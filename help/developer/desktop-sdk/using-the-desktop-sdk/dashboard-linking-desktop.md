@@ -1,0 +1,59 @@
+## Dashboard Linking
+
+### Overview
+
+The Reveal application supports dashboard linking, which allows users to navigate through dashboards. By moving from dashboard to dashboard, you can go from a high level overview of the business' reality to a more detailed view with the specifics.
+
+### Common Use Cases
+
+You can have, for example, a "Company 360" dashboard showing key
+performance indicators for each division (HR, Sales, Marketing). Once the user maximizes one of the visualizations, the navigation is
+triggered and the user is taken to another dashboard with more detailed information about that division.
+
+Alternatively, you can also use dashboard linking to navigate to a more specific dashboard. For example, in a dashboard with a visualization showing the Top 25 Customers, by selecting one of the customers the user will navigate to a new dashboard. This new dashboard will display detailed information about the selected customer, like recent purchases, contact information, top selling products, etc.
+
+For further details about the Dashboard Linking functionality, refer to [**Dashboard Linking**](https://www.revealbi.io/help/dashboard-linking) from the Reveal’s User Guide.
+
+### Code Example
+
+You can use dashboard linking with the SDK, but the containing application needs to be involved when the navigation is being triggered.
+As the SDK does not handle where dashboards are stored, it needs the containing application to provide a dashboard file for the target dashboard.
+
+As a practical example, you can use the **Marketing.xaml.cs** file in the *UpMedia* sample distributed with the SDK.
+
+Basically, you just have to do two things and the SDK will take care of the rest:
+
+1.  Handle the
+    [**VisualizationLinkingDashboard**](rvui.wpf~infragistics.sdk.revealview~visualizationlinkingdashboard_ev) event.
+2.  Invoke the callback with the ID of the target dashboard.
+
+<!-- end list -->
+
+``` csharp
+//attach to VisualizationLinkingDashboard event
+revealView.VisualizationLinkingDashboard += RevealView_VisualizationLinking;
+
+//Implement the event handler
+private void RevealView_VisualizationLinking(object sender,
+    VisualizationLinkingDashboardEventArgs e)
+    {
+        e.Callback("Campaigns", GetDashboardStream("Campaigns"));
+    }
+```
+### Related content
+
+  - [Loading Dashboards Files](loading-dashboards-desktop.md)
+  - [Configuring the RevealView Object](configuring-revealview-desktop.md)
+  - [Editing and Saving Dashboards](editing-saving-dashboards-desktop.md)
+  - [Working with the Localization Service](localization-service-desktop.md)
+  - [Working with the Formatting Service](formatting-service-desktop.md)
+  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-desktop.md)
+  - [Replacing Data Sources](replacing-data-sources-desktop.md)
+  - [In-Memory Data Support](in-memory-data-desktop.md)
+  - [Providing Credentials to Data Sources](providing-credentials-datasources-desktop.md)
+  - [Setting Up Initial Filter Selections](setting-initial-filters-desktop.md)
+  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-desktop.md)
+  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-desktop.md)
+  - [Dashboard Linking (Web)](../../web-sdk/using-the-client-sdk/dashboard-linking-client-web.md)
+  - [Handling User Click Events](handling-click-events-desktop.md)
+  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-desktop.md)

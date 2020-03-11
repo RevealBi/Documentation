@@ -1,0 +1,5 @@
+add reveal specifci theme
+
+recommend starting from scratch and only add files that are required for the reveal theme.
+
+This theme will be much simpler than the ignite theme.

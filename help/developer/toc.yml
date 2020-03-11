@@ -1,0 +1,46 @@
+- name: General
+  header: true
+- name: Welcome to Reveal SDK
+  href: index.md
+- name: Reveal SDK Overview
+  href: sdk-overview.md
+- name: System Requirements and Installation
+  href: installation-requirements.md
+- name: Setup and Configuration (Web)
+  href: setup-configuration-web.md
+- name: Setup and Configuration (Desktop)
+  href: setup-configuration-desktop.md
+- name: Getting Dashboards for the SDK
+  href: get-dashboards.md
+- name: Web SDK
+  header: true
+- name: Overview
+  href: web-sdk/sdk-overview-web.md
+- name: Creating Your First App
+  href: web-sdk/create-first-app-web.md
+- name: Using the Server SDK
+  href: web-sdk/using-the-server-sdk/toc.yml
+- name: Using the Client SDK
+  href: web-sdk/using-the-client-sdk/toc.yml
+- name: Server API Reference
+  href: web-sdk/api-reference-server-web.md
+- name: Client API Reference
+  href: web-sdk/api-reference-client-web.md
+- name: Desktop SDK
+  header: true
+- name: Overview
+  href: desktop-sdk/sdk-overview-desktop.md
+- name: Creating Your First App -coming soon-
+  href: 
+- name: Using the Desktop SDK
+  href: desktop-sdk/using-the-desktop-sdk/toc.yml
+- name: API Reference
+  href: desktop-sdk/api-reference-desktop.md
+- name: Release Information
+  header: true
+- name: Known Issues
+  href: known-issues.md
+- name: Release Notes
+  href: release-notes.md
+- name: Third-Party Software Used by Reveal
+  href: third-party-software.md
