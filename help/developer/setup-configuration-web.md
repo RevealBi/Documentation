@@ -5,7 +5,7 @@
 The Reveal Server SDK requires .NET Core 2.2+ or .NET Framework 4.6.1+
 ASP MVC application projects.
 
-In case you are targeting .NET Framework 4.6.1+, the Reveal Server SDK
+In case you are targeting .NET Framework 4.6.2+, the Reveal Server SDK
 supports a win7-x64 runtime environment. To debug your web project you
 need to add a win7-x64 compatible *RuntimeIdentifier* platform:
 
