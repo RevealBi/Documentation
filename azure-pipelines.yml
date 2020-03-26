@@ -1,0 +1,54 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#trigger:
+#- master
+
+pool:
+  name: "On-Prem"
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      $latestBuildNumber = ($version = Invoke-WebRequest -URI http://10.20.13.5/Nightly/builds/buildversion_release_installer.txt).Content
+      $latestBuildNumber = "1.0.1014.0"
+      Write-Host "Latest build is: " $latestBuildNumber 
+      Write-Host ("##vso[task.setvariable variable=LatestBuild;]$latestBuildNumber")
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '\\igbgsofsmb2\Builds\ReportPlus\EM_Master\EM_Master_Release\EM_Master_Release_1.0.1014.0_Release\DevelopOutput\R+\WPF'
+    Contents: 'Reveal_SDK.zip'
+    TargetFolder: '$(Build.SourcesDirectory)\DevelopOutput\R+\WPF'
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: '$(Build.SourcesDirectory)\DevelopOutput\R+\WPF\Reveal_SDK.zip'
+    destinationFolder: '$(Build.SourcesDirectory)\DevelopOutput\WPF\RevealSDK'
+    cleanDestinationFolder: true
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\DevelopOutput\WPF\RevealSDK\Web\Binaries\Release\net461'
+    Contents: |
+      Infragistics.Reveal.SDK.Server.dll
+      Infragistics.Reveal.SDK.Server.xml
+      Infragistics.Reveal.SDK.WebAPI.dll
+      Infragistics.Reveal.SDK.WebAPI.xml
+    TargetFolder: '$(Build.SourcesDirectory)\en\src'
+    OverWrite: true
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\DevelopOutput\WPF\RevealSDK\WPF\Binaries\Release'
+    Contents: |
+      RVUI.WPF.dll
+      RVUI.WPF.xml
+    TargetFolder: '$(Build.SourcesDirectory)\en\src'
+    OverWrite: true
+
