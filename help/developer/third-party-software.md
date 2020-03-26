@@ -16,16 +16,16 @@
 | Web          | [Google Maps Platform](https://cloud.google.com/maps-platform/terms/?&sign=0)                                 | Custom                                                                                                     |
 | Web          | [SignalIR](https://github.com/aspnet/SignalR)                                                                 | [Apache 2.0](https://opensource.org/licenses/apache2.0.php)                                                |
 | Web          | [Babel JS Compiler](https://github.com/babel/babel)                                                           | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
-| Web          | [LitElement](https://github.com/Polymer/lit-element)                                                          | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
+| Web          | [LitElement](https://github.com/Polymer/lit-element)                                                          | [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)                                                    |
 | Web          | [Simple JavaScript Inheritance](https://johnresig.com/blog/simple-javascript-inheritance/)                    | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF          | [ANTLR](https://github.com/antlr/antlr4)                                                                      | [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)                                               |
 | WPF          | [Json.NET](https://www.newtonsoft.com/json)                                                                   | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF          | [SQLite](https://www.sqlite.org/copyright.html)                                                               | Public                                                                                                     |
 | WPF          | [Oracle.ManagedDataAccess](https://mvnrepository.com/artifact/com.oracle/ojdbc14)                             | [OTN](https://www.oracle.com/downloads/licenses/distribution-license.html)                                 |
 | WPF          | [Microsoft .NET Library](https://www.microsoft.com/net/dotnet_library_license.htm)                            | [Microsoft Software License](https://www.microsoft.com/net/dotnet_library_license.htm)                     |
-| WPF          | [Npgsql](https://github.com/npgsql/npgsql)                                                                    | [Npgsql License](https://github.com/npgsql/npgsql/blob/master/LICENSE.txt)                                 |
-| WPF          | [Microsoft.AnalysisServices.AdomdClient](https://www.microsoft.com/en-us/download/confirmation.aspx?id=42295) | Custom (License found on [installer](https://www.microsoft.com/en-us/download/confirmation.aspx?id=42295)) |
-| WPF          | Sybase.AdoNet4.AseClient                                                                                      | [SAP](https://www.sap.com/about/trust-center/agreements.html)                                              |
+| WPF          | [Npgsql](https://github.com/npgsql/npgsql)| [PostgreSQL License](https://github.com/npgsql/npgsql/blob/master/LICENSE)|
+| WPF | [Microsoft.AnalysisServices.AdomdClient](https://www.nuget.org/packages/Microsoft.AnalysisServices.AdomdClient.retail.amd64/) | Custom [download](https://go.microsoft.com/fwlink/?linkid=852895) |
+| WPF          | [Sybase.AdoNet4.AseClient](https://www.nuget.org/packages/AdoNetCore.AseClient/) | [Apache 2.0](https://opensource.org/licenses/apache2.0.php)                                              |
 | WPF          | [CefSharp](https://github.com/cefsharp/cefsharp)                                                              | [CefSharp](https://raw.githubusercontent.com/cefsharp/cef-binary/master/LICENSE.txt)                       |
 | WPF          | [Cef](https://github.com/chromiumembedded/cef)                                                                | [Cef](https://raw.githubusercontent.com/cefsharp/cef-binary/master/LICENSE.txt)                            |
 | WPF          | [SkiaSharp](https://github.com/mono/SkiaSharp)                                                                | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
@@ -39,7 +39,7 @@
 | WPF          | [LumenWorks.Framework.IO](https://www.codeproject.com/Articles/9258/A-Fast-CSV-Reader)                        | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF          | [CoreFX](https://github.com/dotnet/corefx)                                                                    | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF          | [Strongnamer](https://github.com/dsplaisted/strongnamer)                                                      | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
-| WPF          | [Pomelo.Data.MySql](https://github.com/PomeloFoundation/)                                                     | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
+| WPF | [MySql Connector](https://github.com/mysql-net/MySqlConnector) | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 
 ### Related content
   - [Known Issues](known-issues.md)
