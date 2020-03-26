@@ -10,10 +10,8 @@ pool:
   name: "On-Prem"
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - task: PowerShell@2
+  displayName: "Get latest build number"
   inputs:
     targetType: 'inline'
     script: |
@@ -22,17 +20,20 @@ steps:
       Write-Host "Latest build is: " $latestBuildNumber 
       Write-Host ("##vso[task.setvariable variable=LatestBuild;]$latestBuildNumber")
 - task: CopyFiles@2
+  displayName: "Copy Reveal_SDK.zip"
   inputs:
     SourceFolder: '\\igbgsofsmb2\Builds\ReportPlus\EM_Master\EM_Master_Release\EM_Master_Release_1.0.1014.0_Release\DevelopOutput\R+\WPF'
     Contents: 'Reveal_SDK.zip'
     TargetFolder: '$(Build.SourcesDirectory)\DevelopOutput\R+\WPF'
 - task: ExtractFiles@1
+  displayName: "Extract Reveal_SDK.zip"
   inputs:
     archiveFilePatterns: '$(Build.SourcesDirectory)\DevelopOutput\R+\WPF\Reveal_SDK.zip'
     destinationFolder: '$(Build.SourcesDirectory)\DevelopOutput\WPF\RevealSDK'
     cleanDestinationFolder: true
 
 - task: CopyFiles@2
+  displayName: "Copy Reveal files from net461 folder into en\\src"
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\DevelopOutput\WPF\RevealSDK\Web\Binaries\Release\net461'
     Contents: |
@@ -44,6 +45,7 @@ steps:
     OverWrite: true
 
 - task: CopyFiles@2
+  displayName: "Copy RVUI.WPF files into en\\src"
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\DevelopOutput\WPF\RevealSDK\WPF\Binaries\Release'
     Contents: |
@@ -52,3 +54,7 @@ steps:
     TargetFolder: '$(Build.SourcesDirectory)\en\src'
     OverWrite: true
 
+- task: DocFxTask@0
+  displayName: "Build docfx.json"
+  inputs:
+    solution: 'docfx.json'
