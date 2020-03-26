@@ -58,3 +58,11 @@ steps:
   displayName: "Build docfx.json"
   inputs:
     solution: 'docfx.json'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '_site'
+    ArtifactName: 'docs_site'
+    publishLocation: 'FilePath'
+    TargetPath: '\\igbgsofsmb2\builds\Reveal\Docs\$(Build.DefinitionName)\$(Build.BuildNumber)\EN'
+    Parallel: true
