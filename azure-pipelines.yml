@@ -7,7 +7,7 @@
 #- master
 
 pool:
-  name: "On-Prem"
+  name: "BusinessTools On-Prem Documentation"
 
 steps:
 - task: PowerShell@2
