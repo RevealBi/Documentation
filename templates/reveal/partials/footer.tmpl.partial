@@ -1,0 +1,9 @@
+<div id="footer-container">    
+    {{#_isLangEn}} 
+        {{>partials/revealfoot}}
+    {{/_isLangEn}} 
+    
+    {{#_isLangJa}}
+        {{>partials/revealfoot.ja}}
+    {{/_isLangJa}}
+</div>

@@ -1,5 +1,6 @@
 {
     "build": {
+        "markdownEngineName": "dfm-latest",
         "content": [
             {
                 "files": [
@@ -23,14 +24,16 @@
         "dest": "_site",
         "globalMetadataFiles": [],
         "fileMetadataFiles": [],
-        "template": ["templates/infragistics"],
+        "template": ["templates/reveal"],
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": false,
         "disableGitFeatures": true,
         "globalMetadata": {
             "_appTitle": "Reveal",
-            "_appFooter": "Copyright 2020 Infragistics",
+            "_navBarTitle": "Reveal",
+            "_isLangEn": true,
+            "_navBarTitleHref": "https://www.revealbi.io/",
             "_gitContribute": {
               "repo": "https://github.com/RevealBi/Documentation",
               "branch": "master"
