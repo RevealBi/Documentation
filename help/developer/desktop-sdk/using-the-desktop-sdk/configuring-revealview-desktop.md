@@ -2,15 +2,15 @@
 
 ### Overview
 
-The [**RevealView**](rvui.wpf~infragistics.sdk.revealview) component can
-be instantiated while passing the [**RevealSettings**](rvui.wpf~infragistics.sdk.revealsettings) object as
+The __RevealView__ component can
+be instantiated while passing the __RevealSettings__ object as
 a parameter.
 
-The [**RevealSettings**](rvui.wpf~infragistics.sdk.revealsettings)
+The __RevealSettings__
 object can be used to enable or disable different features towards the
 end user, including:
   - **Showing/Hiding UI Elements** - The *ShowFilters* property is read
-    by [**RevealView**](rvui.wpf~infragistics.sdk.revealview) during
+    by __RevealView__ during
     initialization time and based on its value either shows or hides the
     Global Filters UI to the user. Other similar properties are
     *ShowExportButton*, *CanEdit*, *ShowChangeDataSource*,and
@@ -19,7 +19,7 @@ end user, including:
   - **Specifying a Dashboard** - The *Dashboard* property is used to
     specify which dashboard should be rendered. As shown in [**Loading Dashboard Files**](loading-dashboards-desktop.md), the dashboard must
     be retrieved by using the
-    [**RevealUtility.LoadDashboard**](rvui.wpf~infragistics.sdk.revealutility~loaddashboard)
+    __RevealUtility.LoadDashboard__
     method, which receives a Stream and returns the dashboard object
     (instance of the **RVDashboard** class).
 
@@ -45,7 +45,7 @@ using (var fileStream = File.OpenRead(path))
 }
 ```
 
-#### About Timing
+#### About Initialization
 
 RevealView applies RevealSettings during **initialization time**, which
 is a particular time before the dashboard is displayed on screen. This
@@ -57,9 +57,9 @@ has several implications:
     after the view was created. To do that you need to use the
     *SetFilterSelectedValues* method in the RevealView object.
   - Any change for properties in the
-    [**RevealSettings**](rvui.wpf~infragistics.sdk.revealsettings)
+    __RevealSettings__
     object (like CanEdit, CanSaveAs, etc) requires the creation of a new
-    instance of [**RevealView**](rvui.wpf~infragistics.sdk.revealview).
+    instance of __RevealView__.
 
 ### Related content
 

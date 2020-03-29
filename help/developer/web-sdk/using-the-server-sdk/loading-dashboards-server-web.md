@@ -18,7 +18,7 @@ There are two ways to open/save dashboards with the SDK:
 
 In order to visualize a dashboard, you must provide the SDK with its .rdash file as a stream.
 
-The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for [**IRevealSdkContext.GetDashboardAsync**](Infragistics.Reveal.SDK.WebAPI~Infragistics.Sdk.IRevealSdkContext~GetDashboardAsync.html).
+The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __IRevealSdkContext.GetDashboardAsync__.
 
 ### Code
 
@@ -32,7 +32,7 @@ public Task<Stream> GetDashboardAsync(string dashboardId)
 ```
 
 This code for
-[**IRevealSdkContext.GetDashboardAsync**](nfragistics.Reveal.SDK.WebAPI~Infragistics.Sdk.IRevealSdkContext~GetDashboardAsync.html)
+__IRevealSdkContext.GetDashboardAsync__
 will be invoked on the server when you use **RevealUtility.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.
 
 ### Related content

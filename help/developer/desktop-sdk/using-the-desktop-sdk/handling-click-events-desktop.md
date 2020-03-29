@@ -7,7 +7,7 @@ The SDK allows you to handle when the user clicks a cell with data within a visu
 ### Code
 
 You can handle user click events by registering to the
-[**VisualizationDataPointClicked**](rvui.wpf~infragistics.sdk.revealview~visualizationdatapointclicked_ev) event:
+__VisualizationDataPointClicked__ event:
 
 ``` csharp
 //attach to VisualizationDataPointClicked event

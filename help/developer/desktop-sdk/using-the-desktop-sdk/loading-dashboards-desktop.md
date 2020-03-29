@@ -33,8 +33,8 @@ public partial class MainWindow : Window
 }
 ```
 
-As shown above, dashboard’s contents are loaded using an async method, [**RevealUtility.LoadDashboard**](rvui.wpf~infragistics.sdk.revealutility~loaddashboard).
-Alternatively, you can also use [**RevealUtility.LoadDashboardSync**](rvui.wpf~infragistics.sdk.revealutility~loaddashboardsync) if you prefer to use a synchronous method.
+As shown above, dashboard’s contents are loaded using an async method, __RevealUtility.LoadDashboard__.
+Alternatively, you can also use __RevealUtility.LoadDashboardSync__ if you prefer to use a synchronous method.
 
 > [!NOTE]
 > In this example, we initialized our component in the *Loaded* event and assumed that the content of the window is a Grid component. You might need to introduce changes when integrating the code into your own application.

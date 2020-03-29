@@ -38,7 +38,7 @@ between Americas and APAC. The code includes only the click handlers.
 
 You can do the same when the selection is changed on your selector, just
 setting the new territory name using
-[**SetFilterSelectedValues**](rvui.wpf\<subscript\>infragistics.sdk.revealview\</subscript\>setfilterselectedvalues).
+__SetFilterSelectedValues__.
 
 ### Working with Dynamic Lists
 
@@ -47,10 +47,10 @@ but other lists of values might change. In this case, if a new Territory
 is added to the list, a new button will not be automatically added.
 
 You can use
-[**RevealUtility.GetFilterValues**](rvui.wpf\<subscript\>infragistics.sdk.revealutility\</subscript\>getfiltervalues)
+__RevealUtility.GetFilterValues__
 to get the list of values for a given filter. In this case the following
 call will leave an array with
-[**RVFilterValue**](rvui.wpf~infragistics.sdk.rvfiltervalue) objects in
+__RVFilterValue__ objects in
 the *territories* variable, then loading the list of items in a ComboBox
 with all territories:
 
@@ -77,7 +77,7 @@ using (var stream = File.OpenRead(@"..\..\Sales.rdash"))
 ```
 
 You can then use the *label* attribute from
-[**RVFilterValue**](rvui.wpf~infragistics.sdk.rvfiltervalue) to display
+__RVFilterValue__ to display
 the name of the territory and the *Value* attribute to set the selection
 in the filter.
 
@@ -117,7 +117,7 @@ revealView.SetDateFilter(new RVDateDashboardFilter(RVDateFilterType.YearToDate))
 ```
 
 If you want a list of all predefined date filters, please refer to
-[**RVDateFilterType**](rvui.wpf~infragistics.sdk.rvdatefiltertype) in
+__RVDateFilterType__ in
 the API Reference.
 
 #### Working with a Custom Range

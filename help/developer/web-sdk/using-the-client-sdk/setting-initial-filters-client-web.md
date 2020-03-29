@@ -27,7 +27,7 @@ In this case, you want to set the initial filters selection to:
 As part of the initialization process and once the dashboard is loaded,
 you can retrieve the list of filters in the dashboard and use these
 filters to set the initially selected values in
-[**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings):
+__$.ig.RevealSettings__:
 
 ``` html
 <script type="text/javascript">
@@ -60,7 +60,7 @@ filters to set the initially selected values in
 It is possible that you might not want users to access data from
 territories different than their own. In that case, you can restrict the
 access to filters by configuring the
-[**$.ig.RevealView**](api-reference-client-web.html#_revealview) object to
+__$.ig.RevealView__ object to
 hide the panel containing the dashboard filters:
 
 ``` js

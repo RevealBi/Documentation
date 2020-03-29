@@ -24,7 +24,7 @@ As a practical example, you can use the **Marketing.xaml.cs** file in the *UpMed
 Basically, you just have to do two things and the SDK will take care of the rest:
 
 1.  Handle the
-    [**VisualizationLinkingDashboard**](rvui.wpf~infragistics.sdk.revealview~visualizationlinkingdashboard_ev) event.
+    __VisualizationLinkingDashboard__ event.
 2.  Invoke the callback with the ID of the target dashboard.
 
 <!-- end list -->

@@ -17,7 +17,7 @@ However, to add new visualizations the user needs to **select the data source** 
 ### Displaying a List of Data Sources
 
 The callback you need to use to display a list of data sources is
-[**onDataSourcesRequested**](api-reference-client-web.html#RevealView+onDataSourcesRequested).
+__onDataSourcesRequested__.
 In the case that you don’t set your own function to this callback, when a new visualization is created, Reveal will display all data sources used in the dashboard (if any).
 
 #### Code:
@@ -51,7 +51,7 @@ Please note that the “employees” parameter passed to the “RVInMemoryDataSo
 
 Creating dashboards from scratch is really simple, you just need to:
 
-  - Initialize [**$.ig.RevealView**](api-reference-client-web.html#_revealview.md) and [**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings.md) object, without setting the dashboard attribute to $.ig.RevealSettings and without using [**$.ig.RevealUtility.loadDashboard**](api-reference-client-web.html#RevealUtility.loadDashboard);
+  - Initialize __$.ig.RevealView__ and __$.ig.RevealSettings__ object, without setting the dashboard attribute to $.ig.RevealSettings and without using __$.ig.RevealUtility.loadDashboard__;
 
   - Set *startInEditMode* to true, to start the dashboard in edit mode:
 

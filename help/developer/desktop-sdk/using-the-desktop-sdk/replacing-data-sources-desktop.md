@@ -7,14 +7,14 @@ you can override the configuration or data to be used for each
 visualization of the dashboard.
 
 One of the properties to implement in
-[**RevealView**](rvui.wpf~infragistics.sdk.revealview) is:
+__RevealView__ is:
 
 ``` csharp
 public IRVDataSourceProvider DataSourceProvider { get; set; }
 ```
 
 A class implementing the interface
-[**IRVDataSourceProvider**](rvui.wpf~infragistics.sdk.irvdatasourceprovider)
+__IRVDataSourceProvider__
 may replace or modify the data source used by a given visualization or
 dashboard filter.
 
@@ -43,7 +43,7 @@ Below you can find a list of common use cases:
 
 The following code snippet shows an example of how to replace the data
 source for visualizations in the dashboard. The method
-[**ChangeVisualizationDataSourceItemAsync**](rvui.wpf\<subscript\>infragistics.sdk.irvdatasourceprovider\</subscript\>changevisualizationdatasourceitemasync)
+__ChangeVisualizationDataSourceItemAsync__
 will be invoked for every visualization, on every single dashboard being
 opened.
 
@@ -105,10 +105,10 @@ In the example above, the following two replacements will be performed:
     “Customers”.
 
 Please note that in addition to implement
-[**IRVDataSourceProvider**](rvui.wpf~infragistics.sdk.irvdatasourceprovider),
+__IRVDataSourceProvider__,
 you need to set your implementation in the
-[**DataSourceProvider**](rvui.wpf\<subscript\>infragistics.sdk.revealview\</subscript\>datasourceprovider)
-property of [**RevealView**](rvui.wpf~infragistics.sdk.revealview):
+__DataSourceProvider__
+property of __RevealView__:
 
 ``` csharp
 revealView.DataSourceProvider = new SampleDataSourceProvider();

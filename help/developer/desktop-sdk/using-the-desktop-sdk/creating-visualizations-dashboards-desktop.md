@@ -13,7 +13,7 @@ However, to add new visualizations the user needs to **select the data source** 
 ### Displaying a List of Data Sources
 
 The callback you need to use to display a list of data sources is
-[**DataSourcesRequested**](rvui.wpf~infragistics.sdk.datasourcesrequestedeventargs~callback).
+__DataSourcesRequested__.
 In the case that you don’t set your own method to this callback, when a new visualization is created, Reveal will display all data sources used in the dashboard (if any).
 
 #### Code
@@ -58,11 +58,11 @@ Please note that the “employees” parameter passed to the
 ### Creating New Dashboards
 
 Creating dashboards from scratch is really simple. You just need to
-initialize [**RevealView**](rvui.wpf~infragistics.sdk.revealview) and
-[**RevealSettings**](rvui.wpf~infragistics.sdk.revealsettings) object,
+initialize __RevealView__ and
+__RevealSettings__ object,
 with a null dashboard value specified in RevealSettings and without
 using
-[**RevealUtility.LoadDashboard**](rvui.wpf~infragistics.sdk.revealutility~loaddashboard).
+__RevealUtility.LoadDashboard__.
 
 ``` csharp
 revealView.Settings = new RevealSettings(null);
