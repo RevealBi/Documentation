@@ -11,8 +11,8 @@
 
 html,
 .root {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   -webkit-font-smoothing: antialiased; }
 
 body,
@@ -44,15 +44,15 @@ h6 mark {
 
 h1,
 .h1 {
-  font-size: 4.25rem;
-  line-height: 4.5rem;
+  font-size: 3.25rem;
+  line-height: 3.5rem;
   margin-top: 1.5rem;
-  margin-bottom: 3rem;
-  font-weight: 400; }
+  margin-bottom: 2.5rem;
+  font-weight: 450; }
 
 h2,
 .h2 {
-  font-size: 2.625rem;
+  font-size: 2.525rem;
   line-height: 3rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -61,8 +61,8 @@ h2,
 
 h3,
 .h3 {
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1.825rem;
+  line-height: 2.75rem;
   margin-top: 2rem;
   margin-bottom: 0rem;
   font-weight: 300;
@@ -70,7 +70,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0rem; }
@@ -101,7 +101,7 @@ blockquote {
     color: #333; }
 
 p {
-  line-height: 2rem; }
+  line-height: 1.5rem; }
 
 ul ul,
 ol ol,
