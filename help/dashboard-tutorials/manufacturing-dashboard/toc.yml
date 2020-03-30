@@ -1,0 +1,14 @@
+- name: Getting Started
+  href: index.md
+- name: Creating a Dashboard and Adding a Data Source
+  href: manufacturing-starting-creation-process.md
+- name: Creating the First Visualization
+  href: manufacturing-selecting-data-visualization.md
+- name: Applying Formatting to the First Visualization
+  href: manufacturing-applying-formatting-visualization.md
+- name: Applying a Theme to the Dashboard
+  href: manufacturing-applying-theme.md
+- name: Adding the other Visualizations
+  href: manufacturing-adding-other-visualizations.md
+- name: Saving your Dashboard
+  href: manufacturing-saving-dashboard.md

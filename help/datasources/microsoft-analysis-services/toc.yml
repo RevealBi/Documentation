@@ -1,0 +1,4 @@
+- name: Configuring a Microsoft Analysis Services Data Source
+  href: microsoft-analysis-services.md
+- name: Working with Microsoft Analysis Services
+  href: working-with-microsoft-analysis-services.md

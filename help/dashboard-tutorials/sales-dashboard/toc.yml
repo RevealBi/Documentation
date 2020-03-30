@@ -1,0 +1,14 @@
+- name: Getting Started
+  href: index.md
+- name: Creating a Dashboard and Adding a Data Source
+  href: sales-starting-creation-process.md
+- name: Creating the First Visualization
+  href: sales-selecting-data-visualization.md
+- name: Applying Formatting to the First Visualization
+  href: sales-applying-formatting-visualization.md
+- name: Applying a Theme to the Dashboard
+  href: sales-applying-theme.md
+- name: Adding the other Visualizations
+  href: sales-adding-other-visualizations.md
+- name: Saving your Dashboard
+  href: sales-saving-dashboard.md

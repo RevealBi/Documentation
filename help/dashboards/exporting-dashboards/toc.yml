@@ -1,0 +1,10 @@
+- name: How to Export a Dashboard
+  href: exporting-dashboards.md
+- name: As a PDF Document
+  href: pdf-document.md
+- name: As Images
+  href: images.md
+- name: As PowerPoint Presentations
+  href: powerpoint-presentation.md
+- name: In Excel Data Format
+  href: excel-data-format.md

@@ -1,6 +1,221 @@
-- name: Overview
+- name: General
   header: true
-- name: Welcome to Reveal
-  href: 
-- name: Developer Docs
-  href: developer/index.md
+- name: General Overview
+  href: general/general-overview.md
+- name: Dashboards Overview
+  href: general/dashboards-overview.md
+- name: Logging into Reveal
+  href: general/register-sign-in.md
+- name: Complete Feature Matrix
+  href: general/feature-matrix.md
+- name: Themes and Localization
+  href: general/themes-localization.md
+- name: Notifications Center
+  href: general/notifications-center.md
+- name: Teams
+  header: true
+- name: Overview
+  href: teams/index.md
+- name: Creating and Joining Teams
+  href: teams/creating-joining-teams.md
+- name: Managing your Team
+  href: teams/managing-your-team.md
+- name: Dashboards
+  header: true
+- name: Overview
+  href: dashboards/index.md
+- name: What is a Dashboard?
+  href: dashboards/what-is-dashboard.md
+- name: Creating Dashboards
+  href: dashboards/creating-dashboards.md
+- name: Uploading Dashboards
+  href: dashboards/uploading-dashboards.md
+- name: Managing your Dashboards
+  href: dashboards/managing-dashboards.md
+- name: Styling Dashboards
+  href: dashboards/dashboard-styling.md
+- name: Linking Dashboards
+  href: dashboards/dashboard-linking.md
+- name: Sharing Dashboards
+  href: dashboards/sharing-dashboards/toc.yml
+- name: Exporting Dashboards
+  href: dashboards/exporting-dashboards/toc.yml
+- name: Data Sources
+  header: true
+- name: Overview
+  href: datasources/index.md
+- name: What is a Data Source?
+  href: datasources/what-is-data-source.md
+- name: Creating a New Data Source
+  href: datasources/creating-new-datasource.md
+- name: Box
+  href: datasources/box.md
+- name: Dropbox
+  href: datasources/dropbox.md
+- name: Google Analytics
+  href: datasources/google-analytics.md
+- name: Google BigQuery
+  href: datasources/google-bigquery.md
+- name: Google Drive
+  href: datasources/google-drive.md
+- name: Microsoft Analysis Services
+  href: datasources/microsoft-analysis-services/toc.yml
+- name: Microsoft Azure Synapse Analytics
+  href: datasources/microsoft-azure-synapse-analytics.md
+- name: Microsoft Azure SQL
+  href: datasources/azure-sql.md
+- name: Microsoft Dynamics CRM
+  href: datasources/microsoft-dynamics-crm.md
+- name: Microsoft Reporting Services
+  href: datasources/microsoft-reporting-services.md
+- name: Microsoft SQL Server
+  href: datasources/microsoft-sql-server.md
+- name: MySQL
+  href: datasources/mysql.md
+- name: OData Feed
+  href: datasources/odata-feed.md
+- name: OneDrive
+  href: datasources/onedrive.md
+- name: Oracle
+  href: datasources/oracle.md
+- name: PostgreSQL
+  href: datasources/postgresql.md
+- name: REST API
+  href: datasources/rest-api.md
+- name: SharePoint 
+  href: datasources/sharepoint.md
+- name: Sybase
+  href: datasources/sybase.md
+- name: Web Resource
+  href: datasources/web-resource.md
+- name: Managing Your Data Source Credentials
+  href: datasources/managing-data-source-credentials.md
+- name: Changing the Data Source for a Visualization
+  href: datasources/changing-data-source-visualization.md
+- name: Combining Data Sources in one Visualization
+  href: datasources/data-blending.md
+- name: Integration with Azure Machine Learning
+  href: datasources/azure-machine-learning-models.md
+- name: OAuth 2 / OIDC User Authentication
+  href: datasources/oauth-2-oidc-user-authentication.md
+- name: Managing Dashboards with their own Data Sources
+  href: datasources/managing-dashboards-own-data-sources.md
+- name: Working with JSON Files
+  href: datasources/working-with-json-files.md
+- name: Working with Spreadsheets
+  href: datasources/working-with-spreadsheets.md
+- name: Data Visuallizations
+  header: true
+- name: Overview
+  href: data-visualizations/index.md
+- name: What is a Visualization
+  href: data-visualizations/what-is-visualization.md
+- name: Visualizations Editor
+  href: data-visualizations/visualizations-editor.md
+- name: Category Charts
+  href: data-visualizations/category-charts.md
+- name: Combo Charts
+  href: data-visualizations/combo-charts.md
+- name: Statistical Functions
+  href: data-visualizations/statistical-functions.md
+- name: Do-It-Yourself Visualizations
+  href: data-visualizations/diy-visualizations.md
+- name: Reusing Visualizations
+  href: data-visualizations/reusing-visualizations.md
+- name: Financial Charts
+  href: data-visualizations/financial-charts.md
+- name: Gauge Views
+  href: data-visualizations/gauge-views.md
+- name: Grid View
+  href: data-visualizations/grid-view.md
+- name: Image View
+  href: data-visualizations/image-view.md
+- name: KPI Gauge
+  href: data-visualizations/kpi-gauge.md
+- name: Pivot Table
+  href: data-visualizations/pivot-table.md
+- name: Radial Charts
+  href: data-visualizations/radial-charts.md
+- name: Scatter and Bubble Charts
+  href: data-visualizations/scatter-bubble-charts.md
+- name: Sparkline Charts
+  href: data-visualizations/sparkline-charts.md
+- name: Text View
+  href: data-visualizations/text-view.md
+- name: Text Box
+  href: data-visualizations/text-box.md
+- name: Fields
+  header: true
+- name: Overview
+  href: fields/index.md
+- name: Field Settings
+  href: fields/field-settings.md
+- name: Sort by Field
+  href: fields/sort-by-field.md
+- name: Ad-Hoc Hierarchies
+  href: fields/adhoc-hierarchies.md
+- name: Conditional Formatting
+  href: fields/conditional-formatting.md
+- name: Field Filters and Rules
+  href: fields/field-filters-rules.md
+- name: Calculated Fields
+  href: fields/calculated-fields/toc.yml
+- name: Filters
+  header: true
+- name: Overview
+  href: filters/index.md
+- name: Dashboard Filters
+  href: filters/dashboard-filters.md
+- name: Dashboard Filters Properties
+  href: filters/dashboard-filters-properties.md
+- name: Connecting Dashboard Filters to a Visualization
+  href: filters/connecting-dashboard-filters-visualization.md
+- name: Date Range Filter
+  href: filters/date-range-filter.md
+- name: Visualization Filters
+  href: filters/visualization-filters.md
+- name: Visualization Tutorials
+  header: true
+- name: Overview
+  href: visualization-tutorials/index.md
+- name: Candlestick Visualizations
+  href: visualization-tutorials/tutorial-candlestick-chart.md
+- name: Gauge Views
+  href: visualization-tutorials/tutorial-gauge-views.md
+- name: Image View
+  href: visualization-tutorials/tutorial-image-view.md
+- name: KPI Gauge
+  href: visualization-tutorials/tutorial-kpi-gauge.md
+- name: OHLC Charts
+  href: visualization-tutorials/tutorial-ohlc-chart.md
+- name: Simple Series Charts
+  href: visualization-tutorials/tutorial-simple-charts.md
+- name: Sparkline Charts
+  href: visualization-tutorials/tutorial-sparkline-charts.md
+- name: Stacked Charts
+  href: visualization-tutorials/tutorial-stacked-charts.md
+- name: Text View
+  href: visualization-tutorials/tutorial-text-view.md
+- name: Dashboard Tutorials
+  header: true
+- name: Overview
+  href: dashboard-tutorials/index.md
+- name: Finance Dashboard
+  href: dashboard-tutorials/finance-dashboard/toc.yml
+- name: Manufacturing Dashboard
+  href: dashboard-tutorials/manufacturing-dashboard/toc.yml
+- name: Sales Dashboard
+  href: dashboard-tutorials/sales-dashboard/toc.yml
+- name: Social Dashboard
+  href: dashboard-tutorials/social-dashboard/toc.yml
+- name: Release Information
+  header: true
+- name: System Requirements
+  href: release-information/system-requirements.md
+- name: Known Issues
+  href: release-information/known-issues.md
+- name: Release Notes
+  href: release-information/release-notes.md
+- name: Third-Party Software
+  href: release-information/third-party-software.md
+
