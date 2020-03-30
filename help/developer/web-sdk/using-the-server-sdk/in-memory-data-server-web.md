@@ -66,10 +66,10 @@ As simplified Employee has only the following properties:
 Now you need to visualize the dashboard using your own data instead of the dummy one.
 
 1.  Implement
-    [**IRVDataSourceProvider**](infragistics.reveal.sdk.server~infragistics.sdk.irvdatasourceprovider)
-    and return it as the [**DataSourceProvider**](infragistics.reveal.sdk.webapi~infragistics.sdk.irevealsdkcontext~datasourceprovider)
+    __IRVDataSourceProvider__
+    and return it as the __DataSourceProvider__
     property in
-    [**IRevealSdkContext**](infragistics.reveal.sdk.webapi~infragistics.sdk.irevealsdkcontext), as described in [**Replacing Data Sources**](replacing-data-sources-server-web.md).
+    __IRevealSdkContext__, as described in [**Replacing Data Sources**](replacing-data-sources-server-web.md).
 
     Then, in the implementation for the method
     **ChangeVisualizationDataSourceItemAsync**, you need to add a code similar to this one:
@@ -90,7 +90,7 @@ Now you need to visualize the dashboard using your own data instead of the dummy
     This way you basically replace all references to CSV files in the dashboard with the in-memory data source identified by “employees”. This identification will be used later when returning the data.
 
 2.  Implement the method that will return the actual data, to do that implement
-    [**IRVDataProvider**](infragistics.reveal.sdk.server~infragistics.sdk.irvdataprovider) as shown below:
+    __IRVDataProvider__ as shown below:
 
     ``` csharp
     public class EmbedDataProvider : IRVDataProvider
@@ -137,7 +137,7 @@ public class Employee
 ```
 
 In addition, to implement
-[**IRVDataProvider**](infragistics.reveal.sdk.server~infragistics.sdk.irvdataprovider) you need to modify your implementation of [**IRevealSdkContext.DataProvider**](infragistics.reveal.sdk.webapi~infragistics.sdk.irevealsdkcontext) to return it:
+__IRVDataProvider__ you need to modify your implementation of __IRevealSdkContext.DataProvider__ to return it:
 
 ``` csharp
 IRVDataProvider DataProvider => new EmbedDataProvider();

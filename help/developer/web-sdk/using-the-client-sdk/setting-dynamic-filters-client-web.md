@@ -60,10 +60,10 @@ but other lists of values might change. In this case, if a new Territory
 is added to the list, a new button will not be automatically added.
 
 You can use
-[**$.ig.RevealUtility.getFilterValues**](api-reference-client-web.html#RevealUtility.getFilterValues)
+__$.ig.RevealUtility.getFilterValues__
 to get the list of values for a given filter, in this case the following
 call will leave an array with five
-[**$.ig.RVFilterValue**](api-reference-client-web.html#RVFilterValue)
+__$.ig.RVFilterValue__
 objects in \_window.territories\</emphasis\>:
 
 ``` js
@@ -76,7 +76,7 @@ $.ig.RevealUtility.getFilterValues(dashboard, filter, function (values) {
 ```
 
 You can then use the *label* attribute from
-[**$.ig.RVFilterValue**](api-reference-client-web.html#\<emphasis\>rvfiltervalue)
+__$.ig.RVFilterValue__
 to display the name of the territory and the \_values\</emphasis\>
 attribute to set the selection in the filter. The following code snippet
 shows how to populate a ComboBox to automatically select the Territory:

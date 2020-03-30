@@ -2,18 +2,18 @@
 
 ### Overview
 
-The [**$.ig.RevealView**](api-reference-client-web.html#_revealview.md)
+The __$.ig.RevealView__
 component can be instantiated while passing the
-[**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings.md)
+__$.ig.RevealSettings__
 object as a parameter.
 
-The [**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings.md)
+The __$.ig.RevealSettings__
 object can be used to enable or disable different features towards the
 end user, including:
 
   - **Showing/Hiding UI Elements** - The *showFilters* property is read
     by
-    [**$.ig.RevealView**](api-reference-client-web.html#.html#\<emphasis\>revealview.md)
+    __$.ig.RevealView__
     during initialization time and based on its value either shows or
     hides the Global Filters UI to the user. Other similar properties
     are *showExportImage*, *canEdit*, *showChangeDataSource*, and *maximizedVisualization*.
@@ -58,13 +58,13 @@ screen. This has several implications:
     it will not affect the already loaded dashboard.
   - You can, however, change the selected values for dashboard filters
     after the view was created. To do that you need to use the
-    [**setFilterSelectedValues**](api-reference-client-web.html#RevealView+setFilterSelectedValues)
+    __setFilterSelectedValues__
     method in the $.ig.RevealView object.
   - Any change for properties in the
-    [**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings.md)
+    __$.ig.RevealSettings__
     object (like canEdit, canSaveAs, etc) requires the creation of a new
     instance of
-    [**$.ig.RevealView**](api-reference-client-web.html#_revealview.md).
+    __$.ig.RevealView__.
 
 ### Related content
 

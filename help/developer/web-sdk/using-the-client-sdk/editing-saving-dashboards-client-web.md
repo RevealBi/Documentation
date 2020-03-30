@@ -4,8 +4,8 @@
 
 As described in [**Loading Dashboard Files**](loading-dashboards-server-web.md), there are two ways to handle how you save changes to dashboards:
 
-  - **Client-side**: To use this method you need to set a function in the [**onSave**](api-reference-client-web.html#RevealView+onSave)
-  attribute of the [**revealView**](api-reference-client-web.html#revealview.md) object. This is the recommended approach as it gives more flexibility to the containing app on how operations (save and save as) are performed.
+  - **Client-side**: To use this method you need to set a function in the __onSave__
+  attribute of the __revealView__ object. This is the recommended approach as it gives more flexibility to the containing app on how operations (save and save as) are performed.
 
     *Code Sample*:
 
@@ -26,7 +26,7 @@ As described in [**Loading Dashboard Files**](loading-dashboards-server-web.md),
 
     This might be useful, for example, when your users are not supposed to make changes.
 
-  - **Server-side**: When the [**onSave**](api-reference-client-web.html#RevealView+onSave) event is not set in the [**$.ig.RevealView**](api-reference-client-web.html#<em>revealview.md) object, the default server-side saving method is used. After the end user saves a modified dashboard, a HTTP POST request is invoked. As a result, the [**SaveDashboardAsync**](infragistics.reveal.sdk.webapi~infragistics.sdk.irevealsdkcontext~savedashboardasync) method of the currently defined SDK context is invoked. And you get the \_dashboardId as string and a Stream representation of the dashboard in **dashboardStream**.
+  - **Server-side**: When the __onSave__ event is not set in the __$.ig.RevealView__ object, the default server-side saving method is used. After the end user saves a modified dashboard, a HTTP POST request is invoked. As a result, the __SaveDashboardAsync__ method of the currently defined SDK context is invoked. And you get the \_dashboardId as string and a Stream representation of the dashboard in **dashboardStream**.
 
   With the server-side approach, you only need to implement the code
   client-side but you lose flexibility client-side. This means, for

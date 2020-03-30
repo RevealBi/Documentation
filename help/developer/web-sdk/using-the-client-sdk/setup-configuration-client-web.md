@@ -21,7 +21,7 @@ The Reveal Web Client SDK has the following 3rd party references:
 
 ### 2\. Referencing the Web Client SDK
 
-Enabling [**$.ig.RevealView**](api-reference-client-web.html#_revealview)
+Enabling __$.ig.RevealView__
 component in a web page requires several scripts to be included. These
 scripts will be provided as part of Reveal Web Client SDK.
 
@@ -40,20 +40,20 @@ Client SDK.
 To get started follow these steps:
 
 1.  Define a \<div /\> element with “id” and invoke the
-    [**$.ig.RevealView**](api-reference-client-web.html#_revealview)
+    __$.ig.RevealView__
     constructor.
 
 2.  Create an instance of
-    [**$.ig.RevealSettings**](api-reference-client-web.html#\<emphasis\>revealsettings)
+    __$.ig.RevealSettings__
     providing the \_dashboardId\</emphasis\> in the constructor.
 
 3.  Call
-    [**$.ig.RevealUtility.loadDashboard**](api-reference-client-web.html#RevealUtility.loadDashboard)
+    __$.ig.RevealUtility.loadDashboard__
     providing the *dashboardId* and success and error handlers.
 
     1.  In the success handler you should use the retrieved dashboard
         and set it to the dashboard property of the
-        [**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings)
+        __$.ig.RevealSettings__
         object.
 
 4.  Finally, instantiate the

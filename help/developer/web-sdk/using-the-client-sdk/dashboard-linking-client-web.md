@@ -26,7 +26,7 @@ As a practical example, you can use the **Marketing.cshtml** page in the *UpMedi
 
 Basically, you just have to do two things and the SDK will take care of the rest:
 
-1.  Handle the [**onVisualizationLinkingDashboard**](api-reference-client-web.html#RevealView+onVisualizationLinkingDashboard) event.
+1.  Handle the __onVisualizationLinkingDashboard__ event.
 
 2.  Invoke the callback with the ID of the target dashboard.
 

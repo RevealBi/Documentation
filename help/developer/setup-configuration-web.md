@@ -62,7 +62,7 @@ If you are having issues with the build, follow this
 
 After referencing the required DLLs, you need to create a class that
 implements the
-[**IRevealSdkContext**](infragistics.reportplus.common~infragistics.sdk.irevealsdkcontext)
+__IRevealSdkContext__
 interface. This interface allows the Reveal SDK to run inside of your
 host application and provides callbacks for working with the SDK.
 
@@ -109,11 +109,10 @@ another directory, from the database, or even from an embedded resource.
 
 In the **Startup.cs**, in the **ConfigureServices** method of the
 application, call the services extension method *AddRevealServices*, passing in the
-[**RevealEmbedSettings**](infragistics.reportplus.common~infragistics.sdk.revealembedsettings)
-class.
+_RevealEmbedSettings__ class.
 
 The *AddRevealServices* extension method is defined in the
-[**Infragistics.Sdk**](infragistics.reportplus.common~infragistics.sdk_namespace)
+__Infragistics.Sdk__
 namespace, so you will need to add a using directive. In addition, you
 also need to set the **CachePath** property as shown below.
 
@@ -208,8 +207,7 @@ The Reveal Web Client SDK has the following 3rd party references:
 
 #### 2\. Referencing the Web Client SDK
 
-Enabling [**$.ig.RevealView**](api-reference-client-web.html#_revealview)
-component in a web page requires several scripts to be included. These
+Enabling __$.ig.RevealView__ component in a web page requires several scripts to be included. These
 scripts will be provided as part of Reveal Web Client SDK.
 
 ``` html
@@ -230,24 +228,23 @@ Client SDK.
 To get started follow these steps:
 
 1.  Define a \<div /\> element with “id” and invoke the
-    [**$.ig.RevealView**](api-reference-client-web.html#_revealview)
-    constructor.
+    __$.ig.RevealView__ constructor.
 
     > [!NOTE]
     > **Hosting Client-Side and Server-Side Parts Separately**
     > If you want to host client-side and server-side parts on different servers, please read [here](sdk-overview-web.html#host-client-server-separate) **before** you continue to next step.
 
 2.  Create an instance of
-    [**$.ig.RevealSettings**](api-reference-client-web.html#\<emphasis\>revealsettings)
+    __$.ig.RevealSettings__
     providing the \_dashboardId\</emphasis\> in the constructor.
 
 3.  Call
-    [**$.ig.RevealUtility.loadDashboard**](api-reference-client-web.html#RevealUtility.loadDashboard)
+    __$.ig.RevealUtility.loadDashboard__
     providing the *dashboardId* and success and error handlers.
 
     a.  In the success handler you should use the retrieved dashboard
         and set it to the dashboard property of the
-        [**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings)
+        __$.ig.RevealSettings__
         object.
 
 4.  Finally, instantiate the

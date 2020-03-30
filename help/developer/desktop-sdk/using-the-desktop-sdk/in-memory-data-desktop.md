@@ -50,10 +50,10 @@ As simplified Employee has only the following properties:
 Now you need to visualize the dashboard using your own data instead of the dummy one.
 
 1.  Implement
-    [**IRVDataSourceProvider**](rvui.wpf~infragistics.sdk.irvdatasourceprovider) and set it to the [**DataSourceProvider**](rvui.wpf~infragistics.sdk.revealview~datasourceprovider) property in [**RevealView**](rvui.wpf~infragistics.sdk.revealview),
+    __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealView__,
     as described in [**Replacing Data Sources**](replacing-data-sources-desktop.md).
 
-    Then, in the implementation for the method [**ChangeVisualizationDataSourceItemAsync**](rvui.wpf~infragistics.sdk.irvdatasourceprovider~changevisualizationdatasourceitemasync), you need to add a code similar to this one:
+    Then, in the implementation for the method __ChangeVisualizationDataSourceItemAsync__, you need to add a code similar to this one:
 
     ``` csharp
     public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(RVVisualization visualization, RVDataSourceItem dataSourceItem)
@@ -70,7 +70,7 @@ Now you need to visualize the dashboard using your own data instead of the dummy
 
     This way you basically replace all references to CSV files in the dashboard with the in-memory data source identified by “employees”. This identification will be used later when returning the data.
 
-2.  Implement the method that will return the actual data, to do that implement [**IRVDataProvider**](rvui.wpf~infragistics.sdk.irvdataprovider)as shown below:
+2.  Implement the method that will return the actual data, to do that implement __IRVDataProvider__ as shown below:
 
     ``` csharp
     public class EmbedDataProvider : IRVDataProvider
@@ -114,7 +114,7 @@ Now you need to visualize the dashboard using your own data instead of the dummy
         ```
 
         Finally, remember to set your implementation of
-        [**IRVDataProvider**](rvui.wpf~infragistics.sdk.irvdataprovider) to [**RevealView.DataProvider**](rvui.wpf~infragistics.sdk.revealview~dataprovider)
+        __IRVDataProvider__ to __RevealView.DataProvider__
         property:
 
         ``` csharp

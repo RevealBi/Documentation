@@ -8,11 +8,11 @@ when accessing the data source.
 ### Code
 
 The first step is to implement
-[**IRVAuthenticationProvider**](Infragistics.ReportPlus.Common~Infragistics.Sdk.IRevealSdkContext.html)
+__IRVAuthenticationProvider__
 and return it as the
-[**AuthenticationProvider**](infragistics.reportplus.common\<subscript\>infragistics.sdk.irevealsdkcontext\</subscript\>authenticationprovider)
+__AuthenticationProvider__
 property in
-[**IRevealSdkContext**](infragistics.reportplus.common~infragistics.sdk.irevealsdkcontext),
+__IRevealSdkContext__,
 as shown below.
 
 ``` csharp
@@ -45,12 +45,12 @@ public class EmbedAuthenticationProvider : IRVAuthenticationProvider
 ### Choosing Which Class to Implement
 
 There are two classes that can be used, both implementing the
-[**IRVDataSourceCredential**](infragistics.reportplus.common~infragistics.sdk.irvdatasourcecredential)
+__IRVDataSourceCredential__
 interface. You need to choose the class depending on your data source,
 as detailed below.
 
   - Class
-    [**RVBearerTokenDataSourceCredential**](infragistics.reportplus.common~infragistics.sdk.rvbearertokendatasourcecredential)
+    __RVBearerTokenDataSourceCredential__
     works with:
 
       - Analytics tools (Google Analytics).
@@ -59,7 +59,7 @@ as detailed below.
         OneDrive and SharePoint Online).
 
   - Class
-    [**RVUsernamePasswordDataSourceCredential**](infragistics.reportplus.common~infragistics.sdk.rvusernamepassworddatasourcecredential)
+    __RVUsernamePasswordDataSourceCredential__
     works with:
 
       - Customer Relationship Managers (Microsoft Dynamics CRM
@@ -76,7 +76,7 @@ as detailed below.
 
 Sometimes you might work with an anonymous resource, without
 authentication. In this particular case, you can use
-[**RVUsernamePasswordDataSourceCredential**](infragistics.reportplus.common~infragistics.sdk.rvusernamepassworddatasourcecredential),
+__RVUsernamePasswordDataSourceCredential__,
 which has an empty constructor. You can do this for any data source that
 works with the class.
 

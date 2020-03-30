@@ -25,14 +25,14 @@ information displayed on each division’s home page.
 ### Maximizing Visualizations
 
 To open a dashboard with a maximized visualization, you need to use the
-[**MaximizedVisualization**](api-reference-client-web.html#RevealSettings+maximizedVisualization)
+__MaximizedVisualization__
 attribute of
-[**$.ig.RevealSettings**](api-reference-client-web.html#_revealsettings).
+__$.ig.RevealSettings__.
 When you don’t set a visualization in this attribute, the whole
 dashboard is displayed.
 
 As shown in [**Configuring the $.ig.RevealView object**](configuring-revealview-client-web.md), you can display a specific dashboard in your page. This time, you also need to set the
-[**MaximizedVisualization**](api-reference-client-web.html#RevealSettings+maximizedVisualization)
+__MaximizedVisualization__
 attribute. As shown in the code snippet below with the visualization "Sales" from the dashboard with ID "AllDivisions".
 
 ``` html
@@ -68,7 +68,7 @@ visualization dashboard. This is the concept behind “single
 visualization mode”.
 
 To turn on the “single visualization mode”, just set the
-[**singleVisualizationMode**](api-reference-client-web.html#RevealSettings+singleVisualizationMode)
+__singleVisualizationMode__
 to true as shown below.
 
 ``` js
@@ -78,7 +78,7 @@ $.ig.revealSettings.singleVisualizationMode = true;
 After adding this single line, the dashboard will work as a single
 visualization dashboard. You can can do the same for each division’s
 home page, just replace the title of the visualization in
-[**getVisualizationByTitle**](api-reference-client-web.html#RVDashboard+getVisualizationByTitle)
+__getVisualizationByTitle__
 with the right one.
 
 #### Dynamically changing a locked visualization
@@ -91,7 +91,7 @@ chooses one division from the list, the maximized visualization is
 updated.
 
 You can achieve this scenario by using the **maximizeVisualization**
-method in [**$.ig.RevealView**](api-reference-client-web.html#_revealview),
+method in __$.ig.RevealView__,
 as shown below:
 
 ``` html
@@ -127,7 +127,7 @@ as shown below:
 
 To take into account:
   - The
-    [**$.ig.RevealView**](api-reference-client-web.html#revealview)
+    __$.ig.RevealView__
     object is set in \_window.revealView\</emphasis\> in order to use it
     later when **maximizeVisualization** is called.
   - The buttons added to the section before the div are used just as an
@@ -138,7 +138,7 @@ To take into account:
     visualizations in the sample dashboard, but you can also generate
     the list of buttons dynamically by iterating the list of
     visualizations in the dashboard. For further details see
-    [**$.ig.RVDashboard.visualizations**](api-reference-client-web.html#RVDashboard+visualizations).
+    __$.ig.RVDashboard.visualizations__.
 
 ### Related content
 

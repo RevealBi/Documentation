@@ -7,7 +7,7 @@ The SDK allows you to handle when the user clicks a cell with data within a visu
 ### Code
 
 You can handle user click events by registering to the
-[**onVisualizationDataPointClicked**](api-reference-client-web.html#RevealView+onVisualizationDataPointClicked) event:
+__onVisualizationDataPointClicked__ event:
 
 ``` js
 window.revealView.onVisualizationDataPointClicked = function (visualization, cell, row) {

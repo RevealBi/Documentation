@@ -25,14 +25,14 @@ information displayed on each division’s home page.
 ### Maximizing Visualizations
 
 To open a dashboard with a maximized visualization, you need to use the
-[**MaximizedVisualization**](rvui.wpf\<subscript\>infragistics.sdk.revealsettings\</subscript\>maximizedvisualization)
+__MaximizedVisualization__
 attribute of
-[**RevealSettings**](rvui.wpf~infragistics.sdk.revealsettings). When you
+__RevealSettings__. When you
 don’t set a visualization in this attribute, the whole dashboard is
 displayed.
 
 As shown in [**Configuring the RevealViewobject**](configuring-revealview-desktop.md), you can display a specific dashboard in your page. This time, you also need to set the
-[**MaximizedVisualization**](rvui.wpf\<subscript\>infragistics.sdk.revealsettings\</subscript\>maximizedvisualization)
+__MaximizedVisualization__
 attribute. As shown in the code snippet below with the visualization
 "Sales".
 
@@ -60,7 +60,7 @@ visualization dashboard. This is the concept behind “single
 visualization mode”.
 
 To turn on the “single visualization mode”, just set the
-[**SingleVisualizationMode**](rvui.wpf\<subscript\>infragistics.sdk.revealsettings\</subscript\>singlevisualizationmode)
+__SingleVisualizationMode__
 property to true, as shown below.
 
 ``` csharp
@@ -70,7 +70,7 @@ settings.SingleVisualizationMode = true;
 After adding this single line, the dashboard will work as a single
 visualization dashboard. You can do the same for each division’s home
 page, just replace the title of the visualization in
-[**GetVisualizationByTitle**](rvui.wpf\<subscript\>infragistics.sdk.rvdashboard\</subscript\>getvisualizationbytitle)
+__GetVisualizationByTitle__
 with the right one.
 
 #### Dynamically changing a locked visualization
@@ -83,8 +83,8 @@ chooses one division from the list, the maximized visualization is
 updated.
 
 You can achieve this scenario by using the
-[**MaximizeVisualization**](rvui.wpf\<subscript\>infragistics.sdk.revealview\</subscript\>maximizevisualization)
-method in [**RevealView**](rvui.wpf~infragistics.sdk.revealview), as
+__MaximizeVisualization__
+method in __RevealView__, as
 shown below:
 
 ``` csharp
@@ -102,7 +102,7 @@ To take into account:
 
   - You can generate the list of buttons dynamically by iterating the
     list of visualizations in the dashboard. For further details see
-    [**RVDashboard.Visualizations**](rvui.wpf\<subscript\>infragistics.sdk.rvdashboard\</subscript\>visualizations).
+    __RVDashboard.Visualizations__.
   - There is a working example in the **Manufacturing.xaml.cs** view, in
     the *UpMedia* WPF application distributed with the SDK. That sample
     view shows all visualizations as a list of toggle buttons, at the bottom of the screen.

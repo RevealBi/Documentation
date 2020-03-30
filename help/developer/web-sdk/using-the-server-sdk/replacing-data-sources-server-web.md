@@ -7,7 +7,7 @@ SDK), you can override the configuration or data to be used for each
 visualization of the dashboard.
 
 One of the properties to implement in
-[**IRevealSdkContext**](infragistics.reportplus.common~infragistics.sdk.irevealsdkcontext)
+__IRevealSdkContext__
 is:
 
 ``` csharp
@@ -15,7 +15,7 @@ IRVDataSourceProvider DataSourceProvider { get;  }
 ```
 
 A class implementing the interface
-[**IRVDataSourceProvider**](infragistics.reportplus.common~infragistics.sdk.irvdatasourceprovider)
+__IRVDataSourceProvider__
 may replace or modify the data source used by a given visualization or
 dashboard filter.
 
@@ -44,7 +44,7 @@ Below you can find a list of common use cases:
 
 The following code snippet shows an example of how to replace the data
 source for visualizations in the dashboard. The method
-[**ChangeVisualizationDataSourceItemAsync**](infragistics.reportplus.common\<subscript\>infragistics.sdk.irvdatasourceprovider\</subscript\>changevisualizationdatasourceitemasync)
+__ChangeVisualizationDataSourceItemAsync__
 will be invoked for every visualization, on every single dashboard being
 opened.
 
@@ -108,9 +108,9 @@ In the example above, the following two replacements will be performed:
     “Customers”.
 
 Please note that in addition to implement
-[**IRVDataSourceProvider**](infragistics.reportplus.common~infragistics.sdk.irvdatasourceprovider)
+__IRVDataSourceProvider__
 you need to modify your implementation of
-[**IRevealSdkContext.DataSourceProvider**](infragistics.reportplus.common\<subscript\>infragistics.sdk.irevealsdkcontext\</subscript\>datasourceprovider)
+__IRevealSdkContext.DataSourceProvider__
 to return it:
 
 ``` csharp
