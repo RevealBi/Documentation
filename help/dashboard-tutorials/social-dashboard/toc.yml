@@ -1,0 +1,14 @@
+- name: Getting Started
+  href: index.md
+- name: Creating a Dashboard and Adding a Data Source
+  href: social-starting-creation-process.md
+- name: Creating the First Visualization
+  href: social-selecting-data-visualization.md
+- name: Applying Formatting to the First Visualization
+  href: social-applying-formatting-visualization.md
+- name: Applying a Theme to the Dashboard
+  href: social-applying-theme.md
+- name: Adding the other Visualizations
+  href: social-adding-other-visualizations.md
+- name: Saving your Dashboard
+  href: social-saving-dashboard.md
