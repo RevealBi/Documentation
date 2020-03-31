@@ -16,6 +16,11 @@ here.
     </thead>
     <tbody>
         <tr>
+            <td>???</td>
+            <td><i>New Custom Theming</i><br>
+            Now you can create your own theme in Reveal by configuring some or all of the customizable settings in the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>
+        </tr>
+        <tr>
             <td rowspan="3">1.0.981</td>
             <td><i>New Properties in RevealSettings</i><br>We added multiple new properties to $.ig.RevealSettings to control different features, including: ShowExportToPDF, ShowExportToPowerpoint, ShowExportToExcel, ShowStatisticalFunctions, ShowDataBlending, ShowMachineLearningModelsIntegration, StartWithNewVisualization, InitialThemeName.</td>
         </tr>
