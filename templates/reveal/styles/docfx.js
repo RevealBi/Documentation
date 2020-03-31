@@ -15,7 +15,8 @@ $(function () {
   renderTables();
   renderAlerts();
   renderLinks();
-  renderNavbar();
+  //TODO: Jason and/or Zdravko shold look at this method as it is causing a never-ending loop
+  //renderNavbar();
   renderSidebar();
   renderAffix();
   // renderFooter();
