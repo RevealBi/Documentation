@@ -1,13 +1,10 @@
 {
     "build": {
-        "markdownEngineName": "dfm-latest",
         "content": [
             {
                 "files": [
                     "en-us/**.md",
-                    "en-us/**/toc.yml",
-                    "toc.yml",
-                    "*.md"
+                    "en-us/**/toc.yml"
                 ],
                 "exclude": ["obj/**", "_site/**"]
             }
