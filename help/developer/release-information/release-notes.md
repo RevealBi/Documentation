@@ -16,7 +16,7 @@ here.
     </thead>
     <tbody>
         <tr>
-            <td>???</td>
+            <td>1.0.1136</td>
             <td><i>New Custom Theming</i><br>
             Now you can create your own theme in Reveal by configuring some or all of the customizable settings in the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>
         </tr>
