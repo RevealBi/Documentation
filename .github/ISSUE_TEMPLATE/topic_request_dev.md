@@ -2,7 +2,7 @@
 name: Topic Request
 about: Suggest a new topic for the developer documentation
 title: "[Topic] Your topic!"
-labels: 'Developer Docs'
+labels: Developer Docs
 assignees: ''
 
 ---
