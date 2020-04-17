@@ -16,6 +16,12 @@
                     "**/images/**"
                 ],
                 "exclude": ["obj/**", "_site/**"]
+            },
+            {
+                "files":[
+                    "index.html",
+                    "index.css"
+                ]
             }
         ],
         "dest": "_site",
