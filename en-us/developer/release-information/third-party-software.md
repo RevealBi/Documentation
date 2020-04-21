@@ -21,7 +21,7 @@
 | WPF          | [ANTLR](https://github.com/antlr/antlr4)                                                                      | [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)                                               |
 | WPF          | [Json.NET](https://www.newtonsoft.com/json)                                                                   | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF          | [SQLite](https://www.sqlite.org/copyright.html)                                                               | Public                                                                                                     |
-| WPF          | [Oracle.ManagedDataAccess](https://mvnrepository.com/artifact/com.oracle/ojdbc14)                             | [OTN](https://www.oracle.com/downloads/licenses/distribution-license.html)                                 |
+| WPF          | [Oracle.ManagedDataAccess](https://www.nuget.org/packages/Oracle.ManagedDataAccess)                             | [OTN](https://www.oracle.com/downloads/licenses/distribution-license.html)                                 |
 | WPF          | [Microsoft .NET Library](https://www.microsoft.com/net/dotnet_library_license.htm)                            | [Microsoft Software License](https://www.microsoft.com/net/dotnet_library_license.htm)                     |
 | WPF          | [Npgsql](https://github.com/npgsql/npgsql)| [PostgreSQL License](https://github.com/npgsql/npgsql/blob/master/LICENSE)|
 | WPF | [Microsoft.AnalysisServices.AdomdClient](https://www.nuget.org/packages/Microsoft.AnalysisServices.AdomdClient.retail.amd64/) | Custom [download](https://go.microsoft.com/fwlink/?linkid=852895) |
