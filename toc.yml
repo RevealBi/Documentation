@@ -1,9 +1,0 @@
-- name: How to Buy
-  href: '<your how to buy link>'
-- name: Sign In
-  href: '<your sign in link>'
-  cta: true
-  ctaSecondary: true
-- name: Sign Up For Free
-  href: '<your sign up link>'
-  cta: true

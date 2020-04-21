@@ -1,13 +1,10 @@
 {
     "build": {
-        "markdownEngineName": "dfm-latest",
         "content": [
             {
                 "files": [
-                    "help/**.md",
-                    "help/**/toc.yml",
-                    "toc.yml",
-                    "*.md"
+                    "en-us/**.md",
+                    "en-us/**/toc.yml"
                 ],
                 "exclude": ["obj/**", "_site/**"]
             }
@@ -19,6 +16,12 @@
                     "**/images/**"
                 ],
                 "exclude": ["obj/**", "_site/**"]
+            },
+            {
+                "files":[
+                    "index.html",
+                    "index.css"
+                ]
             }
         ],
         "dest": "_site",
