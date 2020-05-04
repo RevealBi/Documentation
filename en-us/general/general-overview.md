@@ -1,5 +1,7 @@
 ## Overview
 
+I suspect this will not be deployed. 
+
 Reveal is a self-service, cross-platform business intelligence tool that puts the power in your hands to do dashboard reporting - all without the
 need for custom programming. With Reveal you can quickly create and edit dashboards, easily query and filter enterprise data sources, build meaningful visualization over data and effortlessly share your work with others whether or not they are existing Reveal users.
 
@@ -23,7 +25,7 @@ also have a dashboards space.
 
 4.  **Recent module** - In the *Recent* module you will find the dashboards you have viewed or edited, sorted by the most recently used.
 
-5.  **Dashboard samples** - In the *Samples* module you will find dashboards composed by the Reveal’s team. Take advantage of their rich variety of visualizations and edit them to create dashboards tailored to your business needs.
+5.  **Dashboard samples** - In the *Samples* module you will find dashboards composed by the Reveal's team. Take advantage of their rich variety of visualizations and edit them to create dashboards tailored to your business needs.
 
 6.  **+ Dashboard split button** - You can start creating a new dashboard by selecting the *+ Dashboard* split button.
 
@@ -39,7 +41,7 @@ or shared with you.
 
 8.  **Notifications center** - Select the the bell icon to view any team or dashboard updates.
 
-9.  **Profile settings** - Select the icon with your initial (photo) to access Reveal’s *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
+9.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
 
 ### Portrait Orientation for Mobile Devices
 
