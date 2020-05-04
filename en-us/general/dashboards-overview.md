@@ -29,7 +29,7 @@ You can also switch views and look at the data behind your chart if you select o
 
 ![flip to grid](images/flip-grid.png)
 
-When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](Grid-View.md) topic.
+When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](~/en-us/data-visualizations/grid-view.md) topic.
 
 If, at any point, you want to revert back to the original visualization, you can select the **"Show Original"** link.
 
