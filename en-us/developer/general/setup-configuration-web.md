@@ -232,7 +232,7 @@ To get started follow these steps:
 
     > [!NOTE]
     > **Hosting Client-Side and Server-Side Parts Separately**
-    > If you want to host client-side and server-side parts on different servers, please read [here](sdk-overview-web.html#host-client-server-separate) **before** you continue to next step.
+    > If you want to host client-side and server-side parts on different servers, please read [here](~/en-us/developer/web-sdk/sdk-overview-web.html#host-client-server-separate) **before** you continue to next step.
 
 2.  Create an instance of
     __$.ig.RevealSettings__
@@ -248,7 +248,7 @@ To get started follow these steps:
         object.
 
 4.  Finally, instantiate the
-    [*$.ig.RevealView\*](api-reference-client-web.html#_revealview) component
+    __$.ig.RevealView__ component
     by passing two parameters. One is a selector for the DOM element
     where the dashboard should be rendered into, and the other one is
     the settings object.
@@ -317,9 +317,3 @@ following snippet should work fine in almost any browser:
 However, if you want better front end performance and don’t care about
 IE11, you should check the other snippet above and use
 **reveal-webComponent.js** instead)
-
-### Related content
-  - [Setup and Configuration (Desktop)](setup-configuration-desktop.md)
-  - [Creating Your First App (Web)](step-by-step-basics-web.md)
-  - [Web SDK Overview](sdk-overview-web.md)
-  - [System Requirements and Installation](installation-requirements.md)

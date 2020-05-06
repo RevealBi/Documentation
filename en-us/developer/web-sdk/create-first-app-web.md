@@ -113,7 +113,7 @@ Step 3 sample **[git
 commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/44340ad7154f7101f80fce4aea50153ccbd902d7)**.
 
 If you experience any issues, please refer to the [**Setup
-and Configuration (Web)**](setup-configuration-web.md)
+and Configuration (Web)**](~/en-us/developer/general/setup-configuration-web.md)
 topic.
 
 ### Step 4 - Embed Reveal in your Client application
@@ -237,7 +237,7 @@ page](images/marketing-dashboard-result.png)
 Step 4 sample **[git
 commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/380d369b46437c3913ed3c61de32a7f607b96b47)**.
 
-If you experience any issues, please refer to the [**Setup and Configuration (Web)**](setup-configuration-web.md)
+If you experience any issues, please refer to the [**Setup and Configuration (Web)**](~/en-us/developer/general/setup-configuration-web.md)
 topic.
 
 ### Step 5 - Use Reveal Fonts
@@ -438,10 +438,3 @@ application](images/marketing-dashboard-style-client-application-result.png)
 
 Step 6 sample **[git
 commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/085fd35db4d07eb9130ff72dd3bb96a157f6d4ed)**.
-
-### Related content
-
-  - [Setup and Configuration (Web)](../setup-configuration-web.md)
-  - [Web SDK Overview](sdk-overview-web.md)
-  - [Using the Server SDK (Web)](using-the-server-sdk/server-sdk-web.md)
-  - [Using the Client SDK (Web)](using-the-client-sdk/client-sdk-web.md)

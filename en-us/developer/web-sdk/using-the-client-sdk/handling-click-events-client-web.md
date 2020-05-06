@@ -22,15 +22,3 @@ In the callback function you receive information about the location of the click
   - the rest of the values in the same cell.
 
 You can use the rest of the values in the cell to search a specific attribute, like customer ID if you want to change the selected customer in your application. Doesn’t matter that the user clicked another cell, like the sales amount for that customer, you’ll still get the information you need.
-
-### Related content
-
-  - [Configuring the RevealView Object](configuring-revealview-client-web.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-client-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-client-web.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events (Desktop)](../../desktop-sdk/using-the-desktop-sdk/handling-click-events-desktop.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-client-web.md)

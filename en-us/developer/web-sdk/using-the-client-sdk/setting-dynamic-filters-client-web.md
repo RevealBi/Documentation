@@ -126,15 +126,3 @@ buttons and append them to the DOM document.
 The variable *window.territories* holds the list of territories, and is
 later used when selecting the values in the “onclick” code for each
 button.
-
-### Related content
-
-  - [Configuring the RevealView Object](configuring-revealview-client-web.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-client-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-client-web.md)
-  - [Setting Up Dynamic Filter Selections (Desktop)](../../desktop-sdk/using-the-desktop-sdk/setting-dynamic-filters-desktop.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events](handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-client-web.md)

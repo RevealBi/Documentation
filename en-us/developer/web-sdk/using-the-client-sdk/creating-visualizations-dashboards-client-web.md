@@ -45,7 +45,7 @@ The “false” value in the third parameter prevents existing data sources on t
 
 ![displayingDataSources\_web](images/displayingDataSources_web.png)
 
-Please note that the “employees” parameter passed to the “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](in-memory-data-server-web.md) and identifies the dataset to be returned on the server side.
+Please note that the “employees” parameter passed to the “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](~/en-us/developer/web-sdk/using-the-server-sdk/in-memory-data-server-web.md) and identifies the dataset to be returned on the server side.
 
 ### Creating New Dashboards
 
@@ -65,15 +65,3 @@ var revealView = new $.ig.RevealView("#revealView", revealSettings);
 
 You can find a working example, **CreateDashboard.cshtml**, in the
 *UpMedia* web application distributed with the SDK.
-
-### Related content
-
-  - [Configuring the RevealView Object](configuring-revealview-client-web.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-client-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-client-web.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events](handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards (Desktop)](../../desktop-sdk/using-the-desktop-sdk/creating-visualizations-dashboards-desktop.md)

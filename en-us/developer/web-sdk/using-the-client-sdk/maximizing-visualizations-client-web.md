@@ -139,15 +139,3 @@ To take into account:
     the list of buttons dynamically by iterating the list of
     visualizations in the dashboard. For further details see
     __$.ig.RVDashboard.visualizations__.
-
-### Related content
-
-  - [Configuring the RevealView Object](configuring-revealview-client-web.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-client-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode (Desktop)](../../desktop-sdk/using-the-desktop-sdk/maximizing-visualizations-desktop.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events](handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-client-web.md)

@@ -31,10 +31,3 @@ Once you [**created your dashboard**](https://www.revealbi.io/help/creating-dash
     ![export\_dashboards\_sdk\_web](images/export_dashboards_sdk_web.png)
 
     You can export the dashboard file through email (Android and iOS), or as a .rdash file on your computer (Desktop and Web).
-
-### Related content
-  - [Reveal SDK Overview](sdk-overview.md)
-  - [Creating Your First App (Web)](create-first-app-web.md)
-  - [Using the Server SDK (Web)](server-sdk-web.md)
-  - [Using the Client SDK (Web)](client-sdk-web.md)
-  - [Using the Desktop SDK](desktop-sdk.md)

@@ -31,9 +31,3 @@ credentials by loading them from configuration files, or storing them in
 a secure storage. This means that Reveal delegates the storage and
 handling of these credentials to the container. The app might decide to
 return internal credentials or prompt the user for them, if needed.
-
-### Related content
-
-  - [Reveal SDK Overview](../sdk-overview.md)
-  - [Web SDK Overview](../web-sdk/sdk-overview-web.md)
-  - [Using the Desktop SDK](desktop-sdk.md)

@@ -38,7 +38,7 @@ Below you can find a list of common use cases:
     CSV data source with an in-memory one. In this scenario, data is
     actually loaded from memory (or with your custom data loader). For
     further details about how to use in-memory data sources, refer to
-    [**In-Memory Data Support**](in-memory-data-server-web).
+    [**In-Memory Data Support**](in-memory-data-server-web.md).
 
 ### Code
 
@@ -116,8 +116,3 @@ to return it:
 ``` csharp
 IRVDataSourceProvider DataSourceProvider => new SampleDataSourceProvider();
 ```
-### Related content
-  - [Loading Dashboard Files](loading-dashboards-server-web.md)
-  - [In-Memory Data Support](in-memory-data-server-web.md)
-  - [Providing Credentials to Data Sources](providing-credentials-datasources-server-web.md)
-  - [Replacing Data Sources (Desktop)](../../desktop-sdk/using-the-desktop-sdk/replacing-data-sources-desktop.md)

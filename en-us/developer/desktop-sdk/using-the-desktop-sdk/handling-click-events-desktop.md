@@ -38,21 +38,3 @@ private void RevealView_VisualizationDataPointClicked(object sender,
 ```
 
 You can use the rest of the values in the cell to search a specific attribute, like customer ID if you want to change the selected customer in your application. Doesn’t matter that the user clicked another cell, like the sales amount for that customer, you’ll still get the information you need.
-
-### Related content
-
-  - [Loading Dashboards Files](loading-dashboards-desktop.md)
-  - [Configuring the RevealView Object](configuring-revealview-desktop.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-desktop.md)
-  - [Working with the Localization Service](localization-service-desktop.md)
-  - [Working with the Formatting Service](formatting-service-desktop.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-desktop.md)
-  - [Replacing Data Sources](replacing-data-sources-desktop.md)
-  - [In-Memory Data Support](in-memory-data-desktop.md)
-  - [Providing Credentials to Data Sources](providing-credentials-datasources-desktop.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-desktop.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-desktop.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-desktop.md)
-  - [Dashboard Linking](dashboard-linking-desktop.md)
-  - [Handling User Click Events (Web)](../../web-sdk/using-the-client-sdk/handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-desktop.md)

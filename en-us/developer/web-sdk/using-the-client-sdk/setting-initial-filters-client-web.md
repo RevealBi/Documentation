@@ -72,16 +72,3 @@ territory.
 
 Finally, in the case that you still want users to change the date filter
 selection, take a look at [**Setting up Dynamic Filter Selections**](setting-dynamic-filters-client-web.md). There you’ll find information about how to create your own UI that, allowing the user to change the date filter.
-
-### Related content
-
-  - [Configuring the RevealView Object](configuring-revealview-client-web.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-client-web.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events](handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization (Desktop)](../../desktop-sdk/using-the-desktop-sdk/exporting-dashboard-visualization-desktop.md)
-  - [Setting Up Initial Filter Selections (Desktop)](../../desktop-sdk/using-the-desktop-sdk/setting-initial-filters-desktop.md)

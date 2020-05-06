@@ -74,9 +74,3 @@ This is all you need to do to fix the error. You don’t need to apply the other
 
 At this point your project should be set up to display Reveal
 dashboards.
-
-### Related content
-  - [Setup and Configuration (Web)](setup-configuration-web.md)
-  - [Using the Desktop SDK](desktop-sdk.md)
-  - [Desktop SDK Overview](sdk-overview-desktop.md)
-  - [System Requirements and Installation](installation-requirements.md)

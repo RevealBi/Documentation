@@ -55,7 +55,3 @@ here.
         </tr>        
     </tbody>
 </table>
-
-### Related content
-  - [Known Issues](known-issues.md)
-  - [Third-Party Software Used by Reveal](third-party-software.md)

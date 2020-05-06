@@ -137,21 +137,3 @@ There is a working example in the **Sales.xaml.cs** view, in the
 *UpMedia* WPF application distributed with the SDK. That sample view
 contains two custom filtering components: a date range selector and the
 territories displayed as a list of toggle buttons.
-
-### Related content
-
-  - [Loading Dashboards Files](loading-dashboards-desktop.md)
-  - [Configuring the RevealView Object](configuring-revealview-desktop.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-desktop.md)
-  - [Working with the Localization Service](localization-service-desktop.md)
-  - [Working with the Formatting Service](formatting-service-desktop.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-desktop.md)
-  - [Replacing Data Sources](replacing-data-sources-desktop.md)
-  - [In-Memory Data Support](in-memory-data-desktop.md)
-  - [Providing Credentials to Data Sources](providing-credentials-datasources-desktop.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-desktop.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-desktop.md)
-  - [Setting Up Dynamic Filter Selections (Web)](../../web-sdk/using-the-client-sdk/setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-desktop.md)
-  - [Handling User Click Events](handling-click-events-desktop.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-desktop.md)

@@ -37,21 +37,3 @@ revealSettings.CanEdit = false;
 ```
 
 This might be useful, for example, when your users are not supposed to make changes.
-
-### Related content
-
-  - [Loading Dashboards Files](loading-dashboards-desktop.md)
-  - [Configuring the RevealView Object](configuring-revealview-desktop.md)
-  - [Editing and Saving Dashboards (Web)](../../web-sdk/using-the-client-sdk/editing-saving-dashboards-client-web.md)
-  - [Working with the Localization Service](localization-service-desktop.md)
-  - [Working with the Formatting Service](formatting-service-desktop.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-desktop.md)
-  - [Replacing Data Sources](replacing-data-sources-desktop.md)
-  - [In-Memory Data Support](in-memory-data-desktop.md)
-  - [Providing Credentials to Data Sources](providing-credentials-datasources-desktop.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-desktop.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-desktop.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-desktop.md)
-  - [Dashboard Linking](dashboard-linking-desktop.md)
-  - [Handling User Click Events](handling-click-events-desktop.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-desktop.md)

@@ -40,7 +40,3 @@
 | WPF          | [CoreFX](https://github.com/dotnet/corefx)                                                                    | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF          | [Strongnamer](https://github.com/dsplaisted/strongnamer)                                                      | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | WPF | [MySql Connector](https://github.com/mysql-net/MySqlConnector) | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
-
-### Related content
-  - [Known Issues](known-issues.md)
-  - [Release Notes](release-notes.md)

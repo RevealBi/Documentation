@@ -88,9 +88,3 @@ else if (dataSource is RVRESTDataSource)
      userCredential = new RVUsernamePasswordDataSourceCredential();
 }
 ```
-### Related content
-
-  - [Loading Dashboard Files](loading-dashboards-server-web.md)
-  - [Replacing Data Sources](replacing-data-sources-server-web.md)
-  - [In-Memory Data Support](in-memory-data-server-web.md)
-  - [Providing Credentials to Data Sources (Desktop)](../../desktop-sdk/using-the-desktop-sdk/providing-credentials-datasources-desktop.md)

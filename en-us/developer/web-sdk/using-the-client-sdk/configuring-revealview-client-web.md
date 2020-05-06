@@ -19,7 +19,7 @@ end user, including:
     are *showExportImage*, *canEdit*, *showChangeDataSource*, and *maximizedVisualization*.
   - **Specifying a Dashboard** - The *dashboard* property is used to
     specify which dashboard should be rendered. As shown in
-    [**Instantiating the Web Client SDK**](setup-configuration-web.html#instantiate-web-client-sdk),
+    [**Instantiating the Web Client SDK**](~/en-us/developer/general/setup-configuration-web.html#instantiate-web-client-sdk),
     the dashboard must be retrieved by using the
     *$.ig.RevealUtility.loadDashboard* method, which receives a
     dashboardId and a success callback called when the dashboard is
@@ -65,15 +65,3 @@ screen. This has several implications:
     object (like canEdit, canSaveAs, etc) requires the creation of a new
     instance of
     __$.ig.RevealView__.
-
-### Related content
-
-  - [Configuring the RevealView Object (Desktop)](../../desktop-sdk/using-the-desktop-sdk/configuring-revealview-desktop.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-client-web.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-client-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-client-web.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events](handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-client-web.md)

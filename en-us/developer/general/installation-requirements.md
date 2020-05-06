@@ -28,9 +28,3 @@ In case you missed the samples link, you can find them in
 In this location you will find a solution file (Reveal.Sdk.Samples.sln). This project combines all Web, WPF, and WinForms samples.
 
 For Web you need to restore the node packages in order to run the samples with IIS and change the StartUp project. To restore, just right click the solution in the Solution Explorer and select Restore packages.
-
-
-### Related content
-  - [Creating Your First App (Web)](step-by-step-basics-web.md)
-  - [Setup and Configuration (Web)](setup-configuration-web.md)
-  - [Setup and Configuration (Desktop)](setup-configuration-desktop.md)

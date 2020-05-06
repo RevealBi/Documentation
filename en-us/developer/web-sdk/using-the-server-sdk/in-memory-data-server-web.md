@@ -142,9 +142,3 @@ __IRVDataProvider__ you need to modify your implementation of __IRevealSdkContex
 ``` csharp
 IRVDataProvider DataProvider => new EmbedDataProvider();
 ```
-### Related content
-
-  - [Loading Dashboard Files](loading-dashboards-server-web.md)
-  - [Replacing Data Sources](replacing-data-sources-server-web.md)
-  - [Providing Credentials to Data Sources](providing-credentials-datasources-server-web.md)
-  - [In-Memory Data Support (Desktop)](../../desktop-sdk/using-the-desktop-sdk/in-memory-data-desktop.md)

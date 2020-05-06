@@ -2,8 +2,7 @@
 
 ### Overview
 
-As described in [**Loading Dashboard Files**](loading-dashboards-server-web.md), there are two ways to handle how you save changes to dashboards:
-
+As described in [**Loading Dashboard Files**](~/en-us/developer/web-sdk/using-the-server-sdk/loading-dashboards-server-we.md), there are two ways to handle how you save changes to dashboards:
   - **Client-side**: To use this method you need to set a function in the __onSave__
   attribute of the __revealView__ object. This is the recommended approach as it gives more flexibility to the containing app on how operations (save and save as) are performed.
 
@@ -32,17 +31,4 @@ As described in [**Loading Dashboard Files**](loading-dashboards-server-web.md),
   client-side but you lose flexibility client-side. This means, for
   example, that the user cannot select the final location where the
   dashboard will be stored. For further details about the SDK context, please refer to
-  [**Defining the Server Context.**](setup-configuration-web.html#defining-server-context).
-
-
-### Related content
-
-  - [Configuring the RevealView Object](configuring-revealview-client-web.md)
-  - [Editing and Saving Dashboards (Desktop)](../../desktop-sdk/using-the-desktop-sdk/editing-saving-dashboards-desktop.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-web.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-client-web.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-client-web.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-client-web.md)
-  - [Dashboard Linking](dashboard-linking-client-web.md)
-  - [Handling User Click Events](handling-click-events-client-web.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-client-web.md)
+  [**Defining the Server Context.**](~/en-us/developer/general/setup-configuration-web.html#defining-server-context).

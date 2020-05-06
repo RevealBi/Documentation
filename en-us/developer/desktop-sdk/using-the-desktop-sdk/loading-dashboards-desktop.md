@@ -38,21 +38,3 @@ Alternatively, you can also use __RevealUtility.LoadDashboardSync__ if you prefe
 
 > [!NOTE]
 > In this example, we initialized our component in the *Loaded* event and assumed that the content of the window is a Grid component. You might need to introduce changes when integrating the code into your own application.
-
-### Related content
-
-  - [Loading Dashboards Files (Web)](../../web-sdk/using-the-server-sdk/loading-dashboards-server-web.md)
-  - [Configuring the RevealView Object](configuring-revealview-desktop.md)
-  - [Editing and Saving Dashboards](editing-saving-dashboards-desktop.md)
-  - [Working with the Localization Service](localization-service-desktop.md)
-  - [Working with the Formatting Service](formatting-service-desktop.md)
-  - [Exporting a Dashboard or a Visualization](exporting-dashboard-visualization-desktop.md)
-  - [Replacing Data Sources](replacing-data-sources-desktop.md)
-  - [In-Memory Data Support](in-memory-data-desktop.md)
-  - [Providing Credentials to Data Sources](providing-credentials-datasources-desktop.md)
-  - [Setting Up Initial Filter Selections](setting-initial-filters-desktop.md)
-  - [Maximizing Visualizations and Single Visualization Mode](maximizing-visualizations-desktop.md)
-  - [Setting Up Dynamic Filter Selections](setting-dynamic-filters-desktop.md)
-  - [Dashboard Linking](dashboard-linking-desktop.md)
-  - [Handling User Click Events](handling-click-events-desktop.md)
-  - [Creating New Visualizations and Dashboards](creating-visualizations-dashboards-desktop.md)

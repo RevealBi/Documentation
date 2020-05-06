@@ -29,9 +29,3 @@ with the data visualized in the dashboard.
 clicked), for example to display additional information or trigger an action in the app like
 navigating to a page with more details.
 - And many other features...
-
-### Related content
-
-- [Web SDK Overview](sdk-overview-web.md)
-- [Desktop SDK Overview](sdk-overview-desktop.md)
-- [System Requirements and Installation](installation-requirements.md)

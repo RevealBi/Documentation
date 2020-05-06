@@ -37,12 +37,4 @@ window.IGAppBaseURL = "{back-end base url}";
 
 Please, note that the **trailing slash symbol is required** in order to set the property successfully.
 
-Set this property **prior to the** [*instantiation of the $.ig.RevealView*](setup-configuration-web.html#instantiate-web-client-sdk).
-
-### Related content
-
-  - [Reveal SDK Overview](sdk-overview.md)
-  - [Desktop SDK Overview](sdk-overview-desktop.md)
-  - [Creating Your First App (Web)](create-first-app-web.md)
-  - [Using the Server SDK (Web)](server-sdk-web.md)
-  - [Using the Client SDK (Web)](client-sdk-web.md)
+Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en-us/developer/general/setup-configuration-web.html#instantiate-web-client-sdk).
