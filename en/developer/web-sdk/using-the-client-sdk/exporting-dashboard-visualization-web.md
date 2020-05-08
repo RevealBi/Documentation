@@ -20,7 +20,7 @@ To enable a dashboard or a visualization export, you can:
 ### Prerequisites for Export as an Image Option
 
 You need to enable the **export image** functionality in the
-server-side. To do this, please refer to [Enabling server-side screenshot generation](~/en-us/developer/general/setup-configuration-web.html#server-side-image-export).
+server-side. To do this, please refer to [Enabling server-side screenshot generation](~/en/developer/general/setup-configuration-web.html#server-side-image-export).
 
 <a name='enable-export-revealview'></a>
 ### Using the Export Setting

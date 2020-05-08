@@ -232,7 +232,7 @@ To get started follow these steps:
 
     > [!NOTE]
     > **Hosting Client-Side and Server-Side Parts Separately**
-    > If you want to host client-side and server-side parts on different servers, please read [here](~/en-us/developer/web-sdk/sdk-overview-web.html#host-client-server-separate) **before** you continue to next step.
+    > If you want to host client-side and server-side parts on different servers, please read [here](~/en/developer/web-sdk/sdk-overview-web.html#host-client-server-separate) **before** you continue to next step.
 
 2.  Create an instance of
     __$.ig.RevealSettings__

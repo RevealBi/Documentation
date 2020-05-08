@@ -12,7 +12,7 @@ There are two ways to open/save dashboards with the SDK:
   - **Client-side**: Here you have full control and more flexibility. You provide the stream with the contents of the dashboard on the client page, getting the contents from your own server.
 
     Using this approach you can, for example, check user permissions, display your own user interface to select the dashboard, or allow users to upload the ".rdash" file to use. For further details about the client-side approach, follow this [**Configuring the RevealView
-    Object**](~/en-us/developer/web-sdk/using-the-client-sdk/configuring-revealview-client-web.md).
+    Object**](~/en/developer/web-sdk/using-the-client-sdk/configuring-revealview-client-web.md).
 
 ### The Server-Side Approach
 
