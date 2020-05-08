@@ -4,16 +4,14 @@ Here you will find technical information on the Reveal SDK and API methods, incl
 
 ### Where to start:
 
-[**Reveal SDK Overview.**](sdk-overview.md)
+[**Reveal SDK Overview.**](~/en-us/developer/general/sdk-overview.md)
     Introduction to the SDK main concepts and features.
 
-[**Installation and Requirements.**](installation-requirements.md). How to install and what’s required.
+[**Installation and Requirements.**](~/en-us/developer/general/installation-requirements.md). How to install and what’s required.
 
 [**WEB SDK Overview.**](sdk-overview-web.md) Introduction to the Web SDK main concepts and architecture.
-  - [**Setup and configuration (Web).**](setup-configuration-web.md) Steps required to get the Web SDK ready to be used.
-  - [**Using the Server SDK.**](server-sdk-web.md) Most common scenarios with the Web Server SDK.
-  - [**Using the Client SDK.**](client-sdk-web.md) Most common scenarios with the Web Client SDK.
+  - [**Setup and configuration (Web).**](~/en-us/developer/general/setup-configuration-web.md) Steps required to get the Web SDK ready to be used.
+  - [**Creating your First App**](~/en-us/developer/web-sdk/create-first-app-web.md) Procedure that guides you through the initial steps of showing a dashboard on your web page/application for the first time.
 
 [**Desktop SDK Overview.**](sdk-overview-desktop.md) Introduction to the Desktop SDK main concepts and architecture.
-  - [**Setup and configuration (Desktop).**](setup-configuration-desktop.md) Steps required to get the Desktop SDK ready to be used.
-  - [**Using the Desktop SDK.**](desktop-sdk.md) Most common scenarios with the Desktop SDK.
+  - [**Setup and configuration (Desktop).**](~/en-us/developer/general/setup-configuration-desktop.md) Steps required to get the Desktop SDK ready to be used.
