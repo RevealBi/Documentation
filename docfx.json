@@ -3,8 +3,8 @@
         "content": [
             {
                 "files": [
-                    "en-us/**.md",
-                    "en-us/**/toc.yml"
+                    "en/**.md",
+                    "en/**/toc.yml"
                 ],
                 "exclude": ["obj/**", "_site/**"]
             }
