@@ -12,7 +12,7 @@ seamless, identical experience no matter what device you are on: Web,
 Desktop, iOS, or Android.
 
 Learn how to use Reveal with our easy, step-by-step
-[dashboard](dashboard-tutorials.md) and
+[dashboard](~/en-us/dashboard-tutorials/index.md) and
 [visualization](visualization-tutorials.md) tutorials.
 
 ### You can use Reveal to:
