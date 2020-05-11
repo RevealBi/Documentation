@@ -29,7 +29,7 @@ You can also switch views and look at the data behind your chart if you select o
 
 ![flip to grid](images/flip-grid.png)
 
-When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](~/en-us/data-visualizations/grid-view.md) topic.
+When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](~/en/data-visualizations/grid-view.md) topic.
 
 If, at any point, you want to revert back to the original visualization, you can select the **"Show Original"** link.
 
@@ -112,18 +112,12 @@ top right-hand corner. This switches back to *View Mode*.
 It is possible to filter information at a dashboard or a visualization
 level.
 
-  - [**Dashboard filters**](Dashboard-Filters) are available, when you
-    open Dashboard Edit mode (select *Edit* from the overflow menu of
-    your dashboard to access this mode). In the left top corner of the
-    screen, you will see the current dashboard filters and an option to
-    add new ones.
+  - [**Dashboard filters**](~/en/filters/dashboard-filters.md) are available, when you open Dashboard Edit mode (select *Edit* from the overflow menu of your dashboard to access this mode). In the left top corner of the screen, you will see the current dashboard filters and an option to add new ones.
 
-  - [**Visualization filters**](Visualization-Filters) (a.k.a. Quick
-    Filters) are displayed in maximized mode. You can find them in the
-    top section of the visualization under the visualization's name.
+  - [**Visualization filters**](~/en/filters/Visualization-Filters.md) (a.k.a. Quick Filters) are displayed in maximized mode. You can find them in the top section of the visualization under the visualization's name.
 
 For more information on dashboard or visualization Filters, check out
-[this section](Filters).
+[this section](~/en/filters/index.md).
 
 ### Auto Layout for Visualizations
 

@@ -55,56 +55,8 @@ Learn how to use Reveal with our easy, step-by-step
 
   - Various **UI/UX improvements** – Various minor changes were added to improve user experience in the Visualization, Dashboard, New Data Source dialog, etc.
   
-  - Added **support for Shared Drives in Google Drive** – If you have a GSuite Business account, you can now access your Shared Drives data and use it to build visualizations in Reveal. You will see your Shared Drives after you add your [Google Drive](~/en/) as a data source in Reveal.
+  - Added **support for Shared Drives in Google Drive** – If you have a GSuite Business account, you can now access your Shared Drives data and use it to build visualizations in Reveal. You will see your Shared Drives after you add your [Google Drive](~/en/datasources/google-drive.md) as a data source in Reveal.
 
-
-
-
-
-
-
-  - [**Statistical Functions**](statistical-functions.md) - Reveal can now
-    process and perform statistical analysis on existing datasets. This
-    means you can better analyze data and even forecast performance
-    based on historical data.
-
-  - [**Integration with Azure Machine Learning models**](azure-machine-learning-models.md) - You can use data in
-    Reveal to evaluate models in Azure and then use the results as
-    fields in your visualizations.
-
-  - [**Google Analytics data source**](google-analytics.md) - With this new
-    data source, you can create dashboards with information from Google
-    Analytics.
-
-  - [**Google Big Query data source**](google-bigquery.md)- You are now
-    able to connect to Google's Big Query web service within Reveal and
-    have massive datasets processed with zero slowdown.
-
-  - [**Azure Synapse**](microsoft-azure-synapse-analytics.md) and [**Azure
-    SQL**](azure-sql) data sources - Connect to Azure analytics service
-    and SQL databases, to work with big data and advanced query
-    processing features.
-
-  - [**Microsoft Reporting Services (SSRS) data sources**](microsoft-reporting-services.md) - You can now use your
-    existing SSRS reports in your visualizations, you can embed them as
-    PDF files or get the data for the report and create your own
-    visualizations.
-
-  - [**Manage dashboards within folder and Teams**](managing-dashboards.md)
-    - You can now move and copy dashboards between folders or Teams.
-
-  - **Export to** [**Excel**](excel-data-format.md) **and**
-    [**PowerPoint**](powerpoint-presentation.md) **enhancements** - A new
-    robust UI allows you to customize how you export your data to slides
-    and spreadsheets.
-
-  - [**Export to PDF**](pdf-documents.md) - You can now export your
-    dashboards to the PDF format.
-
-  - [**Tooltips redesign and crosshairs addition**](overview-dashboards.md)
-    - Tooltips were improved, they are now slightly smaller and the
-    pointer was removed. In addition, crosshairs are now shown to help
-    give context to the tooltip.
 
 Still not sure? Try our [**free demo**](https://app.revealbi.io/Login?provider=Demo&_ga=2.197140908.2008019520.1580398635-1419162557.1572354605)
-version to discover what Reveal can do for your business\!
+version to discover what Reveal can do for your business!
