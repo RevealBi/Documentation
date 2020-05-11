@@ -16,10 +16,10 @@ different pieces of related information, enabling users to make sense of their d
     in your dashboard, and what it needs to revolve around.
 
   - **Plan the Dashboard**: how will you represent your information
-    graphically? Will you use a [grid](grid-view.md), a [map](map-view.md),
-    [gauges](gauge-views.md), [category charts](category-charts.md), or even a
+    graphically? Will you use a [grid](~/en/data-visualizations/grid-view.md), a map
+    [gauges](~/en/data-visualizations/gauge-views.md), [category charts](~/en/data-visualizations/category-charts.md), or even a
     [pyramid chart](https://www.infragistics.com/community/blogs/b/infragistics/posts/creating-a-population-pyramid-chart-using-stacked-bar-charts-with-Reveal)?
-    Will you use any [filters](filters.md)? If you want to see how to
+    Will you use any [filters](~/en/filters/index.md)? If you want to see how to
     improve your data visualizations with any of the advanced Reveal features, [check out this blog post](https://www.infragistics.com/community/blogs/b/infragistics/posts/8-ways-to-improve-your-data-visualizations)\!
 
   - **Prepare the data** to be used in Reveal. Here is a quick overview
@@ -43,7 +43,7 @@ Within Reveal, you will be able to:
 
   - [Link Dashboards to other Dashboards or to URLs](dashboard-linking.md)
 
-  - [Share your Dashboards](sharing-dashboards.md)
+  - [Share your Dashboards](sharing-dashboards/sharing-dashboards.md)
 
   - [Manage your existing Dashboards](managing-dashboards.md)
 
@@ -56,8 +56,8 @@ designed to get you started and headed in the right direction.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
 </colgroup>
 <tbody>
 <tr class="odd">
