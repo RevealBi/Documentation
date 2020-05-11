@@ -170,7 +170,7 @@ the available functions within Reveal:
     [TRIM](string-calculated-fields.html#trim),
     [UPPER](string-calculated-fields.html#upper).
 
->[NOTE!] **Limitations to IF Conditions**.
+>[!NOTE] **Limitations to IF Conditions**.
 >IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
 
 <a name='without-predefined-functions'></a>

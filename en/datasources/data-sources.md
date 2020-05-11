@@ -20,7 +20,7 @@ to access the data. You can choose from any of the following options:
 
   - **Other Data Sources**: [OData Feed](OData-Feed.md), [Web Resources](Web-Resource.md), [JSON files](Working-with-Json-files.md), [Salesforce](Salesforce.md).
 
->[NOTE!]
+>[!NOTE]
 >The current Reveal release lets you create content manager data sources *only*. Analytics tools, Customer Relationship Managers and Databases are supported for dashboards imported with those data sources.
 
 ### Entering your Credentials

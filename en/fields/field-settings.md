@@ -19,7 +19,7 @@ options:
   - [String Fields](#abc-fields)
 
 
->[NOTE!] All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
+>[!NOTE] All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
 
 </div>
 

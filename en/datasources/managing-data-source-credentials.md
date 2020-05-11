@@ -30,6 +30,6 @@ You need to fill in the following information:
 
 Click/Tap *Create* to finish adding your account details.
 
->[NOTE!] **Using Your Stored Credentials**.
+>[!NOTE] **Using Your Stored Credentials**.
 >Unless you remove them, the accounts' credentials stored in Reveal will always appear in the *Choose Credentials* screen when configuring a data source requiring credentials.
 >![Choose Credentials for a Data Source dialog](images/ChooseCredentialsDataSource_All.png)

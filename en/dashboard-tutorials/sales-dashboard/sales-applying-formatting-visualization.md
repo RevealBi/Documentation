@@ -67,7 +67,7 @@ button** in the top right-hand corner to return to the dashboard editor.
 
 ![SalesWidgetInDashboardEditor\_All](images/SalesWidgetInDashboardEditor_All.png)
 
->[NOTE!]
+>[!NOTE]
 >You can resize any of your visualizations by selecting the visualization and then dragging its corners downwards or to the side.
 
 <style>

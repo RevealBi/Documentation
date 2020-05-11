@@ -57,5 +57,5 @@ the format in which the report will load in the *Visualization editor*:
   - *Load Data* - Your report data will be loaded in the standard
     format, providing you with fields to build your visualization.
 
->[NOTE!] **Editing the Data Source in the Visualization editor.**
+>[!NOTE] **Editing the Data Source in the Visualization editor.**
 >Carefully choose the report format (pdf or data), because once loaded you will be not able to change it. When you *Edit* your data source, you will be only able to change the configuration of the report's parameters.

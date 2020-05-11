@@ -55,7 +55,7 @@ Conditional formatting can be applied to the following visualizations:
 
   - [Text View](Text-View.md)
 
->[NOTE!]
+>[!NOTE]
 >[KPI](KPI-Gauge.md), [Linear](Gauge-Views.hmtl#linear-gauge),
 [Circular](Gauge-Views.html#circular-gauge), [Text](Gauge-Views.html#text-gauge), and [Bullet Graph](Gauge-Views.html#bullet-graph) gauges support conditional
 formatting in the form of [**visualization band range configurations**](gauge-views.html#bands-configuration).

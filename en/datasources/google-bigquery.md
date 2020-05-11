@@ -16,7 +16,7 @@ datasets. To start using them for your visualizations:
 
     ![Select a project in the New Data Source dialog](images/select-project-bigquery.png)
 
-    >[NOTE!]    
+    >[!NOTE]    
     **Demo Public BigQuery Data Projects in Reveal**.
     The two public data projects in the screenshot above are demo
     projects configured by the Reveal's team. They allow users with no

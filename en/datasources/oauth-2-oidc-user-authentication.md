@@ -49,7 +49,7 @@ register Reveal as an OAuth Client/Application by filling in the
 required information. Usually the name of the application and a redirect
 URL are required.
 
->[NOTE!]***Redirect URL***.
+>[!NOTE]***Redirect URL***.
 >Pay attention that the redirect URL is provided in the Reveal's *OAuth 2 / OIDC Account Details* screen.
 
 When you complete the registration, the resource server will generate

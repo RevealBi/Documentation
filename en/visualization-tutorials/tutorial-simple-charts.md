@@ -145,7 +145,7 @@ data you want to display. This comes in the form of:
 For this tutorial, you will use the "Simple Series Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/Reveal/help/samples/Reveal-Tutorials-Spreadsheet.xlsx).
 
->[NOTE!]
+>[!NOTE]
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](Web-Resource.md).
 
 <a name='create-basic-chart'></a>

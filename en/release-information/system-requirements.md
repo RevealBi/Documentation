@@ -24,5 +24,5 @@ The Web version of Reveal supports all major browsers on Mac and
 Windows.
 
 
->[NOTE!]
+>[!NOTE]
 >The mobile versions of Firefox and Chrome are not supported.

@@ -3,7 +3,7 @@
 All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx)
 
->[NOTE!]
+>[!NOTE]
 >If you want to [change your data source](changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](creating-new-datasource.md) instead. You can also [duplicate](Overview.html#view-edit-mode) visualizations to speed up the creation process.
 
 This section will cover the following visualizations:

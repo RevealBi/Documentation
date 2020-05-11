@@ -45,7 +45,7 @@ In the *Export Dashboard* dialog you can manage the following settings:
           - **Custom** - select a color and upload a *logo* image of
             your choice.
 
-            >[NOTE!]**Requirements for logo images**.The image you upload for a logo must be no bigger than **5
+            >[!NOTE]**Requirements for logo images**.The image you upload for a logo must be no bigger than **5
             MB** and one of the following formats: jpg, jpeg, png, gif.
 
 4.  You can **manage your PowerPoint slides** by selecting a slide from

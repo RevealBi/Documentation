@@ -69,5 +69,5 @@ parameters at the bottom of the *Vizualization*'s drop-down list in the
 
 ![parameters binding list](images/parameters-binding_All.png)
 
->[NOTE!] **Date Filters**
+>[!NOTE] **Date Filters**
 >You can bind only dashboard filters to parameters. Date filter binding to parameters is not supported.

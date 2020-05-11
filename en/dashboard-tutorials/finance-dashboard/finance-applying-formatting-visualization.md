@@ -110,7 +110,7 @@ button** in the top right-hand corner to return to the dashboard editor.
 
 ![FinanceWidgetInDashboardEditor\_All](images/FinanceWidgetInDashboardEditor_All.png)
 
->[NOTE!]
+>[!NOTE]
 >You can resize any of your visualizations by selecting the visualization and then dragging its corners downwards or to the side.
 
 <style>

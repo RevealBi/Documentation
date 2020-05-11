@@ -78,7 +78,7 @@ You can also configure the following settings:
 For this tutorial, you will use the "Stacked Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
->[NOTE!]
+>[!NOTE]
 Excel files as local files are not supported in this release. In order
 to follow these tutorials, make sure you upload the file to one of the
 supported [cloud services](data-sources) or add it as a [Web

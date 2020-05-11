@@ -19,7 +19,7 @@ You can also set the first column to be in a fixed position by checking
 the *Fix First Column* option under **Settings**. This is particularly
 useful whe working with many columns.
 
->[NOTE!]
+>[!NOTE]
 >The grid view is suitable in a dashboard when the number of rows and columns is less than 10. When you're dealing with small amounts of data, the preferred approach may be to "just show the numbers".
 
 ### Column Sorting in Dashboard View Mode

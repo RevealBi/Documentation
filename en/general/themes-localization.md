@@ -36,7 +36,7 @@ Reveal will detect and apply the language and regional settings configured in th
 
 > [!NOTE]
 >**About Date Format in Visualizations** 
->he date format used in Reveal visualizations can be customized by field **in the Visualization editor**. Doing so will effectively override the "general" format.
+>The date format used in Reveal visualizations can be customized by field **in the Visualization editor**. Doing so will effectively override the "general" format.
 
 #### Languages
 
