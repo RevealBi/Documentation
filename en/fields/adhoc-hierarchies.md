@@ -15,7 +15,7 @@ sources like Analysis Services. For those cases, the hierarchies are
 defined on the server side, and Reveal supports the expand and drill
 operations.
 
->[NOTE!]
+>[!NOTE]
 >Ad-hoc hierarchies are **not supported** in text and Radial Gauges, and in web, text, and grid views.
 
 ### Enabling Ad-Hoc Hierarchies
@@ -29,7 +29,7 @@ columns. In the example presented in the screenshot, you not only can
 drill up and down, but you can also expand each *Department* to show the
 *Office*.
 
->[NOTE!]
+>[!NOTE]
 >**Ad-hoc Hierarchies with Date and Time Fields**.
 >Building ad-hoc hierarchies with Date, Time and other calendar data is **not supported**.
 

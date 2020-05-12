@@ -76,8 +76,8 @@ form of:
 For this tutorial, you will use the "Sparkline Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
->[NOTE!]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](Web-Resource.md).
+>[!NOTE]
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
 
 <a name='create-sparkline'></a>
 ### Creating a Sparkline Chart

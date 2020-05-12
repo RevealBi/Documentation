@@ -96,6 +96,7 @@ For more information on Stored Procedures and MS SQL Server, visit [this documen
 
 #### Limitations for Stored Procedures in Reveal
 
+
   - For stored procedures that return more than one result set, Reveal
     displays only the first one.
 

@@ -29,4 +29,4 @@ visualization by selecting **Connect** under the filter's name.
 ![Connecting to a dashboard filter in the visualization editor](images/connect-dashboard-filter-visualization-editor.png)
 
 For more information on the binding functionality, please refer to
-[Connecting Dashboard Filters to a Visualization](Connecting-Dashboard-Filters-Visualization.md).
+[Connecting Dashboard Filters to a Visualization](connecting-dashboard-filters-visualization.md).

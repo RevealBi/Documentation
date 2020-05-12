@@ -19,20 +19,20 @@ of time.
 
 The following sections will cover:
 
-  - [Dashboard Filters](Dashboard-Filters.md) in both the *Dashboard* and
+  - [Dashboard Filters](dashboard-filters.md) in both the *Dashboard* and
     the *Visualizations editor*
 
-  - [Dashboard Filter configurable properties](Dashboard-Filters-Properties.md), including:
+  - [Dashboard Filter configurable properties](dashboard-filters-properties.md), including:
 
-      - [Displayed Field](Dashboard-Filters-Properties.html#displayed-field)
+      - [Displayed Field](dashboard-filters-properties.html#displayed-field)
 
-      - [Multiple Selection](Dashboard-Filters-Properties.html#multiple-selections)
+      - [Multiple Selection](dashboard-filters-properties.html#multiple-selections)
 
-      - [Required Selection](Dashboard-Filters-Properties.html#required-selection)
+      - [Required Selection](dashboard-filters-properties.html#required-selection)
 
-      - [Data Filters](Dashboard-Filters-Properties.html#data-filters)
+      - [Data Filters](dashboard-filters-properties.html#data-filters)
 
-  - [Dashboard Filters and their connections to visualizations](Connecting-Dashboard-Filters-Visualization.md), also
+  - [Dashboard Filters and their connections to visualizations](connecting-dashboard-filters-visualization.md), also
     referred to as visualization binding
 
-  - [Visualization Quick Filters](Visualization-Filters.md)
+  - [Visualization Quick Filters](visualization-filters.md)

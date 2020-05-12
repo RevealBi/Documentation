@@ -27,7 +27,7 @@ Then, select **Update Field**.
 In the sample dashboard, there is a red arrow indicator in the **Won
 Opportunities** visualization which is meant to represent that there has
 been a decrease in the amount of won opportunities. This marker is
-created through the [band configurations](Gauge-Views.html#bands-configuration) in the gauge's
+created through the [band configurations](~/en/data-visualizations/gauge-views.html#bands-configuration) in the gauge's
 settings.
 
 ![SalesWonOpportunitiesConditionalFormattingMarker\_All](images/SalesWonOpportunitiesConditionalFormattingMarker_All.png)
@@ -67,7 +67,7 @@ button** in the top right-hand corner to return to the dashboard editor.
 
 ![SalesWidgetInDashboardEditor\_All](images/SalesWidgetInDashboardEditor_All.png)
 
->[NOTE!]
+>[!NOTE]
 >You can resize any of your visualizations by selecting the visualization and then dragging its corners downwards or to the side.
 
 <style>

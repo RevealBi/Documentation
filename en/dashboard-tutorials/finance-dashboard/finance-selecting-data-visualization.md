@@ -1,8 +1,8 @@
 ## Creating the First Visualization 
 
 Let's focus on creating the "Globex Stock Value 2018" visualization in
-the [sample dashboard](Finance-Dashboard-Tutorial.md) presented at the
-beginning of this tutorial. The visualization displays a [Text Gauge](Gauge-Views.md#text-gauge). This particular visualization displays
+the [sample dashboard](finance-dashboard-tutorial.md) presented at the
+beginning of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizations/gauge-views.md#text-gauge). This particular visualization displays
 two fields:
 
   - Stocks

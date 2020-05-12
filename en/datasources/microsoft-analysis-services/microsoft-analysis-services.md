@@ -95,4 +95,4 @@ this case, "sales" is the **measure** attribute of the data cube.
 
 For more information on how to work with the Microsoft Analysis data
 source, please refer to
-[this](#Working-with-Microsoft-Analysis-Services.md) topic.
+[this](working-with-microsoft-analysis-services.md) topic.

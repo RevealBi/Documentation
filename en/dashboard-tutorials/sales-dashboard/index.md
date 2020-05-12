@@ -23,30 +23,30 @@ You can download the sample datasheet
 All other dashboards [in these tutorials](dashboard-tutorials.md) will use
 the same sample spreadsheet.
 
->[NOTE!]
+>[!NOTE]
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the
 [supported cloud services](data-sources.md).
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](Sales-Starting-Creation-Process.md)
+1.  [Creating the Dashboard and Adding a Data Source](sales-starting-creation-process.md)
 
-2.  [Creating the First Visualization](Sales-Selecting-Data-Visualization.md)
+2.  [Creating the First Visualization](sales-selecting-data-visualization.md)
 
-3.  [Applying Formatting to the First Visualization](Sales-Applying-Formatting-Visualization.md)
+3.  [Applying Formatting to the First Visualization](sales-applying-formatting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](Sales-Applying-Theme.md)
+4.  [Applying a Theme to the Dashboard](sales-applying-theme.md)
 
-5.  [Adding the other Visualizations](Sales-Adding-Other-Visualizations.md)
-    [Win/Lost by Month](Sales-Adding-Other-Visualizations.html#win-lost-by-month),
-    [Forecasted](Sales-Adding-Other-Visualizations#forecasted), [Lost Opportunities](Sales-Adding-Other-Visualizations.html#lost-opportunities),
-    [Pipeline by Territory](Sales-Adding-Other-Visualizations.html#pipeline-by-territory),
-    [Total Opportunities](Sales-Adding-Other-Visualizations.html#total-opportunities),
-    [Revenue by Territory](Sales-Adding-Other-Visualizations.html#revenue-by-territory),
-    [Pipeline per Employee](Sales-Adding-Other-Visualizations.html#pipeline-per-employee),
-    [Sales by Product](Sales-Adding-Other-Visualizations.html#sales-by-product))
+5.  [Adding the other Visualizations](sales-adding-other-visualizations.md)
+    [Win/Lost by Month](sales-adding-other-visualizations.html#win-lost-by-month),
+    [Forecasted](sales-adding-other-visualizations#forecasted), [Lost Opportunities](sales-adding-other-visualizations.html#lost-opportunities),
+    [Pipeline by Territory](sales-adding-other-visualizations.html#pipeline-by-territory),
+    [Total Opportunities](sales-adding-other-visualizations.html#total-opportunities),
+    [Revenue by Territory](sales-adding-other-visualizations.html#revenue-by-territory),
+    [Pipeline per Employee](sales-adding-other-visualizations.html#pipeline-per-employee),
+    [Sales by Product](sales-adding-other-visualizations.html#sales-by-product))
 
-6.  [Saving your Dashboard](Sales-Saving-Dashboard.md)
+6.  [Saving your Dashboard](sales-saving-dashboard.md)
 
 <style>
 .previous {

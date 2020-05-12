@@ -34,7 +34,7 @@ following information:
 2.  **URL**: the URL where the service is located.
 
 3.  **Method**: from the dropdown menu you can choose your preferred request type - *GET*, *POST* or *PUT*.
-    > [NOTE!] **Unsupported method**.
+    > [!NOTE] **Unsupported method**.
     > If your method (e.g. POST) is not supported by the REST service, you will receive an error message.
 4. **Result Type**: You can specify the file type you expect to be retrieved from the REST API. For example, if you choose *.csv* and the REST API responds with a *json*, Reveal will try to parse the file as a *.csv*.
 
@@ -72,7 +72,7 @@ To use parameters effectively follow the procedure below:
     ![REST-API-Data-Format-Result\_All](images/REST-API-Data-Format-Result_All.png)
 
     For more information on how to work with a JSON file, please refer
-    to [this topic](Working-with-Json-files.md).
+    to [this topic](working-with-json-files.md).
 
     After loading the data you will continue to the Visualization Editor
     screen.

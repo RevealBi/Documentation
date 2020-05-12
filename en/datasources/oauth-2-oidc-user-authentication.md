@@ -1,6 +1,6 @@
 ## OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
 
-When using [OData Service](odata-feed.md), [Rest API](rest-api) or [Web resources](web-resource.md), some of your resources might be protected. In
+When using [OData Service](odata-feed.md), [Rest API](rest-api.md) or [Web resources](web-resource.md), some of your resources might be protected. In
 this case, you need to grant Reveal access to these resources by setting
 up an OAuth 2 / OIDC account.
 
@@ -35,7 +35,7 @@ perform these 4 steps:
     want to use - e.g. Microsoft, Google, etc.)
 
 2.  Choose one of the three **data sources** in Reveal, which are
-    enabled to work with OAuth 2 / OIDC accounts - [OData Service](odata-feed.md), [Rest API](REST-API.md) or [Web Resource](web-resource.md).
+    enabled to work with OAuth 2 / OIDC accounts - [OData Service](odata-feed.md), [Rest API](rest-api.md) or [Web Resource](web-resource.md).
 
 3.  Use credentials provided for the Client by the resource server to
     **set up your OAuth 2 / OIDC account in Reveal**
@@ -49,7 +49,7 @@ register Reveal as an OAuth Client/Application by filling in the
 required information. Usually the name of the application and a redirect
 URL are required.
 
->[NOTE!]***Redirect URL***.
+>[!NOTE]***Redirect URL***.
 >Pay attention that the redirect URL is provided in the Reveal's *OAuth 2 / OIDC Account Details* screen.
 
 When you complete the registration, the resource server will generate

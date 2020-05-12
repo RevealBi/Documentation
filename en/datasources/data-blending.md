@@ -65,8 +65,8 @@ field in both tables as the relationship between them (equality condition: Depar
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><h4 id="_vacation">Vacation</h4></td>
-<td><h4 id="_departments">Departments</h4></td>
+<td><h4 id="_vacation" style="text-align: center">Vacation</h4></td>
+<td><h4 id="_departments" style="text-align: center">Departments</h4></td>
 </tr>
 <tr class="even">
 <td>

@@ -1,6 +1,6 @@
 ## Managing Teams
 
-As an [Owner](teams-collaboration-privacy.html#members-roles-permissions) of
+As an [Owner](index.html#members-roles-permissions) of
 a team you can:
 
   - manage team members;
@@ -9,7 +9,7 @@ a team you can:
 
   - [delete](#delete-team) the team;
 
-As a special type of team, the [Organization repository](Teams-Collaboration-Privacy.html#organization-team) management
+As a special type of team, the [Organization repository](index.html#organization-team) management
 corresponds to the general rules of team management in Reveal. In the
 cases when there are differences in Organization repository management,
 they will be explicitly mentioned in this topic.

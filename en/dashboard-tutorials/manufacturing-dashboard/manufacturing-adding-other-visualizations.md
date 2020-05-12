@@ -3,8 +3,8 @@
 All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx)
 
->[NOTE!]
->If you want to [change your data source](changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](creating-new-datasource.md) instead. You can also [duplicate](Overview.html#view-edit-mode) visualizations to speed up the creation process.
+>[!NOTE]
+>If you want to [change your data source](changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](creating-new-datasource.md) instead. You can also [duplicate](overview.html#view-edit-mode) visualizations to speed up the creation process.
 
 This section will cover the following visualizations:
 
@@ -47,7 +47,7 @@ This section will cover the following visualizations:
 ### Production
 
 The Production visualization displays the amount of manufactured goods
-for a 12-month period arranged by worker type in a [line chart](Tutorial-Simple-Charts.md). In order to create it:
+for a 12-month period arranged by worker type in a [line chart](tutorial-simple-charts.md). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard, and
     select the **Manufacturing Dashboard** sheet in the
@@ -100,7 +100,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Shipping
 
 The Shipping visualization displays the amount of shipped orders for a
-12 month period in an [area chart](Tutorial-Simple-Charts). In order to
+12 month period in an [area chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to
 create it:
 
 1.  Select the + button in the right corner of your dashboard, and
@@ -157,7 +157,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 
 The Average Hours visualization displays hours logged by the company's
 employees compared to the hours they spent on the company's machinery
-broken down by month in a [spline chart](Tutorial-Simple-Charts). In
+broken down by month in a [spline chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In
 order to create it:
 
 1.  Select the + button in the right corner of your dashboard, and
@@ -215,7 +215,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Headcount
 
 The Headcount visualization displays the amount of workers broken down
-by category in a [bar chart](Tutorial-Simple-Charts). In order to create
+by category in a [bar chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to create
 it:
 
 1.  Select the + button in the right corner of your dashboard, and
@@ -269,7 +269,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Labor Cost
 
 The Labor Cost visualization displays the wages for each employee from
-highest to lowest in a [column chart](Tutorial-Simple-Charts.md). In order
+highest to lowest in a [column chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order
 to create it:
 
 1.  Select the + button in the right corner of your dashboard, and

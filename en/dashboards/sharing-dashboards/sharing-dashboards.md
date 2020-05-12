@@ -7,14 +7,14 @@ own sharing rights you can give other users and teams different [access permissi
 
 Below you will find the specifics of access permissions in the three available sharing scenarios:
 
-  - [sharing dashboards created by you with other  users](#sharing-dashboards-users),
+  - [sharing dashboards created by you with other users](#sharing-dashboards-users),
 
-  - [sharing your team’s dashboards with other users](#sharing-team-dashboard),
+  - [sharing your team's dashboards with other users](#sharing-team-dashboard),
 
   - [sharing a dashboard with a whole team](#sharing-dashboard-with-team).
 
->[NOTE!]
->**Sharing Folders**. Rules for dashboards sharing in this article also apply to sharing folders.
+> [!NOTE]
+> **Sharing Folders**. Rules for dashboards sharing in this article also apply to sharing folders.
 
 <a name='sharing-dashboards-users'></a>
 ### Sharing Your Own Dashboards with Other Users
@@ -51,28 +51,26 @@ the Share menu. You will see a list of all users you have shared the
 dashboard with and their access level. You can change their access level
 by selecting a new one from the dropdown menu next to their name.
 
->[NOTE!]
->Names of users, who have still not accepted the shared dashboard, will
-appear greyed out in the list. You cannot change their access level
-before they accept the dashboard.
+> [!NOTE]
+> Names of users, who have still not accepted the shared dashboard, will appear greyed out in the list. You cannot change their access level before they accept the dashboard.
 
 **You can also unshare any dashboard at any time** by accessing the
 Share dialog and selecting *Remove* from the dropdown menu next to any
-member’s name.
+member's name.
 
 ![Remove sharing button](images/remove-sharing.png)
 
 <a name='sharing-team-dashboard'></a>
-### Sharing a Team’s Dashboard with Other Users
+### Sharing a Team's Dashboard with Other Users
 
-Any member of a team can share the team’s dashboards with other users. To do this, go to the *Teams* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
+Any member of a team can share the team's dashboards with other users. To do this, go to the *Teams* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
 
-The main difference between sharing a team’s dashboard and a dashboard created by you is the [access permissions](#access-permissions) you can
+The main difference between sharing a team's dashboard and a dashboard created by you is the [access permissions](#access-permissions) you can
 give to the users you share the dashboard with. Depending on your role in the team you can have one, two or all the access permissions options available to choose from.
 
 Your role in the team can be:
 
-  - **Owner** - have full access to the team’s dashboards, including
+  - **Owner** - have full access to the team's dashboards, including
     editing, sharing and deleting them.
 
   - **Contributor** - can create, edit and share dashboards and folders
@@ -82,15 +80,26 @@ Your role in the team can be:
 
 Here you can see the access permissions options every team member can give when sharing a dashboard:
 
-<table>
-  <tr>
-    <th rowspan="2">Team Roles</th>
-    <th colspan="3">Access Permissions</th>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-t96r{color:rgb(88, 88, 88);font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-oav7{color:rgb(88, 88, 88);font-weight:bold;text-align:center;vertical-align:middle}
+</style>
+
+<table class="tg">
+ <tr>
+    <th class="tg-oav7" rowspan="2">Team Roles</th>
+    <th class="tg-t96r" colspan="3">Access Permissions</th>
   </tr>
   <tr>
-    <td>Owner</td>
-    <td>Modify</td>
-    <td>Viewer</td>
+    <td class="tg-baqh">Owner</td>
+    <td class="tg-baqh">Modify</td>
+    <td class="tg-baqh">Viewer</td>
   </tr>
   <tr>
     <td>Owner</td>
@@ -116,17 +125,17 @@ Here you can see the access permissions options every team member can give when 
 <a name='sharing-dashboard-with-team'></a>
 ### Sharing a Dashboard with a Whole Team
 
-You can share a dashboard you created or a team’s dashboard with a whole
+You can share a dashboard you created or a team's dashboard with a whole
 team instead of individually with every team member. To do this, choose
 a dashboard from the *Dashboards* section in *My Stuff* or *Teams* tab.
 Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing-dashboards-users).
 
->[NOTE!]
+>[!NOTE]
 >You can share a dashboard with any public team that [belongs to your main Organization](creating-joining-teams.html#organization), whether you are a member of it or not. You can also share with private teams that you are a member of.
 
 When setting access permissions for the whole team, you must take into
 account that individual members will get only the highest permissions
-they have for the team’s dashboards.
+they have for the team's dashboards.
 
 For example, if you give Owner permissions to the team, Viewers in this
 team will have only Viewer permissions, Contributors will get as high as
@@ -160,7 +169,7 @@ every team member get depending on their role in the team:
     <td class="tg-c3ow">Viewer</td>
   </tr>
   <tr>
-    <td class="tg-aktf" colspan="3">Max Level Permissions Received by a Member</td>
+    <td class="tg-7btt" style="text-align: center !important" colspan="3">Max Level Permissions Received by a Member</td>
   </tr>
   <tr>
     <td class="tg-0pky">Owner</td>
@@ -182,7 +191,7 @@ every team member get depending on their role in the team:
   </tr>
 </table>
 
->[NOTE!]
+>[!NOTE]
 >**Giving Exclusive Access to a Team Member**. If you want to give a member of a team higher access level to the dashboard than its membership role allows, add their email individually to the list of invitations and set the access permissions you want them to have.
 
 ### See Also

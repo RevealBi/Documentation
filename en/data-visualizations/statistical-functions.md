@@ -21,7 +21,7 @@ you need to:
 
 ![Statistical functions icon](images/statistical-functions-enable-icon.png)
 
->[NOTE!] **Enabling/Disabling Functions**.
+>[!NOTE] **Enabling/Disabling Functions**.
 >You can have only one of the three functions enabled for a visualization at the same time. Click the enabled function again to turn it off or select another function from the list to switch to.
 
 ### Statistical Functions Types
@@ -71,12 +71,11 @@ To achieve the forecast shown above, perform the following steps:
         significantly in April. This tendency will repeat the next year.
         That means the season length for this example is 12 months.
 
-        >[NOTE!]
+        >[!NOTE]
         **Minimum data available for the Time series function**.
         >Your visualization must contain a minimum of two seasons of  data, otherwise you won't be able to use the Time series function. This means that if your season length is 12 months, you should have data for at least 24 months, if it is 6 months -  data for at least 12, etc.
 
-
-      * **Periods to Forecast** - select **the number of days, months or years**, for which you want your data predicted. The time unit for the periods is determined based on whether your *Date* field is measured in days, month or years.
+    * **Periods to Forecast** - select **the number of days, months or years**, for which you want your data predicted. The time unit for the periods is determined based on whether your *Date* field is measured in days, month or years.
 
 The forecast is visualized by a line and a shaded area around it. The
 line displays the prediction and the **shaded area** shows the range in
@@ -88,7 +87,7 @@ values are highlighted in yellow (see below).
 
 ![Underlying data in table format with highlighted forecasted data](images/underlying-data-time-series.png)
 
->[NOTE!]
+>[!NOTE]
 **Time series function available only for charts over time**
 >If your visualization does not contain a *Date* field, you will receive an error when you try using the Time series function.
 

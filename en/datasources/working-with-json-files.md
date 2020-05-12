@@ -1,4 +1,4 @@
-## Working with JSON Files
+## Working With JSON Files
 
 The JSON format is fully supported in Reveal as your visualizations can
 consume data from any JSON file.

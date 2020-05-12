@@ -5,9 +5,9 @@ When you first install and open the application, you will be presented with the 
 ![Log in screen](images/log-in-screen.png)
 
 In Reveal, you can use your Office 365 or Google account credentials to
-log in. You can also create an Infragistics user account. You’ll only
+log in. You can also create an Infragistics user account. You'll only
 need to sign in once to automatically be logged in to the application,
-so there’s no need to remember multiple passwords.
+so there's no need to remember multiple passwords.
 
 ### Permissions Requests for Office 365 and Google Accounts
 
@@ -19,4 +19,4 @@ profile and maintain access to it.
 
 If you use your **Google** account to sign in, you will only have to type in your account credentials.
 
-Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](data-sources.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive.md](OneDrive) and [Google Drive](Google-Drive.md).
+Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/index.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/OneDrive.md) and [Google Drive](~/en/datasources/Google-Drive.md).

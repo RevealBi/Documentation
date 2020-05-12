@@ -21,7 +21,7 @@ This will prompt the *New Visualization* dialog. In order to proceed, choose whe
 
   - a visualization using a data source, or
 
-  - a simple [text box](text-box.md).
+  - a simple [text box](~/en/data-visualizations/text-box.md).
 
 ![New visualization dialog](images/new-visualization-dialog.png)
 
@@ -42,12 +42,12 @@ your visualization.
 #### Available Content
 
 With Reveal, you can add many content sources, including
-[Dropbox](Dropbox.md), [OneDrive](OneDrive.md), [Box](Box.md) and [Google Drive](Google-Drive.md), which will allow you to browse any folders, files
+[Dropbox](~/en/datasources/Dropbox.md), [OneDrive](~/en/datasources/OneDrive.md), [Box](~/en/datasources/Box.md) and [Google Drive](~/en/datasources/Google-Drive.md), which will allow you to browse any folders, files
 or spreadsheets available in them.
 
 ![available content in OneDrive datasource account](images/available-content-onedrive.png)
 
-In addition, you can also add [SharePoint](SharePoint.md) data sources,
+In addition, you can also add [SharePoint](~/en/datasources/SharePoint.md) data sources,
 which means the ability to access any lists or libraries.
 
 ![available content in SharePoint datasource account](images/available-content-sharepoint.png)
@@ -64,7 +64,7 @@ Reveal provides several options to customize the way your information is visuali
 ![editing visualizations types in editor](images/editing-visualizations-in-editor.png)
 
 Add labels and values to your visualization and preview them in the
-right-hand pane. If necessary, you can change your visualization’s
+right-hand pane. If necessary, you can change your visualization's
 settings or add filters to it.
 
 ![editing visualization fields preview](images/editing-visualization-fields-preview.png)
@@ -90,7 +90,7 @@ Once your dashboard is ready, save it by either selecting the **tick icon** in t
 option in the overflow menu.
 
 You can save your dashboard in your personal repository, or choose any
-team repositories you have [joined or created](Creating-Joining-Teams.md).
+team repositories you have [joined or created](~/en/teams/Creating-Joining-Teams.md).
 Select a name for your dashboard, and, when ready, click/tap **Save here**.
 
 ![save as menu](images/save-as-menu.png)

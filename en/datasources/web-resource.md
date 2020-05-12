@@ -40,4 +40,4 @@ account is reaching the data source or not by selecting **Test
 Connection**.
 
 To set up an *OAuth 2 / OIDC account* for a protected web resource,
-please read [this topic](OAuth-2-OIDC-User-Authentication.md).
+please read [this topic](oauth-2-oidc-user-authentication.md).

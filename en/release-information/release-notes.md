@@ -16,7 +16,28 @@ here.
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="5">1.0.6</td>
+    <td class="tg-0lax" rowspan="5">1.0.8</td>
+    <td class="tg-cly1"><span style="font-style:italic">New TreeMap visualization</span><br>You can use this new visualization type to present large hierarchies with a set of nested rectangles. Rectangles' size will show you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations between similar data.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">Export to Excel enhancements</span>e<br>You can include more visualization types in your spreadsheets upon export. Scatter, Bubble and Sparkline charts are now available.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:italic">Various UI/UX improvements</span><br>Various minor changes were added to improve user experience in the Visualization, Dashboard, New Data Source dialog, etc.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:italic">Added support for Shared Drives in Google Drive</span><br>If you have a GSuite Business account, you can now access your Shared Drives data and use it to build visualizations in Reveal.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-style:italic">Improved Google Authentication process</span><br>Reveal Desktop will now open your system (default) browser to provide you with maximum security when accessing your Google account.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="5">1.0.7</td>
     <td class="tg-cly1"><span style="font-style:italic">New integration with BigQuery Machine Learning models</span><br>You can use your BigQuery machine learning models with your BigQuery data source connection in Reveal.</td>
   </tr>
   <tr>

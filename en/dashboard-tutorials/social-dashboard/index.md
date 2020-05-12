@@ -20,33 +20,33 @@ This dashboard contains information on a sample company's:
 
 You can download the sample datasheet
 [here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
-All other dashboards [in these tutorials](dashboard-tutorials.md) will use
+All other dashboards [in these tutorials](~/en/dashboard-tutorials/index.md) will use
 the same sample spreadsheet.
 
->[NOTE!]
+>[!NOTE]
 Excel files as local files are not supported in this release. In order
 to follow these tutorials, make sure you upload the file to one of the
-[supported cloud services](data-sources.md).
+[supported cloud services](~/en/datasources/data-sources.md).
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](Social-Starting-Creation-Process.md)
+1.  [Creating the Dashboard and Adding a Data Source](social-starting-creation-process.md)
 
-2.  [Creating the First Visualization](Social-Selecting-Data-Visualization.md)
+2.  [Creating the First Visualization](social-selecting-data-visualization.md)
 
-3.  [Creating the Dashboard Filter and Connecting your Visualization](Social-Creating-Dashboard-Filter-Connecting-Visualization.md)
+3.  [Creating the Dashboard Filter and Connecting your Visualization](social-creating-dashboard-filter-connecting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](Social-Applying-Theme.md)
+4.  [Applying a Theme to the Dashboard](social-applying-theme.md)
 
-5.  [Adding the other visualizations](Social-Adding-Other-Visualizations.md)
+5.  [Adding the other visualizations](social-adding-other-visualizations.md)
     ([Followers](social-adding-other-visualizations.html#followers), [YTD Facebook Followers](social-adding-other-visualizations#ytd-facebook-followers),
     [Monthly Facebook Likes](social-adding-other-visualizations.html#monthly-facebook-likes),
     [Retweets & Favorites](social-adding-other-visualizations.html#retweets-favorites),
     [Facebook Reach vs. Impressions](social-adding-other-visualizations.html#facebook-reach-impressions),
     [Monthly Twitter Mentions](social-adding-other-visualizations.html#monthly-twitter-mentions))
 
-6.  [Saving your Dashboard](Social-Saving-Dashboard.md)
+6.  [Saving your Dashboard](social-saving-dashboard.md)
 
 
-[Get Started »](Social-Starting-Creation-Process.md)
+[Get Started »](social-starting-creation-process.md)
 

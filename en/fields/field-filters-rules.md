@@ -118,7 +118,7 @@ entered in a textbox in the same position.
 
 You can also **filter fields dropped into the Values placeholder of the
 data editor**, which might have a different
-[aggregation](Field-Settings.html#numeric-fields) than those in the list of
+[aggregation](field-settings.html#numeric-fields) than those in the list of
 fields.
 
 ![DataFiltersFilteringDataEditor\_All](images/DataFiltersFilteringDataEditor_All.png)

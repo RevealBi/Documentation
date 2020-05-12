@@ -19,13 +19,13 @@ You can also set the first column to be in a fixed position by checking
 the *Fix First Column* option under **Settings**. This is particularly
 useful whe working with many columns.
 
->[NOTE!]
+>[!NOTE]
 >The grid view is suitable in a dashboard when the number of rows and columns is less than 10. When you're dealing with small amounts of data, the preferred approach may be to "just show the numbers".
 
 ### Column Sorting in Dashboard View Mode
 
 The grid view allows you to change the sorting of your columns
-(ascending or descending) in [Dashboard View mode](overview-dashboards.html#view-edit-mode) . You can do so by selecting the
+(ascending or descending) in [Dashboard View mode](~/en/dashboards/index.html#view-edit-mode) . You can do so by selecting the
 arrows icon next to the column name.
 
 ![Grid View Sorting Columns Options](images/grid-view-sorting-columns-options.png)

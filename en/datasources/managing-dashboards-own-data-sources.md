@@ -1,4 +1,4 @@
-## Managing Dashboards with their own Data Sources
+## Managing Dashboards With Their Own Data Sources
 
 With Reveal, you might receive a dashboard with data sources you have
 not yet added into your application. For example, let's take a look at

@@ -58,7 +58,7 @@ Here you can:
 
   - select the alignment of the text (next to *Text Size*).
 
->[NOTE!]
+>[!NOTE]
 >**Formatting Restrictions**
 >You can choose *Text Size* and alignment only for your body text. If you have a title, it will keep its default size and left alignment.
 

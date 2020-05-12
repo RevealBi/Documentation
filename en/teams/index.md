@@ -6,11 +6,11 @@ dashboards with sensitive information.
 
 With Teams in Reveal, you can:
 
-  - Organize your group’s work in a **team’s dashboards** section -
+  - Organize your group's work in a **team's dashboards** section -
     create and share dashboards directly with other members, view and
     edit their dashboards.
 
-  - [**Share**](sharing-dashboards.md) your team’s dashboards with other teams and users in Reveal.
+  - [**Share**](~/en/sharing-dashboards/sharing-dashboards.md) your team's dashboards with other teams and users in Reveal.
 
   - Assign every team member to one of [**three members' roles**](#members-roles-permissions) with distinct access level to safeguard dashboards with sensitive information.
 
@@ -33,7 +33,7 @@ You will find a list of your teams under *My Stuff* in the popover menu.
 
 Reveal creates the Organization repository automatically when a member
 of your organization logs in for the first time with Office365. Members
-need to log in with their organization’s email to be associated with an
+need to log in with their organization's email to be associated with an
 organization and added to the Organization repository.
 
 You will find the Organization team in the teams' list under *My Stuff*.
@@ -41,7 +41,7 @@ This team is named after your organization.
 
 Unlike other teams, only [Owners](#members-roles-permissions) can create
 and add dashboards to the Organization repository. Only key members in
-your organization will be given the owner’s role. This limitation
+your organization will be given the owner's role. This limitation
 ensures that dashboards in the Organization team contain accurate and
 trustworthy data.
 
@@ -54,7 +54,7 @@ have:
   - **Public**: any member of your main Organization team can search and
     join your team.
 
-  - **Private**: your team won’t be found in search results. Users can
+  - **Private**: your team won't be found in search results. Users can
     only join it if they get invitations.
 
 <a name='members-roles-permissions'></a>
@@ -84,17 +84,17 @@ time, all new users that sign in will be added as members, not owners.
 The following table shows the different permissions of members in the
 Org team:
 
-| PERMISSION                                                      | Owner | Member | Viewer |
-| --------------------------------------------------------------- | ----- | ------ | ------ |
-| Can view **dashboards**                                         | Yes   | Yes    | Yes    |
-| Can create **dashboards** in the Org repository                 | Yes   | No     | No     |
-| Can share **dashboards** outside the Org with edit permissions  | Yes   | No     | No     |
-| Can share **dashboards** outside the Org with view permissions  | Yes   | Yes    | Yes    |
-| Can manage **members** in the Organization repository           | Yes   | No     | No     |
-| Can invite **members** to the Org                               | Yes   | No     | No     |
-| Can join **public teams** as a member                           | Yes   | Yes    | Yes    |
-| Can view **private teams**                                      | No    | No     | No     |
-| Can create their own public or private team in the organization | Yes   | Yes    | No     |
+| PERMISSION                                                      | Owner                                   | Member                                  | Viewer                                  |
+| --------------------------------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
+| Can view **dashboards**                                         | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can create **dashboards** in the Org repository                 | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can share **dashboards** outside the Org with edit permissions  | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can share **dashboards** outside the Org with view permissions  | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can manage **members** in the Organization repository           | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can invite **members** to the Org                               | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can join **public teams** as a member                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can view **private teams**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can create their own public or private team in the organization | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
 
 #### Teams - Assigning Members' Roles and Permissions
 
@@ -105,16 +105,16 @@ their team and assigns their roles.
 The table below shows what permissions members of teams different from
 the Organization team have.
 
-| PERMISSION                                                      | Owner | Member | Viewer |
-| --------------------------------------------------------------- | ----- | ------ | ------ |
-| Can view **dashboards**                                         | Yes   | Yes    | Yes    |
-| Can create **dashboards** in the team                           | Yes   | Yes    | No     |
-| Can share **dashboards** outside the team with edit permissions | Yes   | Yes    | No     |
-| Can share **dashboards** outside the team with view permissions | Yes   | Yes    | Yes    |
-| Can manage team **members**                                     | Yes   | No     | No     |
-| Can invite **members** to the team                              | Yes   | No     | No     |
-| Can join **public teams** as a member                           | Yes   | Yes    | Yes    |
-| Can view **private teams**                                      | No    | No     | No     |
+| PERMISSION                                                      | Owner                                   | Member                                  | Viewer                                  |
+| --------------------------------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
+| Can view **dashboards**                                         | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can create **dashboards** in the team                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
+| Can share **dashboards** outside the team with edit permissions | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
+| Can share **dashboards** outside the team with view permissions | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can manage team **members**                                     | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can invite **members** to the team                              | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can join **public teams** as a member                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can view **private teams**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
 
 If you want to know more about managing teams' and Organization
-repository’s properties and members, please read the [Managing Teams](managing-your-team.md) topic.
+repository's properties and members, please read the [Managing Teams](managing-your-team.md) topic.

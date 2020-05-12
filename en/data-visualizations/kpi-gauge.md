@@ -6,7 +6,7 @@ depending on the specific needs of the viewer, but they always provide
 information over metrics important for the organization, such as the
 progress towards goals and over-time trends.
 
-Similarly to the [Text Gauge](Gauge-Views.html#text-gauge), the KPI gauge
+Similarly to the [Text Gauge](gauge-views.html#text-gauge), the KPI gauge
 displays the Value column in a large font. However, the value in the KPI
 is also evaluated against the same value for a previous time period.
 
@@ -19,7 +19,7 @@ Category.
 
 ### Indicator Settings
 
-The KPI gauge has similar settings to the [sparkline](Sparkline-Charts.md)
+The KPI gauge has similar settings to the [sparkline](sparkline-charts.md)
 visualization, through which you can configure:
 
 ![Advanced Settings KPI Gauge](images/advanced-settings-kpi-gauge.png)

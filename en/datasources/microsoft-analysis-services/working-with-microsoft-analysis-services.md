@@ -98,6 +98,6 @@ this product as a filter value).
 
 For more information on how to work with filters, please refer to:
 
-  - [Dashboard Filters and Their Properties](dashboard-filters-properties.md)
+  - [Dashboard Filters and Their Properties](~/en/filters/dashboard-filters-properties.md)
 
-  - [Connecting Dashboard Filters to a Visualization](connecting-dashboard-filters-visualization.md)
+  - [Connecting Dashboard Filters to a Visualization](c~/en/filters/connecting-dashboard-filters-visualization.md)

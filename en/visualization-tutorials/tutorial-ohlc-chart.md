@@ -29,7 +29,7 @@ a sample spreadsheet.
 
 Access the links below for the OHLC chart view walkthroughs:
 
-  - [How to create an OHLC chart](#creating-OHLC-chart)
+  - [How to create an OHLC chart](#creating-ohlc-chart)
 
   - [How to change your axis configuration](#changing-axis-configuration)
 
@@ -72,8 +72,8 @@ chart:
 For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
->[NOTE!]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](Web-Resource.md).
+>[!NOTE]
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
 
 <a name='create-ohlc-chart'></a>
 ### Creating a OHLC Chart
@@ -91,7 +91,7 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 <a name='changing-axis-configuration'></a>
 ### Changing your Axis Configuration
 
-Like [gauge bounds](Tutorial-Gauge-Views.html#adding-bounds-gauge), chart axis
+Like [gauge bounds](tutorial-gauge-views.html#adding-bounds-gauge), chart axis
 configuration allows you to set the lowest and highest values in your
 chart. You can use this feature to include or exclude specific data.
 

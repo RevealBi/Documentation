@@ -99,7 +99,7 @@ working with large datasets
 For both pre-calculated and post-calculated fields, you can use one of
 the available functions within Reveal:
 
-  - [**Aggregation**](Aggregation-Calculated-Fields.md):
+  - [**Aggregation**](aggregation-calculated-fields.md):
     [AVERAGE](aggregation-calculated-fields.html#average),
     [AVERAGEIF](aggregation-calculated-fields.html#averageif),
     [COUNT](aggregation-calculated-fields.html#count),
@@ -109,7 +109,7 @@ the available functions within Reveal:
     [MIN](aggregation-calculated-fields.html#min),
     [MINIF](aggregation-calculated-fields.html#minif).
 
-  - [**Date**](Date-Calculated-Fields.md):
+  - [**Date**](date-calculated-fields.md):
     [DATE](date-calculated-fields.html#date-date),
     [DATEVALUE](date-calculated-fields.html#datevalue),
     [DAY](date-calculated-fields.html#day),
@@ -131,11 +131,11 @@ the available functions within Reveal:
     [WEEKNUM](date-calculated-fields.html#weeknum),
     [YEAR](date-calculated-fields.html#year).
 
-  - [**Information**](Information-Calculated-Fields.md):
+  - [**Information**](information-calculated-fields.md):
     [EMPTY](information-calculated-fields#empty),
     [ISEMPTY](information-calculated-fields.html#isempty).
 
-  - [**Logic**](Logic-Calculated-Fields.md):
+  - [**Logic**](logic-calculated-fields.md):
     [AND](logic-calculated-fields.html#and),
     [FALSE](logic-calculated-fields.html#false),
     [IF](logic-calculated-fields.html#if),
@@ -143,11 +143,11 @@ the available functions within Reveal:
     [OR](logic-calculated-fields.html#or),
     [TRUE](logic-calculated-fields.html#true).
 
-  - [**Lookup & Reference**](Lookup-Reference-Calculated-Fields.md):
+  - [**Lookup & Reference**](lookup-reference-calculated-fields.md):
     [PREVIOUS](lookup-reference-calculated-fields.html#previous),
     [ROW](lookup-reference-calculated-fields.html#row).
 
-  - [**Math**](Math-Calculated-Fields.md):
+  - [**Math**](math-calculated-fields.md):
     [ABS](math-calculated-fields.html#abs),
     [EXP](math-calculated-fields.html#exp),
     [LOG](math-calculated-fields.html#log),
@@ -159,7 +159,7 @@ the available functions within Reveal:
     [SQRT](math-calculated-fields.html#sqrt),
     [TRUNC](math-calculated-fields.html#trunc).
 
-  - [**String**](String-Calculated-Fields.md):
+  - [**String**](string-calculated-fields.md):
     [CONCATENATE](string-calculated-fields.html#concatenate),
     [FIND](string-calculated-fields.html#find),
     [LEN](string-calculated-fields.html#len),
@@ -170,7 +170,7 @@ the available functions within Reveal:
     [TRIM](string-calculated-fields.html#trim),
     [UPPER](string-calculated-fields.html#upper).
 
->[NOTE!] **Limitations to IF Conditions**.
+>[!NOTE] **Limitations to IF Conditions**.
 >IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
 
 <a name='without-predefined-functions'></a>

@@ -56,8 +56,8 @@ In the dialog above, you will need to configure:
 
 ### Parameters Binding
 
-For data sources with parameters ([REST](REST-API.md), [OData](OData-Feed.md)
-and Stored Procedures in [MS SQL Server](Microsoft-SQL-Server.md)) you
+For data sources with parameters ([REST](rest-api.md), [OData](odata-feed.md)
+and Stored Procedures in [MS SQL Server](microsoft-sql-server.md)) you
 might need to connect the dashboard filter to a parameter, so when you
 change the filter data for the visualization, it will be refreshed with
 the selected value in the connected parameter.
@@ -69,5 +69,5 @@ parameters at the bottom of the *Vizualization*'s drop-down list in the
 
 ![parameters binding list](images/parameters-binding_All.png)
 
->[NOTE!] **Date Filters**
+>[!NOTE] **Date Filters**
 >You can bind only dashboard filters to parameters. Date filter binding to parameters is not supported.

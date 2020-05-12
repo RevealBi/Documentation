@@ -4,7 +4,7 @@ Reveal allows you to export the data used for your dashboards to the
 **Excel format**. Data for every visualization in your dashboard will be
 on a separate sheet in the excel file.
 
->[NOTE!]
+>[!NOTE]
 > **Export to Excel limitations**. You can export to Excel only **dashboards using table data**, i.e. data sources organizing information into rows and columns (spreadsheets, CSV files, databases). If your dashboard uses images, html, etc. to visualize data, Reveal will not be able to export the information to the Excel format.
 
 To export a dashboard as an Excel spreadsheet, go to *Dashboard View*
@@ -30,7 +30,7 @@ The *Include Visualization* setting gives you the following options:
   - **Don't Include** - include only the visualizations' data in the
     Excel sheets.
 
->[NOTE!]
-> **Supported visualizations**. The following chart visualizations can be **directly included** in the Excel sheets: Column, Line, Bar,Area, StackedColumn, StackedArea, StackedBar, Pie,Doughnut, Funnel, Composite. The following visualizations are **converted** to similar types before being included in the Excel sheet:
->  - Spline and StepLine ⇒ Line;
->  - SplineArea and StepArea ⇒ Area.
+>[!NOTE]
+> **Supported visualizations**. The following chart visualizations can be **directly included** in the Excel sheets: Column, Line, Bar, Area, StackedColumn, StackedArea, StackedBar, Pie, Doughnut, Funnel, Composite, Scatter, Bubble, Sparklines. 
+
+> The following visualizations are **converted** to similar types before being included in the Excel sheet: Spline and StepLine ⇒ Line; SplineArea and StepArea ⇒ Area.

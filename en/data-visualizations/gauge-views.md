@@ -4,8 +4,8 @@
 The Gauge View displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
 formatting of the different ranges. There are four different flavors:
-[Linear](#linear-gauge.md), [Circular](#circular-gauge.md),
-[Text](#text-gauge.md), [KPI](KPI-Gauge.md) and [Bullet Graph](#bullet-graph.md)
+[Linear](linear-gauge.md), [Circular](circular-gauge.md),
+[Text](text-gauge.md), [KPI](kpi-gauge.md) and [Bullet Graph](bullet-graph.md)
 gauges.
 
 <a name='linear-gauge'></a>
