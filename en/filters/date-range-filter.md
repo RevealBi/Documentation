@@ -9,7 +9,7 @@ date range in the dashboard filters section, you will need to select the
 ![Add filter dropdown menu for a visualization](images/add-new-dashboard-filter.png)
 
 Once the date dashboard filter is enabled, it becomes available for use
-in [visualization binding](Connecting-Dashboard-Filters-Visualization.md)
+in [visualization binding](connecting-dashboard-filters-visualization.md)
 expressions.
 
 ![Filter Date Range dialog](images/dashboard-filter-date-range-menu.png)

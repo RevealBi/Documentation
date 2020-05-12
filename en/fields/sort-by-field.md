@@ -18,7 +18,7 @@ that showcase this functionality:
 ### Ordering String Dates in Chronological Order
 
 Let's take a look at the following visualization, where we have plotted
-the cash and accounts receivable influxes for a company in a [stacked column chart](tutorial-stacked-charts.html#create-stacked-chart).
+the cash and accounts receivable influxes for a company in a [stacked column chart](~/en/visualization-tutorials/tutorial-stacked-charts.html#create-stacked-chart).
 
 ![SortByFieldSalesInformation\_All](images/SortByFieldSalesInformation_All.png)
 
@@ -46,7 +46,7 @@ in chronological order.
 A different scenario, for example, would be to order a field based on a
 custom business logic in your spreadsheet. For example, the following is
 another visualization which displays the Revenue forecast for six
-companies in a [spline area chart](tutorial-simple-charts.html#create-basic-chart).
+companies in a [spline area chart](~/en/visualization-tutorials/tutorial-simple-charts.html#create-basic-chart).
 
 ![RevenueCompanyFilterSample\_All](images/RevenueCompanyFilterSample_All.png)
 

@@ -12,16 +12,16 @@ aspects, and summarize information in many useful ways.
 
 There are several field settings and filtering options:
 
-  - Settings for [date](Field-Settings.html#date-fields),
-    [numeric](Field-Settings.html#numeric-fields), and
-    [string](Field-Settings.html#abc-fields) fields, including label
-    renaming, aggregation, sorting, formatting, and [conditional formatting](Conditional-Formatting.md).
+  - Settings for [date](field-settings.html#date-fields),
+    [numeric](field-settings.html#numeric-fields), and
+    [string](field-settings.html#abc-fields) fields, including label
+    renaming, aggregation, sorting, formatting, and [conditional formatting](conditional-formatting.md).
 
-  - Filters for [empty values](Field-Filters-Rules.html#empty-values).
+  - Filters for [empty values](field-filters-rules.html#empty-values).
 
-  - Filters to [select specific values](Field-Filters-Rules.html#select-values).
+  - Filters to [select specific values](field-filters-rules.html#select-values).
 
-  - Filters by [Rule](Field-Filters-Rules.html#rules).
+  - Filters by [Rule](field-filters-rules.html#rules).
 
-Field settings and rules are accessible through the [visualizations editor](Visualizations-Editor.md), which is displayed automatically when a
+Field settings and rules are accessible through the [visualizations editor](visualizations-editor.md), which is displayed automatically when a
 dataset is added to the dashboard canvas.

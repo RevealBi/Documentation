@@ -24,6 +24,10 @@ Learn how to use Reveal with our easy, step-by-step
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
+<colgroup>
+<col style="width: 70%" />
+<col style="width: 30%" />
+</colgroup>
   <tr>
     <th class="tg-0pky"><img src="images/dataSourcesHomePage_All.png" alt="Adding a data source dialog" width="400" height="300"></th>
     <th class="tg-0pky"><a href="~/en/datasources/index.md">Securely connect to your data</a>: Connect to the most popular data sources without setting anything up on the server. Get real-time insights by connecting directly to <a href="~/en/datasources/sharepoint.md">SharePoint Online</a>, <a href="~/en/datasources/google-drive.md">Google Drive</a>, <a href="~/en/datasources/onedrive.md">OneDrive</a>, <a href="~/en/datasources/microsoft-analysis-services.md">Microsoft Analysis Services</a>, <a href="~/en/datasources/microsoft-sql-server.md">Microsoft SQL Server</a>, <a href="~/en/datasources/microsoft-dynamics-crm.md">CRM</a>, and many more.</th>

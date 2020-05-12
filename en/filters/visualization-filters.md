@@ -22,7 +22,7 @@ it under the visualization's title.
 
 ![VisualizationFilterLocation\_All](images/visualization-filter-location.png)
 
-As with [Dashboard Filters](Dashboard-Filters.md), this enables a dynamic
+As with [Dashboard Filters](dashboard-filters.md), this enables a dynamic
 filtering of the visualization contents as the quick filter selection
 changes.
 

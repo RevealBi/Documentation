@@ -29,22 +29,22 @@ the same sample spreadsheet.
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](Manufacturing-Starting-Creation-Process.md)
+1.  [Creating the Dashboard and Adding a Data Source](manufacturing-starting-creation-process.md)
 
-2.  [Selecting the Fields and Visualization for the First Visualization](Manufacturing-Selecting-Data-Visualization.md)
+2.  [Selecting the Fields and Visualization for the First Visualization](manufacturing-selecting-data-visualization.md)
 
-3.  [Applying Formatting to the First Visualization](Manufacturing-Applying-Formatting-Visualization.md)
+3.  [Applying Formatting to the First Visualization](manufacturing-applying-formatting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](Manufacturing-Applying-Theme)
+4.  [Applying a Theme to the Dashboard](manufacturing-applying-theme.md)
 
-5.  [Adding the other Visualizations](Manufacturing-Adding-Other-Visualizations.md)
-    ([Production](Manufacturing-Adding-Other-Visualizations.html#production),
-    [Shipping](Manufacturing-Adding-Other-Visualizations.html#shipping),
-    [Average Hours](Manufacturing-Adding-Other-Visualizations.html#average-hours),
-    [Headcount](Manufacturing-Adding-Other-Visualizations.html#headcount),
-    [Labor Cost](Manufacturing-Adding-Other-Visualizations.html#labor-cost))
+5.  [Adding the other Visualizations](manufacturing-adding-other-visualizations.md)
+    ([Production](manufacturing-adding-other-visualizations.html#production),
+    [Shipping](manufacturing-adding-other-visualizations.html#shipping),
+    [Average Hours](manufacturing-adding-other-visualizations.html#average-hours),
+    [Headcount](manufacturing-adding-other-visualizations.html#headcount),
+    [Labor Cost](manufacturing-adding-other-visualizations.html#labor-cost))
 
-6.  [Saving your Dashboard](Manufacturing-Saving-Dashboard.md)
+6.  [Saving your Dashboard](manufacturing-saving-dashboard.md)
 
 <style>
 .previous {

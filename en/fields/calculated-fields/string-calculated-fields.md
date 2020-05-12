@@ -30,7 +30,7 @@ The functions included in the String category are:
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">concatenate("Getting started"," with"," the"," Reveal"," application")</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/string-calculated-fields#calc-fields-find">find</a>: <span class="gray-snippet-cstm">find</span> returns the starting position (<span class="gray-snippet-cstm">number</span>) of a first string of <span class="gray-snippet-cstm">text</span> in a second string if <span class="gray-snippet-cstm">text</span> as specified in your arguments.</td>
+    <td class="tg-cly1" rowspan="2"><a href="#calc-fields-find">find</a>: <span class="gray-snippet-cstm">find</span> returns the starting position (<span class="gray-snippet-cstm">number</span>) of a first string of <span class="gray-snippet-cstm">text</span> in a second string if <span class="gray-snippet-cstm">text</span> as specified in your arguments.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">find({find text},{within text},{start number})</span></td>
   </tr>
   <tr>
@@ -51,21 +51,21 @@ The functions included in the String category are:
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">lower("Getting Started with Reveal")</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/string-calculated-fields#calc-fields-mid">mid</a>: <span class="gray-snippet-cstm">mid</span> returns a substring (<span class="gray-snippet-cstm">length</span>) of the specified string of <span class="gray-snippet-cstm">text</span> according to what you configure in your arguments.</td>
+    <td class="tg-cly1" rowspan="2"><a href="#calc-fields-mid">mid</a>: <span class="gray-snippet-cstm">mid</span> returns a substring (<span class="gray-snippet-cstm">length</span>) of the specified string of <span class="gray-snippet-cstm">text</span> according to what you configure in your arguments.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">mid({text},{start},{length})</span></td>
   </tr>
   <tr>
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">mid("Getting Started with Reveal",9,12)</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/string-calculated-fields#calc-fields-replace">replace</a>: <span class="gray-snippet-cstm">replace</span> replaces a given string of <span class="gray-snippet-cstm">text</span> with a different <span class="gray-snippet-cstm">text</span> as specified in your arguments.</td>
+    <td class="tg-cly1" rowspan="2"><a href="#calc-fields-replace">replace</a>: <span class="gray-snippet-cstm">replace</span> replaces a given string of <span class="gray-snippet-cstm">text</span> with a different <span class="gray-snippet-cstm">text</span> as specified in your arguments.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">replace({text},{old text},{new text})</span></td>
   </tr>
   <tr>
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">replace("Getting Started with Reveal","Getting Started","Creating Visualizations with")</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="4"><a href="https://www.revealbi.io/help/string-calculated-fields#calc-fields-sortinterval">sortinterval</a>: <span class="gray-snippet-cstm">sortinterval</span> returns a value in a(n) interval(s) according to what is configured in the arguments. The string is returned with format <span class="gray-snippet-cstm">NN [from,to]</span></td>
+    <td class="tg-cly1" rowspan="4"><a href="#calc-fields-sortinterval">sortinterval</a>: <span class="gray-snippet-cstm">sortinterval</span> returns a value in a(n) interval(s) according to what is configured in the arguments. The string is returned with format <span class="gray-snippet-cstm">NN [from,to]</span></td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">sortinterval()</span></td>
   </tr>
   <tr>

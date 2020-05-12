@@ -81,7 +81,7 @@ corner.
 Had the list of stocks been longer, you might not have been able to
 identify the highest value that easily. You can sort your values in
 ascending/descending order to help you out with bigger tables. The
-[Labor](manufacturing-adding-other-visualizations#labor-cost)
+[Labor](~/en/dashboard-tutorials/manufacturing-dashboard/manufacturing-adding-other-visualizations#labor-cost)
 visualization of the [Manufacturing Dashboard Tutorial](manufacturing-dashboard-tutorial.md) has instructions on how to
 apply it.
 

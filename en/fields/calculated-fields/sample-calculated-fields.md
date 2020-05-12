@@ -70,6 +70,6 @@ The "-1" is used to substract the total difference for the year.
 
 `([Revenue 2017]/[Revenue 2016])-1`
 
-You can then either keep the number, or [format it as a percentage](field-settings.html#numeric-fields).
+You can then either keep the number, or [format it as a percentage](~/en/fields/field-settings.html#numeric-fields).
 
 ![YoyAnalysisPercentage\_All](images/YoyAnalysisPercentage_All.png)

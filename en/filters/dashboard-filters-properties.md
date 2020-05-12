@@ -33,16 +33,16 @@ You will be able to change the following settings for the filter:
     <th class="tg-cly1">Title. The title for the dashboard filter, which will be displayed right under the dashboard title. By default, this is the name of the field that will be used as a filter.</th>
   </tr>
   <tr>
-    <td class="tg-cly1"><a href="https://www.revealbi.io/help/dashboard-filters-properties#DisplayedField">Displayed Field</a>. The field in your dataset, which will be used as a dashboard filter.</td>
+    <td class="tg-cly1"><a href="#displayed-field">Displayed Field</a>. The field in your dataset, which will be used as a dashboard filter.</td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Selection</span>. This setting allows you to configure: <a href="https://www.revealbi.io/help/dashboard-filters-properties#MultipleSelections">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="https://www.revealbi.io/help/dashboard-filters-properties#RequiredSelection">Required Selection</a> (at least one value must always be selected).</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Selection</span>. This setting allows you to configure: <a href="#multiple-selection">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="#required-selection">Required Selection</a> (at least one value must always be selected).</td>
   </tr>
   <tr>
-    <td class="tg-cly1"><a href="https://www.revealbi.io/help/dashboard-filters-properties#DataFilters">Data Filters</a>. This setting allows you to apply any <a href="https://www.revealbi.io/help/field-filters-rules">field filters and rules</a> to the data source used for the dashboard filter.</td>
+    <td class="tg-cly1"><a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#~/en/fields/field-filters-rules.md">field filters and rules</a> to the data source used for the dashboard filter.</td>
   </tr>
   <tr>
-    <td class="tg-cly1"><a href="https://www.revealbi.io/help/connecting-dashboard-filters-visualization">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.</td>
+    <td class="tg-cly1"><a href="connecting-dashboard-filters-visualization.md">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.</td>
   </tr>
 </table>
 
@@ -136,4 +136,4 @@ filter and have the dashboard filter show only the employees in the
 
 Now that you have already created your dashboard filter, you will need
 to **connect it to the visualizations** you want to apply filtering to.
-To learn more about this, please read [Connecting Dashboard Filters to a Visualization](Connecting-Dashboard-Filters-Visualization.md).
+To learn more about this, please read [Connecting Dashboard Filters to a Visualization](connecting-dashboard-filters-visualization.md).

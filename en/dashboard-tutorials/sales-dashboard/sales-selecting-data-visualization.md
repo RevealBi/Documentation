@@ -2,8 +2,8 @@
  
 
 Let's focus on creating the "Won Opportunities" visualization in the
-[sample dashboard](Sales-Dashboard-Tutorial.md) presented at the beginning
-of this tutorial. The visualization displays a [Text Gauge](Gauge-Views.html#text-gauge).
+[sample dashboard](sales-dashboard-tutorial.md) presented at the beginning
+of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizations/gauge-views.html#text-gauge).
 
 First, **open the visualizations picker** by selecting the grid icon in
 the top bar.

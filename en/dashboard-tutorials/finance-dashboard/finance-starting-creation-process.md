@@ -11,7 +11,7 @@ button in the top right-hand corner of the initial view, and select the
 After you select **Dashboard**, you will see the **New Visualization**
 screen pop up. Select the + sign in the top right corner, and then the
 data source in which you stored the the sample datasheet mentioned in
-[this section](Finance-Dashboard-Tutorial.html#sample-datasheet).
+[this section](finance-dashboard-tutorial.html#sample-datasheet).
 
 ![creatingnewvisualization\_all](images/creating-new-visualization.png)
 
@@ -20,8 +20,8 @@ data source in which you stored the the sample datasheet mentioned in
 
 ![Selecting Finance Sheet](images/Selecting-Finance-Sheet.png)
 
-After loading your data, the [Grid View](Grid-View.md) will be selected by
-default in the [Visualizations Editor](Visualizations-Editor.md).
+After loading your data, the [Grid View](grid-view.md) will be selected by
+default in the [Visualizations Editor](visualizations-editor.md).
 
 ![FinanceFirstVisualizationGrid\_All](images/FinanceFirstVisualizationGrid_All.png)
 

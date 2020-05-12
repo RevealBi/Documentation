@@ -49,13 +49,11 @@ disabled by default.
 
 Conditional formatting can be applied to the following visualizations:
 
-  - [Grid View](Grid-View.md)
+  - [Grid View](grid-view.md)
 
-  - [Pivot Table View](Pivot-Table.md)
+  - [Pivot Table View](pivot-table.md)
 
-  - [Text View](Text-View.md)
+  - [Text View](text-view.md)
 
 >[!NOTE]
->[KPI](KPI-Gauge.md), [Linear](Gauge-Views.hmtl#linear-gauge),
-[Circular](Gauge-Views.html#circular-gauge), [Text](Gauge-Views.html#text-gauge), and [Bullet Graph](Gauge-Views.html#bullet-graph) gauges support conditional
-formatting in the form of [**visualization band range configurations**](gauge-views.html#bands-configuration).
+>[KPI](kpi-gauge.md), [Linear](gauge-views.hmtl#linear-gauge), [Circular](gauge-views.html#circular-gauge), [Text](gauge-views.html#text-gauge), and [Bullet Graph](gauge-views.html#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](gauge-views.html#bands-configuration).

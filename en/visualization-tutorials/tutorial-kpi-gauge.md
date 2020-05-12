@@ -66,7 +66,7 @@ a given time period. To create them, you will need:
 For this tutorial, you will use the "KPI View" sheet in the [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
 >[!NOTE]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](Web-Resource.md).
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
 
 <a name='creating-kpi-gauge'></a>
 ### Creating a KPI Gauge

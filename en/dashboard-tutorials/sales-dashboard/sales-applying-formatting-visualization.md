@@ -27,7 +27,7 @@ Then, select **Update Field**.
 In the sample dashboard, there is a red arrow indicator in the **Won
 Opportunities** visualization which is meant to represent that there has
 been a decrease in the amount of won opportunities. This marker is
-created through the [band configurations](Gauge-Views.html#bands-configuration) in the gauge's
+created through the [band configurations](~/en/data-visualizations/gauge-views.html#bands-configuration) in the gauge's
 settings.
 
 ![SalesWonOpportunitiesConditionalFormattingMarker\_All](images/SalesWonOpportunitiesConditionalFormattingMarker_All.png)

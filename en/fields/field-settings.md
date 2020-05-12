@@ -82,7 +82,7 @@ options:
   - **1000 Separator**: configure whether or not to display the
     thousands separator.
 
-  - [**Conditional Formatting**](Conditional-Formatting): when enabled,
+  - [**Conditional Formatting**](conditional-formatting.md): when enabled,
     this allows you to provide different formats to each of your cells
     depending on their values. For instance, values in the lower 50%
     range of a field can be colored with a red adorner to signal a
@@ -94,7 +94,7 @@ options:
 <a name='abc-fields'></a>
 ### String Fields
 
-![String-Field-Formatting](images/String-Field-Formatting.png)
+![String-Field-Formatting](images/string-field-formatting.png)
 
   - **Label renaming**: rename your fields for display purposes only.
     Fields are always referenced by their original name in calculated

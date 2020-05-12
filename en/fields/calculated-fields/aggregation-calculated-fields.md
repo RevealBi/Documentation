@@ -29,11 +29,7 @@ The functions included in the aggregation category are:
 .tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 478px">
-<colgroup>
-<col style="width: 208px">
-<col style="width: 270px">
-</colgroup>
+<table class="tg" style="undefined;table-layout: fixed">
   <tr>
     <th class="tg-cly1"><span style="font-weight:bold">Function Name and Description</span></th>
     <th class="tg-cly1"><span style="font-weight:bold">Function Syntax and Sample</span></th>
@@ -46,7 +42,7 @@ The functions included in the aggregation category are:
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: average([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">averageif</span>: Using a regular function with an <a href="https://www.revealbi.io/help/aggregation-calculated-fields#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">averageif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: averageif({expression},{if-condition})</td>
   </tr>
   <tr>
@@ -60,7 +56,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: count()</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">countif</span>: Using a regular function with an <a href="https://www.revealbi.io/help/aggregation-calculated-fields#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">countif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: countif({if-condition})</td>
   </tr>
   <tr>
@@ -74,7 +70,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: max([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">maxif</span>: Using a regular function with an <a href="https://www.revealbi.io/help/aggregation-calculated-fields#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">maxif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: maxif({expression},{if-condition})</td>
   </tr>
   <tr>
@@ -88,7 +84,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: min([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">minif</span>: Using a regular function with an <a href="https://www.revealbi.io/help/aggregation-calculated-fields#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">minif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: minif({expression},{if-condition})</td>
   </tr>
   <tr>
@@ -145,7 +141,7 @@ the terms we defined above:
 
 | Function Name  | Expression | IF Condition  |
 | -------------- | ---------- | ------------- |
-| averageif (…​) | [Wage]     | [OfficeId]=1) |
+| averageif (…​)  | [Wage]     | [OfficeId]=1) |
 
 A non-numerical example could be the following:
 

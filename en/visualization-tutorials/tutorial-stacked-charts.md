@@ -45,15 +45,13 @@ Access the links below for the Stacked Chart view walkthroughs:
 
   - [How to create a Stacked Column chart](#create-stacked-chart)
 
-  - [How to change your Stacked chart type](#changingcharttype)
+  - [How to change your Stacked chart type](#change-chart-type)
 
-  - [How to change your axis configuration](#changingaxisconfiguration)
+  - [How to change your axis configuration](#change-axis-configuration)
 
-  - [How to set your axis configuration to
-    logarithmic](#settinglogarithmicaxis)
+  - [How to set your axis configuration to logarithmic](#set-logarithmic-axis)
 
-  - [How to enable percentage
-    distribution](#enablingpercentagedistribution)
+  - [How to enable percentage distribution](#enable-percentage-distribution)
 
 ### Key Concepts
 
@@ -81,8 +79,7 @@ For this tutorial, you will use the "Stacked Charts" sheet in the
 >[!NOTE]
 Excel files as local files are not supported in this release. In order
 to follow these tutorials, make sure you upload the file to one of the
-supported [cloud services](data-sources) or add it as a [Web
-Resource](Web-Resource.md).
+supported [cloud services](data-sources) or add it as a [Web Resource](web-resource.md).
 
 </div>
 
@@ -98,6 +95,7 @@ Resource](Web-Resource.md).
 | 5\. **Select your Visualization**        | ![Tutorials-Stacked-Select-Visualization](images/Tutorials-Stacked-Select-Visualization.png)           | By default, the visualization type will be set to "Grid". Select any of the **stack** visualizations.                                                                                                                                           |
 | 6\. **Organize your Data**               | ![Tutorials-Stacked-Charts-Organizing-Data](images/Tutorials-Stacked-Charts-Organizing-Data.png)       | Stacked charts require two or more fields to be dragged and dropped into the "Values" placeholder of the data editor. In this case, the "1960", "2003", "2008" and "2010" fields have been dropped into "Values" and "Country Name" in "Label". |
 
+<a name='change-chart-type'></a>
 ### Changing your Stacked Chart Type
 
 If needed, you can choose a different type of stacked chart better
@@ -111,7 +109,7 @@ fitted to your needs. In order to do this:
 <a name='change-axis-configuration'></a>
 ### Changing your Axis Configuration
 
-Similarly to the [Gauge bands](Gauge-Views#bands-configuration), the
+Similarly to the [Gauge bands](~/en/data-visualizations/gauge-views#bands-configuration), the
 chart axis configuration allows you to set the lowest and highest values
 in your chart. You can use this feature to include or exclude specific
 data.

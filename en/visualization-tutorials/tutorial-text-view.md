@@ -23,7 +23,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
 >[!NOTE]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](Web-Resource.md).
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
 
 <a name='creating-text-view'></a>
 ### Creating a Text View
@@ -50,6 +50,3 @@ text view display row 9 (Bosnia and Herzegovina).
 | 2\. **Set your Filter**   | ![SelectedValuesTextView\_All](images/SelectedValuesTextView_All.png) | Select "Filter Type" to enable the dropdown menu, and then choose **Select Values**.                                                       |
 | 3\. **Select your Value** | ![SelectValueTextView2\_All](images/SelectValueTextView2_All.png)     | By default, all values will be selected. Uncheck the "All" box, and select only **Bosnia and Herzegovina**. Then, select **Create Filter** |
 
-Your visualization will look like the following one:
-
-![TutorialSelectedRowTextView\_All](images/TutorialSelectedRowTextView_All.png)

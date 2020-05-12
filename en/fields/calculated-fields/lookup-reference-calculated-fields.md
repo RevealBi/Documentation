@@ -22,7 +22,7 @@ The functions included in the aggregation category are:
     <th class="tg-cly1"><span style="font-weight:bold">Syntax and Sample</span></th>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/lookup-reference-calculated-fields#calc-fields-previous">previous</a>: previous allows you to get a result with the value of the field you choose as your expression.</td>
+    <td class="tg-cly1" rowspan="2"><a href="#calc-fields-previous">previous</a>: previous allows you to get a result with the value of the field you choose as your expression.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: previous({expression},{first value})</td>
   </tr>
   <tr>
