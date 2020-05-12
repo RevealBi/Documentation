@@ -30,7 +30,7 @@ below:
     information related to the data your machine learning model
     predicts.
 
-    Please, refer to the [Creating a New Data Source Connection](Creating-New-Datasource.md) topic for more information on
+    Please, refer to the [Creating a New Data Source Connection](creating-new-datasource.md) topic for more information on
     how to connect to a data source.
 
 2.  In the *Visualization editor*, click/tap the **brain icon** located

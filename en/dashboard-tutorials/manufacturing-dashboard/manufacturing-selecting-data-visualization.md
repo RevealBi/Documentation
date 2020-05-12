@@ -1,8 +1,8 @@
 ## Creating the First Visualization 
 
 Let's focus on creating the "Incoming Daily Orders MTD" visualization in
-the [sample dashboard](Manufacturing-Dashboard-Tutorial.md) presented at
-the beginning of this tutorial. The widget displays a [Column Chart](Category-Charts.md) and, as such, it only requires one field to be
+the [sample dashboard](manufacturing-dashboard-tutorial.md) presented at
+the beginning of this tutorial. The widget displays a [Column Chart](category-charts.md) and, as such, it only requires one field to be
 dropped into Label and one to be dropped into Values.
 
 First, **open the visualizations picker** by selecting the grid icon in

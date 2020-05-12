@@ -12,5 +12,4 @@ In Reveal, you can also work with dashboards saved on your computer/device by di
     >[!NOTE]
     >**Uploading ReportPlus Dashboards** Reveal also allows you to upload and work with dashboards created in ReportPlus. ReportPlus dashboards' file extension is **.rplus**.
 
-Your dashboard is now uploaded and ready to be edited and shared with
-others.
+Your dashboard is now uploaded and ready to be edited and shared with others.

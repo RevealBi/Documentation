@@ -7,18 +7,18 @@ server side, you will need to configure the Data Sources within Reveal
 to access the data. You can choose from any of the following options:
 
   - **Analytics tools**: [Google Analytics](google-analytics.md)), [Google BigQery](google-bigquery.md),[MS Azure Synapse Analytics](microsoft-azure-synapse-analytics.md).
-  - **Content Managers** and **Cloud Services**: [Box](Box.md),
-    [Dropbox](Dropbox.md), [Google Drive](Google-Drive.md),
-    [OneDrive](OneDrive.md), and [SharePoint Online](SharePoint.md).
+  - **Content Managers** and **Cloud Services**: [Box](box.md),
+    [Dropbox](dropbox.md), [Google Drive](google-drive.md),
+    [OneDrive](onedrive.md), and [SharePoint Online](sharepoint.md).
 
-  - **Customer Relationship Managers**: [Microsoft Dynamics CRM](Microsoft-Dynamics-CRM.md) On-Premises and Online).
+  - **Customer Relationship Managers**: [Microsoft Dynamics CRM](microsoft-dynamics-crm.md) On-Premises and Online).
 
-  - **Databases**: [Microsoft SQL Server](Microsoft-SQL-Server.md),
-    [Microsoft Analysis Services Server](Microsoft-Analysis-Services.md), [MS Azure SQL](azure-sql.md),
-    [MySQL](MySQ.md), [PostgreSQL](PostgreSQL.md), [Oracle](Oracle.md),
-    [Sybase](Sybase.md).[\*](Feature-Matrix.html#databases-web)
+  - **Databases**: [Microsoft SQL Server](microsoft-sql-server.md),
+    [Microsoft Analysis Services Server](microsoft-analysis-services.md), [MS Azure SQL](azure-sql.md),
+    [MySQL](mysql.md), [PostgreSQL](postgresql.md), [Oracle](oracle.md),
+    [Sybase](sybase.md).[\*](feature-matrix.html#databases-web)
 
-  - **Other Data Sources**: [OData Feed](OData-Feed.md), [Web Resources](Web-Resource.md), [JSON files](Working-with-Json-files.md), [Salesforce](Salesforce.md).
+  - **Other Data Sources**: [OData Feed](odata-feed.md), [Web Resources](web-resource.md), [JSON files](working-with-json-files.md), [Salesforce](salesforce.md).
 
 >[!NOTE]
 >The current Reveal release lets you create content manager data sources *only*. Analytics tools, Customer Relationship Managers and Databases are supported for dashboards imported with those data sources.
@@ -51,7 +51,7 @@ You can either **select existing credentials**, which are applicable for your da
 
 When **adding new credentials**, you need to provide the following details:
 
-![add new credentials dialog](images/Creating-New-Account.png)
+![add new credentials dialog](images/creating-new-account.png)
 
 You will need to provide the following details:
 
@@ -61,7 +61,7 @@ You will need to provide the following details:
 
   - **Password**: the password for the data source.
 
-To add and edit credentials for your data sources,you can also use the **Manage Reveal Credentials** menu in your General Settings. To learn more, read the [Managing Data Source Credentials](Managing-Data-Source-Credentials.md) topic.
+To add and edit credentials for your data sources,you can also use the **Manage Reveal Credentials** menu in your General Settings. To learn more, read the [Managing Data Source Credentials](managing-data-source-credentials.md) topic.
 
 Once ready, select **Create and Use**. You will then be able to see your
 dashboard displayed in Reveal.

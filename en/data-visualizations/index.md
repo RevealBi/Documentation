@@ -10,23 +10,20 @@ is visualized.
 
 There are several visualization types:
 
-  - [Grid View](Grid-View.md)
+  - [Grid View](grid-view.md)
 
-  - [Pivot Table](Pivot-Table.md)
+  - [Pivot Table](pivot-table.md)
 
-  - [Text View](Text-View.md)
+  - [Text View](text-view.md)
 
-  - [Image View](Image-View.md)
+  - [Image View](image-view.md)
 
-  - [Gauge Views](Gauge-Views.d), including the [Bullet Graph](Gauge-Views.html#bullet-graph), [Circular](Gauge-Views#circular-gauge), [KPI](KPI-Gauge.md),
-    [Linear](Gauge-Views.html#linear-gauge) and
-    [Text](Gauge-Views.html#text-gauge) gauges.
+  - [Gauge Views](gauge-views.md), including the [Bullet Graph](gauge-views.html#bullet-graph), [Circular](gauge-views.html#circular-gauge), [KPI](kpi-gauge.md), [Linear](gauge-views.html#linear-gauge) and [Text](gauge-views.html#text-gauge) gauges.
 
-  - Several chart types, including [Category](Category-Charts.md),
-    [Combo](combo-charts.md)[Financial](Financial-Charts.md), [Radial](radial-charts.md), [Scatter and Bubble](scatter-bubble-charts.md), and
-    [Sparkline](Sparkline-Charts.md) charts.
+  - Several chart types, including [Category](category-charts.md), [Combo](combo-charts.md), [Financial](financial-charts.md), [Radial](radial-charts.md), [Scatter and Bubble](scatter-bubble-charts.md), and [Sparkline](sparkline-charts.md) charts.
 
-  - [Do-It-Yourself Visualizations](DIY-Visualizations.md)
+  - [Do-It-Yourself Visualizations](diy-visualizations.md)
+  
   - [Text Box Visualizations](text-box.md)
 
 ### Visualization Tutorials
@@ -34,8 +31,7 @@ There are several visualization types:
 Within this section, you will find basic, step-by-step tutorials for the
 Reveal visualizations. All sections use the Data Visualizations data
 source, which you can download using [this link](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
-For specific information on what each visualization supports, visit the
-[Data Visualizations](Data-Visualizations.md) section of the documentation.
+For specific information on what each visualization supports, visit the **Data Visualizations** section of the documentation.
 
 <table>
 <colgroup>
@@ -49,111 +45,111 @@ For specific information on what each visualization supports, visit the
 <tr class="odd">
 <td><p><img src="images/Area-Chart.png" alt="Area Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Area</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Area</a><br />
 </p></td>
 <td><p><img src="images/Bar-Chart.png" alt="Bar Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Bar</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Bar</a><br />
 </p></td>
 <td><p><img src="images/Bullet-Graph-Gauge.png" alt="Bullet Graph Gauge" /><br />
 </p>
-<p><a href="Tutorial-Gauge-Views.md">Bullet Graph</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-gauge-views.md">Bullet Graph</a><br />
 </p></td>
 <td><p><img src="images/Candlestick-Chart.png" alt="Candlestick Chart" /><br />
 </p>
-<p><a href="Tutorial-Candlestick-Chart.md">Candlestick</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-candlestick-chart.md">Candlestick</a><br />
 </p></td>
 <td><p><img src="images/Circular-Gauge.png" alt="Circular Gauge" /><br />
 </p>
-<p><a href="Tutorial-Gauge-Views.md">Circular</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-gauge-views.md">Circular</a><br />
 </p></td>
 </tr>
 <tr class="even">
 <td><p><img src="images/Column-Chart.png" alt="Column Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Column</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Column</a><br />
 </p></td>
 <td><p><img src="images/Doughnut-Chart.png" alt="Doughnut Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Doughnut</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Doughnut</a><br />
 </p></td>
 <td><p><img src="images/Funnel-Chart.png" alt="Funnel Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Funnel</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Funnel</a><br />
 </p></td>
 <td><p><img src="images/Web-View.png" alt="Web View" /><br />
 </p>
-<p><a href="Tutorial-Image-View.md">Image</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-image-view.md">Image</a><br />
 </p></td>
 <td><p><img src="images/kpi.png" alt="kpi" /><br />
 </p>
-<p><a href="Tutorial-KPI-Gauge.md">KPI</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-kpi-gauge.md">KPI</a><br />
 </p></td>
 </tr>
 <tr class="odd">
 <td><p><img src="images/Line-Chart.png" alt="Line Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Line</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Line</a><br />
 </p></td>
 <td><p><img src="images/Linear-Gauge.png" alt="Linear Gauge" /><br />
 </p>
-<p><a href="Tutorial-Gauge-Views.md">Linear</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-gauge-views.md">Linear</a><br />
 </p></td>
 <td><p><img src="images/OHLC-Chart.png" alt="OHLC Chart" /><br />
 </p>
-<p><a href="Tutorial-OHLC-Chart.md">OHLC</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-ohlc-chart.md">OHLC</a><br />
 </p></td>
 <td><p><img src="images/Pie-Chart.png" alt="Pie Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Pie</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Pie</a><br />
 </p></td>
 <td><p><img src="images/Circular-Chart.png" alt="Circular Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Radial</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Radial</a><br />
 </p></td>
 </tr>
 <tr class="even">
 <td><p><img src="images/Sparkline-Chart.png" alt="Sparkline Chart" /><br />
 </p>
-<p><a href="Tutorial-Sparkline-Charts.md">Sparkline</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-sparkline-charts.md">Sparkline</a><br />
 </p></td>
 <td><p><img src="images/Spline-Chart.png" alt="Spline Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Spline</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Spline</a><br />
 </p></td>
 <td><p><img src="images/Spline-Area.png" alt="Spline Area" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Spline with Area</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Spline with Area</a><br />
 </p></td>
 <td><p><img src="images/Stacked-Area-Chart.png" alt="Stacked Area Chart" /><br />
 </p>
-<p><a href="Tutorial-Stacked-Charts.md">Stacked Area</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-stacked-charts.md">Stacked Area</a><br />
 </p></td>
 <td><p><img src="images/Stacked-Bar-Chart.png" alt="Stacked Bar Chart" /><br />
 </p>
-<p><a href="Tutorial-Stacked-Charts.md">Stacked Bar</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-stacked-charts.md">Stacked Bar</a><br />
 </p></td>
 </tr>
 <tr class="odd">
 <td><p><img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br />
 </p>
-<p><a href="Tutorial-Stacked-Charts.md">Stacked Column</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-stacked-charts.md">Stacked Column</a><br />
 </p></td>
 <td><p><img src="images/Step-Area-Chart.png" alt="Step Area Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Step Area</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Step Area</a><br />
 </p></td>
 <td><p><img src="images/Step-Line-Chart.png" alt="Step Line Chart" /><br />
 </p>
-<p><a href="Tutorial-Simple-Charts.md">Step Line</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-simple-charts.md">Step Line</a><br />
 </p></td>
 <td><p><img src="images/Text-Gauge.png" alt="Text Gauge" /><br />
 </p>
-<p><a href="Tutorial-Gauge-Views.md">Text</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-gauge-views.md">Text</a><br />
 </p></td>
 <td><p><img src="images/Text-View.png" alt="Text View" /><br />
 </p>
-<p><a href="Tutorial-Text-View.md">Text View</a><br />
+<p><a href="~/en/visualization-tutorials/tutorial-text-view.md">Text View</a><br />
 </p></td>
 </tr>
 </tbody>

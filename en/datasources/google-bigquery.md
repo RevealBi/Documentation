@@ -48,11 +48,11 @@ data sources storing millions of records.
 Currently, only a limited number of **functions** are available for
 *Calculated Fields* using data from BigQuery:
 
-- [Date](Date-Calculated-Fields.md) - date; time.
+- [Date](date-calculated-fields.md) - date; time.
 
-- [Logic](Logic-Calculated-Fields.md) - false; true; if; not.
+- [Logic](logic-calculated-fields.md) - false; true; if; not.
 
-- [Math](Math-Calculated-Fields.md) - abs; exp; log; log10; mod; rand; sign; sqrt; trunc.
+- [Math](math-calculated-fields.md) - abs; exp; log; log10; mod; rand; sign; sqrt; trunc.
 
 - [Strings](string-calculated-fields.md) - find; len; trim; lower; mid; upper.
 

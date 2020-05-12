@@ -1,7 +1,7 @@
 ## Creating and Joining Teams
 
 *Teams* in Reveal enables easy collaboration within and out of your
-organization. Now you can access and join freely all your organization’s
+organization. Now you can access and join freely all your organization's
 teams and also make your own team available for others in the
 organization to join and work with you.
 
@@ -16,7 +16,7 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 
 
   >[!NOTE]
-  > When signing in for the first time, you might already have a team. This is your [Organization team](teams-collaboration-privacy.html#organization-team) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
+  > When signing in for the first time, you might already have a team. This is your [Organization team](index.html#organization-team) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
 
 
 
@@ -29,14 +29,14 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 
       - assign a *name* to your team;
 
-      - choose team’s *color*;
+      - choose team's *color*;
 
-      - decide on team’s
-        [*privacy*](teams-collaboration-privacy.html#team-privacy-levels);
+      - decide on team's
+        [*privacy*](index.html#team-privacy-levels);
 
       - choose if your team will belong to the main *Organization*.
 
-          - [Organization team](teams-collaboration-privacy.html#organization-team) (this
+          - [Organization team](index.html#organization-team) (this
             option will appear with the name of your organization, e.g.
             *Infragistics, Inc*) - if you associate your team with the
             main Organization team, your team will appear in the list of
@@ -70,7 +70,7 @@ invitation by email.
 <a name='join-team'></a>
 ### Joining an Existing Team
 
-If your account has been automatically added to an [Organization team](teams-collaboration-privacy.html#organization-team), you can **discover
+If your account has been automatically added to an [Organization team](index.html#organization-team), you can **discover
 and join other teams that belong to your organization**.
 To join an existing team, follow the steps below.
 
@@ -84,10 +84,59 @@ To join an existing team, follow the steps below.
     ![join or create a team dialog](images/join-or-create.png)
 
     Here you will find all the
-    [public](teams-collaboration-privacy.html#team-privacy-levels) teams that
+    [public](index.html#team-privacy-levels) teams that
     belong to your organization.
 
 4.  After clicking/tapping the *Join* button, you will automatically be
-    added as a new member with Member’s
-    [permissions](teams-collaboration-privacy.html#members-roles-permissions)
-    to the team you have chosen. The team will appear in your [teams' list](organizing-teams-list.md).
+    added as a new member with Member's
+    [permissions](index.html#members-roles-permissions)
+    to the team you have chosen. The team will appear in your teams' list.
+
+### Organizing your Teams' List
+
+There is no limit to the teams you can create or join. To easily navigate through a large list of teams and find the one you need, you can filter your teams by:
+
+* the *Organization* they belong to;
+* *favorites*;
+* custom *groups* you have created.
+
+#### Filtering by Organization
+
+1.  Click/Tap the popover menu in the top left corner (next to the _Reveal_ icon).
+
+2. Click/Tap _All Organizations_ dropdown on top of your teams' list.
+
+![organization filter in the teams list](images/teams-organization-filter.png)
+
+
+3. Choose to see: all teams, only these that belong to the main Organization or only teams that do not belong to the Organization (_Personal Organization_ option).
+
+>[!NOTE]
+>**All Organizations menu not available**. The _All Organizations_ dropdown menu will not appear unless you have both teams belonging to the main Organization, and _Personal Organization_ teams.
+
+
+#### Adding to Favorites
+
+1. Click/Tap the overflow menu of any team in your teams' list.
+2. Select _Favorite_.
+
+![adding a team to favorites](images/adding-teams-favorites.png)
+
+
+3. This team will appear in the _Favorites_ list at the top of your teams.
+
+#### Filtering by Groups
+
+You can organize your teams by custom groups of your choice. To create a new group:
+
+1. Go to the overflow menu of a team in your list.
+2. Click/Tap _Select Group_.
+3. The _Group Team_ dialog opens. Click/Tap _+ Add Group_ to create a new group.
+
+![[add group to group team dialog]](images/group-team-dialog-add-group.png)
+
+4. Tick the circle of the group you want to add the team to. Select _Apply_.
+
+Your teams' list now shows your teams categorized by _Ungrouped Teams_ and teams in custom groups:
+![teams' list separated by custom groups and ungrouped teams](images/teams-categorized-by-groups.png)
+

@@ -25,49 +25,49 @@ For the complete list of supported data sources and detailed information on how 
 
   - [Data Sources](data-sources.md)
 
-  - [Box](Box.md)
+  - [Box](box.md)
 
-  - [Dropbox](Dropbox.md)
+  - [Dropbox](dropbox.md)
 
   - [Google Analytics](google-analytics.md)
 
   - [Google BigQuery](google-bigquery.md)
 
-  - [Google Drive](Google-Drive.md)
+  - [Google Drive](google-drive.md)
 
-  - [Microsoft Analysis Services](Microsoft-Analysis-Services.md)
+  - [Microsoft Analysis Services](microsoft-analysis-services/microsoft-analysis-services.md)
 
   - [Microsoft Azure Synapse Analytics](microsoft-azure-synapse-analytics.md)
 
   - [Microsoft Azure SQL](azure-sql.md)
 
-  - [Microsoft Dynamics CRM](Microsoft-Dynamics-CRM.md)
+  - [Microsoft Dynamics CRM](microsoft-dynamics-crm.md)
 
   - [Microsoft Reporting Services (SSRS)](microsoft-reporting-services.md)
 
-  - [Microsoft SQL Server](Microsoft-SQL-Server.md)
+  - [Microsoft SQL Server](microsoft-sql-server.md)
 
-  - [MySQL](MySQL.md)
+  - [MySQL](mysql.md)
 
-  - [OData Feed](OData-Feed.md)
+  - [OData Feed](odata-feed.md)
 
-  - [OneDrive](OneDrive.md)
+  - [OneDrive](onedrive.md)
 
-  - [Oracle](Oracle.md)
+  - [Oracle](oracle.md)
 
-  - [PostgreSQL](PostgreSQL.md)
+  - [PostgreSQL](postgresql.md)
 
-  - [REST API](REST-API.md)
+  - [REST API](rest-api.md)
 
-  - [Salesforce](Salesforce.md)
+  - [Salesforce](salesforce.md)
 
-  - [SharePoint](SharePoint.md)
+  - [SharePoint](sharepoint.md)
 
-  - [Sybase](Sybase.md)
+  - [Sybase](sybase.md)
 
-  - [Web Resource](Web-Resource.md)
+  - [Web Resource](web-resource.md)
 
-  - [JSON file](Working-with-Json-files.md)
+  - [JSON file](working-with-json-files.md)
 
   - [Integration with Azure Machine Learning](azure-machine-learning-models.md)
 

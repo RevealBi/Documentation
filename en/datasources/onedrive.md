@@ -1,6 +1,6 @@
 ## OneDrive
 
-If you are signed in with your Office365 account, you will have your OneDrive automatically added to your data sources. Otherwise, read how to add a new data source in [this topic](Creating-New-Datasource.md).
+If you are signed in with your Office365 account, you will have your OneDrive automatically added to your data sources. Otherwise, read how to add a new data source in [this topic](creating-new-datasource.md).
 
 To use your OneDrive data, follow the steps below.
 

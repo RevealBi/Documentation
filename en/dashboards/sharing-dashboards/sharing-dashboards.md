@@ -169,7 +169,7 @@ every team member get depending on their role in the team:
     <td class="tg-c3ow">Viewer</td>
   </tr>
   <tr>
-    <td class="tg-7btt" colspan="3">Max Level Permissions Received by a Member</td>
+    <td class="tg-7btt" style="text-align: center !important" colspan="3">Max Level Permissions Received by a Member</td>
   </tr>
   <tr>
     <td class="tg-0pky">Owner</td>

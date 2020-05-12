@@ -75,8 +75,7 @@ To achieve the forecast shown above, perform the following steps:
         **Minimum data available for the Time series function**.
         >Your visualization must contain a minimum of two seasons of  data, otherwise you won't be able to use the Time series function. This means that if your season length is 12 months, you should have data for at least 24 months, if it is 6 months -  data for at least 12, etc.
 
-
-      * **Periods to Forecast** - select **the number of days, months or years**, for which you want your data predicted. The time unit for the periods is determined based on whether your *Date* field is measured in days, month or years.
+    * **Periods to Forecast** - select **the number of days, months or years**, for which you want your data predicted. The time unit for the periods is determined based on whether your *Date* field is measured in days, month or years.
 
 The forecast is visualized by a line and a shaded area around it. The
 line displays the prediction and the **shaded area** shows the range in

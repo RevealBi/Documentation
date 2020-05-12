@@ -10,31 +10,27 @@ a visualization as part of a Reveal dashboard.
 
 ### Sample DIY visualizations
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2ovq{background-color:rgb(255, 255, 255);color:rgb(0, 0, 0);text-align:left;vertical-align:top}
+.tg .tg-spkm{background-color:rgb(255, 255, 255);color:rgb(73, 85, 85);text-align:left;vertical-align:top}
+.tg .tg-x3gl{background-color:rgb(249, 249, 249);color:rgb(73, 85, 85);text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-x3gl"><br>Table with custom fonts, titles, and widths<br><img src="images/HRDashboardEmployeesDIY_All.png" alt="Image" width="400" height="291"></th>
+    <th class="tg-x3gl"><br>Choropleth map of the population for United States by state<br><img src="images/StatePopulation_all.png" alt="Image" width="400" height="291"></th>
+  </tr>
+</thead>
 <tbody>
-<tr class="odd">
-<td><p><img src="images/HRDashboardEmployeesDIY_All.png" alt="HRDashboardEmployeesDIY_All" /><br />
-</p>
-<p>Table with custom fonts, titles, and widths<br />
-</p></td>
-<td><p><img src="images/StatePopulation_all.png" alt="StatePopulation_all" /><br />
-</p>
-<p>Choropleth map of the population for United States by state<br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><img src="images/BrazilStatePopulation_all.png" alt="BrazilStatePopulation_all" /><br />
-</p>
-<p>Choropleth map of the population for Brazil by state<br />
-</p></td>
-<td><p><img src="images/WorldPopulationGDP_All.png" alt="WorldPopulationGDP_All" /><br />
-</p>
-<p>Choropleth map of worldwide GDP<br />
-</p></td>
-</tr>
+  <tr>
+    <td class="tg-spkm"><br>Choropleth map of the population for Brazil by state<br><img src="images/BrazilStatePopulation_all.png" alt="Image" width="400" height="291"></td>
+    <td class="tg-2ovq"><br>Choropleth map of worldwide GDP<br><img src="images/WorldPopulationGDP_All.png" alt="Image" width="400" height="291"></td>
+  </tr>
 </tbody>
 </table>

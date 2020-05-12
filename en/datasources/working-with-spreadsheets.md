@@ -1,4 +1,4 @@
-## Working with Spreadsheets in Reveal
+## Working With Spreadsheets in Reveal
 
 Below are a couple of helpful tips and tricks for working with
 spreadsheets within Reveal.
@@ -14,12 +14,12 @@ spreadsheets within Reveal.
 <td><p><img src="images/excel.png" alt="excel" /> <img src="images/csv.png" alt="csv" /><br />
 </p>
 <p><em>Reveal expects your data to be organized in columns</em> and will name fields after the spreadsheet's first row. If your data is organized in rows instead, you can <a href="#transposing-spreadsheets">transpose</a> the fields in Reveal.</p>
-<p><a href="Visualizations-Editor.md">LEARN MORE</a><br />
+<p><a href="~/en/data-visualizations/visualizations-editor.md">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/csv.png" alt="csv" /><br />
 </p>
 <p><strong>When working with CSV files, avoid formatting the spreadsheet</strong>. Instead, apply any necessary formatting (1000 comma separators, currency signs, etc.) through Reveal.</p>
-<p><a href="Field-Settings.md">LEARN MORE</a><br />
+<p><a href="~/en/fields/field-settings.md">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/excel.png" alt="excel" /><br />
 </p>
@@ -73,17 +73,17 @@ spreadsheets within Reveal.
 <td><p><img src="images/reveal-logo.png" alt="reveal logo" /><br />
 </p>
 <p>By default, <strong>numbers will have 2 fraction digits</strong>. To change this, access the <em>Formatting</em> menu for the field.</p>
-<p><a href="Field-Settings.html#Numeric-Fields">LEARN MORE</a><br />
+<p><a href="~/en/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/top-1000.png" alt="top 1000" /><br />
 </p>
 <p>The 1000 separator is disabled by default, even for large numbers. To turn it on, access the <em>Formatting</em> menu.</p>
-<p><a href="Field-Settings.html#Numeric-Fields">LEARN MORE</a><br />
+<p><a href="~/en/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/percentage.png" alt="percentage" /><br />
 </p>
 <p>If you need to show percentages or currencies, you will need to select that option from the Formatting menu.</p>
-<p><a href="Field-Settings.html#Numeric-Fields">LEARN MORE</a><br />
+<p><a href="~/en/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
 </p></td>
 </tr>
 <tr class="even">
@@ -132,4 +132,4 @@ modified.
 
 A common use case is building dashboards with spreadsheets located in a
 cloud file sharing service. To learn how to successfully share those
-dashboards with other users, please read [Sharing Dashboards with Cloud Files as a DataSource](sharing-dashboards-datasource-files-cloud-provider.md).
+dashboards with other users, please read [Sharing Dashboards with Cloud Files as a DataSource](~/en/dashboards/sharing-dashboards/sharing-dashboards-datasource-files-cloud-provider.md).

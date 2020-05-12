@@ -20,9 +20,9 @@ In the dashboard above, you see the following visualization types:
 
   - **Units Lost**: [Text Gauge](Gauge-Views.html#text-gauge)
 
-  - **Cost of Labor vs Revenue**: [Line Chart](Category-Charts.md)
+  - **Cost of Labor vs Revenue**: [Line Chart](category-charts.md)
 
-  - **Units Produced by Line**: [Column Chart](Category-Charts.md)
+  - **Units Produced by Line**: [Column Chart](category-charts.md)
 
   - **Operators Available**: [Doughnut Chart](category-charts.md)
 
@@ -33,17 +33,17 @@ In the dashboard above, you see the following visualization types:
 ### How do you create a Visualization?
 
 Once you select the + sign to add a new dashboard, you will be prompted
-to enter a new or an existing [data source](Data-Sources.md). This will be
+to enter a new or an existing [data source](~/en/datasources/data-sources.md). This will be
 the first step towards creating your visualization.
 
 ![Creating a new visualization dialog](images/creating-new-visualization.png)
 
 With the data source selected, the visualization will be created. You
-can edit it through the [Visualizations Editor](Visualizations-Editor.md).
+can edit it through the [Visualizations Editor](visualizations-editor.md).
 
 ### How do you edit Visualizations?
 
 Once a dataset is selected for a dashboard, the **Visualizations Editor** is automatically displayed. This helps
 you work with the data to get the most desired view.
 
-To learn how to work in the Visualization editor and also access it, read [this topic](Visualizations-Editor.md)
+To learn how to work in the Visualization editor and also access it, read [this topic](visualizations-editor.md)

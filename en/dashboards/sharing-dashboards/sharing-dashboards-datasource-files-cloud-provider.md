@@ -84,4 +84,4 @@ in your team.
 ### See Also
 
 If you can't see the contents of a dashboard, shared with you, please
-read: [Requesting Access to Shared Dashboards with Cloud Files](Request-Access-Shared-Dashboards-Cloud-Files.md)
+read: [Requesting Access to Shared Dashboards with Cloud Files](request-access-shared-dashboards-cloud-files.md)
