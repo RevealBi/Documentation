@@ -84,6 +84,8 @@
   href: datasources/rest-api.md
 - name: SharePoint 
   href: datasources/sharepoint.md
+- name: Salesforce
+  href: datasources/salesforce.md
 - name: Sybase
   href: datasources/sybase.md
 - name: Web Resource
@@ -96,6 +98,8 @@
   href: datasources/data-blending.md
 - name: Integration with Azure Machine Learning
   href: datasources/azure-machine-learning-models.md
+- name: Integration with BigQuery Machine Learning
+  href: datasources/bigquery-machine-learning-models.md
 - name: OAuth 2 / OIDC User Authentication
   href: datasources/oauth-2-oidc-user-authentication.md
 - name: Managing Dashboards with their own Data Sources
