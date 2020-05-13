@@ -1,9 +1,7 @@
 - name: General
   header: true
-- name: Welcome to Reveal SDK
-  href: index.md
 - name: Reveal SDK Overview
-  href: general/sdk-overview.md
+  href: general/overview.md
 - name: System Requirements and Installation
   href: general/installation-requirements.md
 - name: Setup and Configuration (Web)
@@ -15,27 +13,27 @@
 - name: Web SDK
   header: true
 - name: Overview
-  href: web-sdk/sdk-overview-web.md
+  href: web-sdk/overview.md
 - name: Creating Your First App
-  href: web-sdk/create-first-app-web.md
+  href: web-sdk/create-first-app.md
 - name: Using the Server SDK
   href: web-sdk/using-the-server-sdk/toc.yml
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
 - name: Server API Reference
-  href: web-sdk/api-reference-server-web.md
+  href: web-sdk/api-reference-server.md
 - name: Client API Reference
-  href: web-sdk/api-reference-client-web.md
+  href: web-sdk/api-reference-client.md
 - name: Desktop SDK
   header: true
 - name: Overview
-  href: desktop-sdk/sdk-overview-desktop.md
+  href: desktop-sdk/overview.md
 - name: Creating Your First App -coming soon-
   href: 
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
 - name: API Reference
-  href: desktop-sdk/api-reference-desktop.md
+  href: desktop-sdk/api-reference.md
 - name: Release Information
   header: true
 - name: Known Issues
