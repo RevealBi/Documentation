@@ -1,30 +1,30 @@
 - name: Loading Dashboard Files
-  href: loading-dashboards-desktop.md
+  href: loading-dashboards.md
 - name: Configuring the RevealView Object
-  href: configuring-revealview-desktop.md
+  href: configuring-revealview.md
 - name: Editing & Saving Dashboards
-  href: editing-saving-dashboards-desktop.md
+  href: editing-saving-dashboards.md
 - name: Working with the Localization Service
-  href: localization-service-desktop.md
+  href: localization-service.md
 - name: Working with the Formatting Service
-  href: formatting-service-desktop.md
+  href: formatting-service.md
 - name: Exporting a Dashboard or a Visualization
-  href: exporting-dashboard-visualization-desktop.md
+  href: exporting-dashboard-visualization.md
 - name: Replacing Data Sources
-  href: replacing-data-sources-desktop.md
+  href: replacing-data-sources.md
 - name: In-Memory Data Support
-  href: in-memory-data-desktop.md
+  href: in-memory-data.md
 - name: Providing Credentials to Data Sources
-  href: providing-credentials-datasources-desktop.md
+  href: providing-credentials-datasources.md
 - name: Setting Up Initial Filter Selections
-  href: setting-initial-filters-desktop.md
+  href: setting-initial-filters.md
 - name: Maximizing Visualizations and Single Visualization Mode
-  href: maximizing-visualizations-desktop.md
+  href: maximizing-visualizations.md
 - name: Setting up Dynamic Filter Selections
-  href: setting-dynamic-filters-desktop.md
+  href: setting-dynamic-filters.md
 - name: Dashboard Linking
-  href: dashboard-linking-desktop.md
+  href: dashboard-linking.md
 - name: Handling User Click Events
-  href: handling-click-events-desktop.md
+  href: handling-click-events.md
 - name: Creating New Visualizations and Dashboards
-  href: creating-visualizations-dashboards-desktop.md
+  href: creating-visualizations-dashboards.md
