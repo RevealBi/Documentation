@@ -1,7 +1,7 @@
 - name: General
   header: true
 - name: General Overview
-  href: general/general-overview.md
+  href: general/overview.md
 - name: Dashboards Overview
   href: general/dashboards-overview.md
 - name: Logging into Reveal
@@ -15,7 +15,7 @@
 - name: Teams
   header: true
 - name: Overview
-  href: teams/index.md
+  href: teams/overview.md
 - name: Creating and Joining Teams
   href: teams/creating-joining-teams.md
 - name: Managing your Team
@@ -23,7 +23,7 @@
 - name: Dashboards
   header: true
 - name: Overview
-  href: dashboards/index.md
+  href: dashboards/overview.md
 - name: What is a Dashboard?
   href: dashboards/what-is-dashboard.md
 - name: Creating Dashboards
@@ -43,7 +43,7 @@
 - name: Data Sources
   header: true
 - name: Overview
-  href: datasources/index.md
+  href: datasources/overview.md
 - name: What is a Data Source?
   href: datasources/what-is-data-source.md
 - name: Creating a New Data Source
@@ -107,7 +107,7 @@
 - name: Data Visuallizations
   header: true
 - name: Overview
-  href: data-visualizations/index.md
+  href: data-visualizations/overview.md
 - name: What is a Visualization
   href: data-visualizations/what-is-visualization.md
 - name: Visualizations Editor
@@ -147,7 +147,7 @@
 - name: Fields
   header: true
 - name: Overview
-  href: fields/index.md
+  href: fields/overview.md
 - name: Field Settings
   href: fields/field-settings.md
 - name: Sort by Field
@@ -163,7 +163,7 @@
 - name: Filters
   header: true
 - name: Overview
-  href: filters/index.md
+  href: filters/overview.md
 - name: Dashboard Filters
   href: filters/dashboard-filters.md
 - name: Dashboard Filters Properties
@@ -177,7 +177,7 @@
 - name: Visualization Tutorials
   header: true
 - name: Overview
-  href: visualization-tutorials/index.md
+  href: visualization-tutorials/overview.md
 - name: Candlestick Visualizations
   href: visualization-tutorials/tutorial-candlestick-chart.md
 - name: Gauge Views
@@ -199,7 +199,7 @@
 - name: Dashboard Tutorials
   header: true
 - name: Overview
-  href: dashboard-tutorials/index.md
+  href: dashboard-tutorials/overview.md
 - name: Finance Dashboard
   href: dashboard-tutorials/finance-dashboard/toc.yml
 - name: Manufacturing Dashboard

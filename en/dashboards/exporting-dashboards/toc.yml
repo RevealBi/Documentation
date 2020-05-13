@@ -1,10 +1,10 @@
 - name: How to Export a Dashboard
-  href: exporting-dashboards.md
+  href: how-to-export-a-dashboard.md
 - name: As a PDF Document
-  href: pdf-document.md
+  href: export-as-pdf-document.md
 - name: As Images
-  href: images.md
+  href: export-as-images.md
 - name: As PowerPoint Presentations
-  href: powerpoint-presentation.md
+  href: export-as-powerpoint-presentation.md
 - name: In Excel Data Format
-  href: excel-data-format.md
+  href: export-as-excel-data-format.md
