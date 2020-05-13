@@ -179,23 +179,23 @@
 - name: Overview
   href: visualization-tutorials/overview.md
 - name: Candlestick Visualizations
-  href: visualization-tutorials/tutorial-candlestick-chart.md
+  href: visualization-tutorials/candlestick-chart.md
 - name: Gauge Views
-  href: visualization-tutorials/tutorial-gauge-views.md
+  href: visualization-tutorials/gauge-views.md
 - name: Image View
-  href: visualization-tutorials/tutorial-image-view.md
+  href: visualization-tutorials/image-view.md
 - name: KPI Gauge
-  href: visualization-tutorials/tutorial-kpi-gauge.md
+  href: visualization-tutorials/kpi-gauge.md
 - name: OHLC Charts
-  href: visualization-tutorials/tutorial-ohlc-chart.md
+  href: visualization-tutorials/ohlc-chart.md
 - name: Simple Series Charts
-  href: visualization-tutorials/tutorial-simple-charts.md
+  href: visualization-tutorials/simple-charts.md
 - name: Sparkline Charts
-  href: visualization-tutorials/tutorial-sparkline-charts.md
+  href: visualization-tutorials/sparkline-charts.md
 - name: Stacked Charts
-  href: visualization-tutorials/tutorial-stacked-charts.md
+  href: visualization-tutorials/stacked-charts.md
 - name: Text View
-  href: visualization-tutorials/tutorial-text-view.md
+  href: visualization-tutorials/text-view.md
 - name: Dashboard Tutorials
   header: true
 - name: Overview
