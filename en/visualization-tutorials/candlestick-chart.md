@@ -101,7 +101,7 @@ In order to access the axis configuration menu:
 |                                             |                                                                                      |                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
 | 1\. **Access the Settings Menu**            | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)               | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Navigate to the Axis Bounds section** | ![Tutorial-Access-Axis-Configuration](images/Tutorial-Access-Axis-Configuration.png) | The settings you will change will be the **Axis Bounds**.   |
+| 2\. **Navigate to the Axis Bounds section** | ![Tutorial-Access-Axis-Configuration](images/Access-Axis-Configuration.png) | The settings you will change will be the **Axis Bounds**.   |
 
 Depending on whether you want to set the minimum or maximum value (or
 both), you will need to access one of the following options:
@@ -123,4 +123,4 @@ the value you want for the chart's top limit.
 |                                        |                                                                                                              |                                                             |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
 | 1\. **Access the Settings Menu**       | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                                       | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Change the Axis to Logarithmic** | ![Tutorial-Access-Candlestick-Axis-Configuration](images/Tutorial-Access-Candlestick-Axis-Configuration.png) | Open the **Axis** dropdown and select **Logarithmic**.      |
+| 2\. **Change the Axis to Logarithmic** | ![Tutorial-Access-Candlestick-Axis-Configuration](images/Access-Candlestick-Axis-Configuration.png) | Open the **Axis** dropdown and select **Logarithmic**.      |

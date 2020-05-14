@@ -104,7 +104,7 @@ can change this by modifying the "Type" field. In order to do so:
 |                                  |                                                                        |                                                                                                                                                |
 | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                                    |
-| 2\. **Change the Type**          | ![Tutorial-Change-Date-Type](images/Tutorial-Change-Date-Type.png)     | By default, the date type will be set to Year-to-Year. Select the dropdown next to **Type**, and change the selection to **Month-over-Month**. |
+| 2\. **Change the Type**          | ![Tutorial-Change-Date-Type](images/Change-Date-Type.png)     | By default, the date type will be set to Year-to-Year. Select the dropdown next to **Type**, and change the selection to **Month-over-Month**. |
 
 <a name='changingdifferencelabelkpi'></a>
 ### Changing the Difference Labels for the KPI Gauge
@@ -112,7 +112,7 @@ can change this by modifying the "Type" field. In order to do so:
 |                                  |                                                                                            |                                                                                                                                                                         |
 | -------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                     | Go to the **Settings** section of the Visualization Editor.                                                                                                             |
-| 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Label](images/Tutorial-Change-Date-Difference-Label.png) | By default, the difference label will be set to "Percentage". Select the dropdown next to **Show difference as**, and change the selection to **Value and Percentage**. |
+| 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Label](images/Change-Date-Difference-Label.png) | By default, the difference label will be set to "Percentage". Select the dropdown next to **Show difference as**, and change the selection to **Value and Percentage**. |
 
 <a name='changing-color-difference-marker'></a>
 ### Changing the Color of the Difference Marker
@@ -125,4 +125,4 @@ occurrence. In order to change this:
 |                                  |                                                                                                          |                                                                                                                                                             |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                                   | Go to the **Settings** section of the Visualization Editor.                                                                                                 |
-| 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Marker-Color](images/Tutorial-Change-Date-Difference-Marker-Color.png) | By default, the color of the marker will be set to green. Select the dropdown next to **When difference is positive**, and change the selection to **red**. |
+| 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Marker-Color](images/Change-Date-Difference-Marker-Color.png) | By default, the color of the marker will be set to green. Select the dropdown next to **When difference is positive**, and change the selection to **red**. |

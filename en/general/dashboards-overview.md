@@ -117,7 +117,7 @@ level.
   - [**Visualization filters**](~/en/filters/Visualization-Filters.md) (a.k.a. Quick Filters) are displayed in maximized mode. You can find them in the top section of the visualization under the visualization's name.
 
 For more information on dashboard or visualization Filters, check out
-[this section](~/en/filters/index.md).
+[this section](~/en/filters/overview.md).
 
 ### Auto Layout for Visualizations
 

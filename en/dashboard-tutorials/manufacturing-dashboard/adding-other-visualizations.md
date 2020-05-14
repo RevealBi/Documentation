@@ -100,7 +100,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Shipping
 
 The Shipping visualization displays the amount of shipped orders for a
-12 month period in an [area chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to
+12 month period in an [area chart](~/en/visualization-tutorials/simple-charts.md). In order to
 create it:
 
 1.  Select the + button in the right corner of your dashboard, and
@@ -157,7 +157,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 
 The Average Hours visualization displays hours logged by the company's
 employees compared to the hours they spent on the company's machinery
-broken down by month in a [spline chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In
+broken down by month in a [spline chart](~/en/visualization-tutorials/simple-charts.md). In
 order to create it:
 
 1.  Select the + button in the right corner of your dashboard, and
@@ -215,7 +215,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Headcount
 
 The Headcount visualization displays the amount of workers broken down
-by category in a [bar chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to create
+by category in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order to create
 it:
 
 1.  Select the + button in the right corner of your dashboard, and
@@ -269,7 +269,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Labor Cost
 
 The Labor Cost visualization displays the wages for each employee from
-highest to lowest in a [column chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order
+highest to lowest in a [column chart](~/en/visualization-tutorials/simple-charts.md). In order
 to create it:
 
 1.  Select the + button in the right corner of your dashboard, and

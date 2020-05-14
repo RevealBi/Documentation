@@ -59,7 +59,7 @@ This section will cover the following visualizations:
 ### Win/Lost by Month
 
 The Win/Lost by Month visualization displays the amount of won and lost
-opportunities for a six-month period in a [column chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to create it:
+opportunities for a six-month period in a [column chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -121,7 +121,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Forecasted
 
 The Forecasted visualization displays the forecast for a six month
-period in a [bar chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to create it:
+period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -284,7 +284,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Pipeline by Territory
 
 The Pipeline by Territory visualizations displays the average sales
-prospects and where they are located in a [funnel chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to create it:
+prospects and where they are located in a [funnel chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -337,7 +337,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 
 The Total Opportunities visualization displays the revenue the
 opportunities represented for the company for a 12 month period in a
-[line chart](~/en/visualization-tutorials/tutorial-simple-charts). In order to create it:
+[line chart](~/en/visualization-tutorials/simple-charts). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -420,7 +420,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Revenue by Territory
 
 The Revenue by Territory displays the revenue represented by each region
-for the company in a [pie chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to
+for the company in a [pie chart](~/en/visualization-tutorials/simple-charts.md). In order to
 create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
@@ -465,7 +465,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Pipeline per Employee
 
 The Pipeline per Employee visualization displays the top 10 sales
-prospects per employee in a [column chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In
+prospects per employee in a [column chart](~/en/visualization-tutorials/simple-charts.md). In
 order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
@@ -538,7 +538,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Sales by Product
 
 The Sales by Product visualization displays the different company
-products and the percentage of sales for each one in a [doughnut chart](~/en/visualization-tutorials/tutorial-simple-charts.md). In order to create it:
+products and the percentage of sales for each one in a [doughnut chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the

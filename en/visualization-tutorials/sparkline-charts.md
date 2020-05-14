@@ -100,7 +100,7 @@ sparkline chart. In order to do this:
 |                                  |                                                                                        |                                                                     |
 | -------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                 | Go to the **Settings** section of the Visualization Editor.         |
-| 2\. **Change the Chart Type**    | ![Tutorial-Change-Chart-Configuration](images/Tutorial-Change-Chart-Configuration.png) | By default, the chart type will be set to line. Set it to **Area**. |
+| 2\. **Change the Chart Type**    | ![Tutorial-Change-Chart-Configuration](images/Change-Chart-Configuration.png) | By default, the chart type will be set to line. Set it to **Area**. |
 
 <a name='change-date-aggregation'></a>
 ### Changing the Date Aggregation
@@ -112,7 +112,7 @@ do so:
 |                                  |                                                                                                      |                                                                                                                                                      |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                               | Go to the **Settings** section of the Visualization Editor.                                                                                          |
-| 2\. **Change the Aggregation**   | ![Tutorial-Change-Date-Aggregation-Sparkline](images/Tutorial-Change-Date-Aggregation-Sparkline.png) | By default, the "Show Last" setting will be set to **Months**. Select the dropdown next to Months, and change the selection to either Years or Days. |
+| 2\. **Change the Aggregation**   | ![Tutorial-Change-Date-Aggregation-Sparkline](images/Change-Date-Aggregation-Sparkline.png) | By default, the "Show Last" setting will be set to **Months**. Select the dropdown next to Months, and change the selection to either Years or Days. |
 
 You can also choose to display more or less data by changing the number
 next to the date's aggregation.
@@ -128,4 +128,4 @@ remove them:
 |                                      |                                                                                    |                                                                                                                                                          |
 | ------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu**     | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)             | Go to the **Settings** section of the Visualization Editor.                                                                                              |
-| 2\. **Change the Displayed Columns** | ![Tutorial-Remove-Columns-Sparkline](images/Tutorial-Remove-Columns-Sparkline.png) | **Uncheck the "Show columns for last two values" or "Show column with difference" boxes** if you do not want to display either of them in the Sparkline. |
+| 2\. **Change the Displayed Columns** | ![Tutorial-Remove-Columns-Sparkline](images/Remove-Columns-Sparkline.png) | **Uncheck the "Show columns for last two values" or "Show column with difference" boxes** if you do not want to display either of them in the Sparkline. |
