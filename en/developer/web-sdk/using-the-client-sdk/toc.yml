@@ -1,18 +1,18 @@
 - name: Configuring the RevealView Object
-  href: configuring-revealview-client-web.md
+  href: configuring-revealview.md
 - name: Editing & Saving Dashboards
-  href: editing-saving-dashboards-client-web.md
+  href: editing-saving-dashboards.md
 - name: Exporting a Dashboard or a Visualization
-  href: exporting-dashboard-visualization-web.md
+  href: exporting-dashboard-visualization.md
 - name: Setting Up Initial Filter Selections
-  href: setting-initial-filters-client-web.md
+  href: setting-initial-filters.md
 - name: Maximizing Visualizations and Single Visualization Mode
-  href: maximizing-visualizations-client-web.md
+  href: maximizing-visualizations.md
 - name: Setting up Dynamic Filter Selections
-  href: setting-dynamic-filters-client-web.md
+  href: setting-dynamic-filters.md
 - name: Dashboard Linking
-  href: dashboard-linking-client-web.md
+  href: dashboard-linking.md
 - name: Handling User Click Events
-  href: handling-click-events-client-web.md
+  href: handling-click-events.md
 - name: Creating New Visualizations and Dashboards
-  href: creating-visualizations-dashboards-client-web.md
+  href: creating-visualizations-dashboards.md

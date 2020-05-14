@@ -1,14 +1,14 @@
 - name: Getting Started
-  href: index.md
+  href: getting-started.md
 - name: Creating a Dashboard and Adding a Data Source
-  href: finance-starting-creation-process.md
+  href: creating-the-dashboard.md
 - name: Creating the First Visualization
-  href: finance-selecting-data-visualization.md
+  href: selecting-data-visualization.md
 - name: Applying Formatting to the First Visualization
-  href: finance-applying-formatting-visualization.md
+  href: applying-formatting-visualization.md
 - name: Applying a Theme to the Dashboard
-  href: finance-applying-theme.md
+  href: applying-theme.md
 - name: Adding the other Visualizations
-  href: finance-adding-other-visualizations.md
+  href: adding-other-visualizations.md
 - name: Saving your Dashboard
-  href: finance-saving-dashboard.md
+  href: saving-dashboard.md

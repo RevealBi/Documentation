@@ -1,18 +1,18 @@
 - name: Overview
-  href: calculated-fields.md
+  href: overview.md
 - name: Aggregation
-  href: aggregation-calculated-fields.md
+  href: aggregation.md
 - name: Date
-  href: date-calculated-fields.md
+  href: date.md
 - name: Information 
-  href: information-calculated-fields.md
+  href: information.md
 - name: Logic 
-  href: logic-calculated-fields.md
+  href: logic.md
 - name: Lookup & Reference
-  href: lookup-reference-calculated-fields.md
+  href: lookup-reference.md
 - name: Math 
-  href: math-calculated-fields.md
+  href: math.md
 - name: String 
-  href: string-calculated-fields.md
+  href: string.md
 - name: Samples, Tips, and Useful Cases
-  href: sample-calculated-fields.md
+  href: samples.md

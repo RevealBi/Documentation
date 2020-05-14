@@ -1,8 +1,8 @@
 - name: Loading Dashboard Files
-  href: loading-dashboards-server-web.md
+  href: loading-dashboards.md
 - name: Replacing Data Sources
-  href: replacing-data-sources-server-web.md
+  href: replacing-data-sources.md
 - name: In-Memory Data Support
-  href: in-memory-data-server-web.md
+  href: in-memory-data.md
 - name: Providing Credentials to Data Sources
-  href: providing-credentials-datasources-server-web.md
+  href: providing-credentials-datasources.md
