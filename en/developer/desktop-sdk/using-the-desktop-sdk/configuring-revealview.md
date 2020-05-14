@@ -17,7 +17,7 @@ end user, including:
     *MaximizedVisualization*.
 
   - **Specifying a Dashboard** - The *Dashboard* property is used to
-    specify which dashboard should be rendered. As shown in [**Loading Dashboard Files**](loading-dashboards-desktop.md), the dashboard must
+    specify which dashboard should be rendered. As shown in [**Loading Dashboard Files**](loading-dashboards.md), the dashboard must
     be retrieved by using the
     __RevealUtility.LoadDashboard__
     method, which receives a Stream and returns the dashboard object

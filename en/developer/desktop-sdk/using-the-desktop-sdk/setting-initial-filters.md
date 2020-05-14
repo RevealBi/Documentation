@@ -65,6 +65,6 @@ That setting will restrict users to see data only for their associated
 territory.
 
 Finally, in the case that you still want users to change the date filter
-selection, take a look to [**Setting up Dynamic Filter Selections**](setting-dynamic-filters-desktop.md). There you’ll find
+selection, take a look to [**Setting up Dynamic Filter Selections**](setting-dynamic-filters.md). There you’ll find
 information about how to create your own UI that, allowing the user to
 change the date filter.

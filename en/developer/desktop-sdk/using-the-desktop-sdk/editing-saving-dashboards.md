@@ -2,7 +2,7 @@
 
 ### Overview
 
-As described in [**Configuring the RevealView Object**](configuring-revealview-desktop.md), you need to provide the __RevealView__ component with the stream containing the dashboard file. In addition, you also might want to handle the modified dashboard file, once the user made changes to the dashboard.
+As described in [**Configuring the RevealView Object**](configuring-revealview.md), you need to provide the __RevealView__ component with the stream containing the dashboard file. In addition, you also might want to handle the modified dashboard file, once the user made changes to the dashboard.
 
 ### Saving dashboards
 

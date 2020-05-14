@@ -31,7 +31,7 @@ __RevealSettings__. When you
 don’t set a visualization in this attribute, the whole dashboard is
 displayed.
 
-As shown in [**Configuring the RevealViewobject**](configuring-revealview-desktop.md), you can display a specific dashboard in your page. This time, you also need to set the
+As shown in [**Configuring the RevealViewobject**](configuring-revealview.md), you can display a specific dashboard in your page. This time, you also need to set the
 __MaximizedVisualization__
 attribute. As shown in the code snippet below with the visualization
 "Sales".

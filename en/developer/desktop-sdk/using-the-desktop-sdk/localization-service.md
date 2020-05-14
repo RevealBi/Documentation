@@ -167,7 +167,7 @@ Now, the amount is displayed in a different currency:
 <a name='format-date-field'></a>
 #### Changing the formatting settings of a date field - example
 
-Currently changing the formatting settings for an aggregated date field cannot be configured with the Localization service and won’t affect the values in pivot. In order to achieve this you have to use the [Formatting service](formatting-service-desktop.md).
+Currently changing the formatting settings for an aggregated date field cannot be configured with the Localization service and won’t affect the values in pivot. In order to achieve this you have to use the [Formatting service](formatting-service.md).
 
 The Localization service allows you to change the formatting settings of **non-aggregated date fields**.
 

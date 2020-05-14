@@ -51,7 +51,7 @@ Now you need to visualize the dashboard using your own data instead of the dummy
 
 1.  Implement
     __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealView__,
-    as described in [**Replacing Data Sources**](replacing-data-sources-desktop.md).
+    as described in [**Replacing Data Sources**](replacing-data-sources.md).
 
     Then, in the implementation for the method __ChangeVisualizationDataSourceItemAsync__, you need to add a code similar to this one:
 

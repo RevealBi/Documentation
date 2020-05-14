@@ -69,7 +69,7 @@ Now you need to visualize the dashboard using your own data instead of the dummy
     __IRVDataSourceProvider__
     and return it as the __DataSourceProvider__
     property in
-    __IRevealSdkContext__, as described in [**Replacing Data Sources**](replacing-data-sources-server-web.md).
+    __IRevealSdkContext__, as described in [**Replacing Data Sources**](replacing-data-sources.md).
 
     Then, in the implementation for the method
     **ChangeVisualizationDataSourceItemAsync**, you need to add a code similar to this one:

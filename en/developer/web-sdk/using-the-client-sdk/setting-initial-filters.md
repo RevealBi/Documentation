@@ -71,4 +71,4 @@ That setting will restrict users to see data only for their associated
 territory.
 
 Finally, in the case that you still want users to change the date filter
-selection, take a look at [**Setting up Dynamic Filter Selections**](setting-dynamic-filters-client-web.md). There you’ll find information about how to create your own UI that, allowing the user to change the date filter.
+selection, take a look at [**Setting up Dynamic Filter Selections**](setting-dynamic-filters.md). There you’ll find information about how to create your own UI that, allowing the user to change the date filter.

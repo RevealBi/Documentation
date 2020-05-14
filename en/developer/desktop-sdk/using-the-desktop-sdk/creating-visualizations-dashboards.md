@@ -2,7 +2,7 @@
 
 ### Overview
 
-As described in [**Editing & Saving Dashboards**](editing-saving-dashboards-desktop.md), there are two ways to handle how you save changes to dashboards: **client-side and server-side**. Those scenarios work fine when users make minor changes to existing dashboards such as:
+As described in [**Editing & Saving Dashboards**](editing-saving-dashboards.md), there are two ways to handle how you save changes to dashboards: **client-side and server-side**. Those scenarios work fine when users make minor changes to existing dashboards such as:
 
   - Adding/modifying filters
   - Changing the type of visualization (chart, gauge, grid, etc.)
@@ -53,7 +53,7 @@ The “false” value in the third parameter prevents existing data sources on t
 ![displayingDataSources\_web](images/displayingDataSources_web.png)
 
 Please note that the “employees” parameter passed to the
-“RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](in-memory-data-desktop.md) and identifies the dataset to be returned.
+“RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](in-memory-data.md) and identifies the dataset to be returned.
 
 ### Creating New Dashboards
 

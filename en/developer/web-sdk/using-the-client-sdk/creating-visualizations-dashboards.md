@@ -3,7 +3,7 @@
 ### Overview
 
 As described in [**Editing & Saving
-Dashboards**](editing-saving-dashboards-client-web.md), there are two ways
+Dashboards**](editing-saving-dashboards.md), there are two ways
 to handle how you save changes to dashboards: **client-side and
 server-side**. Those scenarios work fine when users make minor changes
 to existing dashboards like:
@@ -45,7 +45,7 @@ The “false” value in the third parameter prevents existing data sources on t
 
 ![displayingDataSources\_web](images/displayingDataSources_web.png)
 
-Please note that the “employees” parameter passed to the “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](~/en/developer/web-sdk/using-the-server-sdk/in-memory-data-server-web.md) and identifies the dataset to be returned on the server side.
+Please note that the “employees” parameter passed to the “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](~/en/developer/web-sdk/using-the-server-sdk/in-memory-data.md) and identifies the dataset to be returned on the server side.
 
 ### Creating New Dashboards
 

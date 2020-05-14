@@ -81,7 +81,7 @@ Now you have only the percentage fields formatted:
 
 ![Only percentage numeric data in the visualization displays five decimal digits](images/result-formatting-numeric-data-percentage.png)
 
-If you take a look at the other visualizations in the dashboard, you will notice that the formatting of the numeric data in them is not changed. In these cases, the formatting is controlled by the chart, so you will have to modify the formatting settings of the fields in order to modify it. You can do this by using the [Localization Service](localization-service-desktop.md).
+If you take a look at the other visualizations in the dashboard, you will notice that the formatting of the numeric data in them is not changed. In these cases, the formatting is controlled by the chart, so you will have to modify the formatting settings of the fields in order to modify it. You can do this by using the [Localization Service](localization-service.md).
 
 ![The Marketing sample dashboard after formatting
 changes](images/formatting-service-marketing-sample-result.png)
