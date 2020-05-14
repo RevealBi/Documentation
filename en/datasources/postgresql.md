@@ -57,7 +57,7 @@ that the commands should be executed on the server.
 
 With Reveal, you can retrieve PostgreSQL data from entire tables, but
 you can also select a particular
-[view](https://www.postgresql.org/docs/10/tutorial-views.html) that
+[view](https://www.postgresql.org/docs/10/views.html) that
 returns a subset of data from a table or a set of tables instead.
 
 ![PostgreSQL views dialog](images/postgre-SQL-views.png)
@@ -67,4 +67,4 @@ of the data in the **Products** table in the PostgreSQL server.
 
 ![Sample dashboard using PostgreSQL invoices view data](images/invoices-postgre-sql-view-sample.png)
 
-For more information on views and PostgreSQL, visit [this documentation website](https://www.postgresql.org/docs/10/tutorial-views.html).
+For more information on views and PostgreSQL, visit [this documentation website](https://www.postgresql.org/docs/10/views.html).

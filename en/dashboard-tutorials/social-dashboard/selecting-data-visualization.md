@@ -1,7 +1,7 @@
 ## Creating the First Visualization  
 
 Let's focus on creating the "YTD Twitter Followers" visualization in the
-[sample dashboard](index.md) presented at the beginning
+[sample dashboard](overview.md) presented at the beginning
 of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizations/gauge-views.html#text-gauge).
 
 First, **open the visualizations picker** by selecting the grid icon in

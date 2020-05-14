@@ -12,8 +12,8 @@ seamless, identical experience no matter what device you are on: Web,
 Desktop, iOS, or Android.
 
 Learn how to use Reveal with our easy, step-by-step
-[dashboard](~/en/dashboard-tutorials/index.md) and
-[visualization](~/en/visualization-tutorials/index.md) tutorials.
+[dashboard](~/en/dashboard-tutorials/overview.md) and
+[visualization](~/en/visualization-tutorials/overview.md) tutorials.
 
 ### You can use Reveal to:
 
@@ -34,7 +34,7 @@ Learn how to use Reveal with our easy, step-by-step
 </colgroup>
   <tr>
     <th class="tg-0pky"><img src="images/dataSourcesHomePage_All.png" alt="Adding a data source dialog" width="200" height="150"></th>
-    <th class="tg-0pky"><a href="~/en/datasources/index.md">Securely connect to your data</a>: Connect to the most popular data sources without setting anything up on the server. Get real-time insights by connecting directly to <a href="~/en/datasources/sharepoint.md">SharePoint Online</a>, <a href="~/en/datasources/google-drive.md">Google Drive</a>, <a href="~/en/datasources/onedrive.md">OneDrive</a>, <a href="~/en/datasources/microsoft-analysis-services.md">Microsoft Analysis Services</a>, <a href="~/en/datasources/microsoft-sql-server.md">Microsoft SQL Server</a>, <a href="~/en/datasources/microsoft-dynamics-crm.md">CRM</a>, and many more.</th>
+    <th class="tg-0pky"><a href="~/en/datasources/overview.md">Securely connect to your data</a>: Connect to the most popular data sources without setting anything up on the server. Get real-time insights by connecting directly to <a href="~/en/datasources/sharepoint.md">SharePoint Online</a>, <a href="~/en/datasources/google-drive.md">Google Drive</a>, <a href="~/en/datasources/onedrive.md">OneDrive</a>, <a href="~/en/datasources/microsoft-analysis-services.md">Microsoft Analysis Services</a>, <a href="~/en/datasources/microsoft-sql-server.md">Microsoft SQL Server</a>, <a href="~/en/datasources/microsoft-dynamics-crm.md">CRM</a>, and many more.</th>
   </tr>
   <tr>
     <td class="tg-0pky"><img src="images/VisualizationEditorHomePage_All.png" alt="Selecting a Visualization type dialog" width="200" height="150"></td>
@@ -46,7 +46,7 @@ Learn how to use Reveal with our easy, step-by-step
   </tr>
   <tr>
     <td class="tg-0pky"><img src="images/dashboardsInteractHome_All.png" alt="Dashboard viewer show tooltips" width="200" height="150"></td>
-    <td class="tg-0pky"><a href="~/en/dashboards/exporting-dashboards/index.md">Interact with your dashboards</a>: Once your dashboard is created, interact with your visualizations with drill-down support, or even the ability to change visualization on the fly. Create and share annotated images of your visualizations for deeper insights.</td>
+    <td class="tg-0pky"><a href="~/en/dashboards/exporting-dashboards/overview.md">Interact with your dashboards</a>: Once your dashboard is created, interact with your visualizations with drill-down support, or even the ability to change visualization on the fly. Create and share annotated images of your visualizations for deeper insights.</td>
   </tr>
   <tr>
     <td class="tg-0pky"><img src="images/sharingHome_All.png" alt="Sharing dialog" width="200" height="150"></td>
