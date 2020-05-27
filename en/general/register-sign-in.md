@@ -4,7 +4,7 @@ When you first install and open the application, you will be presented with the 
 
 ![Log in screen](images/log-in-screen.png)
 
-In Reveal, you can use your Office 365 or Google account credentials to
+In Reveal, you can use your Office 365, Google or iCloud (*Apple*) account credentials to
 log in. You can also create an Infragistics user account. You'll only
 need to sign in once to automatically be logged in to the application,
 so there's no need to remember multiple passwords.

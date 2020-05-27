@@ -24,7 +24,7 @@ With Teams in Reveal, you can:
 
 To access your teams click/tap on the popover menu next to the *Reveal* icon:
 
-![Accessing teams popover menu](images/accessing-teams-menu_all.png)
+![Accessing teams popover menu](images/accessing-teams-menu.png)
 
 You will find a list of your teams under *My Stuff* in the popover menu.
 
