@@ -25,7 +25,7 @@ The matrix below shows the availability of Reveal features in all its platforms 
 | Oracle                                            | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | PostgreSQL Server                                 | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | REST API                                          | <span style="color: #FF0000">No</span>        | <span style="color: #007F00">Yes</span>   |
-| Salesforce                                        | <span style="color: #007F00">Yes</span>       | <span style="color: #FF0000">No</span>    |
+| Salesforce                                        | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>    |
 | SharePoint                                        | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Sybase                                            | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Twitter                                           | <span style="color: #007F00">Yes</span>       | <span style="color: #FF0000">No</span>    |
@@ -65,7 +65,7 @@ The matrix below shows the availability of Reveal features in all its platforms 
 | Spline Area                                       | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Text Gauge                                        | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Text View                                         | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
-| Tree Map                                          | <span style="color: #007F00">Yes</span>       | <span style="color: #FF0000">No</span>    |
+| Tree Map                                          | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>    |
 | Web View                                          | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | **INTERACT & ANALYZE**                            |                                               |                                           |
 | Calculated Fields                                 | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
