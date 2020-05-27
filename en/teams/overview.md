@@ -10,7 +10,7 @@ With Teams in Reveal, you can:
     create and share dashboards directly with other members, view and
     edit their dashboards.
 
-  - [**Share**](~/en/sharing-dashboards/sharing-dashboards.md) your team's dashboards with other teams and users in Reveal.
+  - [**Share**](~/en/dashboards/sharing-dashboards/share-a-dashboard.md) your team's dashboards with other teams and users in Reveal.
 
   - Assign every team member to one of [**three members' roles**](#members-roles-permissions) with distinct access level to safeguard dashboards with sensitive information.
 
