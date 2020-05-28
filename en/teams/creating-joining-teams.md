@@ -23,16 +23,11 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 2.  Click/Tap the *+ Create Team* blue button. The following screen
     opens:
 
-    ![team properties dialog](images/create-team-properties_all.png)
+    ![team properties dialog](images/create-team-properties.png)
 
     Here you will need to:
 
       - assign a *name* to your team;
-
-      - choose team's *color*;
-
-      - decide on team's
-        [*privacy*](index.html#team-privacy-levels);
 
       - choose if your team will belong to the main *Organization*.
 
@@ -49,14 +44,18 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 
             >[!NOTE]
             >Carefully choose the *Organization* property for your team as you cannot change it later.
+      - decide on team's [*privacy*](index.html#team-privacy-levels) - this option will not be availabe if you choose _Personal Organization_ for your team. 
+  
+      - configure _branding_ settings - choose a main color and logo to be used when the teams' dashboards are exported as [PDF documents](~/en/dashboards/exporting/export-as-pdf-document.md) and [PPT presentations](~/en/dashboards/exporting/export-as-powerpoint-presentation). 
+       
+        >[!NOTE] **Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: jpg, jpeg, png, gif.
 
-3.  Click/Tap *Create* to continue and start inviting members to your team by adding their emails to the list. They will receive an
+3.  Click/Tap *Create* to continue. Start inviting members to your team by selecting the *+ Members* blue button and adding their emails to the list. They will receive an
 invitation by email.
 
     ![invite members dialog](images/team-invite-members.png)
 
-    *Member* is the default role for every user you invite, unless you
-    assign them a different role.
+    *Member* is the default role for every user you invite, unless you assign them a different role.
 
     >[!NOTE]
     >When adding members, whose emails are not auto-completed by Reveal, type the whole email and press Enter to add it to the list of users you want to invite.
@@ -101,6 +100,8 @@ There is no limit to the teams you can create or join. To easily navigate throug
 * custom *groups* you have created.
 
 #### Filtering by Organization
+
+Filtering by organization appears as an option only if you have at least one team, which is part of your *Organization team* and one team, which is a *Personal team*. 
 
 1.  Click/Tap the popover menu in the top left corner (next to the _Reveal_ icon).
 

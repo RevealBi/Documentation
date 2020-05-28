@@ -33,15 +33,12 @@ invitation.
 
 #### Changing the role or removing more than one member at the same time
 
-1.  Uncheck the checked box on the right, over the members' list.
-
-2.  Checkboxes on the right of members' names appear. Select the ones
-    you want to change/remove.
-
+1. Select the checked box on the right of the *+Members* blue button. 
+2. Checkboxes on the right of members' roles appear.
 3.  Select the trash icon or a role from the menu at the bottom center
     of the screen.
 
-![select role menu at the bottom center in manage members](images/select-role-menu_all.png)
+![select role menu at the bottom center in manage members](images/select-role-menu.png)
 
 <a name='manage-team-properties'></a>
 ### Managing Team Properties
@@ -74,7 +71,7 @@ Organization repository.
 You can delete a team only if you are an Owner. To do this, go to the
 team's [properties](#manage-team-properties) and click *Delete Team*.
 
-![delete team button](images/delete-team_all.png)
+![delete team button](images/delete-team.png)
 
 When you delete a team, it disappears with all its content.
 
@@ -91,7 +88,7 @@ click/tap the dropdown menu on the right of your name and select
 If you are the only Owner of a team you cannot leave it without
 assigning another member as an Owner.
 
-![leave team dialog to assign a new owner](images/owner-leaves-team_all.png)
+![leave team dialog to assign a new owner](images/owner-leaves-team.png)
 
 Reveal shows you all the members of the team who are suitable for an
 Owner's role.
