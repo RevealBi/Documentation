@@ -5,7 +5,7 @@ following information:
 
 ![Configure Sybase database connection](images/enter-sybase-server-details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data Sources list. Default name: *Sybase*.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Sybase*. You can change it to your preference.
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.

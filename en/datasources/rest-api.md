@@ -28,8 +28,8 @@ following information:
 
 ![Configuring-REST-API-Data-Source\_All](images/Configuring-REST-API-Data-Source_All.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
+1. 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *REST API*. You can change it to your preference.
+
 
 2.  **URL**: the URL where the service is located.
 

@@ -18,8 +18,8 @@ To configure an Azure SQL data source, you will need to enter the following info
     enter the credentials for Azure SQL or select existing ones if
     applicable.
 
-      - **Name**: the name for your data source account. It will be
-        displayed in the list of accounts in the previous dialog.
+      - *Default name* of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Azure SQL Database*. You can change it to your preference.
+
 
       - *(Optional)* **Domain**: the name of the domain, if applicable.
 

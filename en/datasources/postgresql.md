@@ -5,8 +5,8 @@ following information:
 
 ![Configure PostgreSQL Server details](images/enter-postgreSQL-server-details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list. Default name: _PostgreSQL_.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *PostgreSQL*. You can change it to your preference.
+
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.

@@ -10,7 +10,7 @@ following information:
 
 ![Configure Web resource connection](images/enter-web-resource-details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data Sources list. Default name: *Web Resource*.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Web Resource*. You can change it to your preference.
 
 2.  **URL**: the URL where the service is located (for example,
     <http://download.infragistics.com/reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx>

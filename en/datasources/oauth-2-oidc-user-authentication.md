@@ -81,19 +81,20 @@ server.
 
 The following fields are mandatory:
 
-1.  **Name**: the name for your data source account. It will be
-    displayed in the list of accounts (this is not a credential provided
-    by the resource server).
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts (this is not a credential provided by the resource server). You can change the name given by default to your preference by selecting the pencil icon.
+ 
+2.  the name for your data source account. It will be
+    displayed in the list of accounts 
 
-2.  **Authenticate Url**: The authenticate URL is usually in a format
+3.  **Authenticate Url**: The authenticate URL is usually in a format
     such as: <https://authorization-server.com/oauth2/authorize> (e.g.
     <https://login.microsoftonline.com/common/oauth2/authorize>).
 
-3.  **Token Url**: The format of the token url is similar to the one of
+4.  **Token Url**: The format of the token url is similar to the one of
     the authenticate url (e.g.
     <https://login.microsoftonline.com/common/oauth2/token>).
 
-4.  **Client ID**: The Client ID is the identifier for your app
+5.  **Client ID**: The Client ID is the identifier for your app
     (Reveal). Its format is a random combination of symbols. You will
     receive a Client ID when you first register Reveal as an OAuth
     Client.

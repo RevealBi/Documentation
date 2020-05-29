@@ -1,12 +1,10 @@
 ## Microsoft SQL Server
 
-To configure a Microsoft SQL Server data source, you will need to enter
-the following information:
+To configure a Microsoft SQL Server data source, you can configure the following information:
 
 ![Enter SQL Server Details](images/Enter-SQL-Server-Details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft SQL Server*. You can change it to your preference.
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
