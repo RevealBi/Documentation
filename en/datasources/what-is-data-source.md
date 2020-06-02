@@ -35,7 +35,7 @@ For the complete list of supported data sources and detailed information on how 
 
   - [Google Drive](google-drive.md)
 
-  - [Microsoft Analysis Services](microsoft-analysis-services/microsoft-analysis-services.md)
+  - [Microsoft Analysis Services](microsoft-analysis-services/configuring-microsoft-analysis-services.md)
 
   - [Microsoft Azure Synapse Analytics](microsoft-azure-synapse-analytics.md)
 

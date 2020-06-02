@@ -122,8 +122,6 @@
   href: data-visualizations/combo-charts.md
 - name: Statistical Functions
   href: data-visualizations/statistical-functions.md
-- name: Do-It-Yourself Visualizations
-  href: data-visualizations/diy-visualizations.md
 - name: Reusing Visualizations
   href: data-visualizations/reusing-visualizations.md
 - name: Financial Charts

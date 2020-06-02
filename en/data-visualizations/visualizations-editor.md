@@ -6,7 +6,7 @@ The Visualization editor is where you create and edit your visualizations. It he
 
 You can access the Visualization editor in two ways:
 
-***1. In the visualizaion creation process***
+***1. In the visualization creation process***
 
 Once you have selected and configured your data source, the Visualization editor will open automatically.
 

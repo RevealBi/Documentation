@@ -1,7 +1,6 @@
 ## Working with Microsoft Analysis Services
 
-Microsoft Analysis Services as a data source shows some specifics in
-regard to:
+Microsoft Analysis Services as a data source shows some specifics regarding:
 
   - [Working with Microsoft Analysis data sources in the Visualization Editor](#visualization-editor);
 
@@ -13,7 +12,7 @@ regard to:
 ### Working in the Visualization Editor
 
 When you create a dashboard with information coming from Microsoft
-Analysis Services, you will see fields organized differently as seen in
+Analysis Services, you will see fields organized differently, as seen in
 the screenshot below.
 
 ![VisEditorDimensionsMeasures\_All](images/VisEditorDimensionsMeasures_All.png)
@@ -36,9 +35,9 @@ two sections in their own query field:
         arbitrary collection of elements with a name (e.g. "Top 50
         Customers").
 
-    3.  **Attributes** - elements are organized in single level
+    3.  **Attributes** - elements are organized in single-level
         hierarchies (e.g. a "Demographic" attribute, containing groups
-        of elements like "Gender", "Marital Status", etc.)
+        of elements like "Gender," "Marital Status," etc.)
 
 2.  **Measures** (depicted by *[123]* icon): Measures consist of
     numeric data.
@@ -90,11 +89,7 @@ contain a list of products (e.g. bikes, clothes, etc). When you select a
 value from the list, the connected visualizations will be refreshed to
 show data only for the selected product.
 
-If you select additionally the *Internet orders* Measure for *Show only
-when Measure has data* field, dashboard filter values that do not
-contain information about this measure will not be an option (i.e. if
-there are no internet orders of bikes, you will not be able to select
-this product as a filter value).
+If you additionally select the *Internet orders* Measure for *Show only when Measure has data* field, dashboard filter values, which do not contain information about the *Internet orders* Measure, will not be an option. For example,  if there are no internet orders of bikes, you will not be able to select this product as a filter value.
 
 For more information on how to work with filters, please refer to:
 

@@ -10,7 +10,7 @@ following information:
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no infomration
+3.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (5000)
     by default.
 
@@ -36,9 +36,6 @@ following information:
 
 You can find your server by following the steps below. Please note that
 the commands should be executed on the server.
-
-table, th, td { border: 1px solid black; border-collapse: collapse; }
-th, td { padding: 15px; }
 
 | WINDOWS                                                                                                         | LINUX                                                                                                         | MAC                                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -80,7 +77,7 @@ server with data from the master database:
 
 ![Select from Sybase Stored Procedures dialog](images/sybase-stored-procedures.png)
 
-In this case, for example, the stored procedure requires for users to set some time range values.
+In this case, for example, the stored procedure requires users to set some time range values.
 
 ![Stored Procedure select dates](images/stored-procedure-sample-dates.png)
 

@@ -41,8 +41,8 @@ Report:
 The order of reports and folders closely resembles the one in your
 Microsoft Reporting Services account.
 
-Depending on your data, you will need to configure certain
-**parameters** for your Reports, like shown below:
+Depending on your data, you will need to configure specific
+**parameters** for your Reports, as shown below:
 
 ![Set up parameters and choose an output format dialog](images/multiple-selection-parameters.png)
 
@@ -50,11 +50,11 @@ After selecting/filling the parameters for your report, you can choose
 the format in which the report will load in the *Visualization editor*:
 
   - *Load as PDF* - You will have your report embedded as a PDF document
-    in the visualization edtior. You will be able to scroll, zoom,
+    in the visualization editor. You will be able to scroll, zoom,
     download or print the pdf inside the Visualization editor.
 
   - *Load Data* - Your report data will be loaded in the standard
     format, providing you with fields to build your visualization.
 
 >[!NOTE] **Editing the Data Source in the Visualization editor.**
->Carefully choose the report format (pdf or data), because once loaded you will be not able to change it. When you *Edit* your data source, you will be only able to change the configuration of the report's parameters.
+>Carefully choose the report format (pdf or data) because once loaded, you will not be able to change it. When you *Edit* your data source, you will only be able to change the configuration of the report's parameters.

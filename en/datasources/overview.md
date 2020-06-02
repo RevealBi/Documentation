@@ -8,10 +8,7 @@ As listed in the [features](~/en/general/feature-matrix.md) section, Reveal prov
 * *Databases* ([Microsoft SQL Server](microsoft-sql-server.md),  [Microsoft Analysis Services Server](configuring-microsoft-analysis-services.md),  MySQL[MySQL](mysql.md), [PostgreSQL](postgresql.md), [Oracle](oracle.md), [Sybase](sybase.md)) [*](~/en/general/feature-matrix.html#databases-web)
 * *Other Data Sources* ([OData-Feed](odatafeed.md), [Web-Resource](web-resource.md), [JSON files](working-with-json-files.md))
 
-> [!NOTE]
-> The current Reveal release lets you create content manager data sources _only_. Analytics tools, Customer Relationship Managers and Databases are supported for dashboards imported with those data sources.
-
-### Entering your Credentials
+### Entering Your Credentials
 
 If you open an existing dashboard and have not yet added the Data Source credentials, you will see a message similar to the following one:
 
@@ -40,6 +37,6 @@ You can configure the following details:
 * *Username*: the user account for the data source.
 * *Password*: the password for the data source.
 
-Once ready, select *Create Account*. You can verify whether the account is reaching the data source or not by selecting _Test Connection_. Then, select *Done*. You will then be able to see your dashboard displayed in Reveal.
+Once ready, select *Create and Use*. 
 
 ![Email Efforts Credentials dashboard](images/EmailEffortsCredentials.png)

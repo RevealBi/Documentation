@@ -42,4 +42,4 @@ Finally, if you want to know more about any of the following:
 
   - Working with Stored Procedures
 
-Please refer to [**SQL Server**](microsoft-sql-server.html#how-to-find-server) as both Reveal data sources work in a similar way.
+Please refer to [**SQL Server**](microsoft-sql-server.html#how-to-find-server) as both Reveal data sources work similarly.

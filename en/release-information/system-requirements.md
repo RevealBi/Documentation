@@ -20,9 +20,12 @@ iOS version 11 or higher.
 
 ### Web
 
-The Web version of Reveal supports all major browsers on Mac and
-Windows.
+The Web version of Reveal supports the following browsers: 
 
+- *Chrome* 
+- *Edge (Chromium-based version)*
+- *Firefox* 
+- *Safari* 
 
 >[!NOTE]
 >The mobile versions of Firefox and Chrome are not supported.

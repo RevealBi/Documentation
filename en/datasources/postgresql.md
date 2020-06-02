@@ -11,7 +11,7 @@ following information:
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no infomration
+3.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (5432)
     by default.
 
@@ -67,4 +67,4 @@ of the data in the **Products** table in the PostgreSQL server.
 
 ![Sample dashboard using PostgreSQL invoices view data](images/invoices-postgre-sql-view-sample.png)
 
-For more information on views and PostgreSQL, visit [this documentation website](https://www.postgresql.org/docs/10/views.html).
+For more information on views and PostgreSQL, visit [this documentation website](https://www.postgresql.org/docs/10/tutorial-views.html).

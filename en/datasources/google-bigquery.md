@@ -48,14 +48,14 @@ data sources storing millions of records.
 Currently, only a limited number of **functions** are available for
 *Calculated Fields* using data from BigQuery:
 
-- [Date](date-calculated-fields.md) - date; time.
+- [Date](~/en/fields/calculated-fields/date.md) - date; time.
 
-- [Logic](logic-calculated-fields.md) - false; true; if; not.
+- [Logic](~/en/fields/calculated-fields/logic.md) - false; true; if; not.
 
-- [Math](math-calculated-fields.md) - abs; exp; log; log10; mod; rand; sign; sqrt; trunc.
+- [Math](~/en/fields/calculated-fields/math.md) - abs; exp; log; log10; mod; rand; sign; sqrt; trunc.
 
-- [Strings](string-calculated-fields.md) - find; len; trim; lower; mid; upper.
+- [Strings](~/en/fields/calculated-fields/string.md) - find; len; trim; lower; mid; upper.
 
 #### Limitations in Data Blending
 
-Currently, Data Blending ([combining data sources in one visualization](data-blending.md)) is **not available** when using data from the Azure Synapse Analytics data source.
+Currently, Data Blending ([combining data sources in one visualization](data-blending.md)) is **not available** when using data from the Google BigQuery data source.
