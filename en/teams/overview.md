@@ -10,7 +10,7 @@ With Teams in Reveal, you can:
     create and share dashboards directly with other members, view and
     edit their dashboards.
 
-  - [**Share**](~/en/sharing-dashboards/sharing-dashboards.md) your team's dashboards with other teams and users in Reveal.
+  - [**Share**](~/en/dashboards/sharing-dashboards/share-a-dashboard.md) your team's dashboards with other teams and users in Reveal.
 
   - Assign every team member to one of [**three members' roles**](#members-roles-permissions) with distinct access level to safeguard dashboards with sensitive information.
 
@@ -24,7 +24,7 @@ With Teams in Reveal, you can:
 
 To access your teams click/tap on the popover menu next to the *Reveal* icon:
 
-![Accessing teams popover menu](images/accessing-teams-menu_all.png)
+![Accessing teams popover menu](images/accessing-teams-menu.png)
 
 You will find a list of your teams under *My Stuff* in the popover menu.
 

@@ -5,18 +5,18 @@ following information:
 
 ![Enter MySQL Server Details dialog](images/enter-mySQL-server-details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names the data source *MySQL*. You can change it to your preference.
+
 
 2. [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no infomration
+3.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (3306)
     by default.
 
 4.  **Credentials**: after selecting *Credentials*, you will be able to
-    enter the credentials for your MySQL server or select existing ones
+    enter the credentials for your MySQL server or choose existing ones
     if applicable.
 
       - **Name**: the name for your data source account. It will be
@@ -42,7 +42,7 @@ the commands should be executed on the server.
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 1\. Open the File Explorer.                                                                                     | 1\. Open a Terminal.                                                                                          | 1\. Open System Preferences.                                         |
 | 2\. Right Click on My Computer \> Properties.                                                                   | 2\. Type in **$hostname**                                                                                     | 2\. Navigate to the Sharing Section.                                 |
-| Your Hostname will appear as "Computer Name" under the *Computer name, domain and workgroups settings* section. | Your Hostname will appear along with your DNS domain name. Make sure you only include **Hostname** in Reveal. | Your Hostname will be listed under the "Computer Name" field on top. |
+| Your Hostname will appear as "Computer Name" under the *Computer name, domain, and workgroups settings* section. | Your Hostname will appear along with your DNS domain name. Make sure you only include **Hostname** in Reveal. | Your Hostname will be listed under the "Computer Name" field on top. |
 
 You can find your *IP address* by following the steps below. Please note
 that the commands should be executed on the server.
@@ -55,7 +55,7 @@ that the commands should be executed on the server.
 
 ### Working with Views
 
-With Reveal, you can retrieve MySQL data from entire tables, but you can
+With Reveal, you can retrieve MySQL data from entire tables. Still, you can
 also select a particular
 [view](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-views.html)
 that returns a subset of data from a table or a set of tables instead.

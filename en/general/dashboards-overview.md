@@ -4,8 +4,6 @@ You can open existing dashboards by selecting the dashboard thumbnail image in t
 
 ![dashboard opened in edit mode](images/dashboard-opened-edit-mode.png)
 
-In this view, all the visualizations in a dashboard are in **minimized** state.
-
 ### Dashboard Interactions
 
 You can **interact** with visualizations in various ways. For instance, if the visualization is in grid view, you can scroll horizontally and
@@ -21,11 +19,11 @@ The maximized view allows a larger display of the information.
 
 ![maximized visualization view](images/maximized-visualization.png)
 
-In this mode, you can also switch the maximized view to other visualizations or look at the data behind your chart by selecting the **small chart icon** in the top right corner. Different possibilities will be displayed depending on the starting visualization. The changes to the visualization will not be saved, unless you enter Edit mode (by selecting *Edit* from the overflow menu) and explicitly save the changes.
+In this mode, you can also switch the maximized view to other visualizations by selecting the **small chart icon** in the top right corner. Different possibilities will be displayed depending on the starting visualization. The changes to the visualization will not be saved, unless you enter Edit mode (by selecting *Edit* from the overflow menu) and explicitly save the changes. 
 
 ![chart change in visualization view mode](images/chart-change-visualization-view-mode.png)
 
-You can also switch views and look at the data behind your chart if you select on the **hash sign** icon in the top right corner of the Visualizations menu.
+You can also look at the data behind your chart if you select the **hash sign** icon.
 
 ![flip to grid](images/flip-grid.png)
 

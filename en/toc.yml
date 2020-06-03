@@ -122,8 +122,6 @@
   href: data-visualizations/combo-charts.md
 - name: Statistical Functions
   href: data-visualizations/statistical-functions.md
-- name: Do-It-Yourself Visualizations
-  href: data-visualizations/diy-visualizations.md
 - name: Reusing Visualizations
   href: data-visualizations/reusing-visualizations.md
 - name: Financial Charts
@@ -132,8 +130,8 @@
   href: data-visualizations/gauge-views.md
 - name: Grid View
   href: data-visualizations/grid-view.md
-- name: Image View
-  href: data-visualizations/image-view.md
+- name: Web View
+  href: data-visualizations/web-view.md
 - name: KPI Gauge
   href: data-visualizations/kpi-gauge.md
 - name: Pivot Table

@@ -53,7 +53,7 @@ When adding fields from other data sources, you actually join two different data
 JOIN.
 
 Below you can see how the **Vacation (left table)** and the
-**Departments (right table)** data sets joined, using the DepartmentID
+**Departments (right table)** data sets are joined, using the DepartmentId
 field in both tables as the relationship between them (equality condition: DepartmentId = DepartmentId).
 
 **Before JOIN operation:**

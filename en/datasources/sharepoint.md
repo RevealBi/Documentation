@@ -13,7 +13,7 @@ You can also enter **a subsite URL** if you want to directly add a SharePoint su
 When working within Reveal, you will be able to use a wide variety of
 files:
 
-  - **Spreadsheets**: Excel (.xls, .xlsx) or CSV, which you can use
+  - **Spreadsheets & tabular data**: Excel (.xls, .xlsx), CSV, TSV, which you can use
     dynamically within Reveal.
 
   - **Other files** (including images or document files such as PDFs,

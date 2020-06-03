@@ -17,13 +17,13 @@ information:
 
 ![Configure Oracle SID mode details](images/enter-oracle-details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
+1. 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Oracle*. You can change it to your preference.
+
 
 1.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-2.  **Port**: if applicable, the server port details. If no infomration
+2.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (1521)
     by default.
 
@@ -65,7 +65,7 @@ information:
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no infomration
+3.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (1521)
     by default.
 
@@ -114,8 +114,8 @@ that the commands should be executed on the server.
 
 ### Working with Views
 
-With Reveal, you can retrieve Oracle data from entire tables, but you
-can also select a particular
+With Reveal, you can retrieve Oracle data from entire tables. Still, you
+can select a particular
 [view](https://docs.oracle.com/cd/B19306_01/server.102/b14220/objects.htm#i440066)
 that returns a subset of data from a table or a set of tables instead.
 

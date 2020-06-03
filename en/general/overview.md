@@ -1,7 +1,7 @@
 ## Overview
 
 Reveal is a self-service, cross-platform business intelligence tool that puts the power in your hands to do dashboard reporting - all without the
-need for custom programming. With Reveal you can quickly create and edit dashboards, easily query and filter enterprise data sources, build meaningful visualization over data and effortlessly share your work with others whether or not they are existing Reveal users.
+need for custom programming. With Reveal you can quickly create and edit dashboards, easily query and filter enterprise data sources, build meaningful visualization over data and effortlessly share your work with other Reveal users.
 
 ### General Navigation
 
@@ -41,6 +41,4 @@ or shared with you.
 
 9.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
 
-### Portrait Orientation for Mobile Devices
 
-This orientation is by far the most intuitive and natural when using an iPad, an iPhone, or Android phones and tablets. When you rotate your device, all Reveal screens adapt to the new orientation.

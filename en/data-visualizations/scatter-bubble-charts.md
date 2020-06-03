@@ -2,26 +2,11 @@
 
 ### What are Scatter Charts Used for?
 
-Scatter charts **use numerical values** in the X (horizontal) and Y
-(vertical) axis. Unlike linear charts, which plot data groups as
-different lines, a scatter chart combines the data and displays the
-connection between values into a single point.
-
-Scatter charts are used to represent the **relationship between two
-quantitative measures**. They are particularly useful for demonstrating
-patterns, when your data includes **large sets of values**.
+Scatter charts are used to represent the relationship between two quantitative measures by plotting data points along the X (horizontal) and Y (vertical) axes. They are particularly useful for demonstrating patterns in large datasests.
 
 ### What are Bubble Charts Used for?
 
-A bubble chart is **a variation of a scatter chart**, in which the data
-points are replaced by bubbles. The bubble chart displays **three
-dimensions of data**. Two of the data values determine the XY location
-of the bubble and the third numeric field controls the size of the
-bubble.
-
-Like scatter charts, bubble charts represent the relationship between
-quantitative measures - X and Y axes, as well as size of the bubbles use
-numerical values.
+A bubble chart is a variation of a scatter chart in which the data points are replaced with bubbles. Like scatter charts, bubble charts represent the relationship between two quantitative measures as well as a third quantitative measure represented by the size of the bubble. 
 
 ### Creating a Scatter Chart
 
@@ -107,10 +92,7 @@ In *Settings* you can:
   - **Change the Style of your visualization.**
 
     You can select whether you want to show a *Title* or *Legend* for
-    your visualization. Choosing a *Start Color* will define the color
-    of the data spots/bubbles, if you use one color, or the color scheme
-    of the elements, if you use more than one color in your
-    visualization.
+    your visualization. Choosing a *Start Color* will define the color of the data points/bubbles. When more than one color is needed due to the use of the *Color Category*, colors are applied sequentially starting at the Start Color.
 
   - **Choose between *Linear* and *Logarithmic* scale for the X and Y axis**.
 

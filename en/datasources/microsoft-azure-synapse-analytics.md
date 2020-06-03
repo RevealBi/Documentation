@@ -11,9 +11,8 @@ need to enter the following information:
 
 ![Configuring azure synapse data source dialog](images/synapse-azure-configuration.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
-
+1. **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Azure SQL Synapse Analytics*. You can change it to your preference.
+   
 2.  **Server**: the computer name or IP address assigned to the computer
     on which the server is running.
 

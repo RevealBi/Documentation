@@ -14,8 +14,7 @@ To use your Google Drive data, follow the steps below.
 
     Enter your **login credentials** and select *Next*.
 
-2.  You will then be notified that you will need to give some **limited
-    permissions** to Reveal so that it can use your Google Drive data.
+2.  **For first-time users only**, you will see an *Authorize* dialog, prompting you to give Reveal **appropriate permissions** so that it can use your Google Drive data.
 
     ![Reveal notification for giving permissions to the app](images/notification-limited-permissions.png)
 
@@ -35,7 +34,7 @@ will not be asked for these permissions again.
 When working within Reveal, you will be able to use a wide variety of
 files:
 
-  - **Spreadsheets**: Excel (.xls, .xlsx) or CSV, which you can use
+  - **Spreadsheets & tabular data**: Excel (.xls, .xlsx), CSV, TSV, which you can use
     dynamically within Reveal.
 
   - **Other files** (including images or document files such as PDFs,

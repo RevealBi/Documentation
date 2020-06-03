@@ -14,7 +14,7 @@ You will then see an authorization prompt. Click *Allow*.
 
 ### Setting Up Your Data
 
-After logging in you can set up your Salesforce data in the following
+After logging in, you can set up your Salesforce data in the following
 dialog:
 
 ![Set up your data dialog](images/set-up-data-salesforce.png)

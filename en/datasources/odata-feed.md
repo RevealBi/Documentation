@@ -5,13 +5,13 @@ following information:
 
 ![Enter OData Service Details dialog](images/enter-OData-service-details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *OData Feed*. You can change it to your preference.
+
 
 2.  **URL**: the URL where the service is located (for example, <http://services.odata.org/Northwind/Northwind.svc> for the Northwind OData Test Service).
 
 3.  **Credentials**: after selecting *Credentials*, you will be able to
-    enter the credentials for your OData Service or select existing ones
+    enter the credentials for your OData Service or choose existing ones
     if applicable.
 
       - **Name**: the name for your data source account. It will be
@@ -38,7 +38,7 @@ Reveal supports OData feeds with dynamic [*open type*](https://docs.microsoft.co
 columns. After any changes to the dynamic OData feed, you only need to
 refresh the dashboard, and the new data will be picked up.
 
-The following example is based on
+The following example uses
 [one](https://services.odata.org/V3/OData/\(S\(bwrmr2ccg0nex5gmubqxjkkz\)\)/OData.svc/)
 of the dynamic OData samples. A visualization was created initially,
 which had two fields (**ID** and **Name**) with three categories.

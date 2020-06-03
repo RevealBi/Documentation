@@ -1,23 +1,19 @@
 ## Microsoft SQL Server
 
-To configure a Microsoft SQL Server data source, you will need to enter
-the following information:
+To configure a Microsoft SQL Server data source, you can set the following information:
 
 ![Enter SQL Server Details](images/Enter-SQL-Server-Details.png)
 
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft SQL Server*. You can change it to your preference.
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no infomration
+3.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (1433)
     by default.
 
-4.  **Credentials**: after selecting *Credentials*, you will be able to
-    enter the credentials for your Microsoft SQL Server or select
-    existing ones if applicable.
+4.  **Credentials**: after selecting *Credentials*, you will be able to enter the credentials for your Microsoft SQL Server or choose existing ones if applicable.
 
       - **Name**: the name for your data source account. It will be
         displayed in the list of accounts in the previous dialog.
@@ -42,7 +38,7 @@ the commands should be executed on the server.
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 1\. Open the File Explorer.                                                                                     | 1\. Open a Terminal.                                                                                          | 1\. Open System Preferences.                                         |
 | 2\. Right Click on My Computer \> Properties.                                                                   | 2\. Type in **$hostname**                                                                                     | 2\. Navigate to the Sharing Section.                                 |
-| Your Hostname will appear as "Computer Name" under the *Computer name, domain and workgroups settings* section. | Your Hostname will appear along with your DNS domain name. Make sure you only include **Hostname** in Reveal. | Your Hostname will be listed under the "Computer Name" field on top. |
+| Your Hostname will appear as "Computer Name" under the *Computer name, domain and workgroups settings* section. | Your Hostname will appear along with your DNS domain name. Make sure you only include the **Hostname** in Reveal. | Your Hostname will be listed under the "Computer Name" field on top. |
 
 You can find your *IP address* by following the steps below. Please note
 that the commands should be executed on the server.
@@ -87,8 +83,7 @@ has been renamed to **TenMostExpensiveProducts**.
 
 ![StoredProcedureSampleResults\_All](images/StoredProcedureSampleResults_All.png)
 
-In this case, the stored procedure requires for users to configure the
-start and end date to display the **Sales by Year** information.
+In this case, the stored procedure requires users to configure the start and end date to display the **Sales by Year** information.
 
 ![StoredProcedureSampleDates\_All](images/Stored-Procedure-Sample-Dates.png)
 
@@ -103,5 +98,4 @@ For more information on Stored Procedures and MS SQL Server, visit [this documen
   - [Output parameters](https://docs.microsoft.com/en-us/sql/connect/jdbc/using-a-stored-procedure-with-output-parameters?view=sql-server-2017)
     in stored procedures are ignored.
 
-  - Stored procedures that return no result sets will be listed in the
-    Data Sources list, but will fail.
+  - Stored procedures that return no result sets will be listed in the Data Sources list but will fail.
