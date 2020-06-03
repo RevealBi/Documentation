@@ -48,15 +48,16 @@ form appears:
 
 ![New text box dialog showing an empty text box form](images/text-box-empty-form.png)
 
-Here you can:
-
-  - write your own text in the text body (the *Enter text* box);
-
-  - *(optional)* add a title;
-
+In this dialog:
+ 
   - choose between *Small*, *Medium* and *Large* *Text Size*;
 
   - select the alignment of the text (next to *Text Size*).
+  
+  - *(optional)* add a *Title*;
+  
+  - write your own text in the text body (the *Enter text* box);
+
 
 >[!NOTE]
 >**Formatting Restrictions**
