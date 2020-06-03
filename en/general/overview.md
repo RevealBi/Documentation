@@ -41,6 +41,4 @@ or shared with you.
 
 9.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
 
-### Portrait Orientation for Mobile Devices
 
-This orientation is by far the most intuitive and natural when using an iPad, an iPhone, or Android phones and tablets. When you rotate your device, all Reveal screens adapt to the new orientation.

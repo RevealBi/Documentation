@@ -130,8 +130,8 @@
   href: data-visualizations/gauge-views.md
 - name: Grid View
   href: data-visualizations/grid-view.md
-- name: Image View
-  href: data-visualizations/image-view.md
+- name: Web View
+  href: data-visualizations/web-view.md
 - name: KPI Gauge
   href: data-visualizations/kpi-gauge.md
 - name: Pivot Table

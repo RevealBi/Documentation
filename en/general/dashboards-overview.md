@@ -4,8 +4,6 @@ You can open existing dashboards by selecting the dashboard thumbnail image in t
 
 ![dashboard opened in edit mode](images/dashboard-opened-edit-mode.png)
 
-In this view, all the visualizations in a dashboard are in **minimized** state.
-
 ### Dashboard Interactions
 
 You can **interact** with visualizations in various ways. For instance, if the visualization is in grid view, you can scroll horizontally and
