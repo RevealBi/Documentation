@@ -99,76 +99,76 @@ working with large datasets
 For both pre-calculated and post-calculated fields, you can use one of
 the available functions within Reveal:
 
-  - [**Aggregation**](aggregation-calculated-fields.md):
-    [AVERAGE](aggregation-calculated-fields.html#average),
-    [AVERAGEIF](aggregation-calculated-fields.html#averageif),
-    [COUNT](aggregation-calculated-fields.html#count),
-    [COUNTIF](aggregation-calculated-fields.html#countif),
-    [MAX](aggregation-calculated-fields.html#max),
-    [MAXIF](aggregation-calculated-fields.html#maxif),
-    [MIN](aggregation-calculated-fields.html#min),
-    [MINIF](aggregation-calculated-fields.html#minif).
+  - [**Aggregation**](aggregation.md):
+    [AVERAGE](aggregation.html#average),
+    [AVERAGEIF](aggregation.html#averageif),
+    [COUNT](aggregation.html#count),
+    [COUNTIF](aggregation.html#countif),
+    [MAX](aggregation.html#max),
+    [MAXIF](aggregation.html#maxif),
+    [MIN](aggregation.html#min),
+    [MINIF](aggregation.html#minif).
 
-  - [**Date**](date-calculated-fields.md):
-    [DATE](date-calculated-fields.html#date-date),
-    [DATEVALUE](date-calculated-fields.html#datevalue),
-    [DAY](date-calculated-fields.html#day),
-    [FORMATDATE](date-calculated-fields#formatdate),
-    [FQUARTER](date-calculated-fields#fquarter),
-    [FYEAR](date-calculated-fields.html#fyear),
-    [HOUR](date-calculated-fields.html#hour),
-    [MILLISECOND](date-calculated-fields.html#millisecond),
-    [MINUTE](date-calculated-fields.html#minute),
-    [MONTH](date-calculated-fields.html#month),
-    [MONTHNAME](date-calculated-fields.html#monthname),
-    [MONTHSHORTNAME](date-calculated-fields.html#monthshortname),
-    [NOW](date-calculated-fields.html#now),
-    [QUARTER](date-calculated-fields.html#quarter),
-    [SECOND](date-calculated-fields.html#second),
-    [TIME](date-calculated-fields.html#date-time),
-    [TODAY](date-calculated-fields.html#today),
-    [WEEKDAY](date-calculated-fields.html#weekday),
-    [WEEKNUM](date-calculated-fields.html#weeknum),
-    [YEAR](date-calculated-fields.html#year).
+  - [**Date**](date.md):
+    [DATE](date.html#date-date),
+    [DATEVALUE](date.html#datevalue),
+    [DAY](date.html#day),
+    [FORMATDATE](date.html#formatdate),
+    [FQUARTER](date.html#fquarter),
+    [FYEAR](date.html#fyear),
+    [HOUR](date.html#hour),
+    [MILLISECOND](date.html#millisecond),
+    [MINUTE](date.html#minute),
+    [MONTH](date.html#month),
+    [MONTHNAME](date.html#monthname),
+    [MONTHSHORTNAME](date.html#monthshortname),
+    [NOW](date.html#now),
+    [QUARTER](date.html#quarter),
+    [SECOND](date.html#second),
+    [TIME](date.html#date-time),
+    [TODAY](date.html#today),
+    [WEEKDAY](date.html#weekday),
+    [WEEKNUM](date.html#weeknum),
+    [YEAR](date.html#year).
 
-  - [**Information**](information-calculated-fields.md):
-    [EMPTY](information-calculated-fields#empty),
-    [ISEMPTY](information-calculated-fields.html#isempty).
+  - [**Information**](information.md):
+    [EMPTY](information.html#empty),
+    [ISEMPTY](information.html#isempty).
 
-  - [**Logic**](logic-calculated-fields.md):
-    [AND](logic-calculated-fields.html#and),
-    [FALSE](logic-calculated-fields.html#false),
-    [IF](logic-calculated-fields.html#if),
-    [NOT](logic-calculated-fields.html#not),
-    [OR](logic-calculated-fields.html#or),
-    [TRUE](logic-calculated-fields.html#true).
+  - [**Logic**](logic.md):
+    [AND](logic.html#and),
+    [FALSE](logic.html#false),
+    [IF](logic.html#if),
+    [NOT](logic.html#not),
+    [OR](logic.html#or),
+    [TRUE](logic.html#true).
 
-  - [**Lookup & Reference**](lookup-reference-calculated-fields.md):
-    [PREVIOUS](lookup-reference-calculated-fields.html#previous),
-    [ROW](lookup-reference-calculated-fields.html#row).
+  - [**Lookup & Reference**](lookup-reference.md):
+    [PREVIOUS](lookup-reference.html#previous),
+    [ROW](lookup-reference.html#row).
 
-  - [**Math**](math-calculated-fields.md):
-    [ABS](math-calculated-fields.html#abs),
-    [EXP](math-calculated-fields.html#exp),
-    [LOG](math-calculated-fields.html#log),
-    [LOG10](math-calculated-fields.html#log10),
-    [MOD](math-calculated-fields.html#mod),
-    [RAND](math-calculated-fields.html#rand),
-    [RANDBETWEEN](math-calculated-fields.html#randbetween),
-    [SIGN](math-calculated-fields.html#sign),
-    [SQRT](math-calculated-fields.html#sqrt),
-    [TRUNC](math-calculated-fields.html#trunc).
+  - [**Math**](math.md):
+    [ABS](math.html#abs),
+    [EXP](math.html#exp),
+    [LOG](math.html#log),
+    [LOG10](math.html#log10),
+    [MOD](math.html#mod),
+    [RAND](math.html#rand),
+    [RANDBETWEEN](math.html#randbetween),
+    [SIGN](math.html#sign),
+    [SQRT](math.html#sqrt),
+    [TRUNC](math.html#trunc).
 
-  - [**String**](string-calculated-fields.md):
-    [CONCATENATE](string-calculated-fields.html#concatenate),
-    [FIND](string-calculated-fields.html#find),
-    [LEN](string-calculated-fields.html#len),
-    [LOWER](string-calculated-fields.html#lower),
-    [MID](string-calculated-fields.html#mid),
-    [REPLACE](string-calculated-fields.html#replace),
-    [SORTINTERVAL](string-calculated-fields.html#sortinterval),
-    [TRIM](string-calculated-fields.html#trim),
-    [UPPER](string-calculated-fields.html#upper).
+  - [**String**](string.md):
+    [CONCATENATE](string.html#concatenate),
+    [FIND](string.html#find),
+    [LEN](string.html#len),
+    [LOWER](string.html#lower),
+    [MID](string.html#mid),
+    [REPLACE](string.html#replace),
+    [SORTINTERVAL](string.html#sortinterval),
+    [TRIM](string.html#trim),
+    [UPPER](string.html#upper).
 
 >[!NOTE] **Limitations to IF Conditions**.
 >IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
@@ -178,7 +178,7 @@ the available functions within Reveal:
 
 You can also create Calculated Fields without using any of the
 predefined functions; for instance, for simple math calculations like
-subtractions, divisions, additions or multiplications. In [this table](sample-calculated-fields.md), you will find some examples that do
+subtractions, divisions, additions or multiplications. In [this table](samples.md), you will find some examples that do
 not use the predefined functions.
 
 ### What to consider when using the Reveal functions

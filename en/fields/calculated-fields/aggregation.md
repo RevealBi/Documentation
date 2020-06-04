@@ -10,10 +10,9 @@ therefore, **meant to be used with numerical fields only**.
 
 In Reveal, aggregation calculated fields include:
 
-  - **Standard functions**: for information on each one, click the
-    corresponding hyperlink under "Function Name".
+  - **Standard functions**: for information on each one, click the corresponding hyperlink under "Function Name."
 
-  - **Standard functions with if conditons**: [this section](#aggregation-if-condition) contains a detailed explanation of what an if condition is (including [nested if conditions](#nested-if-conditions)) and how you need to structure
+  - **Standard functions with if conditions**: [this section](#aggregation-if-condition) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#nested-if-conditions)) and how you need to structure
     it.
 
 **Note:** *All samples included in the table below were created with the
@@ -42,7 +41,7 @@ The functions included in the aggregation category are:
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: average([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">averageif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">averageif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: averageif({expression},{if-condition})</td>
   </tr>
   <tr>
@@ -56,7 +55,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: count()</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">countif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">countif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: countif({if-condition})</td>
   </tr>
   <tr>
@@ -70,7 +69,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: max([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">maxif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">maxif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: maxif({expression},{if-condition})</td>
   </tr>
   <tr>
@@ -84,7 +83,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: min([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">minif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">minif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: minif({expression},{if-condition})</td>
   </tr>
   <tr>
@@ -98,7 +97,7 @@ The functions included in the aggregation category are:
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: sum([Wage])</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">sumif</span>: Using a regular function with an if-condition means that the results you get need to meet a certain criteria, which will be defined within your condition.</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">sumif</span>: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: sumif({expression},{if-condition})</td>
   </tr>
   <tr>

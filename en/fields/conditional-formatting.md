@@ -1,11 +1,11 @@
 ## Conditional Formatting
 
 Conditional formatting allows you to provide different formatting of a
-cell (or rows for [Text Views](text-view.md)) depending on the values found
+cell (or rows for [Text Views](~/en/data-visualizations/text-view.md)) depending on the values found
 in a numeric column. For instance, values in the lower 50% range of a
 grid can be colored with a red adorner to signal very low values.
 
-![Pivot table view conditional formatting in the Visualization editor](images/pivot-table-view-conditional-formatting_all.png)
+<img src="images/pivot-table-view-conditional-formatting.png" alt="Pivot table view conditional formatting in the Visualization editor" width="800"/>
 
 The conditional formatting configuration allows you to establish styling
 rules per ranges of data up to three ranges (typically used for styling,
@@ -14,7 +14,7 @@ information, low values might be a good or bad signal, so you have the
 flexibility to configure the styling in the way that makes the most
 sense in your situation.
 
-![Text view conditional formatting](images/text-view-conditional-formatting.png)
+<img src="images/text-view-conditional-formatting.png" alt="Text view conditional formatting showing Marketing Metrics Visualization" width="800"/>
 
 ### Enabling Conditional Formatting
 
@@ -49,11 +49,11 @@ disabled by default.
 
 Conditional formatting can be applied to the following visualizations:
 
-  - [Grid View](grid-view.md)
+  - [Grid View](~/en/data-visualizations/grid-view.md)
 
-  - [Pivot Table View](pivot-table.md)
+  - [Pivot Table View](~/en/data-visualizations/pivot-table.md)
 
-  - [Text View](text-view.md)
+  - [Text View](~/en/data-visualizations/text-view.md)
 
 >[!NOTE]
->[KPI](kpi-gauge.md), [Linear](gauge-views.hmtl#linear-gauge), [Circular](gauge-views.html#circular-gauge), [Text](gauge-views.html#text-gauge), and [Bullet Graph](gauge-views.html#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](gauge-views.html#bands-configuration).
+>[KPI](~/en/data-visualizations/kpi-gauge.md), [Linear](~/en/data-visualizations/gauge-views.html#linear-gauge), [Circular](~/en/data-visualizations/gauge-views.html#circular-gauge), [Text](~/en/data-visualizations/gauge-views.html#text-gauge), and [Bullet Graph](~/en/data-visualizations/gauge-views.html#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](~/en/data-visualizations/gauge-views.html#bands-configuration).
