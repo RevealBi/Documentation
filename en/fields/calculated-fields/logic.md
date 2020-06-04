@@ -31,42 +31,42 @@ The functions included in the logic category are:
     <th class="tg-cly1"><span style="font-weight:bold">Syntax and Sample</span></th>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/logic-calculated-fields#calc-fields-and-or">and</a>: and runs two logical tests. If <span style="font-weight:bold">the logical test is true, it returns 1. If one or both are false, it returns 0.</span></td>
+    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/logic.html#calc-fields-and-or">and</a>: and runs two logical tests. If <span style="font-weight:bold">the logical test is true, it returns 1. If one or both are false, it returns 0.</span></td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: and({logical1},{logical2})</td>
   </tr>
   <tr>
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: and([BirthDate]&gt;date(1983, 07, 15, 04, 06, 55),[Department]="CPA")</td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/logic-calculated-fields#true-false"><span style="font-weight:bold">false</span></a>: false returns 0, the logical value of <span style="font-weight:bold">false</span>.</td>
+    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/logic.html#true-false"><span style="font-weight:bold">false</span></a>: false returns 0, the logical value of <span style="font-weight:bold">false</span>.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: false()</td>
   </tr>
   <tr>
     <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: false()</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic-calculated-fields#calc-fields-if"><span style="font-weight:bold">if</span></a>: if runs a logical test. If the <span style="font-weight:bold">logical test is true, it returns 1.</span> If the <span style="font-weight:bold">logical test is false, it returns 0.</span></td>
+    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic.html#calc-fields-if"><span style="font-weight:bold">if</span></a>: if runs a logical test. If the <span style="font-weight:bold">logical test is true, it returns 1.</span> If the <span style="font-weight:bold">logical test is false, it returns 0.</span></td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: if({logical test},{value if true},{value if false})</td>
   </tr>
   <tr>
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: if([BirthDate]&lt;(1971,04,15,4,06,55),1,0) </td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic-calculated-fields#calc-fields-not">not</a>: not runs a logical test. If the <span style="font-weight:bold">logical test is false, it returns 1. If the logical test is true, it returns 0.</span></td>
+    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic.html#calc-fields-not">not</a>: not runs a logical test. If the <span style="font-weight:bold">logical test is false, it returns 1. If the logical test is true, it returns 0.</span></td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: not({logical})</td>
   </tr>
   <tr>
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: not([OfficeId]&gt;=3)</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic-calculated-fields#calc-fields-and-or"><span style="font-weight:bold">or</span></a>: or runs two logical tests (if statements). If <span style="font-weight:bold">either one of the logical tests is true, it returns 1. If both are false, it returns 0.</span></td>
+    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic.html#calc-fields-and-or"><span style="font-weight:bold">or</span></a>: or runs two logical tests (if statements). If <span style="font-weight:bold">either one of the logical tests is true, it returns 1. If both are false, it returns 0.</span></td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: or({logical1},{logical2})</td>
   </tr>
   <tr>
     <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: or(if([Office]="London,UK",1,0),if([BirthDate]&lt;date(1992,09,15,4,06,55),1,0))</td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic-calculated-fields#true-false">true</a>: true returns 1, the logical value of <span style="font-weight:bold">true</span>.</td>
+    <td class="tg-0lax" rowspan="2"><a href="https://www.revealbi.io/help/logic.html#true-false">true</a>: true returns 1, the logical value of <span style="font-weight:bold">true</span>.</td>
     <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: true()</td>
   </tr>
   <tr>
@@ -78,7 +78,7 @@ The functions included in the logic category are:
 <a name='calc-fields-if'></a>
 ### If
 
-With the if function, you can find results that meet a certain criteria
+With the if function, you can find results that meet certain criteria
 defined in a logical test. There are three arguments for you to
 configure:
 
@@ -112,7 +112,7 @@ with a logical test.
 | `[BirthDate]` | `<`      | `date(1971,04,15,4,06,55)` |
 
 Where the date argument follows the syntax described in
-[date](date-calculated-fields#date-date).
+[date](date.html#date-date).
 
 | Function Name | Year   | Month | Day  | Hour | Minute | Second |
 | ------------- | ------ | ----- | ---- | ---- | ------ | ------ |
@@ -190,7 +190,7 @@ The `and` calculated field returns only four "TRUE" rows:
 
   - Row 96 (employee "Jorge Stanatto").
 
-You can look at these two rows only if you apply [filter by rule](Field-Filters-Rules#rules-numeric-fields) or [select value](Field-Filters-Rules#select-values) "1.00".
+You can look at these two rows only if you apply [filter by rule](~/en/fields/field-filters-rules.html#rules-numeric-fields) or [select value](~/en/fields/field-filters-rules.html#select-values) "1.00".
 
 If you want to refine your and condition so you only find "Zolleis
 Walker", you can introduce any one of the following third logical tests:
@@ -225,7 +225,7 @@ Walker", you can introduce any one of the following third logical tests:
 </table>
 
 You can also combine the and/or functions with the
-[isempty](Information-Calculated-Fields.html#isempty)
+[isempty](information.html#isempty)
 calculated fields to get the same results:
 
 | Function Name | Logical Test 1 | Logical Test 2 | Logical Test 3  | Logical Test 4            |
