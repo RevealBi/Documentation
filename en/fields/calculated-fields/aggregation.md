@@ -27,6 +27,7 @@ The functions included in the aggregation category are:
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-0lax{text-align:left;vertical-align:top}
+.gray-snippet-cstm{color: #666;background-color: #ddd;}
 </style>
 <table class="tg" style="undefined;table-layout: fixed">
   <tr>
@@ -34,74 +35,74 @@ The functions included in the aggregation category are:
     <th class="tg-cly1"><span style="font-weight:bold">Function Syntax and Sample</span></th>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">average</span>: The average aggregation will return a number, which will be calculated from the average value of all rows in your selected expression.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: average({expression})</td>
+    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">average</span>: The <span class="gray-snippet-cstm">average</span> aggregation will return a number, which will be calculated from the average value of all rows in your selected <span class="gray-snippet-cstm">expression</span>.</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">average({expression})</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: average([Wage])</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">average([Wage])</span></td>
   </tr>
   <tr>
     <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">averageif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: averageif({expression},{if-condition})</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">averageif({expression},{if-condition})</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: averageif([Wage],[OfficeId]=1)</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">averageif([Wage],[OfficeId]=1)</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">count</span>: The count aggregation will return a number, which is the <span style="font-weight:bold">number</span> of rows in your data source. There are no additional arguments required.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: count()</td>
+    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">count</span>: The <span class="gray-snippet-cstm">count</span> aggregation will return a number, which is the <span style="font-weight:bold">number</span> of rows in your data source. There are no additional arguments required.</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">count()</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: count()</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">count()</span></td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">countif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: countif({if-condition})</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm"> <span class="gray-snippet-cstm">countif({if-condition})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: countif([OfficeId]=1)</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">countif([OfficeId]=1)</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">max</span>: The max aggregation will return a number, which is the highest <span style="font-weight:bold">number</span> in your selected expression.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: max({expression})</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">max</span>: The <span class="gray-snippet-cstm">max</span> aggregation will return a number, which is the highest <span style="font-weight:bold">number</span> in your selected <span class="gray-snippet-cstm">expression</span>.</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm"> max({expression})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: max([Wage])</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm"> max([Wage])</span></td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">maxif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: maxif({expression},{if-condition})</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">maxif({expression},{if-condition})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: maxif([Wage],[OfficeId]=1)</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm">maxif([Wage],[OfficeId]=1)</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">min</span>: The min aggregation will return a number, which is the lowest <span style="font-weight:bold">number</span> in your selected expression.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: min({expression})</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">min</span>: The <span class="gray-snippet-cstm">min</span> aggregation will return a number, which is the lowest <span style="font-weight:bold">number</span> in your selected <span class="gray-snippet-cstm">expression</span>.</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm"> min({expression})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: min([Wage])</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm"> min([Wage])</span></td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">minif</span>: Using a regular function with an <a href="#aggregation-if-condition">if-condition</a> means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: minif({expression},{if-condition})</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm"> minif({expression},{if-condition})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: minif([Wage],[OfficeId]=1)</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm"> minif([Wage],[OfficeId]=1)</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">sum</span>: The sum aggregation will return a <span style="font-weight:bold">number</span>, which is calculated as the sum of all rows in your selected expression.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: sum({expression})</td>
+    <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">sum</span>: The <span class="gray-snippet-cstm">sum</span> aggregation will return a <span style="font-weight:bold">number</span>, which is calculated as the sum of all rows in your selected <span class="gray-snippet-cstm">expression</span>.</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm"> sum({expression})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: sum([Wage])</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm"> sum([Wage])</span></td>
   </tr>
   <tr>
     <td class="tg-0lax" rowspan="2"><span style="font-weight:bold">sumif</span>: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition.</td>
-    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: sumif({expression},{if-condition})</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm"> sumif({expression},{if-condition})</span></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: sumif([Wage],[OfficeId]=1)</td>
+    <td class="tg-0lax"><span style="font-weight:bold">Sample</span>: <span class="gray-snippet-cstm"> sumif([Wage],[OfficeId]=1)</span></td>
   </tr>
 </table>
 

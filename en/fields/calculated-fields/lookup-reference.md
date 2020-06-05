@@ -15,6 +15,7 @@ The functions included in the aggregation category are:
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+.gray-snippet-cstm{color: #666;background-color: #ddd;}
 </style>
 <table class="tg">
   <tr>
@@ -22,18 +23,18 @@ The functions included in the aggregation category are:
     <th class="tg-cly1"><span style="font-weight:bold">Syntax and Sample</span></th>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="#calc-fields-previous">previous</a>: previous allows you to get a result with the value of the field you choose as your expression.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: previous({expression},{first value})</td>
+    <td class="tg-cly1" rowspan="2"><a href="#calc-fields-previous">previous</a>: <span class="gray-snippet-cstm">previous</span> allows you to get a result with the value of the field you choose as your <span class="gray-snippet-cstm">expression</span>.</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">previous({expression},{first value})</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: previous([Wage],1)</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>:<span class="gray-snippet-cstm"> previous([Wage],1)</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">row</span>: row returns the number of the current row for every row in your data source.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: row()</td>
+    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">row</span>: <span class="gray-snippet-cstm">row</span> returns the number of the current row for every row in your data source.</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>:<span class="gray-snippet-cstm"> row()</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: row()</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>:<span class="gray-snippet-cstm"> row()</span></td>
   </tr>
 </table>
 
