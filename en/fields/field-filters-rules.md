@@ -5,7 +5,7 @@ order to do so, you will need to add a field to the **Data Filters**
 placeholder in the lower section of the data editor. Then, select field
 from the dropdown to access the *Data Filter* window.
 
-![AddDataFilter\_All](images/AddDataFilter_All.png)
+<img src="images/add-data-filter.png" alt="Adding data filter fields list" width="800"/>
 
 <a name='empty-values'></a>
 ### Filter Empty Values
@@ -79,7 +79,7 @@ following rules:
 
   - Below Average
 
-  - BelowEqualsValue
+  - Below Equals Value
 
   - Below Value
 
@@ -121,7 +121,7 @@ data editor**, which might have a different
 [aggregation](field-settings.html#numeric-fields) than those in the list of
 fields.
 
-![DataFiltersFilteringDataEditor\_All](images/DataFiltersFilteringDataEditor_All.png)
+<img src="images/data-filters-filtering-data-editor.png" alt="Data Filters Filtering in the Data Editor" width="800"/>
 
 These fields will appear at the bottom of the list of fields along with
 the name of the aggregation applied to them.

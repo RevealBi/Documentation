@@ -1,9 +1,7 @@
 ## Information Calculated Fields
 
 Information calculated fields are meant to be used to test the value of
-a selected field. They are particularly useful with large spreadsheets,
-because you can check what type of information you are working with
-before performing a second calculation.
+a selected field. They are particularly useful with large spreadsheets because you can check what type of information you are working with before performing a second calculation.
 
 The functions included in the information category are:
 
@@ -12,6 +10,7 @@ The functions included in the information category are:
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
+.gray-snippet-cstm{color: #666;background-color: #ddd;}
 </style>
 <table class="tg">
   <tr>
@@ -19,18 +18,18 @@ The functions included in the information category are:
     <th class="tg-cly1"><span style="font-weight:bold">Syntax and Sample</span></th>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">empty</span>: empty can be used to insert a column with empty cells. There are no arguments to configure.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: empty()</td>
+    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">empty</span>: <span class="gray-snippet-cstm">empty</span> can be used to insert a column with empty cells. There are no arguments to configure.</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>:  <span class="gray-snippet-cstm">empty()</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: empty()</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>:  <span class="gray-snippet-cstm">empty()</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/information-calculated-fields#calculated-isempty"><span style="font-weight:bold">isempty</span></a>: isempty evaluates the specified expression, and <span style="font-weight:bold">checks if any row in your data source has empty values</span>.</td>
-    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: isempty({value})</td>
+    <td class="tg-cly1" rowspan="2"><a href="https://www.revealbi.io/help/information-calculated-fields#calculated-isempty"><span style="font-weight:bold">isempty</span></a>: <span class="gray-snippet-cstm">isempty</span> evaluates the specified <span class="gray-snippet-cstm">expression</span>, and <span style="font-weight:bold">checks if any row in your data source has empty values</span>.</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>:  <span class="gray-snippet-cstm">isempty({value})</span></td>
   </tr>
   <tr>
-    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>: isempty([ResignedDate])</td>
+    <td class="tg-cly1"><span style="font-weight:bold">Sample</span>:  <span class="gray-snippet-cstm">isempty([ResignedDate])</span></td>
   </tr>
 </table>
 
