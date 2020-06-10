@@ -1,7 +1,6 @@
 ### Creating Candlestick Visualizations
 
-In this tutorial, you will learn how to a Candlestick chart
-visualization using a sample spreadsheet.
+In this tutorial, you will learn how to create a Candlestick chart visualization using a sample spreadsheet.
 
 <table>
 <colgroup>
@@ -81,9 +80,9 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 
 |                                          |                                                                                                                          |                                                                                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Create a Dashboard**               | ![Tutorials-Create-New-Dashboard](images/Tutorials-Create-New-Dashboard.png)                                             | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown.  |
-| 2\. **Configure your Data Source**       | ![Tutorials-Select-Data-Source](images/Tutorials-Select-Data-Source.png)                                                 | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                        |
-| 3\. **Select the Tutorials Spreadsheet** | ![Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet](images/Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet.png) | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "OHLC and Candlestick" sheet.                       |
+| 1\. **Create a Visualization**               |<img src="images/Tutorials-Create-New-Dashboard.png" alt="Creating new visualization" width="300"/>                      | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown.  |
+| 2\. **Configure your Data Source**       | <img src="images/Tutorials-Select-Data-Source.png" alt="Selecting a data source" width="300"/>                                      | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                        |
+| 3\. **Select the Tutorials Spreadsheet** | <img src="images/Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet.png" alt="Seclect OHLC Candlestick Chart spreadsheet" width="300"/> | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "OHLC and Candlestick" sheet.                       |
 | 4\. **Open the Visualizations Menu**     | ![Tutorials-Select-Change-Visualization](images/Tutorials-Select-Change-Visualization.png)                               | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                 |
 | 5\. **Select your Visualization**        | ![Tutorials-Charts-Select-Candlestick-Chart](images/Tutorials-Charts-Select-Candlestick-Chart.png)                       | By default, the visualization type will be set to "Grid". Select the **Candlestick**.                                                                 |
 | 6\. **Organize your Data**               | ![Tutorials-TextView-Organizing-Data](images/Tutorials-CandlestickChart-Organizing-Data.png)                             | Drag and drop the "Date" field into "Label" and the "Open", "High", "Low" and "Close" fields in their corresponding placeholder.                      |
