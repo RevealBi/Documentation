@@ -146,6 +146,8 @@
   href: data-visualizations/text-view.md
 - name: Text Box
   href: data-visualizations/text-box.md
+- name: Treemap Charts
+  href: data-visualizations/treemap-charts.md
 - name: Fields
   header: true
 - name: Overview
