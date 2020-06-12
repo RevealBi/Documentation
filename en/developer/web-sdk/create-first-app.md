@@ -124,30 +124,28 @@ section in Reveal, but with a different theme.
 
 Open the Reveal app (<https://app.revealbi.io>) and go to the **Samples**.
 
-![accessing the marketing dashboard from Reveal samples](images/accessing-marketing-dashboard.png)
+<img src="images/accessing-marketing-dashboard.png" alt="accessing the marketing dashboard from Reveal samples" width="800"/>
+
 
 Select the Marketing dashboard and enter **edit mode**:
 
-![enter edit mode of marketing sample dashboard in Reveal
-app](images/reveal-marketing-dashboard-sample.png)
+<img src="images/reveal-marketing-dashboard-sample.png" alt="enter edit mode of marketing sample dashboard in Reveal app" width="800"/>
 
 Once in Edit mode click the *Theme* button:
 
-![edit mode menu of the marketing
-dashboard](images/marketing-dashboard-theme-button.png)
+<img src="images/marketing-dashboard-theme-button.png" alt="edit mode menu of the marketing dashboard" width="800"/>
 
-And choose the *Rocky Mountain* theme:
 
-![rocky mountain theme in the dashboard themes
-menu](images/dashboard-themes-rocky-mountain.png)
+And choose the *Ocean Theme*:
+
+<img src="images/dashboard-themes-ocean-theme.png" alt="edit mode menu of the marketing dashboard" width="800"/>
 
 Save the modified dashboard and *Export* it:
 
 > [!NOTE]
 > As the Marketing dashboard is part of the Reveal App **Samples**, you cannot save it the same way as a regular dashboard. Instead, you need to use **Save As** and choose a location.
 
-![export marketing dashboard
-menu](images/export-marketing-dashboard-changed-theme.png)
+<img src="images/export-marketing-dashboard-changed-theme.png" alt="export marketing dashboard menu" width="800"/>
 
 Move the **Marketing.rdash** dashboard file to the Dashboards folder,
 which you created in step 3, and set the Build Action for this item to

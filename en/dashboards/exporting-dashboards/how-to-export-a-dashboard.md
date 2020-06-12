@@ -17,17 +17,16 @@ You can easily export dashboards by using the available Export options.
 
 ![Export formats available](images/export-formats.png)
 
-  - [**Export Image**](images.md) - export a screen capture of the entire
+  - [**Export Image**](export-as-images.md) - export a screen capture of the entire
     dashboard or individual visualizations.
 
-  - [**Export PowerPoint**](powerpoint-presentation.md) - export your
+  - [**Export PowerPoint**](export-as-powerpoint-presentation.md) - export your
     dashboard as a PowerPoint presentation.
 
-  - [**Export PDF**](pdf-document.md) - export your dashboard as a PDF
+  - [**Export PDF**](export-as-pdf-document.md) - export your dashboard as a PDF
     document.
 
-  - [**Export Data**](excel-data-format.md) - you can export the data used
-    for your dashboards to the **Excel format**.
+  - [**Export Excel**](export-as-excel-data-format.md) - you can export the data used for your dashboards to the **Excel format** and choose if you want to also export the visualization to your spreadsheet.
 
   - **Export Dashboard** - export the dashboard through email for Android and iOS, or as a file (.rdash) on your computer for both Desktop and Web.
 
