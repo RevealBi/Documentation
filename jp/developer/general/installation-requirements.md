@@ -11,8 +11,7 @@ Reveal Server SDK は、.NET Framework 4.6.1 をターゲットとする .NET Co
 ### Installing Reveal SDK
 
 ウェブとデスクトップの両方のプラットフォーム用の Reveal SDK
-は、[こちら](https://www.revealbi.io/jp)からダウンロードしてください。
-Once ready, follow through the provided installer:
+は、[こちら](https://www.revealbi.io/jp)からダウンロードしてください。準備ができたら、インストーラーの手順に従います。
 
 ![installScreen_desktop](images/installScreen_desktop.png)
 

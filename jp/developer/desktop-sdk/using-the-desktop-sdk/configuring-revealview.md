@@ -33,5 +33,5 @@ RevealView は、ダッシュボードが画面に表示される前の特定の
 
   - ダッシュボードのレンダリング後に設定オブジェクトを変更しても、すでにロードされているダッシュボードには影響しません。
   - ただし、ビューの作成後にダッシュボード フィルターの選択値を変更することはできます。これを行うには、RevealView オブジェクトの SetFilterSelectedValues メソッドを使用する必要があります。
-  - Any change for properties in the __RevealSettings__ オブジェクトのプロパティを変更した場合 (CanEdit、CanSaveAs など)、__RevealView__ の新しいインスタンスを作成する必要があります。
+  - __RevealSettings__ オブジェクトのプロパティを変更した場合 (CanEdit、CanSaveAs など)、__RevealView__ の新しいインスタンスを作成する必要があります。
 
