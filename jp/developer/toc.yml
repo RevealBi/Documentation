@@ -1,0 +1,44 @@
+- name: 全般
+  header: true
+- name: Reveal SDK の概要
+  href: general/overview.md
+- name: インストールと要件
+  href: general/installation-requirements.md
+- name: セットアップと構成 (Web)
+  href: general/setup-configuration-web.md
+- name: セットアップと構成 (Desktop)
+  href: general/setup-configuration-desktop.md
+- name: SDK 用のダッシュボードの取得
+  href: general/get-dashboards.md
+- name: Web SDK
+  header: true
+- name: 概要
+  href: web-sdk/overview.md
+- name: はじめてのアプリ作成
+  href: web-sdk/create-first-app.md
+- name: サーバー SDK の使用
+  href: web-sdk/using-the-server-sdk/toc.yml
+- name: クライアント SDK の使用
+  href: web-sdk/using-the-client-sdk/toc.yml
+- name: サーバー API リファレンス
+  href: web-sdk/api-reference-server.md
+- name: クライアント API リファレンス
+  href: web-sdk/api-reference-client.md
+- name: Desktop SDK
+  header: true
+- name: 概要
+  href: desktop-sdk/overview.md
+- name: はじめてのアプリ作成 -追加予定-
+  href: 
+- name: Desktop SDK の使用
+  href: desktop-sdk/using-the-desktop-sdk/toc.yml
+- name: API リファレンス
+  href: desktop-sdk/api-reference.md
+- name: リリース情報
+  header: true
+- name: 既知の問題
+  href: release-information/known-issues.md
+- name: リリース ノート
+  href: release-information/release-notes.md
+- name: Reveal で使用されるサードパーティ ソフトウェア
+  href: release-information/third-party-software.md

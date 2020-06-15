@@ -1,0 +1,8 @@
+- name: ダッシュボード ファイルの読み込み
+  href: loading-dashboards.md
+- name: データソースの置き換え
+  href: replacing-data-sources.md
+- name: インメモリ データのサポート
+  href: in-memory-data.md
+- name: データソースへ資格情報を提供
+  href: providing-credentials-datasources.md
