@@ -23,7 +23,6 @@ To share a dashboard created by you with individual users you need to:
 
 1.  Access the **Share dialog** - Select the overflow button in the top right-hand corner of a dashboard or a folder and choose *Share*.
 
-  Sharing a dashboard means users will get a local copy of your dashboard; they will not be able to edit your local copy.
 
   ![Accessing the sharing dialog of a dashboard](images/sharing-dialog.png)
 
@@ -32,7 +31,7 @@ To share a dashboard created by you with individual users you need to:
   ![Shared with Me option selected](images/shared-with-me.png)
 
 <a name='access-permissions'></a>
-2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
+1.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
 
 The available options are:
 

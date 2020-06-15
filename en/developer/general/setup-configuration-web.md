@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-The Reveal Server SDK requires .NET Core 2.2+ or .NET Framework 4.6.1+
+The Reveal Server SDK requires .NET Core 2.2+ or .NET Framework 4.6.2
 ASP MVC application projects.
 
 In case you are targeting .NET Framework 4.6.2+, the Reveal Server SDK
@@ -12,7 +12,7 @@ need to add a win7-x64 compatible *RuntimeIdentifier* platform:
 ``` xml
 <PropertyGroup>
 
-   <TargetFramework>net461</TargetFramework>
+   <TargetFramework>net462</TargetFramework>
 
    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
 
@@ -236,7 +236,7 @@ To get started follow these steps:
 
 2.  Create an instance of
     __$.ig.RevealSettings__
-    providing the \_dashboardId\</emphasis\> in the constructor.
+    providing the \_dashboardId\ in the constructor.
 
 3.  Call
     __$.ig.RevealUtility.loadDashboard__
@@ -298,22 +298,3 @@ You can find the following two JS files at "\<InstallationDirectory\>\\Web\\JS":
 
   - **reveal-webComponent.js**
   - **reveal-WebComponent-ie11.js**
-
-#### IE11 support
-
-Alternatively, you may want to support IE11 users. In that case, the
-following snippet should work fine in almost any browser:
-
-``` html
-@section Scripts {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.4/polyfill.min.js"></script>
-    <script src="https://unpkg.com/@@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="~/Reveal/reveal-webComponent-ie11.js"></script>
-}
-<section>
-    <reveal-view dashboard-name="Sales"></reveal-view>
-```
-
-However, if you want better front end performance and don’t care about
-IE11, you should check the other snippet above and use
-**reveal-webComponent.js** instead)

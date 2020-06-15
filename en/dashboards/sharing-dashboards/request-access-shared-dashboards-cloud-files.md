@@ -60,3 +60,5 @@ revoked permissions:
 
         If **access to the file could not be restored**, the file could
         have been deleted from the cloud.
+
+    4. If **access to the file has been restored**, select the *tick icon* to save the change, otherwise, the access to the file will still be denied to other users. 
