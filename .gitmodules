@@ -1,0 +1,3 @@
+[submodule "templates/reveal"]
+	path = templates/reveal
+	url = https://github.com/RevealBi/Documentation-Template-Reveal.git
