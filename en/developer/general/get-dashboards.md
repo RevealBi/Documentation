@@ -28,6 +28,6 @@ Once you [**created your dashboard**](https://www.revealbi.io/help/creating-dash
 
     Go to the overflow menu, select *Export*, then *Dashboard*, this will generate a file with extension “.rdash” that you will use later in your application when integrating the SDK.
 
-    ![export\_dashboards\_sdk\_web](images/export_dashboards_sdk_web.png)
+    <img src="images/export_dashboards_sdk_web.png" alt="exporting format dialog " width="800"/>
 
     You can export the dashboard file through email (Android and iOS), or as a .rdash file on your computer (Desktop and Web).
