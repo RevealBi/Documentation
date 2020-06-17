@@ -14,7 +14,7 @@ With Reveal SDK, developers can embed Reveal into their applications. And dashbo
 can be displayed and even modified by end users.
 
 Reveal SDK can be used to integrate Reveal into applications developed in multiple platforms
-and technologies: Web, Windows WPF, Windows Forms, iOS, and Android.
+and technologies: Web, Windows WPF, and Windows Forms.
 
 The containing app can use Reveal SDK to:
 
