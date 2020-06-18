@@ -9,11 +9,9 @@ data-driven decisions faster. Built by user experience experts and
 designed for the business user, Reveal makes it simple for you to
 create, view and share dashboards with your teams. It offers you a
 seamless, identical experience no matter what device you are on: Web,
-Desktop, iOS, or Android.
+Desktop, iOS, or Android. 
 
-Learn how to use Reveal with our easy, step-by-step
-[dashboard](~/en/dashboard-tutorials/overview.md) and
-[visualization](~/en/visualization-tutorials/overview.md) tutorials.
+Reveal is purposely designed to be embedded into applications. Reveal SDK allows you to provide your users with analytical capabilities by integrating quickly and seamlessly into your Windows or web-hosted applications. Interested? [Download Reveal SDK](https://www.revealbi.io/download-sdk). To find out how to start using it, refer to the [Reveal SDK help](developer/index.md). 
 
 ### You can use Reveal to:
 
@@ -66,5 +64,4 @@ Learn how to use Reveal with our easy, step-by-step
   - Added **support for Shared Drives in Google Drive** – If you have a GSuite Business account, you can now access your Shared Drives data and use it to build visualizations in Reveal. You will see your Shared Drives after you add your [Google Drive](~/en/datasources/google-drive.md) as a data source in Reveal.
 
 
-Still not sure? Try our [**free demo**](https://app.revealbi.io/Login?provider=Demo&_ga=2.197140908.2008019520.1580398635-1419162557.1572354605)
-version to discover what Reveal can do for your business!
+Still not sure? Try our [**free demo**](https://app.revealbi.io/Login?provider=Demo&_ga=2.197140908.2008019520.1580398635-1419162557.1572354605) version to discover what Reveal can do for your business!
