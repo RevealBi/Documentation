@@ -10,6 +10,10 @@ pool:
   name: "BusinessTools On-Prem Documentation"
 
 steps:
+- checkout: self
+  clean: true
+  submodules: true
+  
 - task: DocFxTask@0
   displayName: "Build docfx.json"
   inputs:
