@@ -95,8 +95,8 @@ To join an existing team, follow the steps below.
 
 There is no limit to the teams you can create or join. To easily navigate through a large list of teams and find the one you need, you can filter your teams by:
 
-* the *Organization* they belong to;
-* *favorites*;
+* the *Organization* they belong to,
+* *favorites*,
 * custom *groups* you have created.
 
 #### Filtering by Organization
@@ -126,7 +126,7 @@ Filtering by organization appears as an option only if you have at least one tea
 
 3. This team will appear in the _Favorites_ list at the top of your teams.
 
-#### Filtering by Groups
+#### Organizing by Groups
 
 You can organize your teams by custom groups of your choice. To create a new group:
 
