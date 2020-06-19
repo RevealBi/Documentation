@@ -44,7 +44,7 @@ To close regular tooltips just click or tap away.
 
 #### Hover Tooltips & Crosshairs
 
-In the **Interactions** menu you can enable two options: *Hover tooltips* and *Crosshairs*. Both are only available in Dashboard View mode. They can't be used in Dashboard Edit mode.
+You will find two options in the **Interactions** menu: *Hover tooltips* and *Crosshairs*. Only *Hover tooltips* is enabled by default. Both are only available in Dashboard View mode. They can't be used in Dashboard Edit mode.
 
 ![Accessing Reveal's Dashboard Interactions menu](images/dashboard-interactions-menu.png)
 
@@ -95,14 +95,13 @@ definition.
 In order to apply changes to a dashboard, you must switch to **Dashboard
 Edit mode**. You can do this by selecting *Edit* from the overflow menu
 in the top right corner of the dashboard. This enables editing options
-such as applying *Auto Layout*, a dashboard *Theme* or exporting the
-dashboard.
+such as applying *Auto Layout*, and a dashboard *Theme*.
 
 Shown below is a dashboard in *Dashboard Edit* mode:
 
 ![dashboard opened in edit mode](images/dashboard-opened-edit-mode.png)
 
-To **exit *Edit mode***, you only need to select the *tick icon* in the
+To **exit Edit mode**, you only need to select the *check icon* in the
 top right-hand corner. This switches back to *View Mode*.
 
 ### Dashboard Filters
@@ -125,5 +124,4 @@ of visualizations it has.
 
 ![auto layout view and resizing of dashboards](images/auto-layout-dashboard.png)
 
-You can still resize visualizations while Auto Layout is enabled by
-dragging their corners downwards or the side.
+To start resizing visualizations while Auto Layout is enabled, just drag their corners downwards or to the side. This will automatically turn *Auto Layout* off. 

@@ -72,7 +72,7 @@ Your role in the team can be:
   - **Owner** - have full access to the team's dashboards, including
     editing, sharing and deleting them.
 
-  - **Contributor** - can create, edit and share dashboards and folders
+  - **Member** - can create, edit and share dashboards and folders
     but cannot delete them.
 
   - **Viewer** - can view and share dashboards for view only.
@@ -107,7 +107,7 @@ Here you can see the access permissions options every team member can give when 
     <td><span style="color: #007F00">Yes</span></td>
   </tr>
   <tr>
-    <td>Contributor</td>
+    <td>Member</td>
     <td><span style="color: #FF0000">No</span></td>
     <td><span style="color: #007F00">Yes</span></td>
     <td><span style="color: #007F00">Yes</span></td>
@@ -137,7 +137,7 @@ account that individual members will get only the highest permissions
 they have for the team's dashboards.
 
 For example, if you give Owner permissions to the team, Viewers in this
-team will have only Viewer permissions, Contributors will get as high as
+team will have only Viewer permissions, Members will get as high as
 Modify permissions and only the Owners can get the full Owner access to
 the dashboard. If you give Viewer permissions to the team, even members
 with an Owner role will have only Viewer permissions to this dashboard.

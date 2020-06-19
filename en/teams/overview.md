@@ -1,4 +1,4 @@
-## Teams Collaboration and Privacy
+## Team Collaboration and Privacy
 
 *Teams* facilitates effective collaboration on dashboards between any
 group of Reveal users while also ensuring a high level of security for
