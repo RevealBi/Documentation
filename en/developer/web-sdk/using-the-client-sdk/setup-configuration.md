@@ -15,9 +15,10 @@ To set up the Reveal Web Client SDK you need to:
 
 The Reveal Web Client SDK has the following 3rd party references:
 
-  - jQuery 2.2 or greater
+  - [jQuery](https://jquery.com) 2.2 or greater
+  - [Day.js](https://day.js.org) 1.8.15 or greater
+  - [Quill RTE](https://quilljs.com/) 1.3.6 or greater
 
-  - Day.js 1.8.15 or greater
 
 ### 2\. Referencing the Web Client SDK
 

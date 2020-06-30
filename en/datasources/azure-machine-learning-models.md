@@ -39,6 +39,7 @@ below:
 
     ![Brain icon location in the Visualization editor](images/brain-icon-azure-ml-model.png)
 
+<a href="ml-model-connect"></a>
 ### Connecting to Your Azure Machine Learning Model
 
 To connect to your Machine Learning Model in Azure, you need to do the
