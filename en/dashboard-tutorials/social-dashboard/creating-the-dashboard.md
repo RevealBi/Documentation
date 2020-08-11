@@ -15,9 +15,8 @@ data source in which you stored the the sample datasheet mentioned in
 
 ![creatingnewvisualization\_all](images/creating-new-visualization.png)
 
->[NOTE]
->For instructions on how to add a data source for each of the providers,
-refer to [this topic](~/en/datasources/data-sources.md).
+>[!NOTE]
+>For instructions on how to add a data source for each of the providers, refer to [this topic](~/en/datasources/data-sources.md).
 
 When selecting the file in the **Visualization Data** dialog, make sure
 you select the **Social Dashboard** sheet of the sample spreadsheet.

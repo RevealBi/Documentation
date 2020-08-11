@@ -19,11 +19,10 @@ After opening a chosen dashboard and entering [Dashboard Edit mode](~/en/dashboa
 There are three main areas in the
 visualizations editor:
 
-![visualization editor panes](images/visualization-editor-panes.png)
+<img src="images/visualization-editor-panes.png" alt="Panes of the Visualization editor" width="800"/>
 
-  1. **Data Section**, where you will find the list of available fields
-    in the selected dataset and the data editor. This tool is meant to
-    help you slice-and-dice data according to your needs.
+  1. **Data Section**, where you will find the list of available fields in the selected dataset and the data editor. This tool is meant to help you slice-and-dice data according to your needs. You can use the search to find a data field, when the available fields are more than ten.
+
 
   2. **Settings Section**, where you can access the settings for the
     specific visualization you are using and the *General Settings* for
@@ -34,16 +33,17 @@ visualizations editor:
 
 Among other things, you will be able to:
 
-  - **Sort** & **filter** data.
+  - [**Sort**](~/en/fields/sort-by-field.md) & [**filter**](~/en/filters/visualization-filters.md) data.
 
-  - **Bind the visualization data to a dashboard page selection**.
+  - [**Bind the visualization data to a dashboard page selection**](~/en/dashboards/dashboard-linking.md).
 
-  - **Aggregate data** in the data editor.
+  - [**Aggregate data**](~/en/fields/field-settings.md) in the data editor.
 
-  - **Visualize** & **format** data.
+  - **Search**, **Visualize** & [**format**](~/en/fields/conditional-formatting.md) data.
 
 After you're done building the visualization and selecting the
 appropriate visualizations, select the *Back arrow* to return to the
 Dashboard Editor. In the Dashboard Editor, you can control the layout,
-size, and location of the visualizations simply by dragging
+size, and location of the visualizations by simply dragging
 visualizations and their borders.
+
