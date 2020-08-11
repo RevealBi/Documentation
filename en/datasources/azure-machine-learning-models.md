@@ -1,7 +1,7 @@
 ## Azure Machine Learning in Reveal
 
 
-You can use your trained models data from Azure Machine Learning Studio
+You can use your trained models' data from Azure Machine Learning Studio
 in Reveal. Get better insights than ever! Just choose your data source,
 build a visualization, and use the integration to connect to a trained
 machine learning model.
@@ -39,6 +39,7 @@ below:
 
     ![Brain icon location in the Visualization editor](images/brain-icon-azure-ml-model.png)
 
+<a href="ml-model-connect"></a>
 ### Connecting to Your Azure Machine Learning Model
 
 To connect to your Machine Learning Model in Azure, you need to do the
@@ -61,7 +62,7 @@ following:
 
     d.  Copy the **API key** you are given for this service.
 
-    e.  From the **Default Endpoint** table for the same service select **REQUEST/RESPONSE**.
+    e.  From the **Default Endpoint** table for the same service, select **REQUEST/RESPONSE**.
 
     f.  In the **API Documentation page** that opens, copy the URL of the **API Swagger Document** and paste it in Reveal.
 
@@ -70,9 +71,9 @@ following:
 
     ![Input list in ML model connection dialog](images/input-output-ml-list.png)
 
-    In the dialog above you have the following columns to consider:
+    In the dialog above, you have the following columns to consider:
 
-    a.  **Input** - the left column displays what kind of data the model requires in order to calculate the output information (e.g. *Credit Risk*). In the right column, select the fields in your dataset (e.g. *Age in years*) that match the requested data in the left column (e.g. *Age*) for the model. Reveal automatically matches all fields in the *Input* list sharing the same name with the model's requested data.
+    a.  **Input** - the left column displays what kind of data the model requires in order to calculate the output information (e.g. *Credit Risk*). In the right column, select the fields in your dataset (e.g. *Age in years*) that match the requested data in the left column (e.g. *Age*) for the model. Reveal automatically matches all fields in the *Input* list, sharing the same name with the model's requested data.
 
     b.  **Output** - choose the information you want calculated (predicted) by the model. The result will appear as new fields
     in the Visualization editor, under *From Azure model*.

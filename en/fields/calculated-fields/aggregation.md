@@ -35,7 +35,7 @@ The functions included in the aggregation category are:
     <th class="tg-cly1"><span style="font-weight:bold">Function Syntax and Sample</span></th>
   </tr>
   <tr>
-    <td class="tg-cly1" rowspan="2"><span style="font-weight:bold">average</span>: The <span class="gray-snippet-cstm">average</span> aggregation will return a number, which will be calculated from the average value of all rows in your selected <span class="gray-snippet-cstm">expression</span>.</td>
+    <td class="tg-cly1" rowspan="2"><a name='average'></a><span style="font-weight:bold">average</span>: The <span class="gray-snippet-cstm">average</span> aggregation will return a number, which will be calculated from the average value of all rows in your selected <span class="gray-snippet-cstm">expression</span>.</td>
     <td class="tg-cly1"><span style="font-weight:bold">Syntax</span>: <span class="gray-snippet-cstm">average({expression})</span></td>
   </tr>
   <tr>

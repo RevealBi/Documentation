@@ -15,7 +15,7 @@ data source in which you stored the the sample datasheet mentioned in
 
 ![creatingnewvisualization\_all](images/creating-new-visualization.png)
 
->[NOTE]
+>[!NOTE]
 >For instructions on how to add a data source for each of the providers, refer to [this topic](data-sources.md). When selecting the file in the **Visualization Data** dialog, make sure you select the **Finance Dashboard** sheet of the sample spreadsheet. Then, select *Load Data*.
 
 ![Selecting Finance Sheet](images/Selecting-Finance-Sheet.png)

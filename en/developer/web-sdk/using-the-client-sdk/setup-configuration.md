@@ -15,15 +15,14 @@ To set up the Reveal Web Client SDK you need to:
 
 The Reveal Web Client SDK has the following 3rd party references:
 
-  - jQuery 2.2 or greater
+  - [jQuery](https://jquery.com) 2.2 or greater
+  - [Day.js](https://day.js.org) 1.8.15 or greater
+  - [Quill RTE](https://quilljs.com/) 1.3.6 or greater
 
-  - Day.js 1.8.15 or greater
 
 ### 2\. Referencing the Web Client SDK
 
-Enabling __$.ig.RevealView__
-component in a web page requires several scripts to be included. These
-scripts will be provided as part of Reveal Web Client SDK.
+Enabling the __$.ig.RevealView__ component in a web page requires several scripts to be included. These scripts will be provided as part of Reveal Web Client SDK.
 
 ``` html
 <script src="~/Reveal/infragistics.reveal.js"></script>
@@ -34,10 +33,9 @@ JavaScript files can be found in
 
 ### 7. Instantiating the Web Client SDK
 
-Reveal’s Dashboard presentation is handled natively through the Web
-Client SDK.
+Reveal’s Dashboard presentation is handled natively through the Web Client SDK.
 
-To get started follow these steps:
+To get started, follow these steps:
 
 1.  Define a \<div /\> element with “id” and invoke the
     __$.ig.RevealView__

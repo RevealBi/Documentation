@@ -68,3 +68,26 @@ of the data in the **Products** table in the PostgreSQL server.
 ![Sample dashboard using PostgreSQL invoices view data](images/invoices-postgre-sql-view-sample.png)
 
 For more information on views and PostgreSQL, visit [this documentation website](https://www.postgresql.org/docs/10/tutorial-views.html).
+
+### Working With Functions
+
+PostgreSQL functions allow you to carry out operations that would normally take several queries and round trips in a single function within the database.
+
+The following are just a set of sample functions running on a test server with [Northwind](link:https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) data:
+
+
+<img src="images/postgresql-functions-list.png" alt="A list of PostgreSQL functions" width="800"/>
+
+
+After you select a function, you will need to set up some additional parameters. In this case, the function requires you to configure the start and end date to display the Sales for period information.
+
+
+<img src="images/sales-for-period.png" alt="Sales for period function parameters" width="800"/>
+
+
+For more information on Functions and PostgreSQL, visit this [documentation website](https://www.postgresql.org/docs/9.0/sql-createfunction.html).
+
+### Limitations for Functions in Reveal
+
+* Output parameters in functions are ignored.
+* Functions that return no result sets will be listed in the Data Sources list, but will fail.

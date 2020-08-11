@@ -19,7 +19,9 @@ The maximized view allows a larger display of the information.
 
 ![maximized visualization view](images/maximized-visualization.png)
 
-In this mode, you can also switch the maximized view to other visualizations by selecting the **small chart icon** in the top right corner. Different possibilities will be displayed depending on the starting visualization. The changes to the visualization will not be saved, unless you enter Edit mode (by selecting *Edit* from the overflow menu) and explicitly save the changes. 
+In this mode, you can also switch the maximized view to other visualizations by selecting the **small chart icon** in the top right corner. Different visualizations are displayed based on the data that was used in the editor. Only chart types that work well with your data will be offered. 
+
+If you want to save the changed visualization, you need to have edit permissions, be in [dashboard Edit Mode](#view-edit-mode) and explicitly save the changes by selecting the check icon in the top right corner. You have edit permission for dashboards that are created by you or shared with you with [Owner or Modify permissions](~/en/dashboards/sharing-dashboards/share-a-dashboard.html#access-permissions). 
 
 ![chart change in visualization view mode](images/chart-change-visualization-view-mode.png)
 

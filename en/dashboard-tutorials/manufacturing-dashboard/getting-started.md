@@ -23,7 +23,7 @@ You can download the sample datasheet
 All other dashboards [in these tutorials](dashboard-tutorials.md) will use
 the same sample spreadsheet.
 
->[NOTE]
+>[!NOTE]
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the
 [supported cloud services](data-sources.md).
 
