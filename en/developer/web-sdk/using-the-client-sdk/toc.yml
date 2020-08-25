@@ -16,3 +16,5 @@
   href: handling-click-events.md
 - name: Creating New Visualizations and Dashboards
   href: creating-visualizations-dashboards.md
+- name: Creating Custom Themes
+  href: custom-themes-client-web.md
