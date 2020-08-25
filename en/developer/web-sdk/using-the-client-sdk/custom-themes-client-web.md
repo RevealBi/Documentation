@@ -79,3 +79,79 @@ revealTheme.dashboardBackgroundColor = "rgb(232, 235, 252)";
 revealTheme.dashboardBackgroundColor = "#E8EBFC";
 
 ```
+
+### Pre-Built Themes 
+
+Reveal SDK comes with four pre-built themes: *Mountain Light*, *Mountain Dark*, *Ocean Light*, and *Ocean Dark*. You can set the one that best matches your application's design, or you can also use it as the basis for your custom theme modifications.    
+
+Apply the settings of a chosen pre-built theme by using the *UpdateCurrentTheme* method. 
+
+***Mountain Light Theme***
+
+``` js
+$.ig.RevealView.UpdateCurrentTheme(new $.ig.MountainLightTheme());
+```
+
+> [NOTE]
+> Mountain Light contains the default values for all customizable settings. 
+
+***Mountain Dark Theme***
+``` js
+$.ig.RevealView.UpdateCurrentTheme(new $.ig.MountainDarkTheme());
+```
+
+***Ocean Light Theme***
+``` js
+$.ig.RevealView.UpdateCurrentTheme(new $.ig.OceanLightTheme());
+```
+
+***Ocean Dark Theme***
+``` js
+$.ig.RevealView.UpdateCurrentTheme(new $.ig.OceanDarkTheme());
+```
+
+#### How Pre-Built Themes Look? 
+
+Below, you will find a table showing how the *Visualization Editor* and *Dashboard Editor* look when each of the pre-built themes is applied. 
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Theme</th>
+    <th class="tg-0pky"><span style="font-weight:bold">Dashboard Editor</span></th>
+    <th class="tg-0pky"><span style="font-weight:bold">Visualization Editor</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Mountain Light (Default?)</td>
+    <td class="tg-0pky"><img src="images/mountain-light-theme-dashboard-pre-built.png" alt="Image" width="300" height="206"></td>
+    <td class="tg-0pky"><img src="images/mountain-light-theme-visualization-pre-built.png" width="300" height="206"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Mountain Dark </td>
+    <td class="tg-0pky"><img src="images/mountain-dark-theme-dashboard-pre-built.png" width="300" height="206"></td>
+    <td class="tg-0pky"><img src="images/mountain-dark-theme-visualization-pre-built.png" width="300" height="206"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ocean Light</td>
+    <td class="tg-0pky"><img src="images/ocean-light-theme-dashboard-pre-built.png" width="300" height="206"></td>
+    <td class="tg-0pky"><img src="images/ocean-light-theme-visualization-pre-built.png" width="300" height="206"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ocean Dark</td>
+    <td class="tg-0pky"><img src="images/ocean-dark-theme-dashboard-pre-built.png" width="300" height="206"></td>
+    <td class="tg-0pky"><img src="images/ocean-dark-theme-visualization-pre-built.png" width="300" height="206"></td>
+  </tr>
+</tbody>
+</table>
+
