@@ -133,17 +133,10 @@ Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing
 >You can share a dashboard with any public team that [belongs to your main Organization](creating-joining-teams.html#organization), whether you are a member of it or not. You can also share with private teams that you are a member of.
 
 When setting access permissions for the whole team, you must take into
-account that individual members will get only the highest permissions
-they have for the team's dashboards.
+account that these permissions will not be available for everybody in the team. Individual members will receive only the highest permissions possible for their role in the team.
 
-For example, if you give Owner permissions to the team, Viewers in this
-team will have only Viewer permissions, Members will get as high as
-Modify permissions and only the Owners can get the full Owner access to
-the dashboard. If you give Viewer permissions to the team, even members
-with an Owner role will have only Viewer permissions to this dashboard.
-
-Look at the table below for a quick reference of what permissions can
-every team member get depending on their role in the team:
+Look at the table below for a quick reference of the permissions
+every team member can get depending on their role in the team. For example, if you give *Modify* permissions to the whole team, its *Owners* and *Members* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -160,7 +153,7 @@ every team member get depending on their role in the team:
 <table class="tg">
   <tr>
     <th class="tg-9wq8" rowspan="3">Team Roles</th>
-    <th class="tg-7btt" colspan="3">Access Permissions Given to the Team</th>
+    <th class="tg-7btt" colspan="3">Access Permissions Given to the Whole Team</th>
   </tr>
   <tr>
     <td class="tg-c3ow">Owner</td>
@@ -168,7 +161,7 @@ every team member get depending on their role in the team:
     <td class="tg-c3ow">Viewer</td>
   </tr>
   <tr>
-    <td class="tg-7btt" style="text-align: center !important" colspan="3">Max Level Permissions Received by a Member</td>
+    <td class="tg-7btt" style="text-align: center !important" colspan="3"> Permissions Received by Users Depending on Their Role</td>
   </tr>
   <tr>
     <td class="tg-0pky">Owner</td>
@@ -177,7 +170,7 @@ every team member get depending on their role in the team:
     <td class="tg-c3ow"><span style="color: #FF0000">Viewer</span></td>
   </tr>
   <tr>
-    <td class="tg-0pky">Contributer</td>
+    <td class="tg-0pky">Member</td>
     <td class="tg-c3ow"><span style="color: #D1A827">Modify</span></td>
     <td class="tg-c3ow"><span style="color: #D1A827">Modify</span></td>
     <td class="tg-c3ow"><span style="color: #FF0000">Viewer</span></td>
