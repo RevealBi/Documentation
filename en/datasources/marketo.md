@@ -11,7 +11,7 @@ To configure your Marketo data source connection in Reveal, you need to provide 
 
 Your *Admin* panel in Marketo contains the authentication elements listed above. For more information on how to find them, check the article about [Authentication](https://developers.marketo.com/rest-api/authentication/) in Marketo's documentation. 
 
-If you need details about how to create the OAuth credentials you need from Marketo to connect, see the article about [Custom Services](https://help.tableau.com/current/pro/desktop/en-us/examples_marketo.htm) in Marketo's docs. 
+If you need details about how to create the OAuth credentials you need from Marketo to connect, see the article about [Custom Services](https://developers.marketo.com/rest-api/custom-services/?_fsi=oP2ZRHsM) in Marketo's docs. 
 
 ### Setting Up Your Data
 
