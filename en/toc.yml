@@ -58,6 +58,10 @@
   href: datasources/google-bigquery.md
 - name: Google Drive
   href: datasources/google-drive.md
+- name: Hubspot
+  href: datasources/hubspot.md
+- name: Marketo
+  href: datasources/marketo.md
 - name: Microsoft Analysis Services
   href: datasources/microsoft-analysis-services/toc.yml
 - name: Microsoft Azure Synapse Analytics

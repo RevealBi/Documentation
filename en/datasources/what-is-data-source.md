@@ -6,7 +6,7 @@ databases, spreadsheets, and public data sources. It also
 does not require users to have direct access to these sources in their
 computers or their network.
 
-The screenshot below displays a number of different data sources one user has connected to in their application.
+The screenshot below displays a number of different data sources the user John Williams has connected to in his application.
 
 ![Sample data sources](images/sample-data-sources-screen.png)
 

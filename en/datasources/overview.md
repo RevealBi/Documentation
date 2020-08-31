@@ -1,42 +1,34 @@
 ## Data Sources
 
-As listed in the [features](~/en/general/feature-matrix.md) section, Reveal provides you with the opportunity to connect to different enterprise data sources to retrieve information. While there are no changes to be made on the server side, you will need to configure the Data Sources within Reveal to access the data. You can choose from any of the following options:
 
-* **Analytics tools** [Google Analytics](google-analytics.md).
+Data Sources are the places where your data comes from. Reveal provides
+you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
+databases, spreadsheets, and public data sources.
+
+The screenshot below displays a number of different data sources the user John Williams has connected to in his application.
+
+![Sample data sources](images/sample-data-sources-screen.png)
+
+### Connecting to Data Sources 
+
+To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the _Select a Data Source_ menu (see the screenshot above) for quick selection next time you need it. 
+
+To connect to a data source, perform the steps below.  
+
+1. From the *Home screen*, click/tap the **+ Dashboard** split blue button.
+   ![Reveal's home screen](images/start-creating-dashboard-data-source.png)
+2. In the _New Visualization_ dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
+   ![Available data sources when creating a new visualization](images/creating-new-visualization.png)
+3. Select a data source provider from the dropdown list. 
+
+After you select a data source provider, you will be prompted to configure your data source.  
+
+* **Analytics tools** [Google Analytics](google-analytics.md), [Hubspot](hubspot.md).
 * *Content Managers* and *Cloud Services* ([Box](box.md), [Dropbox](dropbox.md),  [Google Drive](google-drive.md),  [OneDrive](onedrive.md) and [SharePoint Online](sharepoint.md)).
-* *Customer Relationship Managers* ([Microsoft Dynamics CRM](microsoft-dynamics-crm.md) On-Premises and Online)
-* *Databases* ([Microsoft SQL Server](microsoft-sql-server.md),  [Microsoft Analysis Services Server](configuring-microsoft-analysis-services.md),  MySQL[MySQL](mysql.md), [PostgreSQL](postgresql.md), [Oracle](oracle.md), [Sybase](sybase.md)) [*](~/en/general/feature-matrix.html#databases-web)
+* *Customer Relationship Managers* ([Microsoft Dynamics CRM](microsoft-dynamics-crm.md) On-Premises and Online, [Quickbooks](quickbooks.md))
+* *Databases* ([Microsoft SQL Server](microsoft-sql-server.md),  [Microsoft Analysis Services Server](configuring-microsoft-analysis-services.md), [Microsoft Azure Analysis Services](microsoft-azure-analysis-services.md), [MySQL](mysql.md), [PostgreSQL](postgresql.md), [Oracle](oracle.md), [Sybase](sybase.md))
 * *Other Data Sources* ([OData-Feed](odatafeed.md), [Web-Resource](web-resource.md), [JSON files](working-with-json-files.md))
 
-### Entering Your Credentials
+>[NOTE]
+> **Databases** are not supported in the Web version of Reveal. 
 
-If you open an existing dashboard and have not yet added the Data Source credentials, you will see a message similar to the following one:
-
-![addingdatasourceaccount_all](images/addingdatasourceaccount_all.png)
-
-When you select any of the data sources, you will see a new dialog pop up prompting you to enter details for your data source. You will see one of two screens:
-
-1. When using a web-based cloud, you will see a **web login** dialog.
-2. When using any other provider, you will be prompted to **add an account**.
-
-<a name='adding-account'></a>
-### Adding an Account
-
-If you add a data source which is not web-based, you will see the following dialog:
-
-![Adding Account](images/Adding-Account-All.png)
-
-You can either enter new credentials for your data source, select the "No Account" option (data sources which do not require authentication), or select an existing one if applicable. To create a new account, select the + button in the top-right hand corner.
-
-![Creating-New-Account](images/Creating-New-Account.png)
-
-You can configure the following details:
-
-* *Default name* of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. Reveal names it after the data source type by default. You can edit it by selecting the *pencil* icon.
-* _(Optional)_ *Domain*: the name of the domain, if applicable.
-* *Username*: the user account for the data source.
-* *Password*: the password for the data source.
-
-Once ready, select *Create and Use*. 
-
-![Email Efforts Credentials dashboard](images/EmailEffortsCredentials.png)

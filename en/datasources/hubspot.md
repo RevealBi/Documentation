@@ -10,12 +10,11 @@ You will then see an authorization prompt. Click _Grant Access_.
 
 ### Setting Up Your Data
 
-After logging in you can set up your Hubspot data in the following dialog:
-
+After logging in, you can set up your Hubspot data in the following dialog:
 
 <img src="images/set-up-data-hubspot.png" alt="Set up your data dialog" width="800"/>
 
-Here you will find a list of your Hubspot _Objects_. Use the search in big lists to find quickly the object you need.
+Here you will find a list of your Hubspot _Objects_. In big lists, use the search to find quickly the object you need.
 
 >[!NOTE]
 >**Calendar Objects**.
