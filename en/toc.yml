@@ -42,70 +42,21 @@
   href: datasources/overview.md
 - name: Supported Data Sources
   href: datasources/supported-data-sources/toc.yml
-- name: Box
-  href: datasources/box.md
-- name: Dropbox
-  href: datasources/dropbox.md
-- name: Google Analytics
-  href: datasources/google-analytics.md
-- name: Google BigQuery
-  href: datasources/google-bigquery.md
-- name: Google Drive
-  href: datasources/google-drive.md
-- name: Hubspot
-  href: datasources/hubspot.md
-- name: Marketo
-  href: datasources/marketo.md
-- name: Microsoft Analysis Services
-  href: datasources/microsoft-analysis-services/toc.yml
-- name: Microsoft Azure Synapse Analytics
-  href: datasources/microsoft-azure-synapse-analytics.md
-- name: Microsoft Azure SQL
-  href: datasources/azure-sql.md
-- name: Microsoft Dynamics CRM
-  href: datasources/microsoft-dynamics-crm.md
-- name: Microsoft Reporting Services
-  href: datasources/microsoft-reporting-services.md
-- name: Microsoft SQL Server
-  href: datasources/microsoft-sql-server.md
-- name: MySQL
-  href: datasources/mysql.md
-- name: OData Feed
-  href: datasources/odata-feed.md
-- name: OneDrive
-  href: datasources/onedrive.md
-- name: Oracle
-  href: datasources/oracle.md
-- name: PostgreSQL
-  href: datasources/postgresql.md
-- name: REST API
-  href: datasources/rest-api.md
-- name: SharePoint
-  href: datasources/sharepoint.md
-- name: Salesforce
-  href: datasources/salesforce.md
-- name: Sybase
-  href: datasources/sybase.md
-- name: Web Resource
-  href: datasources/web-resource.md
 - name: Managing Your Data Source Credentials
   href: datasources/managing-data-source-credentials.md
 - name: Changing the Data Source for a Visualization
   href: datasources/changing-data-source-visualization.md
 - name: Combining Data Sources in one Visualization
   href: datasources/data-blending.md
-- name: Integration with Azure Machine Learning
-  href: datasources/azure-machine-learning-models.md
-- name: Integration with BigQuery Machine Learning
-  href: datasources/bigquery-machine-learning-models.md
-- name: OAuth 2 / OIDC User Authentication
-  href: datasources/oauth-2-oidc-user-authentication.md
 - name: Managing Dashboards with their own Data Sources
   href: datasources/managing-dashboards-own-data-sources.md
-- name: Working with JSON Files
-  href: datasources/working-with-json-files.md
-- name: Working with Spreadsheets
-  href: datasources/working-with-spreadsheets.md
+- name: OAuth 2 / OIDC User Authentication
+  href: datasources/oauth-2-oidc-user-authentication.md
+- name: Machine Learning Integration
+  href: datasources/ml-integration/toc.yml
+- name: Working with Files
+  href: datasources/working-files/toc.yml
+
 - name: Data Visualizations
   header: true
 - name: Overview
