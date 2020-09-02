@@ -45,16 +45,16 @@ You can use the Time series forecast, Linear regression and Detect outliers to m
 
 <h4 style="color:#2328B0;">Get Better Insights with Machine Learning</h4>
 
-<img src="datasources/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="800"/>
+<img src="datasources/images/ml-integration/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="800"/>
 
 Use your trained models' data from BigQuery or Azure Machine Learning Studio in Reveal. In just three steps, choose your data source, build a visualization, and use the integration to connect to a trained machine learning model.
 
-### What's new? 
+### What's new?
 
 * [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md) data source – You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.
 * [Marketo](~/en/datasources/supported-data-sources/marketo.md) data source – Connect to your account in the marketing platform Marketo and use your data in Reveal.
-* [Process Data on Server]((~/en/datasources/process-data-server-side.md)) feature – You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources.
- 
+* [Process Data on Server](~/en/datasources/process-data-server-side.md) – You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources.
+
 ### Coming Soon to Reveal
 
 Coming Soon...

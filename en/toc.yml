@@ -59,7 +59,6 @@
   href: datasources/ml-integration/toc.yml
 - name: Working with Files
   href: datasources/working-files/toc.yml
-
 - name: Data Visualizations
   header: true
 - name: Overview

@@ -1,5 +1,3 @@
-- name: Fields
-  header: true
 - name: Overview
   href: overview.md
 - name: Field Settings
