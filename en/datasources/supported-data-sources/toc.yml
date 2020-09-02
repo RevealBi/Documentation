@@ -1,0 +1,52 @@
+- name: Box
+  href: box.md
+- name: Dropbox
+  href: dropbox.md
+- name: Google Analytics
+  href: google-analytics.md
+- name: Google BigQuery
+  href: google-bigquery.md
+- name: Google Drive
+  href: google-drive.md
+- name: Hubspot
+  href: hubspot.md
+- name: Marketo
+  href: marketo.md
+- name: Microsoft Analysis Services
+  href: microsoft-analysis-services.md
+- name: Working with Microsoft Analysis Services
+  href: working-with-microsoft-analysis-services.md
+- name: Microsoft Azure Analysis Services
+  href: microsoft-azure-analysis-services.md
+- name: Microsoft Azure Synapse Analytics
+  href: microsoft-azure-synapse-analytics.md
+- name: Microsoft Azure SQL
+  href: azure-sql.md
+- name: Microsoft Dynamics CRM
+  href: microsoft-dynamics-crm.md
+- name: Microsoft Reporting Services
+  href: microsoft-reporting-services.md
+- name: Microsoft SQL Server
+  href: microsoft-sql-server.md
+- name: MySQL
+  href: mysql.md
+- name: OData Feed
+  href: odata-feed.md
+- name: OneDrive
+  href: onedrive.md
+- name: Oracle
+  href: oracle.md
+- name: PostgreSQL
+  href: postgresql.md
+- name: Quickbooks
+  href: quickbooks.md
+- name: REST API
+  href: rest-api.md
+- name: SharePoint
+  href: sharepoint.md
+- name: Salesforce
+  href: salesforce.md
+- name: Sybase
+  href: sybase.md
+- name: Web Resource
+  href: web-resource.md

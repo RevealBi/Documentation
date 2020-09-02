@@ -1,15 +1,13 @@
 - name: General
   header: true
-- name: General Overview
-  href: general/overview.md
-- name: Dashboards Overview
-  href: general/dashboards-overview.md
+- name: Welcome to Reveal
+  href: index.md
 - name: Logging into Reveal
-  href: general/register-sign-in.md
-- name: Complete Feature Matrix
-  href: general/feature-matrix.md
-- name: Themes and Localization
-  href: general/themes-localization.md
+  href: general/logging-in-reveal.md
+- name: Application Themes
+  href: general/app-themes.md
+- name: Supported Languages
+  href: general/supported-languages.md
 - name: Notifications Center
   href: general/notifications-center.md
 - name: Teams
@@ -24,30 +22,26 @@
   header: true
 - name: Overview
   href: dashboards/overview.md
-- name: What is a Dashboard?
-  href: dashboards/what-is-dashboard.md
 - name: Creating Dashboards
   href: dashboards/creating-dashboards.md
 - name: Uploading Dashboards
   href: dashboards/uploading-dashboards.md
-- name: Managing your Dashboards
-  href: dashboards/managing-dashboards.md
 - name: Styling Dashboards
   href: dashboards/dashboard-styling.md
-- name: Linking Dashboards
-  href: dashboards/dashboard-linking.md
-- name: Sharing Dashboards
-  href: dashboards/sharing-dashboards/toc.yml
 - name: Exporting Dashboards
   href: dashboards/exporting-dashboards/toc.yml
+- name: Managing your Dashboards
+  href: dashboards/managing-dashboards.md
+- name: Sharing Dashboards
+  href: dashboards/sharing-dashboards/toc.yml
+- name: Linking Dashboards
+  href: dashboards/dashboard-linking.md
 - name: Data Sources
   header: true
 - name: Overview
   href: datasources/overview.md
-- name: What is a Data Source?
-  href: datasources/what-is-data-source.md
-- name: Creating a New Data Source
-  href: datasources/creating-new-datasource.md
+- name: Supported Data Sources
+  href: datasources/supported-data-sources/toc.yml
 - name: Box
   href: datasources/box.md
 - name: Dropbox
@@ -86,7 +80,7 @@
   href: datasources/postgresql.md
 - name: REST API
   href: datasources/rest-api.md
-- name: SharePoint 
+- name: SharePoint
   href: datasources/sharepoint.md
 - name: Salesforce
   href: datasources/salesforce.md
@@ -112,62 +106,20 @@
   href: datasources/working-with-json-files.md
 - name: Working with Spreadsheets
   href: datasources/working-with-spreadsheets.md
-- name: Data Visuallizations
+- name: Data Visualizations
   header: true
 - name: Overview
   href: data-visualizations/overview.md
-- name: What is a Visualization
-  href: data-visualizations/what-is-visualization.md
-- name: Visualizations Editor
+- name: Working with the Visualization Editor
   href: data-visualizations/visualizations-editor.md
-- name: Category Charts
-  href: data-visualizations/category-charts.md
-- name: Combo Charts
-  href: data-visualizations/combo-charts.md
-- name: Statistical Functions
-  href: data-visualizations/statistical-functions.md
+- name: Visualization Types
+  href: data-visualizations/visualization-types/toc.yml
+- name: Fields
+  href: data-visualizations/fields/toc.yml
 - name: Reusing Visualizations
   href: data-visualizations/reusing-visualizations.md
-- name: Financial Charts
-  href: data-visualizations/financial-charts.md
-- name: Gauge Views
-  href: data-visualizations/gauge-views.md
-- name: Grid View
-  href: data-visualizations/grid-view.md
-- name: Web View
-  href: data-visualizations/web-view.md
-- name: KPI Gauge
-  href: data-visualizations/kpi-gauge.md
-- name: Pivot Table
-  href: data-visualizations/pivot-table.md
-- name: Radial Charts
-  href: data-visualizations/radial-charts.md
-- name: Scatter and Bubble Charts
-  href: data-visualizations/scatter-bubble-charts.md
-- name: Sparkline Charts
-  href: data-visualizations/sparkline-charts.md
-- name: Text View
-  href: data-visualizations/text-view.md
-- name: Text Box
-  href: data-visualizations/text-box.md
-- name: Treemap Charts
-  href: data-visualizations/treemap-charts.md
-- name: Fields
-  header: true
-- name: Overview
-  href: fields/overview.md
-- name: Field Settings
-  href: fields/field-settings.md
-- name: Sort by Field
-  href: fields/sort-by-field.md
-- name: Ad-Hoc Hierarchies
-  href: fields/adhoc-hierarchies.md
-- name: Conditional Formatting
-  href: fields/conditional-formatting.md
-- name: Field Filters and Rules
-  href: fields/field-filters-rules.md
-- name: Calculated Fields
-  href: fields/calculated-fields/toc.yml
+- name: Statistical Functions
+  href: data-visualizations/statistical-functions.md
 - name: Filters
   header: true
 - name: Overview
@@ -178,6 +130,8 @@
   href: filters/dashboard-filters-properties.md
 - name: Connecting Dashboard Filters to a Visualization
   href: filters/connecting-dashboard-filters-visualization.md
+- name: Field Filters and Rules
+  href: field-filters-rules.md
 - name: Date Range Filter
   href: filters/date-range-filter.md
 - name: Visualization Filters
@@ -216,14 +170,11 @@
   href: dashboard-tutorials/sales-dashboard/toc.yml
 - name: Social Dashboard
   href: dashboard-tutorials/social-dashboard/toc.yml
-- name: Release Information
+- name: Additional Resources
   header: true
-- name: System Requirements
-  href: release-information/system-requirements.md
 - name: Known Issues
-  href: release-information/known-issues.md
+  href: additional-resources/known-issues.md
 - name: Release Notes
-  href: release-information/release-notes.md
+  href: additional-resources/release-notes.md
 - name: Third-Party Software
-  href: release-information/third-party-software.md
-
+  href: additional-resources/third-party-software.md

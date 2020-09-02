@@ -1,0 +1,32 @@
+- name: Category Charts
+  href: category-charts.md
+- name: Choropleth Map
+  href: data-visualizations/visualization-types/choropleth-map/toc.yml
+- name: Combo Charts
+  href: combo-charts.md
+- name: Financial Charts
+  href: financial-charts.md
+- name: Gauge Charts
+  href: gauge-charts.md
+- name: Grid Chart
+  href: grid-chart.md
+- name: Image Chart
+  href: image-chart.md
+- name: Web View
+  href: web-view.md
+- name: KPI Gauge
+  href: kpi-gauge.md
+- name: Pivot Table
+  href: pivot-table.md
+- name: Radial Charts
+  href: radial-charts.md
+- name: Scatter and Bubble Charts
+  href: scatter-bubble-charts.md
+- name: Sparkline Charts
+  href: sparkline-charts.md
+- name: Text View
+  href: text-view.md
+- name: Text Box
+  href: text-box.md
+- name: Treemap Charts
+  href: treemap-charts.md
