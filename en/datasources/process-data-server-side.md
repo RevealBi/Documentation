@@ -28,7 +28,7 @@ After configuring the connection, you will have the _Set Up the Database_ screen
 
 <img src="images/process-data-server-checkbox.png" alt="New Process data on server checkbox added in the Set Up the Database dialog in PostgreSQL" width="800"/>
 
-Notice that the _Process Data on Server_ is automatically enabled. Consider unchecking the box next to this feature in case you need to use any of the capabilities that are limited (see in _Limitations_ below), when your data is processed on the server.
+Notice that the _Process Data on Server_ is enabled by default. Consider unchecking the box next to this feature in case you need to use any of the capabilities that are limited (see in _Limitations_ below), when your data is processed on the server.
 
 ### Limitations 
 
@@ -39,14 +39,7 @@ The following capabilities are **not supported** in the Visualization editor whe
 * [Data Blending](data-blending.md) 
 * [Azure ML models integration](azure-machine-learning-models.md)
 
-**Restrictions** are placed on the Calculated Fields feature in the Visualization editor. Currently, only a limited number of **functions** are available when data is processed server-side: 
+Restrictions are placed on the Calculated Fields feature in the Visualization editor. Currently, the **following function are not available** when data is processed server-side: 
 
-- [Aggregation](~/en/fields/calculated-fields/aggregation.md) - average; averageif; count; countif; max; maxif; min; minif; sum; sumif. 
-  
-- [Date](~/en/fields/calculated-fields/date.md) 
 
-- [Logic](~/en/fields/calculated-fields/logic.md) - 
-
-- [Math](~/en/fields/calculated-fields/math.md) - abs; exp; log; log10; ...
-- [Strings](~/en/fields/calculated-fields/string.md)
 
