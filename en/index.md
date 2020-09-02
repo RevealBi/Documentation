@@ -45,7 +45,7 @@ You can use the Time series forecast, Linear regression and Detect outliers to m
 
 <h4 style="color:#2328B0;">Get Better Insights with Machine Learning</h4>
 
-<img src="datasources/images/ml-integration/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="800"/>
+<img src="datasources/ml-integration/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="800"/>
 
 Use your trained models' data from BigQuery or Azure Machine Learning Studio in Reveal. In just three steps, choose your data source, build a visualization, and use the integration to connect to a trained machine learning model.
 
