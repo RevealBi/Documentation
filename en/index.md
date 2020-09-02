@@ -38,16 +38,17 @@ Give everyone the power of data by sharing your dashboards within your Organizat
 
 <h4 style="color:#2328B0;">Leverage Advanced Predictive Analysis </h4>
 
-<img src="data-visualizations/images/time-series-forecast-6-months.png" alt="Showing statistical functions in Reveal" width="800"/>
-
 Get even more insight from your visualizations with advanced predictive analysis, using statistical functions.
 You can use the Time series forecast, Linear regression and Detect outliers to make predictions, recognize and evaluate trends, or discover outliers in your data series.
 
+<img src="data-visualizations/images/time-series-forecast-6-months.png" alt="Showing statistical functions in Reveal" width="800"/>
+
+
 <h4 style="color:#2328B0;">Get Better Insights with Machine Learning</h4>
 
-<img src="datasources/ml-integration/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="800"/>
-
 Use your trained models' data from BigQuery or Azure Machine Learning Studio in Reveal. In just three steps, choose your data source, build a visualization, and use the integration to connect to a trained machine learning model.
+
+<img src="datasources/ml-integration/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="800"/>
 
 ### What's new?
 

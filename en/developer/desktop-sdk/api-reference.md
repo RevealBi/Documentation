@@ -1,6 +1,5 @@
 ## Desktop API Reference
 
-This part of the documentation is your gateway to the Desktop SDK API.
+This part of the documentation is your gateway to the Desktop SDK API, to get information about classes, functions, and procedures.
 
-Soon you'll be able to find the different classes, functions, and
-procedures that are included in the Desktop SDK API.
+Coming soon...

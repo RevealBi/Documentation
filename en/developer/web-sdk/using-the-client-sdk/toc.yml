@@ -18,3 +18,5 @@
   href: creating-visualizations-dashboards.md
 - name: Creating Custom Themes
   href: custom-themes-client-web.md
+- name: Working with Tooltips
+  href: working-tooltips-client-web.md

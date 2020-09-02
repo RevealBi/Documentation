@@ -1,6 +1,8 @@
 - name: General
   header: true
-- name: Reveal SDK Overview
+- name: Welcome to Reveal SDK
+  href: index.md
+- name: SDK Overview
   href: general/overview.md
 - name: System Requirements and Installation
   href: general/installation-requirements.md
@@ -29,7 +31,7 @@
 - name: Overview
   href: desktop-sdk/overview.md
 - name: Creating Your First App -coming soon-
-  href: 
+  href:
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
 - name: API Reference
