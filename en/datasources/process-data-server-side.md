@@ -39,7 +39,10 @@ The following capabilities are **not supported** in the Visualization editor whe
 * [Data Blending](data-blending.md) 
 * [Azure ML models integration](azure-machine-learning-models.md)
 
-Restrictions are placed on the Calculated Fields feature in the Visualization editor. Currently, the **following function are not available** when data is processed server-side: 
+Restrictions are placed on the [Pre-Calculated](~/en/data-visualizations/fields/calculated-fields/overview.html#precalculated-fields) fields feature in the Visualization editor. Different functions are unavailable for each data source. You will be prompted in the _New Calculated Field_ dialog to disable the _Process Data on Server_ feature if you want to use all functions. 
+
+<img src="images/pre-calculated-fields-unavailable-process-data-server.png" alt="Disable Process Data on Server prompt in the Calculated Fields dialog" width="800"/>
+
 
 
 

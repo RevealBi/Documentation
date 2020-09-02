@@ -10,6 +10,6 @@ specifications, a person's contact information, etc.
 
 ![Text View in the Visualization editor](images/text-view-visualization-editor.png)
 
-The **Text View supports conditional formatting**, as explained in [this section](~/en/fields/conditional-formatting.md).
+The **Text View supports conditional formatting**, as explained in [this section](~/en/data-visualizations/fields/conditional-formatting.md).
 
 ![TextViewConditionalFormatting\_All](images/text-view-conditional-formatting.png)

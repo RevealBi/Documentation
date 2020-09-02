@@ -39,7 +39,7 @@ You will be able to change the following settings for the filter:
     <td class="tg-cly1"><span style="font-weight:bold">Selection</span>. This setting allows you to configure: <a href="#multiple-selection">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="#required-selection">Required Selection</a> (at least one value must always be selected).</td>
   </tr>
   <tr>
-    <td class="tg-cly1"><a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#~/en/fields/field-filters-rules.md">field filters and rules</a> to the data source used for the dashboard filter.</td>
+    <td class="tg-cly1"><a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#~/en/data-visualizations/fields/field-filters-rules.md">field filters and rules</a> to the data source used for the dashboard filter.</td>
   </tr>
   <tr>
     <td class="tg-cly1"><a href="connecting-dashboard-filters-visualization.md">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.</td>

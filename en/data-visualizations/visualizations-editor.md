@@ -33,13 +33,13 @@ visualizations editor:
 
 Among other things, you will be able to:
 
-  - [**Sort**](~/en/fields/sort-by-field.md) & [**filter**](~/en/filters/visualization-filters.md) data.
+  - [**Sort**](~/en/data-visualizations/fields/sort-by-field.md) & [**filter**](~/en/filters/visualization-filters.md) data.
 
   - [**Bind the visualization data to a dashboard page selection**](~/en/dashboards/dashboard-linking.md).
 
-  - [**Aggregate data**](~/en/fields/field-settings.md) in the data editor.
+  - [**Aggregate data**](~/en/data-visualizations/fields/field-settings.md) in the data editor.
 
-  - **Search**, **Visualize** & [**format**](~/en/fields/conditional-formatting.md) data.
+  - **Search**, **Visualize** & [**format**](~/en/data-visualizations/fields/conditional-formatting.md) data.
 
 After you're done building the visualization and selecting the
 appropriate visualizations, select the *Back arrow* to return to the

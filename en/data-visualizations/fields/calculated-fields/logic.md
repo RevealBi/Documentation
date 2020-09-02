@@ -191,7 +191,7 @@ The `and` calculated field returns only four "TRUE" rows:
 
   - Row 96 (employee "Jorge Stanatto").
 
-You can look at these two rows only if you apply [filter by rule](~/en/fields/field-filters-rules.html#rules-numeric-fields) or [select value](~/en/fields/field-filters-rules.html#select-values) "1.00".
+You can look at these two rows only if you apply [filter by rule](~/en/data-visualizations/fields/field-filters-rules.html#rules-numeric-fields) or [select value](~/en/data-visualizations/fields/field-filters-rules.html#select-values) "1.00".
 
 If you want to refine your and condition so you only find "Zolleis
 Walker", you can introduce any one of the following third logical tests:

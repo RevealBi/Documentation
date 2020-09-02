@@ -19,7 +19,7 @@ spreadsheets within Reveal.
 <td><p><img src="images/csv.png" alt="csv" /><br />
 </p>
 <p><strong>When working with CSV files, avoid formatting the spreadsheet</strong>. Instead, apply any necessary formatting (1000 comma separators, currency signs, etc.) through Reveal.</p>
-<p><a href="~/en/fields/field-settings.md">LEARN MORE</a><br />
+<p><a href="~/en/data-visualizations/fields/field-settings.md">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/excel.png" alt="excel" /><br />
 </p>
@@ -73,17 +73,17 @@ spreadsheets within Reveal.
 <td><p><img src="images/reveal-logo.png" alt="reveal logo" /><br />
 </p>
 <p>By default, <strong>numbers will have 2 fraction digits</strong>. To change this, access the <em>Formatting</em> menu for the field.</p>
-<p><a href="~/en/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
+<p><a href="~/en/data-visualizations/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/top-1000.png" alt="top 1000" /><br />
 </p>
 <p>The 1000 separator is disabled by default, even for large numbers. To turn it on, access the <em>Formatting</em> menu.</p>
-<p><a href="~/en/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
+<p><a href="~/en/data-visualizations/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
 </p></td>
 <td><p><img src="images/percentage.png" alt="percentage" /><br />
 </p>
 <p>If you need to show percentages or currencies, you will need to select that option from the Formatting menu.</p>
-<p><a href="~/en/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
+<p><a href="~/en/data-visualizations/fields/field-settings.html#numeric-fields">LEARN MORE</a><br />
 </p></td>
 </tr>
 <tr class="even">

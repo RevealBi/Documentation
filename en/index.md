@@ -53,7 +53,7 @@ Use your trained models' data from BigQuery or Azure Machine Learning Studio in 
 
 * [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md) data source – You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.
 * [Marketo](~/en/datasources/supported-data-sources/marketo.md) data source – Connect to your account in the marketing platform Marketo and use your data in Reveal.
-* [Data Process on Server]((~/en/datasources/process-data-server-side.md)) feature – You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources.
+* [Process Data on Server]((~/en/datasources/process-data-server-side.md)) feature – You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources.
  
 ### Coming Soon to Reveal
 
