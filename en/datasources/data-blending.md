@@ -1,7 +1,6 @@
 ## Combining Data Sources in one Visualization
 
-Sometimes you need **Data Blending** to extract value from **more than
-one data source** in the same Reveal visualization.
+Sometimes you need **Data Blending** to extract value from **more than one data source** in the same Reveal visualization.
 
 For example, you may want to compare vacation days taken with other
 employee absences by department, to gain insight about the correlation
