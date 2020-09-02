@@ -14,9 +14,9 @@ For some of the available data sources in Reveal, processing data directly on th
 
 Processing data on server is an option you can **enable** for the following data sources: 
 
-* [MS SQL Server](microsoft-sql-server.md)
-* [MySQL](mysql.md)
-* [PostgreSQL](postgresql.md)
+* [MS SQL Server](supported-data-sources/microsoft-sql-server.md)
+* [MySQL](supported-data-sources/mysql.md)
+* [PostgreSQL](supported-data-sources/postgresql.md)
 
 ### How to Enable Process Data on Server?
 
