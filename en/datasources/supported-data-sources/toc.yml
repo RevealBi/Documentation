@@ -1,5 +1,6 @@
 - name: Amazon Redshift
   href: redshift.md
+  new: true
 - name: Box
   href: box.md
 - name: Dropbox

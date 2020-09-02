@@ -52,6 +52,9 @@
   href: datasources/managing-dashboards-own-data-sources.md
 - name: OAuth 2 / OIDC User Authentication
   href: datasources/oauth-2-oidc-user-authentication.md
+- name: Processing Data on Server
+  href: datasources/process-data-server-side.md
+  new: true
 - name: Machine Learning Integration
   href: datasources/ml-integration/toc.yml
 - name: Working with Files
