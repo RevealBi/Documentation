@@ -84,7 +84,7 @@
 - name: Connecting Dashboard Filters to a Visualization
   href: filters/connecting-dashboard-filters-visualization.md
 - name: Field Filters and Rules
-  href: field-filters-rules.md
+  href: data-visualizations/fields/field-filters-rules.md
 - name: Date Range Filter
   href: filters/date-range-filter.md
 - name: Visualization Filters
