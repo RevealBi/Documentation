@@ -1,6 +1,6 @@
 ## Managing Teams
 
-As an [Owner](index.html#members-roles-permissions) of
+As an [Owner](overview.html#members-roles-permissions) of
 a team you can:
 
   - manage team members;
@@ -9,7 +9,7 @@ a team you can:
 
   - [delete](#delete-team) the team;
 
-As a special type of team, the [Organization repository](index.html#organization-team) management
+As a special type of team, the [Organization repository](overview.html#organization-team) management
 corresponds to the general rules of team management in Reveal. In the
 cases when there are differences in Organization repository management,
 they will be explicitly mentioned in this topic.
@@ -33,7 +33,7 @@ invitation.
 
 #### Changing the role or removing more than one member at the same time
 
-1. Select the checked box on the right of the *+Members* blue button. 
+1. Select the checked box on the right of the *+Members* blue button.
 2. Checkboxes on the right of members' roles appear.
 3.  Select the trash icon or a role from the menu at the bottom center
     of the screen.

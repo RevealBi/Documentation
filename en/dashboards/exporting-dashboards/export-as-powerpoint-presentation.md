@@ -54,4 +54,4 @@ In the *Export Dashboard* dialog you can manage the following settings:
 
 5.  **Annotate** the selected slide by clicking/tapping the *pencil*
     icon. For more information about **annotation settings**, please
-    refer to [Annotating images](images.html#annotating) in the *Exporting Dashboards as Images* topic.
+    refer to [Annotating images](export-as-images.html#annotating) in the *Exporting Dashboards as Images* topic.

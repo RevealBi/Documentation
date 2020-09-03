@@ -17,11 +17,7 @@ You can create a dashboard by selecting the **+ Dashboard** split button in the 
 
 ![Creating new dashboard](images/create-new-dashboard.png)
 
-This will prompt the *New Visualization* dialog. In order to proceed, choose whether you want to create:
-
-  - a visualization using a data source, or
-
-  - a simple [text box](~/en/data-visualizations/text-box.md).
+This will prompt the *New Visualization* dialog. Proceed to create a visualization using a data source.
 
 ![New visualization dialog](images/new-visualization-dialog.png)
 
@@ -42,12 +38,12 @@ your visualization.
 #### Available Content
 
 With Reveal, you can add many content sources, including
-[Dropbox](~/en/datasources/Dropbox.md), [OneDrive](~/en/datasources/OneDrive.md), [Box](~/en/datasources/Box.md) and [Google Drive](~/en/datasources/Google-Drive.md), which will allow you to browse any folders, files
+[Dropbox](~/en/datasources/supported-data-sources/Dropbox.md), [OneDrive](~/en/datasources/supported-data-sources/OneDrive.md), [Box](~/en/datasources/supported-data-sources/Box.md) and [Google Drive](~/en/datasources/supported-data-sources/Google-Drive.md), which will allow you to browse any folders, files
 or spreadsheets available in them.
 
 ![available content in OneDrive datasource account](images/available-content-onedrive.png)
 
-In addition, you can also add [SharePoint](~/en/datasources/SharePoint.md) data sources,
+In addition, you can also add [SharePoint](~/en/datasources/supported-data-sources/SharePoint.md) data sources,
 which means the ability to access any lists or libraries.
 
 ![available content in SharePoint datasource account](images/available-content-sharepoint.png)

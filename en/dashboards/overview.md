@@ -16,14 +16,14 @@ different pieces of related information, enabling users to make sense of their d
     in your dashboard, and what it needs to revolve around.
 
   - **Plan the Dashboard**: how will you represent your information
-    graphically? Will you use a [grid](~/en/data-visualizations/grid-view.md), a map
-    [gauges](~/en/data-visualizations/gauge-views.md), [category charts](~/en/data-visualizations/category-charts.md), or even a
+    graphically? Will you use a [grid](~/en/data-visualizations/visualization-types/grid-chart.md), a map
+    [gauges](~/en/data-visualizations/visualization-types/gauge-charts.md), [category charts](~/en/data-visualizations/visualization-types/category-charts.md), or even a
     [pyramid chart](https://www.infragistics.com/community/blogs/b/infragistics/posts/creating-a-population-pyramid-chart-using-stacked-bar-charts-with-Reveal)?
     Will you use any [filters](~/en/filters/overview.md)? If you want to see how to
     improve your data visualizations with any of the advanced Reveal features, [check out this blog post](https://www.infragistics.com/community/blogs/b/infragistics/posts/8-ways-to-improve-your-data-visualizations)\!
 
   - **Prepare the data** to be used in Reveal. Here is a quick overview
-    of [how to work with spreadsheets](~/en/datasources/working-with-spreadsheets.md) in Reveal.
+    of [how to work with spreadsheets](~/en/datasources/working-files/working-with-spreadsheets.md) in Reveal.
 
   - **Create the dashboard**: for a complete walkthrough, read [this topic](creating-dashboards.md).
 
@@ -40,7 +40,7 @@ Within Reveal, you will be able to:
 
   - [Link Dashboards to other Dashboards or to URLs](dashboard-linking.md)
 
-  - [Share your Dashboards](sharing-dashboards/sharing-dashboards.md)
+  - [Share your Dashboards](sharing-dashboards/share-a-dashboard.md)
 
   - [Manage your existing Dashboards](managing-dashboards.md)
 
@@ -60,21 +60,21 @@ designed to get you started and headed in the right direction.
 <tr class="odd">
 <td><p><img src="images/ThumbnailFinanceDashboard_All.png" alt="ThumbnailFinanceDashboard All" /><br />
 </p>
-<p><a href="~/en/dashboard-tutorials/finance-dashboard/overview.md">Finance Dashboard</a><br />
+<p><a href="~/en/dashboard-tutorials/finance-dashboard/getting-started.md">Finance Dashboard</a><br />
 </p></td>
 <td><p><img src="images/ThumbnailManufacturingDashboard_All.png" alt="ThumbnailManufacturingDashboard All" /><br />
 </p>
-<p><a href="~/en/dashboard-tutorials/manufacturing-dashboard/overview.md">Manufacturing Dashboard</a><br />
+<p><a href="~/en/dashboard-tutorials/manufacturing-dashboard/getting-started.md">Manufacturing Dashboard</a><br />
 </p></td>
 </tr>
 <tr class="even">
 <td><p><img src="images/ThumbnailSalesDashboard_All.png" alt="ThumbnailSalesDashboard All" /><br />
 </p>
-<p><a href="~/en/dashboard-tutorials/sales-dashboard/overview.md">Sales Dashboard</a><br />
+<p><a href="~/en/dashboard-tutorials/sales-dashboard/getting-started.md">Sales Dashboard</a><br />
 </p></td>
 <td><p><img src="images/ThumbnailSocialDashboard_All.png" alt="ThumbnailSocialDashboard All" /><br />
 </p>
-<p><a href="~/en/dashboard-tutorials/social-dashboard/overview.md">Social Dashboard</a><br />
+<p><a href="~/en/dashboard-tutorials/social-dashboard/getting-started.md">Social Dashboard</a><br />
 </p></td>
 </tr>
 </tbody>

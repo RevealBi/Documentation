@@ -51,4 +51,4 @@ font size, and font color.
 ![Adding text in image annotation](images/image-annotation-text.png)
 
 For exporting images in **Android and iOS** devices, please refer to the
-[Exporting Dashboards](Exporting-Dashboards.html#mobile-devices) topic.
+[Exporting Dashboards](how-to-export-a-dashboard.html#mobile-devices) topic.
