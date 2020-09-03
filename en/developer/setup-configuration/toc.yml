@@ -1,4 +1,4 @@
 - name: Setup Web
-  href: general/setup-configuration-web.md
+  href: setup-configuration-web.md
 - name: Setup Desktop
-  href: general/setup-configuration-desktop.md
+  href: setup-configuration-desktop.md
