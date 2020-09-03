@@ -16,6 +16,60 @@ here.
     </thead>
     <tbody>
         <tr>
+            <td rowspan="5">1.0.1422</td>
+            <td><i>Amazon Athena connector in BETA</i><br>
+            You can now connect to Amazon's serverless, interactive query service Athena.</td>
+        </tr>
+        <tr>
+            <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the customizable settings to additionaly personalize the look and feel of the Visualization and Dashboard editor. You can choose from one of the following themes:
+            MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web); 
+            MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);
+            OceanLightTheme (Desktop) / $.ig.OceanLightTheme (Web);
+            OceanDarkTheme (Desktop) / $.ig.OceanDarkTheme (Web).
+</td>
+        </tr>
+        <tr>
+            <td><i>Marketo provider is Now Available</i><br>You can now connect to the marketing platform Marketo and use your data in Reveal.</td>
+        </tr>
+        <tr>
+            <td><i>Amazon Redshift provider is Now Available</i><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.</td>
+        </tr>
+        <tr>
+            <td><i>"Data Process on Server" feature</i><br>You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources</td>
+        </tr>
+        <tr>
+            <td rowspan="6">1.0.1374</td>
+            <td><i> New API to set axis bounds for charts</i><br> You can now set charts axis bounds.</td>
+        </tr>
+        <tr>
+            <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the customizable settings to additionaly personalize the look and feel of the Visualization and Dashboard editor. You can choose from one of the following themes:
+            MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web); 
+            MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);
+            OceanLightTheme (Desktop) / $.ig.OceanLightTheme (Web);
+            OceanDarkTheme (Desktop) / $.ig.OceanDarkTheme (Web).</td>
+        </tr>
+        <tr>
+            <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the customizable settings to additionaly personalize the look and feel of the Visualization and Dashboard editor. You can choose from one of the following themes:
+            MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web); 
+            MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);
+            OceanLightTheme (Desktop) / $.ig.OceanLightTheme (Web);
+            OceanDarkTheme (Desktop) / $.ig.OceanDarkTheme (Web).</td>
+        </tr>
+        <tr>
+            <td><i>Marketo provider is Now Available</i><br>You can now connect to the marketing platform Marketo and use your data in Reveal.</td>
+        </tr>
+        <tr>
+            <td><i>Amazon Redshift provider is Now Available</i><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.</td>
+        </tr>
+        <tr>
+            <td><i>"Data Process on Server" feature</i><br>You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources</td>
+        </tr>
+        <tr>
+            <td>1.0.1136</td>
+            <td><i>New Custom Theming</i><br>
+            Now you can create your own theme in Reveal by configuring some or all of the customizable settings in the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>
+        </tr>
+        <tr>
             <td>1.0.1136</td>
             <td><i>New Custom Theming</i><br>
             Now you can create your own theme in Reveal by configuring some or all of the customizable settings in the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>

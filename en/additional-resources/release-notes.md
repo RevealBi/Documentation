@@ -15,8 +15,60 @@ here.
     <th class="tg-cly1"><span style="font-weight:bold">Reveal version</span></th>
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
+   <tr>
+    <td class="tg-0lax" rowspan="3">1.0.13</td>
+    <td class="tg-cly1"><span style="font-style:italic">New Amazon Redshift data source</span><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.
+</td>
+<tr>
+    <td class="tg-cly1"><span style="font-style:italic">New Marketo data source</span><br>Connect to your account in the marketing platform Marketo and use your data in Reveal.
+</td>
+  </tr>
   <tr>
-    <td class="tg-0lax" rowspan="5">1.0.8</td>
+    <td class="tg-cly1"><span style="font-style:italic">Processing Data on Server</span><br>You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="8">1.0.12</td>
+    <td class="tg-cly1"><span style="font-style:italic">New Choropleth Map visualization</span><br>The Choropleth map visualization allows you to create beautiful thematic maps. You can now present geospatial data in an incredibly digestible manner. Let color guide you and help you quickly discover patterns, trends and anomalies on the map.
+</td>
+<tr>
+    <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data source</span><br>With this new data source, you can create dashboards using your data models in Azure Analysis Services.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">New Quickbooks data source</span><br>Connect to your Quickbooks account and use your entities to perform data analysis in Reveal.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">New Hubspot data source</span><br>You can now use your Hubspot objects to create dashboards in Reveal.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">New Search functionality in the Visualization Editor</span><br>When you load a dataset with more than 10 data fields in the Visualization Editor, you will have this new search enabled.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">Salesforce data source enhancements</span><br>Now you can use your Salesforce report in Reveal.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">SharePoint data source enhancements</span><br>You can now use the metadata (name, type, etc.) collected for all files in a SharePoint library as a data source in Reveal.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"><span style="font-style:italic">PostgreSQL data source enhancements</span><br>Functions from your PostgreSQL database can now be used to create dashboards.
+</td>
+  </tr>
+   <tr>
+    <td class="tg-0lax" rowspan="2">1.0.10 / 1.0.11</td>
+    <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data source</span><br>With this new data source, you can create dashboards using your data models in Azure Analysis Services.
+</td>
+<tr>
+    <td class="tg-cly1"><span style="font-style:italic">New icon for Google Sheets files</span><br>We changed the look of the Google Sheets files icon.
+</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="5">1.0.8 / 1.0.9</td>
     <td class="tg-cly1"><span style="font-style:italic">New TreeMap visualization</span><br>You can use this new visualization type to present large hierarchies with a set of nested rectangles. Rectangles' size will show you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations between similar data.
 </td>
   </tr>
