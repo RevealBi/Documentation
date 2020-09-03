@@ -35,39 +35,51 @@ here.
             <td><i>Amazon Redshift provider is Now Available</i><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.</td>
         </tr>
         <tr>
-            <td><i>"Data Process on Server" feature</i><br>You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources</td>
+            <td><i>New "Data Process on Server" feature</i><br>You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources</td>
         </tr>
         <tr>
             <td rowspan="6">1.0.1374</td>
-            <td><i> New API to set axis bounds for charts</i><br> You can now set charts axis bounds.</td>
+            <td><i> New API to set axis bounds for charts</i><br> You can now programmatically change the axis bounds in runtime for a particular visualization.</td>
         </tr>
         <tr>
-            <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the customizable settings to additionaly personalize the look and feel of the Visualization and Dashboard editor. You can choose from one of the following themes:
-            MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web); 
-            MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);
-            OceanLightTheme (Desktop) / $.ig.OceanLightTheme (Web);
-            OceanDarkTheme (Desktop) / $.ig.OceanDarkTheme (Web).</td>
+            <td><i>Salesforce data source enhancements</i><br>Now you can use your Salesforce reports in Reveal.</td>
         </tr>
         <tr>
-            <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the customizable settings to additionaly personalize the look and feel of the Visualization and Dashboard editor. You can choose from one of the following themes:
-            MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web); 
-            MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);
-            OceanLightTheme (Desktop) / $.ig.OceanLightTheme (Web);
-            OceanDarkTheme (Desktop) / $.ig.OceanDarkTheme (Web).</td>
+            <td><i>New QuickBooks data source</i><br>Connect to your Quickbooks account and use your entities to perform data analysis in Reveal.</td>
         </tr>
         <tr>
-            <td><i>Marketo provider is Now Available</i><br>You can now connect to the marketing platform Marketo and use your data in Reveal.</td>
+            <td><i>New Hubspot data source</i><br>You can now connect to Hubspot.</td>
         </tr>
         <tr>
-            <td><i>Amazon Redshift provider is Now Available</i><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.</td>
+            <td><i>Sharepoint lists and document libraries support</i><br>You can now use the metadata (name, type, etc.) collected for all files in a SharePoint library as a data source in Reveal.</td>
         </tr>
         <tr>
-            <td><i>"Data Process on Server" feature</i><br>You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources</td>
+            <td><i>New Choropleth Map Visualization</i><br>The Choropleth map visualization allows you to create beautiful thematic maps. You can now present geospatial data in an incredibly digestible manner. Let color guide you and help you quickly discover patterns, trends and anomalies on the map.</td>
         </tr>
         <tr>
-            <td>1.0.1136</td>
-            <td><i>New Custom Theming</i><br>
-            Now you can create your own theme in Reveal by configuring some or all of the customizable settings in the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>
+            <td rowspan="2">1.0.1255</td>
+            <td><i>New Azure Analysis Services data source</i><br>With this new data source, you can create dashboards using your data models in Azure Analysis Services.</td>
+        </tr>
+        <tr>
+            <td><i>New icon for Google Sheets files</i><br>The look of the Google Sheets files icon was changed.</td>
+        </tr>
+        <tr>
+            <td rowspan="5">1.0.1222</td>
+            <td><i>New Hover Events API</i><br>
+            This new event is called *revealView.TooltipShowing* in WPF and .onTooltipShowing in Web and is triggered whenever the end-user hovers over a series in a visualization or clicks on the series.</td>
+        </tr>
+        <tr>
+            <td><i>New TreeMap visualization</i><br>You can use this new visualization type to present large hierarchies with a set of nested rectangles. Rectangles’ size will show you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations between similar data.
+</td>
+        </tr>
+        <tr>
+            <td><i>Export to Excel enhancements</i><br>You can include more visualization types in your spreadsheets upon export. Scatter, Bubble and Sparkline charts are now available.</td>
+        </tr>
+        <tr>
+            <td><i>Various UI/UX improvements</i><br>Various minor changes were added to improve user experience in the Visualization, Dashboard, New Data Source dialog, etc.</td>
+        </tr>
+        <tr>
+            <td><i>Added support for Shared Drives in Google Drive</i><br>If you have a GSuite Business account, you can now access your Shared Drives data and use it to build visualizations in Reveal.</td>
         </tr>
         <tr>
             <td>1.0.1136</td>
