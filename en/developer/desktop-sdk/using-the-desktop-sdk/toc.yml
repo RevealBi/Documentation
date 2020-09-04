@@ -29,6 +29,6 @@
 - name: Creating New Visualizations and Dashboards
   href: creating-visualizations-dashboards.md
 - name: Creating Custom Themes
-  href: custom-themes-desktop-copy.md
+  href: custom-themes-desktop.md
 - name: Working with Tooltips
   href: working-tooltips-desktop.md

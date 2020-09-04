@@ -73,7 +73,7 @@ For more information on views and PostgreSQL, visit [this documentation website]
 
 PostgreSQL functions allow you to carry out operations that would normally take several queries and round trips in a single function within the database.
 
-The following are just a set of sample functions running on a test server with [Northwind](link:https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) data:
+The following are just a set of sample functions running on a test server with [Northwind](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) data:
 
 
 <img src="images/postgresql-functions-list.png" alt="A list of PostgreSQL functions" width="800"/>

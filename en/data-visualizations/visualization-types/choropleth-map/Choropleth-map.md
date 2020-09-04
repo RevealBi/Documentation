@@ -53,17 +53,14 @@ In the example below, we will use a choropleth map to analyse the results of the
 
 To follow this walkthrough, download the [2016 November General Election](https://download.infragistics.com/reveal/help/samples/2016_November_General_Election.xlsx) spreadsheet, upload it to a cloud provider and follow the steps below.
 
-1. Connect to the cloud provider where you uploaded the spreadsheet. For more information on adding a data source in Reveal, visit the link:data-sources[Data Sources] section.
+1. Connect to the cloud provider where you uploaded the spreadsheet. For more information on adding a data source in Reveal, visit the [Data Sources](~/en/datasources/overview.md) section.
 2. In the visualization editor, select the Choropleth Map visualization:
 
-
-    <img src="images/select-visualization-choropleth-map.png" alt="Select choropleth map visualization from the Change Visualization menu in the Visualization editor" width="800"/>
-
+  <img src="images/select-visualization-choropleth-map.png" alt="Select choropleth map visualization from the Change Visualization menu in the Visualization editor" width="800"/>
 
 3. In the _Choropleth Data_ section, select the US States map from the _Map_ dropdown  An outline of the United States map will be displayed on the screen.
 
-
-    <img src="images/select-us-map.png" alt="Select choropleth map visualization from the Change Visualization menu in the Visualization editor" width="800"/>
+  <img src="images/select-us-map.png" alt="Select choropleth map visualization from the Change Visualization menu in the Visualization editor" width="800"/>
 
 4. In the _Location_ placeholder, drop the _State_ or _State Abv_ filed. Both of them contain a list of the US states' names.
 
@@ -73,10 +70,9 @@ To follow this walkthrough, download the [2016 November General Election](https:
 
 7. _(Optional)_ Add a filter. For our example, drop the _year_ field in the _Data Filters_ placeholder. Click on the field, select _Filter type_ > _Select Values_ > _2016_.
 
-    <img src="images/presidential-election-2016-map.png" alt="Select choropleth map visualization from the Change Visualization menu in the Visualization editor" width="800"/>
+  <img src="images/presidential-election-2016-map.png" alt="Select choropleth map visualization from the Change Visualization menu in the Visualization editor" width="800"/>
 
 As a result you can see the USA map, divided into states. The larger the percent of voters in a state, the more intensive the blue color of the state is.
-
 
 <a name='map-color'></a>
 ### Using the Map Color to Create a Multi-Color Choropleth Map

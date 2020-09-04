@@ -80,7 +80,7 @@ revealTheme.dashboardBackgroundColor = "#E8EBFC";
 
 ```
 
-### Pre-Built Themes 
+### Built-In Themes 
 
 Reveal SDK comes with four pre-built themes: *Mountain Light*, *Mountain Dark*, *Ocean Light*, and *Ocean Dark*. You can set the one that best matches your application's design, or you can also use it as the basis for your custom theme modifications.    
 
@@ -92,8 +92,8 @@ Apply the settings of a chosen pre-built theme by using the *UpdateCurrentTheme*
 $.ig.RevealView.UpdateCurrentTheme(new $.ig.MountainLightTheme());
 ```
 
-> [NOTE]
-> Mountain Light contains the default values for all customizable settings. 
+> [!NOTE]
+> Mountain Light contains the default values for the customizable theme settings. This means Mountain Light and the Reveal Theme look basically the same way. 
 
 ***Mountain Dark Theme***
 ``` js
@@ -110,7 +110,7 @@ $.ig.RevealView.UpdateCurrentTheme(new $.ig.OceanLightTheme());
 $.ig.RevealView.UpdateCurrentTheme(new $.ig.OceanDarkTheme());
 ```
 
-#### How Pre-Built Themes Look? 
+#### How the Built-In Themes Look? 
 
 Below, you will find a table showing how the *Visualization Editor* and *Dashboard Editor* look when each of the pre-built themes is applied. 
 
@@ -133,7 +133,7 @@ Below, you will find a table showing how the *Visualization Editor* and *Dashboa
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">Mountain Light (Default?)</td>
+    <td class="tg-0pky">Mountain Light (Default)</td>
     <td class="tg-0pky"><img src="images/mountain-light-theme-dashboard-pre-built.png" alt="Image" width="300" height="206"></td>
     <td class="tg-0pky"><img src="images/mountain-light-theme-visualization-pre-built.png" width="300" height="206"></td>
   </tr>
