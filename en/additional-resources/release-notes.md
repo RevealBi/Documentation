@@ -28,13 +28,9 @@ here.
 </td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="8">1.0.12</td>
+    <td class="tg-0lax" rowspan="7">1.0.12</td>
     <td class="tg-cly1"><span style="font-style:italic">New Choropleth Map visualization</span><br>The Choropleth map visualization allows you to create beautiful thematic maps. You can now present geospatial data in an incredibly digestible manner. Let color guide you and help you quickly discover patterns, trends and anomalies on the map.
 </td>
-<tr>
-    <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data source</span><br>With this new data source, you can create dashboards using your data models in Azure Analysis Services.
-</td>
-  </tr>
   <tr>
     <td class="tg-cly1"><span style="font-style:italic">New Quickbooks data source</span><br>Connect to your Quickbooks account and use your entities to perform data analysis in Reveal.
 </td>
