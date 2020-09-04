@@ -60,7 +60,7 @@ here.
 </td>
   </tr>
    <tr>
-    <td class="tg-0lax" rowspan="2">1.0.10 / 1.0.11</td>
+    <td class="tg-0lax" rowspan="2">1.0.10/1.0.11</td>
     <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data source</span><br>With this new data source, you can create dashboards using your data models in Azure Analysis Services.
 </td>
 <tr>
@@ -68,7 +68,7 @@ here.
 </td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="5">1.0.8 / 1.0.9</td>
+    <td class="tg-0lax" rowspan="5">1.0.8/1.0.9</td>
     <td class="tg-cly1"><span style="font-style:italic">New TreeMap visualization</span><br>You can use this new visualization type to present large hierarchies with a set of nested rectangles. Rectangles' size will show you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations between similar data.
 </td>
   </tr>
