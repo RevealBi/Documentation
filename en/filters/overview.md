@@ -26,7 +26,7 @@ The following sections will cover:
 
       - [Displayed Field](dashboard-filters-properties.html#displayed-field)
 
-      - [Multiple Selection](dashboard-filters-properties.html#multiple-selections)
+      - [Multiple Selection](dashboard-filters-properties.html#multiple-selection)
 
       - [Required Selection](dashboard-filters-properties.html#required-selection)
 

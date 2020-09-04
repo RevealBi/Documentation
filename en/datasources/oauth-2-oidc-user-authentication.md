@@ -1,6 +1,6 @@
 ## OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
 
-When using [OData Service](odata-feed.md), [Rest API](rest-api.md) or [Web resources](web-resource.md), some of your resources might be protected. In
+When using [OData Service](supported-data-sources/odata-feed.md), [Rest API](supported-data-sources/rest-api.md) or [Web resources](supported-data-sources/web-resource.md), some of your resources might be protected. In
 this case, you need to grant Reveal access to these resources by setting
 up an OAuth 2 / OIDC account.
 
@@ -35,7 +35,7 @@ perform these 4 steps:
     want to use - e.g. Microsoft, Google, etc.)
 
 2.  Choose one of the three **data sources** in Reveal, which are
-    enabled to work with OAuth 2 / OIDC accounts - [OData Service](odata-feed.md), [Rest API](rest-api.md) or [Web Resource](web-resource.md).
+    enabled to work with OAuth 2 / OIDC accounts - [OData Service](supported-data-sources/odata-feed.md), [Rest API](supported-data-sources/rest-api.md) or [Web Resource](supported-data-sources/web-resource.md).
 
 3.  Use credentials provided for the Client by the resource server to
     **set up your OAuth 2 / OIDC account in Reveal**
@@ -82,9 +82,9 @@ server.
 The following fields are mandatory:
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts (this is not a credential provided by the resource server). You can change the name given by default to your preference by selecting the pencil icon.
- 
+
 2.  the name for your data source account. It will be
-    displayed in the list of accounts 
+    displayed in the list of accounts
 
 3.  **Authenticate Url**: The authenticate URL is usually in a format
     such as: <https://authorization-server.com/oauth2/authorize> (e.g.

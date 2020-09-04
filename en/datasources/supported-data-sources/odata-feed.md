@@ -30,7 +30,7 @@ account is reaching the data source or not by selecting **Test
 Connection**.
 
 To set up an *OAuth 2 / OIDC account* for a protected OData Service data
-source, please read [this topic](OAuth-2-OIDC-User-Authentication.md).
+source, please read [this topic](~/en/datasources/OAuth-2-OIDC-User-Authentication.md).
 
 ### Open Type Columns
 

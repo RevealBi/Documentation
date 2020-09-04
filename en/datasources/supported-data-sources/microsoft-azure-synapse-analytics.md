@@ -12,7 +12,7 @@ need to enter the following information:
 ![Configuring azure synapse data source dialog](images/synapse-azure-configuration.png)
 
 1. **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Azure SQL Synapse Analytics*. You can change it to your preference.
-   
+
 2.  **Server**: the computer name or IP address assigned to the computer
     on which the server is running.
 
@@ -73,10 +73,10 @@ data sources storing millions of records.
 Currently, only a limited number of **functions** are available for
 *Calculated Fields* using data from Azure Synapse Analytics:
 
-- [Logic](~/en/data-visualizations/fields/logic-calculated-fields.md) - false; true; not.
-- [Math](~/en/data-visualizations/fields/math-calculated-fields.md) - abs; log; log10; sign; sqrt.
-- [Strings](~/en/data-visualizations/fields/string-calculated-fields.md) - find; len; trim; lower; mid; upper.
+- [Logic](~/en/data-visualizations/fields/calculated-fields/logic-calculated-fields.md) - false; true; not.
+- [Math](~/en/data-visualizations/fields/calculated-fields/math-calculated-fields.md) - abs; log; log10; sign; sqrt.
+- [Strings](~/en/data-visualizations/fields/calculated-fields/string-calculated-fields.md) - find; len; trim; lower; mid; upper.
 
 #### Limitations in Data Blending
 
-Currently, Data Blending ([combining data sources in one visualization](data-blending.md)) is **not available** when using data from the Azure Synapse Analytics data source.
+Currently, Data Blending ([combining data sources in one visualization](~/en/datasources/data-blending.md)) is **not available** when using data from the Azure Synapse Analytics data source.

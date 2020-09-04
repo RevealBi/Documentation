@@ -73,7 +73,7 @@ To use parameters effectively follow the procedure below:
     ![REST-API-Data-Format-Result\_All](images/REST-API-Data-Format-Result_All.png)
 
     For more information on how to work with a JSON file, please refer
-    to [this topic](working-with-json-files.md).
+    to [this topic](~/en/datasources/working-files/working-with-json-files.md).
 
     After loading the data, you will continue to the Visualization Editor
     screen.

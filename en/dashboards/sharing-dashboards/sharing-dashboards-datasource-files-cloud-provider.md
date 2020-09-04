@@ -62,7 +62,7 @@ shareable link, when sharing them with other users.
 
     ![A dialog to grant access to cloud file data sources](images/grant-access-share-dashboard-dialog.png)
 
-    Click/Tap *Allow Access* and proceed with selecting users to [share your dashboard](sharing-dashboards.md) with.
+    Click/Tap *Allow Access* and proceed with selecting users to [share your dashboard](share-a-dashboard.md) with.
 
 
 >[!NOTE] **Access Not Allowed.**

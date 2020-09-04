@@ -13,7 +13,7 @@ a sample spreadsheet.
 <tr class="odd">
 <td><p><img src="images/OHLCChart_All.png" alt="OHLCChart All" /><br />
 </p>
-<p><a href="#create-ohlc-chart">OHLC Chart</a><br />
+<p><a href="#creating-ohlc-chart">OHLC Chart</a><br />
 </p></td>
 <td><p><img src="images/OHLCChartBounds_All.png" alt="OHLCChartBounds All" /><br />
 </p>
@@ -73,9 +73,9 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
 >[!NOTE]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported cloud services or add it as a [Web Resource](~/en/datasources/supported-data-sources/web-resource.md).
 
-<a name='create-ohlc-chart'></a>
+<a name='creating-ohlc-chart'></a>
 ### Creating a OHLC Chart
 
 |                                          |                                                                                                                          |                                                                                                                                                       |

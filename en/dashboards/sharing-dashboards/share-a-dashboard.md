@@ -31,7 +31,7 @@ To share a dashboard created by you with individual users you need to:
   ![Shared with Me option selected](images/shared-with-me.png)
 
 <a name='access-permissions'></a>
-1.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
+2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
 
 The available options are:
 
@@ -41,7 +41,7 @@ The available options are:
 
   - **Viewer** permissions - the user can view and share dashboards and folders for view only.
 
-3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](Teams-Collaboration-Privacy.html#organization-team). Other users will have the dashboard shared with them only after they accept the invitation.
+3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](~/en/teams/overview.html#organization-team). Other users will have the dashboard shared with them only after they accept the invitation.
 
   ![Sending invitations with access permissions](images/send-invites-share-button.png)
 
@@ -130,7 +130,7 @@ a dashboard from the *Dashboards* section in *My Stuff* or *Teams* tab.
 Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing-dashboards-users).
 
 >[!NOTE]
->You can share a dashboard with any public team that [belongs to your main Organization](creating-joining-teams.html#organization), whether you are a member of it or not. You can also share with private teams that you are a member of.
+>You can share a dashboard with any public team that [belongs to your main Organization](~/en/teams/creating-joining-teams.html#organization), whether you are a member of it or not. You can also share with private teams that you are a member of.
 
 When setting access permissions for the whole team, you must take into
 account that these permissions will not be available for everybody in the team. Individual members will receive only the highest permissions possible for their role in the team.

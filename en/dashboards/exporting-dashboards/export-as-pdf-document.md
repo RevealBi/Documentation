@@ -37,7 +37,7 @@ In the *Export Dashboard* dialog you can manage the following settings:
             your teams having their branding (logo and color) set up are
             displayed as options. If you want to know how to
             access/change your team's branding settings, please read the
-            [Managing Teams](Managing-Your-Team.md) topic.
+            [Managing Teams](~/en/teams/managing-your-team.md) topic.
 
           - **Custom** - select a color and upload a *logo* image of your choice.
 

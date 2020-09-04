@@ -19,5 +19,5 @@ There are several field settings and filtering options:
 
   - Filters by [Rule](field-filters-rules.html#rules).
 
-Field settings and rules are accessible through the [visualizations editor](~/en/data-visualization/visualizations-editor.md), which is displayed automatically when a
+Field settings and rules are accessible through the [visualizations editor](~/en/data-visualizations/visualizations-editor.md), which is displayed automatically when a
 dataset is added to the dashboard canvas.

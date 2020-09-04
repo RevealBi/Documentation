@@ -1,7 +1,7 @@
 ## Conditional Formatting
 
 Conditional formatting allows you to provide different formatting of a
-cell (or rows for [Text Views](~/en/data-visualizations/text-view.md)) depending on the values found
+cell (or rows for [Text Views](~/en/data-visualizations/visualization-types/text-view.md)) depending on the values found
 in a numeric column. For instance, values in the lower 50% range of a
 grid can be colored with a red adorner to signal very low values.
 
@@ -49,11 +49,11 @@ disabled by default.
 
 Conditional formatting can be applied to the following visualizations:
 
-  - [Grid View](~/en/data-visualizations/grid-view.md)
+  - [Grid View](~/en/data-visualizations/visualization-types/grid-chart.md)
 
-  - [Pivot Table View](~/en/data-visualizations/pivot-table.md)
+  - [Pivot Table View](~/en/data-visualizations/visualization-types/pivot-table.md)
 
-  - [Text View](~/en/data-visualizations/text-view.md)
+  - [Text View](~/en/data-visualizations/visualization-types/text-view.md)
 
 >[!NOTE]
->[KPI](~/en/data-visualizations/kpi-gauge.md), [Linear](~/en/data-visualizations/gauge-views.html#linear-gauge), [Circular](~/en/data-visualizations/gauge-views.html#circular-gauge), [Text](~/en/data-visualizations/gauge-views.html#text-gauge), and [Bullet Graph](~/en/data-visualizations/gauge-views.html#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](~/en/data-visualizations/gauge-views.html#bands-configuration).
+>[KPI](~/en/data-visualizations/visualization-types/kpi-gauge.md), [Linear](~/en/data-visualizations/visualization-types/gauge-charts.html#linear-gauge), [Circular](~/en/data-visualizations/visualization-types/gauge-charts.html#circular-gauge), [Text](~/en/data-visualizations/visualization-types/gauge-charts.html#text-gauge), and [Bullet Graph](~/en/data-visualizations/visualization-types/gauge-charts.html#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](~/en/data-visualizations/visualization-types/gauge-charts.html#bands-configuration).

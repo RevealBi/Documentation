@@ -31,7 +31,7 @@ The following are a set of calculated field sample expressions.
 Unix times, defined in the seconds elapsed since January 1st, 1970
 ("Epoch" time) are particularly useful because they represent all
 timezones at once. You can import data sources with unix timestamps and
-convert them into usable dates with the [`date`](Date-Calculated-Fields.md)
+convert them into usable dates with the [`date`](date.md)
 formula.
 
 `((([Unix Time Stamp]/60)/60)/24)+DATE(1970,1,1)+([Timezone]/24)`

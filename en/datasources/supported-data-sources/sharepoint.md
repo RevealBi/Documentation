@@ -4,7 +4,7 @@ Upon selecting SharePoint, you will see the following log in prompt.
 
 ![SharePoint Login](images/sharepoint-login.png)
 
-Here you can choose to use the root SharePoint site in your Office365 account. You can also add a _subsite URL_ to directly start browsing its contents. Once connected to a SharePoint subsite, you will be able to quickly access it through your list in the [_Select a Data Source_](what-is-datasource.html#configured-data-sources) dialog.
+Here you can choose to use the root SharePoint site in your Office365 account. You can also add a _subsite URL_ to directly start browsing its contents. Once connected to a SharePoint subsite, you will be able to quickly access it through your list in the _Select a Data Source_ dialog.
 
 <a name='supported-files'></a>
 ### Supported Files
@@ -31,7 +31,7 @@ To create a dashboard, you can use the SharePoint data types, listed below.
 
   >[!NOTE]
   >**Advanced settings - Items per Page.**
-  >In case you experience an unexpected slowdown or other disturbance while loading the data from your SharePoint list, you may try to configure the _Items per Page_ setting. This is an advanced setting, which allows you to control the data retrieval rate. To improve the speed, you can provide a higher number of items per page. A lower value may help if the information fails to load. The default value of items per page is 5000. 
+  >In case you experience an unexpected slowdown or other disturbance while loading the data from your SharePoint list, you may try to configure the _Items per Page_ setting. This is an advanced setting, which allows you to control the data retrieval rate. To improve the speed, you can provide a higher number of items per page. A lower value may help if the information fails to load. The default value of items per page is 5000.
 
 3. *Metadata of Document Libraries* - the metadata of a SharePoint library is data about files stored in this library, e.g. files' size, names, type, date of creation/upload. It can be used for analysis of the library.
 

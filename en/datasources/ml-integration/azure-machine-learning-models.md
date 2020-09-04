@@ -30,16 +30,13 @@ below:
     information related to the data your machine learning model
     predicts.
 
-    Please, refer to the [Creating a New Data Source Connection](creating-new-datasource.md) topic for more information on
-    how to connect to a data source.
-
 2.  In the *Visualization editor*, click/tap the **brain icon** located
     at the top of the *Fields* list to the left. Then choose **Azure
     Machine Learning**.
 
     ![Brain icon location in the Visualization editor](images/brain-icon-azure-ml-model.png)
 
-<a href="ml-model-connect"></a>
+<a href="ml-integration/ml-model-connect"></a>
 ### Connecting to Your Azure Machine Learning Model
 
 To connect to your Machine Learning Model in Azure, you need to do the

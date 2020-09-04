@@ -1,6 +1,6 @@
 ## Grid View
 
-### Working With Grid View in the Visualization Editor 
+### Working With Grid View in the Visualization Editor
 
 The grid view is the default visualization option for displaying data, which presents the information in a matrix. You can **resize a column's width** by selecting the grid header, which will highlight the whole column. Drag the a side left or right to modify the column's width.
 
@@ -23,7 +23,7 @@ useful whe working with many columns.
 ### Column Sorting in Dashboard View Mode
 
 The grid view allows you to change the sorting of your columns
-(ascending or descending) in [Dashboard View mode](~/en/dashboards/index.html#view-edit-mode) . You can do so by selecting the
+(ascending or descending) in _Dashboard View mode_ . You can do so by selecting the
 arrows icon next to the column name.
 
 <img src="images/grid-view-sorting-columns-options.png" alt="Grid View Sorting Columns Options" width="800"/>

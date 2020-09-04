@@ -10,21 +10,19 @@ is visualized.
 
 There are several visualization types:
 
-  - [Grid View](grid-view.md)
+  - [Grid View](visualization-types/grid-chart.md)
 
-  - [Pivot Table](pivot-table.md)
+  - [Pivot Table](visualization-types/pivot-table.md)
 
-  - [Text View](text-view.md)
+  - [Text View](visualization-types/text-view.md)
 
-  - [Image View](image-view.md)
+  - [Image View](visualization-types/image-chart.md)
 
-  - [Gauge Views](gauge-views.md), including the [Bullet Graph](gauge-views.html#bullet-graph), [Circular](gauge-views.html#circular-gauge), [KPI](kpi-gauge.md), [Linear](gauge-views.html#linear-gauge) and [Text](gauge-views.html#text-gauge) gauges.
+  - [Gauge Views](visualization-types/gauge-charts.md), including the [Bullet Graph](visualization-types/gauge-charts.html#bullet-graph), [Circular](visualization-types/gauge-charts.html#circular-gauge), [KPI](visualization-types/kpi-gauge.md), [Linear](visualization-types/gauge-charts.html#linear-gauge) and [Text](visualization-types/gauge-charts.html#text-gauge) gauges.
 
-  - Several chart types, including [Category](category-charts.md), [Combo](combo-charts.md), [Financial](financial-charts.md), [Radial](radial-charts.md), [Scatter and Bubble](scatter-bubble-charts.md), and [Sparkline](sparkline-charts.md) charts.
+  - Several chart types, including [Category](visualization-types/category-charts.md), [Combo](visualization-types/combo-charts.md), [Financial](visualization-types/financial-charts.md), [Radial](visualization-types/radial-charts.md), [Scatter and Bubble](visualization-types/scatter-bubble-charts.md), and [Sparkline](visualization-types/sparkline-charts.md) charts.
 
-  - [Do-It-Yourself Visualizations](diy-visualizations.md)
-  
-  - [Text Box Visualizations](text-box.md)
+  - [Text Box Visualizations](visualization-types/text-box.md)
 
 ### Visualization Tutorials
 

@@ -39,7 +39,7 @@ You will be able to change the following settings for the filter:
     <td class="tg-cly1"><span style="font-weight:bold">Selection</span>. This setting allows you to configure: <a href="#multiple-selection">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="#required-selection">Required Selection</a> (at least one value must always be selected).</td>
   </tr>
   <tr>
-    <td class="tg-cly1"><a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#~/en/data-visualizations/fields/field-filters-rules.md">field filters and rules</a> to the data source used for the dashboard filter.</td>
+    <td class="tg-cly1"><a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="~/en/data-visualizations/fields/field-filters-rules.md">field filters and rules</a> to the data source used for the dashboard filter.</td>
   </tr>
   <tr>
     <td class="tg-cly1"><a href="connecting-dashboard-filters-visualization.md">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.</td>
@@ -96,8 +96,8 @@ dashboard filter ⇒ *Selection* ⇒ tick *Required Selection* checkbox.
 
 You can also apply filters to the fields in the dataset displayed in the
 Dashboard Filter. This allows you to filter out null or empty values on
-a specific field ([empty values filter](field-filters-rules.html#empty-values)). You can also [select specific values](field-filters-rules.html#select-values), or add
-[rules](field-filters-rules.html#rules) to your field in order to change the
+a specific field ([empty values filter](~/en/data-visualizations/fields/field-filters-rules.html#empty-values)). You can also [select specific values](~/en/data-visualizations/fields/field-filters-rules.html#select-values), or add
+[rules](~/en/data-visualizations/fields/field-filters-rules.html#rules) to your field in order to change the
 options depending on the field type. For more information, visit the
 [field filters and rules](field-filters-rules.md) section.
 

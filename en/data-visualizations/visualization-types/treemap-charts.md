@@ -48,7 +48,7 @@ You may notice *two kinds of labels* in the example above:
 - for the big rectangles, top left - show information about total new sales of each product;
 - for the smaller rectangles, bottom left - show how much of each product is sold in a particular country.
 
-Information about the color and size characteristics of the tiles is similar to what was said about the [Treemaps without hierarchies](#flat-treemap.md).
+Information about the color and size characteristics of the tiles is similar to what was said about the [Treemaps without hierarchies](#flat-treemap).
 
 #### Drilling Up and Down Hierarchy Levels
 
@@ -58,7 +58,7 @@ You can drill up and down the treemap visualization to navigate between differen
 
 #### Treemap Levels Specifics
 
-When you reach the bottom of the hierarchy (the last field dropped in _Label_), your visualization will look exactly like the [flat treemaps](#flat-treemap.md).
+When you reach the bottom of the hierarchy (the last field dropped in _Label_), your visualization will look exactly like the [flat treemaps](#flat-treemap.).
 
 ![Tooltips in the bottom of a treemap](images/total-tooltips-treemap.png)
 
@@ -75,4 +75,4 @@ In the _Settings_ section of the Treemap visualization you can configure the fol
 - **Show Title** - choose whether to show the visualization's title;
 - **Show Values** - choose whether to show **labels**, displaying information about categories and values for rectangles at different levels;
 - **Start Color** - choose a start color from a 10-color palette, Reveal will use your choice to adjust a color scheme;
-- **Links** - connect the visualization to a dashboard or URL. For more information, please refer to the [Linking Dashboards](~/en/dashboards/dashboard-linking) topic.
+- **Links** - connect the visualization to a dashboard or URL. For more information, please refer to the [Linking Dashboards](~/en/dashboards/dashboard-linking.md) topic.

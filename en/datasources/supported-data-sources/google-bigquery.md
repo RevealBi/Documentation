@@ -58,4 +58,4 @@ Currently, only a limited number of **functions** are available for
 
 #### Limitations in Data Blending
 
-Currently, Data Blending ([combining data sources in one visualization](data-blending.md)) is **not available** when using data from the Google BigQuery data source.
+Currently, Data Blending ([combining data sources in one visualization](~/en/datasources/data-blending.md)) is **not available** when using data from the Google BigQuery data source.

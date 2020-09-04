@@ -12,7 +12,7 @@ Once you have selected and configured your data source, the Visualization editor
 
 ***2. In the dashboard editing process***
 
-After opening a chosen dashboard and entering [Dashboard Edit mode](~/en/dashboards/index.html#view-edit-mode), you will be able to **access the visualizations editor** by selecting *Edit* from a visualization's overflow button.
+After opening a chosen dashboard and entering _Dashboard Edit mode_, you will be able to **access the visualizations editor** by selecting *Edit* from a visualization's overflow button.
 
 ### Visualization Editor Overview
 
@@ -46,4 +46,3 @@ appropriate visualizations, select the *Back arrow* to return to the
 Dashboard Editor. In the Dashboard Editor, you can control the layout,
 size, and location of the visualizations by simply dragging
 visualizations and their borders.
-

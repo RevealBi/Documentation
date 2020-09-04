@@ -12,7 +12,7 @@ Before jumping in, take into account that in Reveal you can join an **Organizati
 
 <img src="images/limited-permission-sign-in-o365.png" alt="Permissions request sign in with Office 365" width="800"/>
 
-Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/supported-data-sources/OneDrive.md) and [Google Drive](~/en/datasources/supported-data-sources-Google-Drive.md).
+Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/supported-data-sources/OneDrive.md) and [Google Drive](~/en/datasources/supported-data-sources/Google-Drive.md).
 
 ### Your First Screen
 

@@ -4,7 +4,7 @@ Key Performance Indicators (KPIs) is a measurable value that demonstrates how ef
 information over metrics important for the organization, such as the
 progress towards goals and over-time trends.
 
-Similarly to the [Text Gauge](gauge-views.html#text-gauge), the KPI Gauge
+Similarly to the [Text Gauge](gauge-charts.html#text-gauge), the KPI Gauge
 displays the Value column in a large font. However, the value in the KPI
 is also evaluated against the same value for a previous time period.
 

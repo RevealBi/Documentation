@@ -160,6 +160,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 | 5\. **Select your Visualization**        | ![Tutorials-Charts-Select-Visualization](images/Tutorials-Charts-Select-Visualization.png)                        | By default, the visualization type will be set to "Grid". Select any of the **chart** visualizations.                                                                                          |
 | 6\. **Organize your Data**               | ![Tutorials-Charts-Organizing-Data](images/Tutorials-Charts-Organizing-Data.png)                                  | The charts in the table above, for example, display the population for a select list of countries. Drag and drop the "Country Name" field to "Label" and the "Population" field into "Values". |
 
+<a name='changing-basic-chart'></a>
 ### Changing your Chart Type
 
 The tutorial above outlines how to create any chart. If you need to

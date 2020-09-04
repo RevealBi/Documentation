@@ -53,7 +53,7 @@ the dataset that have null or empty values on a specific column by
 enabling the filter empty values configuration setting in a specific
 column. You can also select specific values, or add rules to your field
 in order to change the options depending on the field type. For more
-information, visit the [field filters and rules](field-filters-rules.md)
+information, visit the [field filters and rules](~/en/data-visualizations/fields/field-filters-rules.md)
 section.
 
 In the **Visualization Filter** section, select **Edit** in the overflow

@@ -17,7 +17,7 @@ To access the BigQuery Machine Learning Integration, follow the steps below:
 
 1. Connect to a BigQuery data source. Select the dataset, which contains information necessary for your machine learning model predictions.
 
-    Please, refer to the [Google BigQuery](google-bigquery.md)  topic for more information on the BigQuery data source.
+    Please, refer to the [Google BigQuery](~/en/datasources/supported-data-sources/google-bigquery.md)  topic for more information on the BigQuery data source.
 
 
 2. In the _Visualization editor_, click/tap the **brain icon** located at the top of the _Fields_ list to the left.

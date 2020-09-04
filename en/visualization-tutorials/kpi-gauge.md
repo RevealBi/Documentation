@@ -12,7 +12,7 @@ a sample spreadsheet.
 <tr class="odd">
 <td><p><img src="images/KPIGaugeSimple_All.png" alt="KPIGaugeSimple All" /><br />
 </p>
-<p><a href="#create-kpi-gauge">KPI Gauge</a><br />
+<p><a href="#creating-kpi-gauge">KPI Gauge</a><br />
 </p></td>
 <td><p><img src="images/TutorialMultipleKPIGauges_All.png" alt="TutorialMultipleKPIGauges All" /><br />
 </p>
@@ -41,7 +41,7 @@ a sample spreadsheet.
 
 Access the links below for the KPI gauge view walkthroughs:
 
-  - [How to create a KPI Gauge](#create-kpi-gauge)
+  - [How to create a KPI Gauge](#creating-kpi-gauge)
 
   - [How to create multiple KPI Gauges in one visualization](#adding-category-kpi)
 
@@ -106,7 +106,7 @@ can change this by modifying the "Type" field. In order to do so:
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                                    |
 | 2\. **Change the Type**          | ![Tutorial-Change-Date-Type](images/Change-Date-Type.png)     | By default, the date type will be set to Year-to-Year. Select the dropdown next to **Type**, and change the selection to **Month-over-Month**. |
 
-<a name='changingdifferencelabelkpi'></a>
+<a name='changing-difference-label-kpi'></a>
 ### Changing the Difference Labels for the KPI Gauge
 
 |                                  |                                                                                            |                                                                                                                                                                         |

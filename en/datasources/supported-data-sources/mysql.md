@@ -55,10 +55,7 @@ that the commands should be executed on the server.
 
 ### Working with Views
 
-With Reveal, you can retrieve MySQL data from entire tables. Still, you can
-also select a particular
-[view](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-views.html)
-that returns a subset of data from a table or a set of tables instead.
+With Reveal, you can retrieve MySQL data from entire tables. Still, you can also select a particular view that returns a subset of data from a table or a set of tables instead.
 
 ![MySQL Views section](images/MySQL-views.png)
 
@@ -67,4 +64,4 @@ of the data in the **Products** table in the MySQL server.
 
 ![Sample dashboard using MySQL invoices view data](images/invoices-MySQL-view-sample.png)
 
-For more information on views and MySQL, visit [this documentation page](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-views.html).
+For more information on views and MySQL, visit [this documentation page](https://dev.mysql.com/doc/refman/8.0/en/views.html).
