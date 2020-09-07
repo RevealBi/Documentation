@@ -91,7 +91,7 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 <a name='changing-axis-configuration'></a>
 ### Changing your Axis Configuration
 
-Like [gauge bounds](tutorial-gauge-views.html#adding-bounds-gauge), chart axis
+Like [gauge bounds](gauge-views.html#adding-bounds-gauge), chart axis
 configuration allows you to set the lowest and highest values in your
 chart. You can use this feature to include or exclude specific data.
 

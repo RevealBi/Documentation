@@ -38,7 +38,7 @@ Access the links below for the Sparkline chart view walkthroughs:
 
   - [How to change the chart type for the Sparkline](#change-chart-type-sparkline)
 
-  - [How to change the date aggregation](#change-datea-ggregation)
+  - [How to change the date aggregation](#change-date-aggregation)
 
   - [How to modify the amount of columns in the Sparkline](#modify-columns)
 
@@ -77,7 +77,7 @@ For this tutorial, you will use the "Sparkline Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
 >[!NOTE]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported _cloud services_ or add it as a [Web Resource](datasources/supported-data-sources/web-resource.md).
 
 <a name='create-sparkline'></a>
 ### Creating a Sparkline Chart

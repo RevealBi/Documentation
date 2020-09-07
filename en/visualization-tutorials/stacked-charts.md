@@ -56,8 +56,8 @@ Access the links below for the Stacked Chart view walkthroughs:
 ### Key Concepts
 
 There are three different layouts to choose from when using stacked
-charts: [area](#creating-stacked-chart),
-[column](#creating-stacked-chart), and [bar](#creating-stacked-chart).
+charts: [area](#create-stacked-chart),
+[column](#create-stacked-chart), and [bar](#create-stacked-chart).
 
 You can also configure the following settings:
 
@@ -79,7 +79,7 @@ For this tutorial, you will use the "Stacked Charts" sheet in the
 >[!NOTE]
 Excel files as local files are not supported in this release. In order
 to follow these tutorials, make sure you upload the file to one of the
-supported [cloud services](data-sources) or add it as a [Web Resource](web-resource.md).
+supported _cloud services_ or add it as a [Web Resource](datasources/supported-data-sources/web-resource.md).
 
 </div>
 
@@ -104,12 +104,12 @@ fitted to your needs. In order to do this:
 |                                      |                                                                                              |                                                                                                                                      |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | 1\. **Open the Visualizations Menu** | ![Tutorials-Select-Change-Visualization](images/Tutorials-Select-Change-Visualization.png)   | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                |
-| 2\. **Select your Visualization**    | ![Tutorials-Stacked-Select-Visualization](images/Tutorials-Stacked-Select-Visualization.png) | Select the type of stack chart you need. This section has a [preview of every stack chart type](#creating-stacked-chart) at the top. |
+| 2\. **Select your Visualization**    | ![Tutorials-Stacked-Select-Visualization](images/Tutorials-Stacked-Select-Visualization.png) | Select the type of stack chart you need. This section has a [preview of every stack chart type](#create-stacked-chart) at the top. |
 
 <a name='change-axis-configuration'></a>
 ### Changing your Axis Configuration
 
-Similarly to the [Gauge bands](~/en/data-visualizations/gauge-views#bands-configuration), the
+Similarly to the [Gauge bands](~/en/data-visualizations/gauge-charts#bands-configuration), the
 chart axis configuration allows you to set the lowest and highest values
 in your chart. You can use this feature to include or exclude specific
 data.
