@@ -21,13 +21,61 @@ To connect to a data source, perform the steps below.
    ![Available data sources when creating a new visualization](images/creating-new-visualization.png)
 3. Select a data source provider from the dropdown list.
 
-After you select a data source provider, you will be prompted to configure your data source.  
+After selecting a data source provider, you will be prompted to **configure** it. Not sure how to do this? Find out in the article about the chosen data source (see the list below).
 
-* **Analytics tools** [Google Analytics](supported-data-sources/google-analytics.md), [Hubspot](supported-data-sources/hubspot.md).
-* *Content Managers* and *Cloud Services* ([Box](supported-data-sources/box.md), [Dropbox](supported-data-sources/dropbox.md),  [Google Drive](supported-data-sources/google-drive.md),  [OneDrive](supported-data-sources/onedrive.md) and [SharePoint Online](supported-data-sources/sharepoint.md)).
-* *Customer Relationship Managers* ([Microsoft Dynamics CRM](supported-data-sources/microsoft-dynamics-crm.md) On-Premises and Online, [Quickbooks](supported-data-sources/quickbooks.md))
-* *Databases* ([Microsoft SQL Server](supported-data-sources/microsoft-sql-server.md),  [Microsoft Analysis Services Server](supported-data-sources/microsoft-analysis-services.md), [Microsoft Azure Analysis Services](supported-data-sources/microsoft-azure-analysis-services.md), [MySQL](supported-data-sources/mysql.md), [PostgreSQL](supported-data-sources/postgresql.md), [Oracle](supported-data-sources/oracle.md), [Sybase](supported-data-sources/sybase.md))
-* *Other Data Sources* ([OData-Feed](supported-data-sources/odatafeed.md), [Web-Resource](supported-data-sources/web-resource.md), [JSON files](working-files/working-with-json-files.md))
+   - [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md)
 
->[NOTE]
-> **Databases** are not supported in the Web version of Reveal.
+   - [Box](~/en/datasources/supported-data-sourcesbox.md)
+
+   - [Dropbox](~/en/datasources/supported-data-sources/dropbox.md)
+
+   - [Google Analytics](~/en/datasources/supported-data-sources/google-analytics.md)
+
+   - [Google BigQuery](~/en/datasources/supported-data-sources/google-bigquery.md)
+
+  - [Google Drive](~/en/datasources/supported-data-sources/google-drive.md)
+  
+  - [Hubspot](~/en/datasources/supported-data-sources/hubspot.md)
+  
+  - [Marketo](~/en/datasources/supported-data-sources/marketo.md)
+
+  - [Microsoft Analysis Services](~/en/datasources/supported-data-sources/microsoft-analysis-services/configuring-microsoft-analysis-services.md)*
+  
+  - [Microsoft Azure Analysis Services](~/en/datasources/supported-data-sources/microsoft-azure-analysis-services.md)
+
+  - [Microsoft Azure SQL Database](~/en/datasources/supported-data-sources/azure-sql.md)*
+  
+  - [Microsoft Azure Synapse Analytics](~/en/datasources/supported-data-sources/microsoft-azure-synapse-analytics.md)
+
+  - [Microsoft Dynamics CRM](~/en/datasources/supported-data-sources/microsoft-dynamics-crm.md)
+
+  - [Microsoft Reporting Services (SSRS)](~/en/datasources/supported-data-sources/microsoft-reporting-services.md)
+
+  - [Microsoft SQL Server](~/en/datasources/supported-data-sources/microsoft-sql-server.md)*
+
+  - [MySQL](~/en/datasources/supported-data-sources/mysql.md)*
+
+  - [OData Feed](~/en/datasources/supported-data-sources/odata-feed.md)
+
+  - [OneDrive](~/en/datasources/supported-data-sources/onedrive.md)
+
+  - [Oracle](~/en/datasources/supported-data-sources/oracle.md)*
+
+  - [PostgreSQL](~/en/datasources/supported-data-sources/postgresql.md)*
+  
+  - [Quickbooks](~/en/datasources/supported-data-sources/quickbooks.md) 
+
+  - [REST API](~/en/datasources/supported-data-sources/rest-api.md)
+
+  - [Salesforce](~/en/datasources/supported-data-sources/salesforce.md)
+
+  - [SharePoint](~/en/datasources/supported-data-sources/sharepoint.md)
+
+  - [Sybase](~/en/datasources/supported-data-sources/sybase.md)*
+
+  - [Web Resource](~/en/datasources/supported-data-sources/web-resource.md)
+
+  - [JSON file](~/en/datasources/supported-data-sources/working-with-json-files.md)
+
+>[!NOTE]
+> **Databases** (*) are not supported in the Web version of Reveal.
