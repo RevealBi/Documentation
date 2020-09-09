@@ -1,5 +1,7 @@
 ## PostgreSQL
 
+>[!NOTE] PostgreSQL is not supported in the Web version of Reveal.
+
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 

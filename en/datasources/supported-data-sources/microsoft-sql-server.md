@@ -1,5 +1,7 @@
 ## Microsoft SQL Server
 
+>[!NOTE] Microsoft SQL Server is not supported in the Web version of Reveal.
+
 To configure a Microsoft SQL Server data source, you can set the following information:
 
 ![Enter SQL Server Details](images/Enter-SQL-Server-Details.png)

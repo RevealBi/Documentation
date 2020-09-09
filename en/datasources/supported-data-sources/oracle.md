@@ -1,5 +1,7 @@
 ## Oracle
 
+>[!NOTE] Oracle is not supported in the Web version of Reveal.
+
 There are two modes you can use to connect to Oracle depending on your
 database's settings:
 

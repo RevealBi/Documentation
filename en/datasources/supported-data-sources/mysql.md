@@ -1,5 +1,7 @@
 ## MySQL
 
+>[!NOTE] MySQL is not supported in the Web version of Reveal.
+
 To configure a MySQL server data source, you will need to enter the
 following information:
 

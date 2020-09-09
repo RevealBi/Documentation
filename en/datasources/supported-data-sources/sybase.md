@@ -1,5 +1,7 @@
 ## Sybase
 
+>[!NOTE] Sybase is not supported in the Web version of Reveal. 
+
 To configure a Sybase server data source, you will need to enter the
 following information:
 
