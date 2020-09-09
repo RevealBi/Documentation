@@ -75,7 +75,14 @@ After selecting a data source provider, you will be prompted to **configure** it
 
    - [Web Resource](~/en/datasources/supported-data-sources/web-resource.md)
 
-   - [JSON file](~/en/datasources/supported-data-sources/working-with-json-files.md)
+   - [JSON files](~/en/datasources/working-files/working-with-json-files.md)
+   - [Spreadsheets]((~/en/datasources/working-files/working-with-spreadsheets.md))
 
 >[!NOTE]
 > **Databases** (*) are not supported in the Web version of Reveal.
+
+### Related Topics 
+
+- You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Managing Dashboards With Their Own Data Sources](managing-dashboards-own-data-sources.md) topic. 
+- You started creating a visualization, but changed your mind about the data source? Read how to connect to a different data source while you are in the Visualization Editor in [Changing the Data Source for a Visualization](changing-data-source-visualization.md).
+- You want to use data from more than one data source for your visualization? Read the [Combining Data Sources in one Visualization](data-blending.md)
