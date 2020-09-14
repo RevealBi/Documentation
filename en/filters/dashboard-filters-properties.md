@@ -107,10 +107,8 @@ employees in all offices of the company:
 
 ![Employee name dashboard filter applied to HR Dashboard](images/data-filters-dashboard-filters-hr-dashboard-example.png)
 
-In this case, you can apply the *Data Filter* property, if you want to
-use as a filter only employees working in a particular office, e.g.
-*London, UK*. This way your dashboard filter will show a list of the
-employees working in the London office to choose from.
+If you want your filter list to contain only employees working in a particular office, e.g.
+*London, UK*, apply a data filter as shown below.
 
 #### Applying a data filter to your dashboard filter
 
@@ -133,6 +131,21 @@ filter and have the dashboard filter show only the employees in the
 
 5.  Choose *London, UK* from the list and click/tap the *Create Filter*
     button.
+
+### Specifics When Using an MS Analysis Services Data Source
+
+There are some specifics when configuring a SSAS-based dashboard filter (see in the list below).
+
+> A screenshot showing both fields below (no collapsing a dropdown, please)
+
+ 1. **Displayed Element** - you can select a *Dimension*, *Hierarchy* or *Level* data field to display dashboard filter values, but not a _Measure_ data field. 
+
+2. (*Optional*) **Show only when Measure has data** - select a *Measure* to limit the dashboard filter values list to those that contain data for a certain Measure.
+
+For example, if you use the *Product* Dimension as a *Displayed element* to filter sales data in a visualization, your dashboard filter will show a list of products (e.g. bikes, clothes, etc). 
+By additionally selecting the *Internet orders* Measure for *Show only when Measure has data* field, you will exclude dashboard filter values, which do not contain information about the *Internet orders* Measure. So, if there are no internet orders of bikes, the _bike_ product will not show up in the _Dashboard Filters_ list.
+
+### Next Steps 
 
 Now that you have already created your dashboard filter, you will need
 to **connect it to the visualizations** you want to apply filtering to.
