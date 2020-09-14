@@ -18,8 +18,6 @@
   new: true
 - name: Microsoft Analysis Services
   href: microsoft-analysis-services.md
-- name: Working with Microsoft Analysis Services
-  href: working-with-microsoft-analysis-services.md
 - name: Microsoft Azure Analysis Services
   href: microsoft-azure-analysis-services.md
 - name: Microsoft Azure Synapse Analytics
