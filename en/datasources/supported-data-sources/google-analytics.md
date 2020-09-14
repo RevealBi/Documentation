@@ -50,48 +50,35 @@ provides an SDK to gather usage data from iOS and Android apps.
 
       - Once a week
 
-After your credentials are verified, Reveal will take you to the
-Visualizations Editor showing Dimensions and Measures.
+After your credentials are verified, Reveal will take you to the _Visualizations Editor_.
 
-### What is a Data Cube?
+### Working in the Visualizations Editor
 
-A data cube is used to store and represent multidimensional data. Unlike
-two-dimensional data models, where two dimensions are used (arranged in
-row and column format) to view, analyze and calculate data, a data cube
-has three or more dimensions.
-
-The concept of a data cube is used to represent the dimensions of data
-available to a user. For example, "sales" could be measured in the
-**dimensions** of product category, geography, date, customers, etc. In
-this case, "sales" is the **measure** attribute of the data cube.
-
-### Working in the Visualization Editor
-
-When you create a dashboard with information coming from Google
-Analytics, you will see fields organized differently as seen in the
-screenshot below.
+When you create a dashboard with information coming from Google Analytics, you will see fields organized differently (see screenshot below).
 
 ![Visualization Editor showing a Google Analytics data cube](images/ga-visualizationeditor.png)
 
-As you can see, there is no "Fields" heading. In its place, there are
-two sections in their own query field:
+You may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
-1.  **Dimensions** (depicted by a cube icon with a pink side):
-    Dimensions are structures used to categorize data that can be
-    measured. Elements in a dimension are organized in attributes.
-    Attributes are elements with single level hierarchies (e.g. a
-    "Demographic" attribute, containing groups of elements like
-    "Gender", "Marital Status", etc.)
+1.  **Dimensions** (depicted by a cube icon with a pink side): Dimensions are attributes of your data. For example, the dimension _Gender_ (under the _Audience_ cube) indicates the gender of your web site's audience.
 
-2.  **Measures** (depicted by *123* icon): Measures consist of
-    numeric data.
+2.  **Measures** (depicted by *123* icon): Measures consist of numeric data. For example, the measure _AdX Clicks_ is the number of times AdX ads were clicked on the site.
 
-The default visualization type for the Google Analytics data source is a
-Pivot table. For *Rows and Columns* you must use **Dimensions** data,
-for *Values* you use **Measures** data.
+If you need to learn more, check this Google Analytics article: [Dimensions and metrics](https://support.google.com/analytics/answer/1033861?hl=en). 
 
-For more information on dimensions and measures, please visit this
-[Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
+>[!NOTE] 
+> Some dimensions and measures cannot be used together. For a list of valid dimensions-measures combinations, refer to the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) on the Google Developer website.
+
+#### Data Filters
+
+There are two *Data Filters* when using the GA data source in Reveal. 
+
+* **Segment** filter. The *Segment filters* are predefined. *System* Segments are defined by Google, and *Custom* Segments are defined by the user on the Google Analytics website. You can choose only one segment to filter your data. 
+* **Date Range**. Select a specific date range in the calendar to filter your data. You can also choose one of the preset date ranges by clicking the arrow in the upper right corner: 
+
+  ![Date Range dialog](images/ga-data-source-date-range-preset.png)
+
+  >[!NOTE] Default date range is _Last 30 days_. This means data will be retrieved for the last 30-day period, including today. 
 
 #### Using Goals from Google Analytics
 
