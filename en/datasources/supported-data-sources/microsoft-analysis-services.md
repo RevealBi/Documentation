@@ -36,15 +36,13 @@ mode, you will need to enter the following information:
     | 2\. Right Click on My Computer \> Properties.                                                                   | 2\. Type in **$hostname**                                                                                     | 2\. Navigate to the Sharing Section.                                 |
     | Your Hostname will appear as "Computer Name" under the *Computer name, domain and workgroups settings* section. | Your Hostname will appear along with your DNS domain name. Make sure you only include **Hostname** in Reveal. | Your Hostname will be listed under the "Computer Name" field on top. |
 
+    You can find the *IP address* by following the steps below. Please note that the commands should be executed on the server machine.
 
-
-  You can find the *IP address* by following the steps below. Please note that the commands should be executed on the server machine.
-
-  | WINDOWS                              | LINUX                             | MAC                                                           |
-  | ------------------------------------ | --------------------------------- | ------------------------------------------------------------- |
-  | 1. Open a Command Prompt.            | 1. Open a Terminal.               | 1. Launch your Network app.                                   |
-  | 2. Type in **ipconfig**              | 2. Type in **$ /bin/ifconfig**    | 2. Select your connection.                                    |
-  | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
+      | WINDOWS                              | LINUX                             | MAC                                                           |
+      | ------------------------------------ | --------------------------------- | ------------------------------------------------------------- |
+      | 1. Open a Command Prompt.            | 1. Open a Terminal.               | 1. Launch your Network app.                                   |
+      | 2. Type in **ipconfig**              | 2. Type in **$ /bin/ifconfig**    | 2. Select your connection.                                    |
+      | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
 
 3.  *(Optional)* **Port**: server port details. If no information is
@@ -81,20 +79,56 @@ Select a database and click *Continue* to set it up.
 
 ![MSAnalysisCubes\_All](images/MSAnalysisCubes_All.png)
 
-Choose a database *cube* in the *Set Up the Database* dialog.
+Choose a database *cube* and click/tap _Select Data_ to continue to the *Visualizations Editor*.
 
-#### What is a Data Cube?
+<a name='visualization-editor'></a>
+### Working in the Visualization Editor
 
-A data cube is used to store and represent multidimensional data. Unlike
-two-dimensional data models, where two dimensions are used (arranged in
-row and column format) to view, analyze and calculate data, a data cube
-has three or more dimensions.
+When you create a dashboard with information coming from Microsoft
+Analysis Services, you will see fields organized differently, as seen in
+the screenshot below.
 
-The concept of a data cube is used to represent the dimensions of data
-available to a user. For example, "sales" could be measured in the
-**dimensions** of product category, geography, date, customers, etc. In
-this case, "sales" is the **measure** attribute of the data cube.
+![VisEditorDimensionsMeasures\_All](images/VisEditorDimensionsMeasures_All.png)
 
-For more information on how to work with the Microsoft Analysis data
-source, please refer to
-[this](working-with-microsoft-analysis-services.md) topic.
+As you can see, there is no "Fields" heading. In its place, there are
+two sections in their own query field:
+
+1.  **Dimensions** (depicted by a cube icon with a pink side):
+    Dimensions are structures used to categorize data that can be
+    measured. Elements in a dimension can be organized by:
+
+    1.  **Hierarchy** - when elements in a dimension are organized by
+        hierarchy, you can use the whole hierarchy or part of it,
+        starting from an element at any lower level. For example, if you
+        have a "Geography" dimension organized in "Country → State →
+        City" hierarchy, you can drag and use only the "State → City"
+        part of this hierarchy.
+
+    2.  **Named Sets** (depicted by a folder icon and named "Sets") - an
+        arbitrary collection of elements with a name (e.g. "Top 50
+        Customers").
+
+    3.  **Attributes** - elements are organized in single-level
+        hierarchies (e.g. a "Demographic" attribute, containing groups
+        of elements like "Gender," "Marital Status," etc.)
+
+2.  **Measures** (depicted by *[123]* icon): Measures consist of numeric data.
+
+![PivotTableExampleMSAnalysis\_All](images/PivotTableExampleMSAnalysis_All.png)
+
+For more information on dimensions and measures, please visit this
+[Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
+
+<a name='sort-by-caption-setting'></a>
+### Sort by Caption Setting
+
+There is also a Sort by Caption option which defines whether the filter
+will be applied to the dimension's labels or to the corresponding
+values. When enabled, *Sort by Caption* sorts the dimensions
+alphabetically by their label
+
+To enable it, select a dimension in *Rows* or *Columns*. Enable
+*Sorting* for the field by choosing *Ascending* or *Descending* to have
+the *Sort by Caption* option show up:
+
+![SortByCaption\_All](images/SortByCaption_All.png)
