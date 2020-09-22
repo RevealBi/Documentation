@@ -83,6 +83,6 @@ After selecting a data source provider, you will be prompted to **configure** it
 
 ### Related Topics 
 
-- You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Managing Dashboards With Their Own Data Sources](managing-dashboards-own-data-sources.md) topic. 
+- You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Connecting a Dashboard to Its Data Source](connect-dashboard-to-data-source.md) topic. 
 - You started creating a visualization, but changed your mind about the data source? Read how to connect to a different data source while you are in the Visualization Editor in [Changing the Data Source for a Visualization](changing-data-source-visualization.md).
 - You want to use data from more than one data source for your visualization? Read the [Combining Data Sources in one Visualization](data-blending.md)
