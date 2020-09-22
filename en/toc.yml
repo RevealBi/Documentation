@@ -48,8 +48,8 @@
   href: datasources/changing-data-source-visualization.md
 - name: Combining Data Sources in one Visualization
   href: datasources/data-blending.md
-- name: Managing Dashboards with their own Data Sources
-  href: datasources/managing-dashboards-own-data-sources.md
+- name: Connecting a Dashboard to Its Data Source
+  href: datasources/connect-dashboard-to-data-source.md
 - name: OAuth 2 / OIDC User Authentication
   href: datasources/oauth-2-oidc-user-authentication.md
 - name: Processing Data on Server
