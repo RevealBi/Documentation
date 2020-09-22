@@ -84,31 +84,23 @@ Choose a database *cube* and click/tap _Select Data_ to continue to the *Visuali
 <a name='visualization-editor'></a>
 ### Working in the Visualization Editor
 
-When you create a dashboard with information coming from Microsoft
-Analysis Services, you will see fields organized differently, as seen in
-the screenshot below.
+When you create a dashboard using a cube data source like Microsoft Analysis Services, you will see fields organized differently in the  *Visualizations Editor* (see screenshot below). Cube data sources consist of hierarchies and aggregations, which have been created by the cubes' designers in advance.
 
 ![VisEditorDimensionsMeasures\_All](images/VisEditorDimensionsMeasures_All.png)
 
-As you can see, there is no "Fields" heading. In its place, there are
-two sections in their own query field:
+In the screenshot above, you may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
 1.  **Dimensions** (depicted by a cube icon with a pink side):
     Dimensions are structures used to categorize data that can be
     measured. Elements in a dimension can be organized by:
 
-    1.  **Hierarchy** - when elements in a dimension are organized by
+    a.  **Hierarchies** - when elements in a dimension are organized by
         hierarchy, you can use the whole hierarchy or part of it,
-        starting from an element at any lower level. For example, if you
-        have a "Geography" dimension organized in "Country → State →
-        City" hierarchy, you can drag and use only the "State → City"
-        part of this hierarchy.
+        starting from an element at any lower level. For example, if you have a "Geography" dimension organized in "Country → State → City" hierarchy, you are allowed to drag and use only the "State → City" part of this hierarchy.
 
-    2.  **Named Sets** (depicted by a folder icon and named "Sets") - an
-        arbitrary collection of elements with a name (e.g. "Top 50
-        Customers").
+    b.  **Named Sets** (depicted by a folder icon and named "Sets") - an arbitrary collection of elements with a name (e.g. "Top 50 Customers").
 
-    3.  **Attributes** - elements are organized in single-level
+    c.  **Attributes** - elements are organized in single-level
         hierarchies (e.g. a "Demographic" attribute, containing groups
         of elements like "Gender," "Marital Status," etc.)
 
