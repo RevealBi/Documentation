@@ -1,12 +1,16 @@
 ## Data Visualizations
 
-In order for users to get the most insight possible out of business
-data, Reveal provides several options to customize the way information
-is visualized.
+Reveal helps you get the most insight possible out of business data by providing a variety of visualizations.
 
-![Reveal-UploadingDashboardsMenu\_All](images/reveal-uploading-dashboards-menu.png)
+### What is a Visualization? 
 
-### Topics Overview
+<img src="images/data-visualizations-example.png" alt="Reveal's log in screen" width="800"/>
+
+Add description here.
+
+### Choosing the Right Chart Type 
+
+### Topics Overview - delete
 
 There are several visualization types:
 
@@ -24,7 +28,11 @@ There are several visualization types:
 
   - [Text Box Visualizations](visualization-types/text-box.md)
 
-### Visualization Tutorials
+### Next Steps 
+
+Creating a vis in the Visualizations editor - link 
+
+### Visualization Tutorials - delete; leave only a link to the Overview
 
 Within this section, you will find basic, step-by-step tutorials for the
 Reveal visualizations. All sections use the Data Visualizations data
