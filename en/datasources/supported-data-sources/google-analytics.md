@@ -101,3 +101,7 @@ As you can see in the example above, the titles of your Google Analytics
 
 For more information about Goals, please refer to this Google Analytics
 [help page](https://support.google.com/analytics/answer/1012040?hl=en).
+
+### Limitations of the Data Source
+
+Currently, you cannot create a [dashboard filter](~/en/filters/dashboard-filters.md) with Google Analytics data. 
