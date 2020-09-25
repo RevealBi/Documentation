@@ -1,11 +1,13 @@
 ## Sort by Field
 
-Reveal allows you to change how the data in a visualization is displayed
-by sorting the data in ascending or descending order. In addition, it is
-also possible to sort your string and numeric fields by different fields
-in your original data source.
+Reveal allows you to change how the data in a visualization is displayed by sorting the data in ascending or descending order. In addition, it is
+also possible to further control how a visualization looks with sorting by selected fields in your original data source. 
 
 ![Sort Visualization by setting dialog](images/sort-visualization-by-field.png)
+
+### Enabling Sort by Field 
+
+The *Sort by field* option is part of the fields settings, but is hidden by default. To enable it, select a field under the _Label_ placeholder. In *Field Settings*, choose _Ascending_ or _Descending_ for _Sorting_. _Sort by field_ shows under the _Sorting_ setting. You can choose a field from the dropdown on the right.
 
 For more practical information, take a look at the following examples
 that showcase this functionality:
