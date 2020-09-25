@@ -25,6 +25,6 @@ If there are visualizations in the dashboard, which are created with another dat
 
 ### Related Topics 
 
-* **Editing your dashboard**. Now after connecting the dashboard to its data source and being able to view it, you may want to edit it, as well. You can do so by accessing the *Dashboard Edit* mode from the overflow menu. Learn more in the [Interacting with Your Dashboards](~/en/general/dashboards-overview.md) topic. 
+* **Editing your dashboard**. Now after connecting the dashboard to its data source and being able to view it, you may want to edit it, as well. You can do so by accessing the *Dashboard Edit* mode from the overflow menu. Learn more in the [Interacting with Your Dashboards](~/en/dashboards/dashboards-interactions.md) topic. 
 
 * **Access permissions to a shared dashboard**. The dashboard you just connected to its data source was most probably shared with you in Reveal. Did you know that there are three types of access permissions that determine the operations you are allowed to do with the dashboard? Learn about this and other specifics in the [Sharing a Dashboard](~/en/dashboards/sharing-dashboards/share-a-dashboard.md) topic.
