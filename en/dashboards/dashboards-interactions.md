@@ -1,15 +1,13 @@
-## Dashboards Overview
+## Interacting with Dashboards
 
 You can open existing dashboards by selecting the dashboard thumbnail image in the initial view.
 
 ![dashboard opened in edit mode](images/dashboard-opened-edit-mode.png)
 
-### Dashboard Interactions
-
 You can **interact** with visualizations in various ways. For instance, if the visualization is in grid view, you can scroll horizontally and
 vertically. The chart view supports zooming and panning. Also drill down & drill up actions become possible if the underlying data model supports it.
 
-#### Maximized view
+### Maximized view
 
 Once the dashboard is opened, you can **maximize** any of the dashboard visualizations by hovering over them and click/tap on the arrow in the right top corner.
 
@@ -35,7 +33,7 @@ If, at any point, you want to revert back to the original visualization, you can
 
 ![show original link](images/change-visualization-show-original.png)
 
-#### Regular Tooltips
+### Regular Tooltips
 
 By clicking on particular visualizations (press and hold in touch environments), you can see tooltips popups. Tooltips help you see values
 at a particular point of your chart like:
@@ -44,7 +42,7 @@ at a particular point of your chart like:
 
 To close regular tooltips just click or tap away.
 
-#### Hover Tooltips & Crosshairs
+### Hover Tooltips & Crosshairs
 
 You will find two options in the **Interactions** menu: *Hover tooltips* and *Crosshairs*. Only *Hover tooltips* is enabled by default. Both are only available in Dashboard View mode. They can't be used in Dashboard Edit mode.
 
@@ -72,7 +70,7 @@ Candlestick and OHLC visualizations only display horizontal crosshairs.
 Including a vertical crosshair would make it difficult to see the lines
 on the data point.
 
-#### Tooltips Totals
+### Tooltips Totals
 
 When displaying tooltips, you can configure them to display total values by Category.
 
