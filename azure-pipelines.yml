@@ -13,7 +13,12 @@ steps:
 - checkout: self
   clean: true
   submodules: true
-  
+
+- task: CmdLine@2
+  inputs:
+    script: 'git pull origin master'
+    workingDirectory: 'templates/reveal'
+
 - task: DocFxTask@0
   displayName: "Build docfx.json"
   inputs:
