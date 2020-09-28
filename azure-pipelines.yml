@@ -15,6 +15,7 @@ steps:
   submodules: true
 
 - task: CmdLine@2
+  displayName: Pull latest from the templates submodule
   inputs:
     script: 'git pull origin master'
     workingDirectory: 'templates/reveal'
