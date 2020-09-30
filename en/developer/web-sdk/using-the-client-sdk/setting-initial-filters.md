@@ -4,9 +4,9 @@
 
 Sometimes, you want to display a dashboard with filters already applied.
 Dashboard filters are very useful to slice the contents of all the
-widgets at once. Because of this, you can use the SDK to set up initial
+visualizations at once. Because of this, you can use the SDK to set up initial
 dashboard filter selections that remain in context for all the
-dashboard’s widgets.
+dashboard’s visualizations.
 
 #### Example Details
 
@@ -26,24 +26,19 @@ In this case, you want to set the initial filters selection to:
 
 As part of the initialization process and once the dashboard is loaded,
 you can retrieve the list of filters in the dashboard and use these
-filters to set the initially selected values in
-__$.ig.RevealSettings__:
+filters to set the selected values though the dashboard object and finally assign it to the revealView's dashboard property:
 
 ``` html
 <script type="text/javascript">
     var dashboardId = 'Sales';
-    var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-    $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-        revealSettings.dashboard = dashboard;
+    $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
 
-        revealSettings.setDateFilter(new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.YearToDate));
-        revealSettings.setFilterSelectedValues(
-            dashboard.getFilterByTitle("Territory"),
-            [getCurrentUser().territory]
-        );
+      dashboard.filters.getByTitle("Territory").selectedValues = [getCurrentUser().territory]
 
-        new $.ig.RevealView("#revealView", revealSettings);
+        var revealView = new $.ig.RevealView("#revealView");
+
+        revealView.dashboard = dashboard;
     }, function (error) {
         console.log(error);
     });
@@ -64,7 +59,7 @@ __$.ig.RevealView__ object to
 hide the panel containing the dashboard filters:
 
 ``` js
-$.ig.revealSettings.showFilters = false;
+revealView.showFilters = false;
 ```
 
 That setting will restrict users to see data only for their associated
