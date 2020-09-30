@@ -3,9 +3,7 @@
 ### Overview
 
 The __$.ig.RevealView__
-component can be instantiated while passing the
-__$.ig.RevealSettings__
-object as a parameter.
+component can be instantiated while passing the selector pointing to the dom element where the reveal view should be rendered.
 
 The __$.ig.RevealSettings__
 object can be used to enable or disable different features towards the
@@ -35,15 +33,12 @@ by “App2”.
 
 ``` js
 var dashboardId = "AppsStats";
-var revealSettings = new $.ig.RevealSettings(dashboardId);
 
 $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-    revealSettings.dashboard = dashboard;
+    dashboard.filters.getByTitle("application_name").selectedValues = ["App2"];
 
-    var applicationNameFilter = dashboard.getFilterByTitle("application_name");
-    revealSettings.setFilterSelectedValues(applicationNameFilter, ["App2"]);
-
-    window.revealView = new $.ig.RevealView("#revealView", revealSettings);
+    var revealView = new $.ig.RevealView("#revealView");
+    revealView.dashboard = dashboard;
 }, function (error) {
 });
 ```
