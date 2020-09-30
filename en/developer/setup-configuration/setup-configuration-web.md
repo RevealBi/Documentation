@@ -238,24 +238,16 @@ To get started follow these steps:
     > [!NOTE] > **Hosting Client-Side and Server-Side Parts Separately**
     > If you want to host client-side and server-side parts on different servers, please read [here](~/en/developer/web-sdk/overview.html#host-client-server-separate) **before** you continue to next step.
 
-2.  Create an instance of
-    **\$.ig.RevealSettings**
-    providing the \_dashboardId\ in the constructor.
-
-3.  Call
-    **\$.ig.RevealUtility.loadDashboard**
+2.  Call
+    **\$.ig.RVDashboard.loadDashboard**
     providing the _dashboardId_ and success and error handlers.
 
-    a. In the success handler you should use the retrieved dashboard
-    and set it to the dashboard property of the
-    **\$.ig.RevealSettings**
-    object.
-
-4.  Finally, instantiate the
+3.  In the success handler instantiate the
     **\$.ig.RevealView** component
-    by passing two parameters. One is a selector for the DOM element
-    where the dashboard should be rendered into, and the other one is
-    the settings object.
+    by passing a selector for the DOM element
+    where the dashboard should be rendered into. Finally
+    you should use the retrieved dashboard and set it to the dashboard property of the
+    **\$.ig.RevealView**
 
 #### Sample Code
 
@@ -266,13 +258,12 @@ To get started follow these steps:
     ⋮
     <script type="text/javascript">
       var dashboardId = "dashboardId";
-      var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-      $.ig.RevealUtility.loadDashboard(
+      $.ig.RVDashboard.loadDashboard(
         dashboardId,
         function (dashboard) {
-          revealSettings.dashboard = dashboard;
-          var revealView = new $.ig.RevealView("#revealView", revealSettings);
+          var revealView = new $.ig.RevealView("#revealView");
+          revealView.dashboard = dashboard;
         },
         function (error) {
           //Process any error that might occur here
