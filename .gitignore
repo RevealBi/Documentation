@@ -1,3 +1,4 @@
 # DocFX
 _site
 obj
+node_modules/
