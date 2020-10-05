@@ -29,7 +29,7 @@ Follow the steps below to format the numeric data to display 5 decimal digits:
     **FormattingProvider** property to your custom implementation:
 
     ``` csharp
-    RevealView.FormattingProvider = new UpMediaFormattingProvider();
+    RevealSdkSettings.FormattingProvider = new UpMediaFormattingProvider();
     ```
 
 2.  Implement the **IRVFormattingProvider**:

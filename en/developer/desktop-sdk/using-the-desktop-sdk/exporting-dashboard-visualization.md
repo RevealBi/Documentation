@@ -19,7 +19,7 @@ To enable a dashboard or a visualization export, you can:
 
 ### Prerequisites for Export as an Image Option
 
-To use the Export as an image feature you will need to add a reference to [CefSharp.Wpf NuGet package (\>= 57.0.0)](~/en/developer/general/setup-configuration-desktop.md) to your project.
+To use the Export as an image feature you will need to add a reference to [CefSharp.Wpf NuGet package (\>= 57.0.0)](~/en/developer/setup-configuration/setup-configuration-desktop.md) to your project.
 
 <a name='enable-export-revealview'></a>
 
