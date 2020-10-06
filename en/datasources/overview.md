@@ -5,7 +5,7 @@ Data Sources are the places where your data comes from. Reveal provides
 you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
 databases, spreadsheets, and public data sources.
 
-The screenshot below displays a number of different data sources the user John Williams has connected to in his application.
+The screenshot below displays a number of different data sources the user John Williams has connected to in his account.
 
 ![Sample data sources](images/sample-data-sources-screen.png)
 

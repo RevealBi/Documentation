@@ -16,7 +16,7 @@ In the _Settings_ section of the Choropleth map visualization you can configure 
 
   - *Show labels* - IF the selected map supports labels, you can choose whether to put them on _all_ regions, only on regions that contain information (_Only when has value_), or turn them off (_None_).
   - *Labels are* - You can use labels to indicate the geographical names (abbreviated) of the regions by selecting _Location Abbreviation_. Alternatively, your labels can show _Values_ for each area. Value labels can be displayed on the map as numbers, percent, or currency, depending on what formatting you chose for your _Value_ field.
-
+  
 ### Localization Settings
 
 Currently, you can provide your dataset in English and Japanese.
