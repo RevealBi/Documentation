@@ -6,8 +6,8 @@ Before loading and processing the data for a dashboard (by Reveal SDK),
 you can override the configuration or data to be used for each
 visualization of the dashboard.
 
-One of the properties to implement in
-__RevealView__ is:
+You would need to set the DataSourceProvider property of
+__RevealSdkSettings__:
 
 ``` csharp
 public IRVDataSourceProvider DataSourceProvider { get; set; }
@@ -108,8 +108,8 @@ Please note that in addition to implement
 __IRVDataSourceProvider__,
 you need to set your implementation in the
 __DataSourceProvider__
-property of __RevealView__:
+property of __RevealSdkSettings__:
 
 ``` csharp
-revealView.DataSourceProvider = new SampleDataSourceProvider();
+RevealSdkSettings.DataSourceProvider = new SampleDataSourceProvider();
 ```
