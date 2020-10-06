@@ -45,7 +45,7 @@ Reveal has a great variety of predefined maps available for your choropleth visu
 
 To have your location column recognized by Reveal, provide the locations' full names or official 2- or 3-letter abbreviations. Be consistent with the format you provide and don't mix full names and abbreviations.
 
-Find more specific information about the Location format and requirements in link:location-data-requirements[How to prepare Your Data for a Choropleth Map].
+Find more specific information about the Location format and requirements in [How to prepare Your Data for a Choropleth Map](location-data-requirements.md).
 
 ### Creating a Choropleth Map
 
