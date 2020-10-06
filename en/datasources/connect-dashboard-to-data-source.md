@@ -6,7 +6,7 @@ A dashboard created with data sources you have not yet added into your applicati
 
 <img src="images/dashboard-own-data-sources.png" alt="A dashboard not connected to its data source" width="100%"/>
 
-Each visualization has a "Log into" button on it enabling you to **connect to the data source** used. To do this: 
+Each visualization has a *Log into* button on it enabling you to **connect to the data source** used. To do this: 
 
 1. Click/tap the **Log into** button.
 2. In the _Connect Data Source_ dialog, click/tap the **+ Credentials** button in the top right corner.
@@ -15,7 +15,7 @@ Each visualization has a "Log into" button on it enabling you to **connect to th
 
 The complete dashboard will be displayed in *Dashboard View* mode. 
 
-![Final Dashboard Own Data Source](images/final-dashboard-own-data-source.png)
+<img src="images/final-dashboard-own-data-source.png" alt="Final look of the dashboard after connecting to its data source" width="100%"/>
 
 >[!NOTE]
 > In the _Connect Data Source_ dialog, you may have a list of data source credentials (see screenshot below). These are credentials you have used to log into other source accounts, or that you have added in advance in the [Manage Reveal Credentials](~/en/datasources/managing-data-source-credentials.md) menu.
