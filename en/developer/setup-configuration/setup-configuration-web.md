@@ -197,7 +197,7 @@ To set up the Reveal Web Client SDK you need to:
 
 3.  [**Instantiate the Web Client SDK**](#instantiate-web-client-sdk).
 
-4.  _(Optional)_ [**Configure Support for React / Angular**](#web-component-support).
+<!-- 4.  _(Optional)_ [**Configure Support for React / Angular**](#web-component-support). -->
 
 <a name='check-dependencies'></a>
 
@@ -277,7 +277,7 @@ To get started follow these steps:
 </html>
 ```
 
-<a name='web-component-support'></a>
+<!-- <a name='web-component-support'></a>
 
 #### 4\. _(Optional)_ Configuring Support for React / Angular
 
@@ -298,4 +298,4 @@ Please note that the Web Component also requires other dependencies to be includ
 You can find the following two JS files at "\<InstallationDirectory\>\\Web\\JS":
 
 - **reveal-webComponent.js**
-- **reveal-WebComponent-ie11.js**
+- **reveal-WebComponent-ie11.js** -->
