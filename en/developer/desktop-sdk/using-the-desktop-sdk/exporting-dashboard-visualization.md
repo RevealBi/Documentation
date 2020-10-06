@@ -19,7 +19,7 @@ To enable a dashboard or a visualization export, you can:
 
 ### Prerequisites for Export as an Image Option
 
-To use the Export as an image feature you will need to add a reference to [CefSharp.Wpf NuGet package (\>= 57.0.0)](~/en/developer/setup-configuration/setup-configuration-desktop.md) to your project.
+To use the Export as an image feature you will need to add a reference to [CefSharp.Wpf NuGet package (\>= 83.4.20)](~/en/developer/setup-configuration/setup-configuration-desktop.md) to your project.
 
 <a name='enable-export-revealview'></a>
 
@@ -29,11 +29,11 @@ To enable your end users to generate an image, document or a presentation out of
 
 - __RevealSettings.ShowExportImage__ - for export as an **image**;
 
-- __RevealSettings.ShowExportToPDF](api-reference__ - for export as a **PDF** document;
+- __RevealView.ShowExportToPDF](api-reference__ - for export as a **PDF** document;
 
-- __RevealSettings.ShowExportToPowerpoint__ - for export as a **PowerPoint** presentation;
+- __RevealView.ShowExportToPowerpoint__ - for export as a **PowerPoint** presentation;
 
-- __RevealSettings.ShowExportToExcel__ - for export in **Excel** data format.
+- __RevealView.ShowExportToExcel__ - for export in **Excel** data format.
 
 This will make the *Export* button available in the overflow menu when a dashboard is opened or a particular visualization is maximized.
 
@@ -47,7 +47,7 @@ If the user chooses the _Export Image_ from the export options, the _Export imag
 
 If they click the *Export Image* button on the bottom right, the RevealView raises the __ImageExported__ event. To access the image via the __Image
 Property__
-of the __ImageExportedEventArgs__, you need to have already subscribed to this event through the event handler.
+of the __ImageExportedEventArgs__, you need to have already subscribed to this event through the event handler. If you haven't subscribed to the event the save file dialog will be opened for the user to specify a location to save the image to.
 
 Here’s a sample implementation of the *ImageExported* event handler:
 
