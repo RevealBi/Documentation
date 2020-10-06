@@ -10,7 +10,7 @@ when accessing the data source.
 The first step is to implement **IRVAuthenticationProvider** and set it
 to the
 __AuthenticationProvider__
-property in __RevealView__, as
+property in __RevealSdkSettings__, as
 shown below.
 
 ``` csharp
