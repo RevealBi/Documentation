@@ -37,4 +37,4 @@ $.ig.RevealSdkSettings.setBaseUrl("{back-end base url}");
 
 Please, note that the **trailing slash symbol is required** in order to set the property successfully.
 
-Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en/developer/general/setup-configuration-web.html#instantiate-web-client-sdk).
+Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en/developer/setup-configuration/setup-configuration-web.html#instantiate-web-client-sdk).
