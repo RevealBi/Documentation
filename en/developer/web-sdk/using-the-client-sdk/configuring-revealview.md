@@ -17,7 +17,7 @@ end user, including:
     are *showExportImage*, *canEdit*, *showChangeDataSource*, and *maximizedVisualization*.
   - **Specifying a Dashboard** - The *dashboard* property is used to
     specify which dashboard should be rendered. As shown in
-    [**Instantiating the Web Client SDK**](~/en/developer/general/setup-configuration-web.html#instantiate-web-client-sdk),
+    [**Instantiating the Web Client SDK**](~/en/developer/setup-configuration/setup-configuration-web.html#instantiate-web-client-sdk),
     the dashboard must be retrieved by using the
     *$.ig.RevealUtility.loadDashboard* method, which receives a
     dashboardId and a success callback called when the dashboard is
