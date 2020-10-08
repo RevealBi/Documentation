@@ -1,5 +1,9 @@
 ## Visualizations Editor
 
+>Add Creating a visualization (from What is a visualization? topic) here, but add also that a vis can be created by adding to an existing dashboard.  
+
+
+
 The Visualization editor is where you create and edit your visualizations. It helps you work with the data to get the most desired view.
 
 ### Accessing the Visualizations Editor
