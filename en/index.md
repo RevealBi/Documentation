@@ -28,7 +28,7 @@ Sort, filter and aggregate your data as you wish! Each chart type provides you w
 
 Once your dashboard is created, interact with your visualizations with drill-down support, or even the ability to change visualization on the fly. Create and share annotated images of your visualizations for deeper insights.
 
-<img src="general/images/tooltips-totals.png" alt="Using tooltips and displaying totals in Reveal" width="100%"/>
+<img src="dashboards/images/tooltips-totals.png" alt="Using tooltips and displaying totals in Reveal" width="100%"/>
 
 <h4 style="color:#2328B0;">Share Insights with your Teams </h4>
 
