@@ -1,6 +1,6 @@
 - name: Category Charts
   href: category-charts.md
-- name: Choropleth Map
+- name: Choropleth Maps
   href: choropleth-map/toc.yml
 - name: Combo Charts
   href: combo-charts.md
@@ -20,6 +20,8 @@
   href: radial-charts.md
 - name: Scatter and Bubble Charts
   href: scatter-bubble-charts.md
+- name: Scatter Maps
+  href: scatter-map/toc.yml
 - name: Sparkline Charts
   href: sparkline-charts.md
 - name: Text View

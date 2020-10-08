@@ -12,11 +12,11 @@ The map supports the three different coloring schemes listed below.
 
   * The *Single color* scheme styles all shapes containing data with the same color. Shapes with no data are greyed out.
   * The *Range of values* scheme styles the shapes using one of seven colors, where colors progressing light to dark represent data values from low to high.
-  * The *Map Color* scheme assigns a theme color to each unique identifier in the _Map Color_ field. With this scheme, the shape ends up being styled based on the identifier with the highest/lowest value for that shape - see link:#map-color[this example].
+  * The *Map Color* scheme assigns a theme color to each unique identifier in the _Map Color_ field. With this scheme, the shape ends up being styled based on the identifier with the highest/lowest value for that shape - see [this example](#map-color).
 
-Find how to set the color of your map in the link:settings-choropleth-map[Choropleth Map Settings] topic.
+Find how to set the color of your map in the [Choropleth Map Settings](settings-choropleth-map.md) topic.
 
-The choropleth map in Reveal also allows you to link:#drill-down[drill down] through your hierarchical data.
+The choropleth map in Reveal also allows you to [drill down](#drill-down) through your hierarchical data.
 
 ### Using the Choropleth Map Visualization
 
@@ -66,7 +66,7 @@ To follow this walkthrough, download the [2016 November General Election](https:
 
 5. For _Values_, select the field containing the quantitative data you want to map. For this example, we will use the _Total Votes (%)_, containing the voting rates in every state.
 
-6. Format the _Value_ field to show percentage. Select the _Total Votes (%)_ under _Value_ > _Formatting_ > _Type_ > _Percent_. Find more about formatting fields in the link:field-settings[Field Settings] topic.
+6. Format the _Value_ field to show percentage. Select the _Total Votes (%)_ under _Value_ > _Formatting_ > _Type_ > _Percent_. Find more about formatting fields in the [Field Settings](~/en/data-visualizations/fields/field-settings.md) topic.
 
 7. _(Optional)_ Add a filter. For our example, drop the _year_ field in the _Data Filters_ placeholder. Click on the field, select _Filter type_ > _Select Values_ > _2016_.
 
