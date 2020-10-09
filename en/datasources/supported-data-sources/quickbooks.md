@@ -13,7 +13,7 @@ If you have Identity Confirmation activations enabled, you will see a prompt to 
 
 After logging in you can set up your Quickbooks data in the following dialog:
 
-<img src="images/set-up-data-quickbooks.png" alt="Set up your data dialog" width="800"/>
+<img src="images/set-up-data-quickbooks.png" alt="Set up your data dialog" width="100%"/>
 
 Here you can choose the Quickbooks entities you need from:
 

@@ -23,7 +23,7 @@ After opening a chosen dashboard and entering _Dashboard Edit mode_, you will be
 There are three main areas in the
 visualizations editor:
 
-<img src="images/visualization-editor-panes.png" alt="Panes of the Visualization editor" width="800"/>
+<img src="images/visualization-editor-panes.png" alt="Panes of the Visualization editor" width="100%"/>
 
   1. **Data Section**, where you will find the list of available fields in the selected dataset and the data editor. This tool is meant to help you slice-and-dice data according to your needs. You can use the search to find a data field, when the available fields are more than ten.
 

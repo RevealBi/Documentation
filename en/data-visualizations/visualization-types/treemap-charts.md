@@ -54,7 +54,7 @@ Information about the color and size characteristics of the tiles is similar to 
 
 You can drill up and down the treemap visualization to navigate between different hierarchy levels. To do this, *click on a big rectangle* area (irregardless of the tiles it contains). In the tooltip, select _Drill Down/Up to_.
 
-<img src="images/drill-down-select.png" alt="Select drill down in tooltip" width="800"/>
+<img src="images/drill-down-select.png" alt="Select drill down in tooltip" width="100%"/>
 
 #### Treemap Levels Specifics
 

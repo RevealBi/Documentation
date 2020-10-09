@@ -25,7 +25,7 @@ When your location data is in Japanese, Reveal translates it in English to conne
 
 If you use a Japanese dataset in Reveal, and your Language and Regional settings are not set to Japanese, then you need to use the *Data is written in* setting to help Reveal recognize the language of your dataset by switching to Japanese (_ja_):
 
-<img src="images/japanese-data-language.png" alt="Set the Language of Data to Japanese" width="800"/>
+<img src="images/japanese-data-language.png" alt="Set the Language of Data to Japanese" width="100%"/>
 
 
 #### Language of Labels

@@ -4,7 +4,7 @@ Reveal helps you get the most insight possible out of business data by providing
 
 ### What is a Visualization? 
 
-<img src="images/data-visualizations-example.png" alt="Reveal's log in screen" width="800"/>
+<img src="images/data-visualizations-example.png" alt="Reveal's log in screen" width="100%"/>
 
 Add description here.
 

@@ -3,14 +3,14 @@
 Welcome to Reveal!  
 When opening the app you'll be met with different login options:
 
-<img src="images/log-in-screen.png" alt="Reveal's log in screen" width="800"/>
+<img src="images/log-in-screen.png" alt="Reveal's log in screen" width="100%"/>
 
 Before jumping in, take into account that in Reveal you can join an **Organization**. If you are a member of an organization, you have to log in with your organization’s email. Choose Google (G Suite) or Microsoft (O365) as needed and you'll be associated with the organization team. Alternatively, you can log in using your iCloud (*Apple*) account credentials.
 
 > [!NOTE]
 > The organization team is named after your organization (e.g. your company's name).  
 
-<img src="images/limited-permission-sign-in-o365.png" alt="Permissions request sign in with Office 365" width="800"/>
+<img src="images/limited-permission-sign-in-o365.png" alt="Permissions request sign in with Office 365" width="100%"/>
 
 Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/supported-data-sources/OneDrive.md) and [Google Drive](~/en/datasources/supported-data-sources/Google-Drive.md).
 
@@ -18,7 +18,7 @@ Depending on which account you used to sign in Reveal, you will have your OneDri
 
 Once you get in, you are greeted with your first screen:
 
-<img src="images/reveal-initial-view.png" alt="First screen in Reveal with numbering added" width="800"/>
+<img src="images/reveal-initial-view.png" alt="First screen in Reveal with numbering added" width="100%"/>
 
 You always start in your personal space, **My Stuff**.
 

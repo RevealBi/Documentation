@@ -51,7 +51,7 @@ Candlestick charts, therefore, require:
   - **Four different fields** in the "Open", "High", "Low", and "Close"
     categories of the data editor.
 
-<img src="images/candlestick-chart-visualization-settings.png" alt="Candlestick chart visualization settings" width="800"/>
+<img src="images/candlestick-chart-visualization-settings.png" alt="Candlestick chart visualization settings" width="100%"/>
 
 There are also different options to add further information to your
 chart:

@@ -12,7 +12,7 @@ which provides key performance indicators for each area. Once you select
 on any visualizations to maximize it, Reveal opens another dashboard
 with more details for all projects.
 
-<img src="images/dashboard-linking-sample.png" alt="Dashboard linking sample" width="800"/>
+<img src="images/dashboard-linking-sample.png" alt="Dashboard linking sample" width="100%"/>
 
 It’s possible to associate actions to specific events. **Opening another
 dashboard** is one of two supported actions. The second one is **opening
