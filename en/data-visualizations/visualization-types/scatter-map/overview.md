@@ -128,7 +128,7 @@ You can even save the zoomed area and keep this view in the dashboard. You can z
 
 You can also use the zoom in the *Visualization Editor*.
 
-Zooming also allows you to change the clear shapes Reveal uses as a map background. At a chosen zoom level, you can replace the grey areas with detailed real maps, called *image files* provided by one of the following map services: 
+Zooming also allows you to change the clear shapes Reveal uses as a map background. At a chosen zoom level, you can replace the grey areas with detailed real maps, called *image tiles* provided by one of the following map services: 
 
 * Bing 
 * Esri

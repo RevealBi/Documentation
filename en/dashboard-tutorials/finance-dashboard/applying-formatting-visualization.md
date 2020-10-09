@@ -14,7 +14,8 @@ for Soylent Corp, you will need to modify the field in the data editor.
 Select **Actual Values** in the **Value** placeholder. Then, change the
 **Aggregation** to **Average** in the *General* menu.
 
-![GlobexValueAggregation\_All](images/GlobexValueAggregation_All.png)
+
+<img src="images/GlobexValueAggregation_All.png" alt="GlobexValueAggregation\_All" width="100%"/>
 
 Then, change **Type** to **Currency** under *Formatting*.
 
