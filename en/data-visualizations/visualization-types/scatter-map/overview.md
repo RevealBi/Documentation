@@ -137,4 +137,4 @@ Zooming also allows you to change the clear shapes Reveal uses as a map backgrou
 <img src="images/scatter-map-image-tiles-enabled
 .png" alt="A scatter map showing the average age of Population in East Asia zoomed in and using image tiles" width="100%"/>
 
-For more information on how to use your map se key in Reveal or how to view shared maps using image files, read the [Using Map Image Tiles](map-image-tiles.md) topic.
+For more information on how to use your map service *authentication token* in Reveal or how to view shared maps using image tiles, read the [Using Map Image Tiles](map-image-tiles.md) topic.
