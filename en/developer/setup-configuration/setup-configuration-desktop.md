@@ -8,7 +8,7 @@ To set up the Reveal Desktop SDK you can choose between:
 ### Using NuGet (Recommended)
 
 The easiest way to setup your WPF or WinForms application project is to
-install the **Infragistics.Reveal.Sdk.Wpf** NuGet package.
+install the **Reveal.Sdk.Wpf** NuGet package.
 
 After installing the Reveal SDK, you should be able to find a new NuGet
 package source added to your **nuget.config** called *Infragistics
@@ -18,13 +18,13 @@ package source added to your **nuget.config** called *Infragistics
 
 After ensuring you have the Infragistics (Local) feed properly
 configured by the installer, you can install the
-**Infragistics.Reveal.Sdk.Wpf** NuGet package to your application
+**Reveal.Sdk.Wpf** NuGet package to your application
 project.
 
 By installing the NuGet package, you will also install the following
 dependency packages:
 
-  - CefSharp.Wpf (57.0.0+)
+  - CefSharp.Wpf (83.4.20+)
   - SkiaSharp (1.68.0+)
   - System.Data.SQLite.Core (1.0.108+)
 
@@ -40,7 +40,7 @@ To setup your project manually you need to:
 
 2.  Install the following NuGet packages, which *RevealView* control
     depends on:
-      - CefSharp.Wpf (57.0.0+)
+      - CefSharp.Wpf (83.4.20+)
       - SkiaSharp (1.68.0+)
       - System.Data.SQLite.Core (1.0.108+)
 
