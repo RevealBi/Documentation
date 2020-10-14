@@ -8,15 +8,16 @@ To configure an Amazon Athena data source, you will need to enter the following 
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the _Select a Data Source_ dialog. By default, Reveal names it *Amazon Athena*. You can change it to your preference.
    
-2. **Region**: Amazon regions are listed with their names and codes in the dropdown. Choose the one associated with your Amazon account. 
+2. **Region**: Amazon regions are listed with their names and codes in the dropdown. Choose the one where the data you need is located. 
 
-3. **Credentials**: here you will be asked to provide the two parts of your AWS (Amazon Web Services) access key:
+3. **Credentials**: here you will be asked to provide the root or IAM user credentials: 
+   
    * *Access Key*
    * *Secret Key* 
 
    Add your credentials and click/tap the _Create and Use_ blue button. Upon successful connection, you will be returned to the previous dialog where *Workgroup* and *Query result location* become available to configure too. 
 
-   For more information about the AWS access key, please take a look at this [Amazon support article](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/).
+   For more information about the AWS credentials, please take a look at this [Amazon article](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
    
 4. *(Optional)* **Workgroup**: choosing one of your workgroups from the dropdown is *optional*. If you don't specify a workgroup, then the *primary* workgroup (which is the default workgroup in your Athena account) will be automatically selected. 
 5. *(Optional)* **Query result location**: this is the directory in *Amazon S3* where the results of your query will be stored. You need to provide a valid *S3* path, e.g.: *s3://query-results-bucket/folder/*. If you don't explicitly specify the path in this dialog, the results will be stored in the output location specified in the selected/default workgroup. If there is no output location created in the workgroup, your Athena query will fail.
