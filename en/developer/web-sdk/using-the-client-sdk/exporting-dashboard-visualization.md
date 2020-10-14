@@ -20,20 +20,20 @@ To enable a dashboard or a visualization export, you can:
 ### Prerequisites for Export as an Image Option
 
 You need to enable the **export image** functionality in the
-server-side. To do this, please refer to [Enabling server-side screenshot generation](~/en/developer/general/setup-configuration-web.html#server-side-image-export).
+server-side. To do this, please refer to [Enabling server-side screenshot generation](~/en/developer/setup-configuration/setup-configuration-web.html#server-side-image-export).
 
 <a name='enable-export-revealview'></a>
 ### Using the Export Setting
 
-To enable your end users to generate an image, document or a presentation out of a dashboard you simply need to set the relevant property to true when loading the dashboard:
+To enable your end users to generate an image, document or a presentation out of a dashboard you simply need to set the relevant property to true:
 
-- __$.ig.RevealSettings.showExportImage__ - for export as an **image**;
+- __revealView.showExportImage__ - for export as an **image**;
 
-- __$.ig.RevealSettings.showExportToPDF__ - for export as a **PDF** document;
+- __revealView.showExportToPDF__ - for export as a **PDF** document;
 
-- __$.ig.RevealSettings.showExportToPowerpoint__ - for export as a **PowerPoint** presentation;
+- __revealView.showExportToPowerpoint__ - for export as a **PowerPoint** presentation;
 
-- __$.ig.RevealSettings.showExportToExcel__ - for export in **Excel** data format.
+- __revealView.showExportToExcel__ - for export in **Excel** data format.
 
 This will make the *Export* button available in the overflow menu when a dashboard is opened or a particular visualization is maximized.
 

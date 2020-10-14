@@ -21,19 +21,16 @@ the described scenario:
 ``` html
 <script type="text/javascript">
     var dashboardId = 'Sales';
-    var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-    $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-        revealSettings.dashboard = dashboard;
-        revealSettings.showFilters = false;
-
-        window.revealView = new $.ig.RevealView("#revealView", revealSettings);
+    $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
+       var revealView = window.revealView = new $.ig.RevealView("#revealView");
+        revealView.showFilters = false;
+        revealView.dashboard = dashboard;
     }, function (error) {
         console.log(error);
     });
     function setSelectedTerritory(territory) {
-        var filter = window.revealView.dashboard.getFilterByTitle('Territory');
-        window.revealView.setFilterSelectedValues(filter, [territory]);
+        window.revealView.dashboard.filters.getByTitle('Territory').selectedValues = [territory];
     }
 </script>
 
@@ -60,15 +57,15 @@ but other lists of values might change. In this case, if a new Territory
 is added to the list, a new button will not be automatically added.
 
 You can use
-__$.ig.RevealUtility.getFilterValues__
-to get the list of values for a given filter, in this case the following
+__$.ig.RVRVDashboardFilter.getFilterValues__
+method to get the list of values for a given filter, in this case the following
 call will leave an array with five
 __$.ig.RVFilterValue__
 objects in \_window.territories\</emphasis\>:
 
 ``` js
-var filter = window.revealView.dashboard.getFilterByTitle('Territory');
-$.ig.RevealUtility.getFilterValues(dashboard, filter, function (values) {
+var filter = window.revealView.dashboard.getByTitle('Territory');
+filter.getFilterValues(function (values) {
     window.territories = values;
 }, function (error) {
     console.log(error);
@@ -77,23 +74,21 @@ $.ig.RevealUtility.getFilterValues(dashboard, filter, function (values) {
 
 You can then use the *label* attribute from
 __$.ig.RVFilterValue__
-to display the name of the territory and the \_values\</emphasis\>
+to display the name of the territory and the __values__
 attribute to set the selection in the filter. The following code snippet
 shows how to populate a ComboBox to automatically select the Territory:
 
 ``` html
 <script type="text/javascript">
     var dashboardId = 'Sales';
-    var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-    $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-        revealSettings.dashboard = dashboard;
-        revealSettings.showFilters = false;
+    $.ig.RVDashaboard.loadDashboard(dashboardId, function (dashboard) {
+        var revealView = window.revealView = new $.ig.RevealView("#revealView");
+        revealView.showFilters = false;
+        revealView.dashboard = dashboard;
 
-        window.revealView = new $.ig.RevealView("#revealView", revealSettings);
-
-        var filter = window.revealView.dashboard.getFilterByTitle('Territory');
-        $.ig.RevealUtility.getFilterValues(dashboard, filter, function (values) {
+        var filter = revealView.dashboard.filters.getByTitle('Territory');
+        filter.getFilterValues(function (values) {
             window.territories = values;
             var buttonsPanel = $('#buttonsPanel')[0];
             for (var i = 0; i < values.length; i++) {
@@ -107,8 +102,8 @@ shows how to populate a ComboBox to automatically select the Territory:
         console.log(error);
     });
     function setSelectedTerritory(territory) {
-        var filter = window.revealView.dashboard.getFilterByTitle('Territory');
-        window.revealView.setFilterSelectedValues(filter, [territory]);
+        var filter = window.revealView.dashboard.getByTitle('Territory');
+        filter.selectedValues = [territory]);
     }
 </script>
 

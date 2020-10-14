@@ -55,7 +55,7 @@ Create a new *Reveal SDK* folder in the project and add the
 **IRevealSdkContext** interface:
 
 ``` csharp
-   using Infragistics.Sdk;
+    using Reveal.Sdk;
     using System;
     using System.IO;
     using System.Reflection;
@@ -105,15 +105,15 @@ To do this, add the following code to **ConfigureServices** method in
 And the necessary references in the same file:
 
 ``` csharp
-   using Demo1.RevealSDK;
-    using Infragistics.Sdk;
+    using Demo1.RevealSDK;
+    using Reveal.Sdk;
 ```
 
 Step 3 sample **[git
 commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/44340ad7154f7101f80fce4aea50153ccbd902d7)**.
 
 If you experience any issues, please refer to the [**Setup
-and Configuration (Web)**](~/en/developer/general/setup-configuration-web.md)
+and Configuration (Web)**](~/en/developer/setup-configuration/setup-configuration-web.md)
 topic.
 
 ### Step 4 - Embed Reveal in your Client application
@@ -182,46 +182,48 @@ Then, add a new action method in **HomeController.cs**:
     }
 ```
 
-One of the third party references that Reveal uses is **Day.js** so
-let’s add reference to it in **\_Layout.cshtml** along with the other
-scripts included:
+Let’s add some references to scripts & css files for some third party dependencies of Reveal in **\_Layout.cshtml** :
 
-``` csharp
+``` html
    <script src="https://unpkg.com/dayjs"></script>
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+   <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 ```
 
 To continue, create a new Reveal folder in the *wwwroot* folder of the
 project. Copy there **infragistics.reveal.js**, which you can find in
-the installation folder of the *Reveal SDK*:
+the **\<InstallationDirectory\>\\SDK\\Web\\JS\\Client** of the *Reveal SDK*:
 
 ![wwwroot folder hierarchy](images/wwwroot-folder.png)
 
 And then reference this library in **\_Layout.cshtml** after the scripts
 for Day.js:
 
-``` csharp
+``` html
    <script src="~/Reveal/infragistics.reveal.js"></script>
 ```
 
 In the same file, also remove the footer section and add a link in the
 navigation for the new page:
 
-``` csharp
+``` html
    <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Marketing">Marketing</a>
-    </li>
+   </li>
 ```
 
 Let’s update the script in **Marketing.cshtml** with the logic for
 loading the dashboard:
 
-``` csharp
-   var dashboardId = "Marketing.rdash";
-    var revealSettings = new $.ig.RevealSettings(dashboardId);
+``` js
+    var dashboardId = "Marketing.rdash";
 
-    $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-        revealSettings.dashboard = dashboard;
-        var revealView = new $.ig.RevealView("#revealView", revealSettings);
+    $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
+        var revealView = new $.ig.RevealView("#revealView");
+        revealView.dashboard = dashboard;
     }, function (error) {
         //Process any error that might occur here
     });
@@ -235,7 +237,7 @@ page](images/marketing-dashboard-result.png)
 Step 4 sample **[git
 commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/380d369b46437c3913ed3c61de32a7f607b96b47)**.
 
-If you experience any issues, please refer to the [**Setup and Configuration (Web)**](~/en/developer/general/setup-configuration-web.md)
+If you experience any issues, please refer to the [**Setup and Configuration (Web)**](~/en/developer/setup-configuration/setup-configuration-web.md)
 topic.
 
 ### Step 5 - Use Reveal Fonts
@@ -281,7 +283,7 @@ For font loading improvements add a reference to the Google Web Font
 Loader in **\_Layout.cshtml** next to the infragistics.reveal.js
 reference:
 
-``` csharp
+``` html
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 ```
 
@@ -296,11 +298,10 @@ take advantage of the font loader:
         },
         active: function () {
             var dashboardId = "Marketing.rdash";
-            var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-            $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-                revealSettings.dashboard = dashboard;
-                var revealView = new $.ig.RevealView("#revealView", revealSettings);
+            $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
+                var revealView = new $.ig.RevealView("#revealView");
+                revealView.dashboard = dashboard;
             }, function (error) {
                 //Process any error that might occur here
             });
@@ -349,7 +350,7 @@ In **\_Layout.cshtml** make the following changes:
 
 <!-- end list -->
 
-``` csharp
+``` html
    <header>
         <div class="header">
             <img class="logo" src="~/img/logo.png" alt="logo" />

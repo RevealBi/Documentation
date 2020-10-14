@@ -17,15 +17,13 @@ Creating your own theme in Reveal is as easy as creating an instance of the new 
 
 When creating a new __$.ig.RevealTheme__ instance, you will get the default values for each setting and you can modify them as needed.
 
-Then, pass the theme instance to the __updateRevealTheme(theme)__ method. If you have a dashboard or another Reveal component already displayed on your screen, you will need to render it again in order to see the applied changes.
+Then, pass the theme instance to the __$.ig.RevealSdkSettings__'s class static theme property. If you have a dashboard or another Reveal component already displayed on your screen, you will need to render it again(set the dashboard property again) in order to see the applied changes.
 
 ### Common Use Case: Modifying a Custom Theme
 
 You may have already applied your own theme but want to modify some of the settings without losing the changes you made to the others.
 
-In this case, you need to call the __getCurrentTheme()__ method. This method enables you to get the last values you have set for your RevealTheme settings. Unlike the case when you create a new instance of the RevealTheme from scratch, after applying your changes and updating your theme again, you will get the current values for each setting you didn’t modify instead of the default values.
-
-Both the __getCurrentTheme()__ and the __updateRevealTheme(theme)__ methods are accessible through the __$.ig.RevealView__ class.
+In this case, you need to get the theme static property from the __$.ig.RevealSdkSettings__. This enables you to get the last values you have set for your RevealTheme settings. Unlike the case when you create a new instance of the RevealTheme from scratch, after applying your changes and updating your theme again, you will get the current values for each setting you didn’t modify instead of the default values.
 
 ### Code Example
 
@@ -46,7 +44,7 @@ revealTheme.fontColor = "rgb(31, 59, 84)";
 revealTheme.accentColor = "rgb(192, 80, 77)";
 revealTheme.dashboardBackgroundColor = "rgb(232, 235, 252)";
 
-$.ig.RevealView.updateRevealTheme(revealTheme);
+$.ig.RevealSdkSettings.theme = revealTheme;
 
 ```
 
@@ -89,7 +87,7 @@ Apply the settings of a chosen pre-built theme by using the *UpdateCurrentTheme*
 ***Mountain Light Theme***
 
 ``` js
-$.ig.RevealView.UpdateCurrentTheme(new $.ig.MountainLightTheme());
+$.ig.RevealSdkSettings.theme = new $.ig.MountainLightTheme();
 ```
 
 > [!NOTE]
@@ -97,17 +95,17 @@ $.ig.RevealView.UpdateCurrentTheme(new $.ig.MountainLightTheme());
 
 ***Mountain Dark Theme***
 ``` js
-$.ig.RevealView.UpdateCurrentTheme(new $.ig.MountainDarkTheme());
+$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();
 ```
 
 ***Ocean Light Theme***
 ``` js
-$.ig.RevealView.UpdateCurrentTheme(new $.ig.OceanLightTheme());
+$.ig.RevealSdkSettings.theme = new $.ig.OceanLightTheme();
 ```
 
 ***Ocean Dark Theme***
 ``` js
-$.ig.RevealView.UpdateCurrentTheme(new $.ig.OceanDarkTheme());
+$.ig.RevealSdkSettings.theme = new $.ig.OceanDarkTheme();
 ```
 
 #### How the Built-In Themes Look? 
