@@ -3,6 +3,8 @@
   new: true
 - name: Amazon Redshift
   href: redshift.md
+- name: Amazon S3
+  href: amazon-s3.md
   new: true
 - name: Box
   href: box.md
