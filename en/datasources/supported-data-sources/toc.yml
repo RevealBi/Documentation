@@ -1,3 +1,6 @@
+- name: Amazon Athena
+  href: athena.md
+  new: true
 - name: Amazon Redshift
   href: redshift.md
   new: true
