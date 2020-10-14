@@ -2,7 +2,7 @@
 
 ### Overview
 
-As described in [**Loading Dashboard Files**](~/en/developer/web-sdk/using-the-server-sdk/loading-dashboards-server-we.md), there are two ways to handle how you save changes to dashboards:
+As described in [**Loading Dashboard Files**](~/en/developer/web-sdk/using-the-server-sdk/loading-dashboards.md), there are two ways to handle how you save changes to dashboards:
   - **Client-side**: To use this method you need to set a function in the __onSave__
   attribute of the __revealView__ object. This is the recommended approach as it gives more flexibility to the containing app on how operations (save and save as) are performed.
 
@@ -20,7 +20,7 @@ As described in [**Loading Dashboard Files**](~/en/developer/web-sdk/using-the-s
     In case you don’t want to handle the save action, you can turn off the option to edit dashboards by setting:
 
     ``` js
-    revealSettings.canSaveAs = false;
+    revealView.canSaveAs = false;
     ```
 
     This might be useful, for example, when your users are not supposed to make changes.
@@ -31,4 +31,4 @@ As described in [**Loading Dashboard Files**](~/en/developer/web-sdk/using-the-s
   client-side but you lose flexibility client-side. This means, for
   example, that the user cannot select the final location where the
   dashboard will be stored. For further details about the SDK context, please refer to
-  [**Defining the Server Context.**](~/en/developer/general/setup-configuration-web.html#defining-server-context).
+  [**Defining the Server Context.**](~/en/developer/setup-configuration/setup-configuration-web.html#defining-server-context).

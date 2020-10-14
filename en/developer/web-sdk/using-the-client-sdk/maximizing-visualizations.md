@@ -24,30 +24,29 @@ information displayed on each division’s home page.
 
 ### Maximizing Visualizations
 
-To open a dashboard with a maximized visualization, you need to use the
-__MaximizedVisualization__
-attribute of
-__$.ig.RevealSettings__.
+To open a dashboard with a maximized visualization, you need to set the dashboardProperty of the revealView and then
+set it's property by passing the visualization you want maximized
+__maximizedVisualization__
+property by passing the visualization you want maximized
+__$.ig.RevealView__ instance.
 When you don’t set a visualization in this attribute, the whole
 dashboard is displayed.
 
 As shown in [**Configuring the $.ig.RevealView object**](configuring-revealview.md), you can display a specific dashboard in your page. This time, you also need to set the
-__MaximizedVisualization__
-attribute. As shown in the code snippet below with the visualization "Sales" from the dashboard with ID "AllDivisions".
+__maximizedVisualization__
+property. As shown in the code snippet below with the visualization "Sales" from the dashboard with ID "AllDivisions".
 
 ``` html
 <script type="text/javascript">
 ...
 
 var dashboardId = 'AllDivisions';
-var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-$.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-    revealSettings.dashboard = dashboard;
+$.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
+    var revealView = new $.ig.RevealView("#revealView");
+    revealView.dashboard = dashboard;
+    revealView.maximizedVisualization = dashboard.visualizations.getByTitle('Sales');
 
-    revealSettings.maximizedVisualization = dashboard.getVisualizationByTitle('Sales');
-
-    new $.ig.RevealView("#revealView", revealSettings);
 }, function (error) {
     console.log(error);
 });
@@ -72,13 +71,13 @@ __singleVisualizationMode__
 to true as shown below.
 
 ``` js
-$.ig.revealSettings.singleVisualizationMode = true;
+revealView.singleVisualizationMode = true;
 ```
 
 After adding this single line, the dashboard will work as a single
-visualization dashboard. You can can do the same for each division’s
+visualization dashboard. You can do the same for each division’s
 home page, just replace the title of the visualization in
-__getVisualizationByTitle__
+dashboard.visualizations.getByTitle()
 with the right one.
 
 #### Dynamically changing a locked visualization
@@ -97,21 +96,19 @@ as shown below:
 ``` html
 <script type="text/javascript">
     var dashboardId = 'AllDivisions';
-    var revealSettings = new $.ig.RevealSettings(dashboardId);
 
-    $.ig.RevealUtility.loadDashboard(dashboardId, function (dashboard) {
-        revealSettings.dashboard = dashboard;
-        revealSettings.singleVisualizationMode = true;
-        revealSettings.maximizedVisualization = dashboard.getVisualizationByTitle('Sales');
+    $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
+        var revealView = window.revealView = new $.ig.RevealView("#revealView");
+        revealView.singleVisualizationMode = true;
+        revealView.dashboard = dashboard;
+        revealView.maximizedVisualization = dashboard.visualizations.getByTitle('Sales');
 
-        window.revealView = new $.ig.RevealView("#revealView", revealSettings);
     }, function (error) {
         console.log(error);
     });
     function maximizeVisualization(title) {
-        window.revealView.maximizeVisualization(
-            window.revealView.dashboard.getVisualizationByTitle(title)
-        );
+        var dashboard = window.revealView.dashboard;
+        window.revealView.maximizedVisualization = dashboard.visualizations.getByTitle(title);
     }
 </script>
 
@@ -129,7 +126,7 @@ To take into account:
   - The
     __$.ig.RevealView__
     object is set in \_window.revealView\</emphasis\> in order to use it
-    later when **maximizeVisualization** is called.
+    later when **maximizeVisualization** property is set.
   - The buttons added to the section before the div are used just as an
     example. They were added as a means to switch the maximized
     visualization, in your case you’ll have to to use a similar code in

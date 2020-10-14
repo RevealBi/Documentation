@@ -51,16 +51,18 @@ Please note that the “employees” parameter passed to the “RVInMemoryDataSo
 
 Creating dashboards from scratch is really simple, you just need to:
 
-  - Initialize __$.ig.RevealView__ and __$.ig.RevealSettings__ object, without setting the dashboard attribute to $.ig.RevealSettings and without using __$.ig.RevealUtility.loadDashboard__;
+  - Initialize __$.ig.RevealView__ object, without setting the dashboard property to $.ig.RevealView and without using __$.ig.RVDashboard.loadDashboard__;
 
   - Set *startInEditMode* to true, to start the dashboard in edit mode:
+
+  - Set the dashboard property to newly created instance of __$.ig.RVDashboard__
 
 <!-- end list -->
 
 ``` js
-var revealSettings = new $.ig.RevealSettings(null);
-revealSettings.startInEditMode = true;
-var revealView = new $.ig.RevealView("#revealView", revealSettings);
+var revealView = new $.ig.RevealView("#revealView");
+revealView.startInEditMode = true;
+revealView.dashboard = new $.ig.RVDashboard;
 ```
 
 You can find a working example, **CreateDashboard.cshtml**, in the

@@ -4,13 +4,13 @@ When embedding Reveal into web applications, the architecture is
 slightly more complex than with native apps, as two components are
 always involved:
 
-  - **Reveal Client SDK**: a set of JavaScript libraries and CSS files
+  - **Reveal Client SDK**: a set of JavaScript libraries 
     that needs to be integrated into the web application. The frameworks
     supported today are: jQuery, Angular and React.
 
   - **Reveal Server SDK**: the server-side component to be integrated
     into the server application, currently this is an ASP.NET Core
-    application using .NET Runtime v4.6.1 or later. In the near future a
+    application using .NET Runtime v4.6.2 or later. In the near future a
     library using .NET Core will be released.
 
 In the following diagram you visualize the architecture for a web
@@ -32,9 +32,9 @@ You can host the client-side and the server-side parts separately i.e. on differ
 To achieve this, set a property on the window object, as shown below:
 
 ``` js
-window.IGAppBaseURL = "{back-end base url}";
+$.ig.RevealSdkSettings.setBaseUrl("{back-end base url}");
 ```
 
 Please, note that the **trailing slash symbol is required** in order to set the property successfully.
 
-Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en/developer/general/setup-configuration-web.html#instantiate-web-client-sdk).
+Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en/developer/setup-configuration/setup-configuration-web.html#instantiate-web-client-sdk).
