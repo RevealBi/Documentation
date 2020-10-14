@@ -24,7 +24,7 @@ To configure an Amazon Athena data source, you will need to enter the following 
    >[!NOTE]
    > If you have specified your Query result location (QRL) in Reveal, but you can't find your output in this location, please check  your workgroup configuration in Athena for settings that prevent you from using custom QRLs. For more information, take a look at [Specifying a Query Result Location](https://docs.aws.amazon.com/athena/latest/ug/querying.html#query-results-specify-location) in Athena's documentation. 
 
-6. **Athena Data Source**: also known as _Data Catalog_ containing databases. You can choose it from the list of that will appear after you connect to your Athena account (see steps 1-3). 
+6. **Athena Data Source**: also known as _Data Catalog_ containing databases. You can choose it from the list that will appear after you connect to your Athena account (see steps 1-3). 
 
 ### Setting Up Your Data
 
@@ -35,7 +35,7 @@ After configuring your Athena data source connection, you will be prompted to ch
 After selecting a database, you can choose from the *tables* or [*views*](https://docs.aws.amazon.com/athena/latest/ug/views.html) inside it. 
 
 In the screenshot above, the **motor_vehicle_collisions_time** view contains a modified version of the data in the **motor_vehicle_collisions** table in Athena. 
-In the screenshot below, the visualization on the left is built with the data in the table, and the the one on the right uses the data contained in the view.  
+In the screenshot below, the visualization on the left is built with the data in the table, and the one on the right uses the data contained in the view.  
 
 <img src="images/collisions-time-athena-view-sample.png" alt="Sample dashboard using Redshift tables and view data" width="100%"/>
 
