@@ -27,15 +27,15 @@ The code below shows how to configure the *data source selection* screen to show
 ``` js
 window.revealView.onDataSourcesRequested = function (callback) {
     var inMemoryDSI = new $.ig.RVInMemoryDataSourceItem("employees");
-    inMemoryDSI.title("Employees");
-    inMemoryDSI.description("Employees");
+    inMemoryDSI.title = "Employees";
+    inMemoryDSI.description = "Employees";
 
     var sqlDs = new $.ig.RVSqlServerDataSource();
-    sqlDs.title("Clients");
-    sqlDs.id("SqlDataSource1");
-    sqlDs.host("db.mycompany.local");
-    sqlDs.port(1433);
-    sqlDs.database("Invoices");
+    sqlDs.title = "Clients";
+    sqlDs.id = "SqlDataSource1";
+    sqlDs.host = "db.mycompany.local";
+    sqlDs.port = 1433;
+    sqlDs.database ="Invoices";
 
     callback(new $.ig.RevealDataSources([sqlDs], [inMemoryDSI], false));
 };
@@ -62,7 +62,7 @@ Creating dashboards from scratch is really simple, you just need to:
 ``` js
 var revealView = new $.ig.RevealView("#revealView");
 revealView.startInEditMode = true;
-revealView.dashboard = new $.ig.RVDashboard;
+revealView.dashboard = new $.ig.RVDashboard();
 ```
 
 You can find a working example, **CreateDashboard.cshtml**, in the
