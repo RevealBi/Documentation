@@ -30,7 +30,7 @@ Follow the steps below to localize the *Marketing* dashboard title to *Localized
     **LocalizationProvider** property to your custom implementation:
 
     ``` csharp
-    RevealView.LocalizationProvider = new UpMediaLocalizationProvider()
+    RevealSdkSettings.LocalizationProvider = new UpMediaLocalizationProvider()
     ```
 
 2.  Implement the **IRVLocalizationProvider**:

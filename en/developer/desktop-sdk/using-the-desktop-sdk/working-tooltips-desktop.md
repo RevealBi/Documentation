@@ -27,10 +27,10 @@ In the following code snippet, you can see how to disable tooltips for a visuali
 private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
 {
        if (e.Visualization.Title == "NoNeedForTooltips")
-            {
-                 e.Cancel = true;
-            }
-             Debug.WriteLine($"TooltipShowing: Visualization: {e.Visualization.Title}, Cell: {e.Cell}, Row: {e.Row}");
+       {
+            e.Cancel = true;
+       }
+       Debug.WriteLine($"TooltipShowing: Visualization: {e.Visualization.Title}, Cell: {e.Cell}, Row: {e.Row}");
 }
 
 ```

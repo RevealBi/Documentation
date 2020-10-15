@@ -35,8 +35,8 @@ private void RevealView_DataSourcesRequested(object sender, DataSourcesRequested
     sqlDs.Database = "Invoices";
 
     e.Callback(new RevealDataSources(
-            new List<object>() { sqlDs },
-            new List<object>() { inMemoryDSI },
+            new List<RVDashboardDataSource> { sqlDs },
+            new List<RVDataSourceItem> { inMemoryDSI },
             false));
 }
 ```
@@ -58,15 +58,13 @@ Please note that the “employees” parameter passed to the
 ### Creating New Dashboards
 
 Creating dashboards from scratch is really simple. You just need to
-initialize __RevealView__ and
-__RevealSettings__ object,
-with a null dashboard value specified in RevealSettings and without
-using
-__RevealUtility.LoadDashboard__.
-
+initialize __RevealView__. Usually when providing the users the capability to create a dashboard from scratch you would want to open the empty dashboard directly in edit mode so the user could start editing it straight away. 
 ``` csharp
-revealView.Settings = new RevealSettings(null);
+revealView = new RevealView();
+revealView.StartInEditMode = true;
 revealView.DataSourcesRequested += RevealView_DataSourcesRequested;
+
+revealView.Dashboard = new RVDashboard();
 ```
 
 You can find a working example in the **EmptyDashboard.xaml.cs** view in the *UpMedia* WPF application distributed with the SDK.

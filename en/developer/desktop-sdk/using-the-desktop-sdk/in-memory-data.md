@@ -50,7 +50,7 @@ As simplified Employee has only the following properties:
 Now you need to visualize the dashboard using your own data instead of the dummy one.
 
 1.  Implement
-    __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealView__,
+    __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealSdkSettings__,
     as described in [**Replacing Data Sources**](replacing-data-sources.md).
 
     Then, in the implementation for the method __ChangeVisualizationDataSourceItemAsync__, you need to add a code similar to this one:

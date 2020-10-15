@@ -26,8 +26,8 @@ information displayed on each division’s home page.
 
 To open a dashboard with a maximized visualization, you need to use the
 __MaximizedVisualization__
-attribute of
-__RevealSettings__. When you
+property of
+__RevealView__ after you have assigned the revealView.Dashboard property. When you
 don’t set a visualization in this attribute, the whole dashboard is
 displayed.
 
@@ -40,11 +40,9 @@ attribute. As shown in the code snippet below with the visualization
 var revealView = new RevealView();
 using (var fileStream = File.OpenRead(path))
 {
-    var dashboard = await RevealUtility.LoadDashboard(fileStream);
-
-    var settings = new RevealSettings(dashboard);
-    settings.MaximizedVisualization = dashboard.GetVisualizationByTitle("Sales");
-    revealView.Settings = settings;
+    var dashboard = new RVDashboard(fileStream);
+    revealView.Dashboard = dashboard;
+    revealView.MaximizedVisualization = dashboard.Visualizations.GetByTitle("Sales");
 }
 ```
 
@@ -64,13 +62,13 @@ __SingleVisualizationMode__
 property to true, as shown below.
 
 ``` csharp
-settings.SingleVisualizationMode = true;
+revealView.SingleVisualizationMode = true;
 ```
 
 After adding this single line, the dashboard will work as a single
 visualization dashboard. You can do the same for each division’s home
 page, just replace the title of the visualization in
-__GetVisualizationByTitle__
+__dashboard.Visualizations.GetByTitle()__
 with the right one.
 
 #### Dynamically changing a locked visualization
@@ -84,13 +82,15 @@ updated.
 
 You can achieve this scenario by using the
 __MaximizeVisualization__
-method in __RevealView__, as
+method in __RevealView__ or set the __MaximizedVisualization__ property, as
 shown below:
 
 ``` csharp
 private void MaximizeVisualization(string title)
         {
-            revealView.MaximizeVisualization(revealView.Dashboard.GetVisualizationByTitle(title));
+            revealView.MaximizeVisualization(revealView.Dashboard.Visualizations.GetTitle(title));
+            //or set the property
+            revealView.MaximizedVisualization = revealView.Dashboard.Visualizations.GetTitle(title);
         }
 ```
 

@@ -33,15 +33,12 @@ var revealView = new RevealView();
 
 using (var fileStream = File.OpenRead(path))
 {
-    var dashboard = await RevealUtility.LoadDashboard(fileStream);
+    var dashboard = new RVDashboard(fileStream);
 
-    var settings = new RevealSettings(dashboard);
-    settings.DateFilter = new RVDateDashboardFilter(RVDateFilterType.YearToDate);
-    settings.SetFilterSelectedValues(
-        dashboard.GetFilterByTitle("Territory"),
-        new List<object>() { CurrentUser.Territory }
-    );
-    revealView.Settings = settings;
+    dashboard.DateFilter = new RVDateDashboardFilter(RVDateFilterType.YearToDate);
+    dashboard.Filters.GetByTitle("Territory").SelectedValues = new List<object>() { CurrentUser.Territory };
+
+    revealView.Dashboard = dashboard;
 }
 ```
 
@@ -58,7 +55,7 @@ __RevealView__ object to hide
 the panel containing the dashboard filters:
 
 ``` csharp
-settings.ShowFilters = false;
+revealView.ShowFilters = false;
 ```
 
 That setting will restrict users to see data only for their associated

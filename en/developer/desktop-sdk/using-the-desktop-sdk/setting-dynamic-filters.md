@@ -21,15 +21,11 @@ the described scenario:
 ``` csharp
 private void Americas_Click(object sender, RoutedEventArgs e)
 {
-    revealView.SetFilterSelectedValues(
-        revealView.Dashboard.GetFilterByTitle("Territory"),
-        new List<object>() { "Americas" });
+    revealView.Dashboard.Filters.GetByTitle("Territory").SelectedValues = new List<object>() { "Americas" };
 }
 private void APAC_Click(object sender, RoutedEventArgs e)
 {
-    revealView.SetFilterSelectedValues(
-        revealView.Dashboard.GetFilterByTitle("Territory"),
-        new List<object>() { "APAC" });
+    revealView.Dashboard.Filters.GetByTitle("Territory").SelectedValues = new List<object>() { "APAC" };
 }
 ```
 
@@ -58,14 +54,11 @@ with all territories:
 using (var stream = File.OpenRead(@"..\..\Sales.rdash"))
 {
     var dashboard = await RevealUtility.LoadDashboard(stream);
-    var settings = new RevealSettings(dashboard);
 
-    revealView.Settings = settings;
-
-    var filterValues = await RevealUtility.GetFilterValues(
-        dashboard,
-        dashboard.GetFilterByTitle("Territory"));
+    var filterValues = await dashboard.Filters.GetByTitle("Territory").GetFilterValuesAsync();
     var territories = filterValues.ToList();
+
+    revealView.Dashboard = dashboard;
 
     foreach (var t in territories)
     {
@@ -93,9 +86,8 @@ private void CmbTerritories_SelectionChanged(object sender, SelectionChangedEven
     {
         selectedItems.Add(filterValue.Value);
     }
-    revealView.SetFilterSelectedValues(
-         revealView.Dashboard.GetFilterByTitle("Territory"),
-         selectedItems);
+
+    await dashboard.Filters.GetByTitle("Territory").SelectedItems = selectedItems;
 }
 ```
 
@@ -113,7 +105,7 @@ To set one of the predefined filters you can use a similar code to the
 following:
 
 ``` csharp
-revealView.SetDateFilter(new RVDateDashboardFilter(RVDateFilterType.YearToDate));
+revealView.Dashboard.DateFilter = new RVDateDashboardFilter(RVDateFilterType.YearToDate);
 ```
 
 If you want a list of all predefined date filters, please refer to
@@ -126,10 +118,10 @@ To set a custom range, for example for the last 15 days, you can use a
 code similar to the following:
 
 ``` csharp
-revealView.SetDateFilter(
+revealView.Dashboard.DateFilter = 
     new RVDateDashboardFilter(
         RVDateFilterType.CustomRange,
-        new RVDateRange(DateTime.UtcNow.AddDays(-15), DateTime.UtcNow)
+         new RVDateRange(DateTime.UtcNow.AddDays(-15), DateTime.UtcNow)
 ));
 ```
 
