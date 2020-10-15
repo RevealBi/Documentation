@@ -24,11 +24,9 @@ information displayed on each division’s home page.
 
 ### Maximizing Visualizations
 
-To open a dashboard with a maximized visualization, you need to set the dashboardProperty of the revealView and then
-set it's property by passing the visualization you want maximized
+To open a dashboard with a maximized visualization, you need to set the dashboard property of __revealView__ first. Then, set the
 __maximizedVisualization__
-property by passing the visualization you want maximized
-__$.ig.RevealView__ instance.
+property by passing the visualization you want maximized to the __$.ig.RevealView__ instance.
 When you don’t set a visualization in this attribute, the whole
 dashboard is displayed.
 

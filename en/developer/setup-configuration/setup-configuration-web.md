@@ -197,7 +197,6 @@ To set up the Reveal Web Client SDK you need to:
 
 3.  [**Instantiate the Web Client SDK**](#instantiate-web-client-sdk).
 
-<!-- 4.  _(Optional)_ [**Configure Support for React / Angular**](#web-component-support). -->
 
 <a name='check-dependencies'></a>
 
@@ -276,26 +275,3 @@ To get started follow these steps:
   </body>
 </html>
 ```
-
-<!-- <a name='web-component-support'></a>
-
-#### 4\. _(Optional)_ Configuring Support for React / Angular
-
-On the front end, Reveal provides a Web Component that provides
-compatibility with Angular and React.
-
-The following snippet shows what you need to add on the client side:
-
-```html
-<script src="~/Reveal/reveal-webComponent.js"></script>
-<section>
-    <reveal-view dashboard-name="Sales" can-edit="" editing="" show-menu="" can-add-visualization=""</reveal-view>
-</section>
-```
-
-Please note that the Web Component also requires other dependencies to be included (jQuery 2.2+ and Infragistics.reveal.js).
-
-You can find the following two JS files at "\<InstallationDirectory\>\\Web\\JS":
-
-- **reveal-webComponent.js**
-- **reveal-WebComponent-ie11.js** -->

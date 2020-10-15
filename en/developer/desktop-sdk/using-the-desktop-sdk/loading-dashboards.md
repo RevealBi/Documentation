@@ -21,10 +21,10 @@ public partial class MainWindow : Window
 
         var revealView = new RevealView();
 
-        // using path on the file system
+        // using a path within the file system
         RVDashboard dashboard = new RVDashboard(path);
 
-        // using s stream to create an RVDashboard object
+        // using a stream to create an RVDashboard object
         using (var fileStream = File.OpenRead(path))
         {
             dashboard = new RVDashboard(fileStream);

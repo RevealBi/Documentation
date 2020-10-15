@@ -57,7 +57,7 @@ but other lists of values might change. In this case, if a new Territory
 is added to the list, a new button will not be automatically added.
 
 You can use
-__$.ig.RVRVDashboardFilter.getFilterValues__
+__$.ig.RVDashboardFilter.getFilterValues__
 method to get the list of values for a given filter, in this case the following
 call will leave an array with five
 __$.ig.RVFilterValue__

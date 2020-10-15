@@ -33,7 +33,7 @@ In the case that the user changed the name of the dashboard, you can use the met
 In case you don’t want to handle the save action, you can turn off the option to edit dashboards by setting:
 
 ``` csharp
-_revealView.CanEdit = false;
+revealView.CanEdit = false;
 ```
 
 This might be useful, for example, when your users are not supposed to make changes.
