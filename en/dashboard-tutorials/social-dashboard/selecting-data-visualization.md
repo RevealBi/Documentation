@@ -41,6 +41,6 @@ Once you are done, go back to the Dashboard Editor by selecting the
 
 </style>
 
-<a href="social-starting-creation-process.md" class="previous">&laquo; Previous Step</a>
-<a href="social-creating-dashboard-filter-connecting-visualization.md" class="next">Next Step &raquo;</a>
+<a href="creating-the-dashboard.md" class="previous">&laquo; Previous Step</a>
+<a href="creating-dashboard-filter-connecting-visualization.md" class="next">Next Step &raquo;</a>
 

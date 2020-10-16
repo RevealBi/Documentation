@@ -36,5 +36,5 @@ default in the [Visualizations Editor](visualizations-editor.md).
 
 </style>
 
-<a href="finance-dashboard-tutorial.md" class="previous">&laquo; Finance Dashboard</a>
-<a href="finance-selecting-data-visualization.md" class="next">Next Step &raquo;</a>
+<a href="dashboard-tutorial.md" class="previous">&laquo; Finance Dashboard</a>
+<a href="selecting-data-visualization.md" class="next">Next Step &raquo;</a>

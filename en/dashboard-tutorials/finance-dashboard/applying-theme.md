@@ -19,5 +19,5 @@ In this sample, we will use the **Ocean Theme** theme. Select
 
 </style>
 
-<a href="finance-applying-formatting-visualization.md" class="previous">&laquo; Previous Step</a>
-<a href="finance-adding-other-visualizations.md" class="next">Next Step &raquo;</a>
+<a href="applying-formatting-visualization.md" class="previous">&laquo; Previous Step</a>
+<a href="adding-other-visualizations.md" class="next">Next Step &raquo;</a>

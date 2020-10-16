@@ -41,6 +41,6 @@ Your visualization should look like the following one:
 
 </style>
 
-<a href="manufacturing-starting-creation-process.md" class="previous">&laquo; Previous Step</a>
-<a href="manufacturing-applying-formatting-visualization.md" class="next">Next Step &raquo;</a>
+<a href="starting-creation-process.md" class="previous">&laquo; Previous Step</a>
+<a href="applying-formatting-visualization.md" class="next">Next Step &raquo;</a>
  

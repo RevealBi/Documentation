@@ -50,5 +50,5 @@ Your visualization will the look like the following one:
 
 </style>
 
-<a href="social-selecting-data-visualization.md" class="previous">&laquo; Previous Step</a>
-<a href="social-applying-theme.md" class="next">Next Step &raquo;</a>
+<a href="selecting-data-visualization.md" class="previous">&laquo; Previous Step</a>
+<a href="applying-theme.md" class="next">Next Step &raquo;</a>

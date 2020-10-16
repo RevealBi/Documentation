@@ -39,5 +39,5 @@ default in the [Visualizations Editor](~/en/data-visualizations/visualizations-e
 
 </style>
 
-<a href="manufacturing-dashboard-tutorial.md" class="previous">&laquo; Manufacturing Dashboard</a>
-<a href="manufacturing-selecting-data-visualization.md" class="next">Next Step &raquo;</a>
+<a href="dashboard-tutorial.md" class="previous">&laquo; Manufacturing Dashboard</a>
+<a href="selecting-data-visualization.md" class="next">Next Step &raquo;</a>

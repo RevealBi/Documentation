@@ -21,4 +21,4 @@ Select a name for your dashboard, and, when ready, click/tap **Save here**.
 
 </style>
 
-<a href="manufacturing-adding-other-visualizations.md" class="previous">&laquo; Previous Step</a>
+<a href="adding-other-visualizations.md" class="previous">&laquo; Previous Step</a>

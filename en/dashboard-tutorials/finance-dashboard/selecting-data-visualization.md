@@ -46,5 +46,5 @@ Your visualization should look like the following one:
 
 </style>
 
-<a href="finance-starting-creation-process.md" class="previous">&laquo; Previous Step</a>
-<a href="finance-applying-formatting-visualization.md" class="next">Next Step &raquo;</a>
+<a href="starting-creation-process.md" class="previous">&laquo; Previous Step</a>
+<a href="applying-formatting-visualization.md" class="next">Next Step &raquo;</a>

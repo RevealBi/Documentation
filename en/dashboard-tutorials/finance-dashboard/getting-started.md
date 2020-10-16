@@ -44,4 +44,4 @@ the same sample spreadsheet.
 
 
 
-[Get Started »](finance-starting-creation-process.md)
+[Get Started »](getting-started.md)

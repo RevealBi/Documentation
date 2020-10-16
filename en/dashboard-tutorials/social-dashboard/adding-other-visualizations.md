@@ -413,5 +413,5 @@ Once you are done, go back to the Dashboard Editor by selecting the
 
 </style>
 
-<a href="social-applying-theme.md" class="previous">&laquo; Previous Step</a>
-<a href="social-saving-dashboard.md" class="next">Next Step &raquo;</a>
+<a href="applying-theme.md" class="previous">&laquo; Previous Step</a>
+<a href="saving-dashboard.md" class="next">Next Step &raquo;</a>

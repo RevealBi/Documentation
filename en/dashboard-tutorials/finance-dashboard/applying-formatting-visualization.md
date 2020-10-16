@@ -125,5 +125,5 @@ button** in the top right-hand corner to return to the dashboard editor.
 
 </style>
 
-<a href="finance-selecting-data-visualization.md" class="previous">&laquo; Previous Step</a>
-<a href="finance-applying-theme.md" class="next">Next Step &raquo;</a>
+<a href="selecting-data-visualization.md" class="previous">&laquo; Previous Step</a>
+<a href="applying-theme.md" class="next">Next Step &raquo;</a>

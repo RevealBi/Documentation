@@ -59,4 +59,4 @@ the same sample spreadsheet.
 
 </style>
 
-<a href="sales-starting-creation-process.md" class="next">Get Started &raquo;</a>
+<a href="starting-creation-process.md" class="next">Get Started &raquo;</a>

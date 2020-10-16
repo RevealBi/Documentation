@@ -29,5 +29,5 @@ Once you have finished editing the visualization, select the **tick icon** in th
 
 </style>
 
-<a href="manufacturing-applying-formatting-visualization.md" class="previous">&laquo; Previous Step</a>
-<a href="manufacturing-adding-other-visualizations.md" class="next">Next Step &raquo;</a>
+<a href="applying-formatting-visualization.md" class="previous">&laquo; Previous Step</a>
+<a href="adding-other-visualizations.md" class="next">Next Step &raquo;</a>

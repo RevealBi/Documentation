@@ -48,5 +48,5 @@ to follow these tutorials, make sure you upload the file to one of the
 6.  [Saving your Dashboard](social-saving-dashboard.md)
 
 
-[Get Started »](social-starting-creation-process.md)
+[Get Started »](creating-the-dashboard.md)
 

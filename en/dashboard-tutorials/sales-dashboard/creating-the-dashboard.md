@@ -40,5 +40,5 @@ default in the [Visualizations Editor](~/en/data-visualizations/visualizations-e
 
 </style>
 
-<a href="sales-dashboard-tutorial.md" class="previous">&laquo; Sales Dashboard</a>
-<a href="sales-selecting-data-visualization.md" class="next">Next Step &raquo;</a>
+<a href="dashboard-tutorial.md" class="previous">&laquo; Sales Dashboard</a>
+<a href="selecting-data-visualization.md" class="next">Next Step &raquo;</a>

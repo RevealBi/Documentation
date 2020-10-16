@@ -42,6 +42,6 @@ default in the [Visualizations Editor](~/en/data-visualizations/visualizations-e
 
 </style>
 
-<a href="social-dashboard-tutorial.md" class="previous">&laquo; Social Dashboard</a>
-<a href="social-selecting-data-visualization.md" class="next">Next Step &raquo;</a>
+<a href="getting-started.md" class="previous">&laquo; Social Dashboard</a>
+<a href="selecting-data-visualization.md" class="next">Next Step &raquo;</a>
 
