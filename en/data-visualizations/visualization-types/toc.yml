@@ -20,8 +20,6 @@
   href: radial-charts.md
 - name: Scatter and Bubble Charts
   href: scatter-bubble-charts.md
-- name: Scatter Maps
-  href: scatter-map/toc.yml
 - name: Sparkline Charts
   href: sparkline-charts.md
 - name: Text View

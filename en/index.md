@@ -52,13 +52,12 @@ Use your trained models' data from BigQuery or Azure Machine Learning Studio in 
 
 ### What's new?
 
-* [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md) data source – You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.
-* [Marketo](~/en/datasources/supported-data-sources/marketo.md) data source – Connect to your account in the marketing platform Marketo and use your data in Reveal.
-* [Process Data on Server](~/en/datasources/process-data-server-side.md) – You can now have server-side aggregation of the data coming from the MS SQL, MySQL and Postgres data sources.
+* [Amazon Athena ](~/en/datasources/supported-data-sources/athena.md) data source – You can now connect to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
+* [Amazon S3](~/en/datasources/supported-data-sources/amazon-s3.md) data source – You can also access your data from Amazon S3 directly.
 
 ### Coming Soon to Reveal
 
-Coming Soon...
+*Scatter Map* visualization! We are looking forward to presenting you with another map visualization that will give you more insight for your geospatial data. Coming with an added capability to connect to a number of mapping services to use as a background.
 
 ### Where Can I Get Reveal?
 

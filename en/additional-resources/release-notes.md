@@ -15,6 +15,14 @@ here.
     <th class="tg-cly1"><span style="font-weight:bold">Reveal version</span></th>
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
+     <tr>
+    <td class="tg-0lax" rowspan="2">1.0.14</td>
+    <td class="tg-cly1"><span style="font-style:italic">New Amazon Athena data source</span><br>You can now connect to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
+</td>
+<tr>
+    <td class="tg-cly1"><span style="font-style:italic">New Amazon S3 data source</span><br>Access your data from Amazon S3 directly in Reveal.
+</td>
+  </tr>
    <tr>
     <td class="tg-0lax" rowspan="3">1.0.13</td>
     <td class="tg-cly1"><span style="font-style:italic">New Amazon Redshift data source</span><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.

@@ -4,8 +4,6 @@
   href: creating-the-dashboard.md
 - name: Creating the First Visualization
   href: selecting-data-visualization.md
-- name: Applying Formatting to the First Visualization
-  href: applying-formatting-visualization.md
 - name: Applying a Theme to the Dashboard
   href: applying-theme.md
 - name: Adding the other Visualizations
