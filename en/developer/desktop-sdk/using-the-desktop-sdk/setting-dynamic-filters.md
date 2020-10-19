@@ -53,7 +53,7 @@ with all territories:
 ``` csharp
 using (var stream = File.OpenRead(@"..\..\Sales.rdash"))
 {
-    var dashboard = await RVDashboard.LoadDashboard(stream);
+    var dashboard = new RVDashboard(stream);
 
     var filterValues = await dashboard.Filters.GetByTitle("Territory").GetFilterValuesAsync();
     var territories = filterValues.ToList();
