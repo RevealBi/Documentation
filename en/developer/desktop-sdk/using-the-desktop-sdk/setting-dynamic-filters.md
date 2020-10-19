@@ -53,7 +53,7 @@ with all territories:
 ``` csharp
 using (var stream = File.OpenRead(@"..\..\Sales.rdash"))
 {
-    var dashboard = await RevealUtility.LoadDashboard(stream);
+    var dashboard = await RVDashboard.LoadDashboard(stream);
 
     var filterValues = await dashboard.Filters.GetByTitle("Territory").GetFilterValuesAsync();
     var territories = filterValues.ToList();
@@ -118,7 +118,7 @@ To set a custom range, for example for the last 15 days, you can use a
 code similar to the following:
 
 ``` csharp
-revealView.Dashboard.DateFilter = 
+revealView.Dashboard.DateFilter =
     new RVDateDashboardFilter(
         RVDateFilterType.CustomRange,
          new RVDateRange(DateTime.UtcNow.AddDays(-15), DateTime.UtcNow)

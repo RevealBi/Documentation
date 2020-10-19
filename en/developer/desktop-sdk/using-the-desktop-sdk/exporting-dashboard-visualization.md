@@ -27,7 +27,7 @@ To use the Export as an image feature you will need to add a reference to [CefSh
 
 To enable your end users to generate an image, document or a presentation out of a dashboard you simply need to set the relevant property to true when loading the dashboard:
 
-- __RevealSettings.ShowExportImage__ - for export as an **image**;
+- __RevealView.ShowExportImage__ - for export as an **image**;
 
 - __RevealView.ShowExportToPDF](api-reference__ - for export as a **PDF** document;
 

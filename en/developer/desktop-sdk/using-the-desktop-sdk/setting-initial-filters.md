@@ -26,7 +26,7 @@ In this case, you want to set the initial filters selection to:
 As part of the initialization process and once the dashboard is loaded,
 you can retrieve the list of filters in the dashboard and use these
 filters to set the initially selected values in
-__RevealSettings__:
+__RevealView__:
 
 ``` csharp
 var revealView = new RevealView();

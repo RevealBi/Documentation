@@ -69,7 +69,7 @@ interface. This interface allows the Reveal SDK to run inside of your
 host application and provides callbacks for working with the SDK.
 
 ```csharp
-using Infragistics.Sdk;
+using Reveal.Sdk;
 public class RevealSdkContext : IRevealSdkContext
 {
     public IRVDataSourceProvider DataSourceProvider => null;
@@ -114,7 +114,7 @@ application, call the services extension method _AddRevealServices_, passing in 
 \_RevealEmbedSettings\_\_ class.
 
 The _AddRevealServices_ extension method is defined in the
-**Infragistics.Sdk**
+**Reveal.Sdk**
 namespace, so you will need to add a using directive. In addition, you
 also need to set the **CachePath** property as shown below.
 
@@ -138,7 +138,7 @@ services.AddMvc().AddReveal();
 ```
 
 Like _AddRevealServices_, the _AddReveal_ method is defined in the
-_Infragistics.Sdk_ namespace, so you need a using directive too.
+_Reveal.Sdk_ namespace, so you need a using directive too.
 
 <a name='server-side-image-export'></a>
 

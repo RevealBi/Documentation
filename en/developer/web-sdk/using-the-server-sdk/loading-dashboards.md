@@ -32,4 +32,4 @@ public Task<Stream> GetDashboardAsync(string dashboardId)
 
 This code for
 __IRevealSdkContext.GetDashboardAsync__
-will be invoked on the server when you use **RevealUtility.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.
+will be invoked on the server when you use **RVDashboard.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.
