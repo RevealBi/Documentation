@@ -31,6 +31,10 @@ dependency packages:
 To handle the **CefSharp.Wpf** known issue, follow this
 [**link**](#cefsharp-fix).
 
+> [!NOTE]
+You will need to install Microsoft.Data.SqlClient (1.1.3) package to 
+your project manually to be able to visualize Microsoft Sql Server data.
+
 ### Using Manual Setup
 
 To setup your project manually you need to:
@@ -43,6 +47,7 @@ To setup your project manually you need to:
       - CefSharp.Wpf (83.4.20+)
       - SkiaSharp (1.68.0+)
       - System.Data.SQLite.Core (1.0.108+)
+      - Microsoft.Data.SqlClient (1.1.3+)
 
 To handle the CefSharp.Wpf known issue, please continue reading below.
 
