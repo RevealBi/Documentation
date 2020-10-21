@@ -13,7 +13,7 @@ end user, including:
 
   - **Specifying a Dashboard** - The *Dashboard* property is used to
     specify which dashboard should be rendered. As shown in [**Loading Dashboard Files**](loading-dashboards.md), the dashboard must
-    be instantiated by using __RVDashboard__ constructor, which receives either a Stream or a path string pointing to a location of the rdash file on the local file system.
+    be instantiated by using the __RVDashboard__ constructor, which receives either a Stream or a path string pointing to the location of the rdash file on the local file system.
 
   - **Selecting Global Filter values** - You can specify which values
     are initially selected for existing Global Filters when loading a
