@@ -1,18 +1,17 @@
 ## Finance Dashboard Tutorial
 
-In this tutorial, you will see how the "Stock Market (Performance)"
-dashboard displayed below was created using a sample spreadsheet with
+In this tutorial, you will see how the "Stock Market (Performance)" dashboard displayed below was created using a sample spreadsheet with
 similar data.
 
 ![StockPerformanceDashboard\_All](images/StockPerformanceDashboard_All.png)
 
 ### What's in this Dashboard?
 
-This dashboard contains information on a sample company's:
+This dashboard contains information on a sample company:
 
   - The top stocks by value and the YTD value of the highest-value stock
 
-  - A forecast for all changes, bids, and offers for a 4 year period
+  - A forecast for all changes, bids, and offers for a 4-year period
 
   - The variation in stock prices and the volume of available stocks
 
@@ -30,17 +29,17 @@ the same sample spreadsheet.
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](finance-starting-creation-process.md)
+1.  [Creating the Dashboard and Adding a Data Source](starting-creation-process.md)
 
-2.  [Creating the First Visualization](finance-selecting-data-visualization.md)
+2.  [Creating the First Visualization](selecting-data-visualization.md)
 
-3.  [Applying Formatting to the First Visualization](finance-applying-formatting-visualization.md)
+3.  [Applying Formatting to the First Visualization](applying-formatting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](finance-applying-theme.md)
+4.  [Applying a Theme to the Dashboard](applying-theme.md)
 
-5.  [Adding the other visualizations](finance-adding-other-visualizations.md) ([Silver Security Stock Value 2018](Finance-Adding-Other-Visualizations.html#sis-stock-value-2018), [GLB Fiscal (Monthly) NYSE + BATS](Finance-Adding-Other-Visualizations.html#glb-fiscal-monthly), [Forecast (Chg, Bid & Offer) - 2018 to 2013](Finance-Adding-Other-Visualizations.html#forecast-change-bid-offers), [Stock Variations](Finance-Adding-Other-Visualizations.html#stock-variations), [Stock Volumes](Finance-Adding-Other-Visualizations.html#stock-volumes))
+5.  [Adding the other visualizations](adding-other-visualizations.md) ([Silver Security Stock Value 2018](Adding-Other-Visualizations.html#sis-stock-value-2018), [GLB Fiscal (Monthly) NYSE + BATS](Adding-Other-Visualizations.html#glb-fiscal-monthly), [Forecast (Chg, Bid & Offer) - 2018 to 2013](Adding-Other-Visualizations.html#forecast-change-bid-offers), [Stock Variations](Adding-Other-Visualizations.html#stock-variations), [Stock Volumes](Adding-Other-Visualizations.html#stock-volumes))
 
-6.  [Saving your Dashboard](finance-saving-dashboard.md)
+6.  [Saving your Dashboard](saving-dashboard.md)
 
 
 

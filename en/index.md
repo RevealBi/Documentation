@@ -39,7 +39,7 @@ Give everyone the power of data by sharing your dashboards within your Organizat
 <h4 style="color:#2328B0;">Leverage Advanced Predictive Analysis </h4>
 
 Get even more insight from your visualizations with advanced predictive analysis, using statistical functions.
-You can use the Time series forecast, Linear regression and Detect outliers to make predictions, recognize and evaluate trends, or discover outliers in your data series.
+You can use the Time series forecast, Linear regression, and Detect outliers to make predictions, recognize and evaluate trends, or discover outliers in your data series.
 
 <img src="data-visualizations/images/time-series-forecast-6-months.png" alt="Showing statistical functions in Reveal" width="100%"/>
 
