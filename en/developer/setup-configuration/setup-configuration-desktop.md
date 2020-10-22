@@ -29,8 +29,8 @@ dependency packages:
   - System.Data.SQLite.Core (1.0.108+)
 
 > [!NOTE]
-You will need to install Microsoft.Data.SqlClient (1.1.3) package to 
-your project manually to be able to visualize Microsoft Sql Server data.
+> You need to manually install Microsoft.Data.SqlClient (1.1.3) package in
+your project to be able to visualize Microsoft Sql Server data.
 
 ### Using Manual Setup
 
