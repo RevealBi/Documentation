@@ -1,7 +1,15 @@
 ## Visualizations Editor
 
->Add Creating a visualization (from What is a visualization? topic) here, but add also that a vis can be created by adding to an existing dashboard.  
+### How do you create a Visualization?
 
+Once you select the + sign to add a new dashboard, you will be prompted
+to enter a new or an existing [data source](~/en/datasources/data-sources.md). This will be
+the first step towards creating your visualization.
+
+![Creating a new visualization dialog](images/creating-new-visualization.png)
+
+With the data source selected, the visualization will be created. You
+can edit it through the [Visualizations Editor](visualizations-editor.md).
 
 
 The Visualization editor is where you create and edit your visualizations. It helps you work with the data to get the most desired view.
