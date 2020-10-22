@@ -78,15 +78,8 @@ To use parameters effectively follow the procedure below:
     After loading the data, you will continue to the Visualization Editor
     screen.
 
-    <div class="note">
-
-    **Unsupported File Formats**
-
-    If the REST API responds with a file format, which is not supported
-    by Reveal (e.g., XML), you will not be able to create visualizations
-    with the data in this file.
-
-    </div>
+    >[!NOTE] **Unsupported File Formats**. 
+    >If the REST API responds with a file format, which is not supported by Reveal (e.g., XML), you will not be able to create visualizations with the data in this file.
 
 3.  **Change the parameters' values without losing your visualization data**. Changing the parameters' values after you have started building your visualization offers a variety of possibilities. For example, you can access new data to add to your visualization or directly change the displayed data in the visualization you have already created.
 

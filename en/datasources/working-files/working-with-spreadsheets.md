@@ -104,7 +104,7 @@ spreadsheets within Reveal.
 When working with Microsoft Excel and Google Sheets, you can use the
 transpose functionality to switch columns from rows.
 
->[!NOTE]**Only the first 200 rows in the spreadsheet will be transposed.**
+>[!NOTE] **Only the first 200 rows in the spreadsheet will be transposed.** 
 >You can access the transpose menu in the **Visualization Data** menu when expanding the sheet in your data source.
 
 ![Spreadsheets Transpose Data Source Menu](images/spreadsheets-transpose-data-source-menu.png)
