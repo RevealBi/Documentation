@@ -30,6 +30,6 @@ If you use a Japanese dataset in Reveal, and your Language and Regional settings
 
 #### Language of Labels
 
-The language of labels on the choropleth map is defined by the language and regional settings configured in your OS and/or browser. So if you are running Reveal on a machine with its locale/language set to [a language Reveal supports](~/en/general/supported-languages), the app will attempt to localize the labels to that language. This has nothing to do with the _Data is written in_ setting.
+The language of labels on the choropleth map is defined by the language and regional settings configured in your OS and/or browser. So if you are running Reveal on a machine with its locale/language set to [a language Reveal supports](~/en/general/supported-languages.md), the app will attempt to localize the labels to that language. This has nothing to do with the _Data is written in_ setting.
 
 If a Japanese employee's machine, for example, is set to use their native language (Japanese), but the data given to them is in English, Reveal will still display the labels in Japanese. Then, if they share the dashboard with a German contractor, the German will see the labels in the language their machine is set to use (the German language is supported in Reveal).
