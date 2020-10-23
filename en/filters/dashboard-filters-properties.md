@@ -62,18 +62,16 @@ You can change the displayed column in *Edit* mode by selecting the
 ### Multiple Selection
 
 Reveal supports the selection of multiple dashboard filter values
-simultaneously. This is meant to enable side by side comparison between
-different elements in a collection. For instance, in the *HR Dashboard*
-dashboard you can compare the hires and absences over time of different
+simultaneously. This is meant to enable side by side comparison between different elements in a collection. For instance, in the *HR Dashboard* dashboard you can compare the hires and absences over time of different
 offices by enabling multiple selection.
 
-![Filters multiple selection applied to a dashboard](images/dashboard-filters-multiple-selection.png)
+![Filters multiple selections applied to a dashboard](images/dashboard-filters-multiple-selection.png)
 
 In order to **enable "Multiple Selection"**, you must switch the
 dashboard to *Edit* mode ⇒ choose *Edit* from the overflow menu of a
 dashboard filter ⇒ *Selection* ⇒ tick *Multiple Selection* checkbox.
 
-![Enabling dashboard filters multiple selection](images/dashboard-filters-enable-multiple-selection.png)
+![Enabling dashboard filters multiple selections](images/dashboard-filters-enable-multiple-selection.png)
 
 <a name='required-selection'></a>
 ### Required Selection
@@ -134,13 +132,16 @@ filter and have the dashboard filter show only the employees in the
 
 ### Dashboard Filters Using MS Analysis Data
 
-There are some specifics when configuring a SSAS-based dashboard filter (see in the list below).
+There are some specifics when configuring an SSAS-based dashboard filter (see in the list below).
+
+<img src="images/ssrs-filter.png" alt="Dashboard Filter dialog when configuring an SSRS filter" width="80%"/>
+
 
 > A screenshot showing both fields below (no collapsing a dropdown, please)
 
  1. **Displayed Element** - you can select a *Dimension*, *Hierarchy* or *Level* data field to display dashboard filter values, but not a _Measure_ data field. 
 
-2. (*Optional*) **Show only when Measure has data** - select a *Measure* to limit the dashboard filter values list to those that contain data for a certain Measure.
+1. (*Optional*) **Show only when Measure has data** - select a *Measure* to limit the dashboard filter values list to those that contain data for a certain Measure.
 
 For example, if you use the *Product* Dimension as a *Displayed element*, your dashboard filter will show a list of products (e.g. bikes, clothes, etc). 
 By additionally selecting the *Internet orders* Measure for *Show only when Measure has data* field, you will exclude dashboard filter values, which do not contain information about the *Internet orders* Measure. So, if there are no internet orders of bikes, the _bike_ product will not show up in the _Dashboard Filters_ list.
