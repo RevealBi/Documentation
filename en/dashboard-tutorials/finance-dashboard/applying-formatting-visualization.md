@@ -19,7 +19,7 @@ Select **Actual Values** in the **Value** placeholder. Then, change the
 
 Then, change **Type** to **Currency** under *Formatting*.
 
-![GlobexValueCurrency\_All](images/GlobexValueCurrency_All.png)
+<img src="images/GlobexValueCurrency_All.png" alt="GlobexValueCurrency\_All" width="100%"/>
 
 Then, select **Update Field**.
 
@@ -30,20 +30,20 @@ not the complete data range in the original spreadsheet. In order to do
 so, drag and drop the **Date** field into **Data Filters** and, under
 Filter Type, select **Filter by Rule**.
 
-![GlobexFilterbyRule\_All](images/GlobexFilterbyRule_All.png)
+<img src="images/GlobexFilterbyRule_All.png" alt="GlobexFilterbyRule\_All" width="100%"/>
 
 In the new *Rule* menu, select **Custom Date Range**.
 
-![GlobexFilterCustomDateRange\_All](images/GlobexFilterCustomDateRange_All.png)
+<img src="images/GlobexFilterCustomDateRange_All.png" alt="GlobexFilterCustomDateRange\_All" width="100%"/>
 
 Then, enter January 1st through December 31st and select **Create
 Filter**.
 
-![GlobexFilteringSpecificCustomDateRange\_All](images/GlobexFilteringSpecificCustomDateRange_All.png)
+<img src="images/GlobexFilteringSpecificCustomDateRange_All.png" alt="GlobexFilteringSpecificCustomDateRange\_All" width="100%"/>
 
 By now, your visualization should look like the following one:
 
-![GlobexResultingVisualizationPartial\_All](images/GlobexResultingVisualizationPartial_All.png)
+<img src="images/GlobexResultingVisualizationPartial_All.png" alt="GlobexResultingVisualizationPartial\_All" width="100%"/>
 
 ### Selecting the Highest Value
 
@@ -52,26 +52,26 @@ you can still filter the data behind it to show the specific row you
 want. Let's take a look at the data behind this visualization. Select
 the **View Data** button in the top right corner of your visualization.
 
-![SelectingViewDataGlobex\_All](images/SelectingViewDataGlobex_All.png)
+<img src="images/SelectingViewDataGlobex_All.png" alt="SelectingViewDataGlobex\_All" width="100%"/>
 
 You will see the following table:
 
-![GlobexViewTableBehindGauge\_All](images/GlobexViewTableBehindGauge_All.png)
+<img src="images/GlobexViewTableBehindGauge_All.png" alt="GlobexViewTableBehindGauge\_All" width="100%"/>
 
 In this case, Globex is the stock with the highest average value. In
 order to display it, you will need to introduce an additional filter.
 Drag and drop **Stocks** into **Data Filters** and, in the *Filter Type*
 menu, choose **Select Values**.
 
-![GlobexFilterSelectValues\_All](images/GlobexFilterSelectValues_All.png)
+<img src="images/GlobexFilterSelectValues_All.png" alt="GlobexFilterSelectValues\_All" width="100%"/>
 
 Select **Globex** and then **Create Filter**.
 
-![GlobexFilterSelectOption\_All](images/GlobexFilterSelectOption_All.png)
+<img src="images/GlobexFilterSelectOption_All.png" alt="GlobexFilterSelectOption\_All" width="100%"/>
 
 Your visualization will now look like the following one.
 
-![GlobexAverageStockValue\_All](images/GlobexAverageStockValue_All.png)
+<img src="images/GlobexAverageStockValue_All.png" alt="GlobexAverageStockValue\_All" width="100%"/>
 
 If you want to verify that the visualization is displaying the correct
 data, you can once again select **View Data** in the top right-hand
@@ -82,8 +82,8 @@ corner.
 Had the list of stocks been longer, you might not have been able to
 identify the highest value that easily. You can sort your values in
 ascending/descending order to help you out with bigger tables. The
-[Labor](~/en/dashboard-tutorials/manufacturing-dashboard/manufacturing-adding-other-visualizations#labor-cost)
-visualization of the [Manufacturing Dashboard Tutorial](manufacturing-dashboard-tutorial.md) has instructions on how to
+[Labor](~/en/dashboard-tutorials/manufacturing-dashboard/adding-other-visualizations.html#labor-cost)
+visualization of the [Manufacturing Dashboard Tutorial](~/en/dashboard-tutorials/manufacturing-dashboard/getting-started.md) has instructions on how to
 apply it.
 
 ### Adding Conditional Formatting
@@ -96,20 +96,20 @@ Go to the **Settings** section of the Visualizations Editor. You will
 see a **Conditional Formatting** section, which will, by default, have
 the following three ranges configured:
 
-![GlobexConditionalFormatting\_All](images/GlobexConditionalFormatting_All.png)
+<img src="images/GlobexConditionalFormatting_All.png" alt="GlobexConditionalFormatting\_All" width="100%"/>
 
 Open any of the dropdowns in order to add indicators and colors to your
 visualization. In this case, we will add a green up arrow for the
-highest range, a yellow line for the mid range, and a red down arrow for
+highest range, a yellow line for the mid-range, and a red down arrow for
 the lower range. The visualization will be updated to display the
 corresponding indicator.
 
-![GlobexConditionalFormattingApplied\_All](images/GlobexConditionalFormattingApplied_All.png)
+<img src="images/GlobexConditionalFormattingApplied_All.png" alt="GlobexConditionalFormattingApplied\_All" width="100%"/>
 
 Once you have finished editing the visualization, select the **tick
 button** in the top right-hand corner to return to the dashboard editor.
 
-![FinanceWidgetInDashboardEditor\_All](images/FinanceWidgetInDashboardEditor_All.png)
+<img src="images/FinanceWidgetInDashboardEditor_All.png" alt="FinanceWidgetInDashboardEditor\_All" width="100%"/>
 
 >[!NOTE]
 >You can resize any of your visualizations by selecting the visualization and then dragging its corners downwards or to the side.
