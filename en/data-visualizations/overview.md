@@ -76,22 +76,55 @@ td {
   </tr>
   <tr>
     <td><b>Part to Whole</b></td>
-    <td><img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br/><a href="visualization-types/category-charts.md">Stacked Column</a></td>
-    <td><img src="images/Stacked-Bar-Chart.png" alt="Stacked Bar Chart" /><br/><a href="visualization-types/category-charts.md">Stacked Bar</a></td>
-    <td><img src="images/Stacked-Area-Chart.png" alt="Stacked Area Chart" /><br/><a href="visualization-types/category-charts.md">Stacked Area</a></td>
-    <td><img src="images/Pie-Chart.png" alt="Pie Chart" /><br/><a href="visualization-types/category-charts.md">Pie</a></td>
-    <td><img src="images/Doughnut-Chart.png" alt="Dougnut Chart" /><br/><a href="visualization-types/category-charts.md">Dougnut</a></td>
-    <td><img src ="images/funnel-chart.png" alt="Funnel Chart" /><br/><a href="visualization-types/category-charts.md">Funnel</a></td>
-    <td><img src ="images/treemap-chart.png" alt="Treemap Chart" /><br/><a href="visualization-types/treemap-charts.md">Treemap</a></td>
+    <td>
+      <img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Stacked Column</a>
+    </td>
+    <td>
+      <img src="images/Stacked-Bar-Chart.png" alt="Stacked Bar Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Stacked Bar</a>
+    </td>
+    <td>
+      <img src="images/Stacked-Area-Chart.png" alt="Stacked Area Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Stacked Area</a>
+    </td>
+    <td>
+      <img src="images/Pie-Chart.png" alt="Pie Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Pie</a>
+    </td>
+    <td>
+      <img src="images/Doughnut-Chart.png" alt="Dougnut Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Dougnut</a>
+    </td>
+    <td>
+      <img src ="images/funnel-chart.png" alt="Funnel Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Funnel</a>
+    </td>
+    <td>
+      <img src ="images/treemap-chart.png" alt="Treemap Chart" /><br/>
+      <a href="visualization-types/treemap-charts.md">Treemap</a>
+    </td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td><b>Data Distribution</b></td>
-    <td><img src="images/step-area-Chart.png" alt="Step Area Chart" /><br/><a href="visualization-types/category-charts.md">Step Area</a></td>
-    <td><img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br/><a href="visualization-types/category-charts.md">Stacked Column</a></td>
-    <td><img src="images/scatter-chart.png" alt="Scatter Chart" /><br/><a href="visualization-types/scatter-bubble-charts.md">Scatter</td>
-    <td><img src="images/bubble-Chart.png" alt="Bubble Chart" /><br/><a href="visualization-types/scatter-bubble-charts.md">Bubble</td>
+    <td>
+      <img src="images/step-area-Chart.png" alt="Step Area Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Step Area</a>
+    </td>
+    <td>
+      <img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Stacked Column</a>
+    </td>
+    <td>
+      <img src="images/scatter-chart.png" alt="Scatter Chart" /><br/>
+      <a href="visualization-types/scatter-bubble-charts.md">Scatter</а>
+    </td>
+    <td>
+      <img src="images/bubble-Chart.png" alt="Bubble Chart" /><br/>
+      <a href="visualization-types/scatter-bubble-charts.md">Bubble</а>
+    </td>
     <td></td>
     <td />
     <td />
@@ -99,11 +132,26 @@ td {
     <td />
   <tr>
     <td><b>Data Trend Analysis<b/></td>
-    <td><img src="images/line-chart.png" alt="Line Chart" /><br/><a href="visualization-types/category-charts.md">Line</a></td>
-    <td><img src="images/spline-Chart.png" alt="Spline Chart" /><br/><a href="visualization-types/category-charts.md">Spline</a></td>
-    <td><img src="images/Combo-Chart.png" alt="Combo Chart" /><br/><a href="visualization-types/combo-charts.md">Combo</a></td>
-    <td><img src="images/ohlc-Chart.png" alt="OHLC Chart" /><br/><a href="visualization-types/financial-charts.md">OHLC</a></td>
-    <td><img src="images/candlestick-Chart.png" alt="Candlestick Chart" /><br/><a href="visualization-types/financial-charts.md">Candlestick</a></td>
+    <td>
+      <img src="images/line-chart.png" alt="Line Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Line</a>
+    </td>
+    <td>
+      <img src="images/spline-Chart.png" alt="Spline Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Spline</a>
+    </td>
+    <td>
+      <img src="images/Combo-Chart.png" alt="Combo Chart" /><br/>
+      <a href="visualization-types/combo-charts.md">Combo</a>
+    </td>
+    <td>
+      <img src="images/ohlc-Chart.png" alt="OHLC Chart" /><br/>
+      <a href="visualization-types/financial-charts.md">OHLC</a>
+    </td>
+    <td>
+      <img src="images/candlestick-Chart.png" alt="Candlestick Chart" /><br/>
+      <a href="visualization-types/financial-charts.md">Candlestick</a>
+    </td>
     <td />
     <td />
     <td />
@@ -111,9 +159,18 @@ td {
   </tr>
   <tr>
   <td><b>Data Relationships</b></td>
-  <td><img src="images/scatter-chart.png" alt="Scatter Chart" /><br/><a href="visualization-types/scatter-bublle-charts.md">Scatter</td>
-  <td><img src="images/Bubble-chart.png" alt="Bubble Chart" /><br/><a href="visualization-types/scatter-bubble-charts.md">Bubble</td>
-  <td><img src="images/line-chart.png" alt="Line Chart" /><br/><a href="visualization-types/category-charts.md">Line</a></td>
+  <td>
+    <img src="images/scatter-chart.png" alt="Scatter Chart" /><br/>
+    <a href="visualization-types/scatter-bublle-charts.md">Scatter</а>
+  </td>
+  <td>
+    <img src="images/Bubble-chart.png" alt="Bubble Chart" /><br/>
+    <a href="visualization-types/scatter-bubble-charts.md">Bubble</а>
+  </td>
+  <td>
+    <img src="images/line-chart.png" alt="Line Chart" /><br/>
+    <a href="visualization-types/category-charts.md">Line</a>
+  </td>
   <td />
   <td />
   <td />
@@ -123,11 +180,26 @@ td {
   </tr>
   <tr>
   <td><b>KPIs and Gauges</b></td>
-    <td><img src="images/bullet-graph-gauge.png" alt="Bullet Graph Gauge" /><br/><a href="visualization-types/gauge-charts.html#bullet-graph">Bullet Graph</a></td>
-    <td><img src="images/linear-gauge.png" alt="Linear Gauge" /><br/><a href="visualization-types/gauge-charts.html#linear-gauge">Linear</td>
-    <td><img src="images/text-gauge.png" alt="Text Chart" /><br/><a href="visualization-types/gauge-charts.html#text-gauge">Text</a></td>
-    <td><img src="images/kpi.png" alt="KPI Gauge" /><br/><a href="visualization-types/kpi-gauge.md">KPI</a></td>
-    <td><img src="images/circular-gauge.png" alt="Circular Gauge" /><br/><a href="visualization-types/gauge-charts.html#circular-gauge">Circular</a></td>
+  <td>
+    <img src="images/bullet-graph-gauge.png" alt="Bullet Graph Gauge" /><br/>
+    <a href="visualization-types/gauge-charts.html#bullet-graph">Bullet Graph</a>
+  </td>
+  <td>
+    <img src="images/linear-gauge.png" alt="Linear Gauge" /><br/>
+    <a href="visualization-types/gauge-charts.html#linear-gauge">Linear</а>
+  </td>
+  <td>
+    <img src="images/text-gauge.png" alt="Text Chart" /><br/>
+    <a href="visualization-types/gauge-charts.html#text-gauge">Text</a>
+  </td>
+  <td>
+    <img src="images/kpi.png" alt="KPI Gauge" /><br/>
+    <a href="visualization-types/kpi-gauge.md">KPI</a>
+  </td>
+  <td>
+    <img src="images/circular-gauge.png" alt="Circular Gauge" /><br/>
+    <a href="visualization-types/gauge-charts.html#circular-gauge">Circular</a>
+  </td>
     <td />
     <td />
     <td />
@@ -135,8 +207,14 @@ td {
   </tr>
   <tr>
   <td><b>Geospatial Data</b></td>
-  <td><img src="images/choropleth-map.png" alt="Choropleth Map" /><br/><a href="visualization-types/choropleth-map/choropleth-map.md">Choropleth Map</a></td>
-  <td><img src="images/scatter-map.png" alt="Scatter Map" /><br/><a href="visualization-types/scatter-map/scatter-map.md">Scatter Map</a></td>
+  <td>
+    <img src="images/choropleth-map.png" alt="Choropleth Map" /><br/>
+    <a href="visualization-types/choropleth-map/choropleth-map.md">Choropleth Map</a>
+  </td>
+  <td>
+    <img src="images/scatter-map.png" alt="Scatter Map" /><br/>
+    <a href="visualization-types/scatter-map/scatter-map.md">Scatter Map</a>
+  </td>
   <td />
   <td />
   <td />
