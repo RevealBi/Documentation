@@ -16,7 +16,7 @@ data source in which you stored the the sample datasheet mentioned in
 ![creatingnewvisualization\_all](images/creating-new-visualization.png)
 
 >[!NOTE]
->For instructions on how to add a data source for each of the providers, refer to [this topic](~/en/datasources/data-sources.md).
+>For instructions on how to add a data source for each of the providers, refer to [this topic](~/en/datasources/overview.md).
 
 When selecting the file in the **Visualization Data** dialog, make sure
 you select the **Sales Dashboard** sheet of the sample spreadsheet.

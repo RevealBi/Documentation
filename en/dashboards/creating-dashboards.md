@@ -51,7 +51,7 @@ which means the ability to access any lists or libraries.
 <a name='modify-visualization'></a>
 ### Changing your Visualization
 
-Once your data source has been added, you will be taken to the Visualizations Editor. By default, the Grid visualization will be selected.
+Once your data source has been added, you will be taken to the Visualizations Editor. By default, the Pivot visualization will be selected.
 
 ![dashboards first visualization in the visualization editor](images/dashboards-first-visualization.png)
 

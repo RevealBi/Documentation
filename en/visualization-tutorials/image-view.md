@@ -3,7 +3,7 @@
 In this tutorial, you will learn how to create an Image visualization
 using a sample spreadsheet.
 
-![ImageVisualizationDashboard\_All.png](images/ImageVisualizationDashboard_All.png)
+<img src="images/ImageVisualizationDashboard_All.png" alt="ImageVisualizationDashboard\_All.png" width="100%" />
 
 ### Key Concepts
 
@@ -26,9 +26,9 @@ For this tutorial, you will use the "Image View" sheet in the [Reveal Tutorials 
 
 |                                          |                                                                                                |                                                                                                                                                      |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Create a Dashboard**               | ![Tutorials-Create-New-Dashboard](images/Tutorials-Create-New-Dashboard.png)                   | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown. |
-| 2\. **Configure your Data Source**       | ![Tutorials-Select-Data-Source](images/Tutorials-Select-Data-Source.png)                       | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                       |
-| 3\. **Select the Tutorials Spreadsheet** | ![Tutorials-Select-Image-View-Spreadsheet](images/Tutorials-Select-Image-View-Spreadsheet.png) | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "Image View" sheet.                                |
-| 4\. **Open the Visualizations Menu**     | ![Tutorials-Select-Change-Visualization](images/Tutorials-Select-Change-Visualization.png)     | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                |
-| 5\. **Select your Visualization**        | ![Tutorial-Image-View-Select](images/Image-View-Select.png)                           | By default, the visualization type will be set to "Grid". Select the **Image** option.                                                               |
-| 6\. **Organize your Data**               | ![Tutorials-ImageView-Organizing-Data](images/Tutorials-ImageView-Organizing-Data.png)         | Drag any of the available fields into **URL**.                                                                                                       |
+| 1\. **Create a Dashboard**               | <img src="images/Tutorials-Create-New-Dashboard.png" alt="Tutorials-Create-New-Dashboard" width="70%" />                   | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown. |
+| 2\. **Configure your Data Source**       | <img src="images/Tutorials-Select-Data-Source.png" alt="Tutorials-Select-Data-Source" width="70%" />                       | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                       |
+| 3\. **Select the Tutorials Spreadsheet** | <img src="images/Tutorials-Select-Image-View-Spreadsheet.png" alt="Tutorials-Select-Image-View-Spreadsheet" width="70%" /> | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "Image View" sheet.                                |
+| 4\. **Open the Visualizations Menu**     | <img src="images/Tutorials-Select-Change-Visualization.png" alt="Tutorials-Select-Change-Visualization" width="70%" />     | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                |
+| 5\. **Select your Visualization**        | <img src="images/tutorial-Image-View-Select.png" alt="Tutorial-Image-View-Select" width="70%" />                           | By default, the visualization type will be set to "Grid". Select the **Image** option.                                                               |
+| 6\. **Organize your Data**               | <img src="images/Tutorials-ImageView-Organizing-Data.png" alt="Tutorials-ImageView-Organizing-Data" width="70%" />         | Drag any of the available fields into **URL**.                                                                                                       |

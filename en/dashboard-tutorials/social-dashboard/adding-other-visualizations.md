@@ -12,8 +12,8 @@ NOTE
 </div>
 
 If you want to [change your data source](~/en/datasources/changing-data-source-visualization.md), you will need to select the
-**overflow button** next to the data source name or [create a new data source](~/en/datasources/creating-new-datasource.md) instead. You can also
-[duplicate](~/en/general/overview.html#view-edit-mode) visualizations to speed up the
+**overflow button** next to the data source name or [create a new data source](~/en/datasources/overview.html#connecting-to-data-sources) instead. You can also
+[duplicate](~/en/dashboards/dashboards-interactions.html#view-edit-mode) visualizations to speed up the
 creation process.
 
 </div>
@@ -70,14 +70,14 @@ order to create it:
     Dashboard** section. Make sure the **Social Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
+    <img src="images/SelectingSocialSheet_All.png" alt="SelectingSocialSheet\_All" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Column" chart.
     
-    ![SelectColumnChart\_All](images/SelectColumnChart_All.png)
+    <img src="images/SelectColumnChart_All.png" alt="SelectColumnChart\_All" width="100%" />
 
 
 
@@ -85,7 +85,7 @@ order to create it:
     the **Facebook Followers by Year** and **Twitter Followers by Year**
     fields into Values.
     
-    ![DragDropSocialFollowers\_All](images/DragDropSocialFollowers_All.png)
+    <img src="images/DragDropSocialFollowers_All.png" alt="DragDropSocialFollowers\_All" width="100%" />
 
 
 
@@ -94,7 +94,7 @@ order to create it:
     **select the fields in the data editor**, and, under **Formatting**
     change the **Fraction Digits** to **0** for both fields.
     
-    ![SocialFollowersFractionDigits\_All](images/SocialFollowersFractionDigits_All.png)
+    <img src="images/SocialFollowersFractionDigits_All.png" alt="SocialFollowersFractionDigits\_All" width="100%" />
 
 
 
@@ -102,7 +102,7 @@ order to create it:
     months. Select the **Date** field in Label, and set the **Date
     Aggregation** to **Month**. Then, select **Update Field**.
     
-    ![SocialFollowersDateFilter\_All](images/SocialFollowersDateFilter_All.png)
+    <img src="images/SocialFollowersDateFilter_All.png" alt="SocialFollowersDateFilter\_All" width="100%" />
 
 
 
@@ -110,7 +110,7 @@ order to create it:
     selecting **Connect** under **Date Filter**. You can find this menu
     above "Social Dashboard".
     
-    ![SocialFollowersConnectDateFilter\_All](images/SocialFollowersConnectDateFilter_All.png)
+    <img src="images/SocialFollowersConnectDateFilter_All.png" alt="SocialFollowersConnectDateFilter\_All" width="100%" />
 
 
 
@@ -123,7 +123,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### YTD Facebook Followers
 
 The YTD Facebook Followers visualization displays the amount of
-followers for that social media channel in a [text gauge](~/en/visualization-tutorials/gauge-views.html#createtextgauge). In order to create it:
+followers for that social media channel in a [text gauge](~/en/visualization-tutorials/visualization-types/gauge-charts.html#text-gauge). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -131,21 +131,21 @@ followers for that social media channel in a [text gauge](~/en/visualization-tut
     Dashboard** section. Make sure the **Social Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
+    <img src="images/SelectingSocialSheet_All.png" alt="SelectingSocialSheet\_All" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Text" gauge.
     
-    ![SelectTextGauge\_All](images/SelectTextGauge_All.png)
+    <img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" width="100%" />
 
 
 
 3.  In the Data Editor, drag and drop the **Facebook Followers by Year**
     field into the Value placeholder.
     
-    ![DragDropSocialFacebookFollowers\_All](images/DragDropSocialFacebookFollowers_All.png)
+    <img src="images/DragDropSocialFacebookFollowers_All.png" alt="DragDropSocialFacebookFollowers\_All" width="100%" />
 
 
 
@@ -153,7 +153,7 @@ followers for that social media channel in a [text gauge](~/en/visualization-tut
     selecting **Connect** under **Date Filter**. You can find this menu
     above "Social Dashboard".
     
-    ![SocialYTDFacebookFollowersConnectDateFilter\_All](images/SocialYTDFacebookFollowersConnectDateFilter_All.png)
+    <img src="images/SocialYTDFacebookFollowersConnectDateFilter_All.png" alt="SocialYTDFacebookFollowersConnectDateFilter\_All" width="100%" />
 
 
 
@@ -175,21 +175,21 @@ likes per month for the company in a [line chart](~/en/visualization-tutorials/s
     Dashboard** section. Make sure the **Social Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
+    <img src="images/SelectingSocialSheet_All.png" alt="SelectingSocialSheet\_All" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Line" chart.
     
-    ![SelectLineChart\_All](images/SelectLineChart_All.png)
+    <img src="images/SelectLineChart_All.png" alt="SelectLineChart\_All" width="100%" />
 
 
 
 3.  In the Data Editor, drag and drop the **Date** field into Label and
     **Likes** into the Values placeholder of the data editor.
     
-    ![DragDropSocialMonthlyLikes\_All](images/DragDropSocialMonthlyLikes_All.png)
+    <img src="images/DragDropSocialMonthlyLikes_All.png" alt="DragDropSocialMonthlyLikes\_All" width="100%" />
 
 
 
@@ -197,7 +197,7 @@ likes per month for the company in a [line chart](~/en/visualization-tutorials/s
     displayed as months. Select the **Date** field in Label, and set the
     **Date Aggregation** to **Month**. Then, select **Update Field**.
     
-    ![SocialMonthlyLikesDateFilter\_All](images/SocialMonthlyLikesDateFilter_All.png)
+    <img src="images/SocialMonthlyLikesDateFilter_All.png" alt="SocialMonthlyLikesDateFilter\_All" width="100%" />
 
 
 
@@ -206,21 +206,21 @@ likes per month for the company in a [line chart](~/en/visualization-tutorials/s
     under **Formatting** change the **Fraction Digits** to **0** for
     both fields.
     
-    ![SocialMonthlyFacebookLikes\_All](images/SocialMonthlyFacebookLikes_All.png)
+    <img src="images/SocialMonthlyFacebookLikes_All.png" alt="SocialMonthlyFacebookLikes\_All" width="100%" />
 
 
 
 6.  To match the sample visualization's color, change the **Start
     Color** to the fourth one within the same **Settings** screen.
     
-    ![SocialMonthlyFacebookLikesStartColor\_All](images/SocialMonthlyFacebookLikesStartColor_All.png)
+    <img src="images/SocialMonthlyFacebookLikesStartColor_All.png" alt="SocialMonthlyFacebookLikesStartColor\_All" width="100%" />
 
 
 7.  Connect your visualization to the existing dashboard filter by
     selecting **Connect** under **Date Filter**. You can find this menu
     above "Social Dashboard".
     
-    ![SocialMonthlyFacebookLikesConnectDateFilter\_All](images/SocialMonthlyFacebookLikesConnectDateFilter_All.png)
+    <img src="images/SocialMonthlyFacebookLikesConnectDateFilter_All.png" alt="SocialMonthlyFacebookLikesConnectDateFilter\_All" width="100%" />
 
 
 8.  **Change the title of your visualization** to "Monthly Likes" **by
@@ -240,27 +240,27 @@ retweets and favorited posts per month for the company in a [column chart](~/en/
     Dashboard** section. Make sure the **Social Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
+    <img src="images/SelectingSocialSheet_All.png" alt="SelectingSocialSheet\_All" width="100%" />
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Column" chart.
     
-    ![SelectColumnChart\_All](images/SelectColumnChart_All.png)
+    <img src="images/SelectColumnChart_All.png" alt="SelectColumnChart\_All" width="100%" />
 
 
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     both **Retweets** and **Favorites** into the Values placeholder of
     the data editor.
     
-    ![DragDropRetweetsFavorites\_All](images/DragDropRetweetsFavorites_All.png)
+    <img src="images/DragDropRetweetsFavorites_All.png" alt="DragDropRetweetsFavorites\_All" width="100%" />
 
 
 4.  In the sample Retweets & Favorites visualization, dates are
     displayed as months. Select the **Date** field in Label, and set the
     **Date Aggregation** to **Month**. Then, select **Update Field**.
     
-    ![SocialRetweetsFavoritesDateFilter\_All](images/SocialRetweetsFavoritesDateFilter_All.png)
+    <img src="images/SocialRetweetsFavoritesDateFilter_All.png" alt="SocialRetweetsFavoritesDateFilter\_All" width="100%" />
 
 
 5.  By default, Retweets & Favorites will be expressed with two fraction
@@ -268,20 +268,20 @@ retweets and favorited posts per month for the company in a [column chart](~/en/
     editor**, and, under **Formatting** change the **Fraction Digits**
     to **0** for both fields.
     
-    ![SocialRetweetsFavoritesFractionDigits\_All](images/SocialRetweetsFavoritesFractionDigits_All.png)
+    <img src="images/SocialRetweetsFavoritesFractionDigits_All.png" alt="SocialRetweetsFavoritesFractionDigits\_All" width="100%" />
 
 
 6.  To match the sample visualization's color, change the **Start
     Color** to the sixth one within the same **Settings** screen.
     
-    ![SocialRetweetsFavoritesStartColor\_All](images/SocialRetweetsFavoritesStartColor_All.png)
+    <img src="images/SocialRetweetsFavoritesStartColor_All.png" alt="SocialRetweetsFavoritesStartColor\_All" width="100%" />
 
 
 7.  Connect your visualization to the existing dashboard filter by
     selecting **Connect** under **Date Filter**. You can find this menu
     above "Social Dashboard".
     
-    ![SocialRetweetsFavoritesConnectDateFilter\_All](images/SocialRetweetsFavoritesConnectDateFilter_All.png)
+    <img src="images/SocialRetweetsFavoritesConnectDateFilter_All.png" alt="SocialRetweetsFavoritesConnectDateFilter\_All" width="100%" />
 
 
 8.  **Change the title of your visualization** to "Retweets & Favorites"
@@ -301,20 +301,20 @@ reaches and impressions through Facebook for the company in an [area chart](~/en
     Dashboard** section. Make sure the **Social Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
+    <img src="images/SelectingSocialSheet_All.png" alt="SelectingSocialSheet\_All" width="100%" />
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Area" chart.
     
-    ![SelectAreaChart\_All](images/SelectAreaChart_All.png)
+    <img src="images/SelectAreaChart_All.png" alt="SelectAreaChart\_All" width="100%" />
 
 
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     both **Post Reach** and **Impressions** into the Values placeholder
     of the data editor.
     
-    ![DragDropReachImpressions\_All](images/DragDropReachImpressions_All.png)
+    <img src="images/DragDropReachImpressions_All.png" alt="DragDropReachImpressions\_All" width="100%" />
 
 
 4.  In the sample Facebook Reach vs. Impressions visualization, dates
@@ -322,7 +322,7 @@ reaches and impressions through Facebook for the company in an [area chart](~/en
     the **Date Aggregation** to **Month**. Then, select **Update
     Field**.
     
-    ![SocialReachVsImpressionsDateFilter\_All](images/SocialReachVsImpressionsDateFilter_All.png)
+    <img src="images/SocialReachVsImpressionsDateFilter_All.png" alt="SocialReachVsImpressionsDateFilter\_All" width="100%" />
 
 
 5.  By default, Post Reach and Impressions will be expressed with two
@@ -330,14 +330,14 @@ reaches and impressions through Facebook for the company in an [area chart](~/en
     data editor**, and, under **Formatting** change the **Fraction
     Digits** to **0** for both fields.
     
-    ![SocialPostReachImpressions\_All](images/SocialPostReachImpressions_All.png)
+    <img src="images/SocialPostReachImpressions_All.png" alt="SocialPostReachImpressions\_All" width="100%" />
 
 
 6.  Connect your visualization to the existing dashboard filter by
     selecting **Connect** under **Date Filter**. You can find this menu
     above "Social Dashboard".
     
-    ![SocialReachImpressionsConnectDateFilter\_All](images/SocialReachImpressionsConnectDateFilter_All.png)
+    <img src="images/SocialReachImpressionsConnectDateFilter_All.png" alt="SocialReachImpressionsConnectDateFilter\_All" width="100%" />
 
 
 7.  **Change the title of your visualization** to "Facebook Reach vs.
@@ -358,26 +358,26 @@ mentions through Twitter for the company in a [line chart](~/en/visualization-tu
     Dashboard** section. Make sure the **Social Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
+    <img src="images/SelectingSocialSheet_All.png" alt="SelectingSocialSheet\_All" width="100%" />
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Line" chart.
     
-    ![SelectLineChart\_All](images/SelectLineChart_All.png)
+    <img src="images/SelectLineChart_All.png" alt="SelectLineChart\_All" width="100%" />
 
 
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     both **Mentions** into the Values placeholder of the data editor.
     
-    ![DragDropMonthlyTwitterMentions\_All](images/DragDropMonthlyTwitterMentions_All.png)
+    <img src="images/DragDropMonthlyTwitterMentions_All.png" alt="DragDropMonthlyTwitterMentions\_All" width="100%" />
 
 
 4.  In the sample Monthly Twitter Mentions visualization, dates are
     displayed as months. Select the **Date** field in Label, and set the
     **Date Aggregation** to **Month**. Then, select **Update Field**.
     
-    ![SocialMonthlyTwitterMentions\_All](images/SocialMonthlyTwitterMentions_All.png)
+    <img src="images/SocialMonthlyTwitterMentions_All.png" alt="SocialMonthlyTwitterMentions\_All" width="100%" />
 
 
 5.  By default, Mentions will be expressed with two fraction digits. In
@@ -385,14 +385,14 @@ mentions through Twitter for the company in a [line chart](~/en/visualization-tu
     under **Formatting** change the **Fraction Digits** to **0** for
     both fields.
     
-    ![SocialMentionsFractionDigits\_All](images/SocialMentionsFractionDigits_All.png)
+    <img src="images/SocialMentionsFractionDigits_All.png" alt="SocialMentionsFractionDigits\_All" width="100%" />
 
 
 6.  Connect your visualization to the existing dashboard filter by
     selecting **Connect** under **Date Filter**. You can find this menu
     above "Social Dashboard".
     
-    ![SocialMonthlyTwitterMentionConnectDateFilter\_All](images/SocialMonthlyTwitterMentionConnectDateFilter_All.png)
+    <img src="images/SocialMonthlyTwitterMentionConnectDateFilter_All.png" alt="SocialMonthlyTwitterMentionConnectDateFilter\_All" width="100%" />
 
 
 7.  **Change the title of your visualization** to "Monthly Twitter

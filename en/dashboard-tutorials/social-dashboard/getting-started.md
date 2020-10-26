@@ -26,7 +26,7 @@ the same sample spreadsheet.
 >[!NOTE]
 Excel files as local files are not supported in this release. In order
 to follow these tutorials, make sure you upload the file to one of the
-[supported cloud services](~/en/datasources/data-sources.md).
+[supported cloud services](~/en/datasources/overview.md).
 
 ### Steps Overview
 
