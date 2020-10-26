@@ -22,7 +22,6 @@
   href: scatter-bubble-charts.md
 - name: Scatter Map
   href: scatter-map/toc.yml
-  new: true
 - name: Sparkline Charts
   href: sparkline-charts.md
 - name: Text View
