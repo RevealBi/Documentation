@@ -3,7 +3,7 @@
 ### How do you create a Visualization?
 
 Once you select the + sign to add a new dashboard, you will be prompted
-to enter a new or an existing [data source](~/en/datasources/data-sources.md). This will be
+to enter a new or an existing [data source](~/en/datasources/overview.md). This will be
 the first step towards creating your visualization.
 
 ![Creating a new visualization dialog](images/creating-new-visualization.png)
