@@ -12,9 +12,11 @@ The dashboard shown below contains a wide variety of visualizations, all of whic
 
 ### Choosing the Right Chart Type 
 
-To choose the right chart type for your visualization you need to answer the following question: what data story are you trying to tell with your visualization?
+In choosing the best chart type you need to look at your data and answer the questions that will help you find out what story you are trying to tell with your visualization. 
 
-The table below will help you choose the chart to use for the type of data that you are trying to represent. 
+Are you trying to compare data, show data distribution or present it as a part to a whole breakdown? Are you doing a trend analysis of your financial, marketing or sales data, need a date/time axis? Are you looking at relationships between data? Or you just want to show KPIs and gauges, which are really easy to read and tell a quick story? Is it important to plot your data on a map? 
+
+Answer what you want to show with your data and use the table below to choose the most suitable chart. 
 
 <style type="text/css">
 td { 
@@ -151,6 +153,10 @@ td {
     <td>
       <img src="images/candlestick-Chart.png" alt="Candlestick Chart" /><br/>
       <a href="visualization-types/financial-charts.md">Candlestick</a>
+    </td>
+    <td>
+      <img src="images/radial-Chart.png" alt="Radial Chart" /><br/>
+      <a href="visualization-types/radial-charts.md">Radial</a>
     </td>
     <td />
     <td />
