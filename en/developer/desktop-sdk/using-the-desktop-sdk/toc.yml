@@ -1,34 +1,47 @@
+- name: Dashboards & Visualizations
+  header: true
+- name: Creating New Visualizations and Dashboards
+  href: creating-visualizations-dashboards.md
 - name: Loading Dashboard Files
   href: loading-dashboards.md
-- name: Configuring the RevealView Object
-  href: configuring-revealview.md
 - name: Editing & Saving Dashboards
   href: editing-saving-dashboards.md
-- name: Working with the Localization Service
-  href: localization-service.md
-- name: Working with the Formatting Service
-  href: formatting-service.md
 - name: Exporting a Dashboard or a Visualization
   href: exporting-dashboard-visualization.md
-- name: Replacing Data Sources
-  href: replacing-data-sources.md
+- name: Dashboard Linking
+  href: dashboard-linking.md
+- name: Maximizing Visualizations and Single Visualization Mode
+  href: maximizing-visualizations.md
+
+- name: Data Sources
+  header: true
 - name: In-Memory Data Support
   href: in-memory-data.md
 - name: Providing Credentials to Data Sources
   href: providing-credentials-datasources.md
-- name: Setting Up Initial Filter Selections
-  href: setting-initial-filters.md
-- name: Maximizing Visualizations and Single Visualization Mode
-  href: maximizing-visualizations.md
-- name: Setting up Dynamic Filter Selections
-  href: setting-dynamic-filters.md
-- name: Dashboard Linking
-  href: dashboard-linking.md
-- name: Handling User Click Events
-  href: handling-click-events.md
-- name: Creating New Visualizations and Dashboards
-  href: creating-visualizations-dashboards.md
+- name: Replacing Data Sources
+  href: replacing-data-sources.md
+- name: Filtering tables/sheets from a data source
+  href:
+
+- name: User Experience
+  header: true
+- name: Localizing Dashboards
+  href: localization-service.md
+- name: Formatting Dashboards
+  href: formatting-service.md
 - name: Creating Custom Themes
   href: custom-themes-desktop.md
+- name: Handling User Click Events
+  href: handling-click-events.md
 - name: Working with Tooltips
   href: working-tooltips-desktop.md
+- name: Showing/Hiding UI Elements
+  href:
+
+- name: Filters
+  header: true
+- name: Setting Up Initial Filter Selections
+  href: setting-initial-filters.md
+- name: Setting up Dynamic Filter Selections
+  href: setting-dynamic-filters.md
