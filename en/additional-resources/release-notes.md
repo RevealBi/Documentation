@@ -3,6 +3,8 @@
 All future updates and new features added to Reveal will be included
 here.
 
+*Scatter Map* visualization! We are looking forward to presenting you with another map visualization that will give you more insight for your geospatial data. Coming with an added capability to connect to a number of mapping services to use as a background.
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
@@ -16,13 +18,19 @@ here.
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
      <tr>
-    <td class="tg-0lax" rowspan="2">1.0.14</td>
+    <td class="tg-0lax" rowspan="3">1.0.14</td>
     <td class="tg-cly1"><span style="font-style:italic">New Amazon Athena data source</span><br>You can now connect to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
 </td>
 <tr>
     <td class="tg-cly1"><span style="font-style:italic">New Amazon S3 data source</span><br>Access your data from Amazon S3 directly in Reveal.
 </td>
   </tr>
+<tr>
+  <td class="tg-cly1"><span style="font-style:italic">
+  New Scatter Map visualization </span><br>
+  Gain more insight from your geospatial data and show distribution, spatial patterns, and outliers. You can also zoom for a more detailed view and connect to a number of mapping services to use as a background.
+  </td>
+</tr>
    <tr>
     <td class="tg-0lax" rowspan="3">1.0.13</td>
     <td class="tg-cly1"><span style="font-style:italic">New Amazon Redshift data source</span><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.
