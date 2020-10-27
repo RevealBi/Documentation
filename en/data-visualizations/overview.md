@@ -235,25 +235,16 @@ If you need more information about how to use each of these visualizations, use 
 
 ### Topics Overview
 
-There are several visualization types:
+In the _Visualization Types_ dropdown (see the table of contents on the left) you will find an A-Z list of all kinds of charts Reveal provides. 
 
-  - [Grid View](visualization-types/grid-chart.md)
+In [Working with the Visualizations Editor](visualizations-editor.md) you will be introduced to the Visualizations Editor's main parts and will also learn how to start creating your first visualization.
 
-  - [Pivot Table](visualization-types/pivot-table.md)
+In the [_Fields_](fields/overview.md) topics you will find more information on how to aggregate, filter and highlight the most valuable aspects of the data fields you are using to build your visualization. 
 
-  - [Text View](visualization-types/text-view.md)
+In [Reusing Visualization](reusing-visualizations.md) you will find useful ideas on how to speed up the dashboards creation process. 
 
-  - [Image View](visualization-types/image-chart.md)
+In [Statistical Functions](statistical-functions.md) you will find how advanced predictive analysis works in Reveal. See how to use the *Time series forecast*, *Linear regression*, and *Outliers Detection* function to receive more insight from your data.  
 
-  - [Gauge Views](visualization-types/gauge-charts.md), including the [Bullet Graph](visualization-types/gauge-charts.html#bullet-graph), [Circular](visualization-types/gauge-charts.html#circular-gauge), [KPI](visualization-types/kpi-gauge.md), [Linear](visualization-types/gauge-charts.html#linear-gauge) and [Text](visualization-types/gauge-charts.html#text-gauge) gauges.
-
-  - Several chart types, including [Category](visualization-types/category-charts.md), [Combo](visualization-types/combo-charts.md), [Financial](visualization-types/financial-charts.md), [Radial](visualization-types/radial-charts.md), [Scatter and Bubble](visualization-types/scatter-bubble-charts.md), and [Sparkline](visualization-types/sparkline-charts.md) charts.
-
-  - [Text Box Visualizations](visualization-types/text-box.md)
-
-### Next Steps 
-
-[Creating a visualization in the Visualizations editor](visualizations-editor.md)
 
 ### Visualization Tutorials
 
@@ -383,3 +374,4 @@ For specific information on what each visualization supports, visit the **Data V
 </tr>
 </tbody>
 </table>
+
