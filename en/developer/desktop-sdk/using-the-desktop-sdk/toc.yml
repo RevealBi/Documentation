@@ -1,5 +1,3 @@
-- name: Dashboards & Visualizations
-  header: true
 - name: Creating New Visualizations and Dashboards
   href: creating-visualizations-dashboards.md
 - name: Loading Dashboard Files
@@ -12,9 +10,6 @@
   href: dashboard-linking.md
 - name: Maximizing Visualizations and Single Visualization Mode
   href: maximizing-visualizations.md
-
-- name: Data Sources
-  header: true
 - name: In-Memory Data Support
   href: in-memory-data.md
 - name: Providing Credentials to Data Sources
@@ -23,9 +18,6 @@
   href: replacing-data-sources.md
 - name: Filtering tables/sheets from a data source
   href:
-
-- name: User Experience
-  header: true
 - name: Localizing Dashboards
   href: localization-service.md
 - name: Formatting Dashboards
@@ -38,9 +30,6 @@
   href: working-tooltips-desktop.md
 - name: Showing/Hiding UI Elements
   href:
-
-- name: Filters
-  header: true
 - name: Setting Up Initial Filter Selections
   href: setting-initial-filters.md
 - name: Setting up Dynamic Filter Selections
