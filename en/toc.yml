@@ -16,7 +16,7 @@
   href: teams/overview.md
 - name: Creating and Joining Teams
   href: teams/creating-joining-teams.md
-- name: Managing your Team
+- name: Managing Your Team
   href: teams/managing-your-team.md
 - name: Dashboards
   header: true
@@ -26,11 +26,13 @@
   href: dashboards/creating-dashboards.md
 - name: Uploading Dashboards
   href: dashboards/uploading-dashboards.md
+- name: Interacting with Dashboards
+  href: dashboards/dashboards-interactions.md
 - name: Styling Dashboards
   href: dashboards/dashboard-styling.md
 - name: Exporting Dashboards
   href: dashboards/exporting-dashboards/toc.yml
-- name: Managing your Dashboards
+- name: Managing Your Dashboards
   href: dashboards/managing-dashboards.md
 - name: Sharing Dashboards
   href: dashboards/sharing-dashboards/toc.yml
