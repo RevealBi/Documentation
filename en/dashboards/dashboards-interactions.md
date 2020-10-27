@@ -4,7 +4,7 @@ You can open existing dashboards by selecting the dashboard thumbnail image in t
 
 ![dashboard opened in edit mode](images/dashboard-opened-edit-mode.png)
 
-You can **interact** with visualizations in various ways. For instance, if the visualization is in grid view, you can scroll horizontally and
+You can **interact** with dashboard visualizations in various ways. For instance, if the visualization is in grid view, you can scroll horizontally and
 vertically. The chart view supports zooming and panning. Also drill down & drill up actions become possible if the underlying data model supports it.
 
 <a name='maximized-view'></a>
