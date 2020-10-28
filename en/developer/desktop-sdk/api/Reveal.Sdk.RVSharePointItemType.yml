@@ -1,0 +1,160 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSharePointItemType
+  commentId: T:Reveal.Sdk.RVSharePointItemType
+  id: RVSharePointItemType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSharePointItemType.List
+  - Reveal.Sdk.RVSharePointItemType.ListItem
+  - Reveal.Sdk.RVSharePointItemType.People
+  - Reveal.Sdk.RVSharePointItemType.Site
+  langs:
+  - csharp
+  - vb
+  name: RVSharePointItemType
+  nameWithType: RVSharePointItemType
+  fullName: Reveal.Sdk.RVSharePointItemType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint item type\n"
+  syntax:
+    content: public enum RVSharePointItemType
+    content.vb: Public Enum RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVSharePointItemType.Site
+  commentId: F:Reveal.Sdk.RVSharePointItemType.Site
+  id: Site
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: Site
+  nameWithType: RVSharePointItemType.Site
+  fullName: Reveal.Sdk.RVSharePointItemType.Site
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint site or sub site\n"
+  syntax:
+    content: Site = 0
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointItemType.List
+  commentId: F:Reveal.Sdk.RVSharePointItemType.List
+  id: List
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: List
+  nameWithType: RVSharePointItemType.List
+  fullName: Reveal.Sdk.RVSharePointItemType.List
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint list\n"
+  syntax:
+    content: List = 1
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointItemType.ListItem
+  commentId: F:Reveal.Sdk.RVSharePointItemType.ListItem
+  id: ListItem
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: ListItem
+  nameWithType: RVSharePointItemType.ListItem
+  fullName: Reveal.Sdk.RVSharePointItemType.ListItem
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint list item\n"
+  syntax:
+    content: ListItem = 2
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointItemType.People
+  commentId: F:Reveal.Sdk.RVSharePointItemType.People
+  id: People
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: People
+  nameWithType: RVSharePointItemType.People
+  fullName: Reveal.Sdk.RVSharePointItemType.People
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint people\n"
+  syntax:
+    content: People = 3
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVSharePointItemType
+  commentId: T:Reveal.Sdk.RVSharePointItemType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSharePointItemType
+  nameWithType: RVSharePointItemType
+  fullName: Reveal.Sdk.RVSharePointItemType

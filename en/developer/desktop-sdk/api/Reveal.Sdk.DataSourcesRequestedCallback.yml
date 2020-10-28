@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.DataSourcesRequestedCallback
+  commentId: T:Reveal.Sdk.DataSourcesRequestedCallback
+  id: DataSourcesRequestedCallback
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.DataSourcesRequestedCallback.#ctor(System.Object,System.IntPtr)
+  - Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke(Reveal.Sdk.RevealDataSources,System.AsyncCallback,System.Object)
+  - Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke(System.IAsyncResult)
+  - Reveal.Sdk.DataSourcesRequestedCallback.Invoke(Reveal.Sdk.RevealDataSources)
+  langs:
+  - csharp
+  - vb
+  name: DataSourcesRequestedCallback
+  nameWithType: DataSourcesRequestedCallback
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback
+  type: Delegate
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nCallback used to return the list of data sources to display to the user when creating a new widget.\n"
+  syntax:
+    content: public delegate void DataSourcesRequestedCallback(RevealDataSources dataSources);
+    parameters:
+    - id: dataSources
+      type: Reveal.Sdk.RevealDataSources
+      description: The list of data sources and items to offer to the user when creating a new widget
+    content.vb: Public Delegate Sub DataSourcesRequestedCallback(dataSources As RevealDataSources)
+  seealso:
+  - linkId: Reveal.Sdk.RevealView.DataSourcesRequested
+    commentId: E:Reveal.Sdk.RevealView.DataSourcesRequested
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.#ctor(System.Object,System.IntPtr)
+  commentId: M:Reveal.Sdk.DataSourcesRequestedCallback.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: Reveal.Sdk.DataSourcesRequestedCallback
+  langs:
+  - csharp
+  - vb
+  name: DataSourcesRequestedCallback(Object, IntPtr)
+  nameWithType: DataSourcesRequestedCallback.DataSourcesRequestedCallback(Object, IntPtr)
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.DataSourcesRequestedCallback(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public DataSourcesRequestedCallback(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: Reveal.Sdk.DataSourcesRequestedCallback.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.Invoke(Reveal.Sdk.RevealDataSources)
+  commentId: M:Reveal.Sdk.DataSourcesRequestedCallback.Invoke(Reveal.Sdk.RevealDataSources)
+  id: Invoke(Reveal.Sdk.RevealDataSources)
+  parent: Reveal.Sdk.DataSourcesRequestedCallback
+  langs:
+  - csharp
+  - vb
+  name: Invoke(RevealDataSources)
+  nameWithType: DataSourcesRequestedCallback.Invoke(RevealDataSources)
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.Invoke(Reveal.Sdk.RevealDataSources)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual void Invoke(RevealDataSources dataSources)
+    parameters:
+    - id: dataSources
+      type: Reveal.Sdk.RevealDataSources
+    content.vb: Public Overridable Sub Invoke(dataSources As RevealDataSources)
+  overload: Reveal.Sdk.DataSourcesRequestedCallback.Invoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke(Reveal.Sdk.RevealDataSources,System.AsyncCallback,System.Object)
+  commentId: M:Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke(Reveal.Sdk.RevealDataSources,System.AsyncCallback,System.Object)
+  id: BeginInvoke(Reveal.Sdk.RevealDataSources,System.AsyncCallback,System.Object)
+  parent: Reveal.Sdk.DataSourcesRequestedCallback
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(RevealDataSources, AsyncCallback, Object)
+  nameWithType: DataSourcesRequestedCallback.BeginInvoke(RevealDataSources, AsyncCallback, Object)
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke(Reveal.Sdk.RevealDataSources, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(RevealDataSources dataSources, AsyncCallback callback, object object)
+    parameters:
+    - id: dataSources
+      type: Reveal.Sdk.RevealDataSources
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(dataSources As RevealDataSources, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke(System.IAsyncResult)
+  commentId: M:Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: Reveal.Sdk.DataSourcesRequestedCallback
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: DataSourcesRequestedCallback.EndInvoke(IAsyncResult)
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual void EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(result As IAsyncResult)
+  overload: Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RevealView.DataSourcesRequested
+  commentId: E:Reveal.Sdk.RevealView.DataSourcesRequested
+  isExternal: true
+- uid: Reveal.Sdk.RevealDataSources
+  commentId: T:Reveal.Sdk.RevealDataSources
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RevealDataSources
+  nameWithType: RevealDataSources
+  fullName: Reveal.Sdk.RevealDataSources
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.#ctor*
+  commentId: Overload:Reveal.Sdk.DataSourcesRequestedCallback.#ctor
+  isExternal: true
+  name: DataSourcesRequestedCallback
+  nameWithType: DataSourcesRequestedCallback.DataSourcesRequestedCallback
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.DataSourcesRequestedCallback
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.Invoke*
+  commentId: Overload:Reveal.Sdk.DataSourcesRequestedCallback.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: DataSourcesRequestedCallback.Invoke
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.Invoke
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke*
+  commentId: Overload:Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: DataSourcesRequestedCallback.BeginInvoke
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke*
+  commentId: Overload:Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: DataSourcesRequestedCallback.EndInvoke
+  fullName: Reveal.Sdk.DataSourcesRequestedCallback.EndInvoke

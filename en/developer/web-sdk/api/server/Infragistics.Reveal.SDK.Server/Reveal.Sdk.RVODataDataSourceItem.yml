@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVODataDataSourceItem
+  commentId: T:Reveal.Sdk.RVODataDataSourceItem
+  id: RVODataDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVODataDataSourceItem.#ctor(Reveal.Sdk.RVODataDataSource)
+  - Reveal.Sdk.RVODataDataSourceItem.Url
+  langs:
+  - csharp
+  - vb
+  name: RVODataDataSourceItem
+  nameWithType: RVODataDataSourceItem
+  fullName: Reveal.Sdk.RVODataDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOData data source item, see <xref href=\"Reveal.Sdk.RVODataDataSource\" data-throw-if-not-resolved=\"false\"></xref> for more information.\n"
+  syntax:
+    content: 'public class RVODataDataSourceItem : RVDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVODataDataSourceItem
+          Inherits RVDataSourceItem
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVODataDataSourceItem.#ctor(Reveal.Sdk.RVODataDataSource)
+  commentId: M:Reveal.Sdk.RVODataDataSourceItem.#ctor(Reveal.Sdk.RVODataDataSource)
+  id: '#ctor(Reveal.Sdk.RVODataDataSource)'
+  parent: Reveal.Sdk.RVODataDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVODataDataSourceItem(RVODataDataSource)
+  nameWithType: RVODataDataSourceItem.RVODataDataSourceItem(RVODataDataSource)
+  fullName: Reveal.Sdk.RVODataDataSourceItem.RVODataDataSourceItem(Reveal.Sdk.RVODataDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVODataDataSourceItem(RVODataDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVODataDataSource
+    content.vb: Public Sub New(dataSource As RVODataDataSource)
+  overload: Reveal.Sdk.RVODataDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVODataDataSourceItem.Url
+  commentId: P:Reveal.Sdk.RVODataDataSourceItem.Url
+  id: Url
+  parent: Reveal.Sdk.RVODataDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: RVODataDataSourceItem.Url
+  fullName: Reveal.Sdk.RVODataDataSourceItem.Url
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nURL to the OData endpoint, must match the URL specified in the <xref href=\"Reveal.Sdk.RVODataDataSource\" data-throw-if-not-resolved=\"false\"></xref> data source object.\n"
+  syntax:
+    content: public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: URL to the OData endpoint
+    content.vb: Public Property Url As String
+  overload: Reveal.Sdk.RVODataDataSourceItem.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVODataDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVODataDataSourceItem.#ctor
+  isExternal: true
+  name: RVODataDataSourceItem
+  nameWithType: RVODataDataSourceItem.RVODataDataSourceItem
+  fullName: Reveal.Sdk.RVODataDataSourceItem.RVODataDataSourceItem
+- uid: Reveal.Sdk.RVODataDataSource
+  commentId: T:Reveal.Sdk.RVODataDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVODataDataSource
+  nameWithType: RVODataDataSource
+  fullName: Reveal.Sdk.RVODataDataSource
+- uid: Reveal.Sdk.RVODataDataSourceItem.Url*
+  commentId: Overload:Reveal.Sdk.RVODataDataSourceItem.Url
+  isExternal: true
+  name: Url
+  nameWithType: RVODataDataSourceItem.Url
+  fullName: Reveal.Sdk.RVODataDataSourceItem.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

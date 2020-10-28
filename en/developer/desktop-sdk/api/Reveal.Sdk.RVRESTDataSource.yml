@@ -1,0 +1,728 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVRESTDataSource
+  commentId: T:Reveal.Sdk.RVRESTDataSource
+  id: RVRESTDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVRESTDataSource.#ctor
+  - Reveal.Sdk.RVRESTDataSource.Body
+  - Reveal.Sdk.RVRESTDataSource.ContentType
+  - Reveal.Sdk.RVRESTDataSource.Headers
+  - Reveal.Sdk.RVRESTDataSource.Method
+  - Reveal.Sdk.RVRESTDataSource.Url
+  - Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication
+  langs:
+  - csharp
+  - vb
+  name: RVRESTDataSource
+  nameWithType: RVRESTDataSource
+  fullName: Reveal.Sdk.RVRESTDataSource
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nREST API data source, configures the URL to get data from, HTTP method to use and optionally headers and body to send in the request.\n"
+  syntax:
+    content: 'public class RVRESTDataSource : RVDashboardDataSource'
+    content.vb: >-
+      Public Class RVRESTDataSource
+          Inherits RVDashboardDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVRESTDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVRESTDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVRESTDataSource()
+  nameWithType: RVRESTDataSource.RVRESTDataSource()
+  fullName: Reveal.Sdk.RVRESTDataSource.RVRESTDataSource()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVRESTDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVRESTDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSource.Url
+  commentId: P:Reveal.Sdk.RVRESTDataSource.Url
+  id: Url
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: RVRESTDataSource.Url
+  fullName: Reveal.Sdk.RVRESTDataSource.Url
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nURL to the web resource, is expected to be a URL with HTTP or HTTPS scheme. \nParameters might be specified using the notation {parameterName}, for example: http://server/customers/{CustomerID} defines a &quot;CustomerID&quot; parameter\nthat must be included in the <xref href=\"Reveal.Sdk.RVRESTDataSourceItem.Parameters\" data-throw-if-not-resolved=\"false\"></xref> property of <xref href=\"Reveal.Sdk.RVRESTDataSourceItem\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Reveal.Sdk.RVRESTDataSource.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication
+  commentId: P:Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication
+  id: UseAnonymousAuthentication
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: UseAnonymousAuthentication
+  nameWithType: RVRESTDataSource.UseAnonymousAuthentication
+  fullName: Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nBoolean flag indicating if anonymous authentication should be used for this data source or credentials must be requested\nto the containing application.\n"
+  syntax:
+    content: public bool UseAnonymousAuthentication { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseAnonymousAuthentication As Boolean
+  overload: Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSource.Method
+  commentId: P:Reveal.Sdk.RVRESTDataSource.Method
+  id: Method
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: RVRESTDataSource.Method
+  fullName: Reveal.Sdk.RVRESTDataSource.Method
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nHTTP method to use, it defaults to GET\n"
+  syntax:
+    content: public string Method { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Method As String
+  overload: Reveal.Sdk.RVRESTDataSource.Method*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSource.ContentType
+  commentId: P:Reveal.Sdk.RVRESTDataSource.ContentType
+  id: ContentType
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: ContentType
+  nameWithType: RVRESTDataSource.ContentType
+  fullName: Reveal.Sdk.RVRESTDataSource.ContentType
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nContent type of the body, only used when <xref href=\"Reveal.Sdk.RVRESTDataSource.Body\" data-throw-if-not-resolved=\"false\"></xref> is not empty\n"
+  syntax:
+    content: public string ContentType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ContentType As String
+  overload: Reveal.Sdk.RVRESTDataSource.ContentType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSource.Body
+  commentId: P:Reveal.Sdk.RVRESTDataSource.Body
+  id: Body
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: RVRESTDataSource.Body
+  fullName: Reveal.Sdk.RVRESTDataSource.Body
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nBody to send, expected to be used only with POST and PUT methods.\n"
+  syntax:
+    content: public string Body { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Body As String
+  overload: Reveal.Sdk.RVRESTDataSource.Body*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSource.Headers
+  commentId: P:Reveal.Sdk.RVRESTDataSource.Headers
+  id: Headers
+  parent: Reveal.Sdk.RVRESTDataSource
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: RVRESTDataSource.Headers
+  fullName: Reveal.Sdk.RVRESTDataSource.Headers
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nList of headers to send in the request, each string in this list is expected to a string in the format name=value.\n"
+  syntax:
+    content: public List<string> Headers { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property Headers As List(Of String)
+  overload: Reveal.Sdk.RVRESTDataSource.Headers*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVRESTDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.#ctor
+  isExternal: true
+  name: RVRESTDataSource
+  nameWithType: RVRESTDataSource.RVRESTDataSource
+  fullName: Reveal.Sdk.RVRESTDataSource.RVRESTDataSource
+- uid: Reveal.Sdk.RVRESTDataSource.Url*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.Url
+  isExternal: true
+  name: Url
+  nameWithType: RVRESTDataSource.Url
+  fullName: Reveal.Sdk.RVRESTDataSource.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication
+  isExternal: true
+  name: UseAnonymousAuthentication
+  nameWithType: RVRESTDataSource.UseAnonymousAuthentication
+  fullName: Reveal.Sdk.RVRESTDataSource.UseAnonymousAuthentication
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RVRESTDataSource.Method*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.Method
+  isExternal: true
+  name: Method
+  nameWithType: RVRESTDataSource.Method
+  fullName: Reveal.Sdk.RVRESTDataSource.Method
+- uid: Reveal.Sdk.RVRESTDataSource.ContentType*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.ContentType
+  isExternal: true
+  name: ContentType
+  nameWithType: RVRESTDataSource.ContentType
+  fullName: Reveal.Sdk.RVRESTDataSource.ContentType
+- uid: Reveal.Sdk.RVRESTDataSource.Body*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.Body
+  isExternal: true
+  name: Body
+  nameWithType: RVRESTDataSource.Body
+  fullName: Reveal.Sdk.RVRESTDataSource.Body
+- uid: Reveal.Sdk.RVRESTDataSource.Headers*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSource.Headers
+  isExternal: true
+  name: Headers
+  nameWithType: RVRESTDataSource.Headers
+  fullName: Reveal.Sdk.RVRESTDataSource.Headers
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

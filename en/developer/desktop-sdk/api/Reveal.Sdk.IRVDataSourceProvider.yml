@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVDataSourceProvider
+  commentId: T:Reveal.Sdk.IRVDataSourceProvider
+  id: IRVDataSourceProvider
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync(Reveal.Sdk.RVDashboardFilter,Reveal.Sdk.RVDataSourceItem)
+  - Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVDataSourceItem)
+  langs:
+  - csharp
+  - vb
+  name: IRVDataSourceProvider
+  nameWithType: IRVDataSourceProvider
+  fullName: Reveal.Sdk.IRVDataSourceProvider
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe interface that must be implemented and set to <see cref=\"!:RevealView.DataSourceProvider\"></see> in order to replace data sources\nwhen a dashboard is opened.\nSee &apos;Replacing data sources&apos; in the developer guide for more information.\n"
+  syntax:
+    content: public interface IRVDataSourceProvider
+    content.vb: Public Interface IRVDataSourceProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVDataSourceItem)
+  commentId: M:Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVDataSourceItem)
+  id: ChangeVisualizationDataSourceItemAsync(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVDataSourceItem)
+  parent: Reveal.Sdk.IRVDataSourceProvider
+  langs:
+  - csharp
+  - vb
+  name: ChangeVisualizationDataSourceItemAsync(RVVisualization, RVDataSourceItem)
+  nameWithType: IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync(RVVisualization, RVDataSourceItem)
+  fullName: Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync(Reveal.Sdk.RVVisualization, Reveal.Sdk.RVDataSourceItem)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThis method can be used to replace the data source used by a given visualization, returning <code>null</code> indicates Reveal to use\nthe original data source stored in the dashboard.\n"
+  syntax:
+    content: Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(RVVisualization visualization, RVDataSourceItem dataSourceItem)
+    parameters:
+    - id: visualization
+      type: Reveal.Sdk.RVVisualization
+      description: The visualization where the data source is being referenced, you might use the Title attribute to decide the data source to use
+    - id: dataSourceItem
+      type: Reveal.Sdk.RVDataSourceItem
+      description: Information about the data source being used, like the name of the table, database, etc.
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.RVDataSourceItem}
+      description: The new data source to use or <code>null</code> to use the original data source in the dashboard
+    content.vb: Function ChangeVisualizationDataSourceItemAsync(visualization As RVVisualization, dataSourceItem As RVDataSourceItem) As Task(Of RVDataSourceItem)
+  overload: Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync*
+- uid: Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync(Reveal.Sdk.RVDashboardFilter,Reveal.Sdk.RVDataSourceItem)
+  commentId: M:Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync(Reveal.Sdk.RVDashboardFilter,Reveal.Sdk.RVDataSourceItem)
+  id: ChangeDashboardFilterDataSourceItemAsync(Reveal.Sdk.RVDashboardFilter,Reveal.Sdk.RVDataSourceItem)
+  parent: Reveal.Sdk.IRVDataSourceProvider
+  langs:
+  - csharp
+  - vb
+  name: ChangeDashboardFilterDataSourceItemAsync(RVDashboardFilter, RVDataSourceItem)
+  nameWithType: IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync(RVDashboardFilter, RVDataSourceItem)
+  fullName: Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync(Reveal.Sdk.RVDashboardFilter, Reveal.Sdk.RVDataSourceItem)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThis method can be used to replace the data source used by a given filter, returning <code>null</code> indicates Reveal to use\nthe original data source stored in the dashboard.\n"
+  syntax:
+    content: Task<RVDataSourceItem> ChangeDashboardFilterDataSourceItemAsync(RVDashboardFilter filter, RVDataSourceItem dataSourceItem)
+    parameters:
+    - id: filter
+      type: Reveal.Sdk.RVDashboardFilter
+      description: The filter where the data source is being referenced, you might use the Title attribute to decide the data source to use
+    - id: dataSourceItem
+      type: Reveal.Sdk.RVDataSourceItem
+      description: Information about the data source being used, like the name of the table, database, etc.
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.RVDataSourceItem}
+      description: The new data source to use or <code>null</code> to use the original data source in the dashboard
+    content.vb: Function ChangeDashboardFilterDataSourceItemAsync(filter As RVDashboardFilter, dataSourceItem As RVDataSourceItem) As Task(Of RVDataSourceItem)
+  overload: Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync*
+  commentId: Overload:Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync
+  isExternal: true
+  name: ChangeVisualizationDataSourceItemAsync
+  nameWithType: IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync
+  fullName: Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync
+- uid: Reveal.Sdk.RVVisualization
+  commentId: T:Reveal.Sdk.RVVisualization
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVVisualization
+  nameWithType: RVVisualization
+  fullName: Reveal.Sdk.RVVisualization
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: System.Threading.Tasks.Task{Reveal.Sdk.RVDataSourceItem}
+  commentId: T:System.Threading.Tasks.Task{Reveal.Sdk.RVDataSourceItem}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<RVDataSourceItem>
+  nameWithType: Task<RVDataSourceItem>
+  fullName: System.Threading.Tasks.Task<Reveal.Sdk.RVDataSourceItem>
+  nameWithType.vb: Task(Of RVDataSourceItem)
+  fullName.vb: System.Threading.Tasks.Task(Of Reveal.Sdk.RVDataSourceItem)
+  name.vb: Task(Of RVDataSourceItem)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVDataSourceItem
+    name: RVDataSourceItem
+    nameWithType: RVDataSourceItem
+    fullName: Reveal.Sdk.RVDataSourceItem
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVDataSourceItem
+    name: RVDataSourceItem
+    nameWithType: RVDataSourceItem
+    fullName: Reveal.Sdk.RVDataSourceItem
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync*
+  commentId: Overload:Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync
+  isExternal: true
+  name: ChangeDashboardFilterDataSourceItemAsync
+  nameWithType: IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync
+  fullName: Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync
+- uid: Reveal.Sdk.RVDashboardFilter
+  commentId: T:Reveal.Sdk.RVDashboardFilter
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardFilter
+  nameWithType: RVDashboardFilter
+  fullName: Reveal.Sdk.RVDashboardFilter

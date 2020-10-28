@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  id: IRVResourceItem
+  parent: Reveal.Sdk
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nInterface representing items used to get a file (resource) from one of the resource providers (Sharepoint, Web Resource, etc.)\n"
+  syntax:
+    content: public interface IRVResourceItem
+    content.vb: Public Interface IRVResourceItem
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk

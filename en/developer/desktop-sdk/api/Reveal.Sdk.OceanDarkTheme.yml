@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.OceanDarkTheme
+  commentId: T:Reveal.Sdk.OceanDarkTheme
+  id: OceanDarkTheme
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.OceanDarkTheme.#ctor
+  langs:
+  - csharp
+  - vb
+  name: OceanDarkTheme
+  nameWithType: OceanDarkTheme
+  fullName: Reveal.Sdk.OceanDarkTheme
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nDark version of the Ocean theme\n"
+  syntax:
+    content: 'public class OceanDarkTheme : RevealTheme'
+    content.vb: >-
+      Public Class OceanDarkTheme
+          Inherits RevealTheme
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RevealTheme
+  inheritedMembers:
+  - Reveal.Sdk.RevealTheme.ChartColors
+  - Reveal.Sdk.RevealTheme.ConditionalFormatting
+  - Reveal.Sdk.RevealTheme.HighlightColor
+  - Reveal.Sdk.RevealTheme.RegularFont
+  - Reveal.Sdk.RevealTheme.MediumFont
+  - Reveal.Sdk.RevealTheme.BoldFont
+  - Reveal.Sdk.RevealTheme.FontColor
+  - Reveal.Sdk.RevealTheme.DashboardBackgroundColor
+  - Reveal.Sdk.RevealTheme.VisualizationBackgroundColor
+  - Reveal.Sdk.RevealTheme.AccentColor
+  - Reveal.Sdk.RevealTheme.UseRoundedCorners
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.OceanDarkTheme.#ctor
+  commentId: M:Reveal.Sdk.OceanDarkTheme.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.OceanDarkTheme
+  langs:
+  - csharp
+  - vb
+  name: OceanDarkTheme()
+  nameWithType: OceanDarkTheme.OceanDarkTheme()
+  fullName: Reveal.Sdk.OceanDarkTheme.OceanDarkTheme()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public OceanDarkTheme()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.OceanDarkTheme.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RevealTheme
+  commentId: T:Reveal.Sdk.RevealTheme
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RevealTheme
+  nameWithType: RevealTheme
+  fullName: Reveal.Sdk.RevealTheme
+- uid: Reveal.Sdk.RevealTheme.ChartColors
+  commentId: P:Reveal.Sdk.RevealTheme.ChartColors
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: ChartColors
+  nameWithType: RevealTheme.ChartColors
+  fullName: Reveal.Sdk.RevealTheme.ChartColors
+- uid: Reveal.Sdk.RevealTheme.ConditionalFormatting
+  commentId: P:Reveal.Sdk.RevealTheme.ConditionalFormatting
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: ConditionalFormatting
+  nameWithType: RevealTheme.ConditionalFormatting
+  fullName: Reveal.Sdk.RevealTheme.ConditionalFormatting
+- uid: Reveal.Sdk.RevealTheme.HighlightColor
+  commentId: P:Reveal.Sdk.RevealTheme.HighlightColor
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: HighlightColor
+  nameWithType: RevealTheme.HighlightColor
+  fullName: Reveal.Sdk.RevealTheme.HighlightColor
+- uid: Reveal.Sdk.RevealTheme.RegularFont
+  commentId: P:Reveal.Sdk.RevealTheme.RegularFont
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: RegularFont
+  nameWithType: RevealTheme.RegularFont
+  fullName: Reveal.Sdk.RevealTheme.RegularFont
+- uid: Reveal.Sdk.RevealTheme.MediumFont
+  commentId: P:Reveal.Sdk.RevealTheme.MediumFont
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: MediumFont
+  nameWithType: RevealTheme.MediumFont
+  fullName: Reveal.Sdk.RevealTheme.MediumFont
+- uid: Reveal.Sdk.RevealTheme.BoldFont
+  commentId: P:Reveal.Sdk.RevealTheme.BoldFont
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: BoldFont
+  nameWithType: RevealTheme.BoldFont
+  fullName: Reveal.Sdk.RevealTheme.BoldFont
+- uid: Reveal.Sdk.RevealTheme.FontColor
+  commentId: P:Reveal.Sdk.RevealTheme.FontColor
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: FontColor
+  nameWithType: RevealTheme.FontColor
+  fullName: Reveal.Sdk.RevealTheme.FontColor
+- uid: Reveal.Sdk.RevealTheme.DashboardBackgroundColor
+  commentId: P:Reveal.Sdk.RevealTheme.DashboardBackgroundColor
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: DashboardBackgroundColor
+  nameWithType: RevealTheme.DashboardBackgroundColor
+  fullName: Reveal.Sdk.RevealTheme.DashboardBackgroundColor
+- uid: Reveal.Sdk.RevealTheme.VisualizationBackgroundColor
+  commentId: P:Reveal.Sdk.RevealTheme.VisualizationBackgroundColor
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: VisualizationBackgroundColor
+  nameWithType: RevealTheme.VisualizationBackgroundColor
+  fullName: Reveal.Sdk.RevealTheme.VisualizationBackgroundColor
+- uid: Reveal.Sdk.RevealTheme.AccentColor
+  commentId: P:Reveal.Sdk.RevealTheme.AccentColor
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: AccentColor
+  nameWithType: RevealTheme.AccentColor
+  fullName: Reveal.Sdk.RevealTheme.AccentColor
+- uid: Reveal.Sdk.RevealTheme.UseRoundedCorners
+  commentId: P:Reveal.Sdk.RevealTheme.UseRoundedCorners
+  parent: Reveal.Sdk.RevealTheme
+  isExternal: true
+  name: UseRoundedCorners
+  nameWithType: RevealTheme.UseRoundedCorners
+  fullName: Reveal.Sdk.RevealTheme.UseRoundedCorners
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.OceanDarkTheme.#ctor*
+  commentId: Overload:Reveal.Sdk.OceanDarkTheme.#ctor
+  isExternal: true
+  name: OceanDarkTheme
+  nameWithType: OceanDarkTheme.OceanDarkTheme
+  fullName: Reveal.Sdk.OceanDarkTheme.OceanDarkTheme

@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.OceanDarkTheme
+    id: rpembedded.OceanDarkTheme
+    name: OceanDarkTheme
+    summary: Light version of the Ocean theme
+    fullName: rpembedded.OceanDarkTheme
+    type: Class
+    children:
+      - rpembedded.OceanDarkTheme.#ctor
+    langs:
+      - js
+  - id: rpembedded.OceanDarkTheme.#ctor
+    uid: rpembedded.OceanDarkTheme.#ctor
+    parent: rpembedded.OceanDarkTheme
+    name: OceanDarkTheme()
+    fullName: rpembedded.OceanDarkTheme.OceanDarkTheme()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new OceanDarkTheme()
+    langs:
+      - js

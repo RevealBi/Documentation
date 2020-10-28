@@ -1,0 +1,512 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSqlPDSDataSource
+  commentId: T:Reveal.Sdk.RVSqlPDSDataSource
+  id: RVSqlPDSDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSqlPDSDataSource.#ctor
+  - Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  - Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  langs:
+  - csharp
+  - vb
+  name: RVSqlPDSDataSource
+  nameWithType: RVSqlPDSDataSource
+  fullName: Reveal.Sdk.RVSqlPDSDataSource
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: 'public abstract class RVSqlPDSDataSource : RVSqlBasedDataSource'
+    content.vb: >-
+      Public MustInherit Class RVSqlPDSDataSource
+          Inherits RVSqlBasedDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  - Reveal.Sdk.RVSqlBasedDataSource
+  derivedClasses:
+  - Reveal.Sdk.RVMySqlDataSource
+  - Reveal.Sdk.RVMySqlDataSource
+  - Reveal.Sdk.RVPostgresDataSource
+  - Reveal.Sdk.RVPostgresDataSource
+  - Reveal.Sdk.RVSqlServerDataSource
+  - Reveal.Sdk.RVSqlServerDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVSqlBasedDataSource.Host
+  - Reveal.Sdk.RVSqlBasedDataSource.Port
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Reveal.Sdk.RVSqlPDSDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVSqlPDSDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVSqlPDSDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVSqlPDSDataSource()
+  nameWithType: RVSqlPDSDataSource.RVSqlPDSDataSource()
+  fullName: Reveal.Sdk.RVSqlPDSDataSource.RVSqlPDSDataSource()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVSqlPDSDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVSqlPDSDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  commentId: P:Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  id: ProcessDataOnServerDefaultValue
+  parent: Reveal.Sdk.RVSqlPDSDataSource
+  langs:
+  - csharp
+  - vb
+  name: ProcessDataOnServerDefaultValue
+  nameWithType: RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  fullName: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSets the default value for &quot;Process Data on Server&quot; option for this data source, the \nend user can still change the value, unless <xref href=\"Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly\" data-throw-if-not-resolved=\"false\"></xref> is <code>true</code>.\n"
+  syntax:
+    content: public bool ProcessDataOnServerDefaultValue { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ProcessDataOnServerDefaultValue As Boolean
+  overload: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  commentId: P:Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  id: ProcessDataOnServerReadOnly
+  parent: Reveal.Sdk.RVSqlPDSDataSource
+  langs:
+  - csharp
+  - vb
+  name: ProcessDataOnServerReadOnly
+  nameWithType: RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  fullName: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nWhen set to <code>true</code> the user will not be allowed to change the value for &quot;Process Data on Server&quot; option\nand the default value will be used.\n"
+  syntax:
+    content: public bool ProcessDataOnServerReadOnly { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ProcessDataOnServerReadOnly As Boolean
+  overload: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVSqlBasedDataSource
+  commentId: T:Reveal.Sdk.RVSqlBasedDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSqlBasedDataSource
+  nameWithType: RVSqlBasedDataSource
+  fullName: Reveal.Sdk.RVSqlBasedDataSource
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Host
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Host
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  isExternal: true
+  name: Host
+  nameWithType: RVSqlBasedDataSource.Host
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Host
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Port
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Port
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  isExternal: true
+  name: Port
+  nameWithType: RVSqlBasedDataSource.Port
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Port
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVSqlPDSDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVSqlPDSDataSource.#ctor
+  isExternal: true
+  name: RVSqlPDSDataSource
+  nameWithType: RVSqlPDSDataSource.RVSqlPDSDataSource
+  fullName: Reveal.Sdk.RVSqlPDSDataSource.RVSqlPDSDataSource
+- uid: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue*
+  commentId: Overload:Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  isExternal: true
+  name: ProcessDataOnServerDefaultValue
+  nameWithType: RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+  fullName: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerDefaultValue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly*
+  commentId: Overload:Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  isExternal: true
+  name: ProcessDataOnServerReadOnly
+  nameWithType: RVSqlPDSDataSource.ProcessDataOnServerReadOnly
+  fullName: Reveal.Sdk.RVSqlPDSDataSource.ProcessDataOnServerReadOnly

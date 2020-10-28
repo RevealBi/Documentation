@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSqlBasedDataSource
+  commentId: T:Reveal.Sdk.RVSqlBasedDataSource
+  id: RVSqlBasedDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSqlBasedDataSource.#ctor
+  - Reveal.Sdk.RVSqlBasedDataSource.Host
+  - Reveal.Sdk.RVSqlBasedDataSource.Port
+  langs:
+  - csharp
+  - vb
+  name: RVSqlBasedDataSource
+  nameWithType: RVSqlBasedDataSource
+  fullName: Reveal.Sdk.RVSqlBasedDataSource
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe base data source class used to represent a connection to one of the supported database systems.\n"
+  syntax:
+    content: 'public abstract class RVSqlBasedDataSource : RVDashboardDataSource'
+    content.vb: >-
+      Public MustInherit Class RVSqlBasedDataSource
+          Inherits RVDashboardDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  derivedClasses:
+  - Reveal.Sdk.RVOracleDataSource
+  - Reveal.Sdk.RVRedshiftDataSource
+  - Reveal.Sdk.RVSqlPDSDataSource
+  - Reveal.Sdk.RVSyBaseDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Reveal.Sdk.RVSqlBasedDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVSqlBasedDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVSqlBasedDataSource()
+  nameWithType: RVSqlBasedDataSource.RVSqlBasedDataSource()
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.RVSqlBasedDataSource()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: protected RVSqlBasedDataSource()
+    content.vb: Protected Sub New
+  overload: Reveal.Sdk.RVSqlBasedDataSource.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Host
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Host
+  id: Host
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: RVSqlBasedDataSource.Host
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Host
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nHost name or IP address to connect to.\n"
+  syntax:
+    content: public string Host { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Host As String
+  overload: Reveal.Sdk.RVSqlBasedDataSource.Host*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Port
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Port
+  id: Port
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: RVSqlBasedDataSource.Port
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Port
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nTCP Port to connect to.\n"
+  syntax:
+    content: public int Port { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Port As Integer
+  overload: Reveal.Sdk.RVSqlBasedDataSource.Port*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVSqlBasedDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVSqlBasedDataSource.#ctor
+  isExternal: true
+  name: RVSqlBasedDataSource
+  nameWithType: RVSqlBasedDataSource.RVSqlBasedDataSource
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.RVSqlBasedDataSource
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Host*
+  commentId: Overload:Reveal.Sdk.RVSqlBasedDataSource.Host
+  isExternal: true
+  name: Host
+  nameWithType: RVSqlBasedDataSource.Host
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Host
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Port*
+  commentId: Overload:Reveal.Sdk.RVSqlBasedDataSource.Port
+  isExternal: true
+  name: Port
+  nameWithType: RVSqlBasedDataSource.Port
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Port
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

@@ -1,0 +1,1020 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboard
+  commentId: T:Reveal.Sdk.RVDashboard
+  id: RVDashboard
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboard.#ctor
+  - Reveal.Sdk.RVDashboard.#ctor(System.IO.Stream)
+  - Reveal.Sdk.RVDashboard.#ctor(System.String)
+  - Reveal.Sdk.RVDashboard.DateFilter
+  - Reveal.Sdk.RVDashboard.Filters
+  - Reveal.Sdk.RVDashboard.HasPendingChanges
+  - Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.IO.Stream)
+  - Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.String)
+  - Reveal.Sdk.RVDashboard.PropertyChanged
+  - Reveal.Sdk.RVDashboard.RaisePropertyChanged(System.String)
+  - Reveal.Sdk.RVDashboard.Title
+  - Reveal.Sdk.RVDashboard.Visualizations
+  langs:
+  - csharp
+  - vb
+  name: RVDashboard
+  nameWithType: RVDashboard
+  fullName: Reveal.Sdk.RVDashboard
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe class representing a Dashboard model.&quot;/>\n"
+  syntax:
+    content: 'public class RVDashboard : INotifyPropertyChanged'
+    content.vb: >-
+      Public Class RVDashboard
+          Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVDashboard.#ctor
+  commentId: M:Reveal.Sdk.RVDashboard.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: RVDashboard()
+  nameWithType: RVDashboard.RVDashboard()
+  fullName: Reveal.Sdk.RVDashboard.RVDashboard()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVDashboard()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVDashboard.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDashboard.#ctor(System.String)
+  commentId: M:Reveal.Sdk.RVDashboard.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: RVDashboard(String)
+  nameWithType: RVDashboard.RVDashboard(String)
+  fullName: Reveal.Sdk.RVDashboard.RVDashboard(System.String)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVDashboard(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Sub New(path As String)
+  overload: Reveal.Sdk.RVDashboard.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDashboard.#ctor(System.IO.Stream)
+  commentId: M:Reveal.Sdk.RVDashboard.#ctor(System.IO.Stream)
+  id: '#ctor(System.IO.Stream)'
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: RVDashboard(Stream)
+  nameWithType: RVDashboard.RVDashboard(Stream)
+  fullName: Reveal.Sdk.RVDashboard.RVDashboard(System.IO.Stream)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVDashboard(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    content.vb: Public Sub New(stream As Stream)
+  overload: Reveal.Sdk.RVDashboard.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.String)
+  commentId: M:Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.String)
+  id: LoadDashboardAsync(System.String)
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: LoadDashboardAsync(String)
+  nameWithType: RVDashboard.LoadDashboardAsync(String)
+  fullName: Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nLoads dashboard from a path on the disk.\n"
+  syntax:
+    content: public static Task<RVDashboard> LoadDashboardAsync(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path on the dist to the rdash file to be loaded.
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+      description: The loaded dashboard.
+    content.vb: Public Shared Function LoadDashboardAsync(path As String) As Task(Of RVDashboard)
+  overload: Reveal.Sdk.RVDashboard.LoadDashboardAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.IO.Stream)
+  commentId: M:Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.IO.Stream)
+  id: LoadDashboardAsync(System.IO.Stream)
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: LoadDashboardAsync(Stream)
+  nameWithType: RVDashboard.LoadDashboardAsync(Stream)
+  fullName: Reveal.Sdk.RVDashboard.LoadDashboardAsync(System.IO.Stream)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nLoads dashboard from a Stream.\n"
+  syntax:
+    content: public static Task<RVDashboard> LoadDashboardAsync(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream fromw which the dashboard should be loaded.
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+      description: The loaded dashboard.
+    content.vb: Public Shared Function LoadDashboardAsync(stream As Stream) As Task(Of RVDashboard)
+  overload: Reveal.Sdk.RVDashboard.LoadDashboardAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RVDashboard.RaisePropertyChanged(System.String)
+  commentId: M:Reveal.Sdk.RVDashboard.RaisePropertyChanged(System.String)
+  id: RaisePropertyChanged(System.String)
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: RaisePropertyChanged(String)
+  nameWithType: RVDashboard.RaisePropertyChanged(String)
+  fullName: Reveal.Sdk.RVDashboard.RaisePropertyChanged(System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: protected void RaisePropertyChanged(string propertyName)
+    parameters:
+    - id: propertyName
+      type: System.String
+    content.vb: Protected Sub RaisePropertyChanged(propertyName As String)
+  overload: Reveal.Sdk.RVDashboard.RaisePropertyChanged*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Reveal.Sdk.RVDashboard.Title
+  commentId: P:Reveal.Sdk.RVDashboard.Title
+  id: Title
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: RVDashboard.Title
+  fullName: Reveal.Sdk.RVDashboard.Title
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe name or title of the dashboard\n"
+  syntax:
+    content: public string Title { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Title As String
+  overload: Reveal.Sdk.RVDashboard.Title*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDashboard.Visualizations
+  commentId: P:Reveal.Sdk.RVDashboard.Visualizations
+  id: Visualizations
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: Visualizations
+  nameWithType: RVDashboard.Visualizations
+  fullName: Reveal.Sdk.RVDashboard.Visualizations
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of visualizations in the dashboard.\n"
+  syntax:
+    content: public ReadOnlyObservableCollection<RVVisualization> Visualizations { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyObservableCollection{Reveal.Sdk.RVVisualization}
+    content.vb: Public ReadOnly Property Visualizations As ReadOnlyObservableCollection(Of RVVisualization)
+  overload: Reveal.Sdk.RVDashboard.Visualizations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDashboard.Filters
+  commentId: P:Reveal.Sdk.RVDashboard.Filters
+  id: Filters
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: Filters
+  nameWithType: RVDashboard.Filters
+  fullName: Reveal.Sdk.RVDashboard.Filters
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of filters in the dashboard. Dashboard filters can be used to apply filters to multiple widgets at the same time.\n"
+  syntax:
+    content: public ReadOnlyObservableCollection<RVDashboardFilter> Filters { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyObservableCollection{Reveal.Sdk.RVDashboardFilter}
+    content.vb: Public ReadOnly Property Filters As ReadOnlyObservableCollection(Of RVDashboardFilter)
+  overload: Reveal.Sdk.RVDashboard.Filters*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDashboard.HasPendingChanges
+  commentId: P:Reveal.Sdk.RVDashboard.HasPendingChanges
+  id: HasPendingChanges
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: HasPendingChanges
+  nameWithType: RVDashboard.HasPendingChanges
+  fullName: Reveal.Sdk.RVDashboard.HasPendingChanges
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns <code>true</code> if the user made changes to the dashboard that were not saved yet.\n"
+  syntax:
+    content: public bool HasPendingChanges { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasPendingChanges As Boolean
+  overload: Reveal.Sdk.RVDashboard.HasPendingChanges*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDashboard.DateFilter
+  commentId: P:Reveal.Sdk.RVDashboard.DateFilter
+  id: DateFilter
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: DateFilter
+  nameWithType: RVDashboard.DateFilter
+  fullName: Reveal.Sdk.RVDashboard.DateFilter
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe date global filter configured in this dashboard, null if no date filter is configured.\n"
+  syntax:
+    content: public RVDateDashboardFilter DateFilter { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDateDashboardFilter
+    content.vb: Public Property DateFilter As RVDateDashboardFilter
+  overload: Reveal.Sdk.RVDashboard.DateFilter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDashboard.PropertyChanged
+  commentId: E:Reveal.Sdk.RVDashboard.PropertyChanged
+  id: PropertyChanged
+  parent: Reveal.Sdk.RVDashboard
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: RVDashboard.PropertyChanged
+  fullName: Reveal.Sdk.RVDashboard.PropertyChanged
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public event PropertyChangedEventHandler PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDashboard.#ctor*
+  commentId: Overload:Reveal.Sdk.RVDashboard.#ctor
+  isExternal: true
+  name: RVDashboard
+  nameWithType: RVDashboard.RVDashboard
+  fullName: Reveal.Sdk.RVDashboard.RVDashboard
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: Reveal.Sdk.RVDashboard.LoadDashboardAsync*
+  commentId: Overload:Reveal.Sdk.RVDashboard.LoadDashboardAsync
+  isExternal: true
+  name: LoadDashboardAsync
+  nameWithType: RVDashboard.LoadDashboardAsync
+  fullName: Reveal.Sdk.RVDashboard.LoadDashboardAsync
+- uid: System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+  commentId: T:System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<RVDashboard>
+  nameWithType: Task<RVDashboard>
+  fullName: System.Threading.Tasks.Task<Reveal.Sdk.RVDashboard>
+  nameWithType.vb: Task(Of RVDashboard)
+  fullName.vb: System.Threading.Tasks.Task(Of Reveal.Sdk.RVDashboard)
+  name.vb: Task(Of RVDashboard)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVDashboard
+    name: RVDashboard
+    nameWithType: RVDashboard
+    fullName: Reveal.Sdk.RVDashboard
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVDashboard
+    name: RVDashboard
+    nameWithType: RVDashboard
+    fullName: Reveal.Sdk.RVDashboard
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Reveal.Sdk.RVDashboard.RaisePropertyChanged*
+  commentId: Overload:Reveal.Sdk.RVDashboard.RaisePropertyChanged
+  isExternal: true
+  name: RaisePropertyChanged
+  nameWithType: RVDashboard.RaisePropertyChanged
+  fullName: Reveal.Sdk.RVDashboard.RaisePropertyChanged
+- uid: Reveal.Sdk.RVDashboard.Title*
+  commentId: Overload:Reveal.Sdk.RVDashboard.Title
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboard.Title
+  fullName: Reveal.Sdk.RVDashboard.Title
+- uid: Reveal.Sdk.RVDashboard.Visualizations*
+  commentId: Overload:Reveal.Sdk.RVDashboard.Visualizations
+  isExternal: true
+  name: Visualizations
+  nameWithType: RVDashboard.Visualizations
+  fullName: Reveal.Sdk.RVDashboard.Visualizations
+- uid: System.Collections.ObjectModel.ReadOnlyObservableCollection{Reveal.Sdk.RVVisualization}
+  commentId: '!:System.Collections.ObjectModel.ReadOnlyObservableCollection{Reveal.Sdk.RVVisualization}'
+  definition: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  name: ReadOnlyObservableCollection<RVVisualization>
+  nameWithType: ReadOnlyObservableCollection<RVVisualization>
+  fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection<Reveal.Sdk.RVVisualization>
+  nameWithType.vb: ReadOnlyObservableCollection(Of RVVisualization)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyObservableCollection(Of Reveal.Sdk.RVVisualization)
+  name.vb: ReadOnlyObservableCollection(Of RVVisualization)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    nameWithType: ReadOnlyObservableCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVVisualization
+    name: RVVisualization
+    nameWithType: RVVisualization
+    fullName: Reveal.Sdk.RVVisualization
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    nameWithType: ReadOnlyObservableCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVVisualization
+    name: RVVisualization
+    nameWithType: RVVisualization
+    fullName: Reveal.Sdk.RVVisualization
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  isExternal: true
+  name: ReadOnlyObservableCollection<>
+  nameWithType: ReadOnlyObservableCollection<>
+  fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection<>
+  nameWithType.vb: ReadOnlyObservableCollection(Of )
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyObservableCollection(Of )
+  name.vb: ReadOnlyObservableCollection(Of )
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    nameWithType: ReadOnlyObservableCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    nameWithType: ReadOnlyObservableCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RVDashboard.Filters*
+  commentId: Overload:Reveal.Sdk.RVDashboard.Filters
+  isExternal: true
+  name: Filters
+  nameWithType: RVDashboard.Filters
+  fullName: Reveal.Sdk.RVDashboard.Filters
+- uid: System.Collections.ObjectModel.ReadOnlyObservableCollection{Reveal.Sdk.RVDashboardFilter}
+  commentId: '!:System.Collections.ObjectModel.ReadOnlyObservableCollection{Reveal.Sdk.RVDashboardFilter}'
+  definition: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  name: ReadOnlyObservableCollection<RVDashboardFilter>
+  nameWithType: ReadOnlyObservableCollection<RVDashboardFilter>
+  fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection<Reveal.Sdk.RVDashboardFilter>
+  nameWithType.vb: ReadOnlyObservableCollection(Of RVDashboardFilter)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyObservableCollection(Of Reveal.Sdk.RVDashboardFilter)
+  name.vb: ReadOnlyObservableCollection(Of RVDashboardFilter)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    nameWithType: ReadOnlyObservableCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVDashboardFilter
+    name: RVDashboardFilter
+    nameWithType: RVDashboardFilter
+    fullName: Reveal.Sdk.RVDashboardFilter
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    nameWithType: ReadOnlyObservableCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVDashboardFilter
+    name: RVDashboardFilter
+    nameWithType: RVDashboardFilter
+    fullName: Reveal.Sdk.RVDashboardFilter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RVDashboard.HasPendingChanges*
+  commentId: Overload:Reveal.Sdk.RVDashboard.HasPendingChanges
+  isExternal: true
+  name: HasPendingChanges
+  nameWithType: RVDashboard.HasPendingChanges
+  fullName: Reveal.Sdk.RVDashboard.HasPendingChanges
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RVDashboard.DateFilter*
+  commentId: Overload:Reveal.Sdk.RVDashboard.DateFilter
+  isExternal: true
+  name: DateFilter
+  nameWithType: RVDashboard.DateFilter
+  fullName: Reveal.Sdk.RVDashboard.DateFilter
+- uid: Reveal.Sdk.RVDateDashboardFilter
+  commentId: T:Reveal.Sdk.RVDateDashboardFilter
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDateDashboardFilter
+  nameWithType: RVDateDashboardFilter
+  fullName: Reveal.Sdk.RVDateDashboardFilter
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  isExternal: true
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler

@@ -1,0 +1,485 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs
+  commentId: T:Reveal.Sdk.VisualizationEditorClosedEventArgs
+  id: VisualizationEditorClosedEventArgs
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled
+  - Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization
+  - Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization
+  langs:
+  - csharp
+  - vb
+  name: VisualizationEditorClosedEventArgs
+  nameWithType: VisualizationEditorClosedEventArgs
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe type of the event arguments of the <xref href=\"Reveal.Sdk.RevealView.VisualizationEditorClosed\" data-throw-if-not-resolved=\"false\"></xref> event.\n"
+  syntax:
+    content: 'public class VisualizationEditorClosedEventArgs : EventArgs'
+    content.vb: >-
+      Public Class VisualizationEditorClosedEventArgs
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization
+  commentId: P:Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization
+  id: Visualization
+  parent: Reveal.Sdk.VisualizationEditorClosedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Visualization
+  nameWithType: VisualizationEditorClosedEventArgs.Visualization
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe visualization after the changes made in the editor\n"
+  syntax:
+    content: public RVVisualization Visualization { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVVisualization
+    content.vb: Public ReadOnly Property Visualization As RVVisualization
+  overload: Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization
+  commentId: P:Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization
+  id: IsNewVisualization
+  parent: Reveal.Sdk.VisualizationEditorClosedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: IsNewVisualization
+  nameWithType: VisualizationEditorClosedEventArgs.IsNewVisualization
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThis property is true if it is a new visualization that has been created\n"
+  syntax:
+    content: public bool IsNewVisualization { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNewVisualization As Boolean
+  overload: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled
+  commentId: P:Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled
+  id: IsCancelled
+  parent: Reveal.Sdk.VisualizationEditorClosedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: IsCancelled
+  nameWithType: VisualizationEditorClosedEventArgs.IsCancelled
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThis property is true if the editor was closed by discarding the changes (pressing the X button).\n"
+  syntax:
+    content: public bool IsCancelled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCancelled As Boolean
+  overload: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization*
+  commentId: Overload:Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization
+  isExternal: true
+  name: Visualization
+  nameWithType: VisualizationEditorClosedEventArgs.Visualization
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs.Visualization
+- uid: Reveal.Sdk.RVVisualization
+  commentId: T:Reveal.Sdk.RVVisualization
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVVisualization
+  nameWithType: RVVisualization
+  fullName: Reveal.Sdk.RVVisualization
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization*
+  commentId: Overload:Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization
+  isExternal: true
+  name: IsNewVisualization
+  nameWithType: VisualizationEditorClosedEventArgs.IsNewVisualization
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsNewVisualization
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled*
+  commentId: Overload:Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled
+  isExternal: true
+  name: IsCancelled
+  nameWithType: VisualizationEditorClosedEventArgs.IsCancelled
+  fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs.IsCancelled

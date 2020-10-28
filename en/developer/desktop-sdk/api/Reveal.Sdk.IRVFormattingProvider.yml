@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVFormattingProvider
+  commentId: T:Reveal.Sdk.IRVFormattingProvider
+  id: IRVFormattingProvider
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVFormattingProvider.GetFormattingService
+  langs:
+  - csharp
+  - vb
+  name: IRVFormattingProvider
+  nameWithType: IRVFormattingProvider
+  fullName: Reveal.Sdk.IRVFormattingProvider
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe interface that must be implemented and set to <see cref=\"!:RevealView.FormattingProvider\"></see> in order to format the different data in dashboards.\nSee &apos;Formatting Service&apos; in the developer guide for more information.\n"
+  syntax:
+    content: public interface IRVFormattingProvider
+    content.vb: Public Interface IRVFormattingProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVFormattingProvider.GetFormattingService
+  commentId: M:Reveal.Sdk.IRVFormattingProvider.GetFormattingService
+  id: GetFormattingService
+  parent: Reveal.Sdk.IRVFormattingProvider
+  langs:
+  - csharp
+  - vb
+  name: GetFormattingService()
+  nameWithType: IRVFormattingProvider.GetFormattingService()
+  fullName: Reveal.Sdk.IRVFormattingProvider.GetFormattingService()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns the formatting service that will be used to format dashboard data.\n"
+  syntax:
+    content: RVBaseFormattingService GetFormattingService()
+    return:
+      type: Reveal.Sdk.RVBaseFormattingService
+      description: Implementation of RVBaseFormattingService interface
+    content.vb: Function GetFormattingService As RVBaseFormattingService
+  overload: Reveal.Sdk.IRVFormattingProvider.GetFormattingService*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVFormattingProvider.GetFormattingService*
+  commentId: Overload:Reveal.Sdk.IRVFormattingProvider.GetFormattingService
+  isExternal: true
+  name: GetFormattingService
+  nameWithType: IRVFormattingProvider.GetFormattingService
+  fullName: Reveal.Sdk.IRVFormattingProvider.GetFormattingService
+- uid: Reveal.Sdk.RVBaseFormattingService
+  commentId: T:Reveal.Sdk.RVBaseFormattingService
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVBaseFormattingService
+  nameWithType: RVBaseFormattingService
+  fullName: Reveal.Sdk.RVBaseFormattingService

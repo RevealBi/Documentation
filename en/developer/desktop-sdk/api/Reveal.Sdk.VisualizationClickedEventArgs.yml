@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.VisualizationClickedEventArgs
+  commentId: T:Reveal.Sdk.VisualizationClickedEventArgs
+  id: VisualizationClickedEventArgs
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.VisualizationClickedEventArgs.Cell
+  - Reveal.Sdk.VisualizationClickedEventArgs.Row
+  - Reveal.Sdk.VisualizationClickedEventArgs.Visualization
+  langs:
+  - csharp
+  - vb
+  name: VisualizationClickedEventArgs
+  nameWithType: VisualizationClickedEventArgs
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe arguments object passed to <xref href=\"Reveal.Sdk.RevealView.VisualizationDataPointClicked\" data-throw-if-not-resolved=\"false\"></xref> event with the information about the\nvisualization selected and the location of the click.\nlist of data sources.\n"
+  syntax:
+    content: 'public class VisualizationClickedEventArgs : EventArgs'
+    content.vb: >-
+      Public Class VisualizationClickedEventArgs
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.VisualizationClickedEventArgs.Visualization
+  commentId: P:Reveal.Sdk.VisualizationClickedEventArgs.Visualization
+  id: Visualization
+  parent: Reveal.Sdk.VisualizationClickedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Visualization
+  nameWithType: VisualizationClickedEventArgs.Visualization
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs.Visualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe visualization containing the clicked cell\n"
+  syntax:
+    content: public RVVisualization Visualization { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVVisualization
+      description: The visualization containing the clicked cell
+    content.vb: Public ReadOnly Property Visualization As RVVisualization
+  overload: Reveal.Sdk.VisualizationClickedEventArgs.Visualization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.VisualizationClickedEventArgs.Cell
+  commentId: P:Reveal.Sdk.VisualizationClickedEventArgs.Cell
+  id: Cell
+  parent: Reveal.Sdk.VisualizationClickedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Cell
+  nameWithType: VisualizationClickedEventArgs.Cell
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs.Cell
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe clicked cell\n"
+  syntax:
+    content: public RVDataCell Cell { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDataCell
+      description: The clicked cell
+    content.vb: Public ReadOnly Property Cell As RVDataCell
+  overload: Reveal.Sdk.VisualizationClickedEventArgs.Cell*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.VisualizationClickedEventArgs.Row
+  commentId: P:Reveal.Sdk.VisualizationClickedEventArgs.Row
+  id: Row
+  parent: Reveal.Sdk.VisualizationClickedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Row
+  nameWithType: VisualizationClickedEventArgs.Row
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs.Row
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe row containing the clicked cell, can be used to get the values of other cells in the same row,\nfor example to get the CustomerId even if the cell clicked was &quot;Sales Amount&quot;.\n"
+  syntax:
+    content: public RVDataCell[] Row { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDataCell[]
+      description: The row containing the clicked cell
+    content.vb: Public ReadOnly Property Row As RVDataCell()
+  overload: Reveal.Sdk.VisualizationClickedEventArgs.Row*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.VisualizationClickedEventArgs.Visualization*
+  commentId: Overload:Reveal.Sdk.VisualizationClickedEventArgs.Visualization
+  isExternal: true
+  name: Visualization
+  nameWithType: VisualizationClickedEventArgs.Visualization
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs.Visualization
+- uid: Reveal.Sdk.RVVisualization
+  commentId: T:Reveal.Sdk.RVVisualization
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVVisualization
+  nameWithType: RVVisualization
+  fullName: Reveal.Sdk.RVVisualization
+- uid: Reveal.Sdk.VisualizationClickedEventArgs.Cell*
+  commentId: Overload:Reveal.Sdk.VisualizationClickedEventArgs.Cell
+  isExternal: true
+  name: Cell
+  nameWithType: VisualizationClickedEventArgs.Cell
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs.Cell
+- uid: Reveal.Sdk.RVDataCell
+  commentId: T:Reveal.Sdk.RVDataCell
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataCell
+  nameWithType: RVDataCell
+  fullName: Reveal.Sdk.RVDataCell
+- uid: Reveal.Sdk.VisualizationClickedEventArgs.Row*
+  commentId: Overload:Reveal.Sdk.VisualizationClickedEventArgs.Row
+  isExternal: true
+  name: Row
+  nameWithType: VisualizationClickedEventArgs.Row
+  fullName: Reveal.Sdk.VisualizationClickedEventArgs.Row
+- uid: Reveal.Sdk.RVDataCell[]
+  isExternal: true
+  name: RVDataCell[]
+  nameWithType: RVDataCell[]
+  fullName: Reveal.Sdk.RVDataCell[]
+  nameWithType.vb: RVDataCell()
+  fullName.vb: Reveal.Sdk.RVDataCell()
+  name.vb: RVDataCell()
+  spec.csharp:
+  - uid: Reveal.Sdk.RVDataCell
+    name: RVDataCell
+    nameWithType: RVDataCell
+    fullName: Reveal.Sdk.RVDataCell
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Reveal.Sdk.RVDataCell
+    name: RVDataCell
+    nameWithType: RVDataCell
+    fullName: Reveal.Sdk.RVDataCell
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

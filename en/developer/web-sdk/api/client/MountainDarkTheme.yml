@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.MountainDarkTheme
+    id: rpembedded.MountainDarkTheme
+    name: MountainDarkTheme
+    summary: Dark version of the Mauntain theme
+    fullName: rpembedded.MountainDarkTheme
+    type: Class
+    children:
+      - rpembedded.MountainDarkTheme.#ctor
+    langs:
+      - js
+  - id: rpembedded.MountainDarkTheme.#ctor
+    uid: rpembedded.MountainDarkTheme.#ctor
+    parent: rpembedded.MountainDarkTheme
+    name: MountainDarkTheme()
+    fullName: rpembedded.MountainDarkTheme.MountainDarkTheme()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new MountainDarkTheme()
+    langs:
+      - js

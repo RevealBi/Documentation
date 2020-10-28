@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.RVDateDashboardFilter
+    id: rpembedded.RVDateDashboardFilter
+    name: RVDateDashboardFilter
+    summary: Class representing the optional date filter defined in a dashboard model.
+    fullName: rpembedded.RVDateDashboardFilter
+    type: Class
+    children:
+      - rpembedded.RVDateDashboardFilter.#ctor
+    langs:
+      - js
+  - id: rpembedded.RVDateDashboardFilter.#ctor
+    uid: rpembedded.RVDateDashboardFilter.#ctor
+    parent: rpembedded.RVDateDashboardFilter
+    name: RVDateDashboardFilter()
+    fullName: rpembedded.RVDateDashboardFilter.RVDateDashboardFilter()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVDateDashboardFilter()
+    langs:
+      - js

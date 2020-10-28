@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  commentId: T:Reveal.Sdk.RVGoogleAnalyticsResourceType
+  id: RVGoogleAnalyticsResourceType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  - Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleAnalyticsResourceType
+  nameWithType: RVGoogleAnalyticsResourceType
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nGoogle Analytics resource type.\n"
+  syntax:
+    content: public enum RVGoogleAnalyticsResourceType
+    content.vb: Public Enum RVGoogleAnalyticsResourceType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  commentId: F:Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  id: Report
+  parent: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  langs:
+  - csharp
+  - vb
+  name: Report
+  nameWithType: RVGoogleAnalyticsResourceType.Report
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nType used to get analytics data.\n"
+  syntax:
+    content: Report = 0
+    return:
+      type: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  commentId: F:Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  id: Profiles
+  parent: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  langs:
+  - csharp
+  - vb
+  name: Profiles
+  nameWithType: RVGoogleAnalyticsResourceType.Profiles
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nType used to get the list of profiles in the account, usually used in a dashboard filter.\n"
+  syntax:
+    content: Profiles = 1
+    return:
+      type: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  commentId: T:Reveal.Sdk.RVGoogleAnalyticsResourceType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVGoogleAnalyticsResourceType
+  nameWithType: RVGoogleAnalyticsResourceType
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType

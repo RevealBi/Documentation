@@ -1,0 +1,683 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVNumberFormattingSpec
+  commentId: T:Reveal.Sdk.RVNumberFormattingSpec
+  id: RVNumberFormattingSpec
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVNumberFormattingSpec.#ctor
+  - Reveal.Sdk.RVNumberFormattingSpec.#ctor(Reveal.Sdk.RVNumberFormattingSpec)
+  - Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat
+  - Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol
+  - Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits
+  - Reveal.Sdk.RVNumberFormattingSpec.FormatType
+  - Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat
+  - Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator
+  langs:
+  - csharp
+  - vb
+  name: RVNumberFormattingSpec
+  nameWithType: RVNumberFormattingSpec
+  fullName: Reveal.Sdk.RVNumberFormattingSpec
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe class representing the formatting options used for numeric dashboard data.\n"
+  syntax:
+    content: 'public class RVNumberFormattingSpec : RVFormattingSpec'
+    content.vb: >-
+      Public Class RVNumberFormattingSpec
+          Inherits RVFormattingSpec
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVFormattingSpec
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVNumberFormattingSpec.#ctor
+  commentId: M:Reveal.Sdk.RVNumberFormattingSpec.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: RVNumberFormattingSpec()
+  nameWithType: RVNumberFormattingSpec.RVNumberFormattingSpec()
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.RVNumberFormattingSpec()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nInitializes a new instance of the <xref href=\"Reveal.Sdk.RVNumberFormattingSpec\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public RVNumberFormattingSpec()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVNumberFormattingSpec.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.#ctor(Reveal.Sdk.RVNumberFormattingSpec)
+  commentId: M:Reveal.Sdk.RVNumberFormattingSpec.#ctor(Reveal.Sdk.RVNumberFormattingSpec)
+  id: '#ctor(Reveal.Sdk.RVNumberFormattingSpec)'
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: RVNumberFormattingSpec(RVNumberFormattingSpec)
+  nameWithType: RVNumberFormattingSpec.RVNumberFormattingSpec(RVNumberFormattingSpec)
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.RVNumberFormattingSpec(Reveal.Sdk.RVNumberFormattingSpec)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nInitializes a new instance of the <xref href=\"Reveal.Sdk.RVNumberFormattingSpec\" data-throw-if-not-resolved=\"false\"></xref> class from other instance.\n"
+  syntax:
+    content: public RVNumberFormattingSpec(RVNumberFormattingSpec other)
+    parameters:
+    - id: other
+      type: Reveal.Sdk.RVNumberFormattingSpec
+      description: The instance of type <xref href="Reveal.Sdk.RVNumberFormattingSpec" data-throw-if-not-resolved="false"></xref> to be copied.
+    content.vb: Public Sub New(other As RVNumberFormattingSpec)
+  overload: Reveal.Sdk.RVNumberFormattingSpec.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.FormatType
+  commentId: P:Reveal.Sdk.RVNumberFormattingSpec.FormatType
+  id: FormatType
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: FormatType
+  nameWithType: RVNumberFormattingSpec.FormatType
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.FormatType
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe number formatting type\n"
+  syntax:
+    content: public RVDashboardNumberFormattingType FormatType { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDashboardNumberFormattingType
+    content.vb: Public Property FormatType As RVDashboardNumberFormattingType
+  overload: Reveal.Sdk.RVNumberFormattingSpec.FormatType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits
+  commentId: P:Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits
+  id: DecimalDigits
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: DecimalDigits
+  nameWithType: RVNumberFormattingSpec.DecimalDigits
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe number of decimal digits\n"
+  syntax:
+    content: public int DecimalDigits { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DecimalDigits As Integer
+  overload: Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator
+  commentId: P:Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator
+  id: ShowGroupingSeparator
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: ShowGroupingSeparator
+  nameWithType: RVNumberFormattingSpec.ShowGroupingSeparator
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe flag indicating whether the grouping separator should be shown, it defaults to <code>false</code>\n"
+  syntax:
+    content: public bool ShowGroupingSeparator { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ShowGroupingSeparator As Boolean
+  overload: Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol
+  commentId: P:Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol
+  id: CurrencySymbol
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: CurrencySymbol
+  nameWithType: RVNumberFormattingSpec.CurrencySymbol
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe symbol to be used for currencies\n"
+  syntax:
+    content: public string CurrencySymbol { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CurrencySymbol As String
+  overload: Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat
+  commentId: P:Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat
+  id: NegativeFormat
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: NegativeFormat
+  nameWithType: RVNumberFormattingSpec.NegativeFormat
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe negative number formatting type\n"
+  syntax:
+    content: public RVDashboardNegativeFormatType NegativeFormat { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDashboardNegativeFormatType
+    content.vb: Public Property NegativeFormat As RVDashboardNegativeFormatType
+  overload: Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat
+  commentId: P:Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat
+  id: ApplyMkFormat
+  parent: Reveal.Sdk.RVNumberFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: ApplyMkFormat
+  nameWithType: RVNumberFormattingSpec.ApplyMkFormat
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe flag indicating whether to apply Million (M) and Thousand (K) formatting, it defaults to <code>false</code>\n"
+  syntax:
+    content: public bool ApplyMkFormat { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ApplyMkFormat As Boolean
+  overload: Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVFormattingSpec
+  commentId: T:Reveal.Sdk.RVFormattingSpec
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVFormattingSpec
+  nameWithType: RVFormattingSpec
+  fullName: Reveal.Sdk.RVFormattingSpec
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVNumberFormattingSpec.#ctor*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.#ctor
+  isExternal: true
+  name: RVNumberFormattingSpec
+  nameWithType: RVNumberFormattingSpec.RVNumberFormattingSpec
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.RVNumberFormattingSpec
+- uid: Reveal.Sdk.RVNumberFormattingSpec
+  commentId: T:Reveal.Sdk.RVNumberFormattingSpec
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVNumberFormattingSpec
+  nameWithType: RVNumberFormattingSpec
+  fullName: Reveal.Sdk.RVNumberFormattingSpec
+- uid: Reveal.Sdk.RVNumberFormattingSpec.FormatType*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.FormatType
+  isExternal: true
+  name: FormatType
+  nameWithType: RVNumberFormattingSpec.FormatType
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.FormatType
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType
+  commentId: T:Reveal.Sdk.RVDashboardNumberFormattingType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardNumberFormattingType
+  nameWithType: RVDashboardNumberFormattingType
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType
+- uid: Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits
+  isExternal: true
+  name: DecimalDigits
+  nameWithType: RVNumberFormattingSpec.DecimalDigits
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.DecimalDigits
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator
+  isExternal: true
+  name: ShowGroupingSeparator
+  nameWithType: RVNumberFormattingSpec.ShowGroupingSeparator
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.ShowGroupingSeparator
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol
+  isExternal: true
+  name: CurrencySymbol
+  nameWithType: RVNumberFormattingSpec.CurrencySymbol
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.CurrencySymbol
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat
+  isExternal: true
+  name: NegativeFormat
+  nameWithType: RVNumberFormattingSpec.NegativeFormat
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.NegativeFormat
+- uid: Reveal.Sdk.RVDashboardNegativeFormatType
+  commentId: T:Reveal.Sdk.RVDashboardNegativeFormatType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardNegativeFormatType
+  nameWithType: RVDashboardNegativeFormatType
+  fullName: Reveal.Sdk.RVDashboardNegativeFormatType
+- uid: Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat*
+  commentId: Overload:Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat
+  isExternal: true
+  name: ApplyMkFormat
+  nameWithType: RVNumberFormattingSpec.ApplyMkFormat
+  fullName: Reveal.Sdk.RVNumberFormattingSpec.ApplyMkFormat

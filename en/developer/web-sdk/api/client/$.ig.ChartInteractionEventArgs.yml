@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.$.ig.ChartInteractionEventArgs
+    id: rpembedded.$.ig.ChartInteractionEventArgs
+    name: ChartInteractionEventArgs
+    summary: The class used as the argument to the onTooltipShowing event.
+    fullName: rpembedded.ChartInteractionEventArgs
+    type: Class
+    children:
+      - rpembedded.$.ig.ChartInteractionEventArgs.#ctor
+      - rpembedded.$.ig.ChartInteractionEventArgs#visualization
+      - rpembedded.$.ig.ChartInteractionEventArgs#cell
+      - rpembedded.$.ig.ChartInteractionEventArgs#cell
+      - rpembedded.$.ig.ChartInteractionEventArgs#calncel
+    langs:
+      - js
+  - id: rpembedded.$.ig.ChartInteractionEventArgs.#ctor
+    uid: rpembedded.$.ig.ChartInteractionEventArgs.#ctor
+    parent: rpembedded.$.ig.ChartInteractionEventArgs
+    name: ChartInteractionEventArgs()
+    fullName: rpembedded.ChartInteractionEventArgs.ChartInteractionEventArgs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new ChartInteractionEventArgs()
+    langs:
+      - js
+  - uid: rpembedded.$.ig.ChartInteractionEventArgs#visualization
+    id: rpembedded.$.ig.ChartInteractionEventArgs#visualization
+    parent: rpembedded.$.ig.ChartInteractionEventArgs
+    name: visualization
+    summary: The visualization for which a tooltip is about to be shown.
+    fullName: rpembedded.$.ig.ChartInteractionEventArgs.visualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - $.ig.RVVisualization
+      content: visualization
+    langs:
+      - js
+  - uid: rpembedded.$.ig.ChartInteractionEventArgs#cell
+    id: rpembedded.$.ig.ChartInteractionEventArgs#cell
+    parent: rpembedded.$.ig.ChartInteractionEventArgs
+    name: cell
+    summary: The name of the dashboard being saved.
+    fullName: rpembedded.$.ig.ChartInteractionEventArgs.cell
+    type: Member
+    syntax:
+      return:
+        type:
+          - $.ig.RVCell
+      content: cell
+    langs:
+      - js
+  - uid: rpembedded.$.ig.ChartInteractionEventArgs#calncel
+    id: rpembedded.$.ig.ChartInteractionEventArgs#calncel
+    parent: rpembedded.$.ig.ChartInteractionEventArgs
+    name: calncel
+    summary: A flag which if set to true will disable the rendering of the tooltip.
+    fullName: rpembedded.$.ig.ChartInteractionEventArgs.calncel
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: calncel
+    langs:
+      - js

@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    id: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs
+    summary: The type of the event arguments of the onVisualizationEditorClosed event.
+    fullName: rpembedded.VisualizationEditorClosedEventArgs
+    type: Class
+    children:
+      - rpembedded.$.ig.VisualizationEditorClosedEventArgs.#ctor
+      - rpembedded.$.ig.VisualizationEditorClosedEventArgs#visualization
+      - rpembedded.$.ig.VisualizationEditorClosedEventArgs#isCancelled
+      - rpembedded.$.ig.VisualizationEditorClosedEventArgs#isNewVisualization
+    langs:
+      - js
+  - id: rpembedded.$.ig.VisualizationEditorClosedEventArgs.#ctor
+    uid: rpembedded.$.ig.VisualizationEditorClosedEventArgs.#ctor
+    parent: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs()
+    fullName: >-
+      rpembedded.VisualizationEditorClosedEventArgs.VisualizationEditorClosedEventArgs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new VisualizationEditorClosedEventArgs()
+    langs:
+      - js
+  - uid: rpembedded.$.ig.VisualizationEditorClosedEventArgs#visualization
+    id: rpembedded.$.ig.VisualizationEditorClosedEventArgs#visualization
+    parent: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    name: visualization
+    summary: The visualization after the changes made in the editor.
+    fullName: rpembedded.$.ig.VisualizationEditorClosedEventArgs.visualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - $.ig.RVVisualization
+      content: visualization
+    langs:
+      - js
+  - uid: rpembedded.$.ig.VisualizationEditorClosedEventArgs#isCancelled
+    id: rpembedded.$.ig.VisualizationEditorClosedEventArgs#isCancelled
+    parent: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    name: isCancelled
+    summary: >-
+      This property is true if the editor was closed by discarding the changes
+      (pressing the X button).
+    fullName: rpembedded.$.ig.VisualizationEditorClosedEventArgs.isCancelled
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: isCancelled
+    langs:
+      - js
+  - uid: rpembedded.$.ig.VisualizationEditorClosedEventArgs#isNewVisualization
+    id: rpembedded.$.ig.VisualizationEditorClosedEventArgs#isNewVisualization
+    parent: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    name: isNewVisualization
+    summary: This property is true if it is a new visualization that has been created.
+    fullName: rpembedded.$.ig.VisualizationEditorClosedEventArgs.isNewVisualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: isNewVisualization
+    langs:
+      - js

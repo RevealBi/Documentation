@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  commentId: T:Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  id: RVAzureAnalysisServicesDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVAzureAnalysisServicesDataSource.#ctor
+  - Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog
+  - Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl
+  langs:
+  - csharp
+  - vb
+  name: RVAzureAnalysisServicesDataSource
+  nameWithType: RVAzureAnalysisServicesDataSource
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nMicrosoft Azure Analysis Services data source\n"
+  syntax:
+    content: 'public class RVAzureAnalysisServicesDataSource : RVAnalysisServicesDataSource'
+    content.vb: >-
+      Public Class RVAzureAnalysisServicesDataSource
+          Inherits RVAnalysisServicesDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  - Reveal.Sdk.RVAnalysisServicesDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVAzureAnalysisServicesDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVAzureAnalysisServicesDataSource()
+  nameWithType: RVAzureAnalysisServicesDataSource.RVAzureAnalysisServicesDataSource()
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource.RVAzureAnalysisServicesDataSource()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVAzureAnalysisServicesDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVAzureAnalysisServicesDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl
+  commentId: P:Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl
+  id: ServerUrl
+  parent: Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  langs:
+  - csharp
+  - vb
+  name: ServerUrl
+  nameWithType: RVAzureAnalysisServicesDataSource.ServerUrl
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nServer Url, including the &apos;asazure://&apos; prefix (sheme).  \n"
+  syntax:
+    content: public string ServerUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ServerUrl As String
+  overload: Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog
+  commentId: P:Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog
+  id: Catalog
+  parent: Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  langs:
+  - csharp
+  - vb
+  name: Catalog
+  nameWithType: RVAzureAnalysisServicesDataSource.Catalog
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe name of the catalog (database) to use.\n"
+  syntax:
+    content: public string Catalog { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Catalog As String
+  overload: Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVAnalysisServicesDataSource
+  commentId: T:Reveal.Sdk.RVAnalysisServicesDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVAnalysisServicesDataSource
+  nameWithType: RVAnalysisServicesDataSource
+  fullName: Reveal.Sdk.RVAnalysisServicesDataSource
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVAzureAnalysisServicesDataSource.#ctor
+  isExternal: true
+  name: RVAzureAnalysisServicesDataSource
+  nameWithType: RVAzureAnalysisServicesDataSource.RVAzureAnalysisServicesDataSource
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource.RVAzureAnalysisServicesDataSource
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl*
+  commentId: Overload:Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl
+  isExternal: true
+  name: ServerUrl
+  nameWithType: RVAzureAnalysisServicesDataSource.ServerUrl
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource.ServerUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog*
+  commentId: Overload:Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog
+  isExternal: true
+  name: Catalog
+  nameWithType: RVAzureAnalysisServicesDataSource.Catalog
+  fullName: Reveal.Sdk.RVAzureAnalysisServicesDataSource.Catalog

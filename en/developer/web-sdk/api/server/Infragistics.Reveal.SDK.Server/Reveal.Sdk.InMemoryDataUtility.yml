@@ -1,0 +1,324 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.InMemoryDataUtility
+  commentId: T:Reveal.Sdk.InMemoryDataUtility
+  id: InMemoryDataUtility
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.InMemoryDataUtility.GetData``1(System.Collections.Generic.IEnumerable{``0})
+  - Reveal.Sdk.InMemoryDataUtility.GetSchema``1
+  langs:
+  - csharp
+  - vb
+  name: InMemoryDataUtility
+  nameWithType: InMemoryDataUtility
+  fullName: Reveal.Sdk.InMemoryDataUtility
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: 'public static class InMemoryDataUtility : Object'
+    content.vb: >-
+      Public Module InMemoryDataUtility
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Reveal.Sdk.InMemoryDataUtility.GetData``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Reveal.Sdk.InMemoryDataUtility.GetData``1(System.Collections.Generic.IEnumerable{``0})
+  id: GetData``1(System.Collections.Generic.IEnumerable{``0})
+  parent: Reveal.Sdk.InMemoryDataUtility
+  langs:
+  - csharp
+  - vb
+  name: GetData<T>(IEnumerable<T>)
+  nameWithType: InMemoryDataUtility.GetData<T>(IEnumerable<T>)
+  fullName: Reveal.Sdk.InMemoryDataUtility.GetData<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static IEnumerable<IEnumerable<object>> GetData<T>(IEnumerable<T> data)
+    parameters:
+    - id: data
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Object}}
+    content.vb: Public Shared Function GetData(Of T)(data As IEnumerable(Of T)) As IEnumerable(Of IEnumerable(Of Object))
+  overload: Reveal.Sdk.InMemoryDataUtility.GetData*
+  nameWithType.vb: InMemoryDataUtility.GetData(Of T)(IEnumerable(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Reveal.Sdk.InMemoryDataUtility.GetData(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: GetData(Of T)(IEnumerable(Of T))
+- uid: Reveal.Sdk.InMemoryDataUtility.GetSchema``1
+  commentId: M:Reveal.Sdk.InMemoryDataUtility.GetSchema``1
+  id: GetSchema``1
+  parent: Reveal.Sdk.InMemoryDataUtility
+  langs:
+  - csharp
+  - vb
+  name: GetSchema<T>()
+  nameWithType: InMemoryDataUtility.GetSchema<T>()
+  fullName: Reveal.Sdk.InMemoryDataUtility.GetSchema<T>()
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static IEnumerable<RVSchemaColumn> GetSchema<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVSchemaColumn}
+    content.vb: Public Shared Function GetSchema(Of T) As IEnumerable(Of RVSchemaColumn)
+  overload: Reveal.Sdk.InMemoryDataUtility.GetSchema*
+  nameWithType.vb: InMemoryDataUtility.GetSchema(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Reveal.Sdk.InMemoryDataUtility.GetSchema(Of T)()
+  name.vb: GetSchema(Of T)()
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.InMemoryDataUtility.GetData*
+  commentId: Overload:Reveal.Sdk.InMemoryDataUtility.GetData
+  isExternal: true
+  name: GetData
+  nameWithType: InMemoryDataUtility.GetData
+  fullName: Reveal.Sdk.InMemoryDataUtility.GetData
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: '!:System.Collections.Generic.IEnumerable{``0}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Object}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Object}}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IEnumerable<Object>>
+  nameWithType: IEnumerable<IEnumerable<Object>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Object>>
+  nameWithType.vb: IEnumerable(Of IEnumerable(Of Object))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: IEnumerable(Of IEnumerable(Of Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.InMemoryDataUtility.GetSchema*
+  commentId: Overload:Reveal.Sdk.InMemoryDataUtility.GetSchema
+  isExternal: true
+  name: GetSchema
+  nameWithType: InMemoryDataUtility.GetSchema
+  fullName: Reveal.Sdk.InMemoryDataUtility.GetSchema
+- uid: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVSchemaColumn}
+  commentId: '!:System.Collections.Generic.IEnumerable{Reveal.Sdk.RVSchemaColumn}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<RVSchemaColumn>
+  nameWithType: IEnumerable<RVSchemaColumn>
+  fullName: System.Collections.Generic.IEnumerable<Reveal.Sdk.RVSchemaColumn>
+  nameWithType.vb: IEnumerable(Of RVSchemaColumn)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVSchemaColumn)
+  name.vb: IEnumerable(Of RVSchemaColumn)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVSchemaColumn
+    name: RVSchemaColumn
+    nameWithType: RVSchemaColumn
+    fullName: Reveal.Sdk.RVSchemaColumn
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVSchemaColumn
+    name: RVSchemaColumn
+    nameWithType: RVSchemaColumn
+    fullName: Reveal.Sdk.RVSchemaColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

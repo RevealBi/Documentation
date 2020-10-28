@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.DataSourcesRequestedTriggerType
+  commentId: T:Reveal.Sdk.DataSourcesRequestedTriggerType
+  id: DataSourcesRequestedTriggerType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.DataSourcesRequestedTriggerType.DashboardFilter
+  - Reveal.Sdk.DataSourcesRequestedTriggerType.DataBlending
+  - Reveal.Sdk.DataSourcesRequestedTriggerType.Visualization
+  langs:
+  - csharp
+  - vb
+  name: DataSourcesRequestedTriggerType
+  nameWithType: DataSourcesRequestedTriggerType
+  fullName: Reveal.Sdk.DataSourcesRequestedTriggerType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nData sources requested trigger type, indicates the context where the data sources are being requested.\nData sources can be requested for a visualization, for a dashboard filter or for data blending.\n"
+  syntax:
+    content: public enum DataSourcesRequestedTriggerType
+    content.vb: Public Enum DataSourcesRequestedTriggerType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.DataSourcesRequestedTriggerType.Visualization
+  commentId: F:Reveal.Sdk.DataSourcesRequestedTriggerType.Visualization
+  id: Visualization
+  parent: Reveal.Sdk.DataSourcesRequestedTriggerType
+  langs:
+  - csharp
+  - vb
+  name: Visualization
+  nameWithType: DataSourcesRequestedTriggerType.Visualization
+  fullName: Reveal.Sdk.DataSourcesRequestedTriggerType.Visualization
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nData sources are requested for a new visualization\n"
+  syntax:
+    content: Visualization = 0
+    return:
+      type: Reveal.Sdk.DataSourcesRequestedTriggerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.DataSourcesRequestedTriggerType.DashboardFilter
+  commentId: F:Reveal.Sdk.DataSourcesRequestedTriggerType.DashboardFilter
+  id: DashboardFilter
+  parent: Reveal.Sdk.DataSourcesRequestedTriggerType
+  langs:
+  - csharp
+  - vb
+  name: DashboardFilter
+  nameWithType: DataSourcesRequestedTriggerType.DashboardFilter
+  fullName: Reveal.Sdk.DataSourcesRequestedTriggerType.DashboardFilter
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nData sources are requested for a new dashboard filter\n"
+  syntax:
+    content: DashboardFilter = 1
+    return:
+      type: Reveal.Sdk.DataSourcesRequestedTriggerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.DataSourcesRequestedTriggerType.DataBlending
+  commentId: F:Reveal.Sdk.DataSourcesRequestedTriggerType.DataBlending
+  id: DataBlending
+  parent: Reveal.Sdk.DataSourcesRequestedTriggerType
+  langs:
+  - csharp
+  - vb
+  name: DataBlending
+  nameWithType: DataSourcesRequestedTriggerType.DataBlending
+  fullName: Reveal.Sdk.DataSourcesRequestedTriggerType.DataBlending
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nData sources are requested for data blending inside a visualization\n"
+  syntax:
+    content: DataBlending = 2
+    return:
+      type: Reveal.Sdk.DataSourcesRequestedTriggerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.DataSourcesRequestedTriggerType
+  commentId: T:Reveal.Sdk.DataSourcesRequestedTriggerType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: DataSourcesRequestedTriggerType
+  nameWithType: DataSourcesRequestedTriggerType
+  fullName: Reveal.Sdk.DataSourcesRequestedTriggerType

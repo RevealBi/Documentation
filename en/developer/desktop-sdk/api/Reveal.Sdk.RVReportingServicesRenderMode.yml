@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVReportingServicesRenderMode
+  commentId: T:Reveal.Sdk.RVReportingServicesRenderMode
+  id: RVReportingServicesRenderMode
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVReportingServicesRenderMode.Data
+  - Reveal.Sdk.RVReportingServicesRenderMode.Report
+  langs:
+  - csharp
+  - vb
+  name: RVReportingServicesRenderMode
+  nameWithType: RVReportingServicesRenderMode
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nRender mode for Reporting Services data source item, see <xref href=\"Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  syntax:
+    content: public enum RVReportingServicesRenderMode
+    content.vb: Public Enum RVReportingServicesRenderMode
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVReportingServicesRenderMode.Report
+  commentId: F:Reveal.Sdk.RVReportingServicesRenderMode.Report
+  id: Report
+  parent: Reveal.Sdk.RVReportingServicesRenderMode
+  langs:
+  - csharp
+  - vb
+  name: Report
+  nameWithType: RVReportingServicesRenderMode.Report
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode.Report
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReport mode, it means the report will be exported to PDF and rendered that way\n"
+  syntax:
+    content: Report = 0
+    return:
+      type: Reveal.Sdk.RVReportingServicesRenderMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVReportingServicesRenderMode.Data
+  commentId: F:Reveal.Sdk.RVReportingServicesRenderMode.Data
+  id: Data
+  parent: Reveal.Sdk.RVReportingServicesRenderMode
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: RVReportingServicesRenderMode.Data
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode.Data
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nData mode, it means the report will be exported to CSV and that data will be used as regular input data.\n"
+  syntax:
+    content: Data = 1
+    return:
+      type: Reveal.Sdk.RVReportingServicesRenderMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVReportingServicesRenderMode
+  commentId: T:Reveal.Sdk.RVReportingServicesRenderMode
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVReportingServicesRenderMode
+  nameWithType: RVReportingServicesRenderMode
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode

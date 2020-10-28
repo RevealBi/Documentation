@@ -1,0 +1,535 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVExcelRange
+  commentId: T:Reveal.Sdk.RVExcelRange
+  id: RVExcelRange
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - Reveal.Sdk.RVExcelRange.LengthX
+  - Reveal.Sdk.RVExcelRange.LengthY
+  - Reveal.Sdk.RVExcelRange.LocationX
+  - Reveal.Sdk.RVExcelRange.LocationY
+  langs:
+  - csharp
+  - vb
+  name: RVExcelRange
+  nameWithType: RVExcelRange
+  fullName: Reveal.Sdk.RVExcelRange
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nClass defining the range that should be used when loading data from an Excel sheet.\n"
+  syntax:
+    content: public class RVExcelRange
+    content.vb: Public Class RVExcelRange
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Reveal.Sdk.RVExcelRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: Reveal.Sdk.RVExcelRange
+  langs:
+  - csharp
+  - vb
+  name: RVExcelRange(Int32, Int32, Int32, Int32)
+  nameWithType: RVExcelRange.RVExcelRange(Int32, Int32, Int32, Int32)
+  fullName: Reveal.Sdk.RVExcelRange.RVExcelRange(System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVExcelRange(int locX, int locY, int lenX, int lenY)
+    parameters:
+    - id: locX
+      type: System.Int32
+    - id: locY
+      type: System.Int32
+    - id: lenX
+      type: System.Int32
+    - id: lenY
+      type: System.Int32
+    content.vb: Public Sub New(locX As Integer, locY As Integer, lenX As Integer, lenY As Integer)
+  overload: Reveal.Sdk.RVExcelRange.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVExcelRange.LocationX
+  commentId: P:Reveal.Sdk.RVExcelRange.LocationX
+  id: LocationX
+  parent: Reveal.Sdk.RVExcelRange
+  langs:
+  - csharp
+  - vb
+  name: LocationX
+  nameWithType: RVExcelRange.LocationX
+  fullName: Reveal.Sdk.RVExcelRange.LocationX
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int LocationX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LocationX As Integer
+  overload: Reveal.Sdk.RVExcelRange.LocationX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVExcelRange.LocationY
+  commentId: P:Reveal.Sdk.RVExcelRange.LocationY
+  id: LocationY
+  parent: Reveal.Sdk.RVExcelRange
+  langs:
+  - csharp
+  - vb
+  name: LocationY
+  nameWithType: RVExcelRange.LocationY
+  fullName: Reveal.Sdk.RVExcelRange.LocationY
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int LocationY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LocationY As Integer
+  overload: Reveal.Sdk.RVExcelRange.LocationY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVExcelRange.LengthX
+  commentId: P:Reveal.Sdk.RVExcelRange.LengthX
+  id: LengthX
+  parent: Reveal.Sdk.RVExcelRange
+  langs:
+  - csharp
+  - vb
+  name: LengthX
+  nameWithType: RVExcelRange.LengthX
+  fullName: Reveal.Sdk.RVExcelRange.LengthX
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int LengthX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LengthX As Integer
+  overload: Reveal.Sdk.RVExcelRange.LengthX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVExcelRange.LengthY
+  commentId: P:Reveal.Sdk.RVExcelRange.LengthY
+  id: LengthY
+  parent: Reveal.Sdk.RVExcelRange
+  langs:
+  - csharp
+  - vb
+  name: LengthY
+  nameWithType: RVExcelRange.LengthY
+  fullName: Reveal.Sdk.RVExcelRange.LengthY
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int LengthY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LengthY As Integer
+  overload: Reveal.Sdk.RVExcelRange.LengthY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVExcelRange.#ctor*
+  commentId: Overload:Reveal.Sdk.RVExcelRange.#ctor
+  isExternal: true
+  name: RVExcelRange
+  nameWithType: RVExcelRange.RVExcelRange
+  fullName: Reveal.Sdk.RVExcelRange.RVExcelRange
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVExcelRange.LocationX*
+  commentId: Overload:Reveal.Sdk.RVExcelRange.LocationX
+  isExternal: true
+  name: LocationX
+  nameWithType: RVExcelRange.LocationX
+  fullName: Reveal.Sdk.RVExcelRange.LocationX
+- uid: Reveal.Sdk.RVExcelRange.LocationY*
+  commentId: Overload:Reveal.Sdk.RVExcelRange.LocationY
+  isExternal: true
+  name: LocationY
+  nameWithType: RVExcelRange.LocationY
+  fullName: Reveal.Sdk.RVExcelRange.LocationY
+- uid: Reveal.Sdk.RVExcelRange.LengthX*
+  commentId: Overload:Reveal.Sdk.RVExcelRange.LengthX
+  isExternal: true
+  name: LengthX
+  nameWithType: RVExcelRange.LengthX
+  fullName: Reveal.Sdk.RVExcelRange.LengthX
+- uid: Reveal.Sdk.RVExcelRange.LengthY*
+  commentId: Overload:Reveal.Sdk.RVExcelRange.LengthY
+  isExternal: true
+  name: LengthY
+  nameWithType: RVExcelRange.LengthY
+  fullName: Reveal.Sdk.RVExcelRange.LengthY

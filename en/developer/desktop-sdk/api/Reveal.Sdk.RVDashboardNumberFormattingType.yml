@@ -1,0 +1,160 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType
+  commentId: T:Reveal.Sdk.RVDashboardNumberFormattingType
+  id: RVDashboardNumberFormattingType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboardNumberFormattingType.Currency
+  - Reveal.Sdk.RVDashboardNumberFormattingType.None
+  - Reveal.Sdk.RVDashboardNumberFormattingType.Number
+  - Reveal.Sdk.RVDashboardNumberFormattingType.Percent
+  langs:
+  - csharp
+  - vb
+  name: RVDashboardNumberFormattingType
+  nameWithType: RVDashboardNumberFormattingType
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of formatting options for a numeric data.\n"
+  syntax:
+    content: public enum RVDashboardNumberFormattingType
+    content.vb: Public Enum RVDashboardNumberFormattingType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType.None
+  commentId: F:Reveal.Sdk.RVDashboardNumberFormattingType.None
+  id: None
+  parent: Reveal.Sdk.RVDashboardNumberFormattingType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: RVDashboardNumberFormattingType.None
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType.None
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nNo formatting\n"
+  syntax:
+    content: None = 0
+    return:
+      type: Reveal.Sdk.RVDashboardNumberFormattingType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType.Number
+  commentId: F:Reveal.Sdk.RVDashboardNumberFormattingType.Number
+  id: Number
+  parent: Reveal.Sdk.RVDashboardNumberFormattingType
+  langs:
+  - csharp
+  - vb
+  name: Number
+  nameWithType: RVDashboardNumberFormattingType.Number
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType.Number
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nNumber formatting\n"
+  syntax:
+    content: Number = 1
+    return:
+      type: Reveal.Sdk.RVDashboardNumberFormattingType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType.Percent
+  commentId: F:Reveal.Sdk.RVDashboardNumberFormattingType.Percent
+  id: Percent
+  parent: Reveal.Sdk.RVDashboardNumberFormattingType
+  langs:
+  - csharp
+  - vb
+  name: Percent
+  nameWithType: RVDashboardNumberFormattingType.Percent
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType.Percent
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nPercentage formatting\n"
+  syntax:
+    content: Percent = 2
+    return:
+      type: Reveal.Sdk.RVDashboardNumberFormattingType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType.Currency
+  commentId: F:Reveal.Sdk.RVDashboardNumberFormattingType.Currency
+  id: Currency
+  parent: Reveal.Sdk.RVDashboardNumberFormattingType
+  langs:
+  - csharp
+  - vb
+  name: Currency
+  nameWithType: RVDashboardNumberFormattingType.Currency
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType.Currency
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nCurrency formatting\n"
+  syntax:
+    content: Currency = 3
+    return:
+      type: Reveal.Sdk.RVDashboardNumberFormattingType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVDashboardNumberFormattingType
+  commentId: T:Reveal.Sdk.RVDashboardNumberFormattingType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardNumberFormattingType
+  nameWithType: RVDashboardNumberFormattingType
+  fullName: Reveal.Sdk.RVDashboardNumberFormattingType

@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVAnalysisServicesDataSource
+  commentId: T:Reveal.Sdk.RVAnalysisServicesDataSource
+  id: RVAnalysisServicesDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVAnalysisServicesDataSource.#ctor
+  langs:
+  - csharp
+  - vb
+  name: RVAnalysisServicesDataSource
+  nameWithType: RVAnalysisServicesDataSource
+  fullName: Reveal.Sdk.RVAnalysisServicesDataSource
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nAbstract base class for Microsoft Analysis Services (MS SSAS) data sources\n"
+  syntax:
+    content: 'public abstract class RVAnalysisServicesDataSource : RVDashboardDataSource'
+    content.vb: >-
+      Public MustInherit Class RVAnalysisServicesDataSource
+          Inherits RVDashboardDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  derivedClasses:
+  - Reveal.Sdk.RVAzureAnalysisServicesDataSource
+  - Reveal.Sdk.RVHttpAnalysisServicesDataSource
+  - Reveal.Sdk.RVNativeAnalysisServicesDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Reveal.Sdk.RVAnalysisServicesDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVAnalysisServicesDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVAnalysisServicesDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVAnalysisServicesDataSource()
+  nameWithType: RVAnalysisServicesDataSource.RVAnalysisServicesDataSource()
+  fullName: Reveal.Sdk.RVAnalysisServicesDataSource.RVAnalysisServicesDataSource()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: protected RVAnalysisServicesDataSource()
+    content.vb: Protected Sub New
+  overload: Reveal.Sdk.RVAnalysisServicesDataSource.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVAnalysisServicesDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVAnalysisServicesDataSource.#ctor
+  isExternal: true
+  name: RVAnalysisServicesDataSource
+  nameWithType: RVAnalysisServicesDataSource.RVAnalysisServicesDataSource
+  fullName: Reveal.Sdk.RVAnalysisServicesDataSource.RVAnalysisServicesDataSource

@@ -1,0 +1,528 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVConditionalFormatting
+  commentId: T:Reveal.Sdk.RVConditionalFormatting
+  id: RVConditionalFormatting
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVConditionalFormatting.#ctor
+  - Reveal.Sdk.RVConditionalFormatting.HIColor
+  - Reveal.Sdk.RVConditionalFormatting.LOWColor
+  - Reveal.Sdk.RVConditionalFormatting.MIDColor
+  - Reveal.Sdk.RVConditionalFormatting.NONEColor
+  langs:
+  - csharp
+  - vb
+  name: RVConditionalFormatting
+  nameWithType: RVConditionalFormatting
+  fullName: Reveal.Sdk.RVConditionalFormatting
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe class grouping conditional formatting colors.&quot;/>\n"
+  syntax:
+    content: public class RVConditionalFormatting
+    content.vb: Public Class RVConditionalFormatting
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVConditionalFormatting.#ctor
+  commentId: M:Reveal.Sdk.RVConditionalFormatting.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVConditionalFormatting
+  langs:
+  - csharp
+  - vb
+  name: RVConditionalFormatting()
+  nameWithType: RVConditionalFormatting.RVConditionalFormatting()
+  fullName: Reveal.Sdk.RVConditionalFormatting.RVConditionalFormatting()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVConditionalFormatting()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVConditionalFormatting.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVConditionalFormatting.HIColor
+  commentId: P:Reveal.Sdk.RVConditionalFormatting.HIColor
+  id: HIColor
+  parent: Reveal.Sdk.RVConditionalFormatting
+  langs:
+  - csharp
+  - vb
+  name: HIColor
+  nameWithType: RVConditionalFormatting.HIColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.HIColor
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nConditional formatting color for HI values\n"
+  syntax:
+    content: public Color HIColor { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property HIColor As Color
+  overload: Reveal.Sdk.RVConditionalFormatting.HIColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVConditionalFormatting.MIDColor
+  commentId: P:Reveal.Sdk.RVConditionalFormatting.MIDColor
+  id: MIDColor
+  parent: Reveal.Sdk.RVConditionalFormatting
+  langs:
+  - csharp
+  - vb
+  name: MIDColor
+  nameWithType: RVConditionalFormatting.MIDColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.MIDColor
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nConditional formatting color for MID values\n"
+  syntax:
+    content: public Color MIDColor { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property MIDColor As Color
+  overload: Reveal.Sdk.RVConditionalFormatting.MIDColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVConditionalFormatting.LOWColor
+  commentId: P:Reveal.Sdk.RVConditionalFormatting.LOWColor
+  id: LOWColor
+  parent: Reveal.Sdk.RVConditionalFormatting
+  langs:
+  - csharp
+  - vb
+  name: LOWColor
+  nameWithType: RVConditionalFormatting.LOWColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.LOWColor
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nConditional formatting color for LOW values\n"
+  syntax:
+    content: public Color LOWColor { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property LOWColor As Color
+  overload: Reveal.Sdk.RVConditionalFormatting.LOWColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVConditionalFormatting.NONEColor
+  commentId: P:Reveal.Sdk.RVConditionalFormatting.NONEColor
+  id: NONEColor
+  parent: Reveal.Sdk.RVConditionalFormatting
+  langs:
+  - csharp
+  - vb
+  name: NONEColor
+  nameWithType: RVConditionalFormatting.NONEColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.NONEColor
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nConditional formatting color when NO VALUE\n"
+  syntax:
+    content: public Color NONEColor { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Color
+    content.vb: Public Property NONEColor As Color
+  overload: Reveal.Sdk.RVConditionalFormatting.NONEColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVConditionalFormatting.#ctor*
+  commentId: Overload:Reveal.Sdk.RVConditionalFormatting.#ctor
+  isExternal: true
+  name: RVConditionalFormatting
+  nameWithType: RVConditionalFormatting.RVConditionalFormatting
+  fullName: Reveal.Sdk.RVConditionalFormatting.RVConditionalFormatting
+- uid: Reveal.Sdk.RVConditionalFormatting.HIColor*
+  commentId: Overload:Reveal.Sdk.RVConditionalFormatting.HIColor
+  isExternal: true
+  name: HIColor
+  nameWithType: RVConditionalFormatting.HIColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.HIColor
+- uid: System.Windows.Media.Color
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: System.Windows.Media.Color
+- uid: Reveal.Sdk.RVConditionalFormatting.MIDColor*
+  commentId: Overload:Reveal.Sdk.RVConditionalFormatting.MIDColor
+  isExternal: true
+  name: MIDColor
+  nameWithType: RVConditionalFormatting.MIDColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.MIDColor
+- uid: Reveal.Sdk.RVConditionalFormatting.LOWColor*
+  commentId: Overload:Reveal.Sdk.RVConditionalFormatting.LOWColor
+  isExternal: true
+  name: LOWColor
+  nameWithType: RVConditionalFormatting.LOWColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.LOWColor
+- uid: Reveal.Sdk.RVConditionalFormatting.NONEColor*
+  commentId: Overload:Reveal.Sdk.RVConditionalFormatting.NONEColor
+  isExternal: true
+  name: NONEColor
+  nameWithType: RVConditionalFormatting.NONEColor
+  fullName: Reveal.Sdk.RVConditionalFormatting.NONEColor

@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSchemaColumn
+  commentId: T:Reveal.Sdk.RVSchemaColumn
+  id: RVSchemaColumn
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSchemaColumn.#ctor(System.String,System.String,Reveal.Sdk.RVSchemaColumnType)
+  - Reveal.Sdk.RVSchemaColumn.Label
+  - Reveal.Sdk.RVSchemaColumn.Name
+  - Reveal.Sdk.RVSchemaColumn.Type
+  langs:
+  - csharp
+  - vb
+  name: RVSchemaColumn
+  nameWithType: RVSchemaColumn
+  fullName: Reveal.Sdk.RVSchemaColumn
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe class representing a column in the in-memory result, specifies name, label and data type of the column.\n"
+  syntax:
+    content: 'public class RVSchemaColumn : Object'
+    content.vb: >-
+      Public Class RVSchemaColumn
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVSchemaColumn.#ctor(System.String,System.String,Reveal.Sdk.RVSchemaColumnType)
+  commentId: M:Reveal.Sdk.RVSchemaColumn.#ctor(System.String,System.String,Reveal.Sdk.RVSchemaColumnType)
+  id: '#ctor(System.String,System.String,Reveal.Sdk.RVSchemaColumnType)'
+  parent: Reveal.Sdk.RVSchemaColumn
+  langs:
+  - csharp
+  - vb
+  name: RVSchemaColumn(String, String, RVSchemaColumnType)
+  nameWithType: RVSchemaColumn.RVSchemaColumn(String, String, RVSchemaColumnType)
+  fullName: Reveal.Sdk.RVSchemaColumn.RVSchemaColumn(System.String, System.String, Reveal.Sdk.RVSchemaColumnType)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nCreates a new schema column with the given name, label and data type\n"
+  syntax:
+    content: public RVSchemaColumn(string name, string label, RVSchemaColumnType type)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the column
+    - id: label
+      type: System.String
+      description: The label of the column as will be displayed in Reveal. If missing - the name of the column will be displayed
+    - id: type
+      type: Reveal.Sdk.RVSchemaColumnType
+      description: The data type of the column
+    content.vb: Public Sub New(name As String, label As String, type As RVSchemaColumnType)
+  overload: Reveal.Sdk.RVSchemaColumn.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSchemaColumn.Name
+  commentId: P:Reveal.Sdk.RVSchemaColumn.Name
+  id: Name
+  parent: Reveal.Sdk.RVSchemaColumn
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: RVSchemaColumn.Name
+  fullName: Reveal.Sdk.RVSchemaColumn.Name
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe name of the column\n"
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Reveal.Sdk.RVSchemaColumn.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSchemaColumn.Label
+  commentId: P:Reveal.Sdk.RVSchemaColumn.Label
+  id: Label
+  parent: Reveal.Sdk.RVSchemaColumn
+  langs:
+  - csharp
+  - vb
+  name: Label
+  nameWithType: RVSchemaColumn.Label
+  fullName: Reveal.Sdk.RVSchemaColumn.Label
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe label of the column\n"
+  syntax:
+    content: public string Label { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Label As String
+  overload: Reveal.Sdk.RVSchemaColumn.Label*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSchemaColumn.Type
+  commentId: P:Reveal.Sdk.RVSchemaColumn.Type
+  id: Type
+  parent: Reveal.Sdk.RVSchemaColumn
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: RVSchemaColumn.Type
+  fullName: Reveal.Sdk.RVSchemaColumn.Type
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe data type of the column\n"
+  syntax:
+    content: public RVSchemaColumnType Type { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVSchemaColumnType
+    content.vb: Public Property Type As RVSchemaColumnType
+  overload: Reveal.Sdk.RVSchemaColumn.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVSchemaColumn.#ctor*
+  commentId: Overload:Reveal.Sdk.RVSchemaColumn.#ctor
+  isExternal: true
+  name: RVSchemaColumn
+  nameWithType: RVSchemaColumn.RVSchemaColumn
+  fullName: Reveal.Sdk.RVSchemaColumn.RVSchemaColumn
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVSchemaColumnType
+  commentId: T:Reveal.Sdk.RVSchemaColumnType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSchemaColumnType
+  nameWithType: RVSchemaColumnType
+  fullName: Reveal.Sdk.RVSchemaColumnType
+- uid: Reveal.Sdk.RVSchemaColumn.Name*
+  commentId: Overload:Reveal.Sdk.RVSchemaColumn.Name
+  isExternal: true
+  name: Name
+  nameWithType: RVSchemaColumn.Name
+  fullName: Reveal.Sdk.RVSchemaColumn.Name
+- uid: Reveal.Sdk.RVSchemaColumn.Label*
+  commentId: Overload:Reveal.Sdk.RVSchemaColumn.Label
+  isExternal: true
+  name: Label
+  nameWithType: RVSchemaColumn.Label
+  fullName: Reveal.Sdk.RVSchemaColumn.Label
+- uid: Reveal.Sdk.RVSchemaColumn.Type*
+  commentId: Overload:Reveal.Sdk.RVSchemaColumn.Type
+  isExternal: true
+  name: Type
+  nameWithType: RVSchemaColumn.Type
+  fullName: Reveal.Sdk.RVSchemaColumn.Type

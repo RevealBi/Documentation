@@ -1,4 +1,8 @@
 # DocFX
 _site
 obj
+en/developer/api/
+src/Web/
+src/WPF/RVUI.WPF.xml
 node_modules/
+.vscode/

@@ -1,0 +1,221 @@
+### YamlMime:TableOfContent
+- uid: Reveal.Sdk
+  name: Reveal.Sdk
+  items:
+  - uid: Reveal.Sdk.InMemoryDataUtility
+    name: InMemoryDataUtility
+  - uid: Reveal.Sdk.IRVAuthenticationProvider
+    name: IRVAuthenticationProvider
+  - uid: Reveal.Sdk.IRVDataProvider
+    name: IRVDataProvider
+  - uid: Reveal.Sdk.IRVDataSourceCredential
+    name: IRVDataSourceCredential
+  - uid: Reveal.Sdk.IRVDataSourceProvider
+    name: IRVDataSourceProvider
+  - uid: Reveal.Sdk.IRVInMemoryData
+    name: IRVInMemoryData
+  - uid: Reveal.Sdk.IRVInMemoryDataProvider
+    name: IRVInMemoryDataProvider
+  - uid: Reveal.Sdk.IRVResourceItem
+    name: IRVResourceItem
+  - uid: Reveal.Sdk.RVAmazonWebServicesCredentials
+    name: RVAmazonWebServicesCredentials
+  - uid: Reveal.Sdk.RVAnalysisServicesDataSource
+    name: RVAnalysisServicesDataSource
+  - uid: Reveal.Sdk.RVAnalysisServicesDataSourceItem
+    name: RVAnalysisServicesDataSourceItem
+  - uid: Reveal.Sdk.RVAthenaDataSource
+    name: RVAthenaDataSource
+  - uid: Reveal.Sdk.RVAthenaDataSourceItem
+    name: RVAthenaDataSourceItem
+  - uid: Reveal.Sdk.RVAzureAnalysisServicesDataSource
+    name: RVAzureAnalysisServicesDataSource
+  - uid: Reveal.Sdk.RVAzureSqlDataSource
+    name: RVAzureSqlDataSource
+  - uid: Reveal.Sdk.RVAzureSqlDataSourceItem
+    name: RVAzureSqlDataSourceItem
+  - uid: Reveal.Sdk.RVAzureSynapseDataSource
+    name: RVAzureSynapseDataSource
+  - uid: Reveal.Sdk.RVAzureSynapseDataSourceItem
+    name: RVAzureSynapseDataSourceItem
+  - uid: Reveal.Sdk.RVBaseSharePointDataSourceItem
+    name: RVBaseSharePointDataSourceItem
+  - uid: Reveal.Sdk.RVBearerTokenDataSourceCredential
+    name: RVBearerTokenDataSourceCredential
+  - uid: Reveal.Sdk.RVBigQueryDataSource
+    name: RVBigQueryDataSource
+  - uid: Reveal.Sdk.RVBigQueryDataSourceItem
+    name: RVBigQueryDataSourceItem
+  - uid: Reveal.Sdk.RVBoxDataSource
+    name: RVBoxDataSource
+  - uid: Reveal.Sdk.RVBoxDataSourceItem
+    name: RVBoxDataSourceItem
+  - uid: Reveal.Sdk.RVChartSettings
+    name: RVChartSettings
+  - uid: Reveal.Sdk.RVChartType
+    name: RVChartType
+  - uid: Reveal.Sdk.RVCsvDataSource
+    name: RVCsvDataSource
+  - uid: Reveal.Sdk.RVCsvDataSourceItem
+    name: RVCsvDataSourceItem
+  - uid: Reveal.Sdk.RVDashboardDataSource
+    name: RVDashboardDataSource
+  - uid: Reveal.Sdk.RVDashboardFilter
+    name: RVDashboardFilter
+  - uid: Reveal.Sdk.RVDataCell
+    name: RVDataCell
+  - uid: Reveal.Sdk.RVDataSourceItem
+    name: RVDataSourceItem
+  - uid: Reveal.Sdk.RVDateDashboardFilter
+    name: RVDateDashboardFilter
+  - uid: Reveal.Sdk.RVDateFilterType
+    name: RVDateFilterType
+  - uid: Reveal.Sdk.RVDateRange
+    name: RVDateRange
+  - uid: Reveal.Sdk.RVDropboxDataSource
+    name: RVDropboxDataSource
+  - uid: Reveal.Sdk.RVDropboxDataSourceItem
+    name: RVDropboxDataSourceItem
+  - uid: Reveal.Sdk.RVDynamicsCrmDataSource
+    name: RVDynamicsCrmDataSource
+  - uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+    name: RVDynamicsCrmDataSourceItem
+  - uid: Reveal.Sdk.RVExcelDataSource
+    name: RVExcelDataSource
+  - uid: Reveal.Sdk.RVExcelDataSourceItem
+    name: RVExcelDataSourceItem
+  - uid: Reveal.Sdk.RVExcelRange
+    name: RVExcelRange
+  - uid: Reveal.Sdk.RVFieldEditorDefaultSettings
+    name: RVFieldEditorDefaultSettings
+  - uid: Reveal.Sdk.RVFilterValue
+    name: RVFilterValue
+  - uid: Reveal.Sdk.RVGoogleAnalyticsDataSource
+    name: RVGoogleAnalyticsDataSource
+  - uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+    name: RVGoogleAnalyticsDataSourceItem
+  - uid: Reveal.Sdk.RVGoogleAnalyticsResourceType
+    name: RVGoogleAnalyticsResourceType
+  - uid: Reveal.Sdk.RVGoogleDriveDataSource
+    name: RVGoogleDriveDataSource
+  - uid: Reveal.Sdk.RVGoogleDriveDataSourceItem
+    name: RVGoogleDriveDataSourceItem
+  - uid: Reveal.Sdk.RVGoogleSheetDataSource
+    name: RVGoogleSheetDataSource
+  - uid: Reveal.Sdk.RVGoogleSheetDataSourceItem
+    name: RVGoogleSheetDataSourceItem
+  - uid: Reveal.Sdk.RVHttpAnalysisServicesDataSource
+    name: RVHttpAnalysisServicesDataSource
+  - uid: Reveal.Sdk.RVHubspotDataSource
+    name: RVHubspotDataSource
+  - uid: Reveal.Sdk.RVHubspotDataSourceItem
+    name: RVHubspotDataSourceItem
+  - uid: Reveal.Sdk.RVInMemoryData
+    name: RVInMemoryData
+  - uid: Reveal.Sdk.RVInMemoryData`1
+    name: RVInMemoryData<T>
+    name.vb: RVInMemoryData(Of T)
+  - uid: Reveal.Sdk.RVInMemoryDataSource
+    name: RVInMemoryDataSource
+  - uid: Reveal.Sdk.RVInMemoryDataSourceItem
+    name: RVInMemoryDataSourceItem
+  - uid: Reveal.Sdk.RVJsonDataSource
+    name: RVJsonDataSource
+  - uid: Reveal.Sdk.RVJsonDataSourceItem
+    name: RVJsonDataSourceItem
+  - uid: Reveal.Sdk.RVLocalFileDataSource
+    name: RVLocalFileDataSource
+  - uid: Reveal.Sdk.RVLocalFileDataSourceItem
+    name: RVLocalFileDataSourceItem
+  - uid: Reveal.Sdk.RVMarketoDataSource
+    name: RVMarketoDataSource
+  - uid: Reveal.Sdk.RVMarketoDataSourceItem
+    name: RVMarketoDataSourceItem
+  - uid: Reveal.Sdk.RVMySqlDataSource
+    name: RVMySqlDataSource
+  - uid: Reveal.Sdk.RVMySqlDataSourceItem
+    name: RVMySqlDataSourceItem
+  - uid: Reveal.Sdk.RVNativeAnalysisServicesDataSource
+    name: RVNativeAnalysisServicesDataSource
+  - uid: Reveal.Sdk.RVODataDataSource
+    name: RVODataDataSource
+  - uid: Reveal.Sdk.RVODataDataSourceItem
+    name: RVODataDataSourceItem
+  - uid: Reveal.Sdk.RVOneDriveDataSource
+    name: RVOneDriveDataSource
+  - uid: Reveal.Sdk.RVOneDriveDataSourceItem
+    name: RVOneDriveDataSourceItem
+  - uid: Reveal.Sdk.RVOracleDataSource
+    name: RVOracleDataSource
+  - uid: Reveal.Sdk.RVOracleDataSourceItem
+    name: RVOracleDataSourceItem
+  - uid: Reveal.Sdk.RVOracleServiceDataSource
+    name: RVOracleServiceDataSource
+  - uid: Reveal.Sdk.RVOracleSIDDataSource
+    name: RVOracleSIDDataSource
+  - uid: Reveal.Sdk.RVPostgresDataSource
+    name: RVPostgresDataSource
+  - uid: Reveal.Sdk.RVPostgresDataSourceItem
+    name: RVPostgresDataSourceItem
+  - uid: Reveal.Sdk.RVRedshiftDataSource
+    name: RVRedshiftDataSource
+  - uid: Reveal.Sdk.RVRedshiftDataSourceItem
+    name: RVRedshiftDataSourceItem
+  - uid: Reveal.Sdk.RVReportingServicesDataSource
+    name: RVReportingServicesDataSource
+  - uid: Reveal.Sdk.RVReportingServicesDataSourceItem
+    name: RVReportingServicesDataSourceItem
+  - uid: Reveal.Sdk.RVReportingServicesRenderMode
+    name: RVReportingServicesRenderMode
+  - uid: Reveal.Sdk.RVResourceBasedDataSourceItem
+    name: RVResourceBasedDataSourceItem
+  - uid: Reveal.Sdk.RVRESTDataSource
+    name: RVRESTDataSource
+  - uid: Reveal.Sdk.RVRESTDataSourceItem
+    name: RVRESTDataSourceItem
+  - uid: Reveal.Sdk.RVSchemaColumn
+    name: RVSchemaColumn
+  - uid: Reveal.Sdk.RVSchemaColumnAttribute
+    name: RVSchemaColumnAttribute
+  - uid: Reveal.Sdk.RVSchemaColumnType
+    name: RVSchemaColumnType
+  - uid: Reveal.Sdk.RVSharePointAuthenticationMethod
+    name: RVSharePointAuthenticationMethod
+  - uid: Reveal.Sdk.RVSharePointDataSource
+    name: RVSharePointDataSource
+  - uid: Reveal.Sdk.RVSharePointItemType
+    name: RVSharePointItemType
+  - uid: Reveal.Sdk.RVSharePointListDataSourceItem
+    name: RVSharePointListDataSourceItem
+  - uid: Reveal.Sdk.RVSharePointListItemDataSourceItem
+    name: RVSharePointListItemDataSourceItem
+  - uid: Reveal.Sdk.RVSharePointPeopleDataSourceItem
+    name: RVSharePointPeopleDataSourceItem
+  - uid: Reveal.Sdk.RVSharePointSiteDataSourceItem
+    name: RVSharePointSiteDataSourceItem
+  - uid: Reveal.Sdk.RVSqlBasedDataSource
+    name: RVSqlBasedDataSource
+  - uid: Reveal.Sdk.RVSqlBasedDataSourceItem
+    name: RVSqlBasedDataSourceItem
+  - uid: Reveal.Sdk.RVSqlPDSDataSource
+    name: RVSqlPDSDataSource
+  - uid: Reveal.Sdk.RVSqlPDSDataSourceItem
+    name: RVSqlPDSDataSourceItem
+  - uid: Reveal.Sdk.RVSqlServerDataSource
+    name: RVSqlServerDataSource
+  - uid: Reveal.Sdk.RVSqlServerDataSourceItem
+    name: RVSqlServerDataSourceItem
+  - uid: Reveal.Sdk.RVSyBaseDataSource
+    name: RVSyBaseDataSource
+  - uid: Reveal.Sdk.RVSyBaseDataSourceItem
+    name: RVSyBaseDataSourceItem
+  - uid: Reveal.Sdk.RVUsernamePasswordDataSourceCredential
+    name: RVUsernamePasswordDataSourceCredential
+  - uid: Reveal.Sdk.RVVisualization
+    name: RVVisualization
+  - uid: Reveal.Sdk.RVWebResourceDataSource
+    name: RVWebResourceDataSource
+  - uid: Reveal.Sdk.RVWebResourceDataSourceItem
+    name: RVWebResourceDataSourceItem
+  - uid: Reveal.Sdk.SdkInMemoryIterator
+    name: SdkInMemoryIterator

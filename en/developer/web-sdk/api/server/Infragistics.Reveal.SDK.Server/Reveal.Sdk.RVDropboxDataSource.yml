@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDropboxDataSource
+  commentId: T:Reveal.Sdk.RVDropboxDataSource
+  id: RVDropboxDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDropboxDataSource.#ctor
+  langs:
+  - csharp
+  - vb
+  name: RVDropboxDataSource
+  nameWithType: RVDropboxDataSource
+  fullName: Reveal.Sdk.RVDropboxDataSource
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nDropbox data source\n"
+  syntax:
+    content: 'public class RVDropboxDataSource : RVDashboardDataSource'
+    content.vb: >-
+      Public Class RVDropboxDataSource
+          Inherits RVDashboardDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVDropboxDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVDropboxDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVDropboxDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVDropboxDataSource()
+  nameWithType: RVDropboxDataSource.RVDropboxDataSource()
+  fullName: Reveal.Sdk.RVDropboxDataSource.RVDropboxDataSource()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVDropboxDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVDropboxDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDropboxDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVDropboxDataSource.#ctor
+  isExternal: true
+  name: RVDropboxDataSource
+  nameWithType: RVDropboxDataSource.RVDropboxDataSource
+  fullName: Reveal.Sdk.RVDropboxDataSource.RVDropboxDataSource

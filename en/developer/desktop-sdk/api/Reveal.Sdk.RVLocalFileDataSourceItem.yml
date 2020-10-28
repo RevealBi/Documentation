@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVLocalFileDataSourceItem
+  commentId: T:Reveal.Sdk.RVLocalFileDataSourceItem
+  id: RVLocalFileDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVLocalFileDataSourceItem.#ctor
+  - Reveal.Sdk.RVLocalFileDataSourceItem.Uri
+  langs:
+  - csharp
+  - vb
+  name: RVLocalFileDataSourceItem
+  nameWithType: RVLocalFileDataSourceItem
+  fullName: Reveal.Sdk.RVLocalFileDataSourceItem
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe local file data source item, used to load files from local storage. See <see cref=\"!:RevealView.LocalDataFilesRootFolder\"></see>\nfor information about configuring the root directory for this storage.\n"
+  syntax:
+    content: 'public class RVLocalFileDataSourceItem : RVDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVLocalFileDataSourceItem
+          Inherits RVDataSourceItem
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVLocalFileDataSourceItem.#ctor
+  commentId: M:Reveal.Sdk.RVLocalFileDataSourceItem.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVLocalFileDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVLocalFileDataSourceItem()
+  nameWithType: RVLocalFileDataSourceItem.RVLocalFileDataSourceItem()
+  fullName: Reveal.Sdk.RVLocalFileDataSourceItem.RVLocalFileDataSourceItem()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVLocalFileDataSourceItem()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVLocalFileDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVLocalFileDataSourceItem.Uri
+  commentId: P:Reveal.Sdk.RVLocalFileDataSourceItem.Uri
+  id: Uri
+  parent: Reveal.Sdk.RVLocalFileDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Uri
+  nameWithType: RVLocalFileDataSourceItem.Uri
+  fullName: Reveal.Sdk.RVLocalFileDataSourceItem.Uri
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe URI referencing the file, like local://Directory/File.csv.\n"
+  syntax:
+    content: public string Uri { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Uri As String
+  overload: Reveal.Sdk.RVLocalFileDataSourceItem.Uri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVLocalFileDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVLocalFileDataSourceItem.#ctor
+  isExternal: true
+  name: RVLocalFileDataSourceItem
+  nameWithType: RVLocalFileDataSourceItem.RVLocalFileDataSourceItem
+  fullName: Reveal.Sdk.RVLocalFileDataSourceItem.RVLocalFileDataSourceItem
+- uid: Reveal.Sdk.RVLocalFileDataSourceItem.Uri*
+  commentId: Overload:Reveal.Sdk.RVLocalFileDataSourceItem.Uri
+  isExternal: true
+  name: Uri
+  nameWithType: RVLocalFileDataSourceItem.Uri
+  fullName: Reveal.Sdk.RVLocalFileDataSourceItem.Uri
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

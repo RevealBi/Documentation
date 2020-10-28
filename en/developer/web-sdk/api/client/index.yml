@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded
+    name: rpembedded
+    langs:
+      - js
+    type: package
+    summary: ''
+    children:
+      - rpembedded.RVChartSettings
+      - rpembedded.$.ig.RevealView
+      - rpembedded.$.ig.ChartInteractionEventArgs
+      - rpembedded.$.ig.DashboardSaveEventArgs
+      - rpembedded.$.ig.VisualizationEditorClosedEventArgs
+      - rpembedded.VisualizationEditorClosingArgs
+      - rpembedded.OceanDarkTheme
+      - rpembedded.OceanLightTheme
+      - rpembedded.MountainLightTheme
+      - rpembedded.MountainDarkTheme
+      - rpembedded.RevealTheme
+      - rpembedded.RVConditionalFormatting
+      - rpembedded.RVCell
+      - rpembedded.RVDashboard
+      - rpembedded.RevealUtility
+      - rpembedded.RVFilterValue
+      - rpembedded.RVDateDashboardFilter
+      - rpembedded.RVVisualization
+      - rpembedded.RVDashboardFilter
+      - rpembedded.RVDateRange
+references:
+  - uid: rpembedded.RVChartSettings
+    name: RVChartSettings
+  - uid: rpembedded.$.ig.RevealView
+    name: RevealView
+  - uid: rpembedded.$.ig.ChartInteractionEventArgs
+    name: ChartInteractionEventArgs
+  - uid: rpembedded.$.ig.DashboardSaveEventArgs
+    name: DashboardSaveEventArgs
+  - uid: rpembedded.$.ig.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs
+  - uid: rpembedded.VisualizationEditorClosingArgs
+    name: VisualizationEditorClosingArgs
+  - uid: rpembedded.OceanDarkTheme
+    name: OceanDarkTheme
+  - uid: rpembedded.OceanLightTheme
+    name: OceanLightTheme
+  - uid: rpembedded.MountainLightTheme
+    name: MountainLightTheme
+  - uid: rpembedded.MountainDarkTheme
+    name: MountainDarkTheme
+  - uid: rpembedded.RevealTheme
+    name: RevealTheme
+  - uid: rpembedded.RVConditionalFormatting
+    name: RVConditionalFormatting
+  - uid: rpembedded.RVCell
+    name: RVCell
+  - uid: rpembedded.RVDashboard
+    name: RVDashboard
+  - uid: rpembedded.RevealUtility
+    name: RevealUtility
+  - uid: rpembedded.RVFilterValue
+    name: RVFilterValue
+  - uid: rpembedded.RVDateDashboardFilter
+    name: RVDateDashboardFilter
+  - uid: rpembedded.RVVisualization
+    name: RVVisualization
+  - uid: rpembedded.RVDashboardFilter
+    name: RVDashboardFilter
+  - uid: rpembedded.RVDateRange
+    name: RVDateRange

@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboardDateAggregationType
+  commentId: T:Reveal.Sdk.RVDashboardDateAggregationType
+  id: RVDashboardDateAggregationType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboardDateAggregationType.Day
+  - Reveal.Sdk.RVDashboardDateAggregationType.Hour
+  - Reveal.Sdk.RVDashboardDateAggregationType.Minute
+  - Reveal.Sdk.RVDashboardDateAggregationType.Month
+  - Reveal.Sdk.RVDashboardDateAggregationType.Year
+  langs:
+  - csharp
+  - vb
+  name: RVDashboardDateAggregationType
+  nameWithType: RVDashboardDateAggregationType
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of periods of time supported for aggregation.\n"
+  syntax:
+    content: public enum RVDashboardDateAggregationType
+    content.vb: Public Enum RVDashboardDateAggregationType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVDashboardDateAggregationType.Year
+  commentId: F:Reveal.Sdk.RVDashboardDateAggregationType.Year
+  id: Year
+  parent: Reveal.Sdk.RVDashboardDateAggregationType
+  langs:
+  - csharp
+  - vb
+  name: Year
+  nameWithType: RVDashboardDateAggregationType.Year
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType.Year
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nYear period\n"
+  syntax:
+    content: Year = 0
+    return:
+      type: Reveal.Sdk.RVDashboardDateAggregationType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDateAggregationType.Month
+  commentId: F:Reveal.Sdk.RVDashboardDateAggregationType.Month
+  id: Month
+  parent: Reveal.Sdk.RVDashboardDateAggregationType
+  langs:
+  - csharp
+  - vb
+  name: Month
+  nameWithType: RVDashboardDateAggregationType.Month
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType.Month
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nMonth period\n"
+  syntax:
+    content: Month = 1
+    return:
+      type: Reveal.Sdk.RVDashboardDateAggregationType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDateAggregationType.Day
+  commentId: F:Reveal.Sdk.RVDashboardDateAggregationType.Day
+  id: Day
+  parent: Reveal.Sdk.RVDashboardDateAggregationType
+  langs:
+  - csharp
+  - vb
+  name: Day
+  nameWithType: RVDashboardDateAggregationType.Day
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType.Day
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nDay period\n"
+  syntax:
+    content: Day = 2
+    return:
+      type: Reveal.Sdk.RVDashboardDateAggregationType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDateAggregationType.Hour
+  commentId: F:Reveal.Sdk.RVDashboardDateAggregationType.Hour
+  id: Hour
+  parent: Reveal.Sdk.RVDashboardDateAggregationType
+  langs:
+  - csharp
+  - vb
+  name: Hour
+  nameWithType: RVDashboardDateAggregationType.Hour
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType.Hour
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nHour period\n"
+  syntax:
+    content: Hour = 3
+    return:
+      type: Reveal.Sdk.RVDashboardDateAggregationType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDateAggregationType.Minute
+  commentId: F:Reveal.Sdk.RVDashboardDateAggregationType.Minute
+  id: Minute
+  parent: Reveal.Sdk.RVDashboardDateAggregationType
+  langs:
+  - csharp
+  - vb
+  name: Minute
+  nameWithType: RVDashboardDateAggregationType.Minute
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType.Minute
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nMinute period\n"
+  syntax:
+    content: Minute = 4
+    return:
+      type: Reveal.Sdk.RVDashboardDateAggregationType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVDashboardDateAggregationType
+  commentId: T:Reveal.Sdk.RVDashboardDateAggregationType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDateAggregationType
+  nameWithType: RVDashboardDateAggregationType
+  fullName: Reveal.Sdk.RVDashboardDateAggregationType

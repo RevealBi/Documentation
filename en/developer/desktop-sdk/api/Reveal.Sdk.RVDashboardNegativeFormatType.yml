@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboardNegativeFormatType
+  commentId: T:Reveal.Sdk.RVDashboardNegativeFormatType
+  id: RVDashboardNegativeFormatType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboardNegativeFormatType.Empty
+  - Reveal.Sdk.RVDashboardNegativeFormatType.MinusSign
+  - Reveal.Sdk.RVDashboardNegativeFormatType.Parenthesis
+  langs:
+  - csharp
+  - vb
+  name: RVDashboardNegativeFormatType
+  nameWithType: RVDashboardNegativeFormatType
+  fullName: Reveal.Sdk.RVDashboardNegativeFormatType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of formatting options for a negative numeric data.\n"
+  syntax:
+    content: public enum RVDashboardNegativeFormatType
+    content.vb: Public Enum RVDashboardNegativeFormatType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVDashboardNegativeFormatType.Empty
+  commentId: F:Reveal.Sdk.RVDashboardNegativeFormatType.Empty
+  id: Empty
+  parent: Reveal.Sdk.RVDashboardNegativeFormatType
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: RVDashboardNegativeFormatType.Empty
+  fullName: Reveal.Sdk.RVDashboardNegativeFormatType.Empty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEmpty formatting\n"
+  syntax:
+    content: Empty = 0
+    return:
+      type: Reveal.Sdk.RVDashboardNegativeFormatType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardNegativeFormatType.MinusSign
+  commentId: F:Reveal.Sdk.RVDashboardNegativeFormatType.MinusSign
+  id: MinusSign
+  parent: Reveal.Sdk.RVDashboardNegativeFormatType
+  langs:
+  - csharp
+  - vb
+  name: MinusSign
+  nameWithType: RVDashboardNegativeFormatType.MinusSign
+  fullName: Reveal.Sdk.RVDashboardNegativeFormatType.MinusSign
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nFormatting with a minus sign\n"
+  syntax:
+    content: MinusSign = 1
+    return:
+      type: Reveal.Sdk.RVDashboardNegativeFormatType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardNegativeFormatType.Parenthesis
+  commentId: F:Reveal.Sdk.RVDashboardNegativeFormatType.Parenthesis
+  id: Parenthesis
+  parent: Reveal.Sdk.RVDashboardNegativeFormatType
+  langs:
+  - csharp
+  - vb
+  name: Parenthesis
+  nameWithType: RVDashboardNegativeFormatType.Parenthesis
+  fullName: Reveal.Sdk.RVDashboardNegativeFormatType.Parenthesis
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nFormatting with a parenthesis\n"
+  syntax:
+    content: Parenthesis = 2
+    return:
+      type: Reveal.Sdk.RVDashboardNegativeFormatType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVDashboardNegativeFormatType
+  commentId: T:Reveal.Sdk.RVDashboardNegativeFormatType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardNegativeFormatType
+  nameWithType: RVDashboardNegativeFormatType
+  fullName: Reveal.Sdk.RVDashboardNegativeFormatType

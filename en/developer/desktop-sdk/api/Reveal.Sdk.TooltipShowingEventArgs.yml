@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.TooltipShowingEventArgs
+  commentId: T:Reveal.Sdk.TooltipShowingEventArgs
+  id: TooltipShowingEventArgs
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.TooltipShowingEventArgs.Cell
+  - Reveal.Sdk.TooltipShowingEventArgs.Row
+  - Reveal.Sdk.TooltipShowingEventArgs.Visualization
+  langs:
+  - csharp
+  - vb
+  name: TooltipShowingEventArgs
+  nameWithType: TooltipShowingEventArgs
+  fullName: Reveal.Sdk.TooltipShowingEventArgs
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe arguments object passed to <xref href=\"Reveal.Sdk.RevealView.TooltipShowing\" data-throw-if-not-resolved=\"false\"></xref> event with the information about the\nvisualization selected and the data a tooltip will be displayed for.\n"
+  syntax:
+    content: 'public class TooltipShowingEventArgs : CancelEventArgs'
+    content.vb: >-
+      Public Class TooltipShowingEventArgs
+          Inherits CancelEventArgs
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.TooltipShowingEventArgs.Visualization
+  commentId: P:Reveal.Sdk.TooltipShowingEventArgs.Visualization
+  id: Visualization
+  parent: Reveal.Sdk.TooltipShowingEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Visualization
+  nameWithType: TooltipShowingEventArgs.Visualization
+  fullName: Reveal.Sdk.TooltipShowingEventArgs.Visualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe visualization for which the tooltip will be displayed for.\n"
+  syntax:
+    content: public RVVisualization Visualization { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVVisualization
+      description: The visualization containing the tooltip cell for.
+    content.vb: Public ReadOnly Property Visualization As RVVisualization
+  overload: Reveal.Sdk.TooltipShowingEventArgs.Visualization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.TooltipShowingEventArgs.Cell
+  commentId: P:Reveal.Sdk.TooltipShowingEventArgs.Cell
+  id: Cell
+  parent: Reveal.Sdk.TooltipShowingEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Cell
+  nameWithType: TooltipShowingEventArgs.Cell
+  fullName: Reveal.Sdk.TooltipShowingEventArgs.Cell
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe cell that tooltip would be displayed for.\n"
+  syntax:
+    content: public RVDataCell Cell { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDataCell
+      description: The cell that tooltip would be displayed for.
+    content.vb: Public ReadOnly Property Cell As RVDataCell
+  overload: Reveal.Sdk.TooltipShowingEventArgs.Cell*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.TooltipShowingEventArgs.Row
+  commentId: P:Reveal.Sdk.TooltipShowingEventArgs.Row
+  id: Row
+  parent: Reveal.Sdk.TooltipShowingEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Row
+  nameWithType: TooltipShowingEventArgs.Row
+  fullName: Reveal.Sdk.TooltipShowingEventArgs.Row
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe row containing the cell that needs tooltip displayed. This can be used to get the values of other cells in the same row,\nfor example to get the CustomerId even if the cell clicked was &quot;Sales Amount&quot;.\n"
+  syntax:
+    content: public RVDataCell[] Row { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDataCell[]
+      description: The row containing the cell that needs tooltip displayed for.
+    content.vb: Public ReadOnly Property Row As RVDataCell()
+  overload: Reveal.Sdk.TooltipShowingEventArgs.Row*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.TooltipShowingEventArgs.Visualization*
+  commentId: Overload:Reveal.Sdk.TooltipShowingEventArgs.Visualization
+  isExternal: true
+  name: Visualization
+  nameWithType: TooltipShowingEventArgs.Visualization
+  fullName: Reveal.Sdk.TooltipShowingEventArgs.Visualization
+- uid: Reveal.Sdk.RVVisualization
+  commentId: T:Reveal.Sdk.RVVisualization
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVVisualization
+  nameWithType: RVVisualization
+  fullName: Reveal.Sdk.RVVisualization
+- uid: Reveal.Sdk.TooltipShowingEventArgs.Cell*
+  commentId: Overload:Reveal.Sdk.TooltipShowingEventArgs.Cell
+  isExternal: true
+  name: Cell
+  nameWithType: TooltipShowingEventArgs.Cell
+  fullName: Reveal.Sdk.TooltipShowingEventArgs.Cell
+- uid: Reveal.Sdk.RVDataCell
+  commentId: T:Reveal.Sdk.RVDataCell
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataCell
+  nameWithType: RVDataCell
+  fullName: Reveal.Sdk.RVDataCell
+- uid: Reveal.Sdk.TooltipShowingEventArgs.Row*
+  commentId: Overload:Reveal.Sdk.TooltipShowingEventArgs.Row
+  isExternal: true
+  name: Row
+  nameWithType: TooltipShowingEventArgs.Row
+  fullName: Reveal.Sdk.TooltipShowingEventArgs.Row
+- uid: Reveal.Sdk.RVDataCell[]
+  isExternal: true
+  name: RVDataCell[]
+  nameWithType: RVDataCell[]
+  fullName: Reveal.Sdk.RVDataCell[]
+  nameWithType.vb: RVDataCell()
+  fullName.vb: Reveal.Sdk.RVDataCell()
+  name.vb: RVDataCell()
+  spec.csharp:
+  - uid: Reveal.Sdk.RVDataCell
+    name: RVDataCell
+    nameWithType: RVDataCell
+    fullName: Reveal.Sdk.RVDataCell
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Reveal.Sdk.RVDataCell
+    name: RVDataCell
+    nameWithType: RVDataCell
+    fullName: Reveal.Sdk.RVDataCell
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

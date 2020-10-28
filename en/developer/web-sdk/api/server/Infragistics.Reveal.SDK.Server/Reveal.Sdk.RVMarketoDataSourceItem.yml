@@ -1,0 +1,388 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVMarketoDataSourceItem
+  commentId: T:Reveal.Sdk.RVMarketoDataSourceItem
+  id: RVMarketoDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVMarketoDataSourceItem.#ctor(Reveal.Sdk.RVMarketoDataSource)
+  - Reveal.Sdk.RVMarketoDataSourceItem.EndDate
+  - Reveal.Sdk.RVMarketoDataSourceItem.Entity
+  - Reveal.Sdk.RVMarketoDataSourceItem.StartDate
+  - Reveal.Sdk.RVMarketoDataSourceItem.Url
+  langs:
+  - csharp
+  - vb
+  name: RVMarketoDataSourceItem
+  nameWithType: RVMarketoDataSourceItem
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nMarketo data source item, see <xref href=\"Reveal.Sdk.RVMarketoDataSource\" data-throw-if-not-resolved=\"false\"></xref> for more information.\n"
+  syntax:
+    content: 'public class RVMarketoDataSourceItem : RVDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVMarketoDataSourceItem
+          Inherits RVDataSourceItem
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.#ctor(Reveal.Sdk.RVMarketoDataSource)
+  commentId: M:Reveal.Sdk.RVMarketoDataSourceItem.#ctor(Reveal.Sdk.RVMarketoDataSource)
+  id: '#ctor(Reveal.Sdk.RVMarketoDataSource)'
+  parent: Reveal.Sdk.RVMarketoDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVMarketoDataSourceItem(RVMarketoDataSource)
+  nameWithType: RVMarketoDataSourceItem.RVMarketoDataSourceItem(RVMarketoDataSource)
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.RVMarketoDataSourceItem(Reveal.Sdk.RVMarketoDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVMarketoDataSourceItem(RVMarketoDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVMarketoDataSource
+    content.vb: Public Sub New(dataSource As RVMarketoDataSource)
+  overload: Reveal.Sdk.RVMarketoDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.Url
+  commentId: P:Reveal.Sdk.RVMarketoDataSourceItem.Url
+  id: Url
+  parent: Reveal.Sdk.RVMarketoDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: RVMarketoDataSourceItem.Url
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.Url
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nURL to the Marketo endpoint, must match the URL specified in the <xref href=\"Reveal.Sdk.RVMarketoDataSource\" data-throw-if-not-resolved=\"false\"></xref> data source object.\n"
+  syntax:
+    content: public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: URL to the Marketo endpoint
+    content.vb: Public Property Url As String
+  overload: Reveal.Sdk.RVMarketoDataSourceItem.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.Entity
+  commentId: P:Reveal.Sdk.RVMarketoDataSourceItem.Entity
+  id: Entity
+  parent: Reveal.Sdk.RVMarketoDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: RVMarketoDataSourceItem.Entity
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.Entity
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nEntity to retrieve data from \n"
+  syntax:
+    content: public string Entity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Entity As String
+  overload: Reveal.Sdk.RVMarketoDataSourceItem.Entity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.StartDate
+  commentId: P:Reveal.Sdk.RVMarketoDataSourceItem.StartDate
+  id: StartDate
+  parent: Reveal.Sdk.RVMarketoDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: RVMarketoDataSourceItem.StartDate
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.StartDate
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nStart date to use when requesting data.\n"
+  syntax:
+    content: public Nullable<DateTime> StartDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartDate As Nullable(Of DateTime)
+  overload: Reveal.Sdk.RVMarketoDataSourceItem.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.EndDate
+  commentId: P:Reveal.Sdk.RVMarketoDataSourceItem.EndDate
+  id: EndDate
+  parent: Reveal.Sdk.RVMarketoDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: RVMarketoDataSourceItem.EndDate
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.EndDate
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nStart date to use when requesting data.\n"
+  syntax:
+    content: public Nullable<DateTime> EndDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As Nullable(Of DateTime)
+  overload: Reveal.Sdk.RVMarketoDataSourceItem.EndDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVMarketoDataSourceItem.#ctor
+  isExternal: true
+  name: RVMarketoDataSourceItem
+  nameWithType: RVMarketoDataSourceItem.RVMarketoDataSourceItem
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.RVMarketoDataSourceItem
+- uid: Reveal.Sdk.RVMarketoDataSource
+  commentId: T:Reveal.Sdk.RVMarketoDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVMarketoDataSource
+  nameWithType: RVMarketoDataSource
+  fullName: Reveal.Sdk.RVMarketoDataSource
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.Url*
+  commentId: Overload:Reveal.Sdk.RVMarketoDataSourceItem.Url
+  isExternal: true
+  name: Url
+  nameWithType: RVMarketoDataSourceItem.Url
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.Entity*
+  commentId: Overload:Reveal.Sdk.RVMarketoDataSourceItem.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: RVMarketoDataSourceItem.Entity
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.Entity
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.StartDate*
+  commentId: Overload:Reveal.Sdk.RVMarketoDataSourceItem.StartDate
+  isExternal: true
+  name: StartDate
+  nameWithType: RVMarketoDataSourceItem.StartDate
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.StartDate
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RVMarketoDataSourceItem.EndDate*
+  commentId: Overload:Reveal.Sdk.RVMarketoDataSourceItem.EndDate
+  isExternal: true
+  name: EndDate
+  nameWithType: RVMarketoDataSourceItem.EndDate
+  fullName: Reveal.Sdk.RVMarketoDataSourceItem.EndDate

@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVInMemoryData
+  commentId: T:Reveal.Sdk.IRVInMemoryData
+  id: IRVInMemoryData
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVInMemoryData.GetData
+  - Reveal.Sdk.IRVInMemoryData.GetSchema
+  langs:
+  - csharp
+  - vb
+  name: IRVInMemoryData
+  nameWithType: IRVInMemoryData
+  fullName: Reveal.Sdk.IRVInMemoryData
+  type: Interface
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe interface representing in-memory data to be returned by <xref href=\"Reveal.Sdk.IRVInMemoryDataProvider\" data-throw-if-not-resolved=\"false\"></xref>, \nplease note data is returned as an IEnumerable, so there&apos;s no need to have all data loaded in memory.\nYou would probably use the default implementation for this interface: <xref href=\"Reveal.Sdk.RVInMemoryData%601\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public interface IRVInMemoryData
+    content.vb: Public Interface IRVInMemoryData
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVInMemoryData.GetData
+  commentId: M:Reveal.Sdk.IRVInMemoryData.GetData
+  id: GetData
+  parent: Reveal.Sdk.IRVInMemoryData
+  langs:
+  - csharp
+  - vb
+  name: GetData()
+  nameWithType: IRVInMemoryData.GetData()
+  fullName: Reveal.Sdk.IRVInMemoryData.GetData()
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nReturns an IEnumerable object with all rows in this dataset, please note data is \nreturned as an IEnumerable, so there&apos;s no need to have all data loaded in memory.\nFor each row returned from this IEnumerable, the order of values must match the order\nspecified in the collection returned by <xref href=\"Reveal.Sdk.IRVInMemoryData.GetSchema\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: IEnumerable<IEnumerable<object>> GetData()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Object}}
+    content.vb: Function GetData As IEnumerable(Of IEnumerable(Of Object))
+  overload: Reveal.Sdk.IRVInMemoryData.GetData*
+- uid: Reveal.Sdk.IRVInMemoryData.GetSchema
+  commentId: M:Reveal.Sdk.IRVInMemoryData.GetSchema
+  id: GetSchema
+  parent: Reveal.Sdk.IRVInMemoryData
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: IRVInMemoryData.GetSchema()
+  fullName: Reveal.Sdk.IRVInMemoryData.GetSchema()
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nReturns the schema for this dataset, basically the list of columns (name and data type),\ndata returned by <xref href=\"Reveal.Sdk.IRVInMemoryData.GetData\" data-throw-if-not-resolved=\"false\"></xref> must be returned in the same order than\nthe columns defined by this method.\nWhen using the default implementation for this interface (<xref href=\"Reveal.Sdk.RVInMemoryData%601\" data-throw-if-not-resolved=\"false\"></xref>),\nyou don&apos;t need to worry about this as it&apos;s resolved automatically by that implementation.\n"
+  syntax:
+    content: IEnumerable<RVSchemaColumn> GetSchema()
+    return:
+      type: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVSchemaColumn}
+    content.vb: Function GetSchema As IEnumerable(Of RVSchemaColumn)
+  overload: Reveal.Sdk.IRVInMemoryData.GetSchema*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVInMemoryData.GetData*
+  commentId: Overload:Reveal.Sdk.IRVInMemoryData.GetData
+  isExternal: true
+  name: GetData
+  nameWithType: IRVInMemoryData.GetData
+  fullName: Reveal.Sdk.IRVInMemoryData.GetData
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Object}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{System.Object}}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IEnumerable<Object>>
+  nameWithType: IEnumerable<IEnumerable<Object>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<System.Object>>
+  nameWithType.vb: IEnumerable(Of IEnumerable(Of Object))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: IEnumerable(Of IEnumerable(Of Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.IRVInMemoryData.GetSchema*
+  commentId: Overload:Reveal.Sdk.IRVInMemoryData.GetSchema
+  isExternal: true
+  name: GetSchema
+  nameWithType: IRVInMemoryData.GetSchema
+  fullName: Reveal.Sdk.IRVInMemoryData.GetSchema
+- uid: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVSchemaColumn}
+  commentId: '!:System.Collections.Generic.IEnumerable{Reveal.Sdk.RVSchemaColumn}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<RVSchemaColumn>
+  nameWithType: IEnumerable<RVSchemaColumn>
+  fullName: System.Collections.Generic.IEnumerable<Reveal.Sdk.RVSchemaColumn>
+  nameWithType.vb: IEnumerable(Of RVSchemaColumn)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVSchemaColumn)
+  name.vb: IEnumerable(Of RVSchemaColumn)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVSchemaColumn
+    name: RVSchemaColumn
+    nameWithType: RVSchemaColumn
+    fullName: Reveal.Sdk.RVSchemaColumn
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVSchemaColumn
+    name: RVSchemaColumn
+    nameWithType: RVSchemaColumn
+    fullName: Reveal.Sdk.RVSchemaColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

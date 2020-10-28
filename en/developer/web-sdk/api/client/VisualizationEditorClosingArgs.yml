@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.VisualizationEditorClosingArgs
+    id: rpembedded.VisualizationEditorClosingArgs
+    name: VisualizationEditorClosingArgs
+    summary: Class representing the event arguments visualizationEditorClosing event
+    fullName: rpembedded.VisualizationEditorClosingArgs
+    type: Class
+    children:
+      - rpembedded.VisualizationEditorClosingArgs.#ctor
+    langs:
+      - js
+  - id: rpembedded.VisualizationEditorClosingArgs.#ctor
+    uid: rpembedded.VisualizationEditorClosingArgs.#ctor
+    parent: rpembedded.VisualizationEditorClosingArgs
+    name: VisualizationEditorClosingArgs()
+    fullName: rpembedded.VisualizationEditorClosingArgs.VisualizationEditorClosingArgs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new VisualizationEditorClosingArgs()
+    langs:
+      - js

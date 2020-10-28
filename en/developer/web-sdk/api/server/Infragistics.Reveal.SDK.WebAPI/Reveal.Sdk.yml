@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  id: Reveal.Sdk
+  children:
+  - Reveal.Sdk.DIExtensions
+  - Reveal.Sdk.IRevealSdkContext
+  - Reveal.Sdk.IRevealUserContext
+  - Reveal.Sdk.RevealEmbedSettings
+  langs:
+  - csharp
+  - vb
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+  type: Namespace
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+references:
+- uid: Reveal.Sdk.RevealEmbedSettings
+  commentId: T:Reveal.Sdk.RevealEmbedSettings
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RevealEmbedSettings
+  nameWithType: RevealEmbedSettings
+  fullName: Reveal.Sdk.RevealEmbedSettings
+- uid: Reveal.Sdk.IRevealSdkContext
+  commentId: T:Reveal.Sdk.IRevealSdkContext
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRevealSdkContext
+  nameWithType: IRevealSdkContext
+  fullName: Reveal.Sdk.IRevealSdkContext
+- uid: Reveal.Sdk.IRevealUserContext
+  commentId: T:Reveal.Sdk.IRevealUserContext
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRevealUserContext
+  nameWithType: IRevealUserContext
+  fullName: Reveal.Sdk.IRevealUserContext
+- uid: Reveal.Sdk.DIExtensions
+  commentId: T:Reveal.Sdk.DIExtensions
+  isExternal: true
+  name: DIExtensions
+  nameWithType: DIExtensions
+  fullName: Reveal.Sdk.DIExtensions
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk

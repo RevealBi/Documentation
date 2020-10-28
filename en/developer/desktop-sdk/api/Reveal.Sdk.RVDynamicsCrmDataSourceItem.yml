@@ -1,0 +1,544 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  commentId: T:Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  id: RVDynamicsCrmDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDynamicsCrmDataSourceItem.#ctor(Reveal.Sdk.RVDynamicsCrmDataSource)
+  - Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery
+  - Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity
+  - Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization
+  langs:
+  - csharp
+  - vb
+  name: RVDynamicsCrmDataSourceItem
+  nameWithType: RVDynamicsCrmDataSourceItem
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nDynamics CRM data source item\n"
+  syntax:
+    content: 'public class RVDynamicsCrmDataSourceItem : RVDataSourceItem'
+    content.vb: >-
+      Public Class RVDynamicsCrmDataSourceItem
+          Inherits RVDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.#ctor(Reveal.Sdk.RVDynamicsCrmDataSource)
+  commentId: M:Reveal.Sdk.RVDynamicsCrmDataSourceItem.#ctor(Reveal.Sdk.RVDynamicsCrmDataSource)
+  id: '#ctor(Reveal.Sdk.RVDynamicsCrmDataSource)'
+  parent: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVDynamicsCrmDataSourceItem(RVDynamicsCrmDataSource)
+  nameWithType: RVDynamicsCrmDataSourceItem.RVDynamicsCrmDataSourceItem(RVDynamicsCrmDataSource)
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.RVDynamicsCrmDataSourceItem(Reveal.Sdk.RVDynamicsCrmDataSource)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVDynamicsCrmDataSourceItem(RVDynamicsCrmDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVDynamicsCrmDataSource
+    content.vb: Public Sub New(dataSource As RVDynamicsCrmDataSource)
+  overload: Reveal.Sdk.RVDynamicsCrmDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization
+  commentId: P:Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization
+  id: Organization
+  parent: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Organization
+  nameWithType: RVDynamicsCrmDataSourceItem.Organization
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nName of the organization to use\n"
+  syntax:
+    content: public string Organization { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Organization As String
+  overload: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity
+  commentId: P:Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity
+  id: Entity
+  parent: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: RVDynamicsCrmDataSourceItem.Entity
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nName of the entity to use\n"
+  syntax:
+    content: public string Entity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Entity As String
+  overload: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery
+  commentId: P:Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery
+  id: CustomQuery
+  parent: Reveal.Sdk.RVDynamicsCrmDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: CustomQuery
+  nameWithType: RVDynamicsCrmDataSourceItem.CustomQuery
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nCustom query to use when getting data from Dynamics CRM\n"
+  syntax:
+    content: public string CustomQuery { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomQuery As String
+  overload: Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVDynamicsCrmDataSourceItem.#ctor
+  isExternal: true
+  name: RVDynamicsCrmDataSourceItem
+  nameWithType: RVDynamicsCrmDataSourceItem.RVDynamicsCrmDataSourceItem
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.RVDynamicsCrmDataSourceItem
+- uid: Reveal.Sdk.RVDynamicsCrmDataSource
+  commentId: T:Reveal.Sdk.RVDynamicsCrmDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDynamicsCrmDataSource
+  nameWithType: RVDynamicsCrmDataSource
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSource
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization*
+  commentId: Overload:Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization
+  isExternal: true
+  name: Organization
+  nameWithType: RVDynamicsCrmDataSourceItem.Organization
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Organization
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity*
+  commentId: Overload:Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: RVDynamicsCrmDataSourceItem.Entity
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.Entity
+- uid: Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery*
+  commentId: Overload:Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery
+  isExternal: true
+  name: CustomQuery
+  nameWithType: RVDynamicsCrmDataSourceItem.CustomQuery
+  fullName: Reveal.Sdk.RVDynamicsCrmDataSourceItem.CustomQuery

@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVLocalizationProvider
+  commentId: T:Reveal.Sdk.IRVLocalizationProvider
+  id: IRVLocalizationProvider
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService
+  langs:
+  - csharp
+  - vb
+  name: IRVLocalizationProvider
+  nameWithType: IRVLocalizationProvider
+  fullName: Reveal.Sdk.IRVLocalizationProvider
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe interface that must be implemented and set to <see cref=\"!:RevealView.LocalizationProvider\"></see> in order to localize the\nfollowing data in dashboards: dashboard title, dashboard filter titles, visualization titles, visualization field labels \nand visualization summarization field labels.\nSee &apos;Localization Service&apos; in the developer guide for more information.\n"
+  syntax:
+    content: public interface IRVLocalizationProvider
+    content.vb: Public Interface IRVLocalizationProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService
+  commentId: M:Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService
+  id: GetLocalizationService
+  parent: Reveal.Sdk.IRVLocalizationProvider
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizationService()
+  nameWithType: IRVLocalizationProvider.GetLocalizationService()
+  fullName: Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns the localization service that will be used to localize the dashboard data.\n"
+  syntax:
+    content: IRVLocalizationService GetLocalizationService()
+    return:
+      type: Reveal.Sdk.IRVLocalizationService
+      description: Implementation of IRVLocalizationService interface
+    content.vb: Function GetLocalizationService As IRVLocalizationService
+  overload: Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService*
+  commentId: Overload:Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService
+  isExternal: true
+  name: GetLocalizationService
+  nameWithType: IRVLocalizationProvider.GetLocalizationService
+  fullName: Reveal.Sdk.IRVLocalizationProvider.GetLocalizationService
+- uid: Reveal.Sdk.IRVLocalizationService
+  commentId: T:Reveal.Sdk.IRVLocalizationService
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVLocalizationService
+  nameWithType: IRVLocalizationService
+  fullName: Reveal.Sdk.IRVLocalizationService

@@ -1,0 +1,699 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDateFilterType
+  commentId: T:Reveal.Sdk.RVDateFilterType
+  id: RVDateFilterType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDateFilterType.AllTime
+  - Reveal.Sdk.RVDateFilterType.CustomRange
+  - Reveal.Sdk.RVDateFilterType.LastMonth
+  - Reveal.Sdk.RVDateFilterType.LastWeek
+  - Reveal.Sdk.RVDateFilterType.LastYear
+  - Reveal.Sdk.RVDateFilterType.MonthToDate
+  - Reveal.Sdk.RVDateFilterType.NextMonth
+  - Reveal.Sdk.RVDateFilterType.NextQuarter
+  - Reveal.Sdk.RVDateFilterType.NextYear
+  - Reveal.Sdk.RVDateFilterType.PreviousMonth
+  - Reveal.Sdk.RVDateFilterType.PreviousQuarter
+  - Reveal.Sdk.RVDateFilterType.PreviousYear
+  - Reveal.Sdk.RVDateFilterType.QuarterToDate
+  - Reveal.Sdk.RVDateFilterType.ThisMonth
+  - Reveal.Sdk.RVDateFilterType.ThisQuarter
+  - Reveal.Sdk.RVDateFilterType.ThisYear
+  - Reveal.Sdk.RVDateFilterType.Today
+  - Reveal.Sdk.RVDateFilterType.TrailingTwelveMonths
+  - Reveal.Sdk.RVDateFilterType.value__
+  - Reveal.Sdk.RVDateFilterType.YearToDate
+  - Reveal.Sdk.RVDateFilterType.Yesterday
+  langs:
+  - csharp
+  - vb
+  name: RVDateFilterType
+  nameWithType: RVDateFilterType
+  fullName: Reveal.Sdk.RVDateFilterType
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nDate filter type, you can use one of the predefined filters or the custom range type.\n"
+  syntax:
+    content: 'public sealed class RVDateFilterType : Enum'
+    content.vb: >-
+      Public NotInheritable Class RVDateFilterType
+          Inherits
+
+           Enum
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Reveal.Sdk.RVDateFilterType.value__
+  commentId: F:Reveal.Sdk.RVDateFilterType.value__
+  id: value__
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: value__
+  nameWithType: RVDateFilterType.value__
+  fullName: Reveal.Sdk.RVDateFilterType.value__
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int value__
+    return:
+      type: System.Int32
+    content.vb: Public value__ As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDateFilterType.AllTime
+  commentId: F:Reveal.Sdk.RVDateFilterType.AllTime
+  id: AllTime
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: AllTime
+  nameWithType: RVDateFilterType.AllTime
+  fullName: Reveal.Sdk.RVDateFilterType.AllTime
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nNo filter defined, all time is included\n"
+  syntax:
+    content: public const RVDateFilterType AllTime
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const AllTime As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.CustomRange
+  commentId: F:Reveal.Sdk.RVDateFilterType.CustomRange
+  id: CustomRange
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: CustomRange
+  nameWithType: RVDateFilterType.CustomRange
+  fullName: Reveal.Sdk.RVDateFilterType.CustomRange
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nCustom range, an instance of RVDateRange must be set in the range property.\n"
+  syntax:
+    content: public const RVDateFilterType CustomRange
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const CustomRange As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.LastWeek
+  commentId: F:Reveal.Sdk.RVDateFilterType.LastWeek
+  id: LastWeek
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: LastWeek
+  nameWithType: RVDateFilterType.LastWeek
+  fullName: Reveal.Sdk.RVDateFilterType.LastWeek
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nLast 7 days\n"
+  syntax:
+    content: public const RVDateFilterType LastWeek
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const LastWeek As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.LastMonth
+  commentId: F:Reveal.Sdk.RVDateFilterType.LastMonth
+  id: LastMonth
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: LastMonth
+  nameWithType: RVDateFilterType.LastMonth
+  fullName: Reveal.Sdk.RVDateFilterType.LastMonth
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nLast 30 days\n"
+  syntax:
+    content: public const RVDateFilterType LastMonth
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const LastMonth As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.LastYear
+  commentId: F:Reveal.Sdk.RVDateFilterType.LastYear
+  id: LastYear
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: LastYear
+  nameWithType: RVDateFilterType.LastYear
+  fullName: Reveal.Sdk.RVDateFilterType.LastYear
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nLast 365 days\n"
+  syntax:
+    content: public const RVDateFilterType LastYear
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const LastYear As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.YearToDate
+  commentId: F:Reveal.Sdk.RVDateFilterType.YearToDate
+  id: YearToDate
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: YearToDate
+  nameWithType: RVDateFilterType.YearToDate
+  fullName: Reveal.Sdk.RVDateFilterType.YearToDate
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nFrom Jan 1st this year to today\n"
+  syntax:
+    content: public const RVDateFilterType YearToDate
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const YearToDate As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.QuarterToDate
+  commentId: F:Reveal.Sdk.RVDateFilterType.QuarterToDate
+  id: QuarterToDate
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: QuarterToDate
+  nameWithType: RVDateFilterType.QuarterToDate
+  fullName: Reveal.Sdk.RVDateFilterType.QuarterToDate
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nFrom the first day of the current quarter\n"
+  syntax:
+    content: public const RVDateFilterType QuarterToDate
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const QuarterToDate As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.MonthToDate
+  commentId: F:Reveal.Sdk.RVDateFilterType.MonthToDate
+  id: MonthToDate
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: MonthToDate
+  nameWithType: RVDateFilterType.MonthToDate
+  fullName: Reveal.Sdk.RVDateFilterType.MonthToDate
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nFrom the first day of the current month\n"
+  syntax:
+    content: public const RVDateFilterType MonthToDate
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const MonthToDate As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.Yesterday
+  commentId: F:Reveal.Sdk.RVDateFilterType.Yesterday
+  id: Yesterday
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: Yesterday
+  nameWithType: RVDateFilterType.Yesterday
+  fullName: Reveal.Sdk.RVDateFilterType.Yesterday
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nYesterday\n"
+  syntax:
+    content: public const RVDateFilterType Yesterday
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const Yesterday As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.Today
+  commentId: F:Reveal.Sdk.RVDateFilterType.Today
+  id: Today
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: Today
+  nameWithType: RVDateFilterType.Today
+  fullName: Reveal.Sdk.RVDateFilterType.Today
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nToday\n"
+  syntax:
+    content: public const RVDateFilterType Today
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const Today As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.ThisMonth
+  commentId: F:Reveal.Sdk.RVDateFilterType.ThisMonth
+  id: ThisMonth
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: ThisMonth
+  nameWithType: RVDateFilterType.ThisMonth
+  fullName: Reveal.Sdk.RVDateFilterType.ThisMonth
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThis month, including the rest of it\n"
+  syntax:
+    content: public const RVDateFilterType ThisMonth
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const ThisMonth As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.ThisQuarter
+  commentId: F:Reveal.Sdk.RVDateFilterType.ThisQuarter
+  id: ThisQuarter
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: ThisQuarter
+  nameWithType: RVDateFilterType.ThisQuarter
+  fullName: Reveal.Sdk.RVDateFilterType.ThisQuarter
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThis quarter, including the rest of it\n"
+  syntax:
+    content: public const RVDateFilterType ThisQuarter
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const ThisQuarter As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.ThisYear
+  commentId: F:Reveal.Sdk.RVDateFilterType.ThisYear
+  id: ThisYear
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: ThisYear
+  nameWithType: RVDateFilterType.ThisYear
+  fullName: Reveal.Sdk.RVDateFilterType.ThisYear
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThis year, including the rest of it. From Jan 1st to Dec 31st of the current year\n"
+  syntax:
+    content: public const RVDateFilterType ThisYear
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const ThisYear As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.PreviousMonth
+  commentId: F:Reveal.Sdk.RVDateFilterType.PreviousMonth
+  id: PreviousMonth
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: PreviousMonth
+  nameWithType: RVDateFilterType.PreviousMonth
+  fullName: Reveal.Sdk.RVDateFilterType.PreviousMonth
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe previous month\n"
+  syntax:
+    content: public const RVDateFilterType PreviousMonth
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const PreviousMonth As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.PreviousQuarter
+  commentId: F:Reveal.Sdk.RVDateFilterType.PreviousQuarter
+  id: PreviousQuarter
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: PreviousQuarter
+  nameWithType: RVDateFilterType.PreviousQuarter
+  fullName: Reveal.Sdk.RVDateFilterType.PreviousQuarter
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe previous quarter\n"
+  syntax:
+    content: public const RVDateFilterType PreviousQuarter
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const PreviousQuarter As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.PreviousYear
+  commentId: F:Reveal.Sdk.RVDateFilterType.PreviousYear
+  id: PreviousYear
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: PreviousYear
+  nameWithType: RVDateFilterType.PreviousYear
+  fullName: Reveal.Sdk.RVDateFilterType.PreviousYear
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe previous year\n"
+  syntax:
+    content: public const RVDateFilterType PreviousYear
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const PreviousYear As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.NextMonth
+  commentId: F:Reveal.Sdk.RVDateFilterType.NextMonth
+  id: NextMonth
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: NextMonth
+  nameWithType: RVDateFilterType.NextMonth
+  fullName: Reveal.Sdk.RVDateFilterType.NextMonth
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe next month\n"
+  syntax:
+    content: public const RVDateFilterType NextMonth
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const NextMonth As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.NextQuarter
+  commentId: F:Reveal.Sdk.RVDateFilterType.NextQuarter
+  id: NextQuarter
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: NextQuarter
+  nameWithType: RVDateFilterType.NextQuarter
+  fullName: Reveal.Sdk.RVDateFilterType.NextQuarter
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe next quarter\n"
+  syntax:
+    content: public const RVDateFilterType NextQuarter
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const NextQuarter As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.NextYear
+  commentId: F:Reveal.Sdk.RVDateFilterType.NextYear
+  id: NextYear
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: NextYear
+  nameWithType: RVDateFilterType.NextYear
+  fullName: Reveal.Sdk.RVDateFilterType.NextYear
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe next year\n"
+  syntax:
+    content: public const RVDateFilterType NextYear
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const NextYear As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDateFilterType.TrailingTwelveMonths
+  commentId: F:Reveal.Sdk.RVDateFilterType.TrailingTwelveMonths
+  id: TrailingTwelveMonths
+  parent: Reveal.Sdk.RVDateFilterType
+  langs:
+  - csharp
+  - vb
+  name: TrailingTwelveMonths
+  nameWithType: RVDateFilterType.TrailingTwelveMonths
+  fullName: Reveal.Sdk.RVDateFilterType.TrailingTwelveMonths
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe last 12 complete months\n"
+  syntax:
+    content: public const RVDateFilterType TrailingTwelveMonths
+    return:
+      type: Reveal.Sdk.RVDateFilterType
+    content.vb: Public Const TrailingTwelveMonths As RVDateFilterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVDateFilterType
+  commentId: T:Reveal.Sdk.RVDateFilterType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDateFilterType
+  nameWithType: RVDateFilterType
+  fullName: Reveal.Sdk.RVDateFilterType

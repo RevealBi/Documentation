@@ -1,0 +1,3481 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RevealView
+  commentId: T:Reveal.Sdk.RevealView
+  id: RevealView
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RevealView.#ctor
+  - Reveal.Sdk.RevealView.AvailableChartTypes
+  - Reveal.Sdk.RevealView.AvailableChartTypesProperty
+  - Reveal.Sdk.RevealView.CanAddCalculatedFields
+  - Reveal.Sdk.RevealView.CanAddCalculatedFieldsProperty
+  - Reveal.Sdk.RevealView.CanAddPostCalculatedFields
+  - Reveal.Sdk.RevealView.CanAddPostCalculatedFieldsProperty
+  - Reveal.Sdk.RevealView.CanAddVisualization
+  - Reveal.Sdk.RevealView.CanAddVisualizationProperty
+  - Reveal.Sdk.RevealView.CanCopyVisualization
+  - Reveal.Sdk.RevealView.CanCopyVisualizationProperty
+  - Reveal.Sdk.RevealView.CanDuplicateVisualization
+  - Reveal.Sdk.RevealView.CanDuplicateVisualizationProperty
+  - Reveal.Sdk.RevealView.CanEdit
+  - Reveal.Sdk.RevealView.CanEditProperty
+  - Reveal.Sdk.RevealView.CanSaveAs
+  - Reveal.Sdk.RevealView.CanSaveAsProperty
+  - Reveal.Sdk.RevealView.CrosshairsEnabled
+  - Reveal.Sdk.RevealView.CrosshairsEnabledProperty
+  - Reveal.Sdk.RevealView.Dashboard
+  - Reveal.Sdk.RevealView.DashboardProperty
+  - Reveal.Sdk.RevealView.DataSourcesRequested
+  - Reveal.Sdk.RevealView.GetCurrentTheme
+  - Reveal.Sdk.RevealView.GetDataForWidget(System.Int32)
+  - Reveal.Sdk.RevealView.HoverTooltipsEnabled
+  - Reveal.Sdk.RevealView.HoverTooltipsEnabledProperty
+  - Reveal.Sdk.RevealView.ImageExported
+  - Reveal.Sdk.RevealView.IsWidgetWaitingForData(System.Int32)
+  - Reveal.Sdk.RevealView.MaximizedVisualization
+  - Reveal.Sdk.RevealView.MaximizedVisualizationProperty
+  - Reveal.Sdk.RevealView.MaximizedWidgetChanged
+  - Reveal.Sdk.RevealView.MaximizeVisualization(Reveal.Sdk.RVVisualization)
+  - Reveal.Sdk.RevealView.MinimizeVisualization
+  - Reveal.Sdk.RevealView.OnApplyTemplate
+  - Reveal.Sdk.RevealView.RefreshDashboardData
+  - Reveal.Sdk.RevealView.SaveDashboard
+  - Reveal.Sdk.RevealView.Serialize
+  - Reveal.Sdk.RevealView.SerializeWithName(System.String)
+  - Reveal.Sdk.RevealView.SetVisualizationChartSettings(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVChartSettings)
+  - Reveal.Sdk.RevealView.ShowChangeDataSource
+  - Reveal.Sdk.RevealView.ShowChangeDataSourceProperty
+  - Reveal.Sdk.RevealView.ShowChangeVisualization
+  - Reveal.Sdk.RevealView.ShowChangeVisualizationProperty
+  - Reveal.Sdk.RevealView.ShowDataBlending
+  - Reveal.Sdk.RevealView.ShowDataBlendingProperty
+  - Reveal.Sdk.RevealView.ShowExportImage
+  - Reveal.Sdk.RevealView.ShowExportImageProperty
+  - Reveal.Sdk.RevealView.ShowExportToExcel
+  - Reveal.Sdk.RevealView.ShowExportToExcelProperty
+  - Reveal.Sdk.RevealView.ShowExportToPDF
+  - Reveal.Sdk.RevealView.ShowExportToPDFProperty
+  - Reveal.Sdk.RevealView.ShowExportToPowerpoint
+  - Reveal.Sdk.RevealView.ShowExportToPowerpointProperty
+  - Reveal.Sdk.RevealView.ShowFilters
+  - Reveal.Sdk.RevealView.ShowFiltersProperty
+  - Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration
+  - Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegrationProperty
+  - Reveal.Sdk.RevealView.ShowMenu
+  - Reveal.Sdk.RevealView.ShowMenuProperty
+  - Reveal.Sdk.RevealView.ShowRefresh
+  - Reveal.Sdk.RevealView.ShowRefreshProperty
+  - Reveal.Sdk.RevealView.ShowStatisticalFunctions
+  - Reveal.Sdk.RevealView.ShowStatisticalFunctionsProperty
+  - Reveal.Sdk.RevealView.SingleVisualizationMode
+  - Reveal.Sdk.RevealView.SingleVisualizationModeProperty
+  - Reveal.Sdk.RevealView.StartInEditMode
+  - Reveal.Sdk.RevealView.StartInEditModeProperty
+  - Reveal.Sdk.RevealView.StartWithNewVisualization
+  - Reveal.Sdk.RevealView.StartWithNewVisualizationProperty
+  - Reveal.Sdk.RevealView.ToImage
+  - Reveal.Sdk.RevealView.TooltipShowing
+  - Reveal.Sdk.RevealView.UpdateRevealTheme(Reveal.Sdk.RevealTheme)
+  - Reveal.Sdk.RevealView.VisualizationDataPointClicked
+  - Reveal.Sdk.RevealView.VisualizationEditorClosed
+  - Reveal.Sdk.RevealView.VisualizationEditorClosing
+  - Reveal.Sdk.RevealView.VisualizationLinkingDashboard
+  langs:
+  - csharp
+  - vb
+  name: RevealView
+  nameWithType: RevealView
+  fullName: Reveal.Sdk.RevealView
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe main class used to render a dashboard in your application, it also allows the edition of existing dashboards or the creation from scratch.\n"
+  syntax:
+    content: 'public class RevealView : Control'
+    content.vb: >-
+      Public Class RevealView
+          Inherits Control
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RevealView.CanEditProperty
+  commentId: F:Reveal.Sdk.RevealView.CanEditProperty
+  id: CanEditProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanEditProperty
+  nameWithType: RevealView.CanEditProperty
+  fullName: Reveal.Sdk.RevealView.CanEditProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanEditProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanEditProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CanSaveAsProperty
+  commentId: F:Reveal.Sdk.RevealView.CanSaveAsProperty
+  id: CanSaveAsProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanSaveAsProperty
+  nameWithType: RevealView.CanSaveAsProperty
+  fullName: Reveal.Sdk.RevealView.CanSaveAsProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanSaveAsProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanSaveAsProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CanAddVisualizationProperty
+  commentId: F:Reveal.Sdk.RevealView.CanAddVisualizationProperty
+  id: CanAddVisualizationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanAddVisualizationProperty
+  nameWithType: RevealView.CanAddVisualizationProperty
+  fullName: Reveal.Sdk.RevealView.CanAddVisualizationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanAddVisualizationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanAddVisualizationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.StartInEditModeProperty
+  commentId: F:Reveal.Sdk.RevealView.StartInEditModeProperty
+  id: StartInEditModeProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: StartInEditModeProperty
+  nameWithType: RevealView.StartInEditModeProperty
+  fullName: Reveal.Sdk.RevealView.StartInEditModeProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty StartInEditModeProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly StartInEditModeProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.StartWithNewVisualizationProperty
+  commentId: F:Reveal.Sdk.RevealView.StartWithNewVisualizationProperty
+  id: StartWithNewVisualizationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: StartWithNewVisualizationProperty
+  nameWithType: RevealView.StartWithNewVisualizationProperty
+  fullName: Reveal.Sdk.RevealView.StartWithNewVisualizationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty StartWithNewVisualizationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly StartWithNewVisualizationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.SingleVisualizationModeProperty
+  commentId: F:Reveal.Sdk.RevealView.SingleVisualizationModeProperty
+  id: SingleVisualizationModeProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: SingleVisualizationModeProperty
+  nameWithType: RevealView.SingleVisualizationModeProperty
+  fullName: Reveal.Sdk.RevealView.SingleVisualizationModeProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty SingleVisualizationModeProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly SingleVisualizationModeProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowFiltersProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowFiltersProperty
+  id: ShowFiltersProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowFiltersProperty
+  nameWithType: RevealView.ShowFiltersProperty
+  fullName: Reveal.Sdk.RevealView.ShowFiltersProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowFiltersProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowFiltersProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowMenuProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowMenuProperty
+  id: ShowMenuProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowMenuProperty
+  nameWithType: RevealView.ShowMenuProperty
+  fullName: Reveal.Sdk.RevealView.ShowMenuProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowMenuProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowMenuProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowExportImageProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowExportImageProperty
+  id: ShowExportImageProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportImageProperty
+  nameWithType: RevealView.ShowExportImageProperty
+  fullName: Reveal.Sdk.RevealView.ShowExportImageProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowExportImageProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowExportImageProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowExportToExcelProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowExportToExcelProperty
+  id: ShowExportToExcelProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportToExcelProperty
+  nameWithType: RevealView.ShowExportToExcelProperty
+  fullName: Reveal.Sdk.RevealView.ShowExportToExcelProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowExportToExcelProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowExportToExcelProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowExportToPowerpointProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowExportToPowerpointProperty
+  id: ShowExportToPowerpointProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportToPowerpointProperty
+  nameWithType: RevealView.ShowExportToPowerpointProperty
+  fullName: Reveal.Sdk.RevealView.ShowExportToPowerpointProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowExportToPowerpointProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowExportToPowerpointProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowExportToPDFProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowExportToPDFProperty
+  id: ShowExportToPDFProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportToPDFProperty
+  nameWithType: RevealView.ShowExportToPDFProperty
+  fullName: Reveal.Sdk.RevealView.ShowExportToPDFProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowExportToPDFProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowExportToPDFProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowChangeVisualizationProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowChangeVisualizationProperty
+  id: ShowChangeVisualizationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowChangeVisualizationProperty
+  nameWithType: RevealView.ShowChangeVisualizationProperty
+  fullName: Reveal.Sdk.RevealView.ShowChangeVisualizationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowChangeVisualizationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowChangeVisualizationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowRefreshProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowRefreshProperty
+  id: ShowRefreshProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowRefreshProperty
+  nameWithType: RevealView.ShowRefreshProperty
+  fullName: Reveal.Sdk.RevealView.ShowRefreshProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowRefreshProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowRefreshProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowChangeDataSourceProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowChangeDataSourceProperty
+  id: ShowChangeDataSourceProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowChangeDataSourceProperty
+  nameWithType: RevealView.ShowChangeDataSourceProperty
+  fullName: Reveal.Sdk.RevealView.ShowChangeDataSourceProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowChangeDataSourceProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowChangeDataSourceProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowStatisticalFunctionsProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowStatisticalFunctionsProperty
+  id: ShowStatisticalFunctionsProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowStatisticalFunctionsProperty
+  nameWithType: RevealView.ShowStatisticalFunctionsProperty
+  fullName: Reveal.Sdk.RevealView.ShowStatisticalFunctionsProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowStatisticalFunctionsProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowStatisticalFunctionsProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowDataBlendingProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowDataBlendingProperty
+  id: ShowDataBlendingProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowDataBlendingProperty
+  nameWithType: RevealView.ShowDataBlendingProperty
+  fullName: Reveal.Sdk.RevealView.ShowDataBlendingProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowDataBlendingProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowDataBlendingProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegrationProperty
+  commentId: F:Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegrationProperty
+  id: ShowMachineLearningModelsIntegrationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowMachineLearningModelsIntegrationProperty
+  nameWithType: RevealView.ShowMachineLearningModelsIntegrationProperty
+  fullName: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegrationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty ShowMachineLearningModelsIntegrationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly ShowMachineLearningModelsIntegrationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.MaximizedVisualizationProperty
+  commentId: F:Reveal.Sdk.RevealView.MaximizedVisualizationProperty
+  id: MaximizedVisualizationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: MaximizedVisualizationProperty
+  nameWithType: RevealView.MaximizedVisualizationProperty
+  fullName: Reveal.Sdk.RevealView.MaximizedVisualizationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty MaximizedVisualizationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly MaximizedVisualizationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CanAddCalculatedFieldsProperty
+  commentId: F:Reveal.Sdk.RevealView.CanAddCalculatedFieldsProperty
+  id: CanAddCalculatedFieldsProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanAddCalculatedFieldsProperty
+  nameWithType: RevealView.CanAddCalculatedFieldsProperty
+  fullName: Reveal.Sdk.RevealView.CanAddCalculatedFieldsProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanAddCalculatedFieldsProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanAddCalculatedFieldsProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CanAddPostCalculatedFieldsProperty
+  commentId: F:Reveal.Sdk.RevealView.CanAddPostCalculatedFieldsProperty
+  id: CanAddPostCalculatedFieldsProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanAddPostCalculatedFieldsProperty
+  nameWithType: RevealView.CanAddPostCalculatedFieldsProperty
+  fullName: Reveal.Sdk.RevealView.CanAddPostCalculatedFieldsProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanAddPostCalculatedFieldsProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanAddPostCalculatedFieldsProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CanCopyVisualizationProperty
+  commentId: F:Reveal.Sdk.RevealView.CanCopyVisualizationProperty
+  id: CanCopyVisualizationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanCopyVisualizationProperty
+  nameWithType: RevealView.CanCopyVisualizationProperty
+  fullName: Reveal.Sdk.RevealView.CanCopyVisualizationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanCopyVisualizationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanCopyVisualizationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CanDuplicateVisualizationProperty
+  commentId: F:Reveal.Sdk.RevealView.CanDuplicateVisualizationProperty
+  id: CanDuplicateVisualizationProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanDuplicateVisualizationProperty
+  nameWithType: RevealView.CanDuplicateVisualizationProperty
+  fullName: Reveal.Sdk.RevealView.CanDuplicateVisualizationProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CanDuplicateVisualizationProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CanDuplicateVisualizationProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.AvailableChartTypesProperty
+  commentId: F:Reveal.Sdk.RevealView.AvailableChartTypesProperty
+  id: AvailableChartTypesProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: AvailableChartTypesProperty
+  nameWithType: RevealView.AvailableChartTypesProperty
+  fullName: Reveal.Sdk.RevealView.AvailableChartTypesProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty AvailableChartTypesProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly AvailableChartTypesProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.DashboardProperty
+  commentId: F:Reveal.Sdk.RevealView.DashboardProperty
+  id: DashboardProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: DashboardProperty
+  nameWithType: RevealView.DashboardProperty
+  fullName: Reveal.Sdk.RevealView.DashboardProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty DashboardProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly DashboardProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.HoverTooltipsEnabledProperty
+  commentId: F:Reveal.Sdk.RevealView.HoverTooltipsEnabledProperty
+  id: HoverTooltipsEnabledProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: HoverTooltipsEnabledProperty
+  nameWithType: RevealView.HoverTooltipsEnabledProperty
+  fullName: Reveal.Sdk.RevealView.HoverTooltipsEnabledProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty HoverTooltipsEnabledProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly HoverTooltipsEnabledProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.CrosshairsEnabledProperty
+  commentId: F:Reveal.Sdk.RevealView.CrosshairsEnabledProperty
+  id: CrosshairsEnabledProperty
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CrosshairsEnabledProperty
+  nameWithType: RevealView.CrosshairsEnabledProperty
+  fullName: Reveal.Sdk.RevealView.CrosshairsEnabledProperty
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static readonly DependencyProperty CrosshairsEnabledProperty
+    return:
+      type: System.Windows.DependencyProperty
+    content.vb: Public Shared ReadOnly CrosshairsEnabledProperty As DependencyProperty
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealView.#ctor
+  commentId: M:Reveal.Sdk.RevealView.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: RevealView()
+  nameWithType: RevealView.RevealView()
+  fullName: Reveal.Sdk.RevealView.RevealView()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUsed to create a new instance of RevealView class.\n"
+  syntax:
+    content: public RevealView()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RevealView.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.MaximizeVisualization(Reveal.Sdk.RVVisualization)
+  commentId: M:Reveal.Sdk.RevealView.MaximizeVisualization(Reveal.Sdk.RVVisualization)
+  id: MaximizeVisualization(Reveal.Sdk.RVVisualization)
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: MaximizeVisualization(RVVisualization)
+  nameWithType: RevealView.MaximizeVisualization(RVVisualization)
+  fullName: Reveal.Sdk.RevealView.MaximizeVisualization(Reveal.Sdk.RVVisualization)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUsed to maximize a visualization once the Reveal View was initialized and rendered. It might be used to sync the currently displayed visualization with\na feature in the containing app, like displaying &apos;Sales by Country&apos; along a Sales report.\n"
+  syntax:
+    content: public bool MaximizeVisualization(RVVisualization visualization)
+    parameters:
+    - id: visualization
+      type: Reveal.Sdk.RVVisualization
+      description: The visualization to be maximized, an object obtained from the dashboard with <code>Visualizations[index]</code> or <code>GetVisualizationByTitle(title)</code>
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the given visualization was found in the dashboard and maximized properly, <code>false</code> otherwise.
+    content.vb: Public Function MaximizeVisualization(visualization As RVVisualization) As Boolean
+  overload: Reveal.Sdk.RevealView.MaximizeVisualization*
+  seealso:
+  - linkId: Reveal.Sdk.RVDashboard.Visualizations
+    commentId: P:Reveal.Sdk.RVDashboard.Visualizations
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.MinimizeVisualization
+  commentId: M:Reveal.Sdk.RevealView.MinimizeVisualization
+  id: MinimizeVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: MinimizeVisualization()
+  nameWithType: RevealView.MinimizeVisualization()
+  fullName: Reveal.Sdk.RevealView.MinimizeVisualization()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUsed to restore the currently maximized visualization to the original state, so the whole dashboard is visible.\n"
+  syntax:
+    content: public bool MinimizeVisualization()
+    return:
+      type: System.Boolean
+      description: True if there was a maximized visualization, which was minimized, false otherwise.
+    content.vb: Public Function MinimizeVisualization As Boolean
+  overload: Reveal.Sdk.RevealView.MinimizeVisualization*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.SetVisualizationChartSettings(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVChartSettings)
+  commentId: M:Reveal.Sdk.RevealView.SetVisualizationChartSettings(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVChartSettings)
+  id: SetVisualizationChartSettings(Reveal.Sdk.RVVisualization,Reveal.Sdk.RVChartSettings)
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: SetVisualizationChartSettings(RVVisualization, RVChartSettings)
+  nameWithType: RevealView.SetVisualizationChartSettings(RVVisualization, RVChartSettings)
+  fullName: Reveal.Sdk.RevealView.SetVisualizationChartSettings(Reveal.Sdk.RVVisualization, Reveal.Sdk.RVChartSettings)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUpdates the chart settings for a given visualization, ignored if the visulization type is not chart.\n"
+  syntax:
+    content: public void SetVisualizationChartSettings(RVVisualization visualization, RVChartSettings chartSettings)
+    parameters:
+    - id: visualization
+      type: Reveal.Sdk.RVVisualization
+      description: the visualization to update
+    - id: chartSettings
+      type: Reveal.Sdk.RVChartSettings
+      description: the new chart settings to use
+    content.vb: Public Sub SetVisualizationChartSettings(visualization As RVVisualization, chartSettings As RVChartSettings)
+  overload: Reveal.Sdk.RevealView.SetVisualizationChartSettings*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.Serialize
+  commentId: M:Reveal.Sdk.RevealView.Serialize
+  id: Serialize
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: Serialize()
+  nameWithType: RevealView.Serialize()
+  fullName: Reveal.Sdk.RevealView.Serialize()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSerializes the current dashboard to a byte array\n"
+  syntax:
+    content: public Task<byte[]> Serialize()
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: a byte array with the contents of the dashboard in rdash format
+    content.vb: Public Function Serialize As Task(Of Byte())
+  overload: Reveal.Sdk.RevealView.Serialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.SerializeWithName(System.String)
+  commentId: M:Reveal.Sdk.RevealView.SerializeWithName(System.String)
+  id: SerializeWithName(System.String)
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: SerializeWithName(String)
+  nameWithType: RevealView.SerializeWithName(String)
+  fullName: Reveal.Sdk.RevealView.SerializeWithName(System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSerializes the current dashboard in &apos;.rdash&apos; format to a byte array, the title of the dashboard is changed to match the specified name.\n"
+  syntax:
+    content: public Task<byte[]> SerializeWithName(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The new name of the dashboard, it changes the title attribute of the dashboard object
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+    content.vb: Public Function SerializeWithName(name As String) As Task(Of Byte())
+  overload: Reveal.Sdk.RevealView.SerializeWithName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ToImage
+  commentId: M:Reveal.Sdk.RevealView.ToImage
+  id: ToImage
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ToImage()
+  nameWithType: RevealView.ToImage()
+  fullName: Reveal.Sdk.RevealView.ToImage()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns an image of the DashboardView. If no dashboard is shown, null is returned.\n"
+  syntax:
+    content: public BitmapSource ToImage()
+    return:
+      type: System.Windows.Media.Imaging.BitmapSource
+      description: A System.Windows.Media.Imaging.BitmapSource with the image.
+    content.vb: Public Function ToImage As BitmapSource
+  overload: Reveal.Sdk.RevealView.ToImage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.UpdateRevealTheme(Reveal.Sdk.RevealTheme)
+  commentId: M:Reveal.Sdk.RevealView.UpdateRevealTheme(Reveal.Sdk.RevealTheme)
+  id: UpdateRevealTheme(Reveal.Sdk.RevealTheme)
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: UpdateRevealTheme(RevealTheme)
+  nameWithType: RevealView.UpdateRevealTheme(RevealTheme)
+  fullName: Reveal.Sdk.RevealView.UpdateRevealTheme(Reveal.Sdk.RevealTheme)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nOverrides built in Reveal Theme settings. This method will not affect views that already display dashboards.\nThis method is marked as obsolete, use <xref href=\"Reveal.Sdk.RevealSdkSettings.Theme\" data-throw-if-not-resolved=\"false\"></xref>  property to get/set current theme.\n<xref href=\"System.ArgumentNullException\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: >-
+      [Obsolete("This method is obsolete and will be removed. Use RevealSdkConfigurations class' Theme property instead.")]
+
+      public static void UpdateRevealTheme(RevealTheme theme)
+    parameters:
+    - id: theme
+      type: Reveal.Sdk.RevealTheme
+    content.vb: >-
+      <Obsolete("This method is obsolete and will be removed. Use RevealSdkConfigurations class' Theme property instead.")>
+
+      Public Shared Sub UpdateRevealTheme(theme As RevealTheme)
+  overload: Reveal.Sdk.RevealView.UpdateRevealTheme*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete and will be removed. Use RevealSdkConfigurations class' Theme property instead.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealView.GetCurrentTheme
+  commentId: M:Reveal.Sdk.RevealView.GetCurrentTheme
+  id: GetCurrentTheme
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentTheme()
+  nameWithType: RevealView.GetCurrentTheme()
+  fullName: Reveal.Sdk.RevealView.GetCurrentTheme()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns currently applied theme. This method is marked as obsolete, use <xref href=\"Reveal.Sdk.RevealSdkSettings.Theme\" data-throw-if-not-resolved=\"false\"></xref>  property to get/set current theme.\n"
+  syntax:
+    content: >-
+      [Obsolete("This method is obsolete and will be removed. Use RevealSdkConfigurations class' Theme property instead.")]
+
+      public static RevealTheme GetCurrentTheme()
+    return:
+      type: Reveal.Sdk.RevealTheme
+    content.vb: >-
+      <Obsolete("This method is obsolete and will be removed. Use RevealSdkConfigurations class' Theme property instead.")>
+
+      Public Shared Function GetCurrentTheme As RevealTheme
+  overload: Reveal.Sdk.RevealView.GetCurrentTheme*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete and will be removed. Use RevealSdkConfigurations class' Theme property instead.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealView.RefreshDashboardData
+  commentId: M:Reveal.Sdk.RevealView.RefreshDashboardData
+  id: RefreshDashboardData
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: RefreshDashboardData()
+  nameWithType: RevealView.RefreshDashboardData()
+  fullName: Reveal.Sdk.RevealView.RefreshDashboardData()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nMethod used to programmatically refresh the dashboard data, equivalent to execute the &apos;Refresh&apos; action in the dashboard menu.\n"
+  syntax:
+    content: public void RefreshDashboardData()
+    content.vb: Public Sub RefreshDashboardData
+  overload: Reveal.Sdk.RevealView.RefreshDashboardData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.OnApplyTemplate
+  commentId: M:Reveal.Sdk.RevealView.OnApplyTemplate
+  id: OnApplyTemplate
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: OnApplyTemplate()
+  nameWithType: RevealView.OnApplyTemplate()
+  fullName: Reveal.Sdk.RevealView.OnApplyTemplate()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public override void OnApplyTemplate()
+    content.vb: Public Overrides Sub OnApplyTemplate
+  overload: Reveal.Sdk.RevealView.OnApplyTemplate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Reveal.Sdk.RevealView.GetDataForWidget(System.Int32)
+  commentId: M:Reveal.Sdk.RevealView.GetDataForWidget(System.Int32)
+  id: GetDataForWidget(System.Int32)
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: GetDataForWidget(Int32)
+  nameWithType: RevealView.GetDataForWidget(Int32)
+  fullName: Reveal.Sdk.RevealView.GetDataForWidget(System.Int32)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public Dictionary<string, object> GetDataForWidget(int widgetPos)
+    parameters:
+    - id: widgetPos
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Function GetDataForWidget(widgetPos As Integer) As Dictionary(Of String, Object)
+  overload: Reveal.Sdk.RevealView.GetDataForWidget*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.IsWidgetWaitingForData(System.Int32)
+  commentId: M:Reveal.Sdk.RevealView.IsWidgetWaitingForData(System.Int32)
+  id: IsWidgetWaitingForData(System.Int32)
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: IsWidgetWaitingForData(Int32)
+  nameWithType: RevealView.IsWidgetWaitingForData(Int32)
+  fullName: Reveal.Sdk.RevealView.IsWidgetWaitingForData(System.Int32)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public bool IsWidgetWaitingForData(int widgetPos)
+    parameters:
+    - id: widgetPos
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsWidgetWaitingForData(widgetPos As Integer) As Boolean
+  overload: Reveal.Sdk.RevealView.IsWidgetWaitingForData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanEdit
+  commentId: P:Reveal.Sdk.RevealView.CanEdit
+  id: CanEdit
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanEdit
+  nameWithType: RevealView.CanEdit
+  fullName: Reveal.Sdk.RevealView.CanEdit
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the user can switch to edit mode or not, defaults to true.\n"
+  syntax:
+    content: public bool CanEdit { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the user can switch to edit mode or not, defaults to true.
+    content.vb: Public Property CanEdit As Boolean
+  overload: Reveal.Sdk.RevealView.CanEdit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanSaveAs
+  commentId: P:Reveal.Sdk.RevealView.CanSaveAs
+  id: CanSaveAs
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanSaveAs
+  nameWithType: RevealView.CanSaveAs
+  fullName: Reveal.Sdk.RevealView.CanSaveAs
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the user can &apos;save as&apos; the dashboard.\n"
+  syntax:
+    content: public bool CanSaveAs { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the user can &apos;save as&apos; the dashboard.
+    content.vb: Public Property CanSaveAs As Boolean
+  overload: Reveal.Sdk.RevealView.CanSaveAs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanAddVisualization
+  commentId: P:Reveal.Sdk.RevealView.CanAddVisualization
+  id: CanAddVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanAddVisualization
+  nameWithType: RevealView.CanAddVisualization
+  fullName: Reveal.Sdk.RevealView.CanAddVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that indicates if new visualizations can be added when the dashboard is edited.\n"
+  syntax:
+    content: public bool CanAddVisualization { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that indicates if new visualizations can be added when the dashboard is edited, it defaults to <code>true</code>.
+    content.vb: Public Property CanAddVisualization As Boolean
+  overload: Reveal.Sdk.RevealView.CanAddVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.StartInEditMode
+  commentId: P:Reveal.Sdk.RevealView.StartInEditMode
+  id: StartInEditMode
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: StartInEditMode
+  nameWithType: RevealView.StartInEditMode
+  fullName: Reveal.Sdk.RevealView.StartInEditMode
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating the view should start in edit mode instead of the default view mode, defaults to false. This flag is taken into account on when the Dashboard property is changed and the dashboard rendered.\n"
+  syntax:
+    content: public bool StartInEditMode { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating the view should start in edit mode instead of the default view mode, defaults to <code>false</code>.This flag is taken into account on when the Dashboard property is changed and the dashboard rendered.
+    content.vb: Public Property StartInEditMode As Boolean
+  overload: Reveal.Sdk.RevealView.StartInEditMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.StartWithNewVisualization
+  commentId: P:Reveal.Sdk.RevealView.StartWithNewVisualization
+  id: StartWithNewVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: StartWithNewVisualization
+  nameWithType: RevealView.StartWithNewVisualization
+  fullName: Reveal.Sdk.RevealView.StartWithNewVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating the new visualization dialog should be displayed automatically when this view is presented.\nThis setting requires <xref href=\"Reveal.Sdk.RevealView.StartInEditMode\" data-throw-if-not-resolved=\"false\"></xref> set to <code>true</code>.\n"
+  syntax:
+    content: public bool StartWithNewVisualization { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating the new visualization dialog should be displayed automatically when this view is presented, defaults to <code>false</code>.
+    content.vb: Public Property StartWithNewVisualization As Boolean
+  overload: Reveal.Sdk.RevealView.StartWithNewVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.SingleVisualizationMode
+  commentId: P:Reveal.Sdk.RevealView.SingleVisualizationMode
+  id: SingleVisualizationMode
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: SingleVisualizationMode
+  nameWithType: RevealView.SingleVisualizationMode
+  fullName: Reveal.Sdk.RevealView.SingleVisualizationMode
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSingle visualization mode is used to show a single visualization at a time. \nYou can control the initial visualization to maximize using the <xref href=\"Reveal.Sdk.RevealView.MaximizedVisualization\" data-throw-if-not-resolved=\"false\"></xref> property.\nIf no initial visualization is configured to be maximized the first one will be maximized initially.\nYou can use <xref href=\"Reveal.Sdk.RevealView.MaximizedVisualization\" data-throw-if-not-resolved=\"false\"></xref> to change the maximized one once the dashboard is visible.\n"
+  syntax:
+    content: public bool SingleVisualizationMode { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: Flag indicating if single visualization mode should be used, it defaults to <code>false</code>.
+    content.vb: Public Property SingleVisualizationMode As Boolean
+  overload: Reveal.Sdk.RevealView.SingleVisualizationMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowFilters
+  commentId: P:Reveal.Sdk.RevealView.ShowFilters
+  id: ShowFilters
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowFilters
+  nameWithType: RevealView.ShowFilters
+  fullName: Reveal.Sdk.RevealView.ShowFilters
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that allows the dashboard filters panel to be hidden. This is useful if you want to limit the selected\nvalues for the filters to the initial selection specified in RevealSettings.\nOnce the RevealView object is created and rendered you can use <xref href=\"Reveal.Sdk.RVDashboardFilter.SelectedValues\" data-throw-if-not-resolved=\"false\"></xref> to change\nthe selection for a given filter, so you can keep the selected values synced with your app.\n"
+  syntax:
+    content: public bool ShowFilters { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that allows the dashboard filters panel to be hidden, it defaults to <code>true</code>.
+    content.vb: Public Property ShowFilters As Boolean
+  overload: Reveal.Sdk.RevealView.ShowFilters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowMenu
+  commentId: P:Reveal.Sdk.RevealView.ShowMenu
+  id: ShowMenu
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowMenu
+  nameWithType: RevealView.ShowMenu
+  fullName: Reveal.Sdk.RevealView.ShowMenu
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that indicates if the menu (containing Refresh, Export, etc.) should be displayed or not.\n"
+  syntax:
+    content: public bool ShowMenu { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that indicates if the menu (containing Refresh, Export, etc.) should be displayed or not.
+    content.vb: Public Property ShowMenu As Boolean
+  overload: Reveal.Sdk.RevealView.ShowMenu*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowExportImage
+  commentId: P:Reveal.Sdk.RevealView.ShowExportImage
+  id: ShowExportImage
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportImage
+  nameWithType: RevealView.ShowExportImage
+  fullName: Reveal.Sdk.RevealView.ShowExportImage
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the export image action is available or not.\n"
+  syntax:
+    content: public bool ShowExportImage { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the export image action is available or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowExportImage As Boolean
+  overload: Reveal.Sdk.RevealView.ShowExportImage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowExportToExcel
+  commentId: P:Reveal.Sdk.RevealView.ShowExportToExcel
+  id: ShowExportToExcel
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportToExcel
+  nameWithType: RevealView.ShowExportToExcel
+  fullName: Reveal.Sdk.RevealView.ShowExportToExcel
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the export to Excel action is available or not.\n"
+  syntax:
+    content: public bool ShowExportToExcel { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the export to Excel action is available or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowExportToExcel As Boolean
+  overload: Reveal.Sdk.RevealView.ShowExportToExcel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowExportToPowerpoint
+  commentId: P:Reveal.Sdk.RevealView.ShowExportToPowerpoint
+  id: ShowExportToPowerpoint
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportToPowerpoint
+  nameWithType: RevealView.ShowExportToPowerpoint
+  fullName: Reveal.Sdk.RevealView.ShowExportToPowerpoint
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the export to Powerpoint action is available or not.\n"
+  syntax:
+    content: public bool ShowExportToPowerpoint { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the export to Powerpoint action is available or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowExportToPowerpoint As Boolean
+  overload: Reveal.Sdk.RevealView.ShowExportToPowerpoint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowExportToPDF
+  commentId: P:Reveal.Sdk.RevealView.ShowExportToPDF
+  id: ShowExportToPDF
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowExportToPDF
+  nameWithType: RevealView.ShowExportToPDF
+  fullName: Reveal.Sdk.RevealView.ShowExportToPDF
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the export to PDF action is available or not.\n"
+  syntax:
+    content: public bool ShowExportToPDF { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the export to PDF action is available or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowExportToPDF As Boolean
+  overload: Reveal.Sdk.RevealView.ShowExportToPDF*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowChangeVisualization
+  commentId: P:Reveal.Sdk.RevealView.ShowChangeVisualization
+  id: ShowChangeVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowChangeVisualization
+  nameWithType: RevealView.ShowChangeVisualization
+  fullName: Reveal.Sdk.RevealView.ShowChangeVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the button to change visualization should be available or not, this button is used to \nswitch to another visualization type (for example from Bar to Column chart) without entering edit mode.\n"
+  syntax:
+    content: public bool ShowChangeVisualization { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the button to change visualization should be available or not, it defaults to <code>true</code>
+    content.vb: Public Property ShowChangeVisualization As Boolean
+  overload: Reveal.Sdk.RevealView.ShowChangeVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowRefresh
+  commentId: P:Reveal.Sdk.RevealView.ShowRefresh
+  id: ShowRefresh
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowRefresh
+  nameWithType: RevealView.ShowRefresh
+  fullName: Reveal.Sdk.RevealView.ShowRefresh
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that indicates if the Refresh action should be displayed or not.\n"
+  syntax:
+    content: public bool ShowRefresh { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that indicates if the Refresh action should be displayed or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowRefresh As Boolean
+  overload: Reveal.Sdk.RevealView.ShowRefresh*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowChangeDataSource
+  commentId: P:Reveal.Sdk.RevealView.ShowChangeDataSource
+  id: ShowChangeDataSource
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowChangeDataSource
+  nameWithType: RevealView.ShowChangeDataSource
+  fullName: Reveal.Sdk.RevealView.ShowChangeDataSource
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that indicates if the Change data source action should be displayed or not.\n"
+  syntax:
+    content: public bool ShowChangeDataSource { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that indicates if the Change data source action should be displayed or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowChangeDataSource As Boolean
+  overload: Reveal.Sdk.RevealView.ShowChangeDataSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowStatisticalFunctions
+  commentId: P:Reveal.Sdk.RevealView.ShowStatisticalFunctions
+  id: ShowStatisticalFunctions
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowStatisticalFunctions
+  nameWithType: RevealView.ShowStatisticalFunctions
+  fullName: Reveal.Sdk.RevealView.ShowStatisticalFunctions
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the menu to apply statistical functions (forecasting, etc.) is available or not.\n"
+  syntax:
+    content: public bool ShowStatisticalFunctions { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the menu to apply statistical functions (forecasting, etc.) is available or not, it defaults to <code>true</code>.
+    content.vb: Public Property ShowStatisticalFunctions As Boolean
+  overload: Reveal.Sdk.RevealView.ShowStatisticalFunctions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowDataBlending
+  commentId: P:Reveal.Sdk.RevealView.ShowDataBlending
+  id: ShowDataBlending
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowDataBlending
+  nameWithType: RevealView.ShowDataBlending
+  fullName: Reveal.Sdk.RevealView.ShowDataBlending
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the button to add fields from another data source should be available or not.\n"
+  syntax:
+    content: public bool ShowDataBlending { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the button add fields from another data source (in the visualization editor) should be available or not, it defaults to <code>true</code>
+    content.vb: Public Property ShowDataBlending As Boolean
+  overload: Reveal.Sdk.RevealView.ShowDataBlending*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration
+  commentId: P:Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration
+  id: ShowMachineLearningModelsIntegration
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ShowMachineLearningModelsIntegration
+  nameWithType: RevealView.ShowMachineLearningModelsIntegration
+  fullName: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the button to add fields from a Machine Learning model should be available or not.\n"
+  syntax:
+    content: public bool ShowMachineLearningModelsIntegration { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the button add fields from a Machine Learning model (in the visualization editor) should be available or not, it defaults to <code>false</code>
+    content.vb: Public Property ShowMachineLearningModelsIntegration As Boolean
+  overload: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.MaximizedVisualization
+  commentId: P:Reveal.Sdk.RevealView.MaximizedVisualization
+  id: MaximizedVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: MaximizedVisualization
+  nameWithType: RevealView.MaximizedVisualization
+  fullName: Reveal.Sdk.RevealView.MaximizedVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVVisualization MaximizedVisualization { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVVisualization
+    content.vb: Public Property MaximizedVisualization As RVVisualization
+  overload: Reveal.Sdk.RevealView.MaximizedVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanAddCalculatedFields
+  commentId: P:Reveal.Sdk.RevealView.CanAddCalculatedFields
+  id: CanAddCalculatedFields
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanAddCalculatedFields
+  nameWithType: RevealView.CanAddCalculatedFields
+  fullName: Reveal.Sdk.RevealView.CanAddCalculatedFields
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if new (calculated) fields can be added to the list of fields.\n"
+  syntax:
+    content: public bool CanAddCalculatedFields { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if new (calculated) fields can be added to the list of fields, it defaults to <code>true</code>.
+    content.vb: Public Property CanAddCalculatedFields As Boolean
+  overload: Reveal.Sdk.RevealView.CanAddCalculatedFields*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanAddPostCalculatedFields
+  commentId: P:Reveal.Sdk.RevealView.CanAddPostCalculatedFields
+  id: CanAddPostCalculatedFields
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanAddPostCalculatedFields
+  nameWithType: RevealView.CanAddPostCalculatedFields
+  fullName: Reveal.Sdk.RevealView.CanAddPostCalculatedFields
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag indicating if the f(x) option in numeric values sections (like &quot;Values&quot;) should be displayed or not.\n"
+  syntax:
+    content: public bool CanAddPostCalculatedFields { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if the f(x) option in numeric values sections (like &quot;Values&quot;) should be displayed or not, it defaults to <code>true</code>.
+    content.vb: Public Property CanAddPostCalculatedFields As Boolean
+  overload: Reveal.Sdk.RevealView.CanAddPostCalculatedFields*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanCopyVisualization
+  commentId: P:Reveal.Sdk.RevealView.CanCopyVisualization
+  id: CanCopyVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanCopyVisualization
+  nameWithType: RevealView.CanCopyVisualization
+  fullName: Reveal.Sdk.RevealView.CanCopyVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that indicates if the &quot;Copy&quot; option is available in the menu for a visualization.\n"
+  syntax:
+    content: public bool CanCopyVisualization { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that indicates if the &quot;Copy&quot; option is available in the menu for a visualization, it defaults to <code>true</code>.
+    content.vb: Public Property CanCopyVisualization As Boolean
+  overload: Reveal.Sdk.RevealView.CanCopyVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CanDuplicateVisualization
+  commentId: P:Reveal.Sdk.RevealView.CanDuplicateVisualization
+  id: CanDuplicateVisualization
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CanDuplicateVisualization
+  nameWithType: RevealView.CanDuplicateVisualization
+  fullName: Reveal.Sdk.RevealView.CanDuplicateVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nA flag that indicates if the &quot;Duplicate&quot; option is available in the menu for a visualization.\n"
+  syntax:
+    content: public bool CanDuplicateVisualization { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag that indicates if the &quot;Duplicate&quot; option is available in the menu for a visualization, it defaults to <code>true</code>.
+    content.vb: Public Property CanDuplicateVisualization As Boolean
+  overload: Reveal.Sdk.RevealView.CanDuplicateVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.AvailableChartTypes
+  commentId: P:Reveal.Sdk.RevealView.AvailableChartTypes
+  id: AvailableChartTypes
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: AvailableChartTypes
+  nameWithType: RevealView.AvailableChartTypes
+  fullName: Reveal.Sdk.RevealView.AvailableChartTypes
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of available chart types for the end user to select from, please note this only affects the list of visualizations to pick from,\nif a given dashboard is using a visualization not listed here, that visualization will be used anyway.\nThe list is initially populated with all supported visualization types, so you can just remove those types you would like to get excluded.\n<pre><code>var toRemoveChartTypes = new List&lt;RVChartType>() { RVChartType.Sparkline };</code></pre>\n<pre><code>revealView.AvailableChartTypes = revealView.AvailableChartTypes.Except(toRemoveChartTypes).ToList();</code></pre>\nPlease note that <xref href=\"Reveal.Sdk.RVChartType.Pivot\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Reveal.Sdk.RVChartType.Image\" data-throw-if-not-resolved=\"false\"></xref> are used as the initial chart type \nfor a new visualization (depending on the source selected) even if those types are not included in this list.\n"
+  syntax:
+    content: public List<RVChartType> AvailableChartTypes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Reveal.Sdk.RVChartType}
+      description: The list of available chart types for the end user to select from, an empty or null list means all types are displayed.
+    content.vb: Public Property AvailableChartTypes As List(Of RVChartType)
+  overload: Reveal.Sdk.RevealView.AvailableChartTypes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.Dashboard
+  commentId: P:Reveal.Sdk.RevealView.Dashboard
+  id: Dashboard
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: Dashboard
+  nameWithType: RevealView.Dashboard
+  fullName: Reveal.Sdk.RevealView.Dashboard
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe Dashboard to load in the RevealView\n"
+  syntax:
+    content: public RVDashboard Dashboard { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVDashboard
+    content.vb: Public Property Dashboard As RVDashboard
+  overload: Reveal.Sdk.RevealView.Dashboard*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.HoverTooltipsEnabled
+  commentId: P:Reveal.Sdk.RevealView.HoverTooltipsEnabled
+  id: HoverTooltipsEnabled
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: HoverTooltipsEnabled
+  nameWithType: RevealView.HoverTooltipsEnabled
+  fullName: Reveal.Sdk.RevealView.HoverTooltipsEnabled
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public bool HoverTooltipsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HoverTooltipsEnabled As Boolean
+  overload: Reveal.Sdk.RevealView.HoverTooltipsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.CrosshairsEnabled
+  commentId: P:Reveal.Sdk.RevealView.CrosshairsEnabled
+  id: CrosshairsEnabled
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: CrosshairsEnabled
+  nameWithType: RevealView.CrosshairsEnabled
+  fullName: Reveal.Sdk.RevealView.CrosshairsEnabled
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEnables crosshairs for chart visualizations.\n"
+  syntax:
+    content: public bool CrosshairsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A flag indicating if crosshairs are displayed for charts, it defaults to <code>false</code>
+    content.vb: Public Property CrosshairsEnabled As Boolean
+  overload: Reveal.Sdk.RevealView.CrosshairsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.VisualizationDataPointClicked
+  commentId: E:Reveal.Sdk.RevealView.VisualizationDataPointClicked
+  id: VisualizationDataPointClicked
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: VisualizationDataPointClicked
+  nameWithType: RevealView.VisualizationDataPointClicked
+  fullName: Reveal.Sdk.RevealView.VisualizationDataPointClicked
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent indicating data in a visualiation was clicked (might be a cell in a table or a column/bar in a chart).\n"
+  example:
+  - >-
+    <pre><code>            private void RevealView_VisualizationDataPointClicked(object sender, VisualizationClickedEventArgs e)
+                {
+                    var vizTitle = e.Visualization.Title;
+                    var column = e.Cell.ColumnName;
+                    var formattedValue = e.Cell.FormattedValue;
+                    var value = e.Cell.Value;
+                    foreach (var c in e.Row)
+                    {
+                        var cValue = c.Value;
+                        //TODO: use value from column c.ColumnName
+                    }
+                }</code></pre>
+  syntax:
+    content: public event EventHandler<VisualizationClickedEventArgs> VisualizationDataPointClicked
+    return:
+      type: System.EventHandler{Reveal.Sdk.VisualizationClickedEventArgs}
+    content.vb: Public Event VisualizationDataPointClicked As EventHandler(Of VisualizationClickedEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.TooltipShowing
+  commentId: E:Reveal.Sdk.RevealView.TooltipShowing
+  id: TooltipShowing
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: TooltipShowing
+  nameWithType: RevealView.TooltipShowing
+  fullName: Reveal.Sdk.RevealView.TooltipShowing
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent fired when the user hovers over a visualization and a tooltip is about to show up. Cancel the event to disable to rendering of the tooltip.\n"
+  example:
+  - >-
+    <pre><code>            private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
+                {
+                    var vizTitle = e.Visualization.Title;
+                    if(vizTitle == &quot;noNeedForTooltipsHere&quot;)
+                    {
+                        e.Cancel = true;
+                    }
+                }</code></pre>
+  syntax:
+    content: public event EventHandler<TooltipShowingEventArgs> TooltipShowing
+    return:
+      type: System.EventHandler{Reveal.Sdk.TooltipShowingEventArgs}
+    content.vb: Public Event TooltipShowing As EventHandler(Of TooltipShowingEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.VisualizationLinkingDashboard
+  commentId: E:Reveal.Sdk.RevealView.VisualizationLinkingDashboard
+  id: VisualizationLinkingDashboard
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: VisualizationLinkingDashboard
+  nameWithType: RevealView.VisualizationLinkingDashboard
+  fullName: Reveal.Sdk.RevealView.VisualizationLinkingDashboard
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent used to implement dashboard linking, this handler must return the contents of the target dashboard (in rdash format).\n"
+  example:
+  - >-
+    <pre><code>            private void RevealView_VisualizationLinking(object sender, VisualizationLinkingDashboardEventArgs e)
+                {
+                     e.Callback(&quot;Campaigns&quot;, GetDashboardStream(&quot;Campaigns&quot;));
+                }</code></pre>
+  syntax:
+    content: public event EventHandler<VisualizationLinkingDashboardEventArgs> VisualizationLinkingDashboard
+    return:
+      type: System.EventHandler{Reveal.Sdk.VisualizationLinkingDashboardEventArgs}
+    content.vb: Public Event VisualizationLinkingDashboard As EventHandler(Of VisualizationLinkingDashboardEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.DataSourcesRequested
+  commentId: E:Reveal.Sdk.RevealView.DataSourcesRequested
+  id: DataSourcesRequested
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: DataSourcesRequested
+  nameWithType: RevealView.DataSourcesRequested
+  fullName: Reveal.Sdk.RevealView.DataSourcesRequested
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent used to return the list of data sources to display to the user when creating a new widget. \nIf this handler is not installed Reveal will only display the list of data sources already used in the dashboard (if any).\n"
+  example:
+  - "<pre><code>             private void RevealView_DataSourcesRequested(object sender, DataSourcesRequestedEventArgs e)\n             {\n                 var inMemoryDSI = new RVInMemoryDataSourceItem(&quot;employees&quot;);\n                 inMemoryDSI.Title = &quot;Employees&quot;;\n                 inMemoryDSI.Description = &quot;Employees&quot;;\n\n                 var sqlDs = new RVSqlServerDataSource();\n                 sqlDs.Title = &quot;Clients&quot;;\n                 sqlDs.Id = &quot;SqlDataSource1&quot;;\n                 sqlDs.Host = &quot;db.mycompany.local&quot;;\n                 sqlDs.Port = 1433;\n                 sqlDs.Database = &quot;Invoices&quot;;\n\n                 e.Callback(new RevealDataSources(\n                      new List&lt;object>() { sqlDs }, \n                      new List&lt;object>() { inMemoryDSI }, \n                      false));\n             }</code></pre>"
+  syntax:
+    content: public event EventHandler<DataSourcesRequestedEventArgs> DataSourcesRequested
+    return:
+      type: System.EventHandler{Reveal.Sdk.DataSourcesRequestedEventArgs}
+    content.vb: Public Event DataSourcesRequested As EventHandler(Of DataSourcesRequestedEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.MaximizedWidgetChanged
+  commentId: E:Reveal.Sdk.RevealView.MaximizedWidgetChanged
+  id: MaximizedWidgetChanged
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: MaximizedWidgetChanged
+  nameWithType: RevealView.MaximizedWidgetChanged
+  fullName: Reveal.Sdk.RevealView.MaximizedWidgetChanged
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent triggered when there was a change in the maximized visualization, a new visualization is maximized or the maximized visualization was minimized.\n"
+  syntax:
+    content: public event EventHandler MaximizedWidgetChanged
+    return:
+      type: System.EventHandler
+    content.vb: Public Event MaximizedWidgetChanged As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.SaveDashboard
+  commentId: E:Reveal.Sdk.RevealView.SaveDashboard
+  id: SaveDashboard
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: SaveDashboard
+  nameWithType: RevealView.SaveDashboard
+  fullName: Reveal.Sdk.RevealView.SaveDashboard
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent triggered when a save (or save as) operation is being performed, the handler is responsible for storing the dashboard and notify when\nthe operation is complete using <xref href=\"Reveal.Sdk.DashboardSaveEventArgs.SaveFinished\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public event EventHandler<DashboardSaveEventArgs> SaveDashboard
+    return:
+      type: System.EventHandler{Reveal.Sdk.DashboardSaveEventArgs}
+    content.vb: Public Event SaveDashboard As EventHandler(Of DashboardSaveEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.VisualizationEditorClosing
+  commentId: E:Reveal.Sdk.RevealView.VisualizationEditorClosing
+  id: VisualizationEditorClosing
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: VisualizationEditorClosing
+  nameWithType: RevealView.VisualizationEditorClosing
+  fullName: Reveal.Sdk.RevealView.VisualizationEditorClosing
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent triggered when the close button in the visualization editor is being pressed, the event can be cancelled if closing the visualization is not allowed.\n<xref href=\"Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization\" data-throw-if-not-resolved=\"false\"></xref> can be used to reset the visualization to the original state, when the editor was displayed.\n"
+  syntax:
+    content: public event EventHandler<VisualizationEditorClosingEventArgs> VisualizationEditorClosing
+    return:
+      type: System.EventHandler{Reveal.Sdk.VisualizationEditorClosingEventArgs}
+    content.vb: Public Event VisualizationEditorClosing As EventHandler(Of VisualizationEditorClosingEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.VisualizationEditorClosed
+  commentId: E:Reveal.Sdk.RevealView.VisualizationEditorClosed
+  id: VisualizationEditorClosed
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: VisualizationEditorClosed
+  nameWithType: RevealView.VisualizationEditorClosed
+  fullName: Reveal.Sdk.RevealView.VisualizationEditorClosed
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent triggered when the visualization editor was closed.\n<xref href=\"Reveal.Sdk.VisualizationEditorClosingEventArgs\" data-throw-if-not-resolved=\"false\"></xref> if you want to cancel the editor closing action.\n"
+  syntax:
+    content: public event EventHandler<VisualizationEditorClosedEventArgs> VisualizationEditorClosed
+    return:
+      type: System.EventHandler{Reveal.Sdk.VisualizationEditorClosedEventArgs}
+    content.vb: Public Event VisualizationEditorClosed As EventHandler(Of VisualizationEditorClosedEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealView.ImageExported
+  commentId: E:Reveal.Sdk.RevealView.ImageExported
+  id: ImageExported
+  parent: Reveal.Sdk.RevealView
+  langs:
+  - csharp
+  - vb
+  name: ImageExported
+  nameWithType: RevealView.ImageExported
+  fullName: Reveal.Sdk.RevealView.ImageExported
+  type: Event
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nEvent triggered when the dashboard was exported to an image, the argument contains the image as a System.Windows.Media.Imaging.BitmapSource./>\n"
+  syntax:
+    content: public event EventHandler<ImageExportedEventArgs> ImageExported
+    return:
+      type: System.EventHandler{Reveal.Sdk.ImageExportedEventArgs}
+    content.vb: Public Event ImageExported As EventHandler(Of ImageExportedEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Windows.DependencyProperty
+  isExternal: true
+  name: DependencyProperty
+  nameWithType: DependencyProperty
+  fullName: System.Windows.DependencyProperty
+- uid: Reveal.Sdk.RevealView.#ctor*
+  commentId: Overload:Reveal.Sdk.RevealView.#ctor
+  isExternal: true
+  name: RevealView
+  nameWithType: RevealView.RevealView
+  fullName: Reveal.Sdk.RevealView.RevealView
+- uid: Reveal.Sdk.RevealView.MaximizeVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.MaximizeVisualization
+  isExternal: true
+  name: MaximizeVisualization
+  nameWithType: RevealView.MaximizeVisualization
+  fullName: Reveal.Sdk.RevealView.MaximizeVisualization
+- uid: Reveal.Sdk.RVDashboard.Visualizations
+  commentId: P:Reveal.Sdk.RVDashboard.Visualizations
+  isExternal: true
+- uid: Reveal.Sdk.RVVisualization
+  commentId: T:Reveal.Sdk.RVVisualization
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVVisualization
+  nameWithType: RVVisualization
+  fullName: Reveal.Sdk.RVVisualization
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RevealView.MinimizeVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.MinimizeVisualization
+  isExternal: true
+  name: MinimizeVisualization
+  nameWithType: RevealView.MinimizeVisualization
+  fullName: Reveal.Sdk.RevealView.MinimizeVisualization
+- uid: Reveal.Sdk.RevealView.SetVisualizationChartSettings*
+  commentId: Overload:Reveal.Sdk.RevealView.SetVisualizationChartSettings
+  isExternal: true
+  name: SetVisualizationChartSettings
+  nameWithType: RevealView.SetVisualizationChartSettings
+  fullName: Reveal.Sdk.RevealView.SetVisualizationChartSettings
+- uid: Reveal.Sdk.RVChartSettings
+  commentId: T:Reveal.Sdk.RVChartSettings
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVChartSettings
+  nameWithType: RVChartSettings
+  fullName: Reveal.Sdk.RVChartSettings
+- uid: Reveal.Sdk.RevealView.Serialize*
+  commentId: Overload:Reveal.Sdk.RevealView.Serialize
+  isExternal: true
+  name: Serialize
+  nameWithType: RevealView.Serialize
+  fullName: Reveal.Sdk.RevealView.Serialize
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Byte[]>
+  nameWithType: Task<Byte[]>
+  fullName: System.Threading.Tasks.Task<System.Byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of System.Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Reveal.Sdk.RevealView.SerializeWithName*
+  commentId: Overload:Reveal.Sdk.RevealView.SerializeWithName
+  isExternal: true
+  name: SerializeWithName
+  nameWithType: RevealView.SerializeWithName
+  fullName: Reveal.Sdk.RevealView.SerializeWithName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RevealView.ToImage*
+  commentId: Overload:Reveal.Sdk.RevealView.ToImage
+  isExternal: true
+  name: ToImage
+  nameWithType: RevealView.ToImage
+  fullName: Reveal.Sdk.RevealView.ToImage
+- uid: System.Windows.Media.Imaging.BitmapSource
+  isExternal: true
+  name: BitmapSource
+  nameWithType: BitmapSource
+  fullName: System.Windows.Media.Imaging.BitmapSource
+- uid: Reveal.Sdk.RevealView.UpdateRevealTheme*
+  commentId: Overload:Reveal.Sdk.RevealView.UpdateRevealTheme
+  isExternal: true
+  name: UpdateRevealTheme
+  nameWithType: RevealView.UpdateRevealTheme
+  fullName: Reveal.Sdk.RevealView.UpdateRevealTheme
+- uid: Reveal.Sdk.RevealTheme
+  commentId: T:Reveal.Sdk.RevealTheme
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RevealTheme
+  nameWithType: RevealTheme
+  fullName: Reveal.Sdk.RevealTheme
+- uid: Reveal.Sdk.RevealView.GetCurrentTheme*
+  commentId: Overload:Reveal.Sdk.RevealView.GetCurrentTheme
+  isExternal: true
+  name: GetCurrentTheme
+  nameWithType: RevealView.GetCurrentTheme
+  fullName: Reveal.Sdk.RevealView.GetCurrentTheme
+- uid: Reveal.Sdk.RevealView.RefreshDashboardData*
+  commentId: Overload:Reveal.Sdk.RevealView.RefreshDashboardData
+  isExternal: true
+  name: RefreshDashboardData
+  nameWithType: RevealView.RefreshDashboardData
+  fullName: Reveal.Sdk.RevealView.RefreshDashboardData
+- uid: Reveal.Sdk.RevealView.OnApplyTemplate*
+  commentId: Overload:Reveal.Sdk.RevealView.OnApplyTemplate
+  isExternal: true
+  name: OnApplyTemplate
+  nameWithType: RevealView.OnApplyTemplate
+  fullName: Reveal.Sdk.RevealView.OnApplyTemplate
+- uid: Reveal.Sdk.RevealView.GetDataForWidget*
+  commentId: Overload:Reveal.Sdk.RevealView.GetDataForWidget
+  isExternal: true
+  name: GetDataForWidget
+  nameWithType: RevealView.GetDataForWidget
+  fullName: Reveal.Sdk.RevealView.GetDataForWidget
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Reveal.Sdk.RevealView.IsWidgetWaitingForData*
+  commentId: Overload:Reveal.Sdk.RevealView.IsWidgetWaitingForData
+  isExternal: true
+  name: IsWidgetWaitingForData
+  nameWithType: RevealView.IsWidgetWaitingForData
+  fullName: Reveal.Sdk.RevealView.IsWidgetWaitingForData
+- uid: Reveal.Sdk.RevealView.CanEdit*
+  commentId: Overload:Reveal.Sdk.RevealView.CanEdit
+  isExternal: true
+  name: CanEdit
+  nameWithType: RevealView.CanEdit
+  fullName: Reveal.Sdk.RevealView.CanEdit
+- uid: Reveal.Sdk.RevealView.CanSaveAs*
+  commentId: Overload:Reveal.Sdk.RevealView.CanSaveAs
+  isExternal: true
+  name: CanSaveAs
+  nameWithType: RevealView.CanSaveAs
+  fullName: Reveal.Sdk.RevealView.CanSaveAs
+- uid: Reveal.Sdk.RevealView.CanAddVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.CanAddVisualization
+  isExternal: true
+  name: CanAddVisualization
+  nameWithType: RevealView.CanAddVisualization
+  fullName: Reveal.Sdk.RevealView.CanAddVisualization
+- uid: Reveal.Sdk.RevealView.StartInEditMode*
+  commentId: Overload:Reveal.Sdk.RevealView.StartInEditMode
+  isExternal: true
+  name: StartInEditMode
+  nameWithType: RevealView.StartInEditMode
+  fullName: Reveal.Sdk.RevealView.StartInEditMode
+- uid: Reveal.Sdk.RevealView.StartWithNewVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.StartWithNewVisualization
+  isExternal: true
+  name: StartWithNewVisualization
+  nameWithType: RevealView.StartWithNewVisualization
+  fullName: Reveal.Sdk.RevealView.StartWithNewVisualization
+- uid: Reveal.Sdk.RevealView.SingleVisualizationMode*
+  commentId: Overload:Reveal.Sdk.RevealView.SingleVisualizationMode
+  isExternal: true
+  name: SingleVisualizationMode
+  nameWithType: RevealView.SingleVisualizationMode
+  fullName: Reveal.Sdk.RevealView.SingleVisualizationMode
+- uid: Reveal.Sdk.RevealView.ShowFilters*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowFilters
+  isExternal: true
+  name: ShowFilters
+  nameWithType: RevealView.ShowFilters
+  fullName: Reveal.Sdk.RevealView.ShowFilters
+- uid: Reveal.Sdk.RevealView.ShowMenu*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowMenu
+  isExternal: true
+  name: ShowMenu
+  nameWithType: RevealView.ShowMenu
+  fullName: Reveal.Sdk.RevealView.ShowMenu
+- uid: Reveal.Sdk.RevealView.ShowExportImage*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowExportImage
+  isExternal: true
+  name: ShowExportImage
+  nameWithType: RevealView.ShowExportImage
+  fullName: Reveal.Sdk.RevealView.ShowExportImage
+- uid: Reveal.Sdk.RevealView.ShowExportToExcel*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowExportToExcel
+  isExternal: true
+  name: ShowExportToExcel
+  nameWithType: RevealView.ShowExportToExcel
+  fullName: Reveal.Sdk.RevealView.ShowExportToExcel
+- uid: Reveal.Sdk.RevealView.ShowExportToPowerpoint*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowExportToPowerpoint
+  isExternal: true
+  name: ShowExportToPowerpoint
+  nameWithType: RevealView.ShowExportToPowerpoint
+  fullName: Reveal.Sdk.RevealView.ShowExportToPowerpoint
+- uid: Reveal.Sdk.RevealView.ShowExportToPDF*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowExportToPDF
+  isExternal: true
+  name: ShowExportToPDF
+  nameWithType: RevealView.ShowExportToPDF
+  fullName: Reveal.Sdk.RevealView.ShowExportToPDF
+- uid: Reveal.Sdk.RevealView.ShowChangeVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowChangeVisualization
+  isExternal: true
+  name: ShowChangeVisualization
+  nameWithType: RevealView.ShowChangeVisualization
+  fullName: Reveal.Sdk.RevealView.ShowChangeVisualization
+- uid: Reveal.Sdk.RevealView.ShowRefresh*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowRefresh
+  isExternal: true
+  name: ShowRefresh
+  nameWithType: RevealView.ShowRefresh
+  fullName: Reveal.Sdk.RevealView.ShowRefresh
+- uid: Reveal.Sdk.RevealView.ShowChangeDataSource*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowChangeDataSource
+  isExternal: true
+  name: ShowChangeDataSource
+  nameWithType: RevealView.ShowChangeDataSource
+  fullName: Reveal.Sdk.RevealView.ShowChangeDataSource
+- uid: Reveal.Sdk.RevealView.ShowStatisticalFunctions*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowStatisticalFunctions
+  isExternal: true
+  name: ShowStatisticalFunctions
+  nameWithType: RevealView.ShowStatisticalFunctions
+  fullName: Reveal.Sdk.RevealView.ShowStatisticalFunctions
+- uid: Reveal.Sdk.RevealView.ShowDataBlending*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowDataBlending
+  isExternal: true
+  name: ShowDataBlending
+  nameWithType: RevealView.ShowDataBlending
+  fullName: Reveal.Sdk.RevealView.ShowDataBlending
+- uid: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration*
+  commentId: Overload:Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration
+  isExternal: true
+  name: ShowMachineLearningModelsIntegration
+  nameWithType: RevealView.ShowMachineLearningModelsIntegration
+  fullName: Reveal.Sdk.RevealView.ShowMachineLearningModelsIntegration
+- uid: Reveal.Sdk.RevealView.MaximizedVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.MaximizedVisualization
+  isExternal: true
+  name: MaximizedVisualization
+  nameWithType: RevealView.MaximizedVisualization
+  fullName: Reveal.Sdk.RevealView.MaximizedVisualization
+- uid: Reveal.Sdk.RevealView.CanAddCalculatedFields*
+  commentId: Overload:Reveal.Sdk.RevealView.CanAddCalculatedFields
+  isExternal: true
+  name: CanAddCalculatedFields
+  nameWithType: RevealView.CanAddCalculatedFields
+  fullName: Reveal.Sdk.RevealView.CanAddCalculatedFields
+- uid: Reveal.Sdk.RevealView.CanAddPostCalculatedFields*
+  commentId: Overload:Reveal.Sdk.RevealView.CanAddPostCalculatedFields
+  isExternal: true
+  name: CanAddPostCalculatedFields
+  nameWithType: RevealView.CanAddPostCalculatedFields
+  fullName: Reveal.Sdk.RevealView.CanAddPostCalculatedFields
+- uid: Reveal.Sdk.RevealView.CanCopyVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.CanCopyVisualization
+  isExternal: true
+  name: CanCopyVisualization
+  nameWithType: RevealView.CanCopyVisualization
+  fullName: Reveal.Sdk.RevealView.CanCopyVisualization
+- uid: Reveal.Sdk.RevealView.CanDuplicateVisualization*
+  commentId: Overload:Reveal.Sdk.RevealView.CanDuplicateVisualization
+  isExternal: true
+  name: CanDuplicateVisualization
+  nameWithType: RevealView.CanDuplicateVisualization
+  fullName: Reveal.Sdk.RevealView.CanDuplicateVisualization
+- uid: Reveal.Sdk.RevealView.AvailableChartTypes*
+  commentId: Overload:Reveal.Sdk.RevealView.AvailableChartTypes
+  isExternal: true
+  name: AvailableChartTypes
+  nameWithType: RevealView.AvailableChartTypes
+  fullName: Reveal.Sdk.RevealView.AvailableChartTypes
+- uid: System.Collections.Generic.List{Reveal.Sdk.RVChartType}
+  commentId: T:System.Collections.Generic.List{Reveal.Sdk.RVChartType}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<RVChartType>
+  nameWithType: List<RVChartType>
+  fullName: System.Collections.Generic.List<Reveal.Sdk.RVChartType>
+  nameWithType.vb: List(Of RVChartType)
+  fullName.vb: System.Collections.Generic.List(Of Reveal.Sdk.RVChartType)
+  name.vb: List(Of RVChartType)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVChartType
+    name: RVChartType
+    nameWithType: RVChartType
+    fullName: Reveal.Sdk.RVChartType
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVChartType
+    name: RVChartType
+    nameWithType: RVChartType
+    fullName: Reveal.Sdk.RVChartType
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RevealView.Dashboard*
+  commentId: Overload:Reveal.Sdk.RevealView.Dashboard
+  isExternal: true
+  name: Dashboard
+  nameWithType: RevealView.Dashboard
+  fullName: Reveal.Sdk.RevealView.Dashboard
+- uid: Reveal.Sdk.RVDashboard
+  commentId: T:Reveal.Sdk.RVDashboard
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboard
+  nameWithType: RVDashboard
+  fullName: Reveal.Sdk.RVDashboard
+- uid: Reveal.Sdk.RevealView.HoverTooltipsEnabled*
+  commentId: Overload:Reveal.Sdk.RevealView.HoverTooltipsEnabled
+  isExternal: true
+  name: HoverTooltipsEnabled
+  nameWithType: RevealView.HoverTooltipsEnabled
+  fullName: Reveal.Sdk.RevealView.HoverTooltipsEnabled
+- uid: Reveal.Sdk.RevealView.CrosshairsEnabled*
+  commentId: Overload:Reveal.Sdk.RevealView.CrosshairsEnabled
+  isExternal: true
+  name: CrosshairsEnabled
+  nameWithType: RevealView.CrosshairsEnabled
+  fullName: Reveal.Sdk.RevealView.CrosshairsEnabled
+- uid: System.EventHandler{Reveal.Sdk.VisualizationClickedEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.VisualizationClickedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<VisualizationClickedEventArgs>
+  nameWithType: EventHandler<VisualizationClickedEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.VisualizationClickedEventArgs>
+  nameWithType.vb: EventHandler(Of VisualizationClickedEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.VisualizationClickedEventArgs)
+  name.vb: EventHandler(Of VisualizationClickedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.VisualizationClickedEventArgs
+    name: VisualizationClickedEventArgs
+    nameWithType: VisualizationClickedEventArgs
+    fullName: Reveal.Sdk.VisualizationClickedEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.VisualizationClickedEventArgs
+    name: VisualizationClickedEventArgs
+    nameWithType: VisualizationClickedEventArgs
+    fullName: Reveal.Sdk.VisualizationClickedEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{Reveal.Sdk.TooltipShowingEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.TooltipShowingEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<TooltipShowingEventArgs>
+  nameWithType: EventHandler<TooltipShowingEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.TooltipShowingEventArgs>
+  nameWithType.vb: EventHandler(Of TooltipShowingEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.TooltipShowingEventArgs)
+  name.vb: EventHandler(Of TooltipShowingEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.TooltipShowingEventArgs
+    name: TooltipShowingEventArgs
+    nameWithType: TooltipShowingEventArgs
+    fullName: Reveal.Sdk.TooltipShowingEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.TooltipShowingEventArgs
+    name: TooltipShowingEventArgs
+    nameWithType: TooltipShowingEventArgs
+    fullName: Reveal.Sdk.TooltipShowingEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{Reveal.Sdk.VisualizationLinkingDashboardEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.VisualizationLinkingDashboardEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<VisualizationLinkingDashboardEventArgs>
+  nameWithType: EventHandler<VisualizationLinkingDashboardEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.VisualizationLinkingDashboardEventArgs>
+  nameWithType.vb: EventHandler(Of VisualizationLinkingDashboardEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.VisualizationLinkingDashboardEventArgs)
+  name.vb: EventHandler(Of VisualizationLinkingDashboardEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.VisualizationLinkingDashboardEventArgs
+    name: VisualizationLinkingDashboardEventArgs
+    nameWithType: VisualizationLinkingDashboardEventArgs
+    fullName: Reveal.Sdk.VisualizationLinkingDashboardEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.VisualizationLinkingDashboardEventArgs
+    name: VisualizationLinkingDashboardEventArgs
+    nameWithType: VisualizationLinkingDashboardEventArgs
+    fullName: Reveal.Sdk.VisualizationLinkingDashboardEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{Reveal.Sdk.DataSourcesRequestedEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.DataSourcesRequestedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<DataSourcesRequestedEventArgs>
+  nameWithType: EventHandler<DataSourcesRequestedEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.DataSourcesRequestedEventArgs>
+  nameWithType.vb: EventHandler(Of DataSourcesRequestedEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.DataSourcesRequestedEventArgs)
+  name.vb: EventHandler(Of DataSourcesRequestedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.DataSourcesRequestedEventArgs
+    name: DataSourcesRequestedEventArgs
+    nameWithType: DataSourcesRequestedEventArgs
+    fullName: Reveal.Sdk.DataSourcesRequestedEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.DataSourcesRequestedEventArgs
+    name: DataSourcesRequestedEventArgs
+    nameWithType: DataSourcesRequestedEventArgs
+    fullName: Reveal.Sdk.DataSourcesRequestedEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: System.EventHandler{Reveal.Sdk.DashboardSaveEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.DashboardSaveEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<DashboardSaveEventArgs>
+  nameWithType: EventHandler<DashboardSaveEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.DashboardSaveEventArgs>
+  nameWithType.vb: EventHandler(Of DashboardSaveEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.DashboardSaveEventArgs)
+  name.vb: EventHandler(Of DashboardSaveEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.DashboardSaveEventArgs
+    name: DashboardSaveEventArgs
+    nameWithType: DashboardSaveEventArgs
+    fullName: Reveal.Sdk.DashboardSaveEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.DashboardSaveEventArgs
+    name: DashboardSaveEventArgs
+    nameWithType: DashboardSaveEventArgs
+    fullName: Reveal.Sdk.DashboardSaveEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{Reveal.Sdk.VisualizationEditorClosingEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.VisualizationEditorClosingEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<VisualizationEditorClosingEventArgs>
+  nameWithType: EventHandler<VisualizationEditorClosingEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.VisualizationEditorClosingEventArgs>
+  nameWithType.vb: EventHandler(Of VisualizationEditorClosingEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.VisualizationEditorClosingEventArgs)
+  name.vb: EventHandler(Of VisualizationEditorClosingEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.VisualizationEditorClosingEventArgs
+    name: VisualizationEditorClosingEventArgs
+    nameWithType: VisualizationEditorClosingEventArgs
+    fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.VisualizationEditorClosingEventArgs
+    name: VisualizationEditorClosingEventArgs
+    nameWithType: VisualizationEditorClosingEventArgs
+    fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{Reveal.Sdk.VisualizationEditorClosedEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.VisualizationEditorClosedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<VisualizationEditorClosedEventArgs>
+  nameWithType: EventHandler<VisualizationEditorClosedEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.VisualizationEditorClosedEventArgs>
+  nameWithType.vb: EventHandler(Of VisualizationEditorClosedEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.VisualizationEditorClosedEventArgs)
+  name.vb: EventHandler(Of VisualizationEditorClosedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs
+    nameWithType: VisualizationEditorClosedEventArgs
+    fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs
+    nameWithType: VisualizationEditorClosedEventArgs
+    fullName: Reveal.Sdk.VisualizationEditorClosedEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{Reveal.Sdk.ImageExportedEventArgs}
+  commentId: T:System.EventHandler{Reveal.Sdk.ImageExportedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<ImageExportedEventArgs>
+  nameWithType: EventHandler<ImageExportedEventArgs>
+  fullName: System.EventHandler<Reveal.Sdk.ImageExportedEventArgs>
+  nameWithType.vb: EventHandler(Of ImageExportedEventArgs)
+  fullName.vb: System.EventHandler(Of Reveal.Sdk.ImageExportedEventArgs)
+  name.vb: EventHandler(Of ImageExportedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.ImageExportedEventArgs
+    name: ImageExportedEventArgs
+    nameWithType: ImageExportedEventArgs
+    fullName: Reveal.Sdk.ImageExportedEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.ImageExportedEventArgs
+    name: ImageExportedEventArgs
+    nameWithType: ImageExportedEventArgs
+    fullName: Reveal.Sdk.ImageExportedEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

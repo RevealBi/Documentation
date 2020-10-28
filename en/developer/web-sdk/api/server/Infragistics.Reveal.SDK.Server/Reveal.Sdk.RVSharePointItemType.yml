@@ -1,0 +1,219 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSharePointItemType
+  commentId: T:Reveal.Sdk.RVSharePointItemType
+  id: RVSharePointItemType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSharePointItemType.List
+  - Reveal.Sdk.RVSharePointItemType.ListItem
+  - Reveal.Sdk.RVSharePointItemType.People
+  - Reveal.Sdk.RVSharePointItemType.Site
+  - Reveal.Sdk.RVSharePointItemType.value__
+  langs:
+  - csharp
+  - vb
+  name: RVSharePointItemType
+  nameWithType: RVSharePointItemType
+  fullName: Reveal.Sdk.RVSharePointItemType
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint item type\n"
+  syntax:
+    content: 'public sealed class RVSharePointItemType : Enum'
+    content.vb: >-
+      Public NotInheritable Class RVSharePointItemType
+          Inherits
+
+           Enum
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Reveal.Sdk.RVSharePointItemType.value__
+  commentId: F:Reveal.Sdk.RVSharePointItemType.value__
+  id: value__
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: value__
+  nameWithType: RVSharePointItemType.value__
+  fullName: Reveal.Sdk.RVSharePointItemType.value__
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int value__
+    return:
+      type: System.Int32
+    content.vb: Public value__ As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointItemType.Site
+  commentId: F:Reveal.Sdk.RVSharePointItemType.Site
+  id: Site
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: Site
+  nameWithType: RVSharePointItemType.Site
+  fullName: Reveal.Sdk.RVSharePointItemType.Site
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint site or sub site\n"
+  syntax:
+    content: public const RVSharePointItemType Site
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+    content.vb: Public Const Site As RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointItemType.List
+  commentId: F:Reveal.Sdk.RVSharePointItemType.List
+  id: List
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: List
+  nameWithType: RVSharePointItemType.List
+  fullName: Reveal.Sdk.RVSharePointItemType.List
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint list\n"
+  syntax:
+    content: public const RVSharePointItemType List
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+    content.vb: Public Const List As RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointItemType.ListItem
+  commentId: F:Reveal.Sdk.RVSharePointItemType.ListItem
+  id: ListItem
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: ListItem
+  nameWithType: RVSharePointItemType.ListItem
+  fullName: Reveal.Sdk.RVSharePointItemType.ListItem
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint list item\n"
+  syntax:
+    content: public const RVSharePointItemType ListItem
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+    content.vb: Public Const ListItem As RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointItemType.People
+  commentId: F:Reveal.Sdk.RVSharePointItemType.People
+  id: People
+  parent: Reveal.Sdk.RVSharePointItemType
+  langs:
+  - csharp
+  - vb
+  name: People
+  nameWithType: RVSharePointItemType.People
+  fullName: Reveal.Sdk.RVSharePointItemType.People
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint people\n"
+  syntax:
+    content: public const RVSharePointItemType People
+    return:
+      type: Reveal.Sdk.RVSharePointItemType
+    content.vb: Public Const People As RVSharePointItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVSharePointItemType
+  commentId: T:Reveal.Sdk.RVSharePointItemType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSharePointItemType
+  nameWithType: RVSharePointItemType
+  fullName: Reveal.Sdk.RVSharePointItemType

@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVJsonDataSourceItem
+  commentId: T:Reveal.Sdk.RVJsonDataSourceItem
+  id: RVJsonDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVJsonDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  - Reveal.Sdk.RVJsonDataSourceItem.Config
+  langs:
+  - csharp
+  - vb
+  name: RVJsonDataSourceItem
+  nameWithType: RVJsonDataSourceItem
+  fullName: Reveal.Sdk.RVJsonDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe data source item used to represent a dataset from a JSON file, it includes \nthe optional parsing configuration.\n"
+  syntax:
+    content: 'public class RVJsonDataSourceItem : RVResourceBasedDataSourceItem'
+    content.vb: >-
+      Public Class RVJsonDataSourceItem
+          Inherits RVResourceBasedDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  - Reveal.Sdk.RVResourceBasedDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVJsonDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  commentId: M:Reveal.Sdk.RVJsonDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  id: '#ctor(Reveal.Sdk.IRVResourceItem)'
+  parent: Reveal.Sdk.RVJsonDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVJsonDataSourceItem(IRVResourceItem)
+  nameWithType: RVJsonDataSourceItem.RVJsonDataSourceItem(IRVResourceItem)
+  fullName: Reveal.Sdk.RVJsonDataSourceItem.RVJsonDataSourceItem(Reveal.Sdk.IRVResourceItem)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nCreates a new JSON item getting data from the specified resource item.\n"
+  syntax:
+    content: public RVJsonDataSourceItem(IRVResourceItem resourceItem)
+    parameters:
+    - id: resourceItem
+      type: Reveal.Sdk.IRVResourceItem
+      description: The resource item to download the file from.
+    content.vb: Public Sub New(resourceItem As IRVResourceItem)
+  overload: Reveal.Sdk.RVJsonDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVJsonDataSourceItem.Config
+  commentId: P:Reveal.Sdk.RVJsonDataSourceItem.Config
+  id: Config
+  parent: Reveal.Sdk.RVJsonDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: RVJsonDataSourceItem.Config
+  fullName: Reveal.Sdk.RVJsonDataSourceItem.Config
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe configuration of the JSON parser.\n"
+  syntax:
+    content: public string Config { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Config As String
+  overload: Reveal.Sdk.RVJsonDataSourceItem.Config*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVResourceBasedDataSourceItem
+  commentId: T:Reveal.Sdk.RVResourceBasedDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVResourceBasedDataSourceItem
+  nameWithType: RVResourceBasedDataSourceItem
+  fullName: Reveal.Sdk.RVResourceBasedDataSourceItem
+- uid: Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  commentId: P:Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  parent: Reveal.Sdk.RVResourceBasedDataSourceItem
+  isExternal: true
+  name: ResourceItem
+  nameWithType: RVResourceBasedDataSourceItem.ResourceItem
+  fullName: Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVJsonDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVJsonDataSourceItem.#ctor
+  isExternal: true
+  name: RVJsonDataSourceItem
+  nameWithType: RVJsonDataSourceItem.RVJsonDataSourceItem
+  fullName: Reveal.Sdk.RVJsonDataSourceItem.RVJsonDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVJsonDataSourceItem.Config*
+  commentId: Overload:Reveal.Sdk.RVJsonDataSourceItem.Config
+  isExternal: true
+  name: Config
+  nameWithType: RVJsonDataSourceItem.Config
+  fullName: Reveal.Sdk.RVJsonDataSourceItem.Config
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

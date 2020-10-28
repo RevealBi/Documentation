@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: rpembedded.RVConditionalFormatting
+    id: rpembedded.RVConditionalFormatting
+    name: RVConditionalFormatting
+    summary: The class contains custom theme settings.
+    fullName: rpembedded.RVConditionalFormatting
+    type: Class
+    children:
+      - rpembedded.RVConditionalFormatting.#ctor
+    langs:
+      - js
+  - id: rpembedded.RVConditionalFormatting.#ctor
+    uid: rpembedded.RVConditionalFormatting.#ctor
+    parent: rpembedded.RVConditionalFormatting
+    name: RVConditionalFormatting()
+    fullName: rpembedded.RVConditionalFormatting.RVConditionalFormatting()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVConditionalFormatting()
+    langs:
+      - js

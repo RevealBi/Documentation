@@ -1,0 +1,160 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSharePointAuthenticationMethod
+  commentId: T:Reveal.Sdk.RVSharePointAuthenticationMethod
+  id: RVSharePointAuthenticationMethod
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSharePointAuthenticationMethod.Form
+  - Reveal.Sdk.RVSharePointAuthenticationMethod.Office365
+  - Reveal.Sdk.RVSharePointAuthenticationMethod.WebLogin
+  - Reveal.Sdk.RVSharePointAuthenticationMethod.Windows
+  langs:
+  - csharp
+  - vb
+  name: RVSharePointAuthenticationMethod
+  nameWithType: RVSharePointAuthenticationMethod
+  fullName: Reveal.Sdk.RVSharePointAuthenticationMethod
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSharepoint authentication methods\n"
+  syntax:
+    content: public enum RVSharePointAuthenticationMethod
+    content.vb: Public Enum RVSharePointAuthenticationMethod
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVSharePointAuthenticationMethod.Windows
+  commentId: F:Reveal.Sdk.RVSharePointAuthenticationMethod.Windows
+  id: Windows
+  parent: Reveal.Sdk.RVSharePointAuthenticationMethod
+  langs:
+  - csharp
+  - vb
+  name: Windows
+  nameWithType: RVSharePointAuthenticationMethod.Windows
+  fullName: Reveal.Sdk.RVSharePointAuthenticationMethod.Windows
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nWindows (NT) authentication\n"
+  syntax:
+    content: Windows = 0
+    return:
+      type: Reveal.Sdk.RVSharePointAuthenticationMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointAuthenticationMethod.Form
+  commentId: F:Reveal.Sdk.RVSharePointAuthenticationMethod.Form
+  id: Form
+  parent: Reveal.Sdk.RVSharePointAuthenticationMethod
+  langs:
+  - csharp
+  - vb
+  name: Form
+  nameWithType: RVSharePointAuthenticationMethod.Form
+  fullName: Reveal.Sdk.RVSharePointAuthenticationMethod.Form
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nForms based authenticaiton\n"
+  syntax:
+    content: Form = 1
+    return:
+      type: Reveal.Sdk.RVSharePointAuthenticationMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointAuthenticationMethod.Office365
+  commentId: F:Reveal.Sdk.RVSharePointAuthenticationMethod.Office365
+  id: Office365
+  parent: Reveal.Sdk.RVSharePointAuthenticationMethod
+  langs:
+  - csharp
+  - vb
+  name: Office365
+  nameWithType: RVSharePointAuthenticationMethod.Office365
+  fullName: Reveal.Sdk.RVSharePointAuthenticationMethod.Office365
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nOffice 365 authentication\n"
+  syntax:
+    content: Office365 = 2
+    return:
+      type: Reveal.Sdk.RVSharePointAuthenticationMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSharePointAuthenticationMethod.WebLogin
+  commentId: F:Reveal.Sdk.RVSharePointAuthenticationMethod.WebLogin
+  id: WebLogin
+  parent: Reveal.Sdk.RVSharePointAuthenticationMethod
+  langs:
+  - csharp
+  - vb
+  name: WebLogin
+  nameWithType: RVSharePointAuthenticationMethod.WebLogin
+  fullName: Reveal.Sdk.RVSharePointAuthenticationMethod.WebLogin
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nWeb based login authentication\n"
+  syntax:
+    content: WebLogin = 3
+    return:
+      type: Reveal.Sdk.RVSharePointAuthenticationMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVSharePointAuthenticationMethod
+  commentId: T:Reveal.Sdk.RVSharePointAuthenticationMethod
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSharePointAuthenticationMethod
+  nameWithType: RVSharePointAuthenticationMethod
+  fullName: Reveal.Sdk.RVSharePointAuthenticationMethod

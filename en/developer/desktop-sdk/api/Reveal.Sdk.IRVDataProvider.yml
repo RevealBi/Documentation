@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVDataProvider
+  commentId: T:Reveal.Sdk.IRVDataProvider
+  id: IRVDataProvider
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVDataProvider.GetData(Reveal.Sdk.RVInMemoryDataSourceItem)
+  langs:
+  - csharp
+  - vb
+  name: IRVDataProvider
+  nameWithType: IRVDataProvider
+  fullName: Reveal.Sdk.IRVDataProvider
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe interface that must be implemented and set to <see cref=\"!:RevealView.DataProvider\"></see> in order to \nreturn in-memory data for dashboards.\n"
+  syntax:
+    content: public interface IRVDataProvider
+    content.vb: Public Interface IRVDataProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVDataProvider.GetData(Reveal.Sdk.RVInMemoryDataSourceItem)
+  commentId: M:Reveal.Sdk.IRVDataProvider.GetData(Reveal.Sdk.RVInMemoryDataSourceItem)
+  id: GetData(Reveal.Sdk.RVInMemoryDataSourceItem)
+  parent: Reveal.Sdk.IRVDataProvider
+  langs:
+  - csharp
+  - vb
+  name: GetData(RVInMemoryDataSourceItem)
+  nameWithType: IRVDataProvider.GetData(RVInMemoryDataSourceItem)
+  fullName: Reveal.Sdk.IRVDataProvider.GetData(Reveal.Sdk.RVInMemoryDataSourceItem)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns the in-memory data for this data source, you can use the <xref href=\"Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId\" data-throw-if-not-resolved=\"false\"></xref> property \nto know what dataset to return.\n"
+  syntax:
+    content: Task<IRVInMemoryData> GetData(RVInMemoryDataSourceItem dataSourceItem)
+    parameters:
+    - id: dataSourceItem
+      type: Reveal.Sdk.RVInMemoryDataSourceItem
+      description: The in-memory data source item to return the data for
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.IRVInMemoryData}
+      description: The in-memory data for the dataset associated to the specified data source item
+    content.vb: Function GetData(dataSourceItem As RVInMemoryDataSourceItem) As Task(Of IRVInMemoryData)
+  overload: Reveal.Sdk.IRVDataProvider.GetData*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVDataProvider.GetData*
+  commentId: Overload:Reveal.Sdk.IRVDataProvider.GetData
+  isExternal: true
+  name: GetData
+  nameWithType: IRVDataProvider.GetData
+  fullName: Reveal.Sdk.IRVDataProvider.GetData
+- uid: Reveal.Sdk.RVInMemoryDataSourceItem
+  commentId: T:Reveal.Sdk.RVInMemoryDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVInMemoryDataSourceItem
+  nameWithType: RVInMemoryDataSourceItem
+  fullName: Reveal.Sdk.RVInMemoryDataSourceItem
+- uid: System.Threading.Tasks.Task{Reveal.Sdk.IRVInMemoryData}
+  commentId: T:System.Threading.Tasks.Task{Reveal.Sdk.IRVInMemoryData}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IRVInMemoryData>
+  nameWithType: Task<IRVInMemoryData>
+  fullName: System.Threading.Tasks.Task<Reveal.Sdk.IRVInMemoryData>
+  nameWithType.vb: Task(Of IRVInMemoryData)
+  fullName.vb: System.Threading.Tasks.Task(Of Reveal.Sdk.IRVInMemoryData)
+  name.vb: Task(Of IRVInMemoryData)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.IRVInMemoryData
+    name: IRVInMemoryData
+    nameWithType: IRVInMemoryData
+    fullName: Reveal.Sdk.IRVInMemoryData
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.IRVInMemoryData
+    name: IRVInMemoryData
+    nameWithType: IRVInMemoryData
+    fullName: Reveal.Sdk.IRVInMemoryData
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

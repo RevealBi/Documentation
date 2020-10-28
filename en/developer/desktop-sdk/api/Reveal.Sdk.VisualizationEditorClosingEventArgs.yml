@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.VisualizationEditorClosingEventArgs
+  commentId: T:Reveal.Sdk.VisualizationEditorClosingEventArgs
+  id: VisualizationEditorClosingEventArgs
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization
+  - Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization
+  langs:
+  - csharp
+  - vb
+  name: VisualizationEditorClosingEventArgs
+  nameWithType: VisualizationEditorClosingEventArgs
+  fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe type of the event arguments of the <xref href=\"Reveal.Sdk.RevealView.VisualizationEditorClosing\" data-throw-if-not-resolved=\"false\"></xref> event.\n"
+  syntax:
+    content: 'public class VisualizationEditorClosingEventArgs : CancelEventArgs'
+    content.vb: >-
+      Public Class VisualizationEditorClosingEventArgs
+          Inherits CancelEventArgs
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization
+  commentId: P:Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization
+  id: IsNewVisualization
+  parent: Reveal.Sdk.VisualizationEditorClosingEventArgs
+  langs:
+  - csharp
+  - vb
+  name: IsNewVisualization
+  nameWithType: VisualizationEditorClosingEventArgs.IsNewVisualization
+  fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThis property is true if it is new visualization that has been created\n"
+  syntax:
+    content: public bool IsNewVisualization { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNewVisualization As Boolean
+  overload: Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization
+  commentId: P:Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization
+  id: ResetVisualization
+  parent: Reveal.Sdk.VisualizationEditorClosingEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ResetVisualization
+  nameWithType: VisualizationEditorClosingEventArgs.ResetVisualization
+  fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSet this property to true in order to reset the visualization at its initial state reseting any changes.\n"
+  syntax:
+    content: public bool ResetVisualization { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ResetVisualization As Boolean
+  overload: Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization*
+  commentId: Overload:Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization
+  isExternal: true
+  name: IsNewVisualization
+  nameWithType: VisualizationEditorClosingEventArgs.IsNewVisualization
+  fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs.IsNewVisualization
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization*
+  commentId: Overload:Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization
+  isExternal: true
+  name: ResetVisualization
+  nameWithType: VisualizationEditorClosingEventArgs.ResetVisualization
+  fullName: Reveal.Sdk.VisualizationEditorClosingEventArgs.ResetVisualization

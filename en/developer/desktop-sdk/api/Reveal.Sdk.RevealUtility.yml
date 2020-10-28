@@ -1,0 +1,745 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RevealUtility
+  commentId: T:Reveal.Sdk.RevealUtility
+  id: RevealUtility
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RevealUtility.#ctor
+  - Reveal.Sdk.RevealUtility.GetFilterValues(Reveal.Sdk.RVDashboard,Reveal.Sdk.RVDashboardFilter,System.Threading.CancellationToken)
+  - Reveal.Sdk.RevealUtility.LoadDashboard(System.IO.Stream)
+  - Reveal.Sdk.RevealUtility.LoadDashboardSync(System.IO.Stream)
+  langs:
+  - csharp
+  - vb
+  name: RevealUtility
+  nameWithType: RevealUtility
+  fullName: Reveal.Sdk.RevealUtility
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUtility class used to load a dashboard object or to get the list of values for a given filter.\n"
+  syntax:
+    content: >-
+      [Obsolete("Please create Dashboards using the `new Dashboard(argument)` or `Dashboard.LoadDasboardAsync(argument)` methods")]
+
+      public class RevealUtility
+    content.vb: >-
+      <Obsolete("Please create Dashboards using the `new Dashboard(argument)` or `Dashboard.LoadDasboardAsync(argument)` methods")>
+
+      Public Class RevealUtility
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please create Dashboards using the `new Dashboard(argument)` or `Dashboard.LoadDasboardAsync(argument)` methods
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RevealUtility.LoadDashboard(System.IO.Stream)
+  commentId: M:Reveal.Sdk.RevealUtility.LoadDashboard(System.IO.Stream)
+  id: LoadDashboard(System.IO.Stream)
+  parent: Reveal.Sdk.RevealUtility
+  langs:
+  - csharp
+  - vb
+  name: LoadDashboard(Stream)
+  nameWithType: RevealUtility.LoadDashboard(Stream)
+  fullName: Reveal.Sdk.RevealUtility.LoadDashboard(System.IO.Stream)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nLoads a dashboard from the specified stream, asynchronous method that returns the loaded dashboard.\n"
+  example:
+  - >-
+    <pre><code>             public partial class MainWindow : Window
+                 {
+                     public MainWindow()
+                     {
+                         InitializeComponent();
+                         this.Loaded += MainWindow_Loaded;
+                     }
+
+                     private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+                     {
+                         var path = @&quot;..\..\Sales.rdash&quot;;
+
+                         var revealView = new RevealView();
+                         using (var fileStream = File.OpenRead(path))
+                         {
+                             var dashboard = await RevealUtility.LoadDashboard(fileStream);
+                             var settings = new RevealSettings(dashboard);
+                             revealView.Settings = settings;
+                         }
+
+                         Grid grid = this.Content as Grid;
+                         grid.Children.Add(revealView);
+                     }
+                 }</code></pre>
+  syntax:
+    content: public static Task<RVDashboard> LoadDashboard(Stream data)
+    parameters:
+    - id: data
+      type: System.IO.Stream
+      description: The stream with rdash file format
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+      description: The dashboard object
+    content.vb: Public Shared Function LoadDashboard(data As Stream) As Task(Of RVDashboard)
+  overload: Reveal.Sdk.RevealUtility.LoadDashboard*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealUtility.LoadDashboardSync(System.IO.Stream)
+  commentId: M:Reveal.Sdk.RevealUtility.LoadDashboardSync(System.IO.Stream)
+  id: LoadDashboardSync(System.IO.Stream)
+  parent: Reveal.Sdk.RevealUtility
+  langs:
+  - csharp
+  - vb
+  name: LoadDashboardSync(Stream)
+  nameWithType: RevealUtility.LoadDashboardSync(Stream)
+  fullName: Reveal.Sdk.RevealUtility.LoadDashboardSync(System.IO.Stream)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nLoads a dashboard from the specified stream, synchronous method that returns the loaded dashboard.\n"
+  syntax:
+    content: public static RVDashboard LoadDashboardSync(Stream data)
+    parameters:
+    - id: data
+      type: System.IO.Stream
+      description: The stream with rdash file format
+    return:
+      type: Reveal.Sdk.RVDashboard
+      description: The dashboard object
+    content.vb: Public Shared Function LoadDashboardSync(data As Stream) As RVDashboard
+  overload: Reveal.Sdk.RevealUtility.LoadDashboardSync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealUtility.GetFilterValues(Reveal.Sdk.RVDashboard,Reveal.Sdk.RVDashboardFilter,System.Threading.CancellationToken)
+  commentId: M:Reveal.Sdk.RevealUtility.GetFilterValues(Reveal.Sdk.RVDashboard,Reveal.Sdk.RVDashboardFilter,System.Threading.CancellationToken)
+  id: GetFilterValues(Reveal.Sdk.RVDashboard,Reveal.Sdk.RVDashboardFilter,System.Threading.CancellationToken)
+  parent: Reveal.Sdk.RevealUtility
+  langs:
+  - csharp
+  - vb
+  name: GetFilterValues(RVDashboard, RVDashboardFilter, CancellationToken)
+  nameWithType: RevealUtility.GetFilterValues(RVDashboard, RVDashboardFilter, CancellationToken)
+  fullName: Reveal.Sdk.RevealUtility.GetFilterValues(Reveal.Sdk.RVDashboard, Reveal.Sdk.RVDashboardFilter, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nMethod used to get the possible values for a given filter. For a Country filter, this will return the list of all countries,\nnot only the selected ones. \nYou can use this method to create your own UI to select filter values.\n"
+  syntax:
+    content: public static Task<IEnumerable<RVFilterValue>> GetFilterValues(RVDashboard dashboard, RVDashboardFilter filter, CancellationToken cancellationToken = default(CancellationToken))
+    parameters:
+    - id: dashboard
+      type: Reveal.Sdk.RVDashboard
+      description: The dashboard object obtained with <xref href="Reveal.Sdk.RevealUtility.LoadDashboard(System.IO.Stream)" data-throw-if-not-resolved="false"></xref> or <xref href="Reveal.Sdk.RevealUtility.LoadDashboardSync(System.IO.Stream)" data-throw-if-not-resolved="false"></xref>
+    - id: filter
+      type: Reveal.Sdk.RVDashboardFilter
+      description: "The filter to return the values for, a member of the collection <xref href=\"Reveal.Sdk.RVDashboard.Filters\" data-throw-if-not-resolved=\"false\"></xref>, \nmight be obtained also using <see cref=\"!:RVDashboard.GetFilterByTitle(string)\"></see> or <see cref=\"!:RVDashboard.GetFilterById(string)\"></see>"
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Optional parameter that can be used to cancel the async operation
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Reveal.Sdk.RVFilterValue}}
+      description: The list of values for the given filter
+    content.vb: Public Shared Function GetFilterValues(dashboard As RVDashboard, filter As RVDashboardFilter, cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of RVFilterValue))
+  overload: Reveal.Sdk.RevealUtility.GetFilterValues*
+  seealso:
+  - linkId: Reveal.Sdk.RVFilterValue
+    commentId: T:Reveal.Sdk.RVFilterValue
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealUtility.#ctor
+  commentId: M:Reveal.Sdk.RevealUtility.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RevealUtility
+  langs:
+  - csharp
+  - vb
+  name: RevealUtility()
+  nameWithType: RevealUtility.RevealUtility()
+  fullName: Reveal.Sdk.RevealUtility.RevealUtility()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RevealUtility()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RevealUtility.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RevealUtility.LoadDashboard*
+  commentId: Overload:Reveal.Sdk.RevealUtility.LoadDashboard
+  isExternal: true
+  name: LoadDashboard
+  nameWithType: RevealUtility.LoadDashboard
+  fullName: Reveal.Sdk.RevealUtility.LoadDashboard
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+  commentId: T:System.Threading.Tasks.Task{Reveal.Sdk.RVDashboard}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<RVDashboard>
+  nameWithType: Task<RVDashboard>
+  fullName: System.Threading.Tasks.Task<Reveal.Sdk.RVDashboard>
+  nameWithType.vb: Task(Of RVDashboard)
+  fullName.vb: System.Threading.Tasks.Task(Of Reveal.Sdk.RVDashboard)
+  name.vb: Task(Of RVDashboard)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVDashboard
+    name: RVDashboard
+    nameWithType: RVDashboard
+    fullName: Reveal.Sdk.RVDashboard
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVDashboard
+    name: RVDashboard
+    nameWithType: RVDashboard
+    fullName: Reveal.Sdk.RVDashboard
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Reveal.Sdk.RevealUtility.LoadDashboardSync*
+  commentId: Overload:Reveal.Sdk.RevealUtility.LoadDashboardSync
+  isExternal: true
+  name: LoadDashboardSync
+  nameWithType: RevealUtility.LoadDashboardSync
+  fullName: Reveal.Sdk.RevealUtility.LoadDashboardSync
+- uid: Reveal.Sdk.RVDashboard
+  commentId: T:Reveal.Sdk.RVDashboard
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboard
+  nameWithType: RVDashboard
+  fullName: Reveal.Sdk.RVDashboard
+- uid: Reveal.Sdk.RevealUtility.GetFilterValues*
+  commentId: Overload:Reveal.Sdk.RevealUtility.GetFilterValues
+  isExternal: true
+  name: GetFilterValues
+  nameWithType: RevealUtility.GetFilterValues
+  fullName: Reveal.Sdk.RevealUtility.GetFilterValues
+- uid: Reveal.Sdk.RVFilterValue
+  commentId: T:Reveal.Sdk.RVFilterValue
+  isExternal: true
+  name: RVFilterValue
+  nameWithType: RVFilterValue
+  fullName: Reveal.Sdk.RVFilterValue
+- uid: Reveal.Sdk.RVDashboardFilter
+  commentId: T:Reveal.Sdk.RVDashboardFilter
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardFilter
+  nameWithType: RVDashboardFilter
+  fullName: Reveal.Sdk.RVDashboardFilter
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Reveal.Sdk.RVFilterValue}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Reveal.Sdk.RVFilterValue}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IEnumerable<RVFilterValue>>
+  nameWithType: Task<IEnumerable<RVFilterValue>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Reveal.Sdk.RVFilterValue>>
+  nameWithType.vb: Task(Of IEnumerable(Of RVFilterValue))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVFilterValue))
+  name.vb: Task(Of IEnumerable(Of RVFilterValue))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVFilterValue
+    name: RVFilterValue
+    nameWithType: RVFilterValue
+    fullName: Reveal.Sdk.RVFilterValue
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVFilterValue
+    name: RVFilterValue
+    nameWithType: RVFilterValue
+    fullName: Reveal.Sdk.RVFilterValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Reveal.Sdk.RevealUtility.#ctor*
+  commentId: Overload:Reveal.Sdk.RevealUtility.#ctor
+  isExternal: true
+  name: RevealUtility
+  nameWithType: RevealUtility.RevealUtility
+  fullName: Reveal.Sdk.RevealUtility.RevealUtility

@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSchemaColumnType
+  commentId: T:Reveal.Sdk.RVSchemaColumnType
+  id: RVSchemaColumnType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSchemaColumnType.Date
+  - Reveal.Sdk.RVSchemaColumnType.DateTime
+  - Reveal.Sdk.RVSchemaColumnType.Number
+  - Reveal.Sdk.RVSchemaColumnType.Text
+  - Reveal.Sdk.RVSchemaColumnType.Time
+  - Reveal.Sdk.RVSchemaColumnType.value__
+  langs:
+  - csharp
+  - vb
+  name: RVSchemaColumnType
+  nameWithType: RVSchemaColumnType
+  fullName: Reveal.Sdk.RVSchemaColumnType
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe list of data types supported by Reveal\n"
+  syntax:
+    content: 'public sealed class RVSchemaColumnType : Enum'
+    content.vb: >-
+      Public NotInheritable Class RVSchemaColumnType
+          Inherits
+
+           Enum
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Reveal.Sdk.RVSchemaColumnType.value__
+  commentId: F:Reveal.Sdk.RVSchemaColumnType.value__
+  id: value__
+  parent: Reveal.Sdk.RVSchemaColumnType
+  langs:
+  - csharp
+  - vb
+  name: value__
+  nameWithType: RVSchemaColumnType.value__
+  fullName: Reveal.Sdk.RVSchemaColumnType.value__
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int value__
+    return:
+      type: System.Int32
+    content.vb: Public value__ As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSchemaColumnType.Text
+  commentId: F:Reveal.Sdk.RVSchemaColumnType.Text
+  id: Text
+  parent: Reveal.Sdk.RVSchemaColumnType
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: RVSchemaColumnType.Text
+  fullName: Reveal.Sdk.RVSchemaColumnType.Text
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nString data type\n"
+  syntax:
+    content: public const RVSchemaColumnType Text
+    return:
+      type: Reveal.Sdk.RVSchemaColumnType
+    content.vb: Public Const Text As RVSchemaColumnType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSchemaColumnType.Number
+  commentId: F:Reveal.Sdk.RVSchemaColumnType.Number
+  id: Number
+  parent: Reveal.Sdk.RVSchemaColumnType
+  langs:
+  - csharp
+  - vb
+  name: Number
+  nameWithType: RVSchemaColumnType.Number
+  fullName: Reveal.Sdk.RVSchemaColumnType.Number
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nNumeric data type, including integer and floating-point values.\n"
+  syntax:
+    content: public const RVSchemaColumnType Number
+    return:
+      type: Reveal.Sdk.RVSchemaColumnType
+    content.vb: Public Const Number As RVSchemaColumnType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSchemaColumnType.DateTime
+  commentId: F:Reveal.Sdk.RVSchemaColumnType.DateTime
+  id: DateTime
+  parent: Reveal.Sdk.RVSchemaColumnType
+  langs:
+  - csharp
+  - vb
+  name: DateTime
+  nameWithType: RVSchemaColumnType.DateTime
+  fullName: Reveal.Sdk.RVSchemaColumnType.DateTime
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nDate including time\n"
+  syntax:
+    content: public const RVSchemaColumnType DateTime
+    return:
+      type: Reveal.Sdk.RVSchemaColumnType
+    content.vb: Public Const DateTime As RVSchemaColumnType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSchemaColumnType.Date
+  commentId: F:Reveal.Sdk.RVSchemaColumnType.Date
+  id: Date
+  parent: Reveal.Sdk.RVSchemaColumnType
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: RVSchemaColumnType.Date
+  fullName: Reveal.Sdk.RVSchemaColumnType.Date
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOnly date data type\n"
+  syntax:
+    content: public const RVSchemaColumnType Date
+    return:
+      type: Reveal.Sdk.RVSchemaColumnType
+    content.vb: Public Const Date As RVSchemaColumnType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVSchemaColumnType.Time
+  commentId: F:Reveal.Sdk.RVSchemaColumnType.Time
+  id: Time
+  parent: Reveal.Sdk.RVSchemaColumnType
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: RVSchemaColumnType.Time
+  fullName: Reveal.Sdk.RVSchemaColumnType.Time
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOnly time data type\n"
+  syntax:
+    content: public const RVSchemaColumnType Time
+    return:
+      type: Reveal.Sdk.RVSchemaColumnType
+    content.vb: Public Const Time As RVSchemaColumnType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVSchemaColumnType
+  commentId: T:Reveal.Sdk.RVSchemaColumnType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSchemaColumnType
+  nameWithType: RVSchemaColumnType
+  fullName: Reveal.Sdk.RVSchemaColumnType

@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDataSourceItemsFilter
+  commentId: T:Reveal.Sdk.RVDataSourceItemsFilter
+  id: RVDataSourceItemsFilter
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDataSourceItemsFilter.#ctor(System.Object,System.IntPtr)
+  - Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke(Reveal.Sdk.RVDataSourceItem,System.AsyncCallback,System.Object)
+  - Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke(System.IAsyncResult)
+  - Reveal.Sdk.RVDataSourceItemsFilter.Invoke(Reveal.Sdk.RVDataSourceItem)
+  langs:
+  - csharp
+  - vb
+  name: RVDataSourceItemsFilter
+  nameWithType: RVDataSourceItemsFilter
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter
+  type: Delegate
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public delegate bool RVDataSourceItemsFilter(RVDataSourceItem dataSourceItem);
+    parameters:
+    - id: dataSourceItem
+      type: Reveal.Sdk.RVDataSourceItem
+    return:
+      type: System.Boolean
+    content.vb: Public Delegate Function RVDataSourceItemsFilter(dataSourceItem As RVDataSourceItem) As Boolean
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.#ctor(System.Object,System.IntPtr)
+  commentId: M:Reveal.Sdk.RVDataSourceItemsFilter.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: Reveal.Sdk.RVDataSourceItemsFilter
+  langs:
+  - csharp
+  - vb
+  name: RVDataSourceItemsFilter(Object, IntPtr)
+  nameWithType: RVDataSourceItemsFilter.RVDataSourceItemsFilter(Object, IntPtr)
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.RVDataSourceItemsFilter(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVDataSourceItemsFilter(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: Reveal.Sdk.RVDataSourceItemsFilter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.Invoke(Reveal.Sdk.RVDataSourceItem)
+  commentId: M:Reveal.Sdk.RVDataSourceItemsFilter.Invoke(Reveal.Sdk.RVDataSourceItem)
+  id: Invoke(Reveal.Sdk.RVDataSourceItem)
+  parent: Reveal.Sdk.RVDataSourceItemsFilter
+  langs:
+  - csharp
+  - vb
+  name: Invoke(RVDataSourceItem)
+  nameWithType: RVDataSourceItemsFilter.Invoke(RVDataSourceItem)
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.Invoke(Reveal.Sdk.RVDataSourceItem)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual bool Invoke(RVDataSourceItem dataSourceItem)
+    parameters:
+    - id: dataSourceItem
+      type: Reveal.Sdk.RVDataSourceItem
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Invoke(dataSourceItem As RVDataSourceItem) As Boolean
+  overload: Reveal.Sdk.RVDataSourceItemsFilter.Invoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke(Reveal.Sdk.RVDataSourceItem,System.AsyncCallback,System.Object)
+  commentId: M:Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke(Reveal.Sdk.RVDataSourceItem,System.AsyncCallback,System.Object)
+  id: BeginInvoke(Reveal.Sdk.RVDataSourceItem,System.AsyncCallback,System.Object)
+  parent: Reveal.Sdk.RVDataSourceItemsFilter
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(RVDataSourceItem, AsyncCallback, Object)
+  nameWithType: RVDataSourceItemsFilter.BeginInvoke(RVDataSourceItem, AsyncCallback, Object)
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke(Reveal.Sdk.RVDataSourceItem, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(RVDataSourceItem dataSourceItem, AsyncCallback callback, object object)
+    parameters:
+    - id: dataSourceItem
+      type: Reveal.Sdk.RVDataSourceItem
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(dataSourceItem As RVDataSourceItem, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke(System.IAsyncResult)
+  commentId: M:Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: Reveal.Sdk.RVDataSourceItemsFilter
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: RVDataSourceItemsFilter.EndInvoke(IAsyncResult)
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual bool EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function EndInvoke(result As IAsyncResult) As Boolean
+  overload: Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.#ctor*
+  commentId: Overload:Reveal.Sdk.RVDataSourceItemsFilter.#ctor
+  isExternal: true
+  name: RVDataSourceItemsFilter
+  nameWithType: RVDataSourceItemsFilter.RVDataSourceItemsFilter
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.RVDataSourceItemsFilter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.Invoke*
+  commentId: Overload:Reveal.Sdk.RVDataSourceItemsFilter.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: RVDataSourceItemsFilter.Invoke
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.Invoke
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke*
+  commentId: Overload:Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: RVDataSourceItemsFilter.BeginInvoke
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke*
+  commentId: Overload:Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: RVDataSourceItemsFilter.EndInvoke
+  fullName: Reveal.Sdk.RVDataSourceItemsFilter.EndInvoke

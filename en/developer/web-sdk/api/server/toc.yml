@@ -1,0 +1,4 @@
+- name: Infragistics.Reveal.SDK.Server
+  href: Infragistics.Reveal.SDK.Server/toc.yml
+- name: Infragistics.Reveal.SDK.WebAPI
+  href: Infragistics.Reveal.SDK.WebAPI/toc.yml

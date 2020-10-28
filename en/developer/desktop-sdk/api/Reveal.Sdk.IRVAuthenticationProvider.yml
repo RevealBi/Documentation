@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVAuthenticationProvider
+  commentId: T:Reveal.Sdk.IRVAuthenticationProvider
+  id: IRVAuthenticationProvider
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync(Reveal.Sdk.RVDashboardDataSource)
+  langs:
+  - csharp
+  - vb
+  name: IRVAuthenticationProvider
+  nameWithType: IRVAuthenticationProvider
+  fullName: Reveal.Sdk.IRVAuthenticationProvider
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe interface that must be implemented and set to <see cref=\"!:RevealView.AuthenticationProvider\"></see>,\nthat returns credentials to be used when getting data from a given data source.\n"
+  syntax:
+    content: public interface IRVAuthenticationProvider
+    content.vb: Public Interface IRVAuthenticationProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync(Reveal.Sdk.RVDashboardDataSource)
+  commentId: M:Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync(Reveal.Sdk.RVDashboardDataSource)
+  id: ResolveCredentialsAsync(Reveal.Sdk.RVDashboardDataSource)
+  parent: Reveal.Sdk.IRVAuthenticationProvider
+  langs:
+  - csharp
+  - vb
+  name: ResolveCredentialsAsync(RVDashboardDataSource)
+  nameWithType: IRVAuthenticationProvider.ResolveCredentialsAsync(RVDashboardDataSource)
+  fullName: Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync(Reveal.Sdk.RVDashboardDataSource)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns the credentials to use for this data source, <code>null</code> means there are no credentials associated and the data loading process will fail.\n"
+  syntax:
+    content: Task<IRVDataSourceCredential> ResolveCredentialsAsync(RVDashboardDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVDashboardDataSource
+      description: The data source to return credentials for
+    return:
+      type: System.Threading.Tasks.Task{Reveal.Sdk.IRVDataSourceCredential}
+      description: The credentials to use for this data source
+    content.vb: Function ResolveCredentialsAsync(dataSource As RVDashboardDataSource) As Task(Of IRVDataSourceCredential)
+  overload: Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync*
+  commentId: Overload:Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync
+  isExternal: true
+  name: ResolveCredentialsAsync
+  nameWithType: IRVAuthenticationProvider.ResolveCredentialsAsync
+  fullName: Reveal.Sdk.IRVAuthenticationProvider.ResolveCredentialsAsync
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: System.Threading.Tasks.Task{Reveal.Sdk.IRVDataSourceCredential}
+  commentId: T:System.Threading.Tasks.Task{Reveal.Sdk.IRVDataSourceCredential}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IRVDataSourceCredential>
+  nameWithType: Task<IRVDataSourceCredential>
+  fullName: System.Threading.Tasks.Task<Reveal.Sdk.IRVDataSourceCredential>
+  nameWithType.vb: Task(Of IRVDataSourceCredential)
+  fullName.vb: System.Threading.Tasks.Task(Of Reveal.Sdk.IRVDataSourceCredential)
+  name.vb: Task(Of IRVDataSourceCredential)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.IRVDataSourceCredential
+    name: IRVDataSourceCredential
+    nameWithType: IRVDataSourceCredential
+    fullName: Reveal.Sdk.IRVDataSourceCredential
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.IRVDataSourceCredential
+    name: IRVDataSourceCredential
+    nameWithType: IRVDataSourceCredential
+    fullName: Reveal.Sdk.IRVDataSourceCredential
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

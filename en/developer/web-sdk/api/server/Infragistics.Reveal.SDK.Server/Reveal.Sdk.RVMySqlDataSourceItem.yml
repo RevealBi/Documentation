@@ -1,0 +1,185 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVMySqlDataSourceItem
+  commentId: T:Reveal.Sdk.RVMySqlDataSourceItem
+  id: RVMySqlDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVMySqlDataSourceItem.#ctor(Reveal.Sdk.RVMySqlDataSource)
+  langs:
+  - csharp
+  - vb
+  name: RVMySqlDataSourceItem
+  nameWithType: RVMySqlDataSourceItem
+  fullName: Reveal.Sdk.RVMySqlDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nMySQL data source item\n"
+  syntax:
+    content: 'public class RVMySqlDataSourceItem : RVSqlPDSDataSourceItem'
+    content.vb: >-
+      Public Class RVMySqlDataSourceItem
+          Inherits RVSqlPDSDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  - Reveal.Sdk.RVSqlBasedDataSourceItem
+  - Reveal.Sdk.RVSqlPDSDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVSqlPDSDataSourceItem.ProcessDataOnServer
+  - Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+  - Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+  - Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVMySqlDataSourceItem.#ctor(Reveal.Sdk.RVMySqlDataSource)
+  commentId: M:Reveal.Sdk.RVMySqlDataSourceItem.#ctor(Reveal.Sdk.RVMySqlDataSource)
+  id: '#ctor(Reveal.Sdk.RVMySqlDataSource)'
+  parent: Reveal.Sdk.RVMySqlDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVMySqlDataSourceItem(RVMySqlDataSource)
+  nameWithType: RVMySqlDataSourceItem.RVMySqlDataSourceItem(RVMySqlDataSource)
+  fullName: Reveal.Sdk.RVMySqlDataSourceItem.RVMySqlDataSourceItem(Reveal.Sdk.RVMySqlDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVMySqlDataSourceItem(RVMySqlDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVMySqlDataSource
+    content.vb: Public Sub New(dataSource As RVMySqlDataSource)
+  overload: Reveal.Sdk.RVMySqlDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem
+  commentId: T:Reveal.Sdk.RVSqlBasedDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSqlBasedDataSourceItem
+  nameWithType: RVSqlBasedDataSourceItem
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem
+- uid: Reveal.Sdk.RVSqlPDSDataSourceItem
+  commentId: T:Reveal.Sdk.RVSqlPDSDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSqlPDSDataSourceItem
+  nameWithType: RVSqlPDSDataSourceItem
+  fullName: Reveal.Sdk.RVSqlPDSDataSourceItem
+- uid: Reveal.Sdk.RVSqlPDSDataSourceItem.ProcessDataOnServer
+  commentId: P:Reveal.Sdk.RVSqlPDSDataSourceItem.ProcessDataOnServer
+  parent: Reveal.Sdk.RVSqlPDSDataSourceItem
+  isExternal: true
+  name: ProcessDataOnServer
+  nameWithType: RVSqlPDSDataSourceItem.ProcessDataOnServer
+  fullName: Reveal.Sdk.RVSqlPDSDataSourceItem.ProcessDataOnServer
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+  parent: Reveal.Sdk.RVSqlBasedDataSourceItem
+  isExternal: true
+  name: Database
+  nameWithType: RVSqlBasedDataSourceItem.Database
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+  parent: Reveal.Sdk.RVSqlBasedDataSourceItem
+  isExternal: true
+  name: Table
+  nameWithType: RVSqlBasedDataSourceItem.Table
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+  parent: Reveal.Sdk.RVSqlBasedDataSourceItem
+  isExternal: true
+  name: CustomQuery
+  nameWithType: RVSqlBasedDataSourceItem.CustomQuery
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVMySqlDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVMySqlDataSourceItem.#ctor
+  isExternal: true
+  name: RVMySqlDataSourceItem
+  nameWithType: RVMySqlDataSourceItem.RVMySqlDataSourceItem
+  fullName: Reveal.Sdk.RVMySqlDataSourceItem.RVMySqlDataSourceItem
+- uid: Reveal.Sdk.RVMySqlDataSource
+  commentId: T:Reveal.Sdk.RVMySqlDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVMySqlDataSource
+  nameWithType: RVMySqlDataSource
+  fullName: Reveal.Sdk.RVMySqlDataSource

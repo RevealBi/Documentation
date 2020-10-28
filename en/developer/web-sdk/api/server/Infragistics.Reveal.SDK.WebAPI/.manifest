@@ -1,0 +1,19 @@
+{
+  "Reveal.Sdk": "Reveal.Sdk.yml",
+  "Reveal.Sdk.DIExtensions": "Reveal.Sdk.DIExtensions.yml",
+  "Reveal.Sdk.DIExtensions.AddReveal(Microsoft.Extensions.DependencyInjection.IMvcBuilder)": "Reveal.Sdk.DIExtensions.yml",
+  "Reveal.Sdk.DIExtensions.AddRevealServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Reveal.Sdk.RevealEmbedSettings,Reveal.Sdk.IRevealSdkContext,Reveal.Sdk.IRevealUserContext)": "Reveal.Sdk.DIExtensions.yml",
+  "Reveal.Sdk.IRevealSdkContext": "Reveal.Sdk.IRevealSdkContext.yml",
+  "Reveal.Sdk.IRevealSdkContext.AuthenticationProvider": "Reveal.Sdk.IRevealSdkContext.yml",
+  "Reveal.Sdk.IRevealSdkContext.DataProvider": "Reveal.Sdk.IRevealSdkContext.yml",
+  "Reveal.Sdk.IRevealSdkContext.DataSourceProvider": "Reveal.Sdk.IRevealSdkContext.yml",
+  "Reveal.Sdk.IRevealSdkContext.GetDashboardAsync(System.String)": "Reveal.Sdk.IRevealSdkContext.yml",
+  "Reveal.Sdk.IRevealSdkContext.SaveDashboardAsync(System.String,System.String,System.IO.Stream)": "Reveal.Sdk.IRevealSdkContext.yml",
+  "Reveal.Sdk.IRevealUserContext": "Reveal.Sdk.IRevealUserContext.yml",
+  "Reveal.Sdk.IRevealUserContext.GetUserId(System.Security.Claims.ClaimsPrincipal)": "Reveal.Sdk.IRevealUserContext.yml",
+  "Reveal.Sdk.RevealEmbedSettings": "Reveal.Sdk.RevealEmbedSettings.yml",
+  "Reveal.Sdk.RevealEmbedSettings.#ctor": "Reveal.Sdk.RevealEmbedSettings.yml",
+  "Reveal.Sdk.RevealEmbedSettings.CachePath": "Reveal.Sdk.RevealEmbedSettings.yml",
+  "Reveal.Sdk.RevealEmbedSettings.DataCachePath": "Reveal.Sdk.RevealEmbedSettings.yml",
+  "Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath": "Reveal.Sdk.RevealEmbedSettings.yml"
+}

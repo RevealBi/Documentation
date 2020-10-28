@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVLocalizationService
+  commentId: T:Reveal.Sdk.IRVLocalizationService
+  id: IRVLocalizationService
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField(System.String,Reveal.Sdk.RVDashboardDataType,Reveal.Sdk.RVFormattingSpec,System.Boolean)
+  - Reveal.Sdk.IRVLocalizationService.GetLocalizedString(System.String,Reveal.Sdk.RVLocalizationElementType)
+  langs:
+  - csharp
+  - vb
+  name: IRVLocalizationService
+  nameWithType: IRVLocalizationService
+  fullName: Reveal.Sdk.IRVLocalizationService
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe interface that must be implemented and returned by <xref href=\"Reveal.Sdk.IRVLocalizationProvider\" data-throw-if-not-resolved=\"false\"></xref> in order to be \nable to localize dashboard data and modify the formattings settings for a specific fields.\n"
+  syntax:
+    content: public interface IRVLocalizationService
+    content.vb: Public Interface IRVLocalizationService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVLocalizationService.GetLocalizedString(System.String,Reveal.Sdk.RVLocalizationElementType)
+  commentId: M:Reveal.Sdk.IRVLocalizationService.GetLocalizedString(System.String,Reveal.Sdk.RVLocalizationElementType)
+  id: GetLocalizedString(System.String,Reveal.Sdk.RVLocalizationElementType)
+  parent: Reveal.Sdk.IRVLocalizationService
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedString(String, RVLocalizationElementType)
+  nameWithType: IRVLocalizationService.GetLocalizedString(String, RVLocalizationElementType)
+  fullName: Reveal.Sdk.IRVLocalizationService.GetLocalizedString(System.String, Reveal.Sdk.RVLocalizationElementType)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns the localized string for a given text and element type.\n"
+  syntax:
+    content: string GetLocalizedString(string originalValue, RVLocalizationElementType elementType)
+    parameters:
+    - id: originalValue
+      type: System.String
+      description: The original text of the element
+    - id: elementType
+      type: Reveal.Sdk.RVLocalizationElementType
+      description: The type of the element
+    return:
+      type: System.String
+      description: The localized version of the text
+    content.vb: Function GetLocalizedString(originalValue As String, elementType As RVLocalizationElementType) As String
+  overload: Reveal.Sdk.IRVLocalizationService.GetLocalizedString*
+- uid: Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField(System.String,Reveal.Sdk.RVDashboardDataType,Reveal.Sdk.RVFormattingSpec,System.Boolean)
+  commentId: M:Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField(System.String,Reveal.Sdk.RVDashboardDataType,Reveal.Sdk.RVFormattingSpec,System.Boolean)
+  id: GetFormattingSettingsForField(System.String,Reveal.Sdk.RVDashboardDataType,Reveal.Sdk.RVFormattingSpec,System.Boolean)
+  parent: Reveal.Sdk.IRVLocalizationService
+  langs:
+  - csharp
+  - vb
+  name: GetFormattingSettingsForField(String, RVDashboardDataType, RVFormattingSpec, Boolean)
+  nameWithType: IRVLocalizationService.GetFormattingSettingsForField(String, RVDashboardDataType, RVFormattingSpec, Boolean)
+  fullName: Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField(System.String, Reveal.Sdk.RVDashboardDataType, Reveal.Sdk.RVFormattingSpec, System.Boolean)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nReturns the formatting settings to be used for specific field and parameters.\n"
+  syntax:
+    content: RVFormattingSpec GetFormattingSettingsForField(string fieldName, RVDashboardDataType dataType, RVFormattingSpec currentSettings, bool isAggregated)
+    parameters:
+    - id: fieldName
+      type: System.String
+      description: The name of the field
+    - id: dataType
+      type: Reveal.Sdk.RVDashboardDataType
+      description: The data type of the field
+    - id: currentSettings
+      type: Reveal.Sdk.RVFormattingSpec
+      description: The original formatting settings for the field
+    - id: isAggregated
+      type: System.Boolean
+      description: The flag indicating if the passed field has aggregation
+    return:
+      type: Reveal.Sdk.RVFormattingSpec
+      description: The new formatting settings
+    content.vb: Function GetFormattingSettingsForField(fieldName As String, dataType As RVDashboardDataType, currentSettings As RVFormattingSpec, isAggregated As Boolean) As RVFormattingSpec
+  overload: Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVLocalizationService.GetLocalizedString*
+  commentId: Overload:Reveal.Sdk.IRVLocalizationService.GetLocalizedString
+  isExternal: true
+  name: GetLocalizedString
+  nameWithType: IRVLocalizationService.GetLocalizedString
+  fullName: Reveal.Sdk.IRVLocalizationService.GetLocalizedString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVLocalizationElementType
+  commentId: T:Reveal.Sdk.RVLocalizationElementType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVLocalizationElementType
+  nameWithType: RVLocalizationElementType
+  fullName: Reveal.Sdk.RVLocalizationElementType
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField*
+  commentId: Overload:Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField
+  isExternal: true
+  name: GetFormattingSettingsForField
+  nameWithType: IRVLocalizationService.GetFormattingSettingsForField
+  fullName: Reveal.Sdk.IRVLocalizationService.GetFormattingSettingsForField
+- uid: Reveal.Sdk.RVDashboardDataType
+  commentId: T:Reveal.Sdk.RVDashboardDataType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataType
+  nameWithType: RVDashboardDataType
+  fullName: Reveal.Sdk.RVDashboardDataType
+- uid: Reveal.Sdk.RVFormattingSpec
+  commentId: T:Reveal.Sdk.RVFormattingSpec
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVFormattingSpec
+  nameWithType: RVFormattingSpec
+  fullName: Reveal.Sdk.RVFormattingSpec
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

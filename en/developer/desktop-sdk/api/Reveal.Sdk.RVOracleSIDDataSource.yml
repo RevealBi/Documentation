@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVOracleSIDDataSource
+  commentId: T:Reveal.Sdk.RVOracleSIDDataSource
+  id: RVOracleSIDDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVOracleSIDDataSource.#ctor
+  - Reveal.Sdk.RVOracleSIDDataSource.SID
+  langs:
+  - csharp
+  - vb
+  name: RVOracleSIDDataSource
+  nameWithType: RVOracleSIDDataSource
+  fullName: Reveal.Sdk.RVOracleSIDDataSource
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nOracle data source, it adds the SID property to the base properties in <xref href=\"Reveal.Sdk.RVSqlBasedDataSource\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: 'public class RVOracleSIDDataSource : RVOracleDataSource'
+    content.vb: >-
+      Public Class RVOracleSIDDataSource
+          Inherits RVOracleDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  - Reveal.Sdk.RVSqlBasedDataSource
+  - Reveal.Sdk.RVOracleDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVOracleDataSource.Database
+  - Reveal.Sdk.RVSqlBasedDataSource.Host
+  - Reveal.Sdk.RVSqlBasedDataSource.Port
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVOracleSIDDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVOracleSIDDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVOracleSIDDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVOracleSIDDataSource()
+  nameWithType: RVOracleSIDDataSource.RVOracleSIDDataSource()
+  fullName: Reveal.Sdk.RVOracleSIDDataSource.RVOracleSIDDataSource()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVOracleSIDDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVOracleSIDDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVOracleSIDDataSource.SID
+  commentId: P:Reveal.Sdk.RVOracleSIDDataSource.SID
+  id: SID
+  parent: Reveal.Sdk.RVOracleSIDDataSource
+  langs:
+  - csharp
+  - vb
+  name: SID
+  nameWithType: RVOracleSIDDataSource.SID
+  fullName: Reveal.Sdk.RVOracleSIDDataSource.SID
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public string SID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SID As String
+  overload: Reveal.Sdk.RVOracleSIDDataSource.SID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVSqlBasedDataSource
+  commentId: T:Reveal.Sdk.RVSqlBasedDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSqlBasedDataSource
+  nameWithType: RVSqlBasedDataSource
+  fullName: Reveal.Sdk.RVSqlBasedDataSource
+- uid: Reveal.Sdk.RVOracleDataSource
+  commentId: T:Reveal.Sdk.RVOracleDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVOracleDataSource
+  nameWithType: RVOracleDataSource
+  fullName: Reveal.Sdk.RVOracleDataSource
+- uid: Reveal.Sdk.RVOracleDataSource.Database
+  commentId: P:Reveal.Sdk.RVOracleDataSource.Database
+  parent: Reveal.Sdk.RVOracleDataSource
+  isExternal: true
+  name: Database
+  nameWithType: RVOracleDataSource.Database
+  fullName: Reveal.Sdk.RVOracleDataSource.Database
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Host
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Host
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  isExternal: true
+  name: Host
+  nameWithType: RVSqlBasedDataSource.Host
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Host
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Port
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Port
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  isExternal: true
+  name: Port
+  nameWithType: RVSqlBasedDataSource.Port
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Port
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVOracleSIDDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVOracleSIDDataSource.#ctor
+  isExternal: true
+  name: RVOracleSIDDataSource
+  nameWithType: RVOracleSIDDataSource.RVOracleSIDDataSource
+  fullName: Reveal.Sdk.RVOracleSIDDataSource.RVOracleSIDDataSource
+- uid: Reveal.Sdk.RVOracleSIDDataSource.SID*
+  commentId: Overload:Reveal.Sdk.RVOracleSIDDataSource.SID
+  isExternal: true
+  name: SID
+  nameWithType: RVOracleSIDDataSource.SID
+  fullName: Reveal.Sdk.RVOracleSIDDataSource.SID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

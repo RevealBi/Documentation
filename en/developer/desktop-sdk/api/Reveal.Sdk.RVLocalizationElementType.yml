@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVLocalizationElementType
+  commentId: T:Reveal.Sdk.RVLocalizationElementType
+  id: RVLocalizationElementType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVLocalizationElementType.DashboardFilterTitle
+  - Reveal.Sdk.RVLocalizationElementType.DashboardTitle
+  - Reveal.Sdk.RVLocalizationElementType.FieldLabel
+  - Reveal.Sdk.RVLocalizationElementType.SummarizationFieldLabel
+  - Reveal.Sdk.RVLocalizationElementType.VisualizationTitle
+  langs:
+  - csharp
+  - vb
+  name: RVLocalizationElementType
+  nameWithType: RVLocalizationElementType
+  fullName: Reveal.Sdk.RVLocalizationElementType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of dashboard elements that are supported for localization\n"
+  syntax:
+    content: public enum RVLocalizationElementType
+    content.vb: Public Enum RVLocalizationElementType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVLocalizationElementType.DashboardTitle
+  commentId: F:Reveal.Sdk.RVLocalizationElementType.DashboardTitle
+  id: DashboardTitle
+  parent: Reveal.Sdk.RVLocalizationElementType
+  langs:
+  - csharp
+  - vb
+  name: DashboardTitle
+  nameWithType: RVLocalizationElementType.DashboardTitle
+  fullName: Reveal.Sdk.RVLocalizationElementType.DashboardTitle
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nTitle of a dashboard\n"
+  syntax:
+    content: DashboardTitle = 0
+    return:
+      type: Reveal.Sdk.RVLocalizationElementType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVLocalizationElementType.DashboardFilterTitle
+  commentId: F:Reveal.Sdk.RVLocalizationElementType.DashboardFilterTitle
+  id: DashboardFilterTitle
+  parent: Reveal.Sdk.RVLocalizationElementType
+  langs:
+  - csharp
+  - vb
+  name: DashboardFilterTitle
+  nameWithType: RVLocalizationElementType.DashboardFilterTitle
+  fullName: Reveal.Sdk.RVLocalizationElementType.DashboardFilterTitle
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nTitle of a dashboard filter\n"
+  syntax:
+    content: DashboardFilterTitle = 1
+    return:
+      type: Reveal.Sdk.RVLocalizationElementType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVLocalizationElementType.VisualizationTitle
+  commentId: F:Reveal.Sdk.RVLocalizationElementType.VisualizationTitle
+  id: VisualizationTitle
+  parent: Reveal.Sdk.RVLocalizationElementType
+  langs:
+  - csharp
+  - vb
+  name: VisualizationTitle
+  nameWithType: RVLocalizationElementType.VisualizationTitle
+  fullName: Reveal.Sdk.RVLocalizationElementType.VisualizationTitle
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nTitle of a visualization\n"
+  syntax:
+    content: VisualizationTitle = 2
+    return:
+      type: Reveal.Sdk.RVLocalizationElementType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVLocalizationElementType.FieldLabel
+  commentId: F:Reveal.Sdk.RVLocalizationElementType.FieldLabel
+  id: FieldLabel
+  parent: Reveal.Sdk.RVLocalizationElementType
+  langs:
+  - csharp
+  - vb
+  name: FieldLabel
+  nameWithType: RVLocalizationElementType.FieldLabel
+  fullName: Reveal.Sdk.RVLocalizationElementType.FieldLabel
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nLabel of a field\n"
+  syntax:
+    content: FieldLabel = 3
+    return:
+      type: Reveal.Sdk.RVLocalizationElementType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVLocalizationElementType.SummarizationFieldLabel
+  commentId: F:Reveal.Sdk.RVLocalizationElementType.SummarizationFieldLabel
+  id: SummarizationFieldLabel
+  parent: Reveal.Sdk.RVLocalizationElementType
+  langs:
+  - csharp
+  - vb
+  name: SummarizationFieldLabel
+  nameWithType: RVLocalizationElementType.SummarizationFieldLabel
+  fullName: Reveal.Sdk.RVLocalizationElementType.SummarizationFieldLabel
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nLabel of a summarization field\n"
+  syntax:
+    content: SummarizationFieldLabel = 4
+    return:
+      type: Reveal.Sdk.RVLocalizationElementType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVLocalizationElementType
+  commentId: T:Reveal.Sdk.RVLocalizationElementType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVLocalizationElementType
+  nameWithType: RVLocalizationElementType
+  fullName: Reveal.Sdk.RVLocalizationElementType

@@ -1,0 +1,502 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDataCell
+  commentId: T:Reveal.Sdk.RVDataCell
+  id: RVDataCell
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDataCell.ColumnLabel
+  - Reveal.Sdk.RVDataCell.ColumnName
+  - Reveal.Sdk.RVDataCell.FormattedValue
+  - Reveal.Sdk.RVDataCell.Value
+  langs:
+  - csharp
+  - vb
+  name: RVDataCell
+  nameWithType: RVDataCell
+  fullName: Reveal.Sdk.RVDataCell
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nClass representing a cell in the visualization data, includes column name, value and formatted value.\n"
+  syntax:
+    content: public class RVDataCell
+    content.vb: Public Class RVDataCell
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVDataCell.Value
+  commentId: P:Reveal.Sdk.RVDataCell.Value
+  id: Value
+  parent: Reveal.Sdk.RVDataCell
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RVDataCell.Value
+  fullName: Reveal.Sdk.RVDataCell.Value
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe value of the cell.\n"
+  syntax:
+    content: public object Value { get; }
+    parameters: []
+    return:
+      type: System.Object
+      description: The value of the cell
+    content.vb: Public ReadOnly Property Value As Object
+  overload: Reveal.Sdk.RVDataCell.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDataCell.FormattedValue
+  commentId: P:Reveal.Sdk.RVDataCell.FormattedValue
+  id: FormattedValue
+  parent: Reveal.Sdk.RVDataCell
+  langs:
+  - csharp
+  - vb
+  name: FormattedValue
+  nameWithType: RVDataCell.FormattedValue
+  fullName: Reveal.Sdk.RVDataCell.FormattedValue
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe formatted value of the cell.\n"
+  syntax:
+    content: public string FormattedValue { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The formatted value of the cell.
+    content.vb: Public ReadOnly Property FormattedValue As String
+  overload: Reveal.Sdk.RVDataCell.FormattedValue*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDataCell.ColumnName
+  commentId: P:Reveal.Sdk.RVDataCell.ColumnName
+  id: ColumnName
+  parent: Reveal.Sdk.RVDataCell
+  langs:
+  - csharp
+  - vb
+  name: ColumnName
+  nameWithType: RVDataCell.ColumnName
+  fullName: Reveal.Sdk.RVDataCell.ColumnName
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe name of the column this cell belongs to.\n"
+  syntax:
+    content: public string ColumnName { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the column this cell belongs to.
+    content.vb: Public ReadOnly Property ColumnName As String
+  overload: Reveal.Sdk.RVDataCell.ColumnName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDataCell.ColumnLabel
+  commentId: P:Reveal.Sdk.RVDataCell.ColumnLabel
+  id: ColumnLabel
+  parent: Reveal.Sdk.RVDataCell
+  langs:
+  - csharp
+  - vb
+  name: ColumnLabel
+  nameWithType: RVDataCell.ColumnLabel
+  fullName: Reveal.Sdk.RVDataCell.ColumnLabel
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe label of the column this cell belongs to.\n"
+  syntax:
+    content: public string ColumnLabel { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The label of the column this cell belongs to.
+    content.vb: Public ReadOnly Property ColumnLabel As String
+  overload: Reveal.Sdk.RVDataCell.ColumnLabel*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDataCell.Value*
+  commentId: Overload:Reveal.Sdk.RVDataCell.Value
+  isExternal: true
+  name: Value
+  nameWithType: RVDataCell.Value
+  fullName: Reveal.Sdk.RVDataCell.Value
+- uid: Reveal.Sdk.RVDataCell.FormattedValue*
+  commentId: Overload:Reveal.Sdk.RVDataCell.FormattedValue
+  isExternal: true
+  name: FormattedValue
+  nameWithType: RVDataCell.FormattedValue
+  fullName: Reveal.Sdk.RVDataCell.FormattedValue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVDataCell.ColumnName*
+  commentId: Overload:Reveal.Sdk.RVDataCell.ColumnName
+  isExternal: true
+  name: ColumnName
+  nameWithType: RVDataCell.ColumnName
+  fullName: Reveal.Sdk.RVDataCell.ColumnName
+- uid: Reveal.Sdk.RVDataCell.ColumnLabel*
+  commentId: Overload:Reveal.Sdk.RVDataCell.ColumnLabel
+  isExternal: true
+  name: ColumnLabel
+  nameWithType: RVDataCell.ColumnLabel
+  fullName: Reveal.Sdk.RVDataCell.ColumnLabel

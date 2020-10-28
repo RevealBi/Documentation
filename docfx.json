@@ -1,46 +1,83 @@
 {
-    "build": {
-        "content": [
-            {
-                "files": [
-                    "en/**.md",
-                    "en/**/toc.yml"
-                ],
-                "exclude": ["obj/**", "_site/**"]
-            }
-        ],
-        "resource": [
-            {
-                "files": [
-                    "images/**",
-                    "**/images/**"
-                ],
-                "exclude": ["obj/**", "_site/**"]
-            },
-            {
-                "files":[
-                    "index.html",
-                    "index.css"
-                ]
-            }
-        ],
-        "dest": "_site",
-        "globalMetadataFiles": [],
-        "fileMetadataFiles": [],
-        "template": ["templates/reveal"],
-        "noLangKeyword": false,
-        "keepFileLink": false,
-        "cleanupCacheHistory": false,
-        "disableGitFeatures": true,
-        "globalMetadata": {
-            "_appTitle": "Reveal",
-            "_navBarTitle": "Reveal",
-            "_isLangEn": true,
-            "_navBarTitleHref": "https://www.revealbi.io/",
-            "_gitContribute": {
-              "repo": "https://github.com/RevealBi/Documentation",
-              "branch": "master"
-            }
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/Web/Server/Infragistics.Reveal.SDK.Server.dll",
+            "src/Web/Server/Infragistics.Reveal.SDK.Server.xml"
+          ],
+          "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
         }
+      ],
+      "dest": "en/developer/web-sdk/api/server/Infragistics.Reveal.SDK.Server",
+      "filter": "src/webApiFilter.yml"
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "src/Web/Server/Infragistics.Reveal.SDK.WebAPI.dll",
+            "src/Web/Server/Infragistics.Reveal.SDK.WebAPI.xml"
+          ],
+          "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
+        }
+      ],
+      "dest": "en/developer/web-sdk/api/server/Infragistics.Reveal.SDK.WebAPI",
+      "filter": "src/webApiFilter.yml"
+    },
+    {
+      "src": [
+        {
+          "files": ["src/WPF/**.dll", "src/WPF/**.xml"],
+          "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
+        }
+      ],
+      "dest": "en/developer/desktop-sdk/api",
+      "filter": "src/desktopApiFilter.yml",
+      "properties": {
+        "TargetFramework": "netcoreapp2.2"
+      }
     }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "en/**.md",
+          "en/**/toc.yml",
+          "en/developer/desktop-sdk/api/**/*.yml",
+          "en/developer/web-sdk/api/**/*.yml"
+        ],
+        "exclude": ["obj/**", "_site/**", "_api/**"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["images/**", "**/images/**"],
+        "exclude": ["obj/**", "_site/**", "_api/**"]
+      },
+      {
+        "files": ["index.html", "index.css"]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": ["templates/reveal"],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": true,
+    "globalMetadata": {
+      "_appTitle": "Reveal",
+      "_navBarTitle": "Reveal",
+      "_isLangEn": true,
+      "_navBarTitleHref": "https://www.revealbi.io/",
+      "_gitContribute": {
+        "repo": "https://github.com/RevealBi/Documentation",
+        "branch": "master"
+      }
+    }
+  }
 }

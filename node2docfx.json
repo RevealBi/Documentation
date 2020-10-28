@@ -1,0 +1,8 @@
+{
+  "source": {
+    "include": ["src/Web/Client/infragistics.rpembedded.js"]
+  },
+  "package": "src/Web/Client/package.json",
+  "readme": "/README.md",
+  "destination": "en/developer/web-sdk/api/client"
+}

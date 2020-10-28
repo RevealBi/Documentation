@@ -1,0 +1,1051 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVChartType
+  commentId: T:Reveal.Sdk.RVChartType
+  id: RVChartType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVChartType.AreaChart
+  - Reveal.Sdk.RVChartType.BarChart
+  - Reveal.Sdk.RVChartType.BubbleChart
+  - Reveal.Sdk.RVChartType.BulletGraph
+  - Reveal.Sdk.RVChartType.CandlestickChart
+  - Reveal.Sdk.RVChartType.Choropleth
+  - Reveal.Sdk.RVChartType.ColumnChart
+  - Reveal.Sdk.RVChartType.ComboChart
+  - Reveal.Sdk.RVChartType.DIY
+  - Reveal.Sdk.RVChartType.DoughnutChart
+  - Reveal.Sdk.RVChartType.FunnelChart
+  - Reveal.Sdk.RVChartType.Grid
+  - Reveal.Sdk.RVChartType.Image
+  - Reveal.Sdk.RVChartType.Indicator
+  - Reveal.Sdk.RVChartType.IndicatorTarget
+  - Reveal.Sdk.RVChartType.LabelGauge
+  - Reveal.Sdk.RVChartType.LinearGauge
+  - Reveal.Sdk.RVChartType.LineChart
+  - Reveal.Sdk.RVChartType.OHLC_Chart
+  - Reveal.Sdk.RVChartType.PieChart
+  - Reveal.Sdk.RVChartType.Pivot
+  - Reveal.Sdk.RVChartType.RadialGauge
+  - Reveal.Sdk.RVChartType.RadialLineChart
+  - Reveal.Sdk.RVChartType.ScatterChart
+  - Reveal.Sdk.RVChartType.ScatterMap
+  - Reveal.Sdk.RVChartType.Sparkline
+  - Reveal.Sdk.RVChartType.SplineAreaChart
+  - Reveal.Sdk.RVChartType.SplineChart
+  - Reveal.Sdk.RVChartType.StackedAreaChart
+  - Reveal.Sdk.RVChartType.StackedBarChart
+  - Reveal.Sdk.RVChartType.StackedColumnChart
+  - Reveal.Sdk.RVChartType.StepAreaChart
+  - Reveal.Sdk.RVChartType.StepLineChart
+  - Reveal.Sdk.RVChartType.TextBox
+  - Reveal.Sdk.RVChartType.TextView
+  - Reveal.Sdk.RVChartType.TreeMap
+  langs:
+  - csharp
+  - vb
+  name: RVChartType
+  nameWithType: RVChartType
+  fullName: Reveal.Sdk.RVChartType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public enum RVChartType
+    content.vb: Public Enum RVChartType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVChartType.Pivot
+  commentId: F:Reveal.Sdk.RVChartType.Pivot
+  id: Pivot
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: Pivot
+  nameWithType: RVChartType.Pivot
+  fullName: Reveal.Sdk.RVChartType.Pivot
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Pivot = 0
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.Grid
+  commentId: F:Reveal.Sdk.RVChartType.Grid
+  id: Grid
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: Grid
+  nameWithType: RVChartType.Grid
+  fullName: Reveal.Sdk.RVChartType.Grid
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Grid = 1
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.AreaChart
+  commentId: F:Reveal.Sdk.RVChartType.AreaChart
+  id: AreaChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: AreaChart
+  nameWithType: RVChartType.AreaChart
+  fullName: Reveal.Sdk.RVChartType.AreaChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: AreaChart = 2
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.BarChart
+  commentId: F:Reveal.Sdk.RVChartType.BarChart
+  id: BarChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: BarChart
+  nameWithType: RVChartType.BarChart
+  fullName: Reveal.Sdk.RVChartType.BarChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: BarChart = 3
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.BubbleChart
+  commentId: F:Reveal.Sdk.RVChartType.BubbleChart
+  id: BubbleChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: BubbleChart
+  nameWithType: RVChartType.BubbleChart
+  fullName: Reveal.Sdk.RVChartType.BubbleChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: BubbleChart = 4
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.CandlestickChart
+  commentId: F:Reveal.Sdk.RVChartType.CandlestickChart
+  id: CandlestickChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: CandlestickChart
+  nameWithType: RVChartType.CandlestickChart
+  fullName: Reveal.Sdk.RVChartType.CandlestickChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: CandlestickChart = 5
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.ColumnChart
+  commentId: F:Reveal.Sdk.RVChartType.ColumnChart
+  id: ColumnChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: ColumnChart
+  nameWithType: RVChartType.ColumnChart
+  fullName: Reveal.Sdk.RVChartType.ColumnChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: ColumnChart = 6
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.ComboChart
+  commentId: F:Reveal.Sdk.RVChartType.ComboChart
+  id: ComboChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: ComboChart
+  nameWithType: RVChartType.ComboChart
+  fullName: Reveal.Sdk.RVChartType.ComboChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: ComboChart = 7
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.DoughnutChart
+  commentId: F:Reveal.Sdk.RVChartType.DoughnutChart
+  id: DoughnutChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: DoughnutChart
+  nameWithType: RVChartType.DoughnutChart
+  fullName: Reveal.Sdk.RVChartType.DoughnutChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: DoughnutChart = 8
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.FunnelChart
+  commentId: F:Reveal.Sdk.RVChartType.FunnelChart
+  id: FunnelChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: FunnelChart
+  nameWithType: RVChartType.FunnelChart
+  fullName: Reveal.Sdk.RVChartType.FunnelChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: FunnelChart = 9
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.LineChart
+  commentId: F:Reveal.Sdk.RVChartType.LineChart
+  id: LineChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: LineChart
+  nameWithType: RVChartType.LineChart
+  fullName: Reveal.Sdk.RVChartType.LineChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: LineChart = 10
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.OHLC_Chart
+  commentId: F:Reveal.Sdk.RVChartType.OHLC_Chart
+  id: OHLC_Chart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: OHLC_Chart
+  nameWithType: RVChartType.OHLC_Chart
+  fullName: Reveal.Sdk.RVChartType.OHLC_Chart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: OHLC_Chart = 11
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.PieChart
+  commentId: F:Reveal.Sdk.RVChartType.PieChart
+  id: PieChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: PieChart
+  nameWithType: RVChartType.PieChart
+  fullName: Reveal.Sdk.RVChartType.PieChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: PieChart = 12
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.RadialLineChart
+  commentId: F:Reveal.Sdk.RVChartType.RadialLineChart
+  id: RadialLineChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: RadialLineChart
+  nameWithType: RVChartType.RadialLineChart
+  fullName: Reveal.Sdk.RVChartType.RadialLineChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: RadialLineChart = 13
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.ScatterChart
+  commentId: F:Reveal.Sdk.RVChartType.ScatterChart
+  id: ScatterChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: ScatterChart
+  nameWithType: RVChartType.ScatterChart
+  fullName: Reveal.Sdk.RVChartType.ScatterChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: ScatterChart = 14
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.SplineChart
+  commentId: F:Reveal.Sdk.RVChartType.SplineChart
+  id: SplineChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: SplineChart
+  nameWithType: RVChartType.SplineChart
+  fullName: Reveal.Sdk.RVChartType.SplineChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: SplineChart = 15
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.SplineAreaChart
+  commentId: F:Reveal.Sdk.RVChartType.SplineAreaChart
+  id: SplineAreaChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: SplineAreaChart
+  nameWithType: RVChartType.SplineAreaChart
+  fullName: Reveal.Sdk.RVChartType.SplineAreaChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: SplineAreaChart = 16
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.StackedAreaChart
+  commentId: F:Reveal.Sdk.RVChartType.StackedAreaChart
+  id: StackedAreaChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: StackedAreaChart
+  nameWithType: RVChartType.StackedAreaChart
+  fullName: Reveal.Sdk.RVChartType.StackedAreaChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: StackedAreaChart = 17
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.StackedBarChart
+  commentId: F:Reveal.Sdk.RVChartType.StackedBarChart
+  id: StackedBarChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: StackedBarChart
+  nameWithType: RVChartType.StackedBarChart
+  fullName: Reveal.Sdk.RVChartType.StackedBarChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: StackedBarChart = 18
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.StackedColumnChart
+  commentId: F:Reveal.Sdk.RVChartType.StackedColumnChart
+  id: StackedColumnChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: StackedColumnChart
+  nameWithType: RVChartType.StackedColumnChart
+  fullName: Reveal.Sdk.RVChartType.StackedColumnChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: StackedColumnChart = 19
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.StepAreaChart
+  commentId: F:Reveal.Sdk.RVChartType.StepAreaChart
+  id: StepAreaChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: StepAreaChart
+  nameWithType: RVChartType.StepAreaChart
+  fullName: Reveal.Sdk.RVChartType.StepAreaChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: StepAreaChart = 20
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.StepLineChart
+  commentId: F:Reveal.Sdk.RVChartType.StepLineChart
+  id: StepLineChart
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: StepLineChart
+  nameWithType: RVChartType.StepLineChart
+  fullName: Reveal.Sdk.RVChartType.StepLineChart
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: StepLineChart = 21
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.RadialGauge
+  commentId: F:Reveal.Sdk.RVChartType.RadialGauge
+  id: RadialGauge
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: RadialGauge
+  nameWithType: RVChartType.RadialGauge
+  fullName: Reveal.Sdk.RVChartType.RadialGauge
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: RadialGauge = 22
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.BulletGraph
+  commentId: F:Reveal.Sdk.RVChartType.BulletGraph
+  id: BulletGraph
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: BulletGraph
+  nameWithType: RVChartType.BulletGraph
+  fullName: Reveal.Sdk.RVChartType.BulletGraph
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: BulletGraph = 23
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.LinearGauge
+  commentId: F:Reveal.Sdk.RVChartType.LinearGauge
+  id: LinearGauge
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: LinearGauge
+  nameWithType: RVChartType.LinearGauge
+  fullName: Reveal.Sdk.RVChartType.LinearGauge
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: LinearGauge = 24
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.LabelGauge
+  commentId: F:Reveal.Sdk.RVChartType.LabelGauge
+  id: LabelGauge
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: LabelGauge
+  nameWithType: RVChartType.LabelGauge
+  fullName: Reveal.Sdk.RVChartType.LabelGauge
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: LabelGauge = 25
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.TreeMap
+  commentId: F:Reveal.Sdk.RVChartType.TreeMap
+  id: TreeMap
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: TreeMap
+  nameWithType: RVChartType.TreeMap
+  fullName: Reveal.Sdk.RVChartType.TreeMap
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: TreeMap = 26
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.Image
+  commentId: F:Reveal.Sdk.RVChartType.Image
+  id: Image
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: RVChartType.Image
+  fullName: Reveal.Sdk.RVChartType.Image
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Image = 27
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.DIY
+  commentId: F:Reveal.Sdk.RVChartType.DIY
+  id: DIY
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: DIY
+  nameWithType: RVChartType.DIY
+  fullName: Reveal.Sdk.RVChartType.DIY
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: DIY = 28
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.TextView
+  commentId: F:Reveal.Sdk.RVChartType.TextView
+  id: TextView
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: TextView
+  nameWithType: RVChartType.TextView
+  fullName: Reveal.Sdk.RVChartType.TextView
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: TextView = 29
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.Indicator
+  commentId: F:Reveal.Sdk.RVChartType.Indicator
+  id: Indicator
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: Indicator
+  nameWithType: RVChartType.Indicator
+  fullName: Reveal.Sdk.RVChartType.Indicator
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Indicator = 30
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.IndicatorTarget
+  commentId: F:Reveal.Sdk.RVChartType.IndicatorTarget
+  id: IndicatorTarget
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: IndicatorTarget
+  nameWithType: RVChartType.IndicatorTarget
+  fullName: Reveal.Sdk.RVChartType.IndicatorTarget
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: IndicatorTarget = 31
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.Sparkline
+  commentId: F:Reveal.Sdk.RVChartType.Sparkline
+  id: Sparkline
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: Sparkline
+  nameWithType: RVChartType.Sparkline
+  fullName: Reveal.Sdk.RVChartType.Sparkline
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Sparkline = 32
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.TextBox
+  commentId: F:Reveal.Sdk.RVChartType.TextBox
+  id: TextBox
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: TextBox
+  nameWithType: RVChartType.TextBox
+  fullName: Reveal.Sdk.RVChartType.TextBox
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: TextBox = 33
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.Choropleth
+  commentId: F:Reveal.Sdk.RVChartType.Choropleth
+  id: Choropleth
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: Choropleth
+  nameWithType: RVChartType.Choropleth
+  fullName: Reveal.Sdk.RVChartType.Choropleth
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Choropleth = 34
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVChartType.ScatterMap
+  commentId: F:Reveal.Sdk.RVChartType.ScatterMap
+  id: ScatterMap
+  parent: Reveal.Sdk.RVChartType
+  langs:
+  - csharp
+  - vb
+  name: ScatterMap
+  nameWithType: RVChartType.ScatterMap
+  fullName: Reveal.Sdk.RVChartType.ScatterMap
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: ScatterMap = 35
+    return:
+      type: Reveal.Sdk.RVChartType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVChartType
+  commentId: T:Reveal.Sdk.RVChartType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVChartType
+  nameWithType: RVChartType
+  fullName: Reveal.Sdk.RVChartType

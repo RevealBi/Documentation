@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRVInMemoryDataProvider
+  commentId: T:Reveal.Sdk.IRVInMemoryDataProvider
+  id: IRVInMemoryDataProvider
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator
+  - Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema
+  langs:
+  - csharp
+  - vb
+  name: IRVInMemoryDataProvider
+  nameWithType: IRVInMemoryDataProvider
+  fullName: Reveal.Sdk.IRVInMemoryDataProvider
+  type: Interface
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public interface IRVInMemoryDataProvider
+    content.vb: Public Interface IRVInMemoryDataProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator
+  commentId: M:Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator
+  id: GetDataIterator
+  parent: Reveal.Sdk.IRVInMemoryDataProvider
+  langs:
+  - csharp
+  - vb
+  name: GetDataIterator()
+  nameWithType: IRVInMemoryDataProvider.GetDataIterator()
+  fullName: Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: IInMemoryDataIterator GetDataIterator()
+    return:
+      type: Infragistics.ReportPlus.DataLayer.IInMemoryDataIterator
+    content.vb: Function GetDataIterator As IInMemoryDataIterator
+  overload: Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator*
+- uid: Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema
+  commentId: M:Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema
+  id: GetTableSchema
+  parent: Reveal.Sdk.IRVInMemoryDataProvider
+  langs:
+  - csharp
+  - vb
+  name: GetTableSchema()
+  nameWithType: IRVInMemoryDataProvider.GetTableSchema()
+  fullName: Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: List<TableSchemaColumn> GetTableSchema()
+    return:
+      type: System.Collections.Generic.List{Infragistics.ReportPlus.DataLayer.TableSchemaColumn}
+    content.vb: Function GetTableSchema As List(Of TableSchemaColumn)
+  overload: Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator*
+  commentId: Overload:Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator
+  isExternal: true
+  name: GetDataIterator
+  nameWithType: IRVInMemoryDataProvider.GetDataIterator
+  fullName: Reveal.Sdk.IRVInMemoryDataProvider.GetDataIterator
+- uid: Infragistics.ReportPlus.DataLayer.IInMemoryDataIterator
+  isExternal: true
+  name: IInMemoryDataIterator
+  nameWithType: IInMemoryDataIterator
+  fullName: Infragistics.ReportPlus.DataLayer.IInMemoryDataIterator
+- uid: Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema*
+  commentId: Overload:Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema
+  isExternal: true
+  name: GetTableSchema
+  nameWithType: IRVInMemoryDataProvider.GetTableSchema
+  fullName: Reveal.Sdk.IRVInMemoryDataProvider.GetTableSchema
+- uid: System.Collections.Generic.List{Infragistics.ReportPlus.DataLayer.TableSchemaColumn}
+  commentId: T:System.Collections.Generic.List{Infragistics.ReportPlus.DataLayer.TableSchemaColumn}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TableSchemaColumn>
+  nameWithType: List<TableSchemaColumn>
+  fullName: System.Collections.Generic.List<Infragistics.ReportPlus.DataLayer.TableSchemaColumn>
+  nameWithType.vb: List(Of TableSchemaColumn)
+  fullName.vb: System.Collections.Generic.List(Of Infragistics.ReportPlus.DataLayer.TableSchemaColumn)
+  name.vb: List(Of TableSchemaColumn)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Infragistics.ReportPlus.DataLayer.TableSchemaColumn
+    name: TableSchemaColumn
+    nameWithType: TableSchemaColumn
+    fullName: Infragistics.ReportPlus.DataLayer.TableSchemaColumn
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Infragistics.ReportPlus.DataLayer.TableSchemaColumn
+    name: TableSchemaColumn
+    nameWithType: TableSchemaColumn
+    fullName: Infragistics.ReportPlus.DataLayer.TableSchemaColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

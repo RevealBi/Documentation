@@ -1,0 +1,765 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RevealSdkSettings
+  commentId: T:Reveal.Sdk.RevealSdkSettings
+  id: RevealSdkSettings
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RevealSdkSettings.AuthenticationProvider
+  - Reveal.Sdk.RevealSdkSettings.Caching
+  - Reveal.Sdk.RevealSdkSettings.DataProvider
+  - Reveal.Sdk.RevealSdkSettings.DataSourceProvider
+  - Reveal.Sdk.RevealSdkSettings.FormattingProvider
+  - Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder
+  - Reveal.Sdk.RevealSdkSettings.LocalizationProvider
+  - Reveal.Sdk.RevealSdkSettings.Theme
+  - Reveal.Sdk.RevealSdkSettings.Visualizations
+  langs:
+  - csharp
+  - vb
+  name: RevealSdkSettings
+  nameWithType: RevealSdkSettings
+  fullName: Reveal.Sdk.RevealSdkSettings
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static class RevealSdkSettings
+    content.vb: Public Module RevealSdkSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Reveal.Sdk.RevealSdkSettings.Caching
+  commentId: P:Reveal.Sdk.RevealSdkSettings.Caching
+  id: Caching
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: Caching
+  nameWithType: RevealSdkSettings.Caching
+  fullName: Reveal.Sdk.RevealSdkSettings.Caching
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUse this property to configure cache related settings like chaching paths.\n"
+  syntax:
+    content: public static CachingConfiguration Caching { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.CachingConfiguration
+    content.vb: Public Shared ReadOnly Property Caching As CachingConfiguration
+  overload: Reveal.Sdk.RevealSdkSettings.Caching*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealSdkSettings.Theme
+  commentId: P:Reveal.Sdk.RevealSdkSettings.Theme
+  id: Theme
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: Theme
+  nameWithType: RevealSdkSettings.Theme
+  fullName: Reveal.Sdk.RevealSdkSettings.Theme
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nUse this property to get/set current theme. \n<xref href=\"System.ArgumentNullException\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public static RevealTheme Theme { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RevealTheme
+    content.vb: Public Shared Property Theme As RevealTheme
+  overload: Reveal.Sdk.RevealSdkSettings.Theme*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealSdkSettings.Visualizations
+  commentId: P:Reveal.Sdk.RevealSdkSettings.Visualizations
+  id: Visualizations
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: Visualizations
+  nameWithType: RevealSdkSettings.Visualizations
+  fullName: Reveal.Sdk.RevealSdkSettings.Visualizations
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nHere you could specify any visualization specific settings.\n"
+  syntax:
+    content: public static VisualizationsConfiguration Visualizations { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.VisualizationsConfiguration
+    content.vb: Public Shared ReadOnly Property Visualizations As VisualizationsConfiguration
+  overload: Reveal.Sdk.RevealSdkSettings.Visualizations*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder
+  commentId: P:Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder
+  id: LocalDataFilesRootFolder
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: LocalDataFilesRootFolder
+  nameWithType: RevealSdkSettings.LocalDataFilesRootFolder
+  fullName: Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe directory that will be used as the root folder for files using the local resource provider.\nThis provider can be used only for CSV, Excel or JSON data files by using <xref href=\"Reveal.Sdk.RVLocalFileDataSourceItem\" data-throw-if-not-resolved=\"false\"></xref> objects in \n<xref href=\"Reveal.Sdk.IRVDataSourceProvider.ChangeDashboardFilterDataSourceItemAsync(Reveal.Sdk.RVDashboardFilter%2cReveal.Sdk.RVDataSourceItem)\" data-throw-if-not-resolved=\"false\"></xref>\nor \n<xref href=\"Reveal.Sdk.IRVDataSourceProvider.ChangeVisualizationDataSourceItemAsync(Reveal.Sdk.RVVisualization%2cReveal.Sdk.RVDataSourceItem)\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public static string LocalDataFilesRootFolder { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property LocalDataFilesRootFolder As String
+  overload: Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealSdkSettings.DataSourceProvider
+  commentId: P:Reveal.Sdk.RevealSdkSettings.DataSourceProvider
+  id: DataSourceProvider
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: DataSourceProvider
+  nameWithType: RevealSdkSettings.DataSourceProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.DataSourceProvider
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nProperty used to replace data sources on dashboards being opened. Useful to change some properties on database data sources (like server host, database name or table name)\nbased on the current user or to use in-memory data sources.\nSee the developer guide for more information.\n"
+  syntax:
+    content: public static IRVDataSourceProvider DataSourceProvider { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.IRVDataSourceProvider
+      description: Property used to replace data sources on dashboards being opened
+    content.vb: Public Shared Property DataSourceProvider As IRVDataSourceProvider
+  overload: Reveal.Sdk.RevealSdkSettings.DataSourceProvider*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealSdkSettings.AuthenticationProvider
+  commentId: P:Reveal.Sdk.RevealSdkSettings.AuthenticationProvider
+  id: AuthenticationProvider
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: AuthenticationProvider
+  nameWithType: RevealSdkSettings.AuthenticationProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.AuthenticationProvider
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nProperty used to return credentials to use for data sources requiring them, like MS SQL Server and the other database providers.\n"
+  syntax:
+    content: public static IRVAuthenticationProvider AuthenticationProvider { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.IRVAuthenticationProvider
+      description: Property used to return credentials to use for data sources requiring them, like MS SQL Server and the other database providers.
+    content.vb: Public Shared Property AuthenticationProvider As IRVAuthenticationProvider
+  overload: Reveal.Sdk.RevealSdkSettings.AuthenticationProvider*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealSdkSettings.LocalizationProvider
+  commentId: P:Reveal.Sdk.RevealSdkSettings.LocalizationProvider
+  id: LocalizationProvider
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: LocalizationProvider
+  nameWithType: RevealSdkSettings.LocalizationProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.LocalizationProvider
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nProperty used to return localization service that can be used to localize dashboard data.\n"
+  syntax:
+    content: public static IRVLocalizationProvider LocalizationProvider { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.IRVLocalizationProvider
+    content.vb: Public Shared Property LocalizationProvider As IRVLocalizationProvider
+  overload: Reveal.Sdk.RevealSdkSettings.LocalizationProvider*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealSdkSettings.DataProvider
+  commentId: P:Reveal.Sdk.RevealSdkSettings.DataProvider
+  id: DataProvider
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: DataProvider
+  nameWithType: RevealSdkSettings.DataProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.DataProvider
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nProperty used to return in-memory data when <xref href=\"Reveal.Sdk.RVInMemoryDataSourceItem\" data-throw-if-not-resolved=\"false\"></xref> is used.\n"
+  syntax:
+    content: public static IRVDataProvider DataProvider { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.IRVDataProvider
+      description: Property used to return in-memory data when <xref href="Reveal.Sdk.RVInMemoryDataSourceItem" data-throw-if-not-resolved="false"></xref> is used.
+    content.vb: Public Shared Property DataProvider As IRVDataProvider
+  overload: Reveal.Sdk.RevealSdkSettings.DataProvider*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.RevealSdkSettings.FormattingProvider
+  commentId: P:Reveal.Sdk.RevealSdkSettings.FormattingProvider
+  id: FormattingProvider
+  parent: Reveal.Sdk.RevealSdkSettings
+  langs:
+  - csharp
+  - vb
+  name: FormattingProvider
+  nameWithType: RevealSdkSettings.FormattingProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.FormattingProvider
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nProperty used to return formatting service that can be used to format dashboard data.\n"
+  syntax:
+    content: public static IRVFormattingProvider FormattingProvider { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.IRVFormattingProvider
+    content.vb: Public Shared Property FormattingProvider As IRVFormattingProvider
+  overload: Reveal.Sdk.RevealSdkSettings.FormattingProvider*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RevealSdkSettings.Caching*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.Caching
+  isExternal: true
+  name: Caching
+  nameWithType: RevealSdkSettings.Caching
+  fullName: Reveal.Sdk.RevealSdkSettings.Caching
+- uid: Reveal.Sdk.CachingConfiguration
+  commentId: T:Reveal.Sdk.CachingConfiguration
+  parent: Reveal.Sdk
+  isExternal: true
+  name: CachingConfiguration
+  nameWithType: CachingConfiguration
+  fullName: Reveal.Sdk.CachingConfiguration
+- uid: Reveal.Sdk.RevealSdkSettings.Theme*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.Theme
+  isExternal: true
+  name: Theme
+  nameWithType: RevealSdkSettings.Theme
+  fullName: Reveal.Sdk.RevealSdkSettings.Theme
+- uid: Reveal.Sdk.RevealTheme
+  commentId: T:Reveal.Sdk.RevealTheme
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RevealTheme
+  nameWithType: RevealTheme
+  fullName: Reveal.Sdk.RevealTheme
+- uid: Reveal.Sdk.RevealSdkSettings.Visualizations*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.Visualizations
+  isExternal: true
+  name: Visualizations
+  nameWithType: RevealSdkSettings.Visualizations
+  fullName: Reveal.Sdk.RevealSdkSettings.Visualizations
+- uid: Reveal.Sdk.VisualizationsConfiguration
+  commentId: T:Reveal.Sdk.VisualizationsConfiguration
+  parent: Reveal.Sdk
+  isExternal: true
+  name: VisualizationsConfiguration
+  nameWithType: VisualizationsConfiguration
+  fullName: Reveal.Sdk.VisualizationsConfiguration
+- uid: Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder
+  isExternal: true
+  name: LocalDataFilesRootFolder
+  nameWithType: RevealSdkSettings.LocalDataFilesRootFolder
+  fullName: Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RevealSdkSettings.DataSourceProvider*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.DataSourceProvider
+  isExternal: true
+  name: DataSourceProvider
+  nameWithType: RevealSdkSettings.DataSourceProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.DataSourceProvider
+- uid: Reveal.Sdk.IRVDataSourceProvider
+  commentId: T:Reveal.Sdk.IRVDataSourceProvider
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVDataSourceProvider
+  nameWithType: IRVDataSourceProvider
+  fullName: Reveal.Sdk.IRVDataSourceProvider
+- uid: Reveal.Sdk.RevealSdkSettings.AuthenticationProvider*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.AuthenticationProvider
+  isExternal: true
+  name: AuthenticationProvider
+  nameWithType: RevealSdkSettings.AuthenticationProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.AuthenticationProvider
+- uid: Reveal.Sdk.IRVAuthenticationProvider
+  commentId: T:Reveal.Sdk.IRVAuthenticationProvider
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVAuthenticationProvider
+  nameWithType: IRVAuthenticationProvider
+  fullName: Reveal.Sdk.IRVAuthenticationProvider
+- uid: Reveal.Sdk.RevealSdkSettings.LocalizationProvider*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.LocalizationProvider
+  isExternal: true
+  name: LocalizationProvider
+  nameWithType: RevealSdkSettings.LocalizationProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.LocalizationProvider
+- uid: Reveal.Sdk.IRVLocalizationProvider
+  commentId: T:Reveal.Sdk.IRVLocalizationProvider
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVLocalizationProvider
+  nameWithType: IRVLocalizationProvider
+  fullName: Reveal.Sdk.IRVLocalizationProvider
+- uid: Reveal.Sdk.RevealSdkSettings.DataProvider*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.DataProvider
+  isExternal: true
+  name: DataProvider
+  nameWithType: RevealSdkSettings.DataProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.DataProvider
+- uid: Reveal.Sdk.IRVDataProvider
+  commentId: T:Reveal.Sdk.IRVDataProvider
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVDataProvider
+  nameWithType: IRVDataProvider
+  fullName: Reveal.Sdk.IRVDataProvider
+- uid: Reveal.Sdk.RevealSdkSettings.FormattingProvider*
+  commentId: Overload:Reveal.Sdk.RevealSdkSettings.FormattingProvider
+  isExternal: true
+  name: FormattingProvider
+  nameWithType: RevealSdkSettings.FormattingProvider
+  fullName: Reveal.Sdk.RevealSdkSettings.FormattingProvider
+- uid: Reveal.Sdk.IRVFormattingProvider
+  commentId: T:Reveal.Sdk.IRVFormattingProvider
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVFormattingProvider
+  nameWithType: IRVFormattingProvider
+  fullName: Reveal.Sdk.IRVFormattingProvider

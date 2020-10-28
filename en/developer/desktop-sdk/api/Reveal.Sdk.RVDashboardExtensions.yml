@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboardExtensions
+  commentId: T:Reveal.Sdk.RVDashboardExtensions
+  id: RVDashboardExtensions
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  - Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  - Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  - Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  langs:
+  - csharp
+  - vb
+  name: RVDashboardExtensions
+  nameWithType: RVDashboardExtensions
+  fullName: Reveal.Sdk.RVDashboardExtensions
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static class RVDashboardExtensions
+    content.vb: Public Module RVDashboardExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  commentId: M:Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  id: GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  isExtensionMethod: true
+  parent: Reveal.Sdk.RVDashboardExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetById(IEnumerable<RVDashboardFilter>, String)
+  nameWithType: RVDashboardExtensions.GetById(IEnumerable<RVDashboardFilter>, String)
+  fullName: Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable<Reveal.Sdk.RVDashboardFilter>, System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nGets the filter with the given ID.\n"
+  syntax:
+    content: public static RVDashboardFilter GetById(this IEnumerable<RVDashboardFilter> filters, string id)
+    parameters:
+    - id: filters
+      type: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter}
+    - id: id
+      type: System.String
+      description: The ID of the filter to search for
+    return:
+      type: Reveal.Sdk.RVDashboardFilter
+      description: The filter with the given ID (case sensitive), null if there&apos;s no filter with that ID
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetById(filters As IEnumerable(Of RVDashboardFilter), id As String) As RVDashboardFilter
+  overload: Reveal.Sdk.RVDashboardExtensions.GetById*
+  nameWithType.vb: RVDashboardExtensions.GetById(IEnumerable(Of RVDashboardFilter), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVDashboardFilter), System.String)
+  name.vb: GetById(IEnumerable(Of RVDashboardFilter), String)
+- uid: Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  commentId: M:Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  id: GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter},System.String)
+  isExtensionMethod: true
+  parent: Reveal.Sdk.RVDashboardExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetByTitle(IEnumerable<RVDashboardFilter>, String)
+  nameWithType: RVDashboardExtensions.GetByTitle(IEnumerable<RVDashboardFilter>, String)
+  fullName: Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable<Reveal.Sdk.RVDashboardFilter>, System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nGets the first filter with the given title.\n"
+  syntax:
+    content: public static RVDashboardFilter GetByTitle(this IEnumerable<RVDashboardFilter> filters, string title)
+    parameters:
+    - id: filters
+      type: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter}
+    - id: title
+      type: System.String
+      description: The title of the filter to search for
+    return:
+      type: Reveal.Sdk.RVDashboardFilter
+      description: The first filter with the given title (case sensitive), null if there&apos;s no filter with that title.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetByTitle(filters As IEnumerable(Of RVDashboardFilter), title As String) As RVDashboardFilter
+  overload: Reveal.Sdk.RVDashboardExtensions.GetByTitle*
+  nameWithType.vb: RVDashboardExtensions.GetByTitle(IEnumerable(Of RVDashboardFilter), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVDashboardFilter), System.String)
+  name.vb: GetByTitle(IEnumerable(Of RVDashboardFilter), String)
+- uid: Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  commentId: M:Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  id: GetById(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  isExtensionMethod: true
+  parent: Reveal.Sdk.RVDashboardExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetById(IEnumerable<RVVisualization>, String)
+  nameWithType: RVDashboardExtensions.GetById(IEnumerable<RVVisualization>, String)
+  fullName: Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable<Reveal.Sdk.RVVisualization>, System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nGets the visualization with the specified ID.\n"
+  syntax:
+    content: public static RVVisualization GetById(this IEnumerable<RVVisualization> visualizations, string id)
+    parameters:
+    - id: visualizations
+      type: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization}
+    - id: id
+      type: System.String
+      description: The ID of the visualization to search for
+    return:
+      type: Reveal.Sdk.RVVisualization
+      description: The visualization with the given ID (case sensitive), null if there&apos;s no visualization with that ID.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetById(visualizations As IEnumerable(Of RVVisualization), id As String) As RVVisualization
+  overload: Reveal.Sdk.RVDashboardExtensions.GetById*
+  nameWithType.vb: RVDashboardExtensions.GetById(IEnumerable(Of RVVisualization), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Reveal.Sdk.RVDashboardExtensions.GetById(System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVVisualization), System.String)
+  name.vb: GetById(IEnumerable(Of RVVisualization), String)
+- uid: Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  commentId: M:Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  id: GetByTitle(System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization},System.String)
+  isExtensionMethod: true
+  parent: Reveal.Sdk.RVDashboardExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetByTitle(IEnumerable<RVVisualization>, String)
+  nameWithType: RVDashboardExtensions.GetByTitle(IEnumerable<RVVisualization>, String)
+  fullName: Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable<Reveal.Sdk.RVVisualization>, System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nGets the first visualization with the given title.\n"
+  syntax:
+    content: public static RVVisualization GetByTitle(this IEnumerable<RVVisualization> visualizations, string title)
+    parameters:
+    - id: visualizations
+      type: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization}
+    - id: title
+      type: System.String
+      description: The title of the visualization to search for
+    return:
+      type: Reveal.Sdk.RVVisualization
+      description: The first visualization with the given title (case sensitive), null if there&apos;s no visualization with that title
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetByTitle(visualizations As IEnumerable(Of RVVisualization), title As String) As RVVisualization
+  overload: Reveal.Sdk.RVDashboardExtensions.GetByTitle*
+  nameWithType.vb: RVDashboardExtensions.GetByTitle(IEnumerable(Of RVVisualization), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Reveal.Sdk.RVDashboardExtensions.GetByTitle(System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVVisualization), System.String)
+  name.vb: GetByTitle(IEnumerable(Of RVVisualization), String)
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDashboardExtensions.GetById*
+  commentId: Overload:Reveal.Sdk.RVDashboardExtensions.GetById
+  isExternal: true
+  name: GetById
+  nameWithType: RVDashboardExtensions.GetById
+  fullName: Reveal.Sdk.RVDashboardExtensions.GetById
+- uid: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter}
+  commentId: T:System.Collections.Generic.IEnumerable{Reveal.Sdk.RVDashboardFilter}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<RVDashboardFilter>
+  nameWithType: IEnumerable<RVDashboardFilter>
+  fullName: System.Collections.Generic.IEnumerable<Reveal.Sdk.RVDashboardFilter>
+  nameWithType.vb: IEnumerable(Of RVDashboardFilter)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVDashboardFilter)
+  name.vb: IEnumerable(Of RVDashboardFilter)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVDashboardFilter
+    name: RVDashboardFilter
+    nameWithType: RVDashboardFilter
+    fullName: Reveal.Sdk.RVDashboardFilter
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVDashboardFilter
+    name: RVDashboardFilter
+    nameWithType: RVDashboardFilter
+    fullName: Reveal.Sdk.RVDashboardFilter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVDashboardFilter
+  commentId: T:Reveal.Sdk.RVDashboardFilter
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardFilter
+  nameWithType: RVDashboardFilter
+  fullName: Reveal.Sdk.RVDashboardFilter
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Reveal.Sdk.RVDashboardExtensions.GetByTitle*
+  commentId: Overload:Reveal.Sdk.RVDashboardExtensions.GetByTitle
+  isExternal: true
+  name: GetByTitle
+  nameWithType: RVDashboardExtensions.GetByTitle
+  fullName: Reveal.Sdk.RVDashboardExtensions.GetByTitle
+- uid: System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization}
+  commentId: T:System.Collections.Generic.IEnumerable{Reveal.Sdk.RVVisualization}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<RVVisualization>
+  nameWithType: IEnumerable<RVVisualization>
+  fullName: System.Collections.Generic.IEnumerable<Reveal.Sdk.RVVisualization>
+  nameWithType.vb: IEnumerable(Of RVVisualization)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Reveal.Sdk.RVVisualization)
+  name.vb: IEnumerable(Of RVVisualization)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Reveal.Sdk.RVVisualization
+    name: RVVisualization
+    nameWithType: RVVisualization
+    fullName: Reveal.Sdk.RVVisualization
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Reveal.Sdk.RVVisualization
+    name: RVVisualization
+    nameWithType: RVVisualization
+    fullName: Reveal.Sdk.RVVisualization
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RVVisualization
+  commentId: T:Reveal.Sdk.RVVisualization
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVVisualization
+  nameWithType: RVVisualization
+  fullName: Reveal.Sdk.RVVisualization

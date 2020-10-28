@@ -1,0 +1,256 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.VisualizationLinkingCallback
+  commentId: T:Reveal.Sdk.VisualizationLinkingCallback
+  id: VisualizationLinkingCallback
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.VisualizationLinkingCallback.#ctor(System.Object,System.IntPtr)
+  - Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke(System.String,System.IO.Stream,System.AsyncCallback,System.Object)
+  - Reveal.Sdk.VisualizationLinkingCallback.EndInvoke(System.IAsyncResult)
+  - Reveal.Sdk.VisualizationLinkingCallback.Invoke(System.String,System.IO.Stream)
+  langs:
+  - csharp
+  - vb
+  name: VisualizationLinkingCallback
+  nameWithType: VisualizationLinkingCallback
+  fullName: Reveal.Sdk.VisualizationLinkingCallback
+  type: Delegate
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nCallback used to return the contents of the target dashboard of a navigation.\n"
+  syntax:
+    content: public delegate void VisualizationLinkingCallback(string dashdboardId, Stream dashboard);
+    parameters:
+    - id: dashdboardId
+      type: System.String
+      description: The id of the dashboard to open
+    - id: dashboard
+      type: System.IO.Stream
+      description: The contents of the target dashboard in rdash format
+    content.vb: Public Delegate Sub VisualizationLinkingCallback(dashdboardId As String, dashboard As Stream)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+- uid: Reveal.Sdk.VisualizationLinkingCallback.#ctor(System.Object,System.IntPtr)
+  commentId: M:Reveal.Sdk.VisualizationLinkingCallback.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: Reveal.Sdk.VisualizationLinkingCallback
+  langs:
+  - csharp
+  - vb
+  name: VisualizationLinkingCallback(Object, IntPtr)
+  nameWithType: VisualizationLinkingCallback.VisualizationLinkingCallback(Object, IntPtr)
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.VisualizationLinkingCallback(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public VisualizationLinkingCallback(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: Reveal.Sdk.VisualizationLinkingCallback.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.VisualizationLinkingCallback.Invoke(System.String,System.IO.Stream)
+  commentId: M:Reveal.Sdk.VisualizationLinkingCallback.Invoke(System.String,System.IO.Stream)
+  id: Invoke(System.String,System.IO.Stream)
+  parent: Reveal.Sdk.VisualizationLinkingCallback
+  langs:
+  - csharp
+  - vb
+  name: Invoke(String, Stream)
+  nameWithType: VisualizationLinkingCallback.Invoke(String, Stream)
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.Invoke(System.String, System.IO.Stream)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual void Invoke(string dashdboardId, Stream dashboard)
+    parameters:
+    - id: dashdboardId
+      type: System.String
+    - id: dashboard
+      type: System.IO.Stream
+    content.vb: Public Overridable Sub Invoke(dashdboardId As String, dashboard As Stream)
+  overload: Reveal.Sdk.VisualizationLinkingCallback.Invoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke(System.String,System.IO.Stream,System.AsyncCallback,System.Object)
+  commentId: M:Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke(System.String,System.IO.Stream,System.AsyncCallback,System.Object)
+  id: BeginInvoke(System.String,System.IO.Stream,System.AsyncCallback,System.Object)
+  parent: Reveal.Sdk.VisualizationLinkingCallback
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(String, Stream, AsyncCallback, Object)
+  nameWithType: VisualizationLinkingCallback.BeginInvoke(String, Stream, AsyncCallback, Object)
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke(System.String, System.IO.Stream, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(string dashdboardId, Stream dashboard, AsyncCallback callback, object object)
+    parameters:
+    - id: dashdboardId
+      type: System.String
+    - id: dashboard
+      type: System.IO.Stream
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(dashdboardId As String, dashboard As Stream, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Reveal.Sdk.VisualizationLinkingCallback.EndInvoke(System.IAsyncResult)
+  commentId: M:Reveal.Sdk.VisualizationLinkingCallback.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: Reveal.Sdk.VisualizationLinkingCallback
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: VisualizationLinkingCallback.EndInvoke(IAsyncResult)
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public virtual void EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(result As IAsyncResult)
+  overload: Reveal.Sdk.VisualizationLinkingCallback.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: Reveal.Sdk.VisualizationLinkingCallback.#ctor*
+  commentId: Overload:Reveal.Sdk.VisualizationLinkingCallback.#ctor
+  isExternal: true
+  name: VisualizationLinkingCallback
+  nameWithType: VisualizationLinkingCallback.VisualizationLinkingCallback
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.VisualizationLinkingCallback
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: Reveal.Sdk.VisualizationLinkingCallback.Invoke*
+  commentId: Overload:Reveal.Sdk.VisualizationLinkingCallback.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: VisualizationLinkingCallback.Invoke
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.Invoke
+- uid: Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke*
+  commentId: Overload:Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: VisualizationLinkingCallback.BeginInvoke
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Reveal.Sdk.VisualizationLinkingCallback.EndInvoke*
+  commentId: Overload:Reveal.Sdk.VisualizationLinkingCallback.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: VisualizationLinkingCallback.EndInvoke
+  fullName: Reveal.Sdk.VisualizationLinkingCallback.EndInvoke

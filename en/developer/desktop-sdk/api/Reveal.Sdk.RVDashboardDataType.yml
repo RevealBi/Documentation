@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboardDataType
+  commentId: T:Reveal.Sdk.RVDashboardDataType
+  id: RVDashboardDataType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboardDataType.Date
+  - Reveal.Sdk.RVDashboardDataType.DateTime
+  - Reveal.Sdk.RVDashboardDataType.Number
+  - Reveal.Sdk.RVDashboardDataType.String
+  - Reveal.Sdk.RVDashboardDataType.Time
+  langs:
+  - csharp
+  - vb
+  name: RVDashboardDataType
+  nameWithType: RVDashboardDataType
+  fullName: Reveal.Sdk.RVDashboardDataType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe list of dashboard data types.\n"
+  syntax:
+    content: public enum RVDashboardDataType
+    content.vb: Public Enum RVDashboardDataType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVDashboardDataType.String
+  commentId: F:Reveal.Sdk.RVDashboardDataType.String
+  id: String
+  parent: Reveal.Sdk.RVDashboardDataType
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: RVDashboardDataType.String
+  fullName: Reveal.Sdk.RVDashboardDataType.String
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nText data\n"
+  syntax:
+    content: String = 0
+    return:
+      type: Reveal.Sdk.RVDashboardDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDataType.Number
+  commentId: F:Reveal.Sdk.RVDashboardDataType.Number
+  id: Number
+  parent: Reveal.Sdk.RVDashboardDataType
+  langs:
+  - csharp
+  - vb
+  name: Number
+  nameWithType: RVDashboardDataType.Number
+  fullName: Reveal.Sdk.RVDashboardDataType.Number
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nNumeric data, including integer and floating-point values\n"
+  syntax:
+    content: Number = 1
+    return:
+      type: Reveal.Sdk.RVDashboardDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDataType.Date
+  commentId: F:Reveal.Sdk.RVDashboardDataType.Date
+  id: Date
+  parent: Reveal.Sdk.RVDashboardDataType
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: RVDashboardDataType.Date
+  fullName: Reveal.Sdk.RVDashboardDataType.Date
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nDate data\n"
+  syntax:
+    content: Date = 2
+    return:
+      type: Reveal.Sdk.RVDashboardDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDataType.DateTime
+  commentId: F:Reveal.Sdk.RVDashboardDataType.DateTime
+  id: DateTime
+  parent: Reveal.Sdk.RVDashboardDataType
+  langs:
+  - csharp
+  - vb
+  name: DateTime
+  nameWithType: RVDashboardDataType.DateTime
+  fullName: Reveal.Sdk.RVDashboardDataType.DateTime
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nDate data including time\n"
+  syntax:
+    content: DateTime = 3
+    return:
+      type: Reveal.Sdk.RVDashboardDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVDashboardDataType.Time
+  commentId: F:Reveal.Sdk.RVDashboardDataType.Time
+  id: Time
+  parent: Reveal.Sdk.RVDashboardDataType
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: RVDashboardDataType.Time
+  fullName: Reveal.Sdk.RVDashboardDataType.Time
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nTime data\n"
+  syntax:
+    content: Time = 4
+    return:
+      type: Reveal.Sdk.RVDashboardDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVDashboardDataType
+  commentId: T:Reveal.Sdk.RVDashboardDataType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataType
+  nameWithType: RVDashboardDataType
+  fullName: Reveal.Sdk.RVDashboardDataType

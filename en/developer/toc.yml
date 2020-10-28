@@ -21,9 +21,9 @@
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
 - name: Server API Reference
-  href: web-sdk/api-reference-server.md
+  href: web-sdk/api/server/toc.yml
 - name: Client API Reference
-  href: web-sdk/api-reference-client.md
+  href: web-sdk/api/client/toc.yml
 - name: Desktop SDK
   header: true
 - name: Overview
@@ -31,7 +31,7 @@
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
 - name: API Reference
-  href: desktop-sdk/api-reference.md
+  href: desktop-sdk/api/toc.yml
 - name: Release Information
   header: true
 - name: Known Issues

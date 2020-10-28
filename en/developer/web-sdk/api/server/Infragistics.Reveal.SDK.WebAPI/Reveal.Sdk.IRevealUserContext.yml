@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.IRevealUserContext
+  commentId: T:Reveal.Sdk.IRevealUserContext
+  id: IRevealUserContext
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.IRevealUserContext.GetUserId(System.Security.Claims.ClaimsPrincipal)
+  langs:
+  - csharp
+  - vb
+  name: IRevealUserContext
+  nameWithType: IRevealUserContext
+  fullName: Reveal.Sdk.IRevealUserContext
+  type: Interface
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nInterface that can be optionally implemented to return information about the current user id when a request is being processed in the controllers.\nCan be specified when calling AddRevealServices, if not specified the default implementation provided by Reveal will be used.\n"
+  syntax:
+    content: public interface IRevealUserContext
+    content.vb: Public Interface IRevealUserContext
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Reveal.Sdk.IRevealUserContext.GetUserId(System.Security.Claims.ClaimsPrincipal)
+  commentId: M:Reveal.Sdk.IRevealUserContext.GetUserId(System.Security.Claims.ClaimsPrincipal)
+  id: GetUserId(System.Security.Claims.ClaimsPrincipal)
+  parent: Reveal.Sdk.IRevealUserContext
+  langs:
+  - csharp
+  - vb
+  name: GetUserId(ClaimsPrincipal)
+  nameWithType: IRevealUserContext.GetUserId(ClaimsPrincipal)
+  fullName: Reveal.Sdk.IRevealUserContext.GetUserId(System.Security.Claims.ClaimsPrincipal)
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nReturns the ID of the user associated to the principal parameter.\n"
+  syntax:
+    content: string GetUserId(ClaimsPrincipal principal)
+    parameters:
+    - id: principal
+      type: System.Security.Claims.ClaimsPrincipal
+      description: The principal claims as obtained from the &apos;User&apos; property in the controller
+    return:
+      type: System.String
+      description: The ID of the user associated to the given principal
+    content.vb: Function GetUserId(principal As ClaimsPrincipal) As String
+  overload: Reveal.Sdk.IRevealUserContext.GetUserId*
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.IRevealUserContext.GetUserId*
+  commentId: Overload:Reveal.Sdk.IRevealUserContext.GetUserId
+  isExternal: true
+  name: GetUserId
+  nameWithType: IRevealUserContext.GetUserId
+  fullName: Reveal.Sdk.IRevealUserContext.GetUserId
+- uid: System.Security.Claims.ClaimsPrincipal
+  commentId: '!:System.Security.Claims.ClaimsPrincipal'
+  isExternal: true
+  name: ClaimsPrincipal
+  nameWithType: ClaimsPrincipal
+  fullName: System.Security.Claims.ClaimsPrincipal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

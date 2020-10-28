@@ -1,0 +1,465 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDateFormattingSpec
+  commentId: T:Reveal.Sdk.RVDateFormattingSpec
+  id: RVDateFormattingSpec
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDateFormattingSpec.#ctor
+  - Reveal.Sdk.RVDateFormattingSpec.#ctor(Reveal.Sdk.RVDateFormattingSpec)
+  - Reveal.Sdk.RVDateFormattingSpec.DateFormat
+  langs:
+  - csharp
+  - vb
+  name: RVDateFormattingSpec
+  nameWithType: RVDateFormattingSpec
+  fullName: Reveal.Sdk.RVDateFormattingSpec
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe class representing the formatting options used for Date, Time and DateTime dashboard data.\n"
+  syntax:
+    content: 'public class RVDateFormattingSpec : RVFormattingSpec'
+    content.vb: >-
+      Public Class RVDateFormattingSpec
+          Inherits RVFormattingSpec
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVFormattingSpec
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVDateFormattingSpec.#ctor
+  commentId: M:Reveal.Sdk.RVDateFormattingSpec.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVDateFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: RVDateFormattingSpec()
+  nameWithType: RVDateFormattingSpec.RVDateFormattingSpec()
+  fullName: Reveal.Sdk.RVDateFormattingSpec.RVDateFormattingSpec()
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nInitializes a new instance of the <xref href=\"Reveal.Sdk.RVDateFormattingSpec\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public RVDateFormattingSpec()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVDateFormattingSpec.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDateFormattingSpec.#ctor(Reveal.Sdk.RVDateFormattingSpec)
+  commentId: M:Reveal.Sdk.RVDateFormattingSpec.#ctor(Reveal.Sdk.RVDateFormattingSpec)
+  id: '#ctor(Reveal.Sdk.RVDateFormattingSpec)'
+  parent: Reveal.Sdk.RVDateFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: RVDateFormattingSpec(RVDateFormattingSpec)
+  nameWithType: RVDateFormattingSpec.RVDateFormattingSpec(RVDateFormattingSpec)
+  fullName: Reveal.Sdk.RVDateFormattingSpec.RVDateFormattingSpec(Reveal.Sdk.RVDateFormattingSpec)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nInitializes a new instance of the <xref href=\"Reveal.Sdk.RVDateFormattingSpec\" data-throw-if-not-resolved=\"false\"></xref> class from other instance.\n"
+  syntax:
+    content: public RVDateFormattingSpec(RVDateFormattingSpec other)
+    parameters:
+    - id: other
+      type: Reveal.Sdk.RVDateFormattingSpec
+      description: The instance of type <xref href="Reveal.Sdk.RVDateFormattingSpec" data-throw-if-not-resolved="false"></xref> to be copied.
+    content.vb: Public Sub New(other As RVDateFormattingSpec)
+  overload: Reveal.Sdk.RVDateFormattingSpec.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVDateFormattingSpec.DateFormat
+  commentId: P:Reveal.Sdk.RVDateFormattingSpec.DateFormat
+  id: DateFormat
+  parent: Reveal.Sdk.RVDateFormattingSpec
+  langs:
+  - csharp
+  - vb
+  name: DateFormat
+  nameWithType: RVDateFormattingSpec.DateFormat
+  fullName: Reveal.Sdk.RVDateFormattingSpec.DateFormat
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe format that will be used for DateTime data.\n"
+  syntax:
+    content: public string DateFormat { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DateFormat As String
+  overload: Reveal.Sdk.RVDateFormattingSpec.DateFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVFormattingSpec
+  commentId: T:Reveal.Sdk.RVFormattingSpec
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVFormattingSpec
+  nameWithType: RVFormattingSpec
+  fullName: Reveal.Sdk.RVFormattingSpec
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDateFormattingSpec.#ctor*
+  commentId: Overload:Reveal.Sdk.RVDateFormattingSpec.#ctor
+  isExternal: true
+  name: RVDateFormattingSpec
+  nameWithType: RVDateFormattingSpec.RVDateFormattingSpec
+  fullName: Reveal.Sdk.RVDateFormattingSpec.RVDateFormattingSpec
+- uid: Reveal.Sdk.RVDateFormattingSpec
+  commentId: T:Reveal.Sdk.RVDateFormattingSpec
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDateFormattingSpec
+  nameWithType: RVDateFormattingSpec
+  fullName: Reveal.Sdk.RVDateFormattingSpec
+- uid: Reveal.Sdk.RVDateFormattingSpec.DateFormat*
+  commentId: Overload:Reveal.Sdk.RVDateFormattingSpec.DateFormat
+  isExternal: true
+  name: DateFormat
+  nameWithType: RVDateFormattingSpec.DateFormat
+  fullName: Reveal.Sdk.RVDateFormattingSpec.DateFormat
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVDashboardFilter
+  commentId: T:Reveal.Sdk.RVDashboardFilter
+  id: RVDashboardFilter
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVDashboardFilter.Id
+  - Reveal.Sdk.RVDashboardFilter.Title
+  langs:
+  - csharp
+  - vb
+  name: RVDashboardFilter
+  nameWithType: RVDashboardFilter
+  fullName: Reveal.Sdk.RVDashboardFilter
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nClass used to represent a dashboard filter\n"
+  syntax:
+    content: 'public class RVDashboardFilter : Object'
+    content.vb: >-
+      Public Class RVDashboardFilter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVDashboardFilter.Title
+  commentId: P:Reveal.Sdk.RVDashboardFilter.Title
+  id: Title
+  parent: Reveal.Sdk.RVDashboardFilter
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: RVDashboardFilter.Title
+  fullName: Reveal.Sdk.RVDashboardFilter.Title
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe title of the filter.\n"
+  syntax:
+    content: public string Title { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The title of the filter.
+    content.vb: Public ReadOnly Property Title As String
+  overload: Reveal.Sdk.RVDashboardFilter.Title*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.RVDashboardFilter.Id
+  commentId: P:Reveal.Sdk.RVDashboardFilter.Id
+  id: Id
+  parent: Reveal.Sdk.RVDashboardFilter
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: RVDashboardFilter.Id
+  fullName: Reveal.Sdk.RVDashboardFilter.Id
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe ID of the filter.\n"
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The ID of the filter.
+    content.vb: Public ReadOnly Property Id As String
+  overload: Reveal.Sdk.RVDashboardFilter.Id*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVDashboardFilter.Title*
+  commentId: Overload:Reveal.Sdk.RVDashboardFilter.Title
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardFilter.Title
+  fullName: Reveal.Sdk.RVDashboardFilter.Title
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVDashboardFilter.Id*
+  commentId: Overload:Reveal.Sdk.RVDashboardFilter.Id
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardFilter.Id
+  fullName: Reveal.Sdk.RVDashboardFilter.Id

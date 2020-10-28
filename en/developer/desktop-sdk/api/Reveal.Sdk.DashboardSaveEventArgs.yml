@@ -1,0 +1,650 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.DashboardSaveEventArgs
+  commentId: T:Reveal.Sdk.DashboardSaveEventArgs
+  id: DashboardSaveEventArgs
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs
+  - Reveal.Sdk.DashboardSaveEventArgs.Name
+  - Reveal.Sdk.DashboardSaveEventArgs.SaveFinished
+  - Reveal.Sdk.DashboardSaveEventArgs.Serialize
+  - Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DashboardSaveEventArgs
+  nameWithType: DashboardSaveEventArgs
+  fullName: Reveal.Sdk.DashboardSaveEventArgs
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nArgument object passed to <xref href=\"Reveal.Sdk.RevealView.SaveDashboard\" data-throw-if-not-resolved=\"false\"></xref> event.\n"
+  syntax:
+    content: 'public class DashboardSaveEventArgs : EventArgs'
+    content.vb: >-
+      Public Class DashboardSaveEventArgs
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.DashboardSaveEventArgs.Serialize
+  commentId: M:Reveal.Sdk.DashboardSaveEventArgs.Serialize
+  id: Serialize
+  parent: Reveal.Sdk.DashboardSaveEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Serialize()
+  nameWithType: DashboardSaveEventArgs.Serialize()
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.Serialize()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSerializes the current dashboard to a byte array\n"
+  syntax:
+    content: public Task<byte[]> Serialize()
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: a byte array with the contents of the dashboard in rdash format
+    content.vb: Public Function Serialize As Task(Of Byte())
+  overload: Reveal.Sdk.DashboardSaveEventArgs.Serialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName(System.String)
+  commentId: M:Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName(System.String)
+  id: SerializeWithNewName(System.String)
+  parent: Reveal.Sdk.DashboardSaveEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SerializeWithNewName(String)
+  nameWithType: DashboardSaveEventArgs.SerializeWithNewName(String)
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName(System.String)
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nSerializes the current dashboard in &apos;.rdash&apos; format to a byte array, the title of the dashboard is changed to match the specified name.\n"
+  syntax:
+    content: public Task<byte[]> SerializeWithNewName(string newName)
+    parameters:
+    - id: newName
+      type: System.String
+      description: The new name of the dashboard, it changes the title attribute of the dashboard object
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+    content.vb: Public Function SerializeWithNewName(newName As String) As Task(Of Byte())
+  overload: Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.DashboardSaveEventArgs.SaveFinished
+  commentId: M:Reveal.Sdk.DashboardSaveEventArgs.SaveFinished
+  id: SaveFinished
+  parent: Reveal.Sdk.DashboardSaveEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SaveFinished()
+  nameWithType: DashboardSaveEventArgs.SaveFinished()
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.SaveFinished()
+  type: Method
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nNotifies the Reveal SDK the save operation has finished and it should switch to view mode.\n"
+  syntax:
+    content: public void SaveFinished()
+    content.vb: Public Sub SaveFinished
+  overload: Reveal.Sdk.DashboardSaveEventArgs.SaveFinished*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs
+  commentId: P:Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs
+  id: IsSaveAs
+  parent: Reveal.Sdk.DashboardSaveEventArgs
+  langs:
+  - csharp
+  - vb
+  name: IsSaveAs
+  nameWithType: DashboardSaveEventArgs.IsSaveAs
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\n<returns>A flag indicating if this event was originated by a &apos;save&apos; (false) or &apos;save as&apos; (true) operation.</returns>\n"
+  syntax:
+    content: public bool IsSaveAs { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSaveAs As Boolean
+  overload: Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.DashboardSaveEventArgs.Name
+  commentId: P:Reveal.Sdk.DashboardSaveEventArgs.Name
+  id: Name
+  parent: Reveal.Sdk.DashboardSaveEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: DashboardSaveEventArgs.Name
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.Name
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe name of the dashboard being saved.\n"
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Reveal.Sdk.DashboardSaveEventArgs.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.DashboardSaveEventArgs.Serialize*
+  commentId: Overload:Reveal.Sdk.DashboardSaveEventArgs.Serialize
+  isExternal: true
+  name: Serialize
+  nameWithType: DashboardSaveEventArgs.Serialize
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.Serialize
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Byte[]>
+  nameWithType: Task<Byte[]>
+  fullName: System.Threading.Tasks.Task<System.Byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of System.Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName*
+  commentId: Overload:Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName
+  isExternal: true
+  name: SerializeWithNewName
+  nameWithType: DashboardSaveEventArgs.SerializeWithNewName
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.SerializeWithNewName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.DashboardSaveEventArgs.SaveFinished*
+  commentId: Overload:Reveal.Sdk.DashboardSaveEventArgs.SaveFinished
+  isExternal: true
+  name: SaveFinished
+  nameWithType: DashboardSaveEventArgs.SaveFinished
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.SaveFinished
+- uid: Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs*
+  commentId: Overload:Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs
+  isExternal: true
+  name: IsSaveAs
+  nameWithType: DashboardSaveEventArgs.IsSaveAs
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.IsSaveAs
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.DashboardSaveEventArgs.Name*
+  commentId: Overload:Reveal.Sdk.DashboardSaveEventArgs.Name
+  isExternal: true
+  name: Name
+  nameWithType: DashboardSaveEventArgs.Name
+  fullName: Reveal.Sdk.DashboardSaveEventArgs.Name
