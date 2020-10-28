@@ -167,7 +167,7 @@ td {
   <td><b>Data Relationships</b></td>
   <td>
     <img src="images/scatter-chart.png" alt="Scatter Chart" /><br/>
-    <a href="visualization-types/scatter-bublle-charts.md">Scatter</а>
+    <a href="visualization-types/scatter-bubble-charts.md">Scatter</а>
   </td>
   <td>
     <img src="images/Bubble-chart.png" alt="Bubble Chart" /><br/>
