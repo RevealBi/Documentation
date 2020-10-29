@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVLocalFileDataSource
+    id: RVLocalFileDataSource
+    name: RVLocalFileDataSource
+    summary: ''
+    fullName: RVLocalFileDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVLocalFileDataSource.#ctor
+    langs:
+      - js
+  - id: RVLocalFileDataSource.#ctor
+    uid: RVLocalFileDataSource.#ctor
+    parent: RVLocalFileDataSource
+    name: RVLocalFileDataSource()
+    fullName: RVLocalFileDataSource.RVLocalFileDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVLocalFileDataSource()
+    langs:
+      - js

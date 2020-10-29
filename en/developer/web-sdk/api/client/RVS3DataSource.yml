@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVS3DataSource
+    id: RVS3DataSource
+    name: RVS3DataSource
+    summary: ''
+    fullName: RVS3DataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVS3DataSource.#ctor
+    langs:
+      - js
+  - id: RVS3DataSource.#ctor
+    uid: RVS3DataSource.#ctor
+    parent: RVS3DataSource
+    name: RVS3DataSource()
+    fullName: RVS3DataSource.RVS3DataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVS3DataSource()
+    langs:
+      - js

@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVDashboardFilter
+    id: RVDashboardFilter
+    name: RVDashboardFilter
+    summary: Class used to represent a dashboard filter.
+    fullName: RVDashboardFilter
+    type: Class
+    children:
+      - RVDashboardFilter.#ctor
+      - RVDashboardFilter#id
+      - RVDashboardFilter#title
+    langs:
+      - js
+  - id: RVDashboardFilter.#ctor
+    uid: RVDashboardFilter.#ctor
+    parent: RVDashboardFilter
+    name: RVDashboardFilter()
+    fullName: RVDashboardFilter.RVDashboardFilter()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVDashboardFilter()
+    langs:
+      - js
+  - uid: RVDashboardFilter#id
+    id: RVDashboardFilter#id
+    parent: RVDashboardFilter
+    name: id
+    summary: The ID of the filter.
+    fullName: RVDashboardFilter.id
+    type: Member
+    syntax:
+      content: id
+    langs:
+      - js
+  - uid: RVDashboardFilter#title
+    id: RVDashboardFilter#title
+    parent: RVDashboardFilter
+    name: title
+    summary: The title of the filter.
+    fullName: RVDashboardFilter.title
+    type: Member
+    syntax:
+      content: title
+    langs:
+      - js

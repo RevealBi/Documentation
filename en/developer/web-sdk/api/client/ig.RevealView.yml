@@ -1,0 +1,149 @@
+### YamlMime:UniversalReference
+items:
+  - uid: $.ig.RevealView
+    id: $.ig.RevealView
+    name: RevealView
+    summary: >-
+      The main class used to render a dashboard in your application, it also
+      allows the edition of existing dashboards or the creation from scratch.
+    fullName: RevealView
+    type: Class
+    children:
+      - $.ig.RevealView.#ctor
+      - $.ig.RevealView.dashboard
+      - $.ig.RevealView.dashboard
+      - $.ig.RevealView#canAddVisualization
+      - $.ig.RevealView#canAddCalculatedFields
+      - $.ig.RevealView#canAddPostCalculatedFields
+      - $.ig.RevealView#canCopyVisualization
+      - $.ig.RevealView#canDuplicateVisualization
+      - $.ig.RevealView#showMenu
+      - $.ig.RevealView#showMenu
+    langs:
+      - js
+  - id: $.ig.RevealView.#ctor
+    uid: $.ig.RevealView.#ctor
+    parent: $.ig.RevealView
+    name: RevealView(selector)
+    fullName: RevealView.RevealView(selector)
+    summary: Used to create a new instance of $.ig.RevealView class.
+    type: Constructor
+    syntax:
+      parameters:
+        - id: selector
+          type:
+            - string
+          description: 'that references the HTML element to attach the view to, like a div.'
+      content: new RevealView(selector)
+    langs:
+      - js
+  - uid: $.ig.RevealView.dashboard
+    id: $.ig.RevealView.dashboard
+    parent: $.ig.RevealView
+    name: dashboard
+    summary: >-
+      A flag indicating if the user can switch to edit mode or not, defaults to
+      true.
+    fullName: $.ig.RevealView.dashboard
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: dashboard
+    langs:
+      - js
+  - uid: $.ig.RevealView#canAddVisualization
+    id: $.ig.RevealView#canAddVisualization
+    parent: $.ig.RevealView
+    name: canAddVisualization
+    summary: >-
+      A flag that indicates if new visualizations can be added when the
+      dashboard is edited
+    fullName: $.ig.RevealView.canAddVisualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: canAddVisualization
+    langs:
+      - js
+  - uid: $.ig.RevealView#canAddCalculatedFields
+    id: $.ig.RevealView#canAddCalculatedFields
+    parent: $.ig.RevealView
+    name: canAddCalculatedFields
+    summary: >-
+      A flag indicating if new (calculated) fields can be added to the list of
+      fields.
+    fullName: $.ig.RevealView.canAddCalculatedFields
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: canAddCalculatedFields
+    langs:
+      - js
+  - uid: $.ig.RevealView#canAddPostCalculatedFields
+    id: $.ig.RevealView#canAddPostCalculatedFields
+    parent: $.ig.RevealView
+    name: canAddPostCalculatedFields
+    summary: >-
+      A flag indicating if the f(x) option in numeric values sections (like
+      "Values") should be displayed or not.
+    fullName: $.ig.RevealView.canAddPostCalculatedFields
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: canAddPostCalculatedFields
+    langs:
+      - js
+  - uid: $.ig.RevealView#canCopyVisualization
+    id: $.ig.RevealView#canCopyVisualization
+    parent: $.ig.RevealView
+    name: canCopyVisualization
+    summary: >-
+      A flag that indicates if the "Copy" option is available in the menu for a
+      visualization.
+    fullName: $.ig.RevealView.canCopyVisualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: canCopyVisualization
+    langs:
+      - js
+  - uid: $.ig.RevealView#canDuplicateVisualization
+    id: $.ig.RevealView#canDuplicateVisualization
+    parent: $.ig.RevealView
+    name: canDuplicateVisualization
+    summary: >-
+      A flag that indicates if the "Duplicate" option is available in the menu
+      for a visualization.
+    fullName: $.ig.RevealView.canDuplicateVisualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: canDuplicateVisualization
+    langs:
+      - js
+  - uid: $.ig.RevealView#showMenu
+    id: $.ig.RevealView#showMenu
+    parent: $.ig.RevealView
+    name: showMenu
+    summary: "A flag that allows the dashboard filters panel to be hidden. This is useful if you want to limit the selected\rvalues for the filters to the initial selection specified in $.ig.RevealSettings.\rOnce the $.ig.RevealView object is created and rendered you can use $.ig.RevealView.setFilterSelectedValues to change\rthe selection for a given filter, so you can keep the selected values synced with your app."
+    fullName: $.ig.RevealView.showMenu
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: showMenu
+    langs:
+      - js

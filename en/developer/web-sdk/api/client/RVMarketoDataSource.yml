@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVMarketoDataSource
+    id: RVMarketoDataSource
+    name: RVMarketoDataSource
+    summary: ''
+    fullName: RVMarketoDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVMarketoDataSource.#ctor
+    langs:
+      - js
+  - id: RVMarketoDataSource.#ctor
+    uid: RVMarketoDataSource.#ctor
+    parent: RVMarketoDataSource
+    name: RVMarketoDataSource()
+    fullName: RVMarketoDataSource.RVMarketoDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVMarketoDataSource()
+    langs:
+      - js

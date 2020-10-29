@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RevealSdkSettings
+    id: RevealSdkSettings
+    name: RevealSdkSettings
+    summary: This class is used to specify global settings for the SDK.
+    fullName: RevealSdkSettings
+    type: Class
+    children:
+      - RevealSdkSettings.#ctor
+    langs:
+      - js
+  - id: RevealSdkSettings.#ctor
+    uid: RevealSdkSettings.#ctor
+    parent: RevealSdkSettings
+    name: RevealSdkSettings()
+    fullName: RevealSdkSettings.RevealSdkSettings()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RevealSdkSettings()
+    langs:
+      - js

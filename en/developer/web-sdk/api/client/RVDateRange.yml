@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVDateRange
+    id: RVDateRange
+    name: RVDateRange
+    summary: Class used to represent a date range for filtering.
+    fullName: RVDateRange
+    type: Class
+    children:
+      - RVDateRange.#ctor
+    langs:
+      - js
+  - id: RVDateRange.#ctor
+    uid: RVDateRange.#ctor
+    parent: RVDateRange
+    name: RVDateRange()
+    fullName: RVDateRange.RVDateRange()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVDateRange()
+    langs:
+      - js

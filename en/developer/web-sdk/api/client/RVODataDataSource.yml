@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVODataDataSource
+    id: RVODataDataSource
+    name: RVODataDataSource
+    summary: ''
+    fullName: RVODataDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVODataDataSource.#ctor
+    langs:
+      - js
+  - id: RVODataDataSource.#ctor
+    uid: RVODataDataSource.#ctor
+    parent: RVODataDataSource
+    name: RVODataDataSource()
+    fullName: RVODataDataSource.RVODataDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVODataDataSource()
+    langs:
+      - js

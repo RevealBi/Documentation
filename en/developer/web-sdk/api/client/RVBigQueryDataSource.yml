@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVBigQueryDataSource
+    id: RVBigQueryDataSource
+    name: RVBigQueryDataSource
+    summary: ''
+    fullName: RVBigQueryDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVBigQueryDataSource.#ctor
+    langs:
+      - js
+  - id: RVBigQueryDataSource.#ctor
+    uid: RVBigQueryDataSource.#ctor
+    parent: RVBigQueryDataSource
+    name: RVBigQueryDataSource()
+    fullName: RVBigQueryDataSource.RVBigQueryDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVBigQueryDataSource()
+    langs:
+      - js

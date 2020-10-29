@@ -1,0 +1,127 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVDashboard
+    id: RVDashboard
+    name: RVDashboard
+    summary: >-
+      The class representing a Dashboard model. To get an instance of this
+      class, use <xref:RVDashboard.loadDashboard> method.
+    fullName: RVDashboard
+    type: Class
+    children:
+      - RVDashboard.#ctor
+      - RVDashboard#onVisualizationsChanged
+      - RVDashboard#onFiltersChanged
+      - RVDashboard#onDateFilterChanged
+      - RVDashboard#onHasPendingChangesChanged
+      - RVDashboard#visualizations
+      - RVDashboard#filters
+      - RVDashboard#dateFilter
+      - RVDashboard#title
+    langs:
+      - js
+  - id: RVDashboard.#ctor
+    uid: RVDashboard.#ctor
+    parent: RVDashboard
+    name: RVDashboard()
+    fullName: RVDashboard.RVDashboard()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVDashboard()
+    langs:
+      - js
+  - uid: RVDashboard#onVisualizationsChanged
+    id: RVDashboard#onVisualizationsChanged
+    parent: RVDashboard
+    name: onVisualizationsChanged
+    summary: "This event is triggered when the list of visualizations has changed because a visualization\rwas added/removed or udpated."
+    fullName: RVDashboard.onVisualizationsChanged
+    type: Member
+    syntax:
+      content: onVisualizationsChanged
+    langs:
+      - js
+  - uid: RVDashboard#onFiltersChanged
+    id: RVDashboard#onFiltersChanged
+    parent: RVDashboard
+    name: onFiltersChanged
+    summary: "This event is triggered when the list of filters has changed because a filter\rwas added or removed."
+    fullName: RVDashboard.onFiltersChanged
+    type: Member
+    syntax:
+      content: onFiltersChanged
+    langs:
+      - js
+  - uid: RVDashboard#onDateFilterChanged
+    id: RVDashboard#onDateFilterChanged
+    parent: RVDashboard
+    name: onDateFilterChanged
+    summary: This event is triggered when the date filter was modified.
+    fullName: RVDashboard.onDateFilterChanged
+    type: Member
+    syntax:
+      content: onDateFilterChanged
+    langs:
+      - js
+  - uid: RVDashboard#onHasPendingChangesChanged
+    id: RVDashboard#onHasPendingChangesChanged
+    parent: RVDashboard
+    name: onHasPendingChangesChanged
+    summary: >-
+      This event is triggered when the hasPendingChanges flag has changed its
+      value.
+    fullName: RVDashboard.onHasPendingChangesChanged
+    type: Member
+    syntax:
+      content: onHasPendingChangesChanged
+    langs:
+      - js
+  - uid: RVDashboard#visualizations
+    id: RVDashboard#visualizations
+    parent: RVDashboard
+    name: visualizations
+    summary: The list of visualizations in the dashboard.
+    fullName: RVDashboard.visualizations
+    type: Member
+    syntax:
+      content: visualizations
+    langs:
+      - js
+  - uid: RVDashboard#filters
+    id: RVDashboard#filters
+    parent: RVDashboard
+    name: filters
+    summary: >-
+      The list of filters in the dashboard. Dashboard filters can be used to
+      apply filters to multiple widgets at the same time.
+    fullName: RVDashboard.filters
+    type: Member
+    syntax:
+      content: filters
+    langs:
+      - js
+  - uid: RVDashboard#dateFilter
+    id: RVDashboard#dateFilter
+    parent: RVDashboard
+    name: dateFilter
+    summary: >-
+      The date global filter configured in this dashboard, null if no date
+      filter is configured.
+    fullName: RVDashboard.dateFilter
+    type: Member
+    syntax:
+      content: dateFilter
+    langs:
+      - js
+  - uid: RVDashboard#title
+    id: RVDashboard#title
+    parent: RVDashboard
+    name: title
+    summary: The name or title of the dashboard
+    fullName: RVDashboard.title
+    type: Member
+    syntax:
+      content: title
+    langs:
+      - js

@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: VisualizationEditorClosingArgs
+    id: VisualizationEditorClosingArgs
+    name: VisualizationEditorClosingArgs
+    summary: Class representing the event arguments visualizationEditorClosing event
+    fullName: VisualizationEditorClosingArgs
+    type: Class
+    children:
+      - VisualizationEditorClosingArgs.#ctor
+    langs:
+      - js
+  - id: VisualizationEditorClosingArgs.#ctor
+    uid: VisualizationEditorClosingArgs.#ctor
+    parent: VisualizationEditorClosingArgs
+    name: VisualizationEditorClosingArgs()
+    fullName: VisualizationEditorClosingArgs.VisualizationEditorClosingArgs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new VisualizationEditorClosingArgs()
+    langs:
+      - js

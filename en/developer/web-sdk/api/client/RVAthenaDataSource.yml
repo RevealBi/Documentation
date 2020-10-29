@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVAthenaDataSource
+    id: RVAthenaDataSource
+    name: RVAthenaDataSource
+    summary: ''
+    fullName: RVAthenaDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVAthenaDataSource.#ctor
+    langs:
+      - js
+  - id: RVAthenaDataSource.#ctor
+    uid: RVAthenaDataSource.#ctor
+    parent: RVAthenaDataSource
+    name: RVAthenaDataSource()
+    fullName: RVAthenaDataSource.RVAthenaDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVAthenaDataSource()
+    langs:
+      - js

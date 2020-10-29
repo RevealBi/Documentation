@@ -1,0 +1,6 @@
+{
+  "source": {
+    "include": ["src/web/client"]
+  },
+  "destination": "en/developer/web-sdk/api/client"
+}

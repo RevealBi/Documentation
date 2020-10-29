@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVSharePointDataSource
+    id: RVSharePointDataSource
+    name: RVSharePointDataSource
+    summary: ''
+    fullName: RVSharePointDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVSharePointDataSource.#ctor
+    langs:
+      - js
+  - id: RVSharePointDataSource.#ctor
+    uid: RVSharePointDataSource.#ctor
+    parent: RVSharePointDataSource
+    name: RVSharePointDataSource()
+    fullName: RVSharePointDataSource.RVSharePointDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVSharePointDataSource()
+    langs:
+      - js

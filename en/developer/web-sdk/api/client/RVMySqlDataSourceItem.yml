@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVMySqlDataSourceItem
+    id: RVMySqlDataSourceItem
+    name: RVMySqlDataSourceItem
+    summary: ''
+    fullName: RVMySqlDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVMySqlDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVMySqlDataSourceItem.#ctor
+    uid: RVMySqlDataSourceItem.#ctor
+    parent: RVMySqlDataSourceItem
+    name: RVMySqlDataSourceItem()
+    fullName: RVMySqlDataSourceItem.RVMySqlDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVMySqlDataSourceItem()
+    langs:
+      - js

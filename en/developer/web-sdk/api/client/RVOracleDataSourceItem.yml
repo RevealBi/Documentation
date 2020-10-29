@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVOracleDataSourceItem
+    id: RVOracleDataSourceItem
+    name: RVOracleDataSourceItem
+    summary: ''
+    fullName: RVOracleDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVOracleDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVOracleDataSourceItem.#ctor
+    uid: RVOracleDataSourceItem.#ctor
+    parent: RVOracleDataSourceItem
+    name: RVOracleDataSourceItem()
+    fullName: RVOracleDataSourceItem.RVOracleDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVOracleDataSourceItem()
+    langs:
+      - js

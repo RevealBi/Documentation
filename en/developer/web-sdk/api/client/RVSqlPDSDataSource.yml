@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVSqlPDSDataSource
+    id: RVSqlPDSDataSource
+    name: RVSqlPDSDataSource
+    summary: ''
+    fullName: RVSqlPDSDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVSqlPDSDataSource.#ctor
+    langs:
+      - js
+  - id: RVSqlPDSDataSource.#ctor
+    uid: RVSqlPDSDataSource.#ctor
+    parent: RVSqlPDSDataSource
+    name: RVSqlPDSDataSource()
+    fullName: RVSqlPDSDataSource.RVSqlPDSDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVSqlPDSDataSource()
+    langs:
+      - js

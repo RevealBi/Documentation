@@ -1,0 +1,25 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVFilterValue
+    id: RVFilterValue
+    name: RVFilterValue
+    summary: >-
+      Class representing a possible value for a dashboard filter, retrieved from
+      <xref:%24.ig.RevealUtility.getFilterValues>
+    fullName: RVFilterValue
+    type: Class
+    children:
+      - RVFilterValue.#ctor
+    langs:
+      - js
+  - id: RVFilterValue.#ctor
+    uid: RVFilterValue.#ctor
+    parent: RVFilterValue
+    name: RVFilterValue()
+    fullName: RVFilterValue.RVFilterValue()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVFilterValue()
+    langs:
+      - js

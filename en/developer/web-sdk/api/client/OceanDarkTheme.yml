@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: OceanDarkTheme
+    id: OceanDarkTheme
+    name: OceanDarkTheme
+    summary: Light version of the Ocean theme
+    fullName: OceanDarkTheme
+    type: Class
+    children:
+      - OceanDarkTheme.#ctor
+    langs:
+      - js
+  - id: OceanDarkTheme.#ctor
+    uid: OceanDarkTheme.#ctor
+    parent: OceanDarkTheme
+    name: OceanDarkTheme()
+    fullName: OceanDarkTheme.OceanDarkTheme()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new OceanDarkTheme()
+    langs:
+      - js

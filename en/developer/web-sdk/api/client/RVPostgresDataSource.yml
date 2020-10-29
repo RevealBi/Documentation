@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVPostgresDataSource
+    id: RVPostgresDataSource
+    name: RVPostgresDataSource
+    summary: ''
+    fullName: RVPostgresDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVPostgresDataSource.#ctor
+    langs:
+      - js
+  - id: RVPostgresDataSource.#ctor
+    uid: RVPostgresDataSource.#ctor
+    parent: RVPostgresDataSource
+    name: RVPostgresDataSource()
+    fullName: RVPostgresDataSource.RVPostgresDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVPostgresDataSource()
+    langs:
+      - js

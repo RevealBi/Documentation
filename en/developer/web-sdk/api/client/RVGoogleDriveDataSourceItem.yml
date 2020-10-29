@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVGoogleDriveDataSourceItem
+    id: RVGoogleDriveDataSourceItem
+    name: RVGoogleDriveDataSourceItem
+    summary: ''
+    fullName: RVGoogleDriveDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVGoogleDriveDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVGoogleDriveDataSourceItem.#ctor
+    uid: RVGoogleDriveDataSourceItem.#ctor
+    parent: RVGoogleDriveDataSourceItem
+    name: RVGoogleDriveDataSourceItem()
+    fullName: RVGoogleDriveDataSourceItem.RVGoogleDriveDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVGoogleDriveDataSourceItem()
+    langs:
+      - js

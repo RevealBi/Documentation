@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVResourceBasedDataSourceItem
+    id: RVResourceBasedDataSourceItem
+    name: RVResourceBasedDataSourceItem
+    summary: ''
+    fullName: RVResourceBasedDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVResourceBasedDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVResourceBasedDataSourceItem.#ctor
+    uid: RVResourceBasedDataSourceItem.#ctor
+    parent: RVResourceBasedDataSourceItem
+    name: RVResourceBasedDataSourceItem()
+    fullName: RVResourceBasedDataSourceItem.RVResourceBasedDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVResourceBasedDataSourceItem()
+    langs:
+      - js

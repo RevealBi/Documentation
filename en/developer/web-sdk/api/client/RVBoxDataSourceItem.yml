@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVBoxDataSourceItem
+    id: RVBoxDataSourceItem
+    name: RVBoxDataSourceItem
+    summary: ''
+    fullName: RVBoxDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVBoxDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVBoxDataSourceItem.#ctor
+    uid: RVBoxDataSourceItem.#ctor
+    parent: RVBoxDataSourceItem
+    name: RVBoxDataSourceItem()
+    fullName: RVBoxDataSourceItem.RVBoxDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVBoxDataSourceItem()
+    langs:
+      - js

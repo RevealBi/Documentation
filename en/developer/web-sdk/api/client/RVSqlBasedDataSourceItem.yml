@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVSqlBasedDataSourceItem
+    id: RVSqlBasedDataSourceItem
+    name: RVSqlBasedDataSourceItem
+    summary: ''
+    fullName: RVSqlBasedDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVSqlBasedDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVSqlBasedDataSourceItem.#ctor
+    uid: RVSqlBasedDataSourceItem.#ctor
+    parent: RVSqlBasedDataSourceItem
+    name: RVSqlBasedDataSourceItem()
+    fullName: RVSqlBasedDataSourceItem.RVSqlBasedDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVSqlBasedDataSourceItem()
+    langs:
+      - js

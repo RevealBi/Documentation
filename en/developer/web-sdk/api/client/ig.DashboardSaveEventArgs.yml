@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: $.ig.DashboardSaveEventArgs
+    id: $.ig.DashboardSaveEventArgs
+    name: DashboardSaveEventArgs
+    summary: The class used as the argument to the onSave event.
+    fullName: DashboardSaveEventArgs
+    type: Class
+    children:
+      - $.ig.DashboardSaveEventArgs.#ctor
+      - $.ig.DashboardSaveEventArgs#saveAs
+      - $.ig.DashboardSaveEventArgs#name
+    langs:
+      - js
+  - id: $.ig.DashboardSaveEventArgs.#ctor
+    uid: $.ig.DashboardSaveEventArgs.#ctor
+    parent: $.ig.DashboardSaveEventArgs
+    name: DashboardSaveEventArgs()
+    fullName: DashboardSaveEventArgs.DashboardSaveEventArgs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new DashboardSaveEventArgs()
+    langs:
+      - js
+  - uid: $.ig.DashboardSaveEventArgs#saveAs
+    id: $.ig.DashboardSaveEventArgs#saveAs
+    parent: $.ig.DashboardSaveEventArgs
+    name: saveAs
+    summary: >-
+      A flag indicating if this event was originated by a 'save' (false) or
+      'save as' (true) operation.
+    fullName: $.ig.DashboardSaveEventArgs.saveAs
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: saveAs
+    langs:
+      - js
+  - uid: $.ig.DashboardSaveEventArgs#name
+    id: $.ig.DashboardSaveEventArgs#name
+    parent: $.ig.DashboardSaveEventArgs
+    name: name
+    summary: The name of the dashboard being saved.
+    fullName: $.ig.DashboardSaveEventArgs.name
+    type: Member
+    syntax:
+      return:
+        type:
+          - string
+      content: name
+    langs:
+      - js

@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVHubspotDataSourceItem
+    id: RVHubspotDataSourceItem
+    name: RVHubspotDataSourceItem
+    summary: ''
+    fullName: RVHubspotDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVHubspotDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVHubspotDataSourceItem.#ctor
+    uid: RVHubspotDataSourceItem.#ctor
+    parent: RVHubspotDataSourceItem
+    name: RVHubspotDataSourceItem()
+    fullName: RVHubspotDataSourceItem.RVHubspotDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVHubspotDataSourceItem()
+    langs:
+      - js

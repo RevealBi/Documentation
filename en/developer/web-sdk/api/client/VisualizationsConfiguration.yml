@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: VisualizationsConfiguration
+    id: VisualizationsConfiguration
+    name: VisualizationsConfiguration
+    summary: >-
+      This class is used to specify settings for visualizations like Choropleth
+      or Scatter Map.
+    fullName: VisualizationsConfiguration
+    type: Class
+    children:
+      - VisualizationsConfiguration.#ctor
+      - VisualizationsConfiguration#scatterMaps
+    langs:
+      - js
+  - id: VisualizationsConfiguration.#ctor
+    uid: VisualizationsConfiguration.#ctor
+    parent: VisualizationsConfiguration
+    name: VisualizationsConfiguration()
+    fullName: VisualizationsConfiguration.VisualizationsConfiguration()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new VisualizationsConfiguration()
+    langs:
+      - js
+  - uid: VisualizationsConfiguration#scatterMaps
+    id: VisualizationsConfiguration#scatterMaps
+    parent: VisualizationsConfiguration
+    name: scatterMaps
+    summary: The configuration used by Scatter Map visualizations
+    fullName: VisualizationsConfiguration.scatterMaps
+    type: Member
+    syntax:
+      content: scatterMaps
+    langs:
+      - js

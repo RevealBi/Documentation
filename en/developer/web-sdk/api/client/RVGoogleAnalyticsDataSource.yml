@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVGoogleAnalyticsDataSource
+    id: RVGoogleAnalyticsDataSource
+    name: RVGoogleAnalyticsDataSource
+    summary: ''
+    fullName: RVGoogleAnalyticsDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVGoogleAnalyticsDataSource.#ctor
+    langs:
+      - js
+  - id: RVGoogleAnalyticsDataSource.#ctor
+    uid: RVGoogleAnalyticsDataSource.#ctor
+    parent: RVGoogleAnalyticsDataSource
+    name: RVGoogleAnalyticsDataSource()
+    fullName: RVGoogleAnalyticsDataSource.RVGoogleAnalyticsDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVGoogleAnalyticsDataSource()
+    langs:
+      - js

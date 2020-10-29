@@ -23,7 +23,7 @@
 - name: Server API Reference
   href: web-sdk/api-reference-server.md
 - name: Client API Reference
-  href: web-sdk/api-reference-client.md
+  href: web-sdk/api/client/toc.yml
 - name: Desktop SDK
   header: true
 - name: Overview

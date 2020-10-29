@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVRedshiftDataSourceItem
+    id: RVRedshiftDataSourceItem
+    name: RVRedshiftDataSourceItem
+    summary: ''
+    fullName: RVRedshiftDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVRedshiftDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVRedshiftDataSourceItem.#ctor
+    uid: RVRedshiftDataSourceItem.#ctor
+    parent: RVRedshiftDataSourceItem
+    name: RVRedshiftDataSourceItem()
+    fullName: RVRedshiftDataSourceItem.RVRedshiftDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVRedshiftDataSourceItem()
+    langs:
+      - js

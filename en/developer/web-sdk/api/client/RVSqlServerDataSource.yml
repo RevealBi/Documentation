@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVSqlServerDataSource
+    id: RVSqlServerDataSource
+    name: RVSqlServerDataSource
+    summary: ''
+    fullName: RVSqlServerDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVSqlServerDataSource.#ctor
+    langs:
+      - js
+  - id: RVSqlServerDataSource.#ctor
+    uid: RVSqlServerDataSource.#ctor
+    parent: RVSqlServerDataSource
+    name: RVSqlServerDataSource()
+    fullName: RVSqlServerDataSource.RVSqlServerDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVSqlServerDataSource()
+    langs:
+      - js

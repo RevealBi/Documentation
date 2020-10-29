@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVChartSettings
+    id: RVChartSettings
+    name: RVChartSettings
+    summary: The class representing the chart settings for a visualization.
+    fullName: RVChartSettings
+    type: Class
+    children:
+      - RVChartSettings.#ctor
+    langs:
+      - js
+  - id: RVChartSettings.#ctor
+    uid: RVChartSettings.#ctor
+    parent: RVChartSettings
+    name: RVChartSettings()
+    fullName: RVChartSettings.RVChartSettings()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVChartSettings()
+    langs:
+      - js

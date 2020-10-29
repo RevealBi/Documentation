@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVAzureSynapseDataSource
+    id: RVAzureSynapseDataSource
+    name: RVAzureSynapseDataSource
+    summary: ''
+    fullName: RVAzureSynapseDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVAzureSynapseDataSource.#ctor
+    langs:
+      - js
+  - id: RVAzureSynapseDataSource.#ctor
+    uid: RVAzureSynapseDataSource.#ctor
+    parent: RVAzureSynapseDataSource
+    name: RVAzureSynapseDataSource()
+    fullName: RVAzureSynapseDataSource.RVAzureSynapseDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVAzureSynapseDataSource()
+    langs:
+      - js

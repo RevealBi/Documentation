@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVSharePointSiteDataSourceItem
+    id: RVSharePointSiteDataSourceItem
+    name: RVSharePointSiteDataSourceItem
+    summary: ''
+    fullName: RVSharePointSiteDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVSharePointSiteDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVSharePointSiteDataSourceItem.#ctor
+    uid: RVSharePointSiteDataSourceItem.#ctor
+    parent: RVSharePointSiteDataSourceItem
+    name: RVSharePointSiteDataSourceItem()
+    fullName: RVSharePointSiteDataSourceItem.RVSharePointSiteDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVSharePointSiteDataSourceItem()
+    langs:
+      - js

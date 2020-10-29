@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVExcelRange
+    id: RVExcelRange
+    name: RVExcelRange
+    summary: ''
+    fullName: RVExcelRange
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVExcelRange.#ctor
+    langs:
+      - js
+  - id: RVExcelRange.#ctor
+    uid: RVExcelRange.#ctor
+    parent: RVExcelRange
+    name: RVExcelRange()
+    fullName: RVExcelRange.RVExcelRange()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVExcelRange()
+    langs:
+      - js

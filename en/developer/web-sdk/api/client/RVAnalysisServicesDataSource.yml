@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVAnalysisServicesDataSource
+    id: RVAnalysisServicesDataSource
+    name: RVAnalysisServicesDataSource
+    summary: ''
+    fullName: RVAnalysisServicesDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVAnalysisServicesDataSource.#ctor
+    langs:
+      - js
+  - id: RVAnalysisServicesDataSource.#ctor
+    uid: RVAnalysisServicesDataSource.#ctor
+    parent: RVAnalysisServicesDataSource
+    name: RVAnalysisServicesDataSource()
+    fullName: RVAnalysisServicesDataSource.RVAnalysisServicesDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVAnalysisServicesDataSource()
+    langs:
+      - js

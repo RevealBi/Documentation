@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVAzureAnalysisServicesDataSource
+    id: RVAzureAnalysisServicesDataSource
+    name: RVAzureAnalysisServicesDataSource
+    summary: ''
+    fullName: RVAzureAnalysisServicesDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVAzureAnalysisServicesDataSource.#ctor
+    langs:
+      - js
+  - id: RVAzureAnalysisServicesDataSource.#ctor
+    uid: RVAzureAnalysisServicesDataSource.#ctor
+    parent: RVAzureAnalysisServicesDataSource
+    name: RVAzureAnalysisServicesDataSource()
+    fullName: RVAzureAnalysisServicesDataSource.RVAzureAnalysisServicesDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVAzureAnalysisServicesDataSource()
+    langs:
+      - js

@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVGoogleSheetDataSourceItem
+    id: RVGoogleSheetDataSourceItem
+    name: RVGoogleSheetDataSourceItem
+    summary: ''
+    fullName: RVGoogleSheetDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVGoogleSheetDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVGoogleSheetDataSourceItem.#ctor
+    uid: RVGoogleSheetDataSourceItem.#ctor
+    parent: RVGoogleSheetDataSourceItem
+    name: RVGoogleSheetDataSourceItem()
+    fullName: RVGoogleSheetDataSourceItem.RVGoogleSheetDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVGoogleSheetDataSourceItem()
+    langs:
+      - js

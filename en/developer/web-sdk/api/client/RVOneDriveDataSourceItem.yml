@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVOneDriveDataSourceItem
+    id: RVOneDriveDataSourceItem
+    name: RVOneDriveDataSourceItem
+    summary: ''
+    fullName: RVOneDriveDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVOneDriveDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVOneDriveDataSourceItem.#ctor
+    uid: RVOneDriveDataSourceItem.#ctor
+    parent: RVOneDriveDataSourceItem
+    name: RVOneDriveDataSourceItem()
+    fullName: RVOneDriveDataSourceItem.RVOneDriveDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVOneDriveDataSourceItem()
+    langs:
+      - js

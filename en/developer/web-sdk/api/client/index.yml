@@ -1,0 +1,313 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'asdf'
+    name: ''
+    langs:
+      - js
+    type: package
+    summary: ''
+    children:
+      - RVLocalFileDataSourceItem$1
+      - RVSyBaseDataSource
+      - RVSyBaseDataSourceItem
+      - RVOracleDataSourceItem
+      - RVOracleServiceDataSource
+      - RVOracleDataSource
+      - RVSharePointSiteDataSourceItem
+      - RVSharePointPeopleDataSourceItem
+      - RVSharePointListItemDataSourceItem
+      - RVSharePointListDataSourceItem
+      - RVBaseSharePointDataSourceItem
+      - RVSharePointDataSource
+      - RVMarketoDataSource
+      - RVMarketoDataSourceItem
+      - RVHubspotDataSourceItem
+      - RVHubspotDataSource
+      - RVGoogleAnalyticsDataSourceItem
+      - RVGoogleAnalyticsDataSource
+      - RVGoogleSheetDataSourceItem
+      - RVGoogleSheetDataSource
+      - RVGoogleDriveDataSourceItem
+      - RVGoogleDriveDataSource
+      - RVODataDataSource
+      - RVODataDataSourceItem
+      - RVDynamicsCrmDataSourceItem
+      - RVDynamicsCrmDataSource
+      - RVOneDriveDataSourceItem
+      - RVOneDriveDataSource
+      - RVDropboxDataSourceItem
+      - RVDropboxDataSource
+      - RVBoxDataSourceItem
+      - RVBoxDataSource
+      - RVRESTDataSourceItem
+      - RVRESTDataSource
+      - RVJsonDataSourceItem
+      - RVJsonDataSource
+      - RVBigQueryDataSourceItem
+      - RVBigQueryDataSource
+      - RVAzureSynapseDataSource
+      - RVAzureSynapseDataSourceItem
+      - RVAzureSqlDataSourceItem
+      - RVAzureSqlDataSource
+      - RVAnalysisServicesDataSourceItem
+      - RVNativeAnalysisServicesDataSource
+      - RVHttpAnalysisServicesDataSource
+      - RVAzureAnalysisServicesDataSource
+      - RVAnalysisServicesDataSource
+      - RVReportingServicesDataSourceItem
+      - RVReportingServicesDataSource
+      - RVRedshiftDataSourceItem
+      - RVRedshiftDataSource
+      - RVPostgresDataSourceItem
+      - RVPostgresDataSource
+      - RVInMemoryDataSourceItem
+      - RVInMemoryDataSource
+      - RVS3DataSource
+      - RVS3DataSourceItem
+      - RVAthenaDataSourceItem
+      - RVAthenaDataSource
+      - RVMySqlDataSourceItem
+      - RVMySqlDataSource
+      - RVCsvDataSourceItem
+      - RVCsvDataSource
+      - RVWebResourceDataSourceItem
+      - RVWebResourceDataSource
+      - RVSqlServerDataSourceItem
+      - RVSqlPDSDataSourceItem
+      - RVSqlBasedDataSourceItem
+      - RVSqlServerDataSource
+      - RVSqlPDSDataSource
+      - RVSqlBasedDataSource
+      - RVExcelRange
+      - RVExcelDataSourceItem
+      - RVResourceBasedDataSourceItem
+      - RVExcelDataSource
+      - RVLocalFileDataSourceItem
+      - RVDataSourceItem
+      - RVLocalFileDataSource
+      - RVDashboardDataSource
+      - RVChartSettings
+      - $.ig.RevealView
+      - $.ig.ChartInteractionEventArgs
+      - $.ig.DashboardSaveEventArgs
+      - RevealSdkSettings
+      - VisualizationsConfiguration
+      - $.ig.VisualizationEditorClosedEventArgs
+      - VisualizationEditorClosingArgs
+      - OceanDarkTheme
+      - OceanLightTheme
+      - MountainLightTheme
+      - MountainDarkTheme
+      - RevealTheme
+      - RVConditionalFormatting
+      - RVCell
+      - RVDashboard
+      - RevealUtility
+      - RVDateDashboardFilter
+      - RVVisualization
+      - RVDashboardFilter
+      - RVFilterValue
+      - RVDateRange
+references:
+  - uid: RVLocalFileDataSourceItem$1
+    name: RVLocalFileDataSourceItem$1
+  - uid: RVSyBaseDataSource
+    name: RVSyBaseDataSource
+  - uid: RVSyBaseDataSourceItem
+    name: RVSyBaseDataSourceItem
+  - uid: RVOracleDataSourceItem
+    name: RVOracleDataSourceItem
+  - uid: RVOracleServiceDataSource
+    name: RVOracleServiceDataSource
+  - uid: RVOracleDataSource
+    name: RVOracleDataSource
+  - uid: RVSharePointSiteDataSourceItem
+    name: RVSharePointSiteDataSourceItem
+  - uid: RVSharePointPeopleDataSourceItem
+    name: RVSharePointPeopleDataSourceItem
+  - uid: RVSharePointListItemDataSourceItem
+    name: RVSharePointListItemDataSourceItem
+  - uid: RVSharePointListDataSourceItem
+    name: RVSharePointListDataSourceItem
+  - uid: RVBaseSharePointDataSourceItem
+    name: RVBaseSharePointDataSourceItem
+  - uid: RVSharePointDataSource
+    name: RVSharePointDataSource
+  - uid: RVMarketoDataSource
+    name: RVMarketoDataSource
+  - uid: RVMarketoDataSourceItem
+    name: RVMarketoDataSourceItem
+  - uid: RVHubspotDataSourceItem
+    name: RVHubspotDataSourceItem
+  - uid: RVHubspotDataSource
+    name: RVHubspotDataSource
+  - uid: RVGoogleAnalyticsDataSourceItem
+    name: RVGoogleAnalyticsDataSourceItem
+  - uid: RVGoogleAnalyticsDataSource
+    name: RVGoogleAnalyticsDataSource
+  - uid: RVGoogleSheetDataSourceItem
+    name: RVGoogleSheetDataSourceItem
+  - uid: RVGoogleSheetDataSource
+    name: RVGoogleSheetDataSource
+  - uid: RVGoogleDriveDataSourceItem
+    name: RVGoogleDriveDataSourceItem
+  - uid: RVGoogleDriveDataSource
+    name: RVGoogleDriveDataSource
+  - uid: RVODataDataSource
+    name: RVODataDataSource
+  - uid: RVODataDataSourceItem
+    name: RVODataDataSourceItem
+  - uid: RVDynamicsCrmDataSourceItem
+    name: RVDynamicsCrmDataSourceItem
+  - uid: RVDynamicsCrmDataSource
+    name: RVDynamicsCrmDataSource
+  - uid: RVOneDriveDataSourceItem
+    name: RVOneDriveDataSourceItem
+  - uid: RVOneDriveDataSource
+    name: RVOneDriveDataSource
+  - uid: RVDropboxDataSourceItem
+    name: RVDropboxDataSourceItem
+  - uid: RVDropboxDataSource
+    name: RVDropboxDataSource
+  - uid: RVBoxDataSourceItem
+    name: RVBoxDataSourceItem
+  - uid: RVBoxDataSource
+    name: RVBoxDataSource
+  - uid: RVRESTDataSourceItem
+    name: RVRESTDataSourceItem
+  - uid: RVRESTDataSource
+    name: RVRESTDataSource
+  - uid: RVJsonDataSourceItem
+    name: RVJsonDataSourceItem
+  - uid: RVJsonDataSource
+    name: RVJsonDataSource
+  - uid: RVBigQueryDataSourceItem
+    name: RVBigQueryDataSourceItem
+  - uid: RVBigQueryDataSource
+    name: RVBigQueryDataSource
+  - uid: RVAzureSynapseDataSource
+    name: RVAzureSynapseDataSource
+  - uid: RVAzureSynapseDataSourceItem
+    name: RVAzureSynapseDataSourceItem
+  - uid: RVAzureSqlDataSourceItem
+    name: RVAzureSqlDataSourceItem
+  - uid: RVAzureSqlDataSource
+    name: RVAzureSqlDataSource
+  - uid: RVAnalysisServicesDataSourceItem
+    name: RVAnalysisServicesDataSourceItem
+  - uid: RVNativeAnalysisServicesDataSource
+    name: RVNativeAnalysisServicesDataSource
+  - uid: RVHttpAnalysisServicesDataSource
+    name: RVHttpAnalysisServicesDataSource
+  - uid: RVAzureAnalysisServicesDataSource
+    name: RVAzureAnalysisServicesDataSource
+  - uid: RVAnalysisServicesDataSource
+    name: RVAnalysisServicesDataSource
+  - uid: RVReportingServicesDataSourceItem
+    name: RVReportingServicesDataSourceItem
+  - uid: RVReportingServicesDataSource
+    name: RVReportingServicesDataSource
+  - uid: RVRedshiftDataSourceItem
+    name: RVRedshiftDataSourceItem
+  - uid: RVRedshiftDataSource
+    name: RVRedshiftDataSource
+  - uid: RVPostgresDataSourceItem
+    name: RVPostgresDataSourceItem
+  - uid: RVPostgresDataSource
+    name: RVPostgresDataSource
+  - uid: RVInMemoryDataSourceItem
+    name: RVInMemoryDataSourceItem
+  - uid: RVInMemoryDataSource
+    name: RVInMemoryDataSource
+  - uid: RVS3DataSource
+    name: RVS3DataSource
+  - uid: RVS3DataSourceItem
+    name: RVS3DataSourceItem
+  - uid: RVAthenaDataSourceItem
+    name: RVAthenaDataSourceItem
+  - uid: RVAthenaDataSource
+    name: RVAthenaDataSource
+  - uid: RVMySqlDataSourceItem
+    name: RVMySqlDataSourceItem
+  - uid: RVMySqlDataSource
+    name: RVMySqlDataSource
+  - uid: RVCsvDataSourceItem
+    name: RVCsvDataSourceItem
+  - uid: RVCsvDataSource
+    name: RVCsvDataSource
+  - uid: RVWebResourceDataSourceItem
+    name: RVWebResourceDataSourceItem
+  - uid: RVWebResourceDataSource
+    name: RVWebResourceDataSource
+  - uid: RVSqlServerDataSourceItem
+    name: RVSqlServerDataSourceItem
+  - uid: RVSqlPDSDataSourceItem
+    name: RVSqlPDSDataSourceItem
+  - uid: RVSqlBasedDataSourceItem
+    name: RVSqlBasedDataSourceItem
+  - uid: RVSqlServerDataSource
+    name: RVSqlServerDataSource
+  - uid: RVSqlPDSDataSource
+    name: RVSqlPDSDataSource
+  - uid: RVSqlBasedDataSource
+    name: RVSqlBasedDataSource
+  - uid: RVExcelRange
+    name: RVExcelRange
+  - uid: RVExcelDataSourceItem
+    name: RVExcelDataSourceItem
+  - uid: RVResourceBasedDataSourceItem
+    name: RVResourceBasedDataSourceItem
+  - uid: RVExcelDataSource
+    name: RVExcelDataSource
+  - uid: RVLocalFileDataSourceItem
+    name: RVLocalFileDataSourceItem
+  - uid: RVDataSourceItem
+    name: RVDataSourceItem
+  - uid: RVLocalFileDataSource
+    name: RVLocalFileDataSource
+  - uid: RVDashboardDataSource
+    name: RVDashboardDataSource
+  - uid: RVChartSettings
+    name: RVChartSettings
+  - uid: $.ig.RevealView
+    name: RevealView
+  - uid: $.ig.ChartInteractionEventArgs
+    name: ChartInteractionEventArgs
+  - uid: $.ig.DashboardSaveEventArgs
+    name: DashboardSaveEventArgs
+  - uid: RevealSdkSettings
+    name: RevealSdkSettings
+  - uid: VisualizationsConfiguration
+    name: VisualizationsConfiguration
+  - uid: $.ig.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs
+  - uid: VisualizationEditorClosingArgs
+    name: VisualizationEditorClosingArgs
+  - uid: OceanDarkTheme
+    name: OceanDarkTheme
+  - uid: OceanLightTheme
+    name: OceanLightTheme
+  - uid: MountainLightTheme
+    name: MountainLightTheme
+  - uid: MountainDarkTheme
+    name: MountainDarkTheme
+  - uid: RevealTheme
+    name: RevealTheme
+  - uid: RVConditionalFormatting
+    name: RVConditionalFormatting
+  - uid: RVCell
+    name: RVCell
+  - uid: RVDashboard
+    name: RVDashboard
+  - uid: RevealUtility
+    name: RevealUtility
+  - uid: RVDateDashboardFilter
+    name: RVDateDashboardFilter
+  - uid: RVVisualization
+    name: RVVisualization
+  - uid: RVDashboardFilter
+    name: RVDashboardFilter
+  - uid: RVFilterValue
+    name: RVFilterValue
+  - uid: RVDateRange
+    name: RVDateRange

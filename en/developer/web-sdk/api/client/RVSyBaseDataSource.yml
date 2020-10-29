@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVSyBaseDataSource
+    id: RVSyBaseDataSource
+    name: RVSyBaseDataSource
+    summary: ''
+    fullName: RVSyBaseDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVSyBaseDataSource.#ctor
+    langs:
+      - js
+  - id: RVSyBaseDataSource.#ctor
+    uid: RVSyBaseDataSource.#ctor
+    parent: RVSyBaseDataSource
+    name: RVSyBaseDataSource()
+    fullName: RVSyBaseDataSource.RVSyBaseDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVSyBaseDataSource()
+    langs:
+      - js

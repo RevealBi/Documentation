@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVJsonDataSource
+    id: RVJsonDataSource
+    name: RVJsonDataSource
+    summary: ''
+    fullName: RVJsonDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVJsonDataSource.#ctor
+    langs:
+      - js
+  - id: RVJsonDataSource.#ctor
+    uid: RVJsonDataSource.#ctor
+    parent: RVJsonDataSource
+    name: RVJsonDataSource()
+    fullName: RVJsonDataSource.RVJsonDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVJsonDataSource()
+    langs:
+      - js

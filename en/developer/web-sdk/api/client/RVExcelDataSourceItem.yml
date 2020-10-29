@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVExcelDataSourceItem
+    id: RVExcelDataSourceItem
+    name: RVExcelDataSourceItem
+    summary: ''
+    fullName: RVExcelDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVExcelDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVExcelDataSourceItem.#ctor
+    uid: RVExcelDataSourceItem.#ctor
+    parent: RVExcelDataSourceItem
+    name: RVExcelDataSourceItem()
+    fullName: RVExcelDataSourceItem.RVExcelDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVExcelDataSourceItem()
+    langs:
+      - js

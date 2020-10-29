@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVAzureSqlDataSource
+    id: RVAzureSqlDataSource
+    name: RVAzureSqlDataSource
+    summary: ''
+    fullName: RVAzureSqlDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVAzureSqlDataSource.#ctor
+    langs:
+      - js
+  - id: RVAzureSqlDataSource.#ctor
+    uid: RVAzureSqlDataSource.#ctor
+    parent: RVAzureSqlDataSource
+    name: RVAzureSqlDataSource()
+    fullName: RVAzureSqlDataSource.RVAzureSqlDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVAzureSqlDataSource()
+    langs:
+      - js

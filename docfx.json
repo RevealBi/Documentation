@@ -3,6 +3,7 @@
         "content": [
             {
                 "files": [
+                    "en/developer/web-sdk/api/**/*.yml",
                     "en/**.md",
                     "en/**/toc.yml"
                 ],

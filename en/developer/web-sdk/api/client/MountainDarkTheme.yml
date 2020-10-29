@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: MountainDarkTheme
+    id: MountainDarkTheme
+    name: MountainDarkTheme
+    summary: Dark version of the Mauntain theme
+    fullName: MountainDarkTheme
+    type: Class
+    children:
+      - MountainDarkTheme.#ctor
+    langs:
+      - js
+  - id: MountainDarkTheme.#ctor
+    uid: MountainDarkTheme.#ctor
+    parent: MountainDarkTheme
+    name: MountainDarkTheme()
+    fullName: MountainDarkTheme.MountainDarkTheme()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new MountainDarkTheme()
+    langs:
+      - js

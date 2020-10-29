@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVRESTDataSourceItem
+    id: RVRESTDataSourceItem
+    name: RVRESTDataSourceItem
+    summary: ''
+    fullName: RVRESTDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVRESTDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVRESTDataSourceItem.#ctor
+    uid: RVRESTDataSourceItem.#ctor
+    parent: RVRESTDataSourceItem
+    name: RVRESTDataSourceItem()
+    fullName: RVRESTDataSourceItem.RVRESTDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVRESTDataSourceItem()
+    langs:
+      - js

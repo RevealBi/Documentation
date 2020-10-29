@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVReportingServicesDataSourceItem
+    id: RVReportingServicesDataSourceItem
+    name: RVReportingServicesDataSourceItem
+    summary: ''
+    fullName: RVReportingServicesDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVReportingServicesDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVReportingServicesDataSourceItem.#ctor
+    uid: RVReportingServicesDataSourceItem.#ctor
+    parent: RVReportingServicesDataSourceItem
+    name: RVReportingServicesDataSourceItem()
+    fullName: RVReportingServicesDataSourceItem.RVReportingServicesDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVReportingServicesDataSourceItem()
+    langs:
+      - js

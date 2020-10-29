@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVCsvDataSource
+    id: RVCsvDataSource
+    name: RVCsvDataSource
+    summary: ''
+    fullName: RVCsvDataSource
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVCsvDataSource.#ctor
+    langs:
+      - js
+  - id: RVCsvDataSource.#ctor
+    uid: RVCsvDataSource.#ctor
+    parent: RVCsvDataSource
+    name: RVCsvDataSource()
+    fullName: RVCsvDataSource.RVCsvDataSource()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVCsvDataSource()
+    langs:
+      - js

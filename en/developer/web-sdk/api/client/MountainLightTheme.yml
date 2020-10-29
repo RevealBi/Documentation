@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: MountainLightTheme
+    id: MountainLightTheme
+    name: MountainLightTheme
+    summary: Light version of the Mauntain theme
+    fullName: MountainLightTheme
+    type: Class
+    children:
+      - MountainLightTheme.#ctor
+    langs:
+      - js
+  - id: MountainLightTheme.#ctor
+    uid: MountainLightTheme.#ctor
+    parent: MountainLightTheme
+    name: MountainLightTheme()
+    fullName: MountainLightTheme.MountainLightTheme()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new MountainLightTheme()
+    langs:
+      - js

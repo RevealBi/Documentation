@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVDynamicsCrmDataSourceItem
+    id: RVDynamicsCrmDataSourceItem
+    name: RVDynamicsCrmDataSourceItem
+    summary: ''
+    fullName: RVDynamicsCrmDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVDynamicsCrmDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVDynamicsCrmDataSourceItem.#ctor
+    uid: RVDynamicsCrmDataSourceItem.#ctor
+    parent: RVDynamicsCrmDataSourceItem
+    name: RVDynamicsCrmDataSourceItem()
+    fullName: RVDynamicsCrmDataSourceItem.RVDynamicsCrmDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVDynamicsCrmDataSourceItem()
+    langs:
+      - js

@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RevealUtility
+    id: RevealUtility
+    name: RevealUtility
+    summary: Utility class used to load dashboards.
+    fullName: RevealUtility
+    type: Class
+    children:
+      - RevealUtility.#ctor
+      - RevealUtility.loadDashboard
+      - RevealUtility.loadDashboardFromContainer
+    langs:
+      - js
+  - id: RevealUtility.#ctor
+    uid: RevealUtility.#ctor
+    parent: RevealUtility
+    name: RevealUtility()
+    fullName: RevealUtility.RevealUtility()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RevealUtility()
+    langs:
+      - js
+  - uid: RevealUtility.loadDashboard
+    id: RevealUtility.loadDashboard
+    parent: RevealUtility
+    name: 'loadDashboard(dashboardId, onSuccess, onError)'
+    summary: >-
+      Loads the dashboard with the given ID from the standard endpoint in the
+      server.
+    fullName: 'RevealUtility.loadDashboard(dashboardId, onSuccess, onError)'
+    type: Function
+    syntax:
+      parameters:
+        - id: dashboardId
+          type:
+            - string
+          description: >-
+            The ID of the dashboard to open, this ID will be received in the
+            server: IRevealSdkContext.GetDashboardAsync
+        - id: onSuccess
+          type:
+            - function
+          description: >-
+            A callback that will receive an instance of $.ig.RVDashboard class
+            if the loading was successful.
+        - id: onError
+          type:
+            - function
+          description: A callback with the error message if the loading operation failed.
+      content: 'function loadDashboard(dashboardId, onSuccess, onError)'
+    langs:
+      - js
+  - uid: RevealUtility.loadDashboardFromContainer
+    id: RevealUtility.loadDashboardFromContainer
+    parent: RevealUtility
+    name: 'loadDashboardFromContainer(blob, onSuccess, onError)'
+    summary: Loads a dashboard from the Blob object with the contents of a .rdash file.
+    fullName: 'RevealUtility.loadDashboardFromContainer(blob, onSuccess, onError)'
+    type: Function
+    syntax:
+      parameters:
+        - id: blob
+          type:
+            - Blob
+          description: >-
+            The Blob object containing the binary contents of the dashboard in
+            rdash file format.
+        - id: onSuccess
+          type:
+            - function
+          description: >-
+            A callback that will receive an instance of $.ig.RVDashboard class
+            if the loading was successful.
+        - id: onError
+          type:
+            - function
+          description: A callback with the error message if the loading operation failed.
+      content: 'function loadDashboardFromContainer(blob, onSuccess, onError)'
+    langs:
+      - js

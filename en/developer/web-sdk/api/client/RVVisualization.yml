@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVVisualization
+    id: RVVisualization
+    name: RVVisualization
+    summary: The class representing a visualization (widget) in the dashboard model.
+    fullName: RVVisualization
+    type: Class
+    children:
+      - RVVisualization.#ctor
+      - RVVisualization#id
+      - RVVisualization#title
+    langs:
+      - js
+  - id: RVVisualization.#ctor
+    uid: RVVisualization.#ctor
+    parent: RVVisualization
+    name: RVVisualization()
+    fullName: RVVisualization.RVVisualization()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVVisualization()
+    langs:
+      - js
+  - uid: RVVisualization#id
+    id: RVVisualization#id
+    parent: RVVisualization
+    name: id
+    summary: The ID of the visualization
+    fullName: RVVisualization.id
+    type: Member
+    syntax:
+      content: id
+    langs:
+      - js
+  - uid: RVVisualization#title
+    id: RVVisualization#title
+    parent: RVVisualization
+    name: title
+    summary: The title of the visualization
+    fullName: RVVisualization.title
+    type: Member
+    syntax:
+      content: title
+    langs:
+      - js

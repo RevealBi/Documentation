@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: RVInMemoryDataSourceItem
+    id: RVInMemoryDataSourceItem
+    name: RVInMemoryDataSourceItem
+    summary: ''
+    fullName: RVInMemoryDataSourceItem
+    tags:
+      - originalTitle: hidden
+        title: hidden
+        text: ''
+    type: Class
+    children:
+      - RVInMemoryDataSourceItem.#ctor
+    langs:
+      - js
+  - id: RVInMemoryDataSourceItem.#ctor
+    uid: RVInMemoryDataSourceItem.#ctor
+    parent: RVInMemoryDataSourceItem
+    name: RVInMemoryDataSourceItem()
+    fullName: RVInMemoryDataSourceItem.RVInMemoryDataSourceItem()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RVInMemoryDataSourceItem()
+    langs:
+      - js

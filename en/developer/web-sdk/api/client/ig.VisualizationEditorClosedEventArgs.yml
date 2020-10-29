@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: $.ig.VisualizationEditorClosedEventArgs
+    id: $.ig.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs
+    summary: The type of the event arguments of the onVisualizationEditorClosed event.
+    fullName: VisualizationEditorClosedEventArgs
+    type: Class
+    children:
+      - $.ig.VisualizationEditorClosedEventArgs.#ctor
+      - $.ig.VisualizationEditorClosedEventArgs#visualization
+      - $.ig.VisualizationEditorClosedEventArgs#isCancelled
+      - $.ig.VisualizationEditorClosedEventArgs#isNewVisualization
+    langs:
+      - js
+  - id: $.ig.VisualizationEditorClosedEventArgs.#ctor
+    uid: $.ig.VisualizationEditorClosedEventArgs.#ctor
+    parent: $.ig.VisualizationEditorClosedEventArgs
+    name: VisualizationEditorClosedEventArgs()
+    fullName: VisualizationEditorClosedEventArgs.VisualizationEditorClosedEventArgs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new VisualizationEditorClosedEventArgs()
+    langs:
+      - js
+  - uid: $.ig.VisualizationEditorClosedEventArgs#visualization
+    id: $.ig.VisualizationEditorClosedEventArgs#visualization
+    parent: $.ig.VisualizationEditorClosedEventArgs
+    name: visualization
+    summary: The visualization after the changes made in the editor.
+    fullName: $.ig.VisualizationEditorClosedEventArgs.visualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - $.ig.RVVisualization
+      content: visualization
+    langs:
+      - js
+  - uid: $.ig.VisualizationEditorClosedEventArgs#isCancelled
+    id: $.ig.VisualizationEditorClosedEventArgs#isCancelled
+    parent: $.ig.VisualizationEditorClosedEventArgs
+    name: isCancelled
+    summary: >-
+      This property is true if the editor was closed by discarding the changes
+      (pressing the X button).
+    fullName: $.ig.VisualizationEditorClosedEventArgs.isCancelled
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: isCancelled
+    langs:
+      - js
+  - uid: $.ig.VisualizationEditorClosedEventArgs#isNewVisualization
+    id: $.ig.VisualizationEditorClosedEventArgs#isNewVisualization
+    parent: $.ig.VisualizationEditorClosedEventArgs
+    name: isNewVisualization
+    summary: This property is true if it is a new visualization that has been created.
+    fullName: $.ig.VisualizationEditorClosedEventArgs.isNewVisualization
+    type: Member
+    syntax:
+      return:
+        type:
+          - boolean
+      content: isNewVisualization
+    langs:
+      - js
