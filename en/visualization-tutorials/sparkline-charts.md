@@ -10,21 +10,21 @@ using a sample spreadsheet.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p><img src="images/SparklineChartSimple_All.png" alt="SparklineChartSimple All" /><br />
+<td><p><img src="images/SparklineChartSimple_All.png" alt="SparklineChartSimple All" width="80%"/><br />
 </p>
 <p><a href="#create-sparkline">Simple Sparkline</a><br />
 </p></td>
-<td><p><img src="images/SparklineChartArea_All.png" alt="SparklineChartArea All" /><br />
+<td><p><img src="images/SparklineChartArea_All.png" alt="SparklineChartArea All" width="80%" /><br />
 </p>
 <p><a href="#change-chart-type-sparkline">Sparkline with Area Chart</a><br />
 </p></td>
 </tr>
 <tr class="even">
-<td><p><img src="images/SparklineDateAggregation_All.png" alt="SparklineDateAggregation All" /><br />
+<td><p><img src="images/SparklineDateAggregation_All.png" alt="SparklineDateAggregation All" width="80%" /><br />
 </p>
 <p><a href="#change-date-aggregation">Sparkline with Day Aggregation</a><br />
 </p></td>
-<td><p><img src="images/SparklineLessColumns_All.png" alt="SparklineLessColumns All" /><br />
+<td><p><img src="images/SparklineLessColumns_All.png" alt="SparklineLessColumns All" width="80%" /><br />
 </p>
 <p><a href="#modify-columns">Sparkline with less Columns and Area Chart</a><br />
 </p></td>
@@ -77,7 +77,7 @@ For this tutorial, you will use the "Sparkline Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
 >[!NOTE]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported _cloud services_ or add it as a [Web Resource](datasources/supported-data-sources/web-resource.md).
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported _cloud services_ or add it as a [Web Resource](~/en/datasources/supported-data-sources/web-resource.md).
 
 <a name='create-sparkline'></a>
 ### Creating a Sparkline Chart
@@ -100,7 +100,7 @@ sparkline chart. In order to do this:
 |                                  |                                                                                        |                                                                     |
 | -------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                 | Go to the **Settings** section of the Visualization Editor.         |
-| 2\. **Change the Chart Type**    | ![Tutorial-Change-Chart-Configuration](images/Change-Chart-Configuration.png) | By default, the chart type will be set to line. Set it to **Area**. |
+| 2\. **Change the Chart Type**    | ![Tutorial-Change-Chart-Configuration](images/tutorial-Change-Chart-Configuration.png) | By default, the chart type will be set to line. Set it to **Area**. |
 
 <a name='change-date-aggregation'></a>
 ### Changing the Date Aggregation
@@ -112,7 +112,7 @@ do so:
 |                                  |                                                                                                      |                                                                                                                                                      |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                               | Go to the **Settings** section of the Visualization Editor.                                                                                          |
-| 2\. **Change the Aggregation**   | ![Tutorial-Change-Date-Aggregation-Sparkline](images/Change-Date-Aggregation-Sparkline.png) | By default, the "Show Last" setting will be set to **Months**. Select the dropdown next to Months, and change the selection to either Years or Days. |
+| 2\. **Change the Aggregation**   | ![Tutorial-Change-Date-Aggregation-Sparkline](images/tutorial-Change-Date-Aggregation-Sparkline.png) | By default, the "Show Last" setting will be set to **Months**. Select the dropdown next to Months, and change the selection to either Years or Days. |
 
 You can also choose to display more or less data by changing the number
 next to the date's aggregation.
@@ -128,4 +128,4 @@ remove them:
 |                                      |                                                                                    |                                                                                                                                                          |
 | ------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu**     | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)             | Go to the **Settings** section of the Visualization Editor.                                                                                              |
-| 2\. **Change the Displayed Columns** | ![Tutorial-Remove-Columns-Sparkline](images/Remove-Columns-Sparkline.png) | **Uncheck the "Show columns for last two values" or "Show column with difference" boxes** if you do not want to display either of them in the Sparkline. |
+| 2\. **Change the Displayed Columns** | ![Tutorial-Remove-Columns-Sparkline](images/tutorial-Remove-Columns-Sparkline.png) | **Uncheck the "Show columns for last two values" or "Show column with difference" boxes** if you do not want to display either of them in the Sparkline. |

@@ -130,7 +130,7 @@ a dashboard from the *Dashboards* section in *My Stuff* or *Teams* tab.
 Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing-dashboards-users).
 
 >[!NOTE]
->You can share a dashboard with any public team that [belongs to your main Organization](~/en/teams/creating-joining-teams.html#organization), whether you are a member of it or not. You can also share with private teams that you are a member of.
+>You can share a dashboard with any public team that is part of the [Organization](~/en/teams/overview.html#organization-team), whether you are a member of it or not. You can also share with private teams that you are a member of.
 
 When setting access permissions for the whole team, you must take into
 account that these permissions will not be available for everybody in the team. Individual members will receive only the highest permissions possible for their role in the team.
