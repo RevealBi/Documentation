@@ -1,6 +1,6 @@
 ## Azure SQL
 
->[!NOTE] Azure SQL is not supported in the Web version of Reveal.
+>[!NOTE] **Limitations in Web.** Azure SQL private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
 
 To configure an Azure SQL data source, you will need to enter the following information:
 
