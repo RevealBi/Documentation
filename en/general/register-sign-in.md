@@ -19,4 +19,4 @@ profile and maintain access to it.
 
 If you use your **Google** account to sign in, you will only have to type in your account credentials.
 
-Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/OneDrive.md) and [Google Drive](~/en/datasources/Google-Drive.md).
+Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/onedrive.md) and [Google Drive](~/en/datasources/google-drive.md).
