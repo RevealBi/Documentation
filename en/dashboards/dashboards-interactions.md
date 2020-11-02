@@ -28,7 +28,7 @@ You can also look at the data behind your chart if you select the **hash sign** 
 
 ![flip to grid](images/flip-grid.png)
 
-When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](~/en/data-visualizations/grid-view.md) topic.
+When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](~/en/data-visualizations/visualization-types/fgrid-chart.md) topic.
 
 If, at any point, you want to revert back to the original visualization, you can select the **"Show Original"** link.
 
@@ -112,7 +112,7 @@ level.
 
   - [**Dashboard filters**](~/en/filters/dashboard-filters.md) are available, when you open Dashboard Edit mode (select *Edit* from the overflow menu of your dashboard to access this mode). In the left top corner of the screen, you will see the current dashboard filters and an option to add new ones.
 
-  - [**Visualization filters**](~/en/filters/Visualization-Filters.md) (a.k.a. Quick Filters) are displayed in maximized mode. You can find them in the top section of the visualization under the visualization's name.
+  - [**Visualization filters**](~/en/filters/visualization-filters.md) (a.k.a. Quick Filters) are displayed in maximized mode. You can find them in the top section of the visualization under the visualization's name.
 
 For more information on dashboard or visualization Filters, check out
 [this section](~/en/filters/overview.md).

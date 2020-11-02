@@ -4,7 +4,7 @@ All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
 
 >[!NOTE]
->If you want to [change your data source](changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](creating-new-datasource.md) instead. You can also[duplicate](~/en/general/overview.html#view-edit-mode) visualizations to speed up the creation process.
+>If you want to [change your data source](~/en/datasources/changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](~/en/datasources/overview.md) instead. You can also [duplicate](~/en/dashboards/dashboards-interactions.html#view-edit-mode) visualizations to speed up the creation process.
 
 This section will cover the following visualizations:
 
@@ -47,7 +47,7 @@ This section will cover the following visualizations:
 ### Silver Security Stock Value 2018
 
 The SIS Stock Value 2018 visualization displays the average value for
-the Soylent Corp stock during 2018 in a [text gauge](~/en/visualization-tutaorials/gauge-views.html#create-text-gauge). In this case, you can
+the Soylent Corp stock during 2018 in a [text gauge](~/en/visualization-tutorials/gauge-views.html#create-text-gauge). In this case, you can
 duplicate the first visualization created during the first steps, as all
 that will change is the selected filter.
 
@@ -91,7 +91,7 @@ that will change is the selected filter.
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
-<a name=glb-fiscal-monthly></a>
+<a name="glb-fiscal-monthly"></a>
 ### GLB Fiscal (Monthly) NYSE + BATS
 
 The GLB Fiscal visualization displays the price movements for the Globex
@@ -299,7 +299,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Stock Volumes
 
 The Stock Volumes visualization displays the amount of stocks available
-during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-views#create-linear-gauge). In order to create it:
+during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-views.html#create-linear-gauge). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard, and
     select the **Finance Dashboard** sheet in the

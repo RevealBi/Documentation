@@ -24,8 +24,7 @@
 <a name='issues-all-platforms'></a>
 ### Issues Affecting All Platforms
 
-  - The original data is not displayed after a Grid sorting has been
-    removed.
+  - The original data is not displayed after a Grid sorting has been removed.
 
-  - CSV and JSON data providers don't detect numeric columns when values
-    have a thousands separator.
+  - CSV and JSON data providers don't detect numeric columns when values have a thousands separator.
+  - Currently, you cannot create a dashboard filter using Google Analytics data. 

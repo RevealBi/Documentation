@@ -4,7 +4,7 @@ All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx)
 
 >[!NOTE]
->If you want to [change your data source](changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](creating-new-datasource) instead. You can also [duplicate](overview.html#view-edit-mode) visualizations to speed up the creation process.
+>If you want to [change your data source](~/en/datasources/changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](~/en/datasources/overview.md) instead. You can also [duplicate](~/en/dashboards/dashboards-interactions.html#view-edit-mode) visualizations to speed up the creation process.
 
 This section will cover the following visualizations:
 
@@ -17,37 +17,37 @@ This section will cover the following visualizations:
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p><img src="images/ThumbnailWinLostMonth_All.png" alt="ThumbnailWinLostMonth All" /><br />
+<td><p><img src="images/ThumbnailWinLostMonth_All.png" alt="ThumbnailWinLostMonth All" width="75%" /><br />
 </p>
 <p><a href="#win-lost-by-month">Win/Lost by Month</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailForecasted_All.png" alt="ThumbnailForecasted All" /><br />
+<td><p><img src="images/ThumbnailForecasted_All.png" alt="ThumbnailForecasted All" width="75%" /><br />
 </p>
 <p><a href="#forecasted">Forecasted</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailLostOpportunities_All.png" alt="ThumbnailLostOpportunities All" /><br />
+<td><p><img src="images/ThumbnailLostOpportunities_All.png" alt="ThumbnailLostOpportunities All" width="75%" /><br />
 </p>
 <p><a href="#lost-opportunities">Lost Opportunities</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailPipelinebyTerritory_All.png" alt="ThumbnailPipelinebyTerritory All" /><br />
+<td><p><img src="images/ThumbnailPipelinebyTerritory_All.png" alt="ThumbnailPipelinebyTerritory All" width="75%" /><br />
 </p>
 <p><a href="#pipeline-by-territory">Pipeline by Territory</a><br />
 </p></td>
 </tr>
 <tr class="even">
-<td><p><img src="images/ThumbnailTotalOpportunities_All.png" alt="ThumbnailTotalOpportunities All" /><br />
+<td><p><img src="images/ThumbnailTotalOpportunities_All.png" alt="ThumbnailTotalOpportunities All" width="75%" /><br />
 </p>
 <p><a href="#total-opportunities">Total Opportunities</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailRevenuebyTerritory_All.png" alt="ThumbnailRevenuebyTerritory All" /><br />
+<td><p><img src="images/ThumbnailRevenuebyTerritory_All.png" alt="ThumbnailRevenuebyTerritory All" width="75%" /><br />
 </p>
 <p><a href="#revenue-by-territory">Revenue by Territory</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailPipelineEmployee_All.png" alt="ThumbnailPipelineEmployee All" /><br />
+<td><p><img src="images/ThumbnailPipelineEmployee_All.png" alt="ThumbnailPipelineEmployee All" width="75%" /><br />
 </p>
 <p><a href="#pipeline-per-employee">Pipeline per Employee</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailSalesbyProduct_All.png" alt="ThumbnailSalesbyProduct All" /><br />
+<td><p><img src="images/ThumbnailSalesbyProduct_All.png" alt="ThumbnailSalesbyProduct All" width="75%" /><br />
 </p>
 <p><a href="#sales-by-product">Sales by Product</a><br />
 </p></td>
@@ -67,21 +67,21 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Column" chart.
     
-    ![SelectColumnChart\_All](images/SelectColumnChart_All.png)
+    <img src="images/SelectColumnChart_All.png" alt="SelectColumnChart\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     the **Win** and **Loss** fields into Values.
     
-    ![DragDropSalesWinLossMonth\_All](images/DragDropSalesWinLossMonth_All.png)
+    <img src="images/DragDropSalesWinLossMonth_All.png" alt="DragDropSalesWinLossMonth\_All" width="50%" />
 
  
 
@@ -89,7 +89,7 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
     In order to match this format, select **Date** in the Label
     placeholder, and change the **Date Aggregation** to **Month**.
     
-    ![SalesWinLostByMonthDateAggregation\_All](images/SalesWinLostByMonthDateAggregation_All.png)
+    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" width="50%" />
     
     Then, select **Update Field**.
 
@@ -100,12 +100,12 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
     Filters and select it to access the Visualization Filter menu.
     Within it, select **Filter by Rule** under **Filter Type**.
     
-    ![FilterbyRuleSalesWinLost\_All](images/FilterbyRuleSalesWinLost_All.png)
+    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" width="50%" />
     
     Then, select **Custom Date Range** under **Rule**, and enter the
     following custom range:
     
-    ![SalesCustomDateRange\_All](images/SalesCustomDateRange_All.png)
+    <img src="images/SalesCustomDateRange_All.png" alt="SalesCustomDateRange\_All" width="50%" />
     
     After this, select **Update Field**.
 
@@ -129,21 +129,21 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Bar" chart.
     
-    ![SelectBarChart\_All](images/SelectBarChart_All.png)
+    <img src="images/SelectBarChart_All.png" alt="SelectBarChart\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     the **Forecasted** field into Values.
     
-    ![DragDropSalesForecasted\_All](images/DragDropSalesForecasted_All.png)
+    <img src="images/DragDropSalesForecasted_All.png" alt="DragDropSalesForecasted\_All" width="50%" />
 
  
 
@@ -152,7 +152,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     placeholder, and change the **Date Aggregation** to **Month**. Also,
     change the **Sorting** to **Descending**.
     
-    ![SalesWinLostByMonthDateAggregation\_All](images/SalesWinLostByMonthDateAggregation_All.png)
+    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" width="50%" />
     
     Then, select **Update Field**.
 
@@ -162,7 +162,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     formatted as currency. Select the **Forecasted** field in Values,
     and apply the following changes:
     
-    ![SalesForecastedFormatting\_All](images/SalesForecastedFormatting_All.png)
+    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" width="50%" />
     
     a.  Change the **Type** to **Currency**.
     
@@ -176,12 +176,12 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     Filters and select it to access the Visualization Filter menu.
     Within it, select **Filter by Rule** under **Filter Type**.
     
-    ![FilterbyRuleSalesWinLost\_All](images/FilterbyRuleSalesWinLost_All.png)
+    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" width="50%" />
     
     Then, select **Custom Date Range** under **Rule**, and enter the
     following custom range:
     
-    ![SalesCustomDateRange\_All](images/SalesCustomDateRange_All.png)
+    <img src="images/SalesCustomDateRange_All.png" alt="SalesCustomDateRange\_All" width="50%" />
     
     Then, select **Update Field**.
 
@@ -190,7 +190,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
 7.  To match the sample visualization's color, go to the **Settings**
     section and change the color to the third one.
     
-    ![SalesForecastedStartColor\_All](images/SalesForecastedStartColor_All.png)
+    <img src="images/SalesForecastedStartColor_All.png" alt="SalesForecastedStartColor\_All" width="50%" />
 
  
 
@@ -204,7 +204,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 ### Lost Opportunities
 
 The Lost Opportunities visualization simply displays the percentage of
-opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/Gauge-Views.html#text-gauge). In order to create it:
+opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/gauge-views.html#text-gauge). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -212,21 +212,21 @@ opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/G
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Text" gauge.
     
-    ![SelectTextGauge\_All](images/SelectTextGauge_All.png)
+    <img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop **Lost Opportunities** field into
     Value.
     
-    ![DragDropSalesLostOpportunities\_All](images/DragDropSalesLostOpportunities_All.png)
+    <img src="images/DragDropSalesLostOpportunities_All.png" alt="DragDropSalesLostOpportunities\_All" width="50%" />
 
  
 
@@ -235,7 +235,7 @@ opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/G
     Opportunities** field in the Value placeholder. In the formatting
     menu:
     
-    ![SalesWonOpportFormatting\_All](images/SalesWonOpportFormatting_All.png)
+    <img src="images/SalesWonOpportFormatting_All.png" alt="SalesWonOpportFormatting\_All" width="50%" />
     
     a.  Change the **Type** to **Percent**.
     
@@ -248,7 +248,7 @@ settings. In order to add it:
 
 1.  Go to the **Settings** tab in the Visualization Editor.
     
-    ![TutorialsSettingsMenu\_All](images/TutorialsSettingsMenu_All.png)
+    <img src="images/TutorialsSettingsMenu_All.png" alt="TutorialsSettingsMenu\_All" width="50%" />
 
  
 
@@ -257,20 +257,20 @@ settings. In order to add it:
     percentage. Therefore, scroll down to **Value Comparison Type** and
     set it to "Number".
     
-    ![TutorialsValueComparisonTypeNumber\_All](images/TutorialsValueComparisonTypeNumber_All.png)
+    <img src="images/TutorialsValueComparisonTypeNumber_All.png" alt="TutorialsValueComparisonTypeNumber\_All" width="50%" />
 
  
 
 3.  **Set your bounds**. In this case, the bounds are within 0.7 and
     0.5.
     
-    ![SalesChangingBandLostOpps\_All](images/SalesChangingBandLostOpps_All.png)
+    <img src="images/SalesChangingBandLostOpps_All.png" alt="SalesChangingBandLostOpps\_All" width="50%" />
 
  
 
 4.  Select each band and **select both the color and the indicator**.
     
-    ![SalesChangingBandColorIndicator\_All](images/SalesChangingBandColorIndicator_All.png)
+    <img src="images/SalesChangingBandColorIndicator_All.png" alt="SalesChangingBandColorIndicator\_All" width="50%" />
 
  
 
@@ -292,21 +292,21 @@ prospects and where they are located in a [funnel chart](~/en/visualization-tuto
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Funnel" chart.
     
-    ![SelectFunnelChart\_All](images/SelectFunnelChart_All.png)
+    <img src="images/SelectFunnelChart_All.png" alt="SelectFunnelChart\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop **Territory** into Labels and
     **Pipeline** into Value.
     
-    ![DragDropSalesPipelineTerritory\_All](images/DragDropSalesPipelineTerritory_All.png)
+    <img src="images/DragDropSalesPipelineTerritory_All.png" alt="DragDropSalesPipelineTerritory\_All" width="50%" />
 
  
 
@@ -315,13 +315,13 @@ prospects and where they are located in a [funnel chart](~/en/visualization-tuto
     original data source. In order to filter the values, drag and drop
     **Territory** into Data Filters.
     
-    ![DragDropTerritoryDataFilter\_All](images/DragDropTerritoryDataFilter_All.png)
+    <img src="images/DragDropTerritoryDataFilter_All.png" alt="DragDropTerritoryDataFilter\_All" width="50%" />
     
     Then, select it to access the **Visualization Filter** dialog. Once
     there, change the **Filter Type** to **Filter Empty Values**, and
     select **Create Filter**.
     
-    ![SalesPipelineTerritoryFilterEmptyValues\_All](images/SalesPipelineTerritoryFilterEmptyValues_All.png)
+    <img src="images/SalesPipelineTerritoryFilterEmptyValues_All.png" alt="SalesPipelineTerritoryFilterEmptyValues\_All" width="50%" />
 
  
 
@@ -337,7 +337,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 
 The Total Opportunities visualization displays the revenue the
 opportunities represented for the company for a 12 month period in a
-[line chart](~/en/visualization-tutorials/simple-charts). In order to create it:
+[line chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
 
 1.  Select the + button in the right corner of your dashboard. In the
     New Visualization dialog, select the
@@ -345,21 +345,21 @@ opportunities represented for the company for a 12 month period in a
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Line" chart.
     
-    ![SelectLineChart\_All](images/SelectLineChart_All.png)
+    <img src="images/SelectLineChart_All.png" alt="SelectLineChart\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop the **Date** into Labels and
     **Total Opportunities** into Values.
     
-    ![DragDropSalesTotalOpportunities\_All](images/DragDropSalesTotalOpportunities_All.png)
+    <img src="images/DragDropSalesTotalOpportunities_All.png" alt="DragDropSalesTotalOpportunities\_All" width="50%" />
 
  
 
@@ -367,7 +367,7 @@ opportunities represented for the company for a 12 month period in a
     In order to match this format, select **Date** in the Label
     placeholder, and change the **Date Aggregation** to **Month**.
     
-    ![SalesWinLostByMonthDateAggregation\_All](images/SalesWinLostByMonthDateAggregation_All.png)
+    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" width="50%" />
     
     Then, select **Update Field**.
 
@@ -377,7 +377,7 @@ opportunities represented for the company for a 12 month period in a
     should be formatted as currency. Select the **Total Opportunities**
     field in Values, and apply the following changes:
     
-    ![SalesForecastedFormatting\_All](images/SalesForecastedFormatting_All.png)
+    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" width="50%" />
     
     1.  Change the **Type** to **Currency**.
     
@@ -392,12 +392,12 @@ opportunities represented for the company for a 12 month period in a
     Filters and select it to access the Visualization Filter menu.
     Within it, select **Filter by Rule** under **Filter Type**.
     
-    ![FilterbyRuleSalesWinLost\_All](images/FilterbyRuleSalesWinLost_All.png)
+    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" width="50%" />
     
     Then, select **Custom Date Range** under **Rule**, and enter the
     following custom range:
     
-    ![SalesTotalOppsCustomDateRange\_All](images/SalesTotalOppsCustomDateRange_All.png)
+    <img src="images/SalesTotalOppsCustomDateRange_All.png" alt="SalesTotalOppsCustomDateRange\_All" width="50%" />
     
     Then, select **Update Filter**.
 
@@ -406,7 +406,7 @@ opportunities represented for the company for a 12 month period in a
 7.  To match the sample visualization's color, go to the **Settings**
     section and change the color to the seventh one.
     
-    ![SalesTotalOpportunitiesStartColor\_All](images/SalesTotalOpportunitiesStartColor_All.png)
+    <img src="images/SalesTotalOpportunitiesStartColor_All.png" alt="SalesTotalOpportunitiesStartColor\_All" width="50%" />
 
  
 
@@ -429,21 +429,21 @@ create it:
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Pie" chart.
     
-    ![SelectPieChart\_All](images/SelectPieChart_All.png)
+    <img src="images/SelectPieChart_All.png" alt="SelectPieChart\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop **Territory** into Label and
     **Sales Territory** into Value.
     
-    ![DragDropRevenueTerritory\_All](images/DragDropRevenueTerritory_All.png)
+    <img src="images/DragDropRevenueTerritory_All.png" alt="DragDropRevenueTerritory\_All" width="50%" />
 
  
 
@@ -451,7 +451,7 @@ create it:
     position. In order to udpate it, go to the **Settings** tab of the
     Visualizations Editor and change the **Start Position** to **90°**.
     
-    ![SalesRevenuebyTerritoryStartPosition\_All](images/SalesRevenuebyTerritoryStartPosition_All.png)
+    <img src="images/SalesRevenuebyTerritoryStartPosition_All.png" alt="SalesRevenuebyTerritoryStartPosition\_All" width="50%" />
 
  
 
@@ -474,21 +474,21 @@ order to create it:
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Column" chart.
     
-    ![SelectTextGauge\_All](images/SelectColumnChart_All.png)
+    <img src="images/SelectColumnChart_All.png" alt="SelectTextGauge\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop **Employee** into Label and
     **Pipeline** into Values.
     
-    ![DragDropPipelineEmployee\_All](images/DragDropPipelineEmployee_All.png)
+    <img src="images/DragDropPipelineEmployee_All.png" alt="DragDropPipelineEmployee\_All" width="50%" />
 
  
 
@@ -496,7 +496,7 @@ order to create it:
     therefore, be formatted as currency. Select the **Pipeline** field
     in Values, and apply the following changes:
     
-    ![SalesForecastedFormatting\_All](images/SalesForecastedFormatting_All.png)
+    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" width="50%" />
     
     1.  Change the **Type** to **Currency**.
     
@@ -511,11 +511,11 @@ order to create it:
     scroll down to the bottom of the list. You will see the aggregated
     **Pipeline** field; select it.
     
-    ![SelectPipelineDataEditor\_All](images/SelectPipelineDataEditor_All.png)
+    <img src="images/SelectPipelineDataEditor_All.png" alt="SelectPipelineDataEditor\_All" width="50%" />
     
     Then, select **Top Items** under **Rule** and enter **10**.
     
-    ![SalesPipelineEmployeeTop10\_All](images/SalesPipelineEmployeeTop10_All.png)
+    <img src="images/SalesPipelineEmployeeTop10_All.png" alt="SalesPipelineEmployeeTop10\_All" width="50%" />
     
     Select **Create Filter** to apply the changes.
 
@@ -524,7 +524,7 @@ order to create it:
 6.  To match the sample visualization's color, go to the **Settings**
     section and change the color to the fifth one.
     
-    ![SalesPipelineEmployeeStartColor\_All](images/SalesPipelineEmployeeStartColor_All.png)
+    <img src="images/SalesPipelineEmployeeStartColor_All.png" alt="SalesPipelineEmployeeStartColor\_All" width="50%" />
 
  
 
@@ -546,21 +546,21 @@ products and the percentage of sales for each one in a [doughnut chart](~/en/vis
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
     
-    ![SelectingSalesSheet\_All.png](images/SelectingSalesSheet_All.png)
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
  
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Doughnut" chart.
     
-    ![SelectFunnelChart\_All](images/SelectDoughnutChart_All.png)
+    <img src="images/SelectDoughnutChart_All.png" alt="SelectFunnelChart\_All" width="100%" />
 
  
 
 3.  In the Data Editor, drag and drop **Product** into Label and **Sales
     Product** into Value.
     
-    ![DragDropSalesProduct\_All](images/DragDropSalesProduct_All.png)
+    <img src="images/DragDropSalesProduct_All.png" alt="DragDropSalesProduct\_All" width="50%" />
 
  
 
@@ -568,7 +568,7 @@ products and the percentage of sales for each one in a [doughnut chart](~/en/vis
     position. In order to udpate it, go to the **Settings** tab of the
     Visualizations Editor and change the **Start Position** to **90°**.
     
-    ![SalesRevenuebyTerritoryStartPosition\_All](images/SalesRevenuebyTerritoryStartPosition_All.png)
+    <img src="images/SalesRevenuebyTerritoryStartPosition_All.png" alt="SalesRevenuebyTerritoryStartPosition\_All" width="50%" />
 
  
 
