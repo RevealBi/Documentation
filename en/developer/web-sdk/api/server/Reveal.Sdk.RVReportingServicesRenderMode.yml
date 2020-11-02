@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVReportingServicesRenderMode
+  commentId: T:Reveal.Sdk.RVReportingServicesRenderMode
+  id: RVReportingServicesRenderMode
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVReportingServicesRenderMode.Data
+  - Reveal.Sdk.RVReportingServicesRenderMode.Report
+  - Reveal.Sdk.RVReportingServicesRenderMode.value__
+  langs:
+  - csharp
+  - vb
+  name: RVReportingServicesRenderMode
+  nameWithType: RVReportingServicesRenderMode
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nRender mode for Reporting Services data source item, see <xref href=\"Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  syntax:
+    content: 'public sealed class RVReportingServicesRenderMode : Enum'
+    content.vb: >-
+      Public NotInheritable Class RVReportingServicesRenderMode
+
+          Inherits
+
+
+
+           Enum
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Reveal.Sdk.RVReportingServicesRenderMode.value__
+  commentId: F:Reveal.Sdk.RVReportingServicesRenderMode.value__
+  id: value__
+  parent: Reveal.Sdk.RVReportingServicesRenderMode
+  langs:
+  - csharp
+  - vb
+  name: value__
+  nameWithType: RVReportingServicesRenderMode.value__
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode.value__
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int value__
+    return:
+      type: System.Int32
+    content.vb: Public value__ As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVReportingServicesRenderMode.Report
+  commentId: F:Reveal.Sdk.RVReportingServicesRenderMode.Report
+  id: Report
+  parent: Reveal.Sdk.RVReportingServicesRenderMode
+  langs:
+  - csharp
+  - vb
+  name: Report
+  nameWithType: RVReportingServicesRenderMode.Report
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode.Report
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nReport mode, it means the report will be exported to PDF and rendered that way\n"
+  syntax:
+    content: public const RVReportingServicesRenderMode Report
+    return:
+      type: Reveal.Sdk.RVReportingServicesRenderMode
+    content.vb: Public Const Report As RVReportingServicesRenderMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVReportingServicesRenderMode.Data
+  commentId: F:Reveal.Sdk.RVReportingServicesRenderMode.Data
+  id: Data
+  parent: Reveal.Sdk.RVReportingServicesRenderMode
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: RVReportingServicesRenderMode.Data
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode.Data
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nData mode, it means the report will be exported to CSV and that data will be used as regular input data.\n"
+  syntax:
+    content: public const RVReportingServicesRenderMode Data
+    return:
+      type: Reveal.Sdk.RVReportingServicesRenderMode
+    content.vb: Public Const Data As RVReportingServicesRenderMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVReportingServicesRenderMode
+  commentId: T:Reveal.Sdk.RVReportingServicesRenderMode
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVReportingServicesRenderMode
+  nameWithType: RVReportingServicesRenderMode
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode

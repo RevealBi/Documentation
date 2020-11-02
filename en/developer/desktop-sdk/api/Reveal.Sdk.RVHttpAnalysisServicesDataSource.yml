@@ -25,6 +25,7 @@ items:
     content: 'public class RVHttpAnalysisServicesDataSource : RVAnalysisServicesDataSource'
     content.vb: >-
       Public Class RVHttpAnalysisServicesDataSource
+
           Inherits RVAnalysisServicesDataSource
   inheritance:
   - System.Object

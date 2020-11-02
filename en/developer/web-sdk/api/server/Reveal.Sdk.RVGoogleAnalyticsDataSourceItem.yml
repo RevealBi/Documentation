@@ -1,0 +1,527 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  commentId: T:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  id: RVGoogleAnalyticsDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.#ctor
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment
+  - Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleAnalyticsDataSourceItem
+  nameWithType: RVGoogleAnalyticsDataSourceItem
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nGoogle Analytics data source item.\n"
+  syntax:
+    content: 'public class RVGoogleAnalyticsDataSourceItem : RVDataSourceItem'
+    content.vb: >-
+      Public Class RVGoogleAnalyticsDataSourceItem
+
+          Inherits RVDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.#ctor
+  commentId: M:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleAnalyticsDataSourceItem()
+  nameWithType: RVGoogleAnalyticsDataSourceItem.RVGoogleAnalyticsDataSourceItem()
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.RVGoogleAnalyticsDataSourceItem()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVGoogleAnalyticsDataSourceItem()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource
+  id: Resource
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Resource
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Resource
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe type of resource, one of &quot;Profiles&quot; (the list of profiles in the account) or &quot;Report&quot; (to get analytics data).\n"
+  syntax:
+    content: public RVGoogleAnalyticsResourceType Resource { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVGoogleAnalyticsResourceType
+    content.vb: Public Property Resource As RVGoogleAnalyticsResourceType
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers
+  id: Identifiers
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Identifiers
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Identifiers
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nProfile identifiers to get data from\n"
+  syntax:
+    content: public string Identifiers { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Identifiers As String
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate
+  id: StartDate
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: RVGoogleAnalyticsDataSourceItem.StartDate
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nStart date to use when requesting data.\n"
+  syntax:
+    content: public Nullable<DateTime> StartDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartDate As Nullable(Of DateTime)
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate
+  id: EndDate
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: RVGoogleAnalyticsDataSourceItem.EndDate
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nEnd date to use when requesting data.\n"
+  syntax:
+    content: public Nullable<DateTime> EndDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As Nullable(Of DateTime)
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics
+  id: Metrics
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Metrics
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Metrics
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nNames of the metrics to request, comma separated.\n"
+  syntax:
+    content: public string Metrics { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Metrics As String
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions
+  id: Dimensions
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Dimensions
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Dimensions
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nNames of the dimensions to request, comma separated.\n"
+  syntax:
+    content: public string Dimensions { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Dimensions As String
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment
+  id: Segment
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Segment
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Segment
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOptional segment name\n"
+  syntax:
+    content: public string Segment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Segment As String
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters
+  commentId: P:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters
+  id: Filters
+  parent: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Filters
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Filters
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOptional filters string as specified by Google Analytics, this value is sent as-is in the &quot;filters&quot; parameter.\n"
+  syntax:
+    content: public string Filters { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Filters As String
+  overload: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.#ctor
+  isExternal: true
+  name: RVGoogleAnalyticsDataSourceItem
+  nameWithType: RVGoogleAnalyticsDataSourceItem.RVGoogleAnalyticsDataSourceItem
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.RVGoogleAnalyticsDataSourceItem
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource
+  isExternal: true
+  name: Resource
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Resource
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Resource
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  commentId: T:Reveal.Sdk.RVGoogleAnalyticsResourceType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVGoogleAnalyticsResourceType
+  nameWithType: RVGoogleAnalyticsResourceType
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers
+  isExternal: true
+  name: Identifiers
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Identifiers
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Identifiers
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate
+  isExternal: true
+  name: StartDate
+  nameWithType: RVGoogleAnalyticsDataSourceItem.StartDate
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.StartDate
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate
+  isExternal: true
+  name: EndDate
+  nameWithType: RVGoogleAnalyticsDataSourceItem.EndDate
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.EndDate
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics
+  isExternal: true
+  name: Metrics
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Metrics
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Metrics
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions
+  isExternal: true
+  name: Dimensions
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Dimensions
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Dimensions
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment
+  isExternal: true
+  name: Segment
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Segment
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Segment
+- uid: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters*
+  commentId: Overload:Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters
+  isExternal: true
+  name: Filters
+  nameWithType: RVGoogleAnalyticsDataSourceItem.Filters
+  fullName: Reveal.Sdk.RVGoogleAnalyticsDataSourceItem.Filters

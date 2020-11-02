@@ -32,7 +32,9 @@ items:
       <AttributeUsage(AttributeTargets.Property)>
 
       Public Class RVSchemaColumnAttribute
+
           Inherits Attribute
+
           Implements _Attribute
   inheritance:
   - System.Object

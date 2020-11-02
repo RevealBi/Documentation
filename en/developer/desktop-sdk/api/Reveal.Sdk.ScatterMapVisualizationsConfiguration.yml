@@ -1,0 +1,466 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  commentId: T:Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  id: ScatterMapVisualizationsConfiguration
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.ScatterMapVisualizationsConfiguration.#ctor(Reveal.Sdk.RVMapImageryType,System.String)
+  - Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  - Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType
+  langs:
+  - csharp
+  - vb
+  name: ScatterMapVisualizationsConfiguration
+  nameWithType: ScatterMapVisualizationsConfiguration
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  type: Class
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nConfiguration used by Scatter Map visualization, used to configure the tiles provider (one of Bing, ESRI or MapBox)\nand corresponding token.\n"
+  syntax:
+    content: public class ScatterMapVisualizationsConfiguration
+    content.vb: Public Class ScatterMapVisualizationsConfiguration
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration.#ctor(Reveal.Sdk.RVMapImageryType,System.String)
+  commentId: M:Reveal.Sdk.ScatterMapVisualizationsConfiguration.#ctor(Reveal.Sdk.RVMapImageryType,System.String)
+  id: '#ctor(Reveal.Sdk.RVMapImageryType,System.String)'
+  parent: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ScatterMapVisualizationsConfiguration(RVMapImageryType, String)
+  nameWithType: ScatterMapVisualizationsConfiguration.ScatterMapVisualizationsConfiguration(RVMapImageryType, String)
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration.ScatterMapVisualizationsConfiguration(Reveal.Sdk.RVMapImageryType, System.String)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public ScatterMapVisualizationsConfiguration(RVMapImageryType mapImageryType, string token)
+    parameters:
+    - id: mapImageryType
+      type: Reveal.Sdk.RVMapImageryType
+    - id: token
+      type: System.String
+    content.vb: Public Sub New(mapImageryType As RVMapImageryType, token As String)
+  overload: Reveal.Sdk.ScatterMapVisualizationsConfiguration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType
+  commentId: P:Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType
+  id: MapImageryType
+  parent: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: MapImageryType
+  nameWithType: ScatterMapVisualizationsConfiguration.MapImageryType
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nMap tiles provider, one of Bing, ESRI, MapBox\n"
+  syntax:
+    content: public RVMapImageryType MapImageryType { get; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVMapImageryType
+    content.vb: Public ReadOnly Property MapImageryType As RVMapImageryType
+  overload: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  commentId: P:Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  id: MapImageryProviderToken
+  parent: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: MapImageryProviderToken
+  nameWithType: ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nThe token used to enable the provider specified in <xref href=\"Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public string MapImageryProviderToken { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property MapImageryProviderToken As String
+  overload: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration.#ctor*
+  commentId: Overload:Reveal.Sdk.ScatterMapVisualizationsConfiguration.#ctor
+  isExternal: true
+  name: ScatterMapVisualizationsConfiguration
+  nameWithType: ScatterMapVisualizationsConfiguration.ScatterMapVisualizationsConfiguration
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration.ScatterMapVisualizationsConfiguration
+- uid: Reveal.Sdk.RVMapImageryType
+  commentId: T:Reveal.Sdk.RVMapImageryType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVMapImageryType
+  nameWithType: RVMapImageryType
+  fullName: Reveal.Sdk.RVMapImageryType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType*
+  commentId: Overload:Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType
+  isExternal: true
+  name: MapImageryType
+  nameWithType: ScatterMapVisualizationsConfiguration.MapImageryType
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryType
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken*
+  commentId: Overload:Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  isExternal: true
+  name: MapImageryProviderToken
+  nameWithType: ScatterMapVisualizationsConfiguration.MapImageryProviderToken
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration.MapImageryProviderToken

@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVGoogleDriveDataSourceItem
+  commentId: T:Reveal.Sdk.RVGoogleDriveDataSourceItem
+  id: RVGoogleDriveDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVGoogleDriveDataSourceItem.#ctor
+  - Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleDriveDataSourceItem
+  nameWithType: RVGoogleDriveDataSourceItem
+  fullName: Reveal.Sdk.RVGoogleDriveDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nGoogle Drive data source item, referencing a file in Google Drive\n"
+  syntax:
+    content: 'public class RVGoogleDriveDataSourceItem : RVDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVGoogleDriveDataSourceItem
+
+          Inherits RVDataSourceItem
+
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVGoogleDriveDataSourceItem.#ctor
+  commentId: M:Reveal.Sdk.RVGoogleDriveDataSourceItem.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVGoogleDriveDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleDriveDataSourceItem()
+  nameWithType: RVGoogleDriveDataSourceItem.RVGoogleDriveDataSourceItem()
+  fullName: Reveal.Sdk.RVGoogleDriveDataSourceItem.RVGoogleDriveDataSourceItem()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVGoogleDriveDataSourceItem()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVGoogleDriveDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier
+  commentId: P:Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier
+  id: Identifier
+  parent: Reveal.Sdk.RVGoogleDriveDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Identifier
+  nameWithType: RVGoogleDriveDataSourceItem.Identifier
+  fullName: Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nIdentifier of the file referenced by this item\n"
+  syntax:
+    content: public string Identifier { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Identifier As String
+  overload: Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVGoogleDriveDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVGoogleDriveDataSourceItem.#ctor
+  isExternal: true
+  name: RVGoogleDriveDataSourceItem
+  nameWithType: RVGoogleDriveDataSourceItem.RVGoogleDriveDataSourceItem
+  fullName: Reveal.Sdk.RVGoogleDriveDataSourceItem.RVGoogleDriveDataSourceItem
+- uid: Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier*
+  commentId: Overload:Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier
+  isExternal: true
+  name: Identifier
+  nameWithType: RVGoogleDriveDataSourceItem.Identifier
+  fullName: Reveal.Sdk.RVGoogleDriveDataSourceItem.Identifier
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

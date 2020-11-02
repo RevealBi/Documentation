@@ -31,7 +31,9 @@ items:
     content: 'public class RVSharePointListItemDataSourceItem : RVBaseSharePointDataSourceItem, IRVResourceItem'
     content.vb: >-
       Public Class RVSharePointListItemDataSourceItem
+
           Inherits RVBaseSharePointDataSourceItem
+
           Implements IRVResourceItem
   inheritance:
   - System.Object

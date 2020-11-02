@@ -176,7 +176,7 @@ items:
       description: The dashboard object obtained with <xref href="Reveal.Sdk.RevealUtility.LoadDashboard(System.IO.Stream)" data-throw-if-not-resolved="false"></xref> or <xref href="Reveal.Sdk.RevealUtility.LoadDashboardSync(System.IO.Stream)" data-throw-if-not-resolved="false"></xref>
     - id: filter
       type: Reveal.Sdk.RVDashboardFilter
-      description: "The filter to return the values for, a member of the collection <xref href=\"Reveal.Sdk.RVDashboard.Filters\" data-throw-if-not-resolved=\"false\"></xref>, \nmight be obtained also using <see cref=\"!:RVDashboard.GetFilterByTitle(string)\"></see> or <see cref=\"!:RVDashboard.GetFilterById(string)\"></see>"
+      description: "The filter to return the values for, a member of the collection <xref href=\"Reveal.Sdk.RVDashboard.Filters\" data-throw-if-not-resolved=\"false\"></xref>, \nmight be obtained also using GetByTitle or GetById in <xref href=\"Reveal.Sdk.RVDashboard.Filters\" data-throw-if-not-resolved=\"false\"></xref>"
     - id: cancellationToken
       type: System.Threading.CancellationToken
       description: Optional parameter that can be used to cancel the async operation

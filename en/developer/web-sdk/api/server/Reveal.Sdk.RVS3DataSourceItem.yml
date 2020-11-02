@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVS3DataSourceItem
+  commentId: T:Reveal.Sdk.RVS3DataSourceItem
+  id: RVS3DataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVS3DataSourceItem.#ctor(Reveal.Sdk.RVS3DataSource)
+  - Reveal.Sdk.RVS3DataSourceItem.Path
+  langs:
+  - csharp
+  - vb
+  name: RVS3DataSourceItem
+  nameWithType: RVS3DataSourceItem
+  fullName: Reveal.Sdk.RVS3DataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nAmazon Athena data source item.\n"
+  syntax:
+    content: 'public class RVS3DataSourceItem : RVDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVS3DataSourceItem
+
+          Inherits RVDataSourceItem
+
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVS3DataSourceItem.#ctor(Reveal.Sdk.RVS3DataSource)
+  commentId: M:Reveal.Sdk.RVS3DataSourceItem.#ctor(Reveal.Sdk.RVS3DataSource)
+  id: '#ctor(Reveal.Sdk.RVS3DataSource)'
+  parent: Reveal.Sdk.RVS3DataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVS3DataSourceItem(RVS3DataSource)
+  nameWithType: RVS3DataSourceItem.RVS3DataSourceItem(RVS3DataSource)
+  fullName: Reveal.Sdk.RVS3DataSourceItem.RVS3DataSourceItem(Reveal.Sdk.RVS3DataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVS3DataSourceItem(RVS3DataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVS3DataSource
+    content.vb: Public Sub New(dataSource As RVS3DataSource)
+  overload: Reveal.Sdk.RVS3DataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVS3DataSourceItem.Path
+  commentId: P:Reveal.Sdk.RVS3DataSourceItem.Path
+  id: Path
+  parent: Reveal.Sdk.RVS3DataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: RVS3DataSourceItem.Path
+  fullName: Reveal.Sdk.RVS3DataSourceItem.Path
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nS3 path for the file represented by this item. For example: &apos;s3://my-bucket/path/to/file.csv&apos;\n"
+  syntax:
+    content: public string Path { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Reveal.Sdk.RVS3DataSourceItem.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVS3DataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVS3DataSourceItem.#ctor
+  isExternal: true
+  name: RVS3DataSourceItem
+  nameWithType: RVS3DataSourceItem.RVS3DataSourceItem
+  fullName: Reveal.Sdk.RVS3DataSourceItem.RVS3DataSourceItem
+- uid: Reveal.Sdk.RVS3DataSource
+  commentId: T:Reveal.Sdk.RVS3DataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVS3DataSource
+  nameWithType: RVS3DataSource
+  fullName: Reveal.Sdk.RVS3DataSource
+- uid: Reveal.Sdk.RVS3DataSourceItem.Path*
+  commentId: Overload:Reveal.Sdk.RVS3DataSourceItem.Path
+  isExternal: true
+  name: Path
+  nameWithType: RVS3DataSourceItem.Path
+  fullName: Reveal.Sdk.RVS3DataSourceItem.Path
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -6,6 +6,7 @@ items:
   parent: Reveal.Sdk
   children:
   - Reveal.Sdk.RVOneDriveDataSourceItem.#ctor
+  - Reveal.Sdk.RVOneDriveDataSourceItem.#ctor(Reveal.Sdk.RVOneDriveDataSource)
   - Reveal.Sdk.RVOneDriveDataSourceItem.Identifier
   langs:
   - csharp
@@ -25,7 +26,9 @@ items:
     content: 'public class RVOneDriveDataSourceItem : RVDataSourceItem, IRVResourceItem'
     content.vb: >-
       Public Class RVOneDriveDataSourceItem
+
           Inherits RVDataSourceItem
+
           Implements IRVResourceItem
   inheritance:
   - System.Object
@@ -70,6 +73,34 @@ items:
   syntax:
     content: public RVOneDriveDataSourceItem()
     content.vb: Public Sub New
+  overload: Reveal.Sdk.RVOneDriveDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVOneDriveDataSourceItem.#ctor(Reveal.Sdk.RVOneDriveDataSource)
+  commentId: M:Reveal.Sdk.RVOneDriveDataSourceItem.#ctor(Reveal.Sdk.RVOneDriveDataSource)
+  id: '#ctor(Reveal.Sdk.RVOneDriveDataSource)'
+  parent: Reveal.Sdk.RVOneDriveDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVOneDriveDataSourceItem(RVOneDriveDataSource)
+  nameWithType: RVOneDriveDataSourceItem.RVOneDriveDataSourceItem(RVOneDriveDataSource)
+  fullName: Reveal.Sdk.RVOneDriveDataSourceItem.RVOneDriveDataSourceItem(Reveal.Sdk.RVOneDriveDataSource)
+  type: Constructor
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVOneDriveDataSourceItem(RVOneDriveDataSource ds)
+    parameters:
+    - id: ds
+      type: Reveal.Sdk.RVOneDriveDataSource
+    content.vb: Public Sub New(ds As RVOneDriveDataSource)
   overload: Reveal.Sdk.RVOneDriveDataSourceItem.#ctor*
   modifiers.csharp:
   - public
@@ -452,6 +483,13 @@ references:
   name: RVOneDriveDataSourceItem
   nameWithType: RVOneDriveDataSourceItem.RVOneDriveDataSourceItem
   fullName: Reveal.Sdk.RVOneDriveDataSourceItem.RVOneDriveDataSourceItem
+- uid: Reveal.Sdk.RVOneDriveDataSource
+  commentId: T:Reveal.Sdk.RVOneDriveDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVOneDriveDataSource
+  nameWithType: RVOneDriveDataSource
+  fullName: Reveal.Sdk.RVOneDriveDataSource
 - uid: Reveal.Sdk.RVOneDriveDataSourceItem.Identifier*
   commentId: Overload:Reveal.Sdk.RVOneDriveDataSourceItem.Identifier
   isExternal: true

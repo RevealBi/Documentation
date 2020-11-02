@@ -25,6 +25,7 @@ items:
     content: 'public class ImageExportedEventArgs : EventArgs'
     content.vb: >-
       Public Class ImageExportedEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object

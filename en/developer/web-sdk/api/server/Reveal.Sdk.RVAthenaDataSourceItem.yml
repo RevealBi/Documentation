@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVAthenaDataSourceItem
+  commentId: T:Reveal.Sdk.RVAthenaDataSourceItem
+  id: RVAthenaDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVAthenaDataSourceItem.#ctor(Reveal.Sdk.RVAthenaDataSource)
+  - Reveal.Sdk.RVAthenaDataSourceItem.Table
+  langs:
+  - csharp
+  - vb
+  name: RVAthenaDataSourceItem
+  nameWithType: RVAthenaDataSourceItem
+  fullName: Reveal.Sdk.RVAthenaDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nAmazon Athena data source item.\n"
+  syntax:
+    content: 'public class RVAthenaDataSourceItem : RVDataSourceItem'
+    content.vb: >-
+      Public Class RVAthenaDataSourceItem
+
+          Inherits RVDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVAthenaDataSourceItem.#ctor(Reveal.Sdk.RVAthenaDataSource)
+  commentId: M:Reveal.Sdk.RVAthenaDataSourceItem.#ctor(Reveal.Sdk.RVAthenaDataSource)
+  id: '#ctor(Reveal.Sdk.RVAthenaDataSource)'
+  parent: Reveal.Sdk.RVAthenaDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVAthenaDataSourceItem(RVAthenaDataSource)
+  nameWithType: RVAthenaDataSourceItem.RVAthenaDataSourceItem(RVAthenaDataSource)
+  fullName: Reveal.Sdk.RVAthenaDataSourceItem.RVAthenaDataSourceItem(Reveal.Sdk.RVAthenaDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVAthenaDataSourceItem(RVAthenaDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVAthenaDataSource
+    content.vb: Public Sub New(dataSource As RVAthenaDataSource)
+  overload: Reveal.Sdk.RVAthenaDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVAthenaDataSourceItem.Table
+  commentId: P:Reveal.Sdk.RVAthenaDataSourceItem.Table
+  id: Table
+  parent: Reveal.Sdk.RVAthenaDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Table
+  nameWithType: RVAthenaDataSourceItem.Table
+  fullName: Reveal.Sdk.RVAthenaDataSourceItem.Table
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nTable or view for this datasource item.\n"
+  syntax:
+    content: public string Table { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Table As String
+  overload: Reveal.Sdk.RVAthenaDataSourceItem.Table*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVAthenaDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVAthenaDataSourceItem.#ctor
+  isExternal: true
+  name: RVAthenaDataSourceItem
+  nameWithType: RVAthenaDataSourceItem.RVAthenaDataSourceItem
+  fullName: Reveal.Sdk.RVAthenaDataSourceItem.RVAthenaDataSourceItem
+- uid: Reveal.Sdk.RVAthenaDataSource
+  commentId: T:Reveal.Sdk.RVAthenaDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVAthenaDataSource
+  nameWithType: RVAthenaDataSource
+  fullName: Reveal.Sdk.RVAthenaDataSource
+- uid: Reveal.Sdk.RVAthenaDataSourceItem.Table*
+  commentId: Overload:Reveal.Sdk.RVAthenaDataSourceItem.Table
+  isExternal: true
+  name: Table
+  nameWithType: RVAthenaDataSourceItem.Table
+  fullName: Reveal.Sdk.RVAthenaDataSourceItem.Table
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

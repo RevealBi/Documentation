@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  commentId: T:Reveal.Sdk.RVGoogleAnalyticsResourceType
+  id: RVGoogleAnalyticsResourceType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  - Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  - Reveal.Sdk.RVGoogleAnalyticsResourceType.value__
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleAnalyticsResourceType
+  nameWithType: RVGoogleAnalyticsResourceType
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nGoogle Analytics resource type.\n"
+  syntax:
+    content: 'public sealed class RVGoogleAnalyticsResourceType : Enum'
+    content.vb: >-
+      Public NotInheritable Class RVGoogleAnalyticsResourceType
+
+          Inherits
+
+
+
+           Enum
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType.value__
+  commentId: F:Reveal.Sdk.RVGoogleAnalyticsResourceType.value__
+  id: value__
+  parent: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  langs:
+  - csharp
+  - vb
+  name: value__
+  nameWithType: RVGoogleAnalyticsResourceType.value__
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType.value__
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public int value__
+    return:
+      type: System.Int32
+    content.vb: Public value__ As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  commentId: F:Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  id: Report
+  parent: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  langs:
+  - csharp
+  - vb
+  name: Report
+  nameWithType: RVGoogleAnalyticsResourceType.Report
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType.Report
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nType used to get analytics data.\n"
+  syntax:
+    content: public const RVGoogleAnalyticsResourceType Report
+    return:
+      type: Reveal.Sdk.RVGoogleAnalyticsResourceType
+    content.vb: Public Const Report As RVGoogleAnalyticsResourceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  commentId: F:Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  id: Profiles
+  parent: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  langs:
+  - csharp
+  - vb
+  name: Profiles
+  nameWithType: RVGoogleAnalyticsResourceType.Profiles
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType.Profiles
+  type: Field
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nType used to get the list of profiles in the account, usually used in a dashboard filter.\n"
+  syntax:
+    content: public const RVGoogleAnalyticsResourceType Profiles
+    return:
+      type: Reveal.Sdk.RVGoogleAnalyticsResourceType
+    content.vb: Public Const Profiles As RVGoogleAnalyticsResourceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVGoogleAnalyticsResourceType
+  commentId: T:Reveal.Sdk.RVGoogleAnalyticsResourceType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVGoogleAnalyticsResourceType
+  nameWithType: RVGoogleAnalyticsResourceType
+  fullName: Reveal.Sdk.RVGoogleAnalyticsResourceType

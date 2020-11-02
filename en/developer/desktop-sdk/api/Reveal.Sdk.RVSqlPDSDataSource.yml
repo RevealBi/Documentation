@@ -25,6 +25,7 @@ items:
     content: 'public abstract class RVSqlPDSDataSource : RVSqlBasedDataSource'
     content.vb: >-
       Public MustInherit Class RVSqlPDSDataSource
+
           Inherits RVSqlBasedDataSource
   inheritance:
   - System.Object

@@ -62,10 +62,14 @@ items:
   - Reveal.Sdk.RVODataDataSource
   - Reveal.Sdk.RVOneDriveDataSource
   - Reveal.Sdk.RVOneDriveDataSource
+  - Reveal.Sdk.RVQuickBooksDataSource
+  - Reveal.Sdk.RVQuickBooksDataSource
   - Reveal.Sdk.RVReportingServicesDataSource
   - Reveal.Sdk.RVReportingServicesDataSource
   - Reveal.Sdk.RVRESTDataSource
   - Reveal.Sdk.RVRESTDataSource
+  - Reveal.Sdk.RVS3DataSource
+  - Reveal.Sdk.RVS3DataSource
   - Reveal.Sdk.RVSharePointDataSource
   - Reveal.Sdk.RVSharePointDataSource
   - Reveal.Sdk.RVSqlBasedDataSource
@@ -106,13 +110,13 @@ items:
   - RVUI.WPF
   namespace: Reveal.Sdk
   syntax:
-    content: protected RVDashboardDataSource()
-    content.vb: Protected Sub New
+    content: public RVDashboardDataSource()
+    content.vb: Public Sub New
   overload: Reveal.Sdk.RVDashboardDataSource.#ctor*
   modifiers.csharp:
-  - protected
+  - public
   modifiers.vb:
-  - Protected
+  - Public
 - uid: Reveal.Sdk.RVDashboardDataSource.Id
   commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
   id: Id

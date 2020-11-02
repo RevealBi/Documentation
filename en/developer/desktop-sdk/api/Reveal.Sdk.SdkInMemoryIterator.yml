@@ -26,6 +26,7 @@ items:
     content: 'public class SdkInMemoryIterator : IInMemoryDataIterator'
     content.vb: >-
       Public Class SdkInMemoryIterator
+
           Implements IInMemoryDataIterator
   inheritance:
   - System.Object

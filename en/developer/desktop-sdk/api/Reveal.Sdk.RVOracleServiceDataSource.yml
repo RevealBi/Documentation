@@ -25,6 +25,7 @@ items:
     content: 'public class RVOracleServiceDataSource : RVOracleDataSource'
     content.vb: >-
       Public Class RVOracleServiceDataSource
+
           Inherits RVOracleDataSource
   inheritance:
   - System.Object

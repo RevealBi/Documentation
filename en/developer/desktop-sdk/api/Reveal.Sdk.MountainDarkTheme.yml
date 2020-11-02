@@ -24,6 +24,7 @@ items:
     content: 'public class MountainDarkTheme : RevealTheme'
     content.vb: >-
       Public Class MountainDarkTheme
+
           Inherits RevealTheme
   inheritance:
   - System.Object

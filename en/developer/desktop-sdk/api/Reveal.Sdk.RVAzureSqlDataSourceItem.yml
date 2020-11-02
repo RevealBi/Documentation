@@ -24,6 +24,7 @@ items:
     content: 'public class RVAzureSqlDataSourceItem : RVSqlServerDataSourceItem'
     content.vb: >-
       Public Class RVAzureSqlDataSourceItem
+
           Inherits RVSqlServerDataSourceItem
   inheritance:
   - System.Object

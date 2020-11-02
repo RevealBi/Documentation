@@ -25,6 +25,7 @@ items:
     content: 'public class RVPostgresDataSource : RVSqlPDSDataSource'
     content.vb: >-
       Public Class RVPostgresDataSource
+
           Inherits RVSqlPDSDataSource
   inheritance:
   - System.Object

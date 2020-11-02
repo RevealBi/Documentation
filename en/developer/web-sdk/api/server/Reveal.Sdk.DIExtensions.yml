@@ -1,0 +1,463 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.DIExtensions
+  commentId: T:Reveal.Sdk.DIExtensions
+  id: DIExtensions
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.DIExtensions.AddReveal(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+  - Reveal.Sdk.DIExtensions.AddRevealServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Reveal.Sdk.RevealEmbedSettings,Reveal.Sdk.IRevealSdkContext,Reveal.Sdk.IRevealUserContext)
+  langs:
+  - csharp
+  - vb
+  name: DIExtensions
+  nameWithType: DIExtensions
+  fullName: Reveal.Sdk.DIExtensions
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  syntax:
+    content: public static class DIExtensions
+    content.vb: Public Module DIExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Reveal.Sdk.DIExtensions.AddReveal(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+  commentId: M:Reveal.Sdk.DIExtensions.AddReveal(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+  id: AddReveal(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+  isExtensionMethod: true
+  parent: Reveal.Sdk.DIExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddReveal(IMvcBuilder)
+  nameWithType: DIExtensions.AddReveal(IMvcBuilder)
+  fullName: Reveal.Sdk.DIExtensions.AddReveal(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nAdds Reveal services to the specified Microsoft.Extensions.DependencyInjection.IMvcBuilder\n"
+  syntax:
+    content: public static IMvcBuilder AddReveal(this IMvcBuilder mvcBuilder)
+    parameters:
+    - id: mvcBuilder
+      type: Microsoft.Extensions.DependencyInjection.IMvcBuilder
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IMvcBuilder
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddReveal(mvcBuilder As IMvcBuilder) As IMvcBuilder
+  overload: Reveal.Sdk.DIExtensions.AddReveal*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Reveal.Sdk.DIExtensions.AddRevealServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Reveal.Sdk.RevealEmbedSettings,Reveal.Sdk.IRevealSdkContext,Reveal.Sdk.IRevealUserContext)
+  commentId: M:Reveal.Sdk.DIExtensions.AddRevealServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Reveal.Sdk.RevealEmbedSettings,Reveal.Sdk.IRevealSdkContext,Reveal.Sdk.IRevealUserContext)
+  id: AddRevealServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Reveal.Sdk.RevealEmbedSettings,Reveal.Sdk.IRevealSdkContext,Reveal.Sdk.IRevealUserContext)
+  isExtensionMethod: true
+  parent: Reveal.Sdk.DIExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRevealServices(IServiceCollection, RevealEmbedSettings, IRevealSdkContext, IRevealUserContext)
+  nameWithType: DIExtensions.AddRevealServices(IServiceCollection, RevealEmbedSettings, IRevealSdkContext, IRevealUserContext)
+  fullName: Reveal.Sdk.DIExtensions.AddRevealServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, Reveal.Sdk.RevealEmbedSettings, Reveal.Sdk.IRevealSdkContext, Reveal.Sdk.IRevealUserContext)
+  type: Method
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nAdds Reveal services to the specified Microsoft.Extensions.DependencyInjection.IServiceCollection\n"
+  syntax:
+    content: public static void AddRevealServices(this IServiceCollection services, RevealEmbedSettings embedSettings, IRevealSdkContext sdkContext, IRevealUserContext userContext = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: embedSettings
+      type: Reveal.Sdk.RevealEmbedSettings
+    - id: sdkContext
+      type: Reveal.Sdk.IRevealSdkContext
+    - id: userContext
+      type: Reveal.Sdk.IRevealUserContext
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub AddRevealServices(services As IServiceCollection, embedSettings As RevealEmbedSettings, sdkContext As IRevealSdkContext, userContext As IRevealUserContext = Nothing)
+  overload: Reveal.Sdk.DIExtensions.AddRevealServices*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.DIExtensions.AddReveal*
+  commentId: Overload:Reveal.Sdk.DIExtensions.AddReveal
+  isExternal: true
+  name: AddReveal
+  nameWithType: DIExtensions.AddReveal
+  fullName: Reveal.Sdk.DIExtensions.AddReveal
+- uid: Microsoft.Extensions.DependencyInjection.IMvcBuilder
+  isExternal: true
+  name: IMvcBuilder
+  nameWithType: IMvcBuilder
+  fullName: Microsoft.Extensions.DependencyInjection.IMvcBuilder
+- uid: Reveal.Sdk.DIExtensions.AddRevealServices*
+  commentId: Overload:Reveal.Sdk.DIExtensions.AddRevealServices
+  isExternal: true
+  name: AddRevealServices
+  nameWithType: DIExtensions.AddRevealServices
+  fullName: Reveal.Sdk.DIExtensions.AddRevealServices
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: '!:Microsoft.Extensions.DependencyInjection.IServiceCollection'
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Reveal.Sdk.RevealEmbedSettings
+  commentId: T:Reveal.Sdk.RevealEmbedSettings
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RevealEmbedSettings
+  nameWithType: RevealEmbedSettings
+  fullName: Reveal.Sdk.RevealEmbedSettings
+- uid: Reveal.Sdk.IRevealSdkContext
+  commentId: T:Reveal.Sdk.IRevealSdkContext
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRevealSdkContext
+  nameWithType: IRevealSdkContext
+  fullName: Reveal.Sdk.IRevealSdkContext
+- uid: Reveal.Sdk.IRevealUserContext
+  commentId: T:Reveal.Sdk.IRevealUserContext
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRevealUserContext
+  nameWithType: IRevealUserContext
+  fullName: Reveal.Sdk.IRevealUserContext

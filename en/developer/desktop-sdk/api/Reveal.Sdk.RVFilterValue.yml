@@ -117,7 +117,7 @@ items:
   assemblies:
   - RVUI.WPF
   namespace: Reveal.Sdk
-  summary: "\nThe internal value associated to this filter value. This is the value that must be added to the list of selected values when \nusing <see cref=\"!:RevealSettings.SetFilterSelectedValues(RVDashboardFilter, System.Collections.Generic.List&lt;object>)\"></see>\nor <xref href=\"Reveal.Sdk.RevealView.SetFilterSelectedValues(Reveal.Sdk.RVDashboardFilter%2cSystem.Collections.Generic.List%7bSystem.Object%7d)\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  summary: "\nThe internal value associated to this filter value. This is the value that must be added to the list of selected values when \nusing <xref href=\"Reveal.Sdk.RevealView.SetFilterSelectedValues(Reveal.Sdk.RVDashboardFilter%2cSystem.Collections.Generic.List%7bSystem.Object%7d)\" data-throw-if-not-resolved=\"false\"></xref>\n"
   syntax:
     content: public object Value { get; }
     parameters: []

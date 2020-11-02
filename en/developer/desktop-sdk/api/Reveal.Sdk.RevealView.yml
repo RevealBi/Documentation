@@ -99,6 +99,7 @@ items:
     content: 'public class RevealView : Control'
     content.vb: >-
       Public Class RevealView
+
           Inherits Control
   inheritance:
   - System.Object

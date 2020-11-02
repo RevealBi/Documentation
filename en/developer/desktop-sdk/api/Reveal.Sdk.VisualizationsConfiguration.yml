@@ -6,6 +6,7 @@ items:
   parent: Reveal.Sdk
   children:
   - Reveal.Sdk.VisualizationsConfiguration.Maps
+  - Reveal.Sdk.VisualizationsConfiguration.ScatterMaps
   langs:
   - csharp
   - vb
@@ -55,6 +56,7 @@ items:
   assemblies:
   - RVUI.WPF
   namespace: Reveal.Sdk
+  summary: "\nConfiguration used by Choropleth and Scatter Map visualizations\n"
   syntax:
     content: public MapVisualizationsConfiguration Maps { get; }
     parameters: []
@@ -68,6 +70,37 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: Reveal.Sdk.VisualizationsConfiguration.ScatterMaps
+  commentId: P:Reveal.Sdk.VisualizationsConfiguration.ScatterMaps
+  id: ScatterMaps
+  parent: Reveal.Sdk.VisualizationsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ScatterMaps
+  nameWithType: VisualizationsConfiguration.ScatterMaps
+  fullName: Reveal.Sdk.VisualizationsConfiguration.ScatterMaps
+  type: Property
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  summary: "\nConfiguration used by Scatter Map visualization, set <code>null</code> to disable the Map tiles provider.\n"
+  syntax:
+    content: public ScatterMapVisualizationsConfiguration ScatterMaps { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+    content.vb: Public Property ScatterMaps As ScatterMapVisualizationsConfiguration
+  overload: Reveal.Sdk.VisualizationsConfiguration.ScatterMaps*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: Reveal.Sdk
   commentId: N:Reveal.Sdk
@@ -380,3 +413,16 @@ references:
   name: MapVisualizationsConfiguration
   nameWithType: MapVisualizationsConfiguration
   fullName: Reveal.Sdk.MapVisualizationsConfiguration
+- uid: Reveal.Sdk.VisualizationsConfiguration.ScatterMaps*
+  commentId: Overload:Reveal.Sdk.VisualizationsConfiguration.ScatterMaps
+  isExternal: true
+  name: ScatterMaps
+  nameWithType: VisualizationsConfiguration.ScatterMaps
+  fullName: Reveal.Sdk.VisualizationsConfiguration.ScatterMaps
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  commentId: T:Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  parent: Reveal.Sdk
+  isExternal: true
+  name: ScatterMapVisualizationsConfiguration
+  nameWithType: ScatterMapVisualizationsConfiguration
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration

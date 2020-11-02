@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem
+  commentId: T:Reveal.Sdk.RVReportingServicesDataSourceItem
+  id: RVReportingServicesDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVReportingServicesDataSourceItem.#ctor(Reveal.Sdk.RVReportingServicesDataSource)
+  - Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic
+  - Reveal.Sdk.RVReportingServicesDataSourceItem.Path
+  - Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode
+  langs:
+  - csharp
+  - vb
+  name: RVReportingServicesDataSourceItem
+  nameWithType: RVReportingServicesDataSourceItem
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nMicrosoft Reporting Services (MS SSRS) data source item\n"
+  syntax:
+    content: 'public class RVReportingServicesDataSourceItem : RVDataSourceItem'
+    content.vb: >-
+      Public Class RVReportingServicesDataSourceItem
+
+          Inherits RVDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.#ctor(Reveal.Sdk.RVReportingServicesDataSource)
+  commentId: M:Reveal.Sdk.RVReportingServicesDataSourceItem.#ctor(Reveal.Sdk.RVReportingServicesDataSource)
+  id: '#ctor(Reveal.Sdk.RVReportingServicesDataSource)'
+  parent: Reveal.Sdk.RVReportingServicesDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVReportingServicesDataSourceItem(RVReportingServicesDataSource)
+  nameWithType: RVReportingServicesDataSourceItem.RVReportingServicesDataSourceItem(RVReportingServicesDataSource)
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.RVReportingServicesDataSourceItem(Reveal.Sdk.RVReportingServicesDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVReportingServicesDataSourceItem(RVReportingServicesDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVReportingServicesDataSource
+    content.vb: Public Sub New(dataSource As RVReportingServicesDataSource)
+  overload: Reveal.Sdk.RVReportingServicesDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.Path
+  commentId: P:Reveal.Sdk.RVReportingServicesDataSourceItem.Path
+  id: Path
+  parent: Reveal.Sdk.RVReportingServicesDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: RVReportingServicesDataSourceItem.Path
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.Path
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nPath to the report\n"
+  syntax:
+    content: public string Path { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Reveal.Sdk.RVReportingServicesDataSourceItem.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic
+  commentId: P:Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic
+  id: Dynamic
+  parent: Reveal.Sdk.RVReportingServicesDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Dynamic
+  nameWithType: RVReportingServicesDataSourceItem.Dynamic
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public string Dynamic { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Dynamic As String
+  overload: Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode
+  commentId: P:Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode
+  id: RenderMode
+  parent: Reveal.Sdk.RVReportingServicesDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RenderMode
+  nameWithType: RVReportingServicesDataSourceItem.RenderMode
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nRender mode, might be data or report. Data means Reveal will request the report to be exported to CSV and will use that data as regular input data.\nReport means the report will be exported to PDF and rendered that way.\n"
+  syntax:
+    content: public RVReportingServicesRenderMode RenderMode { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVReportingServicesRenderMode
+    content.vb: Public Property RenderMode As RVReportingServicesRenderMode
+  overload: Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVReportingServicesDataSourceItem.#ctor
+  isExternal: true
+  name: RVReportingServicesDataSourceItem
+  nameWithType: RVReportingServicesDataSourceItem.RVReportingServicesDataSourceItem
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.RVReportingServicesDataSourceItem
+- uid: Reveal.Sdk.RVReportingServicesDataSource
+  commentId: T:Reveal.Sdk.RVReportingServicesDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVReportingServicesDataSource
+  nameWithType: RVReportingServicesDataSource
+  fullName: Reveal.Sdk.RVReportingServicesDataSource
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.Path*
+  commentId: Overload:Reveal.Sdk.RVReportingServicesDataSourceItem.Path
+  isExternal: true
+  name: Path
+  nameWithType: RVReportingServicesDataSourceItem.Path
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.Path
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic*
+  commentId: Overload:Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic
+  isExternal: true
+  name: Dynamic
+  nameWithType: RVReportingServicesDataSourceItem.Dynamic
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.Dynamic
+- uid: Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode*
+  commentId: Overload:Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode
+  isExternal: true
+  name: RenderMode
+  nameWithType: RVReportingServicesDataSourceItem.RenderMode
+  fullName: Reveal.Sdk.RVReportingServicesDataSourceItem.RenderMode
+- uid: Reveal.Sdk.RVReportingServicesRenderMode
+  commentId: T:Reveal.Sdk.RVReportingServicesRenderMode
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVReportingServicesRenderMode
+  nameWithType: RVReportingServicesRenderMode
+  fullName: Reveal.Sdk.RVReportingServicesRenderMode

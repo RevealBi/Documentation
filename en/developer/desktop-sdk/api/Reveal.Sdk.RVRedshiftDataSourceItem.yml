@@ -27,6 +27,7 @@ items:
     content: 'public class RVRedshiftDataSourceItem : RVSqlBasedDataSourceItem'
     content.vb: >-
       Public Class RVRedshiftDataSourceItem
+
           Inherits RVSqlBasedDataSourceItem
   inheritance:
   - System.Object

@@ -1,0 +1,437 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  commentId: T:Reveal.Sdk.RVSharePointListItemDataSourceItem
+  id: RVSharePointListItemDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.#ctor(Reveal.Sdk.RVSharePointDataSource)
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName
+  - Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl
+  langs:
+  - csharp
+  - vb
+  name: RVSharePointListItemDataSourceItem
+  nameWithType: RVSharePointListItemDataSourceItem
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nData source item to get data from a single item in a Sharepoint list.\n"
+  syntax:
+    content: 'public class RVSharePointListItemDataSourceItem : RVBaseSharePointDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVSharePointListItemDataSourceItem
+
+          Inherits RVBaseSharePointDataSourceItem
+
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  - Reveal.Sdk.RVBaseSharePointDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.#ctor(Reveal.Sdk.RVSharePointDataSource)
+  commentId: M:Reveal.Sdk.RVSharePointListItemDataSourceItem.#ctor(Reveal.Sdk.RVSharePointDataSource)
+  id: '#ctor(Reveal.Sdk.RVSharePointDataSource)'
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVSharePointListItemDataSourceItem(RVSharePointDataSource)
+  nameWithType: RVSharePointListItemDataSourceItem.RVSharePointListItemDataSourceItem(RVSharePointDataSource)
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.RVSharePointListItemDataSourceItem(Reveal.Sdk.RVSharePointDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVSharePointListItemDataSourceItem(RVSharePointDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVSharePointDataSource
+    content.vb: Public Sub New(dataSource As RVSharePointDataSource)
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl
+  id: WebUrl
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: WebUrl
+  nameWithType: RVSharePointListItemDataSourceItem.WebUrl
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nURL to the site containing the list\n"
+  syntax:
+    content: public string WebUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property WebUrl As String
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName
+  id: ListName
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: ListName
+  nameWithType: RVSharePointListItemDataSourceItem.ListName
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nName of the list\n"
+  syntax:
+    content: public string ListName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ListName As String
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId
+  id: ListItemId
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: ListItemId
+  nameWithType: RVSharePointListItemDataSourceItem.ListItemId
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nIdentification of the single item in the list\n"
+  syntax:
+    content: public string ListItemId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ListItemId As String
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl
+  id: ListItemUrl
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: ListItemUrl
+  nameWithType: RVSharePointListItemDataSourceItem.ListItemUrl
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nURL to the single item\n"
+  syntax:
+    content: public string ListItemUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ListItemUrl As String
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder
+  id: IsFolder
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: IsFolder
+  nameWithType: RVSharePointListItemDataSourceItem.IsFolder
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nIs this single item a folder?\n"
+  syntax:
+    content: public bool IsFolder { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFolder As Boolean
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType
+  id: AssetContentType
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: AssetContentType
+  nameWithType: RVSharePointListItemDataSourceItem.AssetContentType
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nContent-type of the item\n"
+  syntax:
+    content: public string AssetContentType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AssetContentType As String
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath
+  commentId: P:Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath
+  id: FolderRelativePath
+  parent: Reveal.Sdk.RVSharePointListItemDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: FolderRelativePath
+  nameWithType: RVSharePointListItemDataSourceItem.FolderRelativePath
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nPath relative to the folder containing the item\n"
+  syntax:
+    content: public string FolderRelativePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FolderRelativePath As String
+  overload: Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVBaseSharePointDataSourceItem
+  commentId: T:Reveal.Sdk.RVBaseSharePointDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVBaseSharePointDataSourceItem
+  nameWithType: RVBaseSharePointDataSourceItem
+  fullName: Reveal.Sdk.RVBaseSharePointDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.#ctor
+  isExternal: true
+  name: RVSharePointListItemDataSourceItem
+  nameWithType: RVSharePointListItemDataSourceItem.RVSharePointListItemDataSourceItem
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.RVSharePointListItemDataSourceItem
+- uid: Reveal.Sdk.RVSharePointDataSource
+  commentId: T:Reveal.Sdk.RVSharePointDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSharePointDataSource
+  nameWithType: RVSharePointDataSource
+  fullName: Reveal.Sdk.RVSharePointDataSource
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl
+  isExternal: true
+  name: WebUrl
+  nameWithType: RVSharePointListItemDataSourceItem.WebUrl
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.WebUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName
+  isExternal: true
+  name: ListName
+  nameWithType: RVSharePointListItemDataSourceItem.ListName
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListName
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId
+  isExternal: true
+  name: ListItemId
+  nameWithType: RVSharePointListItemDataSourceItem.ListItemId
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemId
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl
+  isExternal: true
+  name: ListItemUrl
+  nameWithType: RVSharePointListItemDataSourceItem.ListItemUrl
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.ListItemUrl
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder
+  isExternal: true
+  name: IsFolder
+  nameWithType: RVSharePointListItemDataSourceItem.IsFolder
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.IsFolder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType
+  isExternal: true
+  name: AssetContentType
+  nameWithType: RVSharePointListItemDataSourceItem.AssetContentType
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.AssetContentType
+- uid: Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath*
+  commentId: Overload:Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath
+  isExternal: true
+  name: FolderRelativePath
+  nameWithType: RVSharePointListItemDataSourceItem.FolderRelativePath
+  fullName: Reveal.Sdk.RVSharePointListItemDataSourceItem.FolderRelativePath

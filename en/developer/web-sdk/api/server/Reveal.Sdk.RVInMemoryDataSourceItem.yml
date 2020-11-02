@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVInMemoryDataSourceItem
+  commentId: T:Reveal.Sdk.RVInMemoryDataSourceItem
+  id: RVInMemoryDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVInMemoryDataSourceItem.#ctor(System.String)
+  - Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId
+  langs:
+  - csharp
+  - vb
+  name: RVInMemoryDataSourceItem
+  nameWithType: RVInMemoryDataSourceItem
+  fullName: Reveal.Sdk.RVInMemoryDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nData source item to get in-memory data\n"
+  syntax:
+    content: 'public class RVInMemoryDataSourceItem : RVDataSourceItem'
+    content.vb: >-
+      Public Class RVInMemoryDataSourceItem
+
+          Inherits RVDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVInMemoryDataSourceItem.#ctor(System.String)
+  commentId: M:Reveal.Sdk.RVInMemoryDataSourceItem.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Reveal.Sdk.RVInMemoryDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVInMemoryDataSourceItem(String)
+  nameWithType: RVInMemoryDataSourceItem.RVInMemoryDataSourceItem(String)
+  fullName: Reveal.Sdk.RVInMemoryDataSourceItem.RVInMemoryDataSourceItem(System.String)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nUsed to create a new in-memory item with the specified dataset id\n"
+  syntax:
+    content: public RVInMemoryDataSourceItem(string datasetId)
+    parameters:
+    - id: datasetId
+      type: System.String
+      description: The id of the dataset identifying the data to return&quot;/>
+    content.vb: Public Sub New(datasetId As String)
+  overload: Reveal.Sdk.RVInMemoryDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId
+  commentId: P:Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId
+  id: DatasetId
+  parent: Reveal.Sdk.RVInMemoryDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: DatasetId
+  nameWithType: RVInMemoryDataSourceItem.DatasetId
+  fullName: Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nString identifying this in-memory dataset, it might be used to decide what data to return.\n"
+  syntax:
+    content: public string DatasetId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DatasetId As String
+  overload: Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVInMemoryDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVInMemoryDataSourceItem.#ctor
+  isExternal: true
+  name: RVInMemoryDataSourceItem
+  nameWithType: RVInMemoryDataSourceItem.RVInMemoryDataSourceItem
+  fullName: Reveal.Sdk.RVInMemoryDataSourceItem.RVInMemoryDataSourceItem
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId*
+  commentId: Overload:Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId
+  isExternal: true
+  name: DatasetId
+  nameWithType: RVInMemoryDataSourceItem.DatasetId
+  fullName: Reveal.Sdk.RVInMemoryDataSourceItem.DatasetId

@@ -31,6 +31,7 @@ items:
     content: 'public class RVNumberFormattingSpec : RVFormattingSpec'
     content.vb: >-
       Public Class RVNumberFormattingSpec
+
           Inherits RVFormattingSpec
   inheritance:
   - System.Object

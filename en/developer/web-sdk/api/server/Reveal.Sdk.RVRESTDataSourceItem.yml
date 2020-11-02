@@ -1,0 +1,342 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVRESTDataSourceItem
+  commentId: T:Reveal.Sdk.RVRESTDataSourceItem
+  id: RVRESTDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVRESTDataSourceItem.#ctor(Reveal.Sdk.RVRESTDataSource)
+  - Reveal.Sdk.RVRESTDataSourceItem.Parameters
+  - Reveal.Sdk.RVRESTDataSourceItem.Url
+  langs:
+  - csharp
+  - vb
+  name: RVRESTDataSourceItem
+  nameWithType: RVRESTDataSourceItem
+  fullName: Reveal.Sdk.RVRESTDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nREST API data source item\n"
+  syntax:
+    content: 'public class RVRESTDataSourceItem : RVDataSourceItem, IRVResourceItem'
+    content.vb: >-
+      Public Class RVRESTDataSourceItem
+
+          Inherits RVDataSourceItem
+
+          Implements IRVResourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  implements:
+  - Reveal.Sdk.IRVResourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVRESTDataSourceItem.#ctor(Reveal.Sdk.RVRESTDataSource)
+  commentId: M:Reveal.Sdk.RVRESTDataSourceItem.#ctor(Reveal.Sdk.RVRESTDataSource)
+  id: '#ctor(Reveal.Sdk.RVRESTDataSource)'
+  parent: Reveal.Sdk.RVRESTDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVRESTDataSourceItem(RVRESTDataSource)
+  nameWithType: RVRESTDataSourceItem.RVRESTDataSourceItem(RVRESTDataSource)
+  fullName: Reveal.Sdk.RVRESTDataSourceItem.RVRESTDataSourceItem(Reveal.Sdk.RVRESTDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVRESTDataSourceItem(RVRESTDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVRESTDataSource
+    content.vb: Public Sub New(dataSource As RVRESTDataSource)
+  overload: Reveal.Sdk.RVRESTDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSourceItem.Parameters
+  commentId: P:Reveal.Sdk.RVRESTDataSourceItem.Parameters
+  id: Parameters
+  parent: Reveal.Sdk.RVRESTDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: RVRESTDataSourceItem.Parameters
+  fullName: Reveal.Sdk.RVRESTDataSourceItem.Parameters
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nValues for the parameters specified in the data source <xref href=\"Reveal.Sdk.RVRESTDataSource.Url\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  syntax:
+    content: public Dictionary<string, object> Parameters { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property Parameters As Dictionary(Of String, Object)
+  overload: Reveal.Sdk.RVRESTDataSourceItem.Parameters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRESTDataSourceItem.Url
+  commentId: P:Reveal.Sdk.RVRESTDataSourceItem.Url
+  id: Url
+  parent: Reveal.Sdk.RVRESTDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: RVRESTDataSourceItem.Url
+  fullName: Reveal.Sdk.RVRESTDataSourceItem.Url
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nURL to the REST endpoint, must match the URL specified in the <xref href=\"Reveal.Sdk.RVRESTDataSource\" data-throw-if-not-resolved=\"false\"></xref> data source object.\n"
+  syntax:
+    content: public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: URL to the REST endpoint
+    content.vb: Public Property Url As String
+  overload: Reveal.Sdk.RVRESTDataSourceItem.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVRESTDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSourceItem.#ctor
+  isExternal: true
+  name: RVRESTDataSourceItem
+  nameWithType: RVRESTDataSourceItem.RVRESTDataSourceItem
+  fullName: Reveal.Sdk.RVRESTDataSourceItem.RVRESTDataSourceItem
+- uid: Reveal.Sdk.RVRESTDataSource
+  commentId: T:Reveal.Sdk.RVRESTDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVRESTDataSource
+  nameWithType: RVRESTDataSource
+  fullName: Reveal.Sdk.RVRESTDataSource
+- uid: Reveal.Sdk.RVRESTDataSourceItem.Parameters*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSourceItem.Parameters
+  isExternal: true
+  name: Parameters
+  nameWithType: RVRESTDataSourceItem.Parameters
+  fullName: Reveal.Sdk.RVRESTDataSourceItem.Parameters
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: '!:System.Collections.Generic.Dictionary{System.String,System.Object}'
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: System.Collections.Generic.Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: System.Collections.Generic.Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Reveal.Sdk.RVRESTDataSourceItem.Url*
+  commentId: Overload:Reveal.Sdk.RVRESTDataSourceItem.Url
+  isExternal: true
+  name: Url
+  nameWithType: RVRESTDataSourceItem.Url
+  fullName: Reveal.Sdk.RVRESTDataSourceItem.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

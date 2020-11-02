@@ -24,6 +24,7 @@ items:
     content: 'public class RVGoogleSheetDataSourceItem : RVExcelDataSourceItem'
     content.vb: >-
       Public Class RVGoogleSheetDataSourceItem
+
           Inherits RVExcelDataSourceItem
   inheritance:
   - System.Object

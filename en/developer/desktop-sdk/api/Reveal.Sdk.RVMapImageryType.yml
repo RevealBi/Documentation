@@ -1,0 +1,127 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVMapImageryType
+  commentId: T:Reveal.Sdk.RVMapImageryType
+  id: RVMapImageryType
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVMapImageryType.Bing
+  - Reveal.Sdk.RVMapImageryType.Esri
+  - Reveal.Sdk.RVMapImageryType.MapBox
+  langs:
+  - csharp
+  - vb
+  name: RVMapImageryType
+  nameWithType: RVMapImageryType
+  fullName: Reveal.Sdk.RVMapImageryType
+  type: Enum
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: public enum RVMapImageryType
+    content.vb: Public Enum RVMapImageryType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Reveal.Sdk.RVMapImageryType.Esri
+  commentId: F:Reveal.Sdk.RVMapImageryType.Esri
+  id: Esri
+  parent: Reveal.Sdk.RVMapImageryType
+  langs:
+  - csharp
+  - vb
+  name: Esri
+  nameWithType: RVMapImageryType.Esri
+  fullName: Reveal.Sdk.RVMapImageryType.Esri
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Esri = 0
+    return:
+      type: Reveal.Sdk.RVMapImageryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVMapImageryType.Bing
+  commentId: F:Reveal.Sdk.RVMapImageryType.Bing
+  id: Bing
+  parent: Reveal.Sdk.RVMapImageryType
+  langs:
+  - csharp
+  - vb
+  name: Bing
+  nameWithType: RVMapImageryType.Bing
+  fullName: Reveal.Sdk.RVMapImageryType.Bing
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: Bing = 1
+    return:
+      type: Reveal.Sdk.RVMapImageryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Reveal.Sdk.RVMapImageryType.MapBox
+  commentId: F:Reveal.Sdk.RVMapImageryType.MapBox
+  id: MapBox
+  parent: Reveal.Sdk.RVMapImageryType
+  langs:
+  - csharp
+  - vb
+  name: MapBox
+  nameWithType: RVMapImageryType.MapBox
+  fullName: Reveal.Sdk.RVMapImageryType.MapBox
+  type: Field
+  source:
+    path: RVUI.WPF
+    isExternal: true
+  assemblies:
+  - RVUI.WPF
+  namespace: Reveal.Sdk
+  syntax:
+    content: MapBox = 2
+    return:
+      type: Reveal.Sdk.RVMapImageryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: Reveal.Sdk.RVMapImageryType
+  commentId: T:Reveal.Sdk.RVMapImageryType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVMapImageryType
+  nameWithType: RVMapImageryType
+  fullName: Reveal.Sdk.RVMapImageryType

@@ -29,6 +29,7 @@ items:
     content: 'public class RVAthenaDataSource : RVDashboardDataSource'
     content.vb: >-
       Public Class RVAthenaDataSource
+
           Inherits RVDashboardDataSource
   inheritance:
   - System.Object

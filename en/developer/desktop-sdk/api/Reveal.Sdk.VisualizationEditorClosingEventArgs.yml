@@ -25,6 +25,7 @@ items:
     content: 'public class VisualizationEditorClosingEventArgs : CancelEventArgs'
     content.vb: >-
       Public Class VisualizationEditorClosingEventArgs
+
           Inherits CancelEventArgs
   inheritance:
   - System.Object

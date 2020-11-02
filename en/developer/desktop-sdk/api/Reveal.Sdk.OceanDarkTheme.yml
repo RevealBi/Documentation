@@ -24,6 +24,7 @@ items:
     content: 'public class OceanDarkTheme : RevealTheme'
     content.vb: >-
       Public Class OceanDarkTheme
+
           Inherits RevealTheme
   inheritance:
   - System.Object

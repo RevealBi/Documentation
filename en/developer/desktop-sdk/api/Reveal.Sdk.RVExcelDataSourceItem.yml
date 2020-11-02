@@ -29,6 +29,7 @@ items:
     content: 'public class RVExcelDataSourceItem : RVResourceBasedDataSourceItem'
     content.vb: >-
       Public Class RVExcelDataSourceItem
+
           Inherits RVResourceBasedDataSourceItem
   inheritance:
   - System.Object

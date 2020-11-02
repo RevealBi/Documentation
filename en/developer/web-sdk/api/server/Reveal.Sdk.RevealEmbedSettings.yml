@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RevealEmbedSettings
+  commentId: T:Reveal.Sdk.RevealEmbedSettings
+  id: RevealEmbedSettings
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RevealEmbedSettings.#ctor
+  - Reveal.Sdk.RevealEmbedSettings.CachePath
+  - Reveal.Sdk.RevealEmbedSettings.DataCachePath
+  - Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath
+  langs:
+  - csharp
+  - vb
+  name: RevealEmbedSettings
+  nameWithType: RevealEmbedSettings
+  fullName: Reveal.Sdk.RevealEmbedSettings
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nClass used to configure the Reveal SDK embedded in your application.\n"
+  syntax:
+    content: public class RevealEmbedSettings
+    content.vb: Public Class RevealEmbedSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RevealEmbedSettings.#ctor
+  commentId: M:Reveal.Sdk.RevealEmbedSettings.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RevealEmbedSettings
+  langs:
+  - csharp
+  - vb
+  name: RevealEmbedSettings()
+  nameWithType: RevealEmbedSettings.RevealEmbedSettings()
+  fullName: Reveal.Sdk.RevealEmbedSettings.RevealEmbedSettings()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RevealEmbedSettings()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RevealEmbedSettings.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath
+  commentId: P:Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath
+  id: LocalFileStoragePath
+  parent: Reveal.Sdk.RevealEmbedSettings
+  langs:
+  - csharp
+  - vb
+  name: LocalFileStoragePath
+  nameWithType: RevealEmbedSettings.LocalFileStoragePath
+  fullName: Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nRoot directory used to load data files using the &quot;Local&quot; data source, see <xref href=\"Reveal.Sdk.RVLocalFileDataSourceItem\" data-throw-if-not-resolved=\"false\"></xref>.\nIt defaults to &quot;C:\\\\Reveal\\\\Files&quot;\n"
+  syntax:
+    content: public string LocalFileStoragePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LocalFileStoragePath As String
+  overload: Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealEmbedSettings.DataCachePath
+  commentId: P:Reveal.Sdk.RevealEmbedSettings.DataCachePath
+  id: DataCachePath
+  parent: Reveal.Sdk.RevealEmbedSettings
+  langs:
+  - csharp
+  - vb
+  name: DataCachePath
+  nameWithType: RevealEmbedSettings.DataCachePath
+  fullName: Reveal.Sdk.RevealEmbedSettings.DataCachePath
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nDirectory where files caching data will be stored, it defaults to <xref href=\"Reveal.Sdk.RevealEmbedSettings.CachePath\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public string DataCachePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DataCachePath As String
+  overload: Reveal.Sdk.RevealEmbedSettings.DataCachePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RevealEmbedSettings.CachePath
+  commentId: P:Reveal.Sdk.RevealEmbedSettings.CachePath
+  id: CachePath
+  parent: Reveal.Sdk.RevealEmbedSettings
+  langs:
+  - csharp
+  - vb
+  name: CachePath
+  nameWithType: RevealEmbedSettings.CachePath
+  fullName: Reveal.Sdk.RevealEmbedSettings.CachePath
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.WebAPI
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.WebAPI
+  namespace: Reveal.Sdk
+  summary: "\nDirectory where the rest of cache files (like downloaded files) will be stored, it defaults to the temporary directory in the system.\n"
+  syntax:
+    content: public string CachePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CachePath As String
+  overload: Reveal.Sdk.RevealEmbedSettings.CachePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RevealEmbedSettings.#ctor*
+  commentId: Overload:Reveal.Sdk.RevealEmbedSettings.#ctor
+  isExternal: true
+  name: RevealEmbedSettings
+  nameWithType: RevealEmbedSettings.RevealEmbedSettings
+  fullName: Reveal.Sdk.RevealEmbedSettings.RevealEmbedSettings
+- uid: Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath*
+  commentId: Overload:Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath
+  isExternal: true
+  name: LocalFileStoragePath
+  nameWithType: RevealEmbedSettings.LocalFileStoragePath
+  fullName: Reveal.Sdk.RevealEmbedSettings.LocalFileStoragePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RevealEmbedSettings.DataCachePath*
+  commentId: Overload:Reveal.Sdk.RevealEmbedSettings.DataCachePath
+  isExternal: true
+  name: DataCachePath
+  nameWithType: RevealEmbedSettings.DataCachePath
+  fullName: Reveal.Sdk.RevealEmbedSettings.DataCachePath
+- uid: Reveal.Sdk.RevealEmbedSettings.CachePath*
+  commentId: Overload:Reveal.Sdk.RevealEmbedSettings.CachePath
+  isExternal: true
+  name: CachePath
+  nameWithType: RevealEmbedSettings.CachePath
+  fullName: Reveal.Sdk.RevealEmbedSettings.CachePath

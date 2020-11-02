@@ -1,0 +1,400 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem
+  commentId: T:Reveal.Sdk.RVRedshiftDataSourceItem
+  id: RVRedshiftDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVRedshiftDataSourceItem.#ctor(Reveal.Sdk.RVRedshiftDataSource)
+  - Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName
+  - Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters
+  - Reveal.Sdk.RVRedshiftDataSourceItem.Schema
+  langs:
+  - csharp
+  - vb
+  name: RVRedshiftDataSourceItem
+  nameWithType: RVRedshiftDataSourceItem
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nAmazon Redshift data source item\n"
+  syntax:
+    content: 'public class RVRedshiftDataSourceItem : RVSqlBasedDataSourceItem'
+    content.vb: >-
+      Public Class RVRedshiftDataSourceItem
+
+          Inherits RVSqlBasedDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  - Reveal.Sdk.RVSqlBasedDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+  - Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+  - Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.#ctor(Reveal.Sdk.RVRedshiftDataSource)
+  commentId: M:Reveal.Sdk.RVRedshiftDataSourceItem.#ctor(Reveal.Sdk.RVRedshiftDataSource)
+  id: '#ctor(Reveal.Sdk.RVRedshiftDataSource)'
+  parent: Reveal.Sdk.RVRedshiftDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVRedshiftDataSourceItem(RVRedshiftDataSource)
+  nameWithType: RVRedshiftDataSourceItem.RVRedshiftDataSourceItem(RVRedshiftDataSource)
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.RVRedshiftDataSourceItem(Reveal.Sdk.RVRedshiftDataSource)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVRedshiftDataSourceItem(RVRedshiftDataSource dataSource)
+    parameters:
+    - id: dataSource
+      type: Reveal.Sdk.RVRedshiftDataSource
+    content.vb: Public Sub New(dataSource As RVRedshiftDataSource)
+  overload: Reveal.Sdk.RVRedshiftDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.Schema
+  commentId: P:Reveal.Sdk.RVRedshiftDataSourceItem.Schema
+  id: Schema
+  parent: Reveal.Sdk.RVRedshiftDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Schema
+  nameWithType: RVRedshiftDataSourceItem.Schema
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.Schema
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nName of the schema the referenced table belongs to\n"
+  syntax:
+    content: public string Schema { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Schema As String
+  overload: Reveal.Sdk.RVRedshiftDataSourceItem.Schema*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName
+  commentId: P:Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName
+  id: FunctionName
+  parent: Reveal.Sdk.RVRedshiftDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: FunctionName
+  nameWithType: RVRedshiftDataSourceItem.FunctionName
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\n(Optional) name of the function to get data from, the function is expected to return a result set and might \nhave multiple parameters.\n"
+  syntax:
+    content: public string FunctionName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FunctionName As String
+  overload: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters
+  commentId: P:Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters
+  id: FunctionParameters
+  parent: Reveal.Sdk.RVRedshiftDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: FunctionParameters
+  nameWithType: RVRedshiftDataSourceItem.FunctionParameters
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nParameters to be passed to the function, if there is such specified in <xref href=\"Reveal.Sdk.RVPostgresDataSourceItem.FunctionName\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public Dictionary<string, object> FunctionParameters { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property FunctionParameters As Dictionary(Of String, Object)
+  overload: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem
+  commentId: T:Reveal.Sdk.RVSqlBasedDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSqlBasedDataSourceItem
+  nameWithType: RVSqlBasedDataSourceItem
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+  parent: Reveal.Sdk.RVSqlBasedDataSourceItem
+  isExternal: true
+  name: Database
+  nameWithType: RVSqlBasedDataSourceItem.Database
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem.Database
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+  parent: Reveal.Sdk.RVSqlBasedDataSourceItem
+  isExternal: true
+  name: Table
+  nameWithType: RVSqlBasedDataSourceItem.Table
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem.Table
+- uid: Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+  parent: Reveal.Sdk.RVSqlBasedDataSourceItem
+  isExternal: true
+  name: CustomQuery
+  nameWithType: RVSqlBasedDataSourceItem.CustomQuery
+  fullName: Reveal.Sdk.RVSqlBasedDataSourceItem.CustomQuery
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVRedshiftDataSourceItem.#ctor
+  isExternal: true
+  name: RVRedshiftDataSourceItem
+  nameWithType: RVRedshiftDataSourceItem.RVRedshiftDataSourceItem
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.RVRedshiftDataSourceItem
+- uid: Reveal.Sdk.RVRedshiftDataSource
+  commentId: T:Reveal.Sdk.RVRedshiftDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVRedshiftDataSource
+  nameWithType: RVRedshiftDataSource
+  fullName: Reveal.Sdk.RVRedshiftDataSource
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.Schema*
+  commentId: Overload:Reveal.Sdk.RVRedshiftDataSourceItem.Schema
+  isExternal: true
+  name: Schema
+  nameWithType: RVRedshiftDataSourceItem.Schema
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.Schema
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName*
+  commentId: Overload:Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName
+  isExternal: true
+  name: FunctionName
+  nameWithType: RVRedshiftDataSourceItem.FunctionName
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionName
+- uid: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters*
+  commentId: Overload:Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters
+  isExternal: true
+  name: FunctionParameters
+  nameWithType: RVRedshiftDataSourceItem.FunctionParameters
+  fullName: Reveal.Sdk.RVRedshiftDataSourceItem.FunctionParameters
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: '!:System.Collections.Generic.Dictionary{System.String,System.Object}'
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: System.Collections.Generic.Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: System.Collections.Generic.Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

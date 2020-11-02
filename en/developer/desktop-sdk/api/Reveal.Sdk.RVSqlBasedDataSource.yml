@@ -26,6 +26,7 @@ items:
     content: 'public abstract class RVSqlBasedDataSource : RVDashboardDataSource'
     content.vb: >-
       Public MustInherit Class RVSqlBasedDataSource
+
           Inherits RVDashboardDataSource
   inheritance:
   - System.Object

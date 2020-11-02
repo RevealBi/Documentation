@@ -1,0 +1,202 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVODataDataSource
+  commentId: T:Reveal.Sdk.RVODataDataSource
+  id: RVODataDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVODataDataSource.#ctor
+  - Reveal.Sdk.RVODataDataSource.Url
+  - Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication
+  langs:
+  - csharp
+  - vb
+  name: RVODataDataSource
+  nameWithType: RVODataDataSource
+  fullName: Reveal.Sdk.RVODataDataSource
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOData data source, configures the URL to get data from.\n"
+  syntax:
+    content: 'public class RVODataDataSource : RVDashboardDataSource'
+    content.vb: >-
+      Public Class RVODataDataSource
+
+          Inherits RVDashboardDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVODataDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVODataDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVODataDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVODataDataSource()
+  nameWithType: RVODataDataSource.RVODataDataSource()
+  fullName: Reveal.Sdk.RVODataDataSource.RVODataDataSource()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVODataDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVODataDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVODataDataSource.Url
+  commentId: P:Reveal.Sdk.RVODataDataSource.Url
+  id: Url
+  parent: Reveal.Sdk.RVODataDataSource
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: RVODataDataSource.Url
+  fullName: Reveal.Sdk.RVODataDataSource.Url
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nURL to the OData endpoint, is expected to be a URL with HTTP or HTTPS scheme.\n"
+  syntax:
+    content: public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Reveal.Sdk.RVODataDataSource.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication
+  commentId: P:Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication
+  id: UseAnonymousAuthentication
+  parent: Reveal.Sdk.RVODataDataSource
+  langs:
+  - csharp
+  - vb
+  name: UseAnonymousAuthentication
+  nameWithType: RVODataDataSource.UseAnonymousAuthentication
+  fullName: Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nBoolean flag indicating if anonymous authentication should be used for this data source or credentials must be requested\nto the containing application.\n"
+  syntax:
+    content: public bool UseAnonymousAuthentication { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseAnonymousAuthentication As Boolean
+  overload: Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVODataDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVODataDataSource.#ctor
+  isExternal: true
+  name: RVODataDataSource
+  nameWithType: RVODataDataSource.RVODataDataSource
+  fullName: Reveal.Sdk.RVODataDataSource.RVODataDataSource
+- uid: Reveal.Sdk.RVODataDataSource.Url*
+  commentId: Overload:Reveal.Sdk.RVODataDataSource.Url
+  isExternal: true
+  name: Url
+  nameWithType: RVODataDataSource.Url
+  fullName: Reveal.Sdk.RVODataDataSource.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication*
+  commentId: Overload:Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication
+  isExternal: true
+  name: UseAnonymousAuthentication
+  nameWithType: RVODataDataSource.UseAnonymousAuthentication
+  fullName: Reveal.Sdk.RVODataDataSource.UseAnonymousAuthentication
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

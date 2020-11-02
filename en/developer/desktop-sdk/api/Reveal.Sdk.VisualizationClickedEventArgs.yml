@@ -26,6 +26,7 @@ items:
     content: 'public class VisualizationClickedEventArgs : EventArgs'
     content.vb: >-
       Public Class VisualizationClickedEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object

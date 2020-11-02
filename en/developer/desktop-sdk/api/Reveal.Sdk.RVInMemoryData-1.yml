@@ -32,7 +32,9 @@ items:
         the public properties in this type
     content.vb: >-
       Public Class RVInMemoryData(Of T)
+
           Inherits RVInMemoryData
+
           Implements IRVInMemoryData, IRVInMemoryDataProvider
   inheritance:
   - System.Object

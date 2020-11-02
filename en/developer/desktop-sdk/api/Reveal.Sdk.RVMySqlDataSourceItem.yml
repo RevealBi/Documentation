@@ -24,6 +24,7 @@ items:
     content: 'public class RVMySqlDataSourceItem : RVSqlPDSDataSourceItem'
     content.vb: >-
       Public Class RVMySqlDataSourceItem
+
           Inherits RVSqlPDSDataSourceItem
   inheritance:
   - System.Object

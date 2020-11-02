@@ -1,0 +1,367 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVExcelDataSourceItem
+  commentId: T:Reveal.Sdk.RVExcelDataSourceItem
+  id: RVExcelDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVExcelDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  - Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  - Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  - Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  - Reveal.Sdk.RVExcelDataSourceItem.Range
+  - Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  langs:
+  - csharp
+  - vb
+  name: RVExcelDataSourceItem
+  nameWithType: RVExcelDataSourceItem
+  fullName: Reveal.Sdk.RVExcelDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe data source item used to represent a dataset from an Excel file, it includes information like the\nname of the sheet to get data from and the range to use when loading data.\n"
+  syntax:
+    content: 'public class RVExcelDataSourceItem : RVResourceBasedDataSourceItem'
+    content.vb: >-
+      Public Class RVExcelDataSourceItem
+
+          Inherits RVResourceBasedDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  - Reveal.Sdk.RVResourceBasedDataSourceItem
+  derivedClasses:
+  - Reveal.Sdk.RVGoogleSheetDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVExcelDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  commentId: M:Reveal.Sdk.RVExcelDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  id: '#ctor(Reveal.Sdk.IRVResourceItem)'
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVExcelDataSourceItem(IRVResourceItem)
+  nameWithType: RVExcelDataSourceItem.RVExcelDataSourceItem(IRVResourceItem)
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.RVExcelDataSourceItem(Reveal.Sdk.IRVResourceItem)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVExcelDataSourceItem(IRVResourceItem resourceItem)
+    parameters:
+    - id: resourceItem
+      type: Reveal.Sdk.IRVResourceItem
+    content.vb: Public Sub New(resourceItem As IRVResourceItem)
+  overload: Reveal.Sdk.RVExcelDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  id: Sheet
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Sheet
+  nameWithType: RVExcelDataSourceItem.Sheet
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nName of the sheet in the worksheet to get the data from, if not specified and <xref href=\"Reveal.Sdk.RVExcelDataSourceItem.NamedRange\" data-throw-if-not-resolved=\"false\"></xref> is <code>null</code>,\nthen the first sheet in the file will be used.\n"
+  syntax:
+    content: public string Sheet { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Sheet As String
+  overload: Reveal.Sdk.RVExcelDataSourceItem.Sheet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVExcelDataSourceItem.Range
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.Range
+  id: Range
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: RVExcelDataSourceItem.Range
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.Range
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nDefinition of the range to load data from in the specified sheet.\n"
+  syntax:
+    content: public RVExcelRange Range { get; set; }
+    parameters: []
+    return:
+      type: Reveal.Sdk.RVExcelRange
+    content.vb: Public Property Range As RVExcelRange
+  overload: Reveal.Sdk.RVExcelDataSourceItem.Range*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  id: NamedRange
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: NamedRange
+  nameWithType: RVExcelDataSourceItem.NamedRange
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nNamed range to get data from, it&apos;s optional and if no specified the sheet specified in <xref href=\"Reveal.Sdk.RVExcelDataSourceItem.Sheet\" data-throw-if-not-resolved=\"false\"></xref>\nwill be used.\n"
+  syntax:
+    content: public string NamedRange { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NamedRange As String
+  overload: Reveal.Sdk.RVExcelDataSourceItem.NamedRange*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  id: PivotTable
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: PivotTable
+  nameWithType: RVExcelDataSourceItem.PivotTable
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nName of the pivot table to get data from.\n"
+  syntax:
+    content: public string PivotTable { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PivotTable As String
+  overload: Reveal.Sdk.RVExcelDataSourceItem.PivotTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  id: FirstRowContainsLabels
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: FirstRowContainsLabels
+  nameWithType: RVExcelDataSourceItem.FirstRowContainsLabels
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nFlag indicating if the first row contains labels or data, it defaults to <code>true</code>.\nIf you set this flag to <code>false</code> the columns will be automatically named as &apos;COL1&apos;, &apos;COL2&apos;, etc.\n"
+  syntax:
+    content: public bool FirstRowContainsLabels { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FirstRowContainsLabels As Boolean
+  overload: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVResourceBasedDataSourceItem
+  commentId: T:Reveal.Sdk.RVResourceBasedDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVResourceBasedDataSourceItem
+  nameWithType: RVResourceBasedDataSourceItem
+  fullName: Reveal.Sdk.RVResourceBasedDataSourceItem
+- uid: Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  commentId: P:Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  parent: Reveal.Sdk.RVResourceBasedDataSourceItem
+  isExternal: true
+  name: ResourceItem
+  nameWithType: RVResourceBasedDataSourceItem.ResourceItem
+  fullName: Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVExcelDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVExcelDataSourceItem.#ctor
+  isExternal: true
+  name: RVExcelDataSourceItem
+  nameWithType: RVExcelDataSourceItem.RVExcelDataSourceItem
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.RVExcelDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem
+- uid: Reveal.Sdk.RVExcelDataSourceItem.Sheet*
+  commentId: Overload:Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  isExternal: true
+  name: Sheet
+  nameWithType: RVExcelDataSourceItem.Sheet
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.Sheet
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVExcelDataSourceItem.Range*
+  commentId: Overload:Reveal.Sdk.RVExcelDataSourceItem.Range
+  isExternal: true
+  name: Range
+  nameWithType: RVExcelDataSourceItem.Range
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.Range
+- uid: Reveal.Sdk.RVExcelRange
+  commentId: T:Reveal.Sdk.RVExcelRange
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVExcelRange
+  nameWithType: RVExcelRange
+  fullName: Reveal.Sdk.RVExcelRange
+- uid: Reveal.Sdk.RVExcelDataSourceItem.NamedRange*
+  commentId: Overload:Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  isExternal: true
+  name: NamedRange
+  nameWithType: RVExcelDataSourceItem.NamedRange
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+- uid: Reveal.Sdk.RVExcelDataSourceItem.PivotTable*
+  commentId: Overload:Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  isExternal: true
+  name: PivotTable
+  nameWithType: RVExcelDataSourceItem.PivotTable
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+- uid: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels*
+  commentId: Overload:Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  isExternal: true
+  name: FirstRowContainsLabels
+  nameWithType: RVExcelDataSourceItem.FirstRowContainsLabels
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

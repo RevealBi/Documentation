@@ -28,7 +28,9 @@ items:
     content: 'public class RVMarketoDataSourceItem : RVDataSourceItem, IRVResourceItem'
     content.vb: >-
       Public Class RVMarketoDataSourceItem
+
           Inherits RVDataSourceItem
+
           Implements IRVResourceItem
   inheritance:
   - System.Object

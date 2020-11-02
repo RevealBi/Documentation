@@ -26,6 +26,7 @@ items:
     content: 'public class RVDateFormattingSpec : RVFormattingSpec'
     content.vb: >-
       Public Class RVDateFormattingSpec
+
           Inherits RVFormattingSpec
   inheritance:
   - System.Object

@@ -29,6 +29,7 @@ items:
     content: 'public class RVDashboardFilter : INotifyPropertyChanged'
     content.vb: >-
       Public Class RVDashboardFilter
+
           Implements INotifyPropertyChanged
   inheritance:
   - System.Object

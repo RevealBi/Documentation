@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVOracleServiceDataSource
+  commentId: T:Reveal.Sdk.RVOracleServiceDataSource
+  id: RVOracleServiceDataSource
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVOracleServiceDataSource.#ctor
+  - Reveal.Sdk.RVOracleServiceDataSource.Service
+  langs:
+  - csharp
+  - vb
+  name: RVOracleServiceDataSource
+  nameWithType: RVOracleServiceDataSource
+  fullName: Reveal.Sdk.RVOracleServiceDataSource
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nOracle data source, it adds the Service name property to the base properties in <xref href=\"Reveal.Sdk.RVSqlBasedDataSource\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: 'public class RVOracleServiceDataSource : RVOracleDataSource'
+    content.vb: >-
+      Public Class RVOracleServiceDataSource
+
+          Inherits RVOracleDataSource
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDashboardDataSource
+  - Reveal.Sdk.RVSqlBasedDataSource
+  - Reveal.Sdk.RVOracleDataSource
+  inheritedMembers:
+  - Reveal.Sdk.RVOracleDataSource.Database
+  - Reveal.Sdk.RVSqlBasedDataSource.Host
+  - Reveal.Sdk.RVSqlBasedDataSource.Port
+  - Reveal.Sdk.RVDashboardDataSource.Id
+  - Reveal.Sdk.RVDashboardDataSource.Title
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVOracleServiceDataSource.#ctor
+  commentId: M:Reveal.Sdk.RVOracleServiceDataSource.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVOracleServiceDataSource
+  langs:
+  - csharp
+  - vb
+  name: RVOracleServiceDataSource()
+  nameWithType: RVOracleServiceDataSource.RVOracleServiceDataSource()
+  fullName: Reveal.Sdk.RVOracleServiceDataSource.RVOracleServiceDataSource()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVOracleServiceDataSource()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVOracleServiceDataSource.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVOracleServiceDataSource.Service
+  commentId: P:Reveal.Sdk.RVOracleServiceDataSource.Service
+  id: Service
+  parent: Reveal.Sdk.RVOracleServiceDataSource
+  langs:
+  - csharp
+  - vb
+  name: Service
+  nameWithType: RVOracleServiceDataSource.Service
+  fullName: Reveal.Sdk.RVOracleServiceDataSource.Service
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public string Service { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Service As String
+  overload: Reveal.Sdk.RVOracleServiceDataSource.Service*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDashboardDataSource
+  commentId: T:Reveal.Sdk.RVDashboardDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDashboardDataSource
+  nameWithType: RVDashboardDataSource
+  fullName: Reveal.Sdk.RVDashboardDataSource
+- uid: Reveal.Sdk.RVSqlBasedDataSource
+  commentId: T:Reveal.Sdk.RVSqlBasedDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVSqlBasedDataSource
+  nameWithType: RVSqlBasedDataSource
+  fullName: Reveal.Sdk.RVSqlBasedDataSource
+- uid: Reveal.Sdk.RVOracleDataSource
+  commentId: T:Reveal.Sdk.RVOracleDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVOracleDataSource
+  nameWithType: RVOracleDataSource
+  fullName: Reveal.Sdk.RVOracleDataSource
+- uid: Reveal.Sdk.RVOracleDataSource.Database
+  commentId: P:Reveal.Sdk.RVOracleDataSource.Database
+  parent: Reveal.Sdk.RVOracleDataSource
+  isExternal: true
+  name: Database
+  nameWithType: RVOracleDataSource.Database
+  fullName: Reveal.Sdk.RVOracleDataSource.Database
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Host
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Host
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  isExternal: true
+  name: Host
+  nameWithType: RVSqlBasedDataSource.Host
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Host
+- uid: Reveal.Sdk.RVSqlBasedDataSource.Port
+  commentId: P:Reveal.Sdk.RVSqlBasedDataSource.Port
+  parent: Reveal.Sdk.RVSqlBasedDataSource
+  isExternal: true
+  name: Port
+  nameWithType: RVSqlBasedDataSource.Port
+  fullName: Reveal.Sdk.RVSqlBasedDataSource.Port
+- uid: Reveal.Sdk.RVDashboardDataSource.Id
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Id
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Id
+  nameWithType: RVDashboardDataSource.Id
+  fullName: Reveal.Sdk.RVDashboardDataSource.Id
+- uid: Reveal.Sdk.RVDashboardDataSource.Title
+  commentId: P:Reveal.Sdk.RVDashboardDataSource.Title
+  parent: Reveal.Sdk.RVDashboardDataSource
+  isExternal: true
+  name: Title
+  nameWithType: RVDashboardDataSource.Title
+  fullName: Reveal.Sdk.RVDashboardDataSource.Title
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVOracleServiceDataSource.#ctor*
+  commentId: Overload:Reveal.Sdk.RVOracleServiceDataSource.#ctor
+  isExternal: true
+  name: RVOracleServiceDataSource
+  nameWithType: RVOracleServiceDataSource.RVOracleServiceDataSource
+  fullName: Reveal.Sdk.RVOracleServiceDataSource.RVOracleServiceDataSource
+- uid: Reveal.Sdk.RVOracleServiceDataSource.Service*
+  commentId: Overload:Reveal.Sdk.RVOracleServiceDataSource.Service
+  isExternal: true
+  name: Service
+  nameWithType: RVOracleServiceDataSource.Service
+  fullName: Reveal.Sdk.RVOracleServiceDataSource.Service
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

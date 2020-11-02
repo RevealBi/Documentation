@@ -1,0 +1,202 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVGoogleSheetDataSourceItem
+  commentId: T:Reveal.Sdk.RVGoogleSheetDataSourceItem
+  id: RVGoogleSheetDataSourceItem
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVGoogleSheetDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleSheetDataSourceItem
+  nameWithType: RVGoogleSheetDataSourceItem
+  fullName: Reveal.Sdk.RVGoogleSheetDataSourceItem
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nThe data source item used to represent a dataset from a Google Sheet file, it includes information like the\nname of the sheet to get data from and the range to use when loading data.\n"
+  syntax:
+    content: 'public class RVGoogleSheetDataSourceItem : RVExcelDataSourceItem'
+    content.vb: >-
+      Public Class RVGoogleSheetDataSourceItem
+
+          Inherits RVExcelDataSourceItem
+  inheritance:
+  - System.Object
+  - Reveal.Sdk.RVDataSourceItem
+  - Reveal.Sdk.RVResourceBasedDataSourceItem
+  - Reveal.Sdk.RVExcelDataSourceItem
+  inheritedMembers:
+  - Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  - Reveal.Sdk.RVExcelDataSourceItem.Range
+  - Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  - Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  - Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  - Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  - Reveal.Sdk.RVDataSourceItem.Title
+  - Reveal.Sdk.RVDataSourceItem.Id
+  - Reveal.Sdk.RVDataSourceItem.Description
+  - Reveal.Sdk.RVDataSourceItem.DataSource
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVGoogleSheetDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  commentId: M:Reveal.Sdk.RVGoogleSheetDataSourceItem.#ctor(Reveal.Sdk.IRVResourceItem)
+  id: '#ctor(Reveal.Sdk.IRVResourceItem)'
+  parent: Reveal.Sdk.RVGoogleSheetDataSourceItem
+  langs:
+  - csharp
+  - vb
+  name: RVGoogleSheetDataSourceItem(IRVResourceItem)
+  nameWithType: RVGoogleSheetDataSourceItem.RVGoogleSheetDataSourceItem(IRVResourceItem)
+  fullName: Reveal.Sdk.RVGoogleSheetDataSourceItem.RVGoogleSheetDataSourceItem(Reveal.Sdk.IRVResourceItem)
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVGoogleSheetDataSourceItem(IRVResourceItem resourceItem)
+    parameters:
+    - id: resourceItem
+      type: Reveal.Sdk.IRVResourceItem
+    content.vb: Public Sub New(resourceItem As IRVResourceItem)
+  overload: Reveal.Sdk.RVGoogleSheetDataSourceItem.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Reveal.Sdk.RVDataSourceItem
+  commentId: T:Reveal.Sdk.RVDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVDataSourceItem
+  nameWithType: RVDataSourceItem
+  fullName: Reveal.Sdk.RVDataSourceItem
+- uid: Reveal.Sdk.RVResourceBasedDataSourceItem
+  commentId: T:Reveal.Sdk.RVResourceBasedDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVResourceBasedDataSourceItem
+  nameWithType: RVResourceBasedDataSourceItem
+  fullName: Reveal.Sdk.RVResourceBasedDataSourceItem
+- uid: Reveal.Sdk.RVExcelDataSourceItem
+  commentId: T:Reveal.Sdk.RVExcelDataSourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVExcelDataSourceItem
+  nameWithType: RVExcelDataSourceItem
+  fullName: Reveal.Sdk.RVExcelDataSourceItem
+- uid: Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.Sheet
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  isExternal: true
+  name: Sheet
+  nameWithType: RVExcelDataSourceItem.Sheet
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.Sheet
+- uid: Reveal.Sdk.RVExcelDataSourceItem.Range
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.Range
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  isExternal: true
+  name: Range
+  nameWithType: RVExcelDataSourceItem.Range
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.Range
+- uid: Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  isExternal: true
+  name: NamedRange
+  nameWithType: RVExcelDataSourceItem.NamedRange
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.NamedRange
+- uid: Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  isExternal: true
+  name: PivotTable
+  nameWithType: RVExcelDataSourceItem.PivotTable
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.PivotTable
+- uid: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  commentId: P:Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+  parent: Reveal.Sdk.RVExcelDataSourceItem
+  isExternal: true
+  name: FirstRowContainsLabels
+  nameWithType: RVExcelDataSourceItem.FirstRowContainsLabels
+  fullName: Reveal.Sdk.RVExcelDataSourceItem.FirstRowContainsLabels
+- uid: Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  commentId: P:Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+  parent: Reveal.Sdk.RVResourceBasedDataSourceItem
+  isExternal: true
+  name: ResourceItem
+  nameWithType: RVResourceBasedDataSourceItem.ResourceItem
+  fullName: Reveal.Sdk.RVResourceBasedDataSourceItem.ResourceItem
+- uid: Reveal.Sdk.RVDataSourceItem.Title
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Title
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Title
+  nameWithType: RVDataSourceItem.Title
+  fullName: Reveal.Sdk.RVDataSourceItem.Title
+- uid: Reveal.Sdk.RVDataSourceItem.Id
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Id
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Id
+  nameWithType: RVDataSourceItem.Id
+  fullName: Reveal.Sdk.RVDataSourceItem.Id
+- uid: Reveal.Sdk.RVDataSourceItem.Description
+  commentId: P:Reveal.Sdk.RVDataSourceItem.Description
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: Description
+  nameWithType: RVDataSourceItem.Description
+  fullName: Reveal.Sdk.RVDataSourceItem.Description
+- uid: Reveal.Sdk.RVDataSourceItem.DataSource
+  commentId: P:Reveal.Sdk.RVDataSourceItem.DataSource
+  parent: Reveal.Sdk.RVDataSourceItem
+  isExternal: true
+  name: DataSource
+  nameWithType: RVDataSourceItem.DataSource
+  fullName: Reveal.Sdk.RVDataSourceItem.DataSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVGoogleSheetDataSourceItem.#ctor*
+  commentId: Overload:Reveal.Sdk.RVGoogleSheetDataSourceItem.#ctor
+  isExternal: true
+  name: RVGoogleSheetDataSourceItem
+  nameWithType: RVGoogleSheetDataSourceItem.RVGoogleSheetDataSourceItem
+  fullName: Reveal.Sdk.RVGoogleSheetDataSourceItem.RVGoogleSheetDataSourceItem
+- uid: Reveal.Sdk.IRVResourceItem
+  commentId: T:Reveal.Sdk.IRVResourceItem
+  parent: Reveal.Sdk
+  isExternal: true
+  name: IRVResourceItem
+  nameWithType: IRVResourceItem
+  fullName: Reveal.Sdk.IRVResourceItem

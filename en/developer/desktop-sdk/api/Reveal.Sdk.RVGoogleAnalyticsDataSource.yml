@@ -24,6 +24,7 @@ items:
     content: 'public class RVGoogleAnalyticsDataSource : RVDashboardDataSource'
     content.vb: >-
       Public Class RVGoogleAnalyticsDataSource
+
           Inherits RVDashboardDataSource
   inheritance:
   - System.Object

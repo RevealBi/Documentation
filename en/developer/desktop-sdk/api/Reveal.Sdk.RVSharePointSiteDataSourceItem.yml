@@ -25,6 +25,7 @@ items:
     content: 'public class RVSharePointSiteDataSourceItem : RVBaseSharePointDataSourceItem'
     content.vb: >-
       Public Class RVSharePointSiteDataSourceItem
+
           Inherits RVBaseSharePointDataSourceItem
   inheritance:
   - System.Object

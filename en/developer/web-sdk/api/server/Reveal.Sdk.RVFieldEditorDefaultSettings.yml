@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings
+  commentId: T:Reveal.Sdk.RVFieldEditorDefaultSettings
+  id: RVFieldEditorDefaultSettings
+  parent: Reveal.Sdk
+  children:
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.#ctor
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat
+  - Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator
+  langs:
+  - csharp
+  - vb
+  name: RVFieldEditorDefaultSettings
+  nameWithType: RVFieldEditorDefaultSettings
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings
+  type: Class
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nA class used to provide the desired default settings for the field editor.\n"
+  syntax:
+    content: 'public class RVFieldEditorDefaultSettings : Object'
+    content.vb: >-
+      Public Class RVFieldEditorDefaultSettings
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.#ctor
+  commentId: M:Reveal.Sdk.RVFieldEditorDefaultSettings.#ctor
+  id: '#ctor'
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: RVFieldEditorDefaultSettings()
+  nameWithType: RVFieldEditorDefaultSettings.RVFieldEditorDefaultSettings()
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.RVFieldEditorDefaultSettings()
+  type: Constructor
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  syntax:
+    content: public RVFieldEditorDefaultSettings()
+    content.vb: Public Sub New
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  id: DefaultDecimalPlaces
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultDecimalPlaces
+  nameWithType: RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies the number of decimal places that should be used by default.\n"
+  syntax:
+    content: public int DefaultDecimalPlaces { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DefaultDecimalPlaces As Integer
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator
+  id: ThousandsSeparator
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: ThousandsSeparator
+  nameWithType: RVFieldEditorDefaultSettings.ThousandsSeparator
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies whether a 1000 separator will be used by default.\n"
+  syntax:
+    content: public bool ThousandsSeparator { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ThousandsSeparator As Boolean
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  id: DefaultCurrencySymbol
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultCurrencySymbol
+  nameWithType: RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies the default currency symbol used for currency fields.\n"
+  syntax:
+    content: public string DefaultCurrencySymbol { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultCurrencySymbol As String
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  id: DefaultLargeNumbersFormat
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultLargeNumbersFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies whether large number format will be used by default when the end user is creating new visualizations.\n"
+  syntax:
+    content: public bool DefaultLargeNumbersFormat { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DefaultLargeNumbersFormat As Boolean
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat
+  id: DefaultDateFormat
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultDateFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultDateFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies the default format will be used for Date type of fields.\n"
+  syntax:
+    content: public string DefaultDateFormat { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultDateFormat As String
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  id: DefaultDateTimeFormat
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultDateTimeFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies the default format will be used for DateTime type of fields.\n"
+  syntax:
+    content: public string DefaultDateTimeFormat { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultDateTimeFormat As String
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat
+  commentId: P:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat
+  id: DefaultTimeFormat
+  parent: Reveal.Sdk.RVFieldEditorDefaultSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultTimeFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultTimeFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat
+  type: Property
+  source:
+    path: Infragistics.Reveal.SDK.Server
+    isExternal: true
+  assemblies:
+  - Infragistics.Reveal.SDK.Server
+  namespace: Reveal.Sdk
+  summary: "\nSpecifies the default format will be used for Time type of fields.\n"
+  syntax:
+    content: public string DefaultTimeFormat { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultTimeFormat As String
+  overload: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Reveal.Sdk
+  commentId: N:Reveal.Sdk
+  isExternal: true
+  name: Reveal.Sdk
+  nameWithType: Reveal.Sdk
+  fullName: Reveal.Sdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.#ctor*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.#ctor
+  isExternal: true
+  name: RVFieldEditorDefaultSettings
+  nameWithType: RVFieldEditorDefaultSettings.RVFieldEditorDefaultSettings
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.RVFieldEditorDefaultSettings
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  isExternal: true
+  name: DefaultDecimalPlaces
+  nameWithType: RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDecimalPlaces
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator
+  isExternal: true
+  name: ThousandsSeparator
+  nameWithType: RVFieldEditorDefaultSettings.ThousandsSeparator
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.ThousandsSeparator
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  isExternal: true
+  name: DefaultCurrencySymbol
+  nameWithType: RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultCurrencySymbol
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  isExternal: true
+  name: DefaultLargeNumbersFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultLargeNumbersFormat
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat
+  isExternal: true
+  name: DefaultDateFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultDateFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateFormat
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  isExternal: true
+  name: DefaultDateTimeFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultDateTimeFormat
+- uid: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat*
+  commentId: Overload:Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat
+  isExternal: true
+  name: DefaultTimeFormat
+  nameWithType: RVFieldEditorDefaultSettings.DefaultTimeFormat
+  fullName: Reveal.Sdk.RVFieldEditorDefaultSettings.DefaultTimeFormat

@@ -24,6 +24,7 @@ items:
     content: 'public abstract class RVBaseSharePointDataSourceItem : RVDataSourceItem'
     content.vb: >-
       Public MustInherit Class RVBaseSharePointDataSourceItem
+
           Inherits RVDataSourceItem
   inheritance:
   - System.Object

@@ -27,6 +27,7 @@ items:
     content: 'public class RVBigQueryDataSourceItem : RVDataSourceItem'
     content.vb: >-
       Public Class RVBigQueryDataSourceItem
+
           Inherits RVDataSourceItem
   inheritance:
   - System.Object

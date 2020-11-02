@@ -25,7 +25,9 @@ items:
     content: 'public class RVGoogleDriveDataSourceItem : RVDataSourceItem, IRVResourceItem'
     content.vb: >-
       Public Class RVGoogleDriveDataSourceItem
+
           Inherits RVDataSourceItem
+
           Implements IRVResourceItem
   inheritance:
   - System.Object

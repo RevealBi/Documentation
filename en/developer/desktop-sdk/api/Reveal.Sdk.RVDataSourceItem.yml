@@ -60,12 +60,16 @@ items:
   - Reveal.Sdk.RVODataDataSourceItem
   - Reveal.Sdk.RVOneDriveDataSourceItem
   - Reveal.Sdk.RVOneDriveDataSourceItem
+  - Reveal.Sdk.RVQuickBooksDataSourceItem
+  - Reveal.Sdk.RVQuickBooksDataSourceItem
   - Reveal.Sdk.RVReportingServicesDataSourceItem
   - Reveal.Sdk.RVReportingServicesDataSourceItem
   - Reveal.Sdk.RVResourceBasedDataSourceItem
   - Reveal.Sdk.RVResourceBasedDataSourceItem
   - Reveal.Sdk.RVRESTDataSourceItem
   - Reveal.Sdk.RVRESTDataSourceItem
+  - Reveal.Sdk.RVS3DataSourceItem
+  - Reveal.Sdk.RVS3DataSourceItem
   - Reveal.Sdk.RVSqlBasedDataSourceItem
   - Reveal.Sdk.RVSqlBasedDataSourceItem
   - Reveal.Sdk.RVWebResourceDataSourceItem

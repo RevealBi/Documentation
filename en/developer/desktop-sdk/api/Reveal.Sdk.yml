@@ -98,6 +98,7 @@ items:
   - Reveal.Sdk.RVLocalFileDataSource
   - Reveal.Sdk.RVLocalFileDataSourceItem
   - Reveal.Sdk.RVLocalizationElementType
+  - Reveal.Sdk.RVMapImageryType
   - Reveal.Sdk.RVMarketoDataSource
   - Reveal.Sdk.RVMarketoDataSourceItem
   - Reveal.Sdk.RVMySqlDataSource
@@ -114,6 +115,8 @@ items:
   - Reveal.Sdk.RVOracleSIDDataSource
   - Reveal.Sdk.RVPostgresDataSource
   - Reveal.Sdk.RVPostgresDataSourceItem
+  - Reveal.Sdk.RVQuickBooksDataSource
+  - Reveal.Sdk.RVQuickBooksDataSourceItem
   - Reveal.Sdk.RVRedshiftDataSource
   - Reveal.Sdk.RVRedshiftDataSourceItem
   - Reveal.Sdk.RVReportingServicesDataSource
@@ -122,6 +125,8 @@ items:
   - Reveal.Sdk.RVResourceBasedDataSourceItem
   - Reveal.Sdk.RVRESTDataSource
   - Reveal.Sdk.RVRESTDataSourceItem
+  - Reveal.Sdk.RVS3DataSource
+  - Reveal.Sdk.RVS3DataSourceItem
   - Reveal.Sdk.RVSchemaColumn
   - Reveal.Sdk.RVSchemaColumnAttribute
   - Reveal.Sdk.RVSchemaColumnType
@@ -144,6 +149,7 @@ items:
   - Reveal.Sdk.RVVisualization
   - Reveal.Sdk.RVWebResourceDataSource
   - Reveal.Sdk.RVWebResourceDataSourceItem
+  - Reveal.Sdk.ScatterMapVisualizationsConfiguration
   - Reveal.Sdk.SdkInMemoryIterator
   - Reveal.Sdk.TooltipShowingEventArgs
   - Reveal.Sdk.VisualizationClickedEventArgs
@@ -223,6 +229,20 @@ references:
   name: RVDateDashboardFilter
   nameWithType: RVDateDashboardFilter
   fullName: Reveal.Sdk.RVDateDashboardFilter
+- uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  commentId: T:Reveal.Sdk.ScatterMapVisualizationsConfiguration
+  parent: Reveal.Sdk
+  isExternal: true
+  name: ScatterMapVisualizationsConfiguration
+  nameWithType: ScatterMapVisualizationsConfiguration
+  fullName: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+- uid: Reveal.Sdk.RVMapImageryType
+  commentId: T:Reveal.Sdk.RVMapImageryType
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVMapImageryType
+  nameWithType: RVMapImageryType
+  fullName: Reveal.Sdk.RVMapImageryType
 - uid: Reveal.Sdk.RVConditionalFormatting
   commentId: T:Reveal.Sdk.RVConditionalFormatting
   parent: Reveal.Sdk
@@ -390,12 +410,6 @@ references:
   name: IRVInMemoryDataProvider
   nameWithType: IRVInMemoryDataProvider
   fullName: Reveal.Sdk.IRVInMemoryDataProvider
-- uid: Reveal.Sdk.RVInMemoryDataSource
-  commentId: T:Reveal.Sdk.RVInMemoryDataSource
-  isExternal: true
-  name: RVInMemoryDataSource
-  nameWithType: RVInMemoryDataSource
-  fullName: Reveal.Sdk.RVInMemoryDataSource
 - uid: Reveal.Sdk.RVLocalFileDataSourceItem
   commentId: T:Reveal.Sdk.RVLocalFileDataSourceItem
   isExternal: true
@@ -745,6 +759,7 @@ references:
   fullName: Reveal.Sdk.RVBoxDataSourceItem
 - uid: Reveal.Sdk.RVOneDriveDataSource
   commentId: T:Reveal.Sdk.RVOneDriveDataSource
+  parent: Reveal.Sdk
   isExternal: true
   name: RVOneDriveDataSource
   nameWithType: RVOneDriveDataSource
@@ -807,6 +822,12 @@ references:
   name: RVSharePointItemType
   nameWithType: RVSharePointItemType
   fullName: Reveal.Sdk.RVSharePointItemType
+- uid: Reveal.Sdk.RVInMemoryDataSource
+  commentId: T:Reveal.Sdk.RVInMemoryDataSource
+  isExternal: true
+  name: RVInMemoryDataSource
+  nameWithType: RVInMemoryDataSource
+  fullName: Reveal.Sdk.RVInMemoryDataSource
 - uid: Reveal.Sdk.RVInMemoryDataSourceItem
   commentId: T:Reveal.Sdk.RVInMemoryDataSourceItem
   parent: Reveal.Sdk
@@ -890,6 +911,32 @@ references:
   name: RVAthenaDataSourceItem
   nameWithType: RVAthenaDataSourceItem
   fullName: Reveal.Sdk.RVAthenaDataSourceItem
+- uid: Reveal.Sdk.RVS3DataSource
+  commentId: T:Reveal.Sdk.RVS3DataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVS3DataSource
+  nameWithType: RVS3DataSource
+  fullName: Reveal.Sdk.RVS3DataSource
+- uid: Reveal.Sdk.RVS3DataSourceItem
+  commentId: T:Reveal.Sdk.RVS3DataSourceItem
+  isExternal: true
+  name: RVS3DataSourceItem
+  nameWithType: RVS3DataSourceItem
+  fullName: Reveal.Sdk.RVS3DataSourceItem
+- uid: Reveal.Sdk.RVQuickBooksDataSource
+  commentId: T:Reveal.Sdk.RVQuickBooksDataSource
+  parent: Reveal.Sdk
+  isExternal: true
+  name: RVQuickBooksDataSource
+  nameWithType: RVQuickBooksDataSource
+  fullName: Reveal.Sdk.RVQuickBooksDataSource
+- uid: Reveal.Sdk.RVQuickBooksDataSourceItem
+  commentId: T:Reveal.Sdk.RVQuickBooksDataSourceItem
+  isExternal: true
+  name: RVQuickBooksDataSourceItem
+  nameWithType: RVQuickBooksDataSourceItem
+  fullName: Reveal.Sdk.RVQuickBooksDataSourceItem
 - uid: Reveal.Sdk.RVFieldEditorDefaultSettings
   commentId: T:Reveal.Sdk.RVFieldEditorDefaultSettings
   parent: Reveal.Sdk

@@ -5,25 +5,15 @@
         {
           "files": [
             "src/Web/Server/Infragistics.Reveal.SDK.Server.dll",
-            "src/Web/Server/Infragistics.Reveal.SDK.Server.xml"
-          ],
-          "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
-        }
-      ],
-      "dest": "en/developer/web-sdk/api/server/Infragistics.Reveal.SDK.Server",
-      "filter": "src/webApiFilter.yml"
-    },
-    {
-      "src": [
-        {
-          "files": [
+            "src/Web/Server/Infragistics.Reveal.SDK.Server.xml",
             "src/Web/Server/Infragistics.Reveal.SDK.WebAPI.dll",
             "src/Web/Server/Infragistics.Reveal.SDK.WebAPI.xml"
           ],
           "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
         }
       ],
-      "dest": "en/developer/web-sdk/api/server/Infragistics.Reveal.SDK.WebAPI",
+      "dest": "en/developer/web-sdk/api/server/",
+      "properties": { "Platform": "web" },
       "filter": "src/webApiFilter.yml"
     },
     {
@@ -36,7 +26,7 @@
       "dest": "en/developer/desktop-sdk/api",
       "filter": "src/desktopApiFilter.yml",
       "properties": {
-        "TargetFramework": "netcoreapp2.2"
+        "Platform": "desktop"
       }
     }
   ],

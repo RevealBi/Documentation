@@ -26,6 +26,7 @@ items:
     content: 'public class TooltipShowingEventArgs : CancelEventArgs'
     content.vb: >-
       Public Class TooltipShowingEventArgs
+
           Inherits CancelEventArgs
   inheritance:
   - System.Object

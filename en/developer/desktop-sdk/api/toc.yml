@@ -191,6 +191,8 @@
     name: RVLocalFileDataSourceItem
   - uid: Reveal.Sdk.RVLocalizationElementType
     name: RVLocalizationElementType
+  - uid: Reveal.Sdk.RVMapImageryType
+    name: RVMapImageryType
   - uid: Reveal.Sdk.RVMarketoDataSource
     name: RVMarketoDataSource
   - uid: Reveal.Sdk.RVMarketoDataSourceItem
@@ -223,6 +225,10 @@
     name: RVPostgresDataSource
   - uid: Reveal.Sdk.RVPostgresDataSourceItem
     name: RVPostgresDataSourceItem
+  - uid: Reveal.Sdk.RVQuickBooksDataSource
+    name: RVQuickBooksDataSource
+  - uid: Reveal.Sdk.RVQuickBooksDataSourceItem
+    name: RVQuickBooksDataSourceItem
   - uid: Reveal.Sdk.RVRedshiftDataSource
     name: RVRedshiftDataSource
   - uid: Reveal.Sdk.RVRedshiftDataSourceItem
@@ -239,6 +245,10 @@
     name: RVRESTDataSource
   - uid: Reveal.Sdk.RVRESTDataSourceItem
     name: RVRESTDataSourceItem
+  - uid: Reveal.Sdk.RVS3DataSource
+    name: RVS3DataSource
+  - uid: Reveal.Sdk.RVS3DataSourceItem
+    name: RVS3DataSourceItem
   - uid: Reveal.Sdk.RVSchemaColumn
     name: RVSchemaColumn
   - uid: Reveal.Sdk.RVSchemaColumnAttribute
@@ -283,6 +293,8 @@
     name: RVWebResourceDataSource
   - uid: Reveal.Sdk.RVWebResourceDataSourceItem
     name: RVWebResourceDataSourceItem
+  - uid: Reveal.Sdk.ScatterMapVisualizationsConfiguration
+    name: ScatterMapVisualizationsConfiguration
   - uid: Reveal.Sdk.SdkInMemoryIterator
     name: SdkInMemoryIterator
   - uid: Reveal.Sdk.TooltipShowingEventArgs

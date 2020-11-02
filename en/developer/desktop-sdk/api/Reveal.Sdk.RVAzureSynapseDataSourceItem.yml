@@ -24,6 +24,7 @@ items:
     content: 'public class RVAzureSynapseDataSourceItem : RVSqlServerDataSourceItem'
     content.vb: >-
       Public Class RVAzureSynapseDataSourceItem
+
           Inherits RVSqlServerDataSourceItem
   inheritance:
   - System.Object

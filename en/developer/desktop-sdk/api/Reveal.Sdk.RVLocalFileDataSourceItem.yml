@@ -20,12 +20,14 @@ items:
   assemblies:
   - RVUI.WPF
   namespace: Reveal.Sdk
-  summary: "\nThe local file data source item, used to load files from local storage. See <see cref=\"!:RevealView.LocalDataFilesRootFolder\"></see>\nfor information about configuring the root directory for this storage.\n"
+  summary: "\nThe local file data source item, used to load files from local storage. See <xref href=\"Reveal.Sdk.RevealSdkSettings.LocalDataFilesRootFolder\" data-throw-if-not-resolved=\"false\"></xref>\nfor information about configuring the root directory for this storage.\n"
   syntax:
     content: 'public class RVLocalFileDataSourceItem : RVDataSourceItem, IRVResourceItem'
     content.vb: >-
       Public Class RVLocalFileDataSourceItem
+
           Inherits RVDataSourceItem
+
           Implements IRVResourceItem
   inheritance:
   - System.Object

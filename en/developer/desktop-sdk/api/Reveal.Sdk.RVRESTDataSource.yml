@@ -30,6 +30,7 @@ items:
     content: 'public class RVRESTDataSource : RVDashboardDataSource'
     content.vb: >-
       Public Class RVRESTDataSource
+
           Inherits RVDashboardDataSource
   inheritance:
   - System.Object

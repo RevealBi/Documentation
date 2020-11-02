@@ -26,6 +26,7 @@ items:
     content: 'public class VisualizationLinkingDashboardEventArgs : EventArgs'
     content.vb: >-
       Public Class VisualizationLinkingDashboardEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object

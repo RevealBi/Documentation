@@ -25,6 +25,7 @@ items:
     content: 'public class RVJsonDataSourceItem : RVResourceBasedDataSourceItem'
     content.vb: >-
       Public Class RVJsonDataSourceItem
+
           Inherits RVResourceBasedDataSourceItem
   inheritance:
   - System.Object

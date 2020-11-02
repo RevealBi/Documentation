@@ -28,6 +28,7 @@ items:
     content: 'public abstract class RVInMemoryData : IRVInMemoryData, IRVInMemoryDataProvider'
     content.vb: >-
       Public MustInherit Class RVInMemoryData
+
           Implements IRVInMemoryData, IRVInMemoryDataProvider
   inheritance:
   - System.Object

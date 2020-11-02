@@ -22,8 +22,8 @@
   href: web-sdk/using-the-client-sdk/toc.yml
 - name: Server API Reference
   href: web-sdk/api/server/toc.yml
-- name: Client API Reference
-  href: web-sdk/api/client/toc.yml
+- name: Client API Reference - comming soon
+  # href: web-sdk/api/client/toc.yml
 - name: Desktop SDK
   header: true
 - name: Overview
