@@ -30,22 +30,22 @@ to follow these tutorials, make sure you upload the file to one of the
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](social-starting-creation-process.md)
+1.  [Creating the Dashboard and Adding a Data Source](starting-creation-process.md)
 
-2.  [Creating the First Visualization](social-selecting-data-visualization.md)
+2.  [Creating the First Visualization](selecting-data-visualization.md)
 
-3.  [Creating the Dashboard Filter and Connecting your Visualization](social-creating-dashboard-filter-connecting-visualization.md)
+3.  [Creating the Dashboard Filter and Connecting your Visualization](creating-dashboard-filter-connecting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](social-applying-theme.md)
+4.  [Applying a Theme to the Dashboard](applying-theme.md)
 
-5.  [Adding the other visualizations](social-adding-other-visualizations.md)
-    ([Followers](social-adding-other-visualizations.html#followers), [YTD Facebook Followers](social-adding-other-visualizations#ytd-facebook-followers),
-    [Monthly Facebook Likes](social-adding-other-visualizations.html#monthly-facebook-likes),
-    [Retweets & Favorites](social-adding-other-visualizations.html#retweets-favorites),
-    [Facebook Reach vs. Impressions](social-adding-other-visualizations.html#facebook-reach-impressions),
-    [Monthly Twitter Mentions](social-adding-other-visualizations.html#monthly-twitter-mentions))
+5.  [Adding the other visualizations](adding-other-visualizations.md)
+    ([Followers](adding-other-visualizations.html#followers), [YTD Facebook Followers](adding-other-visualizations#ytd-facebook-followers),
+    [Monthly Facebook Likes](adding-other-visualizations.html#monthly-facebook-likes),
+    [Retweets & Favorites](adding-other-visualizations.html#retweets-favorites),
+    [Facebook Reach vs. Impressions](adding-other-visualizations.html#facebook-reach-impressions),
+    [Monthly Twitter Mentions](adding-other-visualizations.html#monthly-twitter-mentions))
 
-6.  [Saving your Dashboard](social-saving-dashboard.md)
+6.  [Saving your Dashboard](saving-dashboard.md)
 
 
 [Get Started »](creating-the-dashboard.md)

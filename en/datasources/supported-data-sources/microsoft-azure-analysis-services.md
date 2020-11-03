@@ -7,7 +7,7 @@ Azure Analysis Services is a fully managed platform as a service (PaaS) that pro
 Unlike other databases used in Reveal (Microsoft Analysis Services, MySQL, Oracle, etc.), MS Azure Analysis Services can be used in Reveal Web.
 
 >[!NOTE]
->L**imitations in Web when first connecting to your Azure Analysis Services.**
+>**Limitations in Web when first connecting to your Azure Analysis Services.**
 >Due to security restrictions, the process of initial configuration and authentication of your Azure Analysis Services cannot be done in Reveal Web. You can initially connect to this data source in the iOS, Android, or Desktop app. Afterward, you can create or edit dashboards using data from this Azure Analysis Services connection with no further limitations.
 
 To configure your Azure Analysis Services data source, you will need to perform the steps below.

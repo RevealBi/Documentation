@@ -28,7 +28,7 @@ following information:
 
 ![Configuring-REST-API-Data-Source\_All](images/Configuring-REST-API-Data-Source_All.png)
 
-1. 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *REST API*. You can change it to your preference.
+1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *REST API*. You can change it to your preference.
 
 
 2.  **URL**: the URL where the service is located.
@@ -59,18 +59,18 @@ To use parameters effectively follow the procedure below:
     parameters are color-coded in *blue* to make them more easily
     identifiable.
 
-    ![Parameters-URL-Rest-API\_All](images/Parameters-URL-Rest-API_All.png)
+    ![Parameters-URL-Rest-API\_All](images/Parameters-URL-Rest-API.png)
 
 2.  **Add parameters' values**. In the following screen specify the
     value of each parameter you have added in the URL.
 
-    ![Parameters-Values-Rest-API\_All](images/Parameters-Values-Rest-API_All.png)
+    ![Parameters-Values-Rest-API\_All](images/Parameters-Values-Rest-API.png)
 
     As a result, the REST API service will respond with the data on the
     provided URL in a REST compliant format. Generally, you will receive
     a JSON file:
 
-    ![REST-API-Data-Format-Result\_All](images/REST-API-Data-Format-Result_All.png)
+    ![REST-API-Data-Format-Result\_All](images/REST-API-Data-Format-Result.png)
 
     For more information on how to work with a JSON file, please refer
     to [this topic](~/en/datasources/working-files/working-with-json-files.md).
@@ -81,23 +81,21 @@ To use parameters effectively follow the procedure below:
     >[!NOTE] **Unsupported File Formats**. 
     >If the REST API responds with a file format, which is not supported by Reveal (e.g., XML), you will not be able to create visualizations with the data in this file.
 
-3.  **Change the parameters' values without losing your visualization data**. Changing the parameters' values after you have started building your visualization offers a variety of possibilities. For example, you can access new data to add to your visualization or directly change the displayed data in the visualization you have already created.
+3.  **Change the parameters' values without losing your visualization data**. Changing the parameters' values after you have started building your visualization offers a variety of possibilities. For example, you can change the city code path parameter for your weather rest API and have a new dataset loaded for this new city. The information for the visualization you have already built will be automatically updated with the new data. 
 
-To do this, click on the file icon in the upper-left corner of the
-    *Visualization Editor* screen.
+    To do this, click on the file icon in the upper-left corner of the *Visualizations Editor* screen.
+    
+    <img src="images/REST-API-Change-Parameters-Values.png" alt="Rest API Parameters Values changing in the editor" width="100%" />
 
-![REST-API-Change-Parameters-Values\_All](images/REST-API-Change-Parameters-Values_All.png)
+    In the screen that opens, *click/tap* the *REST API Parameters* button.
 
-In the screen that opens, *click/tap* the *REST API Parameters* button.
+    <img src="images/REST-API-Parameters-Button.png" alt="Rest API Parameters button available in editor" width="100%" />
 
-![REST-API-Parameters-Button\_All](images/REST-API-Parameters-Button_All.png)
-
-You will be redirected to the screen in *step 2* where you can provide new values to your parameters.
+    You will be redirected to the screen in *step 2* where you can provide new values to your parameters.
 
 > [!NOTE]
 > **Losing Your Data Warning**
-Sometimes when you change the values of your parameters, there might be a chance to lose the visualization you already created in the Editor. In this case, the following warning message will appear when you *click/tap* the *Load Data* button:
->![REST-API-Losing-Data\_All](images/REST-API-Losing-Data_All.png)
+Sometimes when you change the values of your parameters, there might be a chance to lose the visualization you already created in the Editor. In this case, а warning message will appear when you *click/tap* the *Load Data* button. If you choose to continue, you will have the new dataset loaded in the editor and you will have to start building your visualization from scratch. 
 
 ### Choosing a Method
 
@@ -121,7 +119,7 @@ generally consists of:
 4.  A **Body**: an optional message (when using *POST* and *PUT*
     methods) containing data
 
-    ![Working-With-Methods\_All](images/Working-With-Methods_All.png)
+    ![Working With Methods](images/Working-With-Methods.png)
 
 For more information about the Header and Body of a request, please
 refer to [this link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#Headers).

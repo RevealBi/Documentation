@@ -146,7 +146,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 [Reveal Tutorials Spreadsheet](http://download.infragistics.com/Reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx).
 
 >[!NOTE]
->Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported [cloud services](data-sources.md) or add it as a [Web Resource](web-resource.md).
+>Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported cloud services or add it as a [Web Resource](~/en/datasources/supported-datasources/web-resource.md).
 
 <a name='create-basic-chart'></a>
 ### Creating your Chart
@@ -188,7 +188,7 @@ information. In order to do this:
 <a name='change-axis-configuration'></a>
 ### Changing your Axis Configuration
 
-Similarly to the [Gauge bands](~/en/data-visualizations/gauge-views.html#bands-configuration), the
+Similarly to the [Gauge bands](~/en/data-visualizations/gauge-charts.html#bands-configuration), the
 chart axis configuration allows you to set the lowest and highest values
 in your chart. You can use this feature to include or exclude specific
 data.
