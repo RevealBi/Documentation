@@ -1,35 +1,4 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": [
-            "src/Web/Server/Infragistics.Reveal.SDK.Server.dll",
-            "src/Web/Server/Infragistics.Reveal.SDK.Server.xml",
-            "src/Web/Server/Infragistics.Reveal.SDK.WebAPI.dll",
-            "src/Web/Server/Infragistics.Reveal.SDK.WebAPI.xml"
-          ],
-          "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
-        }
-      ],
-      "dest": "en/developer/web-sdk/api/server/",
-      "properties": { "Platform": "web" },
-      "filter": "src/webApiFilter.yml"
-    },
-    {
-      "src": [
-        {
-          "files": ["src/WPF/**.dll", "src/WPF/**.xml"],
-          "exclude": ["**/bin/**", "**/obj/**", "_site/**"]
-        }
-      ],
-      "dest": "en/developer/desktop-sdk/api",
-      "filter": "src/desktopApiFilter.yml",
-      "properties": {
-        "Platform": "desktop"
-      }
-    }
-  ],
   "build": {
     "content": [
       {
