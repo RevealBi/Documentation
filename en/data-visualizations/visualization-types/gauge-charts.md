@@ -1,7 +1,7 @@
-## Gauge Views
+## Gauge Charts
 
 
-The Gauge View displays a single value, or a list of values, comparing
+The Gauge chart displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
 formatting of the different ranges. There are four different flavors:
 [Linear](#linear-gauge), [Circular](#circular-gauge),
@@ -18,7 +18,7 @@ is also displayed in a numeric format within its bounds or next to it.
 This gauge type is suitable to compare the values of different rows side
 by side.
 
-<img src="images/pivot-editor-view-linear-gauge-view.png" alt="view linear gauge" width="100%"/>
+<img src="images/pivot-editor-view-linear-gauge-view.png" alt="linear gauge" width="100%"/>
 
 <a name='circular-gauge'></a>
 ### Circular Gauge
@@ -27,7 +27,7 @@ The Radial Gauge displays the band's minimum and maximum thresholds, and
 the current value. It also paints the background with the color of the
 current range.
 
-<img src="images/pivot-editor-view-circular-gauge-view.png" alt="Circular gauge view example in the Visualization editor" width="100%"/>
+<img src="images/pivot-editor-view-circular-gauge-view.png" alt="Circular gauge chart example in the Visualization editor" width="100%"/>
 
 
 
@@ -39,7 +39,7 @@ flavor is suitable for very high priority metrics. By default, the gauge
 will visualize the data from the Value column for the first data row
 unless any filters are applied so that the chosen data row is different.
 
-<img src="images/pivot-editor-view-text-gauge-view.png" alt="Text gauge view example in the Visualization editor" width="100%"/>
+<img src="images/pivot-editor-view-text-gauge-view.png" alt="Text gauge chart example in the Visualization editor" width="100%"/>
 
 <a name='bullet-graph'></a>
 ### Bullet Graph
@@ -52,27 +52,28 @@ right in a numeric format.
 The Bullet Graph adds a new visual indicator to the Linear gauge, a
 vertical mark that is based on a target value from the *Target*
 placeholder. This new indicator is retrieved from a numeric column,
-meaning that **you need two numeric columns and a text column to configure this view**.
+meaning that **you need two numeric columns and a text column to configure this chart**.
 
-<img src="images/pivot-editor-view-bullet-graph-gauge-view.png" alt="Bullet graph gauge view example in the Visualization editor" width="100%"/>
+<img src="images/pivot-editor-view-bullet-graph-gauge-view.png" alt="Bullet graph gauge chart example in the Visualization editor" width="100%"/>
 
 The Bullet is useful for comparing values side by side, while also
 evaluating the performance from the value (horizontal line) against the
 target value (vertical mark).
 
 <a name='bands-configuration'></a>
-#### Bands Configuration
+### Bands Configuration
 
-Each gauge type has a common band range configuration, which is similar
-to the one used in conditional formatting. The configuration dialog
-requires:
+All gauge types have a common band range configuration, which you can find in the *Settings* section of the _Visualizations Editor_. The configuration dialog allows you to set:
 
-  - **Limits**. These values are automatically set as the lowest and
+1. Set **Limits**. 
+  These values are automatically set as the lowest and
     highest values in the dataset for the specified value column, but
     can also be overriden manually with constant values.
 
-  - **Bands configuration**. This section requires you to establish two
-    thresholds to split the range in thee spaces. The thresholds can be
+2. Configure **Conditional Formatting**. 
+   
+**Bands configuration**. This section requires you to establish two
+    thresholds to split the range in three spaces. The thresholds can be
     defined as percentage or constant values. Additionally, the
     definition of the color to associate to each band is configured
     here. By default, the upper band is colored green, the middle
