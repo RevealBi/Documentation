@@ -5,10 +5,9 @@
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 
-<img src="images/enter-postgreSQL-server-details.png" alt="configure postgresql data sources" width=100% />
+<img src="images/enter-postgreSQL-server-details.png" alt="Configure PostgreSQL data source dialog" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *PostgreSQL*. You can change it to your preference.
-
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
@@ -62,12 +61,12 @@ you can also select a particular
 [view](https://www.postgresqltutorial.com/postgresql-views/) that
 returns a subset of data from a table or a set of tables instead.
 
-<img src=“images/postgre-SQL-views.png” alt=“PostgreSQL views dialog” width=“100%”/>
+<img src="images/postgre-SQL-views.png" alt="PostgreSQL views dialog" width="100%"/>
 
 In the sample above, the **invoices** view contains a modified version
 of the data in the **Products** table in the PostgreSQL server.
 
-<img src=“images/invoices-postgre-sql-view-sample.png” alt=“Sample dashboard using PostgreSQL invoices view data” width=“100%”/>
+<img src="images/invoices-postgre-sql-view-sample.png" alt="Sample dashboard using PostgreSQL invoices view data" width="100%"/>
 
 ### Working With Functions
 
