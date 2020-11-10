@@ -1,4 +1,4 @@
-- name: Scatter Map
+- name: Overview
   href: scatter-map.md
   new: true
 - name: Using Map Image Tiles

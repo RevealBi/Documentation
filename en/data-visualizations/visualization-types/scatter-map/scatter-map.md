@@ -1,14 +1,14 @@
 ## Scatter Maps
 
-This map displays  scattered markers in a geographic area by using geo-coordinates. The visual distribution of markers can help in identifying density and spatial patterns within your data. By adding size and/or color to the markers, you can reveal more information about your data relative to other points. 
+This map displays scattered markers in a geographic area by using geo-coordinates. The visual distribution of markers can help in identifying density and spatial patterns within your data. By adding size and/or color you can reveal more information about your data relative to other points. 
 
 Scatter maps give you the possibility to connect to a number of map services, which will not only create a more realistic background for your maps, but will also allow you to delve into details. In some scenarios, like when presenting a real estate market analysis, the ability to show neighborhoods and streets on your map will add more value to your work. 
 
 <img src="images/scatter-maps-dashboard.png" alt="Different scatter maps visualizations in a dashboard" width="100%"/>
 
-### Using the Scatter Maps
+### Using Scatter Maps
 
-The information below will help you choose the best scatter map visualization depending on your needs.
+The information below will help you choose the best scatter map configuration depending on your needs.
 
 #### What are Basic Dot Maps Used for?
 
@@ -23,7 +23,7 @@ One-to-many dot maps are not supported in Reveal. This means, one dot cannot rep
 Adding the size category to your basic scatter map is how bubble maps are created. They are great for 
 comparing quantitative data in different locations. 
 
-The size of bubbles indicates the value of a particular variable being compared. To achieve the comparison effect, it would be best if your data set contains a large variety of values for the compared variable. Otherwise, bubbles on the map will appear similar by size (see example below). 
+Bubbles size indicates the value of a particular variable being compared. To achieve the comparison effect, it would be best if your data set contains a large variety of values for the compared variable. Otherwise, bubbles on the map will appear similar by size (see example below). 
 
 <img src="images/bubble-map-density-population-europe-bad-example.png" alt="Bubble map showing similar density of population in European countries except for Monaco" width="100%"/>
 
@@ -38,19 +38,19 @@ Bubbles are not bound to the exact location defined by the latitude and longitud
 
 Color makes maps easier to perceive and gives you the opportunity to add one more variable to your analysis. 
 
-Simple dot maps colored by category are good for drawing attention to clusters and areas where the distribution of an object is really high. For example, you can quickly identify the states with the most airports located if the airports in different states are colored differently (see below). 
+Simple dot maps colored by category are good for drawing attention to clusters and areas where the distribution of an object is really high. For example, you can quickly identify the states with the most airports if the airports in different states are colored differently (see below). 
 
 <img src="images/scatter-dot-different-colors
 .png" alt="A scatter map showing the distribution of US airports with dots colored by state" width="100%"/>
 
-Dot maps colored by value will help you provide insight while avoiding the risk of overlapping large bubbles. If, for example, you aim to make the tendency of the aging population in Europe evident with one look, create a dot map colored by the medium age of population and style the color to show low, medium and high average age:
+Dot maps colored by value will help you provide insight while avoiding the risk of overlapping large bubbles. If, for example, you aim to make the tendency of the aging population in Europe evident with one look, create a dot map colored by the medium population age and style the color to show low, medium and high average age:
 
 <img src="images/scatter-dot-map-colored-by-value
 .png" alt="A scatter map showing the average age of Euro Population with dots colored by using conditional formatting for medium age" width="100%"/>
 
 However, if you aim to show the correlation between two  values for individual locations, your purpose will be served by presenting one value with size and the other - with color. Taking the previous example, you can color the dots by population age and size them by GDP of the country to show the correlation between prosperity and higher life expectancy. 
 
-### Zooming Scatter Maps
+### Scatter Maps Zoom
 
 Scatter maps allow you to zoom in and focus on an area, where the markers are more densely plotted, or such that is not part of the _Map_ dropdown (e.g. the Balkan Peninsula).  
 
@@ -112,7 +112,7 @@ The tooltip of a bubble includes two parts:
 * A bolded title - uses data coming from the field in *Label*. 
 * Content - consists of the name and value of the field in *Bubble Radius*. 
 
-The **bubble tooltips** are used to help your audience read the map. It gives a better idea of what the bubble size stands for and provides the exact value. It can help avoiding the misinterpretation that the bubble is an actual area on the map.
+The **bubble tooltips** are used to help your audience read the map. It gives a better idea of what their size stands for and provides the exact value. It can help avoiding the misinterpretation that the bubble is an actual area on the map.
 
 #### Adding Color to Scatter Maps 
 
@@ -144,5 +144,5 @@ For **scatter maps colored by value** you can configure the coloring scheme. You
 
 * _Single Color_ - styles all markers on the map with the same color.
 * _Range of Values_ - styles the marker using one of seven colors, where colors progressing light to dark represent data values from low to high. You can also choose the _Start Color_, which will determine the color in the middle of the seven shades. 
-* _Conditional Formatting_ - this scheme allows you to establish styling rules per ranges of data up to three ranges - upper, middle, and lower. Depending on the nature of the information, low values might be a good or bad signal, so you have the flexibility to configure the styling in a way that makes the most sense in your situation. 
+* _Conditional Formatting_ - this scheme allows you to establish styling rules per ranges of data - upper, middle, and lower. Depending on the nature of the information, low values might be a good or bad signal, so you have the flexibility to configure the styling in a way that makes the most sense in your situation. 
 
