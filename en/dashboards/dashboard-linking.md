@@ -1,32 +1,27 @@
 ## Linking Dashboards
 
-Reveal supports dashboard linking, which is triggered when a
-visualization’s grid row or chart column is selected. This features
-takes the concept of drill down navigation to a new level; for instance,
-if you want to provide more details on the information displayed in a
-visualization, you can use a whole new dashboard to do so. This can be
-very useful to establish top-down analysis paths, where you go from a
-high level overview of the reality of a business to more detailed views
-with the specifics. 
+Reveal supports dashboard linking, which allows you to connect the visualizations in a dashbord with other dashboards, or URLs. Imagine you want to provide more details on the information displayed in a visualization - you can use a whole new dashboard to do so. This can be very useful in Company 360 dashboards, for example, where you will be able to establish top-down analysis paths, where you go from a high level overview of the reality of a business to more detailed views with the specifics. 
 
-One example is a Company 360 dashboard, which provides key performance indicators for each area of interest in the company. Once you open the dashboard, you will notice the link symbol. 
+Let's take a Company 360 dashboard (see below), which provides key performance indicators for each area of interest in the company. Once you open the dashboard, you will notice the **link symbol** on one or more visualizations. 
 
 By clicking/tapping the link symbol, you can open: 
 
-* **another dashboard** (shown in the screenshot example below), which gives more specific information related to the visualization or a value in it;
+* **another dashboard** (shown in the screenshot below), which gives more specific information related to the visualization or a value in it;
 * **a URL**, which will enable extensibility scenarios such as interacting with third-party web applications as part of the dashboard navigation. 
 
 <img src="images/dashboard-linking-sample.png" alt="Dashboard linking sample" width="100%"/>
 
 ### Adding a Link 
 
-To add a link to a visualization, go to the **Settings** section of the *Visualizations Editor*, and click/tap the _+_ in **Links**.
+To configure a link, go to the **Settings** section of the *Visualizations Editor*, and click/tap the _+_ in **Links**.
 
 ![Adding a link in Settings](images/pivot-editor-linking2.png)
 
+The added link will appear as a symbol on the visualization it is configured for, when the dashboard is in *View Mode*.  
+
 #### Linking to Another Dashboard
 
-Linking to another dashboard gives you the ability to jump from a specific point in one dashboard to another dashboard. This point can be a visualization or a specific value measured in a visualization, depending on the link trigger you chose (see more [below](#trigger)).
+Linking to another dashboard gives you the ability to jump from a specific point in one dashboard to another dashboard. This point can be a visualization or a specific value in a visualization, depending on the link trigger you chose (see more [below](#trigger)).
 
 To link your dashboard to another dashboard you need to perform the steps below.  
 
@@ -34,9 +29,9 @@ To link your dashboard to another dashboard you need to perform the steps below.
 
   **Adding filters** in advance to the dashboard you are linking to will allow you to connect the two dashboards by a common field. This field will play a role as a filter in the second dashboard and a measured category in the first dashboard. 
 
-2. Open the dashboard you want to link and open the visualization you want to add a link in in the _Visualization Editor_. 
+2. After preparing the dashboard you are linking to, open the main dashboard where you want to add the link. Select the visualization, on which you want the link symbol to appear and open it in the _Visualization Editor_. 
 
-3. After choosing to add a new link in *Setting*, the _New Link_ dialog opens: 
+3. Go to *Settings* and select the _+_ in _Links_ to open the _New Link_ dialog: 
 
   <img src="images/new-link-dialog.png" alt="Dashboard linking sample" width="80%"/>
 
@@ -46,17 +41,15 @@ To link your dashboard to another dashboard you need to perform the steps below.
 
   * The **Link Name**, which is the title the users will see if they select the grid row or chart element.
 
-If you have added **dashboard filters** to the target dashboard, then you will also need to connect the dashboard filters to their corresponding fields in the dataset of the visualization you are adding a link to (see below). 
+  If you have added **dashboard filters** to the target dashboard, then you will also need to connect the dashboard filters to their corresponding fields in the dataset of the visualization you are adding a link to (see below). 
 
   <img src="images/filter-configure-linking-dashboards.png" alt="Dashboard linking sample" width="100%"/>
 
-When ready, click _Done_ and go back. 
+  Click _Done_ and go back. 
 
-4. Click the _Create Link_ blue button. 
+4. Select the *Create Link* blue button. 
 
-The link to the dashboard will appear under _Links_ in _Settings_. 
-
-You will notice that another setting appears under _Links_ - _Trigger_. See below for more information on [choosing your trigger](#trigger).  
+The link to the dashboard will appear under _Links_ in the *Visualization Editor*. You will notice that the _Trigger_ setting has also appeared. See below for more information on [choosing your trigger](#trigger).  
 
 #### Adding a URL 
 
@@ -64,7 +57,7 @@ Adding a URL is another option in the _New Link_ dialog. It enables you to open 
 
 There are two parameters that you need to define:
 
-  - The **URL** the visualization will point to. You will be redirected to it once a chart element or table row is selected.
+  - The **URL** the visualization will point to. You will be redirected to it once the lynk symbol is selected.
   
   - The **Link Name**, which is the title the users will see if they select the grid row or chart element.
 
@@ -104,5 +97,5 @@ If a URL is linked to the selected value, then clicking/tapping the link symbol 
 
 #### Visualization is Maximized Trigger 
 
-If you choose this option a link symbol will appear in the upper right corner of the visualization in _Dashboard Edit_ mode. So instead of maximizing the visualization, clicking/tapping in the upper right corner will open another dashboard/the URL you have linked to.
+If you choose this option a link symbol will appear in the upper right corner of the visualization in _Dashboard View_ mode. So instead of maximizing the visualization, selecting the link symbol in the upper right corner will open another dashboard, or the URL you have linked to.
 
