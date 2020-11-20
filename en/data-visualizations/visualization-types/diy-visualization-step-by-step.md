@@ -29,7 +29,7 @@ Create an empty html file with references to jQuery and Reveal bridge utils.
 
 -	jquery-1.11.0.min.js connects the visualization with the host.
 
-If you want, you can also [**download the rplus_bridge_utils.js file**](https://download.infragistics.com/reveal/custom-visualization/rplus_bridge_utils.js?_ga=2.147590512.61211504.1605548193-106870904.1601302445) and reference it locally.
+If you want, you can also [**download the rplus_bridge_utils.js file**](https://download.infragistics.com/reveal/custom-visualization/rplus_bridge_utils.js) and reference it locally.
 
 ### Notify the host the readiness to receive the data
 As a second step, add the necessary javascript code in order to:

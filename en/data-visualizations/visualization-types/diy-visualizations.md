@@ -42,12 +42,12 @@ Add the URL of the web page that generates the custom visualization you want.
 
 <img src="images/custom-visualization-config.png" alt="Showing the Custom Visualization configuration screen within Reveal" width="100%"/>
 
-When referencing web components from a URL, keep in mind that the URL needs to be of public access. In addition, if the URL Address has an HTTPS:// protocol, every resource referenced in your custom HTML will need to use the same protocol.
+Keep in mind that the URL needs to be of public access and have use an HTTPS:// protocol. In addition, every resource referenced in your custom HTML will need to use the same protocol.
 
 
-### Custom Web Components and Reveal
-These custom web components can access the data retrieved by Reveal from any of the supported data sources. Custom components interact with a Javascript API provided for that purpose.
+### Custom Web Pages and Reveal
+Custom web pages can access the data retrieved by Reveal from any of the supported data sources. The custom visualizations interact with a Javascript API provided for that purpose.
 
-Web components can be referenced either from a public URL address or from an internal shared location in your intranet. However, Reveal web is only able to render custom visualizations that have their web components hosted on a public URL.
+You can reference custom web pages either from a public URL address or from an internal shared location in your intranet. However, Reveal web is only able to render custom visualizations that have their components hosted on a public URL.
 
 [**Here you have a step-by-step tutorial**](diy-visualization-step-by-step.md) about a custom HTML visualization. This basic "Hello World" sample, generates a table with a data set retrieved from Reveal.
