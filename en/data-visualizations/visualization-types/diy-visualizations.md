@@ -35,12 +35,12 @@ ability to do your own custom visualization component and display it in a visual
 1. **Select Custom Visualization.**  
 To find this option open the Visualizations section within the Widget Editor.
 
-<img src="images/custom-visualization-access.png" alt="Selecting the Custom Visualization in Reveal" width="100%"/>
+    <img src="images/custom-visualization-access.png" alt="Selecting the Custom Visualization in Reveal" width="100%"/>
 
 2. **Point to the implementation.**  
 Add the URL of the web page that generates the custom visualization you want.
 
-<img src="images/custom-visualization-config.png" alt="Showing the Custom Visualization configuration screen within Reveal" width="100%"/>
+    <img src="images/custom-visualization-config.png" alt="Showing the Custom Visualization configuration screen within Reveal" width="100%"/>
 
 Keep in mind that the URL needs to be of public access and have use an HTTPS:// protocol. In addition, every resource referenced in your custom HTML will need to use the same protocol.
 
