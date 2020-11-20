@@ -74,6 +74,10 @@
   href: data-visualizations/reusing-visualizations.md
 - name: Statistical Functions
   href: data-visualizations/statistical-functions.md
+- name: Custom Visualizations
+  href: data-visualizations/visualization-types/diy-visualizations.md
+- name: How to Create a Custom Visualization
+  href: data-visualizations/visualization-types/diy-visualization-step-by-step.md
 - name: Filters
   header: true
 - name: Overview
