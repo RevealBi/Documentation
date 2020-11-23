@@ -16,7 +16,7 @@ Create an empty html file with references to jQuery and Reveal bridge utils.
 ``` js
 <html>
    <head>
-      <script type="text/javascript" src="https://download.infragistics.com/reveal/custom-visualization/rplus_bridge_utils.js">
+      <script type="text/javascript" src="https://download.infragistics.com/reveal/custom-visualization/reveal_bridge_utils.js">
       </script>
       <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
    </head>
@@ -25,11 +25,11 @@ Create an empty html file with references to jQuery and Reveal bridge utils.
 </html>
 ```
 
--	The first reference (rplus_bridge_utils.js) helps Reveal to manipulate the DOM.
+-	The first reference (reveal_bridge_utils.js) helps Reveal to manipulate the DOM.
 
 -	jquery-1.11.0.min.js connects the visualization with the host.
 
-If you want, you can also [**download the rplus_bridge_utils.js file**](https://download.infragistics.com/reveal/custom-visualization/rplus_bridge_utils.js) and reference it locally.
+If you want, you can also [**download the reveal_bridge_utils.js file**](https://download.infragistics.com/reveal/custom-visualization/reveal_bridge_utils.js) and reference it locally.
 
 ### Notify the host the readiness to receive the data
 As a second step, add the necessary javascript code in order to:
@@ -43,7 +43,7 @@ After this step the code should look similar to:
 ``` js
 <html>
    <head>
-      <script type="text/javascript" src="rplus_bridge_utils.js"></script>
+      <script type="text/javascript" src="reveal_bridge_utils.js"></script>
       <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript">
          window.RPBridgeListener = {
@@ -95,7 +95,7 @@ dataReady: function (tabularData) {
 ``` js
 <html>
    <head>
-      <script type="text/javascript" src="rplus_bridge_utils.js"></script>
+      <script type="text/javascript" src="reveal_bridge_utils.js"></script>
       <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript">
          var helpLink = "https://help.revealbi.io/en/data-visualizations/visualization-types/diy-visualizations.html";
