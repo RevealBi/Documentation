@@ -50,21 +50,18 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 
         >[!NOTE] **Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: jpg, jpeg, png, gif.
 
-3.  Click/Tap *Create* to continue. Start inviting members to your team by selecting the *+ Members* blue button and adding their emails to the list. They will receive an
-invitation by email.
+3.  Click/Tap *Create*. Your team is now created and you can find it in the teams' list under *My Stuff* in the popover menu shown below: 
+  
+    <img src="images/new-team-created.png" alt="new team in the teams tab" width=100% />
+    
+4. After you create your team, you will be prompted to invite members. Click/tap the    
+the *+ Members* blue button. You can choose members from the dropdown list (see below) or use the search bar to add the emails of users who are outside of your Organization. Select _Done_ when you are ready. 
 
     ![invite members dialog](images/team-invite-members.png)
 
-    *Member* is the default role for every user you invite, unless you assign them a different role.
+1. *Member* is the default role for every user you invite, unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about team roles in [Team Collaboration and Privacy](overview.html#members-roles-permissions)
 
-    >[!NOTE]
-    >When adding members, whose emails are not auto-completed by Reveal, type the whole email and press Enter to add it to the list of users you want to invite.
-
-4.  After clicking/tapping *Send Invites* button your new team is
-    created. You will find it in the teams' list under *My Stuff* in the
-    popover menu shown below:
-
-    ![new team in the teams tab](images/new-team-created.png)
+2. After deciding on the roles, click _Update_ to send the invites.
 
 <a name='join-team'></a>
 ### Joining an Existing Team
