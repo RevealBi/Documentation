@@ -1,6 +1,5 @@
 ## Gauge Charts
 
-
 The Gauge chart displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
 formatting of the different ranges. There are four different flavors:
@@ -23,7 +22,7 @@ by side.
 <a name='circular-gauge'></a>
 ### Circular Gauge
 
-The Radial Gauge displays the band's minimum and maximum thresholds, and
+The Circular Gauge displays the band's minimum and maximum thresholds, and
 the current value. It also paints the background with the color of the
 current range.
 
