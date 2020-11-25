@@ -50,9 +50,6 @@ the Share menu. You will see a list of all users you have shared the
 dashboard with and their access level. You can change their access level
 by selecting a new one from the dropdown menu next to their name.
 
-> [!NOTE]
-> Names of users, who have still not accepted the shared dashboard, will appear greyed out in the list. You cannot change their access level before they accept the dashboard.
-
 **You can also unshare any dashboard at any time** by accessing the
 Share dialog and selecting *Remove* from the dropdown menu next to any
 member's name.
@@ -65,7 +62,7 @@ member's name.
 Any member of a team can share the team's dashboards with other users. To do this, go to the *Teams* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
 
 The main difference between sharing a team's dashboard and a dashboard created by you is the [access permissions](#access-permissions) you can
-give to the users you share the dashboard with. Depending on your role in the team you can have one, two or all the access permissions options available to choose from.
+give. Depending on your role in the team you can have one, two or all the access permissions options available when sharing.
 
 Your role in the team can be:
 

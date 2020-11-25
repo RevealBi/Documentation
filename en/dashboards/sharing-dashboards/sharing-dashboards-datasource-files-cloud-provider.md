@@ -34,10 +34,6 @@ following cloud providers:
 
   - Dropbox
 
->[!NOTE] **File Share Support for Box:**
->Coming soon!
-
-
 <a name='cloud-data-source-file'></a>
 ### Granting Access when Choosing a Cloud File as a Data Source
 
