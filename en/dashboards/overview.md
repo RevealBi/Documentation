@@ -16,9 +16,8 @@ different pieces of related information, enabling users to make sense of their d
     in your dashboard, and what it needs to revolve around.
 
   - **Plan the Dashboard**: how will you represent your information
-    graphically? Will you use a [grid](~/en/data-visualizations/visualization-types/grid-chart.md), a map
-    [gauges](~/en/data-visualizations/visualization-types/gauge-charts.md), [category charts](~/en/data-visualizations/visualization-types/category-charts.md), or even a
-    [pyramid chart](https://www.infragistics.com/community/blogs/b/infragistics/posts/creating-a-population-pyramid-chart-using-stacked-bar-charts-with-Reveal)?
+    graphically? Will you use a [grid](~/en/data-visualizations/visualization-types/grid-chart.md), a map,
+    [gauges](~/en/data-visualizations/visualization-types/gauge-charts.md), [category charts](~/en/data-visualizations/visualization-types/category-charts.md)?
     Will you use any [filters](~/en/filters/overview.md)? If you want to see how to
     improve your data visualizations with any of the advanced Reveal features, [check out this blog post](https://www.infragistics.com/community/blogs/b/infragistics/posts/8-ways-to-improve-your-data-visualizations)\!
 
