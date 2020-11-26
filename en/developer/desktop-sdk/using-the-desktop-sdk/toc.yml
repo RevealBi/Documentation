@@ -16,8 +16,6 @@
   href: providing-credentials-datasources.md
 - name: Replacing Data Sources
   href: replacing-data-sources.md
-- name: Filtering tables/sheets from a data source
-  href:
 - name: Localizing Dashboards
   href: localization-service.md
 - name: Formatting Dashboards
@@ -28,8 +26,6 @@
   href: handling-click-events.md
 - name: Working with Tooltips
   href: working-tooltips-desktop.md
-- name: Showing/Hiding UI Elements
-  href:
 - name: Setting Up Initial Filter Selections
   href: setting-initial-filters.md
 - name: Setting up Dynamic Filter Selections
