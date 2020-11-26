@@ -17,14 +17,14 @@ Reveal offers multiple components for visualizing data, including the grid view,
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-x3gl"><br>Table with custom fonts, titles, and widths<br><img src="images/HRDashboardEmployeesDIY_All.png" alt="Image" width="400" height="291"></th>
-    <th class="tg-x3gl"><br>Choropleth map of the population for United States by state<br><img src="images/StatePopulation_all.png" alt="Image" width="400" height="291"></th>
+    <th class="tg-x3gl"><br>Table with custom fonts, titles, and widths<br><img src="images/HRDashboardEmployeesDIY_All.png" alt="Image" width="343" height="275"></th>
+    <th class="tg-x3gl"><br>Choropleth map of the population for United States by state<br><img src="images/StatePopulation_all.png" alt="Image" width="400" height="275"></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-spkm"><br>Choropleth map of the population for Brazil by state<br><img src="images/BrazilStatePopulation_all.png" alt="Image" width="400" height="291"></td>
-    <td class="tg-2ovq"><br>Choropleth map of worldwide GDP<br><img src="images/WorldPopulationGDP_All.png" alt="Image" width="400" height="291"></td>
+    <td class="tg-spkm"><br>Choropleth map of the population for Brazil by state<br><img src="images/BrazilStatePopulation_all.png" alt="Image" width="343" height="275"></td>
+    <td class="tg-2ovq"><br>Choropleth map of worldwide GDP<br><img src="images/WorldPopulationGDP_All.png" alt="Image" width="400" height="275"></td>
   </tr>
 </tbody>
 </table>
@@ -47,6 +47,10 @@ Add the URL of the web page that generates the custom visualization you want.
 ### Custom Web Pages and Reveal
 Custom web pages can access the data retrieved by Reveal from any of the supported data sources. The custom visualizations interact with a Javascript API provided for that purpose.
 
-You can reference custom web pages either through a public URL address or from an internal shared location in your intranet. However, Reveal web is only able to render custom visualizations that have their components hosted on a public URL.
+You can reference custom web pages either through a public URL address or from an internal shared location in your intranet.
+
+>[!NOTE]
+>**Reveal Web limitations/requirements**
+>Reveal web is only able to render custom visualizations that have their components hosted on a public URL.
 
 [**Here you have a step-by-step tutorial**](diy-visualization-step-by-step.md) about a custom HTML visualization. This basic "Hello World" sample, generates a table with a data set retrieved from Reveal.
