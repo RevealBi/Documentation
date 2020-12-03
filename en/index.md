@@ -10,7 +10,7 @@ Interested on embedded analytics? [Download Reveal SDK](https://www.revealbi.io/
 
 ### Reveal Application Highlights
 
-<h4 style="color:#2328B0;">Securely Connect to your Data and Build Powerful Data Visualizations</h4>
+<h4>Securely Connect to your Data and Build Powerful Data Visualizations</h4>
 
 Connect to the most popular data sources without setting anything up on the server. Get real-time insights by connecting directly to SharePoint Online, Google Drive, OneDrive, Microsoft Analysis Services, Microsoft SQL Server, CRM, and many more.
 
@@ -18,25 +18,25 @@ Connect to the most popular data sources without setting anything up on the serv
 
 With an intuitive drag and drop interface, Reveal makes it simple to create dashboards within minutes. Choose from more than 20 different visualizations to present your data and tell your story the best way.
 
-<h4 style="color:#2328B0;">Customize your Data Visualizations</h4>
+<h4>Customize your Data Visualizations</h4>
 
 Sort, filter and aggregate your data as you wish! Each chart type provides you with different settings to design your visualizations the way you want.
 
 <img src="filters/images/visualization-quick-filter-sample.png" alt="Using visualization quick filters in Reveal" width="100%"/>
 
-<h4 style="color:#2328B0;">Interact with your Dashboards</h4>
+<h4>Interact with your Dashboards</h4>
 
 Once your dashboard is created, interact with your visualizations with drill-down support, or even the ability to change visualization on the fly. Create and share annotated images of your visualizations for deeper insights.
 
 <img src="dashboards/images/tooltips-totals.png" alt="Using tooltips and displaying totals in Reveal" width="100%"/>
 
-<h4 style="color:#2328B0;">Share Insights with your Teams </h4>
+<h4>Share Insights with your Teams </h4>
 
 Give everyone the power of data by sharing your dashboards within your Organization's repository, teams you are part of or with individual coworkers. Assign different levels of permissions to users to give them the level of access you want them to have to your dashboard.
 
 <img src="dashboards/sharing-dashboards/images/remove-sharing.png" alt="Showing user roles while sharing in Reveal" width="100%"/>
 
-<h4 style="color:#2328B0;">Leverage Advanced Predictive Analysis </h4>
+<h4>Leverage Advanced Predictive Analysis </h4>
 
 Get even more insight from your visualizations with advanced predictive analysis, using statistical functions.
 You can use the Time series forecast, Linear regression, and Detect outliers to make predictions, recognize and evaluate trends, or discover outliers in your data series.
@@ -44,7 +44,7 @@ You can use the Time series forecast, Linear regression, and Detect outliers to 
 <img src="data-visualizations/images/time-series-forecast-6-months.png" alt="Showing statistical functions in Reveal" width="100%"/>
 
 
-<h4 style="color:#2328B0;">Get Better Insights with Machine Learning</h4>
+<h4>Get Better Insights with Machine Learning</h4>
 
 Use your trained models' data from BigQuery or Azure Machine Learning Studio in Reveal. In just three steps, choose your data source, build a visualization, and use the integration to connect to a trained machine learning model.
 
