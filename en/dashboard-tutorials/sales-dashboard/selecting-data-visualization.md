@@ -1,9 +1,9 @@
 ## Creating the First Visualization
- 
+
 
 Let's focus on creating the "Won Opportunities" visualization in the
-[sample dashboard](sales-dashboard-tutorial.md) presented at the beginning
-of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizations/gauge-views.html#text-gauge).
+[sample dashboard](getting-started.md) presented at the beginning
+of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizations/visualization-types/gauge-charts.html#text-gauge).
 
 First, **open the visualizations picker** by selecting the grid icon in
 the top bar.
@@ -40,5 +40,5 @@ Your visualization should look like the following one:
 
 </style>
 
-<a href="starting-creation-process.md" class="previous">&laquo; Previous Step</a>
+<a href="creating-the-dashboard.md" class="previous">&laquo; Previous Step</a>
 <a href="applying-formatting-visualization.md" class="next">Next Step &raquo;</a>

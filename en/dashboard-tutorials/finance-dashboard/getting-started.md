@@ -15,12 +15,11 @@ This dashboard contains information on a sample company:
 
   - The variation in stock prices and the volume of available stocks
 
-<a name='sample-datasheet'>
+<a name='sample-datasheet'></a>
 ### Sample Datasheet
 
-You can download the sample datasheet
-[here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
-All other dashboards [in these tutorials](dashboard-tutorials/overview.md) will use
+You can download the sample datasheet [here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
+All other dashboards [in these tutorials](~/en/dashboard-tutorials/overview.md) will use
 the same sample spreadsheet.
 
 >[!NOTE]
@@ -29,7 +28,7 @@ the same sample spreadsheet.
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](starting-creation-process.md)
+1.  [Creating the Dashboard and Adding a Data Source](creating-the-dashboard.md)
 
 2.  [Creating the First Visualization](selecting-data-visualization.md)
 
@@ -37,7 +36,7 @@ the same sample spreadsheet.
 
 4.  [Applying a Theme to the Dashboard](applying-theme.md)
 
-5.  [Adding the other visualizations](adding-other-visualizations.md) ([Silver Security Stock Value 2018](Adding-Other-Visualizations.html#sis-stock-value-2018), [GLB Fiscal (Monthly) NYSE + BATS](Adding-Other-Visualizations.html#glb-fiscal-monthly), [Forecast (Chg, Bid & Offer) - 2018 to 2013](Adding-Other-Visualizations.html#forecast-change-bid-offers), [Stock Variations](Adding-Other-Visualizations.html#stock-variations), [Stock Volumes](Adding-Other-Visualizations.html#stock-volumes))
+5.  [Adding the other visualizations](adding-other-visualizations.md) ([Silver Security Stock Value 2018](Adding-Other-Visualizations.html#sis-stock-value-2018), [GLB Fiscal (Monthly) NYSE + BATS](Adding-Other-Visualizations.html#glb-fiscal-monthly), [Forecast (Chg, Bid & Offer) - 2018 to 2023](Adding-Other-Visualizations.html#forecast-change-bid-offers), [Stock Variations](Adding-Other-Visualizations.html#stock-variations), [Stock Volumes](Adding-Other-Visualizations.html#stock-volumes))
 
 6.  [Saving your Dashboard](saving-dashboard.md)
 

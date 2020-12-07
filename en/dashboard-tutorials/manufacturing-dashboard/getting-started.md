@@ -1,4 +1,4 @@
-## Manufacturing Dashboard Tutorial 
+## Manufacturing Dashboard Tutorial
 
 In this tutorial, you will see how the "Supply Chain Management"
 dashboard displayed below was created using a sample spreadsheet with
@@ -20,7 +20,7 @@ similar data.
 
 You can download the sample datasheet
 [here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
-All other dashboards [in these tutorials](dashboard-tutorials.md) will use
+All other dashboards [in these tutorials](~/en/dashboard-tutorials/overview.md)) will use
 the same sample spreadsheet.
 
 >[!NOTE]
@@ -29,22 +29,22 @@ the same sample spreadsheet.
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](manufacturing-starting-creation-process.md)
+1.  [Creating the Dashboard and Adding a Data Source](creating-the-dashboard.md)
 
-2.  [Selecting the Fields and Visualization for the First Visualization](manufacturing-selecting-data-visualization.md)
+2.  [Selecting the Fields and Visualization for the First Visualization](selecting-data-visualization.md)
 
-3.  [Applying Formatting to the First Visualization](manufacturing-applying-formatting-visualization.md)
+3.  [Applying Formatting to the First Visualization](applying-formatting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](manufacturing-applying-theme.md)
+4.  [Applying a Theme to the Dashboard](applying-theme.md)
 
-5.  [Adding the other Visualizations](manufacturing-adding-other-visualizations.md)
-    ([Production](manufacturing-adding-other-visualizations.html#production),
-    [Shipping](manufacturing-adding-other-visualizations.html#shipping),
-    [Average Hours](manufacturing-adding-other-visualizations.html#average-hours),
-    [Headcount](manufacturing-adding-other-visualizations.html#headcount),
-    [Labor Cost](manufacturing-adding-other-visualizations.html#labor-cost))
+5.  [Adding the other Visualizations](adding-other-visualizations.md)
+    ([Production](adding-other-visualizations.html#production),
+    [Shipping](adding-other-visualizations.html#shipping),
+    [Average Hours](adding-other-visualizations.html#average-hours),
+    [Headcount](adding-other-visualizations.html#headcount),
+    [Labor Cost](adding-other-visualizations.html#labor-cost))
 
-6.  [Saving your Dashboard](manufacturing-saving-dashboard.md)
+6.  [Saving your Dashboard](saving-dashboard.md)
 
 <style>
 .previous {
@@ -57,4 +57,4 @@ the same sample spreadsheet.
 
 </style>
 
-<a href="starting-creation-process.md" class="next">Get Started &raquo;</a>
+<a href="creating-the-dashboard.md" class="next">Get Started &raquo;</a>

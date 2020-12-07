@@ -11,17 +11,16 @@ button in the top right-hand corner of the initial view, and select the
 After you select **Dashboard**, you will see the **New Visualization**
 screen pop up. Select the + sign in the top right corner, and then the
 data source in which you stored the the sample datasheet mentioned in
-[this section](finance-dashboard-tutorial.html#sample-datasheet).
+[this section](getting-started.html#sample-datasheet).
 
 ![creatingnewvisualization\_all](images/creating-new-visualization.png)
 
 >[!NOTE]
->For instructions on how to add a data source for each of the providers, refer to [this topic](data-sources.md). When selecting the file in the **Visualization Data** dialog, make sure you select the **Finance Dashboard** sheet of the sample spreadsheet. Then, select *Load Data*.
+>For instructions on how to add a data source for each of the providers, refer to [this topic](~/en/datasources/overview.md). When selecting the file in the **Visualization Data** dialog, make sure you select the **Finance Dashboard** sheet of the sample spreadsheet. Then, select *Load Data*.
 
 ![Selecting Finance Sheet](images/Selecting-Finance-Sheet.png)
 
-After loading your data, the [Grid View](grid-view.md) will be selected by
-default in the [Visualizations Editor](visualizations-editor.md).
+After loading your data, the [Grid Chart](~/en/data-visualizations/visualization-types/grid-chart.md) will be selected by default in the [Visualizations Editor](~/en/data-visualizations/visualization-types/visualizations-editor.md).
 
 ![FinanceFirstVisualizationGrid\_All](images/FinanceFirstVisualizationGrid_All.png)
 
@@ -36,5 +35,5 @@ default in the [Visualizations Editor](visualizations-editor.md).
 
 </style>
 
-<a href="dashboard-tutorial.md" class="previous">&laquo; Finance Dashboard</a>
+<a href="getting-started.md" class="previous">&laquo; Getting Started</a>
 <a href="selecting-data-visualization.md" class="next">Next Step &raquo;</a>

@@ -1,4 +1,4 @@
-## Social Dashboard Tutorial 
+## Social Dashboard Tutorial
 
 In this tutorial, you will see how the "Social Media Analytics"
 dashboard displayed below was created using a sample spreadsheet with
@@ -30,7 +30,7 @@ to follow these tutorials, make sure you upload the file to one of the
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](starting-creation-process.md)
+1.  [Creating the Dashboard and Adding a Data Source](creating-the-dashboard.md)
 
 2.  [Creating the First Visualization](selecting-data-visualization.md)
 
@@ -49,4 +49,3 @@ to follow these tutorials, make sure you upload the file to one of the
 
 
 [Get Started »](creating-the-dashboard.md)
-

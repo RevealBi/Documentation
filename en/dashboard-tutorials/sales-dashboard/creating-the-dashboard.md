@@ -1,4 +1,4 @@
-## Creating a Dashboard and Adding a Data Source 
+## Creating a Dashboard and Adding a Data Source
 
 In order to create a new dashboard, you need to select the **+ New**
 button in the top right-hand corner of the initial view, and select the
@@ -24,8 +24,7 @@ Then, select *Load Data*.
 
 ![SelectingSalesSheet\_All](images/SelectingSalesSheet_All.png)
 
-After loading your data, the [Grid View](~/en/data-visualizations/grid-view.md) will be selected by
-default in the [Visualizations Editor](~/en/data-visualizations/visualizations-editor.md).
+After loading your data, the [Grid Chart](~/en/data-visualizations/visualization-types/grid-chart.md) will be selected by default in the [Visualizations Editor](~/en/data-visualizations/visualizations-editor.md).
 
 ![SalesFirstVisualizationGrid\_All](images/SalesFirstVisualizationGrid_All.png)
 
@@ -40,5 +39,5 @@ default in the [Visualizations Editor](~/en/data-visualizations/visualizations-e
 
 </style>
 
-<a href="dashboard-tutorial.md" class="previous">&laquo; Sales Dashboard</a>
+<a href="getting-started.md" class="previous">&laquo; Sales Dashboard</a>
 <a href="selecting-data-visualization.md" class="next">Next Step &raquo;</a>

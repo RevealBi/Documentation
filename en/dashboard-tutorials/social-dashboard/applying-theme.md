@@ -1,4 +1,4 @@
-## Applying a Theme to the Dashboard 
+## Applying a Theme to the Dashboard
 
 By default, the **Mountain Theme** theme will be applied to your
 dashboard. You can change it by accessing the **Theme** menu in the
@@ -19,6 +19,5 @@ In this sample, we will use the **Ocean Theme** theme. Select
 
 </style>
 
-<a href="selecting-data-visualization.md" class="previous">&laquo; Previous Step</a>
+<a href="creating-dashboard-filter-connecting-visualization.md" class="previous">&laquo; Previous Step</a>
 <a href="adding-other-visualizations.md" class="next">Next Step &raquo;</a>
-
