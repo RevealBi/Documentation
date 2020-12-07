@@ -17,17 +17,17 @@ here.
     <tbody>
         <tr>
         </tr>
-            <td rowspan="5">1.0.1629.0</td>
+            <td rowspan="5">-12/4/2020-<br> 1.0.1629.0 <br> [1.0.20 iOS]</td>
             <td><i>Save/Load Dashboards using JSON</i><br>You can now use Reveal SDK to save/load dashboards to/from JSON files.</td>
         <tr>
         <tr>
             <td><i>[Public Bug Fix] Category field label not being shown</i><br>In Category Charts, tooltips were not displaying the field label but the original field name of a category instead.</td>
         </tr>
         <tr>
-            <td><i>[Public Bug Fix] Title</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra elit nec venenatis blandit. Fusce vel ex sollicitudin, dapibus tortor in, posuere eros.</td>
+            <td><i>[Public Bug Fix] Dates in drill down breadcrumbs wrongly displayed</i><br>When drilling down on a date field, breadcrumbs did not display values properly. Now breadcrumbs give clear information about your drill down level.</td>
         </tr>
         <tr>
-            <td><i>[Public Bug Fix] Title</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra elit nec venenatis blandit. Fusce vel ex sollicitudin, dapibus tortor in, posuere eros.</td>
+            <td><i>[Public Bug Fix] Hover Tooltips and Crosshairs not shown by default</i><br>In Dashboard View mode, Hover Tooltips and Crosshairs were not displayed until users enable them. Now they are enabled by default.</td>
         </tr>
         <tr>
             <td rowspan="5">1.0.1422</td>

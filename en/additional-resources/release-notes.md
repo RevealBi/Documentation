@@ -18,7 +18,7 @@ here.
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="4">1.0.16</td>
+    <td class="tg-0lax" rowspan="4">-12/4/2020-<br> 1.0.16 <br> [1.0.20 iOS] </td>
     <td class="tg-cly1"><span style="font-style:italic">Save/Load Dashboards using JSON</span><br>You can now use Reveal SDK to save/load dashboards to/from JSON files..
 </td>
 <tr>
@@ -27,14 +27,14 @@ here.
   </tr>
 <tr>
   <td class="tg-cly1"><span style="font-style:italic">
-  [Public Bug Fix] Dates in drilldown breadcrumbs being displayed improperly </span><br>
-  When drilling down on a date field, breadcrumbs did not display values properly. Now breadcrumbs give clear information about your drill down level. 
+  [Public Bug Fix] Dates in drill down breadcrumbs wrongly displayed </span><br>
+  When drilling down on a date field, breadcrumbs did not display values properly. Now breadcrumbs give clear information about your drill down level.
   </td>
 </tr>
 <tr>
   <td class="tg-cly1"><span style="font-style:italic">
-  [Public Bug Fix] Hover Tooltips and Crosshairs not being shown by default </span><br>
-  In Dashboard View mode, Hover Tooltips and Crosshairs were not shown until users enable them. Now they are enabled by default. 
+  [Public Bug Fix] Hover Tooltips and Crosshairs not shown by default </span><br>
+  In Dashboard View mode, Hover Tooltips and Crosshairs were not displayed until users enable them. Now they are enabled by default.
   </td>
 </tr>
   <tr>
