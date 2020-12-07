@@ -27,14 +27,14 @@ here.
   </tr>
 <tr>
   <td class="tg-cly1"><span style="font-style:italic">
-  [Public Bug Fix] Title </span><br>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra elit nec venenatis blandit. Fusce vel ex sollicitudin, dapibus tortor in, posuere eros.
+  [Public Bug Fix] Dates in drilldown breadcrumbs being displayed improperly </span><br>
+  When drilling down on a date field, breadcrumbs did not display values properly. Now breadcrumbs give clear information about your drill down level. 
   </td>
 </tr>
 <tr>
   <td class="tg-cly1"><span style="font-style:italic">
-  [Public Bug Fix] Title </span><br>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra elit nec venenatis blandit. Fusce vel ex sollicitudin, dapibus tortor in, posuere eros.
+  [Public Bug Fix] Hover Tooltips and Crosshairs not being shown by default </span><br>
+  In Dashboard View mode, Hover Tooltips and Crosshairs were not shown until users enable them. Now they are enabled by default. 
   </td>
 </tr>
   <tr>
