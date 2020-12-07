@@ -12,13 +12,15 @@ here.
 </style>
 <table class="tg">
   <tr>
+    <th class="tg-cly1"><span style="font-weight:bold">Date</span></th>
     <th class="tg-cly1"><span style="font-weight:bold">Reveal version</span></th>
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="4">-12/4/2020-<br> 1.0.16 <br> [1.0.20 iOS] </td>
+    <td class="tg-0lax" rowspan="4">12/4/2020</td>
+    <td class="tg-0lax" rowspan="4"> 1.0.16 <br> [1.0.20 iOS] </td>
     <td class="tg-cly1"><span style="font-style:italic">Save/Load Dashboards using JSON</span><br>You can now use Reveal SDK to save/load dashboards to/from JSON files..
-</td>
+    </td>
 <tr>
     <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Category field label not being shown</span><br>In Category Charts, tooltips were not displaying the field label but the original field name of a category instead.
 </td>
@@ -36,6 +38,7 @@ here.
   </td>
 </tr>
   <tr>
+    <td class="tg-0lax" rowspan="3"></td>
     <td class="tg-0lax" rowspan="3">1.0.14</td>
     <td class="tg-cly1"><span style="font-style:italic">New Amazon Athena data source</span><br>You can now connect to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
 </td>
@@ -50,6 +53,7 @@ here.
   </td>
 </tr>
    <tr>
+   <td class="tg-0lax" rowspan="3"></td>
     <td class="tg-0lax" rowspan="3">1.0.13</td>
     <td class="tg-cly1"><span style="font-style:italic">New Amazon Redshift data source</span><br>You can now use and gain new insights from your data in the Amazon Redshift cloud data warehouse.
 </td>
@@ -62,6 +66,7 @@ here.
 </td>
   </tr>
   <tr>
+  <td class="tg-0lax" rowspan="7"></td>
     <td class="tg-0lax" rowspan="7">1.0.12</td>
     <td class="tg-cly1"><span style="font-style:italic">New Choropleth Map visualization</span><br>The Choropleth map visualization allows you to create beautiful thematic maps. You can now present geospatial data in an incredibly digestible manner. Let color guide you and help you quickly discover patterns, trends and anomalies on the map.
 </td>
@@ -90,6 +95,7 @@ here.
 </td>
   </tr>
    <tr>
+   <td class="tg-0lax" rowspan="2"></td>
     <td class="tg-0lax" rowspan="2">1.0.10/1.0.11</td>
     <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data source</span><br>With this new data source, you can create dashboards using your data models in Azure Analysis Services.
 </td>
@@ -98,6 +104,7 @@ here.
 </td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="5"></td>
     <td class="tg-0lax" rowspan="5">1.0.8/1.0.9</td>
     <td class="tg-cly1"><span style="font-style:italic">New TreeMap visualization</span><br>You can use this new visualization type to present large hierarchies with a set of nested rectangles. Rectangles' size will show you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations between similar data.
 </td>
@@ -119,6 +126,7 @@ here.
 </td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="5"></td>
     <td class="tg-0lax" rowspan="5">1.0.7</td>
     <td class="tg-cly1"><span style="font-style:italic">New integration with BigQuery Machine Learning models</span><br>You can use your BigQuery machine learning models with your BigQuery data source connection in Reveal.</td>
   </tr>
@@ -135,6 +143,7 @@ here.
     <td class="tg-0lax"><span style="font-style:italic">Export to Excel enhancements</span><br>You can now choose to include visualizations from Reveal in your spreadsheets upon export.</td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="10"></td>
     <td class="tg-0lax" rowspan="10">1.0.5</td>
     <td class="tg-0lax"><span style="font-style:italic">New Statistical Functions</span><br>Reveal can now process and perform statistical analysis on existing datasets. This means you can better analyze data and even forecast performance based on historical data.</td>
   </tr>
@@ -166,6 +175,7 @@ here.
     <td class="tg-0lax"><span style="font-style:italic">Redesign of hover tooltips and crosshairs addition</span><br>Tooltips were improved, they are now slightly smaller and the pointer was removed. In addition, crosshairs are now shown to help give context to the tooltip.</td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="5"></td>
     <td class="tg-0lax" rowspan="5">1.0.4</td>
     <td class="tg-0lax"><span style="font-style:italic">Pie and doughnut charts legends now can show elements with value 0</span><br>You now have the option to show elements with value 0 in the legends of pie and doughnut visualizations. This allows you to see every data piece of the field selected for a Label, but those with value 0 will not be displayed in the chart itself.</td>
   </tr>
@@ -182,6 +192,7 @@ here.
     <td class="tg-0lax"><span style="font-style:italic">[bug fix] Find function starting parameter</span><br>The find function used in calculated fields didn't consider the start position parameter as optional.</td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="6"></td>
     <td class="tg-0lax" rowspan="6">1.0.3</td>
     <td class="tg-0lax"><span style="font-style:italic">Export to Excel and PowerPoint</span><br>You can now export your dashboard's visualizations as slides of a PowerPoint presentation. In addition, you can also export the data used in your dashboard to the Excel format.</td>
   </tr>
@@ -201,6 +212,7 @@ here.
     <td class="tg-0lax"><span style="font-style:italic">Chart Legends improvements</span>Size and layout were visually enhanced and badges were adjusted to be more representative of the series-type.</td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="6"></td>
     <td class="tg-0lax" rowspan="6">1.0.2</td>
     <td class="tg-0lax"><span style="font-style:italic">Improved dashboard level interactions</span><br>You are now able to interact with your dashboard visualizations while minimized. Zoom, scroll, drill down, link to other dashboards and view chart point details (tooltips) without maximizing the visualizations in a dashboard.</td>
   </tr>
@@ -220,6 +232,7 @@ here.
     <td class="tg-0lax"><span style="font-weight:bold;font-style:italic">[bug fix]</span><span style="font-style:italic"> Excel headers coming from cloud providers</span><br>The first row has labels setting used for headers in the first row was not displayed for Excel files hosted in cloud providers(Google Drive, Dropbox, OneDrive).</td>
   </tr>
   <tr>
+    <td class="tg-0lax" rowspan="4"></td>
     <td class="tg-0lax" rowspan="4">1.0.1</td>
     <td class="tg-0lax"><span style="font-style:italic">Localization</span><br>Reveal is now localized to: German, Spanish, French, Italian, Japanese, Korean, Malay, Dutch, Portuguese, Russian and Chinese (Simplified and Traditional).</td>
   </tr>
