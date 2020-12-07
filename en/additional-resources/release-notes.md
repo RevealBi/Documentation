@@ -3,8 +3,6 @@
 All future updates and new features added to Reveal will be included
 here.
 
-*Scatter Map* visualization! We are looking forward to presenting you with another map visualization that will give you more insight for your geospatial data. Coming with an added capability to connect to a number of mapping services to use as a background.
-
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
