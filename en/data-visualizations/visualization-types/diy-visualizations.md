@@ -1,6 +1,6 @@
 ## Custom Visualizations
 
-Reveal offers multiple components for visualizing data, including the grid view, gauge view, map view and several chart types. There are some cases, though, where you would like to have another visualization method, not supported out of the box, that you feel would be a better fit for your scenario. It is for these cases that Reveal introduces the ability to do your own custom visualization component and display it in a visualization as part of a Reveal dashboard.
+Reveal offers multiple components for visualizing data, including the grid chart, gauge chart, maps and other chart types. There are some cases, though, where you would like to have another visualization method, not supported out of the box, that you feel would be a better fit for your scenario. It is for these cases that Reveal introduces the ability to do your own custom visualization component and display it in a visualization as part of a Reveal dashboard.
 
 ### Sample DIY visualizations
 

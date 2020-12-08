@@ -49,9 +49,9 @@ disabled by default.
 
 Conditional formatting can be applied to the following visualizations:
 
-  - [Grid View](~/en/data-visualizations/visualization-types/grid-chart.md)
+  - [Grid Chart](~/en/data-visualizations/visualization-types/grid-chart.md)
 
-  - [Pivot Table View](~/en/data-visualizations/visualization-types/pivot-table.md)
+  - [Pivot Chart](~/en/data-visualizations/visualization-types/pivot-table.md)
 
   - [Text View](~/en/data-visualizations/visualization-types/text-view.md)
 

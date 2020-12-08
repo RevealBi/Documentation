@@ -87,7 +87,7 @@ You can add as many links to a visualization as you want, but they will all have
 
 #### Value is Selected Trigger
 
-If you choose this option a tooltip with the link symbol appears whenever a data item of a chart, such as columns, bar, pie slices, etc. is clicked/tapped. In grid view the link symbol appears in the last column on the right (see below).
+If you choose this option a tooltip with the link symbol appears whenever a data item of a chart, such as columns, bar, pie slices, etc. is clicked/tapped. In the grid chart the link symbol appears in the last column on the right (see below).
 
   <img src="images/links-to-grid-view.png" alt="A grid with link symbols and an arrow pointing to the row of the Amethyst value for CampaignID" width="100%"/>
 

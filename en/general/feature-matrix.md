@@ -43,7 +43,7 @@ The matrix below shows the availability of Reveal features in all its platforms 
 | Custom (DIY)                                      | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Doughnut                                          | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Funnel                                            | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
-| Grid View                                         | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
+| Grid Chart                                         | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Heat Map                                          | <span style="color: #007F00">Yes</span>       | <span style="color: #FF0000">No</span>    |
 | KPI vs Time                                       | <span style="color: #FF0000">No</span>        | <span style="color: #007F00">Yes</span>   |
 | KPI vs Target                                     | <span style="color: #FF0000">No</span>        | <span style="color: #007F00">Yes</span>   |
@@ -71,7 +71,7 @@ The matrix below shows the availability of Reveal features in all its platforms 
 | Calculated Fields                                 | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Cascading Filters                                 | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Change Visualization in View Mode                 | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
-| Column Sorting in View Mode for Grid View         | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
+| Column Sorting in View Mode for Grid Chart         | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Conditional Formatting                            | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Default Formatting Settings                       | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Drill Down & Drill Up                             | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |

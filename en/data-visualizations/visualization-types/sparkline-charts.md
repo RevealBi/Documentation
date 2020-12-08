@@ -1,6 +1,6 @@
 ## Sparkline Charts
 
-Sparkline charts are small charts plotted within a grid view, without
+Sparkline charts are small charts plotted within a grid chart, without
 any axes, labels, or other chart elements. They are meant to represent
 trends and their progression in a given date range.
 
