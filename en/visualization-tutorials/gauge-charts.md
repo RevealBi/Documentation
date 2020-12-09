@@ -58,7 +58,7 @@ Access the links below for the gauge view walkthroughs:
 <a name='key-concepts'></a>
 ### Key Concepts
 
-There are three different layouts to choose from when using gauge views:
+There are three different layouts to choose from when using gauge charts:
 
   - **Bounds Configuration**. The bounds configuration for gauges covers
     the lowest and highest possible values in your gauges. It is usually
