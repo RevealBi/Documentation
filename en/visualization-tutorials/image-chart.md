@@ -1,4 +1,4 @@
-## Creating an Image View
+## Creating an Image Chart
 
 In this tutorial, you will learn how to create an Image visualization
 using a sample spreadsheet.
@@ -7,7 +7,7 @@ using a sample spreadsheet.
 
 ### Key Concepts
 
-As mentioned in the Data Visualization section, the [Image View](image-view.md) displays information in an embedded browser by making
+As mentioned in the Data Visualization section, the [Image Chart](image-chart.md) displays information in an embedded browser by making
 a request to a URL and displaying the results. The data source,
 therefore, will need to:
 
@@ -17,12 +17,12 @@ therefore, will need to:
 
 ### Sample Data Source
 
-For this tutorial, you will use the "Image View" sheet in the [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
+For this tutorial, you will use the "Image Chart" sheet in the [Reveal Tutorials Spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
 >[!NOTE]
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported cloud services or add it as a [Web Resource](~/en/datasources/supported-data-sources/web-resource.md).
 
-### Creating an Image View
+### Creating an Image Chart
 
 |                                          |                                                                                                |                                                                                                                                                      |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
