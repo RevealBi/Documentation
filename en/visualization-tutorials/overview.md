@@ -25,7 +25,7 @@ For specific information on what each visualization supports, visit the [Data Vi
 </p></td>
 <td><p><img src="images/Bullet-Graph-Gauge.png" alt="Bullet Graph Gauge" /><br />
 </p>
-<p><a href="gauge-views.md">Bullet Graph</a><br />
+<p><a href="gauge-charts.md">Bullet Graph</a><br />
 </p></td>
 <td><p><img src="images/Candlestick-Chart.png" alt="Candlestick Chart" /><br />
 </p>
@@ -33,7 +33,7 @@ For specific information on what each visualization supports, visit the [Data Vi
 </p></td>
 <td><p><img src="images/Circular-Gauge.png" alt="Circular Gauge" /><br />
 </p>
-<p><a href="gauge-views.md">Circular</a><br />
+<p><a href="gauge-charts.md">Circular</a><br />
 </p></td>
 </tr>
 <tr class="even">
@@ -51,7 +51,7 @@ For specific information on what each visualization supports, visit the [Data Vi
 </p></td>
 <td><p><img src="images/Web-View.png" alt="Web View" /><br />
 </p>
-<p><a href="image-view.md">Image</a><br />
+<p><a href="image-chart.md">Image</a><br />
 </p></td>
 <td><p><img src="images/kpi.png" alt="kpi" /><br />
 </p>
@@ -65,7 +65,7 @@ For specific information on what each visualization supports, visit the [Data Vi
 </p></td>
 <td><p><img src="images/Linear-Gauge.png" alt="Linear Gauge" /><br />
 </p>
-<p><a href="gauge-views.md">Linear</a><br />
+<p><a href="gauge-charts.md">Linear</a><br />
 </p></td>
 <td><p><img src="images/OHLC-Chart.png" alt="OHLC Chart" /><br />
 </p>
@@ -117,7 +117,7 @@ For specific information on what each visualization supports, visit the [Data Vi
 </p></td>
 <td><p><img src="images/Text-Gauge.png" alt="Text Gauge" /><br />
 </p>
-<p><a href="gauge-views.md">Text</a><br />
+<p><a href="gauge-charts.md">Text</a><br />
 </p></td>
 <td><p><img src="images/Text-View.png" alt="Text View" /><br />
 </p>
