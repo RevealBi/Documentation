@@ -4,8 +4,6 @@ Reveal is a modern BI solution that was built for embedded analytics. You can ea
 
 Built by user experience experts and designed for the business user, Reveal makes it simple for you to create, view, and share data visualizations with your teams. Offering you a seamless, identical experience no matter what device you are on: Web, Desktop, iOS, or Android.
 
-<img src="images/homePage_All.png" alt="Welcome image for Reveal" width="100%"/>
-
 Interested on embedded analytics? [Download Reveal SDK](https://www.revealbi.io/download-sdk). To find out how to start using it, refer to the [Reveal SDK help](developer/index.md).
 
 ### Reveal Application Highlights
