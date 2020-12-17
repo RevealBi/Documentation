@@ -1,6 +1,6 @@
 ## Microsoft SQL Server
 
->[!NOTE] Microsoft SQL Server is not supported in the Web version of Reveal.
+>[!NOTE] **Limitations in Web**. Microsoft SQL Server private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
 
 To configure a Microsoft SQL Server data source, you can set the following information:
 

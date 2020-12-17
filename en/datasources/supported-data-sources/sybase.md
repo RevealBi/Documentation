@@ -1,6 +1,6 @@
 ## Sybase
 
->[!NOTE] Sybase is not supported in the Web version of Reveal. 
+>[!NOTE] **Limitations in Web**. Sybase private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
 
 To configure a Sybase server data source, you will need to enter the
 following information:
