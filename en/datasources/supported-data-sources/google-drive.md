@@ -14,17 +14,7 @@ To use your Google Drive data, follow the steps below.
 
     Enter your **login credentials** and select *Next*.
 
-2.  **For first-time users only**, you will see an *Authorize* dialog, prompting you to give Reveal **appropriate permissions** so that it can use your Google Drive data.
-
-    ![Reveal notification for giving permissions to the app](images/notification-limited-permissions.png)
-
-    By clicking *Continue*, you will be redirected to an **authorization
-    prompt**:
-
-    ![Limited permissions request google dialog](images/limited-permissions-google-drive.png)
-
-3.  Select *Allow* to authorize Reveal to use (see and download) your
-    Google Drive files.
+2. In the **authorization prompt**, select *Allow* to authorize Reveal to use (see, edit, create, and delete) your Google Drive files.
 
 You can now use your Google Drive data to build your visualizations and
 will not be asked for these permissions again.
