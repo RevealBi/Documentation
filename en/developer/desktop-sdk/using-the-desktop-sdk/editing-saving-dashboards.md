@@ -2,7 +2,22 @@
 
 ### Overview
 
-As described in [**Configuring the RevealView Object**](configuring-revealview.md), you need to provide the __RevealView__ component with the stream containing the dashboard file. In addition, you also might want to handle the modified dashboard file, once the user made changes to the dashboard.
+To load a dashboard, you need to provide the __RevealView__ component with the stream containing the dashboard file. Later, you might want to handle the modified dashboard file, once the user made changes to the dashboard.
+
+### Editing dashboards
+
+The **Dashboard** property (type RVDashboard) of __RevealView__ is updated when the end user starts editing the dashboard. For example, when adding or removing visualizations or filters, RVDashboard's collections get automatically updated.
+
+In addition, the __RVDashboard__ class includes a **HasPendingChanges** property that is very useful to check if there are unsaved changes in the dashboard.
+
+**--ADDCODE??--**
+
+After a user finishes editing a visualization, upon closing the Visualization Editor, the Revealview's __VisualizationEditorClosed__ event is fired.
+
+**--ADDCODE??--**
+
+In the case that you need to control how to add new visualizations please refer to [**Creating New Visualizations and Dashboards**](~/en/developer/desktop-sdk/using-the-desktop-sdk/creating-visualizations-dashboards.md).
+
 
 ### Saving dashboards
 

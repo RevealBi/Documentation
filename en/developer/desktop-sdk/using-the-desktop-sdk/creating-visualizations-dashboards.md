@@ -2,13 +2,7 @@
 
 ### Overview
 
-As described in [**Editing & Saving Dashboards**](editing-saving-dashboards.md), there are two ways to handle how you save changes to dashboards: **client-side and server-side**. Those scenarios work fine when users make minor changes to existing dashboards such as:
-
-  - Adding/modifying filters
-  - Changing the type of visualization (chart, gauge, grid, etc.)
-  - Changing the theme
-
-However, to add new visualizations the user needs to **select the data source** to be used. To do that, the containing application needs to provide information to the SDK, so it can display the list of data sources available for a new visualization.
+In order to add new visualizations to an existing dashboard, the user needs to **select the data source** to be used. To do that, the containing application needs to provide information to the SDK, so it can display the list of data sources available for a new visualization.
 
 ### Displaying a List of Data Sources
 
@@ -57,8 +51,7 @@ Please note that the “employees” parameter passed to the
 
 ### Creating New Dashboards
 
-Creating dashboards from scratch is really simple. You just need to
-initialize __RevealView__. Usually when providing the users the capability to create a dashboard from scratch you would want to open the empty dashboard directly in edit mode so the user could start editing it straight away. 
+Creating dashboards from scratch is really simple. You just need to initialize __RevealView__. Usually when providing the users the capability to create a dashboard from scratch you would want to open the empty dashboard directly in edit mode so the user could start editing it straight away.
 ``` csharp
 revealView = new RevealView();
 revealView.StartInEditMode = true;
