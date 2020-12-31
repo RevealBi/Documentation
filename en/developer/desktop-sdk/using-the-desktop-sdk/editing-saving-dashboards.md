@@ -8,13 +8,52 @@ To load a dashboard, you need to provide the __RevealView__ component with the s
 
 The **Dashboard** property (type RVDashboard) of __RevealView__ is updated when the end user starts editing the dashboard. For example, when adding or removing visualizations or filters, RVDashboard's collections get automatically updated.
 
-In addition, the __RVDashboard__ class includes a **HasPendingChanges** property that is very useful to check if there are unsaved changes in the dashboard.
+Attach to the **PropertyChanged** event in __RVDashboard__, to get notified of changes to properties like **HasPendingChanges**:
 
-**--ADDCODE??--**
+*Code Sample*:
+
+``` csharp
+dashboard.PropertyChanged += Dashboard_PropertyChanged;
+```
+
+Then, implement the event handler:
+
+``` csharp
+private void Dashboard_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+{
+    if (e.PropertyName == "HasPendingChanges")
+    {
+        Console.Out.WriteLine("HasPendingChanges: " + ((RVDashboard)sender).HasPendingChanges);
+    }
+}
+```
 
 After a user finishes editing a visualization, upon closing the Visualization Editor, the Revealview's __VisualizationEditorClosed__ event is fired.
+You can attach to the event with this code:
 
-**--ADDCODE??--**
+``` csharp
+revealView.VisualizationEditorClosed += RevealView_VisualizationEditorClosed;
+```
+
+And then you need to implement the event handler:
+
+``` csharp
+private void RevealView_VisualizationEditorClosed(object sender, VisualizationEditorClosedEventArgs e)
+{
+    if (e.IsCancelled)
+    {
+        Console.Out.WriteLine("Visualization editor cancelled " + (e.IsNewVisualization ? "creating a new visualization" : "editing " + e.Visualization.Title));
+        return;
+    }
+    if (e.IsNewVisualization)
+    {
+        Console.Out.WriteLine("New visualization created: " + e.Visualization.Title);
+    } else
+    {
+        Console.Out.WriteLine("Visualization modified: " + e.Visualization.Title);
+    }
+}
+```
 
 In the case that you need to control how to add new visualizations please refer to [**Creating New Visualizations and Dashboards**](~/en/developer/desktop-sdk/using-the-desktop-sdk/creating-visualizations-dashboards.md).
 
