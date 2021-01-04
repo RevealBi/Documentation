@@ -20,10 +20,9 @@ here.
         <tr>
             <td rowspan="3">12/29/2020</td>
             <td rowspan="3">1.0.1.0.1669.0 <br> [1.0.21 iOS]</td>
-            <td><i>[Public Bug Fix] Custom filtering not working with "Processing Data on Server"</i><br>If the option "Processing Data on Server" was checked, custom queries were not filtering data in the Visualization Editor.</td>
         </tr>
         <tr>
-            <td><i>[Public Bug Fix] Pivot hierarchies filtering not working with "Processing Data on Server"</i><br>If the option "Processing Data on Server" was checked, drill down hierarchies in the Pivot Editor were not filtering data.</td>
+            <td><i>[Public Bug Fix] [SDK] Pivot hierarchies filtering not working with "Processing Data on Server"</i><br>If the option "Processing Data on Server" was checked, drill down hierarchies in the Pivot Editor were not filtering data.</td>
         </tr>
         <tr>
             <td><i>[Public Bug Fix] [SDK] Custom filtering not working with "Processing Data on Server</i><br>If the option "Processing Data on Server" was checked, custom queries were not returning the correct number of rows.</td>

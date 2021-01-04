@@ -17,21 +17,6 @@ here.
     <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="3">12/4/2020</td>
-    <td class="tg-0lax" rowspan="3"> 1.0.16 <br> [1.0.21 iOS] </td>
-    <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Custom filtering not working with "Processing Data on Server"</span><br>If the option "Processing Data on Server" was checked, custom queries were not filtering data in the Visualization Editor.
-    </td>
-<tr>
-    <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Pivot hierarchies filtering not working with "Processing Data on Server"</span><br>If the option "Processing Data on Server" was checked, drill down hierarchies in the Pivot Editor were not filtering data.
-</td>
-  </tr>
-<tr>
-  <td class="tg-cly1"><span style="font-style:italic">
-  [Public Bug Fix] [SDK] Custom filtering not working with "Processing Data on Server</span><br>
-  If the option "Processing Data on Server" was checked, custom queries were not returning the correct number of rows.
-  </td>
-</tr>
-  <tr>
     <td class="tg-0lax" rowspan="4">12/4/2020</td>
     <td class="tg-0lax" rowspan="4"> 1.0.16 <br> [1.0.20 iOS] </td>
     <td class="tg-cly1"><span style="font-style:italic">Save/Load Dashboards using JSON</span><br>You can now use Reveal SDK to save/load dashboards to/from JSON files.
