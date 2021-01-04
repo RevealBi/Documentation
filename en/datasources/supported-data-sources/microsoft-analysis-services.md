@@ -4,7 +4,7 @@ Microsoft SQL Analysis Services (SSAS) is an OLAP (online analytical
 processing of information from multiple database systems at the same
 time) and data mining tool in Microsoft SQL Server.
 
->[!NOTE] Microsoft Analysis Services is not supported in the Web version of Reveal.
+>[!NOTE] **Limitations in Web.** Microsoft Analysis Services private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
 
 ### Configuring a Microsoft Analysis Services Data Source
 
