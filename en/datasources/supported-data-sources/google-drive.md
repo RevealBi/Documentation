@@ -3,14 +3,14 @@
 If you are signed in with your Google account, you will have your Google
 Drive automatically added to your data sources:
 
-![Google Drive account in your data sources list](images/google-drive-data-source-automatic.png)
+<img src="images/google-drive-data-source-automatic.png" alt="Google Drive account in your data sources list" width="80%">
 
 To use your Google Drive data, follow the steps below.
 
 1.  Upon selecting your Google Drive (or a folder inside it), you will
     see the following log in prompt:
 
-    ![Google Drive Login](images/google-drive-login.png)
+    <img src="images/google-drive-login.png" alt="Google Drive Login" width="80%">
 
     Enter your **login credentials** and select *Next*.
 

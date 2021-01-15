@@ -15,7 +15,7 @@ By clicking/tapping the link symbol, you can open:
 
 To configure a link, go to the **Settings** section of the *Visualizations Editor*, and click/tap the _+_ in **Links**.
 
-![Adding a link in Settings](images/pivot-editor-linking2.png)
+<img src="images/pivot-editor-linking2.png" alt="Adding a link in Settings" width="80%"/>
 
 The added link will appear as a symbol on the visualization it is configured for, when the dashboard is in *View Mode*.  
 
@@ -43,7 +43,7 @@ To link your dashboard to another dashboard you need to perform the steps below.
 
   If you have added **dashboard filters** to the target dashboard, then you will also need to connect the dashboard filters to their corresponding fields in the dataset of the visualization you are adding a link to (see below). 
 
-  <img src="images/filter-configure-linking-dashboards.png" alt="Dashboard linking sample" width="100%"/>
+  <img src="images/filter-configure-linking-dashboards.png" alt="Dashboard linking sample" width="80%"/>
 
   Click _Done_ and go back. 
 

@@ -1,6 +1,6 @@
 ## PostgreSQL
 
->[!NOTE] PostgreSQL is not supported in the Web version of Reveal.
+>[!NOTE] **Limitations in Web.** PostgreSQL private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
 
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
