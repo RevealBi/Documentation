@@ -16,7 +16,7 @@ This dashboard contains information on a sample company's:
 
   - Mentions and retweets
 
-### Sample Datasheet
+### Sample Data
 
 You can download the sample datasheet
 [here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
