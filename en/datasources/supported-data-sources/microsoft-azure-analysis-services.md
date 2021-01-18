@@ -8,7 +8,7 @@ Unlike other databases used in Reveal (Microsoft Analysis Services, MySQL, Oracl
 
 >[!NOTE]
 >**Limitations in Web when first connecting to your Azure Analysis Services.**
->Due to security restrictions, the process of initial configuration and authentication of your Azure Analysis Services cannot be done in Reveal Web. You can initially connect to this data source in the iOS, Android, or Desktop app. Afterward, you can create or edit dashboards using data from this Azure Analysis Services connection with no further limitations.
+>Due to security restrictions, the process of initial configuration and authentication of your Azure Analysis Services cannot be done in Reveal Web. You can initially connect to this data source in the iOS, Android, or Desktop app. After the initial connection, you can create or edit dashboards using data from this Azure Analysis Services with no further limitations.
 
 To configure your Azure Analysis Services data source, you will need to perform the steps below.
 

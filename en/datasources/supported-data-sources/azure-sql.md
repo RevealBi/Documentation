@@ -1,6 +1,6 @@
 ## Azure SQL
 
->[!NOTE] **Limitations in Web.** Azure SQL private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
+>[!NOTE] **Limitations in Web**. In *Reveal Web*, you can connect only to publicly accessible Azure SQL addresses. If your Azure SQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to the SQL Server address. This limitation does not apply to *Reveal Embedded*.
 
 To configure an Azure SQL data source, you will need to enter the following information:
 

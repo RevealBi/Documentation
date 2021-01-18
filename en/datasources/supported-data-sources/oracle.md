@@ -1,6 +1,6 @@
 ## Oracle
 
->[!NOTE] Oracle is not supported in the Web version of Reveal.
+>[!NOTE] **Limitations in Web**. In *Reveal Web*, you can connect only to publicly accessible Oracle addresses. If your Oracle address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this Oracle address. This limitation does not apply to *Reveal Embedded*.
 
 There are two modes you can use to connect to Oracle depending on your
 database's settings:

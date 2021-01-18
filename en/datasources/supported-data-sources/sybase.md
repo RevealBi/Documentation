@@ -1,6 +1,6 @@
 ## Sybase
 
->[!NOTE] **Limitations in Web**. Sybase private urls are not accessible through Reveal Web. You can use the Desktop, iOS or Android app to connect to private addresses.
+>[!NOTE] **Limitations in Web**. In *Reveal Web*, you can connect only to publicly accessible Sybase addresses. If your Sybase address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this Sybase address. This limitation does not apply to *Reveal Embedded*.
 
 To configure a Sybase server data source, you will need to enter the
 following information:

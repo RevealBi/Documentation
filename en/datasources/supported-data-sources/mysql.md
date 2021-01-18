@@ -1,6 +1,6 @@
 ## MySQL
 
->[!NOTE] MySQL is not supported in the Web version of Reveal.
+>[!NOTE] **Limitations in Web**. In *Reveal Web*, you can connect only to publicly accessible MySQL addresses. If your MySQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this MySQL address. This limitation does not apply to *Reveal Embedded*.
 
 To configure a MySQL server data source, you will need to enter the
 following information:
