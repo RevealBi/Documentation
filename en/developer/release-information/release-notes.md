@@ -17,11 +17,17 @@ here.
         </tr>
     </thead>
     <tbody>
+    <tr>
+        <td rowspan="2">1/20/2020</td>
+        <td rowspan="2">1.0.1712</td>
+        <td><i>[Public Bug Fix] [SDK] The server component relies on Newtonsof.Json serializer</i><br> The Reveal server component was relying on the default JSON serialization settings of the mvc application. Now the hosting app can configure JSON serialization settings as needed.</td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] [SDK] SQL Server filtering not working for NVARCHAR columns</i><br>Filtering for Microsoft SQL Server was not working for NVARCHAR columns when the filtered value contained multi-byte characters.</td>
+    </tr>
         <tr>
-            <td rowspan="3">12/29/2020</td>
-            <td rowspan="3">1.0.1.0.1669.0 <br> [1.0.21 iOS]</td>
-        </tr>
-        <tr>
+            <td rowspan="2">12/29/2020</td>
+            <td rowspan="2">1.0.1669</td>
             <td><i>[Public Bug Fix] [SDK] Pivot hierarchies filtering not working with "Processing Data on Server"</i><br>If the option "Processing Data on Server" was checked, drill down hierarchies in the Pivot Editor were not filtering data.</td>
         </tr>
         <tr>
@@ -29,7 +35,7 @@ here.
         </tr>
         <tr>
             <td rowspan="4">12/4/2020</td>
-            <td rowspan="4">1.0.1629.0 <br> [1.0.20 iOS]</td>
+            <td rowspan="4">1.0.1629</td>
             <td><i>Save/Load Dashboards using JSON</i><br>You can now use Reveal SDK to save/load dashboards to/from JSON files.</td>
         </tr>
         <tr>
