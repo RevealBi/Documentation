@@ -26,9 +26,9 @@ In the dashboard above, you see the following visualization types:
 
   - **Operators Available**: [Doughnut Chart](category-charts.md)
 
-  - **Line 1 Efficiency**: [Circular Gauge](gauge-views.md)
+  - **Line 1 Efficiency**: [Circular Gauge](gauge-charts.md)
 
-  - **Line 2 Efficiency**: [Circular Gauge](gauge-views.md)
+  - **Line 2 Efficiency**: [Circular Gauge](gauge-charts.md)
 
 ### How do you create a Visualization?
 

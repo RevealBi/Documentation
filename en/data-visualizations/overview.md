@@ -273,7 +273,7 @@ For specific information on what each visualization supports, visit the **Data V
 </p></td>
 <td><p><img src="images/Bullet-Graph-Gauge.png" alt="Bullet Graph Gauge" /><br />
 </p>
-<p><a href="~/en/visualization-tutorials/gauge-views.md">Bullet Graph</a><br />
+<p><a href="~/en/visualization-tutorials/gauge-charts.md">Bullet Graph</a><br />
 </p></td>
 <td><p><img src="images/Candlestick-Chart.png" alt="Candlestick Chart" /><br />
 </p>
@@ -281,7 +281,7 @@ For specific information on what each visualization supports, visit the **Data V
 </p></td>
 <td><p><img src="images/Circular-Gauge.png" alt="Circular Gauge" /><br />
 </p>
-<p><a href="~/en/visualization-tutorials/gauge-views.md">Circular</a><br />
+<p><a href="~/en/visualization-tutorials/gauge-charts.md">Circular</a><br />
 </p></td>
 </tr>
 <tr class="even">
@@ -297,9 +297,9 @@ For specific information on what each visualization supports, visit the **Data V
 </p>
 <p><a href="~/en/visualization-tutorials/simple-charts.md">Funnel</a><br />
 </p></td>
-<td><p><img src="images/image-view.png" alt="Image View" /><br />
+<td><p><img src="images/image-view.png" alt="Image Chart" /><br />
 </p>
-<p><a href="~/en/visualization-tutorials/image-view.md">Image</a><br />
+<p><a href="~/en/visualization-tutorials/image-chart.md">Image</a><br />
 </p></td>
 <td><p><img src="images/kpi.png" alt="kpi" /><br />
 </p>
@@ -313,7 +313,7 @@ For specific information on what each visualization supports, visit the **Data V
 </p></td>
 <td><p><img src="images/Linear-Gauge.png" alt="Linear Gauge" /><br />
 </p>
-<p><a href="~/en/visualization-tutorials/gauge-views.md">Linear</a><br />
+<p><a href="~/en/visualization-tutorials/gauge-charts.md">Linear</a><br />
 </p></td>
 <td><p><img src="images/OHLC-Chart.png" alt="OHLC Chart" /><br />
 </p>
@@ -365,7 +365,7 @@ For specific information on what each visualization supports, visit the **Data V
 </p></td>
 <td><p><img src="images/Text-Gauge.png" alt="Text Gauge" /><br />
 </p>
-<p><a href="~/en/visualization-tutorials/gauge-views.md">Text</a><br />
+<p><a href="~/en/visualization-tutorials/gauge-charts.md">Text</a><br />
 </p></td>
 <td><p><img src="images/Text-View.png" alt="Text View" /><br />
 </p>

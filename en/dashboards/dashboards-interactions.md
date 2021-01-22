@@ -4,7 +4,7 @@ You can open existing dashboards by selecting the dashboard thumbnail image in t
 
 ![dashboard opened in edit mode](images/dashboard-opened-edit-mode.png)
 
-You can **interact** with dashboard visualizations in various ways. For instance, if the visualization is in grid view, you can scroll horizontally and
+You can **interact** with dashboard visualizations in various ways. For instance, if the visualization is a grid chart, you can scroll horizontally and
 vertically. The chart view supports zooming and panning. Also drill down & drill up actions become possible if the underlying data model supports it.
 
 <a name='maximized-view'></a>
@@ -28,7 +28,7 @@ You can also look at the data behind your chart if you select the **hash sign** 
 
 ![flip to grid](images/flip-grid.png)
 
-When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid View](~/en/data-visualizations/visualization-types/fgrid-chart.md) topic.
+When viewing the data behind your visualization, you can apply sorting (ascending or descending). For more information on applying sorting to grids, check the [Grid Chart](~/en/data-visualizations/visualization-types/grid-chart.md) topic.
 
 If, at any point, you want to revert back to the original visualization, you can select the **"Show Original"** link.
 

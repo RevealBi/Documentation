@@ -37,18 +37,15 @@ Below, you will find a list of all sections of the _Editor_ with their capabilit
 <img src="images/visualization-editor-panes.png" alt="Panes of the Visualization editor" width="100%"/>
 
 1. **Data Section** - this section contains two panels: 
-
-    a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
-   
-   The *plus* icon in this panel allows you to either [blend data sources](~/en/datasources/data-blending.md) or [calculate a field](fields/calculated-fields/overview.html#precalculated-fields). The *brain* icon allows you to use fields from a [BigQuery](~/en/datasources/datasources/ml-integration/bigquery-machine-learning-models.md) or [Azure](~/en/datasources/datasources/ml-integration/azure-machine-learning-models.md) *machine learning model* for your visualization. 
-   
-   
-   b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
-
+  
+  a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
+       The *plus* icon in this panel allows you to either [blend data sources](~/en/datasources/data-blending.md) or [calculate a field](fields/calculated-fields/overview.html#precalculated-fields). The *brain* icon allows you to use fields from a [BigQuery](~/en/datasources/datasources/ml-integration/bigquery-machine-learning-models.md) or [Azure](~/en/datasources/datasources/ml-integration/azure-machine-learning-models.md) *machine learning model* for your visualization. 
+  
+  b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
 
 2. **Settings Section** - this section allows you to customize what you want to show. Each visualization comes with its own settings. 
 
-At the bottom of the *Settings* section you will see the option for links. This is a powerful feature that takes drill down to a whole new level. Read more in the [Dashboard Linking](~/en/dashboards/dashboard-linking.md) topic.
+  At the bottom of the *Settings* section you will see the option for links. This is a powerful feature that takes drill down to a whole new level. Read more in the [Dashboard Linking](~/en/dashboards/dashboard-linking.md) topic.
 
 3. **Visualization Picker**, where you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown you will notice the visualization fields section change. The fields building each visualization are different, but they change automatically so you only need to fill them in. 
 

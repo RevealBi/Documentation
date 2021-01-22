@@ -1,4 +1,4 @@
-## Applying Formatting to the First Visualization 
+## Applying Formatting to the First Visualization
 
 The raw data that you drag and drop into the data editor placeholders
 will not be formatted by default; you will need to modify each field you
@@ -13,11 +13,11 @@ percentage. In order to apply this formatting:
     editor.
 
 2.  In the Formatting menu:
-    
+
     ![SalesWonOpportFormatting\_All](images/SalesWonOpportFormatting_All.png)
-    
+
     1.  Change the **Type** to **Percent**.
-    
+
     2.  Change the **Fraction Digits** to **0**
 
 Then, select **Update Field**.
@@ -27,15 +27,14 @@ Then, select **Update Field**.
 In the sample dashboard, there is a red arrow indicator in the **Won
 Opportunities** visualization which is meant to represent that there has
 been a decrease in the amount of won opportunities. This marker is
-created through the [band configurations](~/en/data-visualizations/gauge-views.html#bands-configuration) in the gauge's
-settings.
+created through the [band configurations](~/en/data-visualizations/visualization-types/gauge-charts.html#bands-configuration) in the gauge's settings.
 
 ![SalesWonOpportunitiesConditionalFormattingMarker\_All](images/SalesWonOpportunitiesConditionalFormattingMarker_All.png)
 
 In order to configure them:
 
 1.  Go to the **Settings** tab in the Visualizations Editor.
-    
+
     ![TutorialsSettingsMenu\_All](images/TutorialsSettingsMenu_All.png)
 
 
@@ -44,14 +43,14 @@ In order to configure them:
     0.35 as the value, even though the visualization is expressed as a
     percentage. Therefore, scroll down to **Value Comparison Type** and
     set it to "Number".
-    
+
     ![TutorialsValueComparisonTypeNumber\_All](images/TutorialsValueComparisonTypeNumber_All.png)
 
 
 
 3.  **Set your bounds**. In this case, the bounds are within 0.7 and
     0.5.
-    
+
     ![SalesChangingBands\_All](images/SalesChangingBands_All.png)
 
 
@@ -59,7 +58,7 @@ In order to configure them:
 4.  Select each band and **select both the color and the indicator**. By
     default, the highest value will be set to green and the lowest to
     red.
-    
+
     ![SalesChangingBandColorIndicator\_All](images/SalesChangingBandColorIndicator_All.png)
 
 Once you have finished editing the visualization, select the **tick

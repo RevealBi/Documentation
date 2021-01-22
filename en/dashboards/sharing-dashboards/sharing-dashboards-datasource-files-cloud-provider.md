@@ -34,10 +34,6 @@ following cloud providers:
 
   - Dropbox
 
->[!NOTE] **File Share Support for Box:**
->Coming soon!
-
-
 <a name='cloud-data-source-file'></a>
 ### Granting Access when Choosing a Cloud File as a Data Source
 
@@ -63,10 +59,6 @@ shareable link, when sharing them with other users.
     ![A dialog to grant access to cloud file data sources](images/grant-access-share-dashboard-dialog.png)
 
     Click/Tap *Allow Access* and proceed with selecting users to [share your dashboard](share-a-dashboard.md) with.
-
-
->[!NOTE] **Access Not Allowed.**
->If you continue sharing without allowing access, users will not be able to view your dashboard's data. *Request access* feature will be supported in a future version of Reveal.
 
 <a name='save-dashboard-team'></a>
 ### Saving a Dashboard with a Cloud File Data Source in a Team

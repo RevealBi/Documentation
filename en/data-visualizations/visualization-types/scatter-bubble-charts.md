@@ -100,7 +100,7 @@ In *Settings* you can:
     a non-linear scale which takes magnitude into account instead of the
     usual linear scale.
 
-    As a general rule, scatter charts are a better choice than linear
+    As a general rule, scatter charts are a better choice than line
     charts, when you want to use a logarithmic scale on the X-axis,
     since the horizontal axis of a scatter chart is always a value axis.
 

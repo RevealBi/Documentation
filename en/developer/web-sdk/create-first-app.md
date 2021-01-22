@@ -25,9 +25,6 @@ Select **.NET Framework** and **ASP.NET Core 2.2** as follows:
 ![select framework and mvc for project dialog in Visual Studio
 2017](images/select-framework-project.png)
 
-Step 1 sample **[git
-commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/90b5a2952e98e8138751e3c9fd78864acc9c0a4f)**
-
 ### Step 2 - Install Reveal SDK
 
 Download the *Infragistics Reveal SDK* from <https://www.revealbi.io/>
@@ -44,9 +41,6 @@ the one you added:
 ![installing the Nuget dialog](images/install-nuget.png)
 
 ![preview changes dialog](images/preview-changes-dialog.png)
-
-Step 2 sample **[git
-commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/3308bd229c1b50efd12e553e1e54d5ac4d36b6e3)**.
 
 ### Step 3 - Work on Server Configuration
 
@@ -108,9 +102,6 @@ And the necessary references in the same file:
     using Demo1.RevealSDK;
     using Reveal.Sdk;
 ```
-
-Step 3 sample **[git
-commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/44340ad7154f7101f80fce4aea50153ccbd902d7)**.
 
 If you experience any issues, please refer to the [**Setup
 and Configuration (Web)**](~/en/developer/setup-configuration/setup-configuration-web.md)
@@ -234,9 +225,6 @@ Finally, when running the web page, you can see the dashboard:
 ![marketing dashboard result in web
 page](images/marketing-dashboard-result.png)
 
-Step 4 sample **[git
-commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/380d369b46437c3913ed3c61de32a7f607b96b47)**.
-
 If you experience any issues, please refer to the [**Setup and Configuration (Web)**](~/en/developer/setup-configuration/setup-configuration-web.md)
 topic.
 
@@ -313,9 +301,6 @@ Voila\!
 
 ![marketing dashboard loaded with the new
 font](images/marketing-dashboard-new-font.png)
-
-Step 5 sample **[git
-commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/9fd40e047bf6aa4c03258112e6d47f577625a63b)**.
 
 ### Step 6 - Style the Client Application
 
@@ -434,6 +419,3 @@ And this should be your result:
 
 ![result after styling the client
 application](images/marketing-dashboard-style-client-application-result.png)
-
-Step 6 sample **[git
-commit](https://github.com/Infragistics/reveal-sdk-web-sample/commit/085fd35db4d07eb9130ff72dd3bb96a157f6d4ed)**.

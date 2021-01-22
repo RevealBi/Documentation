@@ -3,7 +3,7 @@
 Binding the data in a visualization to a dashboard filter can be done in
 two ways:
 
-![dashboard filters menu](images/dashboard-filters-menu.png)
+<img src="images/dashboard-filters-menu.png" alt="dashboard filters menu" width="80%"/>
 
   - **As part of the Dashboard Filter configuration** (as shown above).
     This allows you to centrally configure binding between a dashboard
@@ -19,7 +19,7 @@ visualization's dataset ([**field binding**](#field-binding)). You can
 always remove a visualization's binding selecting **Disconnect** in the
 Visualizations Editor or the Dashboard Filter menu.
 
-![disconnecting dashboard filters from a visualization](images/disconnecting-dashboard-filter.png)
+<img src="images/disconnecting-dashboard-filter.png" alt="disconnecting dashboard filters from a visualization" width="80%"/>
 
 <a name='field-binding'></a>
 ### Field Binding
@@ -29,7 +29,7 @@ dashboard filter dataset schema and the visualization's schema. To do
 this, select the **Dashboard Filter** you want to use and then
 **Connect**.
 
-![field binding menu](images/pivot-editor-view-field-binding.png)
+<img src="images/pivot-editor-view-field-binding.png" alt="field binding menu" width="80%"/>
 
 In the dialog above, you will need to configure:
 
@@ -67,7 +67,7 @@ To connect a dashboard filter to a parameter, follow the procedure in
 parameters at the bottom of the *Vizualization*'s drop-down list in the
 *Edit Filter Connection* dialog:
 
-![parameters binding list](images/parameters-binding_All.png)
+<img src="images/parameters-binding.png" alt="parameters binding list" width="80%"/>
 
 >[!NOTE] **Date Filters**
 >You can bind only dashboard filters to parameters. Date filter binding to parameters is not supported.

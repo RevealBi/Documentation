@@ -74,6 +74,11 @@
   href: data-visualizations/reusing-visualizations.md
 - name: Statistical Functions
   href: data-visualizations/statistical-functions.md
+- name: Custom Visualizations
+  href: data-visualizations/visualization-types/diy-visualizations.md
+  items:
+    - name: How to Create a Custom Visualization
+      href: data-visualizations/visualization-types/diy-visualization-step-by-step.md
 - name: Filters
   header: true
 - name: Overview
@@ -96,10 +101,10 @@
   href: visualization-tutorials/overview.md
 - name: Candlestick Visualizations
   href: visualization-tutorials/candlestick-chart.md
-- name: Gauge Views
-  href: visualization-tutorials/gauge-views.md
-- name: Image View
-  href: visualization-tutorials/image-view.md
+- name: Gauge Charts
+  href: visualization-tutorials/gauge-charts.md
+- name: Image Charts
+  href: visualization-tutorials/image-chart.md
 - name: KPI Gauge
   href: visualization-tutorials/kpi-gauge.md
 - name: OHLC Charts

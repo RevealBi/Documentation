@@ -16,7 +16,7 @@ defined on the server side, and Reveal supports the expand and drill
 operations.
 
 >[!NOTE]
->Ad-hoc hierarchies are **not supported** in text and Radial Gauges, and in web, text, and grid views.
+>Ad-hoc hierarchies are **not supported** in text and Radial Gauges, and in web, grid charts, and text views.
 
 ### Enabling Ad-Hoc Hierarchies
 
@@ -40,10 +40,10 @@ the following ones:
 
   - Circular Gauges
 
-  - Grid Views
+  - Grid Charts
 
   - Text Gauges
 
   - Text Views
 
-  - Image Views
+  - Image Charts

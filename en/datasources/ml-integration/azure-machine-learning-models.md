@@ -1,6 +1,5 @@
 ## Azure Machine Learning in Reveal
 
-
 You can use your trained models' data from Azure Machine Learning Studio
 in Reveal. Get better insights than ever! Just choose your data source,
 build a visualization, and use the integration to connect to a trained

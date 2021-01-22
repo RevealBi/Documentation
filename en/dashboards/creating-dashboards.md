@@ -66,10 +66,15 @@ settings or add filters to it.
 ![editing visualization fields preview](images/editing-visualization-fields-preview.png)
 
 Once you have modified the visualization, you will be taken back to the
-**Dashboard Editor**. You will see **Undo**, **Redo**,**Theme** and
-**Save As** buttons on the top right-hand corner. You can also add any
-other visualizations with the **+ sign** in the same location, or save
-your dashboard by selecting the **tick icon**.
+**Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, switch on/off **Auto Layout**, **export** or **save** the dashboard. 
+
+You can also use the overflow menu in the top right corner of the visualizations to rename, edit, **copy** or **duplicate** them. 
+
+>[NOTE!] The **difference between copying and duplicating** a visualization is that duplicating works only inside the same dashboard and the copy option allows you to put the visualization in the same or a different dashboard. 
+
+After copying a visualization, find the _Paste_ option inside the overflow menu of the dashboard you want to paste the visualization in. 
+
+<img src="images/paste-option-dashboard.png" alt="paste option in the dashboard overflow menu" width=100%>
 
 #### Applying a Theme
 

@@ -24,7 +24,7 @@ Then, select *Load Data*.
 
 ![SelectingSocialSheet\_All](images/SelectingSocialSheet_All.png)
 
-After loading your data, the [Grid View](~/en/data-visualizations/visualization-types/grid-chart.md) will be selected by
+After loading your data, the [Grid Chart](~/en/data-visualizations/visualization-types/grid-chart.md) will be selected by
 default in the [Visualizations Editor](~/en/data-visualizations/visualizations-editor.md).
 
 ![SocialFirstVisualizationGrid\_All](images/SocialFirstVisualizationGrid_All.png)

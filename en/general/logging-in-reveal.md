@@ -5,14 +5,12 @@ When opening the app you'll be met with different login options:
 
 <img src="images/log-in-screen.png" alt="Reveal's log in screen" width="100%"/>
 
-Before jumping in, take into account that in Reveal you can join an **Organization**. If you are a member of an organization, you have to log in with your organization’s email. Choose Google (G Suite) or Microsoft (O365) as needed and you'll be associated with the organization team. Alternatively, you can log in using your iCloud (*Apple*) account credentials.
+Before jumping in, take into account that in Reveal you can join an **Organization**. If you are a member of an organization, you have to log in with your organization’s email. Choose Google or Microsoft (O365) as needed and you'll be associated with the Оrganization team. Alternatively, you can log in using your iCloud (*Apple*) account credentials.
 
 > [!NOTE]
 > The organization team is named after your organization (e.g. your company's name).  
 
-<img src="images/limited-permission-sign-in-o365.png" alt="Permissions request sign in with Office 365" width="100%"/>
-
-Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md). You will be additionally asked for **limited permissions** only the first time you use your [OneDrive](~/en/datasources/supported-data-sources/onedrive.md) and [Google Drive](~/en/datasources/supported-data-sources/google-drive.md).
+Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md).
 
 ### Your First Screen
 

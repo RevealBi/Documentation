@@ -1,4 +1,4 @@
-## Sales Dashboard Tutorial 
+## Sales Dashboard Tutorial
 
 In this tutorial, you will see how the "Sales Performance" dashboard
 displayed below was created using a sample spreadsheet with similar
@@ -20,33 +20,33 @@ This dashboard contains information on a sample company's:
 
 You can download the sample datasheet
 [here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
-All other dashboards [in these tutorials](dashboard-tutorials.md) will use
+All other dashboards [in these tutorials](~/en/dashboard-tutorials/overview.md) will use
 the same sample spreadsheet.
 
 >[!NOTE]
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the
-[supported cloud services](data-sources.md).
+[supported cloud services](~/en/datasources/overview.md).
 
 ### Steps Overview
 
-1.  [Creating the Dashboard and Adding a Data Source](sales-starting-creation-process.md)
+1.  [Creating the Dashboard and Adding a Data Source](creating-the-dashboard.md)
 
-2.  [Creating the First Visualization](sales-selecting-data-visualization.md)
+2.  [Creating the First Visualization](selecting-data-visualization.md)
 
-3.  [Applying Formatting to the First Visualization](sales-applying-formatting-visualization.md)
+3.  [Applying Formatting to the First Visualization](applying-formatting-visualization.md)
 
-4.  [Applying a Theme to the Dashboard](sales-applying-theme.md)
+4.  [Applying a Theme to the Dashboard](applying-theme.md)
 
-5.  [Adding the other Visualizations](sales-adding-other-visualizations.md)
-    [Win/Lost by Month](sales-adding-other-visualizations.html#win-lost-by-month),
-    [Forecasted](sales-adding-other-visualizations#forecasted), [Lost Opportunities](sales-adding-other-visualizations.html#lost-opportunities),
-    [Pipeline by Territory](sales-adding-other-visualizations.html#pipeline-by-territory),
-    [Total Opportunities](sales-adding-other-visualizations.html#total-opportunities),
-    [Revenue by Territory](sales-adding-other-visualizations.html#revenue-by-territory),
-    [Pipeline per Employee](sales-adding-other-visualizations.html#pipeline-per-employee),
-    [Sales by Product](sales-adding-other-visualizations.html#sales-by-product))
+5.  [Adding the other Visualizations](adding-other-visualizations.md)
+    [Win/Lost by Month](adding-other-visualizations.html#win-lost-by-month),
+    [Forecasted](adding-other-visualizations#forecasted), [Lost Opportunities](adding-other-visualizations.html#lost-opportunities),
+    [Pipeline by Territory](adding-other-visualizations.html#pipeline-by-territory),
+    [Total Opportunities](adding-other-visualizations.html#total-opportunities),
+    [Revenue by Territory](adding-other-visualizations.html#revenue-by-territory),
+    [Pipeline per Employee](adding-other-visualizations.html#pipeline-per-employee),
+    [Sales by Product](adding-other-visualizations.html#sales-by-product))
 
-6.  [Saving your Dashboard](sales-saving-dashboard.md)
+6.  [Saving your Dashboard](saving-dashboard.md)
 
 <style>
 .previous {
@@ -59,4 +59,4 @@ the same sample spreadsheet.
 
 </style>
 
-<a href="starting-creation-process.md" class="next">Get Started &raquo;</a>
+<a href="creating-the-dashboard.md" class="next">Get Started &raquo;</a>

@@ -4,7 +4,7 @@ All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
 
 >[!NOTE]
->If you want to [change your data source](~/en/datasources/changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](~/en/datasources/overview.md) instead. You can also [duplicate](~/en/dashboards/dashboards-interactions.html#view-edit-mode) visualizations to speed up the creation process.
+>If you want to [change your data source](~/en/datasources/changing-data-source-visualization.md), you will need to select the **overflow button** next to the data source name or [create a new data source](~/en/datasources/overview.md) instead. You can also [duplicate](~/en/data-visualizations/reusing-visualizations.md) visualizations to speed up the creation process.
 
 This section will cover the following visualizations:
 
@@ -56,7 +56,6 @@ that will change is the selected filter.
 
     ![DuplicatingVisualizationSISStockValue\_All](images/DuplicatingVisualizationSISStockValue_All.png)
 
-<!-- end list -->
 
 2.  Rename the visualization by opening its overflow button and
     selecting **Rename**.
@@ -67,14 +66,12 @@ that will change is the selected filter.
 
     ![SISStockRenamingVisualization\_All](images/SISStockRenamingVisualization_All.png)
 
-<!-- end list -->
 
 3.  Enter Edit Mode by selecting the overflow button again and selecting
     **Edit**.
 
     ![SISStockValueEditingVisualization\_All](images/SISStockValueEditingVisualization_All.png)
 
-<!-- end list -->
 
 4.  This visualization displays the stock value for **Silver Security
     Corp**, as it is the second highest stock value. Because we choose
@@ -84,12 +81,11 @@ that will change is the selected filter.
     **Selected Value** to **Silver Security Corp** and *unselect
     Globex*.
 
-    ![SISStockValueChangeStock\_All](images/SISStockValueChangeStock_All.png)
+    <img src="images/SISStockValueChangeStock_All.png" alt="Updating the filter in Reveal" width="100%"/>
 
     Then, select **Update Filter**.
 
-Once you are done, go back to the Dashboard Editor by selecting the
-**tick icon** in the top right-hand corner.
+    Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <a name="glb-fiscal-monthly"></a>
 ### GLB Fiscal (Monthly) NYSE + BATS
@@ -103,83 +99,60 @@ and the Better Alternative Trading System (BATS) values in a
     select the **Finance Dashboard** sheet in the
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load Data*.
 
-    ![SelectingFinanceSheet\_All.png](images/SelectingFinanceSheet_All.png)
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
-<!-- end list -->
+2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Candlestick" chart.
 
-2.  **Open the visualizations picker** by selecting the grid icon in the
-    top bar, and select the "Candlestick" chart.
-
-    ![SelectCandlestickChart\_All](images/SelectCandlestickChart_All.png)
-
-<!-- end list -->
+    <img src="images/SelectCandlestickChart_All.png" alt="Selecting the Candlestick chart in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Date** field into the Label
     placeholder of the data editor, **Open** into Open, **High** into
     High, **Low** into Low and **Close** into Close.
 
-    ![DragDropFinanceGLBFiscal\_All](images/DragDropFinanceGLBFiscal_All.png)
+    <img src="images/DragDropFinanceGLBFiscal_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
 
-<!-- end list -->
 
-4.  By default, the Date information in Label will be displayed in
-    years. In order to change this, select **Date** in the Label
-    placeholder of the data editor, and change the **Date Aggregation**
-    to **Day**.
+4.  By default, the Date information in Label will be displayed in years. In order to change this, select **Date** in the Label placeholder of the data editor, and change the **Date Aggregation** to **Day**.
 
-    ![FinanceGLBDateAggregation\_All](images/FinanceGLBDateAggregation_All.png)
+    <img src="images/FinanceGLBDateAggregation_All.png" alt="Changing date aggregation in Reveal" width="100%"/>
 
     Then, select **Update Field**.
 
-<!-- end list -->
+5.  If needed, you can remove the fraction digits in the Y axis by selecting the values in Open, High, Low and Close, and changing **Fraction Digits** to **0**.
 
-5.  If needed, you can remove the fraction digits in the Y axis by
-    selecting the values in Open, High, Low and Close, and changing
-    **Fraction Digits** to **0**.
-
-    ![GLBFiscalRemovingFractionDigits\_All](images/GLBFiscalRemovingFractionDigits_All.png)
+    <img src="images/GLBFiscalRemovingFractionDigits_All.png" alt="Removing fraction digits in Reveal" width="100%"/>
 
     Then, select **Update Field**.
 
-<!-- end list -->
+6.  The visualization displays the GLB stock value, so **you will need to introduce a filter** for **Stocks** in order to display that particular option.
+    Drag and drop **Stocks** into **Data Filters** and then choose **Select Values**.
 
-6.  The visualization displays the GLB stock value, so **you will need
-    to introduce a filter** for **Stocks** in order to display that
-    particular option. Drag and drop **Stocks** into **Data Filters**
-    and then choose **Select Values**.
-
-    ![GlobexCandlestickSelectValues\_All](images/GlobexCandlestickSelectValues_All.png)
+    <img src="images/GlobexCandlestickSelectValues_All.png" alt="Selecting Filters in Reveal" width="100%"/>
 
     There, uncheck all options and select only **Globex**.
 
-    ![GlobexCandlestickSelectGlobex\_All](images/GlobexCandlestickSelectGlobex_All.png)
+    <img src="images/GlobexCandlestickSelectGlobex_All.png" alt="Working with filters in Reveal" width="100%"/>
 
     Then, select **Create Filter**.
 
-<!-- end list -->
-
-7.  You will also need to introduce a filter in order to display
-    information only for 2018. To do this, drag and drop **Date** into
+7.  You will also need to introduce a filter in order to display information only for 2018. To do this, drag and drop **Date** into
     the **Data Filters** placeholder of the data editor and, under
     **Filter Type**, select **Filter by Rule**.
 
-    ![GLBFilterbyRule](images/GLBFilterbyRule.png)
+    <img src="images/GLBFilterbyRule.png" alt="Filtering by rule in Reveal" width="100%"/>
 
     Select the **Custom Date Range** rule and enter January 1st through
     December 31st.
 
-    ![GLBEnterCustomDateRange\_All](images/GLBEnterCustomDateRange_All.png)
+    <img src="images/GLBEnterCustomDateRange_All.png" alt="Selecting a custom date range in Reveal" width="100%"/>
 
     Then, select **Create Filter**.
-
-<!-- end list -->
 
 8.  **Change the title of your visualization** to "GLB Fiscal (Monthly)
     NYSE + BATS" **by selecting the pencil icon** next to "Finance
     Dashboard".
 
-Once you are done, go back to the Dashboard Editor by selecting the
-**tick icon** in the top right-hand corner.
+    Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <a name='forecast-change-bid-offers'></a>
 ### Forecast (Chg, Bid & Offers) - 2018 to 2023
@@ -193,51 +166,39 @@ order to create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingFinanceSheet\_All.png](images/SelectingFinanceSheet_All.png)
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
-<!-- end list -->
+2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Line" chart.
 
-2.  **Open the visualizations picker** by selecting the grid icon in the
-    top bar, and select the "Line" chart.
-
-    ![SelectLineChart\_All](images/SelectLineChart_All.png)
-
-<!-- end list -->
+    <img src="images/SelectLineChart_All.png" alt="Selecting the Line chart in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Date** field into Label,
     **Stocks** into the *Add Hierarchy* section of Label, and
     **Change**, **Bid** and **Offer** into **Values**.
 
-    ![DragDropFinanceForecast\_All](images/DragDropFinanceForecast_All.png)
-
-<!-- end list -->
+    <img src="images/DragDropFinanceForecast_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
 
 4.  By default, the Date information in Label will be displayed in
     years. In order to change this, select **Date** in the Label
     placeholder of the data editor, and change the **Date Aggregation**
     to **Month**.
 
-    ![FinanceForecastDateAggregation\_All](images/FinanceForecastDateAggregation_All.png)
+    <img src="images/FinanceForecastDateAggregation_All.png" alt="Changing date aggregation in Reveal" width="100%"/>
 
     Then, select **Update Field**.
-
-<!-- end list -->
 
 5.  To remove the fraction digits in the Y axis, select the fields in
     Values, and change **Fraction Digits** to **0**.
 
-    ![ForecastRemovingFractionDigits\_All](images/ForecastRemovingFractionDigits_All.png)
+    <img src="images/ForecastRemovingFractionDigits_All.png" alt="Removing fraction digits in Reveal" width="100%"/>
 
     Then, select **Update Field**.
-
-<!-- end list -->
 
 6.  **Change the title of your visualization** to "Forecast (Chg, Bid &
     Offers) - 2018 to 2023" **by selecting the pencil icon** next to
     "Finance Dashboard".
 
-Once you are done, go back to the Dashboard Editor by selecting the
-**tick icon** in the top right-hand corner.
+    Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <a name='stock-variations'></a>
 ### Stock Variations
@@ -251,33 +212,24 @@ In order to create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingFinanceSheet\_All.png](images/SelectingFinanceSheet_All.png)
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
-<!-- end list -->
+2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Sparkline" chart.
 
-2.  **Open the visualizations picker** by selecting the grid icon in the
-    top bar, and select the "Sparkline" chart.
-
-    ![SelectSparklineChart\_All](images/SelectSparklineChart_All.png)
-
-<!-- end list -->
+    <img src="images/SelectSparklineChart_All.png" alt="Selecting the sparkline chart in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Date** field into Date, the
     **Offer** field into **Value** and **Stocks** into Category.
 
-    ![DragDropFinanceStockVariation\_All](images/DragDropFinanceStockVariation_All.png)
-
-<!-- end list -->
+    <img src="images/DragDropFinanceStockVariation_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
 
 4.  By default, the **Offer** field will be displayed as a number. In
     order to display it as currency, select it in the data editor and
     change **Type** to **Currency**.
 
-    ![StockVariationCurrencyFormatting\_All](images/StockVariationCurrencyFormatting_All.png)
+    <img src="images/StockVariationCurrencyFormatting_All.png" alt="Changing the formatting type in Reveal" width="100%"/>
 
     Then, select **Update Field**
-
-<!-- end list -->
 
 5.  The **Last 12 Months** chart will be displayed using a Line Chart by
     default. In order to match the sample, let's set it to display an
@@ -285,9 +237,8 @@ In order to create it:
     Visualizations Editor, open the **Chart Type** dropdown, and select
     **Area**.
 
-    ![StockVariationChangingChartType\_All](images/StockVariationChangingChartType_All.png)
+    <img src="images/StockVariationChangingChartType_All.png" alt="Selecting the Area chart type in Reveal" width="100%"/>
 
-<!-- end list -->
 
 6.  **Change the title of your visualization** to "Stock Variations"
     **by selecting the pencil icon** next to "Finance Dashboard".
@@ -306,46 +257,37 @@ during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-vi
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingFinanceSheet\_All.png](images/SelectingFinanceSheet_All.png)
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
-<!-- end list -->
+2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Sparkline" chart.
 
-2.  **Open the visualizations picker** by selecting the grid icon in the
-    top bar, and select the "Sparkline" chart.
-
-    ![SelectLinearGauge\_All](images/SelectLinearGauge_All.png)
-
-<!-- end list -->
+    <img src="images/SelectLinearGauge_All.png" alt="Selecting the linear gauge in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Stocks** field into Label
     and the **Volume** field into the Values placeholder of the data
     editor.
 
-    ![DragDropFinanceStockVolume\_All](images/DragDropFinanceStockVolume_All.png)
-
-<!-- end list -->
+    <img src="images/DragDropFinanceStockVolume_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
 
 4.  You will also need to introduce a filter in order to display
     information only for 2018. To do this, drag and drop **Date** into
     the **Data Filters** placeholder of the data editor and, under
     **Filter Type**, select **Filter by Rule**.
 
-    ![StockVolFilterbyRule\_All](images/StockVolFilterbyRule_All.png)
+    <img src="images/StockVolFilterbyRule_All.png" alt="Filtering by rule in Reveal" width="100%"/>
 
     Select the **Custom Date Range** rule and enter January 1st through
     December 31st.
 
-    ![StockVolEnterCustomDateRange\_All](images/StockVolEnterCustomDateRange_All.png)
+    <img src="images/StockVolEnterCustomDateRange_All.png" alt="Enter custom date range in Reveal" width="100%"/>
 
     Then, select **Create Filter**.
 
-<!-- end list -->
 
 5.  **Change the title of your visualization** to "Stock Volumes" **by
     selecting the pencil icon** next to "Finance Dashboard".
 
-Once you are done, go back to the Dashboard Editor by selecting the
-**tick icon** in the top right-hand corner.
+    Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <style>
 .previous {
