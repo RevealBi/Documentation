@@ -37,14 +37,23 @@ options:
     same as a calendar year, you can use Fiscal Years and select the
     initial month for your period.
 
-  - **Date Aggregation**: configure the level of granularity for your
-    data (year, month, or day).
-
   - **Sorting**: sort your dates in either ascending or descending
     order.
 
   - **Date Format**: select from a predefined list of date and time
     formats to display your date/time values.
+
+#### Date Fields Hierarchies
+
+Date Fields aggregation is displayed as a hierarchical list in the Fields section. You can find Year, Quarter, Month, Days, and Minutes, depending on the level of granularity of your Date field.
+
+When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed.
+
+![Showing the date field hierarchy functionality in Reveal](images/Date-Field-Hierarchy.png)
+
+In addition, dragging a specific hierarchy level will show data for that level only, as shown below.
+
+![Dragging part of the hierarchy of a date field in Reveal](images/Date-Field-Hierarchy-Level.png)
 
 <a name='numeric-fields'></a>
 ### Numeric Fields
@@ -89,7 +98,7 @@ options:
     problem. You can establish styling rules up to three ranges
     (typically used for upper, middle, and lower ranges), but you can
     customize your limits, type of comparison, colors, and indicator
-    symbols.
+    symbols. 
 
 <a name='abc-fields'></a>
 ### String Fields
