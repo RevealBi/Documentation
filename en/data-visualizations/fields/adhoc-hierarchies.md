@@ -29,10 +29,6 @@ columns. In the example presented in the screenshot, you not only can
 drill up and down, but you can also expand each *Department* to show the
 *Office*.
 
->[!NOTE]
->**Ad-hoc Hierarchies with Date and Time Fields**.
->Building ad-hoc hierarchies with Date, Time and other calendar data is **not supported**.
-
 ### Supported Visualizations
 
 Ad-hoc hierarchies can be added to all visualizations ***except*** for
