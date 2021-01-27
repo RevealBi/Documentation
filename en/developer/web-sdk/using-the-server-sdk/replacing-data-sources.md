@@ -7,7 +7,7 @@ SDK), you can override the configuration or data to be used for each
 visualization of the dashboard.
 
 One of the properties to implement in
-__IRevealSdkContext__
+__RevealSdkContextBase__
 is:
 
 ``` csharp
@@ -109,8 +109,7 @@ In the example above, the following two replacements will be performed:
 
 Please note that in addition to implement
 __IRVDataSourceProvider__
-you need to modify your implementation of
-__IRevealSdkContext.DataSourceProvider__
+you need to modify your implementation of __RevealSdkContextBase.DataSourceProvider__
 to return it:
 
 ``` csharp
