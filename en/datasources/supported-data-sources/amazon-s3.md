@@ -2,6 +2,8 @@
 
 Amazon Simple Storage Service (S3) is a highly scalable and fast data storage service. Adding Amazon S3 to your data sources allows you to access and analyze your data from S3 directly in Reveal.
 
+### Connecting to Amazon S3 
+
 To configure an Amazon S3 data source, you will need to enter the following information:
 
 <img src="images/configure-amazon-s3-dialog.png" alt="Configure Amazon Athena dialog" width="100%"/>

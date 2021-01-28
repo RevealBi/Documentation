@@ -4,7 +4,7 @@ The Google BigQuery data source provides a significant speed increase
 when processing big data within Reveal. This allows you to use datasets
 with millions of records for your visualizations with no slow down.
 
-### Configuring a Google BigQuery Data Source
+### Connecting to Google BigQuery
 
 Upon selecting Google BigQuery, you will be prompted to connect to your
 **Google account**.

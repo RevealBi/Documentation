@@ -27,7 +27,7 @@ Here you can choose the Salesforce object you need from:
   - *All Objects* - this category displays the full list of objects
     contained in your Salesforce account.  You can use the provided search to find quickly the object you need.
 
-#### Using Reports
+### Using Reports
 
 After selecting which report you want to use in the visualization editor, you need to set the values for the parameters in the dialog that follows:
 

@@ -4,13 +4,13 @@ If you sign in with your Office365 account, you will have your OneDrive automati
 
 To use your OneDrive data, follow the steps below.
 
-1.  Upon selecting your OneDrive, you will see the following prompt:
+Upon selecting your OneDrive, you will see the following prompt:
 
-    ![One Drive Login](images/OneDriveLogin_All.png)
+  <img src="images/OneDriveLogin_All.png" alt="One Drive Login" width=100%/>
 
-    Enter your **account and password** and select "Sign in".
+Enter your **account and password** for Microsoft and select *Sign in*.
 
-2.  You will then be notified that you will need to give some **limited permissions** to Reveal so that it can use your OneDrive data.
+1.  You will then be notified that you will need to give some **limited permissions** to Reveal so that it can use your OneDrive data.
 
     ![Reveal notification for giving permissions to the app](images/notification-limited-permissions.png)
 
@@ -18,12 +18,10 @@ To use your OneDrive data, follow the steps below.
 
     ![Limited permissions request Microsoft dialog](images/limited-permissions-onedrive_all.png)
 
-3.  Select *Allow* to authorize Reveal to use (read and maintain access
+2.  Select *Allow* to authorize Reveal to use (read and maintain access
     to) your OneDrive files.
 
-You can now use your OneDrive data to build your visualizations and will
-not be asked for these permissions again.
-
+After authorizing Reveal to use your data, you can use your *OneDrive* files to build visualizations.
 ### Supported Files
 
 When working within Reveal, you will be able to use a wide variety of

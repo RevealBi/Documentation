@@ -12,7 +12,7 @@ database's settings:
     to the database instance.
 
 <a name='using-sid'></a>
-### Using SID
+### Connecting to Oracle Using SID
 
 To configure Oracle using SID, you will need to enter the following
 information:
@@ -54,7 +54,7 @@ information:
     Connection**.
 
 <a name='using-service'></a>
-### Using Service
+### Connecting to Oracle Using Service
 
 To configure Oracle using Service, you will need to enter the following
 information:
@@ -114,7 +114,7 @@ that the commands should be executed on the server.
 | 2. Type in **ipconfig**              | 2. Type in **$ /bin/ifconfig**    | 2. Select your connection.                                    |
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
-### Working with Views
+### Setting Up Your Data
 
 With Reveal, you can retrieve Oracle data from entire tables. Still, you
 can select a particular

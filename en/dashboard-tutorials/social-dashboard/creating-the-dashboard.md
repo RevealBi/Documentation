@@ -11,7 +11,7 @@ button in the top right-hand corner of the initial view, and select the
 After you select **Dashboard**, you will see the **New Visualization**
 screen pop up. Select the + sign in the top right corner, and then the
 data source in which you stored the the sample datasheet mentioned in
-[this section](~/en/dashboard-tutorials/finance-dashboard/getting-started.html#sample-datasheet).
+[this section](~/en/dashboard-tutorials/finance-dashboard/getting-started.html#sample-data).
 
 ![creatingnewvisualization\_all](images/creating-new-visualization.png)
 

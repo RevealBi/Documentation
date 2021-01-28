@@ -1,8 +1,7 @@
 ## Amazon Athena 
 
 The Amazon Athena data source in Reveal allows you to access and query unstructured data stored in [Amazon S3](amazon-s3.md), and use it for your visualizations.  
-
-### Configuring Your Data Source Connection
+### Connecting to Amazon Athena
 
 To configure an Amazon Athena data source, you will need to enter the following information:
 

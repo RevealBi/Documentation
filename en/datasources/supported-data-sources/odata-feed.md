@@ -1,5 +1,6 @@
 ## OData Feed
 
+### Connecting to OData Feed
 To configure an OData Service data source, you will need to enter the
 following information:
 
@@ -25,9 +26,7 @@ following information:
       - **Password**: the password to access the OData Service, if
         applicable.
 
-Once ready, select **Create Account**. You can verify whether the
-account is reaching the data source or not by selecting **Test
-Connection**.
+Once ready, select **Continue**.
 
 To set up an *OAuth 2 / OIDC account* for a protected OData Service data
 source, please read [this topic](~/en/datasources/OAuth-2-OIDC-User-Authentication.md).

@@ -35,9 +35,7 @@ following information:
       - **Password**: the password to access the Web Resource, if
         applicable.
 
-Once ready, select **Create Account**. You can verify whether the
-account is reaching the data source or not by selecting **Test
-Connection**.
+Once ready, select **Continue**.
 
 To set up an *OAuth 2 / OIDC account* for a protected web resource,
 please read [this topic](~/en/datasources/auth-2-oidc-user-authentication.md).

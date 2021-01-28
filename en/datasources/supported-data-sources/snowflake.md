@@ -1,5 +1,7 @@
 ## Snowflake
 
+### Connecting with Snowflake
+
 To configure a Snowflake data source, you first need to connect to the server by entering the following information:
 
 <img src="images/enter-snowflake-server-details.png" alt="Configure Snowflake Server details" width="100%"/>
