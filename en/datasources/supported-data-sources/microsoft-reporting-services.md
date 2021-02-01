@@ -4,7 +4,7 @@ You can now use your existing Microsoft Reporting Services (SSRS)
 reports in Reveal by embedding them as PDF files in your dashboards or
 simply getting the data from the reports to create a visualization.
 
-### Configuring a Microsoft Reporting Data Source
+### Connecting to Microsoft Reporting Services
 
 To configure a Microsoft Reporting Services (SSRS) Data Source, you will
 need to enter the following information:
@@ -30,7 +30,7 @@ need to enter the following information:
     enter new credentials for Microsoft Reporting Services or select
     existing ones if applicable.
 
-### Advanced Configuration: Working with Microsoft Reporting Services
+### Setting Up Your Report
 
 After configuring the connection to your Microsoft Reporting Services
 reports, the following dialog will open, prompting you to choose a

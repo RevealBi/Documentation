@@ -21,7 +21,7 @@ systems on the web. In the REST architecture, clients send requests to
 retrieve or modify resources, and servers send responses to these
 requests.
 
-### Configuring a REST API Data Source
+### Connecting to a REST API
 
 To configure a REST API data source, you will need to enter the
 following information:

@@ -45,9 +45,9 @@ options:
 
 #### Date Fields Hierarchies
 
-Date Fields aggregation is displayed as a hierarchical list in the Fields section. You can find Year, Quarter, Month, Days, and Minutes, depending on the level of granularity of your Date field.
+Date Fields aggregation is displayed as a hierarchical list in the Fields section. You can find Year, Quarter, Month, Day, and Minutes, depending on the level of granularity of your Date field.
 
-When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed.
+When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed (see below).
 
 ![Showing the date field hierarchy functionality in Reveal](images/Date-Field-Hierarchy.png)
 

@@ -2,6 +2,8 @@
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible PostgreSQL addresses. If your PostgreSQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this PostgreSQL address. This limitation does not apply to *Reveal Embedded*.
 
+### Connecting to PostgreSQL
+
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 
@@ -54,8 +56,8 @@ that the commands should be executed on the server.
 | 2\. Type in **ipconfig**             | 2\. Type in **$ /bin/ifconfig**   | 2\. Select your connection.                                   |
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
-### Working with Views
-
+### Setting Up Your Data
+#### Working with Views
 With Reveal, you can retrieve PostgreSQL data from entire tables, but
 you can also select a particular
 [view](https://www.postgresqltutorial.com/postgresql-views/) that
@@ -68,7 +70,7 @@ of the data in the **Products** table in the PostgreSQL server.
 
 <img src="images/invoices-postgre-sql-view-sample.png" alt="Sample dashboard using PostgreSQL invoices view data" width="100%"/>
 
-### Working With Functions
+#### Working With Functions
 
 PostgreSQL functions allow you to carry out operations that would normally take several queries and round trips in a single function within the database.
 

@@ -1,5 +1,7 @@
 ## SharePoint Online
 
+### Connecting to SharePoint 
+
 Upon selecting SharePoint, you will see the following log in prompt.
 
 ![SharePoint Login](images/sharepoint-login.png)

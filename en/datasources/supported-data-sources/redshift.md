@@ -1,5 +1,5 @@
 ## Amazon Redshift
-
+### Connecting to Amazon Redshift
 To configure an Amazon Redshift data source, you will need to enter the following information:
 
 <img src="images/enter-amazon-redshift-server-details.png" alt="Configure Redshift Server details" width="100%"/>
@@ -45,7 +45,7 @@ that the commands should be executed on the server.
 | 2\. Type in **ipconfig**             | 2\. Type in **$ /bin/ifconfig**   | 2\. Select your connection.                                   |
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
-### Working with Views
+### Setting Up Your Data
 
 With Reveal, you can retrieve *Redshift* data from entire tables, but you can also select a particular
 [view](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_VIEW.html) that returns a subset of data from a table or a set of tables instead.

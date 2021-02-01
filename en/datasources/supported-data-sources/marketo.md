@@ -1,5 +1,7 @@
 ## Marketo 
 
+### Connecting to Marketo 
+
 Upon selecting the Marketo data source, you will see the following screen:
 
 ![Data source connection configuring screen](images/marketo-configure-login-screen.png)

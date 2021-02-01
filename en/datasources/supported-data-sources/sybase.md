@@ -2,6 +2,7 @@
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Sybase addresses. If your Sybase address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this Sybase address. This limitation does not apply to *Reveal Embedded*.
 
+### Connecting to Sybases
 To configure a Sybase server data source, you will need to enter the
 following information:
 
@@ -29,9 +30,7 @@ following information:
 
       - **Password**: the password to access the Sybase server.
 
-        Once ready, select **Create Account**. You can verify whether
-        the account is reaching the data source or not by selecting
-        **Test Connection**.
+  Once ready, select **Continue**.
 
 <a name='how-to-find-server'></a>
 ### How to find your Server Information
@@ -54,7 +53,9 @@ that the commands should be executed on the server.
 | 2\. Type in **ipconfig**             | 2\. Type in **$ /bin/ifconfig**   | 2\. Select your connection.                                   |
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
-### Working with Views
+### Setting Up Your Data
+
+#### Working with Views 
 
 With Reveal, you can retrieve Sybase data from entire tables, but you
 can also select a particular
@@ -70,7 +71,7 @@ projections taken from one of the tables in the database.
 
 For more information on views and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm).
 
-### Working with Stored Procedures
+#### Working with Stored Procedures
 
 In Sybase, stored procedures allow users to run a set of query
 statements in a relational database with specific parameters. The

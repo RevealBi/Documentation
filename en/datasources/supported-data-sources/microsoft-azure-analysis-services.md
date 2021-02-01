@@ -1,7 +1,6 @@
 ## Microsoft Azure Analysis Services
 
 Azure Analysis Services is a fully managed platform as a service (PaaS) that provides enterprise-grade data models in the cloud. Now, you can use the Azure Analysis data models in Reveal to create dashboards and perform data analysis.
-
 ### Configuring an Azure Analysis Services data source
 
 Unlike other databases used in Reveal (Microsoft Analysis Services, MySQL, Oracle, etc.), MS Azure Analysis Services can be used in Reveal Web.

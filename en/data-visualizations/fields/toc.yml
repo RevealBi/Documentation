@@ -2,6 +2,7 @@
   href: overview.md
 - name: Field Settings
   href: field-settings.md
+  updated: true
 - name: Sort by Field
   href: sort-by-field.md
 - name: Ad-Hoc Hierarchies

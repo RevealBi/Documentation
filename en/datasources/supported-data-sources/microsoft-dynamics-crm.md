@@ -23,6 +23,4 @@ enter the following information:
 
       - **Password**: the password for the Dynamics CRM website.
 
-Once ready, select **Create Account**. You can verify whether the
-account is reaching the data source or not by selecting **Test
-Connection**.
+Once ready, select **Continue**.
