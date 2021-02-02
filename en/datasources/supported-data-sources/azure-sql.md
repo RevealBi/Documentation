@@ -18,18 +18,15 @@ To configure an Azure SQL data source, you will need to enter the following info
     is entered, Reveal will connect to the port in the hint text (1433)
     by default.
 
-4.  **Credentials**: after selecting *Credentials*, you will be able to
-    enter the credentials for Azure SQL or choose existing ones if
-    applicable.
+4.  **Credentials**: after selecting *Credentials*, you will be able to enter the credentials for Azure SQL or choose existing ones if applicable.
 
-      - *Default name* of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Azure SQL Database*. You can change it to your preference.
+  - *Default name* of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Azure SQL Database*. You can change it to your preference.
 
+  - *(Optional)* **Domain**: the name of the domain, if applicable.
 
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
+  - **Username**: the user account for Azure SQL.
 
-      - **Username**: the user account for Azure SQL.
-
-      - **Password**: the password to access Azure SQL.
+  - **Password**: the password to access Azure SQL.
 
 5.  *(Conditional)* **Database**: Once you connect to your account, you
     will get your databases to choose from (if more than one).
