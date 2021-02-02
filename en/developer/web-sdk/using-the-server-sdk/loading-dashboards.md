@@ -15,7 +15,7 @@ There are two ways to open/save dashboards with the SDK:
 
 ### The Server-Side Approach
 
-In order to visualize a dashboard, you can provide the SDK with an instance of a Dashboard class, which you could instantiate passing a a stream to an rdash or json string representatation of an rdash.
+In order to visualize a dashboard, you can provide the SDK with an instance of a Dashboard class, which you could instantiate passing a stream to a rdash or json string representation of a rdash.
 
 The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __RevealSdkContextBase.GetDashboardAsync__.
 
