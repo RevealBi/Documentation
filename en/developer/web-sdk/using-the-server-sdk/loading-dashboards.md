@@ -15,21 +15,25 @@ There are two ways to open/save dashboards with the SDK:
 
 ### The Server-Side Approach
 
-In order to visualize a dashboard, you must provide the SDK with its .rdash file as a stream.
+In order to visualize a dashboard, you can provide the SDK with an instance of a Dashboard class, which you could instantiate passing a a stream to an rdash or json string representatation of an rdash.
 
-The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __IRevealSdkContext.GetDashboardAsync__.
+The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __RevealSdkContextBase.GetDashboardAsync__.
 
 ### Code
 
 ``` csharp
-public Task<Stream> GetDashboardAsync(string dashboardId)
+public override Task<Dashboard> GetDashboardAsync(string dashboardId)
 {
-    var resourceName = $"Reveal.Sdk.Samples.Web.UpMedia.Dashboards.{dashboardId}";
+    var dashboardFileName = dashboardId + ".rdash";
+    var resourceName = $"Demo1.Dashboards.{dashboardFileName}";
     var assembly = Assembly.GetExecutingAssembly();
-    return Task.FromResult(assembly.GetManifestResourceStream(resourceName));
- }
+    var rdashStream = assembly.GetManifestResourceStream(resourceName)
+    var dashboard = new Dashboard(assembly.GetManifestResourceStream(rdashStream));
+
+    return Task.FromResult(dashboard);
+}
 ```
 
 This code for
-__IRevealSdkContext.GetDashboardAsync__
+__RevealSdkContextBase.GetDashboardAsync__
 will be invoked on the server when you use **RVDashboard.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.

@@ -63,37 +63,33 @@ If you are having issues with the build, follow this
 #### 2\. Defining the Server Context
 
 After referencing the required DLLs, you need to create a class that
-implements the
-**IRevealSdkContext**
-interface. This interface allows the Reveal SDK to run inside of your
+inherits the
+**RevealSdkContextBase**
+abstract class. This class allows the Reveal SDK to run inside of your
 host application and provides callbacks for working with the SDK.
 
 ```csharp
 using Reveal.Sdk;
-public class RevealSdkContext : IRevealSdkContext
+public class RevealSdkContext : RevealSdkContextBase
 {
-    public IRVDataSourceProvider DataSourceProvider => null;
+    public override IRVDataSourceProvider DataSourceProvider => null;
 
-    public IRVDataProvider DataProvider => null;
+    public override IRVDataProvider DataProvider => null;
 
-    public IRVAuthenticationProvider AuthenticationProvider => null;
-
-    public async Task<Stream> GetDashboardAsync(string dashboardId)
+    public override IRVAuthenticationProvider AuthenticationProvider => null;
+      
+    public override Task<Dashboard> GetDashboardAsync(string dashboardId)
     {
-        return await Task.Run(() =>
-        {
-            //load a .rdash file as a stream and return it
-            var fileName = $"C:\\Temp\\{dashboardId}.rdash";
-            return new FileStream(fileName, FileMode.Open, FileAccess.Read);
-        });
+        var fileName = $"C:\\Temp\\{dashboardId}.rdash";
+        var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+        return Task.FromResult(new Dashboard(fileStream));
     }
 
     //This callback is used only when “onSave” event is not installed on the
     //RevealView object client side. For more information see the web client SDK documentation
-    public async Task SaveDashboardAsync(string userId, string dashboardId, Stream dashboardStream)
+    public override Task SaveDashboardAsync(string userId, string dashboardId, Dashboard dashboard)
     {
-        //Save edited dashboard here
-        await Task.Run(() => { });
+        return Task.CompletedTask;
     }
 }
 ```
@@ -127,7 +123,7 @@ services.AddRevealServices(new RevealEmbedSettings
 ```
 
 > [!NOTE] > **LocalFileStoragePath** is only required if you are using local Excel or CSV files as dashboard data source, and the
-> _RevealSdkContext_ class implements _IRevealSdkContext_ as described before.
+> _RevealSdkContext_ class inherits _RevealSdkContextBase_ as described above.
 
 Finally, you need to add Reveal endpoints by calling the **AddReveal**
 extension method when adding MVC service. Similar to the following code

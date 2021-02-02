@@ -12,32 +12,32 @@ __IRVAuthenticationProvider__
 and return it as the
 __AuthenticationProvider__
 property in
-__IRevealSdkContext__,
+__RevealSdkContextBase__,
 as shown below.
 
 ``` csharp
 public class EmbedAuthenticationProvider : IRVAuthenticationProvider
 {
     public Task<IRVDataSourceCredential> ResolveCredentialsAsync(string userId, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVPostgresDataSource)
         {
-            IRVDataSourceCredential userCredential = null;
-            if (dataSource is RVPostgresDataSource)
-            {
-                userCredential = new RVUsernamePasswordDataSourceCredential("postgresuser", "password");
-            }
-            else if (dataSource is RVSqlServerDataSource)
-            {
-                userCredential = new RVUsernamePasswordDataSourceCredential("sqlserveruser", "password", "domain");
-            }
-            else if (dataSource is RVGoogleDriveDataSource)
-            {
-                userCredential = new RVBearerTokenDataSourceCredential("fhJhbUci0mJSUzi1nIiSint....", "user@company.com");
-            }
-            else if (dataSource is RVRestDataSource)
-            {
-                userCredential = new RVUsernamePasswordDataSourceCredential(); // Anonymous
-            }
-            return Task.FromResult<IRVDataSourceCredential>(userCredential);
+            userCredential = new RVUsernamePasswordDataSourceCredential("postgresuser", "password");
+        }
+        else if (dataSource is RVSqlServerDataSource)
+        {
+            userCredential = new RVUsernamePasswordDataSourceCredential("sqlserveruser", "password", "domain");
+        }
+        else if (dataSource is RVGoogleDriveDataSource)
+        {
+            userCredential = new RVBearerTokenDataSourceCredential("fhJhbUci0mJSUzi1nIiSint....", "user@company.com");
+        }
+        else if (dataSource is RVRestDataSource)
+        {
+            userCredential = new RVUsernamePasswordDataSourceCredential(); // Anonymous
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
 }
 ```

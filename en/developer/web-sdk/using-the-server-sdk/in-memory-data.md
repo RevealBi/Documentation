@@ -69,7 +69,7 @@ Now you need to visualize the dashboard using your own data instead of the dummy
     __IRVDataSourceProvider__
     and return it as the __DataSourceProvider__
     property in
-    __IRevealSdkContext__, as described in [**Replacing Data Sources**](replacing-data-sources.md).
+    __RevealSdkContextBase__, as described in [**Replacing Data Sources**](replacing-data-sources.md).
 
     Then, in the implementation for the method
     **ChangeVisualizationDataSourceItemAsync**, you need to add a code similar to this one:
@@ -137,7 +137,7 @@ public class Employee
 ```
 
 In addition, to implement
-__IRVDataProvider__ you need to modify your implementation of __IRevealSdkContext.DataProvider__ to return it:
+__IRVDataProvider__ you need to modify your implementation of __RevealSdkContextBase.DataProvider__ to return it:
 
 ``` csharp
 IRVDataProvider DataProvider => new EmbedDataProvider();
