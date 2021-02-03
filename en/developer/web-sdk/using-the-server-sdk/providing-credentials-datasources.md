@@ -27,6 +27,7 @@ public class EmbedAuthenticationProvider : IRVAuthenticationProvider
         }
         else if (dataSource is RVSqlServerDataSource)
         {
+            // The "domain" parameter is not always needed and this depends on your SQL Server configuration. 
             userCredential = new RVUsernamePasswordDataSourceCredential("sqlserveruser", "password", "domain");
         }
         else if (dataSource is RVGoogleDriveDataSource)
