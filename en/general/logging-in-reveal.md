@@ -18,29 +18,31 @@ Once you get in, you are greeted with your first screen:
 
 <img src="images/reveal-initial-view.png" alt="First screen in Reveal with numbering added" width="100%"/>
 
-You always start in your personal space, **My Stuff**.
+You always start in your personal space, **Home**. Below you can find a quick reference for this initial screen:
 
-Below you can find a quick reference for this initial screen:
+1.  **Home/My Stuff** - Here you can access your personal space, including dashboards, favorites, recents and predefined samples.
 
- 1.  **My Stuff/Teams** - In this popover menu, you can access your personal space and any team you are a member of. You can also create new teams or join existing ones.
+    *  *Dashboards* - This is the central hub for all dashboards. Start from here when you want to create, revise, share, or just open a dashboard you need that was created by other team members.
 
+    * *Favorites* - Keep your most important dashboards at hand in *Favorites*.
 
- 1.  **Dashboards** - This is the central hub for all dashboards. Start from here when you want to create, revise, share, or just open a dashboard you need that was created by other team members.
+    * *Recent* - In *Recent*, you will find the dashboards you have viewed or edited, sorted by the most recently used.
 
- 3.  **Favorites** - Keep your most important dashboards at hand in *Favorites*.
+    * *Dashboard samples* - In *Samples*, you will find dashboards composed by the Reveal's team. Their rich variety of visualizations will inspire your creativity and help you create your own beautiful dashboards.
 
- 4.  **Recent** - In *Recent*, you will find the dashboards you have viewed or edited, sorted by the most recently used.
+2.  **Organization & Teams** - On the left hand side of the screen, you can access the organization team plus any team you are a member of. You can also create new teams or join existing ones.
 
- 5.  **Dashboard samples** - In *Samples*, you will find dashboards composed by the Reveal's team. Their rich variety of visualizations will inspire your creativity and help you create your own beautiful dashboards.
+3.  **Notifications center** - Select the the bell icon to access team and dashboard updates.
 
- 6.  **+ Dashboard split button** - By selecting the *+ Dashboard* split button, you can create folders or go directly to dashboard creation. In addition, here you can also upload a .rdash file (Reveal dashboard).
+4.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
 
- 7.  **Filter** - choose from the dropdown menu which dashboards to see in the dashboard module: all, only created by you
- or shared with you.
+5.  **+ Dashboard split button** - By selecting the *+ Dashboard* split button, you can create folders or go directly to dashboard creation. In addition, here you can also upload a .rdash file (Reveal dashboard).
 
- 8.  **Notifications center** - Select the the bell icon to access team and dashboard updates.
+Once you start using the application, it will look like this:
 
- 9.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
+<img src="images/reveal-initial-view-content.png" alt="First screen in Reveal with content" width="100%"/>
+
+**Filter** - As soon as you have any dashboards, you can choose from the dropdown menu which dashboards to see in the dashboard module: *Everything*, only created by you or shared with you.
 
 ### What About Roles & Permissions?
 

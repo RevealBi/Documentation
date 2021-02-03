@@ -50,8 +50,10 @@ Use your trained models' data from BigQuery or Azure Machine Learning Studio in 
 
 ### What's new?
 
-* [Amazon Athena ](~/en/datasources/supported-data-sources/athena.md) data source – You can now connect to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
-* [Amazon S3](~/en/datasources/supported-data-sources/amazon-s3.md) data source – You can also access your data from Amazon S3 directly.
+* [Snowflake](~/en/datasources/supported-data-sources/snowflake.md) data source – You can now access your data from Snowflake within Reveal.
+* [Date Hierarchies](~/en/data-visualizations/fields/field-settings.html#date-fields)– Date fields now automatically display a hierarchy in the Pivot Editor (Year, Quarter, Month, Day, and Minute).
+* [Scatter Map enhancement](~/en/data-visualizations/visualization-types/scatter-map/scatter-map.html#scatter-maps-zoom) – A new zoom control allows you to better adjust the zoom level and reset it when needed.
+* [Improved UI Navigation](~/en/general/logging-in-reveal.html#your-first-screen) – The main navigation changed, with a different UI and organization, resulting in a better navigation experience.
 
 ### Where Can I Get Reveal?
 
