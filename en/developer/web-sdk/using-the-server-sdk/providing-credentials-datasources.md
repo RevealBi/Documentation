@@ -33,7 +33,7 @@ public class EmbedAuthenticationProvider : IRVAuthenticationProvider
         {
             userCredential = new RVBearerTokenDataSourceCredential("fhJhbUci0mJSUzi1nIiSint....", "user@company.com");
         }
-        else if (dataSource is RVRestDataSource)
+        else if (dataSource is RVRESTDataSource)
         {
             userCredential = new RVUsernamePasswordDataSourceCredential(); // Anonymous
         }
