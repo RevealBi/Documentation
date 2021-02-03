@@ -17,23 +17,50 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="3">12/4/2020</td>
-        <td class="tg-0lax" rowspan="3"> 1.0.16 <br> [1.0.20 iOS] </td>
-        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Category field label not being
-                shown</span><br>In Category Charts, tooltips were not displaying the field label but the original field
-            name of a category instead.
+        <td class="tg-0lax" rowspan="5">2/3/2021</td>
+        <td class="tg-0lax" rowspan="5"> ????? <br> [iOS???] </td>
+        <td class="tg-cly1"><span style="font-style:italic">New Snowflake data source</span><br>
+        You can now access your data from Snowflake within Reveal.
         </td>
     </tr>
     <tr>
-        <td class="tg-cly1"><span style="font-style:italic">
-                [Public Bug Fix] Dates in drill down breadcrumbs wrongly displayed </span><br>
+        <td class="tg-cly1"><span style="font-style:italic">New Date Hierarchies</span><br>
+    Date fields now automatically display a hierarchy in the Pivot Editor (Year, Quarter, Month, Day, and Minute).
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">Scatter Map enhancement</span><br>
+            A new zoom control was added to the Scatter Map, allowing you to better adjust the zoom level and resetting it when needed.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">New UI Navigation</span><br>
+            The main navigation changed, with a different UI and organization, resulting in a better navigation experience.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Word not localized to Japanese</span><br>
+            The word "Others" was not localized to "その他" in Japanese.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-0lax" rowspan="3">12/4/2020</td>
+        <td class="tg-0lax" rowspan="3"> 1.0.16 <br> [1.0.20 iOS] </td>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Category field label not being
+            shown</span><br>
+            In Category Charts, tooltips were not displaying the field label but the original field
+            name of a category instead.
+        </td>
+    </tr>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Dates in drill down breadcrumbs wrongly displayed </span><br>
             When drilling down on a date field, breadcrumbs did not display values properly. Now breadcrumbs give clear
             information about your drill down level.
         </td>
     </tr>
     <tr>
-        <td class="tg-cly1"><span style="font-style:italic">
-                [Public Bug Fix] Hover Tooltips and Crosshairs not shown by default </span><br>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Hover Tooltips and Crosshairs not shown by default </span><br>
             In Dashboard View mode, Hover Tooltips and Crosshairs were not displayed until users enable them. Now they
             are enabled by default.
         </td>
