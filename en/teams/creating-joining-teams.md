@@ -10,7 +10,7 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 <a name='create-team-scratch'></a>
 ### Creating a Team from Scratch
 
-1.  Click *My Stuff* at the top left corner and select the *Join or Create a Team* button in the popover menu.
+1.  Click *Join or Create a Team* at the bottom left corner of the screen.
 
   ![join or create a team button in the popover menu](images/button-join-create-team.png)
 
@@ -46,16 +46,14 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
             >Carefully choose the *Organization* property for your team as you cannot change it later.
       - decide on team's [*privacy*](overview.html#team-privacy-levels) - this option will not be availabe if you choose _Personal Organization_ for your team.
 
-      - configure _branding_ settings - choose a main color and logo to be used when the teams' dashboards are exported as [PDF documents](~/en/dashboards/exporting-dashboards/export-as-pdf-document.md) and [PPT presentations](~/en/dashboards/exporting-dashboards/export-as-powerpoint-presentation). 
+      - configure _branding_ settings - choose a main color and logo to be used when the teams' dashboards are exported as [PDF documents](~/en/dashboards/exporting-dashboards/export-as-pdf-document.md) and [PPT presentations](~/en/dashboards/exporting-dashboards/export-as-powerpoint-presentation).
 
         >[!NOTE] **Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: jpg, jpeg, png, gif.
 
-3.  Click/Tap *Create*. Your team is now created and you can find it in the teams' list under *My Stuff* in the popover menu shown below: 
-  
-    <img src="images/new-team-created.png" alt="new team in the teams tab" width=100% />
-    
+3.  Click/Tap *Create*. Your team is now created and you can find it in the teams' list on the left side of the screen.
+
 4. After you create your team, you will be prompted to invite members. Click/tap the    
-the *+ Members* blue button. You can choose members from the dropdown list (see below) or use the search bar to add the emails of users who are outside of your Organization. Select _Done_ when you are ready. 
+the *+ Members* blue button. You can choose members from the dropdown list (see below) or use the search bar to add the emails of users who are outside of your Organization. Select _Done_ when you are ready.
 
   <img src="images/team-invite-members.png" alt="invite members dialog" width=100% />
 
@@ -70,12 +68,10 @@ If your account has been automatically added to an [Organization team](overview.
 and join other teams that belong to your organization**.
 To join an existing team, follow the steps below.
 
-1.  Click/Tap the popover menu in the top left corner (next to the
-    *Reveal* icon)
 
-2.  Click/tap the *Join or Create a Team* blue button.
+1.  Click/tap the *Join or Create a Team* blue button located in the bottom left of the screen.
 
-3.  The following screen shows up:
+2.  The following screen shows up:
 
     ![join or create a team dialog](images/join-or-create.png)
 
@@ -88,52 +84,6 @@ To join an existing team, follow the steps below.
     [permissions](overview.html#members-roles-permissions)
     to the team you have chosen. The team will appear in your teams' list.
 
-### Organizing your Teams' List
+### Navigating your Teams' List
 
-There is no limit to the teams you can create or join. To easily navigate through a large list of teams and find the one you need, you can filter your teams by:
-
-* the *Organization* they belong to,
-* *favorites*,
-* custom *groups* you have created.
-
-#### Filtering by Organization
-
-Filtering by organization appears as an option only if you have at least one team, which is part of your *Organization team* and one team, which is a *Personal team*.
-
-1.  Click/Tap the popover menu in the top left corner (next to the _Reveal_ icon).
-
-2. Click/Tap _All Organizations_ dropdown on top of your teams' list.
-
-![organization filter in the teams list](images/teams-organization-filter.png)
-
-
-3. Choose to see: all teams, only these that belong to the main Organization or only teams that do not belong to the Organization (_Personal Organization_ option).
-
->[!NOTE]
->**All Organizations menu not available**. The _All Organizations_ dropdown menu will not appear unless you have both teams belonging to the main Organization, and _Personal Organization_ teams.
-
-
-#### Adding to Favorites
-
-1. Click/Tap the overflow menu of any team in your teams' list.
-2. Select _Favorite_.
-
-![adding a team to favorites](images/adding-teams-favorites.png)
-
-
-3. This team will appear in the _Favorites_ list at the top of your teams.
-
-#### Organizing by Groups
-
-You can organize your teams by custom groups of your choice. To create a new group:
-
-1. Go to the overflow menu of a team in your list.
-2. Click/Tap _Select Group_.
-3. The _Group Team_ dialog opens. Click/Tap _+ Add Group_ to create a new group.
-
-![[add group to group team dialog]](images/group-team-dialog-add-group.png)
-
-4. Tick the circle of the group you want to add the team to. Select _Apply_.
-
-Your teams' list now shows your teams categorized by _Ungrouped Teams_ and teams in custom groups:
-![teams' list separated by custom groups and ungrouped teams](images/teams-categorized-by-groups.png)
+There is no limit to the teams you can create or join. To easily navigate through a large list of teams just scroll up & down as needed.

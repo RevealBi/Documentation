@@ -10,8 +10,6 @@ different pieces of related information, enabling users to make sense of their d
 
 ### The Dashboard Creation Process
 
-![Infographic showing the dashboard creation process ](images/dashboard-creation-process.png)
-
   - **Discover the KPI**: decide what you or your analysts want to show
     in your dashboard, and what it needs to revolve around.
 

@@ -26,7 +26,7 @@ Sometimes you may want to start your dashboard by creating a Text Box
 visualization showing a summary or brief introduction. To access the
 Text Box creation menu, follow the steps below:
 
-1.  Click/Tap the *+ Dashboard* split button in the top right corner of
+1.  Click/Tap the *+ New* button in the top right corner of
     Reveal's initial screen.
 
 2.  The *New Visualization* dialog opens and prompts you to select a
@@ -49,13 +49,13 @@ form appears:
 ![New text box dialog showing an empty text box form](images/text-box-empty-form.png)
 
 In this dialog:
- 
+
   - choose between *Small*, *Medium* and *Large* *Text Size*;
 
   - select the alignment of the text (next to *Text Size*).
-  
+
   - *(optional)* add a *Title*;
-  
+
   - write your own text in the text body (the *Enter text* box);
 
 

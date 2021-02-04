@@ -15,7 +15,7 @@ To retrieve information from a data source and use it for your visualizations yo
 
 To connect to a data source, perform the steps below.  
 
-1. From the *Home screen*, click/tap the **+ Dashboard** split blue button.
+1. From the *Home screen*, click/tap the **+ New** blue button.
    ![Reveal's home screen](images/start-creating-dashboard-data-source.png)
 2. In the _New Visualization_ dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
    ![Available data sources when creating a new visualization](images/creating-new-visualization.png)
@@ -34,17 +34,17 @@ After selecting a data source provider, you will be prompted to **configure** it
    - [Google BigQuery](~/en/datasources/supported-data-sources/google-bigquery.md)
 
    - [Google Drive](~/en/datasources/supported-data-sources/google-drive.md)
-  
+
    - [Hubspot](~/en/datasources/supported-data-sources/hubspot.md)
-  
+
    - [Marketo](~/en/datasources/supported-data-sources/marketo.md)
 
    - [Microsoft Analysis Services](~/en/datasources/supported-data-sources/microsoft-analysis-services/configuring-microsoft-analysis-services.md)*
-  
+
    - [Microsoft Azure Analysis Services](~/en/datasources/supported-data-sources/microsoft-azure-analysis-services.md)
 
    - [Microsoft Azure SQL Database](~/en/datasources/supported-data-sources/azure-sql.md)*
-  
+
    - [Microsoft Azure Synapse Analytics](~/en/datasources/supported-data-sources/microsoft-azure-synapse-analytics.md)
 
    - [Microsoft Dynamics CRM](~/en/datasources/supported-data-sources/microsoft-dynamics-crm.md)
@@ -62,8 +62,8 @@ After selecting a data source provider, you will be prompted to **configure** it
    - [Oracle](~/en/datasources/supported-data-sources/oracle.md)*
 
    - [PostgreSQL](~/en/datasources/supported-data-sources/postgresql.md)*
-  
-   - [Quickbooks](~/en/datasources/supported-data-sources/quickbooks.md) 
+
+   - [Quickbooks](~/en/datasources/supported-data-sources/quickbooks.md)
 
    - [REST API](~/en/datasources/supported-data-sources/rest-api.md)
 
@@ -81,8 +81,8 @@ After selecting a data source provider, you will be prompted to **configure** it
 >[!NOTE]
 > **Databases** (*) are not supported in the Web version of Reveal.
 
-### Related Topics 
+### Related Topics
 
-- You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Connecting a Dashboard to Its Data Source](connect-dashboard-to-data-source.md) topic. 
+- You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Connecting a Dashboard to Its Data Source](connect-dashboard-to-data-source.md) topic.
 - You started creating a visualization, but changed your mind about the data source? Read how to connect to a different data source while you are in the Visualization Editor in [Changing the Data Source for a Visualization](changing-data-source-visualization.md).
 - You want to use data from more than one data source for your visualization? Read the [Combining Data Sources in one Visualization](data-blending.md)

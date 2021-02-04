@@ -2,7 +2,7 @@
 
 In Reveal, you can also work with dashboards saved on your computer/device by directly uploading them. To do that, perform the following steps:
 
-1.  Select the arrow on the right of the *+ Dashboard* split button and then *Upload*.
+1.  Select the arrow on the right of the *+ New* button and then *Upload*.
 
     ![Upload option](images/upload-create-folder-menu.png)
 

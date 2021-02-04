@@ -6,8 +6,8 @@ The _Visualizations Editor_ is where you create and edit your visualizations in 
 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization you can choose between two alternative starting points.
 
-* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to _My Stuff_ / a team space and click/tap the _+ Dashboard_ blue split button.
-* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [_Dashboard Edit_](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap the _+ Visualization_ blue split button. 
+* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to _Home_ / a team space and click/tap the _+ New_ blue button.
+* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [_Dashboard Edit_](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap the _+ Visualization_ blue split button.
 
 After that, you will be prompted
 to add a new or select an existing [data source](~/en/datasources/overview.md).
@@ -32,26 +32,26 @@ After opening a chosen dashboard and entering _Dashboard Edit mode_, you will be
 
 ### Visualizations Editor Overview
 
-Below, you will find a list of all sections of the _Editor_ with their capabilities. 
+Below, you will find a list of all sections of the _Editor_ with their capabilities.
 
 <img src="images/visualization-editor-panes.png" alt="Panes of the Visualization editor" width="100%"/>
 
-1. **Data Section** - this section contains two panels: 
-  
+1. **Data Section** - this section contains two panels:
+
   a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
-       The *plus* icon in this panel allows you to either [blend data sources](~/en/datasources/data-blending.md) or [calculate a field](fields/calculated-fields/overview.html#precalculated-fields). The *brain* icon allows you to use fields from a [BigQuery](~/en/datasources/datasources/ml-integration/bigquery-machine-learning-models.md) or [Azure](~/en/datasources/datasources/ml-integration/azure-machine-learning-models.md) *machine learning model* for your visualization. 
-  
+       The *plus* icon in this panel allows you to either [blend data sources](~/en/datasources/data-blending.md) or [calculate a field](fields/calculated-fields/overview.html#precalculated-fields). The *brain* icon allows you to use fields from a [BigQuery](~/en/datasources/datasources/ml-integration/bigquery-machine-learning-models.md) or [Azure](~/en/datasources/datasources/ml-integration/azure-machine-learning-models.md) *machine learning model* for your visualization.
+
   b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
 
-2. **Settings Section** - this section allows you to customize what you want to show. Each visualization comes with its own settings. 
+2. **Settings Section** - this section allows you to customize what you want to show. Each visualization comes with its own settings.
 
   At the bottom of the *Settings* section you will see the option for links. This is a powerful feature that takes drill down to a whole new level. Read more in the [Dashboard Linking](~/en/dashboards/dashboard-linking.md) topic.
 
-3. **Visualization Picker**, where you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown you will notice the visualization fields section change. The fields building each visualization are different, but they change automatically so you only need to fill them in. 
+3. **Visualization Picker**, where you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown you will notice the visualization fields section change. The fields building each visualization are different, but they change automatically so you only need to fill them in.
 
 4. **Visualization Workspace** - Here is where you will be able to see the visualization you are creating or editing as you drag and drop fields. The visualization won't populate until you have all the necessary fields needed to create that chart type.
 
-5. **Data Source** - The data source that you are currently working with will be displayed here. With a click you can change between the different sheets, tables or views within your source or change your connection to a new source entirely without having to leave the editor. See more in [Changing the Data Source for a Visualization](~/en/datasources/changing-data-source-visualization.md) topic. 
+5. **Data Source** - The data source that you are currently working with will be displayed here. With a click you can change between the different sheets, tables or views within your source or change your connection to a new source entirely without having to leave the editor. See more in [Changing the Data Source for a Visualization](~/en/datasources/changing-data-source-visualization.md) topic.
 
 Among other things, you will be able to:
 

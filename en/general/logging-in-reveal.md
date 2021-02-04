@@ -30,13 +30,13 @@ You always start in your personal space, **Home**. Below you can find a quick re
 
     * *Dashboard samples* - In *Samples*, you will find dashboards composed by the Reveal's team. Their rich variety of visualizations will inspire your creativity and help you create your own beautiful dashboards.
 
-2.  **Organization & Teams** - On the left hand side of the screen, you can access the organization team plus any team you are a member of. You can also create new teams or join existing ones.
+2.  **Organization & Teams** - On the left side of the screen, you can access the organization team plus any team you are a member of. You can also create new teams or join existing ones.
 
 3.  **Notifications center** - Select the the bell icon to access team and dashboard updates.
 
 4.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
 
-5.  **+ Dashboard split button** - By selecting the *+ Dashboard* split button, you can create folders or go directly to dashboard creation. In addition, here you can also upload a .rdash file (Reveal dashboard).
+5.  **+ New button** - By selecting the *+ New* button, you can create folders or go directly to dashboard creation. In addition, here you can also upload a .rdash file (Reveal dashboard).
 
 Once you start using the application, it will look like this:
 

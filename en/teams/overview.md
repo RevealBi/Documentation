@@ -22,22 +22,20 @@ With Teams in Reveal, you can:
 
 ### Accessing Your Teams
 
-To access your teams click/tap on the popover menu next to the *Reveal* icon:
+
+You can access your teams on to the left side of the screen, below the *Reveal* icon:
 
 ![Accessing teams popover menu](images/accessing-teams-menu.png)
 
-You will find a list of your teams under *My Stuff* in the popover menu.
+You will find a list of your teams under the organization repository. There you can also create new teams or join existing ones.
+
 
 <a name='organization-team'></a>
 ### The Organization Repository
 
-Reveal creates the Organization repository automatically when a member
-of your organization logs in for the first time with Office365. Members
-need to log in with their organization's email to be associated with an
-organization and added to the Organization repository.
+Reveal creates the Organization repository automatically when a member of your organization logs in for the first time with Office365. Members need to log in with their organization's email to be associated with an organization and added to the Organization repository.
 
-You will find the Organization team in the teams' list under *My Stuff*.
-This team is named after your organization.
+You will find the Organization team right below the *Reveal* icon. This team is named after your organization.
 
 Unlike other teams, only [Owners](#members-roles-permissions) can create
 and add dashboards to the Organization repository. Only key members in

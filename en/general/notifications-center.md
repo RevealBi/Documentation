@@ -1,8 +1,7 @@
 ## Notifications Center
 
 The Notifications Center is designed to keep you updated of any team and
-dashboard changes. Open it by selecting the **bell icon** in the top
-right section of the application.
+dashboard changes. Open it by selecting the **bell icon** in the top right section of the application.
 
 ![Notification center icon and notifications' list](images/in-app-notifications.png)
 

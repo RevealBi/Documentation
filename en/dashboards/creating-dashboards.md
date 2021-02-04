@@ -13,7 +13,7 @@ The dashboard creation experience in Reveal includes:
 <a name='access-dashboard-creation-menu'></a>
 ### Access the Dashboard Creation Menu
 
-You can create a dashboard by selecting the **+ Dashboard** split button in the initial screen.
+You can create a dashboard by selecting the **+ New** button in the initial screen.
 
 ![Creating new dashboard](images/create-new-dashboard.png)
 
@@ -66,13 +66,13 @@ settings or add filters to it.
 ![editing visualization fields preview](images/editing-visualization-fields-preview.png)
 
 Once you have modified the visualization, you will be taken back to the
-**Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, switch on/off **Auto Layout**, **export** or **save** the dashboard. 
+**Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, switch on/off **Auto Layout**, **export** or **save** the dashboard.
 
-You can also use the overflow menu in the top right corner of the visualizations to rename, edit, **copy** or **duplicate** them. 
+You can also use the overflow menu in the top right corner of the visualizations to rename, edit, **copy** or **duplicate** them.
 
->[NOTE!] The **difference between copying and duplicating** a visualization is that duplicating works only inside the same dashboard and the copy option allows you to put the visualization in the same or a different dashboard. 
+>[NOTE!] The **difference between copying and duplicating** a visualization is that duplicating works only inside the same dashboard and the copy option allows you to put the visualization in the same or a different dashboard.
 
-After copying a visualization, find the _Paste_ option inside the overflow menu of the dashboard you want to paste the visualization in. 
+After copying a visualization, find the _Paste_ option inside the overflow menu of the dashboard you want to paste the visualization in.
 
 <img src="images/paste-option-dashboard.png" alt="paste option in the dashboard overflow menu" width=100%>
 

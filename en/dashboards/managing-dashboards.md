@@ -9,7 +9,7 @@ a Team, you will always be able to choose between: *dashboards created by you*, 
 
 Reveal allows you to store and organize your dashboards in different
 **folders** and **teams**. You can keep them at the one level, or you can nest them within each other in case you want to group them. In order
-to create your first folder, select the arrow of the *+Dashboard* split button (see below) and then choose **Create Folder**.
+to create your first folder, select the arrow of the *+New* button (see below) and then choose **Folder**.
 
 ![Create a folder option](images/upload-create-folder-menu.png)
 

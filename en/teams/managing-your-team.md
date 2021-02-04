@@ -19,8 +19,7 @@ they will be explicitly mentioned in this topic.
 
 Only the Owner of a team can invite members.
 
-To see the full members' list of a team: go to your teams' list → select a team → click/tap the members' icons
-on the right, as shown below.
+To see the full members' list of a team: go to your teams' list → click/tap the overflow button of a team → select *Manage Members*, as shown below.
 
 ![manage team members menu](images/manage-team-members_all.png)
 
@@ -43,9 +42,8 @@ invitation.
 <a name='manage-team-properties'></a>
 ### Managing Team Properties
 
-To change your team's properties: go to your teams'
-list→ select a team → click/tap the gear icon on the
-right.
+To change your team's properties:
+go to your teams' list → click/tap the overflow button of a team → select *Team Settings*, as shown below.
 
 ![team settings managing menu](images/team-settings-managing_all.png)
 
@@ -69,7 +67,7 @@ Organization repository.
 ### Deleting a Team
 
 You can delete a team only if you are an Owner. To do this, go to the
-team's [properties](#manage-team-properties) and click *Delete Team*.
+team's [settings](#manage-team-properties) and click *Delete Team*.
 
 ![delete team button](images/delete-team.png)
 
