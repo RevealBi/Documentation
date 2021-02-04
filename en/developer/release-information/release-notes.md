@@ -19,7 +19,7 @@ here.
     <tbody>
         <tr>
             <td rowspan="6">2/3/2021</td>
-            <td rowspan="6">????????</td>
+            <td rowspan="6">???????</td>
             <td><i>[Public Bug Fix] [SDK] HasPendingChanges property not working as expected</i><br> In Desktop SDK, the
                 HasPendingChanges property was not set to false after saving a dashboard with changes.</td>
         </tr>
