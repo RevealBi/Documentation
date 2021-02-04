@@ -4,7 +4,7 @@ This section describes the different options for applying
 transformations to datasets, such as sorting, filtering, and aggregating
 data.
 
-![data-filters-currency](images/data-filters-currency.png)
+<img src="images/data-filters-currency.png" alt="data-filters-currency" width="100%"/>
 
 In order to apply formatting or filter to your data, you must select the
 specific field you want to modify in the corresponding placeholder
@@ -26,7 +26,7 @@ options:
 <a name='date-fields'></a>
 ### Date Fields
 
-![Date-Field-Formatting](images/Date-Field-Formatting.png)
+<img src="images/Date-Field-Formatting.png" alt="Date-Field-Formatting" width="100%"/>
 
   - **Label renaming**: rename your fields for display purposes only.
     Fields are always referenced by their original name in calculated
@@ -49,16 +49,16 @@ Date Fields aggregation is displayed as a hierarchical list in the Fields sectio
 
 When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed (see below).
 
-![Showing the date field hierarchy functionality in Reveal](images/Date-Field-Hierarchy.png)
+<img src="images/Date-Field-Hierarchy.png" alt="Showing the date field hierarchy functionality in Reveal" width="100%"/>
 
 In addition, dragging a specific hierarchy level will show data for that level only, as shown below.
 
-![Dragging part of the hierarchy of a date field in Reveal](images/Date-Field-Hierarchy-Level.png)
+<img src="images/Date-Field-Hierarchy-Level.png" alt="Dragging part of the hierarchy of a date field in Reveal" width="100%"/>
 
 <a name='numeric-fields'></a>
 ### Numeric Fields
 
-![Numeric-Field-Formatting\_All.png](images/Numeric-Field-Formatting.png)
+<img src="images/Numeric-Field-Formatting.png" alt="Numeric-Field-Formatting\_All.png" width="100%"/>
 
   - **Label renaming**: rename your fields for display purposes only.
     Fields are always referenced by their original name in calculated
@@ -103,7 +103,7 @@ In addition, dragging a specific hierarchy level will show data for that level o
 <a name='abc-fields'></a>
 ### String Fields
 
-![String-Field-Formatting](images/string-field-formatting.png)
+<img src="images/string-field-formatting.png" alt="String-Field-Formatting" width="100%"/>
 
   - **Label renaming**: rename your fields for display purposes only.
     Fields are always referenced by their original name in calculated

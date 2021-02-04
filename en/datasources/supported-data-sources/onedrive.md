@@ -12,11 +12,11 @@ Enter your **account and password** for Microsoft and select *Sign in*.
 
 1.  You will then be notified that you will need to give some **limited permissions** to Reveal so that it can use your OneDrive data.
 
-    ![Reveal notification for giving permissions to the app](images/notification-limited-permissions.png)
+    <img src="images/notification-limited-permissions.png" alt="Reveal notification for giving permissions to the app" width="100%"/>
 
     By clicking *Continue*, you will be redirected to an **authorization prompt**:
 
-    ![Limited permissions request Microsoft dialog](images/limited-permissions-onedrive_all.png)
+    <img src="images/limited-permissions-onedrive_all.png" alt="Limited permissions request Microsoft dialog" width="100%"/>
 
 2.  Select *Allow* to authorize Reveal to use (read and maintain access
     to) your OneDrive files.

@@ -3,7 +3,7 @@
 In this tutorial, you will see how the "Stock Market (Performance)" dashboard displayed below was created using a sample spreadsheet with
 similar data.
 
-![StockPerformanceDashboard\_All](images/StockPerformanceDashboard_All.png)
+<img src="images/StockPerformanceDashboard_All.png" alt="StockPerformanceDashboard\_All" width="100%"/>
 
 ### What's in this Dashboard?
 

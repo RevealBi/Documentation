@@ -7,7 +7,7 @@
 To configure a MySQL server data source, you will need to enter the
 following information:
 
-![Enter MySQL Server Details dialog](images/enter-mySQL-server-details.png)
+<img src="images/enter-mySQL-server-details.png" alt="Enter MySQL Server Details dialog" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names the data source *MySQL*. You can change it to your preference.
 
@@ -59,11 +59,11 @@ that the commands should be executed on the server.
 
 With Reveal, you can retrieve MySQL data from entire tables. Still, you can also select a particular view that returns a subset of data from a table or a set of tables instead.
 
-![MySQL Views section](images/MySQL-views.png)
+<img src="images/MySQL-views.png" alt="MySQL Views section" width="100%"/>
 
 In the sample above, the **invoices** view contains a modified version
 of the data in the **Products** table in the MySQL server.
 
-![Sample dashboard using MySQL invoices view data](images/invoices-MySQL-view-sample.png)
+<img src="images/invoices-MySQL-view-sample.png" alt="Sample dashboard using MySQL invoices view data" width="100%"/>
 
 For more information on views and MySQL, visit [this documentation page](https://dev.mysql.com/doc/refman/8.0/en/views.html).

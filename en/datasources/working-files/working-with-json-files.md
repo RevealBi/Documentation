@@ -47,14 +47,14 @@ your JSON file:
 
     b.  Navigate the provider and select your JSON file.
 
-    ![A JSON file located in a cloud data source](images/json-files-locate-file.png)
+    <img src="images/json-files-locate-file.png" alt="A JSON file located in a cloud data source" width="100%"/>
 
 4.  **Choose the data structure you want**.
 
     After scanning the file, Reveal will show you a list of possible
     data structures for you to choose.
 
-    ![Json Files Choose Data table](images/json-files-choose-data-structure.png)
+    <img src="images/json-files-choose-data-structure.png" alt="Json Files Choose Data table" width="100%"/>
 
     If the list does not include the data structure you want, use the
     [**Advanced Selection**](#json-advanced-selection) mode where you
@@ -65,7 +65,7 @@ your JSON file:
     Once you selected the data structure, click/tap the *Load Data*
     button to continue to the *Visualizations Editor*.
 
-    ![Json Files Visualizations Editor](images/JsonFilesVisualizationsEditor_All.png)
+    <img src="images/JsonFilesVisualizationsEditor_All.png" alt="Json Files Visualizations Editor" width="100%"/>
 
 <a name='json-advanced-selection'></a>
 ### Advanced Selection Mode
@@ -80,14 +80,14 @@ with, you are able to build your visualization upon them.
     Click/Tap the **+ Table** button to get access to the *Advanced Selection*
     screen.
 
-    ![Json Files Open Advanced Selection](images/json-files-open-advanced-selection.png)
+    <img src="images/json-files-open-advanced-selection.png" alt="Json Files Open Advanced Selection" width="100%"/>
 
 2.  **Navigate the JSON Tree**.
 
     Expand the nodes and select the deepest level where you want to
     select the data.
 
-    ![Json Files Navigate Tree](images/json-files-navigate-tree.png)
+    <img src="images/json-files-navigate-tree.png" alt="Json Files Navigate Tree" width="100%"/>
 
 3.  **Select the tree elements and fields you want**.
 
@@ -96,7 +96,7 @@ with, you are able to build your visualization upon them.
 
     |                                                                             |                                                                                                                                           |
     | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-    | ![Json Files Unselect Elements](images/json-files-unselect-elements.png) | After selecting one or more children, you can unselect the parent elements (Objects and Arrays) to leave them out of your data structure. |
+    | <img src="images/json-files-unselect-elements.png" alt="Json Files Unselect Elements" width="100%"/> | After selecting one or more children, you can unselect the parent elements (Objects and Arrays) to leave them out of your data structure. |
 
 
 4.  (*Optional*) **Format text fields to Date/Time or Number**
@@ -105,11 +105,11 @@ with, you are able to build your visualization upon them.
     optimal format, and presents a dialog where you can choose what to
     do.
 
-    ![Json Files Format Fields](images/json-files-format-fields.png)
+    <img src="images/json-files-format-fields.png" alt="Json Files Format Fields" width="100%"/>
 
 5.  **Click/Tap *Create Table***.
 
     Once you selected your custom data structure, click/tap the *Create
     Table* button to continue to the *Visualizations Editor*.
 
-    ![JsonFilesVisualizationsEditor2\_All](images/json-files-visualizations-editor2.png)
+    <img src="images/json-files-visualizations-editor2.png" alt="JsonFilesVisualizationsEditor2\_All" width="100%"/>

@@ -39,7 +39,7 @@ following cloud providers:
 
 You can allow access to a cloud file at the point of selecting your data source to build a visualization. After choosing a file uploaded on one of the [supported cloud providers](#cloud-providers), you will be prompted to the following dialog:
 
-![Allow access checkbox in the Set up your file dialog](images/allow-access-box-sharing.png)
+<img src="images/allow-access-box-sharing.png" alt="Allow access checkbox in the Set up your file dialog" width="100%"/>
 
 Make sure the *Allow Access* checkbox is selected, otherwise the
 shareable link will be disabled.
@@ -56,7 +56,7 @@ shareable link, when sharing them with other users.
 
 3.  The following dialog opens:
 
-    ![A dialog to grant access to cloud file data sources](images/grant-access-share-dashboard-dialog.png)
+    <img src="images/grant-access-share-dashboard-dialog.png" alt="A dialog to grant access to cloud file data sources" width="100%"/>
 
     Click/Tap *Allow Access* and proceed with selecting users to [share your dashboard](share-a-dashboard.md) with.
 
@@ -68,7 +68,7 @@ one or more visualizations using cloud files as data source. If a
 shareable link to these data source files hasn't been created (has been
 disabled), Reveal will prompt you to allow access:
 
-![Allow access to a dashboard with a disabled link when saving in a team](images/save-dashboard-disabled-link-teams_all.png)
+<img src="images/save-dashboard-disabled-link-teams_all.png" alt="Allow access to a dashboard with a disabled link when saving in a team" width="100%"/>
 
 This way you make sure all team members can view the dashboard you saved
 in your team.

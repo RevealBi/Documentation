@@ -54,21 +54,21 @@ for a 12-month period arranged by worker type in a [line chart](~/en/visualizati
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingManufacturingSheet\_All.png](images/SelectingManufacturingSheet_All.png)
+    <img src="images/SelectingManufacturingSheet_All.png" alt="SelectingManufacturingSheet\_All.png" width="100%"/>
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Line" chart.
 
-    ![SelectLineChart\_All](images/SelectLineChart_All.png)
+    <img src="images/SelectLineChart_All.png" alt="SelectLineChart\_All" width="100%"/>
 
 
 
 3.  In the Data Editor, drag and drop the **Worker Type** field into
     Label, and the **Production** one into Values.
 
-    ![DragDropManufacturingProduction\_All](images/DragDropManufacturingProduction_All.png)
+    <img src="images/DragDropManufacturingProduction_All.png" alt="DragDropManufacturingProduction\_All" width="100%"/>
 
 
 
@@ -77,7 +77,7 @@ for a 12-month period arranged by worker type in a [line chart](~/en/visualizati
     **Production** in Values, and change **Fraction Digits** to **0**
     under **Formatting**.
 
-    ![ManufacturingProductionFractionDigits\_All](images/ManufacturingProductionFractionDigits_All.png)
+    <img src="images/ManufacturingProductionFractionDigits_All.png" alt="ManufacturingProductionFractionDigits\_All" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -87,7 +87,7 @@ for a 12-month period arranged by worker type in a [line chart](~/en/visualizati
     change the **Start Color** to the fifth one within the **Settings**
     screen of the Visualizations Editor.
 
-    ![ManufacturingProductionChangingStartColor\_All](images/ManufacturingProductionChangingStartColor_All.png)
+    <img src="images/ManufacturingProductionChangingStartColor_All.png" alt="ManufacturingProductionChangingStartColor\_All" width="100%"/>
 
 
 
@@ -108,21 +108,21 @@ create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingManufacturingSheet\_All.png](images/SelectingManufacturingSheet_All.png)
+    <img src="images/SelectingManufacturingSheet_All.png" alt="SelectingManufacturingSheet\_All.png" width="100%"/>
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Area" chart.
 
-    ![SelectAreaChart\_All](images/SelectAreaChart_All.png)
+    <img src="images/SelectAreaChart_All.png" alt="SelectAreaChart\_All" width="100%"/>
 
 
 
 3.  In the Data Editor, drag and drop the **Month** field into Label,
     and the **Shipping Orders** one into Values.
 
-    ![DragDropManufacturingShipping\_All](images/DragDropManufacturingShipping_All.png)
+    <img src="images/DragDropManufacturingShipping_All.png" alt="DragDropManufacturingShipping\_All" width="100%"/>
 
 
 
@@ -131,7 +131,7 @@ create it:
     **Label** placeholder, and change the **Date Aggregation** to
     **Month**.
 
-    ![ManufacturingShippingChangingDateAggregation\_All](images/ManufacturingShippingChangingDateAggregation_All.png)
+    <img src="images/ManufacturingShippingChangingDateAggregation_All.png" alt="ManufacturingShippingChangingDateAggregation\_All" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -141,7 +141,7 @@ create it:
     Select **Shipping Orders** in Values, and change **Fraction Digits**
     to **0** under **Formatting**.
 
-    ![ManufacturingShippingFractionDigits\_All](images/ManufacturingShippingFractionDigits_All.png)
+    <img src="images/ManufacturingShippingFractionDigits_All.png" alt="ManufacturingShippingFractionDigits\_All" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -165,13 +165,13 @@ order to create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingManufacturingSheet\_All.png](images/SelectingManufacturingSheet_All.png)
+    <img src="images/SelectingManufacturingSheet_All.png" alt="SelectingManufacturingSheet\_All.png" width="100%"/>
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Area" chart.
 
-    ![SelectSplineChart\_All](images/SelectSplineChart_All.png)
+    <img src="images/SelectSplineChart_All.png" alt="SelectSplineChart\_All" width="100%"/>
 
 
 
@@ -179,7 +179,7 @@ order to create it:
     and both the **Machine Hours** and the **Employee Hours** fields
     into Values.
 
-    ![DragDropManufacturingAverageHours\_All](images/DragDropManufacturingAverageHours_All.png)
+    <img src="images/DragDropManufacturingAverageHours_All.png" alt="DragDropManufacturingAverageHours\_All" width="100%"/>
 
 
 
@@ -188,7 +188,7 @@ order to create it:
     **Label** placeholder, and change the **Date Aggregation** to
     **Month**.
 
-    ![ManufacturingShippingChangingDateAggregation\_All](images/ManufacturingShippingChangingDateAggregation_All.png)
+    <img src="images/ManufacturingShippingChangingDateAggregation_All.png" alt="ManufacturingShippingChangingDateAggregation\_All" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -199,7 +199,7 @@ order to create it:
     from the Values placeholder, and change **Fraction Digits** to **0**
     under **Formatting**.
 
-    ![ManufacturingAverageHoursFractionDigits\_All](images/ManufacturingAverageHoursFractionDigits_All.png)
+    <img src="images/ManufacturingAverageHoursFractionDigits_All.png" alt="ManufacturingAverageHoursFractionDigits\_All" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -223,21 +223,21 @@ it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingManufacturingSheet\_All.png](images/SelectingManufacturingSheet_All.png)
+    <img src="images/SelectingManufacturingSheet_All.png" alt="SelectingManufacturingSheet\_All.png" width="100%"/>
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Area" chart.
 
-    ![SelectBarChart\_All](images/SelectBarChart_All.png)
+    <img src="images/SelectBarChart_All.png" alt="SelectBarChart\_All" width="100%"/>
 
 
 
 3.  In the Data Editor, drag and drop the **Division** field into Label,
     and the **Number of Workers** one into Values.
 
-    ![DragDropManufacturingHeadcount\_All](images/DragDropManufacturingHeadcount_All.png)
+    <img src="images/DragDropManufacturingHeadcount_All.png" alt="DragDropManufacturingHeadcount\_All" width="100%"/>
 
 
 
@@ -246,7 +246,7 @@ it:
     from the Values placeholder, and change **Fraction Digits** to **0**
     under **Formatting**.
 
-    ![ManufacturingHeadcountFractionDigits\_All](images/ManufacturingHeadcountFractionDigits_All.png)
+    <img src="images/ManufacturingHeadcountFractionDigits_All.png" alt="ManufacturingHeadcountFractionDigits\_All" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -256,7 +256,7 @@ it:
     change the **Start Color** to the fourth one within the **Settings**
     screen of the Visualizations Editor.
 
-    ![ManufacturingHeadcountChangingStartColor\_All](images/ManufacturingHeadcountChangingStartColor_All.png)
+    <img src="images/ManufacturingHeadcountChangingStartColor_All.png" alt="ManufacturingHeadcountChangingStartColor\_All" width="100%"/>
 
 
 6.  **Change the title of your visualization** to "Headcount" **by
@@ -277,21 +277,21 @@ to create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    ![SelectingManufacturingSheet\_All.png](images/SelectingManufacturingSheet_All.png)
+    <img src="images/SelectingManufacturingSheet_All.png" alt="SelectingManufacturingSheet\_All.png" width="100%"/>
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Area" chart.
 
-    ![SelectColumnChart\_All](images/SelectColumnChart_All.png)
+    <img src="images/SelectColumnChart_All.png" alt="SelectColumnChart\_All" width="100%"/>
 
 
 
 3.  In the Data Editor, drag and drop the **Employee** field into Label,
     and the **Labor** one into Values.
 
-    ![DragDropManufacturingHeadcount\_All](images/DragDropManufacturingHeadcount_All.png)
+    <img src="images/DragDropManufacturingHeadcount_All.png" alt="DragDropManufacturingHeadcount\_All" width="100%"/>
 
 
 
@@ -299,7 +299,7 @@ to create it:
     with no fraction digits. In order to do this, select the **Labor**
     field from the Values placeholder and apply the following changes:
 
-    ![ManufacturingLaborCostFormatting\_All](images/ManufacturingLaborCostFormatting_All.png)
+    <img src="images/ManufacturingLaborCostFormatting_All.png" alt="ManufacturingLaborCostFormatting\_All" width="100%"/>
 
       - **Type**: Currency
 
@@ -309,7 +309,7 @@ to create it:
         order. In this same dialog, change the **Sorting** from None to
         **Descending**.
 
-        ![ManufacturingLaborCostDescendingOrder\_All](images/ManufacturingLaborCostDescendingOrder_All.png)
+        <img src="images/ManufacturingLaborCostDescendingOrder_All.png" alt="ManufacturingLaborCostDescendingOrder\_All" width="100%"/>
 
         Then, select **Update Field**.
 
@@ -319,7 +319,7 @@ to create it:
     change the **Start Color** to the second one within the **Settings**
     screen of the Visualizations Editor.
 
-    ![ManufacturingLaborCostChangingStartColor\_All](images/ManufacturingLaborCostChangingStartColor_All.png)
+    <img src="images/ManufacturingLaborCostChangingStartColor_All.png" alt="ManufacturingLaborCostChangingStartColor\_All" width="100%"/>
 
 
 

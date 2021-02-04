@@ -11,7 +11,7 @@ be added to enable binding all visualizations of a dashboard. In this
 scenario, the contents of each visualization can be filtered by location
 by the user browsing the information in that dashboard.
 
-![Dashboard filter by location added in the Dashboard editor](images/dashboard-filters-binding.png)
+<img src="images/dashboard-filters-binding.png" alt="Dashboard filter by location added in the Dashboard editor" width="100%"/>
 
 Reveal also supports activating a Date Range as a Dashboard Filter,
 which enables the filtering of all visualizations by a specific period

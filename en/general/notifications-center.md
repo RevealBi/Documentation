@@ -3,7 +3,7 @@
 The Notifications Center is designed to keep you updated of any team and
 dashboard changes. Open it by selecting the **bell icon** in the top right section of the application.
 
-![Notification center icon and notifications' list](images/in-app-notifications.png)
+<img src="images/in-app-notifications.png" alt="Notification center icon and notifications' list" width="100%"/>
 
 Whenever you receive a notification, you will see a change in the
 notifications' icon. Depending on your notification settings, you might
@@ -19,13 +19,13 @@ In the Notification Center you can:
   - Additionally, you can **turn off notifications** by selecting the
     *Mute this type of notification* option in the overflow menu.
 
-![Accessing options of notifications in the Notification center](images/notification-center-options.png)
+<img src="images/notification-center-options.png" alt="Accessing options of notifications in the Notification center" width="100%"/>
 
 ### Notification Preferences
 
 You can easily edit your notification preferences. Тo do that, click/tap the icon with your first name initial (or photo) in the right top corner of the main screen. Then navigate to *Settings* ⇒ *Notifications*.
 
-![Notifications Settings menu](images/notification-settings.png)
+<img src="images/notification-settings.png" alt="Notifications Settings menu" width="100%"/>
 
 ### Notification Types
 
@@ -55,8 +55,8 @@ For Teams, the following settings are enabled by default:
 
 |                         | Email                                                     | Push | In-App                                                   |
 | ----------------------- | --------------------------------------------------------- | ---- | -------------------------------------------------------- |
-| I’m removed from a Team | ![enabled feature](images/enabled-feature.png)            |      | ![enabled feature](images/enabled-feature.png)           |
-| New members join        |                                                           |      | ![enabled feature](images/enabled-feature.png)           |
+| I’m removed from a Team | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |      | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>           |
+| New members join        |                                                           |      | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>           |
 
 #### Dashboard Notifications
 
@@ -66,6 +66,6 @@ For Dashboards, the following settings are enabled by default:
 
 |                                     | Email                                                     | Push                                                      | In-App                                                    |
 | ----------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| Dashboard is shared with me         | ![enabled feature](images/enabled-feature.png)            | ![enabled feature](images/enabled-feature.png)            | ![enabled feature](images/enabled-feature.png)            |
-| Dashboard shared with a Team i’m in |                                                           |                                                           | ![enabled feature](images/enabled-feature.png)            |
-| Dashboard is updated                |                                                           | ![enabled feature](images/enabled-feature.png)            | ![enabled feature](images/enabled-feature.png)            |
+| Dashboard is shared with me         | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |
+| Dashboard shared with a Team i’m in |                                                           |                                                           | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |
+| Dashboard is updated                |                                                           | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |

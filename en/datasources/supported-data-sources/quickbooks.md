@@ -2,7 +2,7 @@
 
 Upon connecting Quickbooks, you will see the following login prompt:
 
-![Quickbooks login prompt](images/quickbooks-login.png)
+<img src="images/quickbooks-login.png" alt="Quickbooks login prompt" width="100%"/>
 
 
 Enter your login credentials, or select _Sign in with Google_ and click _Sign In_.

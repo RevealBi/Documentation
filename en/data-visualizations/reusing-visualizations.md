@@ -3,7 +3,7 @@
 Speed up the creation of dashboards by reusing visualizations; you just
 need to **copy & paste** any visualization you want.
 
-![Overflow menu of a visualization in a dashboard displayed](images/reusing-visualization.png)
+<img src="images/reusing-visualization.png" alt="Overflow menu of a visualization in a dashboard displayed" width="100%"/>
 
 ### Duplicating Visualizations
 
@@ -12,7 +12,7 @@ Sometimes, you need to duplicate an already customized visualization and
 then tweak the duplicate's data set. For example, the charts below show
 Hires Over Time for all offices and a specific one separately.
 
-![Duplicated visualizations](images/duplicate-visualization.png)
+<img src="images/duplicate-visualization.png" alt="Duplicated visualizations" width="100%"/>
 
 ### Copying and Pasting a Visualization
 

@@ -19,7 +19,7 @@ provides an SDK to gather usage data from iOS and Android apps.
     If you have several Google Analytics accounts, select the one you
     want to use.
 
-    ![Select a Google account to be used with Reveal's Google Analytics data source](images/choose-ga-account.png)
+    <img src="images/choose-ga-account.png" alt="Select a Google account to be used with Reveal's Google Analytics data source" width="100%"/>
 
     Once logged in, you can also use the same account later to create
     another visualization unless you delete the data source.
@@ -28,7 +28,7 @@ provides an SDK to gather usage data from iOS and Android apps.
 
     Select the Google Analytics property that you want to use.
 
-    ![Select a Google property to be used with Reveal's Google Analytics data source](images/choose-ga-property.png)
+    <img src="images/choose-ga-property.png" alt="Select a Google property to be used with Reveal's Google Analytics data source" width="100%"/>
 
     In Google Analytics, **properties** can be websites, mobile apps,
     blogs, among others.
@@ -37,7 +37,7 @@ provides an SDK to gather usage data from iOS and Android apps.
 
     Select the data cube that you want to use.
 
-    ![Select a data cube to be used with Reveal's Google Analytics data source](images/choose-ga-datacube.png)
+    <img src="images/choose-ga-datacube.png" alt="Select a data cube to be used with Reveal's Google Analytics data source" width="100%"/>
 
     In this dialog you can configure the Refresh Data setting to to the
     following values:
@@ -56,7 +56,7 @@ After your credentials are verified, Reveal will take you to the _Visualizations
 
 When you create a dashboard with information coming from Google Analytics, you will see fields organized differently (see screenshot below).
 
-![Visualization Editor showing a Google Analytics data cube](images/ga-visualizationeditor.png)
+<img src="images/ga-visualizationeditor.png" alt="Visualization Editor showing a Google Analytics data cube" width="100%"/>
 
 You may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
@@ -76,7 +76,7 @@ There are two *Data Filters* when using the GA data source in Reveal.
 * **Segment** filter. The *Segment filters* are predefined. *System* Segments are defined by Google, and *Custom* Segments are defined by the user on the Google Analytics website. You can choose only one segment to filter your data. 
 * **Date Range**. Select a specific date range in the calendar to filter your data. You can also choose one of the preset date ranges by clicking the arrow in the upper right corner: 
 
-  ![Date Range dialog](images/ga-data-source-date-range-preset.png)
+  <img src="images/ga-data-source-date-range-preset.png" alt="Date Range dialog" width="100%"/>
 
   >[!NOTE] Default date range is _Last 30 days_. This means data will be retrieved for the last 30-day period, including today. 
 
@@ -86,7 +86,7 @@ You can use *Goals* defined in Google Analytics in the *Visualization
 Editor*. Your *Goals* are listed as part of the metrics in both
 **Dimensions** and **Measures** data types.
 
-![goals google analytics 2 option](images/goals-google-analytics-2-option.png)
+<img src="images/goals-google-analytics-2-option.png" alt="goals google analytics 2 option" width="100%"/>
 
 As you can see in the example above, the titles of your Google Analytics
 *Goals* in Reveal include one or more of the following:

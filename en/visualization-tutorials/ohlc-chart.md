@@ -52,7 +52,7 @@ OHLC charts, therefore, require:
   - **Four different fields** in the "Open", "High", "Low", and "Close"
     categories of the data editor.
 
-![OHLCChartVisualizationSettings\_All](images/OHLCChartVisualizationSettings_All.png)
+<img src="images/OHLCChartVisualizationSettings_All.png" alt="OHLCChartVisualizationSettings\_All" width="100%"/>
 
 There are also different options to add further information to your
 chart:
@@ -80,13 +80,13 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 
 |                                          |                                                                                                                          |                                                                                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Create a Dashboard**               | ![Tutorials-Create-New-Dashboard](images/Tutorials-Create-New-Dashboard.png)                                             | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown.  |
-| 2\. **Configure your Data Source**       | ![Tutorials-Select-Data-Source](images/Tutorials-Select-Data-Source.png)                                                 | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                        |
-| 3\. **Select the Tutorials Spreadsheet** | ![Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet](images/Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet.png) | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "OHLC and Candlestick" sheet.                       |
-| 4\. **Open the Visualizations Menu**     | ![Tutorials-Select-Change-Visualization](images/Tutorials-Select-Change-Visualization.png)                               | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                 |
-| 5\. **Select your Visualization**        | ![Tutorials-Charts-Select-OHLC-Chart](images/Tutorials-Charts-Select-OHLC-Chart.png)                                     | By default, the visualization type will be set to "Grid". Select the **OHLC**.                                                                        |
-| 6\. **Organize your Data**               | ![Tutorials-TextView-Organizing-Data](images/Tutorials-CandlestickChart-Organizing-Data.png)                             | Drag and drop the "Date" field into "Label" and the "Open", "High", "Low" and "Close" fields in their corresponding placeholder.                      |
-| 7\. **Change the Date Aggregation**      | ![Tutorials-CandlestickChart-Changing-Aggregation](images/Tutorials-CandlestickChart-Changing-Aggregation.png)           | Select the **Date** field in the Label placeholder of the data editor, and change the **Date Aggregation** to **Day**. Then, select **Update Field**. |
+| 1\. **Create a Dashboard**               | <img src="images/Tutorials-Create-New-Dashboard.png" alt="Tutorials-Create-New-Dashboard" width="100%"/>                                             | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown.  |
+| 2\. **Configure your Data Source**       | <img src="images/Tutorials-Select-Data-Source.png" alt="Tutorials-Select-Data-Source" width="100%"/>                                                 | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                        |
+| 3\. **Select the Tutorials Spreadsheet** | <img src="images/Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet.png" alt="Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet" width="100%"/> | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "OHLC and Candlestick" sheet.                       |
+| 4\. **Open the Visualizations Menu**     | <img src="images/Tutorials-Select-Change-Visualization.png" alt="Tutorials-Select-Change-Visualization" width="100%"/>                               | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                 |
+| 5\. **Select your Visualization**        | <img src="images/Tutorials-Charts-Select-OHLC-Chart.png" alt="Tutorials-Charts-Select-OHLC-Chart" width="100%"/>                                     | By default, the visualization type will be set to "Grid". Select the **OHLC**.                                                                        |
+| 6\. **Organize your Data**               | <img src="images/Tutorials-CandlestickChart-Organizing-Data.png" alt="Tutorials-TextView-Organizing-Data" width="100%"/>                             | Drag and drop the "Date" field into "Label" and the "Open", "High", "Low" and "Close" fields in their corresponding placeholder.                      |
+| 7\. **Change the Date Aggregation**      | <img src="images/Tutorials-CandlestickChart-Changing-Aggregation.png" alt="Tutorials-CandlestickChart-Changing-Aggregation" width="100%"/>           | Select the **Date** field in the Label placeholder of the data editor, and change the **Date Aggregation** to **Day**. Then, select **Update Field**. |
 
 <a name='changing-axis-configuration'></a>
 ### Changing your Axis Configuration
@@ -99,8 +99,8 @@ In order to access the axis configuration menu:
 
 |                                             |                                                                                      |                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**            | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)               | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Navigate to the Axis Bounds section** | ![Tutorial-Access-Axis-Configuration](images/Access-Axis-Configuration.png) | The settings you will change will be the **Axis Bounds**.   |
+| 1\. **Access the Settings Menu**            | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/>               | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Navigate to the Axis Bounds section** | <img src="images/Access-Axis-Configuration.png" alt="Tutorial-Access-Axis-Configuration" width="100%"/> | The settings you will change will be the **Axis Bounds**.   |
 
 Depending on whether you want to set the minimum or maximum value (or
 both), you will need to access one of the following options:
@@ -121,5 +121,5 @@ the value you want for the chart's top limit.
 
 |                                        |                                                                                                       |                                                             |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**       | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                                | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Change the Axis to Logarithmic** | ![Tutorial-Access-OHLC-Axis-Configuration](images/Access-Candlestick-Axis-Configuration.png) | Open the **Axis** dropdown and select **Logarithmic**.      |
+| 1\. **Access the Settings Menu**       | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/>                                | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Change the Axis to Logarithmic** | <img src="images/Access-Candlestick-Axis-Configuration.png" alt="Tutorial-Access-OHLC-Axis-Configuration" width="100%"/> | Open the **Axis** dropdown and select **Logarithmic**.      |

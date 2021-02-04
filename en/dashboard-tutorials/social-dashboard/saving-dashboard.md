@@ -4,7 +4,7 @@ After creating your dashboard, you should save your progress. Select the
 **Save As** option in the overflow button from the top-right hand corner
 of the dashboard editor.
 
-![SocialAccessingSaveMenu\_All](images/SocialAccessingSaveMenu_All.png)
+<img src="images/SocialAccessingSaveMenu_All.png" alt="SocialAccessingSaveMenu\_All" width="100%"/>
 
 You can save your dashboard in your personal repository, or choose any team repositories you have joined or created. 
 

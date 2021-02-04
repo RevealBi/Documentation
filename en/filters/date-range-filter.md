@@ -6,13 +6,13 @@ date range and filtering the whole dashboard. In order to enable the
 date range in the dashboard filters section, you will need to select the
 **Add Date Filter** option in the **Add Filter** menu.
 
-![Add filter dropdown menu for a visualization](images/add-new-dashboard-filter.png)
+<img src="images/add-new-dashboard-filter.png" alt="Add filter dropdown menu for a visualization" width="100%"/>
 
 Once the date dashboard filter is enabled, it becomes available for use
 in [visualization binding](connecting-dashboard-filters-visualization.md)
 expressions.
 
-![Filter Date Range dialog](images/dashboard-filter-date-range-menu.png)
+<img src="images/dashboard-filter-date-range-menu.png" alt="Filter Date Range dialog" width="100%"/>
 
 ### Using Custom Date Ranges
 
@@ -22,4 +22,4 @@ data within a specific date range. Selecting the
 **Custom Date Range** in the *Date Filter* dropdown to see a calendar with
 personalized day, month, and age options.
 
-![Custom Date Range calendar displayed](images/reveal-custom-date-range.png)
+<img src="images/reveal-custom-date-range.png" alt="Custom Date Range calendar displayed" width="100%"/>

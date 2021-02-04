@@ -31,7 +31,7 @@ To configure a Snowflake data source, you first need to connect to the server by
 
 1.  **Select a database** by marking the empty circle next to it:
 
-    ![Select a database dialog](images/select-database-snowflake.png)
+    <img src="images/select-database-snowflake.png" alt="Select a database dialog" width="100%"/>
 
     >[!NOTE]    
     **Snowflake sample data in Reveal**.
@@ -40,7 +40,7 @@ To configure a Snowflake data source, you first need to connect to the server by
 
 3.  **Select a table or a view** from the database. Use the *eye icon* on the right to preview the data.
 
-    ![Select a table or view dialog](images/select-tableview-snowflake.png)
+    <img src="images/select-tableview-snowflake.png" alt="Select a table or view dialog" width="100%"/>
 
 You are now directed to the *Visualization editor* where you can start building your visualizations with the data retrieved from Snowflake.
 

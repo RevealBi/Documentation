@@ -25,7 +25,7 @@ With Teams in Reveal, you can:
 
 You can access your teams on to the left side of the screen, below the *Reveal* icon:
 
-![Accessing teams popover menu](images/accessing-teams-menu.png)
+<img src="images/accessing-teams-menu.png" alt="Accessing teams popover menu" width="100%"/>
 
 You will find a list of your teams under the organization repository. There you can also create new teams or join existing ones.
 

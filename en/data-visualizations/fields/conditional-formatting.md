@@ -23,7 +23,7 @@ the Data Editor to prompt the **Field Settings** dialog. The conditional
 formatting configuration is the last option in the settings, and is
 disabled by default.
 
-![Conditional formatting configuration in Field settings menu](images/conditional-formatting-configuration.png)
+<img src="images/conditional-formatting-configuration.png" alt="Conditional formatting configuration in Field settings menu" width="100%"/>
 
   - **Limits**: these values are automatically set as the lowest and
     highest values in the dataset for the specified column, but can also

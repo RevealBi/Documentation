@@ -26,7 +26,7 @@ requests.
 To configure a REST API data source, you will need to enter the
 following information:
 
-![Configuring-REST-API-Data-Source\_All](images/Configuring-REST-API-Data-Source_All.png)
+<img src="images/Configuring-REST-API-Data-Source_All.png" alt="Configuring-REST-API-Data-Source\_All" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *REST API*. You can change it to your preference.
 
@@ -59,18 +59,18 @@ To use parameters effectively follow the procedure below:
     parameters are color-coded in *blue* to make them more easily
     identifiable.
 
-    ![Parameters-URL-Rest-API\_All](images/Parameters-URL-Rest-API.png)
+    <img src="images/Parameters-URL-Rest-API.png" alt="Parameters-URL-Rest-API\_All" width="100%"/>
 
 2.  **Add parameters' values**. In the following screen specify the
     value of each parameter you have added in the URL.
 
-    ![Parameters-Values-Rest-API\_All](images/Parameters-Values-Rest-API.png)
+    <img src="images/Parameters-Values-Rest-API.png" alt="Parameters-Values-Rest-API\_All" width="100%"/>
 
     As a result, the REST API service will respond with the data on the
     provided URL in a REST compliant format. Generally, you will receive
     a JSON file:
 
-    ![REST-API-Data-Format-Result\_All](images/REST-API-Data-Format-Result.png)
+    <img src="images/REST-API-Data-Format-Result.png" alt="REST-API-Data-Format-Result\_All" width="100%"/>
 
     For more information on how to work with a JSON file, please refer
     to [this topic](~/en/datasources/working-files/working-with-json-files.md).
@@ -119,7 +119,7 @@ generally consists of:
 4.  A **Body**: an optional message (when using *POST* and *PUT*
     methods) containing data
 
-    ![Working With Methods](images/Working-With-Methods.png)
+    <img src="images/Working-With-Methods.png" alt="Working With Methods" width="100%"/>
 
 For more information about the Header and Body of a request, please
 refer to [this link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#Headers).

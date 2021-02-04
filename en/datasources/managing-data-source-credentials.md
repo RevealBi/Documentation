@@ -14,7 +14,7 @@ In the _Manage Reveal Credentials_ section, you can create, edit and remove cred
 1. In _Manage Reveal Credentials_, click tap the **+ New** blue button (upper right corner).
 2. The *Account Details* menu opens:
 
-  ![Add New Account Credentials dialog](images/add-new-account-credentials.png)
+  <img src="images/add-new-account-credentials.png" alt="Add New Account Credentials dialog" width="100%"/>
 
   Here, you need to fill in the following information:
 
@@ -32,7 +32,7 @@ In the _Manage Reveal Credentials_ section, you can create, edit and remove cred
 
 Unless you remove them, the accounts' credentials stored in Reveal will always appear in the *Choose Credentials* screen when configuring a data source requiring credentials.
 
-![Choose Credentials for a Data Source dialog](images/choose-credentials-data-source.png)
+<img src="images/choose-credentials-data-source.png" alt="Choose Credentials for a Data Source dialog" width="100%"/>
 
 > [!NOTE] **Useful tip!** Take your time to add and organize here all credentials that you intend to use with multiple data sources. 
 

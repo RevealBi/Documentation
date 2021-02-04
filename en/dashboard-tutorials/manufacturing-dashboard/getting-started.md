@@ -4,7 +4,7 @@ In this tutorial, you will see how the "Supply Chain Management"
 dashboard displayed below was created using a sample spreadsheet with
 similar data.
 
-![SupplyChainManagementDashboard\_All](images/SupplyChainManagementDashboard_All.png)
+<img src="images/SupplyChainManagementDashboard_All.png" alt="SupplyChainManagementDashboard\_All" width="100%"/>
 
 ### What's in this dashboard?
 

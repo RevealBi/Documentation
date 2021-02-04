@@ -38,9 +38,9 @@ dialog](images/adding-new-package-source.png)
 After that you can install the Nuget by changing the package source to
 the one you added:
 
-![installing the Nuget dialog](images/install-nuget.png)
+<img src="images/install-nuget.png" alt="installing the Nuget dialog" width="100%"/>
 
-![preview changes dialog](images/preview-changes-dialog.png)
+<img src="images/preview-changes-dialog.png" alt="preview changes dialog" width="100%"/>
 
 ### Step 3 - Work on Server Configuration
 
@@ -190,7 +190,7 @@ To continue, create a new Reveal folder in the *wwwroot* folder of the
 project. Copy there **infragistics.reveal.js**, which you can find in
 the **\<InstallationDirectory\>\\SDK\\Web\\JS\\Client** of the *Reveal SDK*:
 
-![wwwroot folder hierarchy](images/wwwroot-folder.png)
+<img src="images/wwwroot-folder.png" alt="wwwroot folder hierarchy" width="100%"/>
 
 And then reference this library in **\_Layout.cshtml** after the scripts
 for Day.js:

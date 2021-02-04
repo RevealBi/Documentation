@@ -14,7 +14,7 @@ datasets. To start using them for your visualizations:
 
 1.  **Select a project** in the *New Data Source* dialog that opens:
 
-    ![Select a project in the New Data Source dialog](images/select-project-bigquery.png)
+    <img src="images/select-project-bigquery.png" alt="Select a project in the New Data Source dialog" width="100%"/>
 
     >[!NOTE]    
     **Demo Public BigQuery Data Projects in Reveal**.
@@ -26,12 +26,12 @@ datasets. To start using them for your visualizations:
 
 2.  **Select a dataset** by marking the empty circle next to it:
 
-    ![Select a dataset dialog](images/select-dataset-bigquery.png)
+    <img src="images/select-dataset-bigquery.png" alt="Select a dataset dialog" width="100%"/>
 
 3.  **Select a table** from the dataset. Use the *eye icon* on the right
     to preview the data.
 
-    ![Select a table dialog](images/select-table-bigquery.png)
+    <img src="images/select-table-bigquery.png" alt="Select a table dialog" width="100%"/>
 
 You are now directed to the *Visualization editor* where you can start
 building your visualizations with the data retrieved from Google

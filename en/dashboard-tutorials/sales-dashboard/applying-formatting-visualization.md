@@ -14,7 +14,7 @@ percentage. In order to apply this formatting:
 
 2.  In the Formatting menu:
 
-    ![SalesWonOpportFormatting\_All](images/SalesWonOpportFormatting_All.png)
+    <img src="images/SalesWonOpportFormatting_All.png" alt="SalesWonOpportFormatting\_All" width="100%"/>
 
     1.  Change the **Type** to **Percent**.
 
@@ -29,13 +29,13 @@ Opportunities** visualization which is meant to represent that there has
 been a decrease in the amount of won opportunities. This marker is
 created through the [band configurations](~/en/data-visualizations/visualization-types/gauge-charts.html#bands-configuration) in the gauge's settings.
 
-![SalesWonOpportunitiesConditionalFormattingMarker\_All](images/SalesWonOpportunitiesConditionalFormattingMarker_All.png)
+<img src="images/SalesWonOpportunitiesConditionalFormattingMarker_All.png" alt="SalesWonOpportunitiesConditionalFormattingMarker\_All" width="100%"/>
 
 In order to configure them:
 
 1.  Go to the **Settings** tab in the Visualizations Editor.
 
-    ![TutorialsSettingsMenu\_All](images/TutorialsSettingsMenu_All.png)
+    <img src="images/TutorialsSettingsMenu_All.png" alt="TutorialsSettingsMenu\_All" width="100%"/>
 
 
 
@@ -44,14 +44,14 @@ In order to configure them:
     percentage. Therefore, scroll down to **Value Comparison Type** and
     set it to "Number".
 
-    ![TutorialsValueComparisonTypeNumber\_All](images/TutorialsValueComparisonTypeNumber_All.png)
+    <img src="images/TutorialsValueComparisonTypeNumber_All.png" alt="TutorialsValueComparisonTypeNumber\_All" width="100%"/>
 
 
 
 3.  **Set your bounds**. In this case, the bounds are within 0.7 and
     0.5.
 
-    ![SalesChangingBands\_All](images/SalesChangingBands_All.png)
+    <img src="images/SalesChangingBands_All.png" alt="SalesChangingBands\_All" width="100%"/>
 
 
 
@@ -59,12 +59,12 @@ In order to configure them:
     default, the highest value will be set to green and the lowest to
     red.
 
-    ![SalesChangingBandColorIndicator\_All](images/SalesChangingBandColorIndicator_All.png)
+    <img src="images/SalesChangingBandColorIndicator_All.png" alt="SalesChangingBandColorIndicator\_All" width="100%"/>
 
 Once you have finished editing the visualization, select the **tick
 button** in the top right-hand corner to return to the dashboard editor.
 
-![SalesWidgetInDashboardEditor\_All](images/SalesWidgetInDashboardEditor_All.png)
+<img src="images/SalesWidgetInDashboardEditor_All.png" alt="SalesWidgetInDashboardEditor\_All" width="100%"/>
 
 >[!NOTE]
 >You can resize any of your visualizations by selecting the visualization and then dragging its corners downwards or to the side.

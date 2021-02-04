@@ -3,7 +3,7 @@
 Reveal allows you to change how the data in a visualization is displayed by sorting the data in ascending or descending order. In addition, it is
 also possible to further control how a visualization looks with sorting by selected fields in your original data source. 
 
-![Sort Visualization by setting dialog](images/sort-visualization-by-field.png)
+<img src="images/sort-visualization-by-field.png" alt="Sort Visualization by setting dialog" width="100%"/>
 
 ### Enabling Sort by Field 
 
@@ -49,7 +49,7 @@ priority first, ordered A-Z, *Normal* priority cases after those, and, lastly, *
 Let's take a look at the following visualization, where we have plotted
 the cash and accounts receivable influxes for a company in a [stacked column chart](~/en/visualization-tutorials/stacked-charts.html#create-stacked-chart).
 
-![SortByFieldSalesInformation\_All](images/SortByFieldSalesInformation_All.png)
+<img src="images/SortByFieldSalesInformation_All.png" alt="SortByFieldSalesInformation\_All" width="100%"/>
 
 The values have been ordered by **Month Name** (a string field).
 However, the months have been sorted in alphabetical order by default,
@@ -62,9 +62,9 @@ the Y axis (**Month of Year**), but you still want that order to
 prevail. Select the **Month Name** field in the label placeholder of the
 data editor, and select your desired sorting.
 
-![FieldSettingsSortBy\_All](images/FieldSettingsSortBy_All.png)
+<img src="images/FieldSettingsSortBy_All.png" alt="FieldSettingsSortBy\_All" width="100%"/>
 
 Once done, select **Update Field**. Your information will now be ordered
 in chronological order.
 
-![FinalSortingFinancialSample\_All](images/FinalSortingFinancialSample_All.png)
+<img src="images/FinalSortingFinancialSample_All.png" alt="FinalSortingFinancialSample\_All" width="100%"/>

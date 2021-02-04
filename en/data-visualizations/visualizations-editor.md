@@ -12,7 +12,7 @@ Visualizations are the building blocks of your dashboard. So, when you start cre
 After that, you will be prompted
 to add a new or select an existing [data source](~/en/datasources/overview.md).
 
-![Creating a new visualization dialog](images/creating-new-visualization.png)
+<img src="images/creating-new-visualization.png" alt="Creating a new visualization dialog" width="100%"/>
 
 With the data source selected and configured, you will be navigated to the [Visualizations Editor](visualizations-editor.md), where you can start creating your visualization.
 

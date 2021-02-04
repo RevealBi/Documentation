@@ -4,7 +4,7 @@ In this tutorial, you will see how the "Social Media Analytics"
 dashboard displayed below was created using a sample spreadsheet with
 similar data.
 
-![SocialMediaAnalytics\_All](images/SocialMediaAnalytics_All.png)
+<img src="images/SocialMediaAnalytics_All.png" alt="SocialMediaAnalytics\_All" width="100%"/>
 
 ### What's in this Dashboard?
 

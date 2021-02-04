@@ -14,7 +14,7 @@ presentation and annotate specific slides.
 
 ### Export Settings
 
-![Settings for PowerPoint presentation in the Export Dashboard menu](images/export-settings-powerpoint.png)
+<img src="images/export-settings-powerpoint.png" alt="Settings for PowerPoint presentation in the Export Dashboard menu" width="100%"/>
 
 In the *Export Dashboard* dialog you can manage the following settings:
 

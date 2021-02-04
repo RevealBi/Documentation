@@ -14,7 +14,7 @@ Reveal provides the ability to filter rows in the dataset that have null
 or empty values on a specific column by enabling the filter empty values
 configuration setting on a specific column.
 
-![FilterEmtpyValues\_All](images/FilterEmtpyValues_All.png)
+<img src="images/FilterEmtpyValues_All.png" alt="FilterEmtpyValues\_All" width="100%"/>
 
 <a name='select-values'></a>
 ### Select Values
@@ -23,7 +23,7 @@ This type of filter supports the definition of the set of values to
 display for a specific field. To enable it, drag and drop a field to the
 **Data Filters** placeholder.
 
-![SelectValues\_All](images/SelectValues_All.png)
+<img src="images/SelectValues_All.png" alt="SelectValues\_All" width="100%"/>
 
 In the *Field Settings* dialog, you will see the option to **Select
 Values**. This displays the list of possible values for a column, and

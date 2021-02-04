@@ -25,7 +25,7 @@ aggregations. This means in order to apply a certain formula, Reveal will go thr
 To add a new pre-calculated field, click/tap the *+ button* in the
 *Fields* panel:
 
-![Pre-calculated field button](images/pre-calculated-field-button.png)
+<img src="images/pre-calculated-field-button.png" alt="Pre-calculated field button" width="100%"/>
 
 The *New Calculated Field* screen will open:
 

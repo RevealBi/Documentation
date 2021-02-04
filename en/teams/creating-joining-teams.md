@@ -12,7 +12,7 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 
 1.  Click *Join or Create a Team* at the bottom left corner of the screen.
 
-  ![join or create a team button in the popover menu](images/button-join-create-team.png)
+  <img src="images/button-join-create-team.png" alt="join or create a team button in the popover menu" width="100%"/>
 
 
   >[!NOTE]
@@ -23,7 +23,7 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 2.  Click/Tap the *+ Create Team* blue button. The following screen
     opens:
 
-    ![team properties dialog](images/create-team-properties.png)
+    <img src="images/create-team-properties.png" alt="team properties dialog" width="100%"/>
 
     Here you will need to:
 
@@ -73,7 +73,7 @@ To join an existing team, follow the steps below.
 
 2.  The following screen shows up:
 
-    ![join or create a team dialog](images/join-or-create.png)
+    <img src="images/join-or-create.png" alt="join or create a team dialog" width="100%"/>
 
     Here you will find all the
     [public](overview.html#team-privacy-levels) teams that

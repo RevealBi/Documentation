@@ -8,25 +8,25 @@ of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizat
 First, **open the visualizations picker** by selecting the grid icon in
 the top bar.
 
-![VisualizationsMenu\_All](images/VisualizationsMenu_All.png)
+<img src="images/VisualizationsMenu_All.png" alt="VisualizationsMenu\_All" width="100%"/>
 
 **Change your visualization** to "Text Gauge".
 
-![SelectTextGauge\_All](images/SelectTextGauge_All.png)
+<img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" width="100%"/>
 
 Then, **drag and drop** the **Won Opportunities** field into the Value
 placeholder of the data editor.
 
-![SalesFirstDragDrop\_All](images/SalesFirstDragDrop_All.png)
+<img src="images/SalesFirstDragDrop_All.png" alt="SalesFirstDragDrop\_All" width="100%"/>
 
 Lastly, **change the visualization's title** to "Won Opportunities" by
 selecting the pencil next to the "Sales Dashboard" title.
 
-![SalesWonOpportunitiesTitle\_All](images/SalesWonOpportunitiesTitle_All.png)
+<img src="images/SalesWonOpportunitiesTitle_All.png" alt="SalesWonOpportunitiesTitle\_All" width="100%"/>
 
 Your visualization should look like the following one:
 
-![SalesFirstVisualizationSample\_All](images/SalesFirstVisualizationSample_All.png)
+<img src="images/SalesFirstVisualizationSample_All.png" alt="SalesFirstVisualizationSample\_All" width="100%"/>
 
 
 <style>

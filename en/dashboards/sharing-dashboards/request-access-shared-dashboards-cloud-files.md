@@ -10,11 +10,11 @@ might be unable to see its content due to one of the following reasons:
 If the file has been **deleted**, Reveal will show you the following
 message when you click the shared dashboard:
 
-![Message in Reveal: Can't access this data](images/message-deleted-source-file.png)
+<img src="images/message-deleted-source-file.png" alt="Message in Reveal: Can't access this data" width="100%"/>
 
 If your permissions to the file have been **revoked**, you will see:
 
-![configure Google drive and request access options when access denied](images/request-access-button.png)
+<img src="images/request-access-button.png" alt="configure Google drive and request access options when access denied" width="100%"/>
 
 ### Granting Access to Data Source Files with Revoked Permissions
 
@@ -24,7 +24,7 @@ about your denied access. They will also receive an email notification.
 When **the owner** opens the notification (through the app or email message), they will see the following dialog, prompting them to update
 the connection to the data source:
 
-![connections failed dialog](images/connections-failed-dialog.png)
+<img src="images/connections-failed-dialog.png" alt="connections failed dialog" width="100%"/>
 
 After the owner clicks *Update* they will see a message notifying them
 whether the access has been successfully fixed.
@@ -51,7 +51,7 @@ revoked permissions:
 
     2.  Select *Check File Access* button in the overflow menu.
 
-        ![Check shared access button in the overflow menu](images/check-file-access-button.png)
+        <img src="images/check-file-access-button.png" alt="Check shared access button in the overflow menu" width="100%"/>
 
     3.  Select *Update* in the dialog that opens.
 

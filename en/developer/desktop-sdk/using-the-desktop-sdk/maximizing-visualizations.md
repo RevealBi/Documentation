@@ -8,7 +8,7 @@ might also want to lock the initial visualization and prevent the user
 from accessing the whole dashboard. You can achieve both scenarios using
 the Desktop SDK.
 
-![Displaying a dashboard with a maximized visualization](images/three_divisions_dashboard_maximized.png)
+<img src="images/three_divisions_dashboard_maximized.png" alt="Displaying a dashboard with a maximized visualization" width="100%"/>
 
 #### Example Details
 
@@ -16,7 +16,7 @@ Let’s assume that you have a dashboard with three visualizations, where
 each visualization is showing data for a different division of your
 company, i.e., “Marketing”, “Sales” and “HR”.
 
-![Displaying a dashboard with three visualizations](images/three_divisions_dashboard.png)
+<img src="images/three_divisions_dashboard.png" alt="Displaying a dashboard with three visualizations" width="100%"/>
 
 In this example, you’d like to showcase these visualizations in your
 corporate application. You want to include them as part of the

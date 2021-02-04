@@ -54,23 +54,23 @@ that will change is the selected filter.
 1.  Open the overflow button in the "Globex Stock Value 2018"
     visualization, and then select **Duplicate**.
 
-    ![DuplicatingVisualizationSISStockValue\_All](images/DuplicatingVisualizationSISStockValue_All.png)
+    <img src="images/DuplicatingVisualizationSISStockValue_All.png" alt="DuplicatingVisualizationSISStockValue\_All" width="100%"/>
 
 
 2.  Rename the visualization by opening its overflow button and
     selecting **Rename**.
 
-    ![DuplicateVisualizationRenaming\_All](images/DuplicateVisualizationRenaming_All.png)
+    <img src="images/DuplicateVisualizationRenaming_All.png" alt="DuplicateVisualizationRenaming\_All" width="100%"/>
 
     Set the value to "Silver Security Stock Value 2018"
 
-    ![SISStockRenamingVisualization\_All](images/SISStockRenamingVisualization_All.png)
+    <img src="images/SISStockRenamingVisualization_All.png" alt="SISStockRenamingVisualization\_All" width="100%"/>
 
 
 3.  Enter Edit Mode by selecting the overflow button again and selecting
     **Edit**.
 
-    ![SISStockValueEditingVisualization\_All](images/SISStockValueEditingVisualization_All.png)
+    <img src="images/SISStockValueEditingVisualization_All.png" alt="SISStockValueEditingVisualization\_All" width="100%"/>
 
 
 4.  This visualization displays the stock value for **Silver Security

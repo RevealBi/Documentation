@@ -9,7 +9,7 @@ simply getting the data from the reports to create a visualization.
 To configure a Microsoft Reporting Services (SSRS) Data Source, you will
 need to enter the following information:
 
-![Set up menu for Microsoft Reporting Services data source](images/ssrs-configuration.png)
+<img src="images/ssrs-configuration.png" alt="Set up menu for Microsoft Reporting Services data source" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Reporting Services*. You can change it to your preference.
 
@@ -36,7 +36,7 @@ After configuring the connection to your Microsoft Reporting Services
 reports, the following dialog will open, prompting you to choose a
 Report:
 
-![Select a Report dialog](images/select-report-dialog.png)
+<img src="images/select-report-dialog.png" alt="Select a Report dialog" width="100%"/>
 
 The order of reports and folders closely resembles the one in your
 Microsoft Reporting Services account.
@@ -44,7 +44,7 @@ Microsoft Reporting Services account.
 Depending on your data, you will need to configure specific
 **parameters** for your Reports, as shown below:
 
-![Set up parameters and choose an output format dialog](images/multiple-selection-parameters.png)
+<img src="images/multiple-selection-parameters.png" alt="Set up parameters and choose an output format dialog" width="100%"/>
 
 After selecting/filling the parameters for your report, you can choose
 the format in which the report will load in the *Visualization editor*:

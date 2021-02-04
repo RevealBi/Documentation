@@ -5,7 +5,7 @@
 There is an event that is triggered whenever the end-user hovers over a series in a visualization or clicks on the series (as shown in the image below).
 This event called __revealView.TooltipShowing__, gives you more flexibility regarding how you show Tooltips in your visualizations.
 
-![Image showing Reveal's tooltips](images/tooltips-sample.png)
+<img src="images/tooltips-sample.png" alt="Image showing Reveal's tooltips" width="100%"/>
 
 
 ### Common Use Cases

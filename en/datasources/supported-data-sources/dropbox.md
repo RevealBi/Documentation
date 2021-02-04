@@ -2,7 +2,7 @@
 
 Upon selecting Dropbox, you will see the following log in prompt.
 
-![Dropbox login dialog](images/dropbox-login.png)
+<img src="images/dropbox-login.png" alt="Dropbox login dialog" width="100%"/>
 
 Enter your login credentials and select *Sign In*.
 You will then see an

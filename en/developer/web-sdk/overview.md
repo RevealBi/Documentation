@@ -16,7 +16,7 @@ always involved:
 In the following diagram you visualize the architecture for a web
 application embedding Reveal Web SDK:
 
-![sdk\_web\_diagram\_web](images/sdk_web_diagram_web.png)
+<img src="images/sdk_web_diagram_web.png" alt="sdk\_web\_diagram\_web" width="100%"/>
 
 As shown above, the SDK works pretty much the same way as with native
 apps. The difference is that some of the callbacks are invoked in the

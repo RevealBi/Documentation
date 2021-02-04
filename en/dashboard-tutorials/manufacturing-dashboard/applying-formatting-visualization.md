@@ -22,7 +22,7 @@ to modify the formatting for the **Orders** field dropped into the Values placeh
 Once you have finished editing the visualization, select the **tick
 button** in the top right-hand corner to return to the dashboard editor.
 
-![ManufacturingWidgetInDashboardEditor\_All](images/ManufacturingWidgetInDashboardEditor_All.png)
+<img src="images/ManufacturingWidgetInDashboardEditor_All.png" alt="ManufacturingWidgetInDashboardEditor\_All" width="100%"/>
 
 >NOTE
 >You can resize any of your visualizations by selecting the visualization and then dragging its corners downwards or to the side.

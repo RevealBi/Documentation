@@ -6,7 +6,7 @@
 To configure a Sybase server data source, you will need to enter the
 following information:
 
-![Configure Sybase database connection](images/enter-sybase-server-details.png)
+<img src="images/enter-sybase-server-details.png" alt="Configure Sybase database connection" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Sybase*. You can change it to your preference.
 
@@ -62,12 +62,12 @@ can also select a particular
 [view](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm)
 that returns a subset of data from a table or a set of tables instead.
 
-![Select from Sybase views dialog](images/sybase-views.png)
+<img src="images/sybase-views.png" alt="Select from Sybase views dialog" width="100%"/>
 
 The **Category Sales for 1997** view, for example, contains information on sales
 projections taken from one of the tables in the database.
 
-![Sales Projection Sample dashboard](images/sales-projection-sample.png)
+<img src="images/sales-projection-sample.png" alt="Sales Projection Sample dashboard" width="100%"/>
 
 For more information on views and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm).
 
@@ -78,10 +78,10 @@ statements in a relational database with specific parameters. The
 following are just a set of sample stored procedures running in a test
 server with data from the master database:
 
-![Select from Sybase Stored Procedures dialog](images/sybase-stored-procedures.png)
+<img src="images/sybase-stored-procedures.png" alt="Select from Sybase Stored Procedures dialog" width="100%"/>
 
 In this case, for example, the stored procedure requires users to set some time range values.
 
-![Stored Procedure select dates](images/stored-procedure-sample-dates.png)
+<img src="images/stored-procedure-sample-dates.png" alt="Stored Procedure select dates" width="100%"/>
 
 For more information on Stored Procedures and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X39397.htm).

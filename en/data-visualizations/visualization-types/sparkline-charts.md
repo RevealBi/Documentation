@@ -4,19 +4,19 @@ Sparkline charts are small charts plotted within a grid chart, without
 any axes, labels, or other chart elements. They are meant to represent
 trends and their progression in a given date range.
 
-![Sparkline Chart sample](images/sparkline-chart-dashboard-view.png)
+<img src="images/sparkline-chart-dashboard-view.png" alt="Sparkline Chart sample" width="100%"/>
 
 The first column remains fixed in the Visualizations Editor, allowing
 you to scroll through the different columns in your information.
 
-![SparklineChartVisualizationsEditor\_All](images/sparkline-chart-visualizations-editor.png)
+<img src="images/sparkline-chart-visualizations-editor.png" alt="SparklineChartVisualizationsEditor\_All" width="100%"/>
 
 ### Advanced Sparkline Settings
 
 If you access the **Settings** section of the visualizations editor, you
 will be able to modify several settings, including:
 
-![SparklineAdvancedChartSettings\_All](images/sparkline-advanced-chart-settings.png)
+<img src="images/sparkline-advanced-chart-settings.png" alt="SparklineAdvancedChartSettings\_All" width="100%"/>
 
   - **Alignment** for texts, numbers, and dates.
 

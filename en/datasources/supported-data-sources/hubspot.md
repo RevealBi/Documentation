@@ -2,7 +2,7 @@
 
 Upon connecting Hubspot, you will see the following login prompt:
 
-![Hubspot login prompt](images/hubspot-login.png)
+<img src="images/hubspot-login.png" alt="Hubspot login prompt" width="100%"/>
 
 Enter your login credentials, and click _Log In_.
 

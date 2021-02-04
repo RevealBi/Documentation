@@ -6,13 +6,13 @@ Regular charts usually have one X-axis and one Y-axis. Combo charts can
 have two Y-axis, allowing you to display two different types of data
 points in the same chart.
 
-![Combo chart sample within Reveal](images/combo-charts-sample.png)
+<img src="images/combo-charts-sample.png" alt="Combo chart sample within Reveal" width="100%"/>
 
 E.g., as shown above, a combo chart can display countries' total
 population as well as the young population to show the relationship
 between them.
 
-![Selecting the Combo Chart visualization in Reveal](images/combo-charts-selection.png)
+<img src="images/combo-charts-selection.png" alt="Selecting the Combo Chart visualization in Reveal" width="100%"/>
 
 After selecting your data source and the *Combo* visualization, by
 default you start with a column chart and a line chart combined. As
@@ -21,7 +21,7 @@ both charts.
 
 ### Settings for Combo Charts
 
-![Combo Charts configuration settings in Reveal](images/combo-charts-settings.png)
+<img src="images/combo-charts-settings.png" alt="Combo Charts configuration settings in Reveal" width="100%"/>
 
 In *Settings* you can:
 

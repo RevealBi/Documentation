@@ -14,11 +14,11 @@ targeting .NET framework 4.6.2+.
 To get the Reveal SDK for both Web and Desktop platforms, sign up [here](https://www.revealbi.io/#download-sdk).
 Once ready, follow through the provided installer:
 
-![installScreen_desktop](images/installScreen_desktop.png)
+<img src="images/installScreen_desktop.png" alt="installScreen_desktop" width="100%"/>
 
 After a successful installation, you can browse the installed samples by clicking the *Open SDK Samples* link.
 
-![afterInstallScreen_desktop](images/afterInstallScreen_desktop.png)
+<img src="images/afterInstallScreen_desktop.png" alt="afterInstallScreen_desktop" width="100%"/>
 
 ### Samples
 

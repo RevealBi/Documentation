@@ -1,6 +1,6 @@
 ## Working With the Choropleth Map Settings
 
-![Settings in the Visualization editor of the choropleth map](images/visualization-settings-choropleth-map.png)
+<img src="images/visualization-settings-choropleth-map.png" alt="Settings in the Visualization editor of the choropleth map" width="100%"/>
 
 In the _Settings_ section of the Choropleth map visualization you can configure the following:
 

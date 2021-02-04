@@ -13,7 +13,7 @@ Each characteristic of the building tiles (rectangles) has a role in the data an
 
 You can create a **visualization without hierarchical data** like the one shown below:
 
-![An example of a treemap with no hierarchy](images/treemap-chart-example-no-hierarchy.png)
+<img src="images/treemap-chart-example-no-hierarchy.png" alt="An example of a treemap with no hierarchy" width="100%"/>
 
 You can use treemaps with no hierarchies to show patterns and part-to-whole relations in an attractive and clear way.
 
@@ -21,11 +21,11 @@ The visualization above displays _New Sales_ by _Product_. To build this visuali
 
 1. In the _Select Data Source_ dialog, choose *_Reveal Sample Data_*.
 
-    ![Reveal Sample Data in the list of data sources](images/data-source-reveal-sample.png)
+    <img src="images/data-source-reveal-sample.png" alt="Reveal Sample Data in the list of data sources" width="100%"/>
 
 2. In the _Visualization Editor_ choose the **Tree Map visualization**.
 
-    ![Tree Map visualization in the Change Visualization dialog](images/choose-treemap.png)
+    <img src="images/choose-treemap.png" alt="Tree Map visualization in the Change Visualization dialog" width="100%"/>
 
 3. In the *Tree Map Data section* drop _Product_ in _Label_, and _New Sales_ in _Value_.
 
@@ -39,7 +39,7 @@ The biggest tile indicates the largest _New Sales_ value. Rectangles are *arrang
 
 Handling hierarchical data is the treemap's initial purpose. You can have only one value metric, but unlimited different categories, organized into hierarchy.
 
-![Example of a hierarchical treemap visualization](images/treemap-hierarchy-example.png)
+<img src="images/treemap-hierarchy-example.png" alt="Example of a hierarchical treemap visualization" width="100%"/>
 
 In the example above the treemap is split into five big rectangles (branches of the treemap), determined by the _Product_ category. Each of them *contains smaller rectangles*, determined by the next category level - _Territory_. Lower levels are not presented.
 
@@ -60,7 +60,7 @@ You can drill up and down the treemap visualization to navigate between differen
 
 When you reach the bottom of the hierarchy (the last field dropped in _Label_), your visualization will look exactly like the [flat treemaps](#flat-treemap.).
 
-![Tooltips in the bottom of a treemap](images/total-tooltips-treemap.png)
+<img src="images/total-tooltips-treemap.png" alt="Tooltips in the bottom of a treemap" width="100%"/>
 
 The *totals label* over the top of the treemap visualization (on the left) changes at every level. The _Totals_ reflect the changes in the _Value_ field for each hierarchy level in _Label_ (compare totals in the previous examples). In the example above the totals label shows all new sales of product B in Japan.
 
@@ -68,7 +68,7 @@ Use the *breadcrumbs in the title* to identify the current level, which is displ
 
 ### Working With the Visualization Editor Settings
 
-![Settings section in the Visualization editor](images/settings-section.png)
+<img src="images/settings-section.png" alt="Settings section in the Visualization editor" width="100%"/>
 
 In the _Settings_ section of the Treemap visualization you can configure the following:
 
