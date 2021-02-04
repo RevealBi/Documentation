@@ -15,11 +15,11 @@ The dashboard creation experience in Reveal includes:
 
 You can create a dashboard by selecting the **+ New** button in the initial screen.
 
-![Creating new dashboard](images/create-new-dashboard.png)
+<img src="images/create-new-dashboard.png" alt="Creating new dashboard" width="100%"/>
 
 This will prompt the *New Visualization* dialog. Proceed to create a visualization using a data source.
 
-![New visualization dialog](images/new-visualization-dialog.png)
+<img src="images/new-visualization-dialog.png" alt="New visualization dialog" width="100%"/>
 
 <a name='add-data-source'></a>
 ### Add a Data Source
@@ -27,13 +27,13 @@ This will prompt the *New Visualization* dialog. Proceed to create a visualizati
 If your data source is not in the *Select a Data Source* section, select
 the **+ Data Source** button in the top right-hand corner. A new pop-up will appear display all data source categories and the available data sources.
 
-![add data source to create dashboards](images/adding-data-source.png)
+<img src="images/adding-data-source.png" alt="add data source to create dashboards" width="100%"/>
 
 If your data source is a spreadsheet in a content manager, you will be
 able to select, for example, the specific sheet that you want to use in
 your visualization.
 
-![select a data sheet from an excel file data source](images/select-data-source-sheet.png)
+<img src="images/select-data-source-sheet.png" alt="select a data sheet from an excel file data source" width="100%"/>
 
 #### Available Content
 
@@ -41,29 +41,29 @@ With Reveal, you can add many content sources, including
 [Dropbox](~/en/datasources/supported-data-sources/Dropbox.md), [OneDrive](~/en/datasources/supported-data-sources/OneDrive.md), [Box](~/en/datasources/supported-data-sources/Box.md) and [Google Drive](~/en/datasources/supported-data-sources/Google-Drive.md), which will allow you to browse any folders, files
 or spreadsheets available in them.
 
-![available content in OneDrive datasource account](images/available-content-onedrive.png)
+<img src="images/available-content-onedrive.png" alt="available content in OneDrive datasource account" width="100%"/>
 
 In addition, you can also add [SharePoint](~/en/datasources/supported-data-sources/SharePoint.md) data sources,
 which means the ability to access any lists or libraries.
 
-![available content in SharePoint datasource account](images/available-content-sharepoint.png)
+<img src="images/available-content-sharepoint.png" alt="available content in SharePoint datasource account" width="100%"/>
 
 <a name='modify-visualization'></a>
 ### Changing your Visualization
 
 Once your data source has been added, you will be taken to the Visualizations Editor. By default, the Pivot visualization will be selected.
 
-![dashboards first visualization in the visualization editor](images/dashboards-first-visualization.png)
+<img src="images/dashboards-first-visualization.png" alt="dashboards first visualization in the visualization editor" width="100%"/>
 
 Reveal provides several options to customize the way your information is visualized; you can access the options by selecting the **grid icon** in the top bar.
 
-![editing visualizations types in editor](images/editing-visualizations-in-editor.png)
+<img src="images/editing-visualizations-in-editor.png" alt="editing visualizations types in editor" width="100%"/>
 
 Add labels and values to your visualization and preview them in the
 right-hand pane. If necessary, you can change your visualization's
 settings or add filters to it.
 
-![editing visualization fields preview](images/editing-visualization-fields-preview.png)
+<img src="images/editing-visualization-fields-preview.png" alt="editing visualization fields preview" width="100%"/>
 
 Once you have modified the visualization, you will be taken back to the
 **Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, switch on/off **Auto Layout**, **export** or **save** the dashboard.
@@ -84,7 +84,7 @@ Once you have continued to your dashboard, you can select the overflow
 menu ⇒ *Theme* and switch between *Mountain Theme* and *Ocean Theme* as
 shown below.
 
-![changing the theme of a dashboard](images/dashboard-changing-theme.png)
+<img src="images/dashboard-changing-theme.png" alt="changing the theme of a dashboard" width="100%"/>
 
 <a name='save-dashboard'></a>
 ### Save the Dashboard
@@ -96,7 +96,7 @@ You can save your dashboard in your personal repository, or choose any
 team repositories you have [joined or created](~/en/teams/Creating-Joining-Teams.md).
 Select a name for your dashboard, and, when ready, click/tap **Save here**.
 
-![save as menu](images/save-as-menu.png)
+<img src="images/save-as-menu.png" alt="save as menu" width="100%"/>
 
 To better organize your space you can **create folders** in the
 Dashboard Viewer by clicking on the *+Folder* button at the top
