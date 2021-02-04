@@ -10,7 +10,7 @@ To use your Google Drive data, follow the steps below.
 1.  Upon selecting your Google Drive (or a folder inside it), you will
     see the following log in prompt:
 
-    <img src="images/google-drive-login.png" alt="Google Drive Login" width="80%">
+    <img src="images/google-drive-login.png" alt="Google Drive Login" width="50%">
 
     Enter your **login credentials** and select *Next*.
 
