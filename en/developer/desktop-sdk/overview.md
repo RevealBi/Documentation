@@ -21,7 +21,7 @@ dashboards are used and shared by end users (for example they can be
 downloaded from an internal server, bundled as resources in the app’s
 binary, stored in file system, etc.).
 
-<img src="images/sdk_native_diagram_desktop.png" alt="sdk\_native\_diagram\_desktop" width="100%"/>
+<img src="images/sdk_native_diagram_desktop.png" alt="sdk\_native\_diagram\_desktop"/>
 
 ### About Credentials
 

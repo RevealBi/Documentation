@@ -55,21 +55,21 @@ designed to get you started and headed in the right direction.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p><img src="images/ThumbnailFinanceDashboard_All.png" alt="ThumbnailFinanceDashboard All" /><br />
+<td><p><img src="images/ThumbnailFinanceDashboard_All.png" alt="ThumbnailFinanceDashboard All" width="80%"/><br />
 </p>
 <p><a href="~/en/dashboard-tutorials/finance-dashboard/getting-started.md">Finance Dashboard</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailManufacturingDashboard_All.png" alt="ThumbnailManufacturingDashboard All" /><br />
+<td><p><img src="images/ThumbnailManufacturingDashboard_All.png" alt="ThumbnailManufacturingDashboard All" width="80%"/><br />
 </p>
 <p><a href="~/en/dashboard-tutorials/manufacturing-dashboard/getting-started.md">Manufacturing Dashboard</a><br />
 </p></td>
 </tr>
 <tr class="even">
-<td><p><img src="images/ThumbnailSalesDashboard_All.png" alt="ThumbnailSalesDashboard All" /><br />
+<td><p><img src="images/ThumbnailSalesDashboard_All.png" alt="ThumbnailSalesDashboard All" width="80%"/><br />
 </p>
 <p><a href="~/en/dashboard-tutorials/sales-dashboard/getting-started.md">Sales Dashboard</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailSocialDashboard_All.png" alt="ThumbnailSocialDashboard All" /><br />
+<td><p><img src="images/ThumbnailSocialDashboard_All.png" alt="ThumbnailSocialDashboard All" width="80%"/><br />
 </p>
 <p><a href="~/en/dashboard-tutorials/social-dashboard/getting-started.md">Social Dashboard</a><br />
 </p></td>

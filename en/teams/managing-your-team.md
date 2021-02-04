@@ -87,7 +87,7 @@ click/tap the dropdown menu on the right of your name and select
 If you are the only Owner of a team you cannot leave it without
 assigning another member as an Owner.
 
-<img src="images/owner-leaves-team.png" alt="leave team dialog to assign a new owner" width="80%"/>
+<img src="images/owner-leaves-team.png" alt="leave team dialog to assign a new owner" width="40%"/>
 
 Reveal shows you all the members of the team who are suitable for an
 Owner's role.

@@ -55,8 +55,8 @@ For Teams, the following settings are enabled by default:
 
 |                         | Email                                                     | Push | In-App                                                   |
 | ----------------------- | --------------------------------------------------------- | ---- | -------------------------------------------------------- |
-| I’m removed from a Team | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |      | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>           |
-| New members join        |                                                           |      | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>           |
+| I’m removed from a Team | <img src="images/enabled-feature.png" alt="enabled feature"/>            |      | <img src="images/enabled-feature.png" alt="enabled feature" />           |
+| New members join        |                                                           |      | <img src="images/enabled-feature.png" alt="enabled feature" />           |
 
 #### Dashboard Notifications
 
@@ -66,6 +66,6 @@ For Dashboards, the following settings are enabled by default:
 
 |                                     | Email                                                     | Push                                                      | In-App                                                    |
 | ----------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| Dashboard is shared with me         | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |
-| Dashboard shared with a Team i’m in |                                                           |                                                           | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |
-| Dashboard is updated                |                                                           | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            | <img src="images/enabled-feature.png" alt="enabled feature" width="100%"/>            |
+| Dashboard is shared with me         | <img src="images/enabled-feature.png" alt="enabled feature"/>            | <img src="images/enabled-feature.png" alt="enabled feature"/>            | <img src="images/enabled-feature.png" alt="enabled feature"/>            |
+| Dashboard shared with a Team i’m in |                                                           |                                                           | <img src="images/enabled-feature.png" alt="enabled feature" />            |
+| Dashboard is updated                |                                                           | <img src="images/enabled-feature.png" alt="enabled feature" />            | <img src="images/enabled-feature.png" alt="enabled feature" />            |

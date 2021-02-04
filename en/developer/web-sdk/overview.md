@@ -4,7 +4,7 @@ When embedding Reveal into web applications, the architecture is
 slightly more complex than with native apps, as two components are
 always involved:
 
-  - **Reveal Client SDK**: a set of JavaScript libraries 
+  - **Reveal Client SDK**: a set of JavaScript libraries
     that needs to be integrated into the web application. The frameworks
     supported today are: jQuery, Angular and React.
 
@@ -16,7 +16,7 @@ always involved:
 In the following diagram you visualize the architecture for a web
 application embedding Reveal Web SDK:
 
-<img src="images/sdk_web_diagram_web.png" alt="sdk\_web\_diagram\_web" width="100%"/>
+<img src="images/sdk_web_diagram_web.png" alt="sdk\_web\_diagram\_web" />
 
 As shown above, the SDK works pretty much the same way as with native
 apps. The difference is that some of the callbacks are invoked in the

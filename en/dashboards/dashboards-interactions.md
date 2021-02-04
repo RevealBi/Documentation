@@ -18,9 +18,9 @@ The maximized view allows a larger display of the information.
 
 <img src="images/maximized-visualization.png" alt="maximized visualization view" width="100%"/>
 
-In this mode, you can also switch the maximized view to other visualizations by selecting the **small chart icon** in the top right corner. Different visualizations are displayed based on the data that was used in the editor. Only chart types that work well with your data will be offered. 
+In this mode, you can also switch the maximized view to other visualizations by selecting the **small chart icon** in the top right corner. Different visualizations are displayed based on the data that was used in the editor. Only chart types that work well with your data will be offered.
 
-If you want to save the changed visualization, you need to have edit permissions, be in [dashboard Edit Mode](#view-edit-mode) and explicitly save the changes by selecting the check icon in the top right corner. You have edit permission for dashboards that are created by you or shared with you with [Owner or Modify permissions](~/en/dashboards/sharing-dashboards/share-a-dashboard.html#access-permissions). 
+If you want to save the changed visualization, you need to have edit permissions, be in [dashboard Edit Mode](#view-edit-mode) and explicitly save the changes by selecting the check icon in the top right corner. You have edit permission for dashboards that are created by you or shared with you with [Owner or Modify permissions](~/en/dashboards/sharing-dashboards/share-a-dashboard.html#access-permissions).
 
 <img src="images/chart-change-visualization-view-mode.png" alt="chart change in visualization view mode" width="100%"/>
 
@@ -47,7 +47,7 @@ To close regular tooltips just click or tap away.
 
 You will find two options in the **Interactions** menu: *Hover tooltips* and *Crosshairs*. Only *Hover tooltips* is enabled by default. Both are only available in Dashboard View mode. They can't be used in Dashboard Edit mode.
 
-<img src="images/dashboard-interactions-menu.png" alt="Accessing Reveal's Dashboard Interactions menu" width="100%"/>
+<img src="images/dashboard-interactions-menu.png" alt="Accessing Reveal's Dashboard Interactions menu" width="50%"/>
 
   - With *Hover Tooltips* enabled, you can see **tooltips** popups when you hover over data (press and hold in touch environments).
 
@@ -125,4 +125,4 @@ of visualizations it has.
 
 <img src="images/auto-layout-dashboard.png" alt="auto layout view and resizing of dashboards" width="100%"/>
 
-To start resizing visualizations while Auto Layout is enabled, just drag their corners downwards or to the side. This will automatically turn *Auto Layout* off. 
+To start resizing visualizations while Auto Layout is enabled, just drag their corners downwards or to the side. This will automatically turn *Auto Layout* off.

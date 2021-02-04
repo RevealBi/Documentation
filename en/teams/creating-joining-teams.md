@@ -12,11 +12,10 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 
 1.  Click *Join or Create a Team* at the bottom left corner of the screen.
 
-  <img src="images/button-join-create-team.png" alt="join or create a team button in the popover menu" width="100%"/>
+    <img src="images/button-join-create-team.png" alt="join or create a team button in the popover menu" width="100%"/>
 
-
-  >[!NOTE]
-  > When signing in for the first time, you might already have a team. This is your [Organization team](overview.html#organization-team) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
+    >[!NOTE]
+    > When signing in for the first time, you might already have a team. This is your [Organization team](overview.html#organization-team) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
 
 
 
@@ -55,7 +54,7 @@ Start using Teams by [creating a team from scratch](#create-team-scratch) or [jo
 4. After you create your team, you will be prompted to invite members. Click/tap the    
 the *+ Members* blue button. You can choose members from the dropdown list (see below) or use the search bar to add the emails of users who are outside of your Organization. Select _Done_ when you are ready.
 
-  <img src="images/team-invite-members.png" alt="invite members dialog" width=100% />
+  <img src="images/team-invite-members.png" alt="invite members dialog" width="100%"" />
 
 1. *Member* is the default role for every user you invite, unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about team roles in [Team Collaboration and Privacy](overview.html#members-roles-permissions)
 

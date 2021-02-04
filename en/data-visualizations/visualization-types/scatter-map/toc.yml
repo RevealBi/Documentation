@@ -1,6 +1,4 @@
 - name: Overview
   href: scatter-map.md
-  new: true
 - name: Using Map Image Tiles
   href: map-image-tiles.md
-  new: true

@@ -17,8 +17,8 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5">2/3/2021</td>
-        <td class="tg-0lax" rowspan="5"> ????? <br> [iOS???] </td>
+        <td class="tg-0lax" rowspan="5">2/4/2021</td>
+        <td class="tg-0lax" rowspan="5"> 1.0.17</td>
         <td class="tg-cly1"><span style="font-style:italic">New Snowflake data source</span><br>
         You can now access your data from Snowflake within Reveal.
         </td>

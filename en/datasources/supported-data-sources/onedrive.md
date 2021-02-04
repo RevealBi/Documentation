@@ -6,7 +6,7 @@ To use your OneDrive data, follow the steps below.
 
 Upon selecting your OneDrive, you will see the following prompt:
 
-  <img src="images/OneDriveLogin_All.png" alt="One Drive Login" width=100%/>
+  <img src="images/OneDriveLogin_All.png" alt="One Drive Login" width="100%"/>
 
 Enter your **account and password** for Microsoft and select *Sign in*.
 
