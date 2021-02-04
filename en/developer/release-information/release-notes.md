@@ -37,7 +37,7 @@ here.
         </tr>
         <tr>
             <td><i>[Public Bug Fix] [SDK] Date filters not displayed if LocalizationProvider set</i><br>When a
-                LocalizationProvider is set, date filters from/to are not displayed in the visualizations editor.</td>
+                LocalizationProvider was set, date filters from/to were not displayed in the visualizations editor.</td>
         </tr>
         <tr>
             <td><i>[Public Bug Fix] Word not localized to Japanese</i><br>The word "Others" was not localized to "その他"
@@ -46,13 +46,13 @@ here.
         <tr>
             <td rowspan="2">1/20/2020</td>
             <td rowspan="2">1.0.1712</td>
-            <td><i>[Public Bug Fix] [SDK] The server component relies on Newtonsof.Json serializer</i><br> The Reveal
-                server component was relying on the default JSON serialization settings of the mvc application. Now the
+            <td><i>[Public Bug Fix] [SDK] The server component relies on Newtonsoft.Json serializer</i><br> The Reveal
+                server component was relying on the default JSON serialization settings of the MVC application. Now the
                 hosting app can configure JSON serialization settings as needed.</td>
         </tr>
         <tr>
             <td><i>[Public Bug Fix] [SDK] SQL Server filtering not working for NVARCHAR columns</i><br>Filtering for
-                Microsoft SQL Server was not working for NVARCHAR columns when the filtered value contained multi-byte
+                Microsoft SQL Server was not working for NVARCHAR columns when the filtered value contained multibyte
                 characters.</td>
         </tr>
         <tr>
@@ -202,7 +202,7 @@ here.
         <td>1.0.825</td>
         <td><i>Export to Image Functionality is Now Working</i><br>Exporting images server-side (both programmatically
             and through user interaction) was enabled again. For further details about the fix, please refer to: <a
-                href="setup-configuration-server-web#server-side-image-export">Enabling server-side screenshot
+                href="../setup-configuration/setup-configuration-web.html#server-side-image-export">Enabling server-side screenshot
                 generation</a></td>
         <tr>
         </tr>
