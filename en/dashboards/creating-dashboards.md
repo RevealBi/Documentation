@@ -70,8 +70,9 @@ Once you have modified the visualization, you will be taken back to the
 
 You can also use the overflow menu in the top right corner of the visualizations to rename, edit, **copy** or **duplicate** them.
 
->[NOTE!]
+>[!NOTE]
 >The **difference between copying and duplicating** a visualization is that duplicating works only inside the same dashboard and the copy option allows you to put the visualization in the same or a different dashboard.
+
 
 After copying a visualization, find the _Paste_ option inside the overflow menu of the dashboard you want to paste the visualization in.
 
