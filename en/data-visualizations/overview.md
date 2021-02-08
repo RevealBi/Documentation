@@ -250,7 +250,7 @@ In [Statistical Functions](statistical-functions.md) you will find how advanced 
 
 Within this section, you will find basic, step-by-step tutorials for the
 Reveal visualizations. All sections use the Data Visualizations data
-source, which you can download using [this link](http://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
+source, which you can download using [this link](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 For specific information on what each visualization supports, visit the **Data Visualizations** section of the documentation.
 
 <table>

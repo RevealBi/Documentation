@@ -1,7 +1,7 @@
 ## Adding the Other Visualizations
 
 All the remaining visualizations in the dashboards will use the same
-[sample spreadsheet](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
+[sample spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
 
 <div class="note">
 

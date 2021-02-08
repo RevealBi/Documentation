@@ -2,7 +2,7 @@
 
 A web resource, as the name suggests, is any virtual file stored in the
 web which you can retrieve by using a unique URL address. It might, for
-example, be an excel spreadsheet (for example, [this one](http://download.infragistics.com/reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx)),
+example, be an excel spreadsheet (for example, [this one](https://download.infragistics.com/reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx)),
 or an image (for example, [this one](http://www.infragistics.com/media/442175/home-header-shots.png)).
 
 To configure a Web Resource as a Data Source, you will need to enter the
@@ -13,7 +13,7 @@ following information:
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Web Resource*. You can change it to your preference.
 
 2.  **URL**: the URL where the service is located (for example,
-    <http://download.infragistics.com/reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx>
+    <https://download.infragistics.com/reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx>
     for the Dashboard tutorials).
 
 3. **Result Type**: You can specify the file type you expect to be retrieved from the service. For example, if you choose *.csv* and the service responds with a *json*, Reveal will try to parse the file as a *.csv*.
