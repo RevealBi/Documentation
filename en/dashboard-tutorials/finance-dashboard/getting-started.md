@@ -18,7 +18,7 @@ This dashboard contains information on a sample company:
 <a name='sample-datasheet'></a>
 ### Sample Datasheet
 
-You can download the sample datasheet [here](http://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
+You can download the sample datasheet [here](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
 All other dashboards [in these tutorials](~/en/dashboard-tutorials/overview.md) will use
 the same sample spreadsheet.
 
