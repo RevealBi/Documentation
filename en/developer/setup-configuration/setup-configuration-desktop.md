@@ -24,7 +24,7 @@ project.
 By installing the NuGet package, you will also install the following
 dependency packages:
 
-  - CefSharp.Wpf (83.4.20+)
+  - CefSharp.Wpf (87.1.132+)
   - SkiaSharp (1.68.0+)
   - System.Data.SQLite.Core (1.0.108+)
 
@@ -41,7 +41,7 @@ To setup your project manually you need to:
 
 2.  Install the following NuGet packages, which *RevealView* control
     depends on:
-      - CefSharp.Wpf (83.4.20+)
+      - CefSharp.Wpf (87.1.132+)
       - SkiaSharp (1.68.0+)
       - System.Data.SQLite.Core (1.0.108+)
       - Microsoft.Data.SqlClient (1.1.3+)
