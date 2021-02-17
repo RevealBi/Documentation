@@ -20,7 +20,7 @@ here.
         <tr>
             <td>2/8/2021</td>
             <td>1.0.1772</td>
-            <td><i>[Bug Fix] [SDK] Installation of wpf nuget package fails if the host project uses packages.config.</i><br> asdf fasdf a
+            <td><i>[Bug Fix] [SDK] Installation of WPF NuGet package failing with packages.config</i><br> The installation of WPF NuGet package was failing when the host project used packages.config.
             </td>
         </tr>
         <tr>
