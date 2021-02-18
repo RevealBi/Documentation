@@ -3,9 +3,9 @@
 
 Within this section, you will find step-by-step tutorials on how to
 create a variety of Reveal dashboards. For specific information on any
-visualization, visit the [Data Visualizations](data-visualizations/overview.md)
+visualization, visit the [Data Visualizations](~/en/data-visualizations/overview.md)
 section. You can also find detailed information on which filters you can
-apply to a visualization or dashboard in the [Filters](filters/overview.md) topic.
+apply to a visualization or dashboard in the [Filters](~/en/filters/overview.md) topic.
 
 <table>
 <colgroup>
