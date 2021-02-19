@@ -47,19 +47,19 @@ public partial class MainWindow : Window
         this.Loaded += MainWindow_Loaded;
     }
 
-        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            var path = @"..\..\Sales.json";
-            var revealView = new RevealView();
+    private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+    {
+        var path = @"..\..\Sales.json";
+        var revealView = new RevealView();
 
-            // reading the json file contents
-            string jsonContent = File.ReadAllText(path);
-            RVDashboard dashboard = await RVDashboard.LoadFromJsonAsync(jsonContent);
-            revealView.Dashboard = dashboard;
+        // reading the json file contents
+        string jsonContent = File.ReadAllText(path);
+        RVDashboard dashboard = await RVDashboard.LoadFromJsonAsync(jsonContent);
+        revealView.Dashboard = dashboard;
 
-            Grid grid = this.Content as Grid;
-            grid.Children.Add(revealView);
-        }
+        Grid grid = this.Content as Grid;
+        grid.Children.Add(revealView);
+    }
 }
 ```
 > [!NOTE]
