@@ -18,6 +18,12 @@ here.
     </thead>
     <tbody>
         <tr>
+            <td>2/8/2021</td>
+            <td>1.0.1772</td>
+            <td><i>[Bug Fix] [SDK] Installation of WPF NuGet package failing with packages.config</i><br> The installation of WPF NuGet package was failing when the host project used packages.config.
+            </td>
+        </tr>
+        <tr>
             <td rowspan="6">2/4/2021</td>
             <td rowspan="6">1.0.1763</td>
             <td><i>[Public Bug Fix] [SDK] HasPendingChanges property not working as expected</i><br> In Desktop SDK, the
