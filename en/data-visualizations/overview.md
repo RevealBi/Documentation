@@ -19,104 +19,25 @@ Are you trying to compare data, show data distribution or present it as a part t
 Answer what you want to show with your data and use the table below to choose the most suitable chart.
 
 
-<style type="text/css">
-td {
-  border: 1px solid black;
-}
-</style>
-<table>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-</colgroup>
-<body>
-  <tr>
-    <td><b>Compare Data</b></td>
-    <td>
-      <img src="images/Bar-Chart.png" alt="Bar Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Bar</a>
-    </td>
-    <td>
-      <img src="images/Column-chart.png" alt="Column Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Column</а>
-    </td>
-    <td>
-      <img src="images/Area-chart.png" alt="Area Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Area</а>
-    </td>
-    <td>
-      <img src="images/Spline-chart.png" alt="Spline Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Spline</а>
-    </td>
-    <td>
-      <img src="images/Combo-chart.png" alt="Combo Chart" /><br/>
-      <a href="visualization-types/combo-charts.md">Combo</a>
-    </td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>
-      <img src="images/Circular-chart.png" alt="Circular Gauge" /><br/>
-      <a href="visualization-types/gauge-charts.html#circular-gauge">Circular Gauge</a>
-    </td>
-    <td>
-      <img src="images/Spline-Area-chart.png" alt="Spline with Area Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Spline Area</a>
-    </td>
-    <td>
-      <img src="images/OHLC-chart.png" alt="OHLC Chart" /><br/>
-      <a href="visualization-types/financial-charts.md">OHLC</a>
-    </td>
-    <td>
-      <img src="images/Candlestick-chart.png" alt="Candlestick Chart" /><br/>
-      <a href="visualization-types/financial-charts.md">Candlestick</a>
-    </td>
-    <td />
-  </tr>
-  <tr>
-    <td><b>Part to Whole</b></td>
-    <td>
-      <img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Stacked Column</a>
-    </td>
-    <td>
-      <img src="images/Stacked-Bar-Chart.png" alt="Stacked Bar Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Stacked Bar</a>
-    </td>
-    <td />
-    <td />
-    <td />
-    <td />
-    <td />
-    <td />
-    <td />
-  </body>
-  </table>
-
-
 
 <style type="text/css">
 td {
   border: 1px solid black;
-  font-size: 90%;
+  font-size: 60%;
 }
 </style>
 <table>
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
 </colgroup>
 <body>
   <tr>
