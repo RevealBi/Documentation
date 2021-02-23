@@ -2,24 +2,25 @@
 
 Reveal helps you get the most insight possible out of business data by providing a variety of visualizations.
 
-### What is a Visualization? 
+### What is a Visualization?
 
-For users to get the most insight possible out of business data, Reveal provides several options to customize the way information is visualized. These are called "visualizations". Any dashboard is composed of one or more visualizations. 
+For users to get the most insight possible out of business data, Reveal provides several options to customize the way information is visualized. These are called "visualizations". Any dashboard is composed of one or more visualizations.
 
 The dashboard shown below contains a wide variety of visualizations, all of which analyze different aspects of Manufacturing.
 
 <img src="images/data-visualizations-example.png" alt="Reveal's log in screen" width="100%"/>
 
-### Choosing the Right Chart Type 
+### Choosing the Right Chart Type
 
-In choosing the best chart type you need to look at your data and answer the questions that will help you find out what story you are trying to tell with your visualization. 
+In choosing the best chart type you need to look at your data and answer the questions that will help you find out what story you are trying to tell with your visualization.
 
-Are you trying to compare data, show data distribution or present it as a part to a whole breakdown? Are you doing a trend analysis of your financial, marketing or sales data, need a date/time axis? Are you looking at relationships between data? Or you just want to show KPIs and gauges, which are really easy to read and tell a quick story? Is it important to plot your data on a map? 
+Are you trying to compare data, show data distribution or present it as a part to a whole breakdown? Are you doing a trend analysis of your financial, marketing or sales data, need a date/time axis? Are you looking at relationships between data? Or you just want to show KPIs and gauges, which are really easy to read and tell a quick story? Is it important to plot your data on a map?
 
-Answer what you want to show with your data and use the table below to choose the most suitable chart. 
+Answer what you want to show with your data and use the table below to choose the most suitable chart.
+
 
 <style type="text/css">
-td { 
+td {
   border: 1px solid black;
 }
 </style>
@@ -31,10 +32,91 @@ td {
 <col style="width: 10%" />
 <col style="width: 10%" />
 <col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
+</colgroup>
+<body>
+  <tr>
+    <td><b>Compare Data</b></td>
+    <td>
+      <img src="images/Bar-Chart.png" alt="Bar Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Bar</a>
+    </td>
+    <td>
+      <img src="images/Column-chart.png" alt="Column Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Column</а>
+    </td>
+    <td>
+      <img src="images/Area-chart.png" alt="Area Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Area</а>
+    </td>
+    <td>
+      <img src="images/Spline-chart.png" alt="Spline Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Spline</а>
+    </td>
+    <td>
+      <img src="images/Combo-chart.png" alt="Combo Chart" /><br/>
+      <a href="visualization-types/combo-charts.md">Combo</a>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <img src="images/Circular-chart.png" alt="Circular Gauge" /><br/>
+      <a href="visualization-types/gauge-charts.html#circular-gauge">Circular Gauge</a>
+    </td>
+    <td>
+      <img src="images/Spline-Area-chart.png" alt="Spline with Area Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Spline Area</a>
+    </td>
+    <td>
+      <img src="images/OHLC-chart.png" alt="OHLC Chart" /><br/>
+      <a href="visualization-types/financial-charts.md">OHLC</a>
+    </td>
+    <td>
+      <img src="images/Candlestick-chart.png" alt="Candlestick Chart" /><br/>
+      <a href="visualization-types/financial-charts.md">Candlestick</a>
+    </td>
+    <td />
+  </tr>
+  <tr>
+    <td><b>Part to Whole</b></td>
+    <td>
+      <img src="images/Stacked-Column-Chart.png" alt="Stacked Column Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Stacked Column</a>
+    </td>
+    <td>
+      <img src="images/Stacked-Bar-Chart.png" alt="Stacked Bar Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Stacked Bar</a>
+    </td>
+    <td />
+    <td />
+    <td />
+    <td />
+    <td />
+    <td />
+    <td />
+  </body>
+  </table>
+
+
+
+<style type="text/css">
+td {
+  border: 1px solid black;
+  font-size: 90%;
+}
+</style>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
 </colgroup>
 <body>
   <tr>
@@ -231,17 +313,17 @@ td {
 </body>
 </table>
 
-If you need more information about how to use each of these visualizations, use the hyperlinks in the table. 
+If you need more information about how to use each of these visualizations, use the hyperlinks in the table.
 
 ### Topics Overview
 
-In the _Visualization Types_ dropdown (see the table of contents on the left) you will find an A-Z list of all kinds of charts Reveal provides. 
+In the _Visualization Types_ dropdown (see the table of contents on the left) you will find an A-Z list of all kinds of charts Reveal provides.
 
 In [Working with the Visualizations Editor](visualizations-editor.md) you will be introduced to the Visualizations Editor's main parts and will also learn how to start creating your first visualization.
 
-In the [_Fields_](fields/overview.md) topics you will find more information on how to aggregate, filter and highlight the most valuable aspects of the data fields you are using to build your visualization. 
+In the [_Fields_](fields/overview.md) topics you will find more information on how to aggregate, filter and highlight the most valuable aspects of the data fields you are using to build your visualization.
 
-In [Reusing Visualization](reusing-visualizations.md) you will find useful ideas on how to speed up the dashboards creation process. 
+In [Reusing Visualization](reusing-visualizations.md) you will find useful ideas on how to speed up the dashboards creation process.
 
 In [Statistical Functions](statistical-functions.md) you will find how advanced predictive analysis works in Reveal. See how to use the *Time series forecast*, *Linear regression*, and *Outliers Detection* function to receive more insight from your data.  
 
@@ -374,4 +456,3 @@ For specific information on what each visualization supports, visit the **Data V
 </tr>
 </tbody>
 </table>
-
