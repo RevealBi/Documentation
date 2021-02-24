@@ -2,7 +2,7 @@
 
 ### Working With the Grid Chart in the Visualization Editor
 
-The grid chart is the default visualization option for displaying data, which presents the information in a matrix. You can **resize a column's width** by selecting the grid header, which will highlight the whole column. Drag the a side left or right to modify the column's width.
+The grid chart is a visualization option for displaying data, which presents the information in a matrix. You can **resize a column's width** by selecting the grid header, which will highlight the whole column. Drag the a side left or right to modify the column's width.
 
 <img src="images/grid-view-sorting-columns.png" alt="Grid Chart Sorting Columns" width="100%"/>
 
