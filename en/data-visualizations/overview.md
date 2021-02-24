@@ -4,19 +4,6 @@ Reveal helps you get the most insight possible out of business data by providing
 
 ### What is a Visualization?
 
-| | | | | | |
-|-|-|-|-|-|-|
-|__Compare Data__| <img src="images/Bar-Chart.png" alt="Bar Chart"/> [Bar](visualization-types/category-charts.md) | <img src="images/Column-chart.png" alt="Column Chart"/> [Column](visualization-types/category-charts.md) | <img src="images/Area-Chart.png" alt="Area Chart"/> [Area](visualization-types/category-charts.md) | <img src="images/Spline-Chart.png" alt="spline Chart"/> [Spline](visualization-types/category-charts.md) | <img src="images/Combo-Chart.png" alt="Combo Chart"/> [Combo](visualization-types/combo-charts.md) |
-| | <img src="images/Circular-Chart.png" alt="Circular Gauge"/> [Circular Gauge](visualization-types/gauge-charts.html#circular-gauge) | <img src="images/Spline-Area-Chart.png" alt="Spline with Area Chart"/> [Spline Area](visualization-types/category-charts.md) | <img src="images/OHLC-Chart.png" alt="OHLC Chart"/> [OHLC](visualization-types/financial-charts.md) | <img src="images/Candlestick-Chart.png" alt="Candlestick Chart"/> [Candlestick](visualization-types/financial-charts.md) | |
-|__Part to Whole__| Stacked Column | Stacked Bar | Stacked Area | Pie | Doughnut |
-| | Funnel | Treemap | | | |
-| __Data Distribution__ | Step Area | Stacked Column | Scatter | Bubble| |
-| __Data Trend Analysis__ | Line | Spline | Combo | OHLC | Candlestick |
-| | Radial | | | | |
-| __Data Relationships__ | Scatter | Bubble | Line | | |
-| __KPIs and Gauges__ | Bullet Graph | Linear Graph | Text | KPI | |
-| __Geospatial Data__ | Choropleth Map | Scatter Map | | | |
-
 For users to get the most insight possible out of business data, Reveal provides several options to customize the way information is visualized. These are called "visualizations". Any dashboard is composed of one or more visualizations.
 
 The dashboard shown below contains a wide variety of visualizations, all of which analyze different aspects of Manufacturing.
@@ -54,16 +41,16 @@ td {
       <a href="visualization-types/category-charts.md">Bar</a>
     </td>
     <td>
-      <img src="images/Column-chart.png" alt="Column Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Column</а>
+      <img src="images/Column-Chart.png" alt="Column Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Column</a>
     </td>
     <td>
-      <img src="images/Area-chart.png" alt="Area Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Area</а>
+      <img src="images/Area-Chart.png" alt="Area Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Area</a>
     </td>
     <td>
-      <img src="images/Spline-chart.png" alt="Spline Chart" /><br/>
-      <a href="visualization-types/category-charts.md">Spline</а>
+      <img src="images/Spline-Chart.png" alt="Spline Chart" /><br/>
+      <a href="visualization-types/category-charts.md">Spline</a>
     </td>
     <td>
       <img src="images/Combo-chart.png" alt="Combo Chart" /><br/>
