@@ -12,7 +12,7 @@ Interested on embedded analytics? [Download Reveal SDK](https://www.revealbi.io/
 
 Connect to the most popular data sources without setting anything up on the server. Get real-time insights by connecting directly to SharePoint Online, Google Drive, OneDrive, Microsoft Analysis Services, Microsoft SQL Server, CRM, and many more.
 
-<img src="dashboards/images/adding-data-source.png" alt="Connecting to data in Reveal" width="100%"/>
+<img src="data-visualizations/images/creating-new-visualization.png" alt="Connecting to data in Reveal" width="100%"/>
 
 With an intuitive drag and drop interface, Reveal makes it simple to create dashboards within minutes. Choose from more than 20 different visualizations to present your data and tell your story the best way.
 

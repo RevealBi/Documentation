@@ -39,7 +39,7 @@ Below, you will find a list of all sections of the _Editor_ with their capabilit
 1. **Data Section** - this section contains two panels:
 
   a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
-       The *plus* icon in this panel allows you to either [blend data sources](~/en/datasources/data-blending.md) or [calculate a field](fields/calculated-fields/overview.html#precalculated-fields). The *brain* icon allows you to use fields from a [BigQuery](~/en/datasources/datasources/ml-integration/bigquery-machine-learning-models.md) or [Azure](~/en/datasources/datasources/ml-integration/azure-machine-learning-models.md) *machine learning model* for your visualization.
+       The *plus* icon in this panel allows you to either [blend data sources](~/en/datasources/data-blending.md) or [calculate a field](fields/calculated-fields/overview.html#precalculated-fields). The *brain* icon allows you to use fields from a [BigQuery](~/en/datasources/ml-integration/bigquery-machine-learning-models.md) or [Azure](~/en/datasources/ml-integration/azure-machine-learning-models.md) *machine learning model* for your visualization.
 
   b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
 
