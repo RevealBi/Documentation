@@ -82,14 +82,14 @@ The Scatter Map in Reveal provides you with a variety of opportunities for your 
 
 The ScatterMap visualization plots the data using geo-coordinates. Each data point requires a latitude and longitude value to be displayed. The accepted format by Reveal is:
 
-* **two different columns** for latitude and longitude respectively.
+* **Two different columns** for latitude and longitude respectively.
 * **Latitude/Longitude** in Decimal Degrees format, for example: -46.896388, 168.126111
 
     >[!NOTE] **Unaccepted formats**.
     > Latitude/Longitude formats, containing minutes and seconds symbols, such as *46° 53.783333'*, and formats containing suffixes *- 46° 53' 47'' South, 168° 7' 34'' E*, are not accepted.
 
 The ***"There is no data to display."*** message may appear in the Visualization Editor, even if your latitude and longitude data is correct and is in the accepted format. This can happen if the geographic coordinates are plotted outside the bounds of the selected map.
->
+
 #### Basic Dot Maps  
 
 <img src="images/scatter-dot-map-airports.png" alt="A dot map showing the distribution of airports across the US" width="100%"/>
