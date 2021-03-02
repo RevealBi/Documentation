@@ -15,14 +15,14 @@ You can use the *slider* provided in the *Visualization Editor Settings* to spec
 To use image tiles:  
 
 1. In the _Visualization Editor_, go to _Settings_ > _Background_ and make sure _Use Image Tiles_ box is checked.  
-2. If no tile provider is configured, click the button in the yellow banner that shows up (see screenshot below). 
+2. If no tile provider is configured, click the button in the banner that shows up (see screenshot below). 
 
-    <img src="images/configure-tile-provide-banner-button.png" alt="Yellow banner in settings prompting users to configure a tile provider on member or organization level" width="80%"/>
+    <img src="images/configure-tile-provide-banner-button.png" alt="Yellow banner in settings prompting users to configure a tile provider on member or organization level" width="100%"/>
    
     Here you are presented with three levels to configure a tile provider at: 
 
-    * personal;
-    * *team* - this option only appears when you creatе the dashboard inside a team;
+    * *Member*
+    * *Team* - this option only appears when you creatе the dashboard inside a team
     * *Organization* - this option will only appear, if you are part of the Organization team or you creatе the dashboard inside a team, which is part of the Organization.
 
 3. Choose the level you prefer to set up a tile provider. 
@@ -69,11 +69,11 @@ When the dashboard is owned by a user (it's created in the _My Stuff_ space), or
 1. In the *Organization* team settings, if the user is part of an Organization.
 2. In *Personal* settings of the user opening the dashboard. 
 
-#### When the dashboard is owned by a team 
+#### When the dashboard is owned by a Team 
 
 When the dashboard is owned by a team, i.e. it's created in a team dashboards' space, Reveal checks for a tile provider: 
 
-1. In this *team*'s settings.
+1. In this *Team*'s settings.
 2. In the *Organization* settings when the owning team is *part of the Organization*.
 3. In *Personal* settings of the user opening the dashboard.
 
