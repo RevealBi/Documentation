@@ -6,6 +6,11 @@ predictive analysis. You can use the [*Time series forecast*](#time-series-forec
 to make predictions, recognize and evaluate trends, or discover outliers
 in your data series.
 
+>[!NOTE]
+**Time Series Chart not supported**.
+>The newly released Time Series chart does not support statistical functions yet. This means you cannot use Time series forecast, Linear regression or Detect outliers for now. It will be supported in the future. Currently, you can use a Line chart to achieve a similar result.
+
+
 ### Accessing Statistical Functions
 
 To apply one of the three *statistical functions* to your visualization
@@ -32,7 +37,7 @@ enabled.
 
 | **Function**            | **Algorithm**            | **What is it used for?**                                                                                                                                                            | **Which visualizations support it?**                                                                                                                      |
 | ----------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time series forecasting | Exponential smoothing    | To make a forecast of the data, for a given data series. Users can select a time range in the future.                                                                               | [Category charts](visualization-types/category-charts.md): Area, Bar, Column, Line, Spline, Spline Area, Step Area, Step Line                                                    |
+| Time series forecasting | Exponential smoothing    | To make a forecast of the data, for a given data series. Users can select a time range in the future.                                                                               | [Category charts](visualization-types/category-charts.md): Area, Bar, Column, Line, Spline, Spline Area, Step Area, Step Line                                                  |
 | Linear regression       | Linear regression        | To evaluate a trend by finding the linear relationship between two variables. The algorithm calculates a line, close to most of the points in the chart to show the on-going trend. | [Category charts](visualization-types/category-charts.md): Area, Bar, Column, Line, Spline, Spline Area, Step Area, Step Line; [Scatter and Bubble](visualization-types/scatter-bubble-charts.md) chart |
 | Detect outliers         | Interquartile range rule | To detect data that stands out from the rest because of random factors.                                                                                                             | [Category charts](visualization-types/category-charts.md): Area, Column, Line, Spline, Spline Area, Step Area, Step Line; [Scatter](visualization-types/scatter-bubble-charts.md) chart                 |
 
