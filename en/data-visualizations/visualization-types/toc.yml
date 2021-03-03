@@ -30,3 +30,5 @@
   href: text-box.md
 - name: Treemap Charts
   href: treemap-charts.md
+- name: Time Series Charts
+  href: time-charts.md

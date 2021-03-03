@@ -36,7 +36,7 @@ Minimum is set to 0 by default and maximum is calculated
     automatically depending on your values.
 
   - **Choose Compact Labels**.
-With this setting you avoid redundant label information when you zoom your chart.
+With this setting you avoid redundant label information when you zoom your chart, as shown below.
 
 <img src="images/time-series-chart-compact-labels.png" alt="Compact Lables in Time Series within Reveal" width="100%"/>
 
@@ -46,7 +46,7 @@ With this setting you avoid redundant label information when you zoom your chart
 When the Time Series chart is maximized, you can zoom in and out. As shown in the image above, this allows you to focus on a specific time interval and is a clear scenario where using the Compact Labels setting makes sense.
 
 
-## Statistical Functions Not Supported
+### Statistical Functions Not Supported
 
 Reveal provides you with three types of advanced
 predictive analysis. These are *Time series forecast*, *Linear regression*) and *Detect outliers*. You can use them to make predictions, recognize and evaluate trends, or discover outliers
