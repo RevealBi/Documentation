@@ -7,8 +7,8 @@ to make predictions, recognize and evaluate trends, or discover outliers
 in your data series.
 
 >[!NOTE]
-**Time Series Chart not supported**.
->The newly released Time Series chart does not support statistical functions yet. This means you cannot use Time series forecast, Linear regression or Detect outliers for now. It will be supported in the future. Currently, you can use a Line chart to achieve a similar result, as shown in the sections below.
+**Time Series Chart currently not supported**.
+>The newly released Time Series chart does not support statistical functions yet. This means you cannot use Time series forecast, Linear regression or Detect outliers for now. It will be supported in the future. Currently, **you can use a Line chart** to achieve a similar result, as shown in the sections below.
 
 
 ### Accessing Statistical Functions

@@ -31,4 +31,5 @@
 - name: Treemap Charts
   href: treemap-charts.md
 - name: Time Series Charts
-  href: time-charts.md
+  href: time-series-charts.md
+  new: true
