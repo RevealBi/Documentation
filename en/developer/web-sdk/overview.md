@@ -35,6 +35,6 @@ To achieve this, set a property on the window object, as shown below:
 $.ig.RevealSdkSettings.setBaseUrl("{back-end base url}");
 ```
 
-Please, note that the **trailing slash symbol is required** in order to set the property successfully.
+Please, note that the **trailing slash symbol is required in the URL** in order to set the property successfully.
 
 Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en/developer/setup-configuration/setup-configuration-web.html#instantiate-web-client-sdk).
