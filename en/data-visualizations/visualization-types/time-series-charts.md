@@ -49,7 +49,7 @@ When the Time Series chart is maximized, you can zoom in and out. As shown in th
 ### Statistical Functions Currently Not Supported
 
 Reveal provides you with three types of advanced
-predictive analysis. These are *Time series forecast*, *Linear regression*) and *Detect outliers*. You can use them to make predictions, recognize and evaluate trends, or discover outliers
+predictive analysis. These are *Time series forecast*, *Linear regression* and *Detect outliers*. You can use them to make predictions, recognize and evaluate trends, or discover outliers
 in your data series.
 
 The newly released Time Series chart does not support statistical functions yet. This means you cannot use Time series forecast, Linear regression or Detect outliers for now. They will be supported in the future. Currently, you can use a Line chart to achieve a similar result, as shown here [*Time series forecast*](~/en/data-visualizations/statistical-functions.html#time-series-forecast).

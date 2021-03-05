@@ -50,10 +50,7 @@ Use your trained models' data from BigQuery or Azure Machine Learning Studio in 
 
 ### What's new?
 
-* [Snowflake](~/en/datasources/supported-data-sources/snowflake.md) data source – You can now access your data from Snowflake within Reveal.
-* [Date Hierarchies](~/en/data-visualizations/fields/field-settings.html#date-fields)– Date fields now automatically display a hierarchy in the Pivot Editor (Year, Quarter, Month, Day, and Minute).
-* [Scatter Map enhancement](~/en/data-visualizations/visualization-types/scatter-map/scatter-map.html#scatter-maps-zoom) – A new zoom control allows you to better adjust the zoom level and reset it when needed.
-* [Improved UI Navigation](~/en/general/logging-in-reveal.html#your-first-screen) – The main navigation changed, with a different UI and organization, resulting in a better navigation experience.
+* [Time Series chart](~/en/data-visualizations/visualization-types/time-series-charts.md) data source – Gain more insight and detect trends at a glance with the new Time Series chart. Similar to a conventional line chart, the Time Series chart allows for an easy observation of development over time.
 
 ### Where Can I Get Reveal?
 

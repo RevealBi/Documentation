@@ -17,6 +17,28 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
     <tr>
+        <td class="tg-0lax" rowspan="4">2/4/2021</td>
+        <td class="tg-0lax" rowspan="4"> 1.0.18 <br> [1.0.24 iOS]</td>
+        <td class="tg-cly1"><span style="font-style:italic">New Time Series chart</span><br>
+        Gain more insight and detect trends at a glance with the new Time Series chart, which allows for an easy observation of development over time.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix]  Grand Total showing wrong values in iOS</span><br>
+            In the iOS platform, Pivot Table displayed incorrect values for Grand Total.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix]  SQL Server heterogeneous queries not working in iOS</span><br>
+            In the iOS platform, heterogeneous queries in SQL server were not working as expected.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] SQL Server results with an infinite symbol showing an error in iOS</span><br>
+            In the iOS platform, SQL Server results that include the infinite symbol were displaying an error.
+        </td>
+    </tr>
+    <tr>
         <td class="tg-0lax" rowspan="5">2/4/2021</td>
         <td class="tg-0lax" rowspan="5"> 1.0.17</td>
         <td class="tg-cly1"><span style="font-style:italic">New Snowflake data source</span><br>
