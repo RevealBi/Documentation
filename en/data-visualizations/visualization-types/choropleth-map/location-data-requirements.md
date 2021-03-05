@@ -51,7 +51,7 @@ If you are getting the *"There is no data to display"* error, this means the pre
    
     - You might have assigned the wrong fields in the *_Location_* placeholder. Check if the _Location_ field contains geographic units - continents, countries, states, etc.  
   
-    - Your field in the  *_Value_* placeholder may not contain information for the selected locations. If you have added an additional category in the *_Map Color_* placeholder (see link:choropleth-map#map-color[this example]), then your _Value_ field must contain information for this category. For example, there must be information about votes for each candidate, if you compare candidate votes by state.
+    - Your field in the  *_Value_* placeholder may not contain information for the selected locations. If you have added an additional category in the *_Map Color_* placeholder (see [this example](choropleth-map.md#map-color)), then your _Value_ field must contain information for this category. For example, there must be information about votes for each candidate, if you compare candidate votes by state.
   
     - Also, please confirm that you selected the right *_MAP_* in the map selector.
   
