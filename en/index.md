@@ -50,7 +50,7 @@ Use your trained models' data from BigQuery or Azure Machine Learning Studio in 
 
 ### What's new?
 
-* [Time Series chart](~/en/data-visualizations/visualization-types/time-series-charts.md) data source – Gain more insight and detect trends at a glance with the new Time Series chart. Similar to a conventional line chart, the Time Series chart allows for an easy observation of development over time.
+* [Time Series](~/en/data-visualizations/visualization-types/time-series-charts.md) chart – Gain more insight and detect trends at a glance with the new Time Series chart. Similar to a conventional line chart, the Time Series chart allows for an easy observation of development over time.
 
 ### Where Can I Get Reveal?
 
