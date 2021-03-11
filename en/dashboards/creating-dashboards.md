@@ -15,7 +15,7 @@ The dashboard creation experience in Reveal includes:
 
 You can create a dashboard by selecting the **+ New** button in the initial screen.
 
-<img src="/reveal-images/en/dashboards/images/create-new-dashboard.png" alt="Creating new dashboard" width="100%"/>
+<img src="images/create-new-dashboard.png" alt="Creating new dashboard" width="100%"/>
 
 This will prompt the *New Visualization* dialog. Proceed to create a visualization using a data source.
 
