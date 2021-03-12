@@ -64,7 +64,7 @@ here.
                 in Japanese.</td>
         </tr>
         <tr>
-            <td rowspan="2">1/20/2020</td>
+            <td rowspan="2">1/20/2021</td>
             <td rowspan="2">1.0.1712</td>
             <td><i>[Public Bug Fix] [SDK] The server component relies on Newtonsoft.Json serializer</i><br> The Reveal
                 server component was relying on the default JSON serialization settings of the MVC application. Now the
@@ -226,7 +226,7 @@ here.
                 generation</a></td>
         <tr>
         </tr>
-        <td rowspan="4">9/4/2019</td>
+        <td rowspan="4">9/10/2019</td>
         <td rowspan="4">1.0.80x</td>
         <td><i>Localization Service for Reveal Desktop SDK</i><br>You can now localize titles and labels of a variety of
             dashboard elements. The Localization service also enables you to change the formatting settings of numeric
@@ -243,7 +243,7 @@ here.
                 the NuGet package manager to reference assemblies and install dependency packages.</td>
         </tr>
         </tr>
-        <td rowspan="4">9/10/2019</td>
+        <td rowspan="4">9/4/2019</td>
         <td rowspan="4">1.0.70x</td>
         <td><i>Step by Step Guide</i><br>With this detailed guide, you will start with prerequisites and go through
             every step needed to setup and configure Reveal’s SDK.</td>

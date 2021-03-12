@@ -17,7 +17,7 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="4">2/4/2021</td>
+        <td class="tg-0lax" rowspan="4">3/5/2021</td>
         <td class="tg-0lax" rowspan="4"> 1.0.18 <br> [1.0.24 iOS]</td>
         <td class="tg-cly1"><span style="font-style:italic">New Time Series chart</span><br>
         Gain more insight and detect trends at a glance with the new Time Series chart, which allows for an easy observation of development over time.
