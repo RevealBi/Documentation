@@ -88,7 +88,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="3"></td>
+        <td class="tg-0lax" rowspan="3">10/16/2020</td>
         <td class="tg-0lax" rowspan="3">1.0.14</td>
         <td class="tg-cly1"><span style="font-style:italic">New Amazon Athena data source</span><br>You can now connect
             to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
@@ -107,7 +107,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="3"></td>
+        <td class="tg-0lax" rowspan="3">9/3/2020</td>
         <td class="tg-0lax" rowspan="3">1.0.13</td>
         <td class="tg-cly1"><span style="font-style:italic">New Amazon Redshift data source</span><br>You can now use
             and gain new insights from your data in the Amazon Redshift cloud data warehouse.
@@ -124,7 +124,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="7"></td>
+        <td class="tg-0lax" rowspan="7">7/28/2020</td>
         <td class="tg-0lax" rowspan="7">1.0.12</td>
         <td class="tg-cly1"><span style="font-style:italic">New Choropleth Map visualization</span><br>The Choropleth
             map visualization allows you to create beautiful thematic maps. You can now present geospatial data in an
@@ -165,7 +165,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="2"></td>
+        <td class="tg-0lax" rowspan="2">5/19/2020</td>
         <td class="tg-0lax" rowspan="2">1.0.10/1.0.11</td>
         <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data
                 source</span><br>With this new data source, you can create dashboards using your data models in Azure
@@ -178,7 +178,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5"></td>
+        <td class="tg-0lax" rowspan="5">5/4/2020</td>
         <td class="tg-0lax" rowspan="5">1.0.8/1.0.9</td>
         <td class="tg-cly1"><span style="font-style:italic">New TreeMap visualization</span><br>You can use this new
             visualization type to present large hierarchies with a set of nested rectangles. Rectangles' size will show
@@ -210,7 +210,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5"></td>
+        <td class="tg-0lax" rowspan="5">4/1/2020</td>
         <td class="tg-0lax" rowspan="5">1.0.7</td>
         <td class="tg-cly1"><span style="font-style:italic">New integration with BigQuery Machine Learning
                 models</span><br>You can use your BigQuery machine learning models with your BigQuery data source
@@ -234,7 +234,7 @@ here.
             include visualizations from Reveal in your spreadsheets upon export.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="10"></td>
+        <td class="tg-0lax" rowspan="10">2/5/2020</td>
         <td class="tg-0lax" rowspan="10">1.0.5</td>
         <td class="tg-0lax"><span style="font-style:italic">New Statistical Functions</span><br>Reveal can now process
             and perform statistical analysis on existing datasets. This means you can better analyze data and even
@@ -282,7 +282,7 @@ here.
             addition, crosshairs are now shown to help give context to the tooltip.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5"></td>
+        <td class="tg-0lax" rowspan="5">11/25/2019</td>
         <td class="tg-0lax" rowspan="5">1.0.4</td>
         <td class="tg-0lax"><span style="font-style:italic">Pie and doughnut charts legends now can show elements with
                 value 0</span><br>You now have the option to show elements with value 0 in the legends of pie and
@@ -308,7 +308,7 @@ here.
             find function used in calculated fields didn't consider the start position parameter as optional.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="6"></td>
+        <td class="tg-0lax" rowspan="6">11/6/2020</td>
         <td class="tg-0lax" rowspan="6">1.0.3</td>
         <td class="tg-0lax"><span style="font-style:italic">Export to Excel and PowerPoint</span><br>You can now export
             your dashboard's visualizations as slides of a PowerPoint presentation. In addition, you can also export the
@@ -371,7 +371,7 @@ here.
             Drive, Dropbox, OneDrive).</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="4"></td>
+        <td class="tg-0lax" rowspan="4">9/4/2019</td>
         <td class="tg-0lax" rowspan="4">1.0.1</td>
         <td class="tg-0lax"><span style="font-style:italic">Localization</span><br>Reveal is now localized to: German,
             Spanish, French, Italian, Japanese, Korean, Malay, Dutch, Portuguese, Russian and Chinese (Simplified and
