@@ -5,9 +5,9 @@ here.
 
 <table>
     <colgroup>
+        <col style="width: 15%" />
         <col style="width: 10%" />
-        <col style="width: 10%" />
-        <col style="width: 80%" />
+        <col style="width: 75%" />
     </colgroup>
     <thead>
         <tr>
@@ -18,7 +18,7 @@ here.
     </thead>
     <tbody>
         <tr>
-            <td rowspan="4">3/5/2021</td>
+            <td rowspan="4">May-2021</td>
             <td rowspan="4">1.0.1821</td>
             <td><i>[Public Bug Fix] [SDK] SDK apps sometimes throw an NRE exception</i><br> When an SDK application was opened for more than 90 minutes without users interacting with it, performing an action was throwing an exception.</td>
         </tr>
@@ -32,13 +32,13 @@ here.
             <td><i>[Public Bug Fix]  SQL Server results with an infinite symbol showing an error in iOS</i><br>In the iOS platform, SQL Server results that include the infinite symbol were displaying an error.</td>
         </tr>
         <tr>
-            <td>2/8/2021</td>
+            <td>Feb-2021</td>
             <td>1.0.1772</td>
             <td><i>[Bug Fix] [SDK] Installation of WPF NuGet package failing with packages.config</i><br> The installation of WPF NuGet package was failing when the host project used packages.config.
             </td>
         </tr>
         <tr>
-            <td rowspan="6">2/4/2021</td>
+            <td rowspan="6">Feb-2021</td>
             <td rowspan="6">1.0.1763</td>
             <td><i>[Public Bug Fix] [SDK] HasPendingChanges property not working as expected</i><br> In Desktop SDK, the
                 HasPendingChanges property was not set to false after saving a dashboard with changes.</td>
@@ -64,7 +64,7 @@ here.
                 in Japanese.</td>
         </tr>
         <tr>
-            <td rowspan="2">1/20/2021</td>
+            <td rowspan="2">Jan-2021</td>
             <td rowspan="2">1.0.1712</td>
             <td><i>[Public Bug Fix] [SDK] The server component relies on Newtonsoft.Json serializer</i><br> The Reveal
                 server component was relying on the default JSON serialization settings of the MVC application. Now the
@@ -76,7 +76,7 @@ here.
                 characters.</td>
         </tr>
         <tr>
-            <td rowspan="2">12/29/2020</td>
+            <td rowspan="2">Dec-2020</td>
             <td rowspan="2">1.0.1669</td>
             <td><i>[Public Bug Fix] [SDK] Pivot hierarchies filtering not working with "Processing Data on
                     Server"</i><br>If the option "Processing Data on Server" was checked, drill down hierarchies in the
@@ -88,7 +88,7 @@ here.
                 rows.</td>
         </tr>
         <tr>
-            <td rowspan="4">12/4/2020</td>
+            <td rowspan="4">Dec-2020</td>
             <td rowspan="4">1.0.1629</td>
             <td><i>Save/Load Dashboards using JSON</i><br>You can now use Reveal SDK to save/load dashboards to/from
                 JSON files.</td>
@@ -108,7 +108,7 @@ here.
                 default.</td>
         </tr>
         <tr>
-            <td rowspan="5">9/3/2020</td>
+            <td rowspan="5">Sep-2020</td>
             <td rowspan="5">1.0.1422</td>
             <td><i>Amazon Athena connector in BETA</i><br>
                 You can now connect to Amazon's serverless, interactive query service Athena.</td>
@@ -136,7 +136,7 @@ here.
                 coming from the MS SQL, MySQL and Postgres data sources</td>
         </tr>
         <tr>
-            <td rowspan="6">7/28/2020</td>
+            <td rowspan="6">Jul-2020</td>
             <td rowspan="6">1.0.1374</td>
             <td><i> New API to set axis bounds for charts</i><br> You can now programmatically change the axis bounds in
                 runtime for a particular visualization.</td>
@@ -161,7 +161,7 @@ here.
                 color guide you and help you quickly discover patterns, trends and anomalies on the map.</td>
         </tr>
         <tr>
-            <td rowspan="2">5/19/2020</td>
+            <td rowspan="2">May-2020</td>
             <td rowspan="2">1.0.1255</td>
             <td><i>New Azure Analysis Services data source</i><br>With this new data source, you can create dashboards
                 using your data models in Azure Analysis Services.</td>
@@ -170,7 +170,7 @@ here.
             <td><i>New icon for Google Sheets files</i><br>The look of the Google Sheets files icon was changed.</td>
         </tr>
         <tr>
-            <td rowspan="5">5/4/2020</td>
+            <td rowspan="5">May-2020</td>
             <td rowspan="5">1.0.1222</td>
             <td><i>New Hover Events API</i><br>
                 This new event is called *revealView.TooltipShowing* in WPF and .onTooltipShowing in Web and is
@@ -195,14 +195,14 @@ here.
                 now access your Shared Drives data and use it to build visualizations in Reveal.</td>
         </tr>
         <tr>
-            <td>4/1/2020</td>
+            <td>April-2020</td>
             <td>1.0.1136</td>
             <td><i>New Custom Theming</i><br>
                 Now you can create your own theme in Reveal by configuring some or all of the customizable settings in
                 the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>
         </tr>
         <tr>
-            <td rowspan="3">2/10/2020</td>
+            <td rowspan="3">Feb-2020</td>
             <td rowspan="3">1.0.981</td>
             <td><i>New Properties in RevealSettings</i><br>We added multiple new properties to $.ig.RevealSettings to
                 control different features, including: ShowExportToPDF, ShowExportToPowerpoint, ShowExportToExcel,
@@ -218,7 +218,7 @@ here.
                 DataSourcesRequestedTriggerType) property to the DataSourcesRequested event arguments. The users of this
                 event will now gain more context about the DataSourcesRequested purposes.</td>
         </tr>
-        <td>11/25/2019</td>
+        <td>Nov-2019</td>
         <td>1.0.825</td>
         <td><i>Export to Image Functionality is Now Working</i><br>Exporting images server-side (both programmatically
             and through user interaction) was enabled again. For further details about the fix, please refer to: <a
@@ -226,7 +226,7 @@ here.
                 generation</a></td>
         <tr>
         </tr>
-        <td rowspan="4">9/10/2019</td>
+        <td rowspan="4">Sep-2019</td>
         <td rowspan="4">1.0.80x</td>
         <td><i>Localization Service for Reveal Desktop SDK</i><br>You can now localize titles and labels of a variety of
             dashboard elements. The Localization service also enables you to change the formatting settings of numeric
@@ -243,7 +243,7 @@ here.
                 the NuGet package manager to reference assemblies and install dependency packages.</td>
         </tr>
         </tr>
-        <td rowspan="4">9/4/2019</td>
+        <td rowspan="4">Sep-2019</td>
         <td rowspan="4">1.0.70x</td>
         <td><i>Step by Step Guide</i><br>With this detailed guide, you will start with prerequisites and go through
             every step needed to setup and configure Reveal’s SDK.</td>

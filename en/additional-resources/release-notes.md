@@ -17,7 +17,7 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="4">3/5/2021</td>
+        <td class="tg-0lax" rowspan="4">Mar-2021</td>
         <td class="tg-0lax" rowspan="4"> 1.0.18 <br> [1.0.24 iOS]</td>
         <td class="tg-cly1"><span style="font-style:italic">New Time Series chart</span><br>
         Gain more insight and detect trends at a glance with the new Time Series chart, which allows for an easy observation of development over time.
@@ -39,8 +39,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5">2/4/2021</td>
-        <td class="tg-0lax" rowspan="5"> 1.0.17</td>
+        <td class="tg-0lax" rowspan="5">Feb-2021</td>
+        <td class="tg-0lax" rowspan="5"> 1.0.17 <br> [1.0.23 iOS]</td>
         <td class="tg-cly1"><span style="font-style:italic">New Snowflake data source</span><br>
         You can now access your data from Snowflake within Reveal.
         </td>
@@ -66,7 +66,7 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="3">12/4/2020</td>
+        <td class="tg-0lax" rowspan="3">Dec-2020</td>
         <td class="tg-0lax" rowspan="3"> 1.0.16 <br> [1.0.20 iOS] </td>
         <td class="tg-cly1"><span style="font-style:italic">[Public Bug Fix] Category field label not being
             shown</span><br>
@@ -88,8 +88,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="3">10/16/2020</td>
-        <td class="tg-0lax" rowspan="3">1.0.14</td>
+        <td class="tg-0lax" rowspan="3">Oct-2020</td>
+        <td class="tg-0lax" rowspan="3">1.0.15 <br> [1.0.17 iOS] </td>
         <td class="tg-cly1"><span style="font-style:italic">New Amazon Athena data source</span><br>You can now connect
             to Amazon Athena to query your data from Amazon S3, and use it to build visualizations in Reveal.
         </td>
@@ -107,8 +107,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="3">9/3/2020</td>
-        <td class="tg-0lax" rowspan="3">1.0.13</td>
+        <td class="tg-0lax" rowspan="3">Sep-2020</td>
+        <td class="tg-0lax" rowspan="3">1.0.14</td>
         <td class="tg-cly1"><span style="font-style:italic">New Amazon Redshift data source</span><br>You can now use
             and gain new insights from your data in the Amazon Redshift cloud data warehouse.
         </td>
@@ -124,8 +124,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="7">7/28/2020</td>
-        <td class="tg-0lax" rowspan="7">1.0.12</td>
+        <td class="tg-0lax" rowspan="7">Jul-2020</td>
+        <td class="tg-0lax" rowspan="7">1.0.13</td>
         <td class="tg-cly1"><span style="font-style:italic">New Choropleth Map visualization</span><br>The Choropleth
             map visualization allows you to create beautiful thematic maps. You can now present geospatial data in an
             incredibly digestible manner. Let color guide you and help you quickly discover patterns, trends and
@@ -165,8 +165,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="2">5/19/2020</td>
-        <td class="tg-0lax" rowspan="2">1.0.10/1.0.11</td>
+        <td class="tg-0lax" rowspan="2">May-2020</td>
+        <td class="tg-0lax" rowspan="2">1.0.12</td>
         <td class="tg-cly1"><span style="font-style:italic">New Microsoft Azure Analysis Services data
                 source</span><br>With this new data source, you can create dashboards using your data models in Azure
             Analysis Services.
@@ -178,8 +178,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5">5/4/2020</td>
-        <td class="tg-0lax" rowspan="5">1.0.8/1.0.9</td>
+        <td class="tg-0lax" rowspan="5">May-2020</td>
+        <td class="tg-0lax" rowspan="5">1.0.12</td>
         <td class="tg-cly1"><span style="font-style:italic">New TreeMap visualization</span><br>You can use this new
             visualization type to present large hierarchies with a set of nested rectangles. Rectangles' size will show
             you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations
@@ -210,8 +210,8 @@ here.
         </td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5">4/1/2020</td>
-        <td class="tg-0lax" rowspan="5">1.0.7</td>
+        <td class="tg-0lax" rowspan="5">Apr-2020</td>
+        <td class="tg-0lax" rowspan="5">1.0.10/11</td>
         <td class="tg-cly1"><span style="font-style:italic">New integration with BigQuery Machine Learning
                 models</span><br>You can use your BigQuery machine learning models with your BigQuery data source
             connection in Reveal.</td>
@@ -234,8 +234,8 @@ here.
             include visualizations from Reveal in your spreadsheets upon export.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="10">2/5/2020</td>
-        <td class="tg-0lax" rowspan="10">1.0.5</td>
+        <td class="tg-0lax" rowspan="10">Feb-2020</td>
+        <td class="tg-0lax" rowspan="10">1.0.9</td>
         <td class="tg-0lax"><span style="font-style:italic">New Statistical Functions</span><br>Reveal can now process
             and perform statistical analysis on existing datasets. This means you can better analyze data and even
             forecast performance based on historical data.</td>
@@ -282,8 +282,8 @@ here.
             addition, crosshairs are now shown to help give context to the tooltip.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="5">11/25/2019</td>
-        <td class="tg-0lax" rowspan="5">1.0.4</td>
+        <td class="tg-0lax" rowspan="5">Nov-2019</td>
+        <td class="tg-0lax" rowspan="5">1.0.8</td>
         <td class="tg-0lax"><span style="font-style:italic">Pie and doughnut charts legends now can show elements with
                 value 0</span><br>You now have the option to show elements with value 0 in the legends of pie and
             doughnut visualizations. This allows you to see every data piece of the field selected for a Label, but
@@ -308,8 +308,8 @@ here.
             find function used in calculated fields didn't consider the start position parameter as optional.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="6">11/6/2020</td>
-        <td class="tg-0lax" rowspan="6">1.0.3</td>
+        <td class="tg-0lax" rowspan="6">Nov-2020</td>
+        <td class="tg-0lax" rowspan="6">1.0.8</td>
         <td class="tg-0lax"><span style="font-style:italic">Export to Excel and PowerPoint</span><br>You can now export
             your dashboard's visualizations as slides of a PowerPoint presentation. In addition, you can also export the
             data used in your dashboard to the Excel format.</td>
@@ -338,8 +338,8 @@ here.
             visually enhanced and badges were adjusted to be more representative of the series-type.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="6"></td>
-        <td class="tg-0lax" rowspan="6">1.0.2</td>
+        <td class="tg-0lax" rowspan="6">Sep-2019<</td>
+        <td class="tg-0lax" rowspan="6">1.0.7</td>
         <td class="tg-0lax"><span style="font-style:italic">Improved dashboard level interactions</span><br>You are now
             able to interact with your dashboard visualizations while minimized. Zoom, scroll, drill down, link to other
             dashboards and view chart point details (tooltips) without maximizing the visualizations in a dashboard.
@@ -371,8 +371,8 @@ here.
             Drive, Dropbox, OneDrive).</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="4">9/4/2019</td>
-        <td class="tg-0lax" rowspan="4">1.0.1</td>
+        <td class="tg-0lax" rowspan="4">Jul-2019</td>
+        <td class="tg-0lax" rowspan="4">1.0.6</td>
         <td class="tg-0lax"><span style="font-style:italic">Localization</span><br>Reveal is now localized to: German,
             Spanish, French, Italian, Japanese, Korean, Malay, Dutch, Portuguese, Russian and Chinese (Simplified and
             Traditional).</td>
