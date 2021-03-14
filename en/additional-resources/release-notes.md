@@ -308,7 +308,7 @@ here.
             find function used in calculated fields didn't consider the start position parameter as optional.</td>
     </tr>
     <tr>
-        <td class="tg-0lax" rowspan="6">Nov-2020</td>
+        <td class="tg-0lax" rowspan="6">Nov-2019</td>
         <td class="tg-0lax" rowspan="6">1.0.8</td>
         <td class="tg-cly1"><span style="font-style:italic">Export to Excel and PowerPoint</span><br>You can now export
             your dashboard's visualizations as slides of a PowerPoint presentation. In addition, you can also export the
