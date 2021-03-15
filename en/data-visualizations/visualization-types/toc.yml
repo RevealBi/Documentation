@@ -24,12 +24,11 @@
   href: scatter-map/toc.yml
 - name: Sparkline Charts
   href: sparkline-charts.md
-- name: Text View
-  href: text-view.md
 - name: Text Box
   href: text-box.md
-- name: Treemap Charts
-  href: treemap-charts.md
+- name: Text View
+  href: text-view.md
 - name: Time Series Charts
   href: time-series-charts.md
-  new: true
+- name: Treemap Charts
+  href: treemap-charts.md
