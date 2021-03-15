@@ -44,6 +44,7 @@
   href: datasources/overview.md
 - name: Supported Data Sources
   href: datasources/supported-data-sources/toc.yml
+  updated: true
 - name: Managing Your Data Source Credentials
   href: datasources/managing-data-source-credentials.md
 - name: Changing the Data Source for a Visualization
