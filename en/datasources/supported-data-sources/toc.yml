@@ -8,6 +8,9 @@
   href: box.md
 - name: Dropbox
   href: dropbox.md
+- name: Google Ads
+  href: google-ads.md
+  new: true
 - name: Google Analytics
   href: google-analytics.md
 - name: Google BigQuery
@@ -52,7 +55,6 @@
   href: sharepoint.md
 - name: Snowflake
   href: snowflake.md
-  new: true
 - name: Sybase
   href: sybase.md
 - name: Web Resource
