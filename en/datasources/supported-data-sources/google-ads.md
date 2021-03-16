@@ -1,7 +1,8 @@
 ## [First Draft] Google Ads
 
-intro here
+Google Ads (formerly Google Adwords) is an online advertising platform that offers to place business ads both in the results of search engines like Google Search and on non-search websites and apps.
 
+The *Google Ads* data source in Reveal allows you to access and analyze the data tables in your Google Ads account. Your Google Ads dashboards will help you get  a high-level understanding of your advertising efforts and Return on investment (ROI).
 ### Connecting to Google Ads
 
 1. Select *Google Ads* as your data source and you will see Google's login screen.
@@ -18,21 +19,22 @@ intro here
 
 ### Setting Up Your Data
 
-The dialog showing "Popular Resources" and "All Resources" list will most probably drop off.
+The dialog showing "Popular Resources" and "All Resources" list will most probably drop out.
 
 ### Working in the Visualizations Editor 
 
-When you create a dashboard with information coming from Google Analytics, you will see fields organized differently (see screenshot below).
+When you create a dashboard with information coming from Google Ads, you will see fields in the Visualizations Editor are organized differently (as shown in the screenshot below).
 
 <img src="images/google-ads-visualizations-editor.png" alt="Google Ads data in the Visualizations Editor" width="100%">
 
-You may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
+You may notice that there is no *Fields* heading on the left in the *Data* pane. Instead, there are two sections in their own query field:
 
 1. **DIMENSIONS AND SEGMENTS**: 
 
-    a. **Dimensions** are depicted by a cube icon with a pink side. Dimensions are attributes of your data. For example, the dimension *Base Campaign* indicates... 
+    a. **Dimensions** are depicted by a cube icon with a pink side. Dimensions are attributes of your data. For example, the dimension *Base Campaign* indicates... (complete when new design is ready)
+    https://support.google.com/analytics/answer/1033861?hl=en
 
-    b. **Segments** - Segments are depicted by a group icon (see *Devices* in the screenshot below ) The Segment filters are predefined???. You can choose more than one segment.     
+    b. **Segments** - Segments are depicted by a group icon. The Segment filters are predefined???. You can choose more than one segment.     
     https://support.google.com/google-ads/answer/2454072?hl=en#zippy=%2Cdevice
 
 
