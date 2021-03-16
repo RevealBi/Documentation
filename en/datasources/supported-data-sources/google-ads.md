@@ -53,13 +53,6 @@ To change the default date range, click on the Calendar icon and choose *from* a
 .png" alt="Google Ads data in the Visualizations Editor" width="100%">
 
 > [!NOTE] **Data retrieved for *Today*.** If you choose *Today* from the preset date ranges, keep in mind the result may vary throughout the day as data is being updated continuously. *Today* starts at 12:00:00 a.m. and will retrieve all data up until the current time. 
-
-### Limitations in Dashboard Filters
-
->Ask Luis about this
-
-Currently, you cannot create a [dashboard filter](~/en/filters/dashboard-filters.md) with *Google Ads* data.
-
 ### Performance Considerations
 
 Depending on how much data you are trying to retrieve, loading data from Google Ads in the Visualizations Editor can be a really time-consuming task. Certain actions affect waiting time so read below to find out how you can make the loading process faster. 
