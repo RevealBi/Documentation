@@ -18,20 +18,10 @@ here.
     </thead>
     <tbody>
         <tr>
-            <td rowspan="4">May-2021</td>
-            <td rowspan="4">1.0.1821</td>
+            <td rowspan="1">May-2021</td>
+            <td rowspan="1">1.0.1821</td>
             <td><i>[Public Bug Fix] [SDK] SDK apps sometimes throw an NRE exception</i><br> When an SDK application was opened for more than 90 minutes without users interacting with it, performing an action was throwing an exception.</td>
         </tr>
-        <tr>
-            <td><i>[Public Bug Fix]  Grand Total showing  wrong values in iOS</i><br>In the iOS platform, Pivot Table displayed incorrect values for Grand Total.</td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix]  SQL Server heterogeneous queries not working in iOS </i><br>In the iOS platform, heterogeneous queries in SQL server were not working as expected.</td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix]  SQL Server results with an infinite symbol showing an error in iOS</i><br>In the iOS platform, SQL Server results that include the infinite symbol were displaying an error.</td>
-        </tr>
-        <tr>
             <td>Feb-2021</td>
             <td>1.0.1772</td>
             <td><i>[Bug Fix] [SDK] Installation of WPF NuGet package failing with packages.config</i><br> The installation of WPF NuGet package was failing when the host project used packages.config.
