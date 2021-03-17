@@ -18,7 +18,7 @@ here.
     </thead>
     <tbody>
         <tr>
-            <td rowspan="1">May-2021</td>
+            <td rowspan="1">Mar-2021</td>
             <td rowspan="1">1.0.1821</td>
             <td><i>[Public Bug Fix] [SDK] SDK apps sometimes throw an NRE exception</i><br> When an SDK application was opened for more than 90 minutes without users interacting with it, performing an action was throwing an exception.</td>
         </tr>
