@@ -34,36 +34,39 @@ You may notice that there is no *Fields* heading on the left in the *Data* pane.
     a. **Dimensions** are depicted by a cube icon with a pink side. Dimensions are attributes of your data. For example, the dimension *Base Campaign* indicates... (complete when new design is ready)
     https://support.google.com/analytics/answer/1033861?hl=en
 
-    b. **Segments** - Segments are depicted by a group icon. The Segment filters are predefined???. You can choose more than one segment.     
+    more on dimensions: https://support.google.com/searchads/answer/3033845?hl=en&ref_topic=7512955
+
+    b. **Segments** - Segments are depicted by a group icon. The segments you can choose from are predefined and change for each dimension just like in Google Ads. Unlike Google Ads, Reveal allows you to choose more than one segment to filter your data. For example, if you choose *Device* you can compare performance across different devices: mobile, desktop, and tablets. For more information on segments, consult the official 
+    [Google Ads](https://support.google.com/google-ads/answer/2454072?hl=en#zippy=) documentation.
+
     https://support.google.com/google-ads/answer/2454072?hl=en#zippy=%2Cdevice
 
 
-2. **METRICS** (depicted by *123* icon): Measures consist of numeric data. For example, the measure AdX Clicks is the number of times AdX ads were clicked on the site.
+2. **METRICS** (depicted by *123* icon): Metrics consist of numeric data. For example, the metric *Clicks* measures the number of times ads were clicked.
 
 If you need to learn more, check this Google Ads article: Dimensions and metrics.
 
 #### The Date Range Data Filter
 
-In the *DATA FILTERS* section (see bottom right in the *Data* pane), you have a pre-set date range filter - *Last 30 days*. This means data will be retrieved for the last 30-day period, including today.
+In the *Data Filters* section (see bottom right in the *Data* pane), you will find a date range filter set to *Last 30 days*. This means data will be retrieved for the last 30-day period, including today.
 
-To change the default date range, click on the Calendar icon and choose *from* and *to* dates (as shown below). You can also select one of the preset date ranges by clicking the arrow in the upper right corner:
+You can't remove the date filter, but you can change the default date range by clicking on the Calendar icon and choose *from* and *to* dates. Or you can click the arrow in the upper right corner (see the screenshot below) and choose from the date range options in the dropdown:
 
 > This is the Google Analytics Calendar. Replace with a screenshot showing the Google Ads calendar when available.
 <img src="images/google-ads-date-range-filter
 .png" alt="Google Ads data in the Visualizations Editor" width="100%">
 
-> [!NOTE] **Data retrieved for *Today*.** If you choose *Today* from the preset date ranges, keep in mind the result may vary throughout the day as data is being updated continuously. *Today* starts at 12:00:00 a.m. and will retrieve all data up until the current time. 
+> [!NOTE] **Data retrieved for *Today*.** If you choose *Today* from the date range options, keep in mind the date range starts at 12:00:00 a.m. and all data will be retrieved up until the current time. This means the results may vary between runs throughout the day as the data in Google Ads is being updated continuously.  
 ### Performance Considerations
 
-Depending on how much data you are trying to retrieve, loading data from Google Ads in the Visualizations Editor can be a really time-consuming task. Certain actions affect waiting time so read below to find out how you can make the loading process faster. 
+Depending on how much data you are trying to retrieve, loading data from Google Ads in the Visualizations Editor may become a time-consuming task. Certain actions affect waiting time more than others.
 
 #### Selecting a Date Range
 
-When selecting a date range, keep in mind that the bigger the range, the longer the time it takes to load your data. So, at first restrict your range, evaluate the loading time and then expand it. 
+When selecting a date range, keep in mind that the bigger the range, the longer the time it takes to load your data. So, at first restrict your range, evaluate the loading time and then expand it appropriately. 
 
-If you are trying to load a dataset that is too large, you may receive an error for exceeding the rows/columns limits. If you can't restrict your range enough to fit your purposes, then [contact support](https://www.infragistics.com/my-account/submit-support-request/reveal) in order to increase the limit. 
+If you are trying to load a dataset that is too large, you may receive an error stating you exceeded the rows/columns limits. If you can't restrict your time range enough to fit your purposes, then [contact support](https://www.infragistics.com/my-account/submit-support-request/reveal) for a limit increase. 
 
-> Ask Luis about segments + test when ready
 #### Adding Segments
 
-In Reveal, you can combine multiple segments in the Visualizations Editor. As segments are used for more detailed statistics, the more segments you add, the more rows of data you retrieve. This may affect loading time as well. 
+In Reveal, you can combine multiple segments in the Visualizations Editor. As segments are used for more detailed statistics, the more segments you add, the more rows of data you retrieve. This may affect loading time. 
