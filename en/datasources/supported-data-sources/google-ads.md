@@ -50,7 +50,7 @@ If you need to learn more, check this Google Ads article: Dimensions and metrics
 
 In the *Data Filters* section (see bottom right in the *Data* pane), you will find a date range filter set to *Last 30 days*. This means data will be retrieved for the last 30-day period, including today.
 
-You can't remove the date filter, but you can change the default date range by clicking on the Calendar icon and choose *from* and *to* dates. Or you can click the arrow in the upper right corner (see the screenshot below) and choose from the date range options in the dropdown:
+You can't remove the date filter, but you can change the default date range by clicking on the Calendar icon and choose *from* and *to* dates. Or you can select the arrow in the upper right corner (see the screenshot below) and pick a date range from the dropdown options:
 
 > This is the Google Analytics Calendar. Replace with a screenshot showing the Google Ads calendar when available.
 <img src="images/google-ads-date-range-filter
