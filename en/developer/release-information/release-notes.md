@@ -18,6 +18,20 @@ here.
     </thead>
     <tbody>
         <tr>
+            <td rowspan="3">Mar-2021</td>
+            <td rowspan="3">1.0.1866</td>
+            <td><i>New Properties for Web and Desktop SDK:</i><br> <i>showEditDataSource</i> - can be used to disable the Edit button normally available in the data source overflow menu.<br>
+            <i>canAddDashboardFilter</i> - this property can hide the "Add Dashboard Filter" option in the Add Filter menu. This options are available in Dashboard Edit Mode.<br>
+            <i>canAddDateFilter</i> - his property can hide the "Add Date Filter" option in the Add Filter menu. This options are available in Dashboard Edit Mode.
+            </td>     
+        </tr>
+            <td><i>[Public Bug Fix] [SDK] revealView.canSaveAs property not working as expected</i><br> In the Web SDK, the property canSaveAs was not being honored if it was changed after a dashboard is set.
+            </td>
+        </tr>
+            <td><i>[Public Bug Fix] [SDK] HttpContextAccessor.HttpContext property not working as expected</i><br> In the Web SDK, HttpContextAccessor.HttpContext was null when saving a dashboard (accessing it from SaveDashboardAsync method).</td>
+        </tr> 
+        </tr>
+        <tr>
             <td rowspan="1">Mar-2021</td>
             <td rowspan="1">1.0.1821</td>
             <td><i>[Public Bug Fix] [SDK] SDK apps sometimes throw an NRE exception</i><br> When an SDK application was opened for more than 90 minutes without users interacting with it, performing an action was throwing an exception.</td>
