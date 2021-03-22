@@ -29,7 +29,6 @@ here.
             </td>
         </tr>
             <td><i>[Public Bug Fix] [SDK] HttpContextAccessor.HttpContext property not working as expected</i><br> In the Web SDK, HttpContextAccessor.HttpContext was null when saving a dashboard (accessing it from SaveDashboardAsync method).</td>
-        </tr> 
         </tr>
         <tr>
             <td rowspan="1">Mar-2021</td>
