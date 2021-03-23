@@ -22,8 +22,8 @@ here.
             <td rowspan="3">1.0.1866</td>
             <td><i>New Properties for Web and Desktop SDK:</i><br>
             <i>showEditDataSource</i> - can be used to disable the Edit button normally available in the data source overflow menu.<br>
-            <i>canAddDashboardFilter</i> - this property can hide the "Add Dashboard Filter" option in the Add Filter menu. This options are available in Dashboard Edit Mode.<br>
-            <i>canAddDateFilter</i> - his property can hide the "Add Date Filter" option in the Add Filter menu. This options are available in Dashboard Edit Mode.
+            <i>canAddDashboardFilter</i> - this property can hide the "Add Dashboard Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.<br>
+            <i>canAddDateFilter</i> - this property can hide the "Add Date Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
             </td>     
         </tr>
         <tr>
