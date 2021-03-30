@@ -29,7 +29,7 @@
 - name: Overview
   href: web-sdk/overview.md
 - name: Running UpMedia Samples
-  href: running-upmedia-samples.md
+  href: java-sdk/running-upmedia-samples.md
 - name: Setup and Configuration
   href: java-sdk/setup-configuration.md
 - name: Using the Server SDK (NOT YET)
