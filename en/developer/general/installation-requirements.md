@@ -35,9 +35,11 @@ For Web you need to restore the node packages in order to run the samples with I
 - [Maven](https://maven.apache.org/download.cgi) 3.6.3 and up recommended
  
 ### Installing JAVA SDK
-You can get the **JAVA Server SDK** from [here](https://link) **>>>>/ADD THE LINK/**. Just download the ZIP file and install whenever you want.
 
-In addition, you can get the **UpMedia samples** that illustrate how to use the JAVA SDK, from GitHub [here](https://github.com/RevealBi/sdk-samples-java).
+Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules. To work with the SDK libraries, you need to add a reference to Reveal's Maven Repository and also a dependency in your Maven pom.xml file.
 
-For details about how to run the UpMedia samples, please follow this [**link**](#running-upmedia-samples.md).
+#### Samples
+The **UpMedia samples** illustrate how to use the JAVA SDK, you can get them from GitHub [here](https://github.com/RevealBi/sdk-samples-java).
+
+For details about how to run the UpMedia samples, please follow this [link](#running-upmedia-samples.md).
 

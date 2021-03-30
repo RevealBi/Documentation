@@ -27,7 +27,7 @@
 - name: WEB JAVA SDK
   header: true
 - name: Overview
-  href: web-sdk/overview.md
+  href: java-sdk/overview.md
 - name: Running UpMedia Samples
   href: java-sdk/running-upmedia-samples.md
 - name: Setup and Configuration
