@@ -6,7 +6,6 @@
   href: general/overview.md
 - name: System Requirements and Installation
   href: general/installation-requirements.md
-  new: true
 - name: Getting Dashboards for the SDK
   href: general/get-dashboards.md
 - name: WEB .NET SDK
@@ -14,7 +13,7 @@
 - name: Overview
   href: web-sdk/overview.md
 - name: Setup and Configuration
-  href: setup-configuration.md
+  href: web-sdk/setup-configuration.md
 - name: Creating Your First App
   href: web-sdk/create-first-app.md
 - name: Using the Server SDK
@@ -29,13 +28,20 @@
   header: true
 - name: Overview
   href: web-sdk/overview.md
+- name: Running UpMedia Samples
+  href: running-upmedia-samples.md
 - name: Setup and Configuration
-  href: setup-configuration.md
-  new: true
+  href: java-sdk/setup-configuration.md
+- name: Using the Server SDK (NOT YET)
+  href: 
+- name: Using the Client SDK
+  href: web-sdk/using-the-client-sdk/toc.yml
 - name: Desktop SDK
   header: true
 - name: Overview
   href: desktop-sdk/overview.md
+- name: Setup and Configuration
+  href: desktop-sdk/setup-configuration.md
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
 - name: API Reference
