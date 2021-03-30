@@ -1,4 +1,4 @@
-## Setup and Configuration (Web)
+## Setup and Configuration
 
 ### Prerequisites
 

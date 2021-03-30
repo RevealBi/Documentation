@@ -6,14 +6,15 @@
   href: general/overview.md
 - name: System Requirements and Installation
   href: general/installation-requirements.md
-- name: Setup and Configuration
-  href: setup-configuration/toc.yml
+  new: true
 - name: Getting Dashboards for the SDK
   href: general/get-dashboards.md
-- name: Web SDK
+- name: WEB .NET SDK
   header: true
 - name: Overview
   href: web-sdk/overview.md
+- name: Setup and Configuration
+  href: setup-configuration.md
 - name: Creating Your First App
   href: web-sdk/create-first-app.md
 - name: Using the Server SDK
@@ -24,6 +25,13 @@
   href: web-sdk/api-reference-server.md
 - name: Client API Reference
   href: web-sdk/api-reference-client.md
+- name: WEB JAVA SDK
+  header: true
+- name: Overview
+  href: web-sdk/overview.md
+- name: Setup and Configuration
+  href: setup-configuration.md
+  new: true
 - name: Desktop SDK
   header: true
 - name: Overview
