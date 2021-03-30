@@ -10,7 +10,7 @@ After getting the [UpMedia samples](https://github.com/RevealBi/sdk-samples-java
 - [Java SDK](https://www.oracle.com/java/technologies/javase-downloads.html) 11.0.10 and up recommended.
 - [Tomcat](https://tomcat.apache.org/download-90.cgi) 9.0.41 and up recommended.
 - [Eclipse for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/) version 2020-12 and up recommended.
-- Maven dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
+- Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
  
 #### Steps
 
@@ -43,7 +43,7 @@ Alternative steps to work with a WAR file:
 
 - [Java SDK](https://www.oracle.com/java/technologies/javase-downloads.html) 11.0.10 and up recommended.
 - [NodeJS](https://nodejs.org/en/download/) 14.15.4 and up recommended, NPM version: 6.14.10 and up.
-- Maven dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
+- Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
 
 #### Steps
 
@@ -54,8 +54,7 @@ Alternative steps to work with a WAR file:
    mvn spring-boot:run
    ```
    3. Verify the server by accessing http://localhost:8080/upmediabackend/reveal-api/DashboardFile/Sales. As a result you'll get the JSON document for the Sales sample dashboard.
-
-Reveal services can be found under */upmediabackend/reveal-api/*.
+   Reveal services can be found under */upmediabackend/reveal-api/*.
 
 2. **Run the React Application**
     1. Locate the React application in the *upmedia-react* folder.
@@ -80,7 +79,7 @@ For details about Reveal's Web client SDK, please refer [here](~/en/developer/we
 - [Java SDK](https://www.oracle.com/java/technologies/javase-downloads.html) 11.0.10 and up recommended.
 - [Tomcat](https://tomcat.apache.org/download-90.cgi) 9.0.41 and up recommended.
 - [Eclipse for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/) version 2020-12 and up recommended.
-- Maven dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
+- Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
  
 #### Steps
 
