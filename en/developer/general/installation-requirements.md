@@ -41,5 +41,5 @@ Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what
 #### Samples
 The **UpMedia samples** illustrate how to use the JAVA SDK, you can get them from GitHub [here](https://github.com/RevealBi/sdk-samples-java).
 
-For details about how to run the UpMedia samples, please follow this [link](#running-upmedia-samples.md).
+For details about how to run the UpMedia samples, please follow this [link](~/en/developer/java-sdk/running-upmedia-samples.md).
 

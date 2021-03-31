@@ -20,9 +20,9 @@ You can host the client-side and the server-side parts separately i.e. on differ
 To achieve this, set a property on the window object, as shown below:
 
 ``` js
-$.ig.RevealSdkSettings.setBaseUrl("{back-end base url}");
+$.ig.RevealSdkSettings.setBaseUrl("http://localhost:8080/upmedia/reveal-api");
 ```
 
-Please, note that the **trailing slash symbol is required in the URL** in order to set the property successfully.
+Please note that the format used is: **http://**[server]**:**[port]**/**[application]**/reveal-api**. The inclusion of **/reveal-api** is required in order to set the property successfully.
 
-Set this property **prior to the** [*instantiation of the $.ig.RevealView*](~/en/developer/web-sdk/setup-configuration.html#instantiating-the-web-client-sdk).
+Set this property *prior to the* [*instantiation of the $.ig.RevealView*](~/en/developer/web-sdk/setup-configuration.html#instantiating-the-web-client-sdk).

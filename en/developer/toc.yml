@@ -32,7 +32,14 @@
   href: java-sdk/running-upmedia-samples.md
 - name: Setup and Configuration
   href: java-sdk/setup-configuration.md
-- name: Using the Server SDK (NOT YET)
+  items:
+    - name: Setup Tomcat
+      href: java-sdk/setup-configuration-tomcat.md
+    - name: Setup Spring
+      href: java-sdk/setup-configuration-spring.md
+    - name: Export server-side
+      href: java-sdk/export-server-side.md
+- name: Using the Server SDK (IN PROGRESS)
   href: 
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
