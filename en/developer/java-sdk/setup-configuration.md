@@ -41,6 +41,10 @@ To integrate Reveal with any existing application, you need to follow these gene
 3.  Initialize Reveal.
 4.  Enable server-side export
 
+If you are interested in configuring Tomcat or Spring, follow the links below:
+- [Tomcat Server](setup-configuration-tomcat.md)
+- [Spring Server](setup-configuration-spring.md)
+
 #### Step 1 - Adding a dependency to the app implementation
 
 Add a dependency to the existing application implementation, following the steps needed for the server of your preference.
@@ -61,9 +65,15 @@ Replace version_number with a number similar to **1.0.1821**.
 
 #### Step 3 - Initializing Reveal
 
-To initialize Reveal, you can either **?????**
+To initialize Reveal, you use **RevealEngineInitializer.initialize**.
 
----
+It is possible to invoke the method without initial parameters:
+
+``` java
+RevealEngineInitializer.initialize();
+```
+But most of the times, you will be using parameters as shown in the example below:
+
 ``` java
 RevealEngineInitializer.initialize(
 new RevealEngineInitializer.InitializeParameter()
@@ -72,25 +82,22 @@ new RevealEngineInitializer.InitializeParameter()
       .withDashboardProvider(new RevealDashboardProvider())
       .withDataSourceProvider(new UpMediaDataSourceProvider())
       .withDataProvider(new UpMediaInMemoryDataProvider())
-      .setMaxConcurrentImageRenderThreads(2));
+      .withLicense("SERIAL_KEY")
+      .setMaxConcurrentImageRenderThreads(2))
 ```
 
----
+Those parameters, are the **providers** used to customize Reveal, you’ll need to create your own providers when integrating Reveal into your application.
 
-The parameters passed to RevealEngineInitializer.initialize are:
-- IRVAuthenticationProvider
-- IRVUserContextProvider
-- IRVDashboardProvider
-- IRVDataSourceProvider
-- IRVDataProvider
+The available parameters passed to **RevealEngineInitializer.initialize** are:
+- *withAuthProvider*. Here you should include a custom class that resolves authentication, implementing IRVAuthenticationProvider.
+- *withUserContextProvider*. Custom class that provides information about the user, implementing IRVUserContextProvider.
+- *withDashboardProvider*. Custom class that replaces or modifies a dashboard, implementing IRVDashboardProvider.
+- *withDataSourceProvider*. Custom class that replaces or modifies a data source, implementing IRVDataSourceProvider.
+- *withDataProvider*. Custom class that returns in-memory data for dashboards, implementing IRVDataProvider.
+- *withLicense*. Here you can configure the SDK license, by including the Serial Key.
 
-Those are the **providers** used to customize Reveal, you’ll need to create your own providers when integrating Reveal into your application.
+For further details about how implement your own Dashboards provider, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
 
-If you are interested in the configuration of Tomcat or Spring, follow the links below:
-- [Tomcat Server](setup-configuration-tomcat.md)
-- [Spring Server](setup-configuration-spring.md)
-
----
 #### Step 4 - Enabling server-side export
 
 The Java SDK uses some native components for exporting dashboards to different formats: Image, PDF, PPT and Excel.
