@@ -45,7 +45,7 @@ sudo apt-get install -y libgdiplus\
 sudo apt-get install -y --no-install-recommends xvfb 
 ```
 
-If needed, errors included in the log file should provide more information about the missing libraries.
+If needed, you can get more information about the missing libraries from errors included in the log file.
 
 For other environments, you might also have to install:
 
@@ -71,7 +71,7 @@ The instructions below are required only in the following scenarios:
    ```
 
 
-4. Initialize Reveal setting the directory where you extracted the zip file, similar to the following code snippet:
+4. While initializing Reveal, set the directory where you extracted the zip file. Should be similar to the following code snippet:
 
 ```java
 String exportToolDir = "<dir>";

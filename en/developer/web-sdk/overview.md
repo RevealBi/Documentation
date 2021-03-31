@@ -10,8 +10,7 @@ always involved:
 
   - **Reveal Server SDK**: the server-side component to be integrated
     into the server application, currently this is an ASP.NET Core
-    application using .NET Runtime v4.6.2 or later. In the near future a
-    library using .NET Core will be released.
+    application targeting .NET Runtime (v4.6.2 or later) and .NET Core (2.2, 3.1, and 5.0).
 
 In the following diagram you visualize the architecture for a web
 application embedding Reveal Web SDK:
