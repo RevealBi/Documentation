@@ -17,5 +17,5 @@ Here you will find technical information on the Reveal SDK and API methods, incl
   - [Creating your First App.](~/en/developer/web-sdk/create-first-app.md) Walkthrough that guides you through the initial steps of showing a dashboard on your web page/application for the first time.
 
 [WEB JAVA SDK Overview.](~/en/developer/java-sdk/overview.md) Introduction to the Web JAVA SDK main concepts and architecture.
-  - [Setup and configuration.](~/en/developer/java-sdk/setup-configuration-web.md) Steps required to get the Web JAVA SDK ready to be used.
+  - [Setup and configuration.](~/en/developer/java-sdk/setup-configuration.md) Steps required to get the Web JAVA SDK ready to be used.
   - [Running the UpMedia Samples.](~/en/developer/java-sdk/running-upmedia-samples.md) Walkthroughs that guide you run the UpMedia samples provided.

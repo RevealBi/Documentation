@@ -103,9 +103,10 @@ For details about Reveal's Web client SDK, please refer [here](~/en/developer/we
 3. **Run the React Application**
    1. Locate the React application in the *upmedia-react* folder.
    2. Run the React application as usual:
+
     ```bash
-   npm install
-   npm start
+    npm install
+    npm start
    ```
    3. Access your React application at http://localhost:3000.
 

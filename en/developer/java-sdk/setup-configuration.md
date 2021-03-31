@@ -34,7 +34,7 @@ If you are not familiar with Maven, please refer to the following [link](https:/
 
 ### Setup and Configuration (Generic Server)
 
-To integrate Reveal with any existing application, you need to follow these three generic steps:
+To integrate Reveal with any existing application, you need to follow these generic steps:
 
 1.  Add a dependency to the existing app implementation.
 2.  Add a dependency to Reveal SDK.
