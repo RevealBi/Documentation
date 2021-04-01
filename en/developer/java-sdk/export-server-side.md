@@ -75,12 +75,14 @@ The instructions below are required only in the following scenarios:
 
 ```java
 String exportToolDir = "<dir>";
-RevealEngineInitializer.initialize(new InitializeParameter().
-  withAuthProvider(new UpmediaAuthenticationProvider()).
-  withUserContextProvider(new UpmediaUserContextProvider()).
-  withDashboardProvider(new UpmediaDashboardProvider()).
-  setExportToolContainerPath(exportToolDir)
-);
+RevealEngineInitializer.initialize(
+  new InitializeParameterBuilder()
+    .setAuthProvider(new UpmediaAuthenticationProvider())
+    .setUserContextProvider(new UpmediaUserContextProvider())
+    .setDashboardProvider(new UpmediaDashboardProvider())
+    .setLicense("SERIAL_KEY_TO_BE_USED")
+    .setExportToolContainerPath(exportToolDir)
+    .build());
 ```
 
 Alternatively, you can specify the directory through the system property **reveal.exportToolContainerPath**, as shown below:

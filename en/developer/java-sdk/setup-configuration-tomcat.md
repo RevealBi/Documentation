@@ -89,25 +89,25 @@ But most of the times, you will be using parameters as shown in the example belo
 
 ``` java
 RevealEngineInitializer.initialize(
-new RevealEngineInitializer.InitializeParameter()
-      .withAuthProvider(new RevealAuthenticationProvider())
-      .withUserContextProvider(new RevealUserContextProvider())
-      .withDashboardProvider(new RevealDashboardProvider())
-      .withDataSourceProvider(new UpMediaDataSourceProvider())
-      .withDataProvider(new UpMediaInMemoryDataProvider())
-      .withLicense("SERIAL_KEY")
-      .setMaxConcurrentImageRenderThreads(2))
+    new InitializeParameterBuilder()
+        .setAuthProvider(new RevealAuthenticationProvider())
+        .setUserContextProvider(new RevealUserContextProvider())
+        .setDashboardProvider(new RevealDashboardProvider())
+        .setDataSourceProvider(new UpMediaDataSourceProvider())
+        .setDataProvider(new UpMediaInMemoryDataProvider())
+        .setMaxConcurrentImageRenderThreads(2)
+        .setLicense("SERIAL_KEY_TO_BE_USED")
+        .build());
 ```
-
 Those parameters, are the **providers** used to customize Reveal, you’ll need to create your own providers when integrating Reveal into your application.
 
 The available parameters passed to **RevealEngineInitializer.initialize** are:
-- *withAuthProvider*. Here you should include a custom class that resolves authentication, implementing IRVAuthenticationProvider.
-- *withUserContextProvider*. Custom class that provides information about the user, implementing IRVUserContextProvider.
-- *withDashboardProvider*. Custom class that replaces or modifies a dashboard, implementing IRVDashboardProvider.
-- *withDataSourceProvider*. Custom class that replaces or modifies a data source, implementing IRVDataSourceProvider.
-- *withDataProvider*. Custom class that returns in-memory data for dashboards, implementing IRVDataProvider.
-- *withLicense*. Here you can configure the SDK license, by including the Serial Key.
+- *setAuthProvider*. Here you should include a custom class that resolves authentication, implementing IRVAuthenticationProvider.
+- *setUserContextProvider*. Custom class that provides information about the user, implementing IRVUserContextProvider.
+- *setDashboardProvider*. Custom class that replaces or modifies a dashboard, implementing IRVDashboardProvider.
+- *setDataSourceProvider*. Custom class that replaces or modifies a data source, implementing IRVDataSourceProvider.
+- *setDataProvider*. Custom class that returns in-memory data for dashboards, implementing IRVDataProvider.
+- *setLicense*. Here you can configure the SDK license, by including the Serial Key.
 
 For further details about how implement your own Dashboards provider, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
 
