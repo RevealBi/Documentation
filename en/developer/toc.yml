@@ -33,13 +33,13 @@
 - name: Setup and Configuration
   href: java-sdk/setup-configuration.md
   items:
-    - name: Export server-side
-      href: java-sdk/export-server-side.md
     - name: Setup Tomcat
       href: java-sdk/setup-configuration-tomcat.md
     - name: Setup Spring
       href: java-sdk/setup-configuration-spring.md
-- name: Using the Server SDK (IN PROGRESS)
+    - name: Export server-side
+      href: java-sdk/export-server-side.md
+- name: Using the Server SDK (COMING SOON)
   href: 
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml

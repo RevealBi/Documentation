@@ -2,7 +2,6 @@
 
 The Java SDK uses some native components for exporting dashboards to different formats: Image, PDF, PPT and Excel.
 
-
 - For **exporting images** we use [Playwright for Java](https://github.com/microsoft/playwright-java).
 
 - For **exporting PDF, PPT and Excel documents** we use ExportTool (our own native application).
