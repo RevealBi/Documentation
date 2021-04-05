@@ -13,7 +13,8 @@
             {
                 "files": [
                     "images/**",
-                    "**/images/**"
+                    "**/images/**",
+                    "**/api/**"
                 ],
                 "exclude": ["obj/**", "_site/**"]
             },
