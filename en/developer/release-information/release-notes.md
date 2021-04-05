@@ -21,7 +21,7 @@ here.
             <td rowspan="2">Apr-2021</td>
             <td rowspan="2">1.0.0 JAVA</td>
             <td><i>New JAVA SDK released!</i><br>
-            Reveal now supports JAVA as another Web Server besides .NET. The JAVA SDK requires JAVA 11+ and is distributed as a set of Maven modules. For further details, please refer to <a
+            Reveal now supports JAVA as another Web Server option besides .NET. The JAVA SDK requires JAVA 11+ and is distributed as a set of Maven modules. For further details, please refer to <a
                 href="../java-sdk/setup-configuration.html">Setup and Configuration</a>.
             </td>     
         </tr>
