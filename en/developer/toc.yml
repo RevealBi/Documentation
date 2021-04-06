@@ -20,10 +20,10 @@
   href: web-sdk/using-the-server-sdk/toc.yml
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
-- name: Server API Reference
-  href: web-sdk/api-reference-server.md
-- name: Client API Reference
-  href: web-sdk/api-reference-client.md
+# - name: Server API Reference
+#   href: web-sdk/api-reference-server.md
+# - name: Client API Reference
+#   href: web-sdk/api-reference-client.md
 - name: WEB JAVA SDK
   header: true
 - name: Overview
@@ -51,8 +51,18 @@
   href: desktop-sdk/setup-configuration.md
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
-- name: API Reference
-  href: desktop-sdk/api-reference.md
+# - name: API Reference
+#   href: desktop-sdk/api-reference.md
+- name: APi Reference
+  header: true
+- name: Windows Desktop
+  href: API/WindowsDesktop-Overview.md
+- name: DotNet Server
+  href: API/Dotnet-Server-Overview.md
+- name: Java Server
+  href: API/Java-Server-Overview.md
+- name: JavaScript Client
+  href: API/JavaScriptClient-Overview.md
 - name: Release Information
   header: true
 - name: Known Issues
