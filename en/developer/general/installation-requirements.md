@@ -36,7 +36,7 @@ For Web you need to restore the node packages in order to run the samples with I
  
 ### Installing JAVA SDK
 
-Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules. To work with the SDK libraries, you need to add a reference to Reveal's Maven Repository and also a dependency in your Maven pom.xml file.
+Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules. To work with the SDK libraries, you need to add a reference to Reveal's Maven Repository and also a dependency in your Maven pom.xml file. For further details, please refer to [Setup and Configuration](~/en/developer/java-sdk/setup-configuration.md).
 
 #### Samples
 The **UpMedia samples** illustrate how to use the JAVA SDK, you can get them from GitHub [here](https://github.com/RevealBi/sdk-samples-java).
