@@ -43,6 +43,8 @@
   href: 
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
+  name: Java Redistributables
+  href: web-sdk/sdk-redistributables.md
 - name: Desktop SDK
   header: true
 - name: Overview
