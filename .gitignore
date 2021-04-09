@@ -3,3 +3,4 @@ _site
 obj
 node_modules/
 .vscode/
+*.dll
