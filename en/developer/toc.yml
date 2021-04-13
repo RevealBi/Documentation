@@ -8,9 +8,10 @@
   href: general/installation-requirements.md
 - name: Getting Dashboards for the SDK
   href: general/get-dashboards.md
-- name: WEB .NET SDK
-  header: true
+- name: API Reference
+  href: api.md
 - name: Overview
+  header: true
   href: web-sdk/overview.md
 - name: Setup and Configuration
   href: web-sdk/setup-configuration.md
@@ -51,18 +52,6 @@
   href: desktop-sdk/setup-configuration.md
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
-# - name: API Reference
-#   href: desktop-sdk/api-reference.md
-- name: APi Reference
-  header: true
-- name: Windows Desktop
-  href: API/WindowsDesktop-Overview.md
-- name: DotNet Server
-  href: API/Dotnet-Server-Overview.md
-- name: Java Server
-  href: API/Java-Server-Overview.md
-- name: JavaScript Client
-  href: API/JavaScriptClient-Overview.md
 - name: Release Information
   header: true
 - name: Known Issues
