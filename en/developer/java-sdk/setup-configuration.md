@@ -96,7 +96,7 @@ The available parameters passed to **RevealEngineInitializer.initialize** are:
 - *setDataProvider*. Custom class that returns in-memory data for dashboards, implementing IRVDataProvider.
 - *setLicense*. Here you can configure the SDK license, by including the Serial Key.
 
-For further details about how implement your own Dashboards provider, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
+For further details about how implement your own Dashboard providers, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
 
 #### Step 4 - Enabling server-side export
 
