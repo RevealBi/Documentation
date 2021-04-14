@@ -8,8 +8,6 @@
   href: general/installation-requirements.md
 - name: Getting Dashboards for the SDK
   href: general/get-dashboards.md
-- name: Moving datasource files to Reveal Embedded
-  href: general/local-files-datasource.md 
 - name: WEB .NET SDK
   header: true
 - name: Overview
