@@ -3,8 +3,7 @@
 ### Overview
 
 When we create a dashboard in **Reveal Application** we often use Excel or CSV files stored in the cloud to populate it with data.   
-After exporting the dashboard and embedding it in custom application, we can move these files in a local directory and then use the **Reveal SDK** to access and set them as a local datasource. 
-  > [!NOTE] The *CloudToLocalDatasourceProvider* replaces automatically only Excel and CSV files. They need to be the same as the files used for creating the dashboard. You may change the content of the Excel and CSV datasource files, but the file **schema** has to be the **same**. Calls to any other file types or datasources will remain unchanged.
+After exporting the dashboard and embedding it in custom application, we can move these files in a local directory and then use the **Reveal SDK** to access and set them as a local datasource.
 
 ### Steps
 To populate the exported dashboard using local Excel and CSV files, you need to follow these steps:
@@ -40,7 +39,7 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
 
         protected Task<RVDataSourceItem> ProcessDataSourceItem(RVDataSourceItem dataSourceItem)
         {
-            // Check if the data source item is excel or csv file. Return the original data source item if not.
+            // Return data source unless it is an excel or csv file.
             if (dataSourceItem is RVExcelDataSourceItem == false &&
                 dataSourceItem is RVCsvDataSourceItem == false)
             {
@@ -57,9 +56,11 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
             }
 
             var localItem = new RVLocalFileDataSourceItem();
-            // The SDK replaces the "local:/" string with the local folder name you have set as LocalStoragePath
+
+            // The SDK uses the local folder set as LocalStoragePath.
             localItem.Uri = @"local:/" + title;
-            // The Title will be displayed as a datasource name in "Dashboard Edit" mode.
+
+            // The title assigned here is the original data source name.
             localItem.Title = title;
             resourceBased.ResourceItem = localItem;
 
@@ -67,4 +68,4 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
         }
     }
 ```  
-
+  > [!NOTE] The *CloudToLocalDatasourceProvider* replaces automatically Excel and CSV files only. Other file types or data sources will remain unchanged. The replacement files should be the same ones used to create the dashboard or, alternatively, new files that share the **same schema** but with different data.
