@@ -107,7 +107,7 @@ another directory, from the database, or even from an embedded resource.
 
 In the **Startup.cs**, in the **ConfigureServices** method of the
 application, call the services extension method _AddRevealServices_, passing in the
-\_RevealEmbedSettings\_\_ class.
+_RevealEmbedSettings_ class.
 
 The _AddRevealServices_ extension method is defined in the
 **Reveal.Sdk**
