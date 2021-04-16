@@ -19,6 +19,15 @@ This property can be used to disable the user's ability to edit dashboards.
 revealView.CanEdit = false;
 ```
 
+### ShowEditDataSource
+This property can be used to disable the editing of a dashboard datasource.
+
+<img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing a dashboard through the UI" width="60%"/>
+
+``` csharp
+revealView.ShowEditDataSource = false;
+```
+
 ### ShowExportButton
 This property can be used to disable the user's ability to export dashboards.
 
@@ -79,6 +88,24 @@ Dashboard filters allow you to slice the contents of the visualizations in a das
 
 ``` csharp
 revealView.ShowFilters = false;
+```
+
+### CanAddDashboardFilter
+This property can be used to show or hide the Add Dashboard Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Dashboard Filters in the UI" width="60%"/>
+
+``` csharp
+revealView.CanAddDashboardFilter = false;
+```
+
+### CanAddDateFilter
+This property can be used to show or hide the Add Date Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Dashboard Filters in the UI" width="60%"/>
+
+``` csharp
+revealView.CanAddDateFilter = false;
 ```
 
 ### Preselected Filters

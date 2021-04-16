@@ -2,7 +2,7 @@
 
 The __$.ig.RevealView__ component can be used to enable or disable different features and/or UI elements towards the end user. Many of the available properties are of the Boolean type and can be very straightforward to use, but others not so much.
 
-The *revealView* instance and the DOM element created below are assumed by all the code snippets in this topic:
+The *revealView* instance and the DOM element created below are assumed by all the code snippets in this topic: 
 
 ``` js
 var revealView = new $.ig.RevealView("#revealView");
@@ -19,6 +19,15 @@ This property can be used to disable the user's ability to edit dashboards.
 
 ``` js
 revealView.canEdit = false;
+```
+
+### showEditDataSource
+This property can be used to disable the editing of a dashboard datasource.
+
+<img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing a dashboard through the UI" width="60%"/>
+
+``` js
+revealView.showEditDataSource = false;
 ```
 
 ### showExportButton
@@ -81,6 +90,23 @@ Dashboard filters allow you to slice the contents of the visualizations in a das
 
 ``` js
 revealView.showFilters = true;
+```
+
+### canAddDashboardFilter
+This property can be used to show or hide the Add Dashboard Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Dashboard Filters in the UI" width="60%"/>
+
+``` js
+revealView.canAddDashboardFilter = false;
+```
+### canAddDateFilter
+This property can be used to show or hide the Add Date Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Dashboard Filters in the UI" width="60%"/>
+
+``` js
+revealView.canAddDateFilter = false;
 ```
 
 ### Preselected Filters
