@@ -28,7 +28,7 @@
         "dest": "_site",
         "globalMetadataFiles": [],
         "fileMetadataFiles": [],
-        "template": ["../templates/reveal"],
+        "template": ["templates/reveal"],
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": false,
