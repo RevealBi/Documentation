@@ -6,3 +6,5 @@
   href: in-memory-data.md
 - name: Providing Credentials to Data Sources
   href: providing-credentials-datasources.md
+- name: API reference
+  href: api-reference.md
