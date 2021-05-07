@@ -36,6 +36,7 @@
 | Server-side SDK | [mariadb-java-client-1.5.9.jar](https://github.com/mariadb-corporation/mariadb-connector-j) | [LGPL-2.0](https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html) |
 | Server-side SDK | [okio-1.13.0.jar](https://github.com/square/okio) | [Apache 2.0](https://opensource.org/licenses/apache2.0.php) |
 | Server-side SDK | [commons-lang3-3.5](http://projects.apache.org/projects/commons_lang.html) | [Apache 2.0](https://opensource.org/licenses/apache2.0.php) |
+| Server-side SDK | [snowflake JDBC driver](https://github.com/snowflakedb/snowflake-jdbc/) | [Apache 2.0](https://opensource.org/licenses/apache2.0.php) |
 | Client-side SDK | [Bootstrap](https://github.com/twbs/bootstrap) | [MIT](https://opensource.org/licenses/mit-license.html)  |
 | Client-side SDK | [jQuery](https://jquery.org/license/) | [MIT](https://opensource.org/licenses/mit-license.html)  |
 | Client-side SDK | [jQuery validation](https://github.com/jquery-validation) | [MIT](https://opensource.org/licenses/mit-license.html) |
@@ -48,3 +49,4 @@
 | Client-side SDK | [Simple JavaScript Inheritance](https://johnresig.com/blog/simple-javascript-inheritance/) | [MIT](https://opensource.org/licenses/mit-license.html)  |
 | Client-side SDK | [Day.js](https://www.npmjs.com/package/dayjs) | [MIT](https://opensource.org/licenses/mit-license.html)  |
 | Client-side SDK | [Quill Rich Text Editor](https://quilljs.com/) | [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)  |
+| Client-side SDK | [snowflake connector .NET](https://github.com/snowflakedb/snowflake-connector-net) | [Apache 2.0](https://opensource.org/licenses/apache2.0.php)
