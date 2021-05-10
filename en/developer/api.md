@@ -25,7 +25,7 @@ This part of the documentation is your gateway to the Reveal SDK APIs, to get mo
 - **Typescript-like output** - TypeDoc generated output uses typescript way of defining and explaining the types, pretty close to JS way. TypeScript annotation arguably adds more value and the potential to cause confusion seems really low.
 
  
-**2.** Generated with <a href="http://rvsdk-docs-dev.infragistics.local:8082/" target="_blank" rel="noopener\">**Node2DocFx(JSDoc)**</a> 
+**2.** Generated with <a href="http://rvsdk-docs-dev.infragistics.local:8082/api/Overview.html" target="_blank" rel="noopener\">**Node2DocFx(JSDoc)**</a> 
 
 **PROS:**
 - **Uses the Reveal template** - same look and feel, same imperfections. 
