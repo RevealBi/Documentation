@@ -22,7 +22,6 @@ This part of the documentation is your gateway to the Reveal SDK APIs, to get mo
 
 **CONS:**
 - **Does not use the Reveal DocFx template** - A different template and layout results in a different look and feel, making it very hard to achieve a similar visual experience. That being said, IgniteUI for Angular docs does use a TypeScript template we can reuse. They even created a plugin to help with localization that we might be able to get as well.
-
 - **Typescript-like output** - TypeDoc generated output uses typescript way of defining and explaining the types, pretty close to JS way. TypeScript annotation arguably adds more value and the potential to cause confusion seems really low.
 
  
