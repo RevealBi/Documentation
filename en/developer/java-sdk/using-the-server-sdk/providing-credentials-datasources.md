@@ -4,7 +4,7 @@
 
 The Server SDK allows you to pass in a set of credentials to be used when accessing the data source.
 
-The first step is to implement __IRVAuthenticationProvider__ and return the custom class as the first parameter to the __RevealEngineInitializer.initialize__ method.
+The first step is to implement __IRVAuthenticationProvider__ and then you need to set your custom class when initializing Reveal with the __RevealEngineInitializer.initialize__ method.
 For further details, refer to [Initializing Reveal](https://help.revealbi.io/en/developer/java-sdk/setup-configuration.html#step-3---initializing-reveal) in Java Setup and Configuration.
 To look to an actual implementation, please refer to the __RevealJerseyConfig__ class in the Spring sample or __WebAppListener__ in Tomcat-based samples in [GitHub](https://github.com/RevealBi/sdk-samples-java).
 
@@ -46,27 +46,19 @@ if (dataSource instanceof RVRedshiftDataSource) {
 
 ### Choosing Which Class to Implement
 
-There are two classes that can be used, both implementing the __IRVDataSourceCredential__
+There are three classes that can be used, all implementing the __IRVDataSourceCredential__
 interface. You need to choose the class depending on your data source, as detailed below.
 
-  - Class __RVBearerTokenDataSourceCredential__ works with:
+| Class | Examples |
+|:-|:-|
+| __RVBearerTokenDataSourceCredential__ <br> Associated to  OAuth authentication (usually sends the OAuth access token). | Google Analytics, Box, Dropbox, Google Drive, OneDrive, SharePoint Online, OData Feed, Web Resources, REST API. |
+| __RVUsernamePasswordDataSourceCredential__ <br> Works with user/password style authentication (with an optional domain). | Microsoft Dynamics CRM On-Premises and Online, Microsoft SQL Server, Microsoft Analysis Services Server, MySQL, PostgreSQL, Oracle, Sybase, OData Feed, Web Resources, REST API.
+| __RVAmazonWebServicesCredentials__ <br> Works with user/password style authentication (with an optional domain). | Microsoft Dynamics CRM On-Premises and Online, Microsoft SQL Server, Microsoft Analysis Services Server, MySQL, PostgreSQL, Oracle, Sybase, OData Feed, Web Resources, REST API.
 
-      - Analytics tools (Google Analytics).
+      - 
+  - Class __RVAmazonWebServicesCredentials__ works with:
 
-      - Content Managers and Cloud Services (Box, Dropbox, Google Drive,
-        OneDrive and SharePoint Online).
-
-  - Class __RVUsernamePasswordDataSourceCredential__ works with:
-
-      - Customer Relationship Managers (Microsoft Dynamics CRM
-        On-Premises and Online)
-
-      - Databases (Microsoft SQL Server, Microsoft Analysis Services
-        Server, MySQL, PostgreSQL, Oracle, Sybase)
-
-  - **Both classes** work with:
-
-      - Other Data Sources (OData Feed, Web Resources, REST API).
+      - AWS (required by data sources like Athena or S3).
 
 ### No Authentication
 
