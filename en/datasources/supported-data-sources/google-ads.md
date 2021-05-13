@@ -1,25 +1,30 @@
-## [First Draft] Google Ads
+## [Second Draft] Google Ads
 
-Google Ads (formerly Google Adwords) is an online advertising platform that offers to place business ads both in the results of search engines like Google Search and on non-search websites and apps.
-
-The *Google Ads* data source in Reveal allows you to access and analyze the data tables in your Google Ads account. Your Google Ads dashboards will help you get  a high-level understanding of your advertising efforts and Return on investment (ROI).
+The *Google Ads*  data source allows you to access and analyze the data tables from your Google Ads (formerly Google Adwords) account. Create visualizations with your Google Ads data to build a high-level understanding of your advertising efforts.
 ### Connecting to Google Ads
 
 1. Select *Google Ads* as your data source and you will see Google's login screen.
 
-2. If multiple Google accounts are listed, select the account that contains the Google Ads data you want to access and enter your login credentials, if you are not already signed in. 
+2. If multiple Google accounts are listed, select the account that contains the Google Ads data you want to access. 
+3. Enter your login credentials, if you are not already signed in. 
 
-3. In the authorization prompt select *Allow*.
+4. In the authorization prompt, select *Allow*.
 
-4. Choose a *Google Ads* account
+5. Choose a *Google Ads* account.  
 
     If your Google account is connected to several Google Ads accounts, select the one you want to use in the following dialog.
 
     <img src="images/choose-google-ads-account.png" alt="A dialog where you need to choose your Google Ads account" width="100%">
 
-### Setting Up Your Data
+6. Choose a resource.
 
-The dialog showing "Popular Resources" and "All Resources" list will most probably drop out.
+    Select the resource that you want to use from one of the two lists: _Popular Resources_ or _All Resources_. Use the search to find quickly what you need.
+
+    <img src="images/google-ads-resources.png" alt="Set up your resource menu" width="100%"> 
+
+   Under each resource you will see a description. It gives information which dimensions from Google Ads are included in this resource. 
+
+   Click  _Select Data_ to continue to the _Visualizations Editor_.
 
 ### Working in the Visualizations Editor 
 
@@ -29,30 +34,24 @@ When you create a dashboard with information coming from Google Ads, you will se
 
 You may notice that there is no *Fields* heading on the left in the *Data* pane. Instead, there are two sections in their own query field:
 
-1. **DIMENSIONS AND SEGMENTS**: 
+1. **Dimensions (also including Segments)**: 
 
-    a. **Dimensions** are depicted by a cube icon with a pink side. Dimensions are attributes of your data. For example, the dimension *Base Campaign* indicates... (complete when new design is ready)
-    https://support.google.com/analytics/answer/1033861?hl=en
+    a. **Dimensions** are depicted by a cube icon with a pink side. Dimensions contain the attributes of data you can measure. For example, the dimension *Name* under the *Ad Group* cube will show all your ad groups. 
 
-    more on dimensions: https://support.google.com/searchads/answer/3033845?hl=en&ref_topic=7512955
-
-    b. **Segments** - Segments are depicted by a group icon. The segments you can choose from are predefined and change for each dimension just like in Google Ads. Unlike Google Ads, Reveal allows you to choose more than one segment to filter your data. For example, if you choose *Device* you can compare performance across different devices: mobile, desktop, and tablets. For more information on segments, consult the official 
-    [Google Ads](https://support.google.com/google-ads/answer/2454072?hl=en#zippy=) documentation.
-
-    https://support.google.com/google-ads/answer/2454072?hl=en#zippy=%2Cdevice
+    b. **Segments** are depicted by one icon showing a group of people. Segments are different for each Google Ads *resource* you load in the *Visualizations Editor*. 
+    In Reveal, you can use Google Ads segments the same way you use dimensions - as measurable data or as data filters.  
+    For more information on segments, consult the official 
+    [Google Ads Help](https://support.google.com/google-ads/answer/2454072?hl=en#zippy=).
 
 
-2. **METRICS** (depicted by *123* icon): Metrics consist of numeric data. For example, the metric *Clicks* measures the number of times ads were clicked.
-
-If you need to learn more, check this Google Ads article: Dimensions and metrics.
+2. **Measures** (depicted by a *123* icon): Measures consist of numeric data. For example, the measure *Clicks* shows the number of times ads were clicked.
 
 #### The Date Range Data Filter
 
-In the *Data Filters* section (see bottom right in the *Data* pane), you will find a date range filter set to *Last 30 days*. This means data will be retrieved for the last 30-day period, including today.
+In *Data Filters* (see bottom right of the *Data* pane), you will find a date range filter set to *Last 30 days* by default. This means data will be retrieved for the last 30-day period, including *today*.
 
-You can't remove the date filter, but you can change the default date range by clicking on the Calendar icon and choose *from* and *to* dates. Or you can select the arrow in the upper right corner (see the screenshot below) and pick a date range from the dropdown options:
+You can't remove the date filter, but you can change the default date range by clicking on the *Calendar* icon. Select *from* and *to* dates. Alternatively, click/tap the arrow in the upper right corner (see the screenshot ) and pick a date range from the dropdown options:
 
-> This is the Google Analytics Calendar. Replace with a screenshot showing the Google Ads calendar when available.
 <img src="images/google-ads-date-range-filter
 .png" alt="Google Ads data in the Visualizations Editor" width="100%">
 
