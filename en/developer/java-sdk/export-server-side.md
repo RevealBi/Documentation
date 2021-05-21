@@ -23,7 +23,7 @@ There are dependencies to multiple native libraries in Linux. The exact list of 
 
 Below there's a list of libraries needed for a basic Ubuntu 18.0.4 distribution:
 
-```shell
+```bash
 sudo apt-get update
 
 sudo apt-get install -y libgdiplus\
@@ -48,7 +48,7 @@ If needed, you can get more information about the missing libraries from errors 
 
 For other environments, you might also have to install:
 
-```shell
+```bash
 sudo apt-get install -y --allow-unauthenticated libc6-dev
 
 sudo apt-get install -y --allow-unauthenticated libx11-dev
@@ -65,7 +65,7 @@ The instructions below are required only in the following scenarios:
 1. Download the required binaries for your platform: [Windows](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/win-x64.zip), [Linux](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/linux-x64.zip) or [macOS](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/osx-x64.zip).
 2. Unzip the file to a directory in your server, where your Web Application is running (your user should be able to access that directory).
 3. After extracting the zip file, you can get the **ExportTool** at this location: \<*dir*>/\<*version*>/\<*arch*>/ExportTool, for example:
-   ```shell
+   ```bash
    <dir>/1.0.0/linux-x64/ExportTool.
    ```
 

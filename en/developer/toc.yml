@@ -40,10 +40,14 @@
       href: java-sdk/setup-configuration-spring.md
     - name: Export server-side
       href: java-sdk/export-server-side.md
-- name: Using the Server SDK (COMING SOON)
-  href: 
+- name: Using the Server SDK
+  href: java-sdk/using-the-server-sdk/toc.yml
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
+- name: Java Redistributables
+  href: java-sdk/java-sdk-redistributables.md
+- name: Java API Reference
+  href: java-sdk/api-reference.md
 - name: Desktop SDK
   header: true
 - name: Overview

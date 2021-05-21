@@ -18,6 +18,18 @@ here.
     </thead>
     <tbody>
         <tr>
+            <td rowspan="2">May-2021</td>
+            <td rowspan="2">1.0.3 JAVA</td>
+            <td><i>New Snowflake connector!</i><br>
+            Reveal Java SDK now supports Snowflake data source connector, also including data blending between tables in the same Snowflake database.
+            </td>     
+        </tr>
+        <tr>
+            <td><i>Reveal BI Engine for Java was enhanced</i><br>
+            Java platform is now as robust as other platforms, helping to avoid server crashes when a visualization sends a big amount of data back to the client. Several new properties in <b>InitializeParameterBuilder</b> control this: <i>maxInMemoryCells</i>, <i>maxStorageCells</i>, <i>maxStringCellSize</i>, and <i>maxTotalStringSize</i>.
+            </td>
+        </tr>
+        <tr>
             <td rowspan="2">Apr-2021</td>
             <td rowspan="2">1.0.0 JAVA</td>
             <td><i>New JAVA SDK released!</i><br>

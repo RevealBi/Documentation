@@ -1,7 +1,7 @@
 - name: Loading Dashboard Files
   href: loading-dashboards.md
 - name: Replacing Data Sources
-  href: replacing-data-sources.md
+  href: replacing-data-sources/toc.yml
 - name: In-Memory Data Support
   href: in-memory-data.md
 - name: Providing Credentials to Data Sources

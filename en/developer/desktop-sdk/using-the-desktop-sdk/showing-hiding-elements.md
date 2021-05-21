@@ -19,13 +19,49 @@ This property can be used to disable the user's ability to edit dashboards.
 revealView.CanEdit = false;
 ```
 
-### ShowExportButton
-This property can be used to disable the user's ability to export dashboards.
+### ShowEditDataSource
+This property can be used to disable the editing of a dashboard datasource.
 
-<img src="../../general/images/showing_hiding_elements_export.png" alt="Exporting a dashboard through the UI" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing a dashboard datasource through the UI" width="60%"/>
 
 ``` csharp
-revealView.ShowExportButton = false;
+revealView.ShowEditDataSource = false;
+```
+
+### ShowExportImage
+This property can be used to disable exporting the dashboad to an image.
+
+<img src="../../general/images/showing-hiding-elements-show-export-image.png" alt="Exporting a dashboard to Image" width="60%"/>
+
+``` csharp
+revealView.ShowExportImage = false;
+```
+
+### ShowExportToPowerpoint
+This property can be used to disable exporting the dashboad to PowerPoint.
+
+<img src="../../general/images/showing-hiding-elements-show-export-powerpoint.png" alt="Exporting a dashboard to PowerPoint" width="60%"/>
+
+``` csharp
+revealView.ShowExportToPowerpoint = false;
+```
+
+### ShowExportToPDF
+This property can be used to disable exporting the dashboad to PDF.
+
+<img src="../../general/images/showing-hiding-elements-show-export-pdf.png" alt="Exporting a dashboard to PDF" width="60%"/>
+
+``` csharp
+revealView.ShowExportToPDF = false;
+```
+
+### ShowExportToExcel
+This property can be used to disable exporting the dashboad to Excel.
+
+<img src="../../general/images/showing-hiding-elements-show-export-excel.png" alt="Exporting a dashboard to Excel" width="60%"/>
+
+``` csharp
+revealView.ShowExportToExcel = false;
 ```
 
 ### CanCopyVisualization
@@ -79,6 +115,24 @@ Dashboard filters allow you to slice the contents of the visualizations in a das
 
 ``` csharp
 revealView.ShowFilters = false;
+```
+
+### CanAddDashboardFilter
+This property can be used to show or hide the Add Dashboard Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Add Dashboard Filter in the UI" width="60%"/>
+
+``` csharp
+revealView.CanAddDashboardFilter = false;
+```
+
+### CanAddDateFilter
+This property can be used to show or hide the Add Date Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-date-filter.png" alt="Showing Add Date Filter in the UI" width="60%"/>
+
+``` csharp
+revealView.CanAddDateFilter = false;
 ```
 
 ### Preselected Filters

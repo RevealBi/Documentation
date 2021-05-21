@@ -15,7 +15,7 @@
 - name: Providing Credentials to Data Sources
   href: providing-credentials-datasources.md
 - name: Replacing Data Sources
-  href: replacing-data-sources.md
+  href: replacing-data-sources/toc.yml
 - name: Localizing Dashboards
   href: localization-service.md
 - name: Formatting Dashboards

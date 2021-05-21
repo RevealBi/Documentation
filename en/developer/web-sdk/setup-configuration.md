@@ -107,7 +107,7 @@ another directory, from the database, or even from an embedded resource.
 
 In the **Startup.cs**, in the **ConfigureServices** method of the
 application, call the services extension method _AddRevealServices_, passing in the
-\_RevealEmbedSettings\_\_ class.
+_RevealEmbedSettings_ class.
 
 The _AddRevealServices_ extension method is defined in the
 **Reveal.Sdk**
@@ -203,6 +203,9 @@ The Reveal Web Client SDK has the following 3rd party references:
 - [jQuery](https://jquery.com) 2.2 or greater
 - [Day.js](https://day.js.org) 1.8.15 or greater
 - [Quill RTE](https://quilljs.com/) 1.3.6 or greater
+- [Marker Clusterer](https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js) v3 or greater
+- [Google Maps](https://maps.googleapis.com/maps/api/js?key=AIzaSyBpcuViSxzlScwOBZy5ln5iIvRl9TYn4y0&libraries=drawing,visualization) v3 or greater
+
 
 <a name='reference-web-client-sdk'></a>
 

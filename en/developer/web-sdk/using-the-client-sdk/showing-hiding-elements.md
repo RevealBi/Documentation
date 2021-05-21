@@ -2,7 +2,7 @@
 
 The __$.ig.RevealView__ component can be used to enable or disable different features and/or UI elements towards the end user. Many of the available properties are of the Boolean type and can be very straightforward to use, but others not so much.
 
-The *revealView* instance and the DOM element created below are assumed by all the code snippets in this topic:
+The *revealView* instance and the DOM element created below are assumed by all the code snippets in this topic: 
 
 ``` js
 var revealView = new $.ig.RevealView("#revealView");
@@ -21,13 +21,49 @@ This property can be used to disable the user's ability to edit dashboards.
 revealView.canEdit = false;
 ```
 
-### showExportButton
-This property can be used to disable the user's ability to export dashboards.
+### showEditDataSource
+This property can be used to disable the editing of a dashboard datasource.
 
-<img src="../../general/images/showing_hiding_elements_export.png" alt="Exporting a dashboard through the UI" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing the dashboard datasource" width="60%"/>
 
 ``` js
-revealView.showExportButton = false;
+revealView.showEditDataSource = false;
+```
+
+### showExportImage
+This property can be used to disable exporting the dashboad to an image.
+
+<img src="../../general/images/showing-hiding-elements-show-export-image.png" alt="Exporting a dashboard to image" width="60%"/>
+
+``` js
+revealView.showExportImage = false;
+```
+
+### showExportToPowerpoint
+This property can be used to disable exporting the dashboad to PowerPoint.
+
+<img src="../../general/images/showing-hiding-elements-show-export-powerpoint.png" alt="Exporting a dashboard to PowerPoint" width="60%"/>
+
+``` js
+revealView.showExportToPowerpoint = false;
+```
+
+### showExportToPDF
+This property can be used to disable exporting the dashboad to PDF.
+
+<img src="../../general/images/showing-hiding-elements-show-export-pdf.png" alt="Exporting a dashboard to PDF" width="60%"/>
+
+``` js
+revealView.showExportToPDF = false;
+```
+
+### showExportToExcel
+This property can be used to disable exporting the dashboad to Excel.
+
+<img src="../../general/images/showing-hiding-elements-show-export-excel.png" alt="Exporting a dashboard to Excel" width="60%"/>
+
+``` js
+revealView.showExportToExcel = false;
 ```
 
 ### canCopyVisualization
@@ -81,6 +117,23 @@ Dashboard filters allow you to slice the contents of the visualizations in a das
 
 ``` js
 revealView.showFilters = true;
+```
+
+### canAddDashboardFilter
+This property can be used to show or hide the Add Dashboard Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Add Dashboard Filter in the UI" width="60%"/>
+
+``` js
+revealView.canAddDashboardFilter = false;
+```
+### canAddDateFilter
+This property can be used to show or hide the Add Date Filter menu item.
+
+<img src="../../general/images/showing-hiding-elements-can-add-date-filter.png" alt="Showing Add Date Filter in the UI" width="60%"/>
+
+``` js
+revealView.canAddDateFilter = false;
 ```
 
 ### Preselected Filters

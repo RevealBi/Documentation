@@ -96,7 +96,7 @@ The available parameters passed to **RevealEngineInitializer.initialize** are:
 - *setDataProvider*. Custom class that returns in-memory data for dashboards, implementing IRVDataProvider.
 - *setLicense*. Here you can configure the SDK license, by including the Serial Key.
 
-For further details about how implement your own Dashboards provider, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
+For further details about how implement your own Dashboard providers, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
 
 #### Step 4 - Enabling server-side export
 
@@ -125,6 +125,9 @@ The Reveal Web Client SDK has the following 3rd party references:
 - [jQuery](https://jquery.com) 2.2 or greater
 - [Day.js](https://day.js.org) 1.8.15 or greater
 - [Quill RTE](https://quilljs.com/) 1.3.6 or greater
+- [Marker Clusterer](https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js) v3 or greater
+- [Google Maps](https://maps.googleapis.com/maps/api/js?key=AIzaSyBpcuViSxzlScwOBZy5ln5iIvRl9TYn4y0&libraries=drawing,visualization) v3 or greater
+
 
 <a name='reference-web-client-sdk'></a>
 

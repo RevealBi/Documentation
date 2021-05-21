@@ -37,8 +37,7 @@ To enable your end users to generate an image, document or a presentation out of
 
 This will make the *Export* button available in the overflow menu when a dashboard is opened or a particular visualization is maximized.
 
-![Export button for dashboards enabled
-SDK](images/export-button-dashboard-SDK.png)
+<img src="images/export-button-dashboard-SDK.png" alt="Export button for dashboards enabled SDK" width="100%"/>
 
 When the user clicks the *Export* button, they can choose one of the enabled export options.
 
