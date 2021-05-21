@@ -34,21 +34,23 @@ filters to set the selected values though the dashboard object and finally assig
 
     $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
 
-      dashboard.filters.getByTitle("Territory").selectedValues = [getCurrentUser().territory]
+      dashboard.filters.getByTitle("Territory").selectedValues = [getCurrentUser().territory]     
+      dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.YearToDate);
 
-        var revealView = new $.ig.RevealView("#revealView");
+      var revealView = new $.ig.RevealView("#revealView");
+      revealView.dashboard = dashboard;
 
-        revealView.dashboard = dashboard;
     }, function (error) {
         console.log(error);
     });
 </script>
 
-<div id="revealView" style="height:500px;" />
+<div id="revealView" style="height:500px;" ></div>
 ```
 
 > [!NOTE]
-> The code above assumes that **getCurrentUser().territory** returns the territory for the current user.
+> The code above assumes that **getCurrentUser().territory** returns the territory for the current user.   
+Setting the initally selected value in the date filter client-side is only supported when the dashboard **already has a date filter** created (in the .rdash file that you use). 
 
 #### Hiding filters
 
