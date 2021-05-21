@@ -8,9 +8,7 @@
   href: general/installation-requirements.md
 - name: Getting Dashboards for the SDK
   href: general/get-dashboards.md
-- name: API Reference
-  href: api.md
-- name: Overview
+- name: WEB .NET SDK
   header: true
   href: web-sdk/overview.md
 - name: Setup and Configuration
@@ -21,10 +19,10 @@
   href: web-sdk/using-the-server-sdk/toc.yml
 - name: Using the Client SDK
   href: web-sdk/using-the-client-sdk/toc.yml
-# - name: Server API Reference
-#   href: web-sdk/api-reference-server.md
-# - name: Client API Reference
-#   href: web-sdk/api-reference-client.md
+- name: Server API Reference
+  href: web-sdk/api-reference-server.md
+- name: Client API Reference
+  href: web-sdk/api-reference-client.md
 - name: WEB JAVA SDK
   header: true
 - name: Overview
@@ -47,7 +45,7 @@
 - name: Java Redistributables
   href: java-sdk/java-sdk-redistributables.md
 - name: Java API Reference
-  href: java-sdk/api-reference.md
+  href: java-sdk/api-reference-java.md
 - name: Desktop SDK
   header: true
 - name: Overview
@@ -56,6 +54,8 @@
   href: desktop-sdk/setup-configuration.md
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
+- name: API Reference
+  href: desktop-sdk/api-reference-desktop.md
 - name: Release Information
   header: true
 - name: Known Issues
