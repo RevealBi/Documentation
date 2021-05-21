@@ -1,4 +1,4 @@
-<h2><a href="https://help.revealbi.io/en/developer/java-sdk/api/index.html" target="_blank" rel="noopener\">JAVA API Reference API Reference </a></h2>  
+<h2><a href="https://help.revealbi.io/en/developer/java-sdk/api/index.html" target="_blank" rel="noopener\">JAVA API Reference </a></h2>  
 Here you will find technical information about Reveal SDK, specifically about the JAVA Server API. For the complete reference, please follow the <a href="https://help.revealbi.io/en/developer/java-sdk/api/index.html" target="_blank">link</a>.
 
 
