@@ -34,7 +34,7 @@ filters to set the selected values though the dashboard object and finally assig
 
     $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
 
-      dashboard.filters.getByTitle("Territory").selectedValues = [getCurrentUser().territory]     
+      dashboard.filters.getByTitle("Territory").selectedValues = [getCurrentUser().territory];     
       dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.YearToDate);
 
       var revealView = new $.ig.RevealView("#revealView");
