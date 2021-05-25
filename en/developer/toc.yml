@@ -37,8 +37,6 @@
       href: java-sdk/setup-configuration-tomcat.md
     - name: Setup Spring
       href: java-sdk/setup-configuration-spring.md
-    - name: Setup Oracle
-      href: java-sdk/setup-configuration-oracle.md
     - name: Export server-side
       href: java-sdk/export-server-side.md
 - name: Using the Server SDK
