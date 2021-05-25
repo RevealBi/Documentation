@@ -1,4 +1,4 @@
-## Setup and Configuration
+## Oracle Server Setup and Configuration
 
 <a name='maven-dependency'></a>
 
@@ -14,17 +14,28 @@ Add the following repository:
     <id>reveal.public</id>
     <url>http://revealpackages.eastus.cloudapp.azure.com/repository/public</url>
   </repository>	
+  <repository>
+    <id>jeecg</id>
+    <url>http://maven.jeecg.org/nexus/content/repositories/jeecg/</url> 
+  </repository>
 </repositories>
 ```
 
-And the following dependency:
+And the following dependencies:
 
 ```xml
-<dependency>
-  <groupId>com.infragistics.reveal.sdk</groupId>
-  <artifactId>reveal-sdk</artifactId>
-  <version>version_number</version>
-</dependency>
+<dependencies>
+  <dependency>
+    <groupId>com.infragistics.reveal.sdk</groupId>
+    <artifactId>reveal-sdk</artifactId>
+    <version>version_number</version>
+  </dependency>
+  <dependency>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc14</artifactId>
+    <version>10.2.0.5.0</version>
+  </dependency>
+</dependencies>
 ```
 
 Replace version_number with a number similar to **0.9.6**.
@@ -32,23 +43,18 @@ Replace version_number with a number similar to **0.9.6**.
 If you are not familiar with Maven, please refer to the following [link](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
 
-### Setup and Configuration (Generic Server)
+### Setup and Configuration
 
-To integrate Reveal with any existing application, you need to follow these generic steps:
+To integrate Reveal with an existing application, you need to follow these steps:
 
 1.  Add a dependency to the existing app implementation.
 2.  Add a dependency to Reveal SDK.
 3.  Initialize Reveal.
 4.  Enable server-side export
 
-If you are interested in configuring Tomcat or Spring, follow the links below:
-- [Tomcat Server](setup-configuration-tomcat.md)
-- [Spring Server](setup-configuration-spring.md)
-- [Oracle Server](setup-configuration-oracle.md)
-
 #### Step 1 - Adding a dependency to the app implementation
 
-Add a dependency to the existing application implementation, following the steps needed for the server of your preference.
+Add a dependency to the existing application implementation, following the steps needed for your Oracle server.
 
 #### Step 2 - Adding a dependency to Reveal SDK
 
