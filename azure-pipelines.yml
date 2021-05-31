@@ -67,13 +67,13 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'RevealSdkApiDocs/Desktop/_site/api/'
+    SourceFolder: 'RevealSdkApiDocs/Desktop/_site/'
     Contents: |
       **
     targetFolder: '_site/en/developer/api/desktop/'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'RevealSdkApiDocs/dotnetserver/_site/api/'
+    SourceFolder: 'RevealSdkApiDocs/dotnetserver/_site/'
     Contents: |
       **
     targetFolder: '_site/en/developer/api/web/server/dotnet/'
