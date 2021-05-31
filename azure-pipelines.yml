@@ -57,13 +57,13 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'RevealSdkApiDocs/Desktop/_site/'
+    SourceFolder: 'RevealSdkApiDocs/Desktop/_site/api/'
     Contents: |
       **
     targetFolder: '_site/en/developer/api/desktop/'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'RevealSdkApiDocs/dotnetserver/_site/'
+    SourceFolder: 'RevealSdkApiDocs/dotnetserver/_site/api/'
     Contents: |
       **
     targetFolder: '_site/en/developer/api/web/server/dotnet/'
@@ -73,12 +73,6 @@ steps:
     Contents: |
       **
     targetFolder: '_site/en/developer/api/web/client/'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'RevealSdkApiDocs'
-    ArtifactName: 'debug_api_docs'
-    publishLocation: 'pipeline'
 
 - task: PublishBuildArtifacts@1
   inputs:
