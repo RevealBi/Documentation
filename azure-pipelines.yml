@@ -14,6 +14,7 @@ steps:
   clean: true
   submodules: true
 
+- task: DeleteFiles@1
 - task: CmdLine@2 
   inputs:
     script: git clone http://tfs.infragistics.local:8080/tfs/Engineering/EnterpriseMobility/_git/RevealSdkApiDocs
@@ -25,8 +26,15 @@ steps:
     workingDirectory: 'templates/reveal'
 
 - task: CmdLine@2 
+  continueOnError:  true
   inputs:
     script: git clone http://tfs.infragistics.local:8080/tfs/Engineering/EnterpriseMobility/_git/RevealSdkApiDocs
+- task: CmdLine@2 
+  continueOnError:  true
+  inputs:
+    script: git pull
+    workingDirectory: $(Build.SourcesDirectory)/RevealSdkApiDocs
+
 - task: CmdLine@2
   inputs:
     script: |
