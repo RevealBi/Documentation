@@ -54,10 +54,29 @@ steps:
   displayName: "Build docfx.json"
   inputs:
     solution: 'docfx.json'
-    
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'RevealSdkApiDocs/Desktop/_site/'
+    Contents: |
+      **
+    targetFolder: '_site/en/developer/api/desktop/'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'RevealSdkApiDocs/dotnetserver/_site/'
+    Contents: |
+      **
+    targetFolder: '_site/en/developer/api/web/server/dotnet/'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'RevealSdkApiDocs/Typedoc'
+    Contents: |
+      **
+    targetFolder: '_site/en/developer/api/web/client/'
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/RevealSdkApiDocs'
+    PathtoPublish: 'RevealSdkApiDocs'
     ArtifactName: 'debug_api_docs'
     publishLocation: 'pipeline'
 
