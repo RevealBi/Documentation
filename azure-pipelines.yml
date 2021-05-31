@@ -48,7 +48,7 @@ steps:
 - task: CmdLine@2
   displayName: Replicate Revea.Sdk.html as Desktop\_site\latest\index.html
   inputs:
-    script: copy Desktop\_site\latest\Reveal.Sdk.html Desktop\_site\latest\index.html
+    script: copy RevealSdkApiDocs\Desktop\_site\latest\Reveal.Sdk.html RevealSdkApiDocs\Desktop\_site\latest\index.html
 
 - task: DocFxTask@0
   displayName: "Build DotnetServer Api docfx.json"
@@ -58,8 +58,8 @@ steps:
 - task: CmdLine@2
   displayName: Replicate Revea.Sdk.html as Desktop\_site\latest\index.html
   inputs:
-    script: copy Desktop\_site\latest\Reveal.Sdk.html Desktop\_site\latest\index.html
-    
+    script: copy RevealSdkApiDocs\Desktop\_site\latest\Reveal.Sdk.html RevealSdkApiDocs\Desktop\_site\latest\index.html
+
 - task: DocFxTask@0
   displayName: "Build docfx.json"
   inputs:
