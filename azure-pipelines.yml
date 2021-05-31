@@ -45,11 +45,21 @@ steps:
   inputs:
     solution: '$(Build.SourcesDirectory)/RevealSdkApiDocs/Desktop/docfx.json'
 
+- task: CmdLine@2
+  displayName: Replicate Revea.Sdk.html as Desktop\_site\latest\index.html
+  inputs:
+    script: copy Desktop\_site\latest\Reveal.Sdk.html Desktop\_site\latest\index.html
+
 - task: DocFxTask@0
   displayName: "Build DotnetServer Api docfx.json"
   inputs:
     solution: '$(Build.SourcesDirectory)/RevealSdkApiDocs/DotnetServer/docfx.json'
 
+- task: CmdLine@2
+  displayName: Replicate Revea.Sdk.html as Desktop\_site\latest\index.html
+  inputs:
+    script: copy Desktop\_site\latest\Reveal.Sdk.html Desktop\_site\latest\index.html
+    
 - task: DocFxTask@0
   displayName: "Build docfx.json"
   inputs:
