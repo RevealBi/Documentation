@@ -14,6 +14,10 @@ steps:
   clean: true
   submodules: true
 
+- task: CmdLine@2 
+  inputs:
+    script: git clone http://tfs.infragistics.local:8080/tfs/Engineering/EnterpriseMobility/_git/RevealSdkApiDocs
+
 - task: CmdLine@2
   displayName: Pull latest from the templates submodule
   inputs:
