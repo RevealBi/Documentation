@@ -14,10 +14,6 @@ steps:
   clean: true
   submodules: true
 
-- task: DeleteFiles@1
-- task: CmdLine@2 
-  inputs:
-    script: git clone http://tfs.infragistics.local:8080/tfs/Engineering/EnterpriseMobility/_git/RevealSdkApiDocs
 
 - task: CmdLine@2
   displayName: Pull latest from the templates submodule
@@ -26,16 +22,18 @@ steps:
     workingDirectory: 'templates/reveal'
 
 - task: CmdLine@2 
+  displayName: Clone Api Docs repo
   continueOnError:  true
   inputs:
     script: git clone http://tfs.infragistics.local:8080/tfs/Engineering/EnterpriseMobility/_git/RevealSdkApiDocs
 - task: CmdLine@2 
-  continueOnError:  true
+  displayName: Pull Api Docs repo
   inputs:
     script: git pull
     workingDirectory: $(Build.SourcesDirectory)/RevealSdkApiDocs
 
 - task: CmdLine@2
+  displayName: Update submodule of ApiDocs
   inputs:
     script: |
       git submodule init 
@@ -62,7 +60,6 @@ steps:
     PathtoPublish: '$(Build.SourcesDirectory)/RevealSdkApiDocs'
     ArtifactName: 'debug_api_docs'
     publishLocation: 'pipeline'
-    TargetPath: '\\igbgsofsmb2\builds\Reveal\Docs\$(Build.DefinitionName)\$(Build.BuildNumber)\EN'
 
 - task: PublishBuildArtifacts@1
   inputs:
