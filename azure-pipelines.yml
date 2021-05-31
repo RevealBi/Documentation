@@ -24,10 +24,37 @@ steps:
     script: 'git pull origin master'
     workingDirectory: 'templates/reveal'
 
+- task: CmdLine@2 
+  inputs:
+    script: git clone http://tfs.infragistics.local:8080/tfs/Engineering/EnterpriseMobility/_git/RevealSdkApiDocs
+- task: CmdLine@2
+  inputs:
+    script: |
+      git submodule init 
+      git submodule update
+    workingDirectory: $(Build.SourcesDirectory)/RevealSdkApiDocs
+
+- task: DocFxTask@0
+  displayName: "Build Desktop Api docfx.json"
+  inputs:
+    solution: '$(Build.SourcesDirectory)/RevealSdkApiDocs/Desktop/docfx.json'
+
+- task: DocFxTask@0
+  displayName: "Build DotnetServer Api docfx.json"
+  inputs:
+    solution: '$(Build.SourcesDirectory)/RevealSdkApiDocs/DotnetServer/docfx.json'
+
 - task: DocFxTask@0
   displayName: "Build docfx.json"
   inputs:
     solution: 'docfx.json'
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)/RevealSdkApiDocs'
+    ArtifactName: 'debug_api_docs'
+    publishLocation: 'pipeline'
+    TargetPath: '\\igbgsofsmb2\builds\Reveal\Docs\$(Build.DefinitionName)\$(Build.BuildNumber)\EN'
 
 - task: PublishBuildArtifacts@1
   inputs:
