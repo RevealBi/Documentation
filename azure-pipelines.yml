@@ -77,19 +77,20 @@ steps:
     Contents: |
       **
     targetFolder: '_site/en/developer/api/web/server/dotnet/'
+
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'RevealSdkApiDocs/JavaServer/'
     Contents: |
       **
-    targetFolder: '_site/en/developer/api/web/server/java/'
+    targetFolder: '_site/en/developer/api/web/server/java/latest/'
 
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'RevealSdkApiDocs/Typedoc'
     Contents: |
       **
-    targetFolder: '_site/en/developer/api/web/client/'
+    targetFolder: '_site/en/developer/api/web/client/latest'
 
 - task: PublishBuildArtifacts@1
   inputs:
