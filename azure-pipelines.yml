@@ -79,6 +79,13 @@ steps:
     targetFolder: '_site/en/developer/api/web/server/dotnet/'
 - task: CopyFiles@2
   inputs:
+    SourceFolder: 'RevealSdkApiDocs/JavaServer/'
+    Contents: |
+      **
+    targetFolder: '_site/en/developer/api/web/server/java/'
+
+- task: CopyFiles@2
+  inputs:
     SourceFolder: 'RevealSdkApiDocs/Typedoc'
     Contents: |
       **
