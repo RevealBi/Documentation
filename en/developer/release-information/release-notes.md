@@ -18,6 +18,38 @@ here.
     </thead>
     <tbody>
         <tr>
+            <td rowspan="6">May-2021</td>
+            <td rowspan="6">1.0.1956 (1.0.4 JAVA)</td>
+            <td><i>[Public Bug Fix] [SDK] Full list of Data Sources displayed by mistake</i><br>
+            When using <i>DataSourcesRequested</i> callback in the Desktop SDK, the whole list of data sources was being displayed instead of the ones explicitly added.
+            </td>     
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] [SDK] Desktop SDK export to Excel not working as expected</i><br>
+            When reloading a dashboard and then exporting a single visualization to Excel, the first visualization of the dashboard was always the one exported.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] [SDK] Dashboard with SQL data source using a dynamic port not loading</i><br>
+            When loading a dashboard with an SQL data source defined using a dynamic port (providing an instance in the host field), the data source connection was not working because of issues with the dynamic port configuration.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] Calculated field set as Visualization filter were throwing an error</i><br>
+            When configuring a Visualization filter based on a calculated field that depends on another calculated field, an error was being shown ("Invalid column name").
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] Drill down scenario with different "sorty by" configurations not working as expected</i><br>
+            When the fields in a hierarchy were configured with a combination of "sort by: <any field>" and a descending sorting, the result was the dashboard not loading.
+            </td>
+        </tr>
+        <tr>
+            <td><i>Credentials from Web client to server-side in cross-domain applications</i><br>
+            When the backend is not in the same domain as the frontend and you need authentication cookies, you can request credentials using the following Web SDK setting: <b>$.ig.RevealSdkSettings.requestWithCredentialsFlag = true;</b>
+            </td>
+        </tr>
+        <tr>
             <td rowspan="2">May-2021</td>
             <td rowspan="2">1.0.3 JAVA</td>
             <td><i>New Snowflake connector!</i><br>
