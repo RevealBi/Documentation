@@ -1,15 +1,15 @@
 ## Running the UpMedia Samples
 
-After getting the [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) from GitHub, below you have detailed information to help you run them.
+After getting the <a href="https://github.com/RevealBi/sdk-samples-java" target="_blank" rel="noopener"> UpMedia samples </a> from GitHub, below you have detailed information to help you run them.
 
 
 ### UpMedia Sample Application in Tomcat
 
 #### Requirements
 
-- [Java SDK](https://www.oracle.com/java/technologies/javase-downloads.html) 11.0.10 and up recommended.
-- [Tomcat](https://tomcat.apache.org/download-90.cgi) 9.0.41 and up recommended.
-- [Eclipse for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/) version 2020-12 and up recommended.
+- <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"> Java SDK </a> 11.0.10 and up recommended.   
+- <a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"> Tomcat </a> 9.0.41 and up recommended.
+- <a href=" https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener"> Eclipse for Enterprise Java Developers </a> version 2020-12 and up recommended.
 - Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
  
 #### Steps
@@ -41,8 +41,8 @@ Alternative steps to work with a WAR file:
 
 #### Requirements
 
-- [Java SDK](https://www.oracle.com/java/technologies/javase-downloads.html) 11.0.10 and up recommended.
-- [NodeJS](https://nodejs.org/en/download/) 14.15.4 and up recommended, NPM version: 6.14.10 and up.
+- <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"> Java SDK </a> 11.0.10 and up recommended.
+- <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener"> NodeJS </a> 14.15.4 and up recommended, NPM version: 6.14.10 and up.
 - Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
 
 #### Steps
@@ -79,9 +79,9 @@ For details about Reveal's Web client SDK, please refer [here](~/en/developer/we
 
 #### Requirements
 
-- [Java SDK](https://www.oracle.com/java/technologies/javase-downloads.html) 11.0.10 and up recommended.
-- [Tomcat](https://tomcat.apache.org/download-90.cgi) 9.0.41 and up recommended.
-- [Eclipse for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/) version 2020-12 and up recommended.
+- <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"> Java SDK </a> 11.0.10 and up recommended.
+- <a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"> Tomcat </a> 9.0.41 and up recommended.
+- <a href="https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener"> Eclipse for Enterprise Java Developers </a> version 2020-12 and up recommended.
 - Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
  
 #### Steps
