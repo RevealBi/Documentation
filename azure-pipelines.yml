@@ -70,28 +70,27 @@ steps:
     SourceFolder: 'RevealSdkApiDocs/Desktop/_site/'
     Contents: |
       **
-    targetFolder: 'api/wpf/'
-    
+    targetFolder: '_site/api/wpf/'
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'RevealSdkApiDocs/dotnetserver/_site/'
     Contents: |
       **
-    targetFolder: 'api/aspnet/'
+    targetFolder: '_site/api/aspnet/'
 
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'RevealSdkApiDocs/JavaServer/'
     Contents: |
       **
-    targetFolder: 'api/java/latest/'
+    targetFolder: '_site/api/java/latest/'
 
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'RevealSdkApiDocs/Typedoc'
     Contents: |
       **
-    targetFolder: 'api/javascript/latest'
+    targetFolder: '_site/api/javascript/latest'
 
 - task: PublishBuildArtifacts@1
   inputs:
