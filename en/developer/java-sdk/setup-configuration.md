@@ -12,7 +12,7 @@ Add the following repository:
 <repositories>
   <repository>
     <id>reveal.public</id>
-    <url>http://revealpackages.eastus.cloudapp.azure.com/repository/public</url>
+    <url>https://maven.revealbi.io/repository/public</url>
   </repository>	
 </repositories>
 ```
@@ -209,7 +209,7 @@ Add the following repositories:
 <repositories>
   <repository>
     <id>reveal.public</id>
-    <url>http://revealpackages.eastus.cloudapp.azure.com/repository/public</url>
+    <url>https://maven.revealbi.io/repository/public</url>
   </repository>	
   <repository>
     <id>jeecg</id>
