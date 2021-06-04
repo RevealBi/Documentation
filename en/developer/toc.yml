@@ -45,7 +45,7 @@
 - name: Java Redistributables
   href: java-sdk/java-sdk-redistributables.md
 - name: Java API Reference
-  href: java-sdk/api-reference-java.md
+  href: java-sdk/api-reference.md
 - name: Desktop SDK
   header: true
 - name: Overview
@@ -55,7 +55,7 @@
 - name: Using the Desktop SDK
   href: desktop-sdk/using-the-desktop-sdk/toc.yml
 - name: API Reference
-  href: desktop-sdk/api-reference-desktop.md
+  href: desktop-sdk/api-reference.md
 - name: Release Information
   header: true
 - name: Known Issues

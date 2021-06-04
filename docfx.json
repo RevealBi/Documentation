@@ -37,7 +37,11 @@
             "_appTitle": "Reveal",
             "_navBarTitle": "Reveal",
             "_isLangEn": true,
-            "_navBarTitleHref": "https://www.revealbi.io/"
+            "_navBarTitleHref": "https://www.revealbi.io/",
+            "_gitContribute": {
+              "repo": "https://github.com/RevealBi/Documentation",
+              "branch": "master"
+            }
         }
     }
 }
