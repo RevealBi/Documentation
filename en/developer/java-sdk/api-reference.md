@@ -17,9 +17,6 @@ Here you will find technical information about Reveal SDK, specifically about th
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDataProvider.html" target="_blank" rel="noopener\">IRVDataProvider</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDataSourceProvider.html" target="_blank" rel="noopener\">IRVDataSourceProvider</a>
 
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/IRVDataSourceProvider.html" target="_blank" rel="noopener\"> IRVDataSourceProvider interface</a>  
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RevealDataSources.html"  target="_blank" rel="noopener\"> RevealDataSources class</a>  
-
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSource.html" target="_blank" rel="noopener\">RVSqlServerDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSourceItem.html" target="_blank" rel="noopener\">RVSqlServerDataSourceItem</a>
 
