@@ -10,7 +10,10 @@ var revealView = new $.ig.RevealView("#revealView");
 <div id="revealView" style="height:500px;" />
 ```
 
-All the properties are read by __$.ig.RevealView__ during initialization time and based on their values Reveal either shows or hides the different features/UI elements from the user.
+
+> [!NOTE]
+> Depending on your css layout approach you might need the element hosting the RevealView to be "positioned" by setting a position attribute that is not static (like relative or absolute).
+
 
 ### canEdit
 This property can be used to disable the user's ability to edit dashboards.
