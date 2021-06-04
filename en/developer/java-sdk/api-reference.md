@@ -10,12 +10,14 @@ Here you will find technical information about Reveal SDK, specifically about th
 <a href="/api/java/latest/com/infragistics/reveal/engine/init/InitializeParameterBuilder.html" target="_blank" rel="noopener\">InitializeParameterBuilder</a>
 
 **Datasources**  
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVExcelDataSource.html" target="_blank" rel="noopener\">RVExcelDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDashboardProvider.html" target="_blank" rel="noopener\">IRVDashboardProvider</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDataSourceProvider.html" target="_blank" rel="noopener\">IRVDataSourceProvider</a>
 
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSource.html" target="_blank" rel="noopener\">RVSqlServerDataSource</a>  
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSourceItem.html" target="_blank" rel="noopener\">RVSqlServerDataSourceItem</a>
+<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSourceItem.html" target="_blank" rel="noopener\">RVSqlServerDataSourceItem</a>  
+
+<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVExcelDataSource.html" target="_blank" rel="noopener\">RVExcelDataSource</a>  
+<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVExcelDataSourceItem.html" target="_blank" rel="noopener\">RVExcelDataSource</a>  
 
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVRESTDataSource.html" target="_blank" rel="noopener\">RVRESTDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVRESTDataSourceItem.html" target="_blank" rel="noopener\">RVRESTDataSourceItem</a>
