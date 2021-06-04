@@ -31,7 +31,8 @@ Replace version_number with a number similar to **0.9.6**.
 
 If you are not familiar with Maven, please refer to the following [link](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
-For Oracle Databases you need to add an [extra repository and dependency](https://help.revealbi.io/en/developer/java-sdk/setup-configuration.html#working-with-oracle-database)
+> [!NOTE]
+> If you work with an Oracle Database you need to add the driver to your application.
 
 ### Setup and Configuration (Generic Server)
 
@@ -197,40 +198,4 @@ To get started follow these steps:
     <div id="revealView" style="height:500px;" />
   </body>
 </html>
-```
-
-### Working with Oracle Database
-
-As said above, Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules. To work with the SDK libraries, you need to add two references and dependencies in your Maven pom.xml file.
-
-Add the following repositories:
-
-```xml
-<repositories>
-  <repository>
-    <id>reveal.public</id>
-    <url>https://maven.revealbi.io/repository/public</url>
-  </repository>	
-  <repository>
-    <id>jeecg</id>
-    <url>http://maven.jeecg.org/nexus/content/repositories/jeecg/</url> 
-  </repository>
-</repositories>
-```
-
-And the following dependencies:
-
-```xml
-<dependencies>
-  <dependency>
-    <groupId>com.infragistics.reveal.sdk</groupId>
-    <artifactId>reveal-sdk</artifactId>
-    <version>version_number</version>
-  </dependency>
-  <dependency>
-    <groupId>com.oracle</groupId>
-    <artifactId>ojdbc14</artifactId>
-    <version>10.2.0.5.0</version>
-  </dependency>
-</dependencies>
 ```
