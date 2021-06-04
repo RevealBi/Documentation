@@ -9,7 +9,7 @@ For the complete reference, please follow the <a href="/api/javascript/latest/" 
 <a href="/api/javascript/latest/classes/rvdashboard.html" target="_blank" rel="noopener\">RVDashboard</a>  
 <a href="/api/javascript/latest/classes/revealsdksettings.html" target="_blank" rel="noopener\">RevealSdkSettings</a>  
 <a href="/api/javascript/latest/classes/rvvisualization.html" target="_blank" rel="noopener\">RVVisualization</a>  
-<a href="/api/javascript/latest/classes/revealtheme.html" target="_blank" rel="noopener\">RevealTheme</a>
+<a href="/api/javascript/latest/classes/revealtheme.html" target="_blank" rel="noopener\">RevealTheme</a>  
 <a href="/api/javascript/latest/classes/revealutility.html" target="_blank" rel="noopener\">RevealUtility</a>  
 
 **Datasources**  
@@ -22,7 +22,7 @@ For the complete reference, please follow the <a href="/api/javascript/latest/" 
 <a href="/api/javascript/latest/classes/rvjsondatasource.html" target="_blank" rel="noopener\">RVJsonDataSource</a>  
 <a href="/api/javascript/latest/classes/rvjsondatasourceitem.html" target="_blank" rel="noopener\">RVJsonDataSourceItem</a>
  
-<a href="/api/javascript/latest/classes/rvinmemorydatasSource.html" target="_blank" rel="noopener\">RVInMemoryDataSource</a>  
+<a href="/api/javascript/latest/classes/rvinmemorydatasource.html" target="_blank" rel="noopener\">RVInMemoryDataSource</a>  
 <a href="/api/javascript/latest/classes/rvinmemorydatasourceitem.html" target="_blank" rel="noopener\">RVInMemoryDataSourceItem</a>  
 
 **Filtering**  

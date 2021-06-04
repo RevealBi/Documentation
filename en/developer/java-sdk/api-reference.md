@@ -10,11 +10,9 @@ Here you will find technical information about Reveal SDK, specifically about th
 <a href="/api/java/latest/com/infragistics/reveal/engine/init/InitializeParameterBuilder.html" target="_blank" rel="noopener\">InitializeParameterBuilder</a>
 
 **Datasources**  
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVDashboardDataSource.html" target="_blank" rel="noopener\">RVDashboardDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSource.html" target="_blank" rel="noopener\">RVSqlServerDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVExcelDataSource.html" target="_blank" rel="noopener\">RVExcelDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDashboardProvider.html" target="_blank" rel="noopener\">IRVDashboardProvider</a>  
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDataProvider.html" target="_blank" rel="noopener\">IRVDataProvider</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/IRVDataSourceProvider.html" target="_blank" rel="noopener\">IRVDataSourceProvider</a>
 
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVSqlServerDataSource.html" target="_blank" rel="noopener\">RVSqlServerDataSource</a>  
@@ -26,8 +24,6 @@ Here you will find technical information about Reveal SDK, specifically about th
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVJsonDataSource.html" target="_blank" rel="noopener\">RVJsonDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVJsonDataSourceItem.html" target="_blank" rel="noopener\">RVJsonDataSourceItem</a>
 
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/IRVDataProvider.html" target="_blank" rel="noopener\">IRVDataProvider</a>  
-<a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVInMemoryData.html" target="_blank" rel="noopener\">RVInMemoryData</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVInMemoryDataSource.html" target="_blank" rel="noopener\">RVInMemoryDataSource</a>  
 <a href="/api/java/latest/com/infragistics/reveal/sdk/api/model/RVInMemoryDataSourceItem.html" target="_blank" rel="noopener\">RVInMemoryDataSourceItem</a>  
 

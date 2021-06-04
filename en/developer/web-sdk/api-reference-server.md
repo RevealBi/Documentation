@@ -15,8 +15,8 @@ For a complete reference, please follow the <a href="/api/aspnet/latest/Reveal.S
 <a href="/api/aspnet/latest/Reveal.Sdk.RVSqlServerDataSource.html" target="_blank" rel="noopener\">RVSqlServerDataSource</a>  
 <a href="/api/aspnet/latest/Reveal.Sdk.RVSqlServerDataSourceItem.html" target="_blank" rel="noopener\">RVSqlServerDataSourceItem</a>
 
-<a href="/api/aspnet/latest/Reveal.Sdk.Reveal.Sdk.RVRESTDataSource.html" target="_blank" rel="noopener\">RVRESTDataSource</a>  
-<a href="/api/aspnet/latest/Reveal.Sdk.Reveal.Sdk.RVRESTDataSourceItem.html" target="_blank" rel="noopener\">RVRESTDataSourceItem</a>
+<a href="/api/aspnet/latest/Reveal.RVRESTDataSource.html" target="_blank" rel="noopener\">RVRESTDataSource</a>  
+<a href="/api/aspnet/latest/Reveal.RVRESTDataSourceItem.html" target="_blank" rel="noopener\">RVRESTDataSourceItem</a>
 
 <a href="/api/aspnet/latest/Reveal.Sdk.RVJsonDataSource.html" target="_blank" rel="noopener\">RVJsonDataSource</a>  
 <a href="/api/aspnet/latest/Reveal.Sdk.RVJsonDataSourceItem.html" target="_blank" rel="noopener\">RVJsonDataSourceItem</a>

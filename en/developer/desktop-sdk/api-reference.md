@@ -17,8 +17,8 @@ For a complete reference, please follow the <a href="/api/wpf/latest/Reveal.Sdk.
 <a href="/api/wpf/latest/Reveal.Sdk.RVSqlServerDataSource.html" target="_blank" rel="noopener\">RVSqlServerDataSource</a>  
 <a href="/api/wpf/latest/Reveal.Sdk.RVSqlServerDataSourceItem.html" target="_blank" rel="noopener\">RVSqlServerDataSourceItem</a>
 
-<a href="/api/wpf/latest/Reveal.Sdk.Reveal.Sdk.RVRESTDataSource.html" target="_blank" rel="noopener\">RVRESTDataSource</a>  
-<a href="/api/wpf/latest/Reveal.Sdk.Reveal.Sdk.RVRESTDataSourceItem.html" target="_blank" rel="noopener\">RVRESTDataSourceItem</a>
+<a href="/api/wpf/latest/Reveal.Sdk.RVRESTDataSource.html" target="_blank" rel="noopener\">RVRESTDataSource</a>  
+<a href="/api/wpf/latest/Reveal.Sdk.RVRESTDataSourceItem.html" target="_blank" rel="noopener\">RVRESTDataSourceItem</a>
 
 <a href="/api/wpf/latest/Reveal.Sdk.RVJsonDataSource.html" target="_blank" rel="noopener\">RVJsonDataSource</a>  
 <a href="/api/wpf/latest/Reveal.Sdk.RVJsonDataSourceItem.html" target="_blank" rel="noopener\">RVJsonDataSourceItem</a>
@@ -30,7 +30,7 @@ For a complete reference, please follow the <a href="/api/wpf/latest/Reveal.Sdk.
 
 **Authentication**  
 <a href="/api/wpf/latest/Reveal.Sdk.IRVAuthenticationProvider.html" target="_blank" rel="noopener\"> IRVAuthenticationProvider</a>  
-<a href="/api/wpf/latest/Reveal.Sdk.IRVDataSourceCredential.html" target="_blank" rel="noopener\"> IRVDataSourceCredential</a>
+<a href="/api/wpf/latest/Reveal.Sdk.IRVDataSourceCredential.html" target="_blank" rel="noopener\"> IRVDataSourceCredential</a>  
 <a href="/api/wpf/latest/Reveal.Sdk.RVBearerTokenDataSourceCredential.html" target="_blank" rel="noopener\"> RVBearerTokenDataSourceCredential</a>  
 <a href="/api/wpf/latest/Reveal.Sdk.RVUsernamePasswordDataSourceCredential.html" target="_blank" rel="noopener\"> RVUsernamePasswordDataSourceCredential</a>
 
