@@ -28,7 +28,7 @@ public override Task<Dashboard> GetDashboardAsync(string dashboardId)
     var resourceName = $"Demo1.Dashboards.{dashboardFileName}";
     var assembly = Assembly.GetExecutingAssembly();
     var rdashStream = assembly.GetManifestResourceStream(resourceName)
-    var dashboard = new Dashboard(assembly.GetManifestResourceStream(rdashStream));
+    var dashboard = new Dashboard(rdashStream);
 
     return Task.FromResult(dashboard);
 }
