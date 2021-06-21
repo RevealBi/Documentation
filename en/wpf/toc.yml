@@ -1,0 +1,56 @@
+- name: General
+  header: true
+- name: Installation
+  href: installation.md
+- name: NuGet Feeds
+  href: nuget-feeds.md
+- name: Create Your First App
+  href: index.md
+- name: Working with Dashboards
+  header: true
+- name: Creating a Dashboard
+  href: creating-dashboards.md
+- name: Loading Dashboards
+  href: loading-dashboards.md
+- name: Filtering
+  href: filtering-dashboards.md
+- name: Editing
+  href: editing-dashboards.md
+- name: Saving
+  href: saving-dashboards.md
+- name: Linking / Drilldown
+  href: linking-dashboards.md
+- name: Formatting Data
+  href: formatting-data.md
+- name: Localizaing
+  href: localizing-dashboards.md
+- name: Exporting
+  href: exporting-dashboards.md
+- name: Theming
+  href: theming-dashboards.md
+- name: Working with DataSources
+  header: true
+- name: Adding Data Sources
+  href: index.md
+- name: Hiding Data Sources
+  href: index.md
+- name: Replacing Data Sources
+  href: index.md
+- name: Authentication
+  href: index.md
+- name: Working with Visualizations
+  header: true
+- name: Responding to Click Events
+  href: index.md
+- name: Tooltips
+  href: index.md
+- name: Release Information
+  header: true
+- name: API Reference
+  href: api-reference.md
+- name: Known Issues
+  href: known-issues.md
+- name: Release notes
+  href: release-notes.md
+- name: Third-Party Software
+  href: third-party-software.md
