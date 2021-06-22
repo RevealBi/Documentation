@@ -6,7 +6,7 @@
   href: getting-started.md
 - name: Working with Dashboards
   header: true
-- name: Creating a Dashboard
+- name: Creating Dashboards
   href: creating-dashboards.md
 - name: Loading Dashboards
   href: loading-dashboards.md

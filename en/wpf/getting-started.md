@@ -76,9 +76,9 @@ Press F5 to run the application.
 
 ![](images/getting-started-running-app.jpg)
 
-Congratulations! You have written your first Reveal SDK application.
+**Congratulations!** You have written your first Reveal SDK application.
 
-**Next Steps:**
+Next Steps:
 - [Create New Dashboards](creating-dashboards.md)
 - [Load Existing Dashboards](loading-dashboards.md)
 
