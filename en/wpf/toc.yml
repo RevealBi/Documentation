@@ -2,10 +2,8 @@
   header: true
 - name: Installation
   href: installation.md
-- name: NuGet Feeds
-  href: nuget-feeds.md
-- name: Create Your First App
-  href: index.md
+- name: Getting Started
+  href: getting-started.md
 - name: Working with Dashboards
   header: true
 - name: Creating a Dashboard

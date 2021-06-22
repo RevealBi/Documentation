@@ -1,5 +1,0 @@
-# NuGet Feeds
-
-## Trial
-
-## Licensed
