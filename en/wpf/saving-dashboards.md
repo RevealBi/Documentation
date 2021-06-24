@@ -20,7 +20,7 @@ By default, the `RevealView` does not provide a built-in **Save** or **Save As**
 
 In order to handle the saving of dashboards, you must add an event handler to the `RevealView.SaveDashboard` event.
 
-```cs
+```xml
 <rv:RevealView x:Name="_revealView"
                SaveDashboard="RevealView_SaveDashboard"/>
 ```
@@ -43,6 +43,18 @@ The `DashboardSaveEventArgs` object provide the following properties and methods
 
 > [!NOTE]
 > If an end-user is in edit mode and you have not implemented the `RevealView.SaveDashboard` event, the **Check Button** will not exit edit mode when clicked. This is an indicator that you need to implement the `RevealView.SaveDashboard` event.
+
+## Disabled Saving
+
+You can prevent the end-user from invoking either the **Save** or **Save As** operations by either disabling editing or hiding the **Save As** UI elemtents.
+
+To disable the **Save** operation, you must disable editing completely. Please see the [Editing](editing-dashboards.md#canedit) topic for more information on disabling editing.
+
+To disable the **Save As** operation, you must set the `RevealView.CanSaveAs` property to `false`:
+
+```xml
+<rv:RevealView x:Name="_revealView" CanSaveAs="False" />
+```
 
 ## Example: Implement Save
 
