@@ -99,13 +99,9 @@ public class MyUglyTheme : RevealTheme
 {
     public MyUglyTheme()
     {
-        var regularFont = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#Wingdings 2");
-        var mediumFont = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#Lucida Calligraphy");
-        var boldFont = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CF Crack and");
-
-        RegularFont = regularFont;
-        MediumFont = mediumFont;
-        BoldFont = boldFont;
+        RegularFont = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#Wingdings 2");
+        MediumFont = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#Lucida Calligraphy");
+        BoldFont = new FontFamily(new Uri("pack://application:,,,/Fonts/"), "./#CF Crack and");
 
         FontColor = Colors.DarkRed;
         AccentColor = Color.FromRgb(192, 80, 77);
