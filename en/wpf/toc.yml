@@ -6,9 +6,9 @@
   href: getting-started.md
 - name: Working with Dashboards
   header: true
-- name: Creating Dashboards
+- name: Creating
   href: creating-dashboards.md
-- name: Loading Dashboards
+- name: Loading
   href: loading-dashboards.md
 - name: Filtering
   href: filtering-dashboards.md
@@ -20,7 +20,7 @@
   href: linking-dashboards.md
 - name: Formatting Data
   href: formatting-data.md
-- name: Localizaing
+- name: Localizing
   href: localizing-dashboards.md
 - name: Exporting
   href: exporting-dashboards.md
