@@ -33,7 +33,7 @@ You will be able to change the following settings for the filter:
     <th class="tg-cly1">Title. The title for the dashboard filter, which will be displayed right under the dashboard title. By default, this is the name of the field that will be used as a filter.</th>
   </tr>
   <tr>
-    <td class="tg-cly1"><a href="#displayed-field">Displayed Field</a>. The field in your dataset, which will be used as a dashboard filter.</td>
+    <td class="tg-cly1"><a href="#displayed-field">Displayed Field/Element</a>. The field in your dataset, which will be used as a dashboard filter.</td>
   </tr>
   <tr>
     <td class="tg-cly1"><span style="font-weight:bold">Selection</span>. This setting allows you to configure: <a href="#multiple-selection">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="#required-selection">Required Selection</a> (at least one value must always be selected).</td>
@@ -49,12 +49,13 @@ You will be able to change the following settings for the filter:
 <a name='displayed-field'></a>
 ### Displayed Field
 
-This setting specifies the dataset field that will be used to display
-the values in the Dashboard Filters. Listed values will not be repeated,
+>[!NOTE] For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **_Displayed Element_**.
+
+The _Displayed Field/Element_ setting specifies the dataset field that will be used to display
+the values in the *Dashboard Filters*. Listed values will not be repeated,
 even if they appear multiple times in the original dataset.
 
-You can change the displayed column in *Edit* mode by selecting the
-*Edit* button in the overflow menu next to the dashboard filter name.
+You can change the displayed column in *Edit mode* by selecting the *Edit* button in the overflow menu next to the dashboard filter name.
 
 <img src="images/edit-displayed-field-filter-setting.png" alt="Accessing dashboard filter edit mode" width="100%"/>
 
@@ -130,21 +131,18 @@ filter and have the dashboard filter show only the employees in the
 5.  Choose *London, UK* from the list and click/tap the *Create Filter*
     button.
 
-### Dashboard Filters Using MS Analysis Data
+### Dashboard Filters Using Microsoft Analysis Data
 
-There are some specifics when configuring an SSAS-based dashboard filter (see in the list below).
+There are some specifics when configuring an MS Analysis dashboard filter.
 
 <img src="images/ssrs-filter.png" alt="Dashboard Filter dialog when configuring an SSRS filter" width="80%"/>
 
-
-> A screenshot showing both fields below (no collapsing a dropdown, please)
-
  1. **Displayed Element** - you can select a *Dimension*, *Hierarchy* or *Level* data field to display dashboard filter values, but not a _Measure_ data field. 
 
-1. (*Optional*) **Show only when Measure has data** - select a *Measure* to limit the dashboard filter values list to those that contain data for a certain Measure.
+ 2. (*Optional*) **Show only when Measure has data** - select a *Measure* to limit the dashboard filter list to values that contain data for a certain Measure.
 
-For example, if you use the *Product* Dimension as a *Displayed element*, your dashboard filter will show a list of products (e.g. bikes, clothes, etc). 
-By additionally selecting the *Internet orders* Measure for *Show only when Measure has data* field, you will exclude dashboard filter values, which do not contain information about the *Internet orders* Measure. So, if there are no internet orders of bikes, the _bike_ product will not show up in the _Dashboard Filters_ list.
+Look at the screenshot above. In this example, the *Product* Dimension is selected as a *Displayed element*, so the dashboard filter will show a list of products (e.g. bikes, clothes, etc). 
+By additionally selecting the *Internet orders* Measure for *Show only when Measure has data* field, you will exclude dashboard filter values, which do not contain information about the *Internet orders* Measure. So, if there are no internet orders of the product bike, _bike_ will not show up as a possible selection in the _Dashboard Filters_ list.
 
 ### Next Steps 
 
