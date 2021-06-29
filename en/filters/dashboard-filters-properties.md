@@ -49,7 +49,7 @@ You will be able to change the following settings for the filter:
 <a name='displayed-field'></a>
 ### Displayed Field
 
->[!NOTE] For dashboards using data from *Microsoft Analysis Services* and *Google Analytics* data sources, this setting is named **_Displayed Element_**.
+>[!NOTE] For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **_Displayed Element_**.
 
 The _Displayed Field/Element_ setting specifies the dataset field that will be used to display
 the values in the *Dashboard Filters*. Listed values will not be repeated,
