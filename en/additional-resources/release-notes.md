@@ -17,6 +17,18 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
     <tr>
+        <td class="tg-0lax" rowspan="2">Jun-2021</td>
+        <td class="tg-0lax" rowspan="2"> 1.0.20 <br> [1.0.28 iOS]</td>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug fix] Calculated field filter not working with data process on server</span><br>
+        When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug fix] Google Analytics issues with dashboard filters</span><br>
+        When getting data from Google Analytics data sources, you were unable to create dashboard filters.
+        </td>
+    </tr>
+    <tr>
         <td class="tg-0lax" rowspan="5">May-2021</td>
         <td class="tg-0lax" rowspan="5"> 1.0.19 <br> [1.0.26 iOS]</td>
         <td class="tg-cly1"><span style="font-style:italic">SalesForce Bucket fields are now supported in Reveal!</span><br>

@@ -17,6 +17,74 @@ here.
         </tr>
     </thead>
     <tbody>
+       <tr>
+            <td rowspan="5">June-2021</td>
+            <td rowspan="5">1.0.2005</td>
+            <td><i>Scatter Maps now support OpenStreetMap!</i><br>
+            You can now configure and use OpenStreet Map image tiles in Desktop (WPF) and Web-client (JS).
+            </td>     
+        </tr>
+        <tr>
+            <td><i>New Thumbnail component!</i><br>
+            You can now render a thumbnail of a dashboard with <i>RevealDashboardThumbnailView</i>.
+            </td>
+        </tr>
+        <tr>
+            <td><i>Credentials from Web client to server-side data source</i><br>
+            A new type of credentials <i>RVHeadersDataSourceCredentials</i> allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following <a href="https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Cookies-Auth">sample</a> in GitHub.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
+            When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug fix] Google Analytics issues with dashboard filters</i><br>
+            When getting data from Google Analytics data sources, you were unable to create dashboard filters.
+            </td>
+        </tr>
+       <tr>
+            <td rowspan="4">June-2021</td>
+            <td rowspan="4">1.0.7 JAVA</td>
+            <td><i>Scatter Maps now support OpenStreetMap!</i><br>
+            You can now configure and use OpenStreet Map image tiles in the SDK Web-client (JS).
+            </td>     
+        </tr>
+        <tr>
+            <td><i>[Public SDK Bug fix] Text Box content not visible after component is remounted</i><br>
+            When using React with a dashboard and a Text Box visualization, content was not visible after component remount. A page reload was required.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
+            When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug fix] Google Analytics issues with dashboard filters</i><br>
+            When getting data from Google Analytics data sources, you were unable to create dashboard filters.
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">June-2021</td>
+            <td rowspan="2">1.0.6 JAVA</td>
+            <td><i>[Bug Fix] [SDK] Grizzly server throws an exception</i><br>
+            When running Reveal in Grizzly, a <i>NoClassDefFoundError</i> exception was being thrown because of a wrong dependency in <i>javax.servlet.ServletContext</i> class (javax.servlet:javaz.servlet-api assembly).
+            </td>     
+        </tr>
+        <tr>
+            <td><i>New sample for JAVA SDK released!</i><br>
+            There is a new <a href="https://github.com/RevealBi/sdk-samples-java/blob/main/upmedia-backend-grizzly">GitHub sample</a> showing how to use Reveal with <a href="https://javaee.github.io/grizzly/">Grizzly</a> server.
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1">June-2021</td>
+            <td rowspan="1">1.0.5 JAVA</td>
+            <td><i>Credentials from Web client to server-side data source</i><br>
+            A new type of credentials <i>RVHeadersDataSourceCredentials</i> allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following <a href="https://github.com/RevealBi/sdk-samples-java/blob/main/cookies-auth">sample</a> in GitHub.
+            </td>     
+        </tr>
         <tr>
             <td rowspan="6">May-2021</td>
             <td rowspan="6">1.0.1956 (1.0.4 JAVA)</td>
