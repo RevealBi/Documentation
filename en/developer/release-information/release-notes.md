@@ -18,8 +18,8 @@ here.
     </thead>
     <tbody>
        <tr>
-            <td rowspan="5">June-2021</td>
-            <td rowspan="5">1.0.2005</td>
+            <td rowspan="6">June-2021</td>
+            <td rowspan="6">1.0.2005</td>
             <td><i>Scatter Maps now support OpenStreetMap!</i><br>
             You can now configure and use OpenStreet Map image tiles in Desktop (WPF) and Web-client (JS).
             </td>     
@@ -32,6 +32,11 @@ here.
         <tr>
             <td><i>Credentials from Web client to server-side data source</i><br>
             A new type of credentials <i>RVHeadersDataSourceCredentials</i> allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following <a href="https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Cookies-Auth">sample</a> in GitHub.
+            </td>
+        </tr>
+        <tr>
+            <td><i>SDK AspNetCore services injection</i><br>
+            You can now register the <i>RevealSdkContext</i> and <i>RevealUserContext</i> implementations as a type only (not passing an instance), allowing these classes to get any other AspNetCore services injected through the constructor. For further details check the following <a href="https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Reveal.Sdk.Samples.Web.UpMedia.Backend">sample</a> in GitHub.
             </td>
         </tr>
         <tr>
