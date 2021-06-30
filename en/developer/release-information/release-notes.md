@@ -22,7 +22,7 @@ here.
             <td rowspan="5">1.0.2005</td>
             <td><i>Scatter Maps now support OpenStreetMap!</i><br>
             You can now configure and use OpenStreet Map image tiles in Desktop (WPF) and Web-client (JS).
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>New Thumbnail component!</i><br>
@@ -49,7 +49,7 @@ here.
             <td rowspan="4">1.0.7 JAVA</td>
             <td><i>Scatter Maps now support OpenStreetMap!</i><br>
             You can now configure and use OpenStreet Map image tiles in the SDK Web-client (JS).
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>[Public SDK Bug fix] Text Box content not visible after component is remounted</i><br>
@@ -71,7 +71,7 @@ here.
             <td rowspan="2">1.0.6 JAVA</td>
             <td><i>[Bug Fix] [SDK] Grizzly server throws an exception</i><br>
             When running Reveal in Grizzly, a <i>NoClassDefFoundError</i> exception was being thrown because of a wrong dependency in <i>javax.servlet.ServletContext</i> class (javax.servlet:javaz.servlet-api assembly).
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>New sample for JAVA SDK released!</i><br>
@@ -83,14 +83,14 @@ here.
             <td rowspan="1">1.0.5 JAVA</td>
             <td><i>Credentials from Web client to server-side data source</i><br>
             A new type of credentials <i>RVHeadersDataSourceCredentials</i> allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following <a href="https://github.com/RevealBi/sdk-samples-java/blob/main/cookies-auth">sample</a> in GitHub.
-            </td>     
+            </td>
         </tr>
         <tr>
             <td rowspan="6">May-2021</td>
             <td rowspan="6">1.0.1956 (1.0.4 JAVA)</td>
             <td><i>[Public Bug Fix] [SDK] Full list of Data Sources displayed by mistake</i><br>
             When using <i>DataSourcesRequested</i> callback in the Desktop SDK, the whole list of data sources was being displayed instead of the ones explicitly added.
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>[Public Bug Fix] [SDK] Desktop SDK export to Excel not working as expected</i><br>
@@ -122,7 +122,7 @@ here.
             <td rowspan="2">1.0.3 JAVA</td>
             <td><i>New Snowflake connector!</i><br>
             Reveal Java SDK now supports Snowflake data source connector, also including data blending between tables in the same Snowflake database.
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>Reveal BI Engine for Java was enhanced</i><br>
@@ -135,7 +135,7 @@ here.
             <td><i>New JAVA SDK released!</i><br>
             Reveal now supports JAVA as another Web Server option besides .NET. The JAVA SDK requires JAVA 11+ and is distributed as a set of Maven modules. For further details, please refer to <a
                 href="../java-sdk/setup-configuration.html">Setup and Configuration</a>.
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>JAVA SDK Samples released!</i><br>
@@ -150,7 +150,7 @@ here.
             <i>showEditDataSource</i> - can be used to disable the Edit button normally available in the data source overflow menu.<br>
             <i>canAddDashboardFilter</i> - this property can hide the "Add Dashboard Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.<br>
             <i>canAddDateFilter</i> - this property can hide the "Add Date Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
-            </td>     
+            </td>
         </tr>
         <tr>
             <td><i>[Public Bug Fix] [SDK] revealView.canSaveAs property not working as expected</i><br>
