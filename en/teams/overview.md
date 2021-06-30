@@ -1,64 +1,57 @@
-## Team Collaboration and Privacy
+## Workspaces Collaboration and Privacy
 
-*Teams* facilitate effective collaboration on dashboards between any
-group of Reveal users while also ensuring a high level of security for
-dashboards with sensitive information.
+The *workspaces* facilitate effective collaboration on dashboards between any
+group of Reveal users. They also ensure a high level of security for dashboards with sensitive information.
 
-With Teams in Reveal, you can:
+With workspaces in Reveal, you can:
 
-  - Organize your group's work in a **team's dashboards** section -
-    create and share dashboards directly with other members, view and
-    edit their dashboards.
+  - organize your group's work in the workspace section - create and share dashboards directly with other members, view and edit their dashboards.
 
-  - [**Share**](~/en/dashboards/sharing-dashboards/share-a-dashboard.md) your team's dashboards with other teams and users in Reveal.
+  - [**Share**](~/en/dashboards/sharing-dashboards/share-a-dashboard.md) the dashboards in your workspace with other workspaces and with individual users in Reveal.
 
-  - Assign every team member to one of [**three members' roles**](#members-roles-permissions) with distinct access level to safeguard dashboards with sensitive information.
+  - Assign every workspace member to one of [**three members' roles**](#members-roles-permissions) with distinct access level to safeguard dashboards with sensitive information.
 
-  - Bring different departments and employees from across an
-    organization working together in an automatically created
-    [**Organization repository**](#organization-team).
+  - Bring different departments and employees from across an organization working together in an automatically created [**Organization workspace**](#organization-workspace).
 
-  - **Discover other teams** that include members who belong to your Organization team.
+  - **Discover other workspaces** that include members who belong to your Organization workspace.
 
-### Accessing Your Teams
+### Accessing Your Workspaces
 
 
-You can access your teams on to the left side of the screen, below the *Reveal* icon:
+You can access your workspaces on to the left side of the screen, below the *Reveal* icon:
 
-<img src="images/accessing-teams-menu.png" alt="Accessing teams popover menu" width="100%"/>
+<img src="images/accessing-workspaces-menu.png" alt="Accessing workspaces popover menu" width="100%"/>
 
-You will find a list of your teams under the organization repository. There you can also create new teams or join existing ones.
+You will find a list of your workspaces under the *My Stuff* and *Organization* panel. There you can also create new workspaces or join existing ones.
 
 
-<a name='organization-team'></a>
-### The Organization Repository
+<a name='organization-workspace'></a>
+### The Organization Workspace
 
-Reveal creates the Organization repository automatically when a member of your organization logs in for the first time with Office365. Members need to log in with their organization's email to be associated with an organization and added to the Organization repository.
+Reveal creates the Organization workspace automatically when a member of your organization logs in for the first time with Office365. Members need to log in with their organization's email to be associated with an organization and added to the Organization workspace.
 
-You will find the Organization team right below the *Reveal* icon. This team is named after your organization.
+You will find the Organization workspace right below _My Stuff_. This workspace is named after your organization.
 
-Unlike other teams, only [Owners](#members-roles-permissions) can create
-and add dashboards to the Organization repository. Only key members in
-your organization will be given the owner's role. This limitation
-ensures that dashboards in the Organization team contain accurate and
-trustworthy data.
+Unlike other workspaces, only [owners](#members-roles-permissions) can create
+and upload dashboards in the Organization workspace. Only key members in
+your organization will be given the owner's role. This limitation ensures that dashboards in the Organization workspace contain accurate and trustworthy data.
 
-<a name='team-privacy-levels'></a>
-### Team Privacy Levels
+<a name='workspace-privacy-levels'></a>
+### Workspace Privacy Levels
 
-When creating a team, you can select the level of privacy you want it to
-have:
+When creating a workspace, you can select the level of privacy you want it to
+have.
 
-  - **Public**: any member of your main Organization team can search and
-    join your team.
+  - **Public**: any member of your main Organization workspace can search and
+    join your workspace.
 
-  - **Private**: your team won't be found in search results. Users can
+  - **Private**: your workspace won't be found in search results. Users can
     only join it if they get invitations.
 
 <a name='members-roles-permissions'></a>
 ### Members' Roles and Permissions
 
-There are three types of team members in Reveal:
+There are three types of workspace members in Reveal:
 
   - **Owners**
 
@@ -66,53 +59,49 @@ There are three types of team members in Reveal:
 
   - **Viewers**
 
-The process of assigning these roles in the Organization team differ
-from other teams. Below, you will find this process explained as well as
+The process of assigning these roles in the Organization workspace differ
+from other workspaces. Below, you will find this process explained as well as
 two reference tables illustrating members' permissions in the
-Organization and in other teams.
+Organization and in other workspaces.
 
-#### Organization Repository - Assigning Members' Roles and Permissions
+#### Organization Workspace - Assigning Members' Roles and Permissions
 
 The first user from an organization, who signs in Reveal, is given the
-role of **owner** of the Organization repository. As other users from
-the same organization log in they will also be added as owners. After an
-owner assigns someone(s) as a **viewer** or a **member** for the first
-time, all new users that sign in will be added as members, not owners.
+role of **owner** of the Organization workspace. Other users from the same organization who sign in for the first time will also be added as owners. After one of the owners assigns someone as a **viewer** or a **member** for the first
+time, future new users will be added as members, not owners.
 
 The following table shows the different permissions of members in the
-Org team:
+Org workspace:
 
 | PERMISSION                                                      | Owner                                   | Member                                  | Viewer                                  |
 | --------------------------------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
 | Can view **dashboards**                                         | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
-| Can create **dashboards** in the Org repository                 | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can create, edit, delete **dashboards** in the Org workspace                 | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
 | Can share **dashboards** outside the Org with edit permissions  | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
 | Can share **dashboards** outside the Org with view permissions  | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
-| Can manage **members** in the Organization repository           | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
-| Can invite **members** to the Org                               | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
-| Can join **public teams** as a member                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
-| Can view **private teams**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
-| Can create their own public or private team in the organization | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
+| Can manage **members** in the Organization workspace           | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can **invite** users to the Org                               | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can discover and join **public workspaces**                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can discover **private workspaces**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can create their own workspace in the Organization | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
 
-#### Teams - Assigning Members' Roles and Permissions
+#### Workspaces - Assigning Members' Roles and Permissions
 
-When a user creates a team, they are the owner of that team and can
-distribute levels of permissions there. The owner invites new members to
-their team and assigns their roles.
+When a user creates a workspace, they are the owner of that workspace and can
+distribute levels of permissions there. The owner invites new members and assigns their roles.
 
-The table below shows what permissions members of teams different from
-the Organization team have.
+The table below shows the user permissions inside workspaces different from
+the Organization workspace.
 
 | PERMISSION                                                      | Owner                                   | Member                                  | Viewer                                  |
 | --------------------------------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
 | Can view **dashboards**                                         | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
-| Can create **dashboards** in the team                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
-| Can share **dashboards** outside the team with edit permissions | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
-| Can share **dashboards** outside the team with view permissions | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
-| Can manage team **members**                                     | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
-| Can invite **members** to the team                              | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
-| Can join **public teams** as a member                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
-| Can view **private teams**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can create, edit, delete **dashboards** in the workspace                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
+| Can share **dashboards** outside the workspace with edit permissions | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
+| Can share **dashboards** outside the workspace with view permissions | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can manage workspace **members**                                     | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can **invite** users                             | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
+| Can join **public workspaces** as a member                           | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> |
+| Can discover **private workspaces**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
 
-If you want to know more about managing teams' and Organization
-repository's properties and members, please read the [Managing Teams](managing-your-team.md) topic.
+If you want to know more about managing workspaces' and Organization's properties and members, please read the [Managing Workspaces](managing-your-workspace.md) topic.
