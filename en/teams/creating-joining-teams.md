@@ -1,88 +1,91 @@
-## Creating and Joining Teams
+## Creating and Joining Workspaces
 
-*Teams* in Reveal enables easy collaboration within and out of your
+The *workspaces* in Reveal enable easy collaboration within and out of your
 organization. Now you can access and join freely all your organization's
-teams and also make your own team available for others in the
-organization to join and work with you.
+workspaces and also make your own workspace available for others in the
+Organization to join and work with you.
 
-Start using Teams by [creating a team from scratch](#create-team-scratch) or [joining an existing team](#join-team).
+Start using Workspaces by [creating a workspace from scratch](#create-workspace-scratch) or [joining an existing workspace](#join-workspace).
 
-<a name='create-team-scratch'></a>
-### Creating a Team from Scratch
+<a name='create-workspace-scratch'></a>
+### Creating a Workspace from Scratch
 
-1.  Click *Join or Create a Team* at the bottom left corner of the screen.
+1.  Click/tap *New Workspace* at the bottom left corner of the screen.
 
-    <img src="images/button-join-create-team.png" alt="join or create a team button in the popover menu" width="100%"/>
+    <img src="images/button-join-create-team.png" alt="new workspace button in the popover menu" width="100%"/>
 
     >[!NOTE]
-    > When signing in for the first time, you might already have a team. This is your [Organization team](overview.html#organization-team) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
+    > When signing in for the first time, you might already have a workspace. This is your [Organization workspace](overview.html#organization-workspace) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
 
 
 
-2.  Click/Tap the *+ Create Team* blue button. The following screen
-    opens:
+2.  Click/Tap the *+ Create Workspace* blue button. The following screen opens:
 
-    <img src="images/create-team-properties.png" alt="team properties dialog" width="100%"/>
+    <img src="images/create-team-properties.png" alt="workspace properties dialog" width="100%"/>
 
     Here you will need to:
 
-      - assign a *name* to your team;
+      - assign a *name* to your workspace;
 
-      - choose if your team will belong to the main *Organization*.
+      - choose if your workspace will belong to the main *Organization*.
 
-          - [Organization team](overview.html#organization-team) (this
+          - [Organization workspace](overview.html#organization-workspace) (this
             option will appear with the name of your organization, e.g.
-            *Infragistics, Inc*) - if you associate your team with the
-            main Organization team, your team will appear in the list of
-            teams that every member of the main Organization can
-            [join](#join-team) (unless you make your team private).
+            *Infragistics, Inc*) - if you associate your workspace with the
+            main Organization, your workspace will appear in the list of
+            workspaces that every member of the main Organization can
+            [join](#join-workspace) (unless you make it private).
 
-          - *Personal organization* - your new team does not belong to
+          - *Personal organization* - your new workspace does not belong to
             the main Organization and cannot be joined by other users
             without invitation.
 
             >[!NOTE]
-            >Carefully choose the *Organization* property for your team as you cannot change it later.
-      - decide on team's [*privacy*](overview.html#team-privacy-levels) - this option will not be availabe if you choose _Personal Organization_ for your team.
+            >Carefully choose the *Organization* property for your workspace as you cannot change it later.
+      
+      - decide on workspace's [*privacy*](overview.html#workspace-privacy-levels) - this option will not be availabe if you choose _Personal Organization_ for your workspace. Choose *public* if you want your workspace to be discovered and joined without invitation.
 
-      - configure _branding_ settings - choose a main color and logo to be used when the teams' dashboards are exported as [PDF documents](~/en/dashboards/exporting-dashboards/export-as-pdf-document.md) and [PPT presentations](~/en/dashboards/exporting-dashboards/export-as-powerpoint-presentation).
-
+      - configure _branding_ settings - choose a main color and logo to be used when the workspaces' dashboards are exported as [PDF documents](~/en/dashboards/exporting-dashboards/export-as-pdf-document.md) and [PPT presentations](~/en/dashboards/exporting-dashboards/export-as-powerpoint-presentation).
+      
         >[!NOTE] **Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: jpg, jpeg, png, gif.
 
-3.  Click/Tap *Create*. Your team is now created and you can find it in the teams' list on the left side of the screen.
+      - choose *Status*, *Start Date*, *Due Date* - these settings are *optional* but very handy when you are working on a project  
+  
 
-4. After you create your team, you will be prompted to invite members. Click/tap the    
+3.  Click/Tap *Create*. Your workspace is now created and you can find it in the workspaces' list on the left side of the screen.
+
+4. After you create your workspace, you will be prompted to invite members. Click/tap the    
 the *+ Members* blue button. You can choose members from the dropdown list (see below) or use the search bar to add the emails of users who are outside of your Organization. Select _Done_ when you are ready.
 
-  <img src="images/team-invite-members.png" alt="invite members dialog" width="100%" />
+  <img src="images/workspace-invite-members.png" alt="invite members dialog" width="100%" />
 
-1. *Member* is the default role for every user you invite, unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about team roles in [Team Collaboration and Privacy](overview.html#members-roles-permissions)
+1. *Member* is the default role for every user you invite, unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about workspace roles in [Workspace Collaboration and Privacy](overview.html#members-roles-permissions)
 
 2. After deciding on the roles, click _Update_ to send the invites.
 
-<a name='join-team'></a>
-### Joining an Existing Team
+<a name='join-workspace'></a>
+### Joining an Existing Workspace
 
-If your account has been automatically added to an [Organization team](overview.html#organization-team), you can **discover
-and join other teams that belong to your organization**.
-To join an existing team, follow the steps below.
+If your account has been automatically added to an [Organization workspace](overview.html#organization-workspace), you can **discover
+and join other workspaces that belong to your organization**.
+To join an existing workspace, follow the steps below.
 
 
-1.  Click/tap the *Join or Create a Team* blue button located in the bottom left of the screen.
+1.  Click/tap the *New Workspace* blue button located in the bottom left of the screen.
 
 2.  The following screen shows up:
 
-    <img src="images/join-or-create.png" alt="join or create a team dialog" width="80%"/>
+    <img src="images/join-or-create.png" alt="join or create a workspace dialog" width="80%"/>
 
     Here you will find all the
-    [public](overview.html#team-privacy-levels) teams that
+    [public](overview.html#workspace-privacy-levels) workspaces that
     belong to your organization.
 
 4.  After clicking/tapping the *Join* button, you will automatically be
     added as a new member with Member's
     [permissions](overview.html#members-roles-permissions)
-    to the team you have chosen. The team will appear in your teams' list.
+    to the workspace you have chosen. The workspace will appear in your workspaces' list.
 
-### Navigating your Teams' List
+### Navigating your Workspaces' List
 
-There is no limit to the teams you can create or join. To easily navigate through a large list of teams just scroll up & down as needed.
+There is no limit to the workspaces you can create or join. To easily navigate through a large list of workspaces just scroll up & down as needed.
