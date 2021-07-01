@@ -2,7 +2,7 @@
 
 Reveal is a modern BI solution that was built for embedded analytics. You can easily integrate data analytics into your application, taking advantage of rich APIs that give you control over Reveal data visualizations, while also enhancing the user's experience with your app.
 
-Built by user experience experts and designed for the business user, Reveal makes it simple for you to create, view, and share data visualizations with your teams. Offering you a seamless, identical experience no matter what device you are on: Web, Desktop, iOS, or Android.
+Built by user experience experts and designed for the business user, Reveal makes it simple for you to create, view, and share data visualizations with your collaborators. Offering you a seamless, identical experience no matter what device you are on: Web, Desktop, iOS, or Android.
 
 Interested on embedded analytics? [Download Reveal SDK](https://www.revealbi.io/download-sdk). To find out how to start using it, refer to the [Reveal SDK help](developer/index.md).
 
@@ -28,9 +28,9 @@ Once your dashboard is created, interact with your visualizations with drill-dow
 
 <img src="dashboards/images/tooltips-totals.png" alt="Using tooltips and displaying totals in Reveal" width="100%"/>
 
-<h4>Share Insights with your Teams </h4>
+<h4>Share Insights with Your Collaborators </h4>
 
-Give everyone the power of data by sharing your dashboards within your Organization's repository, teams you are part of or with individual coworkers. Assign different levels of permissions to users to give them the level of access you want them to have to your dashboard.
+Give everyone the power of data by sharing your dashboards within your Organization, workspaces you are part of or with individual collaborators. Assign different levels of permissions to users to give them the level of access you want them to have to your dashboard.
 
 <img src="dashboards/sharing-dashboards/images/remove-sharing.png" alt="Showing user roles while sharing in Reveal" width="100%"/>
 
