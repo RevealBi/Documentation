@@ -43,7 +43,7 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
             >[!NOTE]
             >Carefully choose the *Organization* property for your workspace as you cannot change it later.
       
-      - decide on workspace's [*privacy*](overview.html#workspace-privacy-levels) - this option will not be availabe if you choose _Personal Organization_ for your workspace. Choose *public* if you want your workspace to be discovered and joined without invitation.
+      - decide on workspace's [*privacy*](overview.html#workspace-privacy-levels) - this option will not be available if you choose _Personal Organization_ for your workspace. Choose *public* if you want your workspace to be discovered and joined without invitation.
 
       - configure _branding_ settings - choose a main color and logo to be used when the workspaces' dashboards are exported as [PDF documents](~/en/dashboards/exporting-dashboards/export-as-pdf-document.md) and [PPT presentations](~/en/dashboards/exporting-dashboards/export-as-powerpoint-presentation).
       
@@ -52,16 +52,19 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
       - choose *Status*, *Start Date*, *Due Date* - these settings are *optional* but very handy when you are working on a project  
   
 
-3.  Click/Tap *Create*. Your workspace is now created and you can find it in the workspaces' list on the left side of the screen.
+3.  Click/tap *Create*. Your workspace is now created and you can find it in the workspaces' list on the left side of the screen.
 
-4. After you create your workspace, you will be prompted to invite members. Click/tap the    
-the *+ Members* blue button. You can choose members from the dropdown list (see below) or use the search bar to add the emails of users who are outside of your Organization. Select _Done_ when you are ready.
+### Inviting Users to the Workspace
 
-  <img src="images/workspace-invite-members.png" alt="invite members dialog" width="100%" />
+After you create your workspace, you will be prompted to invite other users. 
 
-1. *Member* is the default role for every user you invite, unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about workspace roles in [Workspace Collaboration and Privacy](overview.html#members-roles-permissions)
+1. Click/tap the *+ Members* blue button. You can choose users from the dropdown list (see below). You can also use the search to add the emails of users who are outside of your Organization. Select _Done_ when you are ready.
 
-2. After deciding on the roles, click _Update_ to send the invites.
+    <img src="images/workspace-invite-members.png" alt="invite members dialog" width="100%" />
+
+2. *Member* is the default role when you invite users unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about workspace roles in [Workspace Collaboration and Privacy](overview.html#members-roles-permissions)
+
+5. After deciding on the roles, click _Update_ to send the invites. The users will receive them by email and will also be notified inside Reveal.
 
 <a name='join-workspace'></a>
 ### Joining an Existing Workspace
@@ -73,7 +76,7 @@ To join an existing workspace, follow the steps below.
 
 1.  Click/tap the *New Workspace* blue button located in the bottom left of the screen.
 
-2.  The following screen shows up:
+2.  The *Join or Create a Workspace* dialog shows up:
 
     <img src="images/join-or-create.png" alt="join or create a workspace dialog" width="80%"/>
 
@@ -85,7 +88,3 @@ To join an existing workspace, follow the steps below.
     added as a new member with Member's
     [permissions](overview.html#members-roles-permissions)
     to the workspace you have chosen. The workspace will appear in your workspaces' list.
-
-### Navigating your Workspaces' List
-
-There is no limit to the workspaces you can create or join. To easily navigate through a large list of workspaces just scroll up & down as needed.
