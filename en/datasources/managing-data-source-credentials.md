@@ -4,7 +4,7 @@ When configuring certain data sources in Reveal, you need to provide
 your account credentials for these services to access your information.
 These credentials are encrypted and **automatically stored** by Reveal for future use.
 
-To access and manage all your credentials, in the home screen, select: your **profile picture** (top right corner) > **Settings** > **Manage Reveal Credentials**.
+To access and manage all your credentials, select: your **profile picture** (top right corner) > **Settings** > **Manage Reveal Credentials**.
 
 
 ### Adding New Account Credentials
