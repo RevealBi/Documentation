@@ -6,7 +6,7 @@ The _Visualizations Editor_ is where you create and edit your visualizations in 
 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization you can choose between two alternative starting points.
 
-* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to _Home_ / a team space and click/tap the _+ New_ blue button.
+* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to _Home_ / a workspace and click/tap the _+ New_ blue button.
 * Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [_Dashboard Edit_](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap the _+ Visualization_ blue split button.
 
 After that, you will be prompted

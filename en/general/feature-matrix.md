@@ -98,7 +98,7 @@ The matrix below shows the availability of Reveal features in all its platforms 
 | Export to PPT                                     | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Export to PDF                                     | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | Initial View Displays Shared Dashboard Repository | <span style="color: #007F00">Yes</span>       | <span style="color: #FF0000">No</span>    |
-| Teams Creation & Management                       | <span style="color: #FF0000">No</span>        | <span style="color: #007F00">Yes</span>   |
+| Workspaces Creation & Management                       | <span style="color: #FF0000">No</span>        | <span style="color: #007F00">Yes</span>   |
 | Read-only Passcode Locked Dashboards              | <span style="color: #007F00">Yes</span>       | <span style="color: #FF0000">No</span>    |
 | Share in the ReportPlus / Reveal Cloud            | <span style="color: #007F00">Yes</span>       | <span style="color: #007F00">Yes</span>   |
 | **ANYWHERE ACCESS**                               |                                               |                                           |

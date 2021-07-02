@@ -3,15 +3,15 @@
 
 Shared dashboards are ideal for cross-team collaboration. There are so
 many possibilities when it comes to sharing in Reveal. Depending on your
-own sharing rights you can give other users and teams different [access permissions](#access-permissions) to the content you share with them.
+own sharing rights you can give other users and workspaces different [access permissions](#access-permissions) to the content you share with them.
 
 Below you will find the specifics of access permissions in the three available sharing scenarios:
 
   - [sharing dashboards created by you with other users](#sharing-dashboards-users),
 
-  - [sharing your team's dashboards with other users](#sharing-team-dashboard),
+  - [sharing your workspace's dashboards with other users](#sharing-workspace-dashboard),
 
-  - [sharing a dashboard with a whole team](#sharing-dashboard-with-team).
+  - [sharing a dashboard with a whole workspace](#sharing-dashboard-with-workspace).
 
 > [!NOTE]
 > **Sharing Folders**. Rules for dashboards sharing in this article also apply to sharing folders.
@@ -41,7 +41,7 @@ The available options are:
 
   - **Viewer** permissions - the user can view and share dashboards and folders for view only.
 
-3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](~/en/teams/overview.html#organization-team). Other users will have the dashboard shared with them only after they accept the invitation.
+3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
 
   <img src="images/send-invites-share-button.png" alt="Sending invitations with access permissions" width="100%"/>
 
@@ -56,17 +56,17 @@ member's name.
 
 <img src="images/remove-sharing.png" alt="Remove sharing button" width="100%"/>
 
-<a name='sharing-team-dashboard'></a>
-### Sharing a Team's Dashboard with Other Users
+<a name='sharing-workspace-dashboard'></a>
+### Sharing a Workspace's Dashboard with Other Users
 
-Any member of a team can share the team's dashboards with other users. To do this, go to the *Teams* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
+Any member of a workspace can share the workspace's dashboards with other users. To do this, go to the *Workspaces* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
 
-The main difference between sharing a team's dashboard and a dashboard created by you is the [access permissions](#access-permissions) you can
-give. Depending on your role in the team you can have one, two or all the access permissions options available when sharing.
+The main difference between sharing a workspace's dashboard and a dashboard created by you is the [access permissions](#access-permissions) you can
+give. Depending on your role in the workspace you can have one, two or all the access permissions options available when sharing.
 
-Your role in the team can be:
+Your role in the workspace can be:
 
-  - **Owner** - have full access to the team's dashboards, including
+  - **Owner** - have full access to the workspace's dashboards, including
     editing, sharing and deleting them.
 
   - **Member** - can create, edit and share dashboards and folders
@@ -74,7 +74,7 @@ Your role in the team can be:
 
   - **Viewer** - can view and share dashboards for view only.
 
-Here you can see the access permissions options every team member can give when sharing a dashboard:
+Here you can see the access permissions options every workspace member can give when sharing a dashboard:
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -89,7 +89,7 @@ Here you can see the access permissions options every team member can give when 
 
 <table class="tg">
  <tr>
-    <th class="tg-oav7" rowspan="2">Team Roles</th>
+    <th class="tg-oav7" rowspan="2">Workspace Roles</th>
     <th class="tg-t96r" colspan="3">Access Permissions</th>
   </tr>
   <tr>
@@ -118,22 +118,22 @@ Here you can see the access permissions options every team member can give when 
 </table>
 
 
-<a name='sharing-dashboard-with-team'></a>
-### Sharing a Dashboard with a Whole Team
+<a name='sharing-dashboard-with-workspace'></a>
+### Sharing a Dashboard with a Whole Workspace
 
-You can share a dashboard you created or a team's dashboard with a whole
-team instead of individually with every team member. To do this, choose
-a dashboard from the *Dashboards* section in *My Stuff* or *Teams* tab.
+You can share a dashboard you created or a workspace's dashboard with a whole
+workspace instead of individually with every workspace member. To do this, choose
+a dashboard from the *Dashboards* section in *My Stuff* or *Workspaces* tab.
 Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing-dashboards-users).
 
 >[!NOTE]
->You can share a dashboard with any public team that is part of the [Organization](~/en/teams/overview.html#organization-team), whether you are a member of it or not. You can also share with private teams that you are a member of.
+>You can share a dashboard with any public workspace that is part of the [Organization](~/en/workspaces/overview.html#organization-workspace), whether you are a member of it or not. You can also share with private workspaces that you are a member of.
 
-When setting access permissions for the whole team, you must take into
-account that these permissions will not be available for everybody in the team. Individual members will receive only the highest permissions possible for their role in the team.
+When setting access permissions for the whole workspace, you must take into
+account that these permissions will not be available for everybody in the workspace. Individual members will receive only the highest permissions possible for their role in the workspace.
 
 Look at the table below for a quick reference of the permissions
-every team member can get depending on their role in the team. For example, if you give *Modify* permissions to the whole team, its *Owners* and *Members* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
+every workspace member can get depending on their role in the workspace. For example, if you give *Modify* permissions to the whole workspace, its *Owners* and *Members* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -149,8 +149,8 @@ every team member can get depending on their role in the team. For example, if y
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-9wq8" rowspan="3">Team Roles</th>
-    <th class="tg-7btt" colspan="3">Access Permissions Given to the Whole Team</th>
+    <th class="tg-9wq8" rowspan="3">Workspace Roles</th>
+    <th class="tg-7btt" colspan="3">Access Permissions Given to the Whole Workspace</th>
   </tr>
   <tr>
     <td class="tg-c3ow">Owner</td>
@@ -181,7 +181,7 @@ every team member can get depending on their role in the team. For example, if y
 </table>
 
 >[!NOTE]
->**Giving Exclusive Access to a Team Member**. If you want to give a member of a team higher access level to the dashboard than its membership role allows, add their email individually to the list of invitations and set the access permissions you want them to have.
+>**Giving Exclusive Access to a Workspace Member**. If you want to give a member of a workspace higher access level to the dashboard than its membership role allows, add their email individually to the list of invitations and set the access permissions you want them to have.
 
 ### See Also
 

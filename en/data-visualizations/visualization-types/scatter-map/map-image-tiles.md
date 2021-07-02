@@ -22,17 +22,17 @@ To use image tiles:
     Here you are presented with three levels to configure a tile provider at: 
 
     * *Member*
-    * *Team* - this option only appears when you creatе the dashboard inside a team
-    * *Organization* - this option will only appear, if you are part of the Organization team or you creatе the dashboard inside a team, which is part of the Organization.
+    * *Workspace* - this option only appears when you creatе the dashboard inside a workspace
+    * *Organization* - this option will only appear, if you are part of the Organization workspace or you creatе the dashboard inside a workspace, which is part of the Organization.
 
 3. Choose the level you prefer to set up a tile provider. 
 
-    The dialog that opens is similar for all levels. You can also find this dialog anytime in your *personal settings* or your *team's/Organization's settings*. 
+    The dialog that opens is similar for all levels. You can also find this dialog anytime in your *personal settings* or your *workspace's/Organization's settings*. 
 
     <img src="images/tile-provider-settings-personal.png" alt="Map Image Tiles Personal settings" width="80%"/>
 
-    >[!NOTE] **Setting up a tile provider at Organizational/team level**. 
-    > You can configure a tile provider at the Organizational or team level only if you are an *Owner* in the Organization/team. This will allow all members of this team/Organization use the tile provider you configured. 
+    >[!NOTE] **Setting up a tile provider at Organizational/workspace level**. 
+    > You can configure a tile provider at the Organizational or workspace level only if you are an *Owner* in the Organization/workspace. This will allow all members of this workspace/Organization use the tile provider you configured. 
 
 4. For _Provider_ choose one of the options in the dropdown: 
 
@@ -41,9 +41,9 @@ To use image tiles:
     * *MapBox*
     * If you choose the *None* option you will disable the tile provider at this level, but Reveal will let others know about this (shown in the screenshot below).
 
-        <img src="images/provider-disabled-note.png" alt="Tile provider disabled message in the Visualization editor Settings" width="50%"/>
+        <img src="images/provider-disabled-note.png" alt="A Message stating the following: This map is not displayed as intended. You could turn on image tiles by setting up a tile provider." width="50%"/>
      
-    * The *Not Specified* option will also disable using a tile provider at the selected level (personal, team or organizational), but without notifying other users. You will only see the following banner if the _Not Specified_ option is selected at all levels: 
+    * The *Not Specified* option will also disable using a tile provider at the selected level (personal, workspace or organizational), but without notifying other users. You will only see the following banner if the _Not Specified_ option is selected at all levels: 
     
         <img src="images/not-specified-all-levels-yellow-banner.png" alt="Yellow banner message prompting users to set up a tile provider" width="100%"/>
     
@@ -51,30 +51,30 @@ To use image tiles:
  
 5. Add the _Authentication Token_ for the selected provider. The token can be found in your map service account. Once you add it, it will be stored in Reveal for future use. You can use it without adding it again no matter how many times you disable the tile provider in your settings.  
 
-6. For *Personal settings*, just close the dialog and your changes will be automatically updated. For *Organization/Team settings*, click/tap *Update* and close the dialog.
+6. For *Personal settings*, just close the dialog and your changes will be automatically updated. For *Organization/Workspace settings*, click/tap *Update* and close the dialog.
 
 <a name='resolution-process'></a>
 ### How does Reveal determine which file provider to use?
 
-When you open a scatter map where *Use Image Tiles* is enabled, Reveal resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Team, Organization (see more in [Adding Image Tiles](#adding-image-tiles) above). 
+When you open a scatter map where *Use Image Tiles* is enabled, Reveal resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles) above). 
 
 What if a tile provider is **specified on more than one level**? You will notice that one of the tile providers is being used for the scatter map you opened. How did Reveal choose it? 
 
-The most important factor in determining which level settings take precedence over the others is who owns the dashboard. A dashboard can be owned by a user, the Organization, or a team. 
+The most important factor in determining which level settings take precedence over the others is who owns the dashboard. A dashboard can be owned by a user, the Organization, or a workspace. 
 
 #### When the dashboard is owned by a user or by the Organization
 
 When the dashboard is owned by a user (it's created in the _My Stuff_ space), or by the Organization (it's created in the Organization dashboards' space), Reveal checks for a tile provider, as follows: 
 
-1. In the *Organization* team settings, if the user is part of an Organization.
+1. In the *Organization* workspace settings, if the user is part of an Organization.
 2. In *Personal* settings of the user opening the dashboard. 
 
-#### When the dashboard is owned by a Team 
+#### When the dashboard is owned by a Workspace 
 
-When the dashboard is owned by a team, i.e. it's created in a team dashboards' space, Reveal checks for a tile provider: 
+When the dashboard is owned by a workspace, i.e. it's created in a workspace dashboards' space, Reveal checks for a tile provider: 
 
-1. In this *Team*'s settings.
-2. In the *Organization* settings when the owning team is *part of the Organization*.
+1. In this *Workspace*'s settings.
+2. In the *Organization* settings when the owning workspace is *part of the Organization*.
 3. In *Personal* settings of the user opening the dashboard.
 
 >[!NOTE] **Always use my tile provider**. 

@@ -10,14 +10,14 @@
   href: general/supported-languages.md
 - name: Notifications Center
   href: general/notifications-center.md
-- name: Teams
+- name: Workspaces
   header: true
 - name: Overview
-  href: teams/overview.md
-- name: Creating and Joining Teams
-  href: teams/creating-joining-teams.md
-- name: Managing Your Team
-  href: teams/managing-your-team.md
+  href: workspaces/overview.md
+- name: Creating and Joining Workspaces
+  href: workspaces/creating-joining-workspaces.md
+- name: Managing Your Workspace
+  href: workspaces/managing-your-workspace.md
 - name: Dashboards
   header: true
 - name: Overview

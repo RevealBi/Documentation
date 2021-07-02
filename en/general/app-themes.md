@@ -19,6 +19,6 @@ just some examples of screens with each theme.
 | ------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Dashboard Selector  | <img src="images/creating-dashboard-light-theme.png" alt="Creating a Dashboard in Light Theme" width="100%"/>           | <img src="images/creating-dashboard-dark-theme.png" alt="Creating a Dashboard in Dark Theme" width="100%"/>           |
 | Data Source Creator | <img src="images/create-new-data-source-light-theme.png" alt="Creating a New Data Source in Light Theme" width="100%"/> | <img src="images/create-new-data-source-dark-theme.png" alt="Creating a New Data Source in Dark Theme" width="100%"/> |
-| Teams Creator       | <img src="images/team-creation-light-theme.png" alt="Team Creation in Light Theme" width="100%"/>                       | <img src="images/team-creation-dark-theme.png" alt="Team Creation in Dark Theme" width="100%"/>                       |
+| Workspaces Creator       | <img src="images/workspace-creation-light-theme.png" alt="Workspace Creation in Light Theme" width="100%"/>                       | <img src="images/workspace-creation-dark-theme.png" alt="Workspace Creation in Dark Theme" width="100%"/>                       |
 
 If you switch the *Match OS* function on, your theme in Reveal will automatically change every time your operating system's theme changes. 
