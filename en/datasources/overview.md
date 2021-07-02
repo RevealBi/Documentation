@@ -1,8 +1,6 @@
 ## Data Sources
 
-
-Data Sources are the places where your data comes from. Reveal provides
-you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
+Data Sources are the places where your data comes from. Reveal provides you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
 databases, spreadsheets, and public data sources.
 
 The screenshot below displays a number of different data sources the user John Williams has connected to in his account.
@@ -11,17 +9,20 @@ The screenshot below displays a number of different data sources the user John W
 
 ### Connecting to Data Sources
 
-To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the _Select a Data Source_ menu (see the screenshot above) for quick selection next time you need it.
+To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the _Select a Data Source_ menu for quick selection next time you need it (see the screenshot above).
 
 To connect to a data source, perform the steps below.  
 
-1. From the *Home screen*, click/tap the **+ New** blue button.
+1. Go to _My Stuff_ or a workspace where you want to a create a dashboard. 
+2. Click/tap the **+ Dashboard** blue button.
    <img src="images/start-creating-dashboard-data-source.png" alt="Reveal's home screen" width="100%"/>
-2. In the _New Visualization_ dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
+3. In the _New Visualization_ dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
    <img src="images/creating-new-visualization.png" alt="Available data sources when creating a new visualization" width="100%"/>
-3. Select a data source provider from the dropdown list.
+4. Select a data source provider from the dropdown list.
 
 After selecting a data source provider, you will be prompted to **configure** it. Not sure how to do this? Find out in the article about the chosen data source (see the list below).
+
+   - [Amazon Athena](~/en/datasources/supported-data-sources/athena.md)
 
    - [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md)
 

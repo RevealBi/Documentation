@@ -18,7 +18,7 @@ Once you get in, you are greeted with your first screen:
 
 <img src="images/reveal-initial-view.png" alt="First screen in Reveal with numbering added" width="100%"/>
 
-You always start in your personal space, **Home**. Below you can find a quick reference for this initial screen:
+You always start in your personal space, **My Stuff**. Below you can find a quick reference for this initial screen:
 
 1.  **My Stuff** - Here you can access your personal space, including dashboards, favorites, recents and predefined samples.
 
