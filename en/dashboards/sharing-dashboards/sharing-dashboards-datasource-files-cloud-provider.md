@@ -20,7 +20,7 @@ You can create a shareable link when:
   - [sharing a dashboard](#grant-access-shared-dashboard), which uses a
     cloud file data source;
 
-  - saving a dashboard [in a team](#save-dashboard-team).
+  - saving a dashboard [in a workspace](#save-dashboard-workspace).
 
 <a name='cloud-providers'></a>
 ### Supported Cloud Providers
@@ -60,18 +60,18 @@ shareable link, when sharing them with other users.
 
     Click/Tap *Allow Access* and proceed with selecting users to [share your dashboard](share-a-dashboard.md) with.
 
-<a name='save-dashboard-team'></a>
-### Saving a Dashboard with a Cloud File Data Source in a Team
+<a name='save-dashboard-workspace'></a>
+### Saving a Dashboard with a Cloud File Data Source in a Workspace
 
-You may want to save in your team's space a dashboard, which contains
+You may want to save in your workspace a dashboard, which contains
 one or more visualizations using cloud files as data source. If a
 shareable link to these data source files hasn't been created (has been
 disabled), Reveal will prompt you to allow access:
 
-<img src="images/save-dashboard-disabled-link-teams_all.png" alt="Allow access to a dashboard with a disabled link when saving in a team" width="100%"/>
+<img src="images/save-dashboard-disabled-link-workspace.png" alt="Allow access to a dashboard with a disabled link when saving in a workspace" width="100%"/>
 
-This way you make sure all team members can view the dashboard you saved
-in your team.
+This way you make sure all workspace members can view the dashboard you saved
+in your workspace.
 
 ### See Also
 

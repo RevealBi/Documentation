@@ -12,7 +12,7 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
 
 1.  Click/tap *New Workspace* at the bottom left corner of the screen.
 
-    <img src="images/button-join-create-team.png" alt="new workspace button in the popover menu" width="100%"/>
+    <img src="images/new-workspace-button.png" alt="new workspace button in the popover menu" width="100%"/>
 
     >[!NOTE]
     > When signing in for the first time, you might already have a workspace. This is your [Organization workspace](overview.html#organization-workspace) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
@@ -21,7 +21,7 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
 
 2.  Click/Tap the *+ Create Workspace* blue button. The following screen opens:
 
-    <img src="images/create-team-properties.png" alt="workspace properties dialog" width="100%"/>
+    <img src="images/create-workspace-properties.png" alt="workspace properties dialog" width="100%"/>
 
     Here you will need to:
 

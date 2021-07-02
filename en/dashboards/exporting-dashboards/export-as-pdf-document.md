@@ -33,11 +33,11 @@ In the *Export Dashboard* dialog you can manage the following settings:
 
           - **Reveal**
 
-          - **User's organization/team** - your organization and all of
-            your teams having their branding (logo and color) set up are
+          - **User's organization/workspace** - your organization and all of
+            your workspaces having their branding (logo and color) set up are
             displayed as options. If you want to know how to
-            access/change your team's branding settings, please read the
-            [Managing Teams](~/en/teams/managing-your-team.md) topic.
+            access/change your workspace's branding settings, please read the
+            [Managing Workspaces](~/en/workspaces/managing-your-workspace.md) topic.
 
           - **Custom** - select a color and upload a *logo* image of your choice.
 

@@ -6,7 +6,7 @@ of the dashboard editor.
 
 <img src="images/SalesAccessingSaveMenu_All.png" alt="FinanceAccessingSaveMenu\_All" width="100%"/>
 
-You can save your dashboard in your personal repository, or choose any team repositories you have joined or created. 
+You can save your dashboard in your personal space (*My Stuff*), or choose any of the workspace you have joined or created.
 
 Select a name for your dashboard, and, when ready, click/tap **Save here**.
 

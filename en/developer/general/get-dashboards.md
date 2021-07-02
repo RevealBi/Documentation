@@ -6,7 +6,7 @@ Reveal is a business intelligence platform that was purposely designed to be emb
 
 Let's take a look at the differences between Reveal SDK and the Reveal app.
 
-The **Reveal Application** is a self-service business intelligence tool that enables you to make data-driven decisions faster. You can create, view and share dashboards with your teams. And it offers you an identical experience no matter what platform you are on: Web, Desktop, iOS, or Android. For further details about the Reveal app, you can access an [**online demo**](https://app.revealbi.io/) or browse the [**Help Documentation**](https://www.revealbi.io/help/).
+The **Reveal Application** is a self-service business intelligence tool that enables you to make data-driven decisions faster. You can create, view and share dashboards in your workspaces. And it offers you an identical experience no matter what platform you are on: Web, Desktop, iOS, or Android. For further details about the Reveal app, you can access an [**online demo**](https://app.revealbi.io/) or browse the [**Help Documentation**](https://www.revealbi.io/help/).
 
 With **Reveal SDK** developers can embed Reveal into their applications developed in multiple platforms and technologies. And Reveal dashboards can be displayed and even modified by end users.
 

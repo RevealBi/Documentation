@@ -93,8 +93,8 @@ shown below.
 Once your dashboard is ready, save it by either selecting the **tick icon** in the top right-hand corner or by accessing the **Save As**
 option in the overflow menu.
 
-You can save your dashboard in your personal repository, or choose any
-team repositories you have [joined or created](~/en/teams/Creating-Joining-Teams.md).
+You can save your dashboard in your personal space (*My Stuff*), or choose any of the workspaces you have joined or created.
+
 Select a name for your dashboard, and, when ready, click/tap **Save here**.
 
 <img src="images/save-as-menu.png" alt="save as menu" width="100%"/>

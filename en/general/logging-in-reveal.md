@@ -5,10 +5,10 @@ When opening the app you'll be met with different login options:
 
 <img src="images/log-in-screen.png" alt="Reveal's log in screen" width="100%"/>
 
-Before jumping in, take into account that in Reveal you can join an **Organization**. If you are a member of an organization, you have to log in with your organization’s email. Choose Google or Microsoft (O365) as needed and you'll be associated with the Оrganization team. Alternatively, you can log in using your iCloud (*Apple*) account credentials.
+Before jumping in, take into account that in Reveal you can join an **Organization**. If you are a member of an organization, you have to log in with your organization’s email. Choose Google or Microsoft (O365) as needed and you'll be associated with the Оrganization workspace. Alternatively, you can log in using your iCloud (*Apple*) account credentials.
 
 > [!NOTE]
-> The organization team is named after your organization (e.g. your company's name).  
+> The Organization workspace is named after your organization (e.g. your company's name).  
 
 Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md).
 
@@ -20,9 +20,9 @@ Once you get in, you are greeted with your first screen:
 
 You always start in your personal space, **Home**. Below you can find a quick reference for this initial screen:
 
-1.  **Home/My Stuff** - Here you can access your personal space, including dashboards, favorites, recents and predefined samples.
+1.  **My Stuff** - Here you can access your personal space, including dashboards, favorites, recents and predefined samples.
 
-    *  *Dashboards* - This is the central hub for all dashboards. Start from here when you want to create, revise, share, or just open a dashboard you need that was created by other team members.
+    *  *Dashboards* - This is the central hub for all dashboards. Start from here when you want to create, revise, share, or just open a dashboard you need that was created by other workspace members.
 
     * *Favorites* - Keep your most important dashboards at hand in *Favorites*.
 
@@ -30,9 +30,9 @@ You always start in your personal space, **Home**. Below you can find a quick re
 
     * *Dashboard samples* - In *Samples*, you will find dashboards composed by the Reveal's team. Their rich variety of visualizations will inspire your creativity and help you create your own beautiful dashboards.
 
-2.  **Organization & Teams** - On the left side of the screen, you can access the organization team plus any team you are a member of. You can also create new teams or join existing ones.
+2.  **Organization & Workspaces** - On the left side of the screen, you can access the organization workspace plus any other workspace you are a member of. You can also create new workspaces or join existing ones.
 
-3.  **Notifications center** - Select the the bell icon to access team and dashboard updates.
+3.  **Notifications center** - Select the the bell icon to access workspace and dashboard updates.
 
 4.  **Profile settings** - Select the icon with your initial (photo) to access Reveal's *general settings*, *learning tips*, *Help center* and *give feedback* or ask any questions related to the application.
 
@@ -46,5 +46,5 @@ Once you start using the application, it will look like this:
 
 ### What About Roles & Permissions?
 
-In Reveal, people can join an organization and one or more teams. Roles and permissions apply to both organizations and teams.  
-Roles represent a set of permissions assigned to a Reveal user in relation to a team or an organization. This means every user is assigned a role when joining organizations or teams. There are three different roles (owner, member, viewer) with a clear set of permissions each.
+In Reveal, people can join an organization and one or more workspaces. Roles and permissions apply to both organizations and workspaces.  
+Roles represent a set of permissions assigned to a Reveal user in relation to a workspace or an organization. This means every user is assigned a role when joining organizations or workspaces. There are three different roles (owner, member, viewer) with a clear set of permissions each.
