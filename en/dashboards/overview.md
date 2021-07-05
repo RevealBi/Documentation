@@ -16,8 +16,7 @@ different pieces of related information, enabling users to make sense of their d
   - **Plan the Dashboard**: how will you represent your information
     graphically? Will you use a [grid](~/en/data-visualizations/visualization-types/grid-chart.md), a map,
     [gauges](~/en/data-visualizations/visualization-types/gauge-charts.md), [category charts](~/en/data-visualizations/visualization-types/category-charts.md)?
-    Will you use any [filters](~/en/filters/overview.md)? If you want to see how to
-    improve your data visualizations with any of the advanced Reveal features, [check out this blog post](https://www.infragistics.com/community/blogs/b/infragistics/posts/8-ways-to-improve-your-data-visualizations)\!
+    Will you use any [filters](~/en/filters/overview.md)?
 
   - **Prepare the data** to be used in Reveal. Here is a quick overview
     of [how to work with spreadsheets](~/en/datasources/working-files/working-with-spreadsheets.md) in Reveal.
