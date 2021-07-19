@@ -20,7 +20,7 @@ For more information on both Native and HTTP mode, visit the [Microsoft Instance
 To configure the Microsoft Analysis Services data source for *Native*
 mode, you will need to enter the following information:
 
-<img src="images/microsoft-analysis-native-configuration.png" alt="Configure Microsoft Analysis Services connection" width="100%"/>
+<img src="images/microsoft-analysis-native-configuration.png" alt="Configure Microsoft Analysis Services connection" class="responsive-img"/>
 
 1. *Default name* of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Analysis Services*. You can change it to your preference.
 
@@ -59,7 +59,7 @@ mode, you will need to enter the following information:
 To configure the Microsoft Analysis Services data source for *HTTP*
 mode, you will need to provide the following information:
 
-<img src="images/miscrosoft-analysis-http-config.png" alt="Configure Microsoft Analysis HTTP mode connection" width="100%"/>
+<img src="images/miscrosoft-analysis-http-config.png" alt="Configure Microsoft Analysis HTTP mode connection" class="responsive-img"/>
 
 1.  **Data Source Name**: this field will be displayed in the Data Sources list. Default name: *Microsoft Analysis Services*.
 
@@ -73,11 +73,11 @@ mode, you will need to provide the following information:
 After your credentials for the Analysis Services server are verified,
 Reveal will load and show the databases on the server:
 
-<img src="images/MSAnalysisDatabases_All.png" alt="MSAnalysisDatabases\_All" width="100%"/>
+<img src="images/MSAnalysisDatabases_All.png" alt="MSAnalysisDatabases\_All" class="responsive-img"/>
 
 Select a database and click *Continue* to set it up.
 
-<img src="images/MSAnalysisCubes_All.png" alt="MSAnalysisCubes\_All" width="100%"/>
+<img src="images/MSAnalysisCubes_All.png" alt="MSAnalysisCubes\_All" class="responsive-img"/>
 
 Choose a database *cube* and click/tap _Select Data_ to continue to the *Visualizations Editor*.
 
@@ -86,7 +86,7 @@ Choose a database *cube* and click/tap _Select Data_ to continue to the *Visuali
 
 When you create a dashboard using a cube data source like Microsoft Analysis Services, you will see fields organized differently in the  *Visualizations Editor* (see screenshot below). Cube data sources consist of hierarchies and aggregations, which have been created by the cubes' designers in advance.
 
-<img src="images/VisEditorDimensionsMeasures_All.png" alt="VisEditorDimensionsMeasures\_All" width="100%"/>
+<img src="images/VisEditorDimensionsMeasures_All.png" alt="VisEditorDimensionsMeasures\_All" class="responsive-img"/>
 
 In the screenshot above, you may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
@@ -106,7 +106,7 @@ In the screenshot above, you may notice that there is no "Fields" heading on the
 
 2.  **Measures** (depicted by *[123]* icon): Measures consist of numeric data.
 
-<img src="images/PivotTableExampleMSAnalysis_All.png" alt="PivotTableExampleMSAnalysis\_All" width="100%"/>
+<img src="images/PivotTableExampleMSAnalysis_All.png" alt="PivotTableExampleMSAnalysis\_All" class="responsive-img"/>
 
 For more information on dimensions and measures, please visit this
 [Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
@@ -123,4 +123,4 @@ To enable it, select a dimension in *Rows* or *Columns*. Enable
 *Sorting* for the field by choosing *Ascending* or *Descending* to have
 the *Sort by Caption* option show up:
 
-<img src="images/SortByCaption_All.png" alt="SortByCaption\_All" width="100%"/>
+<img src="images/SortByCaption_All.png" alt="SortByCaption\_All" class="responsive-img"/>

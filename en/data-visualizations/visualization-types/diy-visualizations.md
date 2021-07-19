@@ -34,12 +34,12 @@ Reveal offers multiple components for visualizing data, including the grid chart
 1. **Select Custom Visualization.**  
 To find this option open the Visualizations section within the Widget Editor.
 
-    <img src="images/custom-visualization-access.png" alt="Selecting the Custom Visualization in Reveal" width="100%"/>
+    <img src="images/custom-visualization-access.png" alt="Selecting the Custom Visualization in Reveal" class="responsive-img"/>
 
 2. **Point to the implementation.**  
 Add the URL of the web page that generates the custom visualization you want.
 
-    <img src="images/custom-visualization-config.png" alt="Showing the Custom Visualization configuration screen within Reveal" width="100%"/>
+    <img src="images/custom-visualization-config.png" alt="Showing the Custom Visualization configuration screen within Reveal" class="responsive-img"/>
 
     Keep in mind that the URL needs to be publicly accessible and to use the HTTPS:// protocol. In addition, every resource referenced in your custom HTML will need to use the same protocol.
 

@@ -4,7 +4,7 @@ In this tutorial, you will see how the "Sales Performance" dashboard
 displayed below was created using a sample spreadsheet with similar
 data.
 
-<img src="images/SalesPerformanceDashboard_All.png" alt="SalesPerformanceDashboard\_All" width="100%"/>
+<img src="images/SalesPerformanceDashboard_All.png" alt="SalesPerformanceDashboard\_All" class="responsive-img"/>
 
 ### What's in this Dashboard?
 

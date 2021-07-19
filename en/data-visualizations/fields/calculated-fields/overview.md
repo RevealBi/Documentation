@@ -25,11 +25,11 @@ aggregations. This means in order to apply a certain formula, Reveal will go thr
 To add a new pre-calculated field, click/tap the *+ button* in the
 *Fields* panel:
 
-<img src="images/pre-calculated-field-button.png" alt="Pre-calculated field button" width="100%"/>
+<img src="images/pre-calculated-field-button.png" alt="Pre-calculated field button" class="responsive-img"/>
 
 The *New Calculated Field* screen will open:
 
-<img src="images/new-calculated-field-screen.png" alt="New calculated field screen" width="100%"/>
+<img src="images/new-calculated-field-screen.png" alt="New calculated field screen" class="responsive-img"/>
 
 Here you will need to:
 
@@ -45,7 +45,7 @@ Here you will need to:
 The new pre-calculated field will show up at the bottom of your *Fields*
 list:
 
-<img src="images/new-calculated-field-bottom-list.png" alt="New calculated field shown at the bottom of fields list" width="100%"/>
+<img src="images/new-calculated-field-bottom-list.png" alt="New calculated field shown at the bottom of fields list" class="responsive-img"/>
 
 In the example above, the new calculated field is used with a grid
 visualization where no aggregation is being applied on the data fields.
@@ -66,12 +66,12 @@ To create a post calculated field you will need to:
 1.  Create a visualization (or a *Pivot table*) by adding fields from
     your data source in the *Data editor*.
 
-    <img src="images/post-calculated-fields-data-editor.png" alt="Post calculated fields in the Data editor" width="100%"/>
+    <img src="images/post-calculated-fields-data-editor.png" alt="Post calculated fields in the Data editor" class="responsive-img"/>
 
 2.  Click/tap the *F(x)* button next to *Values* to open the *New
     Calculated Field* screen:
 
-    <img src="images/post-calculated-field-new-calculated-field-screen.png" alt="Post calculated field new calculated field screen" width="100%"/>
+    <img src="images/post-calculated-field-new-calculated-field-screen.png" alt="Post calculated field new calculated field screen" class="responsive-img"/>
 
 3.  Give a name to your new calculated field and apply a formula to the
     summarized value(s). Pay attention that the list of *Values*
@@ -85,7 +85,7 @@ the *+* button next to *Values*. Since post-calculated fields are
 created only by using aggregated values, you will first need to select
 an aggregation from the dropdown list to be executed on the data field.
 
-<img src="images/post-calculated-field-new-calculated-field-screen-adding-fields.png" alt="Adding fields in the calculated field screen" width="100%"/>
+<img src="images/post-calculated-field-new-calculated-field-screen-adding-fields.png" alt="Adding fields in the calculated field screen" class="responsive-img"/>
 
 You can also skip *step 1*, create your post-calculated fields first or
 use only post-calculated fields in your visualization.

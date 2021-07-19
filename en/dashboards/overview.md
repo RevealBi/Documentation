@@ -6,7 +6,7 @@ visualizations which are laid out to communicate the status, metrics,
 or performance of a business. Each visualization is meant to have
 different pieces of related information, enabling users to make sense of their data.
 
-<img src="images/dashboards-home-page.png" alt="A complete dashboard example" width="100%"/>
+<img src="images/dashboards-home-page.png" alt="A complete dashboard example" class="responsive-img"/>
 
 ### The Dashboard Creation Process
 

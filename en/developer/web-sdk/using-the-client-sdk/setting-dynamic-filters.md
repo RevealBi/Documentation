@@ -13,7 +13,7 @@ that change. Most of the times, you would hide the filter selection
 normally displayed in the dashboard. This way the user won’t be confused
 with two different ways to change the Territory in the screen.
 
-<img src="images/territory_filter_selections.png" alt="Displaying filter selections" width="100%"/>
+<img src="images/territory_filter_selections.png" alt="Displaying filter selections" class="responsive-img"/>
 
 In the following code snippet, you’ll find details about how to achieve
 the described scenario:

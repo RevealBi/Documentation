@@ -8,19 +8,19 @@ and can't be modified by consumers of the dashboard.
 In order to define a quick filter, select the **Add a Visualization Filter** button on top of your visualization in the Visualizations
 Editor:
 
-<img src="images/visualization-quick-filter-sample.png" alt="Visualization Quick Filter button in the Visualization Editor" width="100%"/>
+<img src="images/visualization-quick-filter-sample.png" alt="Visualization Quick Filter button in the Visualization Editor" class="responsive-img"/>
 
 The filter options displayed in the Visualization Filters area depend on
 the data type of the field. There are three different filter dialogs:
 text, numeric, and date fields. Once created, the quick filter will be
 displayed on top of your visualization in the Visualizations Editor.
 
-<img src="images/visualization-filter-location-editor.png" alt="Visualization Filter settings" width="100%"/>
+<img src="images/visualization-filter-location-editor.png" alt="Visualization Filter settings" class="responsive-img"/>
 
 When the visualization is maximized in Dashboard View mode, you will see
 it under the visualization's title.
 
-<img src="images/visualization-filter-location.png" alt="VisualizationFilterLocation\_All" width="100%"/>
+<img src="images/visualization-filter-location.png" alt="VisualizationFilterLocation\_All" class="responsive-img"/>
 
 As with [Dashboard Filters](dashboard-filters.md), this enables a dynamic
 filtering of the visualization contents as the quick filter selection
@@ -38,12 +38,12 @@ first, and the *Departments* filter created after that one. After
 selecting **Cranbury, New Jersey, USA** as an *Office*, the Departments
 list was the following:
 
-<img src="images/cascading-filter-hr-dashboard.png" alt="Cascading Filter for the HR Dashboard showing departments in Cranbury" width="100%"/>
+<img src="images/cascading-filter-hr-dashboard.png" alt="Cascading Filter for the HR Dashboard showing departments in Cranbury" class="responsive-img"/>
 
 However, if you select **Tokyo, Japan** instead, the list of
 *Departments* will be a different one.
 
-<img src="images/cascading-filter-hr-dashboard-second-filter.png" alt="Cascading Filter for the HR Dashboard showing departments in Tokyo" width="100%"/>
+<img src="images/cascading-filter-hr-dashboard-second-filter.png" alt="Cascading Filter for the HR Dashboard showing departments in Tokyo" class="responsive-img"/>
 
 ### Data Filters
 
@@ -60,4 +60,4 @@ In the **Visualization Filter** section, select **Edit** in the overflow
 button next to the Visualization Filter. This will allow you to select
 the type of filter you want to apply to your field.
 
-<img src="images/Dashboard-Filter-Field.png" alt="Dashboard Filter Field" width="100%"/>
+<img src="images/Dashboard-Filter-Field.png" alt="Dashboard Filter Field" class="responsive-img"/>

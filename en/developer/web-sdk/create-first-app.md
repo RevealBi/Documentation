@@ -38,7 +38,7 @@ dialog](images/adding-new-package-source.png)
 After that you can install the Nuget by changing the package source to
 the one you added:
 
-<img src="images/install-nuget.png" alt="installing the Nuget dialog" width="100%"/>
+<img src="images/install-nuget.png" alt="installing the Nuget dialog" class="responsive-img"/>
 
 <img src="images/preview-changes-dialog.png" alt="preview changes dialog" width="50%"/>
 
@@ -117,28 +117,28 @@ section in Reveal, but with a different theme.
 
 Open the Reveal app (<https://app.revealbi.io>) and go to the **Samples**.
 
-<img src="images/accessing-marketing-dashboard.png" alt="accessing the marketing dashboard from Reveal samples" width="100%"/>
+<img src="images/accessing-marketing-dashboard.png" alt="accessing the marketing dashboard from Reveal samples" class="responsive-img"/>
 
 
 Select the Marketing dashboard and enter **edit mode**:
 
-<img src="images/reveal-marketing-dashboard-sample.png" alt="enter edit mode of marketing sample dashboard in Reveal app" width="100%"/>
+<img src="images/reveal-marketing-dashboard-sample.png" alt="enter edit mode of marketing sample dashboard in Reveal app" class="responsive-img"/>
 
 Once in Edit mode click the *Theme* button:
 
-<img src="images/marketing-dashboard-theme-button.png" alt="edit mode menu of the marketing dashboard" width="100%"/>
+<img src="images/marketing-dashboard-theme-button.png" alt="edit mode menu of the marketing dashboard" class="responsive-img"/>
 
 
 And choose the *Ocean Theme*:
 
-<img src="images/dashboard-themes-ocean-theme.png" alt="edit mode menu of the marketing dashboard" width="100%"/>
+<img src="images/dashboard-themes-ocean-theme.png" alt="edit mode menu of the marketing dashboard" class="responsive-img"/>
 
 Save the modified dashboard and *Export* it:
 
 > [!NOTE]
 > As the Marketing dashboard is part of the Reveal App **Samples**, you cannot save it the same way as a regular dashboard. Instead, you need to use **Save As** and choose a location.
 
-<img src="images/export-marketing-dashboard-changed-theme.png" alt="export marketing dashboard menu" width="100%"/>
+<img src="images/export-marketing-dashboard-changed-theme.png" alt="export marketing dashboard menu" class="responsive-img"/>
 
 Move the **Marketing.rdash** dashboard file to the Dashboards folder,
 which you created in step 3, and set the Build Action for this item to

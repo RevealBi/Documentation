@@ -23,7 +23,7 @@ To see the full members' list of a workspace:
 
 select a workspace > click/tap its overflow menu > select *Manage Members* (see below).
 
-<img src="images/manage-workspace-members.png" alt="manage workspace members menu" width="100%"/>
+<img src="images/manage-workspace-members.png" alt="manage workspace members menu" class="responsive-img"/>
 
 In this menu, you can change users' roles, remove members and add new ones.
 
@@ -62,7 +62,7 @@ You can delete a workspace only if you are an owner. To do this:
 
 go to the workspace's [settings](#manage-workspace-properties) > click/tap the overflow button next to the Close button > select *Delete Workspace*.
 
-<img src="images/delete-workspace.png" alt="delete workspace button" width="100%"/>
+<img src="images/delete-workspace.png" alt="delete workspace button" class="responsive-img"/>
 
 When you delete a workspace, it disappears with all its content.
 

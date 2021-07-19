@@ -43,7 +43,7 @@ window.revealView.onDataSourcesRequested = function (callback) {
 
 The “false” value in the third parameter prevents existing data sources on the dashboard from being displayed. So, when creating a new widget using the “+” button, you should get the following screen:
 
-<img src="images/displayingDataSources_web.png" alt="displayingDataSources\_web" width="100%"/>
+<img src="images/displayingDataSources_web.png" alt="displayingDataSources\_web" class="responsive-img"/>
 
 Please note that the “employees” parameter passed to the “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](~/en/developer/web-sdk/using-the-server-sdk/in-memory-data.md) and identifies the dataset to be returned on the server side.
 

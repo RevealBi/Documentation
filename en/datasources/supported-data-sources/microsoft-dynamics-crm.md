@@ -3,7 +3,7 @@
 To configure a Microsoft Dynamics CRM data source, you will need to
 enter the following information:
 
-<img src="images/EnterMicrosoftDynamicsCRM_All.png" alt="EnterMicrosoftDynamicsCRM\_All" width="100%"/>
+<img src="images/EnterMicrosoftDynamicsCRM_All.png" alt="EnterMicrosoftDynamicsCRM\_All" class="responsive-img"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Dynamics CRM*. You can change it to your preference.
 

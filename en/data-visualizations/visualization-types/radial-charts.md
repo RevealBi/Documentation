@@ -3,7 +3,7 @@
 Like category charts, Radial charts are simply representations of
 information in a coordinate system.
 
-<img src="images/radial-chart-samples.png" alt="Radial Chart Sample" width="100%"/>
+<img src="images/radial-chart-samples.png" alt="Radial Chart Sample" class="responsive-img"/>
 
 ### Chart Trendlines for Radial Charts
 
@@ -15,4 +15,4 @@ Fit, Quadratic Fit, Cubic Fit, Quartic Fit, Logarithmic Fit, Exponential
 Fit, Power Law Fit, Simple Average, Exponential Average, Modified
 Average, Cumulative Average, Weighted Average.
 
-<img src="images/chart-trendlines-radial.png" alt="Radial Chart Trendline settings" width="100%"/>
+<img src="images/chart-trendlines-radial.png" alt="Radial Chart Trendline settings" class="responsive-img"/>

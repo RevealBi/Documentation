@@ -9,13 +9,13 @@ some business insight and requires attention right away.
 In order to **access the export feature**, select the overflow button in
 the top right-hand corner and click/tap *Export*.
 
-<img src="images/export-dashboards-menu.png" alt="Export option in the overflow menu" width="100%"/>
+<img src="images/export-dashboards-menu.png" alt="Export option in the overflow menu" class="responsive-img"/>
 
 ### Export Format
 
 You can easily export dashboards by using the available Export options.
 
-<img src="images/export-formats.png" alt="Export formats available" width="100%"/>
+<img src="images/export-formats.png" alt="Export formats available" class="responsive-img"/>
 
   - [**Export Image**](export-as-images.md) - export a screen capture of the entire
     dashboard or individual visualizations.
@@ -38,9 +38,9 @@ print, or send the document to a third-party app. After you choose the
 export format, the following action menu prompts you to choose your
 saving/sharing preferences:
 
-<img src="images/export-preview-actions.png" alt="Export preview actions on mobile devices" width="100%"/>
+<img src="images/export-preview-actions.png" alt="Export preview actions on mobile devices" class="responsive-img"/>
 
 For image exports, you can find these same options in the **Export
 Image** dialog before or after you annotate images:
 
-<img src="images/export-image-preview-actions.png" alt="Export image preview actions" width="100%"/>
+<img src="images/export-image-preview-actions.png" alt="Export image preview actions" class="responsive-img"/>

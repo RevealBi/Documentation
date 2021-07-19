@@ -22,7 +22,7 @@ for the example is the *Marketing* sample dashboard.
 
 The initial state of the *Marketing* sample:
 
-<img src="images/dashboard-title-initial-state.png" alt="Initial state of the Marketing Sample" width="100%"/>
+<img src="images/dashboard-title-initial-state.png" alt="Initial state of the Marketing Sample" class="responsive-img"/>
 
 Follow the steps below to localize the *Marketing* dashboard title to *Localized Marketing*.
 
@@ -71,7 +71,7 @@ Follow the steps below to localize the *Marketing* dashboard title to *Localized
 
 When running the app again you can see the localized dashboard title - *Localized Marketing*:
 
-<img src="images/dashboard-title-localized.png" alt="Localized Marketing Sample Title" width="100%"/>
+<img src="images/dashboard-title-localized.png" alt="Localized Marketing Sample Title" class="responsive-img"/>
 
 <a name='localize-field-label'></a>
 #### Localizing a field label - example
@@ -81,7 +81,7 @@ Below you will see an example of how to localize more than one element of the sa
 Here is the initial state of one of the *Marketing*'s sample
 visualizations - *Actual Spend vs Budget*:
 
-<img src="images/field-label-initial-state.png" alt="initial state of the Actual Spend vs Budget visualization" width="100%"/>
+<img src="images/field-label-initial-state.png" alt="initial state of the Actual Spend vs Budget visualization" class="responsive-img"/>
 
 To localize the *Date* field label, you need to add some logic to the **UpMediaLocalizationService** that will handle the localization of the *Date* field:
 
@@ -111,7 +111,7 @@ public class UpMediaLocalizationService : IRVLocalizationService
 
 The *Date* field label in *Actual Spend vs Budget* is now changed to *Localized Date*:
 
-<img src="images/dashboard-field-label-localized.png" alt="localized date field label" width="100%"/>
+<img src="images/dashboard-field-label-localized.png" alt="localized date field label" class="responsive-img"/>
 
 You can use the steps in the examples to localize any other dashboard element.
 
@@ -124,7 +124,7 @@ Currently you can use the Localization service to change the formatting settings
 
 The initial state of the *Spend vs Budget* visualization below shows the numeric field formatted in the US Dollars ($) currency:
 
-<img src="images/numeric-field-us-dollars-currency.png" alt="Original numeric field in US Dollars currency format" width="100%"/>
+<img src="images/numeric-field-us-dollars-currency.png" alt="Original numeric field in US Dollars currency format" class="responsive-img"/>
 
 To change the currency format, you will need to create new formatting settings and return them in the **GetFormattingSettingsForField** method in the implementation of **IRVLocalizationService**.
 
@@ -162,7 +162,7 @@ public class UpMediaLocalizationService : IRVLocalizationService
 
 Now, the amount is displayed in a different currency:
 
-<img src="images/numeric-field-changed-currency-yen.png" alt="Changed numeric field in Japanese Yen currency format" width="100%"/>
+<img src="images/numeric-field-changed-currency-yen.png" alt="Changed numeric field in Japanese Yen currency format" class="responsive-img"/>
 
 <a name='format-date-field'></a>
 #### Changing the formatting settings of a date field - example
@@ -173,7 +173,7 @@ The Localization service allows you to change the formatting settings of **non-a
 
 First, change the *Actual Spend vs Budget* visualization to **Grid**, in order to exclude any aggregated data:
 
-<img src="images/visualization-grid-format-original-date.png" alt="Visualization in Grid format" width="100%"/>
+<img src="images/visualization-grid-format-original-date.png" alt="Visualization in Grid format" class="responsive-img"/>
 
 To change the formatting settings of the *Date* field, you need to add your preferences to the logic of the **GetFormattingSettingsForField** method. The code snippet below shows how to change the date format to display the full name of the month, like: "January 01, 2001".
 
@@ -213,4 +213,4 @@ public RVFormattingSpec GetFormattingSettingsForField(string fieldName, RVDashbo
 
 After you run the app again and change the visualization to Grid, you will see the updated date format:
 
-<img src="images/visualization-grid-format-changed-date.png" alt="Visualization in grid format with changed date format" width="100%"/>
+<img src="images/visualization-grid-format-changed-date.png" alt="Visualization in grid format with changed date format" class="responsive-img"/>

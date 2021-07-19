@@ -14,13 +14,13 @@ The *Google Ads*  data source allows you to access and analyze the data tables f
 
     If your Google account is connected to several Google Ads accounts, select the one you want to use in the following dialog.
 
-    <img src="images/choose-google-ads-account.png" alt="A dialog where you need to choose your Google Ads account" width="100%">
+    <img src="images/choose-google-ads-account.png" alt="A dialog where you need to choose your Google Ads account" class="responsive-img">
 
 6. Choose a resource.
 
     Select the resource that you want to use from one of the two lists: _Popular Resources_ or _All Resources_. Use the search to find quickly what you need.
 
-    <img src="images/google-ads-resources.png" alt="Set up your resource menu" width="100%"> 
+    <img src="images/google-ads-resources.png" alt="Set up your resource menu" class="responsive-img"> 
 
    Under each resource you will see a description. It gives information which dimensions from Google Ads are included in this resource. 
 
@@ -30,7 +30,7 @@ The *Google Ads*  data source allows you to access and analyze the data tables f
 
 When you create a dashboard with information coming from Google Ads, you will see fields in the Visualizations Editor are organized differently (as shown in the screenshot below).
 
-<img src="images/google-ads-visualizations-editor.png" alt="Google Ads data in the Visualizations Editor" width="100%">
+<img src="images/google-ads-visualizations-editor.png" alt="Google Ads data in the Visualizations Editor" class="responsive-img">
 
 You may notice that there is no *Fields* heading on the left in the *Data* pane. Instead, there are two sections in their own query field:
 
@@ -53,7 +53,7 @@ In *Data Filters* (see bottom right of the *Data* pane), you will find a date ra
 You can't remove the date filter, but you can change the default date range by clicking on the *Calendar* icon. Select *from* and *to* dates. Alternatively, click/tap the arrow in the upper right corner (see the screenshot ) and pick a date range from the dropdown options:
 
 <img src="images/google-ads-date-range-filter
-.png" alt="Google Ads data in the Visualizations Editor" width="100%">
+.png" alt="Google Ads data in the Visualizations Editor" class="responsive-img">
 
 > [!NOTE] **Data retrieved for *Today*.** If you choose *Today* from the date range options, keep in mind the date range starts at 12:00:00 a.m. and all data will be retrieved up until the current time. This means the results may vary between runs throughout the day as the data in Google Ads is being updated continuously.  
 ### Performance Considerations

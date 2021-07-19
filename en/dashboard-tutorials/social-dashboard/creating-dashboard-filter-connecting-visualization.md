@@ -9,13 +9,13 @@ In order create the filter, you will need to:
 1.  Select the **Add Filter** button under your dashboard's name, and
     then **Add Date Filter**
 
-    <img src="images/AddDateFilterDashboard_All.png" alt="AddDateFilterDashboard\_All" width="100%"/>
+    <img src="images/AddDateFilterDashboard_All.png" alt="AddDateFilterDashboard\_All" class="responsive-img"/>
 
 
 
 2.  Under **Date Filter**, select **Last Year**.
 
-    <img src="images/AddLastYearFilter_All.png" alt="AddLastYearFilter\_All" width="100%"/>
+    <img src="images/AddLastYearFilter_All.png" alt="AddLastYearFilter\_All" class="responsive-img"/>
 
 Once the date filter has been created, you will need to connect it to
 your existing visualization. In order to do so:
@@ -24,12 +24,12 @@ your existing visualization. In order to do so:
     visualization. Reveal will attempt to connect the dashboard filter
     to a field in your visualization.
 
-    <img src="images/SocialDateFilterConnected_All.png" alt="SocialDateFilterConnected\_All" width="100%"/>
+    <img src="images/SocialDateFilterConnected_All.png" alt="SocialDateFilterConnected\_All" class="responsive-img"/>
 
     If you select **Date Filter**, you will be able to edit the
     connection if necessary.
 
-    <img src="images/EditFilterConnection_All.png" alt="EditFilterConnection\_All" width="100%"/>
+    <img src="images/EditFilterConnection_All.png" alt="EditFilterConnection\_All" class="responsive-img"/>
 
 
 
@@ -37,7 +37,7 @@ your existing visualization. In order to do so:
 
 Your visualization will the look like the following one:
 
-<img src="images/SocialDateFilterConnectedFirstVisualization_All.png" alt="SocialDateFilterConnectedFirstVisualization\_All" width="100%"/>
+<img src="images/SocialDateFilterConnectedFirstVisualization_All.png" alt="SocialDateFilterConnectedFirstVisualization\_All" class="responsive-img"/>
 
 <style>
 .previous {

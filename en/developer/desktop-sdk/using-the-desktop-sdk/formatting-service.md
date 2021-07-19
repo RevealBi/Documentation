@@ -58,7 +58,7 @@ Follow the steps below to format the numeric data to display 5 decimal digits:
 
 When running the app again you will see that all the numeric data is formatted to display numbers with 5 decimal digits and all other formatting settings (such as whether the field represents currency or percentage) are ignored:
 
-<img src="images/result-formatting-numeric-data.png" alt="After formatting all numbers in the visualizations have five decimal digits" width="100%"/>
+<img src="images/result-formatting-numeric-data.png" alt="After formatting all numbers in the visualizations have five decimal digits" class="responsive-img"/>
 
 If you want to change the formatting of only the fields displaying percentage, for example, you need to add a check for the type of the numeric field:
 
@@ -79,7 +79,7 @@ public class UpMediaFormattingService : RVBaseFormattingService
 
 Now you have only the percentage fields formatted:
 
-<img src="images/result-formatting-numeric-data-percentage.png" alt="Only percentage numeric data in the visualization displays five decimal digits" width="100%"/>
+<img src="images/result-formatting-numeric-data-percentage.png" alt="Only percentage numeric data in the visualization displays five decimal digits" class="responsive-img"/>
 
 If you take a look at the other visualizations in the dashboard, you will notice that the formatting of the numeric data in them is not changed. In these cases, the formatting is controlled by the chart, so you will have to modify the formatting settings of the fields in order to modify it. You can do this by using the [Localization Service](localization-service.md).
 
@@ -93,7 +93,7 @@ changes](images/formatting-service-marketing-sample-result.png)
 This is the initial state of one of the Marketing’s sample
 visualizations – **Actual Spend vs Budget**:
 
-<img src="images/formatting-visualization-aggregated-datetime-initial-state.png" alt="Actual Spend vs Budget initial state" width="100%"/>
+<img src="images/formatting-visualization-aggregated-datetime-initial-state.png" alt="Actual Spend vs Budget initial state" class="responsive-img"/>
 
 Below, you will see an example of how to format the aggregated date data to show the full month name - for example "January 2001". To do this, you need to override the **FormatAggregatedDate** method in your implementation of **RVBaseFormattingService**:
 
@@ -141,4 +141,4 @@ public class UpMediaFormattingService : RVBaseFormattingService
 
 And when you run the app again and change the visualization to Grid, you will see the updated dates (you may have to refresh the data because of the caching):
 
-<img src="images/formatting-non-aggregated-date-result.png" alt="Visualization after formatting showing full names of the dates in a grid" width="100%"/>
+<img src="images/formatting-non-aggregated-date-result.png" alt="Visualization after formatting showing full names of the dates in a grid" class="responsive-img"/>

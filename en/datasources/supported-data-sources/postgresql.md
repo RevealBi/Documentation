@@ -7,7 +7,7 @@
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 
-<img src="images/enter-postgreSQL-server-details.png" alt="Configure PostgreSQL data source dialog" width="100%"/>
+<img src="images/enter-postgreSQL-server-details.png" alt="Configure PostgreSQL data source dialog" class="responsive-img"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *PostgreSQL*. You can change it to your preference.
 
@@ -63,12 +63,12 @@ you can also select a particular
 [view](https://www.postgresqltutorial.com/postgresql-views/) that
 returns a subset of data from a table or a set of tables instead.
 
-<img src="images/postgre-SQL-views.png" alt="PostgreSQL views dialog" width="100%"/>
+<img src="images/postgre-SQL-views.png" alt="PostgreSQL views dialog" class="responsive-img"/>
 
 In the sample above, the **invoices** view contains a modified version
 of the data in the **Products** table in the PostgreSQL server.
 
-<img src="images/invoices-postgre-sql-view-sample.png" alt="Sample dashboard using PostgreSQL invoices view data" width="100%"/>
+<img src="images/invoices-postgre-sql-view-sample.png" alt="Sample dashboard using PostgreSQL invoices view data" class="responsive-img"/>
 
 #### Working With Functions
 
@@ -77,7 +77,7 @@ PostgreSQL functions allow you to carry out operations that would normally take 
 The following are just a set of sample functions running on a test server with [Northwind](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) data:
 
 
-<img src="images/postgresql-functions-list.png" alt="A list of PostgreSQL functions" width="100%"/>
+<img src="images/postgresql-functions-list.png" alt="A list of PostgreSQL functions" class="responsive-img"/>
 
 
 After you select a function, you will need to set up some additional parameters. In this case, the function requires you to configure the start and end date to display the Sales for period information.

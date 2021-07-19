@@ -29,7 +29,7 @@ In this case, you need to get the theme static property from the __$.ig.RevealSd
 
 First, here's a sample dashboard before we make any changes:
 
-<img src="images/custom-theme-sample-before.png" alt="Image showing a Reveal dashboard before any theme changes" width="100%"/>
+<img src="images/custom-theme-sample-before.png" alt="Image showing a Reveal dashboard before any theme changes" class="responsive-img"/>
 
 In the following code snippet you can see how to create a new instance of the _revealTheme_ class, apply the changes to the settings you want and update the theme in Reveal Web.
 
@@ -63,9 +63,9 @@ In addition, for the fonts customization you need to add these lines to the CSS 
 
 After implementing the theme changes, below you can see the results for both the Dashboard and Visualization Editors.
 
-<img src="images/custom-theme-sample-after-dashboard.png" alt="Image showing a Reveal dashboard after theme changes" width="100%"/>
+<img src="images/custom-theme-sample-after-dashboard.png" alt="Image showing a Reveal dashboard after theme changes" class="responsive-img"/>
 
-<img src="images/custom-theme-sample-after-visualization.png" alt="Image showing a Reveal visualization after theme changes" width="100%"/>
+<img src="images/custom-theme-sample-after-visualization.png" alt="Image showing a Reveal visualization after theme changes" class="responsive-img"/>
 
 ### Using Color Types
 
