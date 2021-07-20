@@ -109,7 +109,7 @@ and the Better Alternative Trading System (BATS) values in a
     placeholder of the data editor, **Open** into Open, **High** into
     High, **Low** into Low and **Close** into Close.
 
-    <img src="images/DragDropFinanceGLBFiscal_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
+    <img src="images/DragDropFinanceGLBFiscal_All.png" alt="Dragging and dropping fields in Reveal" class="responsive-img"/>
 
 
 4.  By default, the Date information in Label will be displayed in years. In order to change this, select **Date** in the Label placeholder of the data editor, and change the **Date Aggregation** to **Day**.
@@ -176,7 +176,7 @@ order to create it:
     **Stocks** into the *Add Hierarchy* section of Label, and
     **Change**, **Bid** and **Offer** into **Values**.
 
-    <img src="images/DragDropFinanceForecast_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
+    <img src="images/DragDropFinanceForecast_All.png" alt="Dragging and dropping fields in Reveal" class="responsive-img"/>
 
 4.  By default, the Date information in Label will be displayed in
     years. In order to change this, select **Date** in the Label
@@ -221,7 +221,7 @@ In order to create it:
 3.  In the Data Editor, drag and drop the **Date** field into Date, the
     **Offer** field into **Value** and **Stocks** into Category.
 
-    <img src="images/DragDropFinanceStockVariation_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
+    <img src="images/DragDropFinanceStockVariation_All.png" alt="Dragging and dropping fields in Reveal" class="responsive-img"/>
 
 4.  By default, the **Offer** field will be displayed as a number. In
     order to display it as currency, select it in the data editor and
@@ -267,7 +267,7 @@ during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-vi
     and the **Volume** field into the Values placeholder of the data
     editor.
 
-    <img src="images/DragDropFinanceStockVolume_All.png" alt="Dragging and dropping fields in Reveal" width="50%"/>
+    <img src="images/DragDropFinanceStockVolume_All.png" alt="Dragging and dropping fields in Reveal" class="responsive-img"/>
 
 4.  You will also need to introduce a filter in order to display
     information only for 2018. To do this, drag and drop **Date** into

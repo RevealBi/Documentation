@@ -83,7 +83,7 @@ The following are just a set of sample functions running on a test server with [
 After you select a function, you will need to set up some additional parameters. In this case, the function requires you to configure the start and end date to display the Sales for period information.
 
 
-<img src="images/sales-for-period.png" alt="Sales for period function parameters" width="90%"/>
+<img src="images/sales-for-period.png" alt="Sales for period function parameters" class="responsive-img"/>
 
 
 For more information on Functions and PostgreSQL, visit this [documentation website](https://www.postgresql.org/docs/9.0/sql-createfunction.html).

@@ -10,21 +10,21 @@ using a sample spreadsheet.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p><img src="images/SparklineChartSimple_All.png" alt="SparklineChartSimple All" width="80%"/><br />
+<td><p><img src="images/SparklineChartSimple_All.png" alt="SparklineChartSimple All" class="responsive-img"/><br />
 </p>
 <p><a href="#create-sparkline">Simple Sparkline</a><br />
 </p></td>
-<td><p><img src="images/SparklineChartArea_All.png" alt="SparklineChartArea All" width="80%" /><br />
+<td><p><img src="images/SparklineChartArea_All.png" alt="SparklineChartArea All" class="responsive-img" /><br />
 </p>
 <p><a href="#change-chart-type-sparkline">Sparkline with Area Chart</a><br />
 </p></td>
 </tr>
 <tr class="even">
-<td><p><img src="images/SparklineDateAggregation_All.png" alt="SparklineDateAggregation All" width="80%" /><br />
+<td><p><img src="images/SparklineDateAggregation_All.png" alt="SparklineDateAggregation All" class="responsive-img" /><br />
 </p>
 <p><a href="#change-date-aggregation">Sparkline with Day Aggregation</a><br />
 </p></td>
-<td><p><img src="images/SparklineLessColumns_All.png" alt="SparklineLessColumns All" width="80%" /><br />
+<td><p><img src="images/SparklineLessColumns_All.png" alt="SparklineLessColumns All" class="responsive-img" /><br />
 </p>
 <p><a href="#modify-columns">Sparkline with less Columns and Area Chart</a><br />
 </p></td>

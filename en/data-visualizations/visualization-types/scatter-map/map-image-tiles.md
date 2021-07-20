@@ -6,7 +6,7 @@ The *image tiles* feature allows you to switch from the clear grey background of
 
 You can use the *slider* provided in the *Visualization Editor Settings* to specify at which zoom level you want to transition to using image tiles. Sliding left to right changes the moment of transition from minimum to maximum zoom. 
  
-<img src="images/tile-source-zoom-slider.png" alt="Zoom level slider in the Visualization Editor Settings" width="50%"/>
+<img src="images/tile-source-zoom-slider.png" alt="Zoom level slider in the Visualization Editor Settings" class="responsive-img"/>
 
 
 <a name='adding-image-tiles'></a>
@@ -29,7 +29,7 @@ To use image tiles:
 
     The dialog that opens is similar for all levels. You can also find this dialog anytime in your *personal settings* or your *workspace's/Organization's settings*. 
 
-    <img src="images/tile-provider-settings-personal.png" alt="Map Image Tiles Personal settings" width="80%"/>
+    <img src="images/tile-provider-settings-personal.png" alt="Map Image Tiles Personal settings" class="responsive-img"/>
 
     >[!NOTE] **Setting up a tile provider at Organizational/workspace level**. 
     > You can configure a tile provider at the Organizational or workspace level only if you are an *Owner* in the Organization/workspace. This will allow all members of this workspace/Organization use the tile provider you configured. 
@@ -41,7 +41,7 @@ To use image tiles:
     * *MapBox*
     * If you choose the *None* option you will disable the tile provider at this level, but Reveal will let others know about this (shown in the screenshot below).
 
-        <img src="images/provider-disabled-note.png" alt="A Message stating the following: This map is not displayed as intended. You could turn on image tiles by setting up a tile provider." width="50%"/>
+        <img src="images/provider-disabled-note.png" alt="A Message stating the following: This map is not displayed as intended. You could turn on image tiles by setting up a tile provider." class="responsive-img"/>
      
     * The *Not Specified* option will also disable using a tile provider at the selected level (personal, workspace or organizational), but without notifying other users. You will only see the following banner if the _Not Specified_ option is selected at all levels: 
     

@@ -40,7 +40,7 @@ the one you added:
 
 <img src="images/install-nuget.png" alt="installing the Nuget dialog" class="responsive-img"/>
 
-<img src="images/preview-changes-dialog.png" alt="preview changes dialog" width="50%"/>
+<img src="images/preview-changes-dialog.png" alt="preview changes dialog" class="responsive-img"/>
 
 ### Step 3 - Work on Server Configuration
 
@@ -190,7 +190,7 @@ To continue, create a new Reveal folder in the *wwwroot* folder of the
 project. Copy there **infragistics.reveal.js**, which you can find in
 the **\<InstallationDirectory\>\\SDK\\Web\\JS\\Client** of the *Reveal SDK*:
 
-<img src="images/wwwroot-folder.png" alt="wwwroot folder hierarchy" width="40%"/>
+<img src="images/wwwroot-folder.png" alt="wwwroot folder hierarchy" class="responsive-img"/>
 
 And then reference this library in **\_Layout.cshtml** after the scripts
 for Day.js:

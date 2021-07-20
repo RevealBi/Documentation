@@ -15,7 +15,7 @@ By clicking/tapping the link symbol, you can open:
 
 To configure a link, go to the **Settings** section of the *Visualizations Editor*, and click/tap the _+_ in **Links**.
 
-<img src="images/pivot-editor-linking2.png" alt="Adding a link in Settings" width="80%"/>
+<img src="images/pivot-editor-linking2.png" alt="Adding a link in Settings" class="responsive-img"/>
 
 The added link will appear as a symbol on the visualization it is configured for, when the dashboard is in *View Mode*.  
 
@@ -33,7 +33,7 @@ To link your dashboard to another dashboard you need to perform the steps below.
 
 3. Go to *Settings* and select the _+_ in _Links_ to open the _New Link_ dialog: 
 
-  <img src="images/new-link-dialog.png" alt="Dashboard linking sample" width="80%"/>
+  <img src="images/new-link-dialog.png" alt="Dashboard linking sample" class="responsive-img"/>
 
   Here you will need to configure two parameters:
 
@@ -43,7 +43,7 @@ To link your dashboard to another dashboard you need to perform the steps below.
 
   If you have added **dashboard filters** to the target dashboard, then you will also need to connect the dashboard filters to their corresponding fields in the dataset of the visualization you are adding a link to (see below). 
 
-  <img src="images/filter-configure-linking-dashboards.png" alt="Dashboard linking sample" width="80%"/>
+  <img src="images/filter-configure-linking-dashboards.png" alt="Dashboard linking sample" class="responsive-img"/>
 
   Click _Done_ and go back. 
 
@@ -67,7 +67,7 @@ construct the URL the user will be linked to based on the values in your
 visualization fields. For example, let’s take a look at the following
 visualization link:
 
-  <img src="images/adding-url-linking.png" alt="Dashboard linking sample" width="80%"/>
+  <img src="images/adding-url-linking.png" alt="Dashboard linking sample" class="responsive-img"/>
 
 The URL has been set to <http://www.en.wikipedia.org/wiki>, and the selected *variable* will be **CampaignID**. Therefore, users who select
 the **Navigate to Wiki** link in the visualization will be redirected to:

@@ -17,37 +17,37 @@ This section will cover the following visualizations:
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p><img src="images/ThumbnailWinLostMonth_All.png" alt="ThumbnailWinLostMonth All" width="75%" /><br />
+<td><p><img src="images/ThumbnailWinLostMonth_All.png" alt="ThumbnailWinLostMonth All" class="responsive-img" /><br />
 </p>
 <p><a href="#win-lost-by-month">Win/Lost by Month</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailForecasted_All.png" alt="ThumbnailForecasted All" width="75%" /><br />
+<td><p><img src="images/ThumbnailForecasted_All.png" alt="ThumbnailForecasted All" class="responsive-img" /><br />
 </p>
 <p><a href="#forecasted">Forecasted</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailLostOpportunities_All.png" alt="ThumbnailLostOpportunities All" width="75%" /><br />
+<td><p><img src="images/ThumbnailLostOpportunities_All.png" alt="ThumbnailLostOpportunities All" class="responsive-img" /><br />
 </p>
 <p><a href="#lost-opportunities">Lost Opportunities</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailPipelinebyTerritory_All.png" alt="ThumbnailPipelinebyTerritory All" width="75%" /><br />
+<td><p><img src="images/ThumbnailPipelinebyTerritory_All.png" alt="ThumbnailPipelinebyTerritory All" class="responsive-img" /><br />
 </p>
 <p><a href="#pipeline-by-territory">Pipeline by Territory</a><br />
 </p></td>
 </tr>
 <tr class="even">
-<td><p><img src="images/ThumbnailTotalOpportunities_All.png" alt="ThumbnailTotalOpportunities All" width="75%" /><br />
+<td><p><img src="images/ThumbnailTotalOpportunities_All.png" alt="ThumbnailTotalOpportunities All" class="responsive-img" /><br />
 </p>
 <p><a href="#total-opportunities">Total Opportunities</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailRevenuebyTerritory_All.png" alt="ThumbnailRevenuebyTerritory All" width="75%" /><br />
+<td><p><img src="images/ThumbnailRevenuebyTerritory_All.png" alt="ThumbnailRevenuebyTerritory All" class="responsive-img" /><br />
 </p>
 <p><a href="#revenue-by-territory">Revenue by Territory</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailPipelineEmployee_All.png" alt="ThumbnailPipelineEmployee All" width="75%" /><br />
+<td><p><img src="images/ThumbnailPipelineEmployee_All.png" alt="ThumbnailPipelineEmployee All" class="responsive-img" /><br />
 </p>
 <p><a href="#pipeline-per-employee">Pipeline per Employee</a><br />
 </p></td>
-<td><p><img src="images/ThumbnailSalesbyProduct_All.png" alt="ThumbnailSalesbyProduct All" width="75%" /><br />
+<td><p><img src="images/ThumbnailSalesbyProduct_All.png" alt="ThumbnailSalesbyProduct All" class="responsive-img" /><br />
 </p>
 <p><a href="#sales-by-product">Sales by Product</a><br />
 </p></td>
@@ -81,7 +81,7 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     the **Win** and **Loss** fields into Values.
 
-    <img src="images/DragDropSalesWinLossMonth_All.png" alt="DragDropSalesWinLossMonth\_All" width="50%" />
+    <img src="images/DragDropSalesWinLossMonth_All.png" alt="DragDropSalesWinLossMonth\_All" class="responsive-img" />
 
 
 
@@ -89,7 +89,7 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
     In order to match this format, select **Date** in the Label
     placeholder, and change the **Date Aggregation** to **Month**.
 
-    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" width="50%" />
+    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" class="responsive-img" />
 
     Then, select **Update Field**.
 
@@ -100,12 +100,12 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
     Filters and select it to access the Visualization Filter menu.
     Within it, select **Filter by Rule** under **Filter Type**.
 
-    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" width="50%" />
+    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" class="responsive-img" />
 
     Then, select **Custom Date Range** under **Rule**, and enter the
     following custom range:
 
-    <img src="images/SalesCustomDateRange_All.png" alt="SalesCustomDateRange\_All" width="50%" />
+    <img src="images/SalesCustomDateRange_All.png" alt="SalesCustomDateRange\_All" class="responsive-img" />
 
     After this, select **Update Field**.
 
@@ -143,7 +143,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
 3.  In the Data Editor, drag and drop the **Date** field into Label, and
     the **Forecasted** field into Values.
 
-    <img src="images/DragDropSalesForecasted_All.png" alt="DragDropSalesForecasted\_All" width="50%" />
+    <img src="images/DragDropSalesForecasted_All.png" alt="DragDropSalesForecasted\_All" class="responsive-img" />
 
 
 
@@ -152,7 +152,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     placeholder, and change the **Date Aggregation** to **Month**. Also,
     change the **Sorting** to **Descending**.
 
-    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" width="50%" />
+    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" class="responsive-img" />
 
     Then, select **Update Field**.
 
@@ -162,7 +162,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     formatted as currency. Select the **Forecasted** field in Values,
     and apply the following changes:
 
-    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" width="50%" />
+    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" class="responsive-img" />
 
     a.  Change the **Type** to **Currency**.
 
@@ -176,12 +176,12 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     Filters and select it to access the Visualization Filter menu.
     Within it, select **Filter by Rule** under **Filter Type**.
 
-    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" width="50%" />
+    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" class="responsive-img" />
 
     Then, select **Custom Date Range** under **Rule**, and enter the
     following custom range:
 
-    <img src="images/SalesCustomDateRange_All.png" alt="SalesCustomDateRange\_All" width="50%" />
+    <img src="images/SalesCustomDateRange_All.png" alt="SalesCustomDateRange\_All" class="responsive-img" />
 
     Then, select **Update Field**.
 
@@ -190,7 +190,7 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
 7.  To match the sample visualization's color, go to the **Settings**
     section and change the color to the third one.
 
-    <img src="images/SalesForecastedStartColor_All.png" alt="SalesForecastedStartColor\_All" width="50%" />
+    <img src="images/SalesForecastedStartColor_All.png" alt="SalesForecastedStartColor\_All" class="responsive-img" />
 
 
 
@@ -226,7 +226,7 @@ opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/g
 3.  In the Data Editor, drag and drop **Lost Opportunities** field into
     Value.
 
-    <img src="images/DragDropSalesLostOpportunities_All.png" alt="DragDropSalesLostOpportunities\_All" width="50%" />
+    <img src="images/DragDropSalesLostOpportunities_All.png" alt="DragDropSalesLostOpportunities\_All" class="responsive-img" />
 
 
 
@@ -235,7 +235,7 @@ opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/g
     Opportunities** field in the Value placeholder. In the formatting
     menu:
 
-    <img src="images/SalesWonOpportFormatting_All.png" alt="SalesWonOpportFormatting\_All" width="50%" />
+    <img src="images/SalesWonOpportFormatting_All.png" alt="SalesWonOpportFormatting\_All" class="responsive-img" />
 
     a.  Change the **Type** to **Percent**.
 
@@ -248,7 +248,7 @@ settings. In order to add it:
 
 1.  Go to the **Settings** tab in the Visualization Editor.
 
-    <img src="images/TutorialsSettingsMenu_All.png" alt="TutorialsSettingsMenu\_All" width="50%" />
+    <img src="images/TutorialsSettingsMenu_All.png" alt="TutorialsSettingsMenu\_All" class="responsive-img" />
 
 
 
@@ -257,20 +257,20 @@ settings. In order to add it:
     percentage. Therefore, scroll down to **Value Comparison Type** and
     set it to "Number".
 
-    <img src="images/TutorialsValueComparisonTypeNumber_All.png" alt="TutorialsValueComparisonTypeNumber\_All" width="50%" />
+    <img src="images/TutorialsValueComparisonTypeNumber_All.png" alt="TutorialsValueComparisonTypeNumber\_All" class="responsive-img" />
 
 
 
 3.  **Set your bounds**. In this case, the bounds are within 0.7 and
     0.5.
 
-    <img src="images/SalesChangingBandLostOpps_All.png" alt="SalesChangingBandLostOpps\_All" width="50%" />
+    <img src="images/SalesChangingBandLostOpps_All.png" alt="SalesChangingBandLostOpps\_All" class="responsive-img" />
 
 
 
 4.  Select each band and **select both the color and the indicator**.
 
-    <img src="images/SalesChangingBandColorIndicator_All.png" alt="SalesChangingBandColorIndicator\_All" width="50%" />
+    <img src="images/SalesChangingBandColorIndicator_All.png" alt="SalesChangingBandColorIndicator\_All" class="responsive-img" />
 
 
 
@@ -306,7 +306,7 @@ prospects and where they are located in a [funnel chart](~/en/visualization-tuto
 3.  In the Data Editor, drag and drop **Territory** into Labels and
     **Pipeline** into Value.
 
-    <img src="images/DragDropSalesPipelineTerritory_All.png" alt="DragDropSalesPipelineTerritory\_All" width="50%" />
+    <img src="images/DragDropSalesPipelineTerritory_All.png" alt="DragDropSalesPipelineTerritory\_All" class="responsive-img" />
 
 
 
@@ -315,13 +315,13 @@ prospects and where they are located in a [funnel chart](~/en/visualization-tuto
     original data source. In order to filter the values, drag and drop
     **Territory** into Data Filters.
 
-    <img src="images/DragDropTerritoryDataFilter_All.png" alt="DragDropTerritoryDataFilter\_All" width="50%" />
+    <img src="images/DragDropTerritoryDataFilter_All.png" alt="DragDropTerritoryDataFilter\_All" class="responsive-img" />
 
     Then, select it to access the **Visualization Filter** dialog. Once
     there, change the **Filter Type** to **Filter Empty Values**, and
     select **Create Filter**.
 
-    <img src="images/SalesPipelineTerritoryFilterEmptyValues_All.png" alt="SalesPipelineTerritoryFilterEmptyValues\_All" width="50%" />
+    <img src="images/SalesPipelineTerritoryFilterEmptyValues_All.png" alt="SalesPipelineTerritoryFilterEmptyValues\_All" class="responsive-img" />
 
 
 
@@ -359,7 +359,7 @@ opportunities represented for the company for a 12 month period in a
 3.  In the Data Editor, drag and drop the **Date** into Labels and
     **Total Opportunities** into Values.
 
-    <img src="images/DragDropSalesTotalOpportunities_All.png" alt="DragDropSalesTotalOpportunities\_All" width="50%" />
+    <img src="images/DragDropSalesTotalOpportunities_All.png" alt="DragDropSalesTotalOpportunities\_All" class="responsive-img" />
 
 
 
@@ -367,7 +367,7 @@ opportunities represented for the company for a 12 month period in a
     In order to match this format, select **Date** in the Label
     placeholder, and change the **Date Aggregation** to **Month**.
 
-    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" width="50%" />
+    <img src="images/SalesWinLostByMonthDateAggregation_All.png" alt="SalesWinLostByMonthDateAggregation\_All" class="responsive-img" />
 
     Then, select **Update Field**.
 
@@ -377,7 +377,7 @@ opportunities represented for the company for a 12 month period in a
     should be formatted as currency. Select the **Total Opportunities**
     field in Values, and apply the following changes:
 
-    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" width="50%" />
+    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" class="responsive-img" />
 
     1.  Change the **Type** to **Currency**.
 
@@ -392,12 +392,12 @@ opportunities represented for the company for a 12 month period in a
     Filters and select it to access the Visualization Filter menu.
     Within it, select **Filter by Rule** under **Filter Type**.
 
-    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" width="50%" />
+    <img src="images/FilterbyRuleSalesWinLost_All.png" alt="FilterbyRuleSalesWinLost\_All" class="responsive-img" />
 
     Then, select **Custom Date Range** under **Rule**, and enter the
     following custom range:
 
-    <img src="images/SalesTotalOppsCustomDateRange_All.png" alt="SalesTotalOppsCustomDateRange\_All" width="50%" />
+    <img src="images/SalesTotalOppsCustomDateRange_All.png" alt="SalesTotalOppsCustomDateRange\_All" class="responsive-img" />
 
     Then, select **Update Filter**.
 
@@ -406,7 +406,7 @@ opportunities represented for the company for a 12 month period in a
 7.  To match the sample visualization's color, go to the **Settings**
     section and change the color to the seventh one.
 
-    <img src="images/SalesTotalOpportunitiesStartColor_All.png" alt="SalesTotalOpportunitiesStartColor\_All" width="50%" />
+    <img src="images/SalesTotalOpportunitiesStartColor_All.png" alt="SalesTotalOpportunitiesStartColor\_All" class="responsive-img" />
 
 
 
@@ -443,7 +443,7 @@ create it:
 3.  In the Data Editor, drag and drop **Territory** into Label and
     **Sales Territory** into Value.
 
-    <img src="images/DragDropRevenueTerritory_All.png" alt="DragDropRevenueTerritory\_All" width="50%" />
+    <img src="images/DragDropRevenueTerritory_All.png" alt="DragDropRevenueTerritory\_All" class="responsive-img" />
 
 
 
@@ -451,7 +451,7 @@ create it:
     position. In order to udpate it, go to the **Settings** tab of the
     Visualizations Editor and change the **Start Position** to **90°**.
 
-    <img src="images/SalesRevenuebyTerritoryStartPosition_All.png" alt="SalesRevenuebyTerritoryStartPosition\_All" width="50%" />
+    <img src="images/SalesRevenuebyTerritoryStartPosition_All.png" alt="SalesRevenuebyTerritoryStartPosition\_All" class="responsive-img" />
 
 
 
@@ -488,7 +488,7 @@ order to create it:
 3.  In the Data Editor, drag and drop **Employee** into Label and
     **Pipeline** into Values.
 
-    <img src="images/DragDropPipelineEmployee_All.png" alt="DragDropPipelineEmployee\_All" width="50%" />
+    <img src="images/DragDropPipelineEmployee_All.png" alt="DragDropPipelineEmployee\_All" class="responsive-img" />
 
 
 
@@ -496,7 +496,7 @@ order to create it:
     therefore, be formatted as currency. Select the **Pipeline** field
     in Values, and apply the following changes:
 
-    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" width="50%" />
+    <img src="images/SalesForecastedFormatting_All.png" alt="SalesForecastedFormatting\_All" class="responsive-img" />
 
     1.  Change the **Type** to **Currency**.
 
@@ -511,11 +511,11 @@ order to create it:
     scroll down to the bottom of the list. You will see the aggregated
     **Pipeline** field; select it.
 
-    <img src="images/SelectPipelineDataEditor_All.png" alt="SelectPipelineDataEditor\_All" width="50%" />
+    <img src="images/SelectPipelineDataEditor_All.png" alt="SelectPipelineDataEditor\_All" class="responsive-img" />
 
     Then, select **Top Items** under **Rule** and enter **10**.
 
-    <img src="images/SalesPipelineEmployeeTop10_All.png" alt="SalesPipelineEmployeeTop10\_All" width="50%" />
+    <img src="images/SalesPipelineEmployeeTop10_All.png" alt="SalesPipelineEmployeeTop10\_All" class="responsive-img" />
 
     Select **Create Filter** to apply the changes.
 
@@ -524,7 +524,7 @@ order to create it:
 6.  To match the sample visualization's color, go to the **Settings**
     section and change the color to the fifth one.
 
-    <img src="images/SalesPipelineEmployeeStartColor_All.png" alt="SalesPipelineEmployeeStartColor\_All" width="50%" />
+    <img src="images/SalesPipelineEmployeeStartColor_All.png" alt="SalesPipelineEmployeeStartColor\_All" class="responsive-img" />
 
 
 
@@ -560,7 +560,7 @@ products and the percentage of sales for each one in a [doughnut chart](~/en/vis
 3.  In the Data Editor, drag and drop **Product** into Label and **Sales
     Product** into Value.
 
-    <img src="images/DragDropSalesProduct_All.png" alt="DragDropSalesProduct\_All" width="50%" />
+    <img src="images/DragDropSalesProduct_All.png" alt="DragDropSalesProduct\_All" class="responsive-img" />
 
 
 
@@ -568,7 +568,7 @@ products and the percentage of sales for each one in a [doughnut chart](~/en/vis
     position. In order to udpate it, go to the **Settings** tab of the
     Visualizations Editor and change the **Start Position** to **90°**.
 
-    <img src="images/SalesRevenuebyTerritoryStartPosition_All.png" alt="SalesRevenuebyTerritoryStartPosition\_All" width="50%" />
+    <img src="images/SalesRevenuebyTerritoryStartPosition_All.png" alt="SalesRevenuebyTerritoryStartPosition\_All" class="responsive-img" />
 
 
 

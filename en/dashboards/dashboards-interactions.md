@@ -47,7 +47,7 @@ To close regular tooltips just click or tap away.
 
 You will find two options in the **Interactions** menu: *Hover tooltips* and *Crosshairs*. Only *Hover tooltips* is enabled by default. Both are only available in Dashboard View mode. They can't be used in Dashboard Edit mode.
 
-<img src="images/dashboard-interactions-menu.png" alt="Accessing Reveal's Dashboard Interactions menu" width="50%"/>
+<img src="images/dashboard-interactions-menu.png" alt="Accessing Reveal's Dashboard Interactions menu" class="responsive-img"/>
 
   - With *Hover Tooltips* enabled, you can see **tooltips** popups when you hover over data (press and hold in touch environments).
 

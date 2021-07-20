@@ -144,7 +144,7 @@ For **scatter maps colored by category** you can choose to _Use different marker
 For **scatter maps colored by value** you can configure the coloring scheme. You will see three options in the _Color as_ dropdown:
 
 <img src="images/color-as-scheme-options
-.png" alt="Color as options in the Style Settings section" width="50%"/>
+.png" alt="Color as options in the Style Settings section" class="responsive-img"/>
 
 * _Single Color_ - styles all markers on the map with the same color.
 * _Range of Values_ - styles the marker using one of seven colors, where colors progressing light to dark represent data values from low to high. You can also choose the _Start Color_, which will determine the color in the middle of the seven shades.

@@ -8,7 +8,7 @@ When embedding Reveal into web applications, the architecture is slightly more c
 
 In the following diagram you visualize the architecture for a web application embedding Reveal Web SDK:
 
-<img src="images/sdk_web_diagram_web.png" alt="Reveal Web Architecture diagram" width="80%"/>
+<img src="images/sdk_web_diagram_web.png" alt="Reveal Web Architecture diagram" class="responsive-img"/>
 
 As shown above, the SDK works pretty much the same way as with native apps. The difference is that some of the callbacks are invoked in the client side (like the event sent when a data point is clicked) and others are invoked server side (like the callback to load the dashboard or to provide in-memory data).
 

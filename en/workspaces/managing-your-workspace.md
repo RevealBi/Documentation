@@ -33,7 +33,7 @@ In this menu, you can change users' roles, remove members and add new ones.
 2. Checkboxes on the right of users' roles appear.
 3.  Select the trash icon or a role from the menu at the bottom center of the screen.
 
-<img src="images/select-role-menu.png" alt="select role menu at the bottom center in manage members" width="80%"/>
+<img src="images/select-role-menu.png" alt="select role menu at the bottom center in manage members" class="responsive-img"/>
 
 
 <a name='manage-workspace-properties'></a>

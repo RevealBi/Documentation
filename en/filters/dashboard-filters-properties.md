@@ -135,7 +135,7 @@ filter and have the dashboard filter show only the employees in the
 
 There are some specifics when configuring an MS Analysis dashboard filter.
 
-<img src="images/ssrs-filter.png" alt="Dashboard Filter dialog when configuring an SSRS filter" width="80%"/>
+<img src="images/ssrs-filter.png" alt="Dashboard Filter dialog when configuring an SSRS filter" class="responsive-img"/>
 
  1. **Displayed Element** - you can select a *Dimension*, *Hierarchy* or *Level* data field to display dashboard filter values, but not a _Measure_ data field. 
 

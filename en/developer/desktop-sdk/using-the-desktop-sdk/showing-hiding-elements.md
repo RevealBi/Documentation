@@ -13,7 +13,7 @@ All the properties are read by __RevealView__ during initialization time and bas
 ### CanEdit
 This property can be used to disable the user's ability to edit dashboards.
 
-<img src="../../general/images/showing_hiding_elements_edit.png" alt="Editing a dashboard through the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_edit.png" alt="Editing a dashboard through the UI" class="responsive-img"/>
 
 ``` csharp
 revealView.CanEdit = false;
@@ -22,7 +22,7 @@ revealView.CanEdit = false;
 ### ShowEditDataSource
 This property can be used to disable the editing of a dashboard datasource.
 
-<img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing a dashboard datasource through the UI" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing a dashboard datasource through the UI" class="responsive-img"/>
 
 ``` csharp
 revealView.ShowEditDataSource = false;
@@ -31,7 +31,7 @@ revealView.ShowEditDataSource = false;
 ### ShowExportImage
 This property can be used to disable exporting the dashboad to an image.
 
-<img src="../../general/images/showing-hiding-elements-show-export-image.png" alt="Exporting a dashboard to Image" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-show-export-image.png" alt="Exporting a dashboard to Image" class="responsive-img"/>
 
 ``` csharp
 revealView.ShowExportImage = false;
@@ -40,7 +40,7 @@ revealView.ShowExportImage = false;
 ### ShowExportToPowerpoint
 This property can be used to disable exporting the dashboad to PowerPoint.
 
-<img src="../../general/images/showing-hiding-elements-show-export-powerpoint.png" alt="Exporting a dashboard to PowerPoint" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-show-export-powerpoint.png" alt="Exporting a dashboard to PowerPoint" class="responsive-img"/>
 
 ``` csharp
 revealView.ShowExportToPowerpoint = false;
@@ -49,7 +49,7 @@ revealView.ShowExportToPowerpoint = false;
 ### ShowExportToPDF
 This property can be used to disable exporting the dashboad to PDF.
 
-<img src="../../general/images/showing-hiding-elements-show-export-pdf.png" alt="Exporting a dashboard to PDF" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-show-export-pdf.png" alt="Exporting a dashboard to PDF" class="responsive-img"/>
 
 ``` csharp
 revealView.ShowExportToPDF = false;
@@ -58,7 +58,7 @@ revealView.ShowExportToPDF = false;
 ### ShowExportToExcel
 This property can be used to disable exporting the dashboad to Excel.
 
-<img src="../../general/images/showing-hiding-elements-show-export-excel.png" alt="Exporting a dashboard to Excel" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-show-export-excel.png" alt="Exporting a dashboard to Excel" class="responsive-img"/>
 
 ``` csharp
 revealView.ShowExportToExcel = false;
@@ -67,7 +67,7 @@ revealView.ShowExportToExcel = false;
 ### CanCopyVisualization
 This property can be used to disable the ability to copy a visualization and later paste it in the current dashboard or a different one.
 
-<img src="../../general/images/showing_hiding_elements_copy.png" alt="Copying an existing visualization through the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_copy.png" alt="Copying an existing visualization through the UI" class="responsive-img"/>
 
 ``` csharp
 revealView.CanCopyVisualization = false;
@@ -76,7 +76,7 @@ revealView.CanCopyVisualization = false;
 ### CanDuplicateVisualization
 This property can be used to disable the ability to duplicate a visualization in the current dashboard.
 
-<img src="../../general/images/showing_hiding_elements_duplicate.png" alt="Duplicating an existing visualization through the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_duplicate.png" alt="Duplicating an existing visualization through the UI" class="responsive-img"/>
 
 ``` csharp
 revealView.CanDuplicateVisualization = false;
@@ -85,7 +85,7 @@ revealView.CanDuplicateVisualization = false;
 ### CanAddPostCalculatedFields
 This property can be used to disable the ability to add a new post-calculated field in the current dashboard.
 
-<img src="../../general/images/showing_hiding_elements_post_calculated.png" alt="Accessing post-calculated fields through the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_post_calculated.png" alt="Accessing post-calculated fields through the UI" class="responsive-img"/>
 
 Post-calculated fields are new fields in the data set and are created by applying a formula on already summarized values.  
 For further details, please refer to the [Reveal Help](https://help.revealbi.io/en/data-visualizations/fields/calculated-fields/overview.html).
@@ -97,7 +97,7 @@ revealView.CanAddPostCalculatedFields = false;
 ### CanAddCalculatedFields
 This property can be used to disable the ability to add a new pre-calculated field in the current dashboard.
 
-<img src="../../general/images/showing_hiding_elements_pre_calculated.png" alt="Accessing pre-calculated fields through the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_pre_calculated.png" alt="Accessing pre-calculated fields through the UI" class="responsive-img"/>
 
 Pre-calculated fields are new fields in the data set and are evaluated before executing data editor aggregations.  
 For further details, please refer to the [Reveal Help](https://help.revealbi.io/en/data-visualizations/fields/calculated-fields/overview.html).
@@ -109,7 +109,7 @@ revealView.CanAddCalculatedFields = false;
 ### ShowFilters
 This property can be used to show or hide the Dashboard Filters UI to the user.
 
-<img src="../../general/images/showing_hiding_elements_filters.png" alt="Showing Dashboard Filters in the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_filters.png" alt="Showing Dashboard Filters in the UI" class="responsive-img"/>
 
 Dashboard filters allow you to slice the contents of the visualizations in a dashboard, all at once.
 
@@ -120,7 +120,7 @@ revealView.ShowFilters = false;
 ### CanAddDashboardFilter
 This property can be used to show or hide the Add Dashboard Filter menu item.
 
-<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Add Dashboard Filter in the UI" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Add Dashboard Filter in the UI" class="responsive-img"/>
 
 ``` csharp
 revealView.CanAddDashboardFilter = false;
@@ -129,7 +129,7 @@ revealView.CanAddDashboardFilter = false;
 ### CanAddDateFilter
 This property can be used to show or hide the Add Date Filter menu item.
 
-<img src="../../general/images/showing-hiding-elements-can-add-date-filter.png" alt="Showing Add Date Filter in the UI" width="60%"/>
+<img src="../../general/images/showing-hiding-elements-can-add-date-filter.png" alt="Showing Add Date Filter in the UI" class="responsive-img"/>
 
 ``` csharp
 revealView.CanAddDateFilter = false;
@@ -138,7 +138,7 @@ revealView.CanAddDateFilter = false;
 ### Preselected Filters
 You can specify which values are initially selected among existing Dashboard Filters when loading a dashboard.
 
-<img src="../../general/images/showing_hiding_elements_filters_preselected.png" alt="Showing a Dashboard Filter preselected in the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_filters_preselected.png" alt="Showing a Dashboard Filter preselected in the UI" class="responsive-img"/>
 
 The following code snippet shows how to load a dashboard and set the “Territory” selected value to be “Americas”, thus the dashboard will be showing data filtered by “Americas”
 
@@ -152,7 +152,7 @@ revealView.Dashboard = dashboard;
 ### AvailableChartTypes
 This property can be used to filter the visualization types available to the user.
 
-<img src="../../general/images/showing_hiding_elements_charts.png" alt="Switching visualizations through the UI" width="60%"/>
+<img src="../../general/images/showing_hiding_elements_charts.png" alt="Switching visualizations through the UI" class="responsive-img"/>
 
 You can, for example, add or remove visualizations as shown below:
 

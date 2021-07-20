@@ -78,7 +78,7 @@ To join an existing workspace, follow the steps below.
 
 2.  The *Join or Create a Workspace* dialog shows up:
 
-    <img src="images/join-or-create.png" alt="join or create a workspace dialog" width="80%"/>
+    <img src="images/join-or-create.png" alt="join or create a workspace dialog" class="responsive-img"/>
 
     Here you will find all the
     [public](overview.html#workspace-privacy-levels) workspaces that
