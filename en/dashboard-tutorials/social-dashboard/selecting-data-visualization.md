@@ -7,25 +7,25 @@ of this tutorial. The visualization displays a [Text Gauge](~/en/data-visualizat
 First, **open the visualizations picker** by selecting the grid icon in
 the top bar.
 
-<img src="images/VisualizationsMenu_All.png" alt="VisualizationsMenu\_All" class="responsive-img"/>
+<img src="images/VisualizationsMenu_All.png" alt="VisualizationsMenu\_All" width="100%"/>
 
 **Change your visualization** to "Text Gauge".
 
-<img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" class="responsive-img"/>
+<img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" width="100%"/>
 
 Then, **drag and drop** the **Twitter Followers by Year** field into the
 Value placeholder of the data editor.
 
-<img src="images/SocialFirstDragDrop_All.png" alt="SocialFirstDragDrop\_All" class="responsive-img"/>
+<img src="images/SocialFirstDragDrop_All.png" alt="SocialFirstDragDrop\_All" width="100%"/>
 
 Lastly, **change the visualization's title** to "YTD Twitter Followers"
 by selecting the pencil next to the "Social Dashboard" title.
 
-<img src="images/SocialWonOpportunitiesTitle_All.png" alt="SocialWonOpportunitiesTitle\_All" class="responsive-img"/>
+<img src="images/SocialWonOpportunitiesTitle_All.png" alt="SocialWonOpportunitiesTitle\_All" width="100%"/>
 
 Your visualization should look like the following one:
 
-<img src="images/SocialFirstVisualizationSample_All.png" alt="SocialFirstVisualizationSample\_All" class="responsive-img"/>
+<img src="images/SocialFirstVisualizationSample_All.png" alt="SocialFirstVisualizationSample\_All" width="100%"/>
 
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.

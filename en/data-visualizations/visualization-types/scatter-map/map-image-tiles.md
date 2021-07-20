@@ -2,7 +2,7 @@
 
 The *image tiles* feature allows you to switch from the clear grey background of Reveal to a different map layer upon zooming. The additional detail coming from the map service provider will provide more context to your analysis.
 
-<img src="images/scatter-map-zoomed-tile-providers.png" alt="Scatter map in Dashboard View mode using zoom" class="responsive-img"/>
+<img src="images/scatter-map-zoomed-tile-providers.png" alt="Scatter map in Dashboard View mode using zoom" width="100%"/>
 
 You can use the *slider* provided in the *Visualization Editor Settings* to specify at which zoom level you want to transition to using image tiles. Sliding left to right changes the moment of transition from minimum to maximum zoom. 
  
@@ -17,7 +17,7 @@ To use image tiles:
 1. In the _Visualization Editor_, go to _Settings_ > _Background_ and make sure _Use Image Tiles_ box is checked.  
 2. If no tile provider is configured, click the button in the banner that shows up (see screenshot below). 
 
-    <img src="images/configure-tile-provide-banner-button.png" alt="Yellow banner in settings prompting users to configure a tile provider on member or organization level" class="responsive-img"/>
+    <img src="images/configure-tile-provide-banner-button.png" alt="Yellow banner in settings prompting users to configure a tile provider on member or organization level" width="100%"/>
    
     Here you are presented with three levels to configure a tile provider at: 
 
@@ -45,7 +45,7 @@ To use image tiles:
      
     * The *Not Specified* option will also disable using a tile provider at the selected level (personal, workspace or organizational), but without notifying other users. You will only see the following banner if the _Not Specified_ option is selected at all levels: 
     
-        <img src="images/not-specified-all-levels-yellow-banner.png" alt="Yellow banner message prompting users to set up a tile provider" class="responsive-img"/>
+        <img src="images/not-specified-all-levels-yellow-banner.png" alt="Yellow banner message prompting users to set up a tile provider" width="100%"/>
     
     The _Not Specified_ option, however, makes Reveal ignore this level when determining which tile provider to use. For further details, check [How does Reveal determine which tile source provider to use?](#resolution-process).  
  

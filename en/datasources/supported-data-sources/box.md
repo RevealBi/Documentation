@@ -3,7 +3,7 @@
 Upon selecting Box as your data source, you will see the following login
 prompt:
 
-<img src="images/box-login.png" alt="Box login prompt" class="responsive-img"/>
+<img src="images/box-login.png" alt="Box login prompt" width="100%"/>
 
 Enter your login credentials and select *Authorize*.
 

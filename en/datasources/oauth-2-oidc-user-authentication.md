@@ -69,7 +69,7 @@ Reveal.
 
     In the following screen that opens you need to select *OAuth 2 / OIDC Credentials* from the **+ Credentials** dropdown menu:
 
-    <img src="images/OAuth-2-OIDC-Credentials.png" alt="Accessing OAuth2/OIDC Credentials menu" class="responsive-img"/>
+    <img src="images/OAuth-2-OIDC-Credentials.png" alt="Accessing OAuth2/OIDC Credentials menu" width="100%"/>
 
 ### Setting up your OAuth 2 / OIDC account in Reveal
 
@@ -77,7 +77,7 @@ In the *OAuth 2 / OIDC Account Details* screen you will need to fill in
 the credentials that are already generated for Reveal by the resource
 server.
 
-<img src="images/Required-Credentials-OAuth-Account.png" alt="Required Credentials OAuth Account" class="responsive-img"/>
+<img src="images/Required-Credentials-OAuth-Account.png" alt="Required Credentials OAuth Account" width="100%"/>
 
 The following fields are mandatory:
 
@@ -118,7 +118,7 @@ After configuring the OAuth 2 / OIDC account you will be redirected to a
 sign-in screen.
 After signing in, you will be asked to allow Reveal to use your data:
 
-<img src="images/permissions-request.png" alt="Permissions Request dialog" class="responsive-img"/>
+<img src="images/permissions-request.png" alt="Permissions Request dialog" width="100%"/>
 
 After giving the required permissions you can use the data in the
 protected data source to build your visualizations and dashboards in Reveal.

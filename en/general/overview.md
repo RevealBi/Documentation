@@ -7,7 +7,7 @@ need for custom programming. With Reveal you can quickly create and edit dashboa
 
 When you first open Reveal, you will be greeted by the following screen:
 
-<img src="images/reveal-initial-view.png" alt="Reveal start screen view" class="responsive-img"/>
+<img src="images/reveal-initial-view.png" alt="Reveal start screen view" width="100%"/>
 
 Below you will find the menus on the initial Reveal screen and what you are able to do there.
 

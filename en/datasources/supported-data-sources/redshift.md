@@ -2,7 +2,7 @@
 ### Connecting to Amazon Redshift
 To configure an Amazon Redshift data source, you will need to enter the following information:
 
-<img src="images/enter-amazon-redshift-server-details.png" alt="Configure Redshift Server details" class="responsive-img"/>
+<img src="images/enter-amazon-redshift-server-details.png" alt="Configure Redshift Server details" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Amazon Redshift*. You can change it to your preference. 
 
@@ -50,10 +50,10 @@ that the commands should be executed on the server.
 With Reveal, you can retrieve *Redshift* data from entire tables, but you can also select a particular
 [view](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_VIEW.html) that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/amazon-redshift-views.png" alt="Redshift views dialog" class="responsive-img"/>
+<img src="images/amazon-redshift-views.png" alt="Redshift views dialog" width="100%"/>
 
 In the screenshot above, the **motor_vehicle_collisions_time** view contains a modified version of the data in the **motor_vehicle_collisions** table in Redshift. 
 In the screenshot below, the visualization on the left is built with the data in the table, and the the one on the right uses the data contained in the view.  
 
-<img src="images/collisions-time-redshift-view-sample.png" alt="Sample dashboard using Redshift tables and view data" class="responsive-img"/>
+<img src="images/collisions-time-redshift-view-sample.png" alt="Sample dashboard using Redshift tables and view data" width="100%"/>
 

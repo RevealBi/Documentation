@@ -12,7 +12,7 @@ In order to add a new dashboard filter:
     can configure or change it using the overflow menu next to the data
     source's name.
 
-    <img src="images/select-dashboard-filter-data-source-menu.png" alt="Selecting Dashboard Filter data source menu" class="responsive-img"/>
+    <img src="images/select-dashboard-filter-data-source-menu.png" alt="Selecting Dashboard Filter data source menu" width="100%"/>
 
 3.  Choose which dataset to use as a dashboard filter and click/tap
     *Select Data*.
@@ -57,7 +57,7 @@ even if they appear multiple times in the original dataset.
 
 You can change the displayed column in *Edit mode* by selecting the *Edit* button in the overflow menu next to the dashboard filter name.
 
-<img src="images/edit-displayed-field-filter-setting.png" alt="Accessing dashboard filter edit mode" class="responsive-img"/>
+<img src="images/edit-displayed-field-filter-setting.png" alt="Accessing dashboard filter edit mode" width="100%"/>
 
 <a name='multiple-selection'></a>
 ### Multiple Selection
@@ -66,13 +66,13 @@ Reveal supports the selection of multiple dashboard filter values
 simultaneously. This is meant to enable side by side comparison between different elements in a collection. For instance, in the *HR Dashboard* dashboard you can compare the hires and absences over time of different
 offices by enabling multiple selection.
 
-<img src="images/dashboard-filters-multiple-selection.png" alt="Filters multiple selections applied to a dashboard" class="responsive-img"/>
+<img src="images/dashboard-filters-multiple-selection.png" alt="Filters multiple selections applied to a dashboard" width="100%"/>
 
 In order to **enable "Multiple Selection"**, you must switch the
 dashboard to *Edit* mode ⇒ choose *Edit* from the overflow menu of a
 dashboard filter ⇒ *Selection* ⇒ tick *Multiple Selection* checkbox.
 
-<img src="images/dashboard-filters-enable-multiple-selection.png" alt="Enabling dashboard filters multiple selections" class="responsive-img"/>
+<img src="images/dashboard-filters-enable-multiple-selection.png" alt="Enabling dashboard filters multiple selections" width="100%"/>
 
 <a name='required-selection'></a>
 ### Required Selection
@@ -88,7 +88,7 @@ In order to **enable "Required Selection"**, you must switch the
 dashboard to *Edit* mode ⇒ choose *Edit* from the overflow menu of a
 dashboard filter ⇒ *Selection* ⇒ tick *Required Selection* checkbox.
 
-<img src="images/dashboard-filter-enable-required-selection.png" alt="Enabling dashboard filters required selection" class="responsive-img"/>
+<img src="images/dashboard-filter-enable-required-selection.png" alt="Enabling dashboard filters required selection" width="100%"/>
 
 <a name='data-filters'></a>
 ### Data Filters
@@ -104,7 +104,7 @@ For example, if you use the *Employee Name* field to filter the data in
 your *HR Dashboard*, the *Dashboard filter* will show a list of all
 employees in all offices of the company:
 
-<img src="images/data-filters-dashboard-filters-hr-dashboard-example.png" alt="Employee name dashboard filter applied to HR Dashboard" class="responsive-img"/>
+<img src="images/data-filters-dashboard-filters-hr-dashboard-example.png" alt="Employee name dashboard filter applied to HR Dashboard" width="100%"/>
 
 If you want your filter list to contain only employees working in a particular office, e.g.
 *London, UK*, apply a data filter as shown below.
@@ -121,12 +121,12 @@ filter and have the dashboard filter show only the employees in the
 
 3.  Click/tap *Select a Field* and choose *Office* from the list.
 
-    <img src="images/dashboard-filters-select-data-filter-field.png" alt="Selecting a field for a data filter in the dashboard filter settings menu" class="responsive-img"/>
+    <img src="images/dashboard-filters-select-data-filter-field.png" alt="Selecting a field for a data filter in the dashboard filter settings menu" width="100%"/>
 
 4.  In the following dialog, select the filter type you want to apply
     (choose *Select Values* for the purposes of this example):
 
-    <img src="images/dashboard-filter-field.png" alt="Dashboard Filters Filter type option" class="responsive-img"/>
+    <img src="images/dashboard-filter-field.png" alt="Dashboard Filters Filter type option" width="100%"/>
 
 5.  Choose *London, UK* from the list and click/tap the *Create Filter*
     button.

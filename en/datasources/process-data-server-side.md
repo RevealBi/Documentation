@@ -26,7 +26,7 @@ If you need more information on how to do the initial configuration of the data 
 
 After configuring the connection, you will have the _Set Up the Database_ screen opened:
 
-<img src="images/process-data-server-checkbox.png" alt="New Process data on server checkbox added in the Set Up the Database dialog in PostgreSQL" class="responsive-img"/>
+<img src="images/process-data-server-checkbox.png" alt="New Process data on server checkbox added in the Set Up the Database dialog in PostgreSQL" width="100%"/>
 
 Notice that the _Process Data on Server_ is enabled by default. Consider unchecking the box next to this feature in case you need to use any of the capabilities that are limited (see in _Limitations_ below), when your data is processed on the server.
 
@@ -42,4 +42,4 @@ The following capabilities are **not supported** in the Visualization editor whe
 Restrictions are placed on the [Pre-Calculated](~/en/data-visualizations/fields/calculated-fields/overview.html#precalculated-fields) fields feature in the Visualization editor. Unavailable functions are greyed out in the _New Calculated Field_ dialog.
 In this dialog, you can click on the link to disable the _Process Data on Server_ feature.
 
-<img src="images/pre-calculated-fields-unavailable-process-data-server.png" alt="Disable Process Data on Server prompt in the Calculated Fields dialog" class="responsive-img"/>
+<img src="images/pre-calculated-fields-unavailable-process-data-server.png" alt="Disable Process Data on Server prompt in the Calculated Fields dialog" width="100%"/>

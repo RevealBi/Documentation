@@ -4,7 +4,7 @@
 To configure an OData Service data source, you will need to enter the
 following information:
 
-<img src="images/enter-OData-service-details.png" alt="Enter OData Service Details dialog" class="responsive-img"/>
+<img src="images/enter-OData-service-details.png" alt="Enter OData Service Details dialog" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *OData Feed*. You can change it to your preference.
 
@@ -42,14 +42,14 @@ The following example uses
 of the dynamic OData samples. A visualization was created initially,
 which had two fields (**ID** and **Name**) with three categories.
 
-<img src="images/ODataOpenTypesSampleV3_All.png" alt="ODataOpenTypesSampleV3\_All" class="responsive-img"/>
+<img src="images/ODataOpenTypesSampleV3_All.png" alt="ODataOpenTypesSampleV3\_All" width="100%"/>
 
 A few records were added to the Categories section through
 [Postman](https://www.odata.org/getting-started/learning-odata-on-postman/).
 After the changes, the dashboard was refreshed to display the new
 records.
 
-<img src="images/ODataRefreshedOpenTypeV3_All.png" alt="ODataRefreshedOpenTypeV3\_All" class="responsive-img"/>
+<img src="images/ODataRefreshedOpenTypeV3_All.png" alt="ODataRefreshedOpenTypeV3\_All" width="100%"/>
 
 For more information on Open Types in OData, refer to [this article](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/use-open-types-in-odata-v4).
 
@@ -59,17 +59,17 @@ Any functions you have configured to be exposed by an OData service will
 appear in the **Visualization Data** menu for your data source under the
 **Functions** tab.
 
-<img src="images/OData-functions.png" alt="OData Functions tab in the Set up your entity dialog" class="responsive-img"/>
+<img src="images/OData-functions.png" alt="OData Functions tab in the Set up your entity dialog" width="100%"/>
 
 Depending on your function, you might need to enter one or more values
 to get your data. The V3 OData sample includes the following sample
 function, where you have to enter a **rating** value to get results.
 
-<img src="images/OData-function-sample.png" alt="Setting up rating value of a function and Function preview dialog" class="responsive-img"/>
+<img src="images/OData-function-sample.png" alt="Setting up rating value of a function and Function preview dialog" width="100%"/>
 
 Once ready, the Visualizations Editor will load the fields in the data
 source which meet the function condition.
 
-<img src="images/Odata-get-products-by-rating.png" alt="Odata function used in the Visualization editor" class="responsive-img"/>
+<img src="images/Odata-get-products-by-rating.png" alt="Odata function used in the Visualization editor" width="100%"/>
 
 For more information on OData functions, please refer to [this article](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions).

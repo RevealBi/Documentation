@@ -4,7 +4,7 @@ After creating your dashboard, you should save your progress. Select the
 **Save As** option in the overflow button from the top-right hand corner
 of the dashboard editor.
 
-<img src="images/SocialAccessingSaveMenu_All.png" alt="SocialAccessingSaveMenu\_All" class="responsive-img"/>
+<img src="images/SocialAccessingSaveMenu_All.png" alt="SocialAccessingSaveMenu\_All" width="100%"/>
 
 You can save your dashboard in your personal space (*My Stuff*), or choose any of the workspace you have joined or created.
 

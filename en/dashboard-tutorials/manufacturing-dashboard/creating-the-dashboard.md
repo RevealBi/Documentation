@@ -4,7 +4,7 @@ In order to create a new dashboard, you need to select the **+ New**
 button in the top right-hand corner of the initial view, and select the
 **Dashboard** option in the *Create New* menu.
 
-<img src="images/create-new-dashboard.png" alt="Access New Dashboard menu" class="responsive-img"/>
+<img src="images/create-new-dashboard.png" alt="Access New Dashboard menu" width="100%"/>
 
 ### Adding a Data Source
 
@@ -13,18 +13,18 @@ screen pop up. Select the + sign in the top right corner, and then the
 data source in which you stored the the sample datasheet mentioned in
 [this section](getting-started.html#sample-datasheet).
 
-<img src="images/creating-new-visualization.png" alt="creatingnewvisualization\_all" class="responsive-img"/>
+<img src="images/creating-new-visualization.png" alt="creatingnewvisualization\_all" width="100%"/>
 
 >[!NOTE]
 >For instructions on how to add a data source for each of the providers, refer to [this topic](~/en/datasources/overview.md).
 
 When selecting the file in the **Visualization Data** dialog, make sure you select the **Manufacturing Dashboard** sheet of the sample spreadsheet. Then, select *Load Data*.
 
-<img src="images/SelectingManufacturingSheet_All.png" alt="Selecting and loading data in Reveal" class="responsive-img"/>
+<img src="images/SelectingManufacturingSheet_All.png" alt="Selecting and loading data in Reveal" width="100%"/>
 
 After loading your data, the [Grid Chart](~/en/data-visualizations/visualization-types/grid-chart.md) will be selected by default in the [Visualizations Editor](~/en/data-visualizations/visualizations-editor.md).
 
-<img src="images/ManufacturingFirstVisualizationGrid_All.png" alt="ManufacturingFirstVisualizationGrid\_All" class="responsive-img"/>
+<img src="images/ManufacturingFirstVisualizationGrid_All.png" alt="ManufacturingFirstVisualizationGrid\_All" width="100%"/>
 
 <style>
 .previous {

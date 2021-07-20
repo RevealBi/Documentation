@@ -67,14 +67,14 @@ opportunities for a six-month period in a [column chart](~/en/visualization-tuto
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Column" chart.
 
-    <img src="images/SelectColumnChart_All.png" alt="SelectColumnChart\_All" class="responsive-img" />
+    <img src="images/SelectColumnChart_All.png" alt="SelectColumnChart\_All" width="100%" />
 
 
 
@@ -129,14 +129,14 @@ period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Bar" chart.
 
-    <img src="images/SelectBarChart_All.png" alt="SelectBarChart\_All" class="responsive-img" />
+    <img src="images/SelectBarChart_All.png" alt="SelectBarChart\_All" width="100%" />
 
 
 
@@ -212,14 +212,14 @@ opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/g
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Text" gauge.
 
-    <img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" class="responsive-img" />
+    <img src="images/SelectTextGauge_All.png" alt="SelectTextGauge\_All" width="100%" />
 
 
 
@@ -292,14 +292,14 @@ prospects and where they are located in a [funnel chart](~/en/visualization-tuto
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Funnel" chart.
 
-    <img src="images/SelectFunnelChart_All.png" alt="SelectFunnelChart\_All" class="responsive-img" />
+    <img src="images/SelectFunnelChart_All.png" alt="SelectFunnelChart\_All" width="100%" />
 
 
 
@@ -345,14 +345,14 @@ opportunities represented for the company for a 12 month period in a
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Line" chart.
 
-    <img src="images/SelectLineChart_All.png" alt="SelectLineChart\_All" class="responsive-img" />
+    <img src="images/SelectLineChart_All.png" alt="SelectLineChart\_All" width="100%" />
 
 
 
@@ -429,14 +429,14 @@ create it:
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Pie" chart.
 
-    <img src="images/SelectPieChart_All.png" alt="SelectPieChart\_All" class="responsive-img" />
+    <img src="images/SelectPieChart_All.png" alt="SelectPieChart\_All" width="100%" />
 
 
 
@@ -474,14 +474,14 @@ order to create it:
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Column" chart.
 
-    <img src="images/SelectColumnChart_All.png" alt="SelectTextGauge\_All" class="responsive-img" />
+    <img src="images/SelectColumnChart_All.png" alt="SelectTextGauge\_All" width="100%" />
 
 
 
@@ -546,14 +546,14 @@ products and the percentage of sales for each one in a [doughnut chart](~/en/vis
     Dashboard** section. Make sure the **Sales Dashboard** option is
     selected, and then press **Load Data**.
 
-    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" class="responsive-img" />
+    <img src="images/SelectingSalesSheet_All.png" alt="SelectingSalesSheet\_All.png" width="100%" />
 
 
 
 2.  **Open the visualizations picker** by selecting the grid icon in the
     top bar, and select the "Doughnut" chart.
 
-    <img src="images/SelectDoughnutChart_All.png" alt="SelectFunnelChart\_All" class="responsive-img" />
+    <img src="images/SelectDoughnutChart_All.png" alt="SelectFunnelChart\_All" width="100%" />
 
 
 

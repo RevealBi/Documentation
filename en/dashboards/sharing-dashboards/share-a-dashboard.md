@@ -24,11 +24,11 @@ To share a dashboard created by you with individual users you need to:
 1.  Access the **Share dialog** - Select the overflow button in the top right-hand corner of a dashboard or a folder and choose *Share*.
 
 
-  <img src="images/sharing-dialog.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img"/>
+  <img src="images/sharing-dialog.png" alt="Accessing the sharing dialog of a dashboard" width="100%"/>
 
   Once you share a folder with other people, the new files will appear in their accounts as well under the *Shared with Me* section.
 
-  <img src="images/shared-with-me.png" alt="Shared with Me option selected" class="responsive-img"/>
+  <img src="images/shared-with-me.png" alt="Shared with Me option selected" width="100%"/>
 
 <a name='access-permissions'></a>
 2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
@@ -43,7 +43,7 @@ The available options are:
 
 3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
 
-  <img src="images/send-invites-share-button.png" alt="Sending invitations with access permissions" class="responsive-img"/>
+  <img src="images/send-invites-share-button.png" alt="Sending invitations with access permissions" width="100%"/>
 
 **You can change the access level for users at any time** by accessing
 the Share menu. You will see a list of all users you have shared the
@@ -54,7 +54,7 @@ by selecting a new one from the dropdown menu next to their name.
 Share dialog and selecting *Remove* from the dropdown menu next to any
 member's name.
 
-<img src="images/remove-sharing.png" alt="Remove sharing button" class="responsive-img"/>
+<img src="images/remove-sharing.png" alt="Remove sharing button" width="100%"/>
 
 <a name='sharing-workspace-dashboard'></a>
 ### Sharing a Workspace's Dashboard with Other Users

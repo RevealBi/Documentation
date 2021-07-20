@@ -3,7 +3,7 @@
 In this tutorial, you will learn how to create an Image visualization
 using a sample spreadsheet.
 
-<img src="images/ImageVisualizationDashboard_All.png" alt="ImageVisualizationDashboard\_All.png" class="responsive-img" />
+<img src="images/ImageVisualizationDashboard_All.png" alt="ImageVisualizationDashboard\_All.png" width="100%" />
 
 ### Key Concepts
 

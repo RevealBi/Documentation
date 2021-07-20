@@ -4,7 +4,7 @@
 
 Upon selecting the Marketo data source, you will see the following screen:
 
-<img src="images/marketo-configure-login-screen.png" alt="Data source connection configuring screen" class="responsive-img"/>
+<img src="images/marketo-configure-login-screen.png" alt="Data source connection configuring screen" width="100%"/>
 
 Marketo’s REST APIs are authenticated with 2-legged OAuth 2.0, so you need to complete the following information to configure your connection:
 
@@ -20,7 +20,7 @@ If you need details about how to create the OAuth credentials you need from Mark
 
 After logging in, you can set up your Marketo data in the following dialog:
 
-<img src="images/set-up-dialog-marketo.png" alt="Setting up the revenue" class="responsive-img"/>
+<img src="images/set-up-dialog-marketo.png" alt="Setting up the revenue" width="100%"/>
 
 *Activities* and *Leads* objects require you to set two parameters - *from* and *to* (dates) to query the data, before you can continue to the Visualization editor. The date range must be no more than 31 days, incl. the first and the last day. 
 

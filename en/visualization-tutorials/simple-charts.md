@@ -153,12 +153,12 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 
 |                                          |                                                                                                                   |                                                                                                                                                                                                |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Create a Dashboard**               | <img src="images/Tutorials-Create-New-Dashboard.png" alt="Tutorials-Create-New-Dashboard" class="responsive-img"/>                                      | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown.                                           |
-| 2\. **Configure your Data Source**       | <img src="images/Tutorials-Select-Data-Source.png" alt="Tutorials-Select-Data-Source" class="responsive-img"/>                                          | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                                                                 |
-| 3\. **Select the Tutorials Spreadsheet** | <img src="images/Tutorials-Select-Simple-Series-Charts-Spreadsheet.png" alt="Tutorials-Select-Simple-Series-Charts-Spreadshee" class="responsive-img"/> | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "Simple Series Charts" sheet.                                                                |
-| 4\. **Open the Visualizations Menu**     | <img src="images/Tutorials-Select-Change-Visualization.png" alt="Tutorials-Select-Change-Visualization" class="responsive-img"/>                        | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                                                          |
-| 5\. **Select your Visualization**        | <img src="images/Tutorials-Charts-Select-Visualization.png" alt="Tutorials-Charts-Select-Visualization" class="responsive-img"/>                        | By default, the visualization type will be set to "Grid". Select any of the **chart** visualizations.                                                                                          |
-| 6\. **Organize your Data**               | <img src="images/Tutorials-Charts-Organizing-Data.png" alt="Tutorials-Charts-Organizing-Data" class="responsive-img"/>                                  | The charts in the table above, for example, display the population for a select list of countries. Drag and drop the "Country Name" field to "Label" and the "Population" field into "Values". |
+| 1\. **Create a Dashboard**               | <img src="images/Tutorials-Create-New-Dashboard.png" alt="Tutorials-Create-New-Dashboard" width="100%"/>                                      | In the dashboard viewer, select the + button in the top right-hand corner of the "My Dashboards" screen. Then, select "Dashboard" from the dropdown.                                           |
+| 2\. **Configure your Data Source**       | <img src="images/Tutorials-Select-Data-Source.png" alt="Tutorials-Select-Data-Source" width="100%"/>                                          | In the *New Visualization* window, select the + button in the bottom right corner and select your data source.                                                                                 |
+| 3\. **Select the Tutorials Spreadsheet** | <img src="images/Tutorials-Select-Simple-Series-Charts-Spreadsheet.png" alt="Tutorials-Select-Simple-Series-Charts-Spreadshee" width="100%"/> | Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "Simple Series Charts" sheet.                                                                |
+| 4\. **Open the Visualizations Menu**     | <img src="images/Tutorials-Select-Change-Visualization.png" alt="Tutorials-Select-Change-Visualization" width="100%"/>                        | Select the **grid icon** in the top bar of the Visualizations Editor.                                                                                                                          |
+| 5\. **Select your Visualization**        | <img src="images/Tutorials-Charts-Select-Visualization.png" alt="Tutorials-Charts-Select-Visualization" width="100%"/>                        | By default, the visualization type will be set to "Grid". Select any of the **chart** visualizations.                                                                                          |
+| 6\. **Organize your Data**               | <img src="images/Tutorials-Charts-Organizing-Data.png" alt="Tutorials-Charts-Organizing-Data" width="100%"/>                                  | The charts in the table above, for example, display the population for a select list of countries. Drag and drop the "Country Name" field to "Label" and the "Population" field into "Values". |
 
 <a name='changing-basic-chart'></a>
 ### Changing your Chart Type
@@ -169,8 +169,8 @@ following procedure:
 
 |                                      |                                                                                            |                                                                                                                                 |
 | ------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Open the Visualizations Menu** | <img src="images/Tutorials-Select-Change-Visualization.png" alt="Tutorials-Select-Change-Visualization" class="responsive-img"/> | Select the **grid icon** in the top bar of the Visualizations Editor.                                                           |
-| 2\. **Select your Visualization**    | <img src="images/Tutorials-Charts-Select-Visualization.png" alt="Tutorials-Charts-Select-Visualization" class="responsive-img"/> | Select the type of chart you need. This section has a preview of every chart type at the top. |
+| 1\. **Open the Visualizations Menu** | <img src="images/Tutorials-Select-Change-Visualization.png" alt="Tutorials-Select-Change-Visualization" width="100%"/> | Select the **grid icon** in the top bar of the Visualizations Editor.                                                           |
+| 2\. **Select your Visualization**    | <img src="images/Tutorials-Charts-Select-Visualization.png" alt="Tutorials-Charts-Select-Visualization" width="100%"/> | Select the type of chart you need. This section has a preview of every chart type at the top. |
 
 <a name='add-trendline-chart'></a>
 ### Adding a Trendline to your Chart
@@ -181,9 +181,9 @@ information. In order to do this:
 
 |                                     |                                                                        |                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 1\. **Change Settings**             | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/> | Go to the **Settings** section of the Visualization Editor.      |
-| 2\. **Access the Chart Trendlines** | <img src="images/Tutorials-Expand-Trendlines.png" alt="Tutorials-Expand-Trendlines" class="responsive-img"/> | Expand the Chart Trendline dropdown by selecting the down arrow. |
-| 3\. **Select a Chart trendline**    | <img src="images/Select-Predefined-Trendline.png" alt="Select-Predefined-Trendline" class="responsive-img"/> | Select one of Reveal's predefined trendlines.                    |
+| 1\. **Change Settings**             | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/> | Go to the **Settings** section of the Visualization Editor.      |
+| 2\. **Access the Chart Trendlines** | <img src="images/Tutorials-Expand-Trendlines.png" alt="Tutorials-Expand-Trendlines" width="100%"/> | Expand the Chart Trendline dropdown by selecting the down arrow. |
+| 3\. **Select a Chart trendline**    | <img src="images/Select-Predefined-Trendline.png" alt="Select-Predefined-Trendline" width="100%"/> | Select one of Reveal's predefined trendlines.                    |
 
 <a name='change-axis-configuration'></a>
 ### Changing your Axis Configuration
@@ -195,33 +195,33 @@ data.
 
 |                                        |                                                                                      |                                                                                                                                       |
 | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>               | Go to the **Settings** section of the Visualization Editor.                                                                           |
-| 2\. **Access the Axis Bounds section** | <img src="images/Tutorials-Axis-Bounds.png" alt="Tutorials-Axis-Bounds" class="responsive-img"/>                           | Navigate to Axis Bounds.                                                                                                              |
-| 3\. **Change the Default selection**   | <img src="images/Tutorials-Change-Default-Selection.png" alt="Tutorials-Change-Default-Selection" class="responsive-img"/> | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
+| 1\. **Change Settings**                | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/>               | Go to the **Settings** section of the Visualization Editor.                                                                           |
+| 2\. **Access the Axis Bounds section** | <img src="images/Tutorials-Axis-Bounds.png" alt="Tutorials-Axis-Bounds" width="100%"/>                           | Navigate to Axis Bounds.                                                                                                              |
+| 3\. **Change the Default selection**   | <img src="images/Tutorials-Change-Default-Selection.png" alt="Tutorials-Change-Default-Selection" width="100%"/> | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 <a name='set-logarithmic-axis'></a>
 ### Setting your Axis Configuration as Logarithmic
 
 |                                           |                                                                          |                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Change Settings**                   | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>   | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Access the Axis option**            | <img src="images/Tutorials-Axis-Bounds.png" alt="Tutorials-Axis-Bounds" class="responsive-img"/>               | Expand the Axis dropdown by selecting the down arrow.       |
-| 3\. **Select an Axis Configuration type** | <img src="images/Tutorials-Charts-Logarithmic.png" alt="Tutorials-Charts-Logarithmic" class="responsive-img"/> | Select "Logarithmic".                                       |
+| 1\. **Change Settings**                   | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/>   | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Access the Axis option**            | <img src="images/Tutorials-Axis-Bounds.png" alt="Tutorials-Axis-Bounds" width="100%"/>               | Expand the Axis dropdown by selecting the down arrow.       |
+| 3\. **Select an Axis Configuration type** | <img src="images/Tutorials-Charts-Logarithmic.png" alt="Tutorials-Charts-Logarithmic" width="100%"/> | Select "Logarithmic".                                       |
 
 <a name='change-start-position'></a>
 ### Changing the Start Position for Doughnut and Pie Charts
 
 |                                                   |                                                                                |                                                                                           |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                           | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>         | Go to the **Settings** section of the Visualization Editor.                               |
-| 2\. **Access the Start Position section**         | <img src="images/Tutorials-Start-Position.png" alt="Tutorials-Start-Position" class="responsive-img"/>               | Expand the Start Position dropdown by selecting the down arrow.                           |
-| 3\. **Select one of the Start Position options**. | <img src="images/Tutorials-Select-Start-Position.png" alt="Tutorials-Select-Start-Position" class="responsive-img"/> | Select one of Reveal's predefined start positions for your chart (0°, 90°, 180° or 270°). |
+| 1\. **Change Settings**                           | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/>         | Go to the **Settings** section of the Visualization Editor.                               |
+| 2\. **Access the Start Position section**         | <img src="images/Tutorials-Start-Position.png" alt="Tutorials-Start-Position" width="100%"/>               | Expand the Start Position dropdown by selecting the down arrow.                           |
+| 3\. **Select one of the Start Position options**. | <img src="images/Tutorials-Select-Start-Position.png" alt="Tutorials-Select-Start-Position" width="100%"/> | Select one of Reveal's predefined start positions for your chart (0°, 90°, 180° or 270°). |
 
 <a name='change-slice-labels'></a>
 ### Changing the Slice Labels for Doughnut, Funnel, and Pie Charts
 
 |                                                |                                                                          |                                                                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| 1\. **Change Settings**                        | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>   | Go to the **Settings** section of the Visualization Editor.                                            |
-| 2\. **Access the Slice Label section**         | <img src="images/Tutorials-Slice-Label.png" alt="Tutorials-Slice-Label" class="responsive-img"/>               | Expand the Slice Labels dropdown by selecting the down arrow.                                          |
-| 3\. **Select one of the Slice Label options**. | <img src="images/Tutorials-Select-Slice-Label.png" alt="Tutorials-Select-Slice-Label" class="responsive-img"/> | Select one of Reveal's predefined labeling options ("Percentage", "Value", or "Value and Percentage"). |
+| 1\. **Change Settings**                        | <img src="images/Tutorials-Navigate-Settings.png" alt="Tutorials-Navigate-Settings" width="100%"/>   | Go to the **Settings** section of the Visualization Editor.                                            |
+| 2\. **Access the Slice Label section**         | <img src="images/Tutorials-Slice-Label.png" alt="Tutorials-Slice-Label" width="100%"/>               | Expand the Slice Labels dropdown by selecting the down arrow.                                          |
+| 3\. **Select one of the Slice Label options**. | <img src="images/Tutorials-Select-Slice-Label.png" alt="Tutorials-Select-Slice-Label" width="100%"/> | Select one of Reveal's predefined labeling options ("Percentage", "Value", or "Value and Percentage"). |

@@ -4,7 +4,7 @@ You can use your trained machine learning models data from BigQuery in Reveal. G
 
 For example, you may have a machine learning (ML) model that is trained to predict the credit risk for a bank's clients, using specific information about the clients. This ML model can be used in Reveal to build a visualization giving insight about how the clients' housing type relates to their credit risk:
 
-<img src="images/bigquery-machine-learning-model-visualization-example.png" alt="Credit risk by type of Housing example" class="responsive-img"/>
+<img src="images/bigquery-machine-learning-model-visualization-example.png" alt="Credit risk by type of Housing example" width="100%"/>
 
 
 ### Prerequisites
@@ -22,7 +22,7 @@ To access the BigQuery Machine Learning Integration, follow the steps below:
 
 2. In the _Visualization editor_, click/tap the **brain icon** located at the top of the _Fields_ list to the left.
 
-    <img src="images/brain-icon-bigquery-ml-model.png" alt="Brain icon location in the Visualization editor" class="responsive-img"/>
+    <img src="images/brain-icon-bigquery-ml-model.png" alt="Brain icon location in the Visualization editor" width="100%"/>
 
 
 ### Connecting to Your Machine Learning model
@@ -31,12 +31,12 @@ To connect to your BigQuery machine learning model you need to do the following:
 
 1. Select from your trained BigQuery models in the dialog that opens:
 
-    <img src="images/ml-models-list-bigquery.png" alt="A dialog displaying a list of bigquery machine learning models" class="responsive-img"/>
+    <img src="images/ml-models-list-bigquery.png" alt="A dialog displaying a list of bigquery machine learning models" width="100%"/>
 
 
 2. The next dialog requires you to map the data loaded in Reveal to the input expected by your ML model.
 
-    <img src="images/ml-model-mapping-input-output.png" alt="Mapping expected input and choosing output" class="responsive-img"/>
+    <img src="images/ml-model-mapping-input-output.png" alt="Mapping expected input and choosing output" width="100%"/>
 
     In the dialog above you have the following columns to consider:
 
@@ -46,6 +46,6 @@ To connect to your BigQuery machine learning model you need to do the following:
 
     c. (_Optional_) **Parameters** - some of your BigQuery models may require you to fill in values for the parameters they need to calculate the output. In this case you will see a third _Parameters_ column between _Input_ and _Output_.
 
-<img src="images/bq-ml-model-final-example.png" alt="Data output loaded from the bigquery model" class="responsive-img"/>
+<img src="images/bq-ml-model-final-example.png" alt="Data output loaded from the bigquery model" width="100%"/>
 
 You can use the fields returned by the BigQuery model as regular fields in the Visualization editor.

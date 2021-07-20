@@ -6,7 +6,7 @@
 
 To configure a Microsoft SQL Server data source, you can set the following information:
 
-<img src="images/Enter-SQL-Server-Details.png" alt="Enter SQL Server Details" class="responsive-img"/>
+<img src="images/Enter-SQL-Server-Details.png" alt="Enter SQL Server Details" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft SQL Server*. You can change it to your preference.
 
@@ -63,12 +63,12 @@ you can also select a particular
 [view](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-2017)
 that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/SQLServerViews_All.png" alt="SQLServerViews\_All" class="responsive-img"/>
+<img src="images/SQLServerViews_All.png" alt="SQLServerViews\_All" width="100%"/>
 
 In the sample above, the **Alphabetical list of products** view contains
 part of the data in the **Products** table in the SQL Server.
 
-<img src="images/AlphabeticalListProductsSQLServer_All.png" alt="AlphabeticalListProductsSQLServer\_All" class="responsive-img"/>
+<img src="images/AlphabeticalListProductsSQLServer_All.png" alt="AlphabeticalListProductsSQLServer\_All" width="100%"/>
 
 For more information on views and MS SQL Server, visit [this documentation website](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-2017).
 
@@ -81,17 +81,17 @@ server with
 [Northwind](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases)
 data:
 
-<img src="images/SQLStoredProcedures_All.png" alt="SQLStoredProcedures\_All" class="responsive-img"/>
+<img src="images/SQLStoredProcedures_All.png" alt="SQLStoredProcedures\_All" width="100%"/>
 
 This stored procedure, for example, returns the products in the
 **Products** table ordered by their **Unit Price**. The **ProductName**
 has been renamed to **TenMostExpensiveProducts**.
 
-<img src="images/StoredProcedureSampleResults_All.png" alt="StoredProcedureSampleResults\_All" class="responsive-img"/>
+<img src="images/StoredProcedureSampleResults_All.png" alt="StoredProcedureSampleResults\_All" width="100%"/>
 
 In this case, the stored procedure requires users to configure the start and end date to display the **Sales by Year** information.
 
-<img src="images/Stored-Procedure-Sample-Dates.png" alt="StoredProcedureSampleDates\_All" class="responsive-img"/>
+<img src="images/Stored-Procedure-Sample-Dates.png" alt="StoredProcedureSampleDates\_All" width="100%"/>
 
 For more information on Stored Procedures and MS SQL Server, visit [this documentation website](https://docs.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-2017).
 

@@ -44,7 +44,7 @@ After installing the Reveal SDK, you should be able to find a new NuGet
 package source added to your **nuget.config** called _Infragistics
 (Local)_ that points to “%public%\\Documents\\Infragistics\\NuGet”.
 
-<img src="images/addingNugetPackage_web.png" alt="addingNugetPackage_web" class="responsive-img"/>
+<img src="images/addingNugetPackage_web.png" alt="addingNugetPackage_web" width="100%"/>
 
 After ensuring you have the Infragistics (Local) feed properly
 configured by the installer, you need to:

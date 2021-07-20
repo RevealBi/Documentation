@@ -2,7 +2,7 @@
 
 A Time Series chart is used to display data points indexed in time order. It is commonly used to detect trends at a glance, allowing an easy observation of development over time.
 
-<img src="images/time-series-chart.png" alt="Time Series chart within Reveal" class="responsive-img"/>
+<img src="images/time-series-chart.png" alt="Time Series chart within Reveal" width="100%"/>
 
 Very similar to a conventional line chart, the Time Series chart always has a time-based horizontal axis (x-axis).
 
@@ -16,7 +16,7 @@ Fit, Quadratic Fit, Cubic Fit, Quartic Fit, Logarithmic Fit, Exponential
 Fit, Power Law Fit, Simple Average, Exponential Average, Modified
 Average, Cumulative Average, Weighted Average.
 
-<img src="images/time-series-chart-trendlines.png" alt="Chart trendline options in Reveal" class="responsive-img"/>
+<img src="images/time-series-chart-trendlines.png" alt="Chart trendline options in Reveal" width="100%"/>
 
 ### Settings for Time Series Charts
 
@@ -38,7 +38,7 @@ Minimum is set to 0 by default and maximum is calculated
   - **Choose Compact Labels**.
 With this setting you avoid redundant label information when you zoom your chart, as shown below.
 
-<img src="images/time-series-chart-compact-labels.png" alt="Compact Lables in Time Series within Reveal" class="responsive-img"/>
+<img src="images/time-series-chart-compact-labels.png" alt="Compact Lables in Time Series within Reveal" width="100%"/>
 
 
 ### Zooming and Panning

@@ -8,12 +8,12 @@ Similarly to the [Text Gauge](gauge-charts.html#text-gauge), the KPI Gauge
 displays the Value column in a large font. However, the value in the KPI
 is also evaluated against the same value for a previous time period.
 
-<img src="images/pivot-editor-view-kpi-gauge.png" alt="KPI Gauge view in the Visualization editor" class="responsive-img"/>
+<img src="images/pivot-editor-view-kpi-gauge.png" alt="KPI Gauge view in the Visualization editor" width="100%"/>
 
 You can also have multiple KPI's in one visualization if you add a
 Category.
 
-<img src="images/multiple-kpi-gauges.png" alt="Multiple KPI Gauges" class="responsive-img"/>
+<img src="images/multiple-kpi-gauges.png" alt="Multiple KPI Gauges" width="100%"/>
 
 ### Indicator Settings
 
@@ -24,4 +24,4 @@ visualization, through which you can configure:
   - **Show difference as**: whether you will display the difference as a value, percentage, or both value and percentage.
   - **When difference is positive**: the color for the difference indicator.
 
-<img src="images/advanced-settings-kpi-gauge.png" alt="Advanced Settings KPI Gauge" class="responsive-img"/>
+<img src="images/advanced-settings-kpi-gauge.png" alt="Advanced Settings KPI Gauge" width="100%"/>

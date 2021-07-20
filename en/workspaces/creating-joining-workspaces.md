@@ -12,7 +12,7 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
 
 1.  Click/tap *New Workspace* at the bottom left corner of the screen.
 
-    <img src="images/new-workspace-button.png" alt="new workspace button in the popover menu" class="responsive-img"/>
+    <img src="images/new-workspace-button.png" alt="new workspace button in the popover menu" width="100%"/>
 
     >[!NOTE]
     > When signing in for the first time, you might already have a workspace. This is your [Organization workspace](overview.html#organization-workspace) including other members of your organization, who have logged in Reveal with their Office365 account at least once.
@@ -21,7 +21,7 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
 
 2.  Click/Tap the *+ Create Workspace* blue button. The following screen opens:
 
-    <img src="images/create-workspace-properties.png" alt="workspace properties dialog" class="responsive-img"/>
+    <img src="images/create-workspace-properties.png" alt="workspace properties dialog" width="100%"/>
 
     Here you will need to:
 
@@ -60,7 +60,7 @@ After you create your workspace, you will be prompted to invite other users.
 
 1. Click/tap the *+ Members* blue button. You can choose users from the dropdown list (see below). You can also use the search to add the emails of users who are outside of your Organization. Select _Done_ when you are ready.
 
-    <img src="images/workspace-invite-members.png" alt="invite members dialog" class="responsive-img" />
+    <img src="images/workspace-invite-members.png" alt="invite members dialog" width="100%" />
 
 2. *Member* is the default role when you invite users unless you assign them a different role. You can choose between *Owner*, *Member* and *Viewer* in the dropdown next to each user name. Learn more about workspace roles in [Workspace Collaboration and Privacy](overview.html#members-roles-permissions)
 

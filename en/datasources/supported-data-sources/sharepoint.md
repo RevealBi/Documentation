@@ -4,7 +4,7 @@
 
 Upon selecting SharePoint, you will see the following log in prompt.
 
-<img src="images/sharepoint-login.png" alt="SharePoint Login" class="responsive-img"/>
+<img src="images/sharepoint-login.png" alt="SharePoint Login" width="100%"/>
 
 Here you can choose to use the root SharePoint site in your Office365 account. You can also add a _subsite URL_ to directly start browsing its contents. Once connected to a SharePoint subsite, you will be able to quickly access it through your list in the _Select a Data Source_ dialog.
 
@@ -20,7 +20,7 @@ When working within Reveal, you will be able to use a wide variety of files from
 
 After logging in, you can start browsing your SharePoint data - subsites, libraries, folders, lists, and files (as shown below).
 
-<img src="images/sharepoint-browse-dialog.png" alt="A SharePoint site's browsing dialog showing Subsites, Libraries and lists" class="responsive-img"/>
+<img src="images/sharepoint-browse-dialog.png" alt="A SharePoint site's browsing dialog showing Subsites, Libraries and lists" width="100%"/>
 
 To create a dashboard, you can use the SharePoint data types, listed below.
 
@@ -29,7 +29,7 @@ To create a dashboard, you can use the SharePoint data types, listed below.
 
 2. *SharePoint lists* - you can use the items from all types of SharePoint lists. Set up a SharePoint list by selecting a _SharePoint View_.
 
-  <img src="images/sharepoint-list-data-set-up.png" alt="Setting up your SharePoint list" class="responsive-img"/>
+  <img src="images/sharepoint-list-data-set-up.png" alt="Setting up your SharePoint list" width="100%"/>
 
   >[!NOTE]
   >**Advanced settings - Items per Page.**
@@ -41,11 +41,11 @@ To create a dashboard, you can use the SharePoint data types, listed below.
 
     To do this, you need to open the library and click the _Use Metadata_ button at the top right corner.
 
-    <img src="images/sharepoint-library-metadata-button.png" alt="Use Metadata button in a Sharepoint library" class="responsive-img"/>
+    <img src="images/sharepoint-library-metadata-button.png" alt="Use Metadata button in a Sharepoint library" width="100%"/>
 
     Here you will find the metadata of the library presented as SharePoint lists that you can choose from.
 
-<img src="images/set-up-metadata-list.png" alt="Metadata presented as sharepoint lists" class="responsive-img"/>
+<img src="images/set-up-metadata-list.png" alt="Metadata presented as sharepoint lists" width="100%"/>
 
 >[!NOTE]
 >**Do not confuse Libraries' Metadata in Reveal with "managed metadata" in SharePoint!**

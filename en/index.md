@@ -12,7 +12,7 @@ Interested on embedded analytics? [Download Reveal SDK](https://www.revealbi.io/
 
 Connect to the most popular data sources without setting anything up on the server. Get real-time insights by connecting directly to SharePoint Online, Google Drive, OneDrive, Microsoft Analysis Services, Microsoft SQL Server, CRM, and many more.
 
-<img src="data-visualizations/images/creating-new-visualization.png" alt="Connecting to data in Reveal" class="responsive-img"/>
+<img src="data-visualizations/images/creating-new-visualization.png" alt="Connecting to data in Reveal" width="100%"/>
 
 With an intuitive drag and drop interface, Reveal makes it simple to create dashboards within minutes. Choose from more than 20 different visualizations to present your data and tell your story the best way.
 
@@ -20,33 +20,33 @@ With an intuitive drag and drop interface, Reveal makes it simple to create dash
 
 Sort, filter and aggregate your data as you wish! Each chart type provides you with different settings to design your visualizations the way you want.
 
-<img src="filters/images/visualization-quick-filter-sample.png" alt="Using visualization quick filters in Reveal" class="responsive-img"/>
+<img src="filters/images/visualization-quick-filter-sample.png" alt="Using visualization quick filters in Reveal" width="100%"/>
 
 <h4>Interact with your Dashboards</h4>
 
 Once your dashboard is created, interact with your visualizations with drill-down support, or even the ability to change visualization on the fly. Create and share annotated images of your visualizations for deeper insights.
 
-<img src="dashboards/images/tooltips-totals.png" alt="Using tooltips and displaying totals in Reveal" class="responsive-img"/>
+<img src="dashboards/images/tooltips-totals.png" alt="Using tooltips and displaying totals in Reveal" width="100%"/>
 
 <h4>Share Insights with Your Collaborators </h4>
 
 Give everyone the power of data by sharing your dashboards within your Organization, workspaces you are part of or with individual collaborators. Assign different levels of permissions to users to give them the level of access you want them to have to your dashboard.
 
-<img src="dashboards/sharing-dashboards/images/remove-sharing.png" alt="Showing user roles while sharing in Reveal" class="responsive-img"/>
+<img src="dashboards/sharing-dashboards/images/remove-sharing.png" alt="Showing user roles while sharing in Reveal" width="100%"/>
 
 <h4>Leverage Advanced Predictive Analysis </h4>
 
 Get even more insight from your visualizations with advanced predictive analysis, using statistical functions.
 You can use the Time series forecast, Linear regression, and Detect outliers to make predictions, recognize and evaluate trends, or discover outliers in your data series.
 
-<img src="data-visualizations/images/time-series-forecast-6-months.png" alt="Showing statistical functions in Reveal" class="responsive-img"/>
+<img src="data-visualizations/images/time-series-forecast-6-months.png" alt="Showing statistical functions in Reveal" width="100%"/>
 
 
 <h4>Get Better Insights with Machine Learning</h4>
 
 Use your trained models' data from BigQuery or Azure Machine Learning Studio in Reveal. In just three steps, choose your data source, build a visualization, and use the integration to connect to a trained machine learning model.
 
-<img src="datasources/ml-integration/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" class="responsive-img"/>
+<img src="datasources/ml-integration/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" width="100%"/>
 
 ### What's new?
 

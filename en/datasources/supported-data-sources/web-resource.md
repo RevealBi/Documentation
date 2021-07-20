@@ -8,7 +8,7 @@ or an image (for example, [this one](http://www.infragistics.com/media/442175/ho
 To configure a Web Resource as a Data Source, you will need to enter the
 following information:
 
-<img src="images/enter-web-resource-details.png" alt="Configure Web resource connection" class="responsive-img"/>
+<img src="images/enter-web-resource-details.png" alt="Configure Web resource connection" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Web Resource*. You can change it to your preference.
 

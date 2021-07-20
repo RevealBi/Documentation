@@ -2,7 +2,7 @@
 
 The image chart displays information in an embedded browser by making a request to a URL and displaying the results. It works **only with the first row in the data set**, and **displays the contents of the column set as URL** in the data editor.
 
-<img src="images/pivot-editor-view=web-view.png" alt="Image Chart in the Visualization editor" class="responsive-img"/>
+<img src="images/pivot-editor-view=web-view.png" alt="Image Chart in the Visualization editor" width="100%"/>
 
 This chart is a very versatile visualization option which can be used to
 display images, HTML pages, or even text content. If the URL Field

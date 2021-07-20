@@ -13,7 +13,7 @@ following filters:
   - A given period of time (last 365 days, Year to Date, etc.);
   - Territory (Americas, Europe, Asia, etc.).
 
-<img src="images/sales-data_example.png" alt="sales-data\_example" class="responsive-img"/>
+<img src="images/sales-data_example.png" alt="sales-data\_example" width="100%"/>
 
 ### Code Example
 

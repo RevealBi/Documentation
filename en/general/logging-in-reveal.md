@@ -3,7 +3,7 @@
 Welcome to Reveal!  
 When opening the app you'll be met with different login options:
 
-<img src="images/log-in-screen.png" alt="Reveal's log in screen" class="responsive-img"/>
+<img src="images/log-in-screen.png" alt="Reveal's log in screen" width="100%"/>
 
 Before jumping in, take into account that in Reveal you can join an **Organization**. If you are a member of an organization, you have to log in with your organization’s email. Choose Google or Microsoft (O365) as needed and you'll be associated with the Оrganization workspace. Alternatively, you can log in using your iCloud (*Apple*) account credentials.
 
@@ -16,7 +16,7 @@ Depending on which account you used to sign in Reveal, you will have your OneDri
 
 Once you get in, you are greeted with your first screen:
 
-<img src="images/reveal-initial-view.png" alt="First screen in Reveal with numbering added" class="responsive-img"/>
+<img src="images/reveal-initial-view.png" alt="First screen in Reveal with numbering added" width="100%"/>
 
 You always start in your personal space, **My Stuff**. Below you can find a quick reference for this initial screen:
 
@@ -40,7 +40,7 @@ You always start in your personal space, **My Stuff**. Below you can find a quic
 
 Once you start using the application, it will look like this:
 
-<img src="images/reveal-initial-view-content.png" alt="First screen in Reveal with content" class="responsive-img"/>
+<img src="images/reveal-initial-view-content.png" alt="First screen in Reveal with content" width="100%"/>
 
 **Filter** - As soon as you have any dashboards, you can choose from the dropdown menu which dashboards to see in the dashboard module: *Everything*, only created by you or shared with you.
 

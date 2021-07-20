@@ -13,7 +13,7 @@ To configure your Azure Analysis Services data source, you will need to perform 
 
 1. Provide a _URL_ to your server in the _New Data Source_ dialog:
 
-    <img src="images/configure-azure-analysis-services-data-source.png" alt="Configuring an azure analysis services connection" class="responsive-img"/>
+    <img src="images/configure-azure-analysis-services-data-source.png" alt="Configuring an azure analysis services connection" width="100%"/>
 
     The _URL_ requested is the full name of the server, which contains the database with the data models you want to connect. You can *copy the server name* from the Azure Portal. To do this, go to:
 

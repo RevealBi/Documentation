@@ -3,7 +3,7 @@
 The Notifications Center is designed to keep you updated of any workspace and
 dashboard changes. Open it by selecting the **bell icon** in the top right section of the application.
 
-<img src="images/in-app-notifications.png" alt="Notification center icon and notifications' list" class="responsive-img"/>
+<img src="images/in-app-notifications.png" alt="Notification center icon and notifications' list" width="100%"/>
 
 Whenever you receive a notification, you will see a change in the
 notifications' icon. Depending on your notification settings, you might
@@ -16,7 +16,7 @@ In the Notification Center you can:
 
   - Additionally, you can **turn off notifications** by selecting the *Mute this type of notification* option in the overflow menu.
 
-<img src="images/notification-center-options.png" alt="Accessing options of notifications in the Notification center" class="responsive-img"/>
+<img src="images/notification-center-options.png" alt="Accessing options of notifications in the Notification center" width="100%"/>
 
 ### Notification Preferences
 

@@ -2,7 +2,7 @@
 
 Upon connecting Quickbooks, you will see the following login prompt:
 
-<img src="images/quickbooks-login.png" alt="Quickbooks login prompt" class="responsive-img"/>
+<img src="images/quickbooks-login.png" alt="Quickbooks login prompt" width="100%"/>
 
 
 Enter your login credentials, or select _Sign in with Google_ and click _Sign In_.
@@ -13,7 +13,7 @@ If you have Identity Confirmation activations enabled, you will see a prompt to 
 
 After logging in you can set up your Quickbooks data in the following dialog:
 
-<img src="images/set-up-data-quickbooks.png" alt="Set up your data dialog" class="responsive-img"/>
+<img src="images/set-up-data-quickbooks.png" alt="Set up your data dialog" width="100%"/>
 
 Here you can choose the Quickbooks entities you need from:
 

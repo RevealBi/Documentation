@@ -54,23 +54,23 @@ that will change is the selected filter.
 1.  Open the overflow button in the "Globex Stock Value 2018"
     visualization, and then select **Duplicate**.
 
-    <img src="images/DuplicatingVisualizationSISStockValue_All.png" alt="DuplicatingVisualizationSISStockValue\_All" class="responsive-img"/>
+    <img src="images/DuplicatingVisualizationSISStockValue_All.png" alt="DuplicatingVisualizationSISStockValue\_All" width="100%"/>
 
 
 2.  Rename the visualization by opening its overflow button and
     selecting **Rename**.
 
-    <img src="images/DuplicateVisualizationRenaming_All.png" alt="DuplicateVisualizationRenaming\_All" class="responsive-img"/>
+    <img src="images/DuplicateVisualizationRenaming_All.png" alt="DuplicateVisualizationRenaming\_All" width="100%"/>
 
     Set the value to "Silver Security Stock Value 2018"
 
-    <img src="images/SISStockRenamingVisualization_All.png" alt="SISStockRenamingVisualization\_All" class="responsive-img"/>
+    <img src="images/SISStockRenamingVisualization_All.png" alt="SISStockRenamingVisualization\_All" width="100%"/>
 
 
 3.  Enter Edit Mode by selecting the overflow button again and selecting
     **Edit**.
 
-    <img src="images/SISStockValueEditingVisualization_All.png" alt="SISStockValueEditingVisualization\_All" class="responsive-img"/>
+    <img src="images/SISStockValueEditingVisualization_All.png" alt="SISStockValueEditingVisualization\_All" width="100%"/>
 
 
 4.  This visualization displays the stock value for **Silver Security
@@ -81,7 +81,7 @@ that will change is the selected filter.
     **Selected Value** to **Silver Security Corp** and *unselect
     Globex*.
 
-    <img src="images/SISStockValueChangeStock_All.png" alt="Updating the filter in Reveal" class="responsive-img"/>
+    <img src="images/SISStockValueChangeStock_All.png" alt="Updating the filter in Reveal" width="100%"/>
 
     Then, select **Update Filter**.
 
@@ -99,11 +99,11 @@ and the Better Alternative Trading System (BATS) values in a
     select the **Finance Dashboard** sheet in the
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load Data*.
 
-    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" class="responsive-img"/>
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
 2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Candlestick" chart.
 
-    <img src="images/SelectCandlestickChart_All.png" alt="Selecting the Candlestick chart in Reveal" class="responsive-img"/>
+    <img src="images/SelectCandlestickChart_All.png" alt="Selecting the Candlestick chart in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Date** field into the Label
     placeholder of the data editor, **Open** into Open, **High** into
@@ -114,24 +114,24 @@ and the Better Alternative Trading System (BATS) values in a
 
 4.  By default, the Date information in Label will be displayed in years. In order to change this, select **Date** in the Label placeholder of the data editor, and change the **Date Aggregation** to **Day**.
 
-    <img src="images/FinanceGLBDateAggregation_All.png" alt="Changing date aggregation in Reveal" class="responsive-img"/>
+    <img src="images/FinanceGLBDateAggregation_All.png" alt="Changing date aggregation in Reveal" width="100%"/>
 
     Then, select **Update Field**.
 
 5.  If needed, you can remove the fraction digits in the Y axis by selecting the values in Open, High, Low and Close, and changing **Fraction Digits** to **0**.
 
-    <img src="images/GLBFiscalRemovingFractionDigits_All.png" alt="Removing fraction digits in Reveal" class="responsive-img"/>
+    <img src="images/GLBFiscalRemovingFractionDigits_All.png" alt="Removing fraction digits in Reveal" width="100%"/>
 
     Then, select **Update Field**.
 
 6.  The visualization displays the GLB stock value, so **you will need to introduce a filter** for **Stocks** in order to display that particular option.
     Drag and drop **Stocks** into **Data Filters** and then choose **Select Values**.
 
-    <img src="images/GlobexCandlestickSelectValues_All.png" alt="Selecting Filters in Reveal" class="responsive-img"/>
+    <img src="images/GlobexCandlestickSelectValues_All.png" alt="Selecting Filters in Reveal" width="100%"/>
 
     There, uncheck all options and select only **Globex**.
 
-    <img src="images/GlobexCandlestickSelectGlobex_All.png" alt="Working with filters in Reveal" class="responsive-img"/>
+    <img src="images/GlobexCandlestickSelectGlobex_All.png" alt="Working with filters in Reveal" width="100%"/>
 
     Then, select **Create Filter**.
 
@@ -139,12 +139,12 @@ and the Better Alternative Trading System (BATS) values in a
     the **Data Filters** placeholder of the data editor and, under
     **Filter Type**, select **Filter by Rule**.
 
-    <img src="images/GLBFilterbyRule.png" alt="Filtering by rule in Reveal" class="responsive-img"/>
+    <img src="images/GLBFilterbyRule.png" alt="Filtering by rule in Reveal" width="100%"/>
 
     Select the **Custom Date Range** rule and enter January 1st through
     December 31st.
 
-    <img src="images/GLBEnterCustomDateRange_All.png" alt="Selecting a custom date range in Reveal" class="responsive-img"/>
+    <img src="images/GLBEnterCustomDateRange_All.png" alt="Selecting a custom date range in Reveal" width="100%"/>
 
     Then, select **Create Filter**.
 
@@ -166,11 +166,11 @@ order to create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" class="responsive-img"/>
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
 2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Line" chart.
 
-    <img src="images/SelectLineChart_All.png" alt="Selecting the Line chart in Reveal" class="responsive-img"/>
+    <img src="images/SelectLineChart_All.png" alt="Selecting the Line chart in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Date** field into Label,
     **Stocks** into the *Add Hierarchy* section of Label, and
@@ -183,14 +183,14 @@ order to create it:
     placeholder of the data editor, and change the **Date Aggregation**
     to **Month**.
 
-    <img src="images/FinanceForecastDateAggregation_All.png" alt="Changing date aggregation in Reveal" class="responsive-img"/>
+    <img src="images/FinanceForecastDateAggregation_All.png" alt="Changing date aggregation in Reveal" width="100%"/>
 
     Then, select **Update Field**.
 
 5.  To remove the fraction digits in the Y axis, select the fields in
     Values, and change **Fraction Digits** to **0**.
 
-    <img src="images/ForecastRemovingFractionDigits_All.png" alt="Removing fraction digits in Reveal" class="responsive-img"/>
+    <img src="images/ForecastRemovingFractionDigits_All.png" alt="Removing fraction digits in Reveal" width="100%"/>
 
     Then, select **Update Field**.
 
@@ -212,11 +212,11 @@ In order to create it:
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" class="responsive-img"/>
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
 2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Sparkline" chart.
 
-    <img src="images/SelectSparklineChart_All.png" alt="Selecting the sparkline chart in Reveal" class="responsive-img"/>
+    <img src="images/SelectSparklineChart_All.png" alt="Selecting the sparkline chart in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Date** field into Date, the
     **Offer** field into **Value** and **Stocks** into Category.
@@ -227,7 +227,7 @@ In order to create it:
     order to display it as currency, select it in the data editor and
     change **Type** to **Currency**.
 
-    <img src="images/StockVariationCurrencyFormatting_All.png" alt="Changing the formatting type in Reveal" class="responsive-img"/>
+    <img src="images/StockVariationCurrencyFormatting_All.png" alt="Changing the formatting type in Reveal" width="100%"/>
 
     Then, select **Update Field**
 
@@ -237,7 +237,7 @@ In order to create it:
     Visualizations Editor, open the **Chart Type** dropdown, and select
     **Area**.
 
-    <img src="images/StockVariationChangingChartType_All.png" alt="Selecting the Area chart type in Reveal" class="responsive-img"/>
+    <img src="images/StockVariationChangingChartType_All.png" alt="Selecting the Area chart type in Reveal" width="100%"/>
 
 
 6.  **Change the title of your visualization** to "Stock Variations"
@@ -257,11 +257,11 @@ during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-vi
     **Reveal\_Dashboard\_Tutorials** spreadsheet. Then, select *Load
     Data*.
 
-    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" class="responsive-img"/>
+    <img src="images/SelectingFinanceSheet_All.png" alt="Loading data in Reveal" width="100%"/>
 
 2.  **Open the visualizations picker** by selecting the grid icon in the top bar, and select the "Sparkline" chart.
 
-    <img src="images/SelectLinearGauge_All.png" alt="Selecting the linear gauge in Reveal" class="responsive-img"/>
+    <img src="images/SelectLinearGauge_All.png" alt="Selecting the linear gauge in Reveal" width="100%"/>
 
 3.  In the Data Editor, drag and drop the **Stocks** field into Label
     and the **Volume** field into the Values placeholder of the data
@@ -274,12 +274,12 @@ during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-vi
     the **Data Filters** placeholder of the data editor and, under
     **Filter Type**, select **Filter by Rule**.
 
-    <img src="images/StockVolFilterbyRule_All.png" alt="Filtering by rule in Reveal" class="responsive-img"/>
+    <img src="images/StockVolFilterbyRule_All.png" alt="Filtering by rule in Reveal" width="100%"/>
 
     Select the **Custom Date Range** rule and enter January 1st through
     December 31st.
 
-    <img src="images/StockVolEnterCustomDateRange_All.png" alt="Enter custom date range in Reveal" class="responsive-img"/>
+    <img src="images/StockVolEnterCustomDateRange_All.png" alt="Enter custom date range in Reveal" width="100%"/>
 
     Then, select **Create Filter**.
 

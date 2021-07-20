@@ -5,7 +5,7 @@ The Amazon Athena data source in Reveal allows you to access and query unstructu
 
 To configure an Amazon Athena data source, you will need to enter the following information:
 
-<img src="images/configure-amazon-athena-dialog.png" alt="Configure Amazon Athena dialog" class="responsive-img"/>
+<img src="images/configure-amazon-athena-dialog.png" alt="Configure Amazon Athena dialog" width="100%"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the _Select a Data Source_ dialog. By default, Reveal names it *Amazon Athena*. You can change it to your preference.
    
@@ -32,13 +32,13 @@ To configure an Amazon Athena data source, you will need to enter the following 
 
 After configuring your Athena data source connection, you will be prompted to choose a database from the *Data Source (Catalog)* you selected in the previous dialog. 
 
-<img src="images/athena-set-up-database-views.png" alt="Configure Amazon Athena dialog" class="responsive-img"/>
+<img src="images/athena-set-up-database-views.png" alt="Configure Amazon Athena dialog" width="100%"/>
 
 After selecting a database, you can choose from the *tables* or [*views*](https://docs.aws.amazon.com/athena/latest/ug/views.html) inside it. 
 
 In the screenshot above, the **motor_vehicle_collisions_time** view contains a modified version of the data in the **motor_vehicle_collisions** table in Athena. 
 In the screenshot below, the visualization on the left is built with the data in the table, and the one on the right uses the data contained in the view.  
 
-<img src="images/collisions-time-athena-view-sample.png" alt="Sample dashboard using Redshift tables and view data" class="responsive-img"/>
+<img src="images/collisions-time-athena-view-sample.png" alt="Sample dashboard using Redshift tables and view data" width="100%"/>
 
 

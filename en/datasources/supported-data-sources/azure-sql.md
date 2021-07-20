@@ -6,7 +6,7 @@
 
 To configure an Azure SQL data source, you will need to enter the following information:
 
-<img src="images/enter-Azure-SQL-details.png" alt="Opening Reveal's AzureSQL data source configuration screen" class="responsive-img"/>
+<img src="images/enter-Azure-SQL-details.png" alt="Opening Reveal's AzureSQL data source configuration screen" width="100%"/>
 
 1.  **Data Source Name**: this field will be displayed in the Data
     Sources list.

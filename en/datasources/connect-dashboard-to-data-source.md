@@ -4,7 +4,7 @@ In Reveal, you can connect to a data source [before](overview.md) or after a das
 
 A dashboard created with data sources you have not yet added into your application will look like shown below, when you open it for the first time: 
 
-<img src="images/dashboard-own-data-sources.png" alt="A dashboard not connected to its data source" class="responsive-img"/>
+<img src="images/dashboard-own-data-sources.png" alt="A dashboard not connected to its data source" width="100%"/>
 
 Each visualization has a *Log into* button on it enabling you to **connect to the data source** used. To do this: 
 
@@ -15,11 +15,11 @@ Each visualization has a *Log into* button on it enabling you to **connect to th
 
 The complete dashboard will be displayed in *Dashboard View* mode. 
 
-<img src="images/final-dashboard-own-data-source.png" alt="Final look of the dashboard after connecting to its data source" class="responsive-img"/>
+<img src="images/final-dashboard-own-data-source.png" alt="Final look of the dashboard after connecting to its data source" width="100%"/>
 
 >[!NOTE]
 > In the _Connect Data Source_ dialog, you may have a list of data source credentials (see screenshot below). These are credentials you have used to log into other source accounts, or that you have added in advance in the [Manage Reveal Credentials](~/en/datasources/managing-data-source-credentials.md) menu.
-<img src="images/credentials-list-connect.png" alt="A list of ready credentials in the Connect Data Source dialog" class="responsive-img"/>
+<img src="images/credentials-list-connect.png" alt="A list of ready credentials in the Connect Data Source dialog" width="100%"/>
 
 If there are visualizations in the dashboard, which are created with another data source, you will still need to connect them to their data source to view them.
 

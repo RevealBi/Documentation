@@ -8,7 +8,7 @@ For users to get the most insight possible out of business data, Reveal provides
 
 The dashboard shown below contains a wide variety of visualizations, all of which analyze different aspects of Manufacturing.
 
-<img src="images/data-visualizations-example.png" alt="Reveal's log in screen" class="responsive-img"/>
+<img src="images/data-visualizations-example.png" alt="Reveal's log in screen" width="100%"/>
 
 ### Choosing the Right Chart Type
 
