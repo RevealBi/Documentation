@@ -11,7 +11,7 @@ To export a dashboard as an Excel spreadsheet, go to *Dashboard View*
 mode and select: the overflow menu ⇒ *Export* ⇒ *Excel*. The following
 dialog will open:
 
-<img src="images/export-settings-excel.png" alt="Settings for Excel spreadsheet in the Export Dashboard menu" width="100%"/>
+<img src="images/export-settings-excel.png" alt="Settings for Excel spreadsheet in the Export Dashboard menu" class="responsive-img"/>
 
 This *Export Dashboard* dialog allows you to **select** and **rename**
 the data sheets to be included in your Excel file. Every data sheet

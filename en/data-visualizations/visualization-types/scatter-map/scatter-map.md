@@ -4,7 +4,7 @@ This map displays scattered markers in a geographic area by using geo-coordinate
 
 Scatter maps give you the possibility to connect to a number of map services, which will not only create a more realistic background for your maps, but will also allow you to delve into details. In some scenarios, like when presenting a real estate market analysis, the ability to show neighborhoods and streets on your map will add more value to your work.
 
-<img src="images/scatter-maps-dashboard.png" alt="Different scatter maps visualizations in a dashboard" width="100%"/>
+<img src="images/scatter-maps-dashboard.png" alt="Different scatter maps visualizations in a dashboard" class="responsive-img"/>
 
 ### Using Scatter Maps
 
@@ -25,7 +25,7 @@ comparing quantitative data in different locations.
 
 Bubbles size indicates the value of a particular variable being compared. To achieve the comparison effect, it would be best if your data set contains a large variety of values for the compared variable. Otherwise, bubbles on the map will appear similar by size (see example below).
 
-<img src="images/bubble-map-density-population-europe-bad-example.png" alt="Bubble map showing similar density of population in European countries except for Monaco" width="100%"/>
+<img src="images/bubble-map-density-population-europe-bad-example.png" alt="Bubble map showing similar density of population in European countries except for Monaco" class="responsive-img"/>
 
 Unless you aim to identify and focus on **outliers** (like in the screenshot above), you may need to reconsider your choice of visualization.
 
@@ -41,12 +41,12 @@ Color makes maps easier to perceive and gives you the opportunity to add one mor
 Simple dot maps colored by category are good for drawing attention to clusters and areas where the distribution of an object is really high. For example, you can quickly identify the states with the most airports if the airports in different states are colored differently (see below).
 
 <img src="images/scatter-dot-different-colors
-.png" alt="A scatter map showing the distribution of US airports with dots colored by state" width="100%"/>
+.png" alt="A scatter map showing the distribution of US airports with dots colored by state" class="responsive-img"/>
 
 Dot maps colored by value will help you provide insight while avoiding the risk of overlapping large bubbles. If, for example, you aim to make the tendency of the aging population in Europe evident with one look, create a dot map colored by the medium population age and style the color to show low, medium and high average age:
 
 <img src="images/scatter-dot-map-colored-by-value
-.png" alt="A scatter map showing the average age of Euro Population with dots colored by using conditional formatting for medium age" width="100%"/>
+.png" alt="A scatter map showing the average age of Euro Population with dots colored by using conditional formatting for medium age" class="responsive-img"/>
 
 However, if you aim to show the correlation between two  values for individual locations, your purpose will be served by presenting one value with size and the other - with color. Taking the previous example, you can color the dots by population age and size them by GDP of the country to show the correlation between prosperity and higher life expectancy.
 
@@ -58,7 +58,7 @@ When the map is [maximized](~/en/dashboards/dashboards-interactions.html#maximiz
 
 When maximized, the scatter map displays a zoom control that allows you to better adjust the zoom level and reset it when needed.
 
-<img src="images/scatter-map-zoom-control.png" alt="A scatter map displaying the zoom control" width="100%"/>
+<img src="images/scatter-map-zoom-control.png" alt="A scatter map displaying the zoom control" class="responsive-img"/>
 
 As shown above, there are a couple of buttons displayed at the bottom right of the map. The _Reset Zoom_ button will reset the map zoom to the zoom-level the map was saved the last time.
 
@@ -69,7 +69,7 @@ Zooming also allows you to change the clear shapes Reveal uses as a map backgrou
 * *Mapbox*
 
 <img src="images/scatter-map-image-tiles-enabled
-.png" alt="A scatter map showing the average age of Population in East Asia zoomed in and using image tiles" width="100%"/>
+.png" alt="A scatter map showing the average age of Population in East Asia zoomed in and using image tiles" class="responsive-img"/>
 
 For more information on how to use your map service *authentication token* in Reveal or how to view shared maps using image tiles, read the [Using Map Image Tiles](map-image-tiles.md) topic.
 
@@ -92,7 +92,7 @@ The ***"There is no data to display."*** message may appear in the Visualization
 
 #### Basic Dot Maps  
 
-<img src="images/scatter-dot-map-airports.png" alt="A dot map showing the distribution of airports across the US" width="100%"/>
+<img src="images/scatter-dot-map-airports.png" alt="A dot map showing the distribution of airports across the US" class="responsive-img"/>
 
 You can create dot maps by using only the *Latitude* and *Longitude* data from your data set. If your data source does not contain these fields, you can add them from another data source. See how to do this in [Combining Data Sources in One Visualization](~/en/datasources/data-blending.md).
 
@@ -107,7 +107,7 @@ Because of the conceptual simplicity of this map, you can only choose whether to
 
 You can also create a scatter map with variable-sized markers or bubbles.
 
-<img src="images/scatter-bubble-map-electoral-college.png" alt="A bubble map showing the electoral college votes distribution across US states" width="100%"/>
+<img src="images/scatter-bubble-map-electoral-college.png" alt="A bubble map showing the electoral college votes distribution across US states" class="responsive-img"/>
 
 Bubble maps are created by using the same data as simple dot maps. Plus, you need to drop a numeric field in the _Bubble Radius_ placeholder.
 
@@ -123,7 +123,7 @@ The **bubble tooltips** are used to help your audience read the map. It gives a 
 The scatter map allows you to visualize a third variable indicated by color. Adding color is an option for both dot and bubble maps.
 
 <img src="images/scatter-color-average-age-euro-population
-.png" alt="A scatter map showing the average age of Euro Population sized by number and colored using conditional formatting for medium age" width="100%"/>
+.png" alt="A scatter map showing the average age of Euro Population sized by number and colored using conditional formatting for medium age" class="responsive-img"/>
 
 Color on the map can be determined by:
 

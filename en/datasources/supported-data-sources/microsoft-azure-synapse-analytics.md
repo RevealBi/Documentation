@@ -9,7 +9,7 @@ massive datasets for your visualizations with no slow down.
 To configure a Microsoft Azure Synapse Analytics data source, you will
 need to enter the following information:
 
-<img src="images/synapse-azure-configuration.png" alt="Configuring azure synapse data source dialog" width="100%"/>
+<img src="images/synapse-azure-configuration.png" alt="Configuring azure synapse data source dialog" class="responsive-img"/>
 
 1. **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Azure SQL Synapse Analytics*. You can change it to your preference.
 

@@ -9,7 +9,7 @@ By clicking/tapping the link symbol, you can open:
 * **another dashboard** (shown in the screenshot below), which gives more specific information related to the visualization or a value in it;
 * **a URL**, which will enable extensibility scenarios such as interacting with third-party web applications as part of the dashboard navigation. 
 
-<img src="images/dashboard-linking-sample.png" alt="Dashboard linking sample" width="100%"/>
+<img src="images/dashboard-linking-sample.png" alt="Dashboard linking sample" class="responsive-img"/>
 
 ### Adding a Link 
 
@@ -89,7 +89,7 @@ You can add as many links to a visualization as you want, but they will all have
 
 If you choose this option a tooltip with the link symbol appears whenever a data item of a chart, such as columns, bar, pie slices, etc. is clicked/tapped. In the grid chart the link symbol appears in the last column on the right (see below).
 
-  <img src="images/links-to-grid-view.png" alt="A grid with link symbols and an arrow pointing to the row of the Amethyst value for CampaignID" width="100%"/>
+  <img src="images/links-to-grid-view.png" alt="A grid with link symbols and an arrow pointing to the row of the Amethyst value for CampaignID" class="responsive-img"/>
 
 If you have added a data filter with the _CampaignID_ to the target dashboard, then clicking the link symbol in the grid, as shown in the screenshot above, will open another dashboard filtered by the _CampaignID_ field, with the _Amethyst_ value pre-selected. This way, in the target dashboard you will see only the analysis for the value you selected.
 

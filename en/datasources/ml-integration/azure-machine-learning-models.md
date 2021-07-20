@@ -11,7 +11,7 @@ information about the clients. This ML model can be used in Reveal to
 build a visualization giving insight about how the clients' housing type
 relates to their credit risk:
 
-<img src="images/ml-credit-risk-by-housing-visualization-example.png" alt="Credit risk by Housing example" width="100%"/>
+<img src="images/ml-credit-risk-by-housing-visualization-example.png" alt="Credit risk by Housing example" class="responsive-img"/>
 
 ### Prerequisites
 
@@ -33,7 +33,7 @@ below:
     at the top of the *Fields* list to the left. Then choose **Azure
     Machine Learning**.
 
-    <img src="images/brain-icon-azure-ml-model.png" alt="Brain icon location in the Visualization editor" width="100%"/>
+    <img src="images/brain-icon-azure-ml-model.png" alt="Brain icon location in the Visualization editor" class="responsive-img"/>
 
 <a href="ml-integration/ml-model-connect"></a>
 ### Connecting to Your Azure Machine Learning Model
@@ -45,7 +45,7 @@ following:
     order to access the Web Service exposed by the Azure Machine
     Learning Model:
 
-    <img src="images/microsoft-azure-configuration-requested-values.png" alt="MS Azure configuration dialog requested values" width="100%"/>
+    <img src="images/microsoft-azure-configuration-requested-values.png" alt="MS Azure configuration dialog requested values" class="responsive-img"/>
 
     To find the **Swagger Document URL** and **API key** you need to do
     the following:
@@ -65,7 +65,7 @@ following:
 2.  The dialog displayed requires you to map the data in Reveal to the
     input expected by your ML model.
 
-    <img src="images/input-output-ml-list.png" alt="Input list in ML model connection dialog" width="100%"/>
+    <img src="images/input-output-ml-list.png" alt="Input list in ML model connection dialog" class="responsive-img"/>
 
     In the dialog above, you have the following columns to consider:
 
@@ -76,7 +76,7 @@ following:
 
     c.  **Parameters** - some Azure ML models require you to fill in values for the parameters they need in order to calculate the output. In this case you will see a third *Parameters* column between *Input* and *Output*.
 
-      <img src="images/loaded-data-from-azure-model.png" alt="Data output loaded from Azure model" width="100%"/>
+      <img src="images/loaded-data-from-azure-model.png" alt="Data output loaded from Azure model" class="responsive-img"/>
 
 You can use the fields returned by the Azure model as regular fields in
 the Visualization editor.

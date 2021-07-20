@@ -5,7 +5,7 @@ databases, spreadsheets, and public data sources.
 
 The screenshot below displays a number of different data sources the user John Williams has connected to in his account.
 
-<img src="images/sample-data-sources-screen.png" alt="Sample data sources" width="100%"/>
+<img src="images/sample-data-sources-screen.png" alt="Sample data sources" class="responsive-img"/>
 
 ### Connecting to Data Sources
 
@@ -15,9 +15,9 @@ To connect to a data source, perform the steps below.
 
 1. Go to _My Stuff_ or a workspace where you want to a create a dashboard. 
 2. Click/tap the **+ Dashboard** blue button.
-   <img src="images/start-creating-dashboard-data-source.png" alt="Reveal's home screen" width="100%"/>
+   <img src="images/start-creating-dashboard-data-source.png" alt="Reveal's home screen" class="responsive-img"/>
 3. In the _New Visualization_ dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
-   <img src="images/creating-new-visualization.png" alt="Available data sources when creating a new visualization" width="100%"/>
+   <img src="images/creating-new-visualization.png" alt="Available data sources when creating a new visualization" class="responsive-img"/>
 4. Select a data source provider from the dropdown list.
 
 After selecting a data source provider, you will be prompted to **configure** it. Not sure how to do this? Find out in the article about the chosen data source (see the list below).

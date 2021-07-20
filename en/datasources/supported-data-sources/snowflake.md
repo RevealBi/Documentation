@@ -4,7 +4,7 @@
 
 To configure a Snowflake data source, you first need to connect to the server by entering the following information:
 
-<img src="images/enter-snowflake-server-details.png" alt="Configure Snowflake Server details" width="100%"/>
+<img src="images/enter-snowflake-server-details.png" alt="Configure Snowflake Server details" class="responsive-img"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Snowflake*. You can change it to your preference.
 
@@ -16,7 +16,7 @@ To configure a Snowflake data source, you first need to connect to the server by
     enter the credentials for your *Snowflake* server or select existing
     ones if applicable.
 
-    <img src="images/enter-snowflake-credentials.png" alt="Configure Snowflake Credentials" width="100%"/>
+    <img src="images/enter-snowflake-credentials.png" alt="Configure Snowflake Credentials" class="responsive-img"/>
 
     - **Name**: the name for your data source account. It will be
         displayed in the list of accounts in the previous dialog.
@@ -31,7 +31,7 @@ To configure a Snowflake data source, you first need to connect to the server by
 
 1.  **Select a database** by marking the empty circle next to it:
 
-    <img src="images/select-database-snowflake.png" alt="Select a database dialog" width="100%"/>
+    <img src="images/select-database-snowflake.png" alt="Select a database dialog" class="responsive-img"/>
 
     >[!NOTE]    
     **Snowflake sample data in Reveal**.
@@ -40,7 +40,7 @@ To configure a Snowflake data source, you first need to connect to the server by
 
 3.  **Select a table or a view** from the database. Use the *eye icon* on the right to preview the data.
 
-    <img src="images/select-tableview-snowflake.png" alt="Select a table or view dialog" width="100%"/>
+    <img src="images/select-tableview-snowflake.png" alt="Select a table or view dialog" class="responsive-img"/>
 
 You are now directed to the *Visualization editor* where you can start building your visualizations with the data retrieved from Snowflake.
 

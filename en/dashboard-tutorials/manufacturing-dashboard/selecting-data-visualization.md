@@ -8,7 +8,7 @@ dropped into Label and one to be dropped into Values.
 First, **open the visualizations picker** by selecting the grid icon in
 the top bar.
 
-<img src="images/VisualizationsMenu_All.png" alt="VisualizationsMenu\_All" width="100%"/>
+<img src="images/VisualizationsMenu_All.png" alt="VisualizationsMenu\_All" class="responsive-img"/>
 
 **Change your visualization** to "Column".
 
@@ -18,17 +18,17 @@ Then, **drag and drop**:
 
   - *Orders* into the Values placeholder.
 
-<img src="images/ManufacturingFirstDragDrop_All.png" alt="ManufacturingFirstDragDrop\_All" width="100%"/>
+<img src="images/ManufacturingFirstDragDrop_All.png" alt="ManufacturingFirstDragDrop\_All" class="responsive-img"/>
 
 Lastly, **change the visualization's title** to "Incoming Daily Orders
 MTD" by selecting the pencil icon next to the "Manufacturing Dashboard"
 title.
 
-<img src="images/ManufacturingDailyOrdersMTDTitle_All.png" alt="ManufacturingDailyOrdersMTDTitle\_All" width="100%"/>
+<img src="images/ManufacturingDailyOrdersMTDTitle_All.png" alt="ManufacturingDailyOrdersMTDTitle\_All" class="responsive-img"/>
 
 Your visualization should look like the following one:
 
-<img src="images/ManufacturingFirstVisualizationSample_All.png" alt="ManufacturingFirstVisualizationSample\_All" width="100%"/>
+<img src="images/ManufacturingFirstVisualizationSample_All.png" alt="ManufacturingFirstVisualizationSample\_All" class="responsive-img"/>
 
 <style>
 .previous {

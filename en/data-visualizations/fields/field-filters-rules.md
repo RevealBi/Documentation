@@ -5,7 +5,7 @@ order to do so, you will need to add a field to the **Data Filters**
 placeholder in the lower section of the data editor. Then, select field
 from the dropdown to access the *Data Filter* window.
 
-<img src="images/add-data-filter.png" alt="Adding data filter fields list" width="100%"/>
+<img src="images/add-data-filter.png" alt="Adding data filter fields list" class="responsive-img"/>
 
 <a name='empty-values'></a>
 ### Filter Empty Values
@@ -14,7 +14,7 @@ Reveal provides the ability to filter rows in the dataset that have null
 or empty values on a specific column by enabling the filter empty values
 configuration setting on a specific column.
 
-<img src="images/FilterEmtpyValues_All.png" alt="FilterEmtpyValues\_All" width="100%"/>
+<img src="images/FilterEmtpyValues_All.png" alt="FilterEmtpyValues\_All" class="responsive-img"/>
 
 <a name='select-values'></a>
 ### Select Values
@@ -23,7 +23,7 @@ This type of filter supports the definition of the set of values to
 display for a specific field. To enable it, drag and drop a field to the
 **Data Filters** placeholder.
 
-<img src="images/SelectValues_All.png" alt="SelectValues\_All" width="100%"/>
+<img src="images/SelectValues_All.png" alt="SelectValues\_All" class="responsive-img"/>
 
 In the *Field Settings* dialog, you will see the option to **Select
 Values**. This displays the list of possible values for a column, and
@@ -121,7 +121,7 @@ data editor**, which might have a different
 [aggregation](field-settings.html#numeric-fields) than those in the list of
 fields.
 
-<img src="images/data-filters-filtering-data-editor.png" alt="Data Filters Filtering in the Data Editor" width="100%"/>
+<img src="images/data-filters-filtering-data-editor.png" alt="Data Filters Filtering in the Data Editor" class="responsive-img"/>
 
 These fields will appear at the bottom of the list of fields along with
 the name of the aggregation applied to them.

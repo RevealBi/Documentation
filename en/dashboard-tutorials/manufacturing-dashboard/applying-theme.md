@@ -14,7 +14,7 @@ For your visualization to match the sample widget's color, go to the
 Visualization Editor. Then, go to **Settings** and change the **Start
 Color** to the sixth one.
 
-<img src="images/ChangingStartColor_All.png" alt="ChangingStartColor\_All" width="100%"/>
+<img src="images/ChangingStartColor_All.png" alt="ChangingStartColor\_All" class="responsive-img"/>
 
 Once you have finished editing the visualization, select the **tick icon** in the top right-hand corner to return to the dashboard editor.
 

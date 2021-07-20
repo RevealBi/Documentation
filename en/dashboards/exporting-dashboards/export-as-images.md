@@ -37,18 +37,18 @@ case you want to include notes or highlight specific areas with
 different shapes. To **access the annotation section**, select the
 pencil icon in the *Export Image* dialog.
 
-<img src="images/image-annotation-menu.png" alt="Accessing Image Annotation Menu" width="100%"/>
+<img src="images/image-annotation-menu.png" alt="Accessing Image Annotation Menu" class="responsive-img"/>
 
 In the Annotation menu, you will see a top toolbar with many options
 such as adding shapes and freestyle annotations.
 
-<img src="images/image-annotation-shapes.png" alt="Image annotation shapes options" width="100%"/>
+<img src="images/image-annotation-shapes.png" alt="Image annotation shapes options" class="responsive-img"/>
 
 The text option allows you to add text on top of the image. It provides
 options to customize the text, such as background colors, font weight,
 font size, and font color.
 
-<img src="images/image-annotation-text.png" alt="Adding text in image annotation" width="100%"/>
+<img src="images/image-annotation-text.png" alt="Adding text in image annotation" class="responsive-img"/>
 
 For exporting images in **Android and iOS** devices, please refer to the
 [Exporting Dashboards](how-to-export-a-dashboard.html#mobile-devices) topic.

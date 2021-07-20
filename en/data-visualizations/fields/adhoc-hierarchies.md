@@ -7,7 +7,7 @@ hierarchies allow users to analyze the data in charts, gauges, and grid
 views, allowing users to create new hierarchies with the fields located
 in the **Rows** placeholder of the data editor.
 
-<img src="images/ad-hoc-hierarchies_All.png" alt="Ad Hoc Hierarchies example in the Visualization editor" width="100%"/>
+<img src="images/ad-hoc-hierarchies_All.png" alt="Ad Hoc Hierarchies example in the Visualization editor" class="responsive-img"/>
 
 This feature applies to plain data sources (for example, SQL tables,
 Excel spreadsheets or CSV files) and not to multidimensional data
@@ -22,7 +22,7 @@ operations.
 
 To enable ad-hoc hierarchies, just drag and drop a field in the **Add Hierarchy** section of the *Rows* placeholder in the data editor. When you do this, the structure and behavior of the data table will change.
 
-<img src="images/reveal-adhoc-hierarchies_all.png" alt="Reveal Ad-hoc Hierarchies table" width="100%"/>
+<img src="images/reveal-adhoc-hierarchies_all.png" alt="Reveal Ad-hoc Hierarchies table" class="responsive-img"/>
 
 As seen in the screenshot above, a single column will replace multiple
 columns. In the example presented in the screenshot, you not only can

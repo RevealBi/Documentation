@@ -107,26 +107,26 @@ transpose functionality to switch columns from rows.
 >[!NOTE] **Only the first 200 rows in the spreadsheet will be transposed.** 
 >You can access the transpose menu in the **Visualization Data** menu when expanding the sheet in your data source.
 
-<img src="images/spreadsheets-transpose-data-source-menu.png" alt="Spreadsheets Transpose Data Source Menu" width="100%"/>
+<img src="images/spreadsheets-transpose-data-source-menu.png" alt="Spreadsheets Transpose Data Source Menu" class="responsive-img"/>
 
 You will see a transpose icon in the top right-hand corner next to the
 cross button. Once you press it, Reveal will switch columns to rows and
 vice-versa.
 
-<img src="images/transposing-action-spreadsheet.png" alt="Transposing Action Spreadsheet" width="100%"/>
+<img src="images/transposing-action-spreadsheet.png" alt="Transposing Action Spreadsheet" class="responsive-img"/>
 
 In the example above, the information in the spreadsheet will be
 organized in columns expressing the EmployeeID for each employee in the
 company.
 
-<img src="images/transposing-action-final-spreadsheet.png" alt="Transposing Action Final Spreadsheet" width="100%"/>
+<img src="images/transposing-action-final-spreadsheet.png" alt="Transposing Action Final Spreadsheet" class="responsive-img"/>
 
 Once you are ready, select the tick icon. This will take you back to the
 **Visualization Data** menu, where you will now see the name of the
 sheet with a new icon to its left indicating that the sheet has been
 modified.
 
-<img src="images/transposed-spreadsheet-visualization-data.png" alt="Transposed Spreadsheet Visualization Data" width="100%"/>
+<img src="images/transposed-spreadsheet-visualization-data.png" alt="Transposed Spreadsheet Visualization Data" class="responsive-img"/>
 
 ### See Also
 

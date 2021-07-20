@@ -2,7 +2,7 @@
 
 When you first install and open the application, you will be presented with the following screen:
 
-<img src="images/log-in-screen.png" alt="Log in screen" width="100%"/>
+<img src="images/log-in-screen.png" alt="Log in screen" class="responsive-img"/>
 
 In Reveal, you can use your Office 365, Google or iCloud (*Apple*) account credentials to
 log in. You can also create an Infragistics user account. You'll only
@@ -15,7 +15,7 @@ When you sign in for the first time in Reveal with your **Office 365**
 account, you will be asked to give permissions to Reveal to read your
 profile and maintain access to it.
 
-<img src="images/limited-permission-sign-in-o365.png" alt="Permissions request sign in with Office 365" width="100%"/>
+<img src="images/limited-permission-sign-in-o365.png" alt="Permissions request sign in with Office 365" class="responsive-img"/>
 
 If you use your **Google** account to sign in, you will only have to type in your account credentials.
 

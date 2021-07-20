@@ -6,7 +6,7 @@ Amazon Simple Storage Service (S3) is a highly scalable and fast data storage se
 
 To configure an Amazon S3 data source, you will need to enter the following information:
 
-<img src="images/configure-amazon-s3-dialog.png" alt="Configure Amazon Athena dialog" width="100%"/>
+<img src="images/configure-amazon-s3-dialog.png" alt="Configure Amazon Athena dialog" class="responsive-img"/>
 
 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the _Select a Data Source_ dialog. By default, Reveal names it *Amazon S3*. You can change it to your preference.
    

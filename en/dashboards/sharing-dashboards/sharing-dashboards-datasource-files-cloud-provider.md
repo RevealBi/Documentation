@@ -39,7 +39,7 @@ following cloud providers:
 
 You can allow access to a cloud file at the point of selecting your data source to build a visualization. After choosing a file uploaded on one of the [supported cloud providers](#cloud-providers), you will be prompted to the following dialog:
 
-<img src="images/allow-access-box-sharing.png" alt="Allow access checkbox in the Set up your file dialog" width="100%"/>
+<img src="images/allow-access-box-sharing.png" alt="Allow access checkbox in the Set up your file dialog" class="responsive-img"/>
 
 Make sure the *Allow Access* checkbox is selected, otherwise the
 shareable link will be disabled.
@@ -68,7 +68,7 @@ one or more visualizations using cloud files as data source. If a
 shareable link to these data source files hasn't been created (has been
 disabled), Reveal will prompt you to allow access:
 
-<img src="images/save-dashboard-disabled-link-workspace.png" alt="Allow access to a dashboard with a disabled link when saving in a workspace" width="100%"/>
+<img src="images/save-dashboard-disabled-link-workspace.png" alt="Allow access to a dashboard with a disabled link when saving in a workspace" class="responsive-img"/>
 
 This way you make sure all workspace members can view the dashboard you saved
 in your workspace.

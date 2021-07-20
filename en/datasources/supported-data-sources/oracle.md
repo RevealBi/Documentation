@@ -17,7 +17,7 @@ database's settings:
 To configure Oracle using SID, you will need to enter the following
 information:
 
-<img src="images/enter-oracle-details.png" alt="Configure Oracle SID mode details" width="100%"/>
+<img src="images/enter-oracle-details.png" alt="Configure Oracle SID mode details" class="responsive-img"/>
 
 1. 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Oracle*. You can change it to your preference.
 
@@ -59,7 +59,7 @@ information:
 To configure Oracle using Service, you will need to enter the following
 information:
 
-<img src="images/enter-oracle-details-service-mode.png" alt="Configure Oracle Service mode details" width="100%"/>
+<img src="images/enter-oracle-details-service-mode.png" alt="Configure Oracle Service mode details" class="responsive-img"/>
 
 1.  **Data Source Name**: this field will be displayed in the Data
     Sources list.
@@ -121,11 +121,11 @@ can select a particular
 [view](https://docs.oracle.com/cd/B19306_01/server.102/b14220/objects.htm#i440066)
 that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/Oracle-views.png" alt="Oracle views dialog" width="100%"/>
+<img src="images/Oracle-views.png" alt="Oracle views dialog" class="responsive-img"/>
 
 The **invoices** view, for example, contains information on sales
 projections taken from one of the tables in the database.
 
-<img src="images/oracle-view-sample-invoices.png" alt="A dashboard sample using Oracle view data" width="100%"/>
+<img src="images/oracle-view-sample-invoices.png" alt="A dashboard sample using Oracle view data" class="responsive-img"/>
 
 For more information on views and Oracle, visit [this documentation website](https://docs.oracle.com/cd/B19306_01/server.102/b14220/objects.htm#i440066).
