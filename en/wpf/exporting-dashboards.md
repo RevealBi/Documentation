@@ -126,6 +126,9 @@ private void ExportButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
+> [!NOTE]
+> The source code to these sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/Exporting-Image)
+
 ## Export To JSON
 Exports a dashboard into a **JSON** string.
 
