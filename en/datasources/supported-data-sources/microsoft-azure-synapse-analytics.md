@@ -73,9 +73,9 @@ data sources storing millions of records.
 Currently, only a limited number of **functions** are available for
 *Calculated Fields* using data from Azure Synapse Analytics:
 
-- [Logic](~/en/data-visualizations/fields/calculated-fields/logic-calculated-fields.md) - false; true; not.
-- [Math](~/en/data-visualizations/fields/calculated-fields/math-calculated-fields.md) - abs; log; log10; sign; sqrt.
-- [Strings](~/en/data-visualizations/fields/calculated-fields/string-calculated-fields.md) - find; len; trim; lower; mid; upper.
+- [Logic](~/en/data-visualizations/fields/calculated-fields/calculated-fields/logic.md) - false; true; not.
+- [Math](~/en/data-visualizations/fields/calculated-fields/calculated-fields/../../../../../../../ml-integration/azure-machine-learning-models.md.md) - abs; log; log10; sign; sqrt.
+- [Strings](~/en/data-visualizations/fields/calculated-fields/calculated-fields/string.md) - find; len; trim; lower; mid; upper.
 
 #### Limitations in Data Blending
 

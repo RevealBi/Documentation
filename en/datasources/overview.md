@@ -26,7 +26,7 @@ After selecting a data source provider, you will be prompted to **configure** it
 
    - [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md)
 
-   - [Box](~/en/datasources/supported-data-sourcesbox.md)
+   - [Box](~/en/datasources/supported-data-sources/box.md)
 
    - [Dropbox](~/en/datasources/supported-data-sources/dropbox.md)
 
@@ -77,7 +77,8 @@ After selecting a data source provider, you will be prompted to **configure** it
    - [Web Resource](~/en/datasources/supported-data-sources/web-resource.md)
 
    - [JSON files](~/en/datasources/working-files/working-with-json-files.md)
-   - [Spreadsheets]((~/en/datasources/working-files/working-with-spreadsheets.md))
+   - 
+   - [Spreadsheets](~/en/datasources/working-files/working-with-spreadsheets.md)
 
 >[!NOTE]
 > **Databases** (*) are not supported in the Web version of Reveal.
