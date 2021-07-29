@@ -20,7 +20,7 @@ With workspaces in Reveal, you can:
 
 You can access your workspaces on to the left side of the screen, below the *Reveal* icon:
 
-<img src="images/accessing-workspaces-menu.png" alt="Accessing workspaces popover menu" class="responsive-img"/>
+<img src="../dashboards/images/create-new-dashboard.png" alt="Accessing workspaces popover menu" class="responsive-img"/>
 
 You will find a list of your workspaces under the *My Stuff* and *Organization* panel. There you can also create new workspaces or join existing ones.
 
