@@ -13,7 +13,7 @@ The dashboard creation experience in Reveal includes:
 <a name='access-dashboard-creation-menu'></a>
 ### Access the Dashboard Creation Menu
 
-You can create a dashboard by selecting the **+ New** button in the initial screen.
+You can create a dashboard by selecting the **+ Dashboard** button in the initial screen.
 
 <img src="images/create-new-dashboard.png" alt="Creating new dashboard" class="responsive-img"/>
 
