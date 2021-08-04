@@ -29,9 +29,9 @@
 - name: Working with DataSources
   header: true
 - name: Adding Data Sources (TBD)
-  href: index.md
+  href: adding-data-sources.md
 - name: Replacing Data Sources (TBD)
-  href: index.md
+  href: replacing-data-sources.md
 - name: Authentication
   href: authentication.md
 - name: Working with Visualizations
