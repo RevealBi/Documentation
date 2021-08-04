@@ -30,14 +30,14 @@
   header: true
 - name: Adding Data Sources (TBD)
   href: index.md
-- name: Hiding Data Sources (TBD)
-  href: index.md
 - name: Replacing Data Sources (TBD)
   href: index.md
 - name: Authentication
   href: authentication.md
 - name: Working with Visualizations
   header: true
+- name: Maximizing Visualizations (TBD)
+  href: index.md
 - name: Responding to Click Events
   href: click-events.md
 - name: Tooltips
