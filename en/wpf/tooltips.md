@@ -19,8 +19,8 @@ private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
 ```
 
 The `TooltipShowingEventArgs` class has the following properties:
-- **Cell** - get the data point that is associated with the tooltip
-- **Row** - gets a collectin of cell data that is provided in the tooltip
+- **Cell** - gets the data point that is associated with the tooltip
+- **Row** - gets a collection of cell data that is provided in the tooltip
 - **Visualization** - gets the Visualization displaying the tooltip
 
 > [!NOTE]
@@ -28,7 +28,7 @@ The `TooltipShowingEventArgs` class has the following properties:
 
 ## Reading Tooltip Data
 
-By using the properties exposed by the `TooltipShowingEventArgs` class, such as the `TooltipShowingEventArgs.Cell` and `TooltipShowingEventArgs.Row` propertes, you can read data that is used for display in the tooltip.
+By using the properties exposed by the `TooltipShowingEventArgs` class, such as the `TooltipShowingEventArgs.Cell` and `TooltipShowingEventArgs.Row` properties, you can read data that is used for display in the tooltip.
 
 It's important to understand that the `TooltipShowingEventArgs.Row` property provides a collection of `RVDataCell` objects that represent each data point in the tooltip.
 

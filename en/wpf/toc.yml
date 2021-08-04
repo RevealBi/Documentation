@@ -38,7 +38,7 @@
   href: authentication.md
 - name: Working with Visualizations
   header: true
-- name: Responding to Click Events (TBD)
+- name: Responding to Click Events
   href: click-events.md
 - name: Tooltips
   href: tooltips.md
