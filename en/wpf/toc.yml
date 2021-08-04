@@ -34,7 +34,7 @@
   href: index.md
 - name: Replacing Data Sources (TBD)
   href: index.md
-- name: Authentication (TBD)
+- name: Authentication
   href: authentication.md
 - name: Working with Visualizations
   header: true
