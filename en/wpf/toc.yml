@@ -18,9 +18,9 @@
   href: saving-dashboards.md
 - name: Linking
   href: linking-dashboards.md
-- name: Formatting Data
+- name: Formatting Data (TBD)
   href: formatting-data.md
-- name: Localizing
+- name: Localizing (TBD)
   href: localizing-dashboards.md
 - name: Exporting
   href: exporting-dashboards.md
@@ -28,20 +28,20 @@
   href: theming-dashboards.md
 - name: Working with DataSources
   header: true
-- name: Adding Data Sources
+- name: Adding Data Sources (TBD)
   href: index.md
-- name: Hiding Data Sources
+- name: Hiding Data Sources (TBD)
   href: index.md
-- name: Replacing Data Sources
+- name: Replacing Data Sources (TBD)
   href: index.md
-- name: Authentication
-  href: index.md
+- name: Authentication (TBD)
+  href: authentication.md
 - name: Working with Visualizations
   header: true
-- name: Responding to Click Events
-  href: index.md
-- name: Tooltips
-  href: index.md
+- name: Responding to Click Events (TBD)
+  href: click-events.md
+- name: Tooltips (TBD)
+  href: tooltips.md
 - name: Release Information
   header: true
 - name: API Reference
