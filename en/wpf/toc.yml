@@ -40,7 +40,7 @@
   header: true
 - name: Responding to Click Events (TBD)
   href: click-events.md
-- name: Tooltips (TBD)
+- name: Tooltips
   href: tooltips.md
 - name: Release Information
   header: true
