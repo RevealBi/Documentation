@@ -1,4 +1,4 @@
-### Java SDK Redistributables (OSS, Third-Party Software and Reveal Binaries)
+## Java SDK Redistributables (OSS, Third-Party Software and Reveal Binaries)
 
 |              |                                                                                                               |                                                                                                            |
 | ------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |

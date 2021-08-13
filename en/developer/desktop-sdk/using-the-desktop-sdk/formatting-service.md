@@ -1,8 +1,8 @@
-## Working with the Formatting Service
+# Working with the Formatting Service
 
 The Formatting service allows you to format your dashboard data to your preferences, ignoring a field formatting.
 
-### Supported Elements for Formatting
+## Supported Elements for Formatting
 
 Dashboard elements you can format:
 
@@ -10,13 +10,13 @@ Dashboard elements you can format:
   - Date, Time or DateTime data
   - Aggregated Date, Time or DateTime data
 
-### Using the Formatting Service
+## Using the Formatting Service
 
 Below you will find three examples of how to format: [numeric data](#numeric-data), [aggregated DateTime data](#aggregated-date-time-data) and [(non-aggregated) DateTime data](#date-time-data). The dashboard used for the examples is the **Marketing sample** dashboard.
 
 <a name='numeric-data'></a>
 
-#### Formatting numeric data - example
+### Formatting numeric data - example
 
 Below you see the initial state of the **New Seats by Campaign ID** visualization in the **Marketing sample** dashboard:
 
@@ -88,7 +88,7 @@ changes](images/formatting-service-marketing-sample-result.png)
 
 <a name='aggregated-date-time-data'></a>
 
-#### Formatting aggregated DateTime data - example
+### Formatting aggregated DateTime data - example
 
 This is the initial state of one of the Marketing’s sample
 visualizations – **Actual Spend vs Budget**:
@@ -119,7 +119,7 @@ formatting](images/formatting-aggregated-datetime-result.png)
 
 <a name='date-time-data'></a>
 
-#### Formatting (non-aggregated) DateTime data - example
+### Formatting (non-aggregated) DateTime data - example
 
 Below you will see an example of how to format non-aggregated date data. First, change the **Actual Spend vs Budget** visualization to **Grid** in order to exclude any aggregated data:
 

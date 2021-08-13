@@ -1,4 +1,4 @@
-## Oracle
+# Oracle
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Oracle addresses. If your Oracle address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this Oracle address. This limitation does not apply to *Reveal Embedded*.
 
@@ -12,7 +12,7 @@ database's settings:
     to the database instance.
 
 <a name='using-sid'></a>
-### Connecting to Oracle Using SID
+## Connecting to Oracle Using SID
 
 To configure Oracle using SID, you will need to enter the following
 information:
@@ -54,7 +54,7 @@ information:
     Connection**.
 
 <a name='using-service'></a>
-### Connecting to Oracle Using Service
+## Connecting to Oracle Using Service
 
 To configure Oracle using Service, you will need to enter the following
 information:
@@ -94,7 +94,7 @@ information:
     Once ready, select **Create and Use**.
 
 <a name='how-to-find-server'></a>
-### How to find your Server Information
+## How to find your Server Information
 
 You can find your server by following the steps below. Please note that
 the commands should be executed on the server.
@@ -114,7 +114,7 @@ that the commands should be executed on the server.
 | 2. Type in **ipconfig**              | 2. Type in **$ /bin/ifconfig**    | 2. Select your connection.                                    |
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
-### Setting Up Your Data
+## Setting Up Your Data
 
 With Reveal, you can retrieve Oracle data from entire tables. Still, you
 can select a particular

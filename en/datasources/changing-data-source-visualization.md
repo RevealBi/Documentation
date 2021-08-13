@@ -1,4 +1,4 @@
-## Changing the Data Source for a Visualization
+# Changing the Data Source for a Visualization
 
 After visualizations are created, it is still possible to change their
 linked data sources. To do this:

@@ -1,4 +1,4 @@
-## Category Charts
+# Category Charts
 
 These charts are used to associate categories with quantitative
 information.
@@ -16,7 +16,7 @@ For instance, in a Column Chart, all numeric columns are added to the
 chart. The automatic selection of columns done by Reveal can be modified
 in the Chart Settings configuration.
 
-### Chart Trendlines
+## Chart Trendlines
 
 Chart settings enable the display of trend lines, which are lines that
 are painted across a chart, based on an algorithm. Trendlines are a very
@@ -28,7 +28,7 @@ Average, Cumulative Average, Weighted Average.
 
 <img src="images/chart-trendlines.png" alt="Chart trendline options" class="responsive-img"/>
 
-### Percentage Distribution
+## Percentage Distribution
 
 You can also configure this feature for the *stacked series charts*. It
 will override the 0-100 default scale and allow you to visualize the
@@ -36,7 +36,7 @@ percentage distribution of the values in the chart.
 
 <img src="images/pivot-editor-view-stacked-percentage-distribution.png" alt="Pivot editor view stacked percentage distribution setting" class="responsive-img"/>
 
-### Start Position and Slice Labels
+## Start Position and Slice Labels
 
 For *Pie* and *Doughnut* charts, you can configure the start position
 for the chart to rotate the slices and change the order in which your
@@ -50,7 +50,7 @@ both at the same time.
 
 <img src="images/pivot-editor-view-slice-labels.png" alt="Pivot editor slice labels setting" class="responsive-img"/>
 
-### Enabling Pie and Doughnut Charts Legends to Show Elements with Value 0
+## Enabling Pie and Doughnut Charts Legends to Show Elements with Value 0
 
 The pie and doughnut visualization legends give you the option to see
 all the data in the field selected for *Label*, including elements with

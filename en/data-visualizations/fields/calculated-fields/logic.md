@@ -1,4 +1,4 @@
-## Logic Calculated Fields
+# Logic Calculated Fields
 
 
 Logic calculated fields can be used to compare two or more values in
@@ -77,7 +77,7 @@ The functions included in the logic category are:
 
 
 <a name='calc-fields-if'></a>
-### If
+## If
 
 With the if function, you can find results that meet certain criteria
 defined in a logical test. There are three arguments for you to
@@ -92,7 +92,7 @@ configure:
   - A `value if false`: a value the function will output if the logical
     test is false.
 
-#### Basic Samples
+### Basic Samples
 
 Let's take a look at the example in the table above:
 
@@ -129,7 +129,7 @@ Where:
 | ------------- | ---------------------------- | ------------- | -------------- |
 | **if** (…​)   | `[Department]="Development"` | `1`           | `0`            |
 
-#### Sample with Nested if conditions
+### Sample with Nested if conditions
 
 You can use nested if conditions by preceding them with a logical
 operator (`and`, `or`).
@@ -155,7 +155,7 @@ Because the logical operator is `and`, both conditions need to be true
 for the `maxif` aggregation to be carried out.
 
 <a name='calc-fields-and-or'></a>
-### And and Or
+## And and Or
 
 The `and` and `or` functions allow you to build nested if conditions by
 declaring two logical tests that must be applied. Both and and or have
@@ -166,7 +166,7 @@ the same syntax:
 | **and** (…​)  | `logical1`     | `logical2`     | **If both conditions are met, returns 1**. **If only one or none** of the conditions are met, **returns 0**.              |
 | **or** (…​)   | `logical1`     | `logical2`     | If **either both or only one of the conditions is met, returns 1**. **If none** of the conditions are met, **returns 0**. |
 
-#### Samples
+### Samples
 
 Let's take a look at the following and and or samples:
 
@@ -248,7 +248,7 @@ defined.
 
   - Logical Test 4: `ISEMPTY([ResignedDate])`
 
-#### Simplifying Complex Calculated Fields
+### Simplifying Complex Calculated Fields
 
 While formulas like the one in the sample above can be useful if you
 need to get results based on multiple if conditions, their syntax can be
@@ -284,14 +284,14 @@ If we combine these new statements in a new calculated field:
 Employees],[Current Employees])`
 
 <a name='calc-fields-not'></a>
-### Not
+## Not
 
 Using the not function, you can verify whether a logical test is true or
 not. By default, you will see the following structure when you tap not:
 
 `not(logical)`
 
-#### Samples
+### Samples
 
 | Function Name | Logical Test     |
 | ------------- | ---------------- |
@@ -303,7 +303,7 @@ Where
 | ------------ | ---------- | ---------- | ----------------- |
 | `[OfficeId]` | `>`        | `=`        | `3`               |
 
-#### Combining not with and/or
+### Combining not with and/or
 
 You can also use not to get the opposite result of `and`/`or` calculated
 fields.
@@ -327,7 +327,7 @@ All rows that previously returned "0" will now do "1", and all "1" will
 be "0".
 
 <a name='true-false'></a>
-### True and False
+## True and False
 
 The `true` and false functions are used without arguments, which means
 that there is no logical test applied; that is, **there is no expression

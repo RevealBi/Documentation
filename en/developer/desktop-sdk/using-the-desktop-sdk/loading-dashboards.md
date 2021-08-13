@@ -15,7 +15,7 @@ You can create **.rdash** dashboard files the following ways:
 
 For further details, please refer to [Getting Dashboards for the SDK](~/en/developer/developer/general/get-dashboards.md).
 
-## Load from File Path
+# Load from File Path
 It is very common to ship dashboard files with your application. These files are usually copied to the clients disk drive in a known directory so that the files can be loaded from disk during the execution of the application. In order to load these dashboards using a file path, you must know the file path to the **.rdash** file. 
 
 In this example, we have created a directory in our Visual Studio solution called **Dashboards** which will contain all the .rdash files for our application.
@@ -43,7 +43,7 @@ _revealView.Dashboard = await RVDashboard.LoadDashboardAsync(filePath);
 > [!NOTE]
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FilePath).
 
-## Load from File Stream
+# Load from File Stream
 Loading Reveal dashboards from a file stream is very similar to loading dashboards from a file path. In this case, once you have the file path of the dashboard file, you load it into a `FileStream` before creating the `RVDashboard` object instance.
 
 In this example, we are using the `File.OpenRead` method to load the Sales.rdash file into a file stream. We then create a new `RVDashboard` object by passing the file stream as a constructor argument and assign the newly created `RVDashboard` instance to the `RevealView.Dashboard` property.
@@ -68,7 +68,7 @@ using (var stream = File.OpenRead(filePath))
 > [!NOTE]
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FileStream).
 
-## Load from Resource
+# Load from Resource
 Another option for distributing files in an application is to embed them into your application as a resource. This will not place any files on the client's disk drive, but rather embed the files directly into your application's assembly.
 
 To embed a Reveal dashboard **.rdash** file as a resource in your application, open the Properties for the dashboard file in Visual Studio, and set the **Build Action** of the .rdash file to **EmbeddedResource**.
@@ -101,7 +101,7 @@ using (resource)
 > [!NOTE]
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FromResource).
 
-## Load From JSON
+# Load From JSON
 For advanced users, or users that wish to serialize Reveal dashboards into .json files instead of .rdash files, you can load these JSON based files using the `RVDashboard.LoadFromJsonAsync` method.
 
 The first step is to serialize a Reveal dashboard into a json string. Once you have the string you can then save the JSON to disk or anothe rdata store.

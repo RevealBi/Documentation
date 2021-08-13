@@ -1,4 +1,4 @@
-## BigQuery Machine Learning in Reveal
+# BigQuery Machine Learning in Reveal
 
 You can use your trained machine learning models data from BigQuery in Reveal. Get better insights than ever! Just choose BigQuery as your data source for building a visualization, and use the integration to connect to a trained machine learning model.
 
@@ -7,11 +7,11 @@ For example, you may have a machine learning (ML) model that is trained to predi
 <img src="images/bigquery-machine-learning-model-visualization-example.png" alt="Credit risk by type of Housing example" class="responsive-img"/>
 
 
-### Prerequisites
+## Prerequisites
 
 To use the BigQuery Machine Learning integration in Reveal, you need to **connect to a BigQuery data source** account, where you have a **trained machine learning model**.
 
-### Accessing BigQuery Machine Learning Integration
+## Accessing BigQuery Machine Learning Integration
 
 To access the BigQuery Machine Learning Integration, follow the steps below:
 
@@ -25,7 +25,7 @@ To access the BigQuery Machine Learning Integration, follow the steps below:
     <img src="images/brain-icon-bigquery-ml-model.png" alt="Brain icon location in the Visualization editor" class="responsive-img"/>
 
 
-### Connecting to Your Machine Learning model
+## Connecting to Your Machine Learning model
 
 To connect to your BigQuery machine learning model you need to do the following:
 

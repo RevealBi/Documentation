@@ -1,4 +1,4 @@
-## REST API
+# REST API
 
 The REST API data source in Reveal enables you to send GET, POST, and PUT
 HTTP requests to a unique URL in order to manipulate data via a web
@@ -8,7 +8,7 @@ The REST API data source also provides the possibility to change the
 received data by simply changing parameters' values in the URL in the
 midst of creating your visualization without losing your progress.
 
-### What is a REST API?
+## What is a REST API?
 
 An **API** (Application Program Interface) allows two software programs
 to communicate with each other. All web services are APIs accessed
@@ -21,7 +21,7 @@ systems on the web. In the REST architecture, clients send requests to
 retrieve or modify resources, and servers send responses to these
 requests.
 
-### Connecting to a REST API
+## Connecting to a REST API
 
 To configure a REST API data source, you will need to enter the
 following information:
@@ -45,7 +45,7 @@ following information:
     enter the credentials for your REST API or select existing ones if
     applicable. You can also pick the *No Account* option.
 
-### Working with URL Parameters
+## Working with URL Parameters
 
 Parameters are options you can pass in your URL to influence the
 response from the web service. You can provide path and query parameters
@@ -97,7 +97,7 @@ To use parameters effectively follow the procedure below:
 > **Losing Your Data Warning**
 Sometimes when you change the values of your parameters, there might be a chance to lose the visualization you already created in the Editor. In this case, а warning message will appear when you *click/tap* the *Load Data* button. If you choose to continue, you will have the new dataset loaded in the editor and you will have to start building your visualization from scratch. 
 
-### Choosing a Method
+## Choosing a Method
 
 The *Method* in your REST API data source configuration represents a
 request used to interact with resources in a REST system. The request

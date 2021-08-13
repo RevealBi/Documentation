@@ -1,4 +1,4 @@
-## Using Image Tiles with Scatter Maps
+# Using Image Tiles with Scatter Maps
 
 The *image tiles* feature allows you to switch from the clear grey background of Reveal to a different map layer upon zooming. The additional detail coming from the map service provider will provide more context to your analysis.
 
@@ -10,7 +10,7 @@ You can use the *slider* provided in the *Visualization Editor Settings* to spec
 
 
 <a name='adding-image-tiles'></a>
-### Adding Image Tiles to Your Maps
+## Adding Image Tiles to Your Maps
 
 To use image tiles:  
 
@@ -54,7 +54,7 @@ To use image tiles:
 6. For *Personal settings*, just close the dialog and your changes will be automatically updated. For *Organization/Workspace settings*, click/tap *Update* and close the dialog.
 
 <a name='resolution-process'></a>
-### How does Reveal determine which file provider to use?
+## How does Reveal determine which file provider to use?
 
 When you open a scatter map where *Use Image Tiles* is enabled, Reveal resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles) above). 
 
@@ -62,14 +62,14 @@ What if a tile provider is **specified on more than one level**? You will notice
 
 The most important factor in determining which level settings take precedence over the others is who owns the dashboard. A dashboard can be owned by a user, the Organization, or a workspace. 
 
-#### When the dashboard is owned by a user or by the Organization
+### When the dashboard is owned by a user or by the Organization
 
 When the dashboard is owned by a user (it's created in the _My Stuff_ space), or by the Organization (it's created in the Organization dashboards' space), Reveal checks for a tile provider, as follows: 
 
 1. In the *Organization* workspace settings, if the user is part of an Organization.
 2. In *Personal* settings of the user opening the dashboard. 
 
-#### When the dashboard is owned by a Workspace 
+### When the dashboard is owned by a Workspace 
 
 When the dashboard is owned by a workspace, i.e. it's created in a workspace dashboards' space, Reveal checks for a tile provider: 
 

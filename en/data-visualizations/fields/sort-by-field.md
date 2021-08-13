@@ -1,11 +1,11 @@
-## Sort by Field
+# Sort by Field
 
 Reveal allows you to change how the data in a visualization is displayed by sorting the data in ascending or descending order. In addition, it is
 also possible to further control how a visualization looks with sorting by selected fields in your original data source. 
 
 <img src="images/sort-visualization-by-field.png" alt="Sort Visualization by setting dialog" class="responsive-img"/>
 
-### Enabling Sort by Field 
+## Enabling Sort by Field 
 
 The *Sort by field* option is part of the fields settings, but is hidden by default. To enable it: 
 
@@ -21,7 +21,7 @@ that showcase this functionality:
   - [Ordering String Dates in Chronological Order](#string-date-chr-order)
 
 <a name='by-priority'></a>
-### Ordering Support Cases by Priority
+## Ordering Support Cases by Priority
 
 There are scenarios where you would like to order a field by using business logic instead of ordering it alphabetically. 
 For example, the following is a visualization, which displays new support cases during the week, in ascending order.
@@ -44,7 +44,7 @@ priority first, ordered A-Z, *Normal* priority cases after those, and, lastly, *
 <img src="images/ForecastSortByFieldFinal_All.png" alt="Welcome image for Reveal" class="responsive-img"/>
 
 <a name='string-date-chr-order'></a>
-### Ordering String Dates in Chronological Order
+## Ordering String Dates in Chronological Order
 
 Let's take a look at the following visualization, where we have plotted
 the cash and accounts receivable influxes for a company in a [stacked column chart](~/en/visualization-tutorials/stacked-charts.html#create-stacked-chart).

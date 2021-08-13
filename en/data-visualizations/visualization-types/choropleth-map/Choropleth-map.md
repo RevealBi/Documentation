@@ -1,4 +1,4 @@
-## Choropleth Maps
+# Choropleth Maps
 
 Choropleth maps are widespread thematic maps meant to depict statistical data in divided geographical areas or regions. Each area on the map is filled with a uniform color in relation to a data variable.
 Further in this topic, areas on the map are also called "regions" or "shapes".
@@ -18,7 +18,7 @@ Find how to set the color of your map in the [Choropleth Map Settings](settings-
 
 The choropleth map in Reveal also allows you to [drill down](#drill-down) through your hierarchical data.
 
-### Using the Choropleth Map Visualization
+## Using the Choropleth Map Visualization
 
 Typically, choropleth maps are used to present in a digestible manner public reporting, statistical analysis, and any other information, for which boundaries are important. The choropleths are great for displaying densities (ratios) of quantities, making comparisons of regions, examining trends, discovering patterns and anomalies. For example, you can use the choropleth to find regions on the US map with higher obesity rates, or show how homicide percentage vary across Europe.
 
@@ -34,7 +34,7 @@ Below, you can see a map, showing traffic deaths per 100 000 population in Easte
 Your choice of data for the choropleth map visualization highly depends on the insight you want to provide. If you aim to present the spread of a contagious disease through a region, then the use of raw counts may be more appropriate.
 
 <a name='location-data'></a>
-### Data Requirements for Location Data
+## Data Requirements for Location Data
 
 Reveal has a great variety of predefined maps available for your choropleth visualizations. The minimum information required to provide in your data set is:
 
@@ -47,7 +47,7 @@ To have your location column recognized by Reveal, provide the locations' full n
 
 Find more specific information about the Location format and requirements in [How to prepare Your Data for a Choropleth Map](location-data-requirements.md).
 
-### Creating a Choropleth Map
+## Creating a Choropleth Map
 
 In the example below, we will use a choropleth map to analyse the results of the last presidential elections (2016) in the United States.
 
@@ -75,7 +75,7 @@ To follow this walkthrough, download the [2016 November General Election](https:
 As a result you can see the USA map, divided into states. The larger the percent of voters in a state, the more intensive the blue color of the state is.
 
 <a name='map-color'></a>
-### Using the Map Color to Create a Multi-Color Choropleth Map
+## Using the Map Color to Create a Multi-Color Choropleth Map
 
 You can alternatively set the _Map Color_ property to control the color of each area on the map. This is useful to reflect things like which candidate or party had the most/least votes in an area.
 
@@ -88,7 +88,7 @@ To change the coloring condition, go to:
 _Settings_ > _Color based on_ > _Lowest Value_.
 
 <a name='drill-down'></a>
-### Drilling Up and Down Hierarchy Levels
+## Drilling Up and Down Hierarchy Levels
 
 You can drill up and down your choropleth map areas to dynamically uncover hierarchy levels of your location data.
 

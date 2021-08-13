@@ -1,4 +1,4 @@
-## Welcome to the Reveal help!
+# Welcome to the Reveal help!
 
 Reveal is a modern BI solution that was built for embedded analytics. You can easily integrate data analytics into your application, taking advantage of rich APIs that give you control over Reveal data visualizations, while also enhancing the user's experience with your app.
 
@@ -6,7 +6,7 @@ Built by user experience experts and designed for the business user, Reveal make
 
 Interested on embedded analytics? [Download Reveal SDK](https://www.revealbi.io/download-sdk). To find out how to start using it, refer to the [Reveal SDK help](developer/index.md).
 
-### Reveal Application Highlights
+## Reveal Application Highlights
 
 <h4>Securely Connect to your Data and Build Powerful Data Visualizations</h4>
 
@@ -48,11 +48,11 @@ Use your trained models' data from BigQuery or Azure Machine Learning Studio in 
 
 <img src="datasources/ml-integration/images/ml-models-list-bigquery.png" alt="Connecting to a trained machine learning model in Reveal" class="responsive-img"/>
 
-### What's new?
+## What's new?
 
 * [Time Series](~/en/data-visualizations/visualization-types/time-series-charts.md) chart – Gain more insight and detect trends at a glance with the new Time Series chart. Similar to a conventional line chart, the Time Series chart allows for an easy observation of development over time.
 
-### Where Can I Get Reveal?
+## Where Can I Get Reveal?
 
 Reveal offers you a seamless, almost identical experience no matter what device you are on.
 You can use a web browser or get native applications on iOS, Android, and Desktop, making it easy for you to work across different devices and platforms.

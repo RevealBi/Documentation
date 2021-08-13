@@ -1,4 +1,4 @@
-## Azure Machine Learning in Reveal
+# Azure Machine Learning in Reveal
 
 You can use your trained models' data from Azure Machine Learning Studio
 in Reveal. Get better insights than ever! Just choose your data source,
@@ -13,14 +13,14 @@ relates to their credit risk:
 
 <img src="images/ml-credit-risk-by-housing-visualization-example.png" alt="Credit risk by Housing example" class="responsive-img"/>
 
-### Prerequisites
+## Prerequisites
 
 To use the Azure Machine Learning integration in Reveal, you first need
 to have an account in **MS Azure Machine Learning Studio** as well as a
 **trained machine learning model** to connect to when building your
 visualization.
 
-### Accessing Azure Machine Learning Integration
+## Accessing Azure Machine Learning Integration
 
 To access the Azure Machine Learning Integration, follow the steps
 below:
@@ -36,7 +36,7 @@ below:
     <img src="images/brain-icon-azure-ml-model.png" alt="Brain icon location in the Visualization editor" class="responsive-img"/>
 
 <a href="ml-integration/ml-model-connect"></a>
-### Connecting to Your Azure Machine Learning Model
+## Connecting to Your Azure Machine Learning Model
 
 To connect to your Machine Learning Model in Azure, you need to do the
 following:

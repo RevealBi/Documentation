@@ -1,11 +1,11 @@
-## Reusing Visualizations
+# Reusing Visualizations
 
 Speed up the creation of dashboards by reusing visualizations; you just
 need to **copy & paste** any visualization you want.
 
 <img src="images/reusing-visualization.png" alt="Overflow menu of a visualization in a dashboard displayed" class="responsive-img"/>
 
-### Duplicating Visualizations
+## Duplicating Visualizations
 
 Create an exact copy of the original visualization within one dashboard.
 Sometimes, you need to duplicate an already customized visualization and
@@ -14,13 +14,13 @@ Hires Over Time for all offices and a specific one separately.
 
 <img src="images/duplicate-visualization.png" alt="Duplicated visualizations" class="responsive-img"/>
 
-### Copying and Pasting a Visualization
+## Copying and Pasting a Visualization
 
 You can copy & paste any visualization within a dashboard or even across
 dashboards. Note that you can create new dashboards by mashing up
 visualizations from other dashboards.
 
-### What to Consider
+## What to Consider
 
 Your new visualization will have **the same title** as the original
 visualization.

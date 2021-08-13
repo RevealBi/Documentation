@@ -1,4 +1,4 @@
-## Microsoft Analysis Services
+# Microsoft Analysis Services
 
 Microsoft SQL Analysis Services (SSAS) is an OLAP (online analytical
 processing of information from multiple database systems at the same
@@ -6,7 +6,7 @@ time) and data mining tool in Microsoft SQL Server.
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Microsoft Analysis Services addresses. If your Analysis Services address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to the Analysis Services address. This limitation does not apply to *Reveal Embedded*.
 
-### Connecting to Microsoft Analysis Services
+## Connecting to Microsoft Analysis Services
 
 There are two modes you can use when configuring a Microsoft Analysis
 Services data source depending on your server's settings -
@@ -15,7 +15,7 @@ Services data source depending on your server's settings -
 For more information on both Native and HTTP mode, visit the [Microsoft Instance Management help](https://docs.microsoft.com/en-us/sql/analysis-services/instances/connect-to-analysis-services?view=sql-server-2017).
 
 <a name='native'></a>
-#### Using Native
+### Using Native
 
 To configure the Microsoft Analysis Services data source for *Native*
 mode, you will need to enter the following information:
@@ -54,7 +54,7 @@ mode, you will need to enter the following information:
     existing ones if applicable.
 
 <a name='http'></a>
-#### Using HTTP
+### Using HTTP
 
 To configure the Microsoft Analysis Services data source for *HTTP*
 mode, you will need to provide the following information:
@@ -68,7 +68,7 @@ mode, you will need to provide the following information:
 
 3.  **Credentials**: credentials of your user account for the Analysis Services server.
 
-### Configuring Databases
+## Configuring Databases
 
 After your credentials for the Analysis Services server are verified,
 Reveal will load and show the databases on the server:
@@ -82,7 +82,7 @@ Select a database and click *Continue* to set it up.
 Choose a database *cube* and click/tap _Select Data_ to continue to the *Visualizations Editor*.
 
 <a name='visualization-editor'></a>
-### Working in the Visualization Editor
+## Working in the Visualization Editor
 
 When you create a dashboard using a cube data source like Microsoft Analysis Services, you will see fields organized differently in the  *Visualizations Editor* (see screenshot below). Cube data sources consist of hierarchies and aggregations, which have been created by the cubes' designers in advance.
 
@@ -112,7 +112,7 @@ For more information on dimensions and measures, please visit this
 [Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
 
 <a name='sort-by-caption-setting'></a>
-### Sort by Caption Setting
+## Sort by Caption Setting
 
 There is also a Sort by Caption option which defines whether the filter
 will be applied to the dimension's labels or to the corresponding

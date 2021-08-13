@@ -1,4 +1,4 @@
-## Combo Charts
+# Combo Charts
 
 This type of chart combines two or more chart types in one single chart.
 
@@ -19,7 +19,7 @@ default you start with a column chart and a line chart combined. As
 shown in the first image, you need to configure the label and values for
 both charts.
 
-### Settings for Combo Charts
+## Settings for Combo Charts
 
 <img src="images/combo-charts-settings.png" alt="Combo Charts configuration settings in Reveal" class="responsive-img"/>
 

@@ -1,4 +1,4 @@
-## Sharing Dashboards
+# Sharing Dashboards
 
 
 Shared dashboards are ideal for cross-team collaboration. There are so
@@ -17,7 +17,7 @@ Below you will find the specifics of access permissions in the three available s
 > **Sharing Folders**. Rules for dashboards sharing in this article also apply to sharing folders.
 
 <a name='sharing-dashboards-users'></a>
-### Sharing Your Own Dashboards with Other Users
+## Sharing Your Own Dashboards with Other Users
 
 To share a dashboard created by you with individual users you need to:
 
@@ -57,7 +57,7 @@ member's name.
 <img src="images/remove-sharing.png" alt="Remove sharing button" class="responsive-img"/>
 
 <a name='sharing-workspace-dashboard'></a>
-### Sharing a Workspace's Dashboard with Other Users
+## Sharing a Workspace's Dashboard with Other Users
 
 Any member of a workspace can share the workspace's dashboards with other users. To do this, go to the *Workspaces* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
 
@@ -119,7 +119,7 @@ Here you can see the access permissions options every workspace member can give 
 
 
 <a name='sharing-dashboard-with-workspace'></a>
-### Sharing a Dashboard with a Whole Workspace
+## Sharing a Dashboard with a Whole Workspace
 
 You can share a dashboard you created or a workspace's dashboard with a whole
 workspace instead of individually with every workspace member. To do this, choose
@@ -183,6 +183,6 @@ every workspace member can get depending on their role in the workspace. For exa
 >[!NOTE]
 >**Giving Exclusive Access to a Workspace Member**. If you want to give a member of a workspace higher access level to the dashboard than its membership role allows, add their email individually to the list of invitations and set the access permissions you want them to have.
 
-### See Also
+## See Also
 
 When you have used a data source file located on a cloud service to build a dashboard, you will need to grant access to this file to successfully share your dashboard. To learn more, read [Sharing Dashboards with Cloud Files as a Data Source](sharing-dashboards-datasource-files-cloud-provider.md).

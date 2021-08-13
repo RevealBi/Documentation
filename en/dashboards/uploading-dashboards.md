@@ -1,4 +1,4 @@
-## Uploading Dashboards
+# Uploading Dashboards
 
 In Reveal, you can also work with dashboards saved on your computer/device by directly uploading them. To do that, perform the following steps:
 

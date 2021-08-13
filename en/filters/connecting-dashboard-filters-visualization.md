@@ -1,4 +1,4 @@
-## Connecting Dashboard Filters to a Visualization
+# Connecting Dashboard Filters to a Visualization
 
 Binding the data in a visualization to a dashboard filter can be done in
 two ways:
@@ -22,7 +22,7 @@ Visualizations Editor or the Dashboard Filter menu.
 <img src="images/disconnecting-dashboard-filter.png" alt="disconnecting dashboard filters from a visualization" class="responsive-img"/>
 
 <a name='field-binding'></a>
-### Field Binding
+## Field Binding
 
 Field binding allows you to configure a join relationship between the
 dashboard filter dataset schema and the visualization's schema. To do
@@ -54,7 +54,7 @@ In the dialog above, you will need to configure:
   - **Filter**: the specific dashboard filter from the dashboard filters
     list that will be joined.
 
-### Parameters Binding
+## Parameters Binding
 
 For data sources with parameters ([REST](~/en/datasources/supported-data-sources/rest-api.md), [OData](~/en/datasources/supported-data-sources/odata-feed.md)
 and Stored Procedures in [MS SQL Server](~/en/datasources/supported-data-sources/microsoft-sql-server.md)) you

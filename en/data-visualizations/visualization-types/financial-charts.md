@@ -1,4 +1,4 @@
-## Financial Charts
+# Financial Charts
 
 Financial charts are used to describe stock price movements during a
 full day (open and close values, and the highest and lowest values).

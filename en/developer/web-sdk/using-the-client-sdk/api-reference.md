@@ -2,7 +2,7 @@
 Here you will find technical information about Reveal SDK, specifically about the Web Client JavaScript API.
 For the complete reference, please follow the <a href="http://rvsdk-docs-dev.infragistics.local:8081/api/Overview.html" target="_blank" rel="noopener\">link</a>
 
-### Most commonly used classes and interfaces
+## Most commonly used classes and interfaces
 
 **Main SDK concepts and features:**  
 <a href="http://rvsdk-docs-dev.infragistics.local:8081/api/web-client/RevealView.html" target="_blank" rel="noopener\">RevealView</a> 

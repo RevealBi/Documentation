@@ -1,6 +1,6 @@
-## Providing Credentials to Data Sources
+# Providing Credentials to Data Sources
 
-### Overview
+## Overview
 
 The Server SDK allows you to pass in a set of credentials to be used when accessing the data source.
 
@@ -8,7 +8,7 @@ The first step is to implement __IRVAuthenticationProvider__ and then you need t
 For further details, refer to [Initializing Reveal](https://help.revealbi.io/en/developer/java-sdk/setup-configuration.html#step-3---initializing-reveal) in Java Setup and Configuration.
 To look to an actual implementation, please refer to the __RevealJerseyConfig__ class in the Spring sample or __WebAppListener__ in Tomcat-based samples in [GitHub](https://github.com/RevealBi/sdk-samples-java).
 
-### Code
+## Code
 
 If you use __UpmediaAuthenticationProvider__ (upmedia, upmedia-backend-tomcat and upmedia-backend-spring samples) as a reference, there you can find a single method implemented that receives the _userId_ for the current user and the data source for which credentials are being requested: 
 
@@ -41,7 +41,7 @@ if (dataSource instanceof RVRedshiftDataSource) {
 }
 ```
 
-### Choosing Which Class to Implement
+## Choosing Which Class to Implement
 
 There are three classes that can be used, all implementing the __IRVDataSourceCredential__
 interface. You need to choose the class depending on your data source, as detailed below.
@@ -52,6 +52,6 @@ interface. You need to choose the class depending on your data source, as detail
 | __RVUsernamePasswordDataSourceCredential__ <br> Works with user/password style authentication (with an optional domain). | Microsoft Dynamics CRM On-Premises and Online, Microsoft SQL Server, Microsoft Analysis Services Server, MySQL, PostgreSQL, Oracle, Sybase, OData Feed, Web Resources, REST API.
 | __RVAmazonWebServicesCredentials__ <br> Works with AWS (Amazon Web Services). | Athena, S3.
 
-### No Authentication
+## No Authentication
 
 Sometimes you might work with an anonymous resource, without authentication. In this particular case, you can use __RVUsernamePasswordDataSourceCredential__, which has an empty constructor. You can do this for any data source that works with the class.

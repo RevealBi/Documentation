@@ -1,4 +1,4 @@
-## Samples, Tips, and Useful Cases
+# Samples, Tips, and Useful Cases
 
 This topic includes the following information:
 
@@ -9,7 +9,7 @@ This topic includes the following information:
   - [YoY Analysis: Comparing Revenue Figures for a 2 Year Period](#yoy-analysis-revenue)
 
 <a name='basic-sample-expressions'></a>
-### Basic Sample Expressions
+## Basic Sample Expressions
 
 The following are a set of calculated field sample expressions.
 
@@ -26,7 +26,7 @@ The following are a set of calculated field sample expressions.
 | **Deviation from Avg**     | [HR Dataset](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
 
 <a name='converting-unix-timestamps'></a>
-### Converting Unix TimeStamps to Usable Dates
+## Converting Unix TimeStamps to Usable Dates
 
 Unix times, defined in the seconds elapsed since January 1st, 1970
 ("Epoch" time) are particularly useful because they represent all
@@ -54,7 +54,7 @@ The timezone can be entered as a number, or you can use one of your
 fields with a number. In either case, it must be GMT time.
 
 <a name='yoy-analysis-revenue'></a>
-### YoY Analysis: Comparing Revenue Figures for a 2 Year Period
+## YoY Analysis: Comparing Revenue Figures for a 2 Year Period
 
 You can create calculated fields, for example, to carry out a simple YOY
 analysis.

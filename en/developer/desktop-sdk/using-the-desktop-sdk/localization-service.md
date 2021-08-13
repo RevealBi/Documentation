@@ -1,8 +1,8 @@
-## Working with the Localization Service
+# Working with the Localization Service
 
 The Localization service allows you to localize different dashboard elements based on your custom logic. It also provides you with the ability to set custom formatting settings for fields.
 
-### Supported Elements for Localization
+## Supported Elements for Localization
 
 Dashboard elements you can localize:
 
@@ -12,13 +12,13 @@ Dashboard elements you can localize:
   - Field Label
   - Summarization Field Label
 
-### Using the Localization service
+## Using the Localization service
 
 Below you will find two examples of how to [**localize the dashboard title**](#localize-dashboard-title) and how to [**localize a field label**](#localize-field-label) in the same dashboard by adding custom logic. You will also find examples of how to **change the formatting settings of a [numeric field](#format-numeric-field) and of a [non-aggregated date field](#format-date-field)**. The dashboard used
 for the example is the *Marketing* sample dashboard.
 
 <a name='localize-dashboard-title'></a>
-#### Localizing a dashboard title - example
+### Localizing a dashboard title - example
 
 The initial state of the *Marketing* sample:
 
@@ -74,7 +74,7 @@ When running the app again you can see the localized dashboard title - *Localize
 <img src="images/dashboard-title-localized.png" alt="Localized Marketing Sample Title" class="responsive-img"/>
 
 <a name='localize-field-label'></a>
-#### Localizing a field label - example
+### Localizing a field label - example
 
 Below you will see an example of how to localize more than one element of the same dashboard.
 
@@ -115,12 +115,12 @@ The *Date* field label in *Actual Spend vs Budget* is now changed to *Localized 
 
 You can use the steps in the examples to localize any other dashboard element.
 
-### Using the Localization Service to Change Formatting Settings
+## Using the Localization Service to Change Formatting Settings
 
 Currently you can use the Localization service to change the formatting settings of numeric fields and non-aggregated date fields.
 
 <a name='format-numeric-field'></a>
-#### Changing the formatting settings of a numeric field - example
+### Changing the formatting settings of a numeric field - example
 
 The initial state of the *Spend vs Budget* visualization below shows the numeric field formatted in the US Dollars ($) currency:
 
@@ -165,7 +165,7 @@ Now, the amount is displayed in a different currency:
 <img src="images/numeric-field-changed-currency-yen.png" alt="Changed numeric field in Japanese Yen currency format" class="responsive-img"/>
 
 <a name='format-date-field'></a>
-#### Changing the formatting settings of a date field - example
+### Changing the formatting settings of a date field - example
 
 Currently changing the formatting settings for an aggregated date field cannot be configured with the Localization service and won’t affect the values in pivot. In order to achieve this you have to use the [Formatting service](formatting-service.md).
 

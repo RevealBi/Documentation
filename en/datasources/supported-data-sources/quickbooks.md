@@ -1,4 +1,4 @@
-## Quickbooks
+# Quickbooks
 
 Upon connecting Quickbooks, you will see the following login prompt:
 
@@ -9,7 +9,7 @@ Enter your login credentials, or select _Sign in with Google_ and click _Sign In
 
 If you have Identity Confirmation activations enabled, you will see a prompt to enter the *verification code* sent to you.
 
-### Setting Up Your Data
+## Setting Up Your Data
 
 After logging in you can set up your Quickbooks data in the following dialog:
 

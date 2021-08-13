@@ -1,4 +1,4 @@
-## Calculated Fields
+# Calculated Fields
 
 Reveal allows you to define new fields in the data set, named calculated
 fields. These fields are created by using expressions (formulas). An
@@ -17,7 +17,7 @@ There are two types of calculated fields:
   - [post-calculated](#postcalculated-fields).
 
 <a name='precalculated-fields'></a>
-### Pre-Calculated Fields
+## Pre-Calculated Fields
 
 Pre-calculated fields are evaluated before executing data editor
 aggregations. This means in order to apply a certain formula, Reveal will go through every record in your field's dataset once or several times. Because of this, pre-calculation is likely to be underperforming in terms of speed when working with large datasets.
@@ -54,7 +54,7 @@ aggregation (e.g. summarization) will be applied to the already
 calculated records in the pre-calculated field.
 
 <a name='postcalculated-fields'></a>
-### Post-Calculated Fields
+## Post-Calculated Fields
 
 Post-calculated fields can be created when working with *Pivot tables*
 and other visualizations, which execute an aggregation on the data
@@ -94,7 +94,7 @@ Post-calculation tends to perform better than pre-calculation when
 working with large datasets
 
 <a name='predefined-functions'></a>
-### Using the Predefined Reveal Functions
+## Using the Predefined Reveal Functions
 
 For both pre-calculated and post-calculated fields, you can use one of
 the available functions within Reveal:
@@ -174,14 +174,14 @@ the available functions within Reveal:
 >IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
 
 <a name='without-predefined-functions'></a>
-### Creating Calculated Fields without using the predefined functions
+## Creating Calculated Fields without using the predefined functions
 
 You can also create Calculated Fields without using any of the
 predefined functions; for instance, for simple math calculations like
 subtractions, divisions, additions or multiplications. In [this table](samples.md), you will find some examples that do
 not use the predefined functions.
 
-### What to consider when using the Reveal functions
+## What to consider when using the Reveal functions
 
   - **Text strings should be included between quotation marks**.
     Examples include locale ("en") and date formats ("dd/mm/yyyy").

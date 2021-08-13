@@ -1,4 +1,4 @@
-## Time Series Charts
+# Time Series Charts
 
 A Time Series chart is used to display data points indexed in time order. It is commonly used to detect trends at a glance, allowing an easy observation of development over time.
 
@@ -6,7 +6,7 @@ A Time Series chart is used to display data points indexed in time order. It is 
 
 Very similar to a conventional line chart, the Time Series chart always has a time-based horizontal axis (x-axis).
 
-### Chart Trendlines
+## Chart Trendlines
 
 Chart settings enable the display of trend lines, which are lines that
 are painted across a chart, based on an algorithm. Trendlines are a very
@@ -18,7 +18,7 @@ Average, Cumulative Average, Weighted Average.
 
 <img src="images/time-series-chart-trendlines.png" alt="Chart trendline options in Reveal" class="responsive-img"/>
 
-### Settings for Time Series Charts
+## Settings for Time Series Charts
 
 In *Settings* you can:
 
@@ -41,12 +41,12 @@ With this setting you avoid redundant label information when you zoom your chart
 <img src="images/time-series-chart-compact-labels.png" alt="Compact Lables in Time Series within Reveal" class="responsive-img"/>
 
 
-### Zooming and Panning
+## Zooming and Panning
 
 When the Time Series chart is maximized, you can zoom in and out. As shown in the image above, this allows you to focus on a specific time interval and is a clear scenario where using the Compact Labels setting makes sense.
 
 
-### Statistical Functions Currently Not Supported
+## Statistical Functions Currently Not Supported
 
 Reveal provides you with three types of advanced
 predictive analysis. These are *Time series forecast*, *Linear regression* and *Detect outliers*. You can use them to make predictions, recognize and evaluate trends, or discover outliers

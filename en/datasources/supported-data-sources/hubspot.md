@@ -1,4 +1,4 @@
-## Hubspot
+# Hubspot
 
 Upon connecting Hubspot, you will see the following login prompt:
 
@@ -8,7 +8,7 @@ Enter your login credentials, and click _Log In_.
 
 You will then see an authorization prompt. Click _Grant Access_.
 
-### Setting Up Your Data
+## Setting Up Your Data
 
 After logging in, you can set up your Hubspot data in the following dialog:
 

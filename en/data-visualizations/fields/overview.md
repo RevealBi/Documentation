@@ -1,10 +1,10 @@
-## Fields
+# Fields
 
 This section describes the different options for applying transformations to the fields in your dataset. By applying filters, you can optimize the information in your fields for your business analysis. Remove any unnecessary noise, highlight the most valuable aspects, and summarize information in many useful ways.
 
 <img src="images/Field-Rules-Settings.png" alt="Field-Rules-Settings.png" class="responsive-img"/>
 
-### Topics Overview
+## Topics Overview
 
 There are several field settings and filtering options:
 

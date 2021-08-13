@@ -1,4 +1,4 @@
-## Scatter Maps
+# Scatter Maps
 
 This map displays scattered markers in a geographic area by using geo-coordinates. The visual distribution of markers can help in identifying density and spatial patterns within your data. By adding size and/or color you can reveal more information about your data relative to other points.
 
@@ -6,11 +6,11 @@ Scatter maps give you the possibility to connect to a number of map services, wh
 
 <img src="images/scatter-maps-dashboard.png" alt="Different scatter maps visualizations in a dashboard" class="responsive-img"/>
 
-### Using Scatter Maps
+## Using Scatter Maps
 
 The information below will help you choose the best scatter map configuration depending on your needs.
 
-#### What are Basic Dot Maps Used for?
+### What are Basic Dot Maps Used for?
 
 The most basic scatter maps in Reveal consist of uniform color dots plotted over a chosen area.
 
@@ -18,7 +18,7 @@ Dot maps are a great way to visualize the geographical distribution of an entity
 
 One-to-many dot maps are not supported in Reveal. This means, one dot cannot represent more than one object (e.g. 1 dot = 1000 people), so you cannot use the scatter dot maps to create population density maps, for example.  
 
-#### What are Bubble Maps Used for?
+### What are Bubble Maps Used for?
 
 Adding the size category to your basic scatter map is how bubble maps are created. They are great for
 comparing quantitative data in different locations.
@@ -34,7 +34,7 @@ Bubbles are not bound to the exact location defined by the latitude and longitud
 > [!NOTE]
 > A potential issue you need to take into account is that overly large bubbles can spread over more than one area. In this case, adding location data to the [bubble tooltip](#bubble-maps) text can help your audience identify the area where the oversize bubble belongs.
 
-#### What are Colored Scatter Maps Used for?
+### What are Colored Scatter Maps Used for?
 
 Color makes maps easier to perceive and gives you the opportunity to add one more variable to your analysis.
 
@@ -50,7 +50,7 @@ Dot maps colored by value will help you provide insight while avoiding the risk 
 
 However, if you aim to show the correlation between two  values for individual locations, your purpose will be served by presenting one value with size and the other - with color. Taking the previous example, you can color the dots by population age and size them by GDP of the country to show the correlation between prosperity and higher life expectancy.
 
-### Scatter Maps Zoom
+## Scatter Maps Zoom
 
 Scatter maps allow you to zoom in and focus on an area, where the markers are more densely plotted, or such that is not part of the _Map_ dropdown (e.g. the Balkan Peninsula). You can even save the zoomed area and keep this view in the dashboard.
 
@@ -73,12 +73,12 @@ Zooming also allows you to change the clear shapes Reveal uses as a map backgrou
 
 For more information on how to use your map service *authentication token* in Reveal or how to view shared maps using image tiles, read the [Using Map Image Tiles](map-image-tiles.md) topic.
 
-### Creating a Scatter Map
+## Creating a Scatter Map
 
 The Scatter Map in Reveal provides you with a variety of opportunities for your geographical analysis based on the data you choose to display.
 
 <a name='location-data-format'></a>
-#### Location Data Requirements
+### Location Data Requirements
 
 The ScatterMap visualization plots the data using geo-coordinates. Each data point requires a latitude and longitude value to be displayed. The accepted format by Reveal is:
 
@@ -90,7 +90,7 @@ The ScatterMap visualization plots the data using geo-coordinates. Each data poi
 
 The ***"There is no data to display."*** message may appear in the Visualization Editor, even if your latitude and longitude data is correct and is in the accepted format. This can happen if the geographic coordinates are plotted outside the bounds of the selected map.
 
-#### Basic Dot Maps  
+### Basic Dot Maps  
 
 <img src="images/scatter-dot-map-airports.png" alt="A dot map showing the distribution of airports across the US" class="responsive-img"/>
 
@@ -103,7 +103,7 @@ Additionally, the optional Label placeholder can be populated to replace the def
 Because of the conceptual simplicity of this map, you can only choose whether to show *title* and set the *color* of the dots in the _Settings_ section.
 
 <a name='bubble-maps'></a>
-#### Bubble Maps
+### Bubble Maps
 
 You can also create a scatter map with variable-sized markers or bubbles.
 
@@ -118,7 +118,7 @@ The tooltip of a bubble includes two parts:
 
 The **bubble tooltips** are used to help your audience read the map. It gives a better idea of what their size stands for and provides the exact value. It can help avoiding the misinterpretation that the bubble is an actual area on the map.
 
-#### Adding Color to Scatter Maps
+### Adding Color to Scatter Maps
 
 The scatter map allows you to visualize a third variable indicated by color. Adding color is an option for both dot and bubble maps.
 
@@ -131,7 +131,7 @@ Color on the map can be determined by:
 
 * *Category* - a text field is expected. However, if you provide a numeric field, the values in it will be processed as text, i.e. no aggregation will be applied, and a separate color will be created for each individual value.  
 
-#### Configuring Style Settings
+### Configuring Style Settings
 
 Style settings for _Scatter Maps_ include showing/hiding visualizations' *Title* and *Legend* as well as configuring color and type of the markers on the map.
 

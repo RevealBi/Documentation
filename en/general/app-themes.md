@@ -1,4 +1,4 @@
-## Application Themes
+# Application Themes
 
 The general User Experience (UX) can be customized applying application themes, changing localization and regional settings, or even including further customization with the Reveal SDK.
 

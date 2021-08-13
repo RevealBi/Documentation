@@ -1,4 +1,4 @@
-## Dashboard Filters
+# Dashboard Filters
 
 The dashboard filters dataset is defined by entering *Dashboard edit*
 mode. To add a new dataset, just select the *Add Filter* button.
@@ -20,7 +20,7 @@ overflow button next to the dashboard filter and select **Delete**.
 
 <img src="images/remove-dashboard-filter.png" alt="Removing a dashboard filter" class="responsive-img"/>
 
-### Dashboard Filters and the Visualizations Editor
+## Dashboard Filters and the Visualizations Editor
 
 Once there is at least one Dashboard Filter defined in the Dashboard
 Editor, you will be able to bind the data in that Dashboard Filter to a

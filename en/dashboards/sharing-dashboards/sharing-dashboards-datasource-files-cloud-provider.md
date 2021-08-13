@@ -1,4 +1,4 @@
-## Sharing Dashboards with Cloud Files as a Data Source
+# Sharing Dashboards with Cloud Files as a Data Source
 
 When you share dashboards with other Reveal users, you need to take into
 account the data sources you used to build the visualizations in the
@@ -23,7 +23,7 @@ You can create a shareable link when:
   - saving a dashboard [in a workspace](#save-dashboard-workspace).
 
 <a name='cloud-providers'></a>
-### Supported Cloud Providers
+## Supported Cloud Providers
 
 You can grant access to dashboards, which use files uploaded on the
 following cloud providers:
@@ -35,7 +35,7 @@ following cloud providers:
   - Dropbox
 
 <a name='cloud-data-source-file'></a>
-### Granting Access when Choosing a Cloud File as a Data Source
+## Granting Access when Choosing a Cloud File as a Data Source
 
 You can allow access to a cloud file at the point of selecting your data source to build a visualization. After choosing a file uploaded on one of the [supported cloud providers](#cloud-providers), you will be prompted to the following dialog:
 
@@ -45,7 +45,7 @@ Make sure the *Allow Access* checkbox is selected, otherwise the
 shareable link will be disabled.
 
 <a name='grant-access-shared-dashboard'></a>
-### Granting Access when Sharing a Dashboard
+## Granting Access when Sharing a Dashboard
 
 You can grant access to dashboards that use cloud files with a disabled
 shareable link, when sharing them with other users.
@@ -61,7 +61,7 @@ shareable link, when sharing them with other users.
     Click/Tap *Allow Access* and proceed with selecting users to [share your dashboard](share-a-dashboard.md) with.
 
 <a name='save-dashboard-workspace'></a>
-### Saving a Dashboard with a Cloud File Data Source in a Workspace
+## Saving a Dashboard with a Cloud File Data Source in a Workspace
 
 You may want to save in your workspace a dashboard, which contains
 one or more visualizations using cloud files as data source. If a
@@ -73,7 +73,7 @@ disabled), Reveal will prompt you to allow access:
 This way you make sure all workspace members can view the dashboard you saved
 in your workspace.
 
-### See Also
+## See Also
 
 If you can't see the contents of a dashboard, shared with you, please
 read: [Requesting Access to Shared Dashboards with Cloud Files](request-access-shared-dashboards-cloud-files.md)

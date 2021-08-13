@@ -1,10 +1,10 @@
-## Known Issues
+# Known Issues
 
   - [Web, Desktop](#web-desktop)
 
   - [Only Desktop](#desktop)
 
-### Web, Desktop
+## Web, Desktop
 
   - When using the NuGet package, the watermark is still    displayed after
     licensing the Reveal SDK (entering a valid key in the SDK
@@ -12,7 +12,7 @@
 
     As a **workaround**, you can uninstall the NuGet package from the project, clear the NuGet’s cache, and install the package again. In the case that you don’t want to clear all NuGet’s cache, you can lookup the location of that cache and clear only the Infragistics Reveal items. The location depends on the NuGet version and whether *packages.config* or *PackageReferece* is used.
 
-### Desktop
+## Desktop
 
   - After updating Reveal SDK to the new version in a project using package.config, uninstalling the old NuGet version or updating it to the new one will fail.
 

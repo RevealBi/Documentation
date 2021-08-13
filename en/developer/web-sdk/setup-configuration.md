@@ -1,6 +1,6 @@
-## Setup and Configuration
+# Setup and Configuration
 
-### Prerequisites
+## Prerequisites
 
 The Reveal Server SDK requires .NET Core 2.2+ or .NET Framework 4.6.2
 ASP MVC application projects.
@@ -19,7 +19,7 @@ need to add a win7-x64 compatible _RuntimeIdentifier_ platform:
 </PropertyGroup>
 ```
 
-### Setup and Configuration (Server)
+## Setup and Configuration (Server)
 
 To set up the Reveal Web Server SDK you need to:
 
@@ -33,7 +33,7 @@ To set up the Reveal Web Server SDK you need to:
 
 <a name='getting-assemblies-dependencies'></a>
 
-#### 1\. Getting Assemblies and Dependency Packages ready
+### 1\. Getting Assemblies and Dependency Packages ready
 
 To add references to assemblies and install dependency packages we
 recommend using **NuGet** package manager.
@@ -60,7 +60,7 @@ If you are having issues with the build, follow this
 
 <a name='defining-server-context'></a>
 
-#### 2\. Defining the Server Context
+### 2\. Defining the Server Context
 
 After referencing the required DLLs, you need to create a class that
 inherits the
@@ -103,7 +103,7 @@ another directory, from the database, or even from an embedded resource.
 
 <a name='initializing-server-sdk'></a>
 
-#### 3\. Initializing the Server SDK
+### 3\. Initializing the Server SDK
 
 In the **Startup.cs**, in the **ConfigureServices** method of the
 application, call the services extension method _AddRevealServices_, passing in the
@@ -138,7 +138,7 @@ _Reveal.Sdk_ namespace, so you need a using directive too.
 
 <a name='server-side-image-export'></a>
 
-#### 4\. Enabling server-side screenshot generation
+### 4\. Enabling server-side screenshot generation
 
 In order to use the **export to image** functionality (either
 programmatically or through user interaction), you need to perform the
@@ -171,7 +171,7 @@ To solve this error, add the following property to your project:
 
 <a name='sqlite-fix'></a>
 
-#### Build Issues using NuGet
+### Build Issues using NuGet
 
 To handle a deployment issue related to **SQLite.Interop.dll**, custom
 .targets file are used in the NuGet package.
@@ -183,7 +183,7 @@ the following property to your project:
 <DisableSQLiteInteropFix>true</DisableSQLiteInteropFix>
 ```
 
-### Setup and Configuration (Client)
+## Setup and Configuration (Client)
 
 To set up the Reveal Web Client SDK you need to:
 
@@ -196,7 +196,7 @@ To set up the Reveal Web Client SDK you need to:
 
 <a name='check-dependencies'></a>
 
-#### 1\. Checking Dependencies
+### 1\. Checking Dependencies
 
 The Reveal Web Client SDK has the following 3rd party references:
 
@@ -209,7 +209,7 @@ The Reveal Web Client SDK has the following 3rd party references:
 
 <a name='reference-web-client-sdk'></a>
 
-#### 2\. Referencing the Web Client SDK
+### 2\. Referencing the Web Client SDK
 
 Enabling **\$.ig.RevealView** component in a web page requires several scripts to be included. These
 scripts will be provided as part of Reveal Web Client SDK.
@@ -223,7 +223,7 @@ JavaScript files can be found in
 
 <a name='instantiate-web-client-sdk'></a>
 
-#### 3\. Instantiating the Web Client SDK
+### 3\. Instantiating the Web Client SDK
 
 Reveal’s Dashboard presentation is handled natively through the Web
 Client SDK.
@@ -247,7 +247,7 @@ To get started follow these steps:
     you should use the retrieved dashboard and set it to the dashboard property of the
     **\$.ig.RevealView**
 
-#### Sample Code
+### Sample Code
 
 ```html
 <!DOCTYPE html>

@@ -1,4 +1,4 @@
-## Field Settings
+# Field Settings
 
 This section describes the different options for applying
 transformations to datasets, such as sorting, filtering, and aggregating
@@ -24,7 +24,7 @@ options:
 </div>
 
 <a name='date-fields'></a>
-### Date Fields
+## Date Fields
 
 <img src="images/Date-Field-Formatting.png" alt="Date-Field-Formatting" class="responsive-img"/>
 
@@ -43,7 +43,7 @@ options:
   - **Date Format**: select from a predefined list of date and time
     formats to display your date/time values.
 
-#### Date Fields Hierarchies
+### Date Fields Hierarchies
 
 Date Fields aggregation is displayed as a hierarchical list in the Fields section. You can find Year, Quarter, Month, Day, and Minutes, depending on the level of granularity of your Date field.
 
@@ -56,7 +56,7 @@ In addition, dragging a specific hierarchy level will show data for that level o
 <img src="images/Date-Field-Hierarchy-Level.png" alt="Dragging part of the hierarchy of a date field in Reveal" class="responsive-img"/>
 
 <a name='numeric-fields'></a>
-### Numeric Fields
+## Numeric Fields
 
 <img src="images/Numeric-Field-Formatting.png" alt="Numeric-Field-Formatting\_All.png" class="responsive-img"/>
 
@@ -101,7 +101,7 @@ In addition, dragging a specific hierarchy level will show data for that level o
     symbols. 
 
 <a name='abc-fields'></a>
-### String Fields
+## String Fields
 
 <img src="images/string-field-formatting.png" alt="String-Field-Formatting" class="responsive-img"/>
 

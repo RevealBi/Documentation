@@ -1,6 +1,6 @@
-## Exporting a Dashboard or a Visualization
+# Exporting a Dashboard or a Visualization
 
-### Overview
+## Overview
 
 If you want to export a dashboard or a particular visualization, you can choose between the following export options:
 
@@ -17,13 +17,13 @@ To enable a dashboard or a visualization export, you can:
   - initiate export programmatically [outside of the
     RevealView](#programmatically-initiated-export), when exporting **as an image**.
 
-### Prerequisites for Export as an Image Option
+## Prerequisites for Export as an Image Option
 
 To use the Export as an image feature you will need to add a reference to [CefSharp.Wpf NuGet package (\>= 83.4.20)](~/en/developer/setup-configuration/setup-configuration-desktop.md) to your project.
 
 <a name='enable-export-revealview'></a>
 
-### Using the Export Setting
+## Using the Export Setting
 
 To enable your end users to generate an image, document or a presentation out of a dashboard you simply need to set the relevant property to true when loading the dashboard:
 
@@ -41,7 +41,7 @@ This will make the *Export* button available in the overflow menu when a dashboa
 
 When the user clicks the *Export* button, they can choose one of the enabled export options.
 
-#### Specifics when using the image export option
+### Specifics when using the image export option
 
 If the user chooses the _Export Image_ from the export options, the _Export image_ dialog will open. Here, the user can choose between two options: *Copy to clipboard* and *Export Image*.
 
@@ -78,7 +78,7 @@ scenario, in which you show a save dialog to the end user so they can choose whe
 
 <a name='programmatically-initiated-export'></a>
 
-### Programmatically Initiated Image Export
+## Programmatically Initiated Image Export
 
 To get an image of the RevealView programmatically, you will need to invoke the __ToImage__ method. Calling this method will not result in showing the *Export Image* dialog. This way, you can get a screenshot when the user clicks a button, which is outside of the RevealView. This method will create a screenshot of the RevealView component as it is displayed on the screen.
 

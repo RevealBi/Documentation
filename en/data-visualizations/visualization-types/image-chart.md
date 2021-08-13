@@ -1,4 +1,4 @@
-## Image Chart
+# Image Chart
 
 The image chart displays information in an embedded browser by making a request to a URL and displaying the results. It works **only with the first row in the data set**, and **displays the contents of the column set as URL** in the data editor.
 

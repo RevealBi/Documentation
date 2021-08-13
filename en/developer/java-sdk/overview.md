@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 When embedding Reveal into web applications, the architecture is slightly more complex than with native apps, as two components are always involved:
 
@@ -13,7 +13,7 @@ In the following diagram you visualize the architecture for a web application em
 As shown above, the SDK works pretty much the same way as with native apps. The difference is that some of the callbacks are invoked in the client side (like the event sent when a data point is clicked) and others are invoked server side (like the callback to load the dashboard or to provide in-memory data).
 
 <a name='host-client-server-separate'></a>
-### Hosting the Client-side and Server-Side Parts on Different Servers
+## Hosting the Client-side and Server-Side Parts on Different Servers
 
 You can host the client-side and the server-side parts separately i.e. on different urls.
 

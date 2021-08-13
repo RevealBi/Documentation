@@ -1,6 +1,6 @@
-## Creating New Visualizations and Dashboards
+# Creating New Visualizations and Dashboards
 
-### Overview
+## Overview
 
 As described in [**Editing & Saving
 Dashboards**](editing-saving-dashboards.md), there are two ways
@@ -14,13 +14,13 @@ to existing dashboards like:
 
 However, to add new visualizations the user needs to **select the data source** to be used. To do that, the containing application needs to provide information to the SDK, so it can display the list of data sources available for a new visualization.
 
-### Displaying a List of Data Sources
+## Displaying a List of Data Sources
 
 The callback you need to use to display a list of data sources is
 __onDataSourcesRequested__.
 In the case that you don’t set your own function to this callback, when a new visualization is created, Reveal will display all data sources used in the dashboard (if any).
 
-#### Code:
+### Code:
 
 The code below shows how to configure the *data source selection* screen to show an “in-memory” item and a SQL Server data source.
 
@@ -47,7 +47,7 @@ The “false” value in the third parameter prevents existing data sources on t
 
 Please note that the “employees” parameter passed to the “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](~/en/developer/web-sdk/using-the-server-sdk/in-memory-data.md) and identifies the dataset to be returned on the server side.
 
-### Creating New Dashboards
+## Creating New Dashboards
 
 Creating dashboards from scratch is really simple, you just need to:
 

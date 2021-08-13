@@ -1,10 +1,10 @@
-## Google BigQuery
+# Google BigQuery
 
 The Google BigQuery data source provides a significant speed increase
 when processing big data within Reveal. This allows you to use datasets
 with millions of records for your visualizations with no slow down.
 
-### Connecting to Google BigQuery
+## Connecting to Google BigQuery
 
 Upon selecting Google BigQuery, you will be prompted to connect to your
 **Google account**.
@@ -37,13 +37,13 @@ You are now directed to the *Visualization editor* where you can start
 building your visualizations with the data retrieved from Google
 BigQuery.
 
-### Limitations in the Visualization Editor
+## Limitations in the Visualization Editor
 
 When working with big data in Reveal, there are a couple of limitations
 in the Visualization Editor due to the specific approach used to handle
 data sources storing millions of records.
 
-#### Limitations in Functions Available for Calculated Fields
+### Limitations in Functions Available for Calculated Fields
 
 Currently, only a limited number of **functions** are available for
 *Calculated Fields* using data from BigQuery:
@@ -56,6 +56,6 @@ Currently, only a limited number of **functions** are available for
 
 - [Strings](~/en/data-visualizations/fields/calculated-fields/string.md) - find; len; trim; lower; mid; upper.
 
-#### Limitations in Data Blending
+### Limitations in Data Blending
 
 Currently, Data Blending ([combining data sources in one visualization](~/en/datasources/data-blending.md)) is **not available** when using data from the Google BigQuery data source.

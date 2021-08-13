@@ -1,4 +1,4 @@
-## Adding the Other Visualizations
+# Adding the Other Visualizations
 
 All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
@@ -56,7 +56,7 @@ This section will cover the following visualizations:
 </tbody>
 </table>
 
-### Followers
+## Followers
 
 The Followers visualization displays the amount of followers broken down
 by social media channel in a [column chart](~/en/visualization-tutorials/simple-charts.md). In
@@ -118,7 +118,7 @@ order to create it:
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
-### YTD Facebook Followers
+## YTD Facebook Followers
 
 The YTD Facebook Followers visualization displays the amount of
 followers for that social media channel in a [text gauge](~/en/data-visualizations/visualization-types/gauge-charts.html#text-gauge). In order to create it:
@@ -162,7 +162,7 @@ followers for that social media channel in a [text gauge](~/en/data-visualizatio
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
-### Monthly Facebook Likes
+## Monthly Facebook Likes
 
 The Monthly Facebook Likes visualization displays the amount of Facebook
 likes per month for the company in a [line chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -227,7 +227,7 @@ likes per month for the company in a [line chart](~/en/visualization-tutorials/s
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
-### Retweets & Favorites
+## Retweets & Favorites
 
 The Retweets & Favorites visualization displays the amount of Twitter
 retweets and favorited posts per month for the company in a [column chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -288,7 +288,7 @@ retweets and favorited posts per month for the company in a [column chart](~/en/
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
-### Facebook Reach vs. Impressions
+## Facebook Reach vs. Impressions
 
 The Facebook Reach vs. Impressions visualization displays the amount of
 reaches and impressions through Facebook for the company in an [area chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -345,7 +345,7 @@ reaches and impressions through Facebook for the company in an [area chart](~/en
 Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
-### Monthly Twitter Mentions
+## Monthly Twitter Mentions
 
 The Monthly Twitter mentions visualization displays the amount of
 mentions through Twitter for the company in a [line chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:

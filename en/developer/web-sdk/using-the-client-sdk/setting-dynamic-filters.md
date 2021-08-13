@@ -1,6 +1,6 @@
-## Setting up Dynamic Filter Selections
+# Setting up Dynamic Filter Selections
 
-### Overview
+## Overview
 
 Sometimes your application will integrate a custom UI, to present the
 user with a list of values to select. And you might want that user
@@ -50,7 +50,7 @@ As shown above, five buttons were added at the top of the dashboard, one
 button for each of the territories in the dashboard: Americas, APAC,
 EMEA, India and Japan.
 
-### Working with Dynamic Lists
+## Working with Dynamic Lists
 
 Territories like Americas, APAC, India, etc. do not change over time,
 but other lists of values might change. In this case, if a new Territory

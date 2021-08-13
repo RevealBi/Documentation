@@ -1,4 +1,4 @@
-## Creating a Dashboard and Adding a Data Source
+# Creating a Dashboard and Adding a Data Source
 
 In order to create a new dashboard, you need to select the **+ New**
 button in the top right-hand corner of the initial view, and select the
@@ -6,7 +6,7 @@ button in the top right-hand corner of the initial view, and select the
 
 <img src="images/create-new-dashboard.png" alt="AccessNewDashboardMenu\_All" class="responsive-img"/>
 
-### Adding a Data Source
+## Adding a Data Source
 
 After you select **Dashboard**, you will see the **New Visualization**
 screen pop up. Select the + sign in the top right corner, and then the

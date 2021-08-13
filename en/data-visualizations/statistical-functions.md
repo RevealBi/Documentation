@@ -1,4 +1,4 @@
-## Statistical Functions in Reveal
+# Statistical Functions in Reveal
 
 Reveal's Statistical functions allow you to receive more insight from
 your visualizations. They provide you with three types of advanced
@@ -11,7 +11,7 @@ in your data series.
 >The newly released Time Series chart does not support statistical functions yet. This means you cannot use Time series forecast, Linear regression or Detect outliers for now. It will be supported in the future. Currently, **you can use a Line chart** to achieve a similar result, as shown in the sections below.
 
 
-### Accessing Statistical Functions
+## Accessing Statistical Functions
 
 To apply one of the three *statistical functions* to your visualization
 you need to:
@@ -29,7 +29,7 @@ you need to:
 >[!NOTE] **Enabling/Disabling Functions**.
 >You can have only one of the three functions enabled for a visualization at the same time. Click the enabled function again to turn it off or select another function from the list to switch to.
 
-### Statistical Functions Types
+## Statistical Functions Types
 
 The table below explains what every function is used for, the algorithm
 the function uses, and for which visualizations the function can be
@@ -42,7 +42,7 @@ enabled.
 | Detect outliers         | Interquartile range rule | To detect data that stands out from the rest because of random factors.                                                                                                             | [Category charts](visualization-types/category-charts.md): Area, Column, Line, Spline, Spline Area, Step Area, Step Line; [Scatter](visualization-types/scatter-bubble-charts.md) chart                 |
 
 <a name='time-series-forecast'></a>
-#### Time series forecast
+### Time series forecast
 
 The *Time series forecast* function is used to provide prediction of the
 data for a given data series. In the example below, the function is used
@@ -97,7 +97,7 @@ values are highlighted in yellow (see below).
 >If your visualization does not contain a *Date* field, you will receive an error when you try using the Time series function.
 
 <a name='linear-regression'></a>
-#### Linear regression
+### Linear regression
 
 The Linear regression is a statistical model, attempting to show the
 relationship between two variables with a linear equation. The
@@ -136,7 +136,7 @@ values are highlighted in yellow (as shown in the last screenshot of the
 [Time series forecast](#time-series-forecast)).
 
 <a name='detect-outliers'></a>
-#### Detect outliers
+### Detect outliers
 
 Outliers are extreme values that deviate from other observations on
 data. The *Detect outliers* function shows points that deviate

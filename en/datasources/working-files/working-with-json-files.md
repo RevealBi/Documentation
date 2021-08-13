@@ -1,4 +1,4 @@
-## Working With JSON Files
+# Working With JSON Files
 
 The JSON format is fully supported in Reveal as your visualizations can
 consume data from any JSON file.
@@ -8,7 +8,7 @@ data structures you may want to use. In addition, there is an
 [**Advanced Selection**](#json-advanced-selection) mode where you can
 choose a custom data structure.
 
-### JSON Format Information
+## JSON Format Information
 
 JSON (**J**ava**S**cript **O**bject **N**otation) is a self-describing
 lightweight format for storing and exchanging data.
@@ -24,7 +24,7 @@ Format highlights:
   - Data types' notation includes: curly braces **{} for objects** and
     **square brackets \[\] for arrays**.
 
-### Loading a JSON file
+## Loading a JSON file
 
 Follow these steps to create a new visualization that consumes data from
 your JSON file:
@@ -68,7 +68,7 @@ your JSON file:
     <img src="images/JsonFilesVisualizationsEditor_All.png" alt="Json Files Visualizations Editor" class="responsive-img"/>
 
 <a name='json-advanced-selection'></a>
-### Advanced Selection Mode
+## Advanced Selection Mode
 
 JSON files can be used to represent many different data structures.
 Because of this, Reveal allows you to choose a custom data structure for

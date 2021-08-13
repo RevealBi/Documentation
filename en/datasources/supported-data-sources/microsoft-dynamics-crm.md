@@ -1,4 +1,4 @@
-## Microsoft Dynamics CRM
+# Microsoft Dynamics CRM
 
 To configure a Microsoft Dynamics CRM data source, you will need to
 enter the following information:

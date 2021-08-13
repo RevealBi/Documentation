@@ -1,4 +1,4 @@
-## Creating OHLC Visualizations
+# Creating OHLC Visualizations
 
 In this tutorial, you will learn how to a OHLC chart visualization using
 a sample spreadsheet.
@@ -35,7 +35,7 @@ Access the links below for the OHLC chart view walkthroughs:
 
   - [How to set your axis configuration to logarithmic](#setting-logarithmic-axis)
 
-### Key Concepts
+## Key Concepts
 
 Like Candlestick Charts, OHLC charts are meant to show the opening,
 high, low and closing prices for any financial data. They are
@@ -67,7 +67,7 @@ chart:
     non-linear scale which takes magnitude into account instead of the
     usual linear scale.
 
-### Sample Data Source
+## Sample Data Source
 
 For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 [Reveal Tutorials Spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
@@ -76,7 +76,7 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported cloud services or add it as a [Web Resource](~/en/datasources/supported-data-sources/web-resource.md).
 
 <a name='creating-ohlc-chart'></a>
-### Creating a OHLC Chart
+## Creating a OHLC Chart
 
 |                                          |                                                                                                                          |                                                                                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,7 +89,7 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 | 7\. **Change the Date Aggregation**      | <img src="images/Tutorials-CandlestickChart-Changing-Aggregation.png" alt="Tutorials-CandlestickChart-Changing-Aggregation" class="responsive-img"/>           | Select the **Date** field in the Label placeholder of the data editor, and change the **Date Aggregation** to **Day**. Then, select **Update Field**. |
 
 <a name='changing-axis-configuration'></a>
-### Changing your Axis Configuration
+## Changing your Axis Configuration
 
 Like [gauge bounds](gauge-views.html#adding-bounds-gauge), chart axis
 configuration allows you to set the lowest and highest values in your
@@ -105,19 +105,19 @@ In order to access the axis configuration menu:
 Depending on whether you want to set the minimum or maximum value (or
 both), you will need to access one of the following options:
 
-#### Changing the Minimum Bound
+### Changing the Minimum Bound
 
 The default value is set to "0". In order to set a different bound,
 enter the value you want the chart to start with.
 
-#### Changing the Maximum Bound
+### Changing the Maximum Bound
 
 For Maximum bounds, the default will be set to "Automatic" so that
 Reveal uses your original data. In order to set a different one, enter
 the value you want for the chart's top limit.
 
 <a name='setting-logarithmic-axis'></a>
-### Setting your Axis Configuration as Logarithmic
+## Setting your Axis Configuration as Logarithmic
 
 |                                        |                                                                                                       |                                                             |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |

@@ -1,4 +1,4 @@
-## Date Calculated Fields
+# Date Calculated Fields
 
 Date formulas can be used to output different date and time information
 in your widget.
@@ -165,12 +165,12 @@ The functions included in the date category are:
 </table>
 
 <a name='date-date'></a>
-### Date
+## Date
 
 When you use `date`, Reveal will return a date set to the values you
 include in your formula.
 
-#### Syntax
+### Syntax
 
 By default, you will see the following structure when you select date:
 
@@ -179,7 +179,7 @@ By default, you will see the following structure when you select date:
 All values, including `month`, need to be expressed with numerical
 values.
 
-#### Samples
+### Samples
 
 A formula with the following structure will return "08-Nov-1971 12:59":
 
@@ -196,18 +196,18 @@ sure you respect the order of the elements in the formula:
 | date (…​)      | 1971 | 11    | 08  | **27** | 59     | 08     |
 
 <a name='date-time'></a>
-### Time
+## Time
 
 When you use time, Reveal will return a time set to the values you
 include in your formula.
 
-#### Syntax
+### Syntax
 
 By default, you will see the following structure when you select time:
 
 `time({hour},{minute},{second},{millisecond})`
 
-#### Samples
+### Samples
 
 A formula with the following structure will return "11:08:08":
 

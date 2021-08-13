@@ -1,6 +1,6 @@
-## Exporting a Dashboard or a Visualization
+# Exporting a Dashboard or a Visualization
 
-### Overview
+## Overview
 
 If you want to export a dashboard or a particular visualization, you can choose between the following export options:
 
@@ -17,13 +17,13 @@ To enable a dashboard or a visualization export, you can:
   - initiate export programmatically [outside of the
     $.ig.RevealView](#programmatically-initiated-export), when exporting **as an image**.
 
-### Prerequisites for Export as an Image Option
+## Prerequisites for Export as an Image Option
 
 You need to enable the **export image** functionality in the
 server-side. To do this, please refer to [Enabling server-side screenshot generation](~/en/developer/setup-configuration/setup-configuration-web.html#server-side-image-export).
 
 <a name='enable-export-revealview'></a>
-### Using the Export Setting
+## Using the Export Setting
 
 To enable your end users to generate an image, document or a presentation out of a dashboard you simply need to set the relevant property to true:
 
@@ -41,7 +41,7 @@ This will make the *Export* button available in the overflow menu when a dashboa
 
 When the user clicks the *Export* button, they can choose one of the enabled export options.
 
-#### Specifics when using the image export option
+### Specifics when using the image export option
 
 If the user chooses the _Export Image_ from the export options, the _Export image_ dialog will open. Here, the user can choose between two options: *Copy to clipboard* and *Export Image*. If they click the *Export Image* button on the bottom right, the image will be sent to the end user.
 
@@ -56,7 +56,7 @@ Here’s a sample implementation of the onImageExported callback:
 ```
 
 <a name='programmatically-initiated-export'></a>
-### Programmatically Initiated Image Export
+## Programmatically Initiated Image Export
 
 To get an image of the $.ig.RevealView programmatically, you will need to invoke the
 __ToImage__ method. Calling this method will not result in showing the *Export

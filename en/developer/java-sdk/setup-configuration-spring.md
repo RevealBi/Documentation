@@ -1,8 +1,8 @@
-## Spring Server Setup and Configuration
+# Spring Server Setup and Configuration
 
 <a name='maven-dependency'></a>
 
-### Prerequisites (Maven)
+## Prerequisites (Maven)
 
 Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules. To work with the SDK libraries, you need to add a reference to Reveal's Maven Repository and also a dependency in your Maven pom.xml file.
 
@@ -31,7 +31,7 @@ Replace version_number with a number similar to **0.9.6**.
 
 If you are not familiar with Maven, please refer to the following [link](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
-### Setup and Configuration
+## Setup and Configuration
 
 To set up the Reveal with an existing Spring Boot application, you need to:
 
@@ -40,7 +40,7 @@ To set up the Reveal with an existing Spring Boot application, you need to:
 3.  Initialize Reveal.
 4.  Enable server-side export.
 
-#### Step 1 - Adding a dependency to spring-starter-jersey implementation
+### Step 1 - Adding a dependency to spring-starter-jersey implementation
 
 Add a dependency to *spring-starter-jersey*, if not added yet:
 
@@ -51,7 +51,7 @@ Add a dependency to *spring-starter-jersey*, if not added yet:
 </dependency>
 ```
 
-#### Step 2 - Adding a dependency to Reveal SDK
+### Step 2 - Adding a dependency to Reveal SDK
 
 Add a dependency to *reveal-sdk* and specify your SDK version.
 
@@ -65,7 +65,7 @@ Add a dependency to *reveal-sdk* and specify your SDK version.
 
 Replace version_number with a number similar to **1.0.1821**.
 
-#### Step 3 - Initializing Reveal
+### Step 3 - Initializing Reveal
 
 Add a **JerseyConfig** component that will initialize a Jakarta RESTful Web Services (JAX-RS) application with Reveal resources.
 To do this, you can copy the class **RevealJerseyConfig** from *upmedia-backend-spring* source code, located inside the package *com.pany.analytics.upmedia.reveal*).
@@ -109,7 +109,7 @@ The available parameters passed to **RevealEngineInitializer.initialize** are:
 
 For further details about how implement your own Dashboards provider, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
 
-#### Step 4 - Enabling server-side export
+### Step 4 - Enabling server-side export
 
 The Java SDK uses some native components for exporting dashboards to different formats: Image, PDF, PPT and Excel.
 

@@ -1,4 +1,4 @@
-## Styling Dashboards
+# Styling Dashboards
 
 Reveal makes dashboards styling as easy as choosing a color palette.
 

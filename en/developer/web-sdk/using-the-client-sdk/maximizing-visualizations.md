@@ -1,6 +1,6 @@
-## Maximizing Visualizations and Single Visualization Mode
+# Maximizing Visualizations and Single Visualization Mode
 
-### Overview
+## Overview
 
 When displaying a dashboard to the user, there are some cases in which
 you’d like to display just one maximized visualization. In addition, you
@@ -10,7 +10,7 @@ the Web Client SDK.
 
 <img src="images/three_divisions_dashboard_maximized.png" alt="Displaying a dashboard with a maximized visualization" class="responsive-img"/>
 
-#### Example Details
+### Example Details
 
 Let’s assume that you have a dashboard with three visualizations, where
 each visualization is showing data for a different division of your
@@ -22,7 +22,7 @@ In this example, you’d like to showcase these visualizations in your
 corporate application. You want to include them as part of the
 information displayed on each division’s home page.
 
-### Maximizing Visualizations
+## Maximizing Visualizations
 
 To open a dashboard with a maximized visualization, you need to set the dashboard property of __revealView__ first. Then, set the
 __maximizedVisualization__
@@ -57,7 +57,7 @@ Although the initial maximized visualization will be the one with title
 ‘Sales’, the end user can still return to the dashboard and see the
 rest of the visualizations.
 
-### Single Visualization Mode
+## Single Visualization Mode
 
 You may also want to lock the initial visualization, making it the only
 one displayed at all times. This way the dashboard works like a single
@@ -78,7 +78,7 @@ home page, just replace the title of the visualization in
 dashboard.visualizations.getByTitle()
 with the right one.
 
-#### Dynamically changing a locked visualization
+### Dynamically changing a locked visualization
 
 It is also possible for you to dynamically change the single
 visualization being displayed, without reloading the page. From the

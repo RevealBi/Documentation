@@ -1,6 +1,6 @@
-## Loading Dashboard Files
+# Loading Dashboard Files
 
-### Overview
+## Overview
 
 There are two ways to open/save dashboards with the SDK:
 
@@ -12,7 +12,7 @@ There are two ways to open/save dashboards with the SDK:
 
     Using this approach you can, for example, check user permissions, display your own user interface to select the dashboard, or allow users to upload the ".rdash" file to use. For further details about the client-side approach, follow this [**Setup and Configuration(Client)**](~/en/developer/developer/web-sdk/setup-configuration.html#setup-and-configuration-client).
 
-### The Server-Side Approach
+## The Server-Side Approach
 
 First, you get from the client-side both the dashboard ID and also the ID of the user requesting the dashboard. Second, on the server, you get the definition of the dashboard and get the data for each of the visualization and filters defined.
 

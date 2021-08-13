@@ -1,4 +1,4 @@
-## Working With Spreadsheets in Reveal
+# Working With Spreadsheets in Reveal
 
 Below are a couple of helpful tips and tricks for working with
 spreadsheets within Reveal.
@@ -37,7 +37,7 @@ spreadsheets within Reveal.
 </tbody>
 </table>
 
-### Data Ranges
+## Data Ranges
 
 <table>
 <colgroup>
@@ -60,7 +60,7 @@ spreadsheets within Reveal.
 </tbody>
 </table>
 
-### Dates, Numbers and Percentages
+## Dates, Numbers and Percentages
 
 <table>
 <colgroup>
@@ -99,7 +99,7 @@ spreadsheets within Reveal.
 </table>
 
 <a name='transposing-spreadsheets'></a>
-### Transposing Columns to Rows
+## Transposing Columns to Rows
 
 When working with Microsoft Excel and Google Sheets, you can use the
 transpose functionality to switch columns from rows.
@@ -128,7 +128,7 @@ modified.
 
 <img src="images/transposed-spreadsheet-visualization-data.png" alt="Transposed Spreadsheet Visualization Data" class="responsive-img"/>
 
-### See Also
+## See Also
 
 A common use case is building dashboards with spreadsheets located in a
 cloud file sharing service. To learn how to successfully share those

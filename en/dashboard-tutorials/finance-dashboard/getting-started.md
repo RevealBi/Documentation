@@ -1,11 +1,11 @@
-## Finance Dashboard Tutorial
+# Finance Dashboard Tutorial
 
 In this tutorial, you will see how the "Stock Market (Performance)" dashboard displayed below was created using a sample spreadsheet with
 similar data.
 
 <img src="images/StockPerformanceDashboard_All.png" alt="StockPerformanceDashboard\_All" class="responsive-img"/>
 
-### What's in this Dashboard?
+## What's in this Dashboard?
 
 This dashboard contains information on a sample company:
 
@@ -16,7 +16,7 @@ This dashboard contains information on a sample company:
   - The variation in stock prices and the volume of available stocks
 
 <a name='sample-datasheet'></a>
-### Sample Datasheet
+## Sample Datasheet
 
 You can download the sample datasheet [here](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
 All other dashboards [in these tutorials](~/en/dashboard-tutorials/overview.md) will use
@@ -26,7 +26,7 @@ the same sample spreadsheet.
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the
 [supported cloud services](~/en/datasources/overview.md).
 
-### Steps Overview
+## Steps Overview
 
 1.  [Creating the Dashboard and Adding a Data Source](creating-the-dashboard.md)
 

@@ -1,4 +1,4 @@
-## Logging into Reveal
+# Logging into Reveal
 
 Welcome to Reveal!  
 When opening the app you'll be met with different login options:
@@ -12,7 +12,7 @@ Before jumping in, take into account that in Reveal you can join an **Organizati
 
 Depending on which account you used to sign in Reveal, you will have your OneDrive or Google Drive automatically added to your list of [data sources](~/en/datasources/overview.md).
 
-### Your First Screen
+## Your First Screen
 
 Once you get in, you are greeted with your first screen:
 
@@ -44,7 +44,7 @@ Once you start using the application, it will look like this:
 
 **Filter** - As soon as you have any dashboards, you can choose from the dropdown menu which dashboards to see in the dashboard module: *Everything*, only created by you or shared with you.
 
-### What About Roles & Permissions?
+## What About Roles & Permissions?
 
 In Reveal, people can join an organization and one or more workspaces. Roles and permissions apply to both organizations and workspaces.  
 Roles represent a set of permissions assigned to a Reveal user in relation to a workspace or an organization. This means every user is assigned a role when joining organizations or workspaces. There are three different roles (owner, member, viewer) with a clear set of permissions each.

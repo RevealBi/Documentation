@@ -1,11 +1,11 @@
-## Known Issues
+# Known Issues
 
   - [Only Web](#web)
 
   - [Issues Affecting All Platforms](#issues-all-platforms)
 
 <a name='web'></a>
-### Web
+## Web
 
   - When working with the JSON advanced editor in the Web platform,
     Date/Time fields are recognized as String fields instead.
@@ -22,7 +22,7 @@
     data by switching columns from rows in a spreadsheet.
 
 <a name='issues-all-platforms'></a>
-### Issues Affecting All Platforms
+## Issues Affecting All Platforms
 
 - The original data is not displayed after a Grid sorting has been removed.
 

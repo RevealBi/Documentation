@@ -1,4 +1,4 @@
-## Managing Your Data Source Credentials
+# Managing Your Data Source Credentials
 
 When configuring certain data sources in Reveal, you need to provide
 your account credentials for these services to access your information.
@@ -7,7 +7,7 @@ These credentials are encrypted and **automatically stored** by Reveal for futur
 To access and manage all your credentials, select: your **profile picture** (top right corner) > **Settings** > **Manage Reveal Credentials**.
 
 
-### Adding New Account Credentials
+## Adding New Account Credentials
 
 In the _Manage Reveal Credentials_ section, you can create, edit and remove credentials for all your data sources accounts. To add new account credentials follow the instructions below.
 
@@ -28,7 +28,7 @@ In the _Manage Reveal Credentials_ section, you can create, edit and remove cred
 
 3. Click/Tap **Create** to finish. You will find your newly saved credentials at the bottom of the list in _Manage Reveal Credentials_.
 
-### Using Your Stored Credentials
+## Using Your Stored Credentials
 
 Unless you remove them, the accounts' credentials stored in Reveal will always appear in the *Choose Credentials* screen when configuring a data source requiring credentials.
 

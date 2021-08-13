@@ -1,4 +1,4 @@
-## Dropbox
+# Dropbox
 
 Upon selecting Dropbox, you will see the following log in prompt.
 
@@ -8,7 +8,7 @@ Enter your login credentials and select *Sign In*.
 You will then see an
 authorization prompt; select *Allow* to grant the Reveal application access to files on your Dropbox cloud.
 
-### Supported Files
+## Supported Files
 
 When working within Reveal, you will be able to use a wide variety of
 files:

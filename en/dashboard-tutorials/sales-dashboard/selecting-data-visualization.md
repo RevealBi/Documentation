@@ -1,4 +1,4 @@
-## Creating the First Visualization
+# Creating the First Visualization
 
 
 Let's focus on creating the "Won Opportunities" visualization in the

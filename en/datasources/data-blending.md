@@ -1,4 +1,4 @@
-## Combining Data Sources in one Visualization
+# Combining Data Sources in one Visualization
 
 Sometimes you need **Data Blending** to extract value from **more than one data source** in the same Reveal visualization.
 
@@ -46,7 +46,7 @@ Follow these steps to combine two data sources in one visualization:
     Department name instead of using the internal Department ID.
 
 
-### The JOIN Condition
+## The JOIN Condition
 
 When adding fields from other data sources, you actually join two different data sets. The join operation used by Reveal is LEFT (OUTER)
 JOIN.

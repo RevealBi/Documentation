@@ -1,10 +1,10 @@
-## Applying Formatting to the First Visualization
+# Applying Formatting to the First Visualization
 
 The raw data that you drag and drop into the data editor placeholders
 will not be formatted by default; you will need to modify each field you
 have dragged individually.
 
-### Formatting Opportunities as Percentages and Removing Fraction Digits
+## Formatting Opportunities as Percentages and Removing Fraction Digits
 
 In the sample dashboard, the won opportunity figure is represented as a
 percentage. In order to apply this formatting:
@@ -22,7 +22,7 @@ percentage. In order to apply this formatting:
 
 Then, select **Update Field**.
 
-### Adding the Red Indicator
+## Adding the Red Indicator
 
 In the sample dashboard, there is a red arrow indicator in the **Won
 Opportunities** visualization which is meant to represent that there has

@@ -1,4 +1,4 @@
-## Creating Sparkline Charts
+# Creating Sparkline Charts
 
 In this tutorial, you will learn how to a Sparkline chart visualization
 using a sample spreadsheet.
@@ -42,7 +42,7 @@ Access the links below for the Sparkline chart view walkthroughs:
 
   - [How to modify the amount of columns in the Sparkline](#modify-columns)
 
-### Key Concepts
+## Key Concepts
 
 Sparkline charts are meant to display trends and their progression in a
 given date range. They are particular useful, like OHLC and Candlestick
@@ -71,7 +71,7 @@ form of:
     grid, including whether or not you want to include the **last two
     months in your data and the difference between them**.
 
-### Sample Data Source
+## Sample Data Source
 
 For this tutorial, you will use the "Sparkline Charts" sheet in the
 [Reveal Tutorials Spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
@@ -80,7 +80,7 @@ For this tutorial, you will use the "Sparkline Charts" sheet in the
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported _cloud services_ or add it as a [Web Resource](~/en/datasources/supported-data-sources/web-resource.md).
 
 <a name='create-sparkline'></a>
-### Creating a Sparkline Chart
+## Creating a Sparkline Chart
 
 |                                          |                                                                                                                |                                                                                                                                                      |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -92,7 +92,7 @@ For this tutorial, you will use the "Sparkline Charts" sheet in the
 | 6\. **Organize your Data**               | <img src="images/Tutorials-SparklineChart-Organizing-Data.png" alt="Tutorials-SparklineChart-Organizing-Data" class="responsive-img"/>               | Drag and drop the "Date" field into "Date", "Offer" into "Value" and "Stocks" into "Category".                                                       |
 
 <a name='change-chart-type-sparkline'></a>
-### Changing the Chart Type for the Sparkline
+## Changing the Chart Type for the Sparkline
 
 You may want to change the type of chart you want to use for your
 sparkline chart. In order to do this:
@@ -103,7 +103,7 @@ sparkline chart. In order to do this:
 | 2\. **Change the Chart Type**    | <img src="images/tutorial-Change-Chart-Configuration.png" alt="Tutorial-Change-Chart-Configuration" class="responsive-img"/> | By default, the chart type will be set to line. Set it to **Area**. |
 
 <a name='change-date-aggregation'></a>
-### Changing the Date Aggregation
+## Changing the Date Aggregation
 
 By default, the aggregation for your information will be **12 months**.
 You can change this by modifying the "Show Last" settings. In order to
@@ -118,7 +118,7 @@ You can also choose to display more or less data by changing the number
 next to the date's aggregation.
 
 <a name='modify-columns'></a>
-### Modifying the amount of columns in the Sparkline
+## Modifying the amount of columns in the Sparkline
 
 In Reveal, the amount of columns in the visualization is defined by
 whether or not you want to display the last two months and the

@@ -1,6 +1,6 @@
-## Loading Dashboard Files
+# Loading Dashboard Files
 
-### Overview
+## Overview
 
 There are two ways to open/save dashboards with the SDK:
 
@@ -13,13 +13,13 @@ There are two ways to open/save dashboards with the SDK:
 
     Using this approach you can, for example, check user permissions, display your own user interface to select the dashboard, or allow users to upload the ".rdash" file to use. For further details about the client-side approach, follow this [**Setup and Configuration(Client)**](~/en/developer/web-sdk/setup-configuration.html#setup-and-configuration-client).
 
-### The Server-Side Approach
+## The Server-Side Approach
 
 In order to visualize a dashboard, you can provide the SDK with an instance of a Dashboard class, which you could instantiate passing a stream to a rdash or json string representation of a rdash.
 
 The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __RevealSdkContextBase.GetDashboardAsync__.
 
-### Code
+## Code
 
 ``` csharp
 public override Task<Dashboard> GetDashboardAsync(string dashboardId)

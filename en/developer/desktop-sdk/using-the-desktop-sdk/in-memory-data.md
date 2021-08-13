@@ -1,27 +1,27 @@
-## In-Memory Data Support
+# In-Memory Data Support
 
-### Overview
+## Overview
 
 In some cases you need to use data already in memory as part of your application state. Using, for example, the result of a report requested by the user, or information from a data source not yet supported by Reveal (like a custom database or a specific file format).
 
 In-Memory is a special type of data source that can be used only with the SDK and not in the Reveal application out of the box. Because of this, you cannot use an "in-memory data source" directly, you need to to take a different approach as explained below.
 
-### Using In-Memory Data Source
+## Using In-Memory Data Source
 
 The recommended approach is to **define a data file with a schema, matching your in-memory data**. Data files can be, for example, CSV or Excel files, and a schema is basically a list of fields and the data type for each field.
 
 In the example below you find details about how to create a data file with a given schema, and then use data in memory instead of getting information from a database.
 
-### Code Example
+## Code Example
 
 In the following example, you want to use in-memory data with the list of Employees in the company, in order to embed a dashboard showing HR metrics in your HR system. And instead of getting the list of employees from your database, you want to use data in memory.
 
 To achieve all that, you will need to create and export a dashboard in the Reveal application using dummy data.
 
-#### About the Reveal Application
+### About the Reveal Application
 The Reveal Application is a self-service business intelligence tool that enables you to create, view and share dashboards with your teams. For further details about the Reveal app, you can access an [**online demo**](https://app.revealbi.io/) or browse the [**Help Documentation**](https://www.revealbi.io/help/).
 
-#### Getting the Data File and Sample Dashboard Ready
+### Getting the Data File and Sample Dashboard Ready
 
 As simplified Employee has only the following properties:
 
@@ -29,7 +29,7 @@ As simplified Employee has only the following properties:
   - *Fullname*: string
   - *Wage*: numeric
 
-#### Steps
+### Steps
 
 1.  Create The CSV file with the same schema:
 
@@ -45,7 +45,7 @@ As simplified Employee has only the following properties:
 
 4.  Export the dashboard from the Reveal app (Dashboard Menu → Export → Dashboard) and save a .rdash file.
 
-#### Visualizing the Dashboard and Returning the Actual Data
+### Visualizing the Dashboard and Returning the Actual Data
 
 Now you need to visualize the dashboard using your own data instead of the dummy one.
 

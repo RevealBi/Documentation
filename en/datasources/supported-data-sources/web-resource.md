@@ -1,4 +1,4 @@
-## Web Resource
+# Web Resource
 
 A web resource, as the name suggests, is any virtual file stored in the
 web which you can retrieve by using a unique URL address. It might, for

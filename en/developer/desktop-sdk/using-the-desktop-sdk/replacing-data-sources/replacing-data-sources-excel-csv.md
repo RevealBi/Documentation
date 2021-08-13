@@ -1,11 +1,11 @@
-## Replacing Excel and CSV file DataSources 
+# Replacing Excel and CSV file DataSources 
 
-### Overview
+## Overview
 
 When we create a dashboard in **Reveal Application** we often use Excel or CSV files stored in the cloud to populate it with data.   
 After exporting the dashboard and embedding it in custom application, we can move these files in a local directory and then use the **Reveal SDK** to access and set them as a local datasource. 
 
-### Steps
+## Steps
 To populate the exported dashboard using local Excel and CSV files, you need to follow these steps:
 1. **Export the dashboard** file as explained in [**Getting Dashboards for the SDK**](~/en/developer/general/get-dashboards.md) 
 2. **Load the dashboard** in your application as described in: 
@@ -21,7 +21,7 @@ You can use the *Reveal.Sdk.Samples.UpMedia.Wpf* sample application as reference
   public override IRVDataSourceProvider DataSourceProvider => new CloudToLocalDatasourceProvider();        
 ```
 
-### Code
+## Code
 ``` csharp
     public class CloudToLocalDatasourceProvider : IRVDataSourceProvider
     {

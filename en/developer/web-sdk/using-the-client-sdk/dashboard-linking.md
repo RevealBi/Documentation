@@ -1,10 +1,10 @@
-## Dashboard Linking
+# Dashboard Linking
 
-### Overview
+## Overview
 
 The Reveal application supports dashboard linking, which allows users to navigate through dashboards. By moving from dashboard to dashboard, you can go from a high level overview of the business' reality to a more detailed view with the specifics.
 
-### Common Use Cases
+## Common Use Cases
 
 You can have, for example, a "Company 360" dashboard showing key
 performance indicators for each division (HR, Sales, Marketing). Once the user maximizes one of the visualizations, the navigation is
@@ -14,7 +14,7 @@ Alternatively, you can also use dashboard linking to navigate to a more specific
 
 For further details about the Dashboard Linking functionality, refer to [**Dashboard Linking**](https://www.revealbi.io/help/dashboard-linking) from Reveal’s User Guide.
 
-### Code Example
+## Code Example
 
 You can use dashboard linking with the SDK, but the containing
 application needs to be involved when the navigation is being triggered.

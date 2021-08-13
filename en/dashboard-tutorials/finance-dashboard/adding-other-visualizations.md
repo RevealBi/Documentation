@@ -1,4 +1,4 @@
-## Adding the other Visualizations
+# Adding the other Visualizations
 
 All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
@@ -44,7 +44,7 @@ This section will cover the following visualizations:
 </table>
 
 <a name='sis-stock-value-2018'></a>
-### Silver Security Stock Value 2018
+## Silver Security Stock Value 2018
 
 The SIS Stock Value 2018 visualization displays the average value for
 the Soylent Corp stock during 2018 in a [text gauge](~/en/visualization-tutorials/gauge-views.html#create-text-gauge). In this case, you can
@@ -88,7 +88,7 @@ that will change is the selected filter.
     Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <a name="glb-fiscal-monthly"></a>
-### GLB Fiscal (Monthly) NYSE + BATS
+## GLB Fiscal (Monthly) NYSE + BATS
 
 The GLB Fiscal visualization displays the price movements for the Globex
 stock during 2018 considering both the New York Stock Exchange (NYSE)
@@ -155,7 +155,7 @@ and the Better Alternative Trading System (BATS) values in a
     Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <a name='forecast-change-bid-offers'></a>
-### Forecast (Chg, Bid & Offers) - 2018 to 2023
+## Forecast (Chg, Bid & Offers) - 2018 to 2023
 
 The Forecast visualization displays the changes, bids and offers for all
 stocks for a 5 year period in a [line chart](~/en/visualization-tutorials/simple-charts.md). In
@@ -201,7 +201,7 @@ order to create it:
     Once you are done, go back to the Dashboard Editor by selecting the **tick icon** in the top right-hand corner.
 
 <a name='stock-variations'></a>
-### Stock Variations
+## Stock Variations
 
 The Stock Variations visualization displays the change in stock offers
 for a 12 month period in a [sparkline chart](~/en/visualization-tutorials/sparkline-charts.md).
@@ -247,7 +247,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='stock-volumes'></a>
-### Stock Volumes
+## Stock Volumes
 
 The Stock Volumes visualization displays the amount of stocks available
 during a one year period in a [line gauge](~/en/visualization-tutorials/gauge-views.html#create-linear-gauge). In order to create it:

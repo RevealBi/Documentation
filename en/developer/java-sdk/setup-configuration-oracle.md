@@ -1,8 +1,8 @@
-## Oracle Server Setup and Configuration
+# Oracle Server Setup and Configuration
 
 <a name='maven-dependency'></a>
 
-### Prerequisites (Maven)
+## Prerequisites (Maven)
 
 Reveal Java SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules. To work with the SDK libraries, you need to add a reference to Reveal's Maven Repository and also a dependency in your Maven pom.xml file.
 
@@ -43,7 +43,7 @@ Replace version_number with a number similar to **0.9.6**.
 If you are not familiar with Maven, please refer to the following [link](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
 
-### Setup and Configuration
+## Setup and Configuration
 
 To integrate Reveal with an existing application, you need to follow these steps:
 
@@ -52,11 +52,11 @@ To integrate Reveal with an existing application, you need to follow these steps
 3.  Initialize Reveal.
 4.  Enable server-side export
 
-#### Step 1 - Adding a dependency to the app implementation
+### Step 1 - Adding a dependency to the app implementation
 
 Add a dependency to the existing application implementation, following the steps needed for your Oracle server.
 
-#### Step 2 - Adding a dependency to Reveal SDK
+### Step 2 - Adding a dependency to Reveal SDK
 
 Add a dependency to *reveal-sdk* and specify your SDK version.
 
@@ -70,7 +70,7 @@ Add a dependency to *reveal-sdk* and specify your SDK version.
 
 Replace version_number with a number similar to **1.0.1821**.
 
-#### Step 3 - Initializing Reveal
+### Step 3 - Initializing Reveal
 
 To initialize Reveal, you use **RevealEngineInitializer.initialize**.
 
@@ -105,14 +105,14 @@ The available parameters passed to **RevealEngineInitializer.initialize** are:
 
 For further details about how implement your own Dashboard providers, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
 
-#### Step 4 - Enabling server-side export
+### Step 4 - Enabling server-side export
 
 The Java SDK uses some native components for exporting dashboards to different formats: Image, PDF, PPT and Excel.
 
 If you are interested in exporting server-side to one or more of those formats, please refer to [Server-side Export Configuration](export-server-side.md)
 
 
-### Setup and Configuration (Client)
+## Setup and Configuration (Client)
 
 To set up the Reveal Web Client SDK you need to:
 
@@ -125,7 +125,7 @@ To set up the Reveal Web Client SDK you need to:
 
 <a name='check-dependencies'></a>
 
-#### 1\. Checking Dependencies
+### 1\. Checking Dependencies
 
 The Reveal Web Client SDK has the following 3rd party references:
 
@@ -138,7 +138,7 @@ The Reveal Web Client SDK has the following 3rd party references:
 
 <a name='reference-web-client-sdk'></a>
 
-#### 2\. Referencing the Web Client SDK
+### 2\. Referencing the Web Client SDK
 
 Enabling **\$.ig.RevealView** component in a web page requires several scripts to be included. These
 scripts will be provided as part of Reveal Web Client SDK.
@@ -152,7 +152,7 @@ JavaScript files can be found in
 
 <a name='instantiate-web-client-sdk'></a>
 
-#### 3\. Instantiating the Web Client SDK
+### 3\. Instantiating the Web Client SDK
 
 Reveal’s Dashboard presentation is handled natively through the Web
 Client SDK.
@@ -176,7 +176,7 @@ To get started follow these steps:
     you should use the retrieved dashboard and set it to the dashboard property of the
     **\$.ig.RevealView**
 
-#### Sample Code
+### Sample Code
 
 ```html
 <!DOCTYPE html>

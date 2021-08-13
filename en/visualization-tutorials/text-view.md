@@ -1,4 +1,4 @@
-## Creating a Text View
+# Creating a Text View
 
 In this tutorial, you will learn how to create a text view visualization
 using a sample spreadsheet.
@@ -11,13 +11,13 @@ Access the links below for the Text view walkthroughs.
 
   - [How to change the selected row](#changing-selected-row)
 
-### Key Concepts
+## Key Concepts
 
 Text views display information in a key-value pattern, but **they only
 display the first row of data paired with a column's label**. You can,
 however, add filters to make sure Reveal displays the row you need.
 
-### Sample Data Source
+## Sample Data Source
 
 For this tutorial, you will use the "Simple Series Charts" sheet in the
 [Reveal Tutorials Spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
@@ -26,7 +26,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported _cloud services_ or add it as a [Web Resource](datasources/supported-data-sources/web-resource.md).
 
 <a name='creating-text-view'></a>
-### Creating a Text View
+## Creating a Text View
 
 |                                          |                                                                                                                   |                                                                                                                                                                                                                         |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 | 6\. **Organize your Data**               | <img src="images/Tutorials-TextView-Organizing-Data.png" alt="Tutorials-TextView-Organizing-Data" class="responsive-img"/>                              | The above text view, for example, displays the population, life expectancy, and fertility rate for a specific country. Drag and drop "Country Name", "Population", "Life Expectancy" and "Fertility Rate" into Columns. |
 
 <a name='changing-selected-row'></a>
-### Changing the Selected Row
+## Changing the Selected Row
 
 Text View display the first row of the sheet by default. You can add a
 filter to your data in order to change this. For example, let's make the

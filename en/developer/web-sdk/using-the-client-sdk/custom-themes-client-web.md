@@ -1,6 +1,6 @@
-## Creating Custom Themes
+# Creating Custom Themes
 
-### Overview
+## Overview
 
 When embedding analytics into your existing applications it is key that those dashboards match your app's look and feel. That's why you have full control over the Reveal dashboards through our SDK.
 
@@ -12,20 +12,20 @@ Key customizations you can achieve with custom themes:
 - **Font**: Reveal uses three types of text in the application: regular, medium and bold. You can specify the font uses for each of these text groups.
 - **Visualization and dashboard background colors**: You can configure separately the background color of your dashboard and the background color of the visualizations.
 
-### Common Use Case: A New Custom Theme
+## Common Use Case: A New Custom Theme
 Creating your own theme in Reveal is as easy as creating an instance of the new __$.ig.RevealTheme()__ class. This class contains all the customizable settings listed in the overview.
 
 When creating a new __$.ig.RevealTheme__ instance, you will get the default values for each setting and you can modify them as needed.
 
 Then, pass the theme instance to the __$.ig.RevealSdkSettings__'s class static theme property. If you have a dashboard or another Reveal component already displayed on your screen, you will need to render it again(set the dashboard property again) in order to see the applied changes.
 
-### Common Use Case: Modifying a Custom Theme
+## Common Use Case: Modifying a Custom Theme
 
 You may have already applied your own theme but want to modify some of the settings without losing the changes you made to the others.
 
 In this case, you need to get the theme static property from the __$.ig.RevealSdkSettings__. This enables you to get the last values you have set for your RevealTheme settings. Unlike the case when you create a new instance of the RevealTheme from scratch, after applying your changes and updating your theme again, you will get the current values for each setting you didn’t modify instead of the default values.
 
-### Code Example
+## Code Example
 
 First, here's a sample dashboard before we make any changes:
 
@@ -67,7 +67,7 @@ After implementing the theme changes, below you can see the results for both the
 
 <img src="images/custom-theme-sample-after-visualization.png" alt="Image showing a Reveal visualization after theme changes" class="responsive-img"/>
 
-### Using Color Types
+## Using Color Types
 
 You can use either RGB (red, green, blue) or HEX colors to specify the color settings.
 
@@ -78,7 +78,7 @@ revealTheme.dashboardBackgroundColor = "#E8EBFC";
 
 ```
 
-### Built-In Themes 
+## Built-In Themes 
 
 Reveal SDK comes with four pre-built themes: *Mountain Light*, *Mountain Dark*, *Ocean Light*, and *Ocean Dark*. You can set the one that best matches your application's design, or you can also use it as the basis for your custom theme modifications.    
 
@@ -108,7 +108,7 @@ $.ig.RevealSdkSettings.theme = new $.ig.OceanLightTheme();
 $.ig.RevealSdkSettings.theme = new $.ig.OceanDarkTheme();
 ```
 
-#### How the Built-In Themes Look? 
+### How the Built-In Themes Look? 
 
 Below, you will find a table showing how the *Visualization Editor* and *Dashboard Editor* look when each of the pre-built themes is applied. 
 

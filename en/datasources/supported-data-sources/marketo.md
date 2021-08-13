@@ -1,6 +1,6 @@
-## Marketo 
+# Marketo 
 
-### Connecting to Marketo 
+## Connecting to Marketo 
 
 Upon selecting the Marketo data source, you will see the following screen:
 
@@ -16,7 +16,7 @@ Your *Admin* panel in Marketo contains the authentication elements listed above.
 
 If you need details about how to create the OAuth credentials you need from Marketo to connect, see the article about [Custom Services](https://developers.marketo.com/rest-api/custom-services/?_fsi=oP2ZRHsM) in Marketo's docs. 
 
-### Setting Up Your Data
+## Setting Up Your Data
 
 After logging in, you can set up your Marketo data in the following dialog:
 

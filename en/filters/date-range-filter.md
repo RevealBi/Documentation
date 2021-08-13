@@ -1,4 +1,4 @@
-## Date Range Dashboard Filter
+# Date Range Dashboard Filter
 
 Reveal supports enabling a range of dates as dashboard filters to bind
 your data to. This enables time-based analysis scenarios, changing one
@@ -14,7 +14,7 @@ expressions.
 
 <img src="images/dashboard-filter-date-range-menu.png" alt="Filter Date Range dialog" class="responsive-img"/>
 
-### Using Custom Date Ranges
+## Using Custom Date Ranges
 
 Reveal offers a variety of pre-set date ranges (including Last 30, 7, or
 365 days, among others), but you might want to define your range to see

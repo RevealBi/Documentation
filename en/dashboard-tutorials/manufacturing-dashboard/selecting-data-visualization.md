@@ -1,4 +1,4 @@
-## Creating the First Visualization 
+# Creating the First Visualization 
 
 Let's focus on creating the "Incoming Daily Orders MTD" visualization in
 the [sample dashboard](getting-started.md) presented at

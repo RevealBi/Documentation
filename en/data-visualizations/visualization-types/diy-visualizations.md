@@ -1,8 +1,8 @@
-## Custom Visualizations
+# Custom Visualizations
 
 Reveal offers multiple components for visualizing data, including the grid chart, gauge chart, maps and other chart types. There are some cases, though, where you would like to have another visualization method, not supported out of the box, that you feel would be a better fit for your scenario. It is for these cases that Reveal introduces the ability to do your own custom visualization component and display it in a visualization as part of a Reveal dashboard.
 
-### Sample DIY visualizations
+## Sample DIY visualizations
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -29,7 +29,7 @@ Reveal offers multiple components for visualizing data, including the grid chart
 </tbody>
 </table>
 
-### Using a Custom Visualization
+## Using a Custom Visualization
 
 1. **Select Custom Visualization.**  
 To find this option open the Visualizations section within the Widget Editor.
@@ -44,7 +44,7 @@ Add the URL of the web page that generates the custom visualization you want.
     Keep in mind that the URL needs to be publicly accessible and to use the HTTPS:// protocol. In addition, every resource referenced in your custom HTML will need to use the same protocol.
 
 
-### Custom Web Pages and Reveal
+## Custom Web Pages and Reveal
 Custom web pages can access the data retrieved by Reveal from any of the supported data sources. The custom visualizations interact with a Javascript API provided for that purpose.
 
 You can reference custom web pages either through a public URL address or from an internal shared location in your intranet.

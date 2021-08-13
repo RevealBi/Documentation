@@ -1,16 +1,16 @@
-## Creating New Visualizations and Dashboards
+# Creating New Visualizations and Dashboards
 
-### Overview
+## Overview
 
 In order to add new visualizations to an existing dashboard, the user needs to **select the data source** to be used. To do that, the containing application needs to provide information to the SDK, so it can display the list of data sources available for a new visualization.
 
-### Displaying a List of Data Sources
+## Displaying a List of Data Sources
 
 The callback you need to use to display a list of data sources is
 __DataSourcesRequested__.
 In the case that you don’t set your own method to this callback, when a new visualization is created, Reveal will display all data sources used in the dashboard (if any).
 
-#### Code
+### Code
 
 The code below shows how to configure the *data source selection* screen to show an “in-memory” item and a SQL Server data source.
 
@@ -49,7 +49,7 @@ The “false” value in the third parameter prevents existing data sources on t
 Please note that the “employees” parameter passed to the
 “RVInMemoryDataSourceItem” constructor, is the same dataset id used in [**In-Memory Data Support**](in-memory-data.md) and identifies the dataset to be returned.
 
-### Creating New Dashboards
+## Creating New Dashboards
 
 Creating dashboards from scratch is really simple. You just need to initialize __RevealView__. Usually when providing the users the capability to create a dashboard from scratch you would want to open the empty dashboard directly in edit mode so the user could start editing it straight away.
 ``` csharp

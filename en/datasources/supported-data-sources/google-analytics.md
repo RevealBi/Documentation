@@ -1,10 +1,10 @@
-## Google Analytics
+# Google Analytics
 
 Google Analytics is one of the most used web analytics services in the
 web, it tracks and reports website traffic. In addition, Google also
 provides an SDK to gather usage data from iOS and Android apps.
 
-### Connecting to Google Analytics
+## Connecting to Google Analytics
 
 1.  **Log in**
 
@@ -52,7 +52,7 @@ provides an SDK to gather usage data from iOS and Android apps.
 
 After your credentials are verified, Reveal will take you to the _Visualizations Editor_.
 
-### Working in the Visualizations Editor
+## Working in the Visualizations Editor
 
 When you create a dashboard with information coming from Google Analytics, you will see fields organized differently (see screenshot below).
 
@@ -69,7 +69,7 @@ If you need to learn more, check this Google Analytics article: [Dimensions and 
 >[!NOTE] 
 > Some dimensions and measures cannot be used together. For a list of valid dimensions-measures combinations, refer to the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) on the Google Developer website.
 
-#### Data Filters
+### Data Filters
 
 There are two *Data Filters* when using the GA data source in Reveal. 
 
@@ -80,7 +80,7 @@ There are two *Data Filters* when using the GA data source in Reveal.
 
   >[!NOTE] Default date range is _Last 30 days_. This means data will be retrieved for the last 30-day period, including today. 
 
-#### Using Goals from Google Analytics
+### Using Goals from Google Analytics
 
 You can use *Goals* defined in Google Analytics in the *Visualization
 Editor*. Your *Goals* are listed as part of the metrics in both

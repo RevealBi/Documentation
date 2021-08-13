@@ -1,6 +1,6 @@
-## Replacing Data Sources (MS SQL Server)
+# Replacing Data Sources (MS SQL Server)
 
-### Overview
+## Overview
 
 Before loading and processing the data for a dashboard (by Reveal Server
 SDK), you can override the configuration or data to be used for each
@@ -19,7 +19,7 @@ __IRVDataSourceProvider__
 may replace or modify the data source used by a given visualization or
 dashboard filter.
 
-### Use Cases
+## Use Cases
 
 Below you can find a list of common use cases:
 
@@ -41,7 +41,7 @@ Below you can find a list of common use cases:
     [**In-Memory Data Support**](~/en/developer/web-sdk/using-the-server-sdk/in-memory-data.md).
 
 
-### Code
+## Code
 
 The following code snippet shows an example of how to replace the data
 source for visualizations in the dashboard. The method

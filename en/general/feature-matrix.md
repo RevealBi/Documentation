@@ -1,4 +1,4 @@
-## Complete Feature Matrix
+# Complete Feature Matrix
 
 The matrix below shows the availability of Reveal features in all its platforms - Web, Desktop, iOS and Android.
 

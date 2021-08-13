@@ -1,4 +1,4 @@
-## KPI Gauge
+# KPI Gauge
 
 Key Performance Indicators (KPIs) is a measurable value that demonstrates how effectively a company is achieving key business objectives. The indicators vary depending on the specific needs of the viewer, but they always provide
 information over metrics important for the organization, such as the
@@ -15,7 +15,7 @@ Category.
 
 <img src="images/multiple-kpi-gauges.png" alt="Multiple KPI Gauges" class="responsive-img"/>
 
-### Indicator Settings
+## Indicator Settings
 
 The KPI gauge has similar settings to the [sparkline](sparkline-charts.md)
 visualization, through which you can configure:

@@ -1,4 +1,4 @@
-## Adding the other Visualizations
+# Adding the other Visualizations
 
 All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx)
@@ -56,7 +56,7 @@ This section will cover the following visualizations:
 </table>
 
 <a name='win-lost-by-month'></a>
-### Win/Lost by Month
+## Win/Lost by Month
 
 The Win/Lost by Month visualization displays the amount of won and lost
 opportunities for a six-month period in a [column chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -118,7 +118,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='forecasted'></a>
-### Forecasted
+## Forecasted
 
 The Forecasted visualization displays the forecast for a six month
 period in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -201,7 +201,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='lost-opportunities'></a>
-### Lost Opportunities
+## Lost Opportunities
 
 The Lost Opportunities visualization simply displays the percentage of
 opportunities which were missed in a [Text Gauge](~/en/visualization-tutorials/gauge-views.html#text-gauge). In order to create it:
@@ -281,7 +281,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='pipeline-by-territory'></a>
-### Pipeline by Territory
+## Pipeline by Territory
 
 The Pipeline by Territory visualizations displays the average sales
 prospects and where they are located in a [funnel chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -333,7 +333,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='opportunities'></a>
-### Total Opportunities
+## Total Opportunities
 
 The Total Opportunities visualization displays the revenue the
 opportunities represented for the company for a 12 month period in a
@@ -417,7 +417,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='revenue-by-territory'></a>
-### Revenue by Territory
+## Revenue by Territory
 
 The Revenue by Territory displays the revenue represented by each region
 for the company in a [pie chart](~/en/visualization-tutorials/simple-charts.md). In order to
@@ -462,7 +462,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='pipeline-per-employee'></a>
-### Pipeline per Employee
+## Pipeline per Employee
 
 The Pipeline per Employee visualization displays the top 10 sales
 prospects per employee in a [column chart](~/en/visualization-tutorials/simple-charts.md). In
@@ -535,7 +535,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='sales-by-product'></a>
-### Sales by Product
+## Sales by Product
 
 The Sales by Product visualization displays the different company
 products and the percentage of sales for each one in a [doughnut chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:

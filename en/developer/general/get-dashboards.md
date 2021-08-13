@@ -1,6 +1,6 @@
-## Getting Dashboards for the SDK
+# Getting Dashboards for the SDK
 
-### Introduction
+## Introduction
 
 Reveal is a business intelligence platform that was purposely designed to be embedded into applications. Embedded Reveal dashboards are a quick and simple way to display information to communicate the status, metrics, or performance of a business.  
 
@@ -10,13 +10,13 @@ The **Reveal Application** is a self-service business intelligence tool that ena
 
 With **Reveal SDK** developers can embed Reveal into their applications developed in multiple platforms and technologies. And Reveal dashboards can be displayed and even modified by end users.
 
-### Overview
+## Overview
 
 In order to display dashboards in your application you first need to create them using the Reveal Application on your preferred platform.
 
 You can also use the Reveal SDK to create dashboards from scratch, but the recommended approach when you are first evaluating the SDK is to start with dashboards created with the app.
 
-### Getting your Dashboard File
+## Getting your Dashboard File
 
 Once you [**created your dashboard**](https://www.revealbi.io/help/creating-dashboards), below you can find how to get it:
 

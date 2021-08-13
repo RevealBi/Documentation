@@ -1,11 +1,11 @@
-## Providing Credentials to Data Sources
+# Providing Credentials to Data Sources
 
-### Overview
+## Overview
 
 The Server SDK allows you to pass in a set of credentials to be used
 when accessing the data source.
 
-### Code
+## Code
 
 The first step is to implement **IRVAuthenticationProvider** and set it
 to the
@@ -40,7 +40,7 @@ public class EmbedAuthenticationProvider : IRVAuthenticationProvider
 }
 ```
 
-### Choosing Which Class to Implement
+## Choosing Which Class to Implement
 
 There are two classes that can be used, both implementing the
 __IRVDataSourceCredential__
@@ -65,7 +65,7 @@ as detailed below.
   - **Both classes** work with:
       - Other Data Sources (OData Feed, Web Resources, REST API).
 
-### No Authentication
+## No Authentication
 
 Sometimes you might work with an anonymous resource, without
 authentication. In this particular case, you can use

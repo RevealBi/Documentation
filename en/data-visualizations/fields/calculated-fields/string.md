@@ -1,4 +1,4 @@
-## String Calculated Fields
+# String Calculated Fields
 
 String calculated fields, except for `sortinterval`, allow you to edit
 texts to get different results.
@@ -95,12 +95,12 @@ The functions included in the String category are:
 
 
 <a name='calc-fields-find'></a>
-### Find
+## Find
 
 The find function returns the starting position of a first string in a
 second string as specified in your arguments.
 
-#### Syntax
+### Syntax
 
 There are three arguments you need to configure:
 
@@ -110,7 +110,7 @@ There are three arguments you need to configure:
 
   - `start number`: the character from which you want to start looking.
 
-#### Sample
+### Sample
 
 Let's take a look at the sample included in the table above:
 
@@ -129,12 +129,12 @@ If `with` were repeated more than once in the phrase, the calculated
 field will return the character of the **first occurrence of the word**.
 
 <a name='calc-fields-mid'></a>
-### Mid
+## Mid
 
 The mid calculated field returns a substring of the specified string
 according to what you configure in your arguments.
 
-#### Syntax
+### Syntax
 
 There are three parameters for you to configure:
 
@@ -144,7 +144,7 @@ There are three parameters for you to configure:
 
   - `length`: the length of your substring.
 
-#### Sample
+### Sample
 
 Let's take a look at the sample included in the table above:
 
@@ -160,12 +160,12 @@ starting at character 9 and lasting 12 characters:
 | **S** | **t** | **a** | **r** | **t** | **e** | **d** |       | **w** | **i** | **t** | **h** |
 
 <a name='calc-fields-replace'></a>
-### Replace
+## Replace
 
 The replace function replaces a given string with a different one as
 specified in your arguments.
 
-#### Syntax
+### Syntax
 
 There are three arguments for you to configure:
 
@@ -175,7 +175,7 @@ There are three arguments for you to configure:
 
   - `new text`: the text you want to replace your old string with.
 
-#### Sample
+### Sample
 
 Let's look at the following sample:
 
@@ -188,16 +188,16 @@ that the term will be changed every time it appears before you change
 it**.
 
 <a name='calc-fields-sortinterval'></a>
-### Sortinterval
+## Sortinterval
 
 The sortinterval function returns a value in a(n) interval(s) according
 to what is configured in the arguments.
 
-#### Syntax
+### Syntax
 
 The format for the returned string will be `NN [from, to]`.
 
-#### Samples
+### Samples
 
 Let's look at one of the samples in the table above:
 

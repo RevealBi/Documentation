@@ -1,11 +1,11 @@
-## Radial Charts
+# Radial Charts
 
 Like category charts, Radial charts are simply representations of
 information in a coordinate system.
 
 <img src="images/radial-chart-samples.png" alt="Radial Chart Sample" class="responsive-img"/>
 
-### Chart Trendlines for Radial Charts
+## Chart Trendlines for Radial Charts
 
 Chart settings enable the display of trend lines, which are lines that
 are painted across a chart, based on an algorithm. Trendlines are a very

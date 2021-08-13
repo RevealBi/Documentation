@@ -1,11 +1,11 @@
-## Setting Up Initial Filter Selections
+# Setting Up Initial Filter Selections
 
-### Overview
+## Overview
 
 Sometimes, you want to display a dashboard with filters already applied.
 Dashboard filters are very useful to slice the contents of all the widgets at once. Because of this, you can use the SDK to set up initial dashboard filter selections that remain in context for all the dashboard’s widgets.
 
-#### Example Details
+### Example Details
 
 In this example, you have a dashboard showing Sales data with the
 following filters:
@@ -15,7 +15,7 @@ following filters:
 
 <img src="images/sales-data_example.png" alt="sales-data\_example" class="responsive-img"/>
 
-### Code Example
+## Code Example
 
 In this case, you want to set the initial filters selection to:
 
@@ -46,7 +46,7 @@ using (var fileStream = File.OpenRead(path))
 > The code above assumes that **CurrentUser.Territory** returns the name of the territory for the current user.
 
 
-#### Hiding filters
+### Hiding filters
 
 It is possible that you might not want users to access data from
 territories different than their own. In that case, you can restrict the

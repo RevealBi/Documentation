@@ -1,9 +1,9 @@
-## How to prepare Your Data for a Choropleth Map. Location Data Requirements
+# How to prepare Your Data for a Choropleth Map. Location Data Requirements
 
 *Location names* column in your data set has to match the actual geographic units on the selected map. If for example, the column contains name of countries, but you want to use the USA states map, you will see the "_There is no data to display_" error on the screen. Find more about this error in [Troubleshooting Errors](#troubleshooting-choropleth-map) below.
 
 <a name='location-formats'></a>
-### Location Formats
+## Location Formats
 To have your location column recognized by Reveal, provide one of the following formats:
 
  - *names* of countries and their subdivisions (provinces, states, departments, regions, etc.) - comply with the official spelling in English or another supported language. Find more information about supported languages in [My Data Source Is Not in English](#data-not-in-english) below.
@@ -38,12 +38,12 @@ Be consistent with the format you provide. Do not mix full names and codes in th
 | Equatorial Guinea        | Eq. Guinea            |
 
 <a name='troubleshooting-choropleth-map'></a>
-### Troubleshooting Errors
+## Troubleshooting Errors
 
 The Choropleth map was designed to find any match that is available. This way, you'll see a map with partial results doesn't look right, but it will be working regardless.
 For example, when using the US States map, Reveal will show the states that match the map and the other states will be greyed out.
 
-#### Troubleshooting the Choropleth Map
+### Troubleshooting the Choropleth Map
 
 If you are getting the *"There is no data to display"* error, this means the predefined map wasn't matched to any of your information. Try the  suggestions below to troubleshoot this issue.
 
@@ -61,14 +61,14 @@ If you are getting the *"There is no data to display"* error, this means the pre
 
 If you are getting an outcome, but it's not exactly what you were expecting, please go through the entire Choropleth map documentation, including this topic, the [Choropleth Maps](choropleth-map.md), and [Working with the Choropleth Map Settings](settings-choropleth-map.md) topic.
 
-#### General Troubleshooting Tips
+### General Troubleshooting Tips
 
 - *Isolate the issue.* If possible, try to isolate your problem. For example, if you can’t use a specific location, try with another different location or even a different data source. When trying to isolate your issue, make only small changes at a time.
 
 - *Remember/write down the steps you made.* Once you start troubleshooting, it is really helpful to remember what you have already done. When asking for support, things get much easier if you know exactly which steps you made in the past.
 
 <a name='data-not-in-english'></a>
-### My Data Source Is Not In English
+## My Data Source Is Not In English
 
 Reveal doesn't recognize the language of your data source automatically.
 If your data source information is written in another language, you need to specify it by going to:

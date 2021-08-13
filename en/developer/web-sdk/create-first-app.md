@@ -1,9 +1,9 @@
-## Creating Your First App
+# Creating Your First App
 
 This part aims to guide you through the initial steps of showing a
 dashboard on your web page/application for the first time.
 
-### Steps
+## Steps
 
 1.  Creating the Project
 2.  Installing Reveal SDK
@@ -12,7 +12,7 @@ dashboard on your web page/application for the first time.
 5.  Using Reveal Fonts
 6.  Styling the Client Application
 
-### Step 1 - Create the Project
+## Step 1 - Create the Project
 
 Open Visual Studio 2017 and create new project of type **ASP.NET Core
 Web Application**:
@@ -25,7 +25,7 @@ Select **.NET Framework** and **ASP.NET Core 2.2** as follows:
 ![select framework and mvc for project dialog in Visual Studio
 2017](images/select-framework-project.png)
 
-### Step 2 - Install Reveal SDK
+## Step 2 - Install Reveal SDK
 
 Download the *Infragistics Reveal SDK* from <https://www.revealbi.io/>
 and install it on your machine. In **Visual Studio** go to **Tools \>
@@ -42,7 +42,7 @@ the one you added:
 
 <img src="images/preview-changes-dialog.png" alt="preview changes dialog" class="responsive-img"/>
 
-### Step 3 - Work on Server Configuration
+## Step 3 - Work on Server Configuration
 
 Create a new *Reveal SDK* folder in the project and add the
 **RevealSdkContext.cs** class, which implements the
@@ -109,7 +109,7 @@ If you experience any issues, please refer to the [**Setup
 and Configuration (Web)**](~/en/developer/setup-configuration/setup-configuration-web.md)
 topic.
 
-### Step 4 - Embed Reveal in your Client application
+## Step 4 - Embed Reveal in your Client application
 
 Let’s start this step by getting a dashboard ready. For the purpose of
 this demo, you can use the **Marketing dashboard** from the **Samples**
@@ -230,7 +230,7 @@ page](images/marketing-dashboard-result.png)
 If you experience any issues, please refer to the [**Setup and Configuration (Web)**](~/en/developer/setup-configuration/setup-configuration-web.md)
 topic.
 
-### Step 5 - Use Reveal Fonts
+## Step 5 - Use Reveal Fonts
 
 Reveal app uses Roboto fonts. In order to achieve the same look as in
 the app, download the fonts from
@@ -304,7 +304,7 @@ Voila\!
 ![marketing dashboard loaded with the new
 font](images/marketing-dashboard-new-font.png)
 
-### Step 6 - Style the Client Application
+## Step 6 - Style the Client Application
 
 Instead of using the default template, you can style the Client
 application.

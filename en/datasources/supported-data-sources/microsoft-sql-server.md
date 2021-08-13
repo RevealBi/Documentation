@@ -1,8 +1,8 @@
-## Microsoft SQL Server
+# Microsoft SQL Server
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Microsoft SQL addresses. If your MS SQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to the SQL Server address. This limitation does not apply to *Reveal Embedded*.
 
-### Connecting to MS SQL Server 
+## Connecting to MS SQL Server 
 
 To configure a Microsoft SQL Server data source, you can set the following information:
 
@@ -33,7 +33,7 @@ To configure a Microsoft SQL Server data source, you can set the following infor
     Connection**.
 
 <a name='how-to-find-server'></a>
-### How to find your Server Information
+## How to find your Server Information
 
 You can find your server by following the steps below. Please note that
 the commands should be executed on the server.
@@ -54,9 +54,9 @@ that the commands should be executed on the server.
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
 <a name='working-with-views'></a>
-### Setting Up Your Data
+## Setting Up Your Data
 
-#### Working with Views
+### Working with Views
 
 With Reveal, you can retrieve SQL Server data from entire tables, but
 you can also select a particular
@@ -72,7 +72,7 @@ part of the data in the **Products** table in the SQL Server.
 
 For more information on views and MS SQL Server, visit [this documentation website](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-2017).
 
-#### Working with Stored Procedures
+### Working with Stored Procedures
 
 In MS SQL, stored procedures allow users to run a set of query
 statements in a relational database with specific parameters. The
@@ -95,7 +95,7 @@ In this case, the stored procedure requires users to configure the start and end
 
 For more information on Stored Procedures and MS SQL Server, visit [this documentation website](https://docs.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-2017).
 
-#### Limitations for Stored Procedures in Reveal
+### Limitations for Stored Procedures in Reveal
 
 
   - For stored procedures that return more than one result set, Reveal

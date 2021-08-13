@@ -1,6 +1,6 @@
-## Dashboard Filters and Their Properties
+# Dashboard Filters and Their Properties
 
-### Accessing Dashboard Filter Properties
+## Accessing Dashboard Filter Properties
 
 In order to add a new dashboard filter:
 
@@ -17,7 +17,7 @@ In order to add a new dashboard filter:
 3.  Choose which dataset to use as a dashboard filter and click/tap
     *Select Data*.
 
-### Filter Settings Overview
+## Filter Settings Overview
 
 You will be able to change the following settings for the filter:
 
@@ -47,7 +47,7 @@ You will be able to change the following settings for the filter:
 </table>
 
 <a name='displayed-field'></a>
-### Displayed Field
+## Displayed Field
 
 >[!NOTE] For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **_Displayed Element_**.
 
@@ -60,7 +60,7 @@ You can change the displayed column in *Edit mode* by selecting the *Edit* butto
 <img src="images/edit-displayed-field-filter-setting.png" alt="Accessing dashboard filter edit mode" class="responsive-img"/>
 
 <a name='multiple-selection'></a>
-### Multiple Selection
+## Multiple Selection
 
 Reveal supports the selection of multiple dashboard filter values
 simultaneously. This is meant to enable side by side comparison between different elements in a collection. For instance, in the *HR Dashboard* dashboard you can compare the hires and absences over time of different
@@ -75,7 +75,7 @@ dashboard filter ⇒ *Selection* ⇒ tick *Multiple Selection* checkbox.
 <img src="images/dashboard-filters-enable-multiple-selection.png" alt="Enabling dashboard filters multiple selections" class="responsive-img"/>
 
 <a name='required-selection'></a>
-### Required Selection
+## Required Selection
 
 Dashboard filters can be configured to require a selected option or not.
 By default, selections are not required. Making selections optional
@@ -91,7 +91,7 @@ dashboard filter ⇒ *Selection* ⇒ tick *Required Selection* checkbox.
 <img src="images/dashboard-filter-enable-required-selection.png" alt="Enabling dashboard filters required selection" class="responsive-img"/>
 
 <a name='data-filters'></a>
-### Data Filters
+## Data Filters
 
 You can also apply filters to the fields in the dataset displayed in the
 Dashboard Filter. This allows you to filter out null or empty values on
@@ -109,7 +109,7 @@ employees in all offices of the company:
 If you want your filter list to contain only employees working in a particular office, e.g.
 *London, UK*, apply a data filter as shown below.
 
-#### Applying a data filter to your dashboard filter
+### Applying a data filter to your dashboard filter
 
 To apply field filters and rules to the data source used as a dashboard
 filter and have the dashboard filter show only the employees in the
@@ -131,7 +131,7 @@ filter and have the dashboard filter show only the employees in the
 5.  Choose *London, UK* from the list and click/tap the *Create Filter*
     button.
 
-### Dashboard Filters Using Microsoft Analysis Data
+## Dashboard Filters Using Microsoft Analysis Data
 
 There are some specifics when configuring an MS Analysis dashboard filter.
 
@@ -144,7 +144,7 @@ There are some specifics when configuring an MS Analysis dashboard filter.
 Look at the screenshot above. In this example, the *Product* Dimension is selected as a *Displayed element*, so the dashboard filter will show a list of products (e.g. bikes, clothes, etc). 
 By additionally selecting the *Internet orders* Measure for *Show only when Measure has data* field, you will exclude dashboard filter values, which do not contain information about the *Internet orders* Measure. So, if there are no internet orders of the product bike, _bike_ will not show up as a possible selection in the _Dashboard Filters_ list.
 
-### Next Steps 
+## Next Steps 
 
 Now that you have already created your dashboard filter, you will need
 to **connect it to the visualizations** you want to apply filtering to.

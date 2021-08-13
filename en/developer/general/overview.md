@@ -1,4 +1,4 @@
-## Reveal SDK Overview
+# Reveal SDK Overview
 
 - **Desktop SDK** - Reveal Desktop SDK allows you to embed Reveal inside an external (host) Windows application (WPF or WinForms).
 
@@ -8,7 +8,7 @@
 
 When installing Reveal's SDK, you install the .NET Web SDK and Desktop SDK at the same time. The JAVA SDK is distributed as a set of [Maven](https://maven.apache.org/what-is-maven.html) modules.
 
-### Main Features
+## Main Features
 With Reveal SDK, developers can embed Reveal into their applications. And dashboards can be displayed and even modified by end users.
 
 Reveal SDK can be used to integrate Reveal into applications developed in multiple platforms and technologies: Web, Windows WPF, and Windows Forms.

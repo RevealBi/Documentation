@@ -1,4 +1,4 @@
-## Exporting Dashboards as PowerPoint Presentations
+# Exporting Dashboards as PowerPoint Presentations
 
 Reveal allows you to export your dashboard as a PowerPoint presentation.
 Every visualization that is part of this dashboard will be displayed on
@@ -12,7 +12,7 @@ To export a dashboard as a PowerPoint presentation, go to dashboard
 *Export Dashboard* dialog will open, allowing you to set up your
 presentation and annotate specific slides.
 
-### Export Settings
+## Export Settings
 
 <img src="images/export-settings-powerpoint.png" alt="Settings for PowerPoint presentation in the Export Dashboard menu" class="responsive-img"/>
 

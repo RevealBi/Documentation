@@ -1,4 +1,4 @@
-## Visualization Quick Filters
+# Visualization Quick Filters
 
 At a visualization level, you can also apply "quick" filters, which
 allow you to dynamically filter the visualization contents as the quick
@@ -26,7 +26,7 @@ As with [Dashboard Filters](dashboard-filters.md), this enables a dynamic
 filtering of the visualization contents as the quick filter selection
 changes.
 
-### Cascading Filters
+## Cascading Filters
 
 The list of possible values displayed to select from in Quick Filters
 will be filtered based on previous Quick Filter selections. Fields on
@@ -45,7 +45,7 @@ However, if you select **Tokyo, Japan** instead, the list of
 
 <img src="images/cascading-filter-hr-dashboard-second-filter.png" alt="Cascading Filter for the HR Dashboard showing departments in Tokyo" class="responsive-img"/>
 
-### Data Filters
+## Data Filters
 
 You can also apply filters to the fields in the dataset displayed in the
 Visualization Filter. This allows you, for example, to filter rows in

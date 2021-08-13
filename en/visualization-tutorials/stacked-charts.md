@@ -1,4 +1,4 @@
-## Creating Stacked Chart Visualizations
+# Creating Stacked Chart Visualizations
 
 In this tutorial, you will learn how to create stacked chart
 visualizations using a sample spreadsheet.
@@ -53,7 +53,7 @@ Access the links below for the Stacked Chart view walkthroughs:
 
   - [How to enable percentage distribution](#enable-percentage-distribution)
 
-### Key Concepts
+## Key Concepts
 
 There are three different layouts to choose from when using stacked
 charts: [area](#create-stacked-chart),
@@ -71,7 +71,7 @@ You can also configure the following settings:
         calculated with a non-linear scale which takes magnitude into
         account instead of the usual linear scale.
 
-### Sample Data Source
+## Sample Data Source
 
 For this tutorial, you will use the "Stacked Charts" sheet in the
 [Reveal Tutorials Spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
@@ -84,7 +84,7 @@ supported _cloud services_ or add it as a [Web Resource](datasources/supported-d
 </div>
 
 <a name='create-stacked-chart'></a>
-### Creating a Stacked Chart
+## Creating a Stacked Chart
 
 |                                          |                                                                                                        |                                                                                                                                                                                                                                                 |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -96,7 +96,7 @@ supported _cloud services_ or add it as a [Web Resource](datasources/supported-d
 | 6\. **Organize your Data**               | <img src="images/Tutorials-Stacked-Charts-Organizing-Data.png" alt="Tutorials-Stacked-Charts-Organizing-Data" class="responsive-img"/>       | Stacked charts require two or more fields to be dragged and dropped into the "Values" placeholder of the data editor. In this case, the "1960", "2003", "2008" and "2010" fields have been dropped into "Values" and "Country Name" in "Label". |
 
 <a name='change-chart-type'></a>
-### Changing your Stacked Chart Type
+## Changing your Stacked Chart Type
 
 If needed, you can choose a different type of stacked chart better
 fitted to your needs. In order to do this:
@@ -107,7 +107,7 @@ fitted to your needs. In order to do this:
 | 2\. **Select your Visualization**    | <img src="images/Tutorials-Stacked-Select-Visualization.png" alt="Tutorials-Stacked-Select-Visualization" class="responsive-img"/> | Select the type of stack chart you need. This section has a [preview of every stack chart type](#create-stacked-chart) at the top. |
 
 <a name='change-axis-configuration'></a>
-### Changing your Axis Configuration
+## Changing your Axis Configuration
 
 Similarly to the [Gauge bands](~/en/data-visualizations/gauge-charts#bands-configuration), the
 chart axis configuration allows you to set the lowest and highest values
@@ -121,7 +121,7 @@ data.
 | 3\. **Change the Default selection**   | <img src="images/Tutorials-Change-Default-Selection.png" alt="Tutorials-Change-Default-Selection" class="responsive-img"/> | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 <a name='set-logarithmic-axis'></a>
-### Setting your Axis Configuration as Logarithmic
+## Setting your Axis Configuration as Logarithmic
 
 |                                           |                                                                          |                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -130,7 +130,7 @@ data.
 | 3\. **Select an Axis Configuration type** | <img src="images/Tutorials-Charts-Logarithmic.png" alt="Tutorials-Charts-Logarithmic" class="responsive-img"/> | Select "Logarithmic".                                       |
 
 <a name='enable-percentage-distribution'></a>
-### Enabling Percentage Distribution
+## Enabling Percentage Distribution
 
 For stacked charts, you can configure the Percentage Distribution. It
 allows you to switch between values and percentage distribution scales

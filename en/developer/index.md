@@ -1,8 +1,8 @@
-## Welcome to Reveal SDK
+# Welcome to Reveal SDK
 
 Here you will find technical information on the Reveal SDK and API methods, including architecture information.
 
-### Where to start:
+## Where to start:
 
 [Reveal SDK Overview.](~/en/developer/general/overview.md)
     Introduction to the SDK main concepts and features.

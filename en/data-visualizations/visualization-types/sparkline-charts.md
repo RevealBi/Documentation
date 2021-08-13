@@ -1,4 +1,4 @@
-## Sparkline Charts
+# Sparkline Charts
 
 Sparkline charts are small charts plotted within a grid chart, without
 any axes, labels, or other chart elements. They are meant to represent
@@ -11,7 +11,7 @@ you to scroll through the different columns in your information.
 
 <img src="images/sparkline-chart-visualizations-editor.png" alt="SparklineChartVisualizationsEditor\_All" class="responsive-img"/>
 
-### Advanced Sparkline Settings
+## Advanced Sparkline Settings
 
 If you access the **Settings** section of the visualizations editor, you
 will be able to modify several settings, including:

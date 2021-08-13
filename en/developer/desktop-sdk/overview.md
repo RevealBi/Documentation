@@ -1,11 +1,11 @@
-## Overview
+# Overview
 
 When you embed Reveal in another application (Windows WPF, Windows
 Forms, iOS or Android), the Reveal SDK is provided as a library or
 framework that is integrated into the app (the integration steps are
 different for each platform).
 
-### The RevealView Component
+## The RevealView Component
 
 The containing app creates a RevealView object configured with the
 dashboard to render, this view is displayed in the containing app and
@@ -23,7 +23,7 @@ binary, stored in file system, etc.).
 
 <img src="images/sdk_native_diagram_desktop.png" alt="sdk\_native\_diagram\_desktop"/>
 
-### About Credentials
+## About Credentials
 
 When getting data from databases (or other data sources requiring
 authentication), usually the containing app already handles these

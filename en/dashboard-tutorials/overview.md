@@ -1,4 +1,4 @@
-## Dashboard Tutorials
+# Dashboard Tutorials
 
 
 Within this section, you will find step-by-step tutorials on how to

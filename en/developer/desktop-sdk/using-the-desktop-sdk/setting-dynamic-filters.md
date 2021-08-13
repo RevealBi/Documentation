@@ -1,6 +1,6 @@
-## Setting up Dynamic Filter Selections
+# Setting up Dynamic Filter Selections
 
-### Overview
+## Overview
 
 Sometimes your application will integrate a custom UI, to present the
 user with a list of values to select. And you might want that user
@@ -36,7 +36,7 @@ You can do the same when the selection is changed on your selector, just
 setting the new territory name using
 __SetFilterSelectedValues__.
 
-### Working with Dynamic Lists
+## Working with Dynamic Lists
 
 Territories like Americas, APAC, India, etc. do not change over time,
 but other lists of values might change. In this case, if a new Territory
@@ -91,7 +91,7 @@ private void CmbTerritories_SelectionChanged(object sender, SelectionChangedEven
 }
 ```
 
-### Working with Date Filters
+## Working with Date Filters
 
 Date filters are a special kind of filter as they have no data
 associated. There’s not a list of values to select from, instead you
@@ -99,7 +99,7 @@ actually select a time interval (from date A to date B). You can select
 from a list of predefined filters like “Year To Date”, “Previous Month”,
 etc., or specify your own range (from 2019-Jan-12 to 2019-Jan-30).
 
-#### Working with Predefined Filters
+### Working with Predefined Filters
 
 To set one of the predefined filters you can use a similar code to the
 following:
@@ -112,7 +112,7 @@ If you want a list of all predefined date filters, please refer to
 __RVDateFilterType__ in
 the API Reference.
 
-#### Working with a Custom Range
+### Working with a Custom Range
 
 To set a custom range, for example for the last 15 days, you can use a
 code similar to the following:

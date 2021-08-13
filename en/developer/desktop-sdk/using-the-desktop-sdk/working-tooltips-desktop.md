@@ -1,6 +1,6 @@
-## Working with Tooltips
+# Working with Tooltips
 
-### Overview
+## Overview
 
 There is an event that is triggered whenever the end-user hovers over a series in a visualization or clicks on the series (as shown in the image below).
 This event called __revealView.TooltipShowing__, gives you more flexibility regarding how you show Tooltips in your visualizations.
@@ -8,7 +8,7 @@ This event called __revealView.TooltipShowing__, gives you more flexibility rega
 <img src="images/tooltips-sample.png" alt="Image showing Reveal's tooltips" class="responsive-img"/>
 
 
-### Common Use Cases
+## Common Use Cases
 You can cancel the Tooltip event or modify what is shown to the user. Most common examples include:
 
 - You want to disable tooltips altogether or only show them for specific visualizations.
@@ -17,7 +17,7 @@ You can cancel the Tooltip event or modify what is shown to the user. Most commo
 Please note that this event will not be triggered for visualizations that do not support Tooltips, such as grids, gauges, and others.
 
 
-### Code Example
+## Code Example
 
 In the following code snippet, you can see how to disable tooltips for a visualization and still get additional information from the event arguments when the end-user hovers over or clicks on this visualization.
 

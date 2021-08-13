@@ -1,4 +1,4 @@
-## Social Dashboard Tutorial
+# Social Dashboard Tutorial
 
 In this tutorial, you will see how the "Social Media Analytics"
 dashboard displayed below was created using a sample spreadsheet with
@@ -6,7 +6,7 @@ similar data.
 
 <img src="images/SocialMediaAnalytics_All.png" alt="SocialMediaAnalytics\_All" class="responsive-img"/>
 
-### What's in this Dashboard?
+## What's in this Dashboard?
 
 This dashboard contains information on a sample company's:
 
@@ -16,7 +16,7 @@ This dashboard contains information on a sample company's:
 
   - Mentions and retweets
 
-### Sample Data
+## Sample Data
 
 You can download the sample datasheet
 [here](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx).
@@ -28,7 +28,7 @@ Excel files as local files are not supported in this release. In order
 to follow these tutorials, make sure you upload the file to one of the
 [supported cloud services](~/en/datasources/overview.md).
 
-### Steps Overview
+## Steps Overview
 
 1.  [Creating the Dashboard and Adding a Data Source](creating-the-dashboard.md)
 

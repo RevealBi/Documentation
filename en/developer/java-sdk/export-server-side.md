@@ -1,4 +1,4 @@
-## Server-side Export Configuration
+# Server-side Export Configuration
 
 The Java SDK uses some native components for exporting dashboards to different formats: Image, PDF, PPT and Excel.
 
@@ -6,18 +6,18 @@ The Java SDK uses some native components for exporting dashboards to different f
 
 - For **exporting PDF, PPT and Excel documents** we use ExportTool (our own native application).
 
-#### Getting ready to export
+### Getting ready to export
 
 The first time a Dashboard is opened, **both Playwright and ExportTool trigger the required downloads automatically**. But for some platforms there are some dependencies that need to be installed in advance, and also your server environment might restrict external downloads and you might need to setup these tools manually.
 
-### Playwright configuration
+## Playwright configuration
 Playwright automatically downloads the required binaries. But if manual configuration is required or you want to understand better how it works (or how to tweak it), you can check Playwright documentation [here](https://playwright.dev/java/docs/installation).
 
-### macOS Dependencies
+## macOS Dependencies
 
 The only required library for macOS is **libgdiplus**, you can check installation information [here](https://docs.microsoft.com/th-th/dotnet/core/install/macos#libgdiplus).
 
-### Linux Dependencies
+## Linux Dependencies
 
 There are dependencies to multiple native libraries in Linux. The exact list of dependencies you need to install depends on the distribution used, the version, and list of packages previously installed.
 
@@ -54,13 +54,13 @@ sudo apt-get install -y --allow-unauthenticated libc6-dev
 sudo apt-get install -y --allow-unauthenticated libx11-dev
 ```
 
-### ExportTool Manual Setup
+## ExportTool Manual Setup
 
 The instructions below are required only in the following scenarios:
 - You're having issues with the automatic download mechanism
 - You want to have everything pre-installed in advance.
 
-#### Steps
+### Steps
 
 1. Download the required binaries for your platform: [Windows](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/win-x64.zip), [Linux](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/linux-x64.zip) or [macOS](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/osx-x64.zip).
 2. Unzip the file to a directory in your server, where your Web Application is running (your user should be able to access that directory).

@@ -1,4 +1,4 @@
-## Creating and Joining Workspaces
+# Creating and Joining Workspaces
 
 The *workspaces* in Reveal enable easy collaboration within and out of your
 organization. Now you can access and join freely all your organization's
@@ -8,7 +8,7 @@ Organization to join and work with you.
 Start using Workspaces by [creating a workspace from scratch](#create-workspace-scratch) or [joining an existing workspace](#join-workspace).
 
 <a name='create-workspace-scratch'></a>
-### Creating a Workspace from Scratch
+## Creating a Workspace from Scratch
 
 1.  Click/tap *New Workspace* at the bottom left corner of the screen.
 
@@ -54,7 +54,7 @@ Start using Workspaces by [creating a workspace from scratch](#create-workspace-
 
 3.  Click/tap *Create*. Your workspace is now created and you can find it in the workspaces' list on the left side of the screen.
 
-### Inviting Users to the Workspace
+## Inviting Users to the Workspace
 
 After you create your workspace, you will be prompted to invite other users. 
 
@@ -67,7 +67,7 @@ After you create your workspace, you will be prompted to invite other users.
 5. After deciding on the roles, click _Update_ to send the invites. The users will receive them by email and will also be notified inside Reveal.
 
 <a name='join-workspace'></a>
-### Joining an Existing Workspace
+## Joining an Existing Workspace
 
 If your account has been automatically added to an [Organization workspace](overview.html#organization-workspace), you can **discover
 and join other workspaces that belong to your organization**.

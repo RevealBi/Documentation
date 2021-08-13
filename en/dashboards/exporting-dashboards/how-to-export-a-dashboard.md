@@ -1,4 +1,4 @@
-## Export Dashboards
+# Export Dashboards
 
 The information displayed in dashboards will change over time as the
 data changes in the data source, but there will be scenarios where you
@@ -11,7 +11,7 @@ the top right-hand corner and click/tap *Export*.
 
 <img src="images/export-dashboards-menu.png" alt="Export option in the overflow menu" class="responsive-img"/>
 
-### Export Format
+## Export Format
 
 You can easily export dashboards by using the available Export options.
 
@@ -31,7 +31,7 @@ You can easily export dashboards by using the available Export options.
   - **Export Dashboard** - export the dashboard through email for Android and iOS, or as a file (.rdash) on your computer for both Desktop and Web.
 
 <a name='mobile-devices'></a>
-### Exporting Images and Dashboards in Mobile Devices
+## Exporting Images and Dashboards in Mobile Devices
 
 When using Reveal on an Android or iOS mobile device, you can email,
 print, or send the document to a third-party app. After you choose the

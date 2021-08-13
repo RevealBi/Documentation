@@ -1,4 +1,4 @@
-## Box
+# Box
 
 Upon selecting Box as your data source, you will see the following login
 prompt:
@@ -7,7 +7,7 @@ prompt:
 
 Enter your login credentials and select *Authorize*.
 
-### Supported Files
+## Supported Files
 
 When working within Reveal, you will be able to use a wide variety of
 files:

@@ -1,4 +1,4 @@
-## Release Notes
+# Release Notes
 
 All future updates and new features added to Reveal will be included
 here.

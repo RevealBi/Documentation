@@ -1,4 +1,4 @@
-## Exporting Dashboards as PDF Documents
+# Exporting Dashboards as PDF Documents
 
 Reveal allows you to export your dashboard as a PDF document. Every
 visualization that is part of this dashboard will be displayed on a
@@ -9,7 +9,7 @@ select: the overflow menu ⇒ *Export* ⇒ *PDF*. The *Export Dashboard*
 dialog will open, allowing you to edit your document and annotate
 specific pages, so that you can tailor it to your needs.
 
-### Export Settings
+## Export Settings
 
 <img src="images/export-settings-pdf.png" alt="Settings for PDF document in the Export Dashboard menu" class="responsive-img"/>
 

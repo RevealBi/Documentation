@@ -1,4 +1,4 @@
-## Interacting with Dashboards
+# Interacting with Dashboards
 
 You can open existing dashboards by selecting the dashboard thumbnail image in the initial view.
 
@@ -8,7 +8,7 @@ You can **interact** with dashboard visualizations in various ways. For instance
 vertically. The chart view supports zooming and panning. Also drill down & drill up actions become possible if the underlying data model supports it.
 
 <a name='maximized-view'></a>
-### Maximized view
+## Maximized view
 
 Once the dashboard is opened, you can **maximize** any of the dashboard visualizations by hovering over them and click/tap on the arrow in the right top corner.
 
@@ -34,7 +34,7 @@ If, at any point, you want to revert back to the original visualization, you can
 
 <img src="images/change-visualization-show-original.png" alt="show original link" class="responsive-img"/>
 
-### Regular Tooltips
+## Regular Tooltips
 
 By clicking on particular visualizations (press and hold in touch environments), you can see tooltips popups. Tooltips help you see values
 at a particular point of your chart like:
@@ -43,7 +43,7 @@ at a particular point of your chart like:
 
 To close regular tooltips just click or tap away.
 
-### Hover Tooltips & Crosshairs
+## Hover Tooltips & Crosshairs
 
 You will find two options in the **Interactions** menu: *Hover tooltips* and *Crosshairs*. Only *Hover tooltips* is enabled by default. Both are only available in Dashboard View mode. They can't be used in Dashboard Edit mode.
 
@@ -71,7 +71,7 @@ Candlestick and OHLC visualizations only display horizontal crosshairs.
 Including a vertical crosshair would make it difficult to see the lines
 on the data point.
 
-### Tooltips Totals
+## Tooltips Totals
 
 When displaying tooltips, you can configure them to display total values by Category.
 
@@ -86,7 +86,7 @@ When enabling totals, make sure you added a Category to show multiple
 values in your visualization.
 
 <a name='view-edit-mode'></a>
-### View & Edit Modes
+## View & Edit Modes
 
 When first opening a dashboard, you will be browsing it in **View
 mode**. This mode allows you to navigate and filter the information
@@ -105,7 +105,7 @@ Shown below is a dashboard in *Dashboard Edit* mode:
 To **exit Edit mode**, you only need to select the *check icon* in the
 top right-hand corner. This switches back to *View Mode*.
 
-### Dashboard Filters
+## Dashboard Filters
 
 It is possible to filter information at a dashboard or a visualization
 level.
@@ -117,7 +117,7 @@ level.
 For more information on dashboard or visualization Filters, check out
 [this section](~/en/filters/overview.md).
 
-### Auto Layout for Visualizations
+## Auto Layout for Visualizations
 
 Reveal's Auto Layout dynamically sizes all visualizations in your
 dashboard based on the size constraints of your device and on the amount

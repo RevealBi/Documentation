@@ -1,4 +1,4 @@
-## Ad-Hoc Hierarchies
+# Ad-Hoc Hierarchies
 
 
 While Reveal creates hierarchies for Year-Month-Date date fields
@@ -18,7 +18,7 @@ operations.
 >[!NOTE]
 >Ad-hoc hierarchies are **not supported** in text and Radial Gauges, and in web, grid charts, and text views.
 
-### Enabling Ad-Hoc Hierarchies
+## Enabling Ad-Hoc Hierarchies
 
 To enable ad-hoc hierarchies, just drag and drop a field in the **Add Hierarchy** section of the *Rows* placeholder in the data editor. When you do this, the structure and behavior of the data table will change.
 
@@ -29,7 +29,7 @@ columns. In the example presented in the screenshot, you not only can
 drill up and down, but you can also expand each *Department* to show the
 *Office*.
 
-### Supported Visualizations
+## Supported Visualizations
 
 Ad-hoc hierarchies can be added to all visualizations ***except*** for
 the following ones:

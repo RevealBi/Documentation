@@ -1,10 +1,10 @@
-## Processing Data on Server
+# Processing Data on Server
 
 Basically, when connecting to a data source, all your data on the server is loaded and downloaded locally.  In this way, you have your data set, ready to be directly processed in Reveal - sorted, filtered, aggregated, and used for visualizations.
 
 For some data sources, with much larger data sets, sometimes involving million of records, downloading the data to work with locally isn't a feasible solution. That's why an alternative approach is available in Reveal: processing the data directly on the server.
 
-### Supported Data Sources
+## Supported Data Sources
 
 For some of the available data sources in Reveal, processing data directly on the server is the **only** approach used. These are:
 
@@ -18,7 +18,7 @@ Processing data on server is an option you can **enable** for the following data
 * [MySQL](supported-data-sources/mysql.md)
 * [PostgreSQL](supported-data-sources/postgresql.md)
 
-### How to Enable Process Data on Server?
+## How to Enable Process Data on Server?
 
 You can enable the _Process Data on Server_ function while connecting to one of the data sources supporting it.
 
@@ -30,7 +30,7 @@ After configuring the connection, you will have the _Set Up the Database_ screen
 
 Notice that the _Process Data on Server_ is enabled by default. Consider unchecking the box next to this feature in case you need to use any of the capabilities that are limited (see in _Limitations_ below), when your data is processed on the server.
 
-### Limitations
+## Limitations
 
 The _Process Data on Server_ feature helps you build visualizations over very large datasets, where it would otherwise be unfeasible to download all the data locally. However, this feature introduces some limitations to the use of the data source it's enabled for.  
 

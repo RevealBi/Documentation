@@ -1,9 +1,9 @@
-## Overview
+# Overview
 
 Reveal is a self-service, cross-platform business intelligence tool that puts the power in your hands to do dashboard reporting - all without the
 need for custom programming. With Reveal you can quickly create and edit dashboards, easily query and filter enterprise data sources, build meaningful visualization over data and effortlessly share your work with other Reveal users.
 
-### General Navigation
+## General Navigation
 
 When you first open Reveal, you will be greeted by the following screen:
 

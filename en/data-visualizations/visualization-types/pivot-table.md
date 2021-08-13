@@ -1,4 +1,4 @@
-## Pivot Table
+# Pivot Table
 
 
 The Pivot Table visualization allows users to aggregate information by
@@ -19,7 +19,7 @@ that field:
     ability to choose the level of detail in the summarization (day,
     month, year).
 
-### What is a Pivot Table?
+## What is a Pivot Table?
 
 A Pivot Table is a data summarization tool, which among other functions
 allows you to automatically count, average and total the data stored in

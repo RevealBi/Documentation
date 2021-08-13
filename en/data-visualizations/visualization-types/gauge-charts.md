@@ -1,4 +1,4 @@
-## Gauge Charts
+# Gauge Charts
 
 The Gauge chart displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
@@ -7,7 +7,7 @@ formatting of the different ranges. There are four different flavors:
 [Text](#text-gauge.md), [KPI](kpi-gauge.md) and [Bullet Graph](#bullet-graph) gauges.
 
 <a name='linear-gauge'></a>
-### Linear Gauge
+## Linear Gauge
 
 The Linear gauge displays a label, the value of which is taken from the
 *Label* placeholder configuration, and a value that comes from the
@@ -20,7 +20,7 @@ by side.
 <img src="images/pivot-editor-view-linear-gauge-view.png" alt="linear gauge" class="responsive-img"/>
 
 <a name='circular-gauge'></a>
-### Circular Gauge
+## Circular Gauge
 
 The Circular Gauge displays the band's minimum and maximum thresholds, and
 the current value. It also paints the background with the color of the
@@ -31,7 +31,7 @@ current range.
 
 
 <a name='text-gauge'></a>
-### Text Gauge
+## Text Gauge
 
 The Text Gauge displays the Value column data in a large font. This
 flavor is suitable for very high priority metrics. By default, the gauge
@@ -41,7 +41,7 @@ unless any filters are applied so that the chosen data row is different.
 <img src="images/pivot-editor-view-text-gauge-view.png" alt="Text gauge chart example in the Visualization editor" class="responsive-img"/>
 
 <a name='bullet-graph'></a>
-### Bullet Graph
+## Bullet Graph
 
 The Bullet is very similar to a Linear gauge; it displays a label from
 the *Label* placeholder and a value from the *Value* placeholder. The
@@ -60,7 +60,7 @@ evaluating the performance from the value (horizontal line) against the
 target value (vertical mark).
 
 <a name='bands-configuration'></a>
-### Bands Configuration
+## Bands Configuration
 
 All gauge types have a common band range configuration, which you can find in the *Settings* section of the _Visualizations Editor_. The configuration dialog allows you to set:
 

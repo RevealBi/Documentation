@@ -1,4 +1,4 @@
-## Text View
+# Text View
 
 The Text View displays information that follows a key-value pattern,
 such as the employee record shown below. It does so by displaying

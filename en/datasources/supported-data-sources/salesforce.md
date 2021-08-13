@@ -1,4 +1,4 @@
-## Salesforce
+# Salesforce
 
 Upon selecting the Salesforce data source, you will see the following login prompt:
 
@@ -12,7 +12,7 @@ information on Identity Confirmation Activations, visit the [Salesforce help](ht
 
 You will then see an authorization prompt. Click *Allow*.
 
-### Setting Up Your Data
+## Setting Up Your Data
 
 After logging in, you can set up your Salesforce data in the following
 dialog:
@@ -27,7 +27,7 @@ Here you can choose the Salesforce object you need from:
   - *All Objects* - this category displays the full list of objects
     contained in your Salesforce account.  You can use the provided search to find quickly the object you need.
 
-### Using Reports
+## Using Reports
 
 After selecting which report you want to use in the visualization editor, you need to set the values for the parameters in the dialog that follows:
 

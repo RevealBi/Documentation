@@ -1,8 +1,8 @@
-## Visualizations Editor
+# Visualizations Editor
 
 The _Visualizations Editor_ is where you create and edit your visualizations in Reveal. Here you will find the data from your dataset aggregated and prepared for use as well as great variety of visualizations to build with it.
 
-### How Do You Create a Visualization?
+## How Do You Create a Visualization?
 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization you can choose between two alternative starting points.
 
@@ -18,7 +18,7 @@ With the data source selected and configured, you will be navigated to the [Visu
 
 The *Visualization editor* will help you get the most desired view using your data.
 
-### Accessing the Visualizations Editor
+## Accessing the Visualizations Editor
 
 You can access the Visualization editor in two ways:
 
@@ -30,7 +30,7 @@ Once you have selected and configured your data source, the *Visualization edito
 
 After opening a chosen dashboard and entering _Dashboard Edit mode_, you will be able to **access the Visualizations editor** by selecting *Edit* from a visualization's overflow button.
 
-### Visualizations Editor Overview
+## Visualizations Editor Overview
 
 Below, you will find a list of all sections of the _Editor_ with their capabilities.
 

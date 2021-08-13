@@ -1,4 +1,4 @@
-## Managing Workspaces
+# Managing Workspaces
 
 As an [Owner](overview.html#members-roles-permissions) of
 a workspace you can:
@@ -15,7 +15,7 @@ cases when there are differences in the Organization workspace management,
 they will be explicitly mentioned in this topic.
 
 <a name='manage-workspace-members'></a>
-### Managing Workspace Members
+## Managing Workspace Members
 
 Only the Owner of a workspace can invite other users.
 
@@ -27,7 +27,7 @@ select a workspace > click/tap its overflow menu > select *Manage Members* (see 
 
 In this menu, you can change users' roles, remove members and add new ones.
 
-#### Changing the role or removing more than one member at the same time
+### Changing the role or removing more than one member at the same time
 
 1. Select the checked box on the right of the *+Members* blue button.
 2. Checkboxes on the right of users' roles appear.
@@ -37,7 +37,7 @@ In this menu, you can change users' roles, remove members and add new ones.
 
 
 <a name='manage-workspace-properties'></a>
-### Managing Workspace Properties
+## Managing Workspace Properties
 
 Only owners can change workspace properties. To do this:
 
@@ -56,7 +56,7 @@ Your branding information will be used when exporting dashboards to PDF document
 **Organization workspace**: You cannot change the name of the Organization workspace.
 
 <a name='delete-workspace'></a>
-### Deleting a Workspace
+## Deleting a Workspace
 
 You can delete a workspace only if you are an owner. To do this:
 
@@ -70,7 +70,7 @@ A workspace is also deleted if its last member leaves it.
 
 **Organization workspace**: cannot be deleted.
 
-### Leaving a Workspace
+## Leaving a Workspace
 
 To leave a workspace, go to the workspace's [members' list](#manage-workspace-members),
 click/tap the dropdown menu on the right of your name and select *Leave*.

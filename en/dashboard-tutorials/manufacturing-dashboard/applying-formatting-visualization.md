@@ -1,10 +1,10 @@
-## Applying Formatting to the First Visualization
+# Applying Formatting to the First Visualization
 
 The raw data that you drag and drop into the data editor placeholders
 will not be formatted by default; you will need to modify each field you
 have dragged individually.
 
-### Date Aggregation
+## Date Aggregation
 
 In order for your widget to match the sample dashboard's you will need
 to select **Month** in the data editor placeholder, and change the
@@ -12,7 +12,7 @@ to select **Month** in the data editor placeholder, and change the
 
 <img src="images/ManufacturingDateAggregationChange_All.png" alt="Date aggregation in Reveal" class="responsive-img"/>
 
-### Formatting for Orders
+## Formatting for Orders
 
 In order to show numbers with no fractions in the Y axis, you will need
 to modify the formatting for the **Orders** field dropped into the Values placeholder of the data editor. Select it, and change **Fraction Digits** to 0 under **Formatting** in the *Field Settings* menu.

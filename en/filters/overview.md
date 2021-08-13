@@ -1,4 +1,4 @@
-## Filters
+# Filters
 
 Dashboard filters allow you to slice the contents of visualizations in a
 dashboard all at once. When you add datasets to the dashboard filters

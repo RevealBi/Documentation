@@ -1,4 +1,4 @@
-## Saving your Dashboard 
+# Saving your Dashboard 
 
 After creating your dashboard, you should save your progress. Select the
 **Save As** option in the overflow button from the top-right hand corner

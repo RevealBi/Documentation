@@ -1,4 +1,4 @@
-## Creating Simple-Series Charts
+# Creating Simple-Series Charts
 
 In this tutorial, you will learn how to create a simple-series chart
 visualization using a sample spreadsheet.
@@ -110,7 +110,7 @@ Access the links below for the Simple chart view walkthroughs:
 
   - [How to change the slice labels for Funnel,Pie and Doughnut harts](#change-slice-labels)
 
-### Key Concepts
+## Key Concepts
 
 When working with charts, you can add extra information on top of the
 data you want to display. This comes in the form of:
@@ -140,7 +140,7 @@ data you want to display. This comes in the form of:
     change the slice labels to display values, percentages, or both at
     the same time.
 
-### Sample Data Source
+## Sample Data Source
 
 For this tutorial, you will use the "Simple Series Charts" sheet in the
 [Reveal Tutorials Spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
@@ -149,7 +149,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported cloud services or add it as a [Web Resource](~/en/datasources/supported-datasources/web-resource.md).
 
 <a name='create-basic-chart'></a>
-### Creating your Chart
+## Creating your Chart
 
 |                                          |                                                                                                                   |                                                                                                                                                                                                |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -161,7 +161,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
 | 6\. **Organize your Data**               | <img src="images/Tutorials-Charts-Organizing-Data.png" alt="Tutorials-Charts-Organizing-Data" class="responsive-img"/>                                  | The charts in the table above, for example, display the population for a select list of countries. Drag and drop the "Country Name" field to "Label" and the "Population" field into "Values". |
 
 <a name='changing-basic-chart'></a>
-### Changing your Chart Type
+## Changing your Chart Type
 
 The tutorial above outlines how to create any chart. If you need to
 choose a different type, more fitted to your needs, go through the
@@ -173,7 +173,7 @@ following procedure:
 | 2\. **Select your Visualization**    | <img src="images/Tutorials-Charts-Select-Visualization.png" alt="Tutorials-Charts-Select-Visualization" class="responsive-img"/> | Select the type of chart you need. This section has a preview of every chart type at the top. |
 
 <a name='add-trendline-chart'></a>
-### Adding a Trendline to your Chart
+## Adding a Trendline to your Chart
 
 You can add a chart trendline to display the relationship between your
 chart variables, or to display the overall direction of your
@@ -186,7 +186,7 @@ information. In order to do this:
 | 3\. **Select a Chart trendline**    | <img src="images/Select-Predefined-Trendline.png" alt="Select-Predefined-Trendline" class="responsive-img"/> | Select one of Reveal's predefined trendlines.                    |
 
 <a name='change-axis-configuration'></a>
-### Changing your Axis Configuration
+## Changing your Axis Configuration
 
 Similarly to the [Gauge bands](~/en/data-visualizations/gauge-charts.html#bands-configuration), the
 chart axis configuration allows you to set the lowest and highest values
@@ -200,7 +200,7 @@ data.
 | 3\. **Change the Default selection**   | <img src="images/Tutorials-Change-Default-Selection.png" alt="Tutorials-Change-Default-Selection" class="responsive-img"/> | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 <a name='set-logarithmic-axis'></a>
-### Setting your Axis Configuration as Logarithmic
+## Setting your Axis Configuration as Logarithmic
 
 |                                           |                                                                          |                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -209,7 +209,7 @@ data.
 | 3\. **Select an Axis Configuration type** | <img src="images/Tutorials-Charts-Logarithmic.png" alt="Tutorials-Charts-Logarithmic" class="responsive-img"/> | Select "Logarithmic".                                       |
 
 <a name='change-start-position'></a>
-### Changing the Start Position for Doughnut and Pie Charts
+## Changing the Start Position for Doughnut and Pie Charts
 
 |                                                   |                                                                                |                                                                                           |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
@@ -218,7 +218,7 @@ data.
 | 3\. **Select one of the Start Position options**. | <img src="images/Tutorials-Select-Start-Position.png" alt="Tutorials-Select-Start-Position" class="responsive-img"/> | Select one of Reveal's predefined start positions for your chart (0°, 90°, 180° or 270°). |
 
 <a name='change-slice-labels'></a>
-### Changing the Slice Labels for Doughnut, Funnel, and Pie Charts
+## Changing the Slice Labels for Doughnut, Funnel, and Pie Charts
 
 |                                                |                                                                          |                                                                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |

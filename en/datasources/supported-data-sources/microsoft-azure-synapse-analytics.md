@@ -1,10 +1,10 @@
-## Microsoft Azure Synapse Analytics
+# Microsoft Azure Synapse Analytics
 
 The Microsoft Azure Synapse data source provides a significant speed
 increase when processing big data within Reveal. This allows you to use
 massive datasets for your visualizations with no slow down.
 
-### Configuring an Azure Synapse Analytics Data Source
+## Configuring an Azure Synapse Analytics Data Source
 
 To configure a Microsoft Azure Synapse Analytics data source, you will
 need to enter the following information:
@@ -31,7 +31,7 @@ need to enter the following information:
 5.  **Database**: Once you connect to your account you will get your databases to choose from.
 Select *Continue*.
 
-### How to find your Server Information
+## How to find your Server Information
 
 You can find your server by following the steps below. Please note that
 the commands should be executed on the server.
@@ -52,7 +52,7 @@ that the commands should be executed on the server.
 | 2\. Type in **ipconfig**             | 2\. Type in **$ /bin/ifconfig**   | 2\. Select your connection.                                   |
 | **IPv4 Address** is your IP address. | **Inet addr** is your IP address. | The **IP Address** field will have the necessary information. |
 
-### Working with Views
+## Working with Views
 
 Once you connect to a database in MS Azure Synapse Analytics, you can
 choose to retrieve data from an entire table or a particular view.
@@ -62,13 +62,13 @@ working with views when using MS SQL Server. For more information,
 please refer to [this section](Microsoft-SQL-Server.html#working-with-views)
 of the **MS SQL Server data source** topic.
 
-### Limitations in the Visualization Editor
+## Limitations in the Visualization Editor
 
 When working with big data in Reveal, there are a couple of limitations
 in the Visualization Editor due to the specific approach used to handle
 data sources storing millions of records.
 
-#### Limitations in Functions Available for Calculated Fields
+### Limitations in Functions Available for Calculated Fields
 
 Currently, only a limited number of **functions** are available for
 *Calculated Fields* using data from Azure Synapse Analytics:
@@ -77,6 +77,6 @@ Currently, only a limited number of **functions** are available for
 - [Math](~/en/data-visualizations/fields/calculated-fields/math.md) - abs; log; log10; sign; sqrt.
 - [Strings](~/en/data-visualizations/fields/calculated-fields/string.md) - find; len; trim; lower; mid; upper.
 
-#### Limitations in Data Blending
+### Limitations in Data Blending
 
 Currently, Data Blending ([combining data sources in one visualization](~/en/datasources/data-blending.md)) is **not available** when using data from the Azure Synapse Analytics data source.

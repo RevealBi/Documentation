@@ -1,4 +1,4 @@
-## Applying Formatting to the First Visualization
+# Applying Formatting to the First Visualization
 
 The raw data that you drag and drop into the data editor placeholders
 will not be formatted by default; you will need to modify each field you
@@ -7,7 +7,7 @@ have dragged individually. This particular widget displays the average
 will be **Globex**). You will need to introduce additional filters to
 select the specific data.
 
-### Changing the Aggregation and Formatting for Actual Values
+## Changing the Aggregation and Formatting for Actual Values
 
 In order for your visualization to display the **average** actual values
 for Soylent Corp, you will need to modify the field in the data editor.
@@ -23,7 +23,7 @@ Then, change **Type** to **Currency** under *Formatting*.
 
 Then, select **Update Field**.
 
-### Adding a Custom Date Range
+## Adding a Custom Date Range
 
 For this widget, you want to filter the dates to only display 2018 and
 not the complete data range in the original spreadsheet. In order to do
@@ -45,7 +45,7 @@ By now, your visualization should look like the following one:
 
 <img src="images/GlobexResultingVisualizationPartial_All.png" alt="GlobexResultingVisualizationPartial\_All" class="responsive-img"/>
 
-### Selecting the Highest Value
+## Selecting the Highest Value
 
 Text Gauges only display the value in the first row of your data, but
 you can still filter the data behind it to show the specific row you
@@ -86,7 +86,7 @@ ascending/descending order to help you out with bigger tables. The
 visualization of the [Manufacturing Dashboard Tutorial](~/en/dashboard-tutorials/manufacturing-dashboard/getting-started.md) has instructions on how to
 apply it.
 
-### Adding Conditional Formatting
+## Adding Conditional Formatting
 
 You can add additional information to the visualization in the form of a
 colored indicator, which will indicate where the value of your stock

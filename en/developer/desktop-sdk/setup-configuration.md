@@ -1,11 +1,11 @@
-## Setup and Configuration
+# Setup and Configuration
 
 To set up the Reveal Desktop SDK you can choose between:
 
   - Using **NuGet** package manager.
   - Setting up the project **manually**.
 
-### Using NuGet (Recommended)
+## Using NuGet (Recommended)
 
 The easiest way to setup your WPF or WinForms application project is to
 install the **Reveal.Sdk.Wpf** NuGet package.
@@ -32,7 +32,7 @@ dependency packages:
 > You need to manually install Microsoft.Data.SqlClient (1.1.3) package in
 your project to be able to visualize Microsoft Sql Server data.
 
-### Using Manual Setup
+## Using Manual Setup
 
 To setup your project manually you need to:
 
@@ -49,7 +49,7 @@ To setup your project manually you need to:
 To handle the **CefSharp.Wpf** known issue, please continue reading below.
 
 <a name='cefsharp-fix'></a>
-### Handling CefSharp Dependency Package
+## Handling CefSharp Dependency Package
 
 Your build (if targeting *AnyCPU*) **will be failing** after the
 installation of the CefSharp dependency package.

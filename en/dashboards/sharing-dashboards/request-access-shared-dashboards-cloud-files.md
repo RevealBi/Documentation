@@ -1,4 +1,4 @@
-## Requesting Access to Shared Dashboards with Cloud Files
+# Requesting Access to Shared Dashboards with Cloud Files
 
 When trying to open а dashboard, which has been shared with you, you
 might be unable to see its content due to one of the following reasons:
@@ -16,7 +16,7 @@ If your permissions to the file have been **revoked**, you will see:
 
 <img src="images/request-access-button.png" alt="configure Google drive and request access options when access denied" class="responsive-img"/>
 
-### Granting Access to Data Source Files with Revoked Permissions
+## Granting Access to Data Source Files with Revoked Permissions
 
 Click the *Request Access* button to notify the owner of the dashboard
 about your denied access. They will also receive an email notification.
@@ -29,7 +29,7 @@ the connection to the data source:
 After the owner clicks *Update* they will see a message notifying them
 whether the access has been successfully fixed.
 
-### Alternative Solutions to Revoked Permissions Issue
+## Alternative Solutions to Revoked Permissions Issue
 
 You can always **contact the owner** personally to help you solve the
 denied access issue.

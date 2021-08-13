@@ -1,4 +1,4 @@
-## Field Filters and Rules
+# Field Filters and Rules
 
 You can also apply filters or rules to the fields in your dataset. In
 order to do so, you will need to add a field to the **Data Filters**
@@ -8,7 +8,7 @@ from the dropdown to access the *Data Filter* window.
 <img src="images/add-data-filter.png" alt="Adding data filter fields list" class="responsive-img"/>
 
 <a name='empty-values'></a>
-### Filter Empty Values
+## Filter Empty Values
 
 Reveal provides the ability to filter rows in the dataset that have null
 or empty values on a specific column by enabling the filter empty values
@@ -17,7 +17,7 @@ configuration setting on a specific column.
 <img src="images/FilterEmtpyValues_All.png" alt="FilterEmtpyValues\_All" class="responsive-img"/>
 
 <a name='select-values'></a>
-### Select Values
+## Select Values
 
 This type of filter supports the definition of the set of values to
 display for a specific field. To enable it, drag and drop a field to the
@@ -31,13 +31,13 @@ allows you to select only the items you want to remain in the dataset.
 Rows with values excluded by the filter aren't displayed in the
 visualization.
 
-### Filter by Rule
+## Filter by Rule
 
 The **Filter by Rule** option enables the definition of more complex
 rules. The available rule options change depending on the field type.
 
 <a name='rules'></a>
-#### Rules for Date Fields
+### Rules for Date Fields
 
 Date fields include rules designed to support time-based scenarios,
 changing the data range and filtering the information displayed in the
@@ -66,7 +66,7 @@ visualization.
 By default, when Filter by Rule is enabled on a numeric field, it is set
 to "None".
 
-#### Rules for Numeric Fields
+### Rules for Numeric Fields
 
 Numeric fields (such as integers, decimals, and currencies) support the
 following rules:
@@ -94,7 +94,7 @@ following rules:
 By default, when Filter by Rule is enabled on a numeric field, it is set
 to "None".
 
-#### Rules for String Fields
+### Rules for String Fields
 
 Text columns support the following type of rules:
 
@@ -114,7 +114,7 @@ Similarly, these rules also take one parameter: the value of the 'starts
 with', or 'equals' that the rule is going to use to evaluate, and is
 entered in a textbox in the same position.
 
-### Filtering Fields in Values
+## Filtering Fields in Values
 
 You can also **filter fields dropped into the Values placeholder of the
 data editor**, which might have a different

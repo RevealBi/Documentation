@@ -1,4 +1,4 @@
-## Working With the Choropleth Map Settings
+# Working With the Choropleth Map Settings
 
 <img src="images/visualization-settings-choropleth-map.png" alt="Settings in the Visualization editor of the choropleth map" class="responsive-img"/>
 
@@ -17,7 +17,7 @@ In the _Settings_ section of the Choropleth map visualization you can configure 
   - *Show labels* - IF the selected map supports labels, you can choose whether to put them on _all_ regions, only on regions that contain information (_Only when has value_), or turn them off (_None_).
   - *Labels are* - You can use labels to indicate the geographical names (abbreviated) of the regions by selecting _Location Abbreviation_. Alternatively, your labels can show _Values_ for each area. Value labels can be displayed on the map as numbers, percent, or currency, depending on what formatting you chose for your _Value_ field.
   
-### Localization Settings
+## Localization Settings
 
 Currently, you can provide your dataset in English and Japanese.
 
@@ -28,7 +28,7 @@ If you use a Japanese dataset in Reveal, and your Language and Regional settings
 <img src="images/japanese-data-language.png" alt="Set the Language of Data to Japanese" class="responsive-img"/>
 
 
-#### Language of Labels
+### Language of Labels
 
 The language of labels on the choropleth map is defined by the language and regional settings configured in your OS and/or browser. So if you are running Reveal on a machine with its locale/language set to [a language Reveal supports](~/en/general/supported-languages.md), the app will attempt to localize the labels to that language. This has nothing to do with the _Data is written in_ setting.
 

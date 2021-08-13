@@ -1,6 +1,6 @@
-## Snowflake
+# Snowflake
 
-### Connecting with Snowflake
+## Connecting with Snowflake
 
 To configure a Snowflake data source, you first need to connect to the server by entering the following information:
 
@@ -27,7 +27,7 @@ To configure a Snowflake data source, you first need to connect to the server by
 
     - **Password**: the password to access the *Snowflake* server.
 
-### Configuring a Snowflake Data Source
+## Configuring a Snowflake Data Source
 
 1.  **Select a database** by marking the empty circle next to it:
 
@@ -44,6 +44,6 @@ To configure a Snowflake data source, you first need to connect to the server by
 
 You are now directed to the *Visualization editor* where you can start building your visualizations with the data retrieved from Snowflake.
 
-#### Limitations in Data Blending
+### Limitations in Data Blending
 
 Currently, Data Blending ([combining data sources in one visualization](~/en/datasources/data-blending.md)) is **not available** when using data from the Snowflake data source.

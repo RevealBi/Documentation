@@ -1,4 +1,4 @@
-## Conditional Formatting
+# Conditional Formatting
 
 Conditional formatting allows you to provide different formatting of a
 cell (or rows for [Text Views](~/en/data-visualizations/visualization-types/text-view.md)) depending on the values found
@@ -16,7 +16,7 @@ sense in your situation.
 
 <img src="images/text-view-conditional-formatting.png" alt="Text view conditional formatting showing Marketing Metrics Visualization" class="responsive-img"/>
 
-### Enabling Conditional Formatting
+## Enabling Conditional Formatting
 
 To enable conditional formatting on a numeric column, select field in
 the Data Editor to prompt the **Field Settings** dialog. The conditional
@@ -45,7 +45,7 @@ disabled by default.
       - **When value is \<**: the formatting for values less than the
         number you enter.
 
-### Supported Visualizations
+## Supported Visualizations
 
 Conditional formatting can be applied to the following visualizations:
 

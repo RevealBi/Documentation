@@ -1,4 +1,4 @@
-## Creating the First Visualization  
+# Creating the First Visualization  
 
 Let's focus on creating the "YTD Twitter Followers" visualization in the
 [sample dashboard](getting-started.md) presented at the beginning

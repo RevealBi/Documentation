@@ -1,10 +1,10 @@
-## Handling User Click Events
+# Handling User Click Events
 
-### Overview
+## Overview
 
 The SDK allows you to handle when the user clicks a cell with data within a visualization. This is very useful, for example, to provide your own navigation, to change existing selections in your app, among others.
 
-### Code
+## Code
 
 You can handle user click events by registering to the
 __onVisualizationDataPointClicked__ event:

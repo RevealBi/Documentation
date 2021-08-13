@@ -2,7 +2,7 @@
 Here you will find technical information about Reveal SDK, specifically about the Web Client JavaScript API.
 For the complete reference, please follow the <a href="/api/javascript/latest/" target="_blank" rel="noopener\">link</a>
 
-### Most commonly used classes and interfaces  
+## Most commonly used classes and interfaces  
 
 **Main SDK concepts and features**  
 <a href="/api/javascript/latest/classes/revealview.html" target="_blank" rel="noopener\">RevealView</a>   

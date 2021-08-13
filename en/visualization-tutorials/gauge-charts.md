@@ -1,4 +1,4 @@
-## Creating Gauge Visualizations
+# Creating Gauge Visualizations
 
 In this tutorial, you will learn how to create gauge visualizations
 using a sample spreadsheet.
@@ -56,7 +56,7 @@ Access the links below for the gauge view walkthroughs:
   - [How to change band colors](#modify-bands)
 
 <a name='key-concepts'></a>
-### Key Concepts
+## Key Concepts
 
 There are three different layouts to choose from when using gauge charts:
 
@@ -70,7 +70,7 @@ There are three different layouts to choose from when using gauge charts:
     between, and Less than). You can override the default values with
     ranges tailored to your data source.
 
-### Sample Data Source
+## Sample Data Source
 
 For this tutorial, you will use the "Gauge Views" sheet in the [Reveal Tutorials Spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Visualization_Tutorials.xlsx).
 
@@ -78,7 +78,7 @@ For this tutorial, you will use the "Gauge Views" sheet in the [Reveal Tutorials
 >Excel files as local files are not supported in this release. In order to follow these tutorials, make sure you upload the file to one of the supported cloud services or add it as a [Web Resource](~/en/datasources/supported-data-sources/web-resource.md).
 
 <a name='create-linear-gauge'></a>
-### Creating a Linear Gauge
+## Creating a Linear Gauge
 
 |                                          |                                                                                            |                                                                                                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -90,7 +90,7 @@ For this tutorial, you will use the "Gauge Views" sheet in the [Reveal Tutorials
 | 6\. **Organize your Data**               | <img src="images/Tutorials-LinearGauge-Data.png" alt="Tutorials-LinearGauge-Data" class="responsive-img"/>                       | This linear gauge, for example, will display life expectancy per Country. Drag and drop the "Country Name" field to "Label" and one of the year fields into "Values". |
 
 <a name='create-circular-gauge'></a>
-### Creating a Circular Gauge
+## Creating a Circular Gauge
 
 |                                          |                                                                                            |                                                                                                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -115,7 +115,7 @@ displayed in Values:
 
 
 <a name='create-text-gauge'></a>
-### Creating a Text Gauge
+## Creating a Text Gauge
 
 |                                          |                                                                                                                   |                                                                                                                                                                                                                                                       |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,7 +131,7 @@ the average aggregation. In order to learn how to change your field's
 aggregation, [review these instructions](#aggregation-instructions).
 
 <a name='create-bullet-graph-gauge'></a>
-### Creating a Bullet Graph
+## Creating a Bullet Graph
 
 |                                          |                                                                                                                   |                                                                                                                                                                                              |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -143,10 +143,10 @@ aggregation, [review these instructions](#aggregation-instructions).
 | 6\. **Organize your Data**               | <img src="images/Tutorials-Charts-Organizing-Data.png" alt="Tutorials-Charts-Organizing-Data" class="responsive-img"/>                                  | This bullet graph, for example, will display life expectancy per Country. Drag and drop the "Country Name" field to "Label", one of the years into "Values", and another year into "Target". |
 
 <a name='adding-bounds-gauge'></a>
-### Adding Bounds to your Gauge
+## Adding Bounds to your Gauge
 
 Bounds allow you to set the lowest and highest values in your gauges; as
-mentioned in [Key Concepts](#key-concepts), you can change it to exclude
+mentioned in [Key Concepts](###ey-concepts), you can change it to exclude
 specific data. In order to do this:
 
 |                                                |                                                                        |                                                                                                                                       |
@@ -155,7 +155,7 @@ specific data. In order to do this:
 | 2\. **Change the Default selection in Limits** | <img src="images/Tutorials-Limits-Bounds.png" alt="Tutorials-Limits-Bounds" class="responsive-img"/>         | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 <a name='modify-bands'></a>
-### Changing Band Colors
+## Changing Band Colors
 
 The colors for the three different ranges (Higher than, Lower than and
 Between) can be changed between the predefined colors. In order to do

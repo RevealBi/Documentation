@@ -1,6 +1,6 @@
-## SharePoint Online
+# SharePoint Online
 
-### Connecting to SharePoint 
+## Connecting to SharePoint 
 
 Upon selecting SharePoint, you will see the following log in prompt.
 
@@ -9,14 +9,14 @@ Upon selecting SharePoint, you will see the following log in prompt.
 Here you can choose to use the root SharePoint site in your Office365 account. You can also add a _subsite URL_ to directly start browsing its contents. Once connected to a SharePoint subsite, you will be able to quickly access it through your list in the _Select a Data Source_ dialog.
 
 <a name='supported-files'></a>
-### Supported Files
+## Supported Files
 
 When working within Reveal, you will be able to use a wide variety of files from your SharePoint site (subsites):
 
 * *Spreadsheets, JSON files & tabular data* (Excel - .xls, .xlsx; CSV, TSV), which you can use dynamically within Reveal to create chart visualizations.
 * *Other files* (including images or document files such as PDFs, texts, etc.), which will be displayed in a preview mode only.
 
-### Setting Up Your Data
+## Setting Up Your Data
 
 After logging in, you can start browsing your SharePoint data - subsites, libraries, folders, lists, and files (as shown below).
 

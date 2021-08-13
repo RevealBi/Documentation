@@ -1,4 +1,4 @@
-## Exporting Excel 
+# Exporting Excel 
 
 Reveal allows you to export the data used for your dashboards to the
 **Excel format**. Data for every visualization in your dashboard will be

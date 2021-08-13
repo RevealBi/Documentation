@@ -1,4 +1,4 @@
-## Lookup & Reference Calculated Fields
+# Lookup & Reference Calculated Fields
 
 
 Lookup and reference fields will allow you to work with your current
@@ -39,7 +39,7 @@ The functions included in the aggregation category are:
 </table>
 
 <a name='calc-fields-previous'></a>
-### Previous
+## Previous
 
 The previous calculated field allows you to get a result with the value
 of the field you choose as your `expression`. There are two arguments
@@ -50,7 +50,7 @@ for you to configure:
   - `first value`: the value for your first row, which will be empty by
     default.
 
-#### Sample
+### Sample
 
 The following is an extract of the HR Dataset 2016.xlsx "Employees"
 sheet.

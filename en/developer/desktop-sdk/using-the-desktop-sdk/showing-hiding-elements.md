@@ -1,4 +1,4 @@
-## Showing/Hiding User Interface Elements
+# Showing/Hiding User Interface Elements
 
 The __RevealView__ component can be used to enable or disable different features and/or UI elements towards the end user. Many of the available properties are of the Boolean type and can be very straightforward to use, but others not so much.
 
@@ -10,7 +10,7 @@ var revealView = new RevealView();
 
 All the properties are read by __RevealView__ during initialization time and based on their values Reveal either shows or hides the different features/UI elements from the user.
 
-### CanEdit
+## CanEdit
 This property can be used to disable the user's ability to edit dashboards.
 
 <img src="../../general/images/showing_hiding_elements_edit.png" alt="Editing a dashboard through the UI" class="responsive-img"/>
@@ -19,7 +19,7 @@ This property can be used to disable the user's ability to edit dashboards.
 revealView.CanEdit = false;
 ```
 
-### ShowEditDataSource
+## ShowEditDataSource
 This property can be used to disable the editing of a dashboard datasource.
 
 <img src="../../general/images/showing-hiding-elements-edit-datasource.png" alt="Editing a dashboard datasource through the UI" class="responsive-img"/>
@@ -28,7 +28,7 @@ This property can be used to disable the editing of a dashboard datasource.
 revealView.ShowEditDataSource = false;
 ```
 
-### ShowExportImage
+## ShowExportImage
 This property can be used to disable exporting the dashboad to an image.
 
 <img src="../../general/images/showing-hiding-elements-show-export-image.png" alt="Exporting a dashboard to Image" class="responsive-img"/>
@@ -37,7 +37,7 @@ This property can be used to disable exporting the dashboad to an image.
 revealView.ShowExportImage = false;
 ```
 
-### ShowExportToPowerpoint
+## ShowExportToPowerpoint
 This property can be used to disable exporting the dashboad to PowerPoint.
 
 <img src="../../general/images/showing-hiding-elements-show-export-powerpoint.png" alt="Exporting a dashboard to PowerPoint" class="responsive-img"/>
@@ -46,7 +46,7 @@ This property can be used to disable exporting the dashboad to PowerPoint.
 revealView.ShowExportToPowerpoint = false;
 ```
 
-### ShowExportToPDF
+## ShowExportToPDF
 This property can be used to disable exporting the dashboad to PDF.
 
 <img src="../../general/images/showing-hiding-elements-show-export-pdf.png" alt="Exporting a dashboard to PDF" class="responsive-img"/>
@@ -55,7 +55,7 @@ This property can be used to disable exporting the dashboad to PDF.
 revealView.ShowExportToPDF = false;
 ```
 
-### ShowExportToExcel
+## ShowExportToExcel
 This property can be used to disable exporting the dashboad to Excel.
 
 <img src="../../general/images/showing-hiding-elements-show-export-excel.png" alt="Exporting a dashboard to Excel" class="responsive-img"/>
@@ -64,7 +64,7 @@ This property can be used to disable exporting the dashboad to Excel.
 revealView.ShowExportToExcel = false;
 ```
 
-### CanCopyVisualization
+## CanCopyVisualization
 This property can be used to disable the ability to copy a visualization and later paste it in the current dashboard or a different one.
 
 <img src="../../general/images/showing_hiding_elements_copy.png" alt="Copying an existing visualization through the UI" class="responsive-img"/>
@@ -73,7 +73,7 @@ This property can be used to disable the ability to copy a visualization and lat
 revealView.CanCopyVisualization = false;
 ```
 
-### CanDuplicateVisualization
+## CanDuplicateVisualization
 This property can be used to disable the ability to duplicate a visualization in the current dashboard.
 
 <img src="../../general/images/showing_hiding_elements_duplicate.png" alt="Duplicating an existing visualization through the UI" class="responsive-img"/>
@@ -82,7 +82,7 @@ This property can be used to disable the ability to duplicate a visualization in
 revealView.CanDuplicateVisualization = false;
 ```
 
-### CanAddPostCalculatedFields
+## CanAddPostCalculatedFields
 This property can be used to disable the ability to add a new post-calculated field in the current dashboard.
 
 <img src="../../general/images/showing_hiding_elements_post_calculated.png" alt="Accessing post-calculated fields through the UI" class="responsive-img"/>
@@ -94,7 +94,7 @@ For further details, please refer to the [Reveal Help](https://help.revealbi.io/
 revealView.CanAddPostCalculatedFields = false;
 ```
 
-### CanAddCalculatedFields
+## CanAddCalculatedFields
 This property can be used to disable the ability to add a new pre-calculated field in the current dashboard.
 
 <img src="../../general/images/showing_hiding_elements_pre_calculated.png" alt="Accessing pre-calculated fields through the UI" class="responsive-img"/>
@@ -106,7 +106,7 @@ For further details, please refer to the [Reveal Help](https://help.revealbi.io/
 revealView.CanAddCalculatedFields = false;
 ```
 
-### ShowFilters
+## ShowFilters
 This property can be used to show or hide the Dashboard Filters UI to the user.
 
 <img src="../../general/images/showing_hiding_elements_filters.png" alt="Showing Dashboard Filters in the UI" class="responsive-img"/>
@@ -117,7 +117,7 @@ Dashboard filters allow you to slice the contents of the visualizations in a das
 revealView.ShowFilters = false;
 ```
 
-### CanAddDashboardFilter
+## CanAddDashboardFilter
 This property can be used to show or hide the Add Dashboard Filter menu item.
 
 <img src="../../general/images/showing-hiding-elements-can-add-dashboard-filter.png" alt="Showing Add Dashboard Filter in the UI" class="responsive-img"/>
@@ -126,7 +126,7 @@ This property can be used to show or hide the Add Dashboard Filter menu item.
 revealView.CanAddDashboardFilter = false;
 ```
 
-### CanAddDateFilter
+## CanAddDateFilter
 This property can be used to show or hide the Add Date Filter menu item.
 
 <img src="../../general/images/showing-hiding-elements-can-add-date-filter.png" alt="Showing Add Date Filter in the UI" class="responsive-img"/>
@@ -135,7 +135,7 @@ This property can be used to show or hide the Add Date Filter menu item.
 revealView.CanAddDateFilter = false;
 ```
 
-### Preselected Filters
+## Preselected Filters
 You can specify which values are initially selected among existing Dashboard Filters when loading a dashboard.
 
 <img src="../../general/images/showing_hiding_elements_filters_preselected.png" alt="Showing a Dashboard Filter preselected in the UI" class="responsive-img"/>
@@ -149,7 +149,7 @@ revealView.Dashboard = dashboard;
 ```
 
 
-### AvailableChartTypes
+## AvailableChartTypes
 This property can be used to filter the visualization types available to the user.
 
 <img src="../../general/images/showing_hiding_elements_charts.png" alt="Switching visualizations through the UI" class="responsive-img"/>

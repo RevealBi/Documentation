@@ -1,4 +1,4 @@
-## OneDrive
+# OneDrive
 
 If you sign in with your Office365 account, you will have your OneDrive automatically added to your data sources.
 
@@ -22,7 +22,7 @@ Enter your **account and password** for Microsoft and select *Sign in*.
     to) your OneDrive files.
 
 After authorizing Reveal to use your data, you can use your *OneDrive* files to build visualizations.
-### Supported Files
+## Supported Files
 
 When working within Reveal, you will be able to use a wide variety of
 files:

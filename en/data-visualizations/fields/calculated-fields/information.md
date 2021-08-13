@@ -1,4 +1,4 @@
-## Information Calculated Fields
+# Information Calculated Fields
 
 Information calculated fields are meant to be used to test the value of
 a selected field. They are particularly useful with large spreadsheets because you can check what type of information you are working with before performing a second calculation.
@@ -34,13 +34,13 @@ The functions included in the information category are:
 </table>
 
 <a name='isempty'></a>
-### isempty
+## isempty
 
 Unlike empty, isempty will check the field you select and check every
 row in your datasheet. If there are no values in a row, the output will
 be 1; if there are values, you will see 0.
 
-#### Sample
+### Sample
 
 | Function Name | Syntax             | Sample                    |
 | ------------- | ------------------ | ------------------------- |

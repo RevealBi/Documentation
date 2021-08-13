@@ -1,6 +1,6 @@
-## OData Feed
+# OData Feed
 
-### Connecting to OData Feed
+## Connecting to OData Feed
 To configure an OData Service data source, you will need to enter the
 following information:
 
@@ -31,7 +31,7 @@ Once ready, select **Continue**.
 To set up an *OAuth 2 / OIDC account* for a protected OData Service data
 source, please read [this topic](~/en/datasources/OAuth-2-OIDC-User-Authentication.md).
 
-### Open Type Columns
+## Open Type Columns
 
 Reveal supports OData feeds with dynamic [*open type*](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/use-open-types-in-odata-v4)
 columns. After any changes to the dynamic OData feed, you only need to
@@ -53,7 +53,7 @@ records.
 
 For more information on Open Types in OData, refer to [this article](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/use-open-types-in-odata-v4).
 
-### Working with Functions
+## Working with Functions
 
 Any functions you have configured to be exposed by an OData service will
 appear in the **Visualization Data** menu for your data source under the

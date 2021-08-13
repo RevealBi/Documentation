@@ -1,6 +1,6 @@
-## Creating Custom Themes
+# Creating Custom Themes
 
-### Overview
+## Overview
 
 When embedding analytics into your existing applications it is key that those dashboards match your app's look and feel. That's why you have full control over the Reveal dashboards through our SDK.
 
@@ -33,7 +33,7 @@ RevealSdkSettings.Theme = currentTheme;
 
 If you have a dashboard or another Reveal component already displayed on your screen, you will need to render it again in order to see the applied changes.
 
-### Customizable Theme Settings
+## Customizable Theme Settings
 
 The settings that you can use to customize your theme are part of the _RevealTheme()_ class. The _RevealTheme() class_ contains all Dashboard and App settings with their current values. 
 In the table below, you will find a full list of the customizable settings, followed by their type and a short description. 
@@ -51,7 +51,7 @@ In the table below, you will find a full list of the customizable settings, foll
 | **FontColor**                    | Color                   | Sets the color of the font.                                                                                                                                                                                                                                                       |
 | **HighlightColor**               | Color                   | Sets the highlighting color in specific dashboard scenarios (forecast and outliers statistical functions).                                                                                                                                                                        |
 | **UseRoundedCorners**            | bool                    | (By default) Rounded corners in buttons, tooltips, containers, visualizations, etc. If set to false, squared corners will be shown.                                                                                                                                               |
-### Built-In Themes 
+## Built-In Themes 
 
 Reveal SDK comes with four pre-built themes: *Mountain Light*, *Mountain Dark*, *Ocean Light*, and *Ocean Dark*. You can set the one that best matches your application's design, or you can also use it as the basis for your custom theme modifications.    
 
@@ -79,7 +79,7 @@ RevealSdkSettings.Theme = new OceanLightTheme();
 RevealSdkSettings.Theme = new OceanDarkTheme();
 ```
 
-#### How the Built-In Themes Look? 
+### How the Built-In Themes Look? 
 
 Below, you will find a table showing how the *Visualization Editor* and *Dashboard Editor* look when each of the pre-built themes is applied. 
 

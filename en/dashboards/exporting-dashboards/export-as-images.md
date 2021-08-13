@@ -1,10 +1,10 @@
-## Exporting Dashboards as Images
+# Exporting Dashboards as Images
 
 Reveal allows you to export a screen capture of your entire dashboard or
 individual visualizations from your dashboard. The files delivered to
 your local space / mobile device are in the **png format**.
 
-### Exporting an Entire Dashboard as an Image
+## Exporting an Entire Dashboard as an Image
 
 To export an image of your entire dashboard:
 
@@ -18,7 +18,7 @@ To export an image of your entire dashboard:
 You can choose the *Copy to clipboard* option to paste the image quickly
 wherever you need without downloading it first.
 
-### Exporting Individual Visualizations as Images
+## Exporting Individual Visualizations as Images
 
 To export an image of a particular visualization:
 
@@ -30,7 +30,7 @@ To export an image of a particular visualization:
 3.  Select the *Export Image* blue button.
 
 <a name='annotating'></a>
-### Annotating Images
+## Annotating Images
 
 In the *Export Image* menu you can add annotations to your dashboards in
 case you want to include notes or highlight specific areas with

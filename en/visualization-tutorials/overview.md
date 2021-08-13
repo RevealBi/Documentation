@@ -1,4 +1,4 @@
-## Visualization Tutorials
+# Visualization Tutorials
 
 Within this section, you will find basic, step-by-step tutorials for the
 Reveal visualizations. All sections use the Data Visualizations data

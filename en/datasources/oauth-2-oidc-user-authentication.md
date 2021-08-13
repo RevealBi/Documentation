@@ -1,10 +1,10 @@
-## OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
+# OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
 
 When using [OData Service](supported-data-sources/odata-feed.md), [Rest API](supported-data-sources/rest-api.md) or [Web resources](supported-data-sources/web-resource.md), some of your resources might be protected. In
 this case, you need to grant Reveal access to these resources by setting
 up an OAuth 2 / OIDC account.
 
-### What is OAuth 2?
+## What is OAuth 2?
 
 OAuth 2.0 is an authorization framework that supersedes the original
 OAuth protocol. It is commonly used to grant users limited access to
@@ -15,7 +15,7 @@ or website) called OAuth client to another location with protected data.
 For further information, please refer to
 [OAuth 2.0](https://oauth.net/2/)
 
-### What is OIDC?
+## What is OIDC?
 
 OIDC is a simple identity layer on top of the OAuth 2.0 protocol. OIDC
 enables websites or applications to grant users access to their content
@@ -25,7 +25,7 @@ maintaining a bunch of different accounts.
 
 For further information, please refer to [OpenID Connect](https://openid.net/connect/).
 
-### Using protected resources with an OAuth 2 / OIDC Account
+## Using protected resources with an OAuth 2 / OIDC Account
 
 To use data sources with an OAuth 2 / OIDC аccount you will need to
 perform these 4 steps:
@@ -42,7 +42,7 @@ perform these 4 steps:
 
 4.  **Give Reveal permissions** to access and use your data.
 
-### Registering an OAuth Client
+## Registering an OAuth Client
 
 Navigate to the **resource server** (e.g. Microsoft, Google, etc.) and
 register Reveal as an OAuth Client/Application by filling in the
@@ -56,7 +56,7 @@ When you complete the registration, the resource server will generate
 the credentials necessary for configuring the *OAuth 2 account* in
 Reveal.
 
-### Choosing your data source
+## Choosing your data source
 
 1.  Navigate to Reveal and **choose a data source** - *OData Feed*,
     *Rest API* or *Web Resource*.
@@ -71,7 +71,7 @@ Reveal.
 
     <img src="images/OAuth-2-OIDC-Credentials.png" alt="Accessing OAuth2/OIDC Credentials menu" class="responsive-img"/>
 
-### Setting up your OAuth 2 / OIDC account in Reveal
+## Setting up your OAuth 2 / OIDC account in Reveal
 
 In the *OAuth 2 / OIDC Account Details* screen you will need to fill in
 the credentials that are already generated for Reveal by the resource
@@ -112,7 +112,7 @@ OAuth service you might also need to provide the following:
     hosts the protected data (e.g.
     <https://infragisticsinc297.sharepoint.com>)
 
-### Giving Reveal permissions to access and use your data
+## Giving Reveal permissions to access and use your data
 
 After configuring the OAuth 2 / OIDC account you will be redirected to a
 sign-in screen.

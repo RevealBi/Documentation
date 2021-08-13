@@ -1,7 +1,7 @@
-## [Second Draft] Google Ads
+# [Second Draft] Google Ads
 
 The *Google Ads*  data source allows you to access and analyze the data tables from your Google Ads (formerly Google Adwords) account. Create visualizations with your Google Ads data to build a high-level understanding of your advertising efforts.
-### Connecting to Google Ads
+## Connecting to Google Ads
 
 1. Select *Google Ads* as your data source and you will see Google's login screen.
 
@@ -26,7 +26,7 @@ The *Google Ads*  data source allows you to access and analyze the data tables f
 
    Click  _Select Data_ to continue to the _Visualizations Editor_.
 
-### Working in the Visualizations Editor 
+## Working in the Visualizations Editor 
 
 When you create a dashboard with information coming from Google Ads, you will see fields in the Visualizations Editor are organized differently (as shown in the screenshot below).
 
@@ -46,7 +46,7 @@ You may notice that there is no *Fields* heading on the left in the *Data* pane.
 
 2. **Measures** (depicted by a *123* icon): Measures consist of numeric data. For example, the measure *Clicks* shows the number of times ads were clicked.
 
-#### The Date Range Data Filter
+### The Date Range Data Filter
 
 In *Data Filters* (see bottom right of the *Data* pane), you will find a date range filter set to *Last 30 days* by default. This means data will be retrieved for the last 30-day period, including *today*.
 
@@ -56,16 +56,16 @@ You can't remove the date filter, but you can change the default date range by c
 .png" alt="Google Ads data in the Visualizations Editor" class="responsive-img">
 
 > [!NOTE] **Data retrieved for *Today*.** If you choose *Today* from the date range options, keep in mind the date range starts at 12:00:00 a.m. and all data will be retrieved up until the current time. This means the results may vary between runs throughout the day as the data in Google Ads is being updated continuously.  
-### Performance Considerations
+## Performance Considerations
 
 Depending on how much data you are trying to retrieve, loading data from Google Ads in the Visualizations Editor may become a time-consuming task. Certain actions affect waiting time more than others.
 
-#### Selecting a Date Range
+### Selecting a Date Range
 
 When selecting a date range, keep in mind that the bigger the range, the longer the time it takes to load your data. So, at first restrict your range, evaluate the loading time and then expand it appropriately. 
 
 If you are trying to load a dataset that is too large, you may receive an error stating you exceeded the rows/columns limits. If you can't restrict your time range enough to fit your purposes, then [contact support](https://www.infragistics.com/my-account/submit-support-request/reveal) for a limit increase. 
 
-#### Adding Segments
+### Adding Segments
 
 In Reveal, you can combine multiple segments in the Visualizations Editor. As segments are used for more detailed statistics, the more segments you add, the more rows of data you retrieve. This may affect loading time. 

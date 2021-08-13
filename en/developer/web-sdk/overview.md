@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 When embedding Reveal into web applications, the architecture is
 slightly more complex than with native apps, as two components are
@@ -24,7 +24,7 @@ others are invoked server side (like the callback to load the dashboard
 or to provide in-memory data).
 
 <a name='host-client-server-separate'></a>
-### Hosting the Client-side and Server-Side Parts on Different Servers
+## Hosting the Client-side and Server-Side Parts on Different Servers
 
 You can host the client-side and the server-side parts separately i.e. on different urls.
 

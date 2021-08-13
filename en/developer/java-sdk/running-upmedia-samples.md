@@ -1,18 +1,18 @@
-## Running the UpMedia Samples
+# Running the UpMedia Samples
 
 After getting the <a href="https://github.com/RevealBi/sdk-samples-java" target="_blank" rel="noopener"> UpMedia samples </a> from GitHub, below you have detailed information to help you run them.
 
 
-### UpMedia Sample Application in Tomcat
+## UpMedia Sample Application in Tomcat
 
-#### Requirements
+### Requirements
 
 - <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"> Java SDK </a> 11.0.10 and up recommended.   
 - <a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"> Tomcat </a> 9.0.41 and up recommended.
 - <a href=" https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener"> Eclipse for Enterprise Java Developers </a> version 2020-12 and up recommended.
 - Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
  
-#### Steps
+### Steps
 
 1. **Load the Project**
    1. In Eclipse, go to: *File > Import > Existing Projects into Workspace*.
@@ -37,15 +37,15 @@ Alternative steps to work with a WAR file:
 3. Take the WAR file created and manually deploy it to Tomcat.
 
 
-### UpMedia React Sample with Spring Backend
+## UpMedia React Sample with Spring Backend
 
-#### Requirements
+### Requirements
 
 - <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"> Java SDK </a> 11.0.10 and up recommended.
 - <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener"> NodeJS </a> 14.15.4 and up recommended, NPM version: 6.14.10 and up.
 - Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
 
-#### Steps
+### Steps
 
 1. **Run the Spring Application**
    1. Locate the Spring Boot application in the *upmedia-backend-spring* folder.
@@ -75,16 +75,16 @@ There you can find a few components to try:
 
 For details about Reveal's Web client SDK, please refer [here](~/en/developer/web-sdk/overview.md).
 
-### UpMedia React sample with Tomcat backend
+## UpMedia React sample with Tomcat backend
 
-#### Requirements
+### Requirements
 
 - <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"> Java SDK </a> 11.0.10 and up recommended.
 - <a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener"> Tomcat </a> 9.0.41 and up recommended.
 - <a href="https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener"> Eclipse for Enterprise Java Developers </a> version 2020-12 and up recommended.
 - Maven repository and dependency already added. For details, please refer to [Setup and Configuration](setup-configuration.html#maven-dependency).
  
-#### Steps
+### Steps
 
 1. **Load the Project**
    1. In Eclipse, go to: *File > Import > Existing Projects into Workspace*.

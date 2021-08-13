@@ -1,4 +1,4 @@
-## Workspaces Collaboration and Privacy
+# Workspaces Collaboration and Privacy
 
 The *workspaces* facilitate effective collaboration on dashboards between any
 group of Reveal users. They also ensure a high level of security for dashboards with sensitive information.
@@ -15,7 +15,7 @@ With workspaces in Reveal, you can:
 
   - **Discover other workspaces** that include members who belong to your Organization workspace.
 
-### Accessing Your Workspaces
+## Accessing Your Workspaces
 
 
 You can access your workspaces on to the left side of the screen, below the *Reveal* icon:
@@ -26,7 +26,7 @@ You will find a list of your workspaces under the *My Stuff* and *Organization* 
 
 
 <a name='organization-workspace'></a>
-### The Organization Workspace
+## The Organization Workspace
 
 Reveal creates the Organization workspace automatically when a member of your organization logs in for the first time with Office365. Members need to log in with their organization's email to be associated with an organization and added to the Organization workspace.
 
@@ -37,7 +37,7 @@ and upload dashboards in the Organization workspace. Only key members in
 your organization will be given the owner's role. This limitation ensures that dashboards in the Organization workspace contain accurate and trustworthy data.
 
 <a name='workspace-privacy-levels'></a>
-### Workspace Privacy Levels
+## Workspace Privacy Levels
 
 When creating a workspace, you can select the level of privacy you want it to
 have.
@@ -49,7 +49,7 @@ have.
     only join it if they get invitations.
 
 <a name='members-roles-permissions'></a>
-### Members' Roles and Permissions
+## Members' Roles and Permissions
 
 There are three types of workspace members in Reveal:
 
@@ -64,7 +64,7 @@ from other workspaces. Below, you will find this process explained as well as
 two reference tables illustrating members' permissions in the
 Organization and in other workspaces.
 
-#### Organization Workspace - Assigning Members' Roles and Permissions
+### Organization Workspace - Assigning Members' Roles and Permissions
 
 The first user from an organization, who signs in Reveal, is given the
 role of **owner** of the Organization workspace. Other users from the same organization who sign in for the first time will also be added as owners. After one of the owners assigns someone as a **viewer** or a **member** for the first
@@ -85,7 +85,7 @@ Org workspace:
 | Can discover **private workspaces**                                      | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  | <span style="color: #FF0000">No</span>  |
 | Can create their own workspace in the Organization | <span style="color: #007F00">Yes</span> | <span style="color: #007F00">Yes</span> | <span style="color: #FF0000">No</span>  |
 
-#### Workspaces - Assigning Members' Roles and Permissions
+### Workspaces - Assigning Members' Roles and Permissions
 
 When a user creates a workspace, they are the owner of that workspace and can
 distribute levels of permissions there. The owner invites new members and assigns their roles.

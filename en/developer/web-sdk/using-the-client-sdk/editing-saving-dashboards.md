@@ -1,7 +1,7 @@
-## Editing & Saving Dashboards
+# Editing & Saving Dashboards
 
 
-### Editing dashboards
+## Editing dashboards
 
 The **dashboard** property (type $.ig.RVDashboard) of __revealView__ is updated when the end user starts editing the dashboard. For example, when adding or removing visualizations or filters, $.ig.RVDashboard's collections get automatically updated.
 
@@ -33,7 +33,7 @@ revealView.onVisualizationEditorClosed = function (args) {
 
 In the case that you need to control how to add new visualizations please refer to [**Creating New Visualizations and Dashboards**](~/en/developer/desktop-sdk/using-the-desktop-sdk/creating-visualizations-dashboards.md).
 
-### Saving Dashboards
+## Saving Dashboards
 
 As described in [**Loading Dashboard Files**](~/en/developer/web-sdk/using-the-server-sdk/loading-dashboards.md), there are two ways to handle how you save changes to dashboards:
   - **Client-side**: To use this method you need to set a function in the __onSave__

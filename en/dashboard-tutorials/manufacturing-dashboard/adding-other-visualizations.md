@@ -1,4 +1,4 @@
-## Adding the other Visualizations
+# Adding the other Visualizations
 
 All the remaining visualizations in the dashboards will use the same
 [sample spreadsheet](https://download.infragistics.com/reportplus/help/samples/Reveal_Dashboard_Tutorials.xlsx)
@@ -44,7 +44,7 @@ This section will cover the following visualizations:
 </table>
 
 <a name='production'></a>
-### Production
+## Production
 
 The Production visualization displays the amount of manufactured goods
 for a 12-month period arranged by worker type in a [line chart](~/en/visualization-tutorials/simple-charts.md). In order to create it:
@@ -97,7 +97,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='shipping'></a>
-### Shipping
+## Shipping
 
 The Shipping visualization displays the amount of shipped orders for a
 12 month period in an [area chart](~/en/visualization-tutorials/simple-charts.md). In order to
@@ -153,7 +153,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='average-hours'></a>
-### Average Hours
+## Average Hours
 
 The Average Hours visualization displays hours logged by the company's
 employees compared to the hours they spent on the company's machinery
@@ -212,7 +212,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='headcount'></a>
-### Headcount
+## Headcount
 
 The Headcount visualization displays the amount of workers broken down
 by category in a [bar chart](~/en/visualization-tutorials/simple-charts.md). In order to create
@@ -266,7 +266,7 @@ Once you are done, go back to the Dashboard Editor by selecting the
 **tick icon** in the top right-hand corner.
 
 <a name='labor-cost'></a>
-### Labor Cost
+## Labor Cost
 
 The Labor Cost visualization displays the wages for each employee from
 highest to lowest in a [column chart](~/en/visualization-tutorials/simple-charts.md). In order

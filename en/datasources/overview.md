@@ -1,4 +1,4 @@
-## Data Sources
+# Data Sources
 
 Data Sources are the places where your data comes from. Reveal provides you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
 databases, spreadsheets, and public data sources.
@@ -7,7 +7,7 @@ The screenshot below displays a number of different data sources the user John W
 
 <img src="images/sample-data-sources-screen.png" alt="Sample data sources" class="responsive-img"/>
 
-### Connecting to Data Sources
+## Connecting to Data Sources
 
 To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the _Select a Data Source_ menu for quick selection next time you need it (see the screenshot above).
 
@@ -83,7 +83,7 @@ After selecting a data source provider, you will be prompted to **configure** it
 >[!NOTE]
 > **Databases** (*) are not supported in the Web version of Reveal.
 
-### Related Topics
+## Related Topics
 
 - You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Connecting a Dashboard to Its Data Source](connect-dashboard-to-data-source.md) topic.
 - You started creating a visualization, but changed your mind about the data source? Read how to connect to a different data source while you are in the Visualization Editor in [Changing the Data Source for a Visualization](changing-data-source-visualization.md).
