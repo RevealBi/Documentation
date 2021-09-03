@@ -16,6 +16,28 @@ here.
         <th class="tg-cly1"><span style="font-weight:bold">Reveal version</span></th>
         <th class="tg-cly1"><span style="font-weight:bold">Description</span></th>
     </tr>
+   <tr>
+        <td class="tg-0lax" rowspan="4">Sep-2021</td>
+        <td class="tg-0lax" rowspan="4"> 1.0.20 <br> [1.0.29 iOS]</td>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug fix] ReportPlus imported dashboards issue with Combo Chart</span><br>
+        When importing a dashboard from ReportPlus, Combo Chart visualizations including hidden fields were not working as expected.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug fix] ReportPlus imported dashboards issue with SharePoint credentials</span><br>
+        When importing a dashboard from ReportPlus, SharePoint on-prem credentials were not working as expected.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug fix] Changing dashboard filter’s data source issue</span><br>
+        When changing a dashboard filter’s data source, the first filter in the dashboard was being replaced with the one being changed.
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-cly1"><span style="font-style:italic">[Public Bug fix] MS Analysis Services dashboard linking issue</span><br>
+        You can now link dashboards that include visualizations getting data from Microsoft Analysis Services and won’t encounter any problem.
+        </td>
+    </tr>
     <tr>
         <td class="tg-0lax" rowspan="2">Jun-2021</td>
         <td class="tg-0lax" rowspan="2"> 1.0.20 <br> [1.0.28 iOS]</td>
