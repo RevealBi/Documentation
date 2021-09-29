@@ -56,6 +56,7 @@ You can't remove the date filter, but you can change the default date range by c
 .png" alt="Google Ads data in the Visualizations Editor" class="responsive-img">
 
 > [!NOTE] **Data retrieved for *Today*.** If you choose *Today* from the date range options, keep in mind the date range starts at 12:00:00 a.m. and all data will be retrieved up until the current time. This means the results may vary between runs throughout the day as the data in Google Ads is being updated continuously.  
+
 ## Performance Considerations
 
 Depending on how much data you are trying to retrieve, loading data from Google Ads in the Visualizations Editor may become a time-consuming task. Certain actions affect waiting time more than others.
