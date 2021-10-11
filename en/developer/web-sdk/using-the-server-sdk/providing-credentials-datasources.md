@@ -7,13 +7,18 @@ when accessing the data source.
 
 ## Code
 
-The first step is to create a class that implement __IRVAuthenticationProvider__ interface.
-Lets call it MyAuthenticationProvider. Here's a sample implementation:
+The first step is to implement
+__IRVAuthenticationProvider__
+and return it as the
+__AuthenticationProvider__
+property in
+__RevealSdkContextBase__,
+as shown below.
 
 ``` csharp
-public class MyAuthenticationProvider : IRVAuthenticationProvider
+public class EmbedAuthenticationProvider : IRVAuthenticationProvider
 {
-    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(string userId, RVDashboardDataSource dataSource)
     {
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVPostgresDataSource)
@@ -37,19 +42,6 @@ public class MyAuthenticationProvider : IRVAuthenticationProvider
     }
 }
 ```
-After creating the class the next step is to register it in AddReveal call in ConfigureServices method like this:
-
-```csharp
-services
-    .AddMvc()
-        .AddReveal(builder =>
-        {
-            builder
-            ...
-            .AddAuthenticationProvider<MyAuthenticationProvider>()
-            ...
-        });
-``` 
 
 ## Choosing Which Class to Implement
 
