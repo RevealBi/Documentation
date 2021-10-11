@@ -14,8 +14,10 @@
   href: web-sdk/overview.md
 - name: Setup and Configuration
   href: web-sdk/setup-configuration.md
-- name: Creating Your First App
-  href: web-sdk/create-first-app.md
+- name: Upgrade your app to version 1.1
+  href: web-sdk/upgrade-to-1.1.md
+# - name: Creating Your First App
+#   href: web-sdk/create-first-app.md
 - name: Using the Server SDK
   href: web-sdk/using-the-server-sdk/toc.yml
 - name: Using the Client SDK

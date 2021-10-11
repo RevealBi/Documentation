@@ -5,12 +5,11 @@ slightly more complex than with native apps, as two components are
 always involved:
 
   - **Reveal Client SDK**: a set of JavaScript libraries
-    that needs to be integrated into the web application. The frameworks
-    supported today are: jQuery, Angular and React.
+    that needs to be integrated into the web application.
 
   - **Reveal Server SDK**: the server-side component to be integrated
     into the server application, currently this is an ASP.NET Core
-    application targeting .NET Runtime (v4.6.2 or later) and .NET Core (2.2, 3.1, and 5.0).
+    application targeting .NET Core 3.1 and newer.
 
 In the following diagram you visualize the architecture for a web
 application embedding Reveal Web SDK:
