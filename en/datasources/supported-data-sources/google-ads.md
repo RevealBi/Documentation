@@ -1,4 +1,4 @@
-# [Second Draft] Google Ads
+# Google Ads
 
 The *Google Ads*  data source allows you to access and analyze the data tables from your Google Ads (formerly Google Adwords) account. Create visualizations with your Google Ads data to build a high-level understanding of your advertising efforts.
 ## Connecting to Google Ads
