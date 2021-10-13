@@ -15,25 +15,17 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
 You can use the *Reveal.Sdk.Samples.UpMedia.Wpf* sample application as reference for setting *Datasources* as local folder. The sample application comes with **Reveal SDK** installation.  
 5. **Add a new *CloudToLocalDatasourceProvider* class** in the project.  
 6. **Copy the implementation code** from the relevant snippet in **Code** section below.
-7. **Set the *DataSourceProvider* property** of the *RevealSdkContext* class to *CloudToLocalDatasourceProvider*:  
+7. **Set the *DataSourceProvider* property** of the *RevealSdkSettings* class to *CloudToLocalDatasourceProvider*:  
 
 ``` csharp
-  public override IRVDataSourceProvider DataSourceProvider => new CloudToLocalDatasourceProvider();        
+    RevealSdkSettings.DataSourceProvider = new CloudToLocalDatasourceProvider();
 ```
 
 ## Code
 ``` csharp
     public class CloudToLocalDatasourceProvider : IRVDataSourceProvider
     {
-        public Task<RVDataSourceItem> ChangeDashboardFilterDataSourceItemAsync(RVDashboardFilter filter, RVDataSourceItem dataSourceItem)
-        {
-            return ProcessDataSourceItem(dataSourceItem);
-        }
-        public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(RVVisualization visualization, RVDataSourceItem dataSourceItem)
-        {
-            return ProcessDataSourceItem(dataSourceItem);
-        }
-        protected Task<RVDataSourceItem> ProcessDataSourceItem(RVDataSourceItem dataSourceItem)
+        public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDashboardFilter filter, RVDataSourceItem dataSourceItem)
         {
             // Return data source unless it is an excel or csv file.
             if (dataSourceItem is RVExcelDataSourceItem == false &&

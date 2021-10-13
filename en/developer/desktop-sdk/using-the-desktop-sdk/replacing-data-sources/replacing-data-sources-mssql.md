@@ -50,44 +50,38 @@ opened.
 ``` csharp
 public class SampleDataSourceProvider : IRVDataSourceProvider
     {
-        public Task<RVDataSourceItem> ChangeDashboardFilterDataSourceItemAsync(
-             RVDashboardFilter globalFilter, RVDataSourceItem dataSourceItem)
+   public Task<RVDataSourceItem> ChangeDataSourceItemAsync(
+        RVVisualization visualization, RVDataSourceItem dataSourceItem)
+    {
+        var sqlServerDsi = dataSourceItem as RVSqlServerDataSourceItem;
+        if (sqlServerDsi != null)
         {
-            return Task.FromResult<RVDataSourceItem>(null);
+            // Change SQL Server host and database
+            var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
+            sqlServerDS.Host = "10.0.0.20";
+            sqlServerDS.Database = "Adventure Works";
+
+            // Change SQL Server table/view
+            sqlServerDsi.Table = "Employees";
+                  return Task.FromResult((RVDataSourceItem)sqlServerDsi);
         }
 
-   public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(
-        RVVisualization visualization, RVDataSourceItem dataSourceItem)
-   {
-      var sqlServerDsi = dataSourceItem as RVSqlServerDataSourceItem;
-      if (sqlServerDsi != null)
-      {
-          // Change SQL Server host and database
-          var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
-          sqlServerDS.Host = "10.0.0.20";
-          sqlServerDS.Database = "Adventure Works";
+        // Fully replace a data source item with a new one
+        if (visualization.Title == "Top Customers")
+        {
+            var sqlDs = new RVSqlServerDataSource();
+            sqlDs.Host = "salesdb.local";
+            sqlDs.Database = "Sales";
 
-          // Change SQL Server table/view
-          sqlServerDsi.Table = "Employees";
-                return Task.FromResult((RVDataSourceItem)sqlServerDsi);
-      }
+            var sqlDsi = new RVSqlServerDataSourceItem(sqlDs);
+            sqlServerDsi.Table = "Customers";
 
-      // Fully replace a data source item with a new one
-      if (visualization.Title == "Top Customers")
-      {
-          var sqlDs = new RVSqlServerDataSource();
-          sqlDs.Host = "salesdb.local";
-          sqlDs.Database = "Sales";
+            return Task.FromResult((RVDataSourceItem)sqlServerDsi);
+        }
 
-          var sqlDsi = new RVSqlServerDataSourceItem(sqlDs);
-          sqlServerDsi.Table = "Customers";
-
-          return Task.FromResult((RVDataSourceItem)sqlServerDsi);
-      }
-
-      return Task.FromResult((RVDataSourceItem)dataSourceItem);
-   }
-}
+        return Task.FromResult((RVDataSourceItem)dataSourceItem);
+    }
+  }
 ```
 
 In the example above, the following two replacements will be performed:

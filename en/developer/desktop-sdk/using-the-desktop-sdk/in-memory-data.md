@@ -53,10 +53,10 @@ Now you need to visualize the dashboard using your own data instead of the dummy
     __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealSdkSettings__,
     as described in [**Replacing Data Sources**](replacing-data-sources/replacing-data-sources-mssql.md).
 
-    Then, in the implementation for the method __ChangeVisualizationDataSourceItemAsync__, you need to add a code similar to this one:
+    Then, in the implementation for the method __ChangeDataSourceItemAsync__, you need to add a code similar to this one:
 
     ``` csharp
-    public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(RVVisualization visualization, RVDataSourceItem dataSourceItem)
+    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSourceItem)
     {
         var csvDsi = dataSourceItem as RVCsvDataSourceItem;
         if (csvDsi != null)
