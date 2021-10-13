@@ -4,8 +4,7 @@ For a complete reference, please follow the <a href="/api/aspnet/latest/Reveal.S
 
 <h3>Most commonly used classes and interfaces:</h3>  
 
-**Main SDK concepts and features**  
-<a href="/api/aspnet/latest/Reveal.Sdk.RevealSdkContextBase.html" target="_blank" rel="noopener\">RevealSdkContextBase</a>  
+**Main SDK concepts and features** 
 <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html" target="_blank" rel="noopener\">RevealEmbedSettings</a>  
 <a href="/api/aspnet/latest/Reveal.Sdk.Dashboard.html" target="_blank" rel="noopener\">Dashboard class</a>  
 
