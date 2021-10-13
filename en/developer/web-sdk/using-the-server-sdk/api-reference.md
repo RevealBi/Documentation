@@ -9,7 +9,6 @@ For a complete reference, please follow the <a href="http://rvsdk-docs-dev.infra
 <a href="http://rvsdk-docs-dev.infragistics.local:8081/api/web-server/Reveal.Sdk.RevealEmbedSettings.html" target="_blank" rel="noopener\">RevealEmbedSettings</a>
 
 **Datasources**  
-<a href="http://rvsdk-docs-dev.infragistics.local:8081/api/web-server/Reveal.Sdk.RevealSdkContextBase.html" target="_blank" rel="noopener\">RevealSdkContextBase</a>  
 <a href="http://rvsdk-docs-dev.infragistics.local:8081/api/web-server/Reveal.Sdk.IRVDataSourceProvider.html" target="_blank" rel="noopener\">IRVDataSourceProvider</a>  
 <a href="http://rvsdk-docs-dev.infragistics.local:8081/api/web-server/Reveal.Sdk.IRVDataProvider.html" target="_blank" rel="noopener\">IRVDataProvider</a>  
 <a href="http://rvsdk-docs-dev.infragistics.local:8081/api/web-server/Reveal.Sdk.IRVResourceItem.html" target="_blank" rel="noopener\">IRVResourceItem</a>

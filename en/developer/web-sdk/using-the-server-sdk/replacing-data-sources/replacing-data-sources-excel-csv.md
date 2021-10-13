@@ -14,10 +14,18 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
 4. **Set the local folder name** as a value of the *LocalStoragePath*. Details about this you can find here: [**Setup and Configuration(Server) - Initializing the Server SDK**](~/en/developer/web-sdk/setup-configuration.md#3-initializing-the-server-sdk)  
 5. **Add a new *CloudToLocalDatasourceProvider* class** in the project.  
 6. **Copy the implementation code** from the relevant snippet in **Code** section below.
-7. **Set the *DataSourceProvider* property** of the *RevealSdkContext* class to *CloudToLocalDatasourceProvider*:  
+7. **Register the *DataSourceProvider*** implementation *CloudToLocalDatasourceProvider* in the AddReveal() call like:
 
-``` csharp
-  public override IRVDataSourceProvider DataSourceProvider => new CloudToLocalDatasourceProvider();        
+```csharp
+services
+    .AddMvc()
+        .AddReveal(builder =>
+        {
+            builder
+              ...
+              .AddDataSourceProvider<CloudToLocalDatasourceProvider>()
+              ...
+        });
 ```
 
 ## Code
@@ -25,14 +33,7 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
 ``` csharp
     public class CloudToLocalDatasourceProvider : IRVDataSourceProvider
     {
-        public Task<RVDataSourceItem> ChangeDashboardFilterDataSourceItemAsync(string userId, string dashboardId, 
-                        RVDashboardFilter filter, RVDataSourceItem dataSourceItem)
-        {
-            return ProcessDataSourceItem(dataSourceItem);
-        }
-
-        public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(string userId, string dashboardId, 
-                        RVVisualization visualization, RVDataSourceItem dataSourceItem)
+        public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
         {
             return ProcessDataSourceItem(dataSourceItem);
         }

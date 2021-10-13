@@ -4,7 +4,8 @@
 
 There are two ways to open/save dashboards with the SDK:
 
-  - **Server-side**: First, you specify a dashboard ID in the client page. Second, on the server, using a callback method detailed below, you return the stream with the contents of the dashboard with the specified ID.
+  - **Server-side**: First, you specify a dashboard ID in the client page. Second, on the server, using a callback method detailed below, you return an instance of Reveal.Sdk.Dashboard class, that you instantiate by passing a dashboard stream, for the corresponding dashboardId, to the constructor of the Dashboard class.
+
 
     Please note that this is the easiest approach and the one
     recommended when you are first evaluating the SDK.
@@ -17,12 +18,12 @@ There are two ways to open/save dashboards with the SDK:
 
 In order to visualize a dashboard, you can provide the SDK with an instance of a Dashboard class, which you could instantiate passing a stream to a rdash or json string representation of a rdash.
 
-The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __RevealSdkContextBase.GetDashboardAsync__.
+The code snippet below shows how to load a .rdash file that is added to the project as an embedded resource. Please note that this method is the implementation for __IRVDashboardProvider.GetDashboardAsync__ method.
 
 ## Code
 
 ``` csharp
-public override Task<Dashboard> GetDashboardAsync(string dashboardId)
+public override Task<Dashboard> GetDashboardAsync(IRVUserContext userContext, string dashboardId)
 {
     var dashboardFileName = dashboardId + ".rdash";
     var resourceName = $"Demo1.Dashboards.{dashboardFileName}";
@@ -35,5 +36,5 @@ public override Task<Dashboard> GetDashboardAsync(string dashboardId)
 ```
 
 This code for
-__RevealSdkContextBase.GetDashboardAsync__
+__IRVDashboardProvider.GetDashboardAsync__
 will be invoked on the server when you use **RVDashboard.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.

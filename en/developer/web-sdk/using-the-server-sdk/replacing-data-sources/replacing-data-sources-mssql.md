@@ -6,14 +6,6 @@ Before loading and processing the data for a dashboard (by Reveal Server
 SDK), you can override the configuration or data to be used for each
 visualization of the dashboard.
 
-One of the properties to implement in
-__RevealSdkContextBase__
-is:
-
-``` csharp
-IRVDataSourceProvider DataSourceProvider { get;  }
-```
-
 A class implementing the interface
 __IRVDataSourceProvider__
 may replace or modify the data source used by a given visualization or
@@ -44,21 +36,13 @@ Below you can find a list of common use cases:
 ## Code
 
 The following code snippet shows an example of how to replace the data
-source for visualizations in the dashboard. The method
-__ChangeVisualizationDataSourceItemAsync__
-will be invoked for every visualization, on every single dashboard being
-opened.
+source item.
 
 ``` csharp
 public class SampleDataSourceProvider : IRVDataSourceProvider
 {
-        public Task<RVDataSourceItem> ChangeDashboardFilterDataSourceItemAsync(string userId, string dashboardId, RVDashboardFilter globalFilter, RVDataSourceItem dataSourceItem)
-        {
-            return Task.FromResult<RVDataSourceItem>(null);
-        }
-
-        public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(
-            string userId, string dashboardId, RVVisualization visualization,
+        public Task<RVDataSourceItem> ChangeDataSourceItemAsync(
+            IRVUserContext userContext, string dashboardId,
             RVDataSourceItem dataSourceItem)
         {
             var sqlServerDsi = dataSourceItem as RVSqlServerDataSourceItem;
@@ -74,47 +58,28 @@ public class SampleDataSourceProvider : IRVDataSourceProvider
                 return Task.FromResult((RVDataSourceItem)sqlServerDsi);
             }
 
-            // Fully replace a data source item with a new one
-            if (visualization.Title == "Top Customers")
-            {
-                var sqlDs = new RVSqlServerDataSource();
-                sqlDs.Host = "salesdb.local";
-                sqlDs.Database = "Sales";
-
-                var sqlDsi = new RVSqlServerDataSourceItem(sqlDs);
-                sqlServerDsi.Table = "Customers";
-
-                return Task.FromResult((RVDataSourceItem)sqlServerDsi);
-            }
-
             return Task.FromResult(dataSourceItem);
         }
 }
 ```
 
-In the example above, the following two replacements will be performed:
+In the example above, the following  replacement will be performed:
 
   - All data sources using a MS SQL Server database will be changed to
     use the hardcoded server “10.0.0.20”, the “Adventure Works”
     database, and the “Employees” table.
 
-    **Note:** This is a simplified scenario, replacing all
-    visualizations to get data from the same table, which makes no sense
-    as a real world scenario. In real-world applications, you’re
-    probably going to use additional information like userId,
-    dashboardId, or the values in the data source itself (server,
-    database, etc.) to infer the new values to be used.
-
-  - All widgets with the title “Top Customers” will have their data
-    source set to a new SQL Server data source, getting data from the
-    “Sales” database in the “salesdb.local” server, using the table
-    “Customers”.
-
 Please note that in addition to implement
 __IRVDataSourceProvider__
-you need to modify your implementation of __RevealSdkContextBase.DataSourceProvider__
-to return it:
-
-``` csharp
-IRVDataSourceProvider DataSourceProvider => new SampleDataSourceProvider();
+you need to register your implementation when adding Reveal to your IMvcBuilder in COnfigureServices!
+```csharp
+services
+    .AddMvc()
+        .AddReveal(builder =>
+        {
+            builder
+              ...
+              .AddDataSourceProvider<MyDataSourceProvider>()
+              ...
+        });
 ```

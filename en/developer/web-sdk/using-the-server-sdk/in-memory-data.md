@@ -66,16 +66,14 @@ As simplified Employee has only the following properties:
 Now you need to visualize the dashboard using your own data instead of the dummy one.
 
 1.  Implement
-    __IRVDataSourceProvider__
-    and return it as the __DataSourceProvider__
-    property in
-    __RevealSdkContextBase__, as described in [**Replacing Data Sources**](replacing-data-sources/replacing-data-sources-mssql.md).
+     interface and register it in your AddReveal() call in when configuring the AspNetCore services,
+     as described in [**Replacing Data Sources**](replacing-data-sources/replacing-data-sources-mssql.md).
 
     Then, in the implementation for the method
-    **ChangeVisualizationDataSourceItemAsync**, you need to add a code similar to this one:
+    **ChangeDataSourceItemAsync**, you need to add a code similar to this one:
 
     ``` csharp
-    public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(string userId, string dashboardId, RVVisualization visualization, RVDataSourceItem dataSourceItem)
+    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
     {
         var csvDsi = dataSourceItem as RVCsvDataSourceItem;
         if (csvDsi != null)
@@ -90,12 +88,12 @@ Now you need to visualize the dashboard using your own data instead of the dummy
     This way you basically replace all references to CSV files in the dashboard with the in-memory data source identified by “employees”. This identification will be used later when returning the data.
 
 2.  Implement the method that will return the actual data, to do that implement
-    __IRVDataProvider__ as shown below:
+    __IRVDataProvider__ and register it in your AddReveal() call.
 
     ``` csharp
     public class EmbedDataProvider : IRVDataProvider
     {
-        public Task<IRVInMemoryData> GetData(string userId, RVInMemoryDataSourceItem dataSourceItem)
+        public Task<IRVInMemoryData> GetData(IRVUserContext userContext, RVInMemoryDataSourceItem dataSourceItem)
         {
             var datasetId = dataSourceItem.DatasetId;
             if (datasetId == "employees")
@@ -134,11 +132,4 @@ public class Employee
     [RVSchemaColumn("MonthlyWage")]
     public double Wage { get; set; }
 }
-```
-
-In addition, to implement
-__IRVDataProvider__ you need to modify your implementation of __RevealSdkContextBase.DataProvider__ to return it:
-
-``` csharp
-IRVDataProvider DataProvider => new EmbedDataProvider();
 ```
