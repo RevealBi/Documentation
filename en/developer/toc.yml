@@ -14,8 +14,6 @@
   href: web-sdk/overview.md
 - name: Setup and Configuration
   href: web-sdk/setup-configuration.md
-- name: Upgrade your app to version 1.1
-  href: web-sdk/upgrade-to-1.1.md
 # - name: Creating Your First App
 #   href: web-sdk/create-first-app.md
 - name: Using the Server SDK
@@ -61,9 +59,13 @@
   href: desktop-sdk/api-reference.md
 - name: Release Information
   header: true
+- name: Upgrade to version 1.1
+  href: release-information/upgrade-to-1.1.md
 - name: Known Issues
   href: release-information/known-issues.md
 - name: Release Notes
   href: release-information/release-notes.md
 - name: Third-Party Software Used by Reveal
   href: release-information/third-party-software.md
+- name: Archived Docs
+  href: release-information/archived-docs.md

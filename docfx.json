@@ -14,7 +14,8 @@
                 "files": [
                     "images/**",
                     "**/images/**",
-                    "**/api/**"
+                    "**/api/**",
+                    "en/developer/archived-docs/**"
                 ],
                 "exclude": ["obj/**", "_site/**"]
             },
