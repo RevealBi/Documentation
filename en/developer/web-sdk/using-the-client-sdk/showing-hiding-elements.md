@@ -163,15 +163,16 @@ This property can be used to filter the visualization types available to the use
 
 <img src="../../general/images/showing_hiding_elements_charts.png" alt="Switching visualizations through the UI" class="responsive-img"/>
 
-You can, for example, add or remove visualizations as shown below:
+You can use a brand new Array that includes only the visualizations you want to be available:
 
 ``` js
-revealView.availableChartTypes.add($.ig.RVChartType.bulletGraph);
-revealView.availableChartTypes.remove($.ig.RVChartType.choropleth);
+revealView.availableChartTypes = [$.ig.RVChartType.BulletGraph, $.ig.RVChartType.Choropleth];
 ```
 
-In addition, you can use a brand new Array that includes only the visualizations you want to be available:
+Or you could remove some of the charts like:
 
-``` js
-revealView.AvailableChartTypes = [$.ig.RVChartType.bulletGraph, $.ig.RVChartType.choropleth];
+```js
+var toRemoveChartTypes = [$.ig.RVChartType.AreaChart, $.ig.RVChartType.Indicator, $.ig.RVChartType.IndicatorTarget, $.ig.RVChartType.ScatterMap, $.ig.RVChartType.Choropleth, $.ig.RVChartType.TreeMap];
+revealView.availableChartTypes = revealView.availableChartTypes.filter(t => !toRemoveChartTypes.includes(t));
+
 ```
