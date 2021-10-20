@@ -31,7 +31,7 @@ Basically, you just have to do two things and the SDK will take care of the rest
 2.  Invoke the callback with the ID of the target dashboard.
 
 ``` js
-revealView.onLinkedDashboardProvider = function (targetDashboardId, linkTitle) {
-    callback(targetDashboardId);
-};
+revealView.onLinkedDashboardProviderAsync = (dashboardId => {
+      return dashboardId;
+})
 ```
