@@ -49,22 +49,15 @@ As simplified Employee has only the following properties:
 
 Now you need to visualize the dashboard using your own data instead of the dummy one.
 
-1.  Implement
-    __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealSdkSettings__,
-    as described in [**Replacing Data Sources**](replacing-data-sources/replacing-data-sources-mssql.md).
+1.  Implement __IRVDataSourceProvider__ and set it to the __DataSourceProvider__ property in __RevealSdkSettings__, as described in [**Replacing Data Sources**](replacing-data-sources/replacing-data-sources-mssql.md).
 
     Then, in the implementation for the method __ChangeDataSourceItemAsync__, you need to add a code similar to this one:
 
     ``` csharp
     public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSourceItem)
     {
-        var csvDsi = dataSourceItem as RVCsvDataSourceItem;
-        if (csvDsi != null)
-        {
-            var inMemDsi = new RVInMemoryDataSourceItem("employees");
-            return Task.FromResult((RVDataSourceItem)inMemDsi);
-        }
-        return Task.FromResult((RVDataSourceItem)null);
+        var inMemDsi = new RVInMemoryDataSourceItem("employees");
+        return Task.FromResult((RVDataSourceItem)inMemDsi);
     }
     ```
 

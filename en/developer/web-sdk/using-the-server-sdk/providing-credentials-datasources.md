@@ -8,7 +8,7 @@ when accessing the data source.
 ## Code
 
 The first step is to create a class that implement __IRVAuthenticationProvider__ interface.
-Lets call it MyAuthenticationProvider. Here's a sample implementation:
+Here's a sample implementation, calling it MyAuthenticationProvider:
 
 ``` csharp
 public class MyAuthenticationProvider : IRVAuthenticationProvider
@@ -37,7 +37,7 @@ public class MyAuthenticationProvider : IRVAuthenticationProvider
     }
 }
 ```
-After creating the class the next step is to register it in AddReveal call in ConfigureServices method like this:
+After creating the class the next step is to register it in the **AddReveal** call (ConfigureServices method) like this:
 
 ```csharp
 services

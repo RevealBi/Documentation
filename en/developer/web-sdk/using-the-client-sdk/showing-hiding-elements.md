@@ -169,7 +169,7 @@ You can use a brand new Array that includes only the visualizations you want to 
 revealView.availableChartTypes = [$.ig.RVChartType.BulletGraph, $.ig.RVChartType.Choropleth];
 ```
 
-Or you could remove some of the charts like:
+In addition, you could remove some of the charts as shown below:
 
 ```js
 var toRemoveChartTypes = [$.ig.RVChartType.AreaChart, $.ig.RVChartType.Indicator, $.ig.RVChartType.IndicatorTarget, $.ig.RVChartType.ScatterMap, $.ig.RVChartType.Choropleth, $.ig.RVChartType.TreeMap];

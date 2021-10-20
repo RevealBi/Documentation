@@ -8,9 +8,9 @@ The Reveal Server SDK requires .NET Core 3.1 or newer.
 
 To set up the Reveal Web Server SDK you need to:
 
-1.  [**Installing Reveal Sdk.**](#installing-reveal-sdk')
+1.  [**Install the Reveal SDK.**](#installing-reveal-sdk')
 
-2.  [**Define the Server Context.**](#defining-server-context)
+2.  [**Define a DashboardProvider.**](#defining-dashboardprovider)
 
 3.  [**Initialize the Server SDK.**](#initializing-server-sdk)
 
@@ -18,38 +18,30 @@ To set up the Reveal Web Server SDK you need to:
 
 <a name='installing-reveal-sdk'></a>
 
-### 1\. Getting Assemblies and Dependency Packages ready
+### 1\. Installing the Reveal SDK
 
-You need to run the Reveal Sdk installer on you r machine.
+Run the Reveal Sdk installer on your machine to get assemblies and dependency packages ready.
 
-
-After that, you should be able to find a new NuGet
-package source added to your **nuget.config** called _Infragistics
-(Local)_ that points to “%public%\\Documents\\Infragistics\\NuGet”.
+Once the installation is completed, you can find a new NuGet package source added to your **nuget.config** called _Infragistics (Local)_ that points to “%public%\\Documents\\Infragistics\\NuGet”.
 
 <img src="images/addingNugetPackage_web.png" alt="addingNugetPackage_web" class="responsive-img"/>
 
-After ensuring you have the Infragistics (Local) feed properly
-configured by the installer, you need to:
+After ensuring you have the Infragistics (Local) feed properly configured by the installer, you need to:
 
-- install the **Reveal.Sdk.Web.AspNetCore(.Trial)** NuGet package
-  to your application project.
+- install the **Reveal.Sdk.Web.AspNetCore(.Trial)** NuGet package to your application project.
 - add a NuGet package reference to System.Data.SQLite version 1.0.111+
 
-Trial nuget package is available on nuget.org - [**Reveal.Sdk.Web.AspNetCore.Trial**](https://www.nuget.org/packages/Reveal.Sdk.Web.AspNetCore.Trial/)
+> [!NOTE] >
+    > The TRIAL nuget package is available on nuget.org: [**Reveal.Sdk.Web.AspNetCore.Trial**](https://www.nuget.org/packages/Reveal.Sdk.Web.AspNetCore.Trial/).
 
-If you are having issues with the build, follow this
-[**link**](#sqlite-fix).
 
-<a name='defining-server-context'></a>
+If you are having issues with the build, follow this [**link**](#sqlite-fix).
 
-<a name='defining-server-context'></a>
+<a name='defining-dashboardprovider'></a>
 
 ### 2\. Defining а DashboardProvider
 
-After installing hte nuget package, you need to create a class that
-implements
-**IRVDashboardProvider** interface. The class handles loading and saving dashboards.
+After installing the nuget package, you need to create a class that implements the **IRVDashboardProvider** interface. The class handles loading and saving dashboards.
 
 ```csharp
     using Reveal.Sdk;
@@ -83,23 +75,20 @@ implements
     }
 ```
 
-The code above implements a simple file system based provider.
-It accepts an argument in its constructor that should specify the directory that dashboards would get loaded/saved from/to.
-Also it's forgiving in case you miss or don't want to specify file extension.
+The code above implements a simple file system based provider. Basically, it accepts an argument in its constructor that specifies a directory in which dashboards are loaded from/saved to. The code is also forgiving in case you forgot or don't want to specify the file extension.
 
 <a name='initializing-server-sdk'></a>
 
 ### 3\. Initializing the Server SDK
 
-In the **Startup.cs**, in the **ConfigureServices** method of the
-application you'll need to add to the services some of the AspNetCore services that returns an IMvcBuilder interface.
-The most used ones are AddMvc, AddControllersWithViews and Add Controllers. So after you add one of these services
-you need to call .AddReveal on top of it. AddReveal is an extension method extending IMvcBuilder.
+In **Startup.cs**, in the **ConfigureServices** method of the application, you need to add one or more AspNetCore services that return an IMvcBuilder interface.
+The most used services are AddMvc, AddControllersWithViews and Add Controllers. After you add one of these, you need to call *.AddReveal* on top of it. **AddReveal** is an extension method used to extend IMvcBuilder.
 
-AddReveal extension method is located in the Reveal.Sdk namespace so make sure you add a using for it in your Startup.cs.
 
-AddReveal is your way to register reveal server component and provide settings to. Look at the snippet bellow
-to see a basic call registering the DashboardProvider we defined in the previous step:
+> [!NOTE] >
+    > AddReveal extension method is located in the Reveal.Sdk namespace so must add a using for it in your Startup.cs.
+
+With **AddReveal** you can register reveal server component and also provide settings. In the code snippet below you can see a basic call registering the DashboardProvider class that was defined in the previous step:
 
 ```csharp
 services
@@ -116,12 +105,12 @@ services
         });
 ```
 
-In the snippet above we're registering the DashboardProvider class.\
-Also we specify LocalFileStoragePath - path for static data source files like Excel or CSV will be located and setting default caching locations to be used.
+Besides registering the DashboardProvider class, the LocalFileStoragePath was also specified.
+This is the path where static data source files like Excel or CSV will be located, and the default setting for caching locations to be used.
 
-As you might have noted we're registering the type and not a particular instance. That's because the type will be registered in the AspNetCore Di container.
-Which gives you the flexibility to inject any other services you might be using into the implementation of the DashboarProvider and in other Reveal provider.
-You are free to register the instance if you prefer so - just us the other overload AddDashboardProvider method like:
+Please note that you need to register the type and not a particular instance. That's because the type will be registered in the AspNetCore Di container.
+This approach gives you the flexibility to inject any other services you might be using into the implementation of the DashboarProvider and in other Reveal provider.
+You are free to register the instance if you prefer so, just use the other overload AddDashboardProvider method. As shown below:
 ```csharp
 builder.AddDashboardProvider(new DashboardProvider())
 ```
