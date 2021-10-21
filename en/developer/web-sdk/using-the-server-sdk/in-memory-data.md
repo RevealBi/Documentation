@@ -96,10 +96,10 @@ Now you need to visualize the dashboard using your own data instead of the dummy
             if (datasetId == "employees")
             {
                 var data = new List<Employee>()
-                    {
-                        new Employee(){ EmployeeID = "1", Fullname="John Doe", Wage = 80325.61 },
-                        new Employee(){ EmployeeID = "2", Fullname="Doe John", Wage = 10325.61 },
-                    };
+                {
+                    new Employee(){ EmployeeID = "1", Fullname="John Doe", Wage = 80325.61 },
+                    new Employee(){ EmployeeID = "2", Fullname="Doe John", Wage = 10325.61 },
+                };
                 return Task.FromResult<IRVInMemoryData>(new RVInMemoryData<Employee>(data));
             }
             else

@@ -56,8 +56,13 @@ Now you need to visualize the dashboard using your own data instead of the dummy
     ``` csharp
     public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSourceItem)
     {
-        var inMemDsi = new RVInMemoryDataSourceItem("employees");
-        return Task.FromResult((RVDataSourceItem)inMemDsi);
+        var csvDsi = dataSourceItem as RVCsvDataSourceItem;
+        if (csvDsi != null)
+        {
+            var inMemDsi = new RVInMemoryDataSourceItem("employees");
+            return Task.FromResult((RVDataSourceItem)inMemDsi);
+        }
+        return Task.FromResult((RVDataSourceItem)null);
     }
     ```
 

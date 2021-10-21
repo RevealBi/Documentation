@@ -7,16 +7,11 @@ you can override the configuration or data to be used for each
 visualization of the dashboard.
 
 You would need to set the DataSourceProvider property of
-__RevealSdkSettings__:
-
-``` csharp
-public IRVDataSourceProvider DataSourceProvider { get; set; }
-```
+__RevealSdkSettings__.
 
 A class implementing the interface
 __IRVDataSourceProvider__
-may replace or modify the data source used by a given visualization or
-dashboard filter.
+may replace or modify the data source used in the dashboard.
 
 ## Use Cases
 
@@ -42,17 +37,15 @@ Below you can find a list of common use cases:
 ## Code
 
 The following code snippet shows an example of how to replace the data
-source for visualizations in the dashboard. The method
-__ChangeVisualizationDataSourceItemAsync__
-will be invoked for every visualization, on every single dashboard being
-opened.
+source items in the dashboard. The method
+__ChangeDataSourceItemAsync__
+will be invoked for every time a dashboard needs to retrieve data.
 
 ``` csharp
 public class SampleDataSourceProvider : IRVDataSourceProvider
-    {
-   public Task<RVDataSourceItem> ChangeDataSourceItemAsync(
-        RVVisualization visualization, RVDataSourceItem dataSourceItem)
-    {
+{
+   public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSourceItem)
+   {
         var sqlServerDsi = dataSourceItem as RVSqlServerDataSourceItem;
         if (sqlServerDsi != null)
         {
@@ -63,11 +56,11 @@ public class SampleDataSourceProvider : IRVDataSourceProvider
 
             // Change SQL Server table/view
             sqlServerDsi.Table = "Employees";
-                  return Task.FromResult((RVDataSourceItem)sqlServerDsi);
+            return Task.FromResult((RVDataSourceItem)sqlServerDsi);
         }
 
         // Fully replace a data source item with a new one
-        if (visualization.Title == "Top Customers")
+        if (dataSourceItem.Title == "Top Customers")
         {
             var sqlDs = new RVSqlServerDataSource();
             sqlDs.Host = "salesdb.local";
@@ -79,9 +72,10 @@ public class SampleDataSourceProvider : IRVDataSourceProvider
             return Task.FromResult((RVDataSourceItem)sqlServerDsi);
         }
 
+        // return the original data source item
         return Task.FromResult((RVDataSourceItem)dataSourceItem);
     }
-  }
+}
 ```
 
 In the example above, the following two replacements will be performed:
@@ -95,7 +89,7 @@ In the example above, the following two replacements will be performed:
     real world scenario. In real-world applications, you’re probably going to use additional information like userId, dashboardId, or the
     values in the data source itself (server, database, etc.) to infer the new values to be used.
 
-  - All widgets with the title “Top Customers” will have their data
+  - All data source items with the title “Top Customers” will have their data
     source set to a new SQL Server data source, getting data from the
     “Sales” database in the “salesdb.local” server, using the table
     “Customers”.
