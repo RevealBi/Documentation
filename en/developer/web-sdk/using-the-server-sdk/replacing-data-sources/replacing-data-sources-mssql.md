@@ -2,14 +2,9 @@
 
 ## Overview
 
-Before loading and processing the data for a dashboard (by Reveal Server
-SDK), you can override the configuration or data to be used for each
-visualization of the dashboard.
+Before loading and processing the data for a dashboard (by Reveal Server SDK), you can override the configuration or data to be used for each visualization of the dashboard.
 
-A class implementing the interface
-__IRVDataSourceProvider__
-may replace or modify the data source used by a given visualization or
-dashboard filter.
+A class implementing the interface __IRVDataSourceProvider__ may replace or modify the data source used by a given visualization or dashboard filter.
 
 ## Use Cases
 
@@ -35,8 +30,7 @@ Below you can find a list of common use cases:
 
 ## Code
 
-The following code snippet shows an example of how to replace the data
-source item.
+The following code snippet shows an example of how to replace the data source item.
 
 ``` csharp
 public class SampleDataSourceProvider : IRVDataSourceProvider
@@ -63,15 +57,11 @@ public class SampleDataSourceProvider : IRVDataSourceProvider
 }
 ```
 
-In the example above, the following  replacement will be performed:
+In the example above, the following replacement will be performed:
 
-  - All data sources using a MS SQL Server database will be changed to
-    use the hardcoded server “10.0.0.20”, the “Adventure Works”
-    database, and the “Employees” table.
+  - All data sources using a MS SQL Server database will be changed to use the hardcoded server “10.0.0.20”, the “Adventure Works” database, and the “Employees” table.
 
-Please note that in addition to implement
-__IRVDataSourceProvider__
-you need to register your implementation when adding Reveal to your IMvcBuilder in COnfigureServices!
+Please note that in addition to implement __IRVDataSourceProvider__ you need to register your implementation when adding Reveal to your IMvcBuilder in ConfigureServices!
 ```csharp
 services
     .AddMvc()

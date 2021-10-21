@@ -4,11 +4,10 @@
 
 There are two ways to open/save dashboards with the SDK:
 
-  - **Server-side**: First, you specify a dashboard ID in the client page. Second, on the server, using a callback method detailed below, you return an instance of Reveal.Sdk.Dashboard class, that you instantiate by passing a dashboard stream, for the corresponding dashboardId, to the constructor of the Dashboard class.
+  - **Server-side**: First, you specify a dashboard ID in the client page. Second, on the server, using a callback method detailed below, you return an instance of Reveal.Sdk.Dashboard class. You instantiate that class by passing a dashboard stream, for the corresponding dashboardId, to the constructor of the Dashboard class.
 
 
-    Please note that this is the easiest approach and the one
-    recommended when you are first evaluating the SDK.
+    Please note that this is the easiest approach and the one recommended when you are first evaluating the SDK.
 
   - **Client-side**: Here you have full control and more flexibility. You provide the stream with the contents of the dashboard on the client page, getting the contents from your own server.
 
@@ -35,6 +34,4 @@ public override Task<Dashboard> GetDashboardAsync(IRVUserContext userContext, st
 }
 ```
 
-This code for
-__IRVDashboardProvider.GetDashboardAsync__
-will be invoked on the server when you use **RVDashboard.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.
+This code for __IRVDashboardProvider.GetDashboardAsync__ will be invoked on the server when you use **RVDashboard.loadDashboard** function on the client. And you will get the *dashboardId* that was specified client-side as the first parameter.

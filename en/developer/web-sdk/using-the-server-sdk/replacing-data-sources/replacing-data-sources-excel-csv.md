@@ -14,7 +14,7 @@ To populate the exported dashboard using local Excel and CSV files, you need to 
 4. **Set the local folder name** as a value of the *LocalStoragePath*. Details about this you can find here: [**Setup and Configuration(Server) - Initializing the Server SDK**](~/en/developer/web-sdk/setup-configuration.md#3-initializing-the-server-sdk)  
 5. **Add a new *CloudToLocalDatasourceProvider* class** in the project.  
 6. **Copy the implementation code** from the relevant snippet in **Code** section below.
-7. **Register the *DataSourceProvider*** implementation *CloudToLocalDatasourceProvider* in the AddReveal() call like:
+7. **Register the *DataSourceProvider*** implementation *CloudToLocalDatasourceProvider* in the AddReveal() call, as shown below:
 
 ```csharp
 services
