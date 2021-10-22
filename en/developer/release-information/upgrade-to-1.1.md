@@ -1,12 +1,12 @@
-## List of breaking changes in 1.1.0 and onwards
+## List of Breaking Changes in 1.1.0
 
-1. **[Dotnet Server]** Removed the RevealSdkContext(RevealSdkContextBase class and IRevealSdkContext interface) - the main purpose this was serving was only bundling a few services/providers needed by Reveal.
-2. **[Dotnet Server]** Updated the registration and configuration of Reveal services in the Startup.cs class of your application.
+1. **[.NET Server]** Removed the RevealSdkContext(RevealSdkContextBase class and IRevealSdkContext interface) - the main purpose this was serving was only bundling a few services/providers needed by Reveal.
+2. **[.NET Server]** Updated the registration and configuration of Reveal services in the Startup.cs class of your application.
    1. Previously you we're forced to register a concrete instance of the RevealSdkProvider. That meant you couldn't easily plug any existing ApsNetCore services you might have, using the default Dependency Injection framework. Now, after getting rid of the RevealSdkContext, we provide a simple and more fluent way to register your implementations of Reveal required services and register them as a type.
    2. Before version 1.1 you had to do two calls - AddRevealServices & AddReveal - now we make it only a single AddReveal() call.
-3. **[Dotnet Server]** Introduced small changes to the Reveal.Sdk.Dashboard class constructor's overloads to make them more consistent. Now there are three constructor overloads that load a dashboard in rdash format from stream, filepath or byte array. Loading from Json is available through a static method called FromJsonString. And now serialization methods of the Dashboard class are ToStreamAsync, ToByteArrayAsync, SaveToFileAsync for the rdash format and ToJsonStringAsync to save as Json string.
-4. **[Dotnet Server, Wpf]** Changed the IRVDataSourceProvider interface, so it won't be used only in the initial dashboard request from the customer as it was in previous version. Now it will be called every time a request for data is sent to the server. There is also a single ChangeDataSourceItemAsync to be implemented in the interface.
-5. **[Dotnet Server]** Reveal.Sdk.Web.AspNetCore(.Trial) package does not support .NET 4.6.2 & NET Core 2.2 any more, only NET Core 3.1 and newer.
+3. **[.NET Server]** Introduced small changes to the Reveal.Sdk.Dashboard class constructor's overloads to make them more consistent. Now there are three constructor overloads that load a dashboard in rdash format from stream, filepath or byte array. Loading from Json is available through a static method called FromJsonString. And now serialization methods of the Dashboard class are ToStreamAsync, ToByteArrayAsync, SaveToFileAsync for the rdash format and ToJsonStringAsync to save as Json string.
+4. **[.NET Server, Desktop]** Changed the IRVDataSourceProvider interface, so it won't be used only in the initial dashboard request from the customer as it was in previous version. Now it will be called every time a request for data is sent to the server. There is also a single ChangeDataSourceItemAsync to be implemented in the interface.
+5. **[.NET Server]** Reveal.Sdk.Web.AspNetCore(.Trial) package does not support .NET 4.6.2 & NET Core 2.2 any more, only NET Core 3.1 and newer.
 6. **[JS Client]** On the client side - the onVisualizationLinkingDashboard event is removed from RevealView class, in favor of onLinkedDashboardProviderAsync which serves the same purpose and is used when creating the dashboard link in the editor.
 
 ## How to upgrade your projects
