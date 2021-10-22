@@ -29,7 +29,7 @@ here.
         &emsp;&emsp;.AddMvc()<br>
         &emsp;&emsp;.AddReveal();</i><br>
         For further details, please refer to <a
-                href="../release-information/setup-upgrade-to-1.1.html">Reveal SDK Upgrade to 1.1</a>.
+                href="../release-information/upgrade-to-1.1.html">Reveal SDK Upgrade to 1.1</a>.
         </td>
     </tr>
     <tr>
