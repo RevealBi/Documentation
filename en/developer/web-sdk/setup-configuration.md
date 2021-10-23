@@ -8,7 +8,7 @@ The Reveal Server SDK requires .NET Core 3.1 or newer.
 
 To set up the Reveal Web Server SDK you need to:
 
-1.  [**Install the Reveal SDK.**](#installing-reveal-sdk')
+1.  [**Install the Reveal SDK.**](#installing-reveal-sdk)
 
 2.  [**Define a DashboardProvider.**](#defining-dashboardprovider)
 
