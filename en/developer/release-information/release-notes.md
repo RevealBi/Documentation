@@ -106,7 +106,7 @@ here.
             </td>
         </tr>
         <tr>
-            <td><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
+            <td><a name="java-sdk-1.0.7"></a><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
             When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
             </td>
         </tr>
@@ -115,20 +115,20 @@ here.
             When getting data from Google Analytics data sources, you were unable to create dashboard filters.
             </td>
         </tr>
-       <tr>
+        <tr>
             <td rowspan="4">June-2021</td>
             <td rowspan="4">1.0.7 JAVA</td>
             <td><i>Scatter Maps now support OpenStreetMap!</i><br>
             You can now configure and use OpenStreet Map image tiles in the SDK Web-client (JS).
             </td>
-        </tr>
+        </tr>    
         <tr>
             <td><i>[Public SDK Bug fix] Text Box content not visible after component is remounted</i><br>
             When using React with a dashboard and a Text Box visualization, content was not visible after component remount. A page reload was required.
             </td>
         </tr>
         <tr>
-            <td><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
+            <td><a name="java-sdk-1.0.6"></a><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
             When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
             </td>
         </tr>
@@ -138,14 +138,14 @@ here.
             </td>
         </tr>
         <tr>
-            <td rowspan="2">June-2021</td>
+            <td rowspan="2"><a name="java-sdk-1.0.5"></a>June-2021</td>
             <td rowspan="2">1.0.6 JAVA</td>
             <td><i>[Bug Fix] [SDK] Grizzly server throws an exception</i><br>
             When running Reveal in Grizzly, a <i>NoClassDefFoundError</i> exception was being thrown because of a wrong dependency in <i>javax.servlet.ServletContext</i> class (javax.servlet:javaz.servlet-api assembly).
             </td>
         </tr>
         <tr>
-            <td><i>New sample for JAVA SDK released!</i><br>
+            <td><a name="java-sdk-1.0.4"></a><i>New sample for JAVA SDK released!</i><br>
             There is a new <a href="https://github.com/RevealBi/sdk-samples-java/blob/main/upmedia-backend-grizzly">GitHub sample</a> showing how to use Reveal with <a href="https://javaee.github.io/grizzly/">Grizzly</a> server.
             </td>
         </tr>
@@ -179,7 +179,7 @@ here.
             </td>
         </tr>
         <tr>
-            <td><i>[Public Bug Fix] Drill down scenario with different "sorty by" configurations not working as expected</i><br>
+            <td><a name="java-sdk-1.0.3"></a><i>[Public Bug Fix] Drill down scenario with different "sorty by" configurations not working as expected</i><br>
             When the fields in a hierarchy were configured with a combination of "sort by: <any field>" and a descending sorting, the result was the dashboard not loading.
             </td>
         </tr>
@@ -191,7 +191,7 @@ here.
         <tr>
             <td rowspan="2">May-2021</td>
             <td rowspan="2">1.0.3 JAVA</td>
-            <td><i>New Snowflake connector!</i><br>
+            <td><a name="java-sdk-1.0.0"></a><i>New Snowflake connector!</i><br>
             Reveal Java SDK now supports Snowflake data source connector, also including data blending between tables in the same Snowflake database.
             </td>
         </tr>
