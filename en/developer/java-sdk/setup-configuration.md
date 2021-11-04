@@ -154,9 +154,6 @@ You need to download the JavaScript files for your version of the Java SDK. Find
 | [JAVA SDK 1.0.3](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.3/reveal-sdk-distribution-1.0.3-js.zip) | [Version 1.0.3](~/en/developer/release-information/release-notes.html#java-sdk-1.0.3) |
 | [JAVA SDK 1.0.0](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.0/reveal-sdk-distribution-1.0.0-js.zip) | [Version 1.0.0](~/en/developer/release-information/release-notes.html#java-sdk-1.0.0) |
 
-JavaScript files can be found in
-"\<InstallationDirectory\>\\SDK\\Web\\JS\\Client".
-
 <a name='instantiate-web-client-sdk'></a>
 
 ### 3\. Instantiating the Web Client SDK
