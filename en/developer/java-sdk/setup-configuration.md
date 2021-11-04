@@ -143,6 +143,17 @@ scripts will be provided as part of Reveal Web Client SDK.
 <script src="~/Reveal/infragistics.reveal.js"></script>
 ```
 
+You need to download the JavaScript files for your version of the Java SDK. Find below a table with download links for all Java SDK versions. Links to each version's release notes are also provided in the table. 
+
+|                                                                  **Download JS files for**                                                                   |                                 **Release notes**                                 |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+| [JAVA SDK 1.0.7](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.7/reveal-sdk-distribution-1.0.7-js.zip) | [Version 1.0.7](~/en/developer/release-information/release-notes.html#java-sdk-1.0.7) |
+| [JAVA SDK 1.0.6](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.6/reveal-sdk-distribution-1.0.6-js.zip) | [Version 1.0.6](~/en/developer/release-information/release-notes.html#java-sdk-1.0.6) |
+| [JAVA SDK 1.0.5](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.5/reveal-sdk-distribution-1.0.5-js.zip) | [Version 1.0.5](~/en/developer/release-information/release-notes.html#java-sdk-1.0.5) |
+| [JAVA SDK 1.0.4](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.4/reveal-sdk-distribution-1.0.4-js.zip) | [Version 1.0.4](~/en/developer/release-information/release-notes.html#java-sdk-1.0.4) |
+| [JAVA SDK 1.0.3](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.3/reveal-sdk-distribution-1.0.3-js.zip) | [Version 1.0.3](~/en/developer/release-information/release-notes.html#java-sdk-1.0.3) |
+| [JAVA SDK 1.0.0](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.0/reveal-sdk-distribution-1.0.0-js.zip) | [Version 1.0.0](~/en/developer/release-information/release-notes.html#java-sdk-1.0.0) |
+
 JavaScript files can be found in
 "\<InstallationDirectory\>\\SDK\\Web\\JS\\Client".
 
