@@ -18,8 +18,26 @@ here.
     </thead>
     <tbody>
     <tr>
-        <td rowspan="5">Oct-2021</td>
-        <td rowspan="5">1.1.0.67</td>
+            <td rowspan="3">Nov-2021</td>
+            <td rowspan="3">1.0.9 JAVA</td>
+            <td><i>[Public Bug Fix] [SDK] RevealView's availableChartTypes had a timing issue</i><br>
+            Setting the availableChartTypes property right after initializing the RevealView object was causing issues.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] [SDK] RVDateRange Property not returning the expected type</i><br>
+            The <i>from</i> property in the RVDateRange class was not returning a JavaScript Date.
+            </td>
+        </tr>
+        <tr>
+            <td><i>Search fields in the Data Blending screen</i><br>
+            The Data Blending UI was improved by adding the ability to search for fields to be joined/added in the result.
+        </td>
+        </tr>
+        <tr>
+    <tr>
+        <td rowspan="6">Oct-2021</td>
+        <td rowspan="6">1.1.0.67</td>
         <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
         <i>- Registering Reveal services is more flexible</i> - You now can inject other services in your implementations of Reveal interfaces. You only register the type of your implementations of your Reveal providers interfaces.<br>
         <i>- RevealSDKContext removed</i> - RVUserContext is now first class citizen across reveal providers. You need to register a UserContextProvider, which will be instantiating that class and it would be passed to the methods of other Reveal services like IRVDashboardProvider.<br>
@@ -48,6 +66,12 @@ here.
     </tr>
     <tr>
         <td><i>[Public Bug Fix] [SDK] availableChartTypes JavaScript accessor not working as expected</i><br> In the Web Client SDK, you were not able to instantiate RevealView and immediately set the available charts for end users to pick from (availableChartTypes).
+        </td>
+    </tr>
+    </tr>
+    <tr>
+        <td><i>Search fields in the Data Blending screen</i><br>
+            The Data Blending UI was improved by adding the ability to search for fields to be joined/added in the result.
         </td>
     </tr>
     <tr>
@@ -123,7 +147,7 @@ here.
             </td>
         </tr>    
         <tr>
-            <td><i>[Public SDK Bug fix] Text Box content not visible after component is remounted</i><br>
+            <td><i>[Public Bug fix] [SDK] Text Box content not visible after component is remounted</i><br>
             When using React with a dashboard and a Text Box visualization, content was not visible after component remount. A page reload was required.
             </td>
         </tr>
