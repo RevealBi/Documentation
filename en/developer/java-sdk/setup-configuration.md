@@ -154,6 +154,11 @@ You need to download the JavaScript files for your version of the Java SDK. Find
 | [JAVA SDK 1.0.3](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.3/reveal-sdk-distribution-1.0.3-js.zip) | [Version 1.0.3](~/en/developer/release-information/release-notes.html#java-sdk-1.0.3) |
 | [JAVA SDK 1.0.0](https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/1.0.0/reveal-sdk-distribution-1.0.0-js.zip) | [Version 1.0.0](~/en/developer/release-information/release-notes.html#java-sdk-1.0.0) |
 
+> [!NOTE] **Referencing Reveal JS classes**
+> You could reference the JS classes through **$.ig.** or **RevealApi.**.
+> Through out the docs we're using "$.ig." prefix to reference classes.
+> You could use the RevealApi prefix instead of the "$.ig." one, if you want.
+
 <a name='instantiate-web-client-sdk'></a>
 
 ### 3\. Instantiating the Web Client SDK

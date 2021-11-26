@@ -190,7 +190,7 @@ The Reveal Web Client SDK has the following 3rd party references:
 
 ### 2\. Referencing the Web Client SDK
 
-Enabling **\$.ig.RevealView** component in a web page requires several scripts to be included. These
+Enabling **RevealView** component in a web page requires several scripts to be included. These
 scripts will be provided as part of Reveal Web Client SDK.
 
 ```html
@@ -199,6 +199,16 @@ scripts will be provided as part of Reveal Web Client SDK.
 
 JavaScript files can be found in
 "\<InstallationDirectory\>\\SDK\\Web\\JS\\Client".
+Default installation directory is:
+```cmd
+"%public%\\Documents\\Infragistics"
+```
+
+> [!NOTE] **Referencing Reveal JS classes**
+> You could reference the JS classes through **$.ig.** or **RevealApi.**.
+> Through out the docs we're using "$.ig." prefix to reference classes.
+> You could use the RevealApi prefix instead of the "$.ig." one, if you want.
+
 
 <a name='instantiate-web-client-sdk'></a>
 
