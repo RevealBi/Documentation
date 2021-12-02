@@ -37,7 +37,7 @@ here.
         <tr>
     <tr>
         <td rowspan="6">Oct-2021</td>
-        <td rowspan="6">1.1.0.0</td>
+        <td rowspan="6">1.1.0</td>
         <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
         <i>- Registering Reveal services is more flexible</i> - You now can inject other services in your implementations of Reveal interfaces. You only register the type of your implementations of your Reveal providers interfaces.<br>
         <i>- RevealSDKContext removed</i> - RVUserContext is now first class citizen across reveal providers. You need to register a UserContextProvider, which will be instantiating that class and it would be passed to the methods of other Reveal services like IRVDashboardProvider.<br>
