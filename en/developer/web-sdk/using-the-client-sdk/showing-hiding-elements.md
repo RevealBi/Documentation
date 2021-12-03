@@ -176,3 +176,27 @@ var toRemoveChartTypes = [$.ig.RVChartType.AreaChart, $.ig.RVChartType.Indicator
 revealView.availableChartTypes = revealView.availableChartTypes.filter(t => !toRemoveChartTypes.includes(t));
 
 ```
+
+<a name="canChangeVisualizationBackgroundColor"></a>
+## canChangeVisualizationBackgroundColor
+A flag indicating if the end-user can change the background color for a given visualization in the visualization editor (under Settings tab), if enabled the list of colors specified as BackgroundColors in RevealTheme will be displayed as a suggested palette, but the user can also use an advanced mode to select any color.
+
+Default value of this property is false. So to enable the end user to specify a background for a visualization you need to set it to true.
+
+``` csharp
+revealView.canChangeVisualizationBackgroundColor = true;
+```
+
+This feature depends on [Spectrum](https://github.com/bgrins/spectrum) color picker - v 1.8.0.
+In order to use it you'll need to make sure to have it loaded in the browser. Like:
+
+```html
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+```
+
+
+Background color for visualization could also be controlled programmatically by calling revealView.setVisualizationBackgroundColor(RVVisualization, color). The color argument should be a hex string like "#ffffff".
+

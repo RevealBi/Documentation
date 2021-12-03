@@ -148,7 +148,6 @@ dashboard.filters.GetByTitle("Territory").selectedValues = new List<object>() { 
 revealView.Dashboard = dashboard;
 ```
 
-
 ## AvailableChartTypes
 This property can be used to filter the visualization types available to the user.
 
@@ -166,3 +165,14 @@ In addition, you can create a brand new List that includes only the visualizatio
 ``` csharp
 revealView.AvailableChartTypes = new List<RVChartType>() { RVChartType.BulletGraph, RVChartType.Choropleth };
 ```
+
+## CanChangeVisualizationBackgroundColor
+A flag indicating if the end-user can change the background color for a given visualization in the visualization editor (under Settings tab), if enabled the list of colors specified as BackgroundColors in RevealTheme will be displayed as a suggested palette, but the user can also use an advanced mode to select any color.
+
+Default value of this property is false. SO to enable the end user to specify a background for a visualization you need to set it to true.
+
+``` csharp
+revealView.CanChangeVisualizationBackgroundColor = true;
+```
+
+Background color for visualization could also be controlled programmatically by calling RevealView.SetVisualizationBackgroundColor(RVVisualization, Color).
