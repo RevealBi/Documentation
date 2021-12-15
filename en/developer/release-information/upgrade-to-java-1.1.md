@@ -42,43 +42,32 @@ All those interfaces changed the method signatures, they used to receive a user 
 
 
 
-## How to upgrade your projects (TO BE REPLACED)
+## How to upgrade your projects (TO BE UPDATED WITH THE REAL EXAMPLE)
 
-1. Create a class implementing the Reveal.Sdk.IRVDashboardProvider - in the code snippet below it's called MyDashboardProvider. This new provider houses the GetDashboardAsync & SaveDashboardAsync. So you'll need to move the implementation of these methods here. Another important changes in these API methods are that both are using IRVUserContext interface instead of string userId and GetDashboardAsync now also gets userContext.
-In addition, you could get more control of what gets passed as user context by creating an implementation of IRVUserContextProvider.
+You no longer initialize Reveal using **RevealEngineInitializer.initialize**, now you use **initialize(InitializeParameter parameterObject)**.
 
-2. Go to your Startup.cs file and remove the services.AddRevealServices() call in ConfigureServices.
-Change the .AddReveal call as shown below:
-```csharp
-services
-      .AddMvc()
-      .AddReveal(builder => 
-      {
-         builder
-            .AddDashboardProvider<MyDashboardProvider>()
-            .AddSettings(s =>
-            {
-                  s.CachePath = s.DataCachePath = cacheFilePath;
-                  s.LocalFileStoragePath = GetLocalFileStoragePath();
-            });
-      });
+The available parameters remain the same and can be used as shown in the example below:
+
+``` java
+RevealEngineInitializer.initialize(
+    new InitializeParameterBuilder()
+        .setAuthProvider(new RevealAuthenticationProvider())
+        .setUserContextProvider(new RevealUserContextProvider())
+        .setDashboardProvider(new RevealDashboardProvider())
+        .setDataSourceProvider(new UpMediaDataSourceProvider())
+        .setDataProvider(new UpMediaInMemoryDataProvider())
+        .setMaxConcurrentImageRenderThreads(2)
+        .setLicense("SERIAL_KEY_TO_BE_USED")
+        .build());
 ```
-Now you should have your dashboard provider registered and also some settings included.
+Those parameters, are the **providers** used to customize Reveal, you’ll need to create your own providers when integrating Reveal into your application.
 
-3. Fix your IRVDataSourceProvider implementation.  Hopefully your project wasn't making much use of the two previous methods about visualization or filtering since this distinction is not available in 1.1. Now you get the data source item that needs to be replaced - so you'll most likely need to move and adjust ChangeDashboardFilterDataSourceItemAsync to become ChangeDataSourceItemAsync.
-4. Fix your implementation of IRVAuthenticationProvider so it accepts IRVUserContext instead of a string dashboardId.
-5. In case you were using RVBaseUserContextProvider implementation you'll be getting an error that this base class is no longer available. So you need to implement the IRVUserContextProvider interface instead of the base class. This is responsible for creating an IRVUserContext implementation. There is a default implementation of the user context interface that you could use - Reveal.Sdk.RVUserContext class.
+The available parameters are:
+- *setAuthProvider*. Here you should include a custom class that resolves authentication, implementing IRVAuthenticationProvider.
+- *setUserContextProvider*. Custom class that provides information about the user, implementing IRVUserContextProvider.
+- *setDashboardProvider*. Custom class that replaces or modifies a dashboard, implementing IRVDashboardProvider.
+- *setDataSourceProvider*. Custom class that replaces or modifies a data source, implementing IRVDataSourceProvider.
+- *setDataProvider*. Custom class that returns in-memory data for dashboards, implementing IRVDataProvider.
+- *setLicense*. Here you can configure the SDK license, by including the Serial Key.
 
-6. Replace any usage of onVisualizationLinkingDashboard by using onLinkedDashboardProviderAsync event on the reveal view. 
-As an example, you need to change:
-```javascript
-revealView.onVisualizationLinkingDashboard = function (title, url, callback) {
-      callback(url);
-};
-```
-to:
-```javascript
-revealView.onLinkedDashboardProviderAsync = (dashboardId => {
-   return $.ig.RVDashboard.loadDashboardAsync(dashboardId);
-})
-```
+For further details about how implement your own Dashboard providers, please check our [UpMedia samples](https://github.com/RevealBi/sdk-samples-java) in GitHub.
