@@ -1,4 +1,4 @@
-## List of Breaking Changes in 1.1.0
+## List of Breaking Changes in .NET 1.1.0
 
 1. **[.NET Server]** Removed the RevealSdkContext(RevealSdkContextBase class and IRevealSdkContext interface) - the main purpose this was serving was only bundling a few services/providers needed by Reveal.
 2. **[.NET Server]** Updated the registration and configuration of Reveal services in the Startup.cs class of your application.
