@@ -18,6 +18,18 @@ here.
     </thead>
     <tbody>
     <tr>
+        <td rowspan="2">Dec-2021</td>
+        <td rowspan="2">1.1.0 JAVA</td>
+        <td><i>The Java Server SDK was greatly improved, for further details please refer to <a href="../release-information/upgrade-to-java-1.1.html">Reveal Java SDK Upgrade to v1.1</a>.
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fixes] [SDK] </i><br>
+        - Fixed export to Excel when there are null date values in the dataset.<br>
+        - Fixed issue exporting to PDF or PPT with custom branding logo.
+        </td>
+    </tr>
+    <tr>
             <td rowspan="3">Nov-2021</td>
             <td rowspan="3">1.0.9 JAVA</td>
             <td><i>[Public Bug Fix] [SDK] RevealView's availableChartTypes had a timing issue</i><br>
@@ -37,7 +49,7 @@ here.
         <tr>
     <tr>
         <td rowspan="6">Oct-2021</td>
-        <td rowspan="6">1.1.0</td>
+        <td rowspan="6">1.1.0 .NET</td>
         <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
         <i>- Registering Reveal services is more flexible</i> - You now can inject other services in your implementations of Reveal interfaces. You only register the type of your implementations of your Reveal providers interfaces.<br>
         <i>- RevealSDKContext removed</i> - RVUserContext is now first class citizen across reveal providers. You need to register a UserContextProvider, which will be instantiating that class and it would be passed to the methods of other Reveal services like IRVDashboardProvider.<br>
@@ -47,7 +59,7 @@ here.
         &emsp;&emsp;.AddMvc()<br>
         &emsp;&emsp;.AddReveal();</i><br>
         For further details, please refer to <a
-                href="../release-information/upgrade-to-net-1.1.html">Reveal .NET SDK Upgrade to 1.1</a>.
+                href="../release-information/upgrade-to-net-1.1.html">Reveal .NET SDK Upgrade to v1.1</a>.
         </td>
     </tr>
     <tr>

@@ -10,12 +10,12 @@ To look to an actual implementation, please refer to the __RevealJerseyConfig__ 
 
 ## Code
 
-If you use __UpmediaAuthenticationProvider__ (upmedia, upmedia-backend-tomcat and upmedia-backend-spring samples) as a reference, there you can find a single method implemented that receives the _userId_ for the current user and the data source for which credentials are being requested: 
+If you use __UpmediaAuthenticationProvider__ (upmedia, upmedia-backend-tomcat and upmedia-backend-spring samples) as a reference, there you can find a single method implemented that receives _userContext_ for the current user and the data source for which credentials are being requested: 
 
 ``` java
 public class UpmediaAuthenticationProvider implements IRVAuthenticationProvider {
     @Override
-    public IRVDataSourceCredential resolveCredentials(String userId, RVDashboardDataSource dataSource) {
+    public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         // Returning credentials for a SqlServer data source example:
         if (dataSource instanceof RVSqlServerDataSource) {
             String host = ((RVSqlServerDataSource)dataSource).getHost();

@@ -23,8 +23,8 @@ You need your own dashboard provider, implementing the interface IRVDashboardPro
 
 ```java
 public interface IRVDashboardProvider {
-    InputStream getDashboard(String userId, String dashboardId) throws IOException;
-    void saveDashboard(String userId, String dashboardId, InputStream dashboardStream) throws IOException;
+    InputStream getDashboard(IRVUserContext userContext, String dashboardId) throws IOException;
+    void saveDashboard(IRVUserContext userContext, String dashboardId, InputStream dashboardStream) throws IOException;
 }
 ```
 

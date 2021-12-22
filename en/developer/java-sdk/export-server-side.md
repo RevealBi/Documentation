@@ -46,6 +46,12 @@ sudo apt-get install -y --no-install-recommends xvfb
 
 If needed, you can get more information about the missing libraries from errors included in the log file.
 
+Please note that Ubuntu requires the following extra step (which also requires [Maven](https://maven.apache.org/install.html)).
+
+```bash
+mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install-deps chromium"
+```
+
 For other environments, you might also have to install:
 
 ```bash

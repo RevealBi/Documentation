@@ -59,8 +59,10 @@
   href: desktop-sdk/api-reference.md
 - name: Release Information
   header: true
-- name: Upgrade to version .NET 1.1
+- name: Upgrade to .NET v1.1
   href: release-information/upgrade-to-net-1.1.md
+- name: Upgrade to Java v1.1
+  href: release-information/upgrade-to-java-1.1.md
 - name: Known Issues
   href: release-information/known-issues.md
 - name: Release Notes
