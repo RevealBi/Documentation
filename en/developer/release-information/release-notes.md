@@ -25,23 +25,23 @@ here.
     </tr>
     <tr>
         <td><i>Localization support for web</i></br>
-        <a href="/api/javascript/latest/classes/revealsdksettings.html#fieldformattingsettingsprovider">
+        <a href="/api/javascript/latest/classes/revealsdksettings.html#localizedstringsprovider">
             $.ig.RevealSdkSettings.localizedStringsProvider</a> extension point enables localization of several dashboard elements: Dashboard title, Widget title, Field labels, Dashboard Filter titles.
         </td>
     </tr>
     <tr>
         <td><i>Formatting support for web</i></br>
-            <a href="/api/javascript/latest/classes/revealsdksettings.html#localizedstringsprovider">$.ig.RevealSdkSettings.fieldFormattingSettingsProvider</a> extension point allows defining custom formatting for any date time or numeric field.
+            <a  href="/api/javascript/latest/classes/revealsdksettings.html#fieldformattingsettingsprovider">$.ig.RevealSdkSettings.fieldFormattingSettingsProvider</a> extension point allows defining custom formatting for any date time or numeric field.
         </td>
     </tr>
     <tr>
         <td><i>Added option to hide the dashboard header – including the title and the kebab menu.</i><br>
-            <a hre="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_ShowHeader">ShowHeader</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#showheader">showHeader</a> (JS).
+            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_ShowHeader">ShowHeader</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#showheader">showHeader</a> (JS).
         </td>
     </tr>
     <tr>
         <td><i>Added an option to enable/disable the end user to maximize visualizations.</i><br>
-            <a hre="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canmaximizevisualization">canMaximizeVisualizationProperty</a> (JS). 
+            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canmaximizevisualization">canMaximizeVisualizationProperty</a> (JS). 
         </td>
     </tr>
     <tr>
@@ -51,12 +51,12 @@ here.
     </tr>
     <tr>
         <td><i>New an option in the editor to enable/disable the end user to change the background color for a given visualization in the visualization editor.</i></br>
-           <a href="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canchangevisualizationbackgroundcolor">canChangeVisualizationBackgroundColor</a> (JS).
+           <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canchangevisualizationbackgroundcolor">canChangeVisualizationBackgroundColor</a> (JS).
         </td>
     </tr>
     <tr>
         <td><i>New way to change the background color for a visualization programmatically.</i></br>
-            <a href="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_SetVisualizationBackgroundColor_Reveal_Sdk_RVVisualization_System_Windows_Media_Color_">SetVisualizationBackgroundColor</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#setvisualizationbackgroundcolor">setVisualizationBackgroundColor</a> (JS).
+            <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_SetVisualizationBackgroundColor_Reveal_Sdk_RVVisualization_System_Windows_Media_Color_">SetVisualizationBackgroundColor</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#setvisualizationbackgroundcolor">setVisualizationBackgroundColor</a> (JS).
         </td>
     </tr>
         <tr>
