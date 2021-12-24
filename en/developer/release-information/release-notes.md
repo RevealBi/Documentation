@@ -18,12 +18,8 @@ here.
     </thead>
     <tbody>
     <tr>
-        <td rowspan="9">Dec-2021</td>
-        <td rowspan="9">1.1.1 .NET</td>
-        <td>
-        </td>
-    </tr>
-    <tr>
+        <td rowspan="8">Dec-2021</td>
+        <td rowspan="8">1.1.1 .NET</td>
         <td><i>Localization support for web</i></br>
         <a href="/api/javascript/latest/classes/revealsdksettings.html#localizedstringsprovider">
             $.ig.RevealSdkSettings.localizedStringsProvider</a> extension point enables localization of several dashboard elements: Dashboard title, Widget title, Field labels, Dashboard Filter titles.
