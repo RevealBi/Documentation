@@ -40,17 +40,17 @@ here.
         </td>
     </tr>
     <tr>
-        <td><i>Added an option to enable/disable the end user to maximize visualizations.</i><br>
+        <td><i>Added an option to enable/disable the end user ability to maximize visualizations</i><br>
             <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canmaximizevisualization">canMaximizeVisualizationProperty</a> (JS). 
         </td>
     </tr>
     <tr>
-        <td><i>Added <a href="/api/javascript/latest/classes/revealsdksettings.html#ensurefontsloadedasync"> $.ig.RevealSdkSettings.ensureFontsLoadedAsync()</a>.</i></br>
-            Create the RevealView once this promise completes to make sure all fonts have been loaded.
+        <td><i>Made easier to check if fonts are loaded before rendering in the browser</i></br>
+        Now you can you can skip the WebFontLoader library and use <a href="/api/javascript/latest/classes/revealsdksettings.html#ensurefontsloadedasync"> $.ig.RevealSdkSettings.ensureFontsLoadedAsync()</a> to make sure all fonts have been loaded. Instantiate RevealView once the promise returned by this method completes to make sure the fonts needed are loaded.
         </td>
     </tr>
     <tr>
-        <td><i>New an option in the editor to enable/disable the end user to change the background color for a given visualization in the visualization editor.</i></br>
+        <td><i>Added a new option in the editor to enable/disable the end user ability to change the background color for a given visualization in the visualization editor.</i></br>
            <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canchangevisualizationbackgroundcolor">canChangeVisualizationBackgroundColor</a> (JS).
         </td>
     </tr>
