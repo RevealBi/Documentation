@@ -18,6 +18,54 @@ here.
     </thead>
     <tbody>
     <tr>
+        <td rowspan="9">Dec-2021</td>
+        <td rowspan="9">1.1.1 .NET</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td><i>Localization support for web</i></br>
+        <a href="/api/javascript/latest/classes/revealsdksettings.html#fieldformattingsettingsprovider">
+            $.ig.RevealSdkSettings.localizedStringsProvider</a> extension point enables localization of several dashboard elements: Dashboard title, Widget title, Field labels, Dashboard Filter titles.
+        </td>
+    </tr>
+    <tr>
+        <td><i>Formatting support for web</i></br>
+            <a href="/api/javascript/latest/classes/revealsdksettings.html#localizedstringsprovider">$.ig.RevealSdkSettings.fieldFormattingSettingsProvider</a> extension point allows defining custom formatting for any date time or numeric field.
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added option to hide the dashboard header – including the title and the kebab menu.</i><br>
+            <a hre="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_ShowHeader">ShowHeader</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#showheader">showHeader</a> (JS).
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added an option to enable/disable the end user to maximize visualizations.</i><br>
+            <a hre="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canmaximizevisualization">canMaximizeVisualizationProperty</a> (JS). 
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added <a href="/api/javascript/latest/classes/revealsdksettings.html#ensurefontsloadedasync"> $.ig.RevealSdkSettings.ensureFontsLoadedAsync()</a>.</i></br>
+            Create the RevealView once this promise completes to make sure all fonts have been loaded.
+        </td>
+    </tr>
+    <tr>
+        <td><i>New an option in the editor to enable/disable the end user to change the background color for a given visualization in the visualization editor.</i></br>
+           <a href="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canchangevisualizationbackgroundcolor">canChangeVisualizationBackgroundColor</a> (JS).
+        </td>
+    </tr>
+    <tr>
+        <td><i>New way to change the background color for a visualization programmatically.</i></br>
+            <a href="/api/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_SetVisualizationBackgroundColor_Reveal_Sdk_RVVisualization_System_Windows_Media_Color_">SetVisualizationBackgroundColor</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#setvisualizationbackgroundcolor">setVisualizationBackgroundColor</a> (JS).
+        </td>
+    </tr>
+        <tr>
+        <td><i>[Public Bug Fixes]</i><br>
+        - Fixed export to Excel when there are null date values in the dataset.<br>
+        - Fixed issue exporting to PDF or PPT with custom branding logo.
+        </td>
+    </tr>
+    <tr>
         <td rowspan="2">Dec-2021</td>
         <td rowspan="2">1.1.0 JAVA</td>
         <td><i>The Java Server SDK was greatly improved, for further details please refer to <a href="../release-information/upgrade-to-java-1.1.html">Reveal Java SDK Upgrade to v1.1</a>.
