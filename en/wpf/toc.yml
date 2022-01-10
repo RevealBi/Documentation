@@ -36,7 +36,7 @@
   href: authentication.md
 - name: Working with Visualizations
   header: true
-- name: Maximizing Visualizations (TBD)
+- name: Maximizing Visualizations
   href: maximizing-visualizations.md
 - name: Responding to Click Events
   href: click-events.md
