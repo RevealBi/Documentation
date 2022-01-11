@@ -1,6 +1,6 @@
 # Known Issues
 
-##### 1. After updating the Reveal SDK to a newer version in a project using package.config, uninstalling the old NuGet version or updating it to the new one will fail.
+**1** - After updating the Reveal SDK to a newer version in a project using package.config, uninstalling the old NuGet version or updating it to the new one will fail.
 
 As a workaround, prior to updating the Reveal SDK you can uninstall the NuGet package from your project. Then, update the Reveal SDK using the installer and finally you can reinstall the updated NuGet package.
 
