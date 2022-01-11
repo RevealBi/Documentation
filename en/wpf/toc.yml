@@ -28,10 +28,16 @@
   href: theming-dashboards.md
 - name: Working with DataSources
   header: true
-- name: Adding Data Sources (TBD)
-  href: adding-data-sources.md
-- name: Replacing Data Sources (TBD)
-  href: replacing-data-sources.md
+- name: Adding Data Sources
+  items:
+    - name: In Memory Data
+      href: adding-data-sources/in-memory-data.md
+    - name: MS SQL Server
+      href: adding-data-sources/ms-sql-server.md
+- name: Replacing Data Sources
+  items:
+    - name: MS SQL Server
+      href: replacing-data-sources/ms-sql-server.md
 - name: Authentication
   href: authentication.md
 - name: Working with Visualizations
