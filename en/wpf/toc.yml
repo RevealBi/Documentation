@@ -1,0 +1,60 @@
+- name: General
+  header: true
+- name: Installation
+  href: installation.md
+- name: Getting Started
+  href: getting-started.md
+- name: Working with Dashboards
+  header: true
+- name: Creating
+  href: creating-dashboards.md
+- name: Loading
+  href: loading-dashboards.md
+- name: Filtering
+  href: filtering-dashboards.md
+- name: Editing
+  href: editing-dashboards.md
+- name: Saving
+  href: saving-dashboards.md
+- name: Linking
+  href: linking-dashboards.md
+- name: Formatting Data
+  href: formatting-data.md
+- name: Localizing
+  href: localizing-dashboards.md
+- name: Exporting
+  href: exporting-dashboards.md
+- name: Theming
+  href: theming-dashboards.md
+- name: Working with DataSources
+  header: true
+- name: Adding Data Sources
+  items:
+    - name: In Memory Data
+      href: adding-data-sources/in-memory-data.md
+    - name: MS SQL Server
+      href: adding-data-sources/ms-sql-server.md
+- name: Replacing Data Sources
+  items:
+    - name: MS SQL Server
+      href: replacing-data-sources/ms-sql-server.md
+- name: Authentication
+  href: authentication.md
+- name: Working with Visualizations
+  header: true
+- name: Maximizing Visualizations
+  href: maximizing-visualizations.md
+- name: Responding to Click Events
+  href: click-events.md
+- name: Tooltips
+  href: tooltips.md
+- name: Release Information
+  header: true
+- name: API Reference
+  href: api-reference.md
+- name: Known Issues
+  href: known-issues.md
+- name: Release notes
+  href: release-notes.md
+- name: Third-Party Software
+  href: third-party-software.md
