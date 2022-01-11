@@ -2,6 +2,7 @@
 
 All future updates and new features added to Reveal SDK will be included
 here.
+
 <table>
     <colgroup>
         <col style="width: 15%" />
