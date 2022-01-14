@@ -38,6 +38,8 @@
       href: adding-data-sources/ms-sql-server.md
 - name: Replacing Data Sources
   items:
+    - name: Excel File
+      href: replacing-data-sources/excel-file.md
     - name: MS SQL Server
       href: replacing-data-sources/ms-sql-server.md
 - name: Authentication
