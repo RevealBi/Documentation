@@ -51,6 +51,15 @@ a h4:hover, a h3:hover {
  color: #2d5aaa;
 }
 
+.sdkLink {
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.sdkLink:hover {
+    color: #2d5aaa;
+}
+
 .h5 {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
