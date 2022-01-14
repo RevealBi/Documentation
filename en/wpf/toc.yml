@@ -30,6 +30,8 @@
   header: true
 - name: Adding Data Sources
   items:
+    - name: Excel File
+      href: adding-data-sources/excel-file.md
     - name: In Memory Data
       href: adding-data-sources/in-memory-data.md
     - name: MS SQL Server
