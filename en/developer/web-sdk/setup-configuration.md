@@ -16,6 +16,8 @@ To set up the Reveal Web Server SDK you need to:
 
 4.  [**Setting up server-side screenshot generation**](#server-side-image-export).
 
+5.  [**Enable reveal logging**](#enable-reveal-logging)
+
 <a name='installing-reveal-sdk'></a>
 
 ### 1\. Installing the Reveal SDK
@@ -145,6 +147,25 @@ playwright install chromium
 **Note:** *Prior to version **1.1.2** we were using puppeteer & nodejs for the export functionality.
 You had to add package.json & screenshoteer.js files to the root of your project and for the export to work.
 With version 1.1.2 this is no longer necessary as well as you don't need to have nodejs installed on your dev/prod environments*
+
+<a name='enable-reveal-logging'></a>
+
+### 5\. Enable Reveal logging
+
+You could enable reveal logging by adding a "Reveal.Sdk" key in you're appsettings.json and set its log level like
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "Reveal.Sdk": "Debug"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
 
 <a name='sqlite-fix'></a>
 
