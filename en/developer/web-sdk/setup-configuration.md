@@ -130,23 +130,22 @@ For windows the default path is **%userprofile%\AppData\Local\ms-playwright\**. 
 
 This download could take some time and cause delay for the first user that tries to export a dashboard. This is ok during development time but not so much when you deply to staging or a production environment. For these scenarios we provide some settings that allow you to fine tune your deployment.
 
-
-<a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_CreateChromiumInstancesOnDemand" target="_blank" rel="noopener\">CreateChromiumInstancesOnDemand</a>  
-
 These settings are exposed through the RevealEmbedSettings class.
 - <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_CreateChromiumInstancesOnDemand" target="_blank" rel="noopener\">CreateChromiumInstancesOnDemand</a> - set this to false to force Playwright initialization to happen on app startup
 - <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ChromiumDownloadFolder" target="_blank" rel="noopener\">ChromiumDownloadFolder</a> - provide the location where the Chromium executables would get downloaded
-- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ChromiumExecutablePath" target="_blank" rel="noopener\">ChromiumExecutablePath</a> ChromiumExecutablePath - you might want to manually deploy the Chromium executables for your server platform. Set this path to the location where you've deployed Chromium executables. To get the chromium executables you could use the [**Playwright Cli**](https://playwright.dev/dotnet/docs/cli)
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ChromiumExecutablePath" target="_blank" rel="noopener\">ChromiumExecutablePath</a> ChromiumExecutablePath - you might want to manually deploy the Chromium executables for your server platform. Set this path to the location where you've deployed Chromium executables.
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_MaxConcurrentExportingThreads" target="_blank" rel="noopener\">MaxConcurrentExportingThreads</a> - you could specify how many concurrent threads supporting export functionality should be used
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ExportingTimeout" target="_blank" rel="noopener\">ExportingTimeout</a> - defines the timeout period in milliseconds for an export operation. Default value is 30000 ms. When an end user tries to export a dashboard this if does no finish in the specified time period the export operation would fail. Increasing the number of concurrent threads might help in such a case.
+
+In case you want to use the ChromiumExecutablePath and set up the browsers manually on your environment you will need get the Chromium executables using the [**Playwright Cli**](https://playwright.dev/dotnet/docs/cli) like:
 ```cmd
 dotnet tool install --global Microsoft.Playwright.CLI
 playwright install chromium
 ```
-- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_MaxConcurrentExportingThreads" target="_blank" rel="noopener\">MaxConcurrentExportingThreads</a> - you could specify how many concurrent threads supporting export functionality should be used
-- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ExportingTimeout" target="_blank" rel="noopener\">ExportingTimeout</a> - defines the timeout period in milliseconds for an export operation. Default value is 30000 ms. When an end user tries to export a dashboard this if does no finish in the specified time period the export operation would fail. Increasing the number of concurrent threads might help in such a case.   
 
-**Note:** *Prior to version **1.1.2** we were using puppeteer & nodejs for the export functionality.
+**Note:** Prior to version <b>1.1.2</b> we were using puppeteer & nodejs for the export functionality.
 You had to add package.json & screenshoteer.js files to the root of your project and for the export to work.
-With version 1.1.2 this is no longer necessary as well as you don't need to have nodejs installed on your dev/prod environments*
+With version 1.1.2 release this is no longer necessary as well as you don't need to have nodejs installed on your dev/prod environments.
 
 <a name='enable-reveal-logging'></a>
 
