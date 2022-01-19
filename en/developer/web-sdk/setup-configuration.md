@@ -14,7 +14,9 @@ To set up the Reveal Web Server SDK you need to:
 
 3.  [**Initialize the Server SDK.**](#initializing-server-sdk)
 
-4.  [**Enable server-side screenshot generation**](#server-side-image-export).
+4.  [**Setting up server-side screenshot generation**](#server-side-image-export).
+
+5.  [**Enable reveal logging**](#enable-reveal-logging)
 
 <a name='installing-reveal-sdk'></a>
 
@@ -117,35 +119,51 @@ builder.AddDashboardProvider(new DashboardProvider())
 
 <a name='server-side-image-export'></a>
 
-### 4\. Enabling server-side screenshot generation
+### 4\. Setting up server-side screenshot generation
 
-In order to use the **export to image** functionality (either
-programmatically or through user interaction), you need to perform the
-steps below:
+In order to use the export to **image**, **PDF** or **PowerPoint** functionality (either
+programmatically or through user interaction) we use [**Playwright**](https://playwright.dev/dotnet/).
 
-1.  Get the following three files from
-    **\<InstallationDirectory\>\\SDK\\Web\\JS\\Server**:
+By default, the first time an user tries to export a dashboard to image, PDF or PowerPoint,
+Playwright would try to download Chromium browser to it's default location for the current platform.
+For windows the default path is **%userprofile%\AppData\Local\ms-playwright\**. The Chromium executables it downloads size ~220 Megabytes.
 
-    - package.json
-    - packages-lock.json
-    - screenshoteer.js
+This download could take some time and cause delay for the first user that tries to export a dashboard. This is ok during development time but not so much when you deply to staging or a production environment. For these scenarios we provide some settings that allow you to fine tune your deployment.
 
-2.  Copy the files to the root level of your project (parent folder of
-    "wwwroot").
+These settings are exposed through the RevealEmbedSettings class.
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_CreateChromiumInstancesOnDemand" target="_blank" rel="noopener\">CreateChromiumInstancesOnDemand</a> - set this to false to force Playwright initialization to happen on app startup
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ChromiumDownloadFolder" target="_blank" rel="noopener\">ChromiumDownloadFolder</a> - provide the location where the Chromium executables would get downloaded
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ChromiumExecutablePath" target="_blank" rel="noopener\">ChromiumExecutablePath</a> ChromiumExecutablePath - you might want to manually deploy the Chromium executables for your server platform. Set this path to the location where you've deployed Chromium executables.
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_MaxConcurrentExportingThreads" target="_blank" rel="noopener\">MaxConcurrentExportingThreads</a> - you could specify how many concurrent threads supporting export functionality should be used
+- <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_ExportingTimeout" target="_blank" rel="noopener\">ExportingTimeout</a> - defines the timeout period in milliseconds for an export operation. Default value is 30000 ms. When an end user tries to export a dashboard this if does no finish in the specified time period the export operation would fail. Increasing the number of concurrent threads might help in such a case.
 
-3.  Make sure you have **npm** (the package manager for Node.js)
-    installed.
+In case you want to use the ChromiumExecutablePath and set up the browsers manually on your environment you will need get the Chromium executables using the [**Playwright Cli**](https://playwright.dev/dotnet/docs/cli) like:
+```cmd
+dotnet tool install --global Microsoft.Playwright.CLI
+playwright install chromium
+```
 
-If **you don’t need the export to image** functionality, you don’t need
-to copy the files to your projects. However, when trying to build the
-project, it will fail complaining that it cannot find **npm**.
+**Note:** Prior to version <b>1.1.2</b> we were using puppeteer & nodejs for the export functionality.
+You had to add package.json & screenshoteer.js files to the root of your project and for the export to work.
+With version 1.1.2 release this is no longer necessary as well as you don't need to have nodejs installed on your dev/prod environments.
 
-To solve this error, add the following property to your project:
+<a name='enable-reveal-logging'></a>
 
-```xml
-<PropertyGroup>
-  <DisableRevealExportToImage>true</DisableRevealExportToImage>
-</PropertyGroup>
+### 5\. Enable Reveal logging
+
+You could enable reveal logging by adding a "Reveal.Sdk" key in you're appsettings.json and set its log level like
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "Reveal.Sdk": "Debug"
+    }
+  },
+  "AllowedHosts": "*"
+}
 ```
 
 <a name='sqlite-fix'></a>
