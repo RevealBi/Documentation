@@ -17,9 +17,113 @@ here.
         </tr>
     </thead>
     <tbody>
+           <tr>
+        <td rowspan="5">Dec-2021</td>
+        <td rowspan="5">1.1.1 .NET</td>
+        <td><i>Added option to hide the dashboard header – including the title and the kebab menu.</i><br>
+            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_ShowHeader">ShowHeader</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#showheader">showHeader</a> (JS).
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added an option to enable/disable the end user ability to maximize visualizations</i><br>
+            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canmaximizevisualization">canMaximizeVisualizationProperty</a> (JS). 
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added a new option in the editor to enable/disable the end user ability to change the background color for a given visualization in the visualization editor.</i></br>
+           <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canchangevisualizationbackgroundcolor">canChangeVisualizationBackgroundColor</a> (JS).
+        </td>
+    </tr>
+    <tr>
+        <td><i>New way to change the background color for a visualization programmatically.</i></br>
+            <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_SetVisualizationBackgroundColor_Reveal_Sdk_RVVisualization_System_Windows_Media_Color_">SetVisualizationBackgroundColor</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#setvisualizationbackgroundcolor">setVisualizationBackgroundColor</a> (JS).
+        </td>
+    </tr>
         <tr>
-            <td rowspan="6">May-2021</td>
-            <td rowspan="6">1.0.1956 (1.0.4 JAVA)</td>
+        <td><i>[Public Bug Fixes]</i><br>
+        - Fixed export to Excel when there are null date values in the dataset.<br>
+        - Fixed issue exporting to PDF or PPT with custom branding logo.
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="3">Oct-2021</td>
+        <td rowspan="3">1.1.0 .NET</td>
+        <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
+        <i>- Registering Reveal services is more flexible</i> - You now can inject other services in your implementations of Reveal interfaces. You only register the type of your implementations of your Reveal providers interfaces.<br>
+        <i>- RevealSDKContext removed</i> - RVUserContext is now first class citizen across reveal providers. You need to register a UserContextProvider, which will be instantiating that class and it would be passed to the methods of other Reveal services like IRVDashboardProvider.<br>
+        <i>- .NET Core 3.1 or newer is now required</i> - Reveal dropped support for .NET Core running on top of .NET Framework v4.6.2 or higher and .NET core 2.2 as it is out of support.<br>
+        <i>- Improved setup for default implementations</i> - Greatly improved setup for default implementations - Now it's pretty simple to setup Reveal if you have your dashboards in a "Dashboards" folder and your local data files (csv or excel) are located in your "Data" folder on the project root level. Example:<br>
+        <i>services<br>
+        &emsp;&emsp;.AddMvc()<br>
+        &emsp;&emsp;.AddReveal();</i><br>
+        For further details, please refer to <a
+                href="../release-information/upgrade-to-net-1.1.html">Reveal .NET SDK Upgrade to v1.1</a>.
+        </td>
+    </tr>
+    <tr>
+        <td><i>IRVDataSourceProvider interface changed (Desktop and .NET Server SDK)</i><br>
+        The IRVDataSourceProvider interface now has a single ChangeDataSourceItem and it will be called whenever a dashboard need to use a data source item.
+        </td>
+    </tr>
+    </tr>
+    <tr>
+        <td><i>Search fields in the Data Blending screen</i><br>
+            The Data Blending UI was improved by adding the ability to search for fields to be joined/added in the result.
+        </td>
+    </tr>
+    <tr>
+            <td rowspan="2">Sep-2021</td>
+            <td rowspan="2">1.0.2013</td>
+            <td><i>[Public Bug Fix] Calculated field export to excel resulting in empty cells</i><br>
+            When exporting to excel a calculated field doing division by zero, the result included empty cells.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] Data blending with custom queries and server-side processing issues</i><br>
+            When turning on “Process Data On Server” in Web .NET and performing a custom query, data blending was not working as expected.
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">Sep-2021</td>
+            <td rowspan="2">1.0.2012</td>
+            <td><i>[Public Bug Fix] [SDK] Small window sizes render Text chart unreadable</i><br>
+            In both Web and Desktop, the Text Chart font becomes unreadable when the window’s size is small.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug Fix] [SDK] Issues getting the list of date formats</i><br> When getting a list of date formats for a field editor in the Desktop SDK, you can now use <i>RVBaseFormattingService</i> with aggregated dates.
+            </td>
+        </tr>
+        <tr>
+            <td>Aug-2021</td>
+            <td>1.0.2008</td>
+            <td><i>[Public Bug Fix] [SDK] Saving dashboard as a stream has issues</i><br> When saving dashboards as a stream, in some specific cases <i>dashboard.Serialize.Async()</i> was returning null.</td>
+        </tr>
+       <tr>
+            <td rowspan="4">June-2021</td>
+            <td rowspan="4">1.0.2005</td>
+            <td><i>Scatter Maps now support OpenStreetMap!</i><br>
+            You can now configure and use OpenStreet Map image tiles in Desktop (WPF) and Web-client (JS).
+            </td>
+        </tr>
+        <tr>
+            <td><i>New Thumbnail component!</i><br>
+            You can now render a thumbnail of a dashboard with <i>RevealDashboardThumbnailView</i>.
+            </td>
+        </tr>
+        <tr>
+            <td><a name="java-sdk-1.0.7"></a><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
+            When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
+            </td>
+        </tr>
+        <tr>
+            <td><i>[Public Bug fix] Google Analytics issues with dashboard filters</i><br>
+            When getting data from Google Analytics data sources, you were unable to create dashboard filters.
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="5">May-2021</td>
+            <td rowspan="5">1.0.1956</td>
             <td><i>[Public Bug Fix] [SDK] Full list of Data Sources displayed by mistake</i><br>
             When using <i>DataSourcesRequested</i> callback in the Desktop SDK, the whole list of data sources was being displayed instead of the ones explicitly added.
             </td>     
@@ -45,53 +149,13 @@ here.
             </td>
         </tr>
         <tr>
-            <td><i>Credentials from Web client to server-side in cross-domain applications</i><br>
-            When the backend is not in the same domain as the frontend and you need authentication cookies, you can request credentials using the following Web SDK setting: <b>$.ig.RevealSdkSettings.requestWithCredentialsFlag = true;</b>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="2">May-2021</td>
-            <td rowspan="2">1.0.3 JAVA</td>
-            <td><i>New Snowflake connector!</i><br>
-            Reveal Java SDK now supports Snowflake data source connector, also including data blending between tables in the same Snowflake database.
+            <td rowspan="1">Mar-2021</td>
+            <td rowspan="1">1.0.1866</td>
+            <td><i>New Properties for Desktop SDK:</i><br>
+            <i>ShowEditDataSource</i> - can be used to disable the Edit button normally available in the data source overflow menu.<br>
+            <i>CanAddDashboardFilter</i> - this property can hide the "Add Dashboard Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.<br>
+            <i>CanAddDateFilter</i> - this property can hide the "Add Date Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
             </td>     
-        </tr>
-        <tr>
-            <td><i>Reveal BI Engine for Java was enhanced</i><br>
-            Java platform is now as robust as other platforms, helping to avoid server crashes when a visualization sends a big amount of data back to the client. Several new properties in <b>InitializeParameterBuilder</b> control this: <i>maxInMemoryCells</i>, <i>maxStorageCells</i>, <i>maxStringCellSize</i>, and <i>maxTotalStringSize</i>.
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="2">Apr-2021</td>
-            <td rowspan="2">1.0.0 JAVA</td>
-            <td><i>New JAVA SDK released!</i><br>
-            Reveal now supports JAVA as another Web Server option besides .NET. The JAVA SDK requires JAVA 11+ and is distributed as a set of Maven modules. For further details, please refer to <a
-                href="../java-sdk/setup-configuration.html">Setup and Configuration</a>.
-            </td>     
-        </tr>
-        <tr>
-            <td><i>JAVA SDK Samples released!</i><br>
-            You can get the JAVA SDK UpMedia samples available in <a
-                href="https://github.com/RevealBi/sdk-samples-java">Github</a>.
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="3">Mar-2021</td>
-            <td rowspan="3">1.0.1866</td>
-            <td><i>New Properties for Web and Desktop SDK:</i><br>
-            <i>showEditDataSource</i> - can be used to disable the Edit button normally available in the data source overflow menu.<br>
-            <i>canAddDashboardFilter</i> - this property can hide the "Add Dashboard Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.<br>
-            <i>canAddDateFilter</i> - this property can hide the "Add Date Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
-            </td>     
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix] [SDK] revealView.canSaveAs property not working as expected</i><br>
-            In the Web SDK, the property canSaveAs was not being honored if it was changed after a dashboard is set.
-            </td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix] [SDK] HttpContextAccessor.HttpContext property not working as expected</i><br> In the Web SDK, HttpContextAccessor.HttpContext was null when saving a dashboard (accessing it from SaveDashboardAsync method).
-            </td>
         </tr>
         <tr>
             <td>Mar-2021</td>
