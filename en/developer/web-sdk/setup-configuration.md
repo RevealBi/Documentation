@@ -227,7 +227,7 @@ Default installation directory is:
 > [!NOTE] **Referencing Reveal JS classes**
 > You could reference the JS classes through **$.ig.** or **RevealApi.**.
 > Through out the docs we're using "$.ig." prefix to reference classes.
-> You could use the RevealApi prefix instead of the "$.ig." one, if you want.
+> You could use the RevealApi prefix instead of the "$.ig." one, if you want. Using **RevealApi** prefix could be better if you're using typescript since you should be able to drop the type definitions(beta) infragistics.reveal.d.ts in your project.
 
 
 <a name='instantiate-web-client-sdk'></a>
