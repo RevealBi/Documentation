@@ -14,7 +14,7 @@ To set up the Reveal Web Server SDK you need to:
 
 3.  [**Initialize the Server SDK.**](#initializing-server-sdk)
 
-4.  [**Setting up server-side screenshot generation**](#server-side-image-export).
+4.  [**Set up server-side screenshot generation**](#server-side-image-export).
 
 5.  [**Enable reveal logging**](#enable-reveal-logging)
 
@@ -119,16 +119,16 @@ builder.AddDashboardProvider(new DashboardProvider())
 
 <a name='server-side-image-export'></a>
 
-### 4\. Setting up server-side screenshot generation
+### 4\. Set up server-side screenshot generation
 
 In order to use the export to **image**, **PDF** or **PowerPoint** functionality (either
-programmatically or through user interaction) we use [**Playwright**](https://playwright.dev/dotnet/).
+programmatically or through user interaction) dotnet server SDK uses [**Playwright**](https://playwright.dev/dotnet/) internally.
 
 By default, the first time an user tries to export a dashboard to image, PDF or PowerPoint,
 Playwright would try to download Chromium browser to it's default location for the current platform.
 For windows the default path is **%userprofile%\AppData\Local\ms-playwright\**. The Chromium executables it downloads size ~220 Megabytes.
 
-This download could take some time and cause delay for the first user that tries to export a dashboard. This is ok during development time but not so much when you deply to staging or a production environment. For these scenarios we provide some settings that allow you to fine tune your deployment.
+This download could take some time and cause delay for the first user that tries to export a dashboard. This is ok during development time but not so much when you deploy to staging or a production environment. For these scenarios you could use some of the settings bellow to see how you could fine tune your deployment.
 
 These settings are exposed through the RevealEmbedSettings class.
 - <a href="/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html#Reveal_Sdk_RevealEmbedSettings_CreateChromiumInstancesOnDemand" target="_blank" rel="noopener\">CreateChromiumInstancesOnDemand</a> - set this to false to force Playwright initialization to happen on app startup
@@ -143,7 +143,7 @@ dotnet tool install --global Microsoft.Playwright.CLI
 playwright install chromium
 ```
 
-**Note:** Prior to version <b>1.1.2</b> we were using puppeteer & nodejs for the export functionality.
+**Note:** Prior to version <b>1.1.2</b> the SDK were using puppeteer & nodejs for the export functionality.
 You had to add package.json & screenshoteer.js files to the root of your project and for the export to work.
 With version 1.1.2 release this is no longer necessary as well as you don't need to have nodejs installed on your dev/prod environments.
 
