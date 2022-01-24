@@ -18,6 +18,41 @@ here.
     </thead>
     <tbody>
     <tr>
+        <td rowspan="6">Jan-2022</td>
+        <td rowspan="6">1.1.2 .NET</td>
+        <td><i>[Public Bug Fix] [SDK] LocalizationProvider and DataSourceProvider issue</i><br>
+        Setting up a LocalizationProvider was not working in a few cases in which a DataSourceProvider was also set up.
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] [SDK] Export to Excel with null values in column names issue</i><br>
+        When exporting to excel having a null value in a column name, the app was crashing with InvalidCastException.
+        </td>
+    </tr>
+        <tr>
+        <td><i>[Public Bug Fix] [SDK] Export to PDF/PPT with custom logo issue</i><br>
+        Exporting to PDF or PPT formats and including a custom branding logo was not working as expected.
+        </td>
+    </tr>
+        <tr>
+        <td><i>[Public Bug Fix] [SDK] Dashboard filtering issue</i><br>
+        When using a large data source with dashboard linking and filtering, the app was not showing filtered data as expected.
+        </td>
+    </tr>
+        <tr>
+        <td><i>[Public Bug Fix] [SDK] Dashboard linking and drilled down data issue</i><br>
+        When dashboard linking passes information from a visualization, previously drilled down to values were not being included.
+        </td>
+    </tr>
+    <tr>
+        <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
+        <i>- .NET server logging</i> - You can now enable .NET server logging for Reveal SDK. It’s managed with upsetting.json LogLevel like "Reveal.Sdk.*": "Trace”.<br>
+        <i>- Playwright-based Export </i> - Export to image, PDF and PPT are now based on Playwright instead of Puppeteer. For further details, read about how can to adjust your deployment procedures.<br>
+        For further details, please read about <a
+                href="../web-sdk/setup-configuration.html#4-set-up-server-side-screenshot-generation">how to adjust your deployment</a>.
+        </td>
+    </tr>
+    <tr>
         <td rowspan="8">Dec-2021</td>
         <td rowspan="8">1.1.1 .NET</td>
         <td><i>Localization support for web</i></br>
