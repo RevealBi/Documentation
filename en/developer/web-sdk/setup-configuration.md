@@ -128,7 +128,7 @@ By default, the first time an user tries to export a dashboard to image, PDF or 
 Playwright would try to download Chromium browser to it's default location for the current platform.
 For windows the default path is **%userprofile%\AppData\Local\ms-playwright\**. The Chromium executables it downloads size ~220 Megabytes.
 
-This download could take some time and cause delay for the first user that tries to export a dashboard. This is ok during development time but not so much when you deploy to staging or a production environment. For these scenarios you could use some of the settings bellow to see how you could fine tune your deployment.
+This download could take some time and cause delay for the first user that tries to export a dashboard. This is ok during development time but not so much when you deploy to staging or a production environment. For these scenarios you could use some of the settings below to see how you could fine tune your deployment.
 
 These settings are exposed through the <a href="/api/aspnet/latest/Reveal.Sdk.ExportConfiguration.html" target="_blank" rel="noopener\">RevealEmbedSettings Export</a> property.
 - <a href="/api/aspnet/latest/Reveal.Sdk.ExportConfiguration.html#Reveal_Sdk_ExportConfiguration_CreateChromiumInstancesOnDemand" target="_blank" rel="noopener\">CreateChromiumInstancesOnDemand</a> - set this to false to force Playwright initialization to happen on app startup
@@ -143,7 +143,7 @@ dotnet tool install --global Microsoft.Playwright.CLI
 playwright install chromium
 ```
 
-**Note:** Prior to version <b>1.1.2</b> the SDK were using puppeteer & nodejs for the export functionality.
+**Note:** Prior to version <b>1.1.2</b> the SDK used puppeteer & nodejs for the export functionality.
 You had to add package.json & screenshoteer.js files to the root of your project and for the export to work.
 With version 1.1.2 release this is no longer necessary as well as you don't need to have nodejs installed on your dev/prod environments.
 
