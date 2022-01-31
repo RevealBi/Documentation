@@ -1,0 +1,74 @@
+- name: General
+  header: true
+- name: Installation
+  href: installation.md
+- name: Getting Started
+  items:
+    - name: ASP.NET Core Web App
+      href: getting-started-aspnet.md
+    - name: Angular
+      href: getting-started.md
+    - name: JavaScript
+      href: getting-started.md
+    - name: React
+      href: getting-started.md
+- name: Working with Dashboards
+  header: true
+- name: Creating
+  href: index.md
+- name: Loading
+  href: index.md
+- name: Filtering
+  href: index.md
+- name: Editing
+  href: index.md
+- name: Saving
+  href: index.md
+- name: Linking
+  href: index.md
+- name: Formatting Data
+  href: index.md
+- name: Localizing
+  href: index.md
+- name: Exporting
+  href: index.md
+- name: Theming
+  href: index.md
+- name: Working with DataSources
+  header: true
+- name: Adding Data Sources
+  items:
+    - name: Excel File
+      href: index.md
+    - name: In Memory Data
+      href: index.md
+    - name: MS SQL Server
+      href: index.md
+- name: Replacing Data Sources
+  items:
+    - name: Excel File
+      href: index.md
+    - name: MS SQL Server
+      href: index.md
+- name: Authentication
+  href: index.md
+- name: Working with Visualizations
+  header: true
+- name: Maximizing Visualizations
+  href: index.md
+- name: Responding to Click Events
+  href: index.md
+- name: Tooltips
+  href: index.md
+- name: Release Information
+  header: true
+- name: API Reference - Server
+  href: api-reference-server.md
+- name: API Reference - Client
+  href: api-reference-client.md
+- name: Known Issues
+  href: known-issues.md
+- name: Release notes
+  href: release-notes.md
+- name: Third-Party Software
+  href: third-party-software.md
