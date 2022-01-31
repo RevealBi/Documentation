@@ -15,7 +15,7 @@
 - name: Working with Dashboards
   header: true
 - name: Creating
-  href: index.md
+  href: creating-dashboards.md
 - name: Loading
   href: index.md
 - name: Filtering

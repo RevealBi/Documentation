@@ -37,7 +37,7 @@ using Reveal.Sdk;
 builder.Services.AddRazorPages().AddReveal();
 ```
 
-## Step 3 - Reference Client SDK
+## Step 3 - Add Reveal JavaScript API
 
 1 - Create a new folder called `reveal` under the `wwwroot/lib` folder.
 
@@ -54,9 +54,9 @@ builder.Services.AddRazorPages().AddReveal();
 ```
 
 > [!NOTE]
-> The Reveal SDK Client depends on `jQuery` version 2.2 or greater.
+> The Reveal JavaScript API depends on `jQuery` version 2.2 or greater.
 
-4 - Install the remaining Reveal SDK Client dependencies:
+4 - Install the remaining Reveal JavaScript API dependencies:
 
 - Day.js 1.8.15 or greater
 
@@ -155,13 +155,12 @@ The final `_Layout.cshtml` files should look similar to this:
     <script type="text/javascript">
         $.ig.RevealSdkSettings.ensureFontsLoadedAsync().then(() => {
             var revealView = new $.ig.RevealView("#revealView");
-            revealView.dashboard = new $.ig.RVDashboard();
         });        
     </script>
 }
 ```
 
-This JavaScript code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instaniate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector. Finally, we set the `RevealView.Dashboard` to an instance of a new `$.ig.RVDashboard`.
+This JavaScript code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instaniate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
 
 The final `Index.cshtml` file should look like this:
 
@@ -179,7 +178,6 @@ The final `Index.cshtml` file should look like this:
     <script type="text/javascript">
         $.ig.RevealSdkSettings.ensureFontsLoadedAsync().then(() => {
             var revealView = new $.ig.RevealView("#revealView");
-            revealView.dashboard = new $.ig.RVDashboard();
         });        
     </script>
 }
