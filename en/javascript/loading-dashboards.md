@@ -82,7 +82,7 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/7111");
 ```
 
 > [!IMPORTANT]
-> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not requried. This method only needs to be called once.
+> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
 4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This methed returns a `Promise` which will contain the dashboard being requested from the server. Once you have recieved the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 

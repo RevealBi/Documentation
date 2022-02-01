@@ -41,11 +41,11 @@
 - name: Adding Data Sources
   items:
     - name: Excel File
-      href: index.md
+      href: adding-data-sources/excel-file.md
     - name: In Memory Data
-      href: in-memory-data.md
+      href: adding-data-sources/in-memory-data.md
     - name: MS SQL Server
-      href: index.md
+      href: adding-data-sources/ms-sql-server.md
 - name: Replacing Data Sources
   items:
     - name: Excel File

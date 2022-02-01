@@ -38,7 +38,13 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 Add an event handler to the `RevealView.onDataSourcesRequested`
 
-In the event handler, create a new instance of the `$.ig.RVInMemoryDataSourceItem` object and provide a unique name/ID as a parameter. This ID is used in the `IRVDataProvider` to indicate which data source is requesting the data.
+First define a `<div>` tag with the `id` set to `revealView`.
+
+```html
+<div id="revealView" style="height: 920px; width: 100%;"></div>
+```
+
+Then in the event handler, create a new instance of the `$.ig.RVInMemoryDataSourceItem` object and provide a unique name/ID as a parameter. This ID is used in the `IRVDataProvider` to indicate which data source is requesting the data.
 
 ```javascript
 var revealView = new $.ig.RevealView("#revealView");
@@ -50,6 +56,9 @@ revealView.onDataSourcesRequested = (callback) => {
     callback(new $.ig.RevealDataSources([], [inMemoryDataSourceItem], true));
 };
 ```
+
+> [!IMPORTANT]
+> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
 ## Example: Implement In-Memory Data Source
 
@@ -251,11 +260,11 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 Now you may be asking, "Where does the `DataSetId` value come from?". This happens in the next step when we create the data source item.
 
-### Handle the DataSourcesRequested Event
+### Handle the onDataSourcesRequested Event
 
 The next step is to add an event handler to the `RevealView.onDataSourcesRequested` event.
 
-First deine a `<div>` tag with the `id` set to `revealView`.
+First define a `<div>` tag with the `id` set to `revealView`.
 
 ```html
 <div id="revealView" style="height: 920px; width: 100%;"></div>
