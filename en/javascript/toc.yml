@@ -19,7 +19,7 @@
 - name: Creating
   href: creating-dashboards.md
 - name: Loading
-  href: index.md
+  href: loading-dashboards.md
 - name: Filtering
   href: index.md
 - name: Editing
@@ -53,7 +53,7 @@
     - name: MS SQL Server
       href: index.md
 - name: Authentication
-  href: index.md
+  href: authentication.md
 - name: Working with Visualizations
   header: true
 - name: Maximizing Visualizations
