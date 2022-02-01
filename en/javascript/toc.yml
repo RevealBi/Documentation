@@ -43,7 +43,7 @@
     - name: Excel File
       href: index.md
     - name: In Memory Data
-      href: index.md
+      href: in-memory-data.md
     - name: MS SQL Server
       href: index.md
 - name: Replacing Data Sources
