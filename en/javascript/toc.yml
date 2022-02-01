@@ -49,9 +49,9 @@
 - name: Replacing Data Sources
   items:
     - name: Excel File
-      href: index.md
+      href: replacing-data-sources/excel-file.md
     - name: MS SQL Server
-      href: index.md
+      href: replacing-data-sources/ms-sql-server.md
 - name: Authentication
   href: authentication.md
 - name: Working with Visualizations
