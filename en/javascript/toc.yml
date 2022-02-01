@@ -10,8 +10,8 @@
       href: getting-started-angular.md
     - name: ASP.NET Core Web App
       href: getting-started-aspnet.md
-    - name: JavaScript
-      href: getting-started.md
+    - name: HTML/JavaScript
+      href: getting-started-javascript.md
     - name: React
       href: getting-started.md
 - name: Working with Dashboards
