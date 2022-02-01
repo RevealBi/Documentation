@@ -1,4 +1,4 @@
-# Getting Started with Reveal SDK - ASP.NET
+# Getting Started with Reveal SDK for ASP.NET
 
 ## Step 1 - Create a New ASP.NET Web App
 

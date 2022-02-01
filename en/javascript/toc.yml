@@ -4,10 +4,12 @@
   href: installation.md
 - name: Getting Started
   items:
+    - name: Setting Up the Server
+      href: getting-started-server.md
+    - name: Angular
+      href: getting-started-angular.md
     - name: ASP.NET Core Web App
       href: getting-started-aspnet.md
-    - name: Angular
-      href: getting-started.md
     - name: JavaScript
       href: getting-started.md
     - name: React
