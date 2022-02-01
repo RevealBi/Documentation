@@ -94,7 +94,7 @@ The final `index.html` files should look similar to this:
 <div #revealView style="height: 100vh; width: 100%; position:relative;"></div>
 ```
 
-2 - Open and modify the `src/app/app.component.ts` file.  First, we need to make sure that we can use jQuery by declaring a new variable named `$`, of type `any`, at the top of the file just under the import statements. This will make sure TypeScript will complile our JavaScript.
+2 - Open and modify the `src/app/app.component.ts` file.  First, we need to make sure that we can use jQuery by declaring a new variable named `$`, of type `any`, at the top of the file just under the import statements. This will make sure TypeScript will compile our JavaScript.
 
 ```ts
 declare let $: any;

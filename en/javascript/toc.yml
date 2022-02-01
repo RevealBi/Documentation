@@ -13,7 +13,7 @@
     - name: HTML/JavaScript
       href: getting-started-javascript.md
     - name: React
-      href: getting-started.md
+      href: getting-started-react.md
 - name: Working with Dashboards
   header: true
 - name: Creating
