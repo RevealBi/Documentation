@@ -59,7 +59,7 @@
 - name: Maximizing Visualizations
   href: maximizing-visualizations.md
 - name: Responding to Click Events
-  href: index.md
+  href: click-events.md
 - name: Tooltips
   href: tooltips.md
 - name: Release Information
