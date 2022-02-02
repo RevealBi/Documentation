@@ -21,7 +21,7 @@
 - name: Loading
   href: loading-dashboards.md
 - name: Filtering
-  href: index.md
+  href: filtering-dashboards.md
 - name: Editing
   href: editing-dashboards.md
 - name: Saving
