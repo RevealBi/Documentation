@@ -33,7 +33,7 @@
 - name: Localizing
   href: index.md
 - name: Exporting
-  href: index.md
+  href: exporting-dashboards.md
 - name: Theming
   href: theming-dashboards.md
 - name: Working with DataSources
