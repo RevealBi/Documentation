@@ -61,7 +61,7 @@
 - name: Responding to Click Events
   href: index.md
 - name: Tooltips
-  href: index.md
+  href: tooltips.md
 - name: Release Information
   header: true
 - name: API Reference - Server
