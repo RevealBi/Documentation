@@ -37,9 +37,9 @@ The following image illustrates how the properties of a `RVCell` maps to the dat
 ![](images/tooltips-row-property.jpg)
 
 ## Prevent Tooltips from Showing
-To prevent tooltips from showing for all visualizations, or a specific visualzation, simply set the `args.Cancel` property to `true`.
+To prevent tooltips from showing for all visualizations, or a specific visualzation, simply set the `args.cancel` property to `true`.
 
-In this example, we are checking if the `args.Title` property is **Sales** and preventing the tooltip from showing by setting the `args.Cancel` property to `true`.
+In this example, we are checking if the `args.visualization.title` property is **Sales** and preventing the tooltip from showing by setting the `args.cancel` property to `true`.
 
 ```javascript
 revealView.onTooltipShowing = (args) => {
@@ -50,5 +50,5 @@ revealView.onTooltipShowing = (args) => {
 ```
 
 > [!NOTE]
-> The source code to this sample can be found on [GitHub]()
+> The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/Tooltips)
 

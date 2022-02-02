@@ -57,7 +57,7 @@
 - name: Working with Visualizations
   header: true
 - name: Maximizing Visualizations
-  href: index.md
+  href: maximizing-visualizations.md
 - name: Responding to Click Events
   href: index.md
 - name: Tooltips
