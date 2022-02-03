@@ -65,7 +65,7 @@ The `RevealTheme` has the following properties:
 | **useRoundedCorners**                             | Rounded corners in buttons, tooltips, containers, visualizations, etc. If set to false, squared corners will be shown.                                                                                                                                                                        |
 
 > [!NOTE]
-> When updating theme properties or applying a new theme at runtime, you must reload the dashboard in order to have theme changes applied to the `RevealView`.
+> When updating theme properties or applying a new theme at runtime, you must call the `RevealView.refreshTheme` method in order to have theme changes applied to the `RevealView`.
 
 ### Clone Existing Theme
 
