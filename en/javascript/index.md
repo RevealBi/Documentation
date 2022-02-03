@@ -7,4 +7,4 @@ Built by user experience experts and designed for the business user, Reveal make
 **Where to start:**
 1. [Download the Reveal SDK](https://www.revealbi.io/download-sdk)
 2. [Installation](installation.md)
-3. [Create your First App](getting-started.md)
+3. [Create your First App](getting-started-javascript.md)
