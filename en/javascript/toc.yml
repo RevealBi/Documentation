@@ -25,13 +25,9 @@
 - name: Editing
   href: editing-dashboards.md
 - name: Saving
-  href: index.md
+  href: saving-dashboards.md
 - name: Linking
   href: linking-dashboards.md
-- name: Formatting Data
-  href: index.md
-- name: Localizing
-  href: index.md
 - name: Exporting
   href: exporting-dashboards.md
 - name: Theming
