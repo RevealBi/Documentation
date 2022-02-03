@@ -2,6 +2,16 @@
   header: true
 - name: Installation
   href: installation.md
+- name: Configuring the Server
+  items:
+    - name: ASP.NET Core Web API
+      href: configuring-server-aspnet.md
+    - name: Tomcat
+      href: configuring-server-tomcat.md
+    - name: Maven
+      href: configuring-server-maven.md 
+    - name: Oracle
+      href: configuring-server-oracle.md       
 - name: Getting Started
   items:
     - name: Setting Up the Server
