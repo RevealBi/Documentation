@@ -10,7 +10,7 @@ The **Save** operation is invoked when the end-user is in edit mode, and clicks 
 
 ![](images/saving-save-button.jpg)
 
-The **Save As** opertion is invoked when the end-user opens the **Kabob Menu** located in the top right corner of the `RevealView`, and selects the **Save As** menu item.
+The **Save As** operation is invoked when the end-user opens the **Kebab Menu** located in the top right corner of the `RevealView`, and selects the **Save As** menu item.
 
 ![](images/saving-saveas-button.jpg)
 
@@ -41,9 +41,9 @@ public class DashboardProvider : IRVDashboardProvider
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/master/SavingDashboards-Server)
 
 ## Implementing Save As
-The Reveal SDK provides the **Save** functionality by default. However, the Reveal SDK does not provide a **Save As** implementation.  This means that you as the developer will be required to write all neccessary code to perform the **Save As** operation within your application. The **Save As** operation must be handled by the client application.
+The Reveal SDK provides the **Save** functionality by default. However, the Reveal SDK does not provide a **Save As** implementation.  This means that you as the developer will be required to write all necessary code to perform the **Save As** operation within your application. The **Save As** operation must be handled by the client application.
 
-To perform saving operations on the client, you must add an event hanlder to the `RevealView.onSave` event. This will instruct the Reveal SDK that all saving operations will be controlled by the client application.
+To perform saving operations on the client, you must add an event handler to the `RevealView.onSave` event. This will instruct the Reveal SDK that all saving operations will be controlled by the client application.
 
 ```javascript
 revealView.onSave = (rv, args) => {

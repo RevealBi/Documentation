@@ -8,7 +8,7 @@ The steps below describe how to create a new ASP.NET Core Web API project. If yo
 
 ![](images/getting-started-angular-project.jpg)
 
-2 - Provide a project name and set the location to the **server** directory we created eariler, and click **Next**.
+2 - Provide a project name and set the location to the **server** directory we created earlier, and click **Next**.
 
 ![](images/getting-started-angular-name.jpg)
 

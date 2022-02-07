@@ -144,7 +144,7 @@ here.
             </td>
         </tr>
         <tr>
-            <td><i>[Public Bug Fix] Drill down scenario with different "sorty by" configurations not working as expected</i><br>
+            <td><i>[Public Bug Fix] Drill down scenario with different "sort by" configurations not working as expected</i><br>
             When the fields in a hierarchy were configured with a combination of "sort by: <any field>" and a descending sorting, the result was the dashboard not loading.
             </td>
         </tr>
@@ -245,7 +245,7 @@ here.
         </tr>
         <tr>
             <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the
-                customizable settings to additionaly personalize the look and feel of the Visualization and Dashboard
+                customizable settings to additionally personalize the look and feel of the Visualization and Dashboard
                 editor. You can choose from one of the following themes:
                 MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web);
                 MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);

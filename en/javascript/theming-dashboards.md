@@ -97,7 +97,7 @@ $.ig.RevealSdkSettings.theme = this.cloneCurrentTheme();
 
 ### Create a Custom Theme
 
-If you would like a theme that is more maintainable and easier to reuse and share, we recommend creating a custom theme. Creating a cutsom theme can be accomplished by creating a new class instance of a `RevealTheme`, and modifying it's properties.
+If you would like a theme that is more maintainable and easier to reuse and share, we recommend creating a custom theme. Creating a custom theme can be accomplished by creating a new class instance of a `RevealTheme`, and modifying it's properties.
 
 Here is an example of a custom theme:
 

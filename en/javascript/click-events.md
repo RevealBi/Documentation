@@ -21,4 +21,4 @@ The `RVDataCell` has the following properties:
 - **columnLabel** - the label, or custom name, of the column belonging to the data point
 - **columnName** - the name of the column belonging to the data point
 - **formattedValue** - the formatted value of the data point
-- **value** - the orginal value of the data point
+- **value** - the original value of the data point

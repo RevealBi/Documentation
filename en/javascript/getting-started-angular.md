@@ -124,7 +124,7 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-Once that is complete, we can now initlialize the `RevealView`.
+Once that is complete, we can now initialize the `RevealView`.
 
 ```ts
 export class AppComponent implements AfterViewInit {
@@ -140,7 +140,7 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-This code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instaniate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
+This code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
 
 The final `app.component.ts` file should look like this:
 

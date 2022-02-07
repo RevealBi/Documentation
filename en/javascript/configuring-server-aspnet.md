@@ -10,7 +10,7 @@ The steps below describe how to create a new ASP.NET Core Web API project. If yo
 
 ![](images/getting-started-angular-project.jpg)
 
-2 - Provide a project name and set the location to the **server** directory we created eariler, and click **Next**.
+2 - Provide a project name and set the location to the **server** directory we created earlier, and click **Next**.
 
 ![](images/getting-started-angular-name.jpg)
 
@@ -50,7 +50,7 @@ By default, the Reveal SDK uses a convention that will load all dashboards from 
 
 ### Step 4 - Setup CORs Policy (Debugging)
 
-While developing and debugging your application, it is common to host the server and client app on different URLs. For example; your Server my be running on `https://localhost:24519`, while your Angular app may be running on `https://localhost:4200`. If you were to try and load a dashboard from the client application, it would fail because of ASP.NET Core's Cross-Origin Requests (CORs) security policy. To enable this scenario, you must create a CORs policy and enable it in the server project.
+While developing and debugging your application, it is common to host the server and client app on different URLs. For example; your Server may be running on `https://localhost:24519`, while your Angular app may be running on `https://localhost:4200`. If you were to try and load a dashboard from the client application, it would fail because of ASP.NET Core's Cross-Origin Requests (CORs) security policy. To enable this scenario, you must create a CORs policy and enable it in the server project.
 
 1 - Open and modify the `Program.cs` file to create a CORs policy which will allow any origin (url) access to any headers and methods.
 

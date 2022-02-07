@@ -59,7 +59,7 @@ private void RevealView_DataSourcesRequested(object sender, Reveal.Sdk.DataSourc
 >
 > * With subfolder - `RVLocalFileDataSourceItem.Uri = "local:/SubFolder/FileName.xlsx"`
 
-**Step 5** - Create a new instance of the `RVExcelDataSourceItem` object and pass the `RVLocalFileDataSourceItem` instance you created in the previous step as an argument in the object contructor. Set the `Title` property to a string which describes the data within the Excel file.
+**Step 5** - Create a new instance of the `RVExcelDataSourceItem` object and pass the `RVLocalFileDataSourceItem` instance you created in the previous step as an argument in the object constructor. Set the `Title` property to a string which describes the data within the Excel file.
 
 Finally, add the `RVExcelDataSourceItem` object to the data source items collection.
 

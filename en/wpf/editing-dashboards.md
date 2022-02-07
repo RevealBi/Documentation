@@ -12,7 +12,7 @@ This property is used to define which chart types are available to end-users for
 
 Only the chart types in the `RevealView.AvailableChartTypes` collection will be displayed to the end-user.
 
-By defaut, all supported chart types are available. You can remove specific chart types by using the `AvailableChartTypes.Remove` method and passing the `RVChartType` you want to remove as a parameter.
+By default, all supported chart types are available. You can remove specific chart types by using the `AvailableChartTypes.Remove` method and passing the `RVChartType` you want to remove as a parameter.
 
 This sample removes the `RVChartType.Indicator` and `RVChartType.IndicatorTarget` (also known as KPIs) from the `RevealView.AvailableChartTypes`.
 ```cs
@@ -103,7 +103,7 @@ This property shows/hides the **Add Date Filter** menu item for the Dashboard.
 
 ### CanAddPostCalculatedFields
 
-This property shows/hides the **F(x)** menu item in the "Visualization Fields" section of the Visualzation Editor.
+This property shows/hides the **F(x)** menu item in the "Visualization Fields" section of the Visualization Editor.
 
 ![](images/editing-canaddpostcalculatedfields.jpg)
 
@@ -118,7 +118,7 @@ This property shows/hides the **Copy** menu item for a Visualization.
 ![](images/editing-cancopyvisualization.jpg)
 
 ```xml
-<rv:RevealView x:Name="_revealView" CanCopyVisualiation="False" />
+<rv:RevealView x:Name="_revealView" CanCopyVisualization="False" />
 ```
 
 ### CanDuplicateVisualization
@@ -180,7 +180,7 @@ When set to `true`, this property will immediately launch the "New Visualization
 
 ### VisualizationEditorOpening
 
-There may be times when you want to excute some application logic **before** the visualization editor has opened, and you may want to even prevent the editor from opening until a condition is met. To do this, you can add an event handler to the `RevealView.VisualizationEditorOpening` event.
+There may be times when you want to execute some application logic **before** the visualization editor has opened, and you may want to even prevent the editor from opening until a condition is met. To do this, you can add an event handler to the `RevealView.VisualizationEditorOpening` event.
 
 ```cs
 <rv:RevealView x:Name="_revealView"
@@ -200,11 +200,11 @@ The `VisualizationEditorOpeningEventArgs` contains the following properties:
 - **Visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-> If you set `e.Cancel` to `true`, then the Visualzation Editor will not open.
+> If you set `e.Cancel` to `true`, then the Visualization Editor will not open.
 
 ### VisualizationEditorOpened
 
-If you would like to be notifed **after** the Visualzation Editor has been opened, either when editing an existing visualization or creating a new one, you can add an event handler to the `RevealView.VisualizationEditorOpened` event.
+If you would like to be notified **after** the Visualization Editor has been opened, either when editing an existing visualization or creating a new one, you can add an event handler to the `RevealView.VisualizationEditorOpened` event.
 
 ```cs
 <rv:RevealView x:Name="_revealView"
@@ -224,7 +224,7 @@ The `VisualizationEditorOpenedEventArgs` contains the following properties:
 
 ### VisualizationEditorClosing
 
-There may be times when you want to excute some application logic **before** the visualization editor has closed, and you may want to even prevent the editor from closing until a condition is met. To do this, you can add an event handler to the `RevealView.VisualizationEditorClosing` event.
+There may be times when you want to execute some application logic **before** the visualization editor has closed, and you may want to even prevent the editor from closing until a condition is met. To do this, you can add an event handler to the `RevealView.VisualizationEditorClosing` event.
 
 ```xml
 <rv:RevealView x:Name="_revealView"
@@ -245,7 +245,7 @@ The `VisualizationEditorClosedEventArgs` contains the following properties:
 - **Visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-> If you set `e.Cancel` to `true`, then the Visualzation Editor will not close.
+> If you set `e.Cancel` to `true`, then the Visualization Editor will not close.
 
 ### VisualizationEditorClosed
 Anytime an end-user edits a single visualization in the `RevealView`, the `RevealView.VisualizationEditorClosed` event is fired **after** the editor is closed. This can be in response to editing an existing visualization, or adding a new visualization. You can respond to this event by adding an event handler to the `RevealView.VisualizationEditorClosed` event.
@@ -269,7 +269,7 @@ The `VisualizationEditorClosedEventArgs` contains the following properties:
 
 ### Dashboard.PropertyChanged
 
-You can be notifed of property value changes on the `RVDashboard` object by adding an event handler to the `RVDashboard.PropertyChanged` event.
+You can be notified of property value changes on the `RVDashboard` object by adding an event handler to the `RVDashboard.PropertyChanged` event.
 
 ```cs
 _revealView.Dashboard.PropertyChanged += Dashboard_PropertyChanged;
@@ -282,12 +282,12 @@ private void Dashboard_PropertyChanged(object sender, System.ComponentModel.Prop
 }
 ```
 
-Changes to values in the following properties will invoke the `RVDashboad.PropertyChanged` event:
+Changes to values in the following properties will invoke the `RVDashboard.PropertyChanged` event:
 - **DateFilter** - the dashboard date filter. For more information read the [Filtering](filtering-dashboards.md#date-filter) topic.
 - **HasPendingChanges** - returns `true` if changes have been made to the current dashboard; otherwise `false`
 - **Title** - the title of the Dashboard that is displayed in the `RevealView`
 
-When dashboards are modified, the `RVDashboard.HasPendingChanges` property is updated to reflect if there are changes that have been made to the dashboard that have not yet been saved or committed.  You may use this property to notify UI elements in your application to update their enabled/disables state based on the value of the `RVDashboard.HasPendingChanges` property. To do this, add an event handler to the `RVDashboad.PropertyChanged` event, and check the `e.PropertyName`. If the propery name is **HasPendingChanges** you can get the value from the dashboard and run logic based on your requirements.
+When dashboards are modified, the `RVDashboard.HasPendingChanges` property is updated to reflect if there are changes that have been made to the dashboard that have not yet been saved or committed.  You may use this property to notify UI elements in your application to update their enabled/disables state based on the value of the `RVDashboard.HasPendingChanges` property. To do this, add an event handler to the `RVDashboard.PropertyChanged` event, and check the `e.PropertyName`. If the property name is **HasPendingChanges** you can get the value from the dashboard and run logic based on your requirements.
 
 ```cs
 private void Dashboard_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -300,4 +300,4 @@ private void Dashboard_PropertyChanged(object sender, System.ComponentModel.Prop
 ```
 
 > [!NOTE]
-> When using the `RVDashboard.PropertyChanged` event, be sure to unsubcribe from the event before you load a new dashboard or discard the existing dashboard. Otherwise you could introduce memory leaks into your application.
+> When using the `RVDashboard.PropertyChanged` event, be sure to unsubscribe from the event before you load a new dashboard or discard the existing dashboard. Otherwise you could introduce memory leaks into your application.

@@ -1,6 +1,6 @@
 # Click Events
 
-When an end-user clicks on a data point within a visualzation, the `VisualizationDataPointClicked` event is invoked. You can respond to this event by adding an event handler to the `VisualizationDataPointClicked` event.
+When an end-user clicks on a data point within a visualization, the `VisualizationDataPointClicked` event is invoked. You can respond to this event by adding an event handler to the `VisualizationDataPointClicked` event.
 
 ```xml
 <rv:RevealView x:Name="_revealView"
@@ -27,4 +27,4 @@ The `RVDataCell` class has the following properties:
 - **ColumnLabel** - the label, or custom name, of the column belonging to the data point
 - **ColumnName** - the name of the column belonging to the data point
 - **FormattedValue** - the formatted value of the data point
-- **Value** - the orginal value of the data point
+- **Value** - the original value of the data point

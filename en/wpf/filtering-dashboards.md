@@ -118,7 +118,7 @@ The `RVDashboardFilter.GetFilterValuesAsync()` method will return a collection o
 
 The `RVFilter` object has the following properties:
 - **Label** - the text that is displayed in the filter dropdown UI.
-- **Value** - the underlyiing value of the  `RVFilter` object.
+- **Value** - the underlying value of the  `RVFilter` object.
 
 ### Get Selected Filter Values
 

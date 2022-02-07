@@ -91,7 +91,7 @@ _revealView.RefreshTheme();
 
 ### Create a Custom Theme
 
-If you would like a theme that is more maintainable and easier to reuse and share, we recommend creating a custom theme. A custom theme is a class that dervives from `RevealTheme`.
+If you would like a theme that is more maintainable and easier to reuse and share, we recommend creating a custom theme. A custom theme is a class that derives from `RevealTheme`.
 
 Here is an example of a custom theme called `MyUglyTheme`:
 ```cs

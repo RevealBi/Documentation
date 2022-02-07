@@ -131,7 +131,7 @@ Next, we need to generate some data that will be used to build our Reveal Dashbo
 ```cs
 public class SalesDataGenerator
 {
-    private static string[] _products = new string[4] { "Apple", "Grape", "Orage", "Banana" };
+    private static string[] _products = new string[4] { "Apple", "Grape", "Orange", "Banana" };
     private static string[] _sellerNames = new string[8] { "Ellen Adams", "Lisa Andrews", "William Fox", "Walter Harp", "Jessica Oxley", "Misty Shock", "Chris Meyer", "Jay Calvin" };
     private static string[] _cities = new string[6] { "Tokyo", "Shanghai", "Beijing", "Singapore", "New York", "Seoul" };
     private static readonly Random Random = new Random();
@@ -236,7 +236,7 @@ public MainWindow()
 
 Now that we have created the data that will be used in our dashboards, the next step is to make that data available to the Reveal SDK. To do this, we need to create a new class that implements the `IRVDataProvider`.  This interface is used specifically for in-memory data implementations within the Reveal SDK.
 
-Let's create a new class called `InMemoryDataProvider` and implement the `IRVDataProvider` interface. Notice that we also defined a constructor that accepts an `IEnumerable<Sale>`. This allows us to pass in our generated sales data from our previou step.
+Let's create a new class called `InMemoryDataProvider` and implement the `IRVDataProvider` interface. Notice that we also defined a constructor that accepts an `IEnumerable<Sale>`. This allows us to pass in our generated sales data from our previous step.
 
 ```cs
 class InMemoryDataProvider : IRVDataProvider
@@ -262,7 +262,7 @@ class InMemoryDataProvider : IRVDataProvider
 }
 ```
 
-As you can see, in the `GetData` method, we are checking the `DatasetId` for a specific value. If this id matches our `SalesRecords` data source item, then we will then use the in-memory bussiness object collection that we passed in class constructor as the data source for the dashboard.
+As you can see, in the `GetData` method, we are checking the `DatasetId` for a specific value. If this id matches our `SalesRecords` data source item, then we will then use the in-memory business object collection that we passed in class constructor as the data source for the dashboard.
 
 Now that we have our data and our data provider, we need to set the `RevealSdkSettings.DataProvider` property to an instance of our `InMemoryDataProvider` class. 
 

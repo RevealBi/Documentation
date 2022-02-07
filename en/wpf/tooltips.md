@@ -36,14 +36,14 @@ The `RVDataCell` class has the following properties:
 - **ColumnLabel** - the label, or custom name, of the column belonging to the data point
 - **ColumnName** - the name of the column belonging to the data point
 - **FormattedValue** - the formatted value of the data point
-- **Value** - the orginal value of the data point
+- **Value** - the original value of the data point
 
 The following image illustrates how the properties of a `RVCell` maps to the data being displayed in the tooltip.
 
 ![](images/tooltips-row-property.jpg)
 
 ## Prevent Tooltips from Showing
-To prevent tooltips from showing for all visualizations, or a specific visualzation, simply set the `TooltipShowingEventArgs.Cancel` property to `true`.
+To prevent tooltips from showing for all visualizations, or a specific visualization, simply set the `TooltipShowingEventArgs.Cancel` property to `true`.
 
 In this example, we are checking if the `RVVisualization.Title` property is "Sales" and preventing the tooltip from showing by setting the `TooltipShowingEventArgs.Cancel` property to `true`.
 
