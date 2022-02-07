@@ -82,7 +82,7 @@ shows how to populate a ComboBox to automatically select the Territory:
 <script type="text/javascript">
     var dashboardId = 'Sales';
 
-    $.ig.RVDashaboard.loadDashboard(dashboardId, function (dashboard) {
+    $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
         var revealView = window.revealView = new $.ig.RevealView("#revealView");
         revealView.showFilters = false;
         revealView.dashboard = dashboard;

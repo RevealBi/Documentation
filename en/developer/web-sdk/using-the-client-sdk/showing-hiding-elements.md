@@ -34,7 +34,7 @@ revealView.showEditDataSource = false;
 ```
 
 ## showExportImage
-This property can be used to disable exporting the dashboad to an image.
+This property can be used to disable exporting the dashboard to an image.
 
 <img src="../../general/images/showing-hiding-elements-show-export-image.png" alt="Exporting a dashboard to image" class="responsive-img"/>
 
@@ -43,7 +43,7 @@ revealView.showExportImage = false;
 ```
 
 ## showExportToPowerpoint
-This property can be used to disable exporting the dashboad to PowerPoint.
+This property can be used to disable exporting the dashboard to PowerPoint.
 
 <img src="../../general/images/showing-hiding-elements-show-export-powerpoint.png" alt="Exporting a dashboard to PowerPoint" class="responsive-img"/>
 
@@ -52,7 +52,7 @@ revealView.showExportToPowerpoint = false;
 ```
 
 ## showExportToPDF
-This property can be used to disable exporting the dashboad to PDF.
+This property can be used to disable exporting the dashboard to PDF.
 
 <img src="../../general/images/showing-hiding-elements-show-export-pdf.png" alt="Exporting a dashboard to PDF" class="responsive-img"/>
 
@@ -61,7 +61,7 @@ revealView.showExportToPDF = false;
 ```
 
 ## showExportToExcel
-This property can be used to disable exporting the dashboad to Excel.
+This property can be used to disable exporting the dashboard to Excel.
 
 <img src="../../general/images/showing-hiding-elements-show-export-excel.png" alt="Exporting a dashboard to Excel" class="responsive-img"/>
 
