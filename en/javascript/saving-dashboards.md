@@ -43,7 +43,13 @@ public class DashboardProvider : IRVDashboardProvider
 ## Implementing Save As
 The Reveal SDK provides the **Save** functionality by default. However, the Reveal SDK does not provide a **Save As** implementation.  This means that you as the developer will be required to write all neccessary code to perform the **Save As** operation within your application. The **Save As** operation must be handled by the client application.
 
-To perform saving operations on the client, you must add an event hanlder to the `RevealView.onSave` event. This will instruct the Reveal SDK that all saving operations will be controlled by the client application.
+First, you must set the `RevealView.serverSideSave` property to `false`. This will instruct the Reveal SDK that all saving operations will be controlled by the client application.
+
+```javascript
+revealView.serverSideSave = false;
+```
+
+Next, in order to perform saving operations on the client, you must add an event handler to the `RevealView.onSave` event. 
 
 ```javascript
 revealView.onSave = (rv, args) => {
@@ -58,13 +64,93 @@ The `DashboardSaveEventArgs` object provides the following properties and method
 - **dashboardId** - the ID of the dashboard being saved, for existing dashboards this is the ID used when loading it. For new dashboards or "save as" operation the value will be null. You should set the value of this property when "saving as" an existing dashboard or saving a new one before calling saveFinished, if not set it will be assumed to match the dashboard name.
 - **isNew** - a flag indicating if this event was originated by saving a newly created dashboard, it will be false when saving or "saving as" an existing dashboard.
 - **saveAs** - determines if this is a **Save As** operation
-- **serialize()** - serializes the current dashboard to the '.rdash' file format, using the current name.
-- **serializeWithNewName()** - changes the dashboard's Title and serializes the current dashboard to the '.rdash' file format with the name provided.
-- **savedFinished() - REQUIRED** - performs the save operation. This method will place the `RevealView` out of edit mode and into view mode.
+- **serialize(bytes => { })** - serializes the current dashboard to a `byte[]` that can be used in custom save logic.
+- **serializeWithNewName(name, bytes => { })** - changes the `name` and `dashboardId` and serializes the dashboard to a `byte[]` that can be used in custom save logic. Does not change the currently loaded dashboard's `name` or `dashboardId`. You must do this manually during the save operation.
+- **savedFinished() - REQUIRED** - This method places the `RevealView` out of edit mode and into view mode indicating saving is complete.
 
-## Example: Implementing Save As
+## Example: Implementing Save and Save As
 
-Let's start by creating an API endpoint on the ASP.NET Core Web API server that will let us know if a dashboard name already exists. Open and modify the `Program.cs` file with the following code.
+The first step to implementing any save functionality is to set the `revealView.serverSideSave` to `false`. This tells the Reveal SDK that the client will be handling the save operations.
+
+```javascript
+revealView.serverSideSave = false;
+```
+
+Next, add an event handler for save event and determine if we are dealing with a **Save** or **Save As** operation by checking the `DashboardSaveEventArgs.saveAs` property.
+
+```javascript
+revealView.onSave = (rv, args) => {
+    if (args.saveAs) {
+
+    }
+    else {
+        
+    }
+};
+```
+
+Let's start by first implementing the **Save** functionality. First, we need to add a REST service end point to our ASP.NET Core Web API server application that will handle saving the dashboard to the server. Modify the `Program.cs` file and map a **PUT** route endpoint which will handle updating existing dashboard files.
+
+In this sample code, we first check to make sure the file exists, if not we exit the method. If it does exist, we expect to get the dashboard `byte[]` from the Body of the request. We read the stream from the `request.Body` and convert it to a `byte[]` that can be used to overwrite the existing file and write the changes to disk.
+
+```cs
+app.MapPut("/dashboards/{name}", async (HttpRequest request, string name) =>
+{
+    var filePath = Path.Combine(Environment.CurrentDirectory, $"Dashboards/{name}.rdash");
+    if (!File.Exists(filePath))
+        return;
+
+    byte[] bytes;
+    using (var ms = new MemoryStream())
+    {
+        await request.Body.CopyToAsync(ms);
+        bytes = ms.ToArray();
+    }
+
+    using (var stream = File.Open(filePath, FileMode.Open))
+    {
+        stream.Write(bytes, 0, bytes.Length);
+    }
+});
+```
+
+Next, let's add a function to our client application that will perform the save. This function will handle both the **Save** and **Save As** operations. This function will have parameters for the `name` of the dashboard, the `byte[]` which represents the dashboard contents, and `isSaveAs` which will determine whether or not this is a **Save** or **Save As** operation. If this is a **Save As** operation, we will set the `method` of the request to **POST**, which indicates a new file will be created.
+
+```javascript
+function saveDashboard(name, bytes, isSaveAs = false) {
+
+    let url = `https://localhost:7111/dashboards/${name}`;
+    let params = {
+        body: bytes,
+        method: "PUT"
+    }
+
+    if (isSaveAs) {
+        params.method = "POST"
+    }
+
+    return fetch(url, params);
+}
+```
+
+Let's implement the **Save** logic in the `RevealView.onSave` event. First, we need to serialize the current dashboard to a `byte[]` by calling the `DashboardSaveEventArgs.serialize` method so we can send it to our REST service endpoint. In the callback of the `DashboardSaveEventArgs.serialize` method, we call the `saveDashboard` function we created earlier and pass the `DashboardSaveEventArgs.name` and the `byte[]` as arguments. When the `saveDashboard` completes, we call the `DashboardSaveEventArgs.saveFinished` method which will tell the Reveal SDK that saving has been completed and to place the `RevealView` out of edit-mode.
+
+```javascript
+revealView.onSave = (rv, args) => {
+    if (args.saveAs) {
+        //todo
+    }
+    else {
+        args.serialize(bytes => {
+            this.saveDashboard(args.name, bytes).then(() => {
+                args.saveFinished();
+            });
+        });
+    }
+};
+```
+
+Now, let's implement the **Saev As** functionality.  The first step in implementing **Save as** is to make sure we are dealing with a unique file name. Let's add a REST end-point to our ASP.NET Core Web API server that will let the client application know if a dashboard name already exists. Open and modify the `Program.cs` file with the following code.
 
 ```cs
 app.Map("/isduplicatename/{name}", (string name) =>
@@ -82,79 +168,82 @@ function isDuplicateName(name) {
 }
 ```
 
-Now, let's determine if we are dealing with a **Save** or **Save As** operation.
+Now, let's begin to implement the **Save As** operation. First, let's capture the new name from the end-user.  Next, we want to check to see if the name the user provided is a duplicate. If there is a duplicate, we will prompt the user to override the existing file. If the end-user doesn't want to override the existing dahsboard file, we want to cancel the saving process. First, call the `DashboardSaveEventArgs.saveFinished` method to force the `RevealView` to exit edit-mode, and then `return` so that we exit the save event wihtout performing any save operation.
 
 ```javascript
-revealView.onSave = (rv, args) => {
-    if (args.saveAs) {
+if (args.saveAs) {
+    var newName = prompt("Please enter the dashboard name");
+    isDuplicateName(newName).then(isDuplicate => {
+        if (isDuplicate === "true") {
+            if (!window.confirm("A dashboard with name: " + newName + " already exists. Do you want to override it?")) {
+                args.saveFinished();
+                return;
+            }
+        }
 
-    }
-    else {
-        
-    }
-};
+        //todo - perform save
+    });
+}
 ```
 
-Now, let's implement the **Save As** operation. First, let's capture the new name from the end-user.  Next, we want to check to see if the name the user provided is a duplicate. If there is no duplicate, we'll save the dashboard with a new name. If there is a duplicate, we will prompt the user to override the existing file.
+To complete the **Save As** operation, we need to add another REST service end-point to our ASP.NET Core Web API server to process the **POST**. Modify the `Program.cs` file and map a **POST** route endpoint which will handle saving new dashboard files.
+
+In this sample code, we expect to get the dashboard `byte[]` from the Body of the request. We read the stream from the `request.Body` and convert it to a `byte[]` that can be used to create the new dashboard file.
+
+```cs
+app.MapPost("/dashboards/{name}", async (HttpRequest request, string name) =>
+{
+    var ms = new MemoryStream();
+    await request.Body.CopyToAsync(ms);
+    var bytes = ms.ToArray();
+
+    var filePath = Path.Combine(Environment.CurrentDirectory, $"Dashboards/{name}.rdash");
+    using (var stream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+    {
+        await stream.WriteAsync(bytes, 0, bytes.Length);
+    }
+});
+```
+
+Let's update our client code to complete the **Save As** operation. Before we perform the save, let's set the `DashboardSaveEventArgs.dashboardId` and `DashboardSaveEventArgs.name` to the new name of the dashboard. This will update the dashboard that is currently loaded into the `RevealView` to match the file being saved to the server. Now, we need to serialize the current dashboard to a `byte[]` by calling `DashboardSaveEventArgs.serializeWithNewName`. This method will serialize the dashboard to a `byte[]` using the new `name` which updates the title and id of the newly serialized dashboard. In the callback of the `DashboardSaveEventArgs.serializeWithNewName` method, we call the `saveDashboard` function we created earlier and pass the `DashboardSaveEventArgs.name`, the `byte[]`, and `true` (to indicate save as) as arguments. When the `saveDashboard` completes, we call the `DashboardSaveEventArgs.saveFinished` method which will tell the Reveal SDK that saving has been completed and to place the `RevealView` out of edit-mode.
+
+```javascript
+args.dashboardId = args.name = newName;
+args.serializeWithNewName(newName, bytes => {
+    this.saveDashboard(newName, bytes, true).then(() => {
+        args.saveFinished();
+    });
+});
+```
+
+The final code of the `RevealView.onSave` event looks like this:
 
 ```javascript
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
         var newName = prompt("Please enter the dashboard name");
         isDuplicateName(newName).then(isDuplicate => {
-            if (isDuplicate === "false") {
-                args.name = newName;
-                args.dashboardId = newName;
-                args.saveFinished();
-            }
-            else {
-                if (window.confirm("A dashboard with name:" + newName + " already exists. Do you want to override it?")) {
-                    args.name = newName;
-                    args.dashboardId = newName;
-                    args.saveFinished();                                  
+            if (isDuplicate === "true") {
+                if (!window.confirm("A dashboard with name: " + newName + " already exists. Do you want to override it?")) {
+                    args.saveFinished();
+                    return;
                 }
             }
+
+            args.dashboardId = args.name = newName;
+            args.serializeWithNewName(newName, bytes => {
+                this.saveDashboard(newName, bytes, true).then(() => {
+                    args.saveFinished();
+                });
+            });
         });
     }
     else {
-        
-    }
-};
-```
-
-Finally, let's implement the **Save** operation. We just need to make a single call to `DashboardSaveEventArgs.saveFinished`. This will invoke the default **Save** functionality implemented on the server.
-
-```javascript
-...
-
-    else {
-        args.saveFinished();
-    }
-```
-
-The final code looks like this:
-
-```javascript
-revealView.onSave = (rv, args) => {
-    if (args.saveAs) {
-        var newName = prompt("Please enter the dashboard name");
-        isDuplicateName(newName).then(isDuplicate => {
-            if (isDuplicate === "false") {
-                args.name = newName;
-                args.dashboardId = newName;
+        args.serialize(bytes => {
+            this.saveDashboard(args.name, bytes).then(() => {
                 args.saveFinished();
-            }
-            else {
-                if (window.confirm("A dashboard with name:" + newName + " already exists. Do you want to override it?")) {
-                    args.name = newName;
-                    args.dashboardId = newName;
-                    args.saveFinished();                                  
-                }
-            }
+            });
         });
-    }
-    else {
-        args.saveFinished();
     }
 };
 ```
