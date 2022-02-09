@@ -68,7 +68,23 @@ The `DashboardSaveEventArgs` object provides the following properties and method
 - **serializeWithNewName(name, bytes => { })** - changes the `name` and `dashboardId` and serializes the dashboard to a `byte[]` that can be used in custom save logic. Does not change the currently loaded dashboard's `name` or `dashboardId`. You must do this manually during the save operation.
 - **savedFinished() - REQUIRED** - This method places the `RevealView` out of edit mode and into view mode indicating saving is complete.
 
-## Example: Implementing Save and Save As
+## Disabled Saving
+
+You can prevent the end-user from invoking either the **Save** or **Save As** operations by either disabling editing or hiding the **Save As** UI elements.
+
+To disable the **Save** operation, you must disable editing completely by setting the `RevealView.canEdit` property to `false`:
+
+```javascript
+revealView.canEdit="false";
+```
+
+To disable the **Save As** operation, you must set the `RevealView.canSaveAs` property to `false`:
+
+```javascript
+revealView.canSaveAs="false";
+```
+
+## Example: Implementing Custom Save
 
 The first step to implementing any save functionality is to set the `revealView.serverSideSave` to `false`. This tells the Reveal SDK that the client will be handling the save operations.
 
@@ -250,20 +266,3 @@ revealView.onSave = (rv, args) => {
 
 > [!NOTE]
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/master/SavingDashboards-Client)
-
-
-## Disabled Saving
-
-You can prevent the end-user from invoking either the **Save** or **Save As** operations by either disabling editing or hiding the **Save As** UI elements.
-
-To disable the **Save** operation, you must disable editing completely by setting the `RevealView.canEdit` property to `false`:
-
-```javascript
-revealView.canEdit="false";
-```
-
-To disable the **Save As** operation, you must set the `RevealView.canSaveAs` property to `false`:
-
-```javascript
-revealView.canSaveAs="false";
-```
