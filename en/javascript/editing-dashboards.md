@@ -323,13 +323,13 @@ revealView.onVisualizationEditorOpening = function (args) {
 };
 ```
 
-The `args` contains the following properties:
+The `VisualizationEditorOpeningArgs` contains the following properties:
 - **cancel** - gets or sets a value indicating whether the event should be canceled. `true` if the event should be canceled; otherwise `false`
 - **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
 - **visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-> If you set `e.cancel` to `true`, then the Visualzation Editor will not open.
+> If you set `VisualizationEditorOpeningArgs.cancel` to `true`, then the Visualzation Editor will not open.
 
 ### onVisualizationEditorOpened
 
@@ -359,14 +359,14 @@ revealView.onVisualizationEditorClosing = function (args) {
 };
 ```
 
-The `args` contains the following properties:
+The `VisualizationEditorClosingArgs` contains the following properties:
 - **cancel** - gets or sets a value indicating whether the event should be canceled. `true` if the event should be canceled; otherwise `false`
 - **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
 - **resetVisualization** - if `true`, resets the visualization back to the state prior to being edited.
 - **visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-> If you set `e.cancel` to `true`, then the Visualzation Editor will not close.
+> If you set `VisualizationEditorClosingArgs.cancel` to `true`, then the Visualzation Editor will not close.
 
 ### onVisualizationEditorClosed
 Anytime an end-user edits a single visualization in the `RevealView`, the `RevealView.onVisualizationEditorClosed` event is fired **after** the editor is closed. This can be in response to editing an existing visualization, or adding a new visualization. You can respond to this event by adding an event handler to the `RevealView.onVisualizationEditorClosed` event.
@@ -378,7 +378,7 @@ revealView.onVisualizationEditorClosed = function (args) {
 };
 ```
 
-The `args` contains the following properties:
+The `VisualizationEditorClosedEventArgs` contains the following properties:
 - **isCancelled** - determines if the visualization editor was closed via the **X button** (`false`) or the **Check Button** (`true`)
 - **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
 - **visualization** - the visualization that was edited and/or added

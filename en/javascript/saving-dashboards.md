@@ -166,7 +166,7 @@ revealView.onSave = (rv, args) => {
 };
 ```
 
-Now, let's implement the **Saev As** functionality.  The first step in implementing **Save as** is to make sure we are dealing with a unique file name. Let's add a REST end-point to our ASP.NET Core Web API server that will let the client application know if a dashboard name already exists. Open and modify the `Program.cs` file with the following code.
+Now, let's implement the **Save As** functionality.  The first step in implementing **Save As** is to make sure we are dealing with a unique file name. Let's add a REST end-point to our ASP.NET Core Web API server that will let the client application know if a dashboard name already exists. Open and modify the `Program.cs` file with the following code.
 
 ```cs
 app.Map("/isduplicatename/{name}", (string name) =>
