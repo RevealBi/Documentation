@@ -366,11 +366,7 @@ The `VisualizationEditorClosingArgs` contains the following properties:
 - **visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-<<<<<<< HEAD:en/javascript/editing-dashboards.md
-> If you set `e.cancel` to `true`, then the Visualization Editor will not close.
-=======
-> If you set `VisualizationEditorClosingArgs.cancel` to `true`, then the Visualzation Editor will not close.
->>>>>>> master:en/web/editing-dashboards.md
+> If you set `VisualizationEditorClosingArgs.cancel` to `true`, then the Visualization Editor will not close.
 
 ### onVisualizationEditorClosed
 Anytime an end-user edits a single visualization in the `RevealView`, the `RevealView.onVisualizationEditorClosed` event is fired **after** the editor is closed. This can be in response to editing an existing visualization, or adding a new visualization. You can respond to this event by adding an event handler to the `RevealView.onVisualizationEditorClosed` event.

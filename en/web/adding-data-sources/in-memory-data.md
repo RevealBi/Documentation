@@ -247,7 +247,7 @@ public class MyInMemoryDataProvider: IRVDataProvider
 }
 ```
 
-As you can see, in the `GetData` method, we are checking the `DatasetId` for a specific value. If this id matches our `SalesRecords` data source item, then we will then use the in-memory bussiness object collection that is stored in the `_salesInMemoryData` variable as the data source for the dashboard.
+As you can see, in the `GetData` method, we are checking the `DatasetId` for a specific value. If this id matches our `SalesRecords` data source item, then we will then use the in-memory business object collection that is stored in the `_salesInMemoryData` variable as the data source for the dashboard.
 
 Now that we have our data and our data provider, we need to update the `AddReveal` method in the `Program.cs` file to add the `IRVDataProvider` we just created to the `RevealSetupBuilder` using the `RevealSetupBuilder.AddDataProvider` method.
 

@@ -25,7 +25,7 @@
 
 ![](images/angular-create-reveal-folder.jpg)
 
-2 - Copy all the Javacript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `assets/reveal` folder you created previously.
+2 - Copy all the JavaScript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `assets/reveal` folder you created previously.
 
 ![](images/angular-copy-reveal-files.jpg)
 
