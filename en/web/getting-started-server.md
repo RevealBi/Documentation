@@ -72,5 +72,10 @@ if (app.Environment.IsDevelopment())
 
 It's important to understand the order in which the middleware executes. The `UseCors` must be called in a specific order. In this example after `UseHttpsRedirection()` and before `UseAuthorization()`. For more information, please refer to this [Microsoft help topic](https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0)
 
+Next Steps:
+- [Create an Angular Client App](getting-started-angular.md)
+- [Create an Html/JS Client App](getting-started-javascript.md)
+- [Create a React Client App](getting-started-react.md)
+
 > [!NOTE]
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/01-GettingStarted-Server-WebApi).

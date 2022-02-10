@@ -12,7 +12,7 @@ revealView.onTooltipShowing = (args) => {
 };
 ```
 
-The `args` contains the following properties:
+The `TooltipShowingEventArgs` contains the following properties:
 - **cell** - gets the data point that is associated with the tooltip
 - **row** - gets a collection of cell data that is provided in the tooltip
 - **visualization** - gets the Visualization displaying the tooltip
@@ -22,9 +22,9 @@ The `args` contains the following properties:
 
 ## Reading Tooltip Data
 
-By using the properties exposed by the event `args`, such as the `args.cell` and `args.row` properties, you can read data that is used for display in the tooltip.
+By using the properties exposed by the event `TooltipShowingEventArgs` object, such as the `TooltipShowingEventArgs.cell` and `TooltipShowingEventArgs.row` properties, you can read data that is used for display in the tooltip.
 
-It's important to understand that the `args.row` property provides a collection of `RVDataCell` objects that represent each data point in the tooltip.
+It's important to understand that the `TooltipShowingEventArgs.row` property provides a collection of `RVDataCell` objects that represent each data point in the tooltip.
 
 The `RVDataCell` class has the following properties:
 - **columnLabel** - the label, or custom name, of the column belonging to the data point
@@ -37,9 +37,9 @@ The following image illustrates how the properties of a `RVCell` maps to the dat
 ![](images/tooltips-row-property.jpg)
 
 ## Prevent Tooltips from Showing
-To prevent tooltips from showing for all visualizations, or a specific visualization, simply set the `args.cancel` property to `true`.
+To prevent tooltips from showing for all visualizations, or a specific visualization, simply set the `TooltipShowingEventArgs.cancel` property to `true`.
 
-In this example, we are checking if the `args.visualization.title` property is **Sales** and preventing the tooltip from showing by setting the `args.cancel` property to `true`.
+In this example, we are checking if the `TooltipShowingEventArgs.visualization.title` property is **Sales** and preventing the tooltip from showing by setting the `TooltipShowingEventArgs.cancel` property to `true`.
 
 ```javascript
 revealView.onTooltipShowing = (args) => {
