@@ -10,13 +10,13 @@ The **Save** operation is invoked when the end-user is in edit mode, and clicks 
 
 ![](images/saving-save-button.jpg)
 
-The **Save As** opertion is invoked when the end-user opens the **Kabob Menu** located in the top right corner of the `RevealView`, and selects the **Save As** menu item.
+The **Save As** operation is invoked when the end-user opens the **Kebab Menu** located in the top right corner of the `RevealView`, and selects the **Save As** menu item.
 
 ![](images/saving-saveas-button.jpg)
 
 ## Save Dashboard Event
 
-By default, the `RevealView` does not provide a built-in **Save** or **Save As** functionality. This means that you as the developer will be required to write all neccessary code to perform both the **Save** and **Save As** operations within your application.
+By default, the `RevealView` does not provide a built-in **Save** or **Save As** functionality. This means that you as the developer will be required to write all necessary code to perform both the **Save** and **Save As** operations within your application.
 
 In order to handle the saving of dashboards, you must add an event handler to the `RevealView.SaveDashboard` event.
 
@@ -46,7 +46,7 @@ The `DashboardSaveEventArgs` object provide the following properties and methods
 
 ## Disabled Saving
 
-You can prevent the end-user from invoking either the **Save** or **Save As** operations by either disabling editing or hiding the **Save As** UI elemtents.
+You can prevent the end-user from invoking either the **Save** or **Save As** operations by either disabling editing or hiding the **Save As** UI elements.
 
 To disable the **Save** operation, you must disable editing completely. Please see the [Editing](editing-dashboards.md#canedit) topic for more information on disabling editing.
 
@@ -58,10 +58,10 @@ To disable the **Save As** operation, you must set the `RevealView.CanSaveAs` pr
 
 ## Example: Implement Save
 
-Let's start by creating a variable to hold the default directory in which we will be saving our dashboards. In this case we will be saving our dashoards in a **Dashboards** folder relative to the application directory.
+Let's start by creating a variable to hold the default directory in which we will be saving our dashboards. In this case we will be saving our dashboards in a **Dashboards** folder relative to the application directory.
 
 ```cs
-string _defaultDirctory = Path.Combine(Environment.CurrentDirectory, "Dashboards");
+string _defaultDirectory = Path.Combine(Environment.CurrentDirectory, "Dashboards");
 ```
 
 Next, let's determine if we are dealing with a **Save** or **Save As** operation.
@@ -91,7 +91,7 @@ private async void RevealView_SaveDashboard(object sender, Reveal.Sdk.DashboardS
     }
     else
     {
-        var path = Path.Combine(_defaultDirctory, $"{e.Name}.rdash");
+        var path = Path.Combine(_defaultDirectory, $"{e.Name}.rdash");
         var data = await e.Serialize();
         using (var output = File.Open(path, FileMode.Open))
         {
@@ -101,7 +101,7 @@ private async void RevealView_SaveDashboard(object sender, Reveal.Sdk.DashboardS
 }
 ```
 
-The next step is to implement the **Save As** operation.  This step requires a litte more code, as we need to first capture the new file path of the dashboard that will be provided by the end-user, and then create a new file based on that file path.  To do this, we will use the `SaveFileDialog` provided by WPF.  Once we capture the new file path from the end-user, we will create a new `FileStream` using that path. We will then extract the new file name from the path which will be used as both the name of the **.rdash** file and the Title of the dashboard.  To make sure the file name and the Title are the same, we use the `e.SerializeWithNewName()` method passing the extracted name as an argument. Once we have the `byte[]` we write it to disk.
+The next step is to implement the **Save As** operation.  This step requires a little more code, as we need to first capture the new file path of the dashboard that will be provided by the end-user, and then create a new file based on that file path.  To do this, we will use the `SaveFileDialog` provided by WPF.  Once we capture the new file path from the end-user, we will create a new `FileStream` using that path. We will then extract the new file name from the path which will be used as both the name of the **.rdash** file and the Title of the dashboard.  To make sure the file name and the Title are the same, we use the `e.SerializeWithNewName()` method passing the extracted name as an argument. Once we have the `byte[]` we write it to disk.
 
 The code will look something like this:
 
@@ -115,7 +115,7 @@ private async void RevealView_SaveDashboard(object sender, Reveal.Sdk.DashboardS
             DefaultExt = ".rdash",
             FileName = e.Name + ".rdash",
             Filter = "Reveal Dashboard (*.rdash)|*.rdash",
-            InitialDirectory = _defaultDirctory
+            InitialDirectory = _defaultDirectory
         };
 
         if (saveDialog.ShowDialog() == true)
@@ -144,7 +144,7 @@ private async void RevealView_SaveDashboard(object sender, Reveal.Sdk.DashboardS
             DefaultExt = ".rdash",
             FileName = e.Name + ".rdash",
             Filter = "Reveal Dashboard (*.rdash)|*.rdash",
-            InitialDirectory = _defaultDirctory
+            InitialDirectory = _defaultDirectory
         };
 
         if (saveDialog.ShowDialog() == true)
@@ -159,7 +159,7 @@ private async void RevealView_SaveDashboard(object sender, Reveal.Sdk.DashboardS
     }
     else
     {
-        var path = Path.Combine(_defaultDirctory, $"{e.Name}.rdash");
+        var path = Path.Combine(_defaultDirectory, $"{e.Name}.rdash");
         var data = await e.Serialize();
         using (var output = File.Open(path, FileMode.Open))
         {

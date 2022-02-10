@@ -25,7 +25,7 @@
 
 ![](images/react-create-reveal-folder.jpg)
 
-2 - Copy all the Javacript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `assets/reveal` folder you created previously.
+2 - Copy all the JavaScript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `assets/reveal` folder you created previously.
 
 ![](images/react-copy-reveal-files.jpg)
 
@@ -141,7 +141,7 @@ declare let $: any;
   }); 
 ```
 
-This JavaScript code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instaniate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
+This JavaScript code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
 
 The final `index.html` file should look like this:
 

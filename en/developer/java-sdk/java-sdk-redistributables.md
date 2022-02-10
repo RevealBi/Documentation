@@ -42,8 +42,6 @@
 | Client-side SDK | [jQuery validation](https://github.com/jquery-validation) | [MIT](https://github.com/jquery-validation/jquery-validation/blob/master/LICENSE.md) |
 | Client-side SDK | [jQuery validation unobtrusive](https://github.com/aspnet/jquery-validation-unobtrusive/) | [Apache 2.0](https://github.com/aspnet/jquery-validation-unobtrusive/blob/main/LICENSE.txt)  |
 | Client-side SDK | [Roboto Google Font](https://fonts.google.com/specimen/Roboto) | [Apache 2.0](https://fonts.google.com/specimen/Roboto#license)  |
-| Client-side SDK | [Google Maps Marker Clusterer](https://github.com/googlemaps/js-marker-clusterer) | [Apache 2.0](https://github.com/googlearchive/js-marker-clusterer/blob/gh-pages/LICENSE)  |
-| Client-side SDK | [Google Maps Platform](https://developers.google.com/maps/documentation) | [Custom](https://cloud.google.com/maps-platform/terms)  |
 | Client-side SDK | [Babel JS Compiler](https://github.com/babel/babel) | [MIT](https://github.com/babel/babel/blob/main/LICENSE)  |
 | Client-side SDK | [LitElement](https://github.com/Polymer/lit-element) | [BSD 3-Clause](https://github.com/lit/lit-element/blob/master/LICENSE)  |
 | Client-side SDK | [Simple JavaScript Inheritance](https://johnresig.com/blog/simple-javascript-inheritance/) | [MIT](https://opensource.org/licenses/mit-license.html)  |

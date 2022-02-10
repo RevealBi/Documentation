@@ -49,7 +49,7 @@ Alternative steps to work with a WAR file:
 
 1. **Run the Spring Application**
    1. Locate the Spring Boot application in the *upmedia-backend-spring* folder.
-   2. Run the sample application by executing the folllowing command:  
+   2. Run the sample application by executing the following command:  
    
     ```bash
     mvn spring-boot:run

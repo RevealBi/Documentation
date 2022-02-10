@@ -56,7 +56,7 @@ When the **Image** menu item is clicked, the end-user is prompted with a dialog 
 ![](images/export-image-options.jpg)
 
 #### Custom Image Export
-By default, when an end-user clicks the **Export Image** button in the **Export Image Dialog** the image will be exported and added to the borwsers Downloads for the end-user to choose a location to save the image file. However, this behavior can be intercepted and custom image export logic can be used instead.
+By default, when an end-user clicks the **Export Image** button in the **Export Image Dialog** the image will be exported and added to the browsers Downloads for the end-user to choose a location to save the image file. However, this behavior can be intercepted and custom image export logic can be used instead.
 
 To use a custom image export, you must add an event handler to the `RevealView.onImageExported` event.
 

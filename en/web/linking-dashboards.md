@@ -2,7 +2,7 @@
 
 The Reveal SDK supports dashboard linking, which allows users to navigate through dashboards. By moving from dashboard to dashboard, you can go from a high level overview of the business' reality to a more detailed view with the specifics.
 
-From a Reveal SDK perspective, dashboard linking is invoked when an end-user clicks on a link in a visualzation which invokes the loading of another dashboard.
+From a Reveal SDK perspective, dashboard linking is invoked when an end-user clicks on a link in a visualization which invokes the loading of another dashboard.
 
 ![](images/linking-open-campaigns.jpg)
 

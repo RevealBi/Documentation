@@ -123,7 +123,7 @@ The `RVDashboardFilter.getFilterValues()` method will return a collection of `RV
 
 The `RVFilter` object has the following properties:
 - **label** - the text that is displayed in the filter dropdown UI.
-- **value** - the underlyiing value of the  `RVFilter` object.
+- **value** - the underlying value of the  `RVFilter` object.
 
 ### Get Selected Filter Values
 

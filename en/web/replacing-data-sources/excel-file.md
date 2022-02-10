@@ -31,7 +31,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 In this example, we are replacing a data source item that is using a cloud-based Excel file named "Sales Cloud Excel File" with a local Excel file named "SalesLocalExcelFile.xlsx".
 
-First, we check the incoming `RVDataSourceItem` to see if it is a `RVExcelDataSourceItem`. If it is, then we get the existing `RVDataSourceItem.ResourceItem` and check its `Title` proprty. If the title is "Sales Cloud Excel File" then we will create a new `RVLocalFileDataSourceItem` and set the `Uri` to the location of the new local Excel file. After we set the title of the local Excel file data source item, we replace the `RVExcelDataSourceItem.ResourceItem` with our newly created `RVLocalFileDataSourceItem`.
+First, we check the incoming `RVDataSourceItem` to see if it is a `RVExcelDataSourceItem`. If it is, then we get the existing `RVDataSourceItem.ResourceItem` and check its `Title` property. If the title is "Sales Cloud Excel File" then we will create a new `RVLocalFileDataSourceItem` and set the `Uri` to the location of the new local Excel file. After we set the title of the local Excel file data source item, we replace the `RVExcelDataSourceItem.ResourceItem` with our newly created `RVLocalFileDataSourceItem`.
 
 ```cs
 public class MyDataSourceProvider : IRVDataSourceProvider

@@ -50,7 +50,7 @@ filters to set the selected values though the dashboard object and finally assig
 
 > [!NOTE]
 > The code above assumes that **getCurrentUser().territory** returns the territory for the current user.   
-Setting the initally selected value in the date filter client-side is only supported when the dashboard **already has a date filter** created (in the .rdash file that you use). 
+Setting the initially selected value in the date filter client-side is only supported when the dashboard **already has a date filter** created (in the .rdash file that you use). 
 
 ### Hiding filters
 

@@ -69,7 +69,7 @@ private void RevealView_ImageExported(object sender, ImageExportedEventArgs e)
 
 The `ImageExportedEventArgs` object provides the following properties to help you save image exports:
 - **Image** - the screenshot of the dashboard that was taken as a `BitmapSource`
-- **CloseExportDialog** - a boolean propert which controls the visibility of the Export Dialog. True, the dialog will close; False, the dialog will remain open.
+- **CloseExportDialog** - a boolean property which controls the visibility of the Export Dialog. True, the dialog will close; False, the dialog will remain open.
 
 #### Example: A Custom Image Export
 

@@ -6,11 +6,11 @@ If you want to display an existing Reveal Dashboard in the `RevealView` control 
 - Load the dashboard from an embedded resource
 - Load the dashboard from json
 
-Dashboards are located on the server. The cient application will make a call to the `$.ig.RVDashboard.loadDashboard` method passing in the name of the dashboard to load. The request for the dashboard is sent to the server and the server will respond to the client with the requested dashboard. The client will take the dashboard provided in the server response, and set the `RevealView.dashboard` property.
+Dashboards are located on the server. The client application will make a call to the `$.ig.RVDashboard.loadDashboard` method passing in the name of the dashboard to load. The request for the dashboard is sent to the server and the server will respond to the client with the requested dashboard. The client will take the dashboard provided in the server response, and set the `RevealView.dashboard` property.
 
 You can create **.rdash** dashboard files the following ways:
 - Export the dashboard as a .rdash file from the [Reveal BI website](https://app.revealbi.io/)
-- Export the dashboard as a .rdash file from one of the native Reveal applicatons
+- Export the dashboard as a .rdash file from one of the native Reveal applications
 - Save, or Export, a dashboard that was created in an application using the Reveal SDK.
 - Download these [sample dashboards](https://github.com/RevealBi/sdk-samples-wpf/raw/master/SampleDashboards.zip)
 
@@ -29,9 +29,9 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/7111");
 ```
 
 > [!IMPORTANT]
-> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not requried. This method only needs to be called once.
+> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
-3 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This methed returns a `Promise` which will contain the dashboard being requested from the server. Once you have recieved the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+3 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method returns a `Promise` which will contain the dashboard being requested from the server. Once you have received the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 
 ```javascript
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
@@ -45,7 +45,7 @@ $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
 
 ## Load from Custom File Path
 
-If the default **Dashboards** file directory is not an option for your apppication, you can provide a custom file path in which to load the dashboards instead.
+If the default **Dashboards** file directory is not an option for your application, you can provide a custom file path in which to load the dashboards instead.
 
 1 - In the ASP.NET Core Web API server application, create a new class that implements the `IRVDashboardProvider` interface. Add the logic to load dashboards from your custom file directory in the `GetDashboardAsync` method. In this example, the ASP.NET Core Web API server application uses a folder named **MyDashboardsFolder** to store all dashboards.
 
@@ -84,7 +84,7 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/7111");
 > [!IMPORTANT]
 > Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
-4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This methed returns a `Promise` which will contain the dashboard being requested from the server. Once you have recieved the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method returns a `Promise` which will contain the dashboard being requested from the server. Once you have received the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 
 ```javascript
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
@@ -138,9 +138,9 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/7111");
 ```
 
 > [!IMPORTANT]
-> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not requried. This method only needs to be called once.
+> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
-4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This methed returns a `Promise` which will contain the dashboard being requested from the server. Once you have recieved the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method returns a `Promise` which will contain the dashboard being requested from the server. Once you have received the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 
 ```javascript
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
@@ -200,9 +200,9 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/7111");
 ```
 
 > [!IMPORTANT]
-> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not requried. This method only needs to be called once.
+> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
-5 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This methed returns a `Promise` which will contain the dashboard being requested from the server. Once you have recieved the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+5 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method returns a `Promise` which will contain the dashboard being requested from the server. Once you have received the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 
 ```javascript
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
@@ -239,7 +239,7 @@ public class DashboardProvider : IRVDashboardProvider
 ```
 
 > [!WARNING]
-> Manipulating or changing the contents of a Reveal dashboard after it has been serialized to JSON can break the integrety of the dashboard and cause irreversible damage to the contents of the dashboard. This could result in runtime exceptions being thrown in your application due to errors and/or a failure to load the dashboard.
+> Manipulating or changing the contents of a Reveal dashboard after it has been serialized to JSON can break the integrity of the dashboard and cause irreversible damage to the contents of the dashboard. This could result in runtime exceptions being thrown in your application due to errors and/or a failure to load the dashboard.
 
 2 - Update the `AddReveal` method in the `Program.cs` file to add the `IRVDashboardProvider` you just created to the `RevealSetupBuilder` using the `RevealSetupBuilder.AddDashboardProvider` method.
 
@@ -257,9 +257,9 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/7111");
 ```
 
 > [!IMPORTANT]
-> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not requried. This method only needs to be called once.
+> Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
-4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This methed returns a `Promise` which will contain the dashboard being requested from the server. Once you have recieved the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+4 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method returns a `Promise` which will contain the dashboard being requested from the server. Once you have received the dashboard, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 
 ```javascript
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {

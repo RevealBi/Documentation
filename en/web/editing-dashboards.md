@@ -103,7 +103,7 @@ revealView.canAddDateFilter = false;
 
 ### canAddPostCalculatedFields
 
-This property shows/hides the **F(x)** menu item in the "Visualization Fields" section of the Visualzation Editor.
+This property shows/hides the **F(x)** menu item in the "Visualization Fields" section of the Visualization Editor.
 
 ![](images/editing-canaddpostcalculatedfields.jpg)
 
@@ -138,14 +138,14 @@ When using this property, you must install the following dependencies into your 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
-### canCopyVisualiation
+### canCopyVisualization
 
 This property shows/hides the **Copy** menu item for a Visualization.
 
 ![](images/editing-cancopyvisualization.jpg)
 
 ```javascript
-revealView.canCopyVisualiation = false;
+revealView.canCopyVisualization = false;
 ```
 
 ### canDuplicateVisualization
@@ -313,7 +313,7 @@ revealView.startWithNewVisualization = false;
 
 ### onVisualizationEditorOpening
 
-There may be times when you want to excute some application logic **before** the visualization editor has opened, and you may want to even prevent the editor from opening until a condition is met. To do this, you can add an event handler to the `RevealView.onVisualizationEditorOpening` event.
+There may be times when you want to execute some application logic **before** the visualization editor has opened, and you may want to even prevent the editor from opening until a condition is met. To do this, you can add an event handler to the `RevealView.onVisualizationEditorOpening` event.
 
 ```javascript
 revealView.onVisualizationEditorOpening = function (args) {
@@ -329,11 +329,11 @@ The `VisualizationEditorOpeningArgs` contains the following properties:
 - **visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-> If you set `VisualizationEditorOpeningArgs.cancel` to `true`, then the Visualzation Editor will not open.
+> If you set `VisualizationEditorOpeningArgs.cancel` to `true`, then the Visualization Editor will not open.
 
 ### onVisualizationEditorOpened
 
-If you would like to be notifed **after** the Visualzation Editor has been opened, either when editing an existing visualization or creating a new one, you can add an event handler to the `RevealView.onVisualizationEditorOpened` event.
+If you would like to be notified **after** the Visualization Editor has been opened, either when editing an existing visualization or creating a new one, you can add an event handler to the `RevealView.onVisualizationEditorOpened` event.
 
 ```javascript
 revealView.onVisualizationEditorOpened = function (args) {
@@ -349,7 +349,7 @@ The `VisualizationEditorOpenedEventArgs` contains the following properties:
 
 ### onVisualizationEditorClosing
 
-There may be times when you want to excute some application logic **before** the visualization editor has closed, and you may want to even prevent the editor from closing until a condition is met. To do this, you can add an event handler to the `RevealView.onVisualizationEditorClosing` event.
+There may be times when you want to execute some application logic **before** the visualization editor has closed, and you may want to even prevent the editor from closing until a condition is met. To do this, you can add an event handler to the `RevealView.onVisualizationEditorClosing` event.
 
 ```javascript
 revealView.onVisualizationEditorClosing = function (args) {
@@ -366,7 +366,7 @@ The `VisualizationEditorClosingArgs` contains the following properties:
 - **visualization** - the visualization that was edited and/or added
 
 > [!NOTE]
-> If you set `VisualizationEditorClosingArgs.cancel` to `true`, then the Visualzation Editor will not close.
+> If you set `VisualizationEditorClosingArgs.cancel` to `true`, then the Visualization Editor will not close.
 
 ### onVisualizationEditorClosed
 Anytime an end-user edits a single visualization in the `RevealView`, the `RevealView.onVisualizationEditorClosed` event is fired **after** the editor is closed. This can be in response to editing an existing visualization, or adding a new visualization. You can respond to this event by adding an event handler to the `RevealView.onVisualizationEditorClosed` event.

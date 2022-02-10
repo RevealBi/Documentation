@@ -111,7 +111,7 @@ Besides registering the DashboardProvider class, the LocalFileStoragePath was al
 This is the path where static data source files like Excel or CSV will be located, and the default setting for caching locations to be used.
 
 Please note that you need to register the type and not a particular instance. That's because the type will be registered in the AspNetCore Di container.
-This approach gives you the flexibility to inject any other services you might be using into the implementation of the DashboarProvider and in other Reveal provider.
+This approach gives you the flexibility to inject any other services you might be using into the implementation of the DashboardProvider and in other Reveal provider.
 You are free to register the instance if you prefer so, just use the other overload AddDashboardProvider method. As shown below:
 ```csharp
 builder.AddDashboardProvider(new DashboardProvider())

@@ -10,7 +10,7 @@ Loading a dashboard into a `RevealView` consists of taking a **.rdash** file (.r
 
 You can create **.rdash** dashboard files the following ways:
 - Export the dashboard as a .rdash file from the [Reveal BI website](https://app.revealbi.io/)
-- Export the dashboard as a .rdash file from one of the native Reveal applicatons
+- Export the dashboard as a .rdash file from one of the native Reveal applications
 - Save, or Export, a dashboard that was created in an application using the Reveal SDK.
 - Download these [sample dashboards](https://github.com/RevealBi/sdk-samples-wpf/raw/master/SampleDashboards.zip)
 
@@ -27,7 +27,7 @@ It's important to make sure we set the **Copy to Output Directory** value to **C
 
 The first step is to get the file location of the .rdash file you wish to load. Once you have the file path to your dashboard, create a new instance of the `RVDashboard` and pass the file path to the constructor of the `RVDashboard` class. 
 
-In our example, we are using `Environment.CurrentDirectory` to get the curent executing directory of our application. We then append the location of the **Sales.rdash** dashboard, which is in our **Dashboards** directory, using the `Path.Combine` method. Once we have the correct file path to our **Sales.rdash** dashboard, we set the `RevealView.Dashboard` property to a new instance of an `RVDashboard` object using the file path as a constructor argument.
+In our example, we are using `Environment.CurrentDirectory` to get the current executing directory of our application. We then append the location of the **Sales.rdash** dashboard, which is in our **Dashboards** directory, using the `Path.Combine` method. Once we have the correct file path to our **Sales.rdash** dashboard, we set the `RevealView.Dashboard` property to a new instance of an `RVDashboard` object using the file path as a constructor argument.
 ```cs
 var filePath = Path.Combine(Environment.CurrentDirectory, "Dashboards/Sales.rdash");
 _revealView.Dashboard = new RVDashboard(filePath);
@@ -74,7 +74,7 @@ To embed a Reveal dashboard **.rdash** file as a resource in your application, o
 
 ![](images/load-dashboard-as-resource.jpg)
 
-Once your dashboards have been defined as an **EmbeddedResource**, you can load the dashboard by using the `Assembly.GetManifestResourceStream` method. This metho will return a `Stream` object that you can then use to load into the `RevealView`.
+Once your dashboards have been defined as an **EmbeddedResource**, you can load the dashboard by using the `Assembly.GetManifestResourceStream` method. This method will return a `Stream` object that you can then use to load into the `RevealView`.
 
 It's important to note, that the `name` of the resource you will provide in the `Assembly.GetManifestResourceStream` method must include the `namespace` and file name of the .rdash file.
 
@@ -88,7 +88,7 @@ using (resource)
 }
 ```
 
-You can also load dashboards as embedded reouscres into the `RevealView` from a resource stream asynchronously using the `RVDashboard.LoadDashboardAsync` method.
+You can also load dashboards as embedded resources into the `RevealView` from a resource stream asynchronously using the `RVDashboard.LoadDashboardAsync` method.
 ```cs
 var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream($"LoadingDashboards.Dashboards.Sales.rdash");
 using (resource)
@@ -103,7 +103,7 @@ using (resource)
 ## Load From JSON
 For advanced users, or users that wish to serialize Reveal dashboards into .json files instead of .rdash files, you can load these JSON based files using the `RVDashboard.LoadFromJsonAsync` method.
 
-The first step is to serialize a Reveal dashboard into a json string. Once you have the string you can then save the JSON to disk or anothe rdata store.
+The first step is to serialize a Reveal dashboard into a json string. Once you have the string you can then save the JSON to disk or another data store.
 
 To serialize a Reveal Dashboard into JSON simply call the `RVDashboard.ExportToJson` method.
 
@@ -125,7 +125,7 @@ _revealView.Dashboard = await RVDashboard.LoadFromJsonAsync(json);
 ```
 
 > [!WARNING]
-> Manipulating or changing the contents of a Reveal dashboard after it has been serialized to JSON can break the integrety of the dashboard and cause irreversible damage to the contents of the dashboard. This could result in runtime exceptions being thrown in your application due to errors and/or a failure to load the dashboard.
+> Manipulating or changing the contents of a Reveal dashboard after it has been serialized to JSON can break the integrity of the dashboard and cause irreversible damage to the contents of the dashboard. This could result in runtime exceptions being thrown in your application due to errors and/or a failure to load the dashboard.
 
 > [!NOTE]
 > The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FromJson).
