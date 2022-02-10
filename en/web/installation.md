@@ -61,3 +61,6 @@ Once you have either modified the existing install, or re-run the Reveal SDK Ins
 After you choose **Enter License**, you will be taken to a screen in which you can now enter your license key.
 
 ![](images/install-enter-license-key.jpg)
+
+> [!NOTE]
+> After successfully adding your license you will need to uninstall the **Reveal.Sdk.Web.AspNetCore.Trial** and install **Reveal.Sdk.Web.AspNetCore** nuget package.
