@@ -111,7 +111,7 @@ This property shows/hides the **F(x)** menu item in the "Visualization Fields" s
 <rv:RevealView x:Name="_revealView" CanAddPostCalculatedFields="False" />
 ```
 
-### CanCopyVisualiation
+### CanCopyVisualization
 
 This property shows/hides the **Copy** menu item for a Visualization.
 

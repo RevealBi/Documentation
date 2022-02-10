@@ -10,7 +10,7 @@ The **Save** operation is invoked when the end-user is in edit mode, and clicks 
 
 ![](images/saving-save-button.jpg)
 
-The **Save As** operation is invoked when the end-user opens the **Kabob Menu** located in the top right corner of the `RevealView`, and selects the **Save As** menu item.
+The **Save As** operation is invoked when the end-user opens the **Kebab Menu** located in the top right corner of the `RevealView`, and selects the **Save As** menu item.
 
 ![](images/saving-saveas-button.jpg)
 
