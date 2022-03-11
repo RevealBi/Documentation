@@ -17,7 +17,22 @@ here.
         </tr>
     </thead>
     <tbody>
-           <tr>
+    <tr>
+        <td rowspan="3">Mar-2022</td>
+        <td rowspan="3">1.1.3</td>
+        <td><i>New data source: Google Search Console!
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added a new event to cancel data loading for a visualization: <i>onVisualizationDataLoading</i>.
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] Reveal SDK dependency affected by a high severity vulnerability</i><br>
+        The CefSharp.Wpf dependency of Reveal SDK was updated from version 94.4.50 to 98.1.210 to avoid <a hre="https://github.com/advisories/GHSA-vv6j-ww6x-54gx">potential exploits</a>.
+        </td>
+    </tr>
+    <tr>
         <td rowspan="5">Dec-2021</td>
         <td rowspan="5">1.1.1 .NET</td>
         <td><i>Added option to hide the dashboard header – including the title and the kebab menu.</i><br>
