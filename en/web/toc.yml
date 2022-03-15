@@ -1,7 +1,11 @@
 - name: General
   header: true
 - name: Installation
-  href: installation.md     
+  href: installation.md
+- name: Configuring the Server
+  items:
+    - name: ASP.NET
+      href: configuring-server-aspnet.md
 - name: Getting Started
   items:
     - name: Setting Up the Server
