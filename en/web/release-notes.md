@@ -17,6 +17,25 @@ here.
         </tr>
     </thead>
     <tbody>
+        <tr>
+        <td rowspan="4">Mar-2022</td>
+        <td rowspan="4">1.1.3</td>
+        <td><i>New data source: Google Search Console!
+        </td>
+    </tr>
+    <tr>
+        <td>Added a new helper class to configure a JSON Data Source Item: <i>RevealApi.RVJsonSchemaConfigBuilder</i>.
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added a new event to cancel data loading for a visualization: <i>onVisualizationDataLoading</i>.
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] Dashboard linking with renamed fields issue</i><br>
+        If you renamed a field and then used it as a filter in a dashboard link, the linked dashboard was not filtering properly.
+        </td>
+    </tr>
     <tr>
         <td rowspan="6">Jan-2022</td>
         <td rowspan="6">1.1.2 .NET</td>
