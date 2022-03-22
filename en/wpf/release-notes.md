@@ -18,6 +18,12 @@ here.
     </thead>
     <tbody>
     <tr>
+        <td rowspan="1">Mar-2022</td>
+        <td rowspan="1">1.1.4</td>
+        <td><i>Internal bug fixes.</i>
+        </td>
+    </tr>
+    <tr>
         <td rowspan="3">Mar-2022</td>
         <td rowspan="3">1.1.3</td>
         <td><i>New data source: Google Search Console!
@@ -29,29 +35,29 @@ here.
     </tr>
     <tr>
         <td><i>[Public Bug Fix] Reveal SDK dependency affected by a high severity vulnerability</i><br>
-        The CefSharp.Wpf dependency of Reveal SDK was updated from version 94.4.50 to 98.1.210 to avoid <a hre="https://github.com/advisories/GHSA-vv6j-ww6x-54gx">potential exploits</a>.
+        The CefSharp.Wpf dependency of Reveal SDK was updated from version 94.4.50 to 98.1.210 to avoid <a href="https://github.com/advisories/GHSA-vv6j-ww6x-54gx">potential exploits</a>.
         </td>
     </tr>
     <tr>
         <td rowspan="5">Dec-2021</td>
-        <td rowspan="5">1.1.1 .NET</td>
+        <td rowspan="5">1.1.1</td>
         <td><i>Added option to hide the dashboard header – including the title and the kebab menu.</i><br>
-            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_ShowHeader">ShowHeader</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#showheader">showHeader</a> (JS).
+            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_ShowHeader">ShowHeader</a>.
         </td>
     </tr>
     <tr>
         <td><i>Added an option to enable/disable the end user ability to maximize visualizations</i><br>
-            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canmaximizevisualization">canMaximizeVisualizationProperty</a> (JS). 
+            <a hre="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanMaximizeVisualizationProperty">CanMaximizeVisualizationProperty</a>.
         </td>
     </tr>
     <tr>
         <td><i>Added a new option in the editor to enable/disable the end user ability to change the background color for a given visualization in the visualization editor.</i></br>
-           <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#canchangevisualizationbackgroundcolor">canChangeVisualizationBackgroundColor</a> (JS).
+           <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_CanChangeVisualizationBackgroundColorProperty">CanChangeVisualizationBackgroundColorProperty</a>.
         </td>
     </tr>
     <tr>
         <td><i>New way to change the background color for a visualization programmatically.</i></br>
-            <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_SetVisualizationBackgroundColor_Reveal_Sdk_RVVisualization_System_Windows_Media_Color_">SetVisualizationBackgroundColor</a> (WPF) & <a href="/api/javascript/latest/classes/revealview.html#setvisualizationbackgroundcolor">setVisualizationBackgroundColor</a> (JS).
+            <a href="/api/wpf/latest/Reveal.Sdk.RevealView.html#Reveal_Sdk_RevealView_SetVisualizationBackgroundColor_Reveal_Sdk_RVVisualization_System_Windows_Media_Color_">SetVisualizationBackgroundColor</a>.
         </td>
     </tr>
         <tr>
@@ -60,9 +66,9 @@ here.
         - Fixed issue exporting to PDF or PPT with custom branding logo.
         </td>
     </tr>
-    <tr>
+    <!-- <tr>
         <td rowspan="3">Oct-2021</td>
-        <td rowspan="3">1.1.0 .NET</td>
+        <td rowspan="3">1.1.0</td>
         <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
         <i>- Registering Reveal services is more flexible</i> - You now can inject other services in your implementations of Reveal interfaces. You only register the type of your implementations of your Reveal providers interfaces.<br>
         <i>- RevealSDKContext removed</i> - RVUserContext is now first class citizen across reveal providers. You need to register a UserContextProvider, which will be instantiating that class and it would be passed to the methods of other Reveal services like IRVDashboardProvider.<br>
@@ -74,9 +80,11 @@ here.
         For further details, please refer to <a
                 href="../release-information/upgrade-to-net-1.1.html">Reveal .NET SDK Upgrade to v1.1</a>.
         </td>
-    </tr>
+    </tr> -->
     <tr>
-        <td><i>IRVDataSourceProvider interface changed (Desktop and .NET Server SDK)</i><br>
+        <td rowspan="2">Oct-2021</td>
+        <td rowspan="2">1.1.0</td>
+        <td><i>IRVDataSourceProvider interface changed.</i><br>
         The IRVDataSourceProvider interface now has a single ChangeDataSourceItem and it will be called whenever a dashboard need to use a data source item.
         </td>
     </tr>
@@ -262,10 +270,10 @@ here.
             <td><i>NEW Pre-built Themes</i><br>We added four pre-built app themes. Set one of them and use the
                 customizable settings to additionally personalize the look and feel of the Visualization and Dashboard
                 editor. You can choose from one of the following themes:
-                MountainLightTheme (Desktop) / $.ig.MountainLightTheme (Web);
-                MountainDarkTheme (Desktop) / $.ig.MountainDarkTheme (Web);
-                OceanLightTheme (Desktop) / $.ig.OceanLightTheme (Web);
-                OceanDarkTheme (Desktop) / $.ig.OceanDarkTheme (Web).
+                MountainLightTheme
+                MountainDarkTheme
+                OceanLightTheme
+                OceanDarkTheme
             </td>
         </tr>
         <tr>
@@ -318,7 +326,7 @@ here.
             <td rowspan="5">May-2020</td>
             <td rowspan="5">1.0.1222</td>
             <td><i>New Hover Events API</i><br>
-                This new event is called *revealView.TooltipShowing* in WPF and .onTooltipShowing in Web and is
+                This new event is called *revealView.TooltipShowing* is
                 triggered whenever the end-user hovers over a series in a visualization or clicks on the series.</td>
         </tr>
         <tr>
@@ -344,19 +352,19 @@ here.
             <td>1.0.1136</td>
             <td><i>New Custom Theming</i><br>
                 Now you can create your own theme in Reveal by configuring some or all of the customizable settings in
-                the new RevealTheme (Desktop) / $.ig.RevealTheme (Web) class.</td>
+                the new RevealTheme class.</td>
         </tr>
         <tr>
             <td rowspan="3">Feb-2020</td>
             <td rowspan="3">1.0.981</td>
-            <td><i>New Properties in RevealSettings</i><br>We added multiple new properties to $.ig.RevealSettings to
+            <td><i>New Properties in RevealSettings</i><br>We added multiple new properties to RevealSettings to
                 control different features, including: ShowExportToPDF, ShowExportToPowerpoint, ShowExportToExcel,
                 ShowStatisticalFunctions, ShowDataBlending, ShowMachineLearningModelsIntegration,
                 StartWithNewVisualization, InitialThemeName.</td>
         </tr>
         <tr>
             <td><i>Accent Color is Now Available</i><br>You can now find the SetAccentColor method added to
-                $.ig.RevealView.</td>
+                RevealView.</td>
         </tr>
         <tr>
             <td><i>A Trigger Property Added to DataSourceRequested Event</i><br>We added a Trigger (of type
