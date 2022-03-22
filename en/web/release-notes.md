@@ -31,7 +31,7 @@ here.
     </tr>
     <tr>
         <td><i>[Public Bug Fix] Date filter range selection</i><br>
-        Date filter's ranges like "this month" we're not properly selecting the start and the end of the target month.
+        In some cases, date filter's predefined ranges (e.g., "this month") were not properly working with the expected values (e.g., start and end of the target month).
         </td>
     </tr>
     <tr>
