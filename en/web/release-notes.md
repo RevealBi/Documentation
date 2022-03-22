@@ -17,7 +17,24 @@ here.
         </tr>
     </thead>
     <tbody>
-        <tr>
+    <tr>
+        <td rowspan="3">Mar-2022</td>
+        <td rowspan="3">1.1.4</td>
+        <td><i>Added an option to override, the browser locale when localizing strings in Reveal UI</i> <br>
+        <code>await RevealApi.RevealSdkSettings.overrideLocale(RevealApi.SupportedLocales.En);</code>
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] Dashboard linking with filter parameters</i><br>
+        In some cases the filter value from the source dashboard wasn't compared properly against the values in the target dashboard.
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] Date filter range selection</i><br>
+        Date filter's ranges like "this month" we're not properly selecting the start and the end of the target month.
+        </td>
+    </tr>
+    <tr>
         <td rowspan="4">Mar-2022</td>
         <td rowspan="4">1.1.3</td>
         <td><i>New data source: Google Search Console!
@@ -38,7 +55,7 @@ here.
     </tr>
     <tr>
         <td rowspan="6">Jan-2022</td>
-        <td rowspan="6">1.1.2 .NET</td>
+        <td rowspan="6">1.1.2</td>
         <td><i>[Public Bug Fix] [SDK] LocalizationProvider and DataSourceProvider issue</i><br>
         Setting up a LocalizationProvider was not working in a few cases in which a DataSourceProvider was also set up.
         </td>
@@ -73,7 +90,7 @@ here.
     </tr>
     <tr>
         <td rowspan="8">Dec-2021</td>
-        <td rowspan="8">1.1.1 .NET</td>
+        <td rowspan="8">1.1.1</td>
         <td><i>Localization support for web</i></br>
         <a href="/api/javascript/latest/classes/revealsdksettings.html#localizedstringsprovider">
             $.ig.RevealSdkSettings.localizedStringsProvider</a> extension point enables localization of several dashboard elements: Dashboard title, Widget title, Field labels, Dashboard Filter titles.
@@ -116,38 +133,9 @@ here.
         </td>
     </tr>
     <tr>
-        <td rowspan="2">Dec-2021</td>
-        <td rowspan="2">1.1.0 JAVA</td>
-        <td><i>The Java Server SDK was greatly improved, for further details please refer to <a href="../release-information/upgrade-to-java-1.1.html">Reveal Java SDK Upgrade to v1.1</a>.
-        </td>
-    </tr>
-    <tr>
-        <td><i>[Public Bug Fixes] [SDK] </i><br>
-        - Fixed export to Excel when there are null date values in the dataset.<br>
-        - Fixed issue exporting to PDF or PPT with custom branding logo.
-        </td>
-    </tr>
-    <tr>
-            <td rowspan="3">Nov-2021</td>
-            <td rowspan="3">1.0.9 JAVA</td>
-            <td><i>[Public Bug Fix] [SDK] RevealView's availableChartTypes had a timing issue</i><br>
-            Setting the availableChartTypes property right after initializing the RevealView object was causing issues.
-            </td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix] [SDK] RVDateRange Property not returning the expected type</i><br>
-            The <i>from</i> property in the RVDateRange class was not returning a JavaScript Date.
-            </td>
-        </tr>
-        <tr>
-            <td><i>Search fields in the Data Blending screen</i><br>
-            The Data Blending UI was improved by adding the ability to search for fields to be joined/added in the result.
-        </td>
-        </tr>
-        <tr>
     <tr>
         <td rowspan="6">Oct-2021</td>
-        <td rowspan="6">1.1.0 .NET</td>
+        <td rowspan="6">1.1.0</td>
         <td><i>The .NET Server SDK was enhanced with several changes:</i><br>
         <i>- Registering Reveal services is more flexible</i> - You now can inject other services in your implementations of Reveal interfaces. You only register the type of your implementations of your Reveal providers interfaces.<br>
         <i>- RevealSDKContext removed</i> - RVUserContext is now first class citizen across reveal providers. You need to register a UserContextProvider, which will be instantiating that class and it would be passed to the methods of other Reveal services like IRVDashboardProvider.<br>
@@ -250,79 +238,6 @@ here.
             </td>
         </tr>
         <tr>
-            <td rowspan="4">June-2021</td>
-            <td rowspan="4">1.0.7 JAVA</td>
-            <td><i>Scatter Maps now support OpenStreetMap!</i><br>
-            You can now configure and use OpenStreet Map image tiles in the SDK Web-client (JS).
-            </td>
-        </tr>    
-        <tr>
-            <td><i>[Public Bug fix] [SDK] Text Box content not visible after component is remounted</i><br>
-            When using React with a dashboard and a Text Box visualization, content was not visible after component remount. A page reload was required.
-            </td>
-        </tr>
-        <tr>
-            <td><a name="java-sdk-1.0.6"></a><i>[Public Bug fix] Calculated field filter not working with data process on server</i><br>
-            When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
-            </td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug fix] Google Analytics issues with dashboard filters</i><br>
-            When getting data from Google Analytics data sources, you were unable to create dashboard filters.
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="2"><a name="java-sdk-1.0.5"></a>June-2021</td>
-            <td rowspan="2">1.0.6 JAVA</td>
-            <td><i>[Bug Fix] [SDK] Grizzly server throws an exception</i><br>
-            When running Reveal in Grizzly, a <i>NoClassDefFoundError</i> exception was being thrown because of a wrong dependency in <i>javax.servlet.ServletContext</i> class (javax.servlet:javaz.servlet-api assembly).
-            </td>
-        </tr>
-        <tr>
-            <td><a name="java-sdk-1.0.4"></a><i>New sample for JAVA SDK released!</i><br>
-            There is a new <a href="https://github.com/RevealBi/sdk-samples-java/blob/main/upmedia-backend-grizzly">GitHub sample</a> showing how to use Reveal with <a href="https://javaee.github.io/grizzly/">Grizzly</a> server.
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="1">June-2021</td>
-            <td rowspan="1">1.0.5 JAVA</td>
-            <td><i>Credentials from Web client to server-side data source</i><br>
-            A new type of credentials <i>RVHeadersDataSourceCredentials</i> allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following <a href="https://github.com/RevealBi/sdk-samples-java/blob/main/cookies-auth">sample</a> in GitHub.
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="6">May-2021</td>
-            <td rowspan="6">1.0.1956 (1.0.4 JAVA)</td>
-            <td><i>[Public Bug Fix] [SDK] Full list of Data Sources displayed by mistake</i><br>
-            When using <i>DataSourcesRequested</i> callback in the Desktop SDK, the whole list of data sources was being displayed instead of the ones explicitly added.
-            </td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix] [SDK] Desktop SDK export to Excel not working as expected</i><br>
-            When reloading a dashboard and then exporting a single visualization to Excel, the first visualization of the dashboard was always the one exported.
-            </td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix] [SDK] Dashboard with SQL data source using a dynamic port not loading</i><br>
-            When loading a dashboard with an SQL data source defined using a dynamic port (providing an instance in the host field), the data source connection was not working because of issues with the dynamic port configuration.
-            </td>
-        </tr>
-        <tr>
-            <td><i>[Public Bug Fix] Calculated field set as Visualization filter were throwing an error</i><br>
-            When configuring a Visualization filter based on a calculated field that depends on another calculated field, an error was being shown ("Invalid column name").
-            </td>
-        </tr>
-        <tr>
-            <td><a name="java-sdk-1.0.3"></a><i>[Public Bug Fix] Drill down scenario with different "sort by" configurations not working as expected</i><br>
-            When the fields in a hierarchy were configured with a combination of "sort by: <any field>" and a descending sorting, the result was the dashboard not loading.
-            </td>
-        </tr>
-        <tr>
-            <td><i>Credentials from Web client to server-side in cross-domain applications</i><br>
-            When the backend is not in the same domain as the frontend and you need authentication cookies, you can request credentials using the following Web SDK setting: <b>$.ig.RevealSdkSettings.requestWithCredentialsFlag = true;</b>
-            </td>
-        </tr>
-        <tr>
             <td rowspan="2">May-2021</td>
             <td rowspan="2">1.0.3 JAVA</td>
             <td><a name="java-sdk-1.0.0"></a><i>New Snowflake connector!</i><br>
@@ -332,20 +247,6 @@ here.
         <tr>
             <td><i>Reveal BI Engine for Java was enhanced</i><br>
             Java platform is now as robust as other platforms, helping to avoid server crashes when a visualization sends a big amount of data back to the client. Several new properties in <b>InitializeParameterBuilder</b> control this: <i>maxInMemoryCells</i>, <i>maxStorageCells</i>, <i>maxStringCellSize</i>, and <i>maxTotalStringSize</i>.
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="2">Apr-2021</td>
-            <td rowspan="2">1.0.0 JAVA</td>
-            <td><i>New JAVA SDK released!</i><br>
-            Reveal now supports JAVA as another Web Server option besides .NET. The JAVA SDK requires JAVA 11+ and is distributed as a set of Maven modules. For further details, please refer to <a
-                href="../java-sdk/setup-configuration.html">Setup and Configuration</a>.
-            </td>
-        </tr>
-        <tr>
-            <td><i>JAVA SDK Samples released!</i><br>
-            You can get the JAVA SDK UpMedia samples available in <a
-                href="https://github.com/RevealBi/sdk-samples-java">Github</a>.
             </td>
         </tr>
         <tr>
