@@ -21,7 +21,7 @@ here.
         <td rowspan="4">May-2022</td>
         <td rowspan="4">1.1.5</td>
         <td><i>RVDateDashboardFilter.Range property now returns the date range based on the selected filter type.</i><br>
-         RVDateFilter.range was previously returning a valid value only when filter was set to custom range.
+         RVDateDashboardFilter.Range was previously returning a valid value only when filter was set to custom range.
         </td>
     </tr>
     <tr>
