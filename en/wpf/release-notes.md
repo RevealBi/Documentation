@@ -18,6 +18,25 @@ here.
     </thead>
     <tbody>
     <tr>
+        <td rowspan="4">May-2022</td>
+        <td rowspan="4">1.1.5</td>
+        <td><i>RVDateDashboardFilter.Range property now returns the date range based on the selected filter type.</i><br>
+         RVDateDashboardFilter.Range was previously returning a valid value only when filter was set to custom range.
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] Fixed cascading for dashboard filters not working when the data source for the filter was replaced using IRVDataSourceProvider API.</i><br>        
+        </td>
+    </tr>        
+    <tr>
+        <td><i>[Public Bug Fix] Fixed issue with dashboard linking mapping an aggregated date in a chart to a date filter, in some timezones it was mapping to the wrong date range.</i><br>        
+        </td>
+    </tr>        
+    <tr>
+        <td><i>[Public Bug Fix] Fixed onVisualizationDataPointClicked not called for Time Series Visualization.</i><br>        
+        </td>
+    </tr>                
+    <tr>
         <td rowspan="1">Mar-2022</td>
         <td rowspan="1">1.1.4</td>
         <td><i>Internal bug fixes.</i>
