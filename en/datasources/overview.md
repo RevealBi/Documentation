@@ -80,6 +80,12 @@ After selecting a data source provider, you will be prompted to **configure** it
    
    - [Spreadsheets](~/en/datasources/working-files/working-with-spreadsheets.md)
 
+## Filtering your Data Sources
+
+To filter your data sources, you can click on the filter button in the upper right corner.
+
+<img src="images/data-sources-filter.png" alt="Sample data sources" class="responsive-img"/>
+
 ## Related Topics
 
 - You received a dashboard that consumes data from a data source you still haven't connected to? See how to open it in the [Connecting a Dashboard to Its Data Source](connect-dashboard-to-data-source.md) topic.
