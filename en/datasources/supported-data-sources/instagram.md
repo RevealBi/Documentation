@@ -16,7 +16,7 @@ The Instagram data source allows you to connect your Instagram Business account 
 
 Once you have chosen/added your data source, in this case the Instagram Business account, you’ll be able to manage the data in the visualization editor. 
 
-<img src="./images/instagram-visualization-editor.png" alt="instagram-visualization editor" class="responsive-img"/>
+<img src="./images/instagram-visualization-editor.png" alt="Instagram visualization editor" class="responsive-img"/>
 You will be presented with two sections in their own query field:
 
 - **Dimensions (depicted by a cube icon with a pink side)**: Here you can find the attributes of your data that you want to measure.
@@ -28,7 +28,7 @@ You can filter your data by selecting a specific date range. Keep in mind that t
 
 To change the date range, you can click on the filter and then click on the arrow in the upper right corner.
 
-<img src="./images/instagram-date-range.png" alt="Instagram-date-range-options" class="responsive-img"/>
+<img src="./images/instagram-date-range.png" alt="Instagram date range options" class="responsive-img"/>
 
 ## Settings
 
