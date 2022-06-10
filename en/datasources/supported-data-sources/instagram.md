@@ -10,7 +10,7 @@ The Instagram data source allows you to connect your Instagram Business account 
 
 <img src="./images/instagram-edit-data-source.png" alt="Edit data source dialog" class="responsive-img"/>
 
-4. Choose the pages you want to use for your dashboard and click on Select Data.
+4. Choose the pages you want to use for your dashboard and click on **Select Data**.
 
 ## Working in the visualization editor
 
@@ -18,6 +18,7 @@ Once you have chosen/added your data source, in this case the Instagram Business
 
 <img src="./images/instagram-visualization-editor.png" alt="instagram-visualization editor" class="responsive-img"/>
 You will be presented with two sections in their own query field:
+
 - **Dimensions (depicted by a cube icon with a pink side)**: Here you can find the attributes of your data that you want to measure.
 - **Measures (depicted by 123 icon)**: Measures consist of numeric data. For example, you can see how many account followers your website (under the Account cube with a pink side) has.
 
@@ -43,7 +44,6 @@ You can adjust the following through the settings menu:
 <img src="./images/instagram-settings-options.png" alt="Options in the instagram settings" class="responsive-img"/>
 
 When you are ready with the visualization editor, you can save the dashboard in **My Analytics**>**My Dashboards** or in a specific workspace. 
-
 
 <img src="./images/instagram-dashboards.png" alt="Dashboard section with an instagram dashboard" class="responsive-img"/>
 
