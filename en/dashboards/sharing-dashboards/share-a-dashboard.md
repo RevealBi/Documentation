@@ -38,7 +38,7 @@ The available options are:
 
   - **Owner** permissions - the user can create, edit, share and delete.
 
-  - **Contributor** permissions - the user can create, edit and share but cannot delete the dashboard or folder.
+  - **Contributor** permissions - the user can create, edit and share but cannot delete the dashboard or folder. They can only delete the visualizations in the dashboard.
 
   - **Viewer** permissions - the user can view and share dashboards and folders for view only.
 
@@ -95,7 +95,7 @@ Here you can see the access permissions options every workspace member can give 
   </tr>
   <tr>
     <td class="tg-baqh">Owner</td>
-    <td class="tg-baqh">Modify</td>
+    <td class="tg-baqh">Contributor</td>
     <td class="tg-baqh">Viewer</td>
   </tr>
   <tr>
@@ -134,7 +134,7 @@ When setting access permissions for the whole workspace, you must take into
 account that these permissions will not be available for everybody in the workspace. Individual members will receive only the highest permissions possible for their role in the workspace.
 
 Look at the table below for a quick reference of the permissions
-every workspace member can get depending on their role in the workspace. For example, if you give *Contributor* permissions to the whole workspace, its *Owners* and *Members* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
+every workspace member can get depending on their role in the workspace. For example, if you give *Contributor* permissions to the whole workspace, its *Owners* and *Contributors* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
