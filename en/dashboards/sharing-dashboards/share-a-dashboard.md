@@ -31,13 +31,14 @@ To share a dashboard created by you with individual users you need to:
   <img src="images/shared-with-me.png" alt="Shared with Me option selected" class="responsive-img"/>
 
 <a name='access-permissions'></a>
+
 2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
 
 The available options are:
 
   - **Owner** permissions - the user can create, edit, share and delete.
 
-  - **Modify** permissions - the user can create, edit and share but cannot delete the dashboard or folder.
+  - **Contributor** permissions - the user can create, edit and share but cannot delete the dashboard or folder.
 
   - **Viewer** permissions - the user can view and share dashboards and folders for view only.
 
@@ -69,7 +70,7 @@ Your role in the workspace can be:
   - **Owner** - have full access to the workspace's dashboards, including
     editing, sharing and deleting them.
 
-  - **Member** - can create, edit and share dashboards and folders
+  - **Contributor** - can create, edit and share dashboards and folders
     but cannot delete them.
 
   - **Viewer** - can view and share dashboards for view only.
@@ -104,7 +105,7 @@ Here you can see the access permissions options every workspace member can give 
     <td><span style="color: #007F00">Yes</span></td>
   </tr>
   <tr>
-    <td>Member</td>
+    <td>Contributor</td>
     <td><span style="color: #FF0000">No</span></td>
     <td><span style="color: #007F00">Yes</span></td>
     <td><span style="color: #007F00">Yes</span></td>
@@ -123,7 +124,7 @@ Here you can see the access permissions options every workspace member can give 
 
 You can share a dashboard you created or a workspace's dashboard with a whole
 workspace instead of individually with every workspace member. To do this, choose
-a dashboard from the *Dashboards* section in *My Stuff* or *Workspaces* tab.
+a dashboard from the *Dashboards* section in *My Analytics* or *Workspaces* tab.
 Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing-dashboards-users).
 
 >[!NOTE]
@@ -133,7 +134,7 @@ When setting access permissions for the whole workspace, you must take into
 account that these permissions will not be available for everybody in the workspace. Individual members will receive only the highest permissions possible for their role in the workspace.
 
 Look at the table below for a quick reference of the permissions
-every workspace member can get depending on their role in the workspace. For example, if you give *Modify* permissions to the whole workspace, its *Owners* and *Members* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
+every workspace member can get depending on their role in the workspace. For example, if you give *Contributor* permissions to the whole workspace, its *Owners* and *Members* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -154,7 +155,7 @@ every workspace member can get depending on their role in the workspace. For exa
   </tr>
   <tr>
     <td class="tg-c3ow">Owner</td>
-    <td class="tg-c3ow">Modify</td>
+    <td class="tg-c3ow">Contributor</td>
     <td class="tg-c3ow">Viewer</td>
   </tr>
   <tr>
@@ -163,13 +164,13 @@ every workspace member can get depending on their role in the workspace. For exa
   <tr>
     <td class="tg-0pky">Owner</td>
     <td class="tg-c3ow"><span style="color: #007F00">Owner</span></td>
-    <td class="tg-c3ow"><span style="color: #D1A827">Modify</span></td>
+    <td class="tg-c3ow"><span style="color: #D1A827">Contributor</span></td>
     <td class="tg-c3ow"><span style="color: #FF0000">Viewer</span></td>
   </tr>
   <tr>
-    <td class="tg-0pky">Member</td>
-    <td class="tg-c3ow"><span style="color: #D1A827">Modify</span></td>
-    <td class="tg-c3ow"><span style="color: #D1A827">Modify</span></td>
+    <td class="tg-0pky">Contributor</td>
+    <td class="tg-c3ow"><span style="color: #D1A827">Contributor</span></td>
+    <td class="tg-c3ow"><span style="color: #D1A827">Contributor</span></td>
     <td class="tg-c3ow"><span style="color: #FF0000">Viewer</span></td>
   </tr>
   <tr>
