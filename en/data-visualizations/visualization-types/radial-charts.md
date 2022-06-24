@@ -1,3 +1,8 @@
+---
+title: How to Create Radial Charts Visualization
+_description: Find out how to create and use Radial Charts visualization in Slingshot Analytics.
+---
+
 # Radial Charts
 
 Like category charts, Radial charts are simply representations of

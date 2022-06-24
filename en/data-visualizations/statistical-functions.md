@@ -1,3 +1,8 @@
+---
+title: How to Use Statistical Functions 
+_description: Learn how to use the Statistical function to receive more insights from your visualizations.
+---
+
 # Statistical Functions in Reveal
 
 Reveal's Statistical functions allow you to receive more insight from

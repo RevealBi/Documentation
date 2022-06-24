@@ -1,3 +1,8 @@
+---
+title: How to Create Scatter Maps Visualization
+_description: Find out how to create and use Scatter Maps visualization in Slingshot Analytics.
+---
+
 # Scatter Maps
 
 This map displays scattered markers in a geographic area by using geo-coordinates. The visual distribution of markers can help in identifying density and spatial patterns within your data. By adding size and/or color you can reveal more information about your data relative to other points.

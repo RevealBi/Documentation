@@ -1,3 +1,8 @@
+---
+title: How to Use the Visualizations Editor
+_description: Find out how to create and edit your visualizations and use a great variety of options.
+---
+
 # Visualizations Editor
 
 The _Visualizations Editor_ is where you create and edit your visualizations in Reveal. Here you will find the data from your dataset aggregated and prepared for use as well as great variety of visualizations to build with it.

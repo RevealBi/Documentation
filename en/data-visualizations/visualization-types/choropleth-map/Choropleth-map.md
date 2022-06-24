@@ -1,3 +1,8 @@
+---
+title: How to Use Choropleth maps for Visualization
+_description: Find out how to use Choropleth maps to depict statistical data in geographical areas.
+---
+
 # Choropleth Maps
 
 Choropleth maps are widespread thematic maps meant to depict statistical data in divided geographical areas or regions. Each area on the map is filled with a uniform color in relation to a data variable.

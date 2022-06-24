@@ -1,3 +1,8 @@
+---
+title: How to Sort by Field in Slingshot 
+_description: Learn how to change the display of data in a visualization to further precise how it looks.
+---
+
 # Sort by Field
 
 Reveal allows you to change how the data in a visualization is displayed by sorting the data in ascending or descending order. In addition, it is

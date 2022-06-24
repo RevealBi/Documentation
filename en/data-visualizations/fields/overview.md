@@ -1,3 +1,8 @@
+---
+title: How to use Fields in Slingshot 
+_description: Learn to options to easily apply transformations to the fields in your dataset.
+---
+
 # Fields
 
 This section describes the different options for applying transformations to the fields in your dataset. By applying filters, you can optimize the information in your fields for your business analysis. Remove any unnecessary noise, highlight the most valuable aspects, and summarize information in many useful ways.

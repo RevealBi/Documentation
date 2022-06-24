@@ -1,3 +1,8 @@
+---
+title: How to use Conditional Formatting
+_description: Learn how to use Conditional Formatting in Slingshot to achieve more precise data visualizations.
+---
+
 # Conditional Formatting
 
 Conditional formatting allows you to provide different formatting of a
