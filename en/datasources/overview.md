@@ -1,3 +1,8 @@
+---
+title: How to Connect to Data Sources in Slingshot 
+_description: Learn how to connect to different enterprise data sources and use them.
+---
+
 # Data Sources
 
 Data Sources are the places where your data comes from. Reveal provides you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,

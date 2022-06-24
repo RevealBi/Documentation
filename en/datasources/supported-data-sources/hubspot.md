@@ -1,3 +1,8 @@
+---
+title: How to use HubSpot as Your Data Source
+_description: Connecting to HubSpot to use your data in Slingshot
+---
+
 # Hubspot
 
 Upon connecting Hubspot, you will see the following login prompt:

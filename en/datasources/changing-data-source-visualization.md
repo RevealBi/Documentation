@@ -1,3 +1,8 @@
+---
+title: How to Change the Data Source for a Visualization in Slingshot
+_description: A guide to change the linked data sources on a visualization after it is created.
+---
+
 # Changing the Data Source for a Visualization
 
 After visualizations are created, it is still possible to change their

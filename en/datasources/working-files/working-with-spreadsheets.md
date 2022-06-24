@@ -1,3 +1,8 @@
+---
+title: How to Work with Spreadsheets in Slingshot 
+_description: Tips and tricks on using Spreadsheets to utilize your data insights in the best way.
+---
+
 # Working With Spreadsheets in Reveal
 
 Below are a couple of helpful tips and tricks for working with

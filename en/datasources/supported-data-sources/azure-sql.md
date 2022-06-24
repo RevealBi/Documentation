@@ -1,3 +1,8 @@
+---
+title: How to configure an Azure SQL data source in Slingshot
+_description: : A roadmap to configuring an Azure SQL data source to use it for your great visualizations.
+---
+
 # Azure SQL
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Azure SQL addresses. If your Azure SQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to the SQL Server address. This limitation does not apply to *Reveal Embedded*.

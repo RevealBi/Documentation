@@ -1,3 +1,8 @@
+---
+title: How to use Google BigQuery data source in Slingshot
+_description: Learn how to set up and use Google BigQuery data source and use huge datasets with no slow down.
+---
+
 # Google BigQuery
 
 The Google BigQuery data source provides a significant speed increase

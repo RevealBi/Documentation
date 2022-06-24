@@ -1,3 +1,8 @@
+---
+title: How to Configure Google Analytics and Use It in Slingshot 
+_description: Guidelines to using Google Analytics to contribute to your data insights for business.
+---
+
 # Google Analytics
 
 Google Analytics is one of the most used web analytics services in the

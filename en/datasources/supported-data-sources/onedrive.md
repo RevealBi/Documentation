@@ -1,3 +1,8 @@
+---
+title: How to configure a OneDrive data source
+_description: Connecting and using OneDrive as a data source in Slingshot to boost your results.
+---
+
 # OneDrive
 
 If you sign in with your Office365 account, you will have your OneDrive automatically added to your data sources.

@@ -1,3 +1,8 @@
+---
+title: How to use Math Calculated Fields
+_description: Learn how to use Math Calculated Fields to perfection your dashboards.
+---
+
 # Math Calculated Fields
 
 

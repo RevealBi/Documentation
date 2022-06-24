@@ -1,3 +1,8 @@
+---
+title: How to use Lookup & Reference Calculated Fields
+_description: Learn how to use Lookup & Reference Calculated Fields to get more details for your dashboards.
+---
+
 # Lookup & Reference Calculated Fields
 
 

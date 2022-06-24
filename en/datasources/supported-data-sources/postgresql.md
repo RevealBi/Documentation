@@ -1,3 +1,8 @@
+---
+title: How to configure a PostgreSQL data source
+_description: Connecting and using PostgreSQL as a data source in Slingshot.
+---
+
 # PostgreSQL
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible PostgreSQL addresses. If your PostgreSQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this PostgreSQL address. This limitation does not apply to *Reveal Embedded*.

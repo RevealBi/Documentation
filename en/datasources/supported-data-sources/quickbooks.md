@@ -1,3 +1,8 @@
+---
+title: How to configure and use a Quickbooks data source 
+_description: Connecting and using Quickbooks as a data source in Slingshot.
+---
+
 # Quickbooks
 
 Upon connecting Quickbooks, you will see the following login prompt:

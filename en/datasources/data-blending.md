@@ -1,3 +1,8 @@
+---
+title: Data Blending in Slingshot 
+_description: How to combine more than one data source in one visualization.
+---
+
 # Combining Data Sources in one Visualization
 
 Sometimes you need **Data Blending** to extract value from **more than one data source** in the same Reveal visualization.
