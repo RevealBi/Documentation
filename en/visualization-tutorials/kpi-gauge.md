@@ -1,3 +1,8 @@
+---
+title: How to Create KPI Gauges Charts in Slingshot
+_description: A quick tutorial on creating an a KPI gauge visualization using a sample spreadsheet.
+---
+
 # Creating KPI Gauges
 
 In this tutorial, you will learn how to a KPI gauge visualization using

@@ -1,3 +1,8 @@
+---
+title: How to Create OHLC Visualizations in Slingshot 
+_description: A quick tutorial on creating OHLC visualizations using a sample spreadsheet.
+---
+
 # Creating OHLC Visualizations
 
 In this tutorial, you will learn how to a OHLC chart visualization using

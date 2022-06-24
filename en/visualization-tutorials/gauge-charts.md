@@ -1,3 +1,8 @@
+---
+title: How to Create Gauge Visualizations in Slingshot 
+_description: A quick tutorial on creating all types of Gauge visualizations using a sample spreadsheet.
+---
+
 # Creating Gauge Visualizations
 
 In this tutorial, you will learn how to create gauge visualizations

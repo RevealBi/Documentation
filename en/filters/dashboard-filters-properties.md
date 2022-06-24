@@ -1,3 +1,8 @@
+---
+title: How to Use Dashboard Filters Properties 
+_description: Learn how to quickly apply and use Dashboard filters properties to achieve maximum effect for your visualization.
+---
+
 # Dashboard Filters and Their Properties
 
 ## Accessing Dashboard Filter Properties
