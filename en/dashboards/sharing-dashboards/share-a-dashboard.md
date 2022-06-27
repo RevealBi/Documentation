@@ -24,11 +24,11 @@ To share a dashboard created by you with individual users you need to:
 1.  Access the **Share dialog** - Select the overflow button in the top right-hand corner of a dashboard or a folder and choose *Share*.
 
 
-  <img src="images/sharing-dialog.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img"/>
+  <img src="images/shared-with-button.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img"/>
 
-  Once you share a folder with other people, the new files will appear in their accounts as well under the *Shared with Me* section.
+  Once you share a folder with other people, the new files will appear in their accounts as well under the **Shared with Me** section in the left panel. Alternatively you can find the files when you open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
 
-  <img src="images/shared-with-me.png" alt="Shared with Me option selected" class="responsive-img"/>
+  <img src="images/shared-with-me-section.png" alt="Finding the Shared with Me option in different sections" class="responsive-img"/>
 
 <a name='access-permissions'></a>
 
@@ -44,7 +44,7 @@ The available options are:
 
 3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
 
-  <img src="images/send-invites-share-button.png" alt="Sending invitations with access permissions" class="responsive-img"/>
+  <img src="images/add-users-sharing-dashboards.png" alt="Choosing with whom to share a dashboard" class="responsive-img"/>
 
 **You can change the access level for users at any time** by accessing
 the Share menu. You will see a list of all users you have shared the
@@ -55,7 +55,7 @@ by selecting a new one from the dropdown menu next to their name.
 Share dialog and selecting *Remove* from the dropdown menu next to any
 member's name.
 
-<img src="images/remove-sharing.png" alt="Remove sharing button" class="responsive-img"/>
+<img src="images/shared-with-remove-option.png" alt="Remove sharing button" class="responsive-img"/>
 
 <a name='sharing-workspace-dashboard'></a>
 ## Sharing a Workspace's Dashboard with Other Users
