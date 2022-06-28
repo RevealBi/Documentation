@@ -1,3 +1,8 @@
+---
+title: Slingshot Ad-hoc Hierarchies – Add, Create and Analyze Faster
+_description: Create new hierarchies in Slingshot and analyze your data in charts, gauges, and grid views.
+---
+
 # Ad-Hoc Hierarchies
 
 

@@ -1,3 +1,8 @@
+---
+title: How to Add and Use Dashboard Filters  
+_description: Learn how to use Dashboard edit mode to add new dashboard filters in Slingshot Analytics.
+---
+
 # Dashboard Filters
 
 The dashboard filters dataset is defined by entering *Dashboard edit*
