@@ -18,6 +18,53 @@ here.
     </thead>
     <tbody>
     <tr>
+        <td rowspan="7">Jun-2022</td>
+        <td rowspan="7">1.1.7</td>
+        <td><i>New initial zoom level feature for charts (only for new charts enabled with RevealSdkSettings.EnableNewCharts = true).</i>
+        <br>The initial zoom level can be controlled by the end-user in the Settings panel for the visualization.</br>
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added a way to assign chart colors programmatically through revealView.onVisualizationSeriesColorAssigning event.</i>     
+        <br>
+        The following code snippet returns red color for High and green for Low, for all Pie charts:
+        <code><pre>
+revealView.onVisualizationSeriesColorAssigning = function(visualization, defaultColor, fieldName, categoryName) {
+    if (visualization.chartType == "PieChart") {
+	if (categoryName == "High") {
+	    return "#ff0000";
+	} else if (categoryName == "Low") {
+	    return "#00ff00";
+	}
+    }
+    return defaultColor;
+};        </pre></code>
+        </br>   
+        </td>
+    </tr>        
+    <tr>
+        <td><i>End user can now control the Others slice for Pie and Doughnut visualizations.</i>        
+        <br>In the Settings panel for the visualization the end-user can select a threshold (all slices under that value will be merged in a single Others slice) or disable the feature completely.</br>
+        </td>
+    </tr>
+    <tr>
+        <td><i>[Public Bug Fix] Fixed how dashboard filters with required single selection work after the initial configuration.</i>
+        <br>In the past the initial state after creating the filter was showing all elements selected which is not a valid state if required single selection is enabled.</br>        
+        </td>
+    </tr>        
+    <tr>
+        <td><i>[Public Bug Fix] Fixed formatting used in the breadcrumb (displayed when drill-down is used) for numeric fields, in the past the formatting for the field was ignored.</i>
+        </td>
+    </tr>        
+    <tr>
+        <td><i>[Public Bug Fix] Fixed issue with Text visualization displaying NaN when there's no data instead of the "No data" message.</i>
+        </td>
+    </tr>        
+    <tr>
+        <td><i>[Public Bug Fix] Fixed link to help page displayed by the installer when the installation is ready.</i>
+        </td>
+    </tr>        
+    <tr>
         <td rowspan="4">May-2022</td>
         <td rowspan="4">1.1.5</td>
         <td><i>RVDateFilter.range property now returns the date range based on the selected filter type.</i><br>
