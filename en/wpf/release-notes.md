@@ -28,8 +28,8 @@ here.
         <td><i>Added a way to assign chart colors programmatically through RevealView.VisualizationSeriesColorAssigning event.</i>        
 <br>
         The following code snippet returns red color for High and green for Low, for all Pie charts:
-        <br><code><pre>revealView.VisualizationSeriesColorAssigning += RevealView_VisualizationSeriesColorAssigning;</pre></code></br>
-        <code><pre>
+        <br><code><pre>
+revealView.VisualizationSeriesColorAssigning += RevealView_VisualizationSeriesColorAssigning;
 private Color RevealView_VisualizationSeriesColorAssigning(RVVisualization visualization, Color defaultColor, string fieldName, string categoryName)
 {
     if (visualization.ChartType == RVChartType.PieChart)
