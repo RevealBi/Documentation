@@ -2,10 +2,9 @@
 
 
 Shared dashboards are ideal for cross-team collaboration. There are so
-many possibilities when it comes to sharing in Reveal. Depending on your
-own sharing rights you can give other users and workspaces different [access permissions](#access-permissions) to the content you share with them.
+many possibilities when it comes to sharing in Reveal. 
 
-Below you will find the specifics of access permissions in the three available sharing scenarios:
+Here you will find more information about the permission roles and the available sharing scenarios:
 
   - [sharing dashboards created by you with other users](#sharing-dashboards-users),
 
@@ -21,56 +20,49 @@ Below you will find the specifics of access permissions in the three available s
 
 To share a dashboard created by you with individual users you need to:
 
-1.  Access the **Share dialog** - Select the overflow button in the top right-hand corner of a dashboard or a folder and choose *Share*.
+1.  Access the *Share dialog* - Open the overflow menu and choose **Shared With**.
 
 
   <img src="images/shared-with-button.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img"/>
 
-  Once you share a folder with other people, the new files will appear in their accounts as well under the **Shared with Me** section in the left panel. Alternatively you can find the files when you open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
+  Once you share a folder with other people, the new files will appear in their accounts as well under the **Shared with Me** section in the left panel. Alternatively they can find the files when they open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
 
   <img src="images/shared-with-me-section.png" alt="Finding the Shared with Me option in different sections" class="responsive-img"/>
 
 <a name='access-permissions'></a>
 
-2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses of the people you want to invite and **set the level of access** those people will have over the shared dashboard.
+2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses or the names of the people you want to invite and click/tap on **Done**.
 
-The available options are:
-
-  - **Owner** permissions - the user can create, edit, share and delete.
-
-  - **Contributor** permissions - the user can create, edit and share but cannot delete the dashboard or folder. They can only delete the visualizations in the dashboard.
-
-  - **Viewer** permissions - the user can view and share dashboards and folders for view only.
-
-3.  After setting the access level, click/tap *Send Invites*. The dashboard is shared automatically with members of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
+3.  After selecting the users, click/tap *Update*. The dashboard is shared automatically with members of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
 
   <img src="images/add-users-sharing-dashboards.png" alt="Choosing with whom to share a dashboard" class="responsive-img"/>
 
-**You can change the access level for users at any time** by accessing
+**You can change the access level for users at any time when you are the owner of the dashboard** by accessing
 the Share menu. You will see a list of all users you have shared the
 dashboard with and their access level. You can change their access level
 by selecting a new one from the dropdown menu next to their name.
 
-**You can also unshare any dashboard at any time** by accessing the
+**When you are the owner of the dashboard, you can also unshare it at any time** by accessing the
 Share dialog and selecting *Remove* from the dropdown menu next to any
 member's name.
 
 <img src="images/shared-with-remove-option.png" alt="Remove sharing button" class="responsive-img"/>
 
+In general, a user can have one of the following permissions:
+
+  - **Owner** permissions - the user can create, edit, share and delete.
+
+  - **Contributor** permissions - the user can create, edit and share but cannot delete a dashboard or folder. They can only edit the visualizations in the dashboard. If a list of dashboards has been shared with the user, they can remove the dashboads in the list but can't delete the list in itself. 
+ 
+   <img src="images/request-to-share-button.png" alt="Sending a request to the owner in order to share a dashboard" width="50%" class="responsive-img"/>
+
+  - **Viewer** permissions - the user can view a dashboard. They can also share it with another user after the approval of the owner.
+
 <a name='sharing-workspace-dashboard'></a>
 ## Sharing a Workspace's Dashboard with Other Users
 
-Any member of a workspace can share the workspace's dashboards with other users. To do this, go to the *Workspaces* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users).
 
-The main difference between sharing a workspace's dashboard and a dashboard created by you is the [access permissions](#access-permissions) you can
-give. Depending on your role in the workspace you can have one, two or all the access permissions options available when sharing.
 
-Your role in the workspace can be:
-
-  - **Owner** - have full access to the workspace's dashboards, including
-    editing, sharing and deleting them.
-
-  - **Contributor** - can create, edit and share dashboards and folders
     but cannot delete them.
 
   - **Viewer** - can view and share dashboards for view only.
@@ -80,10 +72,8 @@ Here you can see the access permissions options every workspace member can give 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-t96r{color:rgb(88, 88, 88);font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-oav7{color:rgb(88, 88, 88);font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -105,18 +95,7 @@ Here you can see the access permissions options every workspace member can give 
     <td><span style="color: #007F00">Yes</span></td>
   </tr>
   <tr>
-    <td>Contributor</td>
-    <td><span style="color: #FF0000">No</span></td>
-    <td><span style="color: #007F00">Yes</span></td>
-    <td><span style="color: #007F00">Yes</span></td>
-  </tr>
-  <tr>
-    <td>Viewer</td>
-    <td><span style="color: #FF0000">No</span></td>
-    <td><span style="color: #FF0000">No</span></td>
-    <td><span style="color: #007F00">Yes</span></td>
-  </tr>
-</table>
+Any member of a workspace can share the workspace's dashboards with other users. To do this, go to the *Workspaces* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users). Keep in mind that the owner of the workspace needs to approve the request first in order for a member to share a dashboard with another member.
 
 
 <a name='sharing-dashboard-with-workspace'></a>
@@ -129,60 +108,6 @@ Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing
 
 >[!NOTE]
 >You can share a dashboard with any public workspace that is part of the [Organization](~/en/workspaces/overview.html#organization-workspace), whether you are a member of it or not. You can also share with private workspaces that you are a member of.
-
-When setting access permissions for the whole workspace, you must take into
-account that these permissions will not be available for everybody in the workspace. Individual members will receive only the highest permissions possible for their role in the workspace.
-
-Look at the table below for a quick reference of the permissions
-every workspace member can get depending on their role in the workspace. For example, if you give *Contributor* permissions to the whole workspace, its *Owners* and *Contributors* will be able to modify the dashboard, but *Viewers* will only receive permissions to view and share the dashboard. This is the highest level of permissions possible for their role in general.   
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-aktf{font-weight:bold;color:#333333;border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-7btt{font-weight:bold;border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-9wq8" rowspan="3">Workspace Roles</th>
-    <th class="tg-7btt" colspan="3">Access Permissions Given to the Whole Workspace</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">Owner</td>
-    <td class="tg-c3ow">Contributor</td>
-    <td class="tg-c3ow">Viewer</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt" style="text-align: center !important" colspan="3"> Permissions Received by Users Depending on Their Role</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Owner</td>
-    <td class="tg-c3ow"><span style="color: #007F00">Owner</span></td>
-    <td class="tg-c3ow"><span style="color: #D1A827">Contributor</span></td>
-    <td class="tg-c3ow"><span style="color: #FF0000">Viewer</span></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Contributor</td>
-    <td class="tg-c3ow"><span style="color: #D1A827">Contributor</span></td>
-    <td class="tg-c3ow"><span style="color: #D1A827">Contributor</span></td>
-    <td class="tg-c3ow"><span style="color: #FF0000">Viewer</span></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Viewer</td>
-    <td class="tg-baqh"><span style="color: #FF0000">Viewer</span></td>
-    <td class="tg-baqh"><span style="color: #FF0000">Viewer</span></td>
-    <td class="tg-baqh"><span style="color: #FF0000">Viewer</span></td>
-  </tr>
-</table>
-
->[!NOTE]
->**Giving Exclusive Access to a Workspace Member**. If you want to give a member of a workspace higher access level to the dashboard than its membership role allows, add their email individually to the list of invitations and set the access permissions you want them to have.
 
 ## See Also
 
