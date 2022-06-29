@@ -61,40 +61,6 @@ In general, a user can have one of the following permissions:
 <a name='sharing-workspace-dashboard'></a>
 ## Sharing a Workspace's Dashboard with Other Users
 
-
-
-    but cannot delete them.
-
-  - **Viewer** - can view and share dashboards for view only.
-
-Here you can see the access permissions options every workspace member can give when sharing a dashboard:
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-oav7{color:rgb(88, 88, 88);font-weight:bold;text-align:center;vertical-align:middle}
-</style>
-
-<table class="tg">
- <tr>
-    <th class="tg-oav7" rowspan="2">Workspace Roles</th>
-    <th class="tg-t96r" colspan="3">Access Permissions</th>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Owner</td>
-    <td class="tg-baqh">Contributor</td>
-    <td class="tg-baqh">Viewer</td>
-  </tr>
-  <tr>
-    <td>Owner</td>
-    <td><span style="color: #007F00">Yes</span></td>
-    <td><span style="color: #007F00">Yes</span></td>
-    <td><span style="color: #007F00">Yes</span></td>
-  </tr>
-  <tr>
 Any member of a workspace can share the workspace's dashboards with other users. To do this, go to the *Workspaces* tab and choose a dashboard from the *Dashboards* section. Then, follow the steps in [Sharing your Own Dashboard with Other Users](#sharing-dashboards-users). Keep in mind that the owner of the workspace needs to approve the request first in order for a member to share a dashboard with another member.
 
 
