@@ -25,7 +25,7 @@ To share a dashboard created by you with individual users you need to:
 
   <img src="images/shared-with-button.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img"/>
 
-  Once you share a folder with other people, the new files will appear in their accounts as well under the **Shared with Me** section in the left panel. Alternatively they can find the files when they open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
+  Once you share a folder with other people, the files will appear under the **Shared with Me** section in the left panel. Alternatively they can find the files when they open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
 
   <img src="images/shared-with-me-section.png" alt="Finding the Shared with Me option in different sections" class="responsive-img"/>
 
@@ -33,7 +33,7 @@ To share a dashboard created by you with individual users you need to:
 
 2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses or the names of the people you want to invite and click/tap on **Done**.
 
-3.  After selecting the users, click/tap *Update*. The dashboard is shared automatically with members of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
+3.  After selecting the users, click/tap **Update**. The dashboard will be shared automatically with the selected users if they are part of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
 
   <img src="images/add-users-sharing-dashboards.png" alt="Choosing with whom to share a dashboard" class="responsive-img"/>
 
@@ -52,8 +52,8 @@ In general, a user can have one of the following permissions:
 
   - **Owner** permissions - the user can create, edit, share and delete.
 
-  - **Contributor** permissions - the user can create, edit and share but cannot delete a dashboard or folder. They can only edit the visualizations in the dashboard. If a list of dashboards has been shared with the user, they can remove the dashboads in the list but can't delete the list in itself. 
- 
+  - **Contributor** permissions - the user can create, edit, share, and delete. Keep in mind that the user cannot delete the item that was shared with them (Dashboard/Dashboard List).
+
    <img src="images/request-to-share-button.png" alt="Sending a request to the owner in order to share a dashboard" width="50%" class="responsive-img"/>
 
   - **Viewer** permissions - the user can view a dashboard. They can also share it with another user after the approval of the owner.
@@ -67,8 +67,9 @@ Any member of a workspace can share the workspace's dashboards with other users.
 <a name='sharing-dashboard-with-workspace'></a>
 ## Sharing a Dashboard with a Whole Workspace
 
-You can share a dashboard you created or a workspace's dashboard with a whole
-workspace instead of individually with every workspace member. To do this, choose
+You can share a dashboard you have access to with a workspace instead of individually with every workspace member.
+
+ To do this, choose
 a dashboard from the *Dashboards* section in *My Analytics* or *Workspaces* tab.
 Then follow the steps in [Sharing your Own Dashboards with Other Users](#sharing-dashboards-users).
 
