@@ -32,6 +32,10 @@ Within Reveal, you will be able to:
 
   - [Create Dashboards](creating-dashboards.md)
 
+  - [Upload Dashboards](uploading-dashboards.md)
+
+  - [Interact with Dashboards](dashboards-interactions.md)
+
   - [Style your Dashboards](dashboard-styling.md)
 
   - [Link Dashboards to other Dashboards or to URLs](dashboard-linking.md)
@@ -39,6 +43,9 @@ Within Reveal, you will be able to:
   - [Share your Dashboards](sharing-dashboards/share-a-dashboard.md)
 
   - [Manage your existing Dashboards](managing-dashboards.md)
+
+  - [Export Dashboards](how-to-export-a-dashboard.md) as [Images](export-as-images.md), [PDF files](export-as-pdft-document.md), [PowerPoint presentations](export-as-powerpoint-presentation.md) or
+  [Excel spreadsheets](export-as-excel-data-format.md)
 
 You can also import any [dashboards created with previous versions of ReportPlus](Uploading-Dashboards.md).
 
