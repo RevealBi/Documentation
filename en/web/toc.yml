@@ -38,6 +38,8 @@
   href: theming-dashboards.md
 - name: Working with DataSources
   header: true
+- name: Data Sources
+  href: datasources.md
 - name: Adding Data Sources
   items:
     - name: Excel File
