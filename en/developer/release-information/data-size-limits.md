@@ -20,4 +20,4 @@ Default limit Values:
 |  setMaxInMemoryCells | Long  |  Set this property to the expected maximum size of pivot tables or grids, given as a number of cells |
 |  setMaxStorageCells | Long  | Set this property to the expected maximum size of cells to be processed from any data source  |
 |  setMaxStringCellSize | Integer  |  Sets a limit on the number of characters any string in a dataset column may have |
-|  SsetMaxTotalStringsSize | Long  | Set this property to the expected maximum size of pivot tables or grids, given as the total number of characters in all of its cells. |
+|  setMaxTotalStringsSize | Long  | Set this property to the expected maximum size of pivot tables or grids, given as the total number of characters in all of its cells. |
