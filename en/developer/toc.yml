@@ -45,3 +45,5 @@
   href: release-information/third-party-software.md
 - name: Archived Docs
   href: release-information/archived-docs.md
+- name: Data Size Limits
+  href: release-information/data-size-limits.md
