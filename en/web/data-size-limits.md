@@ -12,7 +12,7 @@ Default limit Values:
 ##Modifying Default Values
 
 ###Source 
-[**InitializeParameterBuilder**](https://help.revealbi.io/api/java/latest/com/infragistics/reveal/engine/init/InitializeParameterBuilder.html)
+[**InitializeParameterBuilder**](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.RevealEmbedSettings.html)
 
 
 | Property  |   Type| Description  |  
