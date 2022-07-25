@@ -38,6 +38,8 @@
   href: theming-dashboards.md
 - name: Working with DataSources
   header: true
+- name: Data Sources
+  href: datasources.md
 - name: Adding Data Sources
   items:
     - name: Excel File
@@ -74,3 +76,5 @@
   href: release-notes.md
 - name: Third-Party Software
   href: third-party-software.md
+- name: Data Size Lmits
+  href: data-size-limits.md
