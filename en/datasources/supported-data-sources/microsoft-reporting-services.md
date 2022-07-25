@@ -1,3 +1,8 @@
+---
+title: How to connect to Microsoft Reporting Services in Slingshot
+_description: Learn how to use your existing Microsoft Reporting Services to create great visualizations.
+---
+
 # Microsoft Reporting Services
 
 You can now use your existing Microsoft Reporting Services (SSRS)

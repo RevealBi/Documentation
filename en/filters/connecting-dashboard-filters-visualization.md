@@ -1,3 +1,8 @@
+---
+title: How to Connect Dashboard Filters to a Visualization 
+_description: Learn how bring the data in your visualization to a dashboard filter in Slingshot Analytics.
+---
+
 # Connecting Dashboard Filters to a Visualization
 
 Binding the data in a visualization to a dashboard filter can be done in

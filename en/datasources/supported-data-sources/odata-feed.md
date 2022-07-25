@@ -1,3 +1,8 @@
+---
+title: How to configure an OData Service data source 
+_description: Connecting and using OData Feed in Slingshot to boost your results.
+---
+
 # OData Feed
 
 ## Connecting to OData Feed

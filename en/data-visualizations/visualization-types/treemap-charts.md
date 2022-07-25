@@ -1,3 +1,8 @@
+---
+title: How to Create Treemap Visualization
+_description: Learn how to create and use Treemap Visualization in Slingshot Analytics.
+---
+
 # Treemaps in Reveal
 
 The Treemap visualization is used to display hierarchical data as a set of nested rectangles. Rectangles of each level are of different sizes and colors.

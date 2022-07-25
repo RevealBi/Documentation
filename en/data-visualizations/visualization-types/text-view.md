@@ -1,3 +1,8 @@
+---
+title: How to Create Text View Visualization
+_description: Find out how to create and use Text View visualization in Slingshot Analytics.
+---
+
 # Text View
 
 The Text View displays information that follows a key-value pattern,

@@ -1,3 +1,8 @@
+---
+title: How to Reuse Visualizations in Slingshot 
+_description: See how easy and quick you can reuse visualization and speed up dashboard creation.
+---
+
 # Reusing Visualizations
 
 Speed up the creation of dashboards by reusing visualizations; you just

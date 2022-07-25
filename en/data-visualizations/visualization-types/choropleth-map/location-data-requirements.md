@@ -1,3 +1,8 @@
+---
+title: Preparing Your Data for Location Data Requirements 
+_description: In using Choropleth maps for Visualization, learn how to follow location data requirements.
+---
+
 # How to prepare Your Data for a Choropleth Map. Location Data Requirements
 
 *Location names* column in your data set has to match the actual geographic units on the selected map. If for example, the column contains name of countries, but you want to use the USA states map, you will see the "_There is no data to display_" error on the screen. Find more about this error in [Troubleshooting Errors](#troubleshooting-choropleth-map) below.

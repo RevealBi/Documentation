@@ -1,3 +1,8 @@
+---
+title: Using Azure Machine Learning Studio in Slingshot
+_description: See how to achieve better insights using your data by Azure Machine Learning Studio.
+---
+
 # Azure Machine Learning in Reveal
 
 You can use your trained models' data from Azure Machine Learning Studio

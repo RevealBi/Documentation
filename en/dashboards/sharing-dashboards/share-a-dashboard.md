@@ -1,6 +1,5 @@
 # Sharing Dashboards
 
-
 Shared dashboards are ideal for cross-team collaboration. There are so
 many possibilities when it comes to sharing in Reveal. Depending on your
 own sharing rights you can give other users and workspaces different [access permissions](#access-permissions) to the content you share with them.

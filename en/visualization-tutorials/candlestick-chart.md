@@ -1,3 +1,8 @@
+---
+title: How to Create Candlestick Visualizations in Slingshot
+_description: Get familiar the specifics of creating a Candlestick chart visualization for your data.
+---
+
 ## Creating Candlestick Visualizations
 
 In this tutorial, you will learn how to create a Candlestick chart visualization using a sample spreadsheet.

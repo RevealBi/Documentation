@@ -1,3 +1,8 @@
+---
+title: How to Use Field Settings in Slingshot 
+_description: Learn how to apply field settings for sorting, filtering, and aggregating data.
+---
+
 # Field Settings
 
 This section describes the different options for applying

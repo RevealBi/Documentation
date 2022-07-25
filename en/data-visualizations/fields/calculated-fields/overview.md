@@ -1,3 +1,8 @@
+---
+title: How to use Calculated Fields
+_description: Learn how to use Calculated fields and all their types to create a more precise data visualization.
+---
+
 # Calculated Fields
 
 Reveal allows you to define new fields in the data set, named calculated

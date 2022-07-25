@@ -1,3 +1,8 @@
+---
+title: How to Upload Dashboards to Slingshot
+_description: See how to work with dashboards saved on your device by directly uploading them.
+---
+
 # Uploading Dashboards
 
 In Reveal, you can also work with dashboards saved on your computer/device by directly uploading them. To do that, perform the following steps:

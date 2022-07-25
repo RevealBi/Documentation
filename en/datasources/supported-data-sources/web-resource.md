@@ -1,3 +1,8 @@
+---
+title: How to use Web Resource as a data source in Slingshot 
+_description: Learn how to use any virtual file in the web as a data source in Slingshot to advance your work.
+---
+
 # Web Resource
 
 A web resource, as the name suggests, is any virtual file stored in the

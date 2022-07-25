@@ -1,3 +1,8 @@
+---
+title: How to Manage Your Data Source Credentials in Slingshot
+_description: A guide on how to access and manage all your credentials to data sources.
+---
+
 # Managing Your Data Source Credentials
 
 When configuring certain data sources in Reveal, you need to provide

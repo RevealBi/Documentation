@@ -1,3 +1,8 @@
+---
+title: How to Share Dashboards with Cloud Files
+_description: A guide on sharing and granting access to other users to dashboards on a cloud provider.
+---
+
 # Sharing Dashboards with Cloud Files as a Data Source
 
 When you share dashboards with other Reveal users, you need to take into

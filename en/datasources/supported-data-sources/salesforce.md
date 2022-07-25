@@ -1,3 +1,8 @@
+---
+title: How to set up and use Salesforce Data Source
+_description: Setting up and using Salesforce as a data source in Slingshot.
+---
+
 # Salesforce
 
 Upon selecting the Salesforce data source, you will see the following login prompt:

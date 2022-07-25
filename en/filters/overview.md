@@ -1,3 +1,8 @@
+---
+title: Filters in Slingshot Analytics – All You Need to Know
+_description: Learn all about dashboard filters, add datasets and make each visualization unique in Slingshot Analytics.
+---
+
 # Filters
 
 Dashboard filters allow you to slice the contents of visualizations in a

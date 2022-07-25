@@ -1,3 +1,8 @@
+---
+title: How to configure Microsoft SQL Server in Slingshot
+_description: Steps to configuring Microsoft SQL Server and using it to your advantage.
+---
+
 # Microsoft SQL Server
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Microsoft SQL addresses. If your MS SQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to the SQL Server address. This limitation does not apply to *Reveal Embedded*.

@@ -1,3 +1,8 @@
+---
+title: How to Configure a Sybase Data Source in Slingshot
+_description: Learn how to configure your Sybase data source in Slingshot, retrieve it and use it in different dashboard views.
+---
+
 # Sybase
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Sybase addresses. If your Sybase address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this Sybase address. This limitation does not apply to *Reveal Embedded*.

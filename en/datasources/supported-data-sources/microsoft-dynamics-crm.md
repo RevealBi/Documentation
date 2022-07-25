@@ -1,3 +1,8 @@
+---
+title: How to configure Microsoft Dynamics CRM in Slingshot 
+_description: Steps to configuring Microsoft Dynamics CRM and using it to your advantage.
+---
+
 # Microsoft Dynamics CRM
 
 To configure a Microsoft Dynamics CRM data source, you will need to
