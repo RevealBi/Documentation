@@ -1,3 +1,8 @@
+---
+title: How to use Azure Analysis Services as Your Data Source
+_description: Steps to configure and use an Azure Analysis Services data source in Slingshot.
+---
+
 # Microsoft Azure Analysis Services
 
 Azure Analysis Services is a fully managed platform as a service (PaaS) that provides enterprise-grade data models in the cloud. Now, you can use the Azure Analysis data models in Reveal to create dashboards and perform data analysis.

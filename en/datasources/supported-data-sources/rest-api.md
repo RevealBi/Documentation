@@ -1,3 +1,8 @@
+---
+title: How to configure and use REST API Data Source 
+_description: Connecting and using REST API data source as a data source in Slingshot.
+---
+
 # REST API
 
 The REST API data source in Reveal enables you to send GET, POST, and PUT

@@ -1,3 +1,8 @@
+---
+title: How to Create and Use Combo Charts 
+_description: Find out how to use Combo Charts for your visualizations in Slingshot Analytics.
+---
+
 # Combo Charts
 
 This type of chart combines two or more chart types in one single chart.

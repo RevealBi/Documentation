@@ -1,3 +1,8 @@
+---
+title: How to Use Category Charts for Visualization
+_description: Find out how to use category charts for making your visualizations truly remarkable.
+---
+
 # Category Charts
 
 These charts are used to associate categories with quantitative

@@ -1,3 +1,8 @@
+---
+title: How to Create a Text View Visualization in Slingshot 
+_description: A quick tutorial on creating a Text View visualization using a sample spreadsheet.
+---
+
 # Creating a Text View
 
 In this tutorial, you will learn how to create a text view visualization

@@ -1,3 +1,8 @@
+---
+title: How to Create Stacked Chart Visualization in Slingshot
+_description: A quick tutorial on creating Stacked Chart visualization using a sample spreadsheet.
+---
+
 # Creating Stacked Chart Visualizations
 
 In this tutorial, you will learn how to create stacked chart

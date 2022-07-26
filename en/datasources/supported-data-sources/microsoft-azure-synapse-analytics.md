@@ -1,3 +1,8 @@
+---
+title: How to use Microsoft Azure Synapse as Your Data Source
+_description: Steps to configure and use an Azure Synapse Analytics data source in Slingshot.
+---
+
 # Microsoft Azure Synapse Analytics
 
 The Microsoft Azure Synapse data source provides a significant speed

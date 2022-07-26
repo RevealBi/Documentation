@@ -1,4 +1,10 @@
+---
+title: How to configure and use an Amazon Redshift data source
+_description: Connecting and using Amazon Redshift as a data source in Slingshot.
+---
+
 # Amazon Redshift
+
 ## Connecting to Amazon Redshift
 To configure an Amazon Redshift data source, you will need to enter the following information:
 

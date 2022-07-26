@@ -1,3 +1,8 @@
+---
+title: How to Connect a Dashboard to Its Data Source
+_description: Find out how to connect an already created dashboard to a data source of your choice.
+---
+
 # Connecting a Dashboard to Its Data Source
 
 In Reveal, you can connect to a data source [before](overview.md) or after a dashboard is created. Connecting to a data source is part of the dashboard creation process. However, you can have a dashboard, which is already created, but still not connected to a data source. There are two scenarios where this can happen: this dashboard is [shared](~/en/dashboards/sharing-dashboards/share-a-dashboard.md) with you, or you have [uploaded](~/en/dashboards/uploading-dashboards.md) it to Reveal. 

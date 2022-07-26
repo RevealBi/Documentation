@@ -1,3 +1,8 @@
+---
+title: How to use Marketo as Your Data Source
+_description: Connecting to Marketo to use your data in Slingshot
+---
+
 # Marketo 
 
 ## Connecting to Marketo 

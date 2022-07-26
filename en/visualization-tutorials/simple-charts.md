@@ -1,3 +1,8 @@
+---
+title: How to Create Simple-Series Charts Visualization in Slingshot
+_description: A quick tutorial on creating a Simple-Series visualization using a sample spreadsheet.
+---
+
 # Creating Simple-Series Charts
 
 In this tutorial, you will learn how to create a simple-series chart

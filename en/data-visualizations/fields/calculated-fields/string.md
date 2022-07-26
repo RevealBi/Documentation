@@ -1,3 +1,8 @@
+---
+title: How to use String Calculated Fields
+_description: Learn how to use String Calculated Fields to create a more precise data visualization.
+---
+
 # String Calculated Fields
 
 String calculated fields, except for `sortinterval`, allow you to edit

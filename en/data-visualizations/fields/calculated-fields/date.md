@@ -1,3 +1,8 @@
+---
+title: How to Use Date Calculated Fields in Slingshot
+_description: Learn how to use Date Calculated Fields to output different date and time information.
+---
+
 # Date Calculated Fields
 
 Date formulas can be used to output different date and time information

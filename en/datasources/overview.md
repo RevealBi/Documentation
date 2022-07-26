@@ -1,24 +1,25 @@
+---
+title: How to Connect to Data Sources in Slingshot 
+_description: Learn how to connect to different enterprise data sources and use them.
+---
+
 # Data Sources
 
 Data Sources are the places where your data comes from. Reveal provides you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
 databases, spreadsheets, and public data sources.
 
-The screenshot below displays a number of different data sources the user John Williams has connected to in his account.
-
-<img src="images/sample-data-sources-screen.png" alt="Sample data sources" class="responsive-img"/>
-
 ## Connecting to Data Sources
 
-To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the _Select a Data Source_ menu for quick selection next time you need it (see the screenshot above).
+To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the *Data Sources* menu for quick selection next time you need it (see the screenshot above).
 
-To connect to a data source, perform the steps below.  
+To connect to a data source, perform the steps below:
 
-1. Go to _My Stuff_ or a workspace where you want to a create a dashboard. 
-2. Click/tap the **+ Dashboard** blue button.
-   <img src="images/start-creating-dashboard-data-source.png" alt="Reveal's home screen" class="responsive-img"/>
-3. In the _New Visualization_ dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
-   <img src="images/creating-new-visualization.png" alt="Available data sources when creating a new visualization" class="responsive-img"/>
-4. Select a data source provider from the dropdown list.
+1. Go to *My Analytics* or a workspace where you want to a create a dashboard. 
+2. Click/tap on the **+ Dashboard** or **Create Dashboard** *(My Analytics)* blue button.
+   <img src="images/data-sources-my-analytics.png" alt="Dashboard button in my analytics" class="responsive-img"/>
+3. In the *+ Visualization* dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
+
+<img src="images/data-sources-screen.png.png" alt="Sample data sources" class="responsive-img"/>
 
 After selecting a data source provider, you will be prompted to **configure** it. Not sure how to do this? Find out in the article about the chosen data source (see the list below).
 
@@ -26,10 +27,12 @@ After selecting a data source provider, you will be prompted to **configure** it
 
    - [Amazon Redshift](~/en/datasources/supported-data-sources/redshift.md)
 
+   - [Amazon S3](~/en/datasources/supported-data-sources/amazon-s3.md)
    - [Box](~/en/datasources/supported-data-sources/box.md)
 
    - [Dropbox](~/en/datasources/supported-data-sources/dropbox.md)
 
+   - [Google Ads](~/en/datasources/supported-data-sources/google-ads.md)
    - [Google Analytics](~/en/datasources/supported-data-sources/google-analytics.md)
 
    - [Google BigQuery](~/en/datasources/supported-data-sources/google-bigquery.md)
@@ -44,9 +47,9 @@ After selecting a data source provider, you will be prompted to **configure** it
 
    - [Microsoft Azure Analysis Services](~/en/datasources/supported-data-sources/microsoft-azure-analysis-services.md)
 
-   - [Microsoft Azure SQL Database](~/en/datasources/supported-data-sources/azure-sql.md)*
-
    - [Microsoft Azure Synapse Analytics](~/en/datasources/supported-data-sources/microsoft-azure-synapse-analytics.md)
+   
+   - [Microsoft Azure SQL Database](~/en/datasources/supported-data-sources/azure-sql.md)*
 
    - [Microsoft Dynamics CRM](~/en/datasources/supported-data-sources/microsoft-dynamics-crm.md)
 
@@ -72,16 +75,21 @@ After selecting a data source provider, you will be prompted to **configure** it
 
    - [SharePoint](~/en/datasources/supported-data-sources/sharepoint.md)
 
+   - [Snowflake](~/en/datasources/supported-data-sources/snowflake.d)
+
    - [Sybase](~/en/datasources/supported-data-sources/sybase.md)*
 
    - [Web Resource](~/en/datasources/supported-data-sources/web-resource.md)
 
    - [JSON files](~/en/datasources/working-files/working-with-json-files.md)
-   - 
+   
    - [Spreadsheets](~/en/datasources/working-files/working-with-spreadsheets.md)
 
->[!NOTE]
-> **Databases** (*) are not supported in the Web version of Reveal.
+## Filtering your Data Sources
+
+To filter your data sources, you can click on the filter button in the upper right corner.
+
+<img src="images/data-sources-filter.png" alt="Sample data sources" class="responsive-img"/>
 
 ## Related Topics
 

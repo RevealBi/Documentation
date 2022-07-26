@@ -1,3 +1,8 @@
+---
+title: How to Create an Image Chart in Slingshot 
+_description: A quick tutorial on creating an Image Chart visualization using a sample spreadsheet.
+---
+
 # Creating an Image Chart
 
 In this tutorial, you will learn how to create an Image visualization

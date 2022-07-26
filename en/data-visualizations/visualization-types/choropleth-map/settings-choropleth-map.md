@@ -1,3 +1,8 @@
+---
+title: How to Work with a Choropleth map Setting
+_description: Master the Choropleth map with the tips and tricks provided on this page.
+---
+
 # Working With the Choropleth Map Settings
 
 <img src="images/visualization-settings-choropleth-map.png" alt="Settings in the Visualization editor of the choropleth map" class="responsive-img"/>

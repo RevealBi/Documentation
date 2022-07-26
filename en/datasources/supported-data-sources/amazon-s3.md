@@ -1,3 +1,8 @@
+---
+title: How to Add Amazon S3 to your data sources 
+_description: A step-by-step guide on how to configure an Amazon S3 data source and use it in Slingshot.
+---
+
 # Amazon S3
 
 Amazon Simple Storage Service (S3) is a highly scalable and fast data storage service. Adding Amazon S3 to your data sources allows you to access and analyze your data from S3 directly in Reveal.

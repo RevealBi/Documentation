@@ -1,3 +1,8 @@
+---
+title: Data Visualizations in Slingshot – All You Need to Know  
+_description: An overview of how data visualizations work in Slingshot Analytics and how to customize them.
+---
+
 # Data Visualizations
 
 Reveal helps you get the most insight possible out of business data by providing a variety of visualizations.

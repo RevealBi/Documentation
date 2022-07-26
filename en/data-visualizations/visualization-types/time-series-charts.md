@@ -1,3 +1,8 @@
+---
+title: How to Create Time Series Chart Visualization 
+_description: Find out how to create and use Time Series Chart visualization in Slingshot Analytics.
+---
+
 # Time Series Charts
 
 A Time Series chart is used to display data points indexed in time order. It is commonly used to detect trends at a glance, allowing an easy observation of development over time.

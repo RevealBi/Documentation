@@ -1,3 +1,8 @@
+---
+title: How to Create KPI Gauge in Visualizations Editor
+_description: Find out how to use KPI Gauge for your visualizations in Slingshot Analytics.
+---
+
 # KPI Gauge
 
 Key Performance Indicators (KPIs) is a measurable value that demonstrates how effectively a company is achieving key business objectives. The indicators vary depending on the specific needs of the viewer, but they always provide

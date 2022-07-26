@@ -1,3 +1,8 @@
+---
+title: How to Create and Use Gauge Charts
+_description: Find out how to use Gauge Charts for your visualizations in Slingshot Analytics.
+---
+
 # Gauge Charts
 
 The Gauge chart displays a single value, or a list of values, comparing

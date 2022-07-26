@@ -1,3 +1,8 @@
+---
+title: How to apply Field Filters and Rules to Dataset 
+_description: Learn how to apply filters or rules to your dataset in Slingshot while creating visualizations.
+---
+
 # Field Filters and Rules
 
 You can also apply filters or rules to the fields in your dataset. In

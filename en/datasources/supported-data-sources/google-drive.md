@@ -1,3 +1,8 @@
+---
+title: How to add Google Drive as Your Data Source
+_description: Steps to use Google Drive as your data source in Slingshot.
+---
+
 # Google Drive
 
 If you are signed in with your Google account, you will have your Google

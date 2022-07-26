@@ -1,3 +1,8 @@
+---
+title:OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
+_description: Ways to set up an OAuth 2 / OIDC account and grant access to your resources when using OData Service, Rest API or Web.
+---
+
 # OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
 
 When using [OData Service](supported-data-sources/odata-feed.md), [Rest API](supported-data-sources/rest-api.md) or [Web resources](supported-data-sources/web-resource.md), some of your resources might be protected. In

@@ -1,3 +1,8 @@
+---
+title: How to configure an Amazon Athena data source in Slingshot
+_description: Configuring an Amazon Athena data source to use unstructured data stored in Amazon S3 easy and fast.
+---
+
 # Amazon Athena 
 
 The Amazon Athena data source in Reveal allows you to access and query unstructured data stored in [Amazon S3](amazon-s3.md), and use it for your visualizations.  

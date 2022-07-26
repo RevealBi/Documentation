@@ -1,3 +1,8 @@
+---
+title: How to Apply Visualization Quick Filters
+_description: Learn how to apply quick visualization filters to dynamically filter your visualization content.
+---
+
 # Visualization Quick Filters
 
 At a visualization level, you can also apply "quick" filters, which

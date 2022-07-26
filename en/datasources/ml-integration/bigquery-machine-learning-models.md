@@ -1,3 +1,8 @@
+---
+title: Using BigQuery Machine Learning in Slingshot
+_description: How to use your trained machine learning models data for building a visualization.
+---
+
 # BigQuery Machine Learning in Reveal
 
 You can use your trained machine learning models data from BigQuery in Reveal. Get better insights than ever! Just choose BigQuery as your data source for building a visualization, and use the integration to connect to a trained machine learning model.

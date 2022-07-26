@@ -1,3 +1,8 @@
+---
+title: How to Use Information Calculated Fields in Slingshot 
+_description: Learn how to utilize and test the value of a selected field through Information Calculated Fields.
+---
+
 # Information Calculated Fields
 
 Information calculated fields are meant to be used to test the value of
