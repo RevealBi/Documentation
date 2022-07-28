@@ -30,6 +30,6 @@ To configure a Snowflake data source, you first need to connect to the server by
 
 2.  **Select a table** from the database. Use the icon on the right, next to the empty circles, to preview the data.
 
-  <img src="images/snowflake-data-source-details.png.png" alt="Select a table or view dialog" class="responsive-img" width="55%"/>
+  <img src="images/snowflake-data-source-details.png.png" alt="Select a table dialog" class="responsive-img" width="55%"/>
 
 You are now directed to the *Visualization editor* where you can start building your visualizations with the data retrieved from Snowflake.
