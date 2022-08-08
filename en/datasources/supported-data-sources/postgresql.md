@@ -12,7 +12,7 @@ _description: Connecting and using PostgreSQL as a data source in Slingshot.
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 
-<img src="../images/add-postgresql-as-data-source.png" alt="Configure PostgreSQL data source dialog" class="responsive-img" width="60%"/>
+<img src="../images/add-postgresql-as-data-source.png" alt="Configure PostgreSQL data source dialog" class="responsive-img" width="55%"/>
 
 1.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
@@ -83,7 +83,7 @@ After you select a function, you will need to set up some additional parameters.
 In this case, the function requires you to configure the start and end date to display the Sales for period information.
 
 
-<img src="../images/postgresql-sales-for-period.png" alt="Sales for period function parameters" class="responsive-img" width="60%"/>
+<img src="../images/postgresql-sales-for-period.png" alt="Sales for period function parameters" class="responsive-img" width="45%"/>
 
 
 For more information on Functions and PostgreSQL, visit this [documentation website](https://www.postgresql.org/docs/9.0/sql-createfunction.html).
