@@ -2,7 +2,6 @@
 
 All future updates and new features added to Reveal SDK will be included
 here.
-
 <table>
     <colgroup>
         <col style="width: 15%" />
@@ -16,8 +15,8 @@ here.
             <th>Description</th>
         </tr>
     </thead>
-    <tbody>\
-			<tr>
+    <tbody>
+		<tr>
         <td rowspan="9">Aug-2022</td>
         <td rowspan="9">1.2.0</td>
         <td><i>Added support for custom menu icons</i>
@@ -56,7 +55,6 @@ here.
         <td><i>[Public Bug Fix] Fixed Time Series is not setting min value properly for negative values.</i><br>        
         </td>
     </tr>
-    <tr>
     <tr>
         <td rowspan="7">Jun-2022</td>
         <td rowspan="7">1.1.7</td>
