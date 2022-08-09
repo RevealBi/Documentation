@@ -17,6 +17,45 @@ here.
         </tr>
     </thead>
     <tbody>
+	<tr>
+        <td rowspan="9">Aug-2022</td>
+        <td rowspan="9">1.2.0</td>
+        <td><i>Added support for custom menu icons</i>
+        </td>
+    </tr>
+    <tr>
+        <td><i>Added support for custom empty state image for dashboards</i><br>        
+        </td>
+    </tr>    
+    <tr>
+        <td><i>Added a way to change the default visualization</i><br>        
+        </td>
+    </tr>    
+    <tr>
+        <td><i>Add schema attribute to SQL Server data sources</i><br>        
+        </td>
+    </tr>    
+    <tr>
+        <td><i>Added a way to change the category grouping separator in a chart visualization.</i><br>        
+        </td>
+    </tr>    
+    </tr>    	
+    <tr>
+        <td><i>[Public Bug Fix] Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.</i><br>        
+        </td>
+    </tr>                
+    <tr>
+        <td><i>[Public Bug Fix] Fixed currentTimeZone cache issues.</i><br>        
+        </td>
+    </tr>  
+    <tr>
+        <td><i>[Public Bug Fix] Fixed Google Sheets not visible in Google Drive popup.</i><br>        
+        </td>
+    </tr>        
+    <tr>
+        <td><i>[Public Bug Fix] Fixed Time Series is not setting min value properly for negative values.</i><br>        
+        </td>
+    </tr>
     <tr>
         <td rowspan="7">Jun-2022</td>
         <td rowspan="7">1.1.7</td>
