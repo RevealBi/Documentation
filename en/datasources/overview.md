@@ -6,7 +6,7 @@ _description: Learn how to connect to different enterprise data sources and use 
 # Data Sources
 
 Data Sources are the places where your data comes from. Reveal provides you with the opportunity to connect to different enterprise data sources. You can choose from analytics tools, content managers, cloud services, CRMs,
-databases, spreadsheets, and public data sources.
+databases, spreadsheets and public data sources.
 
 ## Connecting to Data Sources
 
@@ -14,12 +14,13 @@ To retrieve information from a data source and use it for your visualizations yo
 
 To connect to a data source, perform the steps below:
 
-1. Go to *My Analytics* or a workspace where you want to a create a dashboard. 
+1. Go to **My Analytics** or a workspace where you want to a create a dashboard. 
 2. Click/tap on the **+ Dashboard** or **Create Dashboard** *(My Analytics)* blue button.
-   <img src="images/data-sources-my-analytics.png" alt="Dashboard button in my analytics" class="responsive-img"/>
+
+   <img src="images/data-sources-my-analytics.png" alt="Dashboard button in my analytics" class="responsive-img" width="60%" height="80%"/>
 3. In the *+ Visualization* dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
 
-<img src="images/data-sources-screen.png.png" alt="Sample data sources" class="responsive-img"/>
+   <img src="images/data-sources-screen.png.png" alt="Sample data sources" class="responsive-img" width="60%"/>
 
 After selecting a data source provider, you will be prompted to **configure** it. Not sure how to do this? Find out in the article about the chosen data source (see the list below).
 
@@ -89,7 +90,7 @@ After selecting a data source provider, you will be prompted to **configure** it
 
 To filter your data sources, you can click on the filter button in the upper right corner.
 
-<img src="images/data-sources-filter.png" alt="Sample data sources" class="responsive-img"/>
+   <img src="images/data-sources-filter.png" alt="Sample data sources" class="responsive-img" width="60%"/>
 
 ## Related Topics
 
