@@ -22,30 +22,30 @@ To share a dashboard created by you with individual users you need to:
 1.  Access the *Share dialog* - Open the overflow menu and choose **Shared With**.
 
 
-  <img src="images/shared-with-button.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img"/>
+  <img src="images/shared-with-button.png" alt="Accessing the sharing dialog of a dashboard" class="responsive-img" width="80%"/>
 
-  Once you share a folder with other people, the files will appear under the **Shared with Me** section in the left panel. Alternatively they can find the files when they open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
+  Once you have shared a folder with other people, the files will appear under the **Shared with Me** section in the left panel. Alternatively they can find the files when they open **My Analytics** and click/tap on **Shared with Me** that is under **Filters**.
 
-  <img src="images/shared-with-me-section.png" alt="Finding the Shared with Me option in different sections" class="responsive-img"/>
+  <img src="images/shared-with-me-section.png" alt="Finding the Shared with Me option in different sections" class="responsive-img" width="80%"/>
 
 <a name='access-permissions'></a>
 
 2.  **Choose the users** you want to share the dashboard with - Enter the e-mail addresses or the names of the people you want to invite and click/tap on **Done**.
 
-3.  After selecting the users, click/tap **Update**. The dashboard will be shared automatically with the selected users if they are part of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will have the dashboard shared with them only after they accept the invitation.
+3.  After selecting the users, click/tap on **Update**. The dashboard will be shared automatically with the selected users if they are part of your [Organization](~/en/workspaces/overview.html#organization-workspace). Other users will be able to see the dashboard in the **Shared with Me** section after they have accepted the invitation.
 
-  <img src="images/add-users-sharing-dashboards.png" alt="Choosing with whom to share a dashboard" class="responsive-img"/>
+  <img src="images/add-users-sharing-dashboards.png" alt="Choosing with whom to share a dashboard" class="responsive-img" width="80%"/>
 
 **You can change the access level for users at any time when you are the owner of the dashboard** by accessing
-the Share menu. You will see a list of all users you have shared the
+the *Share* menu. You will see a list of all users you have shared the
 dashboard with and their access level. You can change their access level
 by selecting a new one from the dropdown menu next to their name.
 
 **When you are the owner of the dashboard, you can also unshare it at any time** by accessing the
-Share dialog and selecting *Remove* from the dropdown menu next to any
+*Share* dialog and selecting **Remove** from the dropdown menu next to any
 member's name.
 
-<img src="images/shared-with-remove-option.png" alt="Remove sharing button" class="responsive-img"/>
+<img src="images/shared-with-remove-option.png" alt="Remove sharing button" class="responsive-img" width="80%"/>
 
 In general, a user can have one of the following permissions:
 
@@ -53,7 +53,7 @@ In general, a user can have one of the following permissions:
 
   - **Contributor** permissions - the user can create, edit, share, and delete. Keep in mind that the user cannot delete the item that was shared with them (Dashboard/Dashboard List).
 
-   <img src="images/request-to-share-button.png" alt="Sending a request to the owner in order to share a dashboard" width="50%" class="responsive-img"/>
+   <img src="images/request-to-share-button.png" alt="Sending a request to the owner in order to share a dashboard" width="35%" class="responsive-img"/>
 
   - **Viewer** permissions - the user can view a dashboard. They can also share it with another user after the approval of the owner.
 
