@@ -12,7 +12,7 @@ _description: Connecting and using PostgreSQL as a data source in Slingshot.
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 
-<img src="../images/add-postgresql-as-data-source.png" alt="Configure PostgreSQL data source dialog" class="responsive-img" width="55%"/>
+<img src="../images/add-postgresql-as-data-source.png" alt="Configure PostgreSQL data source dialog" class="responsive-img" width="50%"/>
 
 1.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
@@ -61,7 +61,7 @@ you can also select a particular
 [view](https://www.postgresqltutorial.com/postgresql-views/) that
 returns a subset of data from a table or a set of tables instead.
 
-<img src="../images/postgresql-views.png" alt="PostgreSQL views dialog" class="responsive-img" width="60%"/>
+<img src="../images/postgresql-views.png" alt="PostgreSQL views dialog" class="responsive-img" width="55%"/>
 
 In the sample above, the **invoices** view contains a modified version
 of the data in the **Products** table in the PostgreSQL server.
@@ -75,7 +75,7 @@ PostgreSQL functions allow you to carry out operations that would normally take 
 The following are just a set of sample functions running on a test server with [Northwind](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) data:
 
 
-<img src="../images/postgresql-functions.png" alt="A dashboard with a table visualization and a view visualization" class="responsive-img" width="60%"/>
+<img src="../images/postgresql-functions.png" alt="A dashboard with a table visualization and a view visualization" class="responsive-img" width="55%"/>
 
 
 After you select a function, you will need to set up some additional parameters. 
@@ -87,6 +87,16 @@ In this case, the function requires you to configure the start and end date to d
 
 
 For more information on Functions and PostgreSQL, visit this [documentation website](https://www.postgresql.org/docs/9.0/sql-createfunction.html).
+
+## Working in the Visualization editor
+
+Once your data source has been added, you will be taken to the *Visualizations Editor*. Here you can build your dashboard. Note that based on the vusialization that you have chosen, you will see different types of fields.
+
+<img src="./images/postgresql-visualization-editor.png" alt="Working in the visualization editor while using postgresql as a data source." class="responsive-img" width="65%"/>
+
+When you are ready with your visualization, you can click/tap on the checkmark in the top right corner to save it as a dashboard. 
+
+<img src="./images/postgresql-my-analytics.png" alt="A postgresql dashboard in the My Analytics section" class="responsive-img" width="65%"/>
 
 ## Limitations for Functions in Reveal
 
