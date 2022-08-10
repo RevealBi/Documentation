@@ -90,7 +90,7 @@ After selecting a data source provider, you will be prompted to **configure** it
 
 To filter your data sources, you can click on the filter button in the upper right corner.
 
-   <img src="images/data-sources-filter.png" alt="Sample data sources" class="responsive-img" width="60%"/>
+   <img src="images/data-sources-filter.png" alt="A dialog with filtering options" class="responsive-img" width="60%"/>
 
 ## Related Topics
 
