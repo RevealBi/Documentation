@@ -2,6 +2,7 @@
 
 All future updates and new features added to Reveal SDK will be included
 here.
+
 <table>
     <colgroup>
         <col style="width: 15%" />
@@ -16,43 +17,120 @@ here.
         </tr>
     </thead>
     <tbody>
-		<tr>
-        <td rowspan="9">Aug-2022</td>
-        <td rowspan="9">1.2.0</td>
-        <td><i>Added support for custom menu icons</i>
+<tr>
+        <td rowspan="14">Aug-2022</td>
+        <td rowspan="14">1.2.0</td>
+        <td><i>Added support for custom menu items.</i><br> 
+	This snippet shows the creation of a custom "My Menu Item":
+<code><pre>
+	revealView.onMenuOpening = function(visualization, args) {
+		if (args.isInEditMode && visualization == null) { //dashboard edit mode
+			args.menuItems.push(new RevealApi.RVMenuItem(
+				"My Menu Item",
+				new RevealApi.RVImage("/images/save-24.png", "My Save"),
+				function() {
+					alert('my action');
+				}
+			));
+		}
+	};
+</pre></code>
         </td>
     </tr>
     <tr>
-        <td><i>Added support for custom empty state image for dashboards</i><br>        
+        <td><i>Added support for custom empty state image for dashboards.</i><br>     
+        Added the possibility of changing the placeholder images present at new dashboard creation.	
+<code><pre>
+revealView.assets.dashboardEmptyState = new RevealApi.RVImageAsset(
+    new RevealApi.RVImage("/images/dashboard_empty.png", "Empty Dashboard State Image"), 
+    "Add your First Visualization", 
+    "Visualize all your data in perfect harmony");	
+</pre></code>	
+        </td>
+    </tr> 
+   <td><i>Reduced the size of the main Javascript file</i><br> 
+  The main Javascript file was optimized and reduced in size by 30%.
+        </td>
+    </tr>	
+    <tr>
+        <td><i>Added a way to change the default visualization.</i><br>   
+	In this snippet we change the Default Visualization to Pivot Grid:
+        <code><pre>
+		revealView.defaultChartType = RevealApi.RVChartType.PivotGrid;
+</pre></code>			
         </td>
     </tr>    
     <tr>
-        <td><i>Added a way to change the default visualization</i><br>        
+        <td><i>Add schema attribute to SQL Server data sources.</i><br>     
+The schema property on the data source allows SDK users to get a subset of tables/views/procedures that contain the schema provided.		
+        <code><pre>
+		var msSqlAdventureDS = new RevealApi.RVSqlServerDataSource();
+                msSqlAdventureDS.host = "server.domain";
+		msSqlAdventureDS.host = "msSqlAdventureId";
+		msSqlAdventureDS.database = "AdventureWorks";
+		msSqlAdventureDS.port = 1433;
+		msSqlAdventureDS.title = "SQLServer Adventure DS";
+		msSqlAdventureDS.schema = "HumanResources";
+</pre></code>		
         </td>
     </tr>    
     <tr>
-        <td><i>Add schema attribute to SQL Server data sources</i><br>        
+        <td><i>Added a way to change the category grouping separator in a chart visualization.</i><br> 
+		In the following snippet we change the default separator from slash "/" to hyphen "-".
+        <code><pre>revealView.categoryGroupingSeparator = "-";
+</pre></code> 		
         </td>
     </tr>    
+    </tr>  
     <tr>
-        <td><i>Added a way to change the category grouping separator in a chart visualization.</i><br>        
+        <td><i>Added support for TrustServerCertificate setting for SQL Server data sources.</i><br>   
+Two new boolean properties were added to implement this feature to RVSqlServerDataSource:<br> 
+- Encrypt<br> 
+- TrustServerCertificate<br> 
+Both are used to set flags with the same exact name in the connection string.		
+       <code><pre>
+	revealView.onDataSourcesRequested = function (callback) {
+	   var msSqlAdventureDS = new RevealApi.RVSqlServerDataSource();
+                msSqlAdventureDS.host = "server.domain";
+		msSqlAdventureDS.id = "msSqlAdventureId";
+		msSqlAdventureDS.database = "AdventureWorks";
+		msSqlAdventureDS.port = 1433;
+		msSqlAdventureDS.title = "SQLServer Adventure DS";
+		msSqlAdventureDS.schema = "HumanResources";
+                msSqlAdventureDS.encrypt = true;
+                msSqlAdventureDS.trustServerCertificate = true;
+       callback(new RevealApi.RevealDataSources([msSqlAdventureDS],null, true));
+</pre></code>		
         </td>
-    </tr>    
-    </tr>    	
+    </tr>  	
     <tr>
         <td><i>[Public Bug Fix] Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.</i><br>        
         </td>
-    </tr>                
+    </tr> 
     <tr>
-        <td><i>[Public Bug Fix] Fixed currentTimeZone cache issues.</i><br>        
+        <td><i>[Public Bug Fix] Fixed Dashboard filters not refreshing when dashboard is refreshed</i><br>        
+        </td>
+    </tr> 
+    <tr>
+        <td><i>[Public Bug Fix] Fixed number formatting in link name in tooltips.</i><br>        
+        </td>
+    </tr>
+	<tr>
+        <td><i>[Public Bug Fix] Fixed Fiscal Year not working in Postgres/Redshift.</i><br>        
+        </td>
+    </tr> 	
+    <tr>
+        <td><i>[Public Bug Fix] Fixed currentTimeZone caching issues.</i><br>        
         </td>
     </tr>  
     <tr>
-        <td><i>[Public Bug Fix] Fixed Google Sheets not visible in Google Drive popup.</i><br>        
+        <td><i>[Public Bug Fix] Fixed Google Sheets not visible in Google Drive popup.</i><br>       
+All eligible datasources (spreadsheets, excel, csv and json) are displayed within the connector correctly.			
         </td>
     </tr>        
     <tr>
-        <td><i>[Public Bug Fix] Fixed Time Series is not setting min value properly for negative values.</i><br>        
+        <td><i>[Public Bug Fix] Fixed Time Series not setting min value properly for negative values.</i><br>   
+The minimum and maximum values of the y-axis in the time series charts adjust themselves automatically.		
         </td>
     </tr>
     <tr>
