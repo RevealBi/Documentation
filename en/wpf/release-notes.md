@@ -17,43 +17,127 @@ here.
         </tr>
     </thead>
     <tbody>
-	<tr>
-        <td rowspan="9">Aug-2022</td>
-        <td rowspan="9">1.2.0</td>
-        <td><i>Added support for custom menu icons</i>
+<tr>
+        <td rowspan="13">Aug-2022</td>
+        <td rowspan="13">1.2.0</td>
+        <td><i>Added support for custom menu items.</i><br> 
+This snippet shows the creation of a custom "My Menu Item":	
+		 <code><pre>
+revealView.MenuOpening += RevealView_MenuOpening;
+private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEventArgs args)
+{
+  if (args.IsInEditMode && visualization == null) //dashboard edit mode
+  {
+    args.MenuItems.Add(new RVMenuItem()
+            {
+        Icon = new RVImage(new BitmapImage(new Uri("pack://application:,,,/Images/save-24.png"))),
+        Title = "My Menu Item",
+        Action = () =>
+        {
+          MyCustomAction();
+        }
+            });
+  }
+}
+</pre></code>
         </td>
     </tr>
     <tr>
-        <td><i>Added support for custom empty state image for dashboards</i><br>        
+        <td><i>Added support for custom empty state image for dashboards.</i><br>     
+        Added the possibility of changing the placeholder images present at new dashboard creation.	
+	 <code><pre>
+revealView.Assets.DashboardEmptyState = new RVImageAsset()
+{
+  Image = new RVImage(new BitmapImage(new Uri("pack://application:,,,/Images/dashboard_empty.png"))),
+  Title = "Add your First Visualization",
+  Subtitle = "Visualize all your data in perfect harmony"
+};
+</pre></code>
         </td>
     </tr>    
     <tr>
-        <td><i>Added a way to change the default visualization</i><br>        
+        <td><i>Added a way to change the default visualization.</i><br>   
+	In this snippet we change the Default Visualization to Pivot Grid:
+        <code><pre>
+		revealView.DefaultChartType = RVChartType.PivotGrid;
+</pre></code>			
         </td>
     </tr>    
     <tr>
-        <td><i>Add schema attribute to SQL Server data sources</i><br>        
+        <td><i>Add schema attribute to SQL Server data sources.</i><br>     
+The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
+        <code><pre>
+		  var msSqlAdventureDS = new RVSqlServerDataSource()
+            {
+                Id = "msSqlAdventureId",
+                Title = "SQLServer Adventure DS",
+                Host = "server.domain",
+                Database = "AdventureWorks",
+                Schema = "HumanResources",
+                Port = 1433
+            };
+            datasources.Add(msSqlAdventureDS);
+</pre></code>		
         </td>
     </tr>    
     <tr>
-        <td><i>Added a way to change the category grouping separator in a chart visualization.</i><br>        
+        <td><i>Added a way to change the category grouping separator used in legends for a chart visualization.</i><br> 
+		In the following snippet we change the separator from the default slash "/" to hyphen "-".
+        <code><pre>revealView.CategoryGroupingSeparator = "-";
+</pre></code> 		
         </td>
     </tr>    
-    </tr>    	
+    </tr>  
+    <tr>
+        <td><i>Added support for TrustServerCertificate setting for SQL Server data sources.</i><br>   
+Two new boolean properties were added to implement this feature to RVSqlServerDataSource:<br> 
+- Encrypt<br> 
+- TrustServerCertificate<br> 
+Both are used to set flags with the same exact name in the connection string.		
+       <code><pre>
+		  var msSqlAdventureDS = new RVSqlServerDataSource()
+            {
+                Id = "msSqlAdventureId",
+                Title = "SQLServer Adventure DS",
+                Host = "server.domain",
+                Database = "AdventureWorks",
+                Schema = "HumanResources",
+                Port = 1433,
+		Encrypt = true,
+		TrustServerCertificate = true
+            };
+            datasources.Add(msSqlAdventureDS);
+</pre></code>		
+        </td>
+    </tr>  	
     <tr>
         <td><i>[Public Bug Fix] Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.</i><br>        
         </td>
-    </tr>                
+    </tr> 
     <tr>
-        <td><i>[Public Bug Fix] Fixed currentTimeZone cache issues.</i><br>        
+        <td><i>[Public Bug Fix] Fixed Dashboard filters not refreshing when dashboard is refreshed</i><br>        
+        </td>
+    </tr> 
+    <tr>
+        <td><i>[Public Bug Fix] Fixed number formatting in link name in tooltips.</i><br>        
+        </td>
+    </tr>
+	<tr>
+        <td><i>[Public Bug Fix] Fixed Fiscal Year not working in Postgres/Redshift.</i><br>        
+        </td>
+    </tr> 	
+    <tr>
+        <td><i>[Public Bug Fix] Fixed currentTimeZone caching issues.</i><br>        
         </td>
     </tr>  
     <tr>
-        <td><i>[Public Bug Fix] Fixed Google Sheets not visible in Google Drive popup.</i><br>        
+        <td><i>[Public Bug Fix] Fixed Google Sheets not visible in Google Drive popup.</i><br>       
+All eligible datasources (spreadsheets, excel, csv and json) are displayed within the connector correctly.			
         </td>
     </tr>        
     <tr>
-        <td><i>[Public Bug Fix] Fixed Time Series is not setting min value properly for negative values.</i><br>        
+        <td><i>[Public Bug Fix] Fixed Time Series not setting min value properly for negative values.</i><br>   
+The minimum and maximum values of the y-axis in the time series charts adjust themselves automatically.		
         </td>
     </tr>
     <tr>
