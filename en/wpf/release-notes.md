@@ -65,7 +65,7 @@ revealView.Assets.DashboardEmptyState = new RVImageAsset()
     </tr>    
     <tr>
         <td><i>Add schema attribute to SQL Server data sources.</i><br>     
-The schema property on the data source allows SDK users to get a subset of tables/views/procedures that contain the schema provided.		
+The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
         <code><pre>
 		  var msSqlAdventureDS = new RVSqlServerDataSource()
             {
@@ -81,8 +81,8 @@ The schema property on the data source allows SDK users to get a subset of table
         </td>
     </tr>    
     <tr>
-        <td><i>Added a way to change the category grouping separator in a chart visualization.</i><br> 
-		In the following snippet we change the default separator from slash "/" to hyphen "-".
+        <td><i>Added a way to change the category grouping separator used in legends for a chart visualization.</i><br> 
+		In the following snippet we change the separator from the default slash "/" to hyphen "-".
         <code><pre>revealView.CategoryGroupingSeparator = "-";
 </pre></code> 		
         </td>
