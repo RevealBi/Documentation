@@ -27,7 +27,7 @@ here.
     <tr>
         <td><i>Added support for custom menu items.</i><br> 
 	This snippet shows the creation of a custom "My Menu Item":
-<code><pre>
+<pre>
 	revealView.onMenuOpening = function(visualization, args) {
 		if (args.isInEditMode && visualization == null) { //dashboard edit mode
 			args.menuItems.push(new RevealApi.RVMenuItem(
@@ -39,18 +39,18 @@ here.
 			));
 		}
 	};
-</pre></code>
+</pre>
         </td>
     </tr>
     <tr>
         <td><i>Added support for custom empty state image for dashboards.</i><br>     
         Added the possibility of changing the placeholder images present at new dashboard creation.	
-<code><pre>
+<pre>
 revealView.assets.dashboardEmptyState = new RevealApi.RVImageAsset(
     new RevealApi.RVImage("/images/dashboard_empty.png", "Empty Dashboard State Image"), 
     "Add your First Visualization", 
     "Visualize all your data in perfect harmony");	
-</pre></code>	
+</pre>	
         </td>
     </tr> 
     <tr>
@@ -64,7 +64,7 @@ revealView.assets.dashboardEmptyState = new RevealApi.RVImageAsset(
     <tr>
         <td><i>Add schema attribute to SQL Server data sources.</i><br>     
 	The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
-        <code><pre>
+       <pre>
 		var msSqlAdventureDS = new RevealApi.RVSqlServerDataSource();
                 msSqlAdventureDS.host = "server.domain";
 		msSqlAdventureDS.host = "msSqlAdventureId";
@@ -72,14 +72,14 @@ revealView.assets.dashboardEmptyState = new RevealApi.RVImageAsset(
 		msSqlAdventureDS.port = 1433;
 		msSqlAdventureDS.title = "SQLServer Adventure DS";
 		msSqlAdventureDS.schema = "HumanResources";
-</pre></code>		
+</pre>		
         </td>
     </tr>    
     <tr>
         <td><i>Added a way to change the category grouping separator used in legends for a chart visualization.</i><br> 
 	In the following snippet we change the separator from the default slash "/" to hyphen "-".
-        <code><pre>revealView.categoryGroupingSeparator = "-";
-</pre></code> 		
+        <pre>revealView.categoryGroupingSeparator = "-";
+</pre> 		
         </td>
     </tr>    
     </tr>  
@@ -89,7 +89,7 @@ Two new boolean properties were added to implement this feature to RVSqlServerDa
 - Encrypt<br> 
 - TrustServerCertificate<br> 
 Both are used to set flags with the same exact name in the connection string.		
-       <code><pre>
+       <pre>
 	revealView.onDataSourcesRequested = function (callback) {
 	   var msSqlAdventureDS = new RevealApi.RVSqlServerDataSource();
                 msSqlAdventureDS.host = "server.domain";
@@ -101,7 +101,7 @@ Both are used to set flags with the same exact name in the connection string.
                 msSqlAdventureDS.encrypt = true;
                 msSqlAdventureDS.trustServerCertificate = true;
        callback(new RevealApi.RevealDataSources([msSqlAdventureDS],null, true));
-</pre></code>		
+</pre>	
         </td>
     </tr>  	
     <tr>
@@ -683,3 +683,4 @@ revealView.onVisualizationSeriesColorAssigning = function(visualization, default
         </tr>
     </tbody>
 </table>
+S
