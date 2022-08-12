@@ -1,7 +1,7 @@
 # Release Notes
 
 ## 1.2.0 (Aug-2022)
-### NEW FEATURES
+### New Features
 - _Reduced the size of the main Javascript file_
   The main Javascript file was optimized and reduced in size by 30%.
 
@@ -58,6 +58,7 @@ revealView.categoryGroupingSeparator = "-";
 Two new boolean properties were added to implement this feature to RVSqlServerDataSource:
 	- Encrypt
 	- TrustServerCertificate
+
 Both are used to set flags with the same exact name in the connection string.		
 ```javascript
 var msSqlAdventureDS = new RevealApi.RVSqlServerDataSource();
@@ -71,7 +72,8 @@ msSqlAdventureDS.encrypt = true;
 msSqlAdventureDS.trustServerCertificate = true;
 ```
 
-### BUG FIXES
+
+### Bug Fixes
 - Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.
 - Fixed Dashboard filters not refreshing when dashboard is refreshed.
 - Fixed number formatting in link name in tooltips.
