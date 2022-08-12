@@ -683,4 +683,4 @@ revealView.onVisualizationSeriesColorAssigning = function(visualization, default
         </tr>
     </tbody>
 </table>
-S
+
