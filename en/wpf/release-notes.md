@@ -76,7 +76,7 @@ var msSqlAdventureDS = new RVSqlServerDataSource()
 	Encrypt = true,
 	TrustServerCertificate = true
 };
-            datasources.Add(msSqlAdventureDS);
+datasources.Add(msSqlAdventureDS);
 ```
 
 ### BUG FIXES
