@@ -1,7 +1,7 @@
 # Release Notes
 
 ## 1.2.0 (Aug-2022)
-### NEW FEATURES
+### New Features
 
 - _Added support for custom menu items._
 This snippet shows the creation of a custom 'My Menu Item':
@@ -86,7 +86,7 @@ datasources.Add(msSqlAdventureDS);
 ```
 
 
-### BUG FIXES
+### Bug Fixes
 - Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.
 - Fixed Dashboard filters not refreshing when dashboard is refreshed.
 - Fixed number formatting in link name in tooltips.
