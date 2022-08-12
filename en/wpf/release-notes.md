@@ -4,7 +4,8 @@
 ### NEW FEATURES
 
 - _Added support for custom menu items._
-This snippet shows the creation of a custom "My Menu Item":
+This snippet shows the creation of a custom 'My Menu Item':
+
 ```cs
 revealView.MenuOpening += RevealView_MenuOpening;
 private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEventArgs args)
@@ -23,8 +24,10 @@ private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEv
 	}
 }
 ```
+
 - _Added support for custom empty state image for dashboards._
 Added the possibility of changing the placeholder images present at new dashboard creation.	
+
 ```cs
 revealView.Assets.DashboardEmptyState = new RVImageAsset()
 {
@@ -54,15 +57,18 @@ var msSqlAdventureDS = new RVSqlServerDataSource()
 };
 datasources.Add(msSqlAdventureDS);
 ```
+
 - _Added a way to change the category grouping separator used in legends for a chart visualization._
-In the following snippet we change the separator from the default slash "/" to hyphen "-".
+In the following snippet we change the separator from the default value (slash) to hyphen.
 ```cs
 revealView.CategoryGroupingSeparator = "-";
 ```
+
 - _Added support for TrustServerCertificate setting for SQL Server data sources._
 Two new boolean properties were added to implement this feature to RVSqlServerDataSource:
 	- Encrypt
 	- TrustServerCertificate
+	
 Both are used to set flags with the same exact name in the connection string.		
 ```cs
 var msSqlAdventureDS = new RVSqlServerDataSource()
@@ -78,6 +84,7 @@ var msSqlAdventureDS = new RVSqlServerDataSource()
 };
 datasources.Add(msSqlAdventureDS);
 ```
+
 
 ### BUG FIXES
 - Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.
