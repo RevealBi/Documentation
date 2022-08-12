@@ -145,7 +145,7 @@ The minimum and maximum values of the y-axis in the time series charts adjust th
         <td><i>Added a way to assign chart colors programmatically through revealView.onVisualizationSeriesColorAssigning event.</i>     
         <br>
         The following code snippet returns red color for High and green for Low, for all Pie charts:
-        <code><pre>
+        <pre>
 revealView.onVisualizationSeriesColorAssigning = function(visualization, defaultColor, fieldName, categoryName) {
     if (visualization.chartType == "PieChart") {
 	if (categoryName == "High") {
@@ -155,7 +155,7 @@ revealView.onVisualizationSeriesColorAssigning = function(visualization, default
 	}
     }
     return defaultColor;
-};        </pre></code>
+};        </pre>
         </br>   
         </td>
     </tr>        
