@@ -22,7 +22,7 @@ here.
         <td rowspan="13">1.2.0</td>
         <td><i>Added support for custom menu items.</i><br> 
 This snippet shows the creation of a custom "My Menu Item":	
-		 <code><pre>
+		 <pre>
 revealView.MenuOpening += RevealView_MenuOpening;
 private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEventArgs args)
 {
@@ -39,34 +39,34 @@ private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEv
             });
   }
 }
-</pre></code>
+</pre>
         </td>
     </tr>
     <tr>
         <td><i>Added support for custom empty state image for dashboards.</i><br>     
         Added the possibility of changing the placeholder images present at new dashboard creation.	
-	 <code><pre>
+	 <pre>
 revealView.Assets.DashboardEmptyState = new RVImageAsset()
 {
   Image = new RVImage(new BitmapImage(new Uri("pack://application:,,,/Images/dashboard_empty.png"))),
   Title = "Add your First Visualization",
   Subtitle = "Visualize all your data in perfect harmony"
 };
-</pre></code>
+</pre>
         </td>
     </tr>    
     <tr>
         <td><i>Added a way to change the default visualization.</i><br>   
 	In this snippet we change the Default Visualization to Pivot Grid:
-        <code><pre>
+        <pre>
 		revealView.DefaultChartType = RVChartType.PivotGrid;
-</pre></code>			
+</pre>			
         </td>
     </tr>    
     <tr>
         <td><i>Add schema attribute to SQL Server data sources.</i><br>     
-The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
-        <code><pre>
+The schema property on the data source allows SDK users to get a subset of tables/views/procedures that contain the schema provided.		
+       <pre>
 		  var msSqlAdventureDS = new RVSqlServerDataSource()
             {
                 Id = "msSqlAdventureId",
@@ -77,14 +77,14 @@ The schema property on the data source allows SDK users to restrict the displaye
                 Port = 1433
             };
             datasources.Add(msSqlAdventureDS);
-</pre></code>		
+</pre>	
         </td>
     </tr>    
     <tr>
-        <td><i>Added a way to change the category grouping separator used in legends for a chart visualization.</i><br> 
-		In the following snippet we change the separator from the default slash "/" to hyphen "-".
-        <code><pre>revealView.CategoryGroupingSeparator = "-";
-</pre></code> 		
+        <td><i>Added a way to change the category grouping separator in a chart visualization.</i><br> 
+		In the following snippet we change the default separator from slash "/" to hyphen "-".
+        <pre>revealView.CategoryGroupingSeparator = "-";
+</pre>	
         </td>
     </tr>    
     </tr>  
@@ -94,7 +94,7 @@ Two new boolean properties were added to implement this feature to RVSqlServerDa
 - Encrypt<br> 
 - TrustServerCertificate<br> 
 Both are used to set flags with the same exact name in the connection string.		
-       <code><pre>
+       <pre>
 		  var msSqlAdventureDS = new RVSqlServerDataSource()
             {
                 Id = "msSqlAdventureId",
@@ -103,11 +103,11 @@ Both are used to set flags with the same exact name in the connection string.
                 Database = "AdventureWorks",
                 Schema = "HumanResources",
                 Port = 1433,
-		Encrypt = true,
-		TrustServerCertificate = true
+				Encrypt = true,
+				TrustServerCertificate = true
             };
             datasources.Add(msSqlAdventureDS);
-</pre></code>		
+</pre>		
         </td>
     </tr>  	
     <tr>
@@ -151,7 +151,7 @@ The minimum and maximum values of the y-axis in the time series charts adjust th
         <td><i>Added a way to assign chart colors programmatically through RevealView.VisualizationSeriesColorAssigning event.</i>        
 <br>
         The following code snippet returns red color for High and green for Low, for all Pie charts:
-        <br><code><pre>
+        <br><pre>
 revealView.VisualizationSeriesColorAssigning += RevealView_VisualizationSeriesColorAssigning;
 private Color RevealView_VisualizationSeriesColorAssigning(RVVisualization visualization, Color defaultColor, string fieldName, string categoryName)
 {
@@ -168,7 +168,7 @@ private Color RevealView_VisualizationSeriesColorAssigning(RVVisualization visua
     }
     return defaultColor;
 }
-        </pre></code>
+        </pre>
         </br>   
         </td>
     </tr>        
