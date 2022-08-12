@@ -20,6 +20,7 @@ revealView.onMenuOpening = function(visualization, args) {
 	}
 };
 ```
+
 - _Added support for custom empty state image for dashboards._
 Added the possibility of changing the placeholder images present at new dashboard creation.	
 ```javascript
@@ -46,11 +47,13 @@ msSqlAdventureDS.port = 1433;
 msSqlAdventureDS.title = "SQLServer Adventure DS";
 msSqlAdventureDS.schema = "HumanResources";
 ```
+
 - _Added a way to change the category grouping separator used in legends for a chart visualization._
-In the following snippet we change the separator from the default slash "/" to hyphen "-".
+In the following snippet we change the separator from the default separator (slash) to hyphen.
 ```javascript
 revealView.categoryGroupingSeparator = "-";
 ```
+
 - _Added support for TrustServerCertificate setting for SQL Server data sources._
 Two new boolean properties were added to implement this feature to RVSqlServerDataSource:
 	- Encrypt
