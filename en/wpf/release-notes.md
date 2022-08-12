@@ -9,18 +9,18 @@ This snippet shows the creation of a custom "My Menu Item":
 revealView.MenuOpening += RevealView_MenuOpening;
 private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEventArgs args)
 {
-  if (args.IsInEditMode && visualization == null) //dashboard edit mode
-  {
-    args.MenuItems.Add(new RVMenuItem()
-            {
-        Icon = new RVImage(new BitmapImage(new Uri("pack://application:,,,/Images/save-24.png"))),
-        Title = "My Menu Item",
-        Action = () =>
-        {
-          MyCustomAction();
-        }
-            });
-  }
+	if (args.IsInEditMode && visualization == null) //dashboard edit mode
+	{
+		args.MenuItems.Add(new RVMenuItem()
+		{
+			Icon = new RVImage(new BitmapImage(new Uri("pack://application:,,,/Images/save-24.png"))),
+			Title = "My Menu Item",
+			Action = () =>
+			{
+				MyCustomAction();
+			}
+		});
+	}
 }
 ```
 - _Added support for custom empty state image for dashboards._
@@ -43,16 +43,16 @@ revealView.DefaultChartType = RVChartType.PivotGrid;
 - _Add schema attribute to SQL Server data sources._
 The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
 ```cs
-		  var msSqlAdventureDS = new RVSqlServerDataSource()
-            {
-                Id = "msSqlAdventureId",
-                Title = "SQLServer Adventure DS",
-                Host = "server.domain",
-                Database = "AdventureWorks",
-                Schema = "HumanResources",
-                Port = 1433
-            };
-            datasources.Add(msSqlAdventureDS);
+var msSqlAdventureDS = new RVSqlServerDataSource()
+{
+	Id = "msSqlAdventureId",
+	Title = "SQLServer Adventure DS",
+	Host = "server.domain",
+	Database = "AdventureWorks",
+	Schema = "HumanResources",
+	Port = 1433
+};
+datasources.Add(msSqlAdventureDS);
 ```
 - _Added a way to change the category grouping separator used in legends for a chart visualization._
 In the following snippet we change the separator from the default slash "/" to hyphen "-".
@@ -65,17 +65,17 @@ Two new boolean properties were added to implement this feature to RVSqlServerDa
 	- TrustServerCertificate
 Both are used to set flags with the same exact name in the connection string.		
 ```cs
-		  var msSqlAdventureDS = new RVSqlServerDataSource()
-            {
-                Id = "msSqlAdventureId",
-                Title = "SQLServer Adventure DS",
-                Host = "server.domain",
-                Database = "AdventureWorks",
-                Schema = "HumanResources",
-                Port = 1433,
-				Encrypt = true,
-				TrustServerCertificate = true
-            };
+var msSqlAdventureDS = new RVSqlServerDataSource()
+{
+	Id = "msSqlAdventureId",
+	Title = "SQLServer Adventure DS",
+	Host = "server.domain",
+	Database = "AdventureWorks",
+	Schema = "HumanResources",
+	Port = 1433,
+	Encrypt = true,
+	TrustServerCertificate = true
+};
             datasources.Add(msSqlAdventureDS);
 ```
 
