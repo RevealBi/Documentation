@@ -6,7 +6,7 @@
 - _Added support for custom menu items._
 This snippet shows the creation of a custom 'My Menu Item':
 
-```cs
+```csharp
 revealView.MenuOpening += RevealView_MenuOpening;
 private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEventArgs args)
 {
@@ -28,7 +28,7 @@ private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEv
 - _Added support for custom empty state image for dashboards._
 Added the possibility of changing the placeholder images present at new dashboard creation.	
 
-```cs
+```csharp
 revealView.Assets.DashboardEmptyState = new RVImageAsset()
 {
   Image = new RVImage(new BitmapImage(new Uri("pack://application:,,,/Images/dashboard_empty.png"))),
@@ -39,13 +39,13 @@ revealView.Assets.DashboardEmptyState = new RVImageAsset()
 
 - _Added a way to change the default visualization._
 In this snippet we change the Default Visualization to Pivot Grid:
-```cs
+```csharp
 revealView.DefaultChartType = RVChartType.PivotGrid;
 ```
 
 - _Added support for parameters to RVInMemoryDataSourceItem._
 You can now set parameters to in-mem data source items to pass additional information:
-```cs
+```csharp
 public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSourceItem)
 {
     if (dataSourceItem is RVInMemoryDataSourceItem item)
@@ -62,7 +62,7 @@ public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSou
 
 - _Add schema attribute to SQL Server data sources._
 The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
-```cs
+```csharp
 var msSqlAdventureDS = new RVSqlServerDataSource()
 {
 	Id = "msSqlAdventureId",
@@ -77,7 +77,7 @@ datasources.Add(msSqlAdventureDS);
 
 - _Added a way to change the category grouping separator used in legends for a chart visualization._
 In the following snippet we change the separator from the default value (slash) to hyphen.
-```cs
+```csharp
 revealView.CategoryGroupingSeparator = "-";
 ```
 
@@ -87,7 +87,7 @@ Two new boolean properties were added to implement this feature to RVSqlServerDa
 	- TrustServerCertificate
 	
 Both are used to set flags with the same exact name in the connection string.		
-```cs
+```csharp
 var msSqlAdventureDS = new RVSqlServerDataSource()
 {
 	Id = "msSqlAdventureId",
