@@ -43,6 +43,23 @@ In this snippet we change the Default Visualization to Pivot Grid:
 revealView.DefaultChartType = RVChartType.PivotGrid;
 ```
 
+- _Added support for parameters to RVInMemoryDataSourceItem._
+You can now set parameters to in-mem data source items to pass additional information:
+```cs
+public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSourceItem)
+{
+    if (dataSourceItem is RVInMemoryDataSourceItem item)
+    {
+        item.Parameters = new Dictionary<string, object>()
+        {
+            { "CurrentUser", GetCurrentUserName() }
+        };
+        return Task.FromResult<RVDataSourceItem>(item);
+    }
+    return Task.FromResult<RVDataSourceItem>(null);
+}
+```
+
 - _Add schema attribute to SQL Server data sources._
 The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
 ```cs
