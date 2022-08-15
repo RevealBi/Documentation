@@ -5,7 +5,6 @@
 
 - _Added support for custom menu items._
 This snippet shows the creation of a custom 'My Menu Item':
-
 ```csharp
 revealView.MenuOpening += RevealView_MenuOpening;
 private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEventArgs args)
@@ -26,8 +25,7 @@ private void RevealView_MenuOpening(RVVisualization visualization, MenuOpeningEv
 ```
 
 - _Added support for custom empty state image for dashboards._
-Added the possibility of changing the placeholder images present at new dashboard creation.	
-
+Added the possibility of changing the placeholder images present at new dashboard creation:	
 ```csharp
 revealView.Assets.DashboardEmptyState = new RVImageAsset()
 {
@@ -61,7 +59,7 @@ public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDataSourceItem dataSou
 ```
 
 - _Add schema attribute to SQL Server data sources._
-The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema.
+The schema property on the data source allows SDK users to restrict the displayed list tables/views/procedures to the provided schema:
 ```csharp
 var msSqlAdventureDS = new RVSqlServerDataSource()
 {
@@ -76,7 +74,7 @@ datasources.Add(msSqlAdventureDS);
 ```
 
 - _Added a way to change the category grouping separator used in legends for a chart visualization._
-In the following snippet we change the separator from the default value (slash) to hyphen.
+In the following snippet we change the separator from the default value (slash) to hyphen:
 ```csharp
 revealView.CategoryGroupingSeparator = "-";
 ```
@@ -84,9 +82,9 @@ revealView.CategoryGroupingSeparator = "-";
 - _Added support for TrustServerCertificate setting for SQL Server data sources._
 Two new boolean properties were added to implement this feature to RVSqlServerDataSource:
 	- Encrypt
-	- TrustServerCertificate
+	- TrustServerCertificate.
 	
-Both are used to set flags with the same exact name in the connection string.		
+Both are used to set flags with the same exact name in the connection string:
 ```csharp
 var msSqlAdventureDS = new RVSqlServerDataSource()
 {
@@ -101,7 +99,6 @@ var msSqlAdventureDS = new RVSqlServerDataSource()
 };
 datasources.Add(msSqlAdventureDS);
 ```
-
 
 ### Bug Fixes
 - Fixed ApplyTimeZone error when joining Data sources in Postgres/Redshift.
@@ -233,24 +230,24 @@ You can now render a thumbnail of a dashboard with _RevealDashboardThumbnailView
  - Google Analytics issues with dashboard filters.
  When getting data from Google Analytics data sources, you were unable to create dashboard filters.
  
- ## 1.0.1956 (May-2021)
+## 1.0.1956 (May-2021)
  
- ### Bug Fixes
- - [SDK] Full list of Data Sources displayed by mistake.
- When using _DataSourcesRequested_ callback in the Desktop SDK, the whole list of data sources was being displayed instead of the ones explicitly added.
- - [SDK] Desktop SDK export to Excel not working as expected.
- When reloading a dashboard and then exporting a single visualization to Excel, the first visualization of the dashboard was always the one exported.
- - [SDK] Dashboard with SQL data source using a dynamic port not loading.
- When loading a dashboard with an SQL data source defined using a dynamic port (providing an instance in the host field), the data source connection was not working because of issues with the dynamic port configuration.
- - Calculated field set as Visualization filter were throwing an error.
- When configuring a Visualization filter based on a calculated field that depends on another calculated field, an error was being shown ("Invalid column name").
- - Drill down scenario with different "sort by" configurations not working as expected.
- When the fields in a hierarchy were configured with a combination of "sort by: <any field>" and a descending sorting, the result was the dashboard not loading.
+### Bug Fixes
+- [SDK] Full list of Data Sources displayed by mistake.
+When using _DataSourcesRequested_ callback in the Desktop SDK, the whole list of data sources was being displayed instead of the ones explicitly added.
+- [SDK] Desktop SDK export to Excel not working as expected.
+When reloading a dashboard and then exporting a single visualization to Excel, the first visualization of the dashboard was always the one exported.
+- [SDK] Dashboard with SQL data source using a dynamic port not loading.
+When loading a dashboard with an SQL data source defined using a dynamic port (providing an instance in the host field), the data source connection was not working because of issues with the dynamic port configuration.
+- Calculated field set as Visualization filter were throwing an error.
+When configuring a Visualization filter based on a calculated field that depends on another calculated field, an error was being shown ("Invalid column name").
+- Drill down scenario with different "sort by" configurations not working as expected.
+When the fields in a hierarchy were configured with a combination of "sort by: <any field>" and a descending sorting, the result was the dashboard not loading.
  
- ## 1.0.1866 (Mar-2021)
+## 1.0.1866 (Mar-2021)
  
- ### Newe Features
- -  _New Properties for Desktop SDK:_
+### Newe Features
+-  _New Properties for Desktop SDK:_
 	- _ShowEditDataSource_ can be used to disable the Edit button normally available in the data source overflow menu.
 	- _CanAddDashboardFilter_: this property can hide the "Add Dashboard Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
 	- _CanAddDateFilter_: this property can hide the "Add Date Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
