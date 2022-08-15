@@ -139,6 +139,7 @@ private Color RevealView_VisualizationSeriesColorAssigning(RVVisualization visua
     return defaultColor;
 }
 ```
+
 -  _End user can now control the Others slice for Pie and Doughnut visualizations._ 
 In the Settings panel for the visualization the end-user can select a threshold (all slices under that value will be merged in a single Others slice) or disable the feature completely.
 
@@ -407,4 +408,4 @@ With this detailed guide, you will start with prerequisites and go through every
 -  _Change the Widget’s Data Source._
 You can now enable or disable the possibility to change a widget’s data source to end users. When opening the Visualization Data screen in edit mode, Reveal will either show or hide the change data source button in the UI.
 -  _Formatting Service for Reveal Desktop SDK._
-You can now enable or disable the possibility to change the dashboard’s theme to end users. When entering edit mode for a dashboard, Reveal will either show or hide the button used to display the available themes.
+You can now enable or disable the possibility to change the dashboard’s theme to end users. When entering edit mode for a dashboard, Reveal will either show or hide the button used to display the available themes.                
