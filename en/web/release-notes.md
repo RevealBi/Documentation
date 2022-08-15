@@ -3,7 +3,7 @@
 ## 1.2.0 (Aug-2022)
 
 ### New Features
-- _Reduced the size of the main Javascript file_
+- _Reduced the size of the main Javascript file._
   The main Javascript file was optimized and reduced in size by 30%.
 
 - _Added support for custom menu items._
@@ -135,7 +135,8 @@ RVDateFilter.range was previously returning a valid value only when filter was s
 
 ### New Features
 
--  _Added an option to override, the browser locale when localizing strings in Reveal UI._
+-  _Added an option to override, the browser locale when localizing strings in Reveal UI_
+
 ```javascript
 await RevealApi.RevealSdkSettings.overrideLocale(RevealApi.SupportedLocales.En);
 ```
@@ -144,7 +145,7 @@ await RevealApi.RevealSdkSettings.overrideLocale(RevealApi.SupportedLocales.En);
 - Dashboard linking with filter parameters.
 In some cases the filter value from the source dashboard wasn't compared properly against the values in the target dashboard.
 - Date filter range selection.
-- In some cases, date filter's predefined ranges (e.g., "this month") were not properly working with the expected values (e.g., start and end of the target month).
+In some cases, date filter's predefined ranges (e.g., "this month") were not properly working with the expected values (e.g., start and end of the target month).
 
 ## 1.1.3 (Mar-2022)
 
@@ -203,7 +204,7 @@ Now you can you can skip the WebFontLoader library and use [$.ig.RevealSdkSettin
 - Fixed export to Excel when there are null date values in the dataset.<br>
 - Fixed issue exporting to PDF or PPT with custom branding logo.
 
-## 1.1.0 (OCT-2021)
+## 1.1.0 (Oct-2021)
 
 ### New Features
 -  _The .NET Server SDK was enhanced with several changes:_
@@ -216,8 +217,8 @@ Now you can you can skip the WebFontLoader library and use [$.ig.RevealSdkSettin
 	- _Improved setup for default implementations._
 	Greatly improved setup for default implementations - Now it's pretty simple to setup Reveal if you have your dashboards in a "Dashboards" folder and your local data files (csv or excel) are located in your "Data" folder on the project root level. Example:
 		- services:
-		 &emsp;&emsp;.AddMvc()<br>
-        &emsp;&emsp;.AddReveal();
+			-.AddMvc()
+            -.AddReveal();
 For further details, please refer to [Reveal .NET SDK Upgrade to v1.1](https://help.revealbi.io/en/developer/release-information/upgrade-to-1.1.html).
 - _IRVDataSourceProvider interface changed (Desktop and .NET Server SDK)_
 The IRVDataSourceProvider interface now has a single ChangeDataSourceItem and it will be called whenever a dashboard need to use a data source item.
@@ -273,14 +274,6 @@ You can now register the _RevealSdkContext_ and _RevealUserContext_ implementati
 When enabling server-side aggregation of the data, calculated fields used as filters were not filtering data as expected.
 - Google Analytics issues with dashboard filters.
 When getting data from Google Analytics data sources, you were unable to create dashboard filters.
-
-## 1.0.3 JAVA (May-2021)
-
-### New Features
--  _New Snowflake connector!_
-Reveal Java SDK now supports Snowflake data source connector, also including data blending between tables in the same Snowflake database.
--  _Reveal BI Engine for Java was enhanced_.
-Java platform is now as robust as other platforms, helping to avoid server crashes when a visualization sends a big amount of data back to the client. Several new properties in <b>InitializeParameterBuilder</b> control this: <i>maxInMemoryCells</i>, <i>maxStorageCells</i>, <i>maxStringCellSize</i>, and <i>maxTotalStringSize</i>.
 
 ## 1.0.1866 (Mar-2021)
 
