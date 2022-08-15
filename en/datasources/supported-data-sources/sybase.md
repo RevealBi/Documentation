@@ -11,7 +11,7 @@ _description: Learn how to configure your Sybase data source in Slingshot, retri
 To configure a Sybase server data source, you will need to enter the
 following information:
 
-<img src="images/add-sybase-as-data-source.png" alt="Configure Sybase database connection" width="60%" class="responsive-img"/>
+<img src="images/add-sybase-as-data-source.png" alt="Configure Sybase database connection" width="50%" class="responsive-img"/>
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
@@ -63,11 +63,11 @@ can also select a particular
 [view](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm)
 that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/sybase-views-list.png" alt="Select from Sybase views dialog" class="responsive-img" width="60%"/>
+<img src="images/sybase-views-list.png" alt="Select from Sybase views dialog" class="responsive-img" width="55%"/>
 
-The **syscacheinfo** view, for example, contains information on the cache, taken from one of the tables in the database.
+The **syscacheinfo** view, for example, contains information about the cache, taken from one of the tables in the database.
 
-<img src="images/sybase-view-visualization-editor.png" alt="Sales Projection Sample dashboard" class="responsive-img" width="50%"/>
+<img src="images/sybase-view-visualization-editor.png" alt="Creating a visualization while using a sybase view" class="responsive-img" width="60%"/>
 
 For more information on views and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm).
 
@@ -78,7 +78,7 @@ statements in a relational database with specific parameters.
 
 In this case, for example, the stored procedure requires users to set *@name* range value.
 
-<img src="images/stored-procedure-parameters-sybase.png" alt="Stored Procedure select dates" class="responsive-img" width="50%"/>
+<img src="images/stored-procedure-parameters-sybase.png" alt="Stored Procedure select name" class="responsive-img" width="55%"/>
 
 For more information on Stored Procedures and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X39397.htm).
 
@@ -86,9 +86,9 @@ For more information on Stored Procedures and Sybase, visit [this documentation 
 
 Once your data source has been added, you will be taken to the *Visualizations Editor*. Here you can build your dashboard. By default, the *Column* visualization will be selected. You can select it in order to choose another chart type.
 
-<img src="images/sybase-working-in-visualization-editor.png" alt="Using Sybase data to create a dashboard in the visualization editor" class="responsive-img" width="50%"/>
+<img src="images/sybase-working-in-visualization-editor.png" alt="Using Sybase data to create a dashboard in the visualization editor" class="responsive-img" width="70%"/>
 
 When you are ready with your visualization, you can save it as a dashboard by clicking/tapping on the checkmark in the top right corner.
 
-<img src="images/sybase-my-analytics.png" alt="Sybase dashboard in My Analytics" class="responsive-img" width="50%"/>
+<img src="images/sybase-my-analytics.png" alt="Sybase dashboard in My Analytics" class="responsive-img" width="70%"/>
 
