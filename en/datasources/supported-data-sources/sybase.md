@@ -31,7 +31,7 @@ following information:
     - **Alias**: the name for your data source account. It will be
         displayed in the list of accounts in the previous dialog.
 
-  Once ready, select **Add**.
+  Once ready, select **Add** and then **Add Server**.
 
 <a name='how-to-find-server'></a>
 ## How to find your Server Information
