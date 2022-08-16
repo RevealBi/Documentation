@@ -330,7 +330,7 @@ You can now have server-side aggregation of the data coming from the MS SQL, MyS
 ## 1.0.1374 (Jul-2020)
 
 ### New Features
--  _New API to set axis bounds for charts.
+-  _New API to set axis bounds for charts._
 You can now programmatically change the axis bounds in runtime for a particular visualization.
 -  _Salesforce data source enhancements._
 Now you can use your Salesforce reports in Reveal.
