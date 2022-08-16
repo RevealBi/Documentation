@@ -246,7 +246,7 @@ When the fields in a hierarchy were configured with a combination of "sort by: <
  
 ## 1.0.1866 (Mar-2021)
  
-### Newe Features
+### New Features
 -  _New Properties for Desktop SDK:_
 	- _ShowEditDataSource_ can be used to disable the Edit button normally available in the data source overflow menu.
 	- _CanAddDashboardFilter_: this property can hide the "Add Dashboard Filter" option in the Add Filter menu. These options are available in Dashboard Edit Mode.
@@ -329,7 +329,7 @@ You can now have server-side aggregation of the data coming from the MS SQL, MyS
 
 ## 1.0.1374 (Jul-2020)
 
-### Ne Features
+### New Features
 -  _New API to set axis bounds for charts.
 You can now programmatically change the axis bounds in runtime for a particular visualization.
 -  _Salesforce data source enhancements._
@@ -346,7 +346,7 @@ The Choropleth map visualization allows you to create beautiful thematic maps. Y
 ## 1.0.1255 (May-2020)
 
 ### New Features
--  _New Azure Analysis Services data source.
+-  _New Azure Analysis Services data source._
 With this new data source, you can create dashboards using your data models in Azure Analysis Services.
 -  _New icon for Google Sheets files._
 The look of the Google Sheets files icon was changed.
@@ -356,7 +356,7 @@ The look of the Google Sheets files icon was changed.
 ### New Features
 -  _New Hover Events API._
 This new event is called *revealView.TooltipShowing* is triggered whenever the end-user hovers over a series in a visualization or clicks on the series.
--  _New TreeMap visualization.
+-  _New TreeMap visualization._
 You can use this new visualization type to present large hierarchies with a set of nested rectangles. Rectangles’ size will show you part-to-whole relationships amongst a variety of metrics, helping you identify patterns and relations between similar data.
 -  _Export to Excel enhancements._
 You can include more visualization types in your spreadsheets upon export. Scatter, Bubble and Sparkline charts are now available.
@@ -373,7 +373,7 @@ Now you can create your own theme in Reveal by configuring some or all of the cu
 
 ## 1.0.981 (Feb-2020)
 
-### New Featurea
+### New Features
 -  _New Properties in RevealSettings._ 
 We added multiple new properties to RevealSettings to control different features, including: ShowExportToPDF, ShowExportToPowerpoint, ShowExportToExcel, ShowStatisticalFunctions, ShowDataBlending, ShowMachineLearningModelsIntegration, StartWithNewVisualization, InitialThemeName.</td>
 -  _Accent Color is Now Available._
@@ -383,7 +383,7 @@ We added a Trigger (of type DataSourcesRequestedTriggerType) property to the Dat
 
 ## 1.0.825 (Nov-2019)
 
-### New Fetures
+### New Features
 -  _Export to Image Functionality is Now Working._
 Exporting images server-side (both programmatically and through user interaction) was enabled again. For further details about the fix, please refer to: [Enabling server-side screenshot](https://help.revealbi.io/en/developer/setup-configuration/setup-configuration-web.html#server-side-image-export).
 
