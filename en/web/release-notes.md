@@ -162,7 +162,7 @@ If you renamed a field and then used it as a filter in a dashboard link, the lin
 
 ## 1.1.2 (Jan-2022)
 
-### New Features.
+### New Features
 -  _The .NET Server SDK was enhanced with several changes:_
 	- .NET server logging.
 	You can now enable .NET server logging for Reveal SDK. It’s managed with upsetting.json LogLevel like "Reveal.Sdk.*": "Trace”.
@@ -263,11 +263,11 @@ When saving dashboards as a stream, in some specific cases _dashboard.Serialize.
 -  _Scatter Maps now support OpenStreetMap!_
 You can now configure and use OpenStreet Map image tiles in Desktop (WPF) and Web-client (JS).
 -  _New Thumbnail component!_
-You can now render a thumbnail of a dashboard with <i>RevealDashboardThumbnailView.
+You can now render a thumbnail of a dashboard with RevealDashboardThumbnailView.
 -  _Credentials from Web client to server-side data source._
-A new type of credentials _RVHeadersDataSourceCredentials_ allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following <a href="https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Cookies-Auth">sample</a> in GitHub.
+A new type of credentials _RVHeadersDataSourceCredentials_ allow you to send authentication headers and cookies to REST and Web Resource data sources. For further details, check the following [sample](https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Cookies-Auth) in GitHub.
 - _SDK AspNetCore services injection_
-You can now register the _RevealSdkContext_ and _RevealUserContext_ implementations as a type only (not passing an instance), allowing these classes to get any other AspNetCore services injected through the constructor. For further details check the following <a href="https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Reveal.Sdk.Samples.Web.UpMedia.Backend">sample</a> in GitHub.
+You can now register the _RevealSdkContext_ and _RevealUserContext_ implementations as a type only (not passing an instance), allowing these classes to get any other AspNetCore services injected through the constructor. For further details check the following [sample](https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/Reveal.Sdk.Samples.Web.UpMedia.Backend) in GitHub.
 
 ### Bug Fixes
 - Calculated field filter not working with data process on server.
@@ -327,7 +327,7 @@ Filtering for Microsoft SQL Server was not working for NVARCHAR columns when the
 
 ## 1.0.1669 (Dec-2020)
 
-### Biug Fixes
+### Bug Fixes
 - [SDK] Pivot hierarchies filtering not working with "Processing Data on Server".
 If the option "Processing Data on Server" was checked, drill down hierarchies in the Pivot Editor were not filtering data.
 - [SDK] Custom filtering not working with "Processing Data on Server.
@@ -366,7 +366,7 @@ You can now have server-side aggregation of the data coming from the MS SQL, MyS
 
 ## 1.0.1374 (Jul-2020)
 
-### New Fetures
+### New Features
 -  _New API to set axis bounds for charts._
 You can now programmatically change the axis bounds in runtime for a particular visualization.
 -  _Salesforce data source enhancements_
@@ -382,7 +382,7 @@ The Choropleth map visualization allows you to creat beautiful thematic maps. Yo
 
 ## 1.0.1255 (May-2020)
 
-### New Fetures
+### New Features
 -  _New Azure Analysis Services data source._
 With this new data source, you can create dashboards using your data models in Azure Analysis Services.
 - _New icon for Google Sheets files._
