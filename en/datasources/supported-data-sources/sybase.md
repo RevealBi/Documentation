@@ -88,7 +88,7 @@ Once your data source has been added, you will be taken to the *Visualizations E
 
 <img src="images/sybase-working-in-visualization-editor.png" alt="Using Sybase data to create a dashboard in the visualization editor" class="responsive-img" width="70%"/>
 
-When you are ready with your visualization, you can save it as a dashboard by clicking/tapping on the checkmark in the top right corner.
+When you are ready with your visualization, you can save it as a dashboard by clicking/tapping on the checkmark in the top right corner. In the example below we saved the dashboard in **My Analytics** > **My Dashboards** > **Statistics**.
 
 <img src="images/sybase-my-analytics.png" alt="Sybase dashboard in My Analytics" class="responsive-img" width="70%"/>
 
