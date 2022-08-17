@@ -39,6 +39,6 @@ Once your data source has been added, you will be taken to the *Visualization Ed
 
 <img src="images/marketo-visualization-editor.png" alt="Using data from Marketo in the visualization editor" class="responsive-img" width="50%"/>
 
-When you are ready with your visualization, you can click/tap on the checkmark in the top right corner to save it as a dashboard. In the example below we saved the dashboard in **My Analytics** > **My Dashboard** > **Marketing**.
+When you are ready with your visualization, you can click/tap on the checkmark in the top right corner to save it as a dashboard. In the example below we saved the dashboard in **My Analytics** > **My Dashboards** > **Marketing**.
 
 <img src="images/marketo-my-analytics.png" alt="A Marketo dashboard in My Analytics" class="responsive-img" width="50%"/>
