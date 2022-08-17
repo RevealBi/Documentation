@@ -35,6 +35,6 @@ Based on the vusialization that you have chosen, you will see different types of
 
 <img src="images/quickbooks-visualization-editor.png" alt="Visualization editor using quickbook as data source" class="responsive-img" width="50%"/>
 
-When you are ready with your visualization, you can click/tap on the checkmark in the top right corner to save it as a dashboard. 
+When you are ready with your visualization, you can click/tap on the checkmark in the top right corner to save it as a dashboard. In this case we saved the dashboard in **My Analytics** > **My Dashboards** > **Accounting**.
 
 <img src="images/quickbooks-my-analytics.png" alt="Quickbooks dashboard in My Analytics" class="responsive-img" width="50%"/>
