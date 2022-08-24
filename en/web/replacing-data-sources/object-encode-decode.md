@@ -1,5 +1,6 @@
 # Encode/Decode information of Database Providers
 
+The Encode/Decode method can be used to mask information exchanged with the server, like DB name and host, which can be considered sensitive.
 The encoding of information in DataSource or DataSourceItems, happens server-side before returning the objects to the client. 
 DataSource and DataSourceItems information is typically sent from the server to the client when editing a dashboard. 
 Alongside with the IRVObjectEncoder implementation, decoding must be done using an IRVDataSourceProvider implementation.
@@ -81,6 +82,7 @@ This class will perform the actual replacement of the MS SQL Server information 
             // else etc.
             return host;
         }
+	
         private static string EncodeDatabase(string database)
         {
             if (database == "real_database_name")
