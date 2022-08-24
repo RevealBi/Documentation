@@ -54,6 +54,8 @@
       href: replacing-data-sources/excel-file.md
     - name: MS SQL Server
       href: replacing-data-sources/ms-sql-server.md
+    - name: Object Encode/Decode
+      href: replacing-data-sources/object-encode-decode.md
 - name: Authentication
   href: authentication.md
 - name: Working with Visualizations
