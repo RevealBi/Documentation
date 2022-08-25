@@ -3,7 +3,7 @@
 Whether you are trying to manage dashboards in your personal space or in
 a Workspace, you will always be able to choose between: *dashboards created by you* or *dashboards shared with you*.
 
-<img src="images/dashboard-options.png" alt="Filter for viewing dashboards" class="responsive-img"/>
+<img src="images/dashboard-options.png" alt="Filter for viewing dashboards" class="responsive-img" width="70%" />
 
 ## Organizing your Dashboards
 
@@ -16,7 +16,7 @@ You can create a section with the following steps:
 3. Name it and click/tap on **Create**.
 4. Once you have named your section, you can start adding dashboards to it with the **+Dashboard** button.
 
-<img src="images/add-section-button.png" alt="Create a section option" class="responsive-img"/>
+<img src="images/add-section-button.png" alt="Create a section option" class="responsive-img" width="70%"/>
 
 You can create a list with the following steps:
 
@@ -29,9 +29,9 @@ You can create a list with the following steps:
 
 Open the dashboard’s overflow menu actions and choose to copy the dashboard or move it between **sections** and/or **workspaces**.
 
-<img src="images/dashboard-overflow-menu-options.png" alt="Displaying the dashboard’s overflow actions" class="responsive-img"/>
+<img src="images/dashboard-overflow-menu-options.png" alt="Displaying the dashboard’s overflow actions" class="responsive-img" width="70%"/>
 
 You can also move the dashboard to the *Data and Analytics Catalog*. The administrator will decide if the dashboard can be moved in order for the entire organization to be able to see it.
 
-<img src="images/data-and-analytics-catalog.png" alt="A dialog for moving your dashboard to the Data anf Analytics catalog " class="responsive-img" width= "60%"/>
+<img src="images/data-and-analytics-catalog.png" alt="A dialog for moving your dashboard to the Data anf Analytics catalog " class="responsive-img" width= "40%"/>
 
