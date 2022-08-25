@@ -2,8 +2,6 @@
   href: athena.md
 - name: Amazon Redshift
   href: redshift.md
-- name: Amazon S3
-  href: amazon-s3.md
 - name: Box
   href: box.md
 - name: Dropbox
