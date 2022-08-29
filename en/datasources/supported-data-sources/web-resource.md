@@ -13,7 +13,7 @@ or an image (for example, [this one](http://www.infragistics.com/media/442175/ho
 To configure a Web Resource as a Data Source, you will need to enter the
 following information:
 
-<img src="images/web-resource.png" alt="Configure Web resource connection" class="responsive-img"/>
+<img src="images/web-resource.png" alt="Configure Web resource connection" class="responsive-img" width="30%"/>
 
 1.  **URL**: the URL where the service is located (for example,
     <https://download.infragistics.com/reveal/help/samples/Reveal_Dashboard_Tutorials.xlsx>
