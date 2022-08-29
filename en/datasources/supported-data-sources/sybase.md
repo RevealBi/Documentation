@@ -11,9 +11,7 @@ _description: Learn how to configure your Sybase data source in Slingshot, retri
 To configure a Sybase server data source, you will need to enter the
 following information:
 
-<img src="images/enter-sybase-server-details.png" alt="Configure Sybase database connection" class="responsive-img"/>
-
-1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Sybase*. You can change it to your preference.
+<img src="images/add-sybase-as-data-source.png" alt="Configure Sybase database connection" width="50%" class="responsive-img"/>
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
@@ -26,16 +24,14 @@ following information:
     enter the credentials for your Sybase server or select existing ones
     if applicable.
 
-      - **Name**: the name for your data source account. It will be
-        displayed in the list of accounts in the previous dialog.
-
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
-
-      - **Username**: the user account for the Sybase server.
+      - **Username**: the user account for the Sybase server or the name of the domain.
 
       - **Password**: the password to access the Sybase server.
+    
+    - **Alias**: the name for your data source account. It will be
+        displayed in the list of accounts in the previous dialog.
 
-  Once ready, select **Continue**.
+  Once ready, select **Add** and then **Add Server**.
 
 <a name='how-to-find-server'></a>
 ## How to find your Server Information
@@ -67,26 +63,32 @@ can also select a particular
 [view](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm)
 that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/sybase-views.png" alt="Select from Sybase views dialog" class="responsive-img"/>
+<img src="images/sybase-views-list.png" alt="Select from Sybase views dialog" class="responsive-img" width="55%"/>
 
-The **Category Sales for 1997** view, for example, contains information on sales
-projections taken from one of the tables in the database.
+The **syscacheinfo** view, for example, contains information about the cache, taken from one of the tables in the database.
 
-<img src="images/sales-projection-sample.png" alt="Sales Projection Sample dashboard" class="responsive-img"/>
+<img src="images/sybase-view-visualization-editor.png" alt="Creating a visualization while using a sybase view" class="responsive-img" width="60%"/>
 
 For more information on views and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm).
 
 ### Working with Stored Procedures
 
 In Sybase, stored procedures allow users to run a set of query
-statements in a relational database with specific parameters. The
-following are just a set of sample stored procedures running in a test
-server with data from the master database:
+statements in a relational database with specific parameters. 
 
-<img src="images/sybase-stored-procedures.png" alt="Select from Sybase Stored Procedures dialog" class="responsive-img"/>
+In this case, for example, the stored procedure requires users to set *@name* range value.
 
-In this case, for example, the stored procedure requires users to set some time range values.
-
-<img src="images/stored-procedure-sample-dates.png" alt="Stored Procedure select dates" class="responsive-img"/>
+<img src="images/stored-procedure-parameters-sybase.png" alt="Stored Procedure select name" class="responsive-img" width="55%"/>
 
 For more information on Stored Procedures and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X39397.htm).
+
+## Working in the Visualization editor
+
+Once your data source has been added, you will be taken to the *Visualizations Editor*. Here you can build your dashboard. By default, the *Column* visualization will be selected. You can select it in order to choose another chart type.
+
+<img src="images/sybase-working-in-visualization-editor.png" alt="Using Sybase data to create a dashboard in the visualization editor" class="responsive-img" width="70%"/>
+
+When you are ready with your visualization, you can save it as a dashboard by clicking/tapping on the checkmark in the top right corner. In this case we saved the dashboard in **My Analytics** > **My Dashboards** > **Statistics**.
+
+<img src="images/sybase-my-analytics.png" alt="Sybase dashboard in My Analytics" class="responsive-img" width="70%"/>
+
