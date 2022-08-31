@@ -2,3 +2,7 @@
   href: loading-dashboards.md
 - name: Providing Credentials to Data Sources
   href: providing-credentials-datasources.md
+- name: Replacing Data Sources
+  items:
+    - name: Object Encode/Decode
+      href: object-encode-decode.md
