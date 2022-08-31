@@ -244,7 +244,7 @@ public class LocalSampleDataSourceProvider implements IRVDataSourceProvider {
 }
 ```
 
-**Step 4** - Update the `contextInitialized` function in the `WebAppListener.java` file to add the `IRVObjectEncoder` you just created to the `RevealEngineInitializer` using the `setDataSourceProvider(new LocalSampleDataSourceProvider()).` method.
+**Step 4** - Update the `contextInitialized` function in the `WebAppListener.java` file to add the `IRVDataSourceProvider` you just created to the `RevealEngineInitializer` using the `setDataSourceProvider(new LocalSampleDataSourceProvider()).` method.
 
 ```cs
 public void contextInitialized(ServletContextEvent ctx) {
