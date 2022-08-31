@@ -135,14 +135,14 @@ public void contextInitialized(ServletContextEvent ctx) {
 	}
 ```
 
-# Replacing Database/REST Data Source
+# Decoding Database/REST Data Source
 
 
-In the Java Web API server application, create a class that implements `IRVDataSourceProvider`. This class will perform the actual replacement of the Database/REST settings.
+In the Java Web API server application, create a class that implements `IRVDataSourceProvider`. This class will perform the actual decoding of the Database/REST settings.
 The `changeDataSourceItem` method of this class returns the `RVDataSourceItem` that the visualization will use to get its data. By modifying the `RVDataSourceItem` item that is provided as an argument in the `changeDataSourceItem` method, you can change which server or table to get your data from.
 
 
-## Example: Replace Host, Database,Schema, id and Table of an MS SQL Server
+## Example: Decode Host, Database,Schema, id and Table of an MS SQL Server
 
 
 **Step 3** You can change the MS SQL Server host, database, schema, id and table name of every MS SQL Server data source item in your dashboard by casting each `RVDashboardDataSource` as a `RVSqlServerDataSource` and every `RVDataSourceItem` as a `RVSqlServerDataSourceItem`, modifying it's properties as follows:
