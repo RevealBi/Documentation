@@ -92,11 +92,11 @@ For more information on Functions and PostgreSQL, visit this [documentation webs
 
 Once your data source has been added, you will be taken to the *Visualizations Editor*. Here you can build your dashboard. Note that based on the vusialization that you have chosen, you will see different types of fields.
 
-<img src="./images/postgresql-visualization-editor.png" alt="Working in the visualization editor while using postgresql as a data source." class="responsive-img" width="65%"/>
+<img src="./images/postgresql-visualization-editor.png" alt="Working in the visualization editor while using postgresql as a data source." class="responsive-img" width="80%"/>
 
 When you are ready with your visualization, you can click/tap on the checkmark in the top right corner to save it as a dashboard. In the example below we saved the dashboard in **My Analytics** > **My Dashboards** > **Customer support**.
 
-<img src="./images/postgresql-my-analytics.png" alt="A postgresql dashboard in the My Analytics section" class="responsive-img" width="65%"/>
+<img src="./images/postgresql-my-analytics.png" alt="A postgresql dashboard in the My Analytics section" class="responsive-img" width="80%"/>
 
 ## Limitations for Functions in Reveal
 
