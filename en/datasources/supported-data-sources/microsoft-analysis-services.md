@@ -82,7 +82,7 @@ Choose a database *cube* and click/tap on **Select Data** to continue to the *Vi
 
 When you create a dashboard using a cube data source like Microsoft Analysis Services, you will see fields organized differently in the  *Visualizations Editor* (see screenshot below). Cube data sources consist of hierarchies and aggregations, which have been created by the cubes' designers in advance.
 
-<img src="../images/visualization-editor-ssas.png" alt="Using the Microsoft Analysis Service data source information in the visualization editor" class="responsive-img" width="80%"/>
+<img src="../images/visualization-editor-ssas.png" alt="Using the Microsoft Analysis Service data source information in the visualization editor" class="responsive-img" width="85%"/>
 
 In the screenshot above, you may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
@@ -102,7 +102,7 @@ In the screenshot above, you may notice that there is no "Fields" heading on the
 
 2.  **Measures** (depicted by *[123]* icon): Measures consist of numeric data.
 
-<img src="../images/visualization-editor-ssas-pivot-chart.png" alt="Using the visualizatio editor with a pivot chart" class="responsive-img" width="80%"/>
+<img src="../images/visualization-editor-ssas-pivot-chart.png" alt="Using the visualizatio editor with a pivot chart" class="responsive-img" width="85%"/>
 
 For more information on dimensions and measures, please visit this
 [Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
@@ -138,4 +138,4 @@ When you are ready with the visualization editor, you can save the dashboard in 
 <img src="../images/ssas-dashboard-my-analytics.png" alt="Dasboard with an information from the microsoft analysis services data source in My Analytics" class="responsive-img" width="80%"/>
 
 In case you've entered wrong credentials, you will get an error message (screenshot below). You can click on *Log into Microsoft Analysis Services* and update your credentials. That should fix the issue. 
- <img src="../images/microsoft-analysis-services-authentication-failed.png" alt="Displaying the error message authentication failed" class="responsive-img" width="80%"/>
+ <img src="../images/microsoft-analysis-services-authentication-failed.png" alt="Displaying the error message authentication failed" class="responsive-img" width="85%"/>
