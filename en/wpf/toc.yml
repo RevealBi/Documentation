@@ -44,6 +44,8 @@
       href: replacing-data-sources/ms-sql-server.md
 - name: Authentication
   href: authentication.md
+- name: Custom SQL Queries
+  href: custom-query.md
 - name: Working with Visualizations
   header: true
 - name: Maximizing Visualizations
