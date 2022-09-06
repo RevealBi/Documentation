@@ -58,6 +58,10 @@
       href: replacing-data-sources/object-encode-decode.md
 - name: Authentication
   href: authentication.md
+- name: User Context
+  href: user-context.md
+- name: Custom SQL Queries
+  href: custom-query.md
 - name: Working with Visualizations
   header: true
 - name: Maximizing Visualizations
