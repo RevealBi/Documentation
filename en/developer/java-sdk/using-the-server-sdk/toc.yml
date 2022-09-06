@@ -4,5 +4,9 @@
   href: providing-credentials-datasources.md
 - name: Replacing Data Sources
   items:
+    - name: Excel File
+      href: excel-file.md
+    - name: MS SQL SERVER
+      href: ms-sql-server.md
     - name: Object Encode/Decode
       href: object-encode-decode.md
