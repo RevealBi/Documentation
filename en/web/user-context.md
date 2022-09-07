@@ -32,8 +32,7 @@ requested.
     }
 ```
 
-You can find an implementation in [**Web sample application using RevealBI AspNetCore SDK**]
-(https://github.com/RevealBi/sdk-samples-aspnetcore/blob/590f79ce822755002bf2ccbbdb6e455ab7f1f3c3/Cookies-Auth/README.md)
+You can find an implementation in [**Web sample application using RevealBI AspNetCore SDK**](https://github.com/RevealBi/sdk-samples-aspnetcore/blob/590f79ce822755002bf2ccbbdb6e455ab7f1f3c3/Cookies-Auth/README.md)
 
 
 ### API Reference Links
