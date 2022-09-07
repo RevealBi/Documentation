@@ -10,3 +10,5 @@
       href: ms-sql-server.md
     - name: Object Encode/Decode
       href: object-encode-decode.md
+- name: User Context
+  href: user-context.md
