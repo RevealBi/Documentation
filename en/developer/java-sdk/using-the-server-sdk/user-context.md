@@ -1,6 +1,6 @@
 # User Context
 
-The User Context represents the identity of the authenticated user of the application. The User Context can be used by Reveal SDK providers such as the `IRVDashboardProvider` , `IRVAuthenticationProvider`, `IRVDataProvider` and others to restrict what permissions the user has. To provide User Context to the Reveal SDK, you must create a class that implements the [**IRVUserContextProvider**](https://help.revealbi.io/api/java/latest/com/infragistics/reveal/sdk/api/IRVUserContextProvider.html) interface or extend `RVContainerRequestAwareUserContextProvider`.
+The User Context represents the identity of the authenticated user of the application. The User Context can be used by Reveal SDK providers such as the `IRVDashboardProvider` , `IRVAuthenticationProvider`, `IRVDataProvider` and others to restrict what permissions the user has. To provide User Context to the Reveal SDK, you can extend `RVContainerRequestAwareUserContextProvider` and implement the abstract method that receives an instance of ContainerRequestContext from JAX-RS specification.
 
 ## Sample User Context Provider
 
@@ -29,7 +29,7 @@ public class SampleUserContextProvider extends RVContainerRequestAwareUserContex
 	}
 }
 ```
-**Step 2** - Update the `contextInitialized` function in the `WebAppListener.java` file to add the `IRVUserContextProvider` you just created to the `RevealEngineInitializer` using the `setUserContextProvider(new SampleUserContextProvider())` method.
+**Step 2** - Update the `contextInitialized` function in the `WebAppListener.java` file to add the `RVContainerRequestAwareUserContextProvider` you just created to the `RevealEngineInitializer` using the `setUserContextProvider(new SampleUserContextProvider())` method.
 
 ```java
 	public void contextInitialized(ServletContextEvent ctx) {
