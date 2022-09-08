@@ -1,12 +1,10 @@
 # User Context
 
-Used to identify the user, related to a particular call to the methods of `IRVDashboardProvider`, `IRVAuthenticationProvider`, `IRVDataProvider` and other providers. You can store some user specific data in the Properties like user's permission that you want to use in some of the providers listed above. You can use `RVUserContext` as a default implementation.<br>
-This way, you can perform user specific interactions within Reveal SDK.
-
+The User Context represents the identity of the authenticated user of the application. The User Context can be used by Reveal SDK providers such as the `IRVDashboardProvider` , `IRVAuthenticationProvider`, `IRVDataProvider` and others to restrict what permissions the user has. To provide User Context to the Reveal SDK, you must create a class that implements the [**IRVUserContextProvider**](https://help.revealbi.io/api/java/latest/com/infragistics/reveal/sdk/api/IRVUserContextProvider.html) interface or extend `RVContainerRequestAwareUserContextProvider`.
 
 ## Sample User Context Provider
 
-`SampleUserContextProvider` extends `RVContainerRequestAwareUserContextProvider` class and defines the `getUserContext` method that returns a `RVUserContext` object, which contains both the `userId` and a set of properties. We're using this list of properties to store the sessionId, this way we can retrieve it later when credentials for a data source are requested.
+**Step 1** - `SampleUserContextProvider` extends `RVContainerRequestAwareUserContextProvider` class and defines the `getUserContext` method that returns a [**RVUserContext**](https://help.revealbi.io/api/java/latest/com/infragistics/reveal/sdk/base/RVUserContext.html) object, which contains both the `userId` and a set of properties. We're using this list of properties to store the sessionId, this way we can retrieve it later when credentials for a data source are requested.
 
 ```java
 public class SampleUserContextProvider extends RVContainerRequestAwareUserContextProvider {
@@ -31,10 +29,16 @@ public class SampleUserContextProvider extends RVContainerRequestAwareUserContex
 	}
 }
 ```
+**Step 2** - Update the `contextInitialized` function in the `WebAppListener.java` file to add the `IRVUserContextProvider` you just created to the `RevealEngineInitializer` using the `setUserContextProvider(new SampleUserContextProvider())` method.
+
+```java
+	public void contextInitialized(ServletContextEvent ctx) {
+		RevealEngineInitializer.initialize(new InitializeParameterBuilder().
+				setUserContextProvider(new SampleUserContextProvider()).
+				.build());
+
+		ctx.getServletContext().setAttribute("revealSdkVersion", RevealEngineInitializer.getRevealSdkVersion());
+	}
+```
 
 You can find an implementation in [**Tomcat sample application using RevealBI Java SDK**](https://github.com/RevealBi/sdk-samples-java/tree/f76481b3578ee95b3949d87e693e2228809daa3e/cookies-auth)
-
-### API Reference Links
-
-[**IRVUserContextProvider**](https://help.revealbi.io/api/java/latest/com/infragistics/reveal/sdk/api/IRVUserContextProvider.html) <br>
-[**RVUserContext**](https://help.revealbi.io/api/java/latest/com/infragistics/reveal/sdk/base/RVUserContext.html) 
