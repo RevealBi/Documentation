@@ -28,7 +28,7 @@ requested.
     }
 ```
 
-**Step 2** - Update the `AddReveal` method in the `Program.cs` file to add the `IRVDataSourceProvider` you just created to the `RevealSetupBuilder` using the `RevealSetupBuilder.AddUserContextProvider` method.
+**Step 2** - Update the `AddReveal` method in the `Program.cs` file to add the `IRVUserContextProvider` you just created to the `RevealSetupBuilder` using the `RevealSetupBuilder.AddUserContextProvider` method.
 
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
