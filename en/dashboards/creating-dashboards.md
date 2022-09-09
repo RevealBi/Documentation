@@ -19,7 +19,7 @@ You can create a dashboard by clicking/tapping on the **+ Dashboard** or **Creat
 
 This will prompt the *New Visualization* dialog. Proceed to create a visualization using a data source.
 
-<img src="images/new-visualization-dialog-dashboard.png" alt="New visualization dialog" class="responsive-img" width= "50%"/>
+<img src="images/new-visualization-dialog-dashboard.png" alt="New visualization dialog" class="responsive-img" width= "55%"/>
 
 <a name='add-data-source'></a>
 ## Add a Data Source
@@ -31,7 +31,7 @@ the **+ Data Source** button in the top right-hand corner. A new dialog will app
 
 If your data source is a spreadsheet in a content manager, you will be able to select, for example, the specific sheet that you want to use in your visualization.
 
-<img src="images/dashboards-select-data-sheet.png" alt="select a data sheet from an excel file data source" class="responsive-img" width="50%"/>
+<img src="images/dashboards-select-data-sheet.png" alt="select a data sheet from an excel file data source" class="responsive-img" width="55%"/>
 
 ### Available Content
 
@@ -49,7 +49,7 @@ which means the ability to access any lists or libraries.
 <a name='modify-visualization'></a>
 ## Changing your Visualization
 
-Once your data source has been added, you will be taken to the Visualizations Editor. By default, the Column visualization will be selected.
+Once your data source has been added, you will be taken to the *Visualization Editor*. By default, the Column visualization will be selected.
 
 <img src="images/creating-dashboards-sample-data.png" alt="dashboards first visualization in the visualization editor" class="responsive-img" width="80%"/>
 
@@ -75,7 +75,7 @@ After copying a visualization, find the *Paste* option inside the overflow menu 
 
 ## Applying a Theme
 
-Once you have continued to your dashboard, you can select the overflow menu ⇒ *Theme* and switch between *Mountain Theme* and *Ocean Theme* as shown below.
+Once you have continued to your dashboard, you can select the overflow menu ⇒ *Theme* and switch between *Mountain Theme*, *Ocean Theme* and *Aurora Theme* as shown below.
 
 <img src="images/dashboard-themes.png" alt="Changing the theme of a dashboard" class="responsive-img" width="45%"/>
 
