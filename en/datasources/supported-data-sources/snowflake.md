@@ -13,7 +13,8 @@ To configure a Snowflake data source, you first need to connect to the server by
 3.  **Credentials**: after selecting *Credentials*, you will be able to
     enter the credentials for your *Snowflake* server or select existing
     ones if applicable.
- <img src="images/add-snowflake-credentials.png" alt="A dialog where you can add your credentials" class="responsive-img" width="60%"/>
+
+     <img src="images/add-snowflake-credentials.png" alt="A dialog where you can add your credentials" class="responsive-img" width="50%"/>
 
     - **Username**: the user account for the *Snowflake* server or the name of the domain.
 
