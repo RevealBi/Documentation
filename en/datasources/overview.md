@@ -17,7 +17,7 @@ To connect to a data source, perform the steps below:
 1. Go to **My Analytics** or a workspace where you want to a create a dashboard. 
 2. Click/tap on the **+ Dashboard** or **Create Dashboard** *(My Analytics)* blue button.
 
-   <img src="images/data-sources-my-analytics.png" alt="Dashboard button in my analytics" class="responsive-img" width="60%" height="80%"/>
+   <img src="images/data-sources-my-analytics.png" alt="Dashboard button in my analytics" class="responsive-img" width="70%" height="80%"/>
 3. In the *+ Visualization* dialog, you will see a list of recently used data sources. To create a new connection, select the **+ Data Source** button on the right.
 
    <img src="images/data-sources-screen.png.png" alt="Sample data sources" class="responsive-img" width="60%"/>
