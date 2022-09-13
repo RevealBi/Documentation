@@ -10,7 +10,7 @@ databases, spreadsheets and public data sources.
 
 ## Connecting to Data Sources
 
-To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the *Data Sources* menu for quick selection next time you need it (see the screenshot above).
+To retrieve information from a data source and use it for your visualizations you need to connect to it first. Once you have connected to a data source, it will be saved in the *Data Sources* menu for quick selection next time you need it.
 
 To connect to a data source, perform the steps below:
 
