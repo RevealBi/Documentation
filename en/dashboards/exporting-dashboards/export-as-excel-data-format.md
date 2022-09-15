@@ -7,11 +7,12 @@ on a separate sheet in the excel file.
 >[!NOTE]
 > **Export to Excel limitations**. You can export to Excel only **dashboards using table data**, i.e. data sources organizing information into rows and columns (spreadsheets, CSV files, databases). If your dashboard uses images, html, etc. to visualize data, Reveal will not be able to export the information to the Excel format.
 
-To export a dashboard as an Excel spreadsheet, go to *Dashboard View*
-mode and select: the overflow menu ⇒ *Export* ⇒ *Excel*. The following
-dialog will open:
+1.  Go to the overflow menu in the upper right-hand corner of the
+    dashboard and select **Export**.
 
-<img src="images/export-settings-excel.png" alt="Settings for Excel spreadsheet in the Export Dashboard menu" class="responsive-img"/>
+2. Click/tap on **Excel** to open the following dialog:
+
+<img src="images/export-dashboard-as-excel.png" alt="Settings for Excel spreadsheet in the Export Dashboard menu" class="responsive-img" width="60%"/>
 
 This *Export Dashboard* dialog allows you to **select** and **rename**
 the data sheets to be included in your Excel file. Every data sheet
