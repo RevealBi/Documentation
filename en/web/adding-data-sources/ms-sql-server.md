@@ -61,3 +61,42 @@ When the application runs, create a new Visualization and you will see the newly
 
 > [!IMPORTANT]
 > Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
+
+
+### Custom SQL Queries
+
+CustomQuery Propery of an [**RVSqlBasedDataSourceItem**](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.RVSqlBasedDataSourceItem.html#properties) allows you to perform a "Custom SQL query to use when getting data" from the server.
+
+
+**Example: Define a Custom MS SQL Server Query in Javascript**
+
+In JavaScript, create an `RVSqlServerDataSource` and `RVSqlServerDataSourceItem` instance within the `RevealApi.RevealView.onDataSourcesRequested` method and add the line `your_DS_Item.customQuery = "SELECT TOP 5 CustomerID,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax FROM [TABLE]";`.
+<br>
+Then, include the newly created `RVSqlServerDataSourceItem` in the callback `callback(new RevealApi.RevealDataSources([], [your_DS_Item], true));`:
+
+```javascript
+            var revealView = new RevealApi.RevealView("#revealView");
+            revealView.dashboard = new RevealApi.RVDashboard();
+
+            //...
+
+            revealView.onDataSourcesRequested = function(callback) {
+
+                var sqlDs = new RevealApi.RVSqlServerDataSource();
+                sqlDs.title = "Title";
+                sqlDs.id = "SqlDataSource1";
+                sqlDs.host = "your_host_name";
+                sqlDs.port = "sql_port_number";
+                sqlDs.database = "your_db_name";
+
+                var sqlDsi = new RevealApi.RVSqlServerDataSourceItem(sqlDs);
+                sqlDsi.title = "Clients";
+                sqlDsi.id = "SQLDatsaourceItem1";
+                sqlDsi.customQuery = "SELECT TOP 5 CustomerID,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax FROM [TABLE]";
+
+                callback(new RevealApi.RevealDataSources([], [sqlDsi], true));
+            };
+        }
+```
+
+![](images/custom-query-web.jpg)
