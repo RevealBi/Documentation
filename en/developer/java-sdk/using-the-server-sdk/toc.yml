@@ -6,7 +6,7 @@
   items:
     - name: Excel File
       href: excel-file.md
-    - name: MS SQL SERVER
+    - name: MS SQL Server
       href: ms-sql-server.md
     - name: Object Encode/Decode
       href: object-encode-decode.md
