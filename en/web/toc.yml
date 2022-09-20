@@ -60,8 +60,6 @@
   href: authentication.md
 - name: User Context
   href: user-context.md
-- name: User Context
-  href: user-context.md
 - name: Working with Visualizations
   header: true
 - name: Maximizing Visualizations
