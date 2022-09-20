@@ -1,5 +1,11 @@
 # Release Notes
 
+## 1.2.1 (Sep-2022)
+
+### Bug Fixed
+- _Updated Npgsql library (Postgres driver) to version 6.0.6._
+**NOTE**: if in your application you're using also Npgsql but an older version, you'll need to update to 6.0.6 or later.
+
 ## 1.2.0 (Aug-2022)
 
 ### New Features
