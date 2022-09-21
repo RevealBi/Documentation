@@ -1,5 +1,10 @@
 # Release Notes
 
+## 1.2.2 (Sep-2022)
+### Bug Fixes
+- Fixed Custom Color Picker. The Error _System.IO.FileNotFoundException: 'Could not load file or assembly 'Reveal.UI.Controls.Editors.XamColorPicker...'_ was thrown when CanChangeVisualizationBackgroundColor was set to true.
+
+
 ## 1.2.0 (Aug-2022)
 ### New Features
 
