@@ -9,13 +9,13 @@ some business insight and requires attention right away.
 In order to **access the export feature**, select the overflow button in
 the top right-hand corner and click/tap *Export*.
 
-<img src="images/export-option.png" alt="Export option in the overflow menu" class="responsive-img" width="85%"/>
+<img src="images/export-option.png" alt="Export option in the overflow menu" class="responsive-img" width="80%"/>
 
 ## Export Format
 
 You can easily export dashboards by using the available Export options.
 
-<img src="images/export-format-options.png" alt="Export formats available" class="responsive-img" width="85%"/>
+<img src="images/format-options.png" alt="Export formats available" class="responsive-img" width="85%"/>
 
   - [**Export Image**](export-as-images.md) - export a screen capture of the entire
     dashboard or individual visualizations.

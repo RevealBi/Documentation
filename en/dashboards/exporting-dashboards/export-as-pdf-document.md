@@ -11,7 +11,7 @@ specific pages, so that you can tailor it to your needs.
 
 ## Export Settings
 
-<img src="images/export-settings-pdf.png" alt="Settings for PDF document in the Export Dashboard menu" class="responsive-img"/>
+<img src="images/export-pdf-options.png" alt="Settings for PDF document in the Export Dashboard menu" class="responsive-img" width="70%"/>
 
 In the *Export Dashboard* dialog you can manage the following settings:
 
