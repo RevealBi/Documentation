@@ -1,3 +1,8 @@
+---
+title: How to Create Dashboards in Slingshot
+_description: A 4-step guide on how to easily create dashboards in Slingshot and ensure seamless collaboration.
+---
+
 # Creating Dashboards
 
 The dashboard creation experience in Reveal includes:

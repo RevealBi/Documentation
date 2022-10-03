@@ -1,5 +1,5 @@
 ---
-title: How to Use mage Tiles with Scatter Maps
+title: How to Use image Tiles with Scatter Maps
 _description: Learn all about the image tile feature that will allow you to switch to a different map layer upon zooming.
 ---
 

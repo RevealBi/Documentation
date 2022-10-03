@@ -1,3 +1,8 @@
+---
+title: How to Style Dashboards in Slingshot
+_description: An easy and fast guide on how to change dashboard style settings to make the most of your visualizations.
+---
+
 # Styling Dashboards
 
 Reveal makes dashboards styling as easy as choosing a color palette.
