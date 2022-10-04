@@ -44,7 +44,7 @@ In the dialog above, filters are preconfigured with the default values from Sale
 
 You can change the report filters' values later in the *Visualization editor* by choosing to **Edit** your data source (as shown below):
 
-<img src="../images/edit-data-source-salesforce.png" alt="Edit your data source in the Visualization editor" class="responsive-img" width="80%"/>
+<img src="./images/salesforce-edit-option.png" alt="Edit your data source in the Visualization editor" class="responsive-img" width="80%"/>
 
 ## Working in the Visualization editor 
 
