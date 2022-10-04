@@ -51,15 +51,15 @@ which means the ability to access any lists or libraries.
 
 Once your data source has been added, you will be taken to the *Visualization Editor*. By default, the Column visualization will be selected.
 
-<img src="images/creating-dashboards-sample-data.png" alt="dashboards first visualization in the visualization editor" class="responsive-img" width="80%"/>
+<img src="images/visualization-editor-creating-dashboards.png" alt="dashboards first visualization in the visualization editor" class="responsive-img" width="80%"/>
 
 Reveal provides several options to customize the way your information is visualized. You can access the options by selecting the **grid icon** in the top bar.
 
-<img src="images/creating-dashboards-chart-types.png" alt="list with chart types" class="responsive-img" width="80%"/>
+<img src="images/chart-types-creating-dashboards.png" alt="list with chart types" class="responsive-img" width="80%"/>
 
 Add labels and values to your visualization and preview them in the right-hand pane. If necessary, you can change your visualization's settings or add filters to it.
 
-<img src="images/visualization-fields-preview.png" alt="Editing visualization fields preview" class="responsive-img" width="80%"/>
+<img src="images/visualization-editor-using-sample-data.png" alt="Editing visualization fields preview" class="responsive-img" width="80%"/>
 
 Once you have modified the visualization, you will be taken back to the **Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, switch on/off **Auto Layout**, **export** or **save** the dashboard.
 
@@ -70,14 +70,14 @@ You can also use the overflow menu in the top right corner of the visualizations
 
 After copying a visualization, find the *Paste* option inside the overflow menu of the dashboard you want to paste the visualization in.
 
-<img src="images/paste-option-creating-dashboards.png" alt="Paste option in the dashboard overflow menu" class="responsive-img" width="80%"/>
+<img src="images/creating-dashboards-paste-option.png" alt="Paste option in the dashboard overflow menu" class="responsive-img" width="80%"/>
 
 
 ## Applying a Theme
 
 Once you have continued to your dashboard, you can select the overflow menu ⇒ *Theme* and switch between *Mountain Theme*, *Ocean Theme* and *Aurora Theme* as shown below.
 
-<img src="images/dashboard-themes.png" alt="Changing the theme of a dashboard" class="responsive-img" width="45%"/>
+<img src="images/creating-dashboards-themes-options.png" alt="Changing the theme of a dashboard" class="responsive-img" width="45%"/>
 
 <a name='save-dashboard'></a>
 ## Save the Dashboard
@@ -88,6 +88,6 @@ You can save your dashboard under **My Analytics** > **My Dashboards** or choose
 
 Select a name for your dashboard, and, when ready, click/tap on **Save here**.
 
-<img src="images/dashboard-save-as-dialog.png" alt="Save as dialog while creating dashboards" class="responsive-img" width="80%"/>
+<img src="images/creating-dashboards-save-as-dialog.png" alt="Save as dialog while creating dashboards" class="responsive-img" width="80%"/>
 
 To better organize your space you can create lists and sections by clicking on the *+List* and *+Section* buttons at the top right-hand corner, while in the *Save as* menu.

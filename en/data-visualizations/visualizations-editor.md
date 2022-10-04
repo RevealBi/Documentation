@@ -39,7 +39,7 @@ After opening a chosen dashboard and entering *Dashboard Edit mode*, you will be
 
 Below, you will find a list of all sections of the *Editor* with their capabilities.
 
-<img src="images/visualization-editor.png" alt="Panes of the Visualization editor" class="responsive-img" width="80%"/>
+<img src="images/panes-of-visualization-editor.png" alt="Panes of the Visualization editor" class="responsive-img" width="80%"/>
 
 1. **Data Section** - this section contains two panels:
 
