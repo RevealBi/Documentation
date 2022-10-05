@@ -1,3 +1,8 @@
+---
+title: Slingshot Dashboards – All You Need to Know
+_description: What are dashboards, what can you use them for and how to create them fast and easy.
+---
+
 # Dashboards
 
 Dashboards are a quick and simple way to display minimal information at

@@ -1,3 +1,8 @@
+---
+title: How to Link Dashboards in Slingshot
+_description: Learn how to connect the visualizations in a dashboard with other dashboards, or URLs in Slingshot.
+---
+
 # Interacting with Dashboards
 
 You can open existing dashboards by selecting the dashboard thumbnail image in the initial view.

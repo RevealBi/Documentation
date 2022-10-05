@@ -1,3 +1,8 @@
+---
+title: How to Share a Dashboard in Slingshot
+_description: A guide to sharing dashboards to achieve great cross-team collaboration.
+---
+
 # Sharing Dashboards
 
 Shared dashboards are ideal for cross-team collaboration. There are so
