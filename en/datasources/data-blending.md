@@ -11,16 +11,17 @@ For example, you may want to compare vacation days taken with other
 employee absences by department, to gain insight about the correlation
 of those variables.
 
-<img src="images/data-blending-sample.png" alt="Data Blending Example Visualization" class="responsive-img"/>
+<img src="images/data-blending-sample.png" alt="Data Blending Example Visualization" class="responsive-img" width="80%"/>
 
 Follow these steps to combine two data sources in one visualization:
 
 1.  **Open the Data Blending dialog**.
 
     Click/Tap the **+** button in the *Fields* section and select
-    *Fields from another Data Source*.
+    **Fields from another Data Source**.
 
-     <img src="images/fields-from-another-data-source-option.png" alt="Data Blending Accessing dialog in the Visualization editor" class="responsive-img" width="45%"/>
+     <img src="images/fields-from-another-data-source-option.png" alt="Data Blending Accessing dialog in the Visualization editor" class="responsive-img" width="
+     35%"/>
 
 2.  **Choose the new Data Source**.
 
@@ -31,21 +32,21 @@ Follow these steps to combine two data sources in one visualization:
     Configure the equality condition that needs to match to combine the
     two data sets.
 
-     <img src="images/join-condition-data-blending.png" alt="Data Blending Join Condition selection" class="responsive-img" width="75%"/>
+     <img src="images/join-condition-data-blending.png" alt="Data Blending Join Condition selection" class="responsive-img" width="55%"/>
 
 4.  **Choose the fields you want**
 
     Specify which are the fields that you want to combine, so you can
     access them in your visualization.
 
-     <img src="images/data-blending-new-fields.png" alt="Data Blending Choose New Fields dialog" class="responsive-img" width="75%"/>
+     <img src="images/data-blending-new-fields.png" alt="Data Blending Choose New Fields dialog" class="responsive-img" width="60%"/>
 
 5.  **Select Join Data**
 
     After merging the two data sets, you can find the new fields at the
     bottom of the *Fields* section.
 
-     <img src="images/result-data-blending.png" alt="Show Data Blending Result" class="responsive-img"/>
+     <img src="images/result-data-blending.png" alt="Show Data Blending Result" class="responsive-img" width="70%"/>
 
     As shown in the image above, you can now visualize vacation days by
     Department name instead of using the internal Department ID.

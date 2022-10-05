@@ -38,9 +38,9 @@ print, or send the document to a third-party app. After you choose the
 export format, the following action menu prompts you to choose your
 saving/sharing preferences:
 
-<img src="images/export-formats-options-mobile.png" alt="Export preview actions on mobile devices" class="responsive-img" width="30%"/>
+<img src="images/export-formats-options-mobile.png" alt="Export preview actions on mobile devices" class="responsive-img" width="31%"/>
 
 For image exports, you can find these same options in the **Export
 Image** dialog before or after you annotate images:
 
-<img src="images/export-format-image.png" alt="Export image preview actions" class="responsive-img" width="30%"/>
+<img src="images/export-format-image.png" alt="Export image preview actions" class="responsive-img" width="31%"/>

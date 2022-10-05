@@ -50,13 +50,13 @@ pencil icon in the *Export Image* dialog.
 In the Annotation menu, you will see a top toolbar with many options
 such as adding shapes and freestyle annotations.
 
-<img src="images/export-image-toolbar.png" alt=" Toolbar with different shapes options" class="responsive-img" width="75%"/>
+<img src="images/export-image-toolbar.png" alt=" Toolbar with different shapes options" class="responsive-img" width="80%"/>
 
 The text option allows you to add text on top of the image. It provides
 options to customize the text, such as background colors, font weight,
 font size, and font color.
 
-<img src="images/text-option-in-export-image.png" alt="Adding text in image annotation" class="responsive-img" width="75%"/>
+<img src="images/text-option-in-export-image.png" alt="Adding text in image annotation" class="responsive-img" width="80%"/>
 
 For exporting images in **Android and iOS** devices, please refer to the
 [Exporting Dashboards](how-to-export-a-dashboard.html#mobile-devices) topic.

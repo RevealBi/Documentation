@@ -19,11 +19,11 @@ name and click/tap on **Edit**.
  <img src="images/edit-option-data-source.png" alt="Edit option of current data source" class="responsive-img" width="75%" />
 
 4. This will display the **Visualization Data**, where you will see your
-current data source. Click/tap on **Change data source** next to your data
+current data source. You can choose another collection of data from the same data source or click/tap on **Change data source** next to your data
 source's name and choose the data source you want from one of the
 supported in the list.
 
-  <img src="images/change-data-source-button.png" alt="Current data source swap button" class="responsive-img" width="50%"/>
+  <img src="images/change-data-source-button.png" alt="Current data source swap button" class="responsive-img" width="60%"/>
 
 5. Once you have chosen the data source, a **Data Source Details** dialog will open up. Here you can select the information you want to use for the visualization editor. The data already present in the editor will be completely replaced by the data in your new data source.
 
