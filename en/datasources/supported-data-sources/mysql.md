@@ -1,3 +1,8 @@
+---
+title: How to configure a MySQL server data source
+_description: Create and use visualizations through a MySQL server data source in Slingshot. 
+--- 
+
 # MySQL
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible MySQL addresses. If your MySQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this MySQL address. This limitation does not apply to *Reveal Embedded*.
@@ -54,7 +59,7 @@ that the commands should be executed on the server.
 
 With Reveal, you can retrieve MySQL data from entire tables. Still, you can also select a particular view that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/mysql-views.png" alt="MySQL Views section" class="responsive-img" width="60%"/>
+<img src="images/mysql-views.png" alt="MySQL Views section" class="responsive-img" width="55%"/>
 
 In the sample above, the **invoices** view contains a modified version
 of the data in the **products**,**customers**, **orderdetails** and **orders** tables in the MySQL server.

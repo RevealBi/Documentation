@@ -24,7 +24,7 @@ provides an SDK to gather usage data from iOS and Android apps.
     If you have several Google Analytics accounts, select the one you
     want to use.
 
-    <img src="images/google-analytics-accounts-list.png" alt="Select a Google account to be used with Reveal's Google Analytics data source" class="responsive-img" width="55%"/>
+    <img src="images/google-analytics-accounts-list.png" alt="Select a Google account to be used with Reveal's Google Analytics data source" class="responsive-img" width="50%"/>
 
     Once logged in, you can also use the same account later to create
     another visualization unless you delete the data source.
@@ -55,7 +55,7 @@ provides an SDK to gather usage data from iOS and Android apps.
 
       - Once a week
        
-       <img src="images/google-analytics-time-period.png" alt="Different values that the Refresh Data option provides" class="responsive-img" width="55%"/>
+       <img src="images/google-analytics-time-period.png" alt="Different values that the Refresh Data option provides" class="responsive-img" width="65%"/>
      
 
 After your credentials are verified, Reveal will take you to the *Visualizations Editor*.
@@ -84,7 +84,7 @@ There are two *Data Filters* when using the GA data source in Reveal.
 * **Segment** filter. The *Segment filters* are predefined. *System* Segments are defined by Google, and *Custom* Segments are defined by the user on the Google Analytics website. You can choose only one segment to filter your data. 
 * **Date Range**. Select a specific date range in the calendar to filter your data. You can also choose one of the preset date ranges by clicking the arrow in the upper right corner: 
 
-  <img src="images/google-analytics-date-range.png" alt="Date Range dialog" class="responsive-img" width="55%"/>
+  <img src="images/google-analytics-date-range.png" alt="Date Range dialog" class="responsive-img" width="50%"/>
 
   >[!NOTE] Default date range is *Last 30 days*. This means data will be retrieved for the last 30-day period, including today. 
 
@@ -94,7 +94,7 @@ You can use *Goals* defined in Google Analytics in the *Visualization
 Editor*. Your *Goals* are listed as part of the metrics in both
 **Dimensions** and **Measures** data types.
 
-<img src="images/goals-google-analytics.png" alt="goals google analytics option" class="responsive-img" width="55%"/>
+<img src="images/goals-google-analytics.png" alt="goals google analytics option" class="responsive-img" width="50%"/>
 
 As you can see in the example above, the titles of your Google Analytics
 *Goals* in Reveal include one or more of the following:
