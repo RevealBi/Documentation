@@ -25,7 +25,7 @@ need to enter the following information:
 ## Setting Up Your Report
 
 After configuring the connection to your Microsoft Reporting Services
-reports, the following dialog will open, prompting you to choose the data you want to work with:
+reports and selecting the data source location, the following dialog will open, prompting you to choose the data you want to work with:
 
 <img src="images/microsoft-reporting-services-data-source-details.png" alt="Select a Report dialog" class="responsive-img" width="55%"/>
 
@@ -49,7 +49,7 @@ the format in which the report will load in the *Visualization editor*:
   - *Load Data* - Your report data will be loaded in the standard
     format, providing you with fields to build your visualization.
 
-  <img src="images/microsoft-reporting-services-visualization-editor.png" alt="Microsoft reporting services data in the Visualization editor" class="responsive-img" width="80%"/>
+  <img src="images/microsoft-reporting-services-sample-data-visualization-editor.png" alt="Microsoft reporting services data in the Visualization editor" class="responsive-img" width="80%"/>
 
 >[!NOTE] **Editing the Data Source in the Visualization editor.**
 >Carefully choose the report format (pdf or data) because once loaded, you will not be able to change it. When you *Edit* your data source, you will only be able to change the configuration of the report's parameters.

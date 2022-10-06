@@ -12,7 +12,7 @@ _description: Connecting and using PostgreSQL as a data source in Slingshot.
 To configure a PostgreSQL server data source, you will need to enter the
 following information:
 
-<img src="../images/add-postgresql-as-data-source.png" alt="Configure PostgreSQL data source dialog" class="responsive-img" width="50%"/>
+<img src="../images/add-postgresql-as-data-source.png" alt="Configure PostgreSQL data source dialog" class="responsive-img" width="48%"/>
 
 1.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.

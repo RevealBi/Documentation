@@ -1,3 +1,8 @@
+---
+title: How to configure a MySQL server data source
+_description: Create and use visualizations through a MySQL server data source in Slingshot. 
+--- 
+
 # MySQL
 
 
@@ -55,7 +60,7 @@ that the commands should be executed on the server.
 
 With Reveal, you can retrieve MySQL data from entire tables. Still, you can also select a particular view that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/mysql-views.png" alt="MySQL Views section" class="responsive-img" width="60%"/>
+<img src="images/mysql-views.png" alt="MySQL Views section" class="responsive-img" width="55%"/>
 
 In the sample above, the **invoices** view contains a modified version
 of the data in the **products**,**customers**, **orderdetails** and **orders** tables in the MySQL server.

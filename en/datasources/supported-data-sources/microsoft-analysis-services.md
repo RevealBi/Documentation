@@ -75,14 +75,14 @@ Reveal will load and show the databases on the server. Select a database and cli
 
 Choose a database *cube* and click/tap on **Select Data** to continue to the *Visualizations Editor*.
 
-<img src="../images/data-source-cubes-ssas.png" alt="A list of different cubes in the Data Source Details dialog" class="responsive-img" width="50%"/>
+<img src="images/data-source-cubes-microsoft-analysis-services.png" alt="A list of different cubes in the Data Source Details dialog" class="responsive-img" width="50%"/>
 
 <a name='visualization-editor'></a>
 ## Working in the Visualization Editor
 
 When you create a dashboard using a cube data source like Microsoft Analysis Services, you will see fields organized differently in the  *Visualizations Editor* (see screenshot below). Cube data sources consist of hierarchies and aggregations, which have been created by the cubes' designers in advance.
 
-<img src="../images/visualization-editor-ssas.png" alt="Using the Microsoft Analysis Service data source information in the visualization editor" class="responsive-img" width="85%"/>
+<img src="images/visualization-editor-microsoft-analysis-services.png" alt="Using the Microsoft Analysis Service data source information in the visualization editor" class="responsive-img" width="85%"/>
 
 In the screenshot above, you may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
@@ -102,7 +102,7 @@ In the screenshot above, you may notice that there is no "Fields" heading on the
 
 2.  **Measures** (depicted by *[123]* icon): Measures consist of numeric data.
 
-<img src="../images/visualization-editor-ssas-pivot-chart.png" alt="Using the visualizatio editor with a pivot chart" class="responsive-img" width="85%"/>
+<img src="images/pivot-chart-microsoft-analysis-services.png" alt="Using the visualizatio editor with a pivot chart" class="responsive-img" width="85%"/>
 
 For more information on dimensions and measures, please visit this
 [Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
