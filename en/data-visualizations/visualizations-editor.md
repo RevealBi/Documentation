@@ -12,7 +12,7 @@ The *Visualizations Editor* is where you create and edit your visualizations in 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization you can choose between two alternative starting points.
 
 * Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to **My Analytics** or a workspace and click/tap on the **+Dashboard** blue button.
-* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [_Dashboard Edit_](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap the *+ Visualization* blue split button.
+* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [*Dashboard Edit*](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap on the *dashboard* blue split button. Note that on mobile it is the **+** blue button.
 
 After that, you will be prompted
 to add a new or select an existing [data source](~/en/datasources/overview.md).
@@ -33,13 +33,13 @@ Once you have selected and configured your data source, the *Visualization edito
 
 ***2. In the dashboard editing process***
 
-After opening a chosen dashboard and entering *Dashboard Edit mode*, you will be able to **access the Visualizations editor** by selecting *Edit* from a visualization's overflow button.
+After opening a chosen dashboard and entering *Dashboard Edit mode*, you will be able to **access the Visualizations editor** by selecting **Edit** from a visualization's overflow button. Alternatively you can click/tap on the pencil icon, next to the overflow menu.
 
 ## Visualizations Editor Overview
 
 Below, you will find a list of all sections of the *Editor* with their capabilities.
 
-<img src="images/visualization-editor.png" alt="Panes of the Visualization editor" class="responsive-img" width="80%"/>
+<img src="images/panes-of-visualization-editor.png" alt="Panes of the Visualization editor" class="responsive-img" width="85%"/>
 
 1. **Data Section** - this section contains two panels:
 

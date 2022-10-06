@@ -11,7 +11,7 @@ specific pages, so that you can tailor it to your needs.
 
 ## Export Settings
 
-<img src="images/export-settings-pdf.png" alt="Settings for PDF document in the Export Dashboard menu" class="responsive-img"/>
+<img src="images/export-pdf-options.png" alt="Settings for PDF document in the Export Dashboard menu" class="responsive-img" width="57%"/>
 
 In the *Export Dashboard* dialog you can manage the following settings:
 
@@ -31,15 +31,15 @@ In the *Export Dashboard* dialog you can manage the following settings:
         color of the pdf document) - here you can choose one of the
         following options:
 
-          - **Reveal**
+        - **Reveal**
 
-          - **User's organization/workspace** - your organization and all of
+        - **User's organization/workspace** - your organization and all of
             your workspaces having their branding (logo and color) set up are
             displayed as options. If you want to know how to
             access/change your workspace's branding settings, please read the
             [Managing Workspaces](~/en/workspaces/managing-your-workspace.md) topic.
 
-          - **Custom** - select a color and upload a *logo* image of your choice.
+        - **Custom** - select a color and upload a *logo* image of your choice.
 
             >[!NOTE] **Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: jpg, jpeg, png, gif.
 

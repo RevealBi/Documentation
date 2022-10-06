@@ -1,3 +1,8 @@
+---
+title: How to Manage Your Dashboards in Slingshot
+_description: Learn how to manage and organize every type of dashboards you have access to.
+---
+
 # Managing Your Dashboards
 
 Whether you are trying to manage dashboards in your personal space or in
