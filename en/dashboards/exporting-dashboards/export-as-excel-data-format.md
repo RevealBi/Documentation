@@ -10,9 +10,11 @@ on a separate sheet in the excel file.
 1.  Go to the overflow menu in the upper right-hand corner of the
     dashboard and select **Export**.
 
-2. Click/tap on **Excel** to open the following dialog:
+  <img src="../images/export-option-excel.png" alt="Export option in the overflow menu" class="responsive-img" width="55%"/>
 
-<img src="images/export-dashboard-as-excel.png" alt="Settings for Excel spreadsheet in the Export Dashboard menu" class="responsive-img" width="60%"/>
+2. The following dialog will open up:
+
+  <img src="images/export-dashboard-as-excel.png" alt="Settings for Excel spreadsheet in the Export Dashboard menu" class="responsive-img" width="55%"/>
 
 This *Export Dashboard* dialog allows you to **select** and **rename**
 the data sheets to be included in your Excel file. Every data sheet

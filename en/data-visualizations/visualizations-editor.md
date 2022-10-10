@@ -12,7 +12,7 @@ The *Visualizations Editor* is where you create and edit your visualizations in 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization you can choose between two alternative starting points.
 
 * Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to **My Analytics** or a workspace and click/tap on the **+Dashboard** blue button.
-* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [*Dashboard Edit*](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap on the *dashboard* blue split button. Note that on mobile it is the **+** blue button.
+* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in [*Dashboard Edit*](~/en/dashboards/dashboards-interactions.html#view-edit-mode) mode and click/tap on the *dashboard* blue split button. (the **+** blue button on mobile devices)
 
 After that, you will be prompted
 to add a new or select an existing [data source](~/en/datasources/overview.md).
