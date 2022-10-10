@@ -67,7 +67,7 @@ that returns a subset of data from a table or a set of tables instead.
 
 The **syscacheinfo** view, for example, contains information about the cache, taken from one of the tables in the database.
 
-<img src="images/sybase-view-visualization.png" alt="Creating a visualization while using a sybase view" class="responsive-img" width="65%"/>
+<img src="images/sybase-view-visualization.png" alt="Creating a visualization while using a sybase view" class="responsive-img" width="70%"/>
 
 For more information on views and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X29678.htm).
 
@@ -78,7 +78,7 @@ statements in a relational database with specific parameters.
 
 In this case, for example, the stored procedure requires users to set *@name* range value.
 
-<img src="images/stored-procedure-parameters-sybase.png" alt="Stored Procedure select name" class="responsive-img" width="50%"/>
+<img src="images/stored-procedure-parameters-sybase.png" alt="Stored Procedure select name" class="responsive-img" width="53%"/>
 
 For more information on Stored Procedures and Sybase, visit [this documentation website](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X39397.htm).
 

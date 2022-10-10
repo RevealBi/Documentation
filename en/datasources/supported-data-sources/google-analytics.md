@@ -24,7 +24,7 @@ provides an SDK to gather usage data from iOS and Android apps.
     If you have several Google Analytics accounts, select the one you
     want to use.
 
-    <img src="images/google-analytics-accounts-list.png" alt="Select a Google account to be used with Reveal's Google Analytics data source" class="responsive-img" width="50%"/>
+    <img src="images/google-analytics-accounts-list.png" alt="Select a Google account to be used with Reveal's Google Analytics data source" class="responsive-img" width="55%"/>
 
     Once logged in, you can also use the same account later to create
     another visualization unless you delete the data source.
@@ -33,7 +33,7 @@ provides an SDK to gather usage data from iOS and Android apps.
 
     Select the Google Analytics property that you want to use.
 
-    <img src="images/google-analytics-property.png" alt="Select a Google property to be used with Reveal's Google Analytics data source" class="responsive-img" width="55%"/>
+    <img src="images/google-analytics-property.png" alt="Select a Google property to be used with Reveal's Google Analytics data source" class="responsive-img" width="58%"/>
 
     In Google Analytics, **properties** can be websites, mobile apps,
     blogs, among others.
@@ -42,7 +42,7 @@ provides an SDK to gather usage data from iOS and Android apps.
 
     Select the data cube that you want to use.
 
-    <img src="images/google-analytics-cubes.png" alt="Select a data cube to be used with Reveal's Google Analytics data source" class="responsive-img" width="55%"/>
+    <img src="images/google-analytics-cubes.png" alt="Select a data cube to be used with Reveal's Google Analytics data source" class="responsive-img" width="58%"/>
 
     You can also configure the *Refresh Data* setting to to the
     following values:
@@ -55,16 +55,13 @@ provides an SDK to gather usage data from iOS and Android apps.
 
       - Once a week
        
-       <img src="images/google-analytics-time-period.png" alt="Different values that the Refresh Data option provides" class="responsive-img" width="65%"/>
-     
-
 After your credentials are verified, Reveal will take you to the *Visualizations Editor*.
 
 ## Working in the Visualizations Editor
 
 When you create a dashboard with information coming from Google Analytics, you will see fields organized differently (see screenshot below).
 
-<img src="images/visualization-editor-google-analytics.png" alt="Visualization Editor showing a Google Analytics data cube" class="responsive-img" width="80%"/>
+<img src="images/visualization-editor-google-analytics.png" alt="Visualization Editor showing a Google Analytics data cube" class="responsive-img" width="85%"/>
 
 You may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
