@@ -10,18 +10,17 @@ The Amazon Athena data source in Reveal allows you to access and query unstructu
 
 To configure an Amazon Athena data source, you will need to enter the following information:
 
-<img src="images/configure-amazon-athena-dialog.png" alt="Configure Amazon Athena dialog" class="responsive-img"/>
-
-1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the _Select a Data Source_ dialog. By default, Reveal names it *Amazon Athena*. You can change it to your preference.
+<img src="images/amazon-athena-configuration-dialog.png" alt="Configure Amazon Athena dialog" class="responsive-img" width="50%"/>
    
-2. **Region**: Amazon regions are listed with their names and codes in the dropdown. Choose the one where the data you need is located. 
+1. **Region**: Amazon regions are listed with their names and codes in the dropdown. Choose the one where the data you need is located. 
 
 3. **Credentials**: here you will be asked to provide the root or IAM user credentials: 
    
    * *Access Key*
-   * *Secret Key* 
+   * *Secret Key*
+   * *Alias (optional)* 
 
-   Add your credentials and click/tap the _Create and Use_ blue button. Upon successful connection, you will be returned to the previous dialog where *Workgroup* and *Query result location* become available to configure too. 
+   Add your credentials and click/tap  on the *Add* blue button. Upon successful connection, you will be returned to the previous dialog where *Workgroup* and *Query result location* become available to configure too. 
 
    For more information about the AWS credentials, please take a look at this [Amazon article](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
    
@@ -31,19 +30,19 @@ To configure an Amazon Athena data source, you will need to enter the following 
    >[!NOTE]
    > If you have specified your Query result location (QRL) in Reveal, but you can't find your output in this location, please check  your workgroup configuration in Athena for settings that prevent you from using custom QRLs. For more information, take a look at [Specifying a Query Result Location](https://docs.aws.amazon.com/athena/latest/ug/querying.html#query-results-specify-location) in Athena's documentation. 
 
-6. **Athena Data Source**: also known as _Data Catalog_ containing databases. You can choose it from the list that will appear after you connect to your Athena account (see steps 1-3). 
+6. **Athena Data Source**: also known as *Data Catalog* containing databases. You can choose it from the list that will appear after you connect to your Athena account (see steps 1-3). 
 
 ## Setting Up Your Data
 
 After configuring your Athena data source connection, you will be prompted to choose a database from the *Data Source (Catalog)* you selected in the previous dialog. 
 
-<img src="images/athena-set-up-database-views.png" alt="Configure Amazon Athena dialog" class="responsive-img"/>
+<img src="images/amazon-athena-views.png" alt="Configure Amazon Athena dialog" class="responsive-img" width="55%"/>
 
 After selecting a database, you can choose from the *tables* or [*views*](https://docs.aws.amazon.com/athena/latest/ug/views.html) inside it. 
 
-In the screenshot above, the **motor_vehicle_collisions_time** view contains a modified version of the data in the **motor_vehicle_collisions** table in Athena. 
-In the screenshot below, the visualization on the left is built with the data in the table, and the one on the right uses the data contained in the view.  
+In the screenshot above, the **motor_vehicle_collisions_full_view** view contains a modified version of the data in the **motor_vehicle_collisions_full** table in Athena. 
+In the screenshot below, the visualization on the left is built with the data in the view, and the one on the right uses the data contained in the table.  
 
-<img src="images/collisions-time-athena-view-sample.png" alt="Sample dashboard using Redshift tables and view data" class="responsive-img"/>
+<img src="images/amazon-athena-sample.png" alt="Sample dashboard using Amazon Athena table and view data" class="responsive-img" width="85%"/>
 
 
