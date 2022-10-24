@@ -11,7 +11,7 @@ For example, you may want to compare vacation days taken with other
 employee absences by department, to gain insight about the correlation
 of those variables.
 
-<img src="images/data-blending-sample.png" alt="Data Blending Example Visualization" class="responsive-img" width="80%"/>
+<img src="images/data-blending-sample.png" alt="Data Blending Example Visualization" class="responsive-img" width="85%"/>
 
 Follow these steps to combine two data sources in one visualization:
 
@@ -39,14 +39,14 @@ Follow these steps to combine two data sources in one visualization:
     Specify which are the fields that you want to combine, so you can
     access them in your visualization.
 
-     <img src="images/data-blending-new-fields.png" alt="Data Blending Choose New Fields dialog" class="responsive-img" width="60%"/>
+     <img src="images/data-blending-new-fields.png" alt="Data Blending Choose New Fields option" class="responsive-img" width="60%"/>
 
 5.  **Select Join Data**
 
     After merging the two data sets, you can find the new fields at the
     bottom of the *Fields* section.
 
-     <img src="images/result-data-blending.png" alt="Show Data Blending Result" class="responsive-img" width="70%"/>
+     <img src="images/result-data-blending.png" alt="Show Data Blending Result" class="responsive-img" width="85%"/>
 
     As shown in the image above, you can now visualize vacation days by
     Department name instead of using the internal Department ID.
@@ -65,8 +65,8 @@ field in both tables as the relationship between them (equality condition: Depar
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 45%" />
+<col style="width: 45%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -77,8 +77,8 @@ field in both tables as the relationship between them (equality condition: Depar
 <td>
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 45%" />
+<col style="width: 45%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -99,8 +99,8 @@ field in both tables as the relationship between them (equality condition: Depar
 </table></td>
 <td><table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 45%" />
+<col style="width: 45%" />
 </colgroup>
 <thead>
 <tr class="header">

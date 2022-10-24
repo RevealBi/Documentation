@@ -8,8 +8,13 @@ All the elements of the presentation are editable so that you can tailor
 it to your needs.
 
 To export a dashboard as a PowerPoint presentation, you need to:
+
 1. Go to the dashboard *View mode* and click/tap on the overflow menu. 
+
 2. Choose **Export** and then click/tap on **PowerPoint**. 
+
+ <img src="../images/export-as-powerpoint-option.png" alt="Powerpoint option in the list of export formats" class="responsive-img" width="60%"/>
+
 3. The *Export Dashboard* dialog will open, allowing you to set up your
 presentation and annotate specific slides.
 

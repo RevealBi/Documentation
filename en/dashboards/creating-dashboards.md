@@ -24,7 +24,7 @@ You can create a dashboard by clicking/tapping on the **+ Dashboard** or **Creat
 
 This will prompt the *New Visualization* dialog. Proceed to create a visualization using a data source.
 
-<img src="images/new-visualization-dialog-dashboard.png" alt="New visualization dialog" class="responsive-img" width= "55%"/>
+<img src="images/new-visualization-dialog-dashboard.png" alt="New visualization dialog" class="responsive-img" width= "62%"/>
 
 <a name='add-data-source'></a>
 ## Add a Data Source
@@ -44,12 +44,12 @@ With Reveal, you can add many content sources, including
 [Dropbox](~/en/datasources/supported-data-sources/Dropbox.md), [OneDrive](~/en/datasources/supported-data-sources/OneDrive.md), [Box](~/en/datasources/supported-data-sources/Box.md) and [Google Drive](~/en/datasources/supported-data-sources/Google-Drive.md), which will allow you to browse any folders, files
 or spreadsheets available in them.
 
-<img src="images/dashboards-onedrive-available-content.png" alt="Available content in OneDrive datasource account" class="responsive-img" width="80%"/>
+<img src="images/dashboards-onedrive-available-content.png" alt="Available content in OneDrive datasource account" class="responsive-img" width="82%"/>
 
 In addition, you can also add [SharePoint](~/en/datasources/supported-data-sources/SharePoint.md) data sources,
 which means the ability to access any lists or libraries.
 
-<img src="images/dashboards-sharepoint-list.png" alt="Available content in SharePoint datasource account" class="responsive-img" width="80%"/>
+<img src="images/dashboards-sharepoint-list.png" alt="Available content in SharePoint datasource account" class="responsive-img" width="82%"/>
 
 <a name='modify-visualization'></a>
 ## Changing your Visualization
@@ -66,7 +66,7 @@ Add labels and values to your visualization and preview them in the right-hand p
 
 <img src="images/visualization-editor-using-sample-data.png" alt="Editing visualization fields preview" class="responsive-img" width="85%"/>
 
-Once you have modified the visualization, you will be taken back to the **Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, refresh the dashboard,paste it, switch on/off **Auto Layout**, **export** or **save** the dashboard.
+Once you have modified the visualization, you will be taken back to the **Dashboard Editor**. You will see **Undo**, **Redo**, and the **+Visualization** split button on the top right-hand corner. Next to these buttons you will also find the overflow menu of the dashboard where you can choose to change the dashboard theme, refresh the dashboard, paste it, switch on/off **Auto Layout**, **export** or **save** the dashboard.
 
 You can also use the overflow menu in the top right corner of the visualizations to rename, edit, **copy**, **duplicate** or delete them.
 
