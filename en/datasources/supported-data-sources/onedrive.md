@@ -11,11 +11,11 @@ To use your OneDrive data, follow the steps below:
 
 1. Upon selecting your OneDrive, you will be prompt to enter your **account and password** for Microsoft. Once you have entered the crendetials, select **Sign in**.
 
-  <img src="images/microsoft-account-onedrive.png" alt="One Drive Login" class="responsive-img" width="60%"/>
+  <img src="images/microsoft-account-onedrive.png" alt="One Drive Login" class="responsive-img" width="85%"/>
 
 2. By clicking *Continue*, you will be redirected to an *authorization prompt*. Click/tap on **Accept** to continue.
 
-  <img src="images/microsoft-onedrive-permissions.png" alt=" A dialog with a set of permissions" class="responsive-img" width="60%"/>
+  <img src="images/microsoft-onedrive-permissions.png" alt=" A dialog with a set of permissions" class="responsive-img" width="85%"/>
 
 After authorizing Reveal to use your data, you can use your *OneDrive* files to build visualizations.
 
