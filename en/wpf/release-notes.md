@@ -1,6 +1,6 @@
 # Release Notes
 
-## [1.2.3] (Oct-2022)
+## 1.2.3 (Oct-2022)
 
 ### NEW FEATURES
 - New function 'EndOfMonth' for calculated fields.
