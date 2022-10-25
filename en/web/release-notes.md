@@ -1,5 +1,13 @@
 # Release Notes
 
+## [1.2.3] (Oct-2022)
+
+### NEW FEATURES
+- New function 'EndOfMonth' for calculated fields.
+
+### BUG FIXES
+- Fixed missing error report when changing the data source for a visualization.
+- Fix error when filtering all rows while showing totals.
 ## 1.2.1 (Sep-2022)
 
 ### Bug Fixed
