@@ -1,5 +1,14 @@
 # Release Notes
 
+## [1.2.3] (Oct-2022)
+
+### NEW FEATURES
+- New function 'EndOfMonth' for calculated fields.
+
+### BUG FIXES
+- Fixed missing error report when changing the data source for a visualization.
+- Fix error when filtering all rows while showing totals.
+
 ## 1.2.2 (Sep-2022)
 ### Bug Fixes
 - Fixed Custom Color Picker. The Error _System.IO.FileNotFoundException: 'Could not load file or assembly 'Reveal.UI.Controls.Editors.XamColorPicker...'_ was thrown when CanChangeVisualizationBackgroundColor was set to true.
