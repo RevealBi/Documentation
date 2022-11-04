@@ -10,7 +10,7 @@ fields. These fields are created by using expressions (formulas). An
 expression can be a combination of existing field(s), constant values
 and:
 
-  - [predefined functions](#predefined-functions), and/or
+  - [predefined functions](#predefined-functions) and/or
 
   - [simple math calculations and other functions that are not predefined](#without-predefined-functions).
 
@@ -27,14 +27,14 @@ There are two types of calculated fields:
 Pre-calculated fields are evaluated before executing data editor
 aggregations. This means in order to apply a certain formula, Reveal will go through every record in your field's dataset once or several times. Because of this, pre-calculation is likely to be underperforming in terms of speed when working with large datasets.
 
-To add a new pre-calculated field, click/tap the *+ button* in the
-*Fields* panel:
+To add a new pre-calculated field, click/tap the **+ button** in the
+*Fields* panel and choose **Calculated Field**:
 
-<img src="images/pre-calculated-field-button.png" alt="Pre-calculated field button" class="responsive-img"/>
+<img src="images/calculated-field-option.png" alt="Pre-calculated field option" class="responsive-img" width="85%"/>
 
 The *New Calculated Field* screen will open:
 
-<img src="images/new-calculated-field-screen.png" alt="New calculated field screen" class="responsive-img"/>
+<img src="images/new-calculated-field-dialog.png" alt="New calculated field dialog" class="responsive-img" width="85%"/>
 
 Here you will need to:
 
@@ -50,7 +50,7 @@ Here you will need to:
 The new pre-calculated field will show up at the bottom of your *Fields*
 list:
 
-<img src="images/new-calculated-field-bottom-list.png" alt="New calculated field shown at the bottom of fields list" class="responsive-img"/>
+<img src="images/new-calculated-field-visualization-example.png" alt="New calculated field shown in the column placeholder and in the visualization" class="responsive-img" width="85%"/>
 
 In the example above, the new calculated field is used with a grid
 visualization where no aggregation is being applied on the data fields.
@@ -71,12 +71,12 @@ To create a post calculated field you will need to:
 1.  Create a visualization (or a *Pivot table*) by adding fields from
     your data source in the *Data editor*.
 
-    <img src="images/post-calculated-fields-data-editor.png" alt="Post calculated fields in the Data editor" class="responsive-img"/>
+    <img src="images/post-calculated-field-example.png" alt="Post calculated fields in the Data editor" class="responsive-img" width="85%"/>
 
 2.  Click/tap the *F(x)* button next to *Values* to open the *New
     Calculated Field* screen:
 
-    <img src="images/post-calculated-field-new-calculated-field-screen.png" alt="Post calculated field new calculated field screen" class="responsive-img"/>
+    <img src="images/post-calculated-field-new-calculated-field-dialog.png" alt="Post calculated field new calculated field screen" class="responsive-img" width="85%"/>
 
 3.  Give a name to your new calculated field and apply a formula to the
     summarized value(s). Pay attention that the list of *Values*
@@ -90,13 +90,13 @@ the *+* button next to *Values*. Since post-calculated fields are
 created only by using aggregated values, you will first need to select
 an aggregation from the dropdown list to be executed on the data field.
 
-<img src="images/post-calculated-field-new-calculated-field-screen-adding-fields.png" alt="Adding fields in the calculated field screen" class="responsive-img"/>
+<img src="images/post-calculated-field-new-calculated-field-dialog-adding-fields.png" alt="Adding fields in the calculated field screen" class="responsive-img" width="85%"/>
 
 You can also skip *step 1*, create your post-calculated fields first or
 use only post-calculated fields in your visualization.
 
 Post-calculation tends to perform better than pre-calculation when
-working with large datasets
+working with large datasets.
 
 <a name='predefined-functions'></a>
 ## Using the Predefined Reveal Functions
@@ -120,6 +120,8 @@ the available functions within Reveal:
     [DAY](date.html#day),
     [FORMATDATE](date.html#formatdate),
     [FQUARTER](date.html#fquarter),
+    [SEMESTER](date.html#semester),
+    [FSEMESTER](date.html#fsemester),
     [FYEAR](date.html#fyear),
     [HOUR](date.html#hour),
     [MILLISECOND](date.html#millisecond),
@@ -127,6 +129,9 @@ the available functions within Reveal:
     [MONTH](date.html#month),
     [MONTHNAME](date.html#monthname),
     [MONTHSHORTNAME](date.html#monthshortname),
+    [APPLYTIMEZONE](date.html#applytimezone),
+    [CURRENTTIMEZONE](date.html#currenttimezone),
+    [DATETIMEFROMUNIXTS](date.html#datetimefromunixts),
     [NOW](date.html#now),
     [QUARTER](date.html#quarter),
     [SECOND](date.html#second),
