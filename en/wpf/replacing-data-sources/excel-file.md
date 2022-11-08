@@ -11,12 +11,12 @@ public class MyDataSourceProvider : IRVDataSourceProvider
 {
     public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(RVDashboardFilter filter, RVDataSourceItem dataSourceItem)
     {
-        return Task.FromResult(dataSourceItem);
+        throw new NotImplementedException();
     }
 
     public Task<RVDataSourceItem> ChangeDashboardFilterDataSourceItemAsync(RVDashboardFilter filter, RVDataSourceItem dataSourceItem)
     {
-        return Task.FromResult(dataSourceItem);
+        throw new NotImplementedException();
     }
 }
 ```
