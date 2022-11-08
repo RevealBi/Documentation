@@ -30,12 +30,13 @@ public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDashboardFilter filter
     var sqlServerDsi = dataSourceItem as RVSqlServerDataSourceItem;
     if (sqlServerDsi != null)
     {
-        // Change SQL Server host and database
+        // Change SQL Server host
         var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
-        sqlServerDS.Host = "10.0.0.20";
-        sqlServerDS.Database = "Adventure Works";
+        sqlServerDS.Host = "10.0.0.20";        
+        
 
-        // Change SQL Server table/view
+        // Change SQL Server database and table/view
+        sqlServerDsi.Database = "Adventure Works";
         sqlServerDsi.Table = "Employees";
         return Task.FromResult((RVDataSourceItem)sqlServerDsi);
     }
@@ -44,3 +45,5 @@ public Task<RVDataSourceItem> ChangeDataSourceItemAsync(RVDashboardFilter filter
 }
 ```
 
+> [!NOTE]
+> The database **Host** can only be changed on the `RVSqlServerDataSource` object. For all other properties use the `RVSqlServerDataSourceItem`.
