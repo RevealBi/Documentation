@@ -37,8 +37,7 @@ public Task<RVDataSourceItem> ChangeVisualizationDataSourceItemAsync(RVVisualiza
     {
         // Change SQL Server host
         var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
-        sqlServerDS.Host = "10.0.0.20";        
-        
+        sqlServerDS.Host = "10.0.0.20";
 
         // Change SQL Server database and table/view
         sqlServerDsi.Database = "Adventure Works";
