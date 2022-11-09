@@ -52,14 +52,14 @@ your JSON file:
 
     b.  Navigate the provider and select your JSON file.
 
-    <img src="images/json-files-locate-file.png" alt="A JSON file located in a cloud data source" class="responsive-img"/>
+    <img src="images/add-data-file-json.png" alt="A JSON file located in a cloud data source" class="responsive-img" width="85%"/>
 
 4.  **Choose the data structure you want**.
 
     After scanning the file, Reveal will show you a list of possible
     data structures for you to choose.
 
-    <img src="images/json-files-choose-data-structure.png" alt="Json Files Choose Data table" class="responsive-img"/>
+    <img src="images/json-data-source-details-dialog.png" alt="Json Files Choose Data table" class="responsive-img" width="55%"/>
 
     If the list does not include the data structure you want, use the
     [**Advanced Selection**](#json-advanced-selection) mode where you
@@ -70,7 +70,7 @@ your JSON file:
     Once you selected the data structure, click/tap the *Load Data*
     button to continue to the *Visualizations Editor*.
 
-    <img src="images/JsonFilesVisualizationsEditor_All.png" alt="Json Files Visualizations Editor" class="responsive-img"/>
+    <img src="images/visualization-editor-json-file-data.png" alt="Json Files Visualizations Editor" class="responsive-img" width="85%"/>
 
 <a name='json-advanced-selection'></a>
 ## Advanced Selection Mode
@@ -85,14 +85,14 @@ with, you are able to build your visualization upon them.
     Click/Tap the **+ Table** button to get access to the *Advanced Selection*
     screen.
 
-    <img src="images/json-files-open-advanced-selection.png" alt="Json Files Open Advanced Selection" class="responsive-img"/>
+    <img src="images/json-data-source-details-table-option.png" alt="Table option for advanced selection in the data source details dialog for json" class="responsive-img" width="55%"/>
 
 2.  **Navigate the JSON Tree**.
 
     Expand the nodes and select the deepest level where you want to
     select the data.
 
-    <img src="images/json-files-navigate-tree.png" alt="Json Files Navigate Tree" class="responsive-img"/>
+    <img src="images/advanced-selection-json-tree.png" alt="Json Files Navigate Tree" class="responsive-img" width="85%"/>
 
 3.  **Select the tree elements and fields you want**.
 
@@ -101,7 +101,7 @@ with, you are able to build your visualization upon them.
 
     |                                                                             |                                                                                                                                           |
     | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-    | <img src="images/json-files-unselect-elements.png" alt="Json Files Unselect Elements" class="responsive-img"/> | After selecting one or more children, you can unselect the parent elements (Objects and Arrays) to leave them out of your data structure. |
+    | <img src="images/unselect-elements-json-file.png" alt="Json Files Unselect Elements" class="responsive-img"/> | After selecting one or more children, you can unselect the parent elements (Objects and Arrays) to leave them out of your data structure. |
 
 
 4.  (*Optional*) **Format text fields to Date/Time or Number**
@@ -110,11 +110,11 @@ with, you are able to build your visualization upon them.
     optimal format, and presents a dialog where you can choose what to
     do.
 
-    <img src="images/json-files-format-fields.png" alt="Json Files Format Fields" class="responsive-img"/>
+    <img src="images/different-format-options-json-advanced-selection.png" alt="Json Files Format Fields" class="responsive-img"/>
 
 5.  **Click/Tap *Create Table***.
 
     Once you selected your custom data structure, click/tap the *Create
     Table* button to continue to the *Visualizations Editor*.
 
-    <img src="images/json-files-visualizations-editor2.png" alt="JsonFilesVisualizationsEditor2\_All" class="responsive-img"/>
+    <img src="images/visualization-editor-json-file.png" alt="Using the data from json file to create visualization" class="responsive-img" width="85%"/>

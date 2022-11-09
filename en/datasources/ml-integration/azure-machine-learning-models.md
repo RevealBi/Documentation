@@ -16,7 +16,7 @@ information about the clients. This ML model can be used in Reveal to
 build a visualization giving insight about how the clients' housing type
 relates to their credit risk:
 
-<img src="images/ml-credit-risk-by-housing-visualization-example.png" alt="Credit risk by Housing example" class="responsive-img"/>
+<img src="../images/credit-risk-by-housing-sample-azure-machine-learning.png" alt="Credit risk by Housing example" class="responsive-img" width="80%"/>
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ below:
     at the top of the *Fields* list to the left. Then choose **Azure
     Machine Learning**.
 
-    <img src="images/brain-icon-azure-ml-model.png" alt="Brain icon location in the Visualization editor" class="responsive-img"/>
+    <img src="../images/azure-ml-model-brain-icon.png" alt="Brain icon location in the Visualization editor" class="responsive-img" width="80%"/>
 
 <a href="ml-integration/ml-model-connect"></a>
 ## Connecting to Your Azure Machine Learning Model
@@ -50,7 +50,7 @@ following:
     order to access the Web Service exposed by the Azure Machine
     Learning Model:
 
-    <img src="images/microsoft-azure-configuration-requested-values.png" alt="MS Azure configuration dialog requested values" class="responsive-img"/>
+    <img src="../images/microsoft-azure-connection-configuration.png" alt="MS Azure configuration dialog requested values" class="responsive-img" width="80%"/>
 
     To find the **Swagger Document URL** and **API key** you need to do
     the following:
@@ -70,7 +70,7 @@ following:
 2.  The dialog displayed requires you to map the data in Reveal to the
     input expected by your ML model.
 
-    <img src="images/input-output-ml-list.png" alt="Input list in ML model connection dialog" class="responsive-img"/>
+    <img src="../images/input-output-microsoft-azure-ml-model.png" alt="Input list in ML model connection dialog" class="responsive-img" width="80%"/>
 
     In the dialog above, you have the following columns to consider:
 
@@ -81,7 +81,7 @@ following:
 
     c.  **Parameters** - some Azure ML models require you to fill in values for the parameters they need in order to calculate the output. In this case you will see a third *Parameters* column between *Input* and *Output*.
 
-      <img src="images/loaded-data-from-azure-model.png" alt="Data output loaded from Azure model" class="responsive-img"/>
+      <img src="../images/loaded-data-from-azure-ml-model.png" alt="Data output loaded from Azure model" class="responsive-img" width="80%"/>
 
 You can use the fields returned by the Azure model as regular fields in
 the Visualization editor.
