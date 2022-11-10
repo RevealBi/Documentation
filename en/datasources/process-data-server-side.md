@@ -44,4 +44,4 @@ The following capabilities are **not supported** in the Visualization editor whe
 Restrictions are placed on the [Pre-Calculated](~/en/data-visualizations/fields/calculated-fields/overview.html#precalculated-fields) fields feature in the Visualization editor. Unavailable functions are greyed out in the *New Calculated Field* dialog.
 In this dialog, you can click on the link to disable the *Process Data on Server* feature.
 
-<img src="images/unavailable-functions-message.png" alt="Disable Process Data on Server prompt in the Calculated Fields dialog" class="responsive-img" width="85%"/>
+<img src="images/unavailable-functions-message.png" alt="Disable Process Data on Server prompt in the Calculated Fields dialog" class="responsive-img" width="90%"/>
