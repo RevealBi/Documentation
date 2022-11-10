@@ -41,22 +41,17 @@ information:
     Server Manager and type select instance from v$thread. This will
     return your ORACLE\_SID.
 
-6.  **Credentials**: after selecting *Credentials*, you will be able to
+6. **Credentials**: after selecting *Credentials*, you will be able to
     enter the credentials for your Oracle server or select existing ones
     if applicable.
 
-     - **Name**: the name for your data source account (default: _Oracle_). It will be
-        displayed in the list of accounts in the previous dialog.
-
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
-
-      - **Username**: the user account for the Oracle server.
+      - **Username**: the user account for the Oracle server or the name of the domain.
 
       - **Password**: the password to access the Oracle server.
 
-    Once ready, select **Create Account**. You can verify whether the
-    account is reaching the data source or not by selecting **Test
-    Connection**.
+      - **Alias**: the name for your data source account. It will be displayed in the list of accounts in the previous dialog.
+
+    Once ready, select **Add** and then **Add Server**.
 
 <a name='using-service'></a>
 ## Connecting to Oracle Using Service
