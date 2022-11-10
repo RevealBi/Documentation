@@ -12,12 +12,10 @@ Drive automatically added to your data sources:
 
 To use your Google Drive data, follow the steps below.
 
-1.  Upon selecting your Google Drive (or a folder inside it), you will be prompt to choose an account and connect it to the app:
+1.  Upon selecting your Google Drive (or a folder inside it), you will be prompt to choose an account and connect it to the app. Enter your **login credentials** or choose an an account and select *Next*.
 
     <img src="images/google-drive-login-credentials.png" alt="Google Drive Login" class="responsive-img" width="50%">
-
-    Enter your **login credentials** or choose an an account and select *Next*.
-
+    
 2. An **authorization prompt** will pop up. You can select **Allow** to finish the process.
 
    <img src="images/google-drive-permissions.png" alt="Google Drive Login" class="responsive-img" width="40%">
