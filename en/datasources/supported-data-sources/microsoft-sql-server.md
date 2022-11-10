@@ -13,29 +13,22 @@ To configure a Microsoft SQL Server data source, you can set the following infor
 
 <img src="images/enter-microsoft-sql-credentials.png" alt="Enter SQL Server Details" class="responsive-img" width="50%"/>
 
-1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft SQL Server*. You can change it to your preference.
-
-2.  [**Server**](#how-to-find-server): the computer name or IP address
+1.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no information
+2.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (1433)
     by default.
 
-4.  **Credentials**: after selecting *Credentials*, you will be able to enter the credentials for your Microsoft SQL Server or choose existing ones if applicable.
+3.  **Credentials**: after selecting *Credentials*, you will be able to enter the credentials for your Microsoft SQL Server or choose existing ones if applicable.
 
-      - **Name**: the name for your data source account. It will be
-        displayed in the list of accounts in the previous dialog.
-
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
-
-      - **Username**: the user account for the SQL Server.
+      - **Username**: the user account for the SQL Server or the name of the domain.
 
       - **Password**: the password to access the SQL Server.
 
-    Once ready, select **Create Account**. You can verify whether the
-    account is reaching the data source or not by selecting **Test
-    Connection**.
+      - **Alias**: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Analytics names it Microsoft SQL Server. You can change it to your preference.
+
+    Once ready, select **Add** and then **Add Server**.
 
 <a name='how-to-find-server'></a>
 ## How to find your Server Information
@@ -70,7 +63,7 @@ that returns a subset of data from a table or a set of tables instead.
 
 <img src="images/microsoft-sql-views.png" alt="SQLServerViews\_All" class="responsive-img" width="60%"/>
 
-In the sample above, the **Invoices** view contains
+In the sample below, the **Invoices** view contains
 part of the data in the **Alphabetical list of products** table in the SQL Server.
 
 <img src="images/sample-microsoft-sql.png" alt="AlphabeticalListProductsSQLServer\_All" class="responsive-img" width="85%"/>

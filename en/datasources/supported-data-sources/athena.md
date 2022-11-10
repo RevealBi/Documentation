@@ -43,6 +43,6 @@ After selecting a database, you can choose from the *tables* or [*views*](https:
 In the screenshot above, the **motor_vehicle_collisions_full_view** view contains a modified version of the data in the **motor_vehicle_collisions_full** table in Athena. 
 In the screenshot below, the visualization on the left is built with the data in the view, and the one on the right uses the data contained in the table.  
 
-<img src="images/amazon-athena-sample.png" alt="Sample dashboard using Amazon Athena table and view data" class="responsive-img" width="85%"/>
+<img src="images/amazon-athena-sample.png" alt="Sample dashboard using Amazon Athena table and view data" class="responsive-img" width="88%"/>
 
 
