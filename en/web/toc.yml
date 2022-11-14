@@ -4,10 +4,6 @@
   href: overview.md
 - name: Installation
   href: installation.md
-- name: Configuring the Server
-  items:
-    - name: ASP.NET
-      href: configuring-server-aspnet.md
 - name: Getting Started
   items:
     - name: Setting Up the Server
@@ -20,6 +16,10 @@
       href: getting-started-javascript.md
     - name: React
       href: getting-started-react.md
+- name: Configuring the Server
+  items:
+    - name: ASP.NET
+      href: configuring-server-aspnet.md
 - name: Working with Dashboards
   header: true
 - name: Creating
