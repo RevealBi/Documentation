@@ -3,7 +3,6 @@
 Reveal is a business intelligence solution that is purpose-built for embedded analytics. With Reveal, you can:
 
 - Deliver full-featured self-service dashboards and modern reporting.
-
 - Use in any JavaScript framework (like React, Angular, Vue JS, Web Components or Blazor), Windows Forms or WPF application.
 - Customize the UX to match your brand experience.
 - Connect to almost any data source to populate your dashboards.
