@@ -6,8 +6,12 @@
   href: installation.md
 - name: Getting Started
   items:
-    - name: Setting Up the Server
-      href: getting-started-server.md
+    - name: Creating the Server
+      items:
+        - name: ASP.NET Web API
+          href: getting-started-server.md
+        - name: Node.js
+          href: getting-started-server-node.md
     - name: Angular
       href: getting-started-angular.md
     - name: ASP.NET Core Web App

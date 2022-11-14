@@ -1,4 +1,4 @@
-# Setting up the Reveal SDK Server
+# Setting up the Reveal SDK Server with ASP.NET
 
 ## Step 1 - Create a New ASP.NET Core Web API
 
