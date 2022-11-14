@@ -42,7 +42,7 @@ The Reveal SDK has two concepts regarding data sources.
 Reveal does not store your data, and it does not store credentials. When requesting data from databases or other data sources requiring authentication, your application code handles credential management by loading them from configuration files or storing them in a secure storage. Reveal delegates the storage and handling of these credentials to you.
 
 There are two help topics that will guide you through authentication and authorization API’s:
--	[Authentication](https://help.revealbi.io/en/web/authentication.html) – Shows how to use both Username/Password and Bearer Token authentication credentials with your data sources
+-	[Authentication](https://help.revealbi.io/en/web/authentication.html) – Shows how to use both Username/Password and Bearer Token authentication credentials with your data sources.
 -	[User Credentials](https://help.revealbi.io/en/web/user-context.html) – Shows how to retrieve the identity of the authenticated user of your application and send that information to a custom query.
 
 For example, to resolve credentials for a visualization that uses data from a SQL Server database, you would use code similar to this to set connection details. Where those details are stored, and how they are retrieved, is up to your server code.
