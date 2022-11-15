@@ -55,7 +55,7 @@ var reveal = require('reveal-sdk-node');
 const app = express();
 
 //add reveal sdk
-app.use('/reveal-api/', reveal());
+app.use('/', reveal());
 
 app.listen(8080, () => {
 	console.log(`Reveal server accepting http requests`);
@@ -90,7 +90,7 @@ const app = express();
 
 app.use(cors()); // DEVELOPMENT only! In production, configure appropriately.
 
-app.use('/reveal-api/', reveal());
+app.use('/', reveal());
 
 app.listen(8080, () => {
 	console.log(`Reveal server accepting http requests`);
