@@ -17,7 +17,7 @@ Reveal has 2 core components that enable the delivery of dashboards to your clie
 
 This diagram describes the SDK components.  
 
-![reveal-high-level-architecture](images/overview-high-level-architecture.png)
+![reveal-high-level-architecture](images/overview-high-level-architecture.jpg)
 
 The Reveal client has a baseUrl property which is the endpoint of your server that the client will send/receive the requests and responses from.
 
