@@ -1,5 +1,17 @@
 # Release Notes
 
+## 1.3.0 (Nov-2022)
+
+### New Features
+- _New Data Source: Google Analytics 4._
+- _Interactive Dashboard Filtering._ Filter all visualizations using the same data source by clicking on a chart or pivot table data point. Enable with: `revealView.interactiveFilteringEnabled = true`.
+- _New function 'DateDiff' for calculated fields._
+- _Customization of the export path_ can now be achieved by using the `DefaultExportPath` property found in `RevealSdkSettings`
+
+### Bug Fixes
+- Fix error when filtering boolean values in Postgres & Redshift ("operator does not exist")
+- Removed new http header 'XRID' that was accidentally added in v1.2.3 and was causing issues with CORS.
+
 ## 1.2.3 (Oct-2022)
 
 ### New Features
