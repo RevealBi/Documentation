@@ -1,5 +1,29 @@
 # Release Notes
 
+## 1.3.0 (Nov-2022)
+
+### New Features
+- _Export dashboards from the backend:_
+```csharp
+var pdfStream = await dashboardExporter.ExportToPdf(dashboardId);
+```
+- _New Data Source: Google Analytics 4._
+- _Interactive Dashboard Filtering._ Filter all visualizations using the same data source by clicking on a chart or pivot table data point. Enable with: `revealView.interactiveFilteringEnabled = true`.
+- _Methods containing a callback now include an additional signature allowing for promise method handling:_
+```javascript
+$.ig.RevealUtility.loadDashboard(dashboardId).then(dashboard => {
+  revealView.dashboard = dashboard;
+});
+```
+- _Manually loading of default fonts using the `ensureFontsLoadedAsync` method from `$.ig.revealSdkSettings` is no longer required._
+- _New function 'DateDiff' for calculated fields._
+
+### Bug Fixes
+- Fix error when filtering boolean values in Postgres & Redshift ("operator does not exist")
+- Fix localization not working when the locale contains an hyphen
+- Fix for `IRVDataSourceProvider.ChangeDataSourceItem` not invoked when creating a new visualization from a REST data source.
+- Removed new http header 'XRID' that was accidentally added in v1.2.3 and was causing issues with CORS.
+
 ## 1.2.3 (Oct-2022)
 
 ### New Features
