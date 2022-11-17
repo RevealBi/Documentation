@@ -100,7 +100,7 @@ For this tutorial, you will use the "Sparkline Charts" sheet in the
 
    <img src="images/sparkline-charts-spreadsheet.png" alt="Tutorials-Select-Sparkline-Charts-Spreadsheet.png" class="responsive-img" width="55%"/>                         
 
-4. Select the **grid icon** in the top bar of the Visualizations Editor. By default, the visualization type will be set to *Column*. Select the **Sparkline** chart.                                                                              
+4. Open the *Visualization Picker* and select the **Sparkline Chart**. By default, the visualization type will be set to **Column**.                                                                             
   <img src="images/chart-types-sparkline.png" alt="Tutorials-Charts-Select-Sparkline-Chart" class="responsive-img" width="55%"/>                                                                              
 5. Drag and drop the *Date* field into **Date**, *Offer* into **Value** and *Stocks* into **Category**.
 

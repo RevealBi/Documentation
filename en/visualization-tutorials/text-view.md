@@ -42,7 +42,7 @@ For this tutorial, you will use the "Simple Series Charts" sheet in the
  3. Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "Simple Series Charts" sheet.  
 
      <img src="images/tutorials-simple-series-charts-spreadsheet.png" alt="Simple Series Charts Spreadsheed in the data source " class="responsive-img" width="60%"/>                                                                                      
- 4.  Select the **grid icon** in the top bar of the *Visualization Editor*. By default, the visualization type will be set to *Grid*. Select the **Text View**.   
+ 4.  Open the *Visualization Picker* and select **Text View**. By default, the visualization type will be set to **Column**.   
  
       <img src="images/text-view-chart-types.png" alt="Text View in the chart types list" class="responsive-img" width="70%"/>                                                                                                
  5. The above text view, for example, displays the population, life expectancy, and fertility rate for a specific country. Drag and drop "Country Name", "Population", "Life Expectancy" and "Fertility Rate" into Columns.
