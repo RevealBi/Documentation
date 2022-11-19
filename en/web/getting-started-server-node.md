@@ -109,3 +109,6 @@ Next Steps:
 - [Create an Angular Client App](getting-started-angular.md)
 - [Create an Html/JS Client App](getting-started-javascript.md)
 - [Create a React Client App](getting-started-react.md)
+
+> [!NOTE]
+> The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/nodejs).
