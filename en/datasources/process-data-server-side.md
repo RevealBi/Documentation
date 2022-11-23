@@ -26,7 +26,7 @@ You can enable the *Process Data on Server* function while connecting to one of 
 
 If you need more information on how to do the initial configuration of the data source, select one of the three data sources in the bullet list above and read the article on how to set it up.
 
-After configuring the connection, you will have the *Set Up the Database* screen opened:
+After configuring the connection, the *Data Source Details* dialog will show up:
 
 <img src="images/process-data-on-server-option.png" alt="New Process data on server checkbox added in the Set Up the Database dialog in PostgreSQL" class="responsive-img" width="55%"/>
 

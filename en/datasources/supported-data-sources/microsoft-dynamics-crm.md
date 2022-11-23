@@ -32,7 +32,7 @@ Once ready, select **Add**.
 
 After logging in, you can set up your Microsoft Dynamics CRM data in the following dialog:
 
-<img src="images/microsoft-dynamics-crm-details.png" alt="A dialog for adding the credentials for Microsoft Dynamics CRM" class="responsive-img" width="57%"/>
+<img src="images/microsoft-dynamics-crm-details.png" alt="A dialog containing lists of entities" class="responsive-img" width="57%"/>
 
 Here you can choose the Microsoft Dynamics CRM entities you need from:
 
