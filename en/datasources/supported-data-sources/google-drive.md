@@ -8,7 +8,7 @@ _description: Steps to use Google Drive as your data source in Slingshot.
 If you are signed in with your Google account, you will have your Google
 Drive automatically added to your data sources:
 
-<img src="images/google-drive-list-data-files.png" alt="Google Drive account in your data sources list" class="responsive-img" width="75%">
+<img src="images/google-drive-list-data-files.png" alt="Google Drive account in your data sources list" class="responsive-img" width="80%">
 
 To use your Google Drive data, follow the steps below.
 

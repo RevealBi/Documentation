@@ -65,7 +65,7 @@ your JSON file:
     [**Advanced Selection**](#json-advanced-selection) mode where you
     can choose a custom data structure.
 
-5.  **Click/Tap *Load Data***.
+5.  **Click/Tap **Load Data**.
 
     Once you selected the data structure, click/tap the *Load Data*
     button to continue to the *Visualizations Editor*.
@@ -112,7 +112,7 @@ with, you are able to build your visualization upon them.
 
     <img src="images/different-format-options-json-advanced-selection.png" alt="Json Files Format Fields" class="responsive-img"/>
 
-5.  **Click/Tap *Create Table***.
+5.  **Click/Tap **Create Table**.
 
     Once you selected your custom data structure, click/tap the *Create
     Table* button to continue to the *Visualizations Editor*.

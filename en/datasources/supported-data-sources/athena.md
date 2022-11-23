@@ -36,9 +36,9 @@ To configure an Amazon Athena data source, you will need to enter the following 
 
 After configuring your Athena data source connection, you will be prompted to choose a database from the *Data Source (Catalog)* you selected in the previous dialog. 
 
-<img src="images/amazon-athena-views.png" alt="Configure Amazon Athena dialog" class="responsive-img" width="55%"/>
-
 After selecting a database, you can choose from the *tables* or [*views*](https://docs.aws.amazon.com/athena/latest/ug/views.html) inside it. 
+
+<img src="images/amazon-athena-views.png" alt="A dialog containing tables and views" class="responsive-img" width="55%"/>
 
 In the screenshot above, the **motor_vehicle_collisions_full_view** view contains a modified version of the data in the **motor_vehicle_collisions_full** table in Athena. 
 In the screenshot below, the visualization on the left is built with the data in the view, and the one on the right uses the data contained in the table.  
