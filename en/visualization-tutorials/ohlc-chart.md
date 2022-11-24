@@ -70,7 +70,7 @@ For this tutorial, you will use the "OHLC and Candlestick" sheet in the
 
    <img src="images/visualization-tutorials-data-source.png" alt="Tutorials-Select-Data-Source" class="responsive-img" width="55%"/>                                         
 
- 3. Once the data source is configured, select the **Reveal Tutorials Spreadsheet**. Then, choose the "OHLC and Candlestick" sheet. 
+ 3. Choose the **OHLC and Candlestick** sheet. 
 
     <img src="images/ohlc-candlestick-spreadsheet.png" alt="Tutorials-Select-OHLC-Candlestick-Charts-Spreadsheet" class="responsive-img" width="55%"/>                       
 
