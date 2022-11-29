@@ -8,7 +8,7 @@ _description: Find out how to create and use Radial Charts visualization in Slin
 Like category charts, Radial charts are simply representations of
 information in a coordinate system.
 
-<img src="images/radial-chart-samples.png" alt="Radial Chart Sample" class="responsive-img"/>
+<img src="images/radial-chart-visualization-editor.png" alt="Using a radial chart to create a visualization" class="responsive-img" width="85%"/>
 
 ## Chart Trendlines for Radial Charts
 
@@ -20,4 +20,4 @@ Fit, Quadratic Fit, Cubic Fit, Quartic Fit, Logarithmic Fit, Exponential
 Fit, Power Law Fit, Simple Average, Exponential Average, Modified
 Average, Cumulative Average, Weighted Average.
 
-<img src="images/chart-trendlines-radial.png" alt="Radial Chart Trendline settings" class="responsive-img"/>
+<img src="images/radial-chart-trendline-settings.png" alt="A list consistng of all the chart trendlines available for the radial chart" class="responsive-img" width="85%"/>
