@@ -7,7 +7,7 @@ _description: Learn how to apply quick visualization filters to dynamically filt
 
 At a visualization level, you can also apply "quick" filters, which
 allow you to dynamically filter the visualization contents as the quick
-filter selection changes. These become part of the dashboard definition,
+filter selection changes. These become part of the dashboard definition
 and can't be modified by consumers of the dashboard.
 
 In order to define a quick filter, select the **Add a Visualization Filter** button on top of your visualization in the Visualizations
@@ -17,7 +17,7 @@ Editor:
 
 The filter options displayed in the Visualization Filters area depend on
 the data type of the field. There are three different filter dialogs:
-text, numeric, and date fields. Once created, the quick filter will be
+text, numeric and date fields. Once created, the quick filter will be
 displayed on top of your visualization in the Visualizations Editor.
 
 <img src="images/visualization-filter-visualization-editor.png" alt="List of fields in the visualization editor" class="responsive-img" width="85%"/>
@@ -25,7 +25,7 @@ displayed on top of your visualization in the Visualizations Editor.
 When the visualization is maximized in Dashboard View mode, you will see
 it under the visualization's title.
 
-<img src="images/visualization-filter-location.png" alt="The location of the visualization filter in dashboard view maximized" class="responsive-img" width="85%"/>
+<img src="images/location-visualization-filter.png" alt="The location of the visualization filter in dashboard view maximized" class="responsive-img" width="85%"/>
 
 As with [Dashboard Filters](dashboard-filters.md), this enables a dynamic
 filtering of the visualization contents as the quick filter selection
