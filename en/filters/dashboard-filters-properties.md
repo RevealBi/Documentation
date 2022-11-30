@@ -17,7 +17,7 @@ In order to add a new dashboard filter:
     can configure or change it using the overflow menu next to the data
     source's name.
 
-    <img src="images/select-dashboard-filter-data-source-menu.png" alt="Selecting Dashboard Filter data source menu" class="responsive-img" width="80%"/>
+    <img src="images/dashboard-filter-data-source-menu.png" alt="Selecting Dashboard Filter data source menu" class="responsive-img" width="80%"/>
 
 3.  Choose which dataset to use as a dashboard filter and click/tap
     *Select Data*.
@@ -57,7 +57,7 @@ You will be able to change the following settings for the filter:
 >[!NOTE] For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **Displayed Element**.
 
 The *Displayed Field/Element* setting specifies the dataset field that will be used to display
-the values in the *Dashboard Filters*. Listed values will not be repeated,
+the values in the *Dashboard Filters*. Listed values will not be repeated
 even if they appear multiple times in the original dataset.
 
 You can change the displayed column in *Edit mode* by selecting the *Edit* button in the overflow menu next to the dashboard filter name.
@@ -109,7 +109,7 @@ For example, if you use the *Fullname* field to filter the data in
 your *HR Dashboard*, the *Dashboard filter* will show a list of all
 employees in all offices of the company:
 
-<img src="images/data-filters-dashboard-filters-hr-dashboard-example.png" alt="Full name dashboard filter applied to HR Dashboard" class="responsive-img" width="50%"/>
+<img src="images/data-filters-dashboard-filters-hr-dashboard.png" alt="Full name dashboard filter applied to HR Dashboard" class="responsive-img" width="45%"/>
 
 If you want your filter list to contain only employees working in a particular office, e.g.
 *London, UK*, apply a data filter as shown below.
