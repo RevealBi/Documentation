@@ -8,8 +8,6 @@ The authentication provider is used to check which data source is requesting aut
 
 # [ASP.NET](#tab/aspnet)
 
-To provide authentication credentials to your data source, you must first create a class that implements the `IRVAuthenticationProvider` interface and implement the `ResolveCredentialsAsync` method.
-
 ```cs
 public class AuthenticationProvider: IRVAuthenticationProvider
 {
@@ -20,9 +18,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 }
 ```
 
-# [JAVA](#tab/java)
-
-To provide authentication credentials to your data source, you must first create a class that implements the `IRVAuthenticationProvider` interface and implement the `resolveCredentials` method.
+# [Java](#tab/java)
 
 ```java
 public class AuthenticationProvider implements IRVAuthenticationProvider {
@@ -33,9 +29,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 }
 ```
 
-# [Nodejs](#tab/node)
-
-To provide authentication credentials to your data source, you must first create a function that accepts the `IRVUserContext` and `RVDashboardDataSource` as parameters.
+# [Node.js](#tab/node)
 
 ```javascript
 const authenticationProvider = async (userContext: IRVUserContext, dataSource: RVDashboardDataSource) => {
@@ -49,8 +43,6 @@ const authenticationProvider = async (userContext: IRVUserContext, dataSource: R
 
 # [ASP.NET](#tab/aspnet)
 
-Update the `AddReveal` method in the `Program.cs` file to add the `IRVAuthenticationProvider` you just created to the `RevealSetupBuilder` using the `RevealSetupBuilder.AddAuthenticationProvider` method.
-
 ```cs
 builder.Services.AddControllers().AddReveal( builder =>
 {
@@ -58,9 +50,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 });
 ```
 
-# [JAVA](#tab/java)
-
-Update the `RevealEngineInitializer.initialize` method to add the `IRVAuthenticationProvider` you just created to the `InitializeParameterBuilder` using the `InitializeParameterBuilder.setAuthProvider` method.
+# [Java](#tab/java)
 
 ```java
 RevealEngineInitializer.initialize(new InitializeParameterBuilder().
@@ -68,9 +58,7 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
     build());
 ```
 
-# [Nodejs](#tab/node)
-
-Set the `RevealOptions.authenticationProvider` property to the constant you created earlier and pass the options to the `reveal` method.
+# [Node.js](#tab/node)
 
 ```javascript
 const revealOptions: RevealOptions {
@@ -107,7 +95,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 }
 ```
 
-# [JAVA](#tab/java)
+# [Java](#tab/java)
 
 ```java
 public class AuthenticationProvider implements IRVAuthenticationProvider {
@@ -124,7 +112,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 }
 ```
 
-# [Nodejs](#tab/node)
+# [Node.js](#tab/node)
 
 ```javascript
 const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
@@ -150,7 +138,7 @@ if (dataSource is RVSqlServerDataSource)
 }
 ```
 
-# [JAVA](#tab/java)
+# [Java](#tab/java)
 
 ```java
 if (dataSource instanceof RVSqlServerDataSource) {
@@ -158,7 +146,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 }
 ```
 
-# [Nodejs](#tab/node)
+# [Node.js](#tab/node)
 
 ```javascript
 if (dataSource instanceof RVSqlServerDataSource) {
@@ -201,7 +189,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 }
 ```
 
-# [JAVA](#tab/java)
+# [Java](#tab/java)
 
 ```java
 public class AuthenticationProvider implements IRVAuthenticationProvider {
@@ -215,7 +203,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 }
 ```
 
-# [Nodejs](#tab/node)
+# [Node.js](#tab/node)
 
 ```javascript
 const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
