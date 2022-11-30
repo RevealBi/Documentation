@@ -12,6 +12,8 @@
           href: getting-started-server.md
         - name: Node.js
           href: getting-started-server-node.md
+        - name: Spring Boot - Jersey
+          href: getting-started-spring-boot-jersey.md
     - name: Angular
       href: getting-started-angular.md
     - name: ASP.NET Core Web App
