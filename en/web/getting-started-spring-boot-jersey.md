@@ -4,6 +4,13 @@
 
 The steps below describe how to create a new Java Spring Boot with Jersey project. If you want to add the Reveal SDK to an existing application, go to Step 2.
 
+To develop a Spring Boot application in Visual Studio Code, you need to install the following:
+- [Development Kit (JDK)](https://www.microsoft.com/openjdk)
+- [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=pivotal.vscode-boot-dev-pack)
+
+More information about how to get started with Visual Studio Code and Java can be found at [Getting Started with Java](https://code.visualstudio.com/docs/java/java-tutorial) tutorial.
+
 1 - Start Visual Studio Code, open the Command Palette and type **>Spring Initializr: Create a Maven Project** and press **Enter**.
 
 ![](images/getting-started-spring-boot-jersey-project.jpg)
@@ -31,11 +38,15 @@ The steps below describe how to create a new Java Spring Boot with Jersey projec
 
 ![](images/getting-started-spring-boot-jersey-package-type.jpg)
 
-7 - Choose the **Spring Web** and **Jersey** dependencies.
+7 - Select the Java version. In this example we are using version **17**.
+
+![](images/getting-started-spring-boot-jersey-java-version.jpg)
+
+8 - Choose the **Spring Web** and **Jersey** dependencies.
 
 ![](images/getting-started-spring-boot-jersey-dependencies.jpg)
 
-8 - Save and open the newly created project project.
+9 - Save and open the newly created project.
 
 ![](images/getting-started-spring-boot-jersey-explorer.jpg)
 
@@ -125,9 +136,22 @@ public class RevealDashboardProvider implements IRVDashboardProvider {
 3 - Finally, register the Dashboard Provider with the `RevealEngineInitializer` in the `RevealJerseyConfig` class.
 
 ```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder()
-.setDashboardProvider(new RevealDashboardProvider())
-.build());
+@Component
+@ApplicationPath("/")
+public class RevealJerseyConfig extends ResourceConfig 
+{
+    public RevealJerseyConfig()
+    {
+        RevealEngineInitializer.initialize(new InitializeParameterBuilder()
+        .setDashboardProvider(new RevealDashboardProvider())
+        .build());
+        
+        //register all Reveal classes in JAX-RS context
+        for (Class<?> clazz : RevealEngineInitializer.getClassesToRegister()) {
+        	register(clazz);
+        }
+    }
+}
 ```
 
 ## Step 4 - Setup CORs Policy (Debugging)

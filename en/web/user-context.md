@@ -14,12 +14,12 @@ internal class UserContextProvider : IRVUserContextProvider
     public IRVUserContext GetUserContext(HttpContext aspnetContext)       
     {
         //when using standard auth mechanisms, the userId can be obtained using aspnetContext.User.Identity.Name.
-        string userIdentityName = aspnetContext.User.Identity.Name;
-        string userId = (userIdentityName != null) ? userIdentityName : "guest";
+        var userIdentityName = aspnetContext.User.Identity.Name;
+        var userId = (userIdentityName != null) ? userIdentityName : "guest";
+        
+        var props = new Dictionary<string, object>() { { "some-property", aspnetContext.Current.Request.Cookies["some-cookie-name"].Value } };
 
-        return new RVUserContext(
-            userId,
-            new Dictionary<string, object>() { { "some-property", aspnetContext.Current.Request.Cookies["some-cookie-name"].Value } });
+        return new RVUserContext(userId, props);
     }    
 }
 ```
