@@ -84,11 +84,11 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVPostgresDataSource)
         {
-            userCredential = new RVUsernamePasswordDataSourceCredential("postgresuser", "password");
+            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
         }
         else if (dataSource is RVSqlServerDataSource)
         {
-            userCredential = new RVUsernamePasswordDataSourceCredential("sqlserveruser", "password", "domain");
+            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password", "domain");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -102,10 +102,10 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 	@Override
 	public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
 		if (dataSource instanceof RVPostgresDataSource) {
-			return new RVUsernamePasswordDataSourceCredential("postgresuser", "password");
+			return new RVUsernamePasswordDataSourceCredential("username", "password");
 		} 
         else if (dataSource instanceof RVSqlServerDataSource) {
-			return new RVUsernamePasswordDataSourceCredential("sqlserveruser", "password", "domain");
+			return new RVUsernamePasswordDataSourceCredential("username", "password", "domain");
 		} 
 		return null;
 	}
@@ -117,9 +117,9 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 ```javascript
 const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
 	if (dataSource instanceof RVPostgresDataSource) {
-		return new RVUsernamePasswordDataSourceCredential("postgresuser", "password");
+		return new RVUsernamePasswordDataSourceCredential("username", "password");
 	} else if (dataSource instanceof RVSqlServerDataSource) {
-		return new RVUsernamePasswordDataSourceCredential("sqlserveruser", "password", "domain");
+		return new RVUsernamePasswordDataSourceCredential("username", "password", "domain");
 	}
 	return null;
 }
@@ -157,6 +157,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 ***
 
 The `RVUsernamePasswordDataSourceCredential` is supported for the following data sources:
+- Amazon Redshift
 - Microsoft Analysis Services Server
 - Microsoft Dynamics CRM (On-Premises and Online)
 - Microsoft SQL Server
@@ -170,7 +171,7 @@ The `RVUsernamePasswordDataSourceCredential` is supported for the following data
 
 ## Bearer Token Authentication
 
-If your data source requires the use of a username and password, then you must return an instance of the `RVBearerTokenDataSourceCredential` class. The `RVBearerTokenDataSourceCredential` class provides constructor overloads to define the **token**, and the **user id**.
+If your data source requires the use of security tokens, then you must return an instance of the `RVBearerTokenDataSourceCredential` class. The `RVBearerTokenDataSourceCredential` class provides constructor overloads to define the **token**, and the **user id**.
 
 # [ASP.NET](#tab/aspnet)
 
@@ -182,7 +183,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVGoogleDriveDataSource)
         {
-            userCredential = new RVBearerTokenDataSourceCredential("fhJhbUci0mJSUzi1nIiSint....", "user@company.com");
+            userCredential = new RVBearerTokenDataSourceCredential("token", "userid");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -196,7 +197,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 	@Override
 	public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVGoogleDriveDataSource) {
-            return new RVBearerTokenDataSourceCredential("fhJhbUci0mJSUzi1nIiSint....", "user@company.com");
+            return new RVBearerTokenDataSourceCredential("token", "userid");
         }
 		return null;
 	}
@@ -208,7 +209,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 ```javascript
 const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVGoogleDriveDataSource) {
-        return new RVBearerTokenDataSourceCredential("fhJhbUci0mJSUzi1nIiSint....", "user@company.com");
+        return new RVBearerTokenDataSourceCredential("token", "userid");
     }
 	return null;
 }
@@ -226,3 +227,54 @@ The `RVBearerTokenDataSourceCredential` is supported for the following data sour
 - REST Services
 - SharePoint Online
 - Web Resources
+
+## Amazon Web Services
+
+If your data source uses Amazon Web Services (AWS), then you must return an instance of the `RVAmazonWebServicesCredentials` class. The `RVAmazonWebServicesCredentials` class provides constructor overloads to define the **key**, and the **secret**.
+
+# [ASP.NET](#tab/aspnet)
+
+```cs
+public class AuthenticationProvider: IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVS3DataSource)
+        {
+            userCredential = new RVAmazonWebServicesCredentials("key", "secret");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+# [Java](#tab/java)
+
+```java
+public class AuthenticationProvider implements IRVAuthenticationProvider {
+	@Override
+	public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVS3DataSource) {
+            return new RVAmazonWebServicesCredentials("key", "secret");
+        }
+		return null;
+	}
+}
+```
+
+# [Node.js](#tab/node)
+
+```javascript
+const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVS3DataSource) {
+        return new RVAmazonWebServicesCredentials("key", "secret");
+    }
+	return null;
+}
+```
+***
+
+The `RVAmazonWebServicesCredentials` is supported for the following data sources:
+- Amazon Athena
+- Amazon S3

@@ -36,11 +36,12 @@ The following data sources are supported in the Reveal SDK:
 
 - Amazon Athena
 - Amazon Redshift
+- Amazon S3
 - Box
 - CSV (Comma Separated Values)
 - Dropbox
 - [Excel / Microsoft Excel](adding-data-sources/excel-file.md)
-- Google Analytics
+- Google Analytics 4
 - Google BigQuery
 - Google Drive
 - Google Sheets
