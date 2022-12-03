@@ -31,8 +31,16 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 # [Node.js](#tab/node)
 
-```javascript
-const authenticationProvider = async (userContext: IRVUserContext, dataSource: RVDashboardDataSource) => {
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+    ...
+}
+```
+
+# [Node.js - TypeScript](#tab/node-ts)
+
+```ts
+const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     ...
 }
 ```
@@ -60,8 +68,18 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
 
 # [Node.js](#tab/node)
 
-```javascript
-const revealOptions: RevealOptions {
+```js
+const revealOptions = {
+	authenticationProvider: authenticationProvider
+};
+
+app.use('/', reveal(revealOptions));
+```
+
+# [Node.js - TypeScript](#tab/node-ts)
+
+```ts
+const revealOptions: RevealOptions = {
 	authenticationProvider: authenticationProvider
 };
 
@@ -114,8 +132,21 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 # [Node.js](#tab/node)
 
-```javascript
-const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+	if (dataSource instanceof RVPostgresDataSource) {
+		return new RVUsernamePasswordDataSourceCredential("username", "password");
+	} else if (dataSource instanceof RVSqlServerDataSource) {
+		return new RVUsernamePasswordDataSourceCredential("username", "password", "domain");
+	}
+	return null;
+}
+```
+
+# [Node.js - TypeScript](#tab/node-ts)
+
+```ts
+const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
 	if (dataSource instanceof RVPostgresDataSource) {
 		return new RVUsernamePasswordDataSourceCredential("username", "password");
 	} else if (dataSource instanceof RVSqlServerDataSource) {
@@ -148,7 +179,15 @@ if (dataSource instanceof RVSqlServerDataSource) {
 
 # [Node.js](#tab/node)
 
-```javascript
+```js
+if (dataSource instanceof RVSqlServerDataSource) {
+	return new RVUsernamePasswordDataSourceCredential();
+}
+```
+
+# [Node.js - TypeScript](#tab/node-ts)
+
+```ts
 if (dataSource instanceof RVSqlServerDataSource) {
 	return new RVUsernamePasswordDataSourceCredential();
 }
@@ -206,8 +245,19 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 # [Node.js](#tab/node)
 
-```javascript
-const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof RVGoogleDriveDataSource) {
+        return new RVBearerTokenDataSourceCredential("token", "userid");
+    }
+	return null;
+}
+```
+
+# [Node.js - TypeScript](#tab/node-ts)
+
+```ts
+const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVGoogleDriveDataSource) {
         return new RVBearerTokenDataSourceCredential("token", "userid");
     }
@@ -265,8 +315,19 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 # [Node.js](#tab/node)
 
-```javascript
-const authenticationProvider = async (userContext:IRVUserContext, dataSource: RVDashboardDataSource) => {
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof RVS3DataSource) {
+        return new RVAmazonWebServicesCredentials("key", "secret");
+    }
+	return null;
+}
+```
+
+# [Node.js - TypeScript](#tab/node-ts)
+
+```ts
+const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVS3DataSource) {
         return new RVAmazonWebServicesCredentials("key", "secret");
     }
