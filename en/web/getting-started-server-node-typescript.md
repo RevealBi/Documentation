@@ -58,8 +58,6 @@ app.listen(5111, () => {
 });
 ```
 
-
-
 ## Step 2 - Add Reveal SDK
 
 1 - Install the **Reveal SDK** for Node.js
@@ -148,4 +146,4 @@ Next Steps:
 - [Create a React Client App](getting-started-react.md)
 
 > [!NOTE]
-> The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/nodejs).
+> The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/nodejs-typescript).
