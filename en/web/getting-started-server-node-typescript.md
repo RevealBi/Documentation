@@ -1,4 +1,4 @@
-# Setting up the Reveal SDK Server with Node.js
+# Setting up the Reveal SDK Server with Node.js and TypeScript
 
 ## Step 1 - Create the Node.js Project
 
@@ -22,22 +22,43 @@
 > npm install express
 </pre>
 
-5 - Open the project in **VS Code**
+5 - Install **TypeScript** and other package types.
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+> npm install typescript @types/node @types/express @types/cors --save-dev
+</pre>
+
+6 - Install **Nodemon** and **ts-node** packages.
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+> npm install nodemon ts-node --save-dev
+</pre>
+
+7 - Configure **TypeScript**. In this example, we are setting the root directory to "src" and the output directory to "dist".
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+> npx tsc --init --rootDir src --outDir dist
+</pre>
+
+8 - Open the project in **VS Code**
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 > code .
 </pre>
 
-6 - Create a new file named **main.js**, and add the following code
+9 - Create a new file named **app.ts** in a directory called **src**
+
+![](images/getting-started-server-node-typescript-create-app-file.jpg)
+
+Add the following code:
 
 ```javascript
-var express = require('express');
+import express, { Application } from 'express';
 
-const app = express();
+const app: Application = express();
 
-app.listen(8080, () => {
+app.listen(5111, () => {
 	console.log(`Reveal server accepting http requests`);
 });
 ```
+
+
 
 ## Step 2 - Add Reveal SDK
 
@@ -46,27 +67,26 @@ app.listen(8080, () => {
 > npm install reveal-sdk-node
 </pre>
 
-2 - Modify the `main.js` file to add Reveal
+2 - Modify the `app.ts` file to add Reveal
 
 ```javascript
-var express = require('express');
-var reveal = require('reveal-sdk-node');
+import express, { Application } from 'express';
+import reveal from 'reveal-sdk-node';
 
-const app = express();
+const app: Application = express();
 
-//add reveal sdk
-app.use('/', reveal());
+app.use("/", reveal());
 
-app.listen(8080, () => {
+app.listen(5111, () => {
 	console.log(`Reveal server accepting http requests`);
 });
 ```
 
 ## Step 3 - Create the Dashboards Folder
 
-1 - In Visual Studio Code, click the **New Folder** button in the Explorer and name it **dashboards**. The folder MUST be named **dashboards**
+1 - In Visual Studio Code, click the **New Folder** button in the Explorer and name it **dashboards**. The folder MUST be named **dashboards** and created in the working directory of the application.
 
-![](images/getting-started-server-node-create-dashboards-folder.jpg)
+![](images/getting-started-server-node-typescript-create-dashboards-folder.jpg)
 
 By default, the Reveal SDK uses a convention that will load all dashboards from the **dashboards** folder. You can change this convention by creating a custom `IRVDashboardProvider`.
 
@@ -74,25 +94,26 @@ By default, the Reveal SDK uses a convention that will load all dashboards from 
 
 While developing and debugging your application, it is common to host the server and client app on different URLs. For example; your Server my be running on `https://localhost:24519`, while your Angular app may be running on `https://localhost:4200`. If you were to try and load a dashboard from the client application, it would fail because of a Cross-Origin Resource Sharing (CORS) policy. To enable this scenario, you must create a CORS policy and enable it in the server project.
 
-1 - Install **cors** package
+1 - Install **cors** package and the TypeScript types.
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 > npm install cors
+> npm install @types/cors --save-dev
 </pre>
 
-2 - Modify the `main.js` file to enable **cors**
+2 - Modify the `app.ts` file to enable **cors**
 
 ```javascript
-var express = require('express');
-var cors = require('cors');
-var reveal = require('reveal-sdk-node');
+import express, { Application } from 'express';
+import reveal from 'reveal-sdk-node';
+import cors from "cors";
 
-const app = express();
+const app: Application = express();
 
-app.use(cors()); // DEVELOPMENT only! In production, configure appropriately.
+app.use(cors());
 
-app.use('/', reveal());
+app.use("/", reveal());
 
-app.listen(8080, () => {
+app.listen(5111, () => {
 	console.log(`Reveal server accepting http requests`);
 });
 ```
@@ -102,7 +123,23 @@ app.listen(8080, () => {
 The final step is to start the Node.js server by runnning the following command:
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-> node main.js
+> npx nodemon src/app.ts
+</pre>
+
+Optionally you can add the following scripts to the `package.json` file.
+
+```json
+  "scripts": {
+    "start": "node dist/app.js", //runs the app.js file in the dist folder that was generated from the build script
+    "dev": "npx nodemon src/app.ts", //runs the server and watches for changes during development
+    "build": "tsc -p .", //builds the app and generates javascript files in the dist folder
+  },
+```
+
+Then execute the **dev** script during development.
+
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+> npm run dev
 </pre>
 
 Next Steps:

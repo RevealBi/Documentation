@@ -9,6 +9,11 @@ public class MyDataSourceProvider : IRVDataSourceProvider
     {
         throw new NotImplementedException();
     }
+
+    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        throw new NotImplementedException();
+    }
 }
 ```
 
@@ -32,20 +37,30 @@ public class MyDataSourceProvider : IRVDataSourceProvider
 {
     public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
     {
-        var sqlServerDsi = dataSourceItem as RVSqlServerDataSourceItem;
-        if (sqlServerDsi != null)
+        if (dataSourceItem is RVSqlServerDataSourceItem sqlServerDsi)
         {
-        // Change SQL Server host
-        var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
-        sqlServerDS.Host = "10.0.0.20";
+            // Change SQL Server host
+            var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
+            sqlServerDS.Host = "10.0.0.20";
 
-        // Change SQL Server database and table/view
-        sqlServerDsi.Database = "Adventure Works";
-        sqlServerDsi.Table = "Employees";
-        return Task.FromResult((RVDataSourceItem)sqlServerDsi);
+            // Change SQL Server database and table/view
+            sqlServerDsi.Database = "Adventure Works";
+            sqlServerDsi.Table = "Employees";
         }
 
         return Task.FromResult(dataSourceItem);
+    }
+
+    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        if (dataSource is RVSqlServerDataSource sqlDatasource)
+        {
+            sqlDatasource.Host = "10.0.0.20";
+            sqlDatasource.Database = "Adventure Works";
+            sqlDatasource.Table = "Employees";
+        }
+
+        return Task.FromResult(dataSource);
     }
 }
 ```
