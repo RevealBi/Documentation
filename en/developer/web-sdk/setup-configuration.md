@@ -25,8 +25,8 @@ To set up the Reveal Web Server SDK you need to:
 - install the **Reveal.Sdk.AspNetCore** NuGet package to your application project.
 - add a NuGet package reference to System.Data.SQLite version 1.0.111+
 
-> [!NOTE] >
-    > The nuget package is available on nuget.org: [**Reveal.Sdk.AspNetCore**](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/).
+> [!NOTE]
+> The nuget package is available on nuget.org: [**Reveal.Sdk.AspNetCore**](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/).
 
 
 If you are having issues with the build, follow this [**link**](#sqlite-fix).
