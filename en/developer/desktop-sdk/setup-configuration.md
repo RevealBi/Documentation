@@ -17,8 +17,8 @@ dependency packages:
   - SkiaSharp (1.68.0+)
   - System.Data.SQLite.Core (1.0.108+)
 
-> [!NOTE] >
-    > The nuget package is available on nuget.org: [**Reveal.Sdk.Wpf**](https://www.nuget.org/packages/Reveal.Sdk.Wpf/).
+> [!NOTE]
+> The nuget package is available on nuget.org: [**Reveal.Sdk.Wpf**](https://www.nuget.org/packages/Reveal.Sdk.Wpf/).
 
 > [!NOTE]
 > You need to manually install Microsoft.Data.SqlClient (1.1.3) package in
