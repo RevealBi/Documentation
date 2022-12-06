@@ -10,8 +10,6 @@ The steps below describe how to install the Reveal SDK into an existing ASP.NET 
 
 2 - In the package manager dialog, open the **Browse** tab and install the **Reveal.Sdk.AspNetCore** NuGet package into the project, found on [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/).
 
-![](images/getting-started-nuget-packages-install.jpg)
-
 3 - Open and modify the `Program.cs` file to add the namespace `using Reveal.Sdk;`. Then, add the call to `IMcvBuilder.AddReveal()` to the existing `builder.Services.AddControllers()` method as follows:
 
 ```
