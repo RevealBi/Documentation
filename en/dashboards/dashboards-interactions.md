@@ -20,7 +20,7 @@ In this mode, you can also switch the maximized view to other visualizations by 
 
 If you want to save the changed visualization, you need to have edit permissions, be in [dashboard Edit Mode](#view-edit-mode) and explicitly save the changes by selecting the check icon in the top right corner. You have edit permission for dashboards that are created by you or shared with you with [Owner or Modify permissions](~/en/dashboards/sharing-dashboards/share-a-dashboard.html#access-permissions).
 
-<img src="images/different-chart-options-for-visualization.png" alt="chart change in visualization view mode" class="responsive-img"/>
+<img src="images/different-chart-options-for-visualization.png" alt="chart change in visualization view mode" class="responsive-img" width="85%"/>
 
 You can also look at the data behind your chart if you select the **hash sign** icon.
 
@@ -49,7 +49,7 @@ You will find two options in the **Interactions** menu: *Hover tooltips* and *Cr
 
   - With *Hover Tooltips* enabled, you can see **tooltips** popups when you hover over data (press and hold in touch environments).
 
-    <img src="images/hover-tooltip.png" alt="Reveal displays tooltips when hovering over data" class="responsive-img"/>
+    <img src="images/hover-tooltips.png" alt="Reveal displays tooltips when hovering over data" class="responsive-img" width="85%"/>
 
     By clicking the data (releasing drag tooltips in touch
     environments), you can access the **Tools** section with tooltip
@@ -59,7 +59,7 @@ You will find two options in the **Interactions** menu: *Hover tooltips* and *Cr
   - With *Crosshairs* enabled, Reveal shows crosshairs elements along
     with the tooltips. Giving more context to the tooltip.
 
-    <img src="images/crosshairs-example.png" alt="Reveal displays crosshairs along with tooltips" class="responsive-img"/>
+    <img src="images/crosshairs-example.png" alt="Reveal displays crosshairs along with tooltips" class="responsive-img" width="85%"/>
 
 Crosshairs are currently supported for the following data
 visualizations: Scatter, Bubble, Area, Candlestick, Line, Spline,
@@ -69,12 +69,12 @@ SplineArea, StepArea, StepLine, Candlestick and OHLC.
 
 When displaying tooltips, you can configure them to display total values by Category.
 
-<img src="images/tooltips-totals-example.png" alt="Reveal Portrait Orientation" class="responsive-img"/>
+<img src="images/tooltips-totals-example.png" alt="Reveal Portrait Orientation" class="responsive-img" width="85%"/>
 
 To enable this feature, go to *Settings* \> *Show Totals on Tooltip*,
 like shown below:
 
-<img src="images/show-totals-on-tooltip.png" alt="Reveal Portrait Orientation" class="responsive-img"/>
+<img src="images/show-totals-on-tooltip.png" alt="Reveal Portrait Orientation" class="responsive-img" width="85%"/>
 
 When enabling totals, make sure you added a Category to show multiple
 values in your visualization.
@@ -93,7 +93,7 @@ in the top right corner of the dashboard. Alternatively, you can click/tap on th
 
 Shown below is a dashboard in *Dashboard Edit* mode:
 
-<img src="images/dashboard-edit-mode.png" alt="dashboard opened in edit mode" class="responsive-img" width="85%"/>
+<img src="images/edit-a-dashboard.png" alt="dashboard opened in edit mode" class="responsive-img" width="85%"/>
 
 To **exit Edit mode**, you need to select the *check icon* in the
 top right-hand corner. This switches back to *View Mode*.
