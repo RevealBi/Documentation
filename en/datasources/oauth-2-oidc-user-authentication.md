@@ -116,16 +116,4 @@ OAuth service you might also need to provide the following:
 
 * **Alias** of the data source: Your data source name will be displayed in the list of accounts. You can always change it.
 
-## Giving Reveal permissions to access and use your data
 
-After configuring the OAuth 2 / OIDC account you will be redirected to a
-sign-in screen.
-After signing in, you will be asked to allow Reveal to use your data:
-
-<img src="images/permissions-request.png" alt="Permissions Request dialog" class="responsive-img"/>
-
-After giving the required permissions you can use the data in the
-protected data source to build your visualizations and dashboards in Reveal.
-
-The OAuth 2 / OIDC account you configured will be saved in the data
-source list of accounts for future use.
