@@ -10,23 +10,15 @@ To set up the Reveal Desktop SDK you can choose between:
 The easiest way to setup your WPF or WinForms application project is to
 install the **Reveal.Sdk.Wpf** NuGet package.
 
-After installing the Reveal SDK, you should be able to find a new NuGet
-package source added to your **nuget.config** called *Infragistics
-(Local)* that points to “%public%\\Documents\\Infragistics\\NuGet”.
-
-<img src="images/addingNugetPackage_desktop.png" alt="addingNugetPackage\_desktop" class="responsive-img"/>
-
-After ensuring you have the Infragistics (Local) feed properly
-configured by the installer, you can install the
-**Reveal.Sdk.Wpf** NuGet package to your application
-project.
-
 By installing the NuGet package, you will also install the following
 dependency packages:
 
   - CefSharp.Wpf (87.1.132+)
   - SkiaSharp (1.68.0+)
   - System.Data.SQLite.Core (1.0.108+)
+
+> [!NOTE] >
+    > The nuget package is available on nuget.org: [**Reveal.Sdk.Wpf**](https://www.nuget.org/packages/Reveal.Sdk.Wpf/).
 
 > [!NOTE]
 > You need to manually install Microsoft.Data.SqlClient (1.1.3) package in
