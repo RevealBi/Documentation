@@ -10,7 +10,7 @@ Lookup and reference fields will allow you to work with your current
 spreadsheet and dashboard, returning text references to cells, rows and
 dashboard variables.
 
->[!NOTE] *All samples included in the table below were created with the **HR Dataset 2016.xlsx** spreadsheet.*
+>[!NOTE] All samples included in the table below were created with the **HR Dataset 2016.xlsx** spreadsheet.
 
 The functions included in the aggregation category are:
 
