@@ -1,5 +1,5 @@
 ---
-title:OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
+title: OAuth 2 / OIDC User Authentication with REST, OData, and Web Resources
 _description: Ways to set up an OAuth 2 / OIDC account and grant access to your resources when using OData Service, Rest API or Web.
 ---
 
@@ -66,15 +66,13 @@ Reveal.
 1.  Navigate to Reveal and **choose a data source** - *OData Feed*,
     *Rest API* or *Web Resource*.
 
-2.  Give this data source a meaningful *Name*.
+2.  Provide the *URL* where the data is located.
 
-3.  Provide the *URL* where the data is located.
+3.  Click/tap on *Credentials*.
 
-4.  Click/tap *Choose an account*.
+Once you've clicked/tapped on **+ Credentials** you can select *OAuth 2 / OIDC Credentials* from the **Credential Type** dropdown menu:
 
-    In the following screen that opens you need to select *OAuth 2 / OIDC Credentials* from the **+ Credentials** dropdown menu:
-
-    <img src="images/OAuth-2-OIDC-Credentials.png" alt="Accessing OAuth2/OIDC Credentials menu" class="responsive-img"/>
+ <img src="images/credential-type-options.png" alt="Accessing OAuth2/OIDC Credentials menu" class="responsive-img" width="55%"/>
 
 ## Setting up your OAuth 2 / OIDC account in Reveal
 
@@ -82,14 +80,9 @@ In the *OAuth 2 / OIDC Account Details* screen you will need to fill in
 the credentials that are already generated for Reveal by the resource
 server.
 
-<img src="images/Required-Credentials-OAuth-Account.png" alt="Required Credentials OAuth Account" class="responsive-img"/>
+<img src="images/required-credentials-oauth2.png" alt="Required Credentials OAuth Account" class="responsive-img" width="55%"/>
 
 The following fields are mandatory:
-
-1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts (this is not a credential provided by the resource server). You can change the name given by default to your preference by selecting the pencil icon.
-
-2.  the name for your data source account. It will be
-    displayed in the list of accounts
 
 3.  **Authenticate Url**: The authenticate URL is usually in a format
     such as: <https://authorization-server.com/oauth2/authorize> (e.g.
@@ -110,6 +103,8 @@ OAuth service you might also need to provide the following:
 *  **Client Secret**: The client secret is used as additional
     protection. Its format is a random combination of symbols.
 
+* **Logout Url**: 
+
 *  **Scope**: Scope values are used to request additional levels of
     access. The values will depend on the particular service.
 
@@ -117,16 +112,8 @@ OAuth service you might also need to provide the following:
     hosts the protected data (e.g.
     <https://infragisticsinc297.sharepoint.com>)
 
-## Giving Reveal permissions to access and use your data
+* **Additional Parameters**: 
 
-After configuring the OAuth 2 / OIDC account you will be redirected to a
-sign-in screen.
-After signing in, you will be asked to allow Reveal to use your data:
+* **Alias** of the data source: Your data source name will be displayed in the list of accounts. You can always change it.
 
-<img src="images/permissions-request.png" alt="Permissions Request dialog" class="responsive-img"/>
 
-After giving the required permissions you can use the data in the
-protected data source to build your visualizations and dashboards in Reveal.
-
-The OAuth 2 / OIDC account you configured will be saved in the data
-source list of accounts for future use.
