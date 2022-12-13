@@ -46,23 +46,7 @@ There is also a local NuGet package source automatically added to Visual Studio 
 
 ## Adding Your License Key
 
-By default, when you install the Reveal SDK for the first time using the Reveal SDK Installer only the **trial** product is installed. In order to unlock the **licensed** product, you must provide a license key in the installer.
-
-Providing a license key to the installer can be done in two ways:
-1. Find the extracted Reveal SDK Installer EXE file and double click to start it.
-2. In Windows, go to **Setting -> Apps** and modify the Reveal SDK installation
-
-![](images/install-modify-app.jpg)
-
-Once you have either modified the existing install, or re-run the Reveal SDK Installer, you will be prompted with a screen to either "Repair", "Remove", or "Enter License".  Choose **Enter License**
-
-![](images/install-modify-installer.jpg)
-
-After you choose **Enter License**, you will be taken to a screen in which you can now enter your license key.
-
-![](images/install-enter-license-key.jpg)
-
-![](images/install-enter-license-key.jpg)
-
-> [!NOTE]
-> After successfully adding your license you will need to uninstall the **Reveal.Sdk.Wpf.Trial** and install **Reveal.Sdk.Wpf** nuget package.
+To remove the dashboard watermarks, the license key needs to be set as shown here:
+``` csharp
+    RevealSdkSettings.License = "YOUR LICENSE HERE";
+```

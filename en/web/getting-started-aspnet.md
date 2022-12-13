@@ -22,12 +22,7 @@ The steps below describe how to create a new ASP.NET Core Web App project. If yo
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - In the package manager dialog, open the **Browse** tab, select the **Infragistics (Local)** package source, and install the **Reveal.Sdk.Web.AspNetCore** NuGet package into the project.
-
-![](images/getting-started-nuget-packages-install.jpg)
-
-> [!NOTE]
-> If you are a trial user, you can install the **Reveal.Sdk.Web.AspNetCore.Trial** NuGet package found on [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.Web.AspNetCore.Trial/).
+2 - In the package manager dialog, open the **Browse** tab and install the **Reveal.Sdk.AspNetCore** NuGet package into the project, found at [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/).
 
 3 - Open and modify the `Program.cs` file to add the namespace `using Reveal.Sdk;`. Then, add the call to `IMcvBuilder.AddReveal()` as follows:
 

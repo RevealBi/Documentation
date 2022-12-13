@@ -22,19 +22,11 @@ To set up the Reveal Web Server SDK you need to:
 
 ### 1\. Installing the Reveal SDK
 
-Run the Reveal Sdk installer on your machine to get assemblies and dependency packages ready.
-
-Once the installation is completed, you can find a new NuGet package source added to your **nuget.config** called _Infragistics (Local)_ that points to “%public%\\Documents\\Infragistics\\NuGet”.
-
-<img src="images/addingNugetPackage_web.png" alt="addingNugetPackage_web" class="responsive-img"/>
-
-After ensuring you have the Infragistics (Local) feed properly configured by the installer, you need to:
-
-- install the **Reveal.Sdk.Web.AspNetCore(.Trial)** NuGet package to your application project.
+- install the **Reveal.Sdk.AspNetCore** NuGet package to your application project.
 - add a NuGet package reference to System.Data.SQLite version 1.0.111+
 
-> [!NOTE] >
-    > The TRIAL nuget package is available on nuget.org: [**Reveal.Sdk.Web.AspNetCore.Trial**](https://www.nuget.org/packages/Reveal.Sdk.Web.AspNetCore.Trial/).
+> [!NOTE]
+> The nuget package is available on nuget.org: [**Reveal.Sdk.AspNetCore**](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/).
 
 
 If you are having issues with the build, follow this [**link**](#sqlite-fix).
