@@ -72,7 +72,7 @@ Reveal.
 
 Once you've clicked/tapped on **+ Credentials** you can select *OAuth 2 / OIDC Credentials* from the **Credential Type** dropdown menu:
 
- <img src="images/credential-type-options.png" alt="Accessing OAuth2/OIDC Credentials menu" class="responsive-img" width="55%"/>
+ <img src="images/credential-type-options.png" alt="Accessing OAuth2/OIDC Credentials menu" class="responsive-img" width="42%"/>
 
 ## Setting up your OAuth 2 / OIDC account in Reveal
 
@@ -80,7 +80,7 @@ In the *OAuth 2 / OIDC Account Details* screen you will need to fill in
 the credentials that are already generated for Reveal by the resource
 server.
 
-<img src="images/required-credentials-oauth2.png" alt="Required Credentials OAuth Account" class="responsive-img" width="55%"/>
+<img src="images/required-credentials-oauth2.png" alt="Required Credentials OAuth Account" class="responsive-img" width="42%"/>
 
 The following fields are mandatory:
 
@@ -103,7 +103,7 @@ OAuth service you might also need to provide the following:
 *  **Client Secret**: The client secret is used as additional
     protection. Its format is a random combination of symbols.
 
-* **Logout Url**: 
+* **Logout Url**
 
 *  **Scope**: Scope values are used to request additional levels of
     access. The values will depend on the particular service.
@@ -112,7 +112,7 @@ OAuth service you might also need to provide the following:
     hosts the protected data (e.g.
     <https://infragisticsinc297.sharepoint.com>)
 
-* **Additional Parameters**: 
+* **Additional Parameters**
 
 * **Alias** of the data source: Your data source name will be displayed in the list of accounts. You can always change it.
 
