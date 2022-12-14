@@ -33,7 +33,7 @@ If, for example, you compare traffic deaths in different countries only by raw c
 
 Below, you can see a map, showing traffic deaths per 100 000 population in Eastern Asia. Here, you can make realistic conclusions about the driving culture of Asian countries, avoiding the chance to be deluded by the population of bigger countries.
 
-<img src="images/road-traffic-deaths-eastern-asia-example.png" alt="A choropleth map of Eastern Asia showing traffic deaths per 100 000" class="responsive-img" width="85%"/>
+<img src="images/road-traffic-deaths-eastern-asia-example.png" alt="A choropleth map of Eastern Asia showing traffic deaths per 100 000" class="responsive-img" width="90%"/>
 
 
 Your choice of data for the choropleth map visualization highly depends on the insight you want to provide. If you aim to present the spread of a contagious disease through a region, then the use of raw counts may be more appropriate.
@@ -61,7 +61,7 @@ To follow this walkthrough, download the [2016 November General Election](https:
 1. Connect to the cloud provider where you uploaded the spreadsheet. For more information on adding a data source in Reveal, visit the [Data Sources](~/en/datasources/overview.md) section.
 2. In the visualization editor, select the Choropleth Map visualization:
 
-  <img src="images/chart-types-choropleth.png" alt="Select choropleth map visualization from the list of chart types" class="responsive-img" width="55%"/>
+  <img src="images/chart-types-choropleth.png" alt="Select choropleth map visualization from the list of chart types" class="responsive-img" width="65%"/>
 
 3. In the *Choropleth Data* section, select the US States map from the *Map* dropdown  An outline of the United States map will be displayed on the screen.
 
