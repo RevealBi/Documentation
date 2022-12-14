@@ -7,7 +7,7 @@ _description: Learn to options to easily apply transformations to the fields in 
 
 This section describes the different options for applying transformations to the fields in your dataset. By applying filters, you can optimize the information in your fields for your business analysis. Remove any unnecessary noise, highlight the most valuable aspects and summarize information in many useful ways.
 
-<img src="images/visualization-sample-fields.png" alt="Visualization sample that uses different fields.png" class="responsive-img" width="85%"/>
+<img src="images/visualization-sample-fields.png" alt="Visualization sample that uses different fields.png" class="responsive-img" width="88%"/>
 
 ## Topics Overview
 

@@ -30,7 +30,7 @@ aggregations. This means in order to apply a certain formula, Reveal will go thr
 To add a new pre-calculated field, click/tap the **+ button** in the
 *Fields* panel and choose **Calculated Field**:
 
-<img src="images/calculated-field-option.png" alt="Pre-calculated field option" class="responsive-img" width="85%"/>
+<img src="images/calculated-field-option.png" alt="Pre-calculated field option" class="responsive-img" width="88%"/>
 
 The *New Calculated Field* screen will open:
 
@@ -50,7 +50,7 @@ Here you will need to:
 The new pre-calculated field will show up at the bottom of your *Fields*
 list:
 
-<img src="images/new-calculated-field-visualization-example.png" alt="New calculated field shown in the column placeholder and in the visualization" class="responsive-img" width="85%"/>
+<img src="images/new-calculated-field-visualization-example.png" alt="New calculated field shown in the column placeholder and in the visualization" class="responsive-img" width="88%"/>
 
 In the example above, the new calculated field is used with a grid
 visualization where no aggregation is being applied on the data fields.
@@ -71,7 +71,7 @@ To create a post calculated field you will need to:
 1.  Create a visualization (or a *Pivot table*) by adding fields from
     your data source in the *Data editor*.
 
-    <img src="images/post-calculated-field-example.png" alt="Post calculated fields in the Data editor" class="responsive-img" width="85%"/>
+    <img src="images/post-calculated-field-example.png" alt="Post calculated fields in the Data editor" class="responsive-img" width="88%"/>
 
 2.  Click/tap the *F(x)* button next to *Values* to open the *New
     Calculated Field* screen:
@@ -90,7 +90,7 @@ the *+* button next to *Values*. Since post-calculated fields are
 created only by using aggregated values, you will first need to select
 an aggregation from the dropdown list to be executed on the data field.
 
-<img src="images/post-calculated-field-new-calculated-field-dialog-adding-fields.png" alt="Adding fields in the calculated field screen" class="responsive-img" width="85%"/>
+<img src="images/post-calculated-field-new-calculated-field-dialog-adding-fields.png" alt="Adding fields in the calculated field screen" class="responsive-img" width="88%"/>
 
 You can also skip *step 1*, create your post-calculated fields first or
 use only post-calculated fields in your visualization.
