@@ -10,7 +10,7 @@ cell (or rows for [Text Views](~/en/data-visualizations/visualization-types/text
 in a numeric column. For instance, values in the lower 50% range of a
 grid can be colored with a red adorner to signal very low values.
 
-<img src="images/pivot-table-view-conditional-formatting.png" alt="Pivot table view conditional formatting in the Visualization editor" class="responsive-img" width="85%"/>
+<img src="images/conditional-formatting-pivot-table-view.png" alt="Pivot table view conditional formatting in the Visualization editor" class="responsive-img" width="85%"/>
 
 The conditional formatting configuration allows you to establish styling
 rules per ranges of data up to three ranges (typically used for styling,
@@ -28,7 +28,7 @@ the Data Editor to prompt the **Field Settings** dialog. The conditional
 formatting configuration is the last option in the settings, and is
 disabled by default.
 
-<img src="images/conditional-formatting-configuration-fields-settings-dialog.png" alt="Conditional formatting configuration in Field settings menu" class="responsive-img" width="45%"/>
+<img src="images/conditional-formatting-configuration-fields-settings-dialog.png" alt="Conditional formatting configuration in Field settings menu" class="responsive-img" width="43%"/>
 
   - **Limits**: these values are automatically set as the lowest and
     highest values in the dataset for the specified column, but can also
