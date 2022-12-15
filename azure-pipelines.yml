@@ -20,8 +20,11 @@ steps:
 
 - script: |
     npm install
+  displayName: NPM Install
+
+- script: |
     npm run build
-  displayName: Install and build
+  displayName: Build Docs
 
 - task: PublishBuildArtifacts@1
   inputs:
