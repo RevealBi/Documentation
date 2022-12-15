@@ -9,7 +9,7 @@ const config = {
   title: 'Reveal',
   tagline: 'Embedded Analytics & Business Intelligence Tools',
   url: 'https://help.revealbi.io',
-  baseUrl: '/documentation-vnext/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'RevealBi', // Usually your GitHub org/user name.
-  projectName: 'documentation-vnext', // Usually your repo name.
+  projectName: 'Documentation', // Usually your repo name.
 
   i18n: {
     defaultLocale: 'en',
@@ -44,7 +44,7 @@ const config = {
           routeBasePath: "/",
           breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/RevealBi/documentation-vnext/tree/master/',
+          editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
           remarkPlugins: [
             [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
           ],

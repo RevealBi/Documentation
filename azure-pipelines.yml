@@ -20,7 +20,7 @@ steps:
 
 - script: |
     npm install
-  displayName: NPM Install
+  displayName: Npm Install
 
 - script: |
     npm run build
