@@ -19,12 +19,9 @@ The steps below describe how to create a new WPF project. If you want to add the
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - In the package manager dialog, open the **Browse** tab, select the **Infragistics (Local)** package source, and install the **Reveal.Sdk.Wpf** NuGet package into the project.
+2 - In the package manager dialog, open the **Browse** tab and install the **Reveal.Sdk.Wpf** NuGet package found at [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.Wpf/).
 
 ![](images/getting-started-nuget-packages-install.jpg)
-
-> [!NOTE]
-> If you are a trial user, you can install the **Reveal.Sdk.Wpf.Trial** NuGet package found on [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.Wpf.Trial/).
 
 ### Manually
 

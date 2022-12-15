@@ -1,3 +1,8 @@
+---
+title: Slingshot Dashboards – All You Need to Know
+_description: What are dashboards, what can you use them for and how to create them fast and easy.
+---
+
 # Dashboards
 
 Dashboards are a quick and simple way to display minimal information at
@@ -30,7 +35,11 @@ different pieces of related information, enabling users to make sense of their d
 
 Within Reveal, you will be able to:
 
-  - [Create Dashboards](creating-dashboards.md)
+   - [Create Dashboards](creating-dashboards.md)
+
+  - [Upload Dashboards](uploading-dashboards.md)
+
+  - [Interact with Dashboards](dashboards-interactions.md)
 
   - [Style your Dashboards](dashboard-styling.md)
 
@@ -39,6 +48,9 @@ Within Reveal, you will be able to:
   - [Share your Dashboards](sharing-dashboards/share-a-dashboard.md)
 
   - [Manage your existing Dashboards](managing-dashboards.md)
+
+  - [Export Dashboards](how-to-export-a-dashboard.md) as [Images](export-as-images.md), [PDF files](export-as-pdft-document.md), [PowerPoint presentations](export-as-powerpoint-presentation.md) or
+  [Excel spreadsheets](export-as-excel-data-format.md)
 
 You can also import any [dashboards created with previous versions of ReportPlus](Uploading-Dashboards.md).
 

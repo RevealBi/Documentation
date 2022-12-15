@@ -1,3 +1,8 @@
+---
+title: How to apply Field Filters and Rules to Dataset 
+_description: Learn how to apply filters or rules to your dataset in Slingshot while creating visualizations.
+---
+
 # Field Filters and Rules
 
 You can also apply filters or rules to the fields in your dataset. In
@@ -5,7 +10,7 @@ order to do so, you will need to add a field to the **Data Filters**
 placeholder in the lower section of the data editor. Then, select field
 from the dropdown to access the *Data Filter* window.
 
-<img src="images/add-data-filter.png" alt="Adding data filter fields list" class="responsive-img"/>
+<img src="images/data-filter-visualization-editor.png" alt="Adding data filter fields list" class="responsive-img" width="70%"/>
 
 <a name='empty-values'></a>
 ## Filter Empty Values
@@ -14,7 +19,7 @@ Reveal provides the ability to filter rows in the dataset that have null
 or empty values on a specific column by enabling the filter empty values
 configuration setting on a specific column.
 
-<img src="images/FilterEmtpyValues_All.png" alt="FilterEmtpyValues\_All" class="responsive-img"/>
+<img src="images/data-filter-filter-empty-values-option.png" alt="Filter Empty Values in the list of filter types" class="responsive-img" width="40%"/>
 
 <a name='select-values'></a>
 ## Select Values
@@ -23,7 +28,7 @@ This type of filter supports the definition of the set of values to
 display for a specific field. To enable it, drag and drop a field to the
 **Data Filters** placeholder.
 
-<img src="images/SelectValues_All.png" alt="SelectValues\_All" class="responsive-img"/>
+<img src="images/data-filter-select-values.png" alt="Select Values option in the list of filter types" class="responsive-img" width="40%"/>
 
 In the *Field Settings* dialog, you will see the option to **Select
 Values**. This displays the list of possible values for a column, and
@@ -116,12 +121,7 @@ entered in a textbox in the same position.
 
 ## Filtering Fields in Values
 
-You can also **filter fields dropped into the Values placeholder of the
-data editor**, which might have a different
-[aggregation](field-settings.html#numeric-fields) than those in the list of
-fields.
+You can filter your *Values* by [aggreggation](https://www.slingshotapp.io/en/help/docs/analytics/data-visualizations/fields/calculated-fields/aggregation). Then this value will appear with the same aggregation in the list of fields in the  **Data Filters** placeholder.
 
-<img src="images/data-filters-filtering-data-editor.png" alt="Data Filters Filtering in the Data Editor" class="responsive-img"/>
+<img src="images/data-filters-values-list.png" alt="Data Filters Filtering in the Data Editor" class="responsive-img" width="80%"/>
 
-These fields will appear at the bottom of the list of fields along with
-the name of the aggregation applied to them.

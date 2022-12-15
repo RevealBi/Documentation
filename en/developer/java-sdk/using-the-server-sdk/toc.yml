@@ -2,3 +2,13 @@
   href: loading-dashboards.md
 - name: Providing Credentials to Data Sources
   href: providing-credentials-datasources.md
+- name: Replacing Data Sources
+  items:
+    - name: Excel File
+      href: excel-file.md
+    - name: MS SQL Server
+      href: ms-sql-server.md
+    - name: Object Encode/Decode
+      href: object-encode-decode.md
+- name: User Context
+  href: user-context.md

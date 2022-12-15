@@ -1,4 +1,10 @@
+---
+title: How to configure a MySQL server data source
+_description: Create and use visualizations through a MySQL server data source in Slingshot. 
+--- 
+
 # MySQL
+
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible MySQL addresses. If your MySQL address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this MySQL address. This limitation does not apply to *Reveal Embedded*.
 
@@ -7,32 +13,27 @@
 To configure a MySQL server data source, you will need to enter the
 following information:
 
-<img src="images/enter-mySQL-server-details.png" alt="Enter MySQL Server Details dialog" class="responsive-img"/>
+<img src="images/add-mysql-as-data-source.png" alt="Enter MySQL Server Details dialog" class="responsive-img" width="50%"/>
 
-1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names the data source *MySQL*. You can change it to your preference.
-
-
-2. [**Server**](#how-to-find-server): the computer name or IP address
+1. [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
 
-3.  **Port**: if applicable, the server port details. If no information
+2.  **Port**: if applicable, the server port details. If no information
     is entered, Reveal will connect to the port in the hint text (3306)
     by default.
 
-4.  **Credentials**: after selecting *Credentials*, you will be able to
+3.  **Credentials**: after selecting *Credentials*, you will be able to
     enter the credentials for your MySQL server or choose existing ones
     if applicable.
 
-      - **Name**: the name for your data source account. It will be
-        displayed in the list of accounts in the previous dialog.
-
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
-
-      - **Username**: the user account for the MySQL server.
+      - **Username**: the user account for the MySQL server or the name of the domain.
 
       - **Password**: the password to access the MySQL server.
 
-    Once ready, select **Continue**.
+      - **Alias**: the name for your data source account. It will be
+        displayed in the list of accounts in the previous dialog.
+
+    Once ready, select **Add** and then **Add Server**.
 
 <a name='how-to-find-server'></a>
 ## How to find your Server Information
@@ -59,11 +60,20 @@ that the commands should be executed on the server.
 
 With Reveal, you can retrieve MySQL data from entire tables. Still, you can also select a particular view that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/MySQL-views.png" alt="MySQL Views section" class="responsive-img"/>
+<img src="images/mysql-views.png" alt="MySQL Views section" class="responsive-img" width="55%"/>
 
 In the sample above, the **invoices** view contains a modified version
-of the data in the **Products** table in the MySQL server.
-
-<img src="images/invoices-MySQL-view-sample.png" alt="Sample dashboard using MySQL invoices view data" class="responsive-img"/>
+of the data in the **products**,**customers**, **orderdetails** and **orders** tables in the MySQL server.
 
 For more information on views and MySQL, visit [this documentation page](https://dev.mysql.com/doc/refman/8.0/en/views.html).
+
+## Working in the Visualization editor
+
+Once you have chosen your table or view, you will be taken to the *Visualizations Editor*. Here you can build your dashboard. By default, the *Column* visualization will be selected. You can select it in order to choose another chart type.
+
+<img src="images/mysql-visualization-editor.png" alt="Using MySQL as data to create a dashboard in the visualization editor" class="responsive-img" width="85%"/>
+
+When you are ready with the visualization editor, you can save the dashboard in **My Analytics** > **My Dashboards** or in a specific workspace. 
+
+<img src="images/mysql-my-analytics.png" alt="A dashboard created from a MySQL data source in the My Analytics section" class="responsive-img" width="85%"/>
+

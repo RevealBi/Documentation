@@ -1,3 +1,8 @@
+---
+title: How to Request Access to Shared Dashboards with Cloud Files
+_description: Learn how to receive and grant access to data source files and dashboards.
+---
+
 # Requesting Access to Shared Dashboards with Cloud Files
 
 When trying to open а dashboard, which has been shared with you, you

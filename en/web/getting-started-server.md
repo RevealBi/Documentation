@@ -1,4 +1,4 @@
-# Setting up the Reveal SDK Server
+# Setting up the Reveal SDK Server with ASP.NET
 
 ## Step 1 - Create a New ASP.NET Core Web API
 
@@ -22,12 +22,7 @@ The steps below describe how to create a new ASP.NET Core Web API project. If yo
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - In the package manager dialog, open the **Browse** tab, select the **Infragistics (Local)** package source, and install the **Reveal.Sdk.Web.AspNetCore** NuGet package into the project.
-
-![](images/getting-started-nuget-packages-install.jpg)
-
-> [!NOTE]
-> If you are a trial user, you can install the **Reveal.Sdk.Web.AspNetCore.Trial** NuGet package found on [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.Web.AspNetCore.Trial/).
+2 - In the package manager dialog, open the **Browse** tab and install the **Reveal.Sdk.AspNetCore** NuGet package into the project, found at [NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/).
 
 3 - Open and modify the `Program.cs` file to add the namespace `using Reveal.Sdk;`. Then, add the call to `IMcvBuilder.AddReveal()` to the existing `builder.Services.AddControllers()` method as follows:
 
@@ -78,4 +73,4 @@ Next Steps:
 - [Create a React Client App](getting-started-react.md)
 
 > [!NOTE]
-> The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/01-GettingStarted-Server-WebApi).
+> The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/aspnet).

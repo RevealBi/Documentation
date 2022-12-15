@@ -1,3 +1,8 @@
+---
+title: How to Work with Spreadsheets in Slingshot 
+_description: Tips and tricks on using Spreadsheets to utilize your data insights in the best way.
+---
+
 # Working With Spreadsheets in Reveal
 
 Below are a couple of helpful tips and tricks for working with
@@ -104,29 +109,29 @@ spreadsheets within Reveal.
 When working with Microsoft Excel and Google Sheets, you can use the
 transpose functionality to switch columns from rows.
 
+To make this change, you need to first click/tap on the *Preview Data* button for the chosen sheet.
+
 >[!NOTE] **Only the first 200 rows in the spreadsheet will be transposed.** 
->You can access the transpose menu in the **Visualization Data** menu when expanding the sheet in your data source.
 
-<img src="images/spreadsheets-transpose-data-source-menu.png" alt="Spreadsheets Transpose Data Source Menu" class="responsive-img"/>
+<img src="./images/data-source-details-dialog-spreadsheet-sample.png" alt="Spreadsheets Transpose Data Source Menu" class="responsive-img" width="55%"/>
 
-You will see a transpose icon in the top right-hand corner next to the
-cross button. Once you press it, Reveal will switch columns to rows and
+Then you will see a transpose icon in the top right-hand corner next to the
+cross button. Once you click/tap on it, Reveal will switch columns to rows and
 vice-versa.
 
-<img src="images/transposing-action-spreadsheet.png" alt="Transposing Action Spreadsheet" class="responsive-img"/>
+<img src="images/transposing-action-spreadsheet-columns.png" alt="Transposing Action Spreadsheet" class="responsive-img" width="85%"/>
 
 In the example above, the information in the spreadsheet will be
-organized in columns expressing the EmployeeID for each employee in the
+organized in columns expressing the *EmployeeID* for each employee in the
 company.
 
-<img src="images/transposing-action-final-spreadsheet.png" alt="Transposing Action Final Spreadsheet" class="responsive-img"/>
+<img src="images/transposing-action-spreadsheet-rows.png" alt="Transposing Action Final Spreadsheet" class="responsive-img" width="85%"/>
 
-Once you are ready, select the tick icon. This will take you back to the
-**Visualization Data** menu, where you will now see the name of the
+Once you are ready, select the tick icon. This will take you back to the *Data Source details* dialog, where you will now see the name of the
 sheet with a new icon to its left indicating that the sheet has been
 modified.
 
-<img src="images/transposed-spreadsheet-visualization-data.png" alt="Transposed Spreadsheet Visualization Data" class="responsive-img"/>
+<img src="images/transposed-icon-data-source-details-dialog.png" alt="Transposed icon showing up next to the name of the chosen sheet in the data source details dialog" class="responsive-img" width="55%"/>
 
 ## See Also
 

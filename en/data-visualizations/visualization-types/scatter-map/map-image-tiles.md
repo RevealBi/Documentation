@@ -1,3 +1,8 @@
+---
+title: How to Use Image Tiles with Scatter Maps
+_description: Learn all about the image tile feature that will allow you to switch to a different map layer upon zooming.
+---
+
 # Using Image Tiles with Scatter Maps
 
 The *image tiles* feature allows you to switch from the clear grey background of Reveal to a different map layer upon zooming. The additional detail coming from the map service provider will provide more context to your analysis.

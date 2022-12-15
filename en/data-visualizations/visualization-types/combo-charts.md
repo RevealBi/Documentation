@@ -1,3 +1,8 @@
+---
+title: How to Create and Use Combo Charts 
+_description: Find out how to use Combo Charts for your visualizations in Slingshot Analytics.
+---
+
 # Combo Charts
 
 This type of chart combines two or more chart types in one single chart.
@@ -6,13 +11,13 @@ Regular charts usually have one X-axis and one Y-axis. Combo charts can
 have two Y-axis, allowing you to display two different types of data
 points in the same chart.
 
-<img src="images/combo-charts-sample.png" alt="Combo chart sample within Reveal" class="responsive-img"/>
+<img src="images/combo-chart-example.png" alt="Combo chart sample" class="responsive-img" width="85%"/>
 
 E.g., as shown above, a combo chart can display countries' total
 population as well as the young population to show the relationship
 between them.
 
-<img src="images/combo-charts-selection.png" alt="Selecting the Combo Chart visualization in Reveal" class="responsive-img"/>
+<img src="images/combo-charts-selection.png" alt="Selecting the Combo Chart visualization" class="responsive-img" width="75%"/>
 
 After selecting your data source and the *Combo* visualization, by
 default you start with a column chart and a line chart combined. As
@@ -21,9 +26,13 @@ both charts.
 
 ## Settings for Combo Charts
 
-<img src="images/combo-charts-settings.png" alt="Combo Charts configuration settings in Reveal" class="responsive-img"/>
+<img src="images/combo-chart-settings.png" alt="Combo Charts configuration settings" class="responsive-img" width="85%"/>
 
 In *Settings* you can:
+
+  - **Choose the Style**.
+
+    You can enable the Title, Legend or choose the Start Color.
 
   - **Change the visualization type for one or both charts**.
 

@@ -1,3 +1,8 @@
+---
+title: How to configure an Oracle data source
+_description: Learn how to configure and use an Oracle data source in two modes.
+---
+
 # Oracle
 
 >[!NOTE] **Limitations in Web**. In the *Reveal Web* app, you can connect only to publicly accessible Oracle addresses. If your Oracle address is restricted for the general public (private or hosted in the company's intranet, for example), you can use *Reveal Desktop*, *iOS* or *Android* to connect to it. The device where you're running Reveal needs to have access to this Oracle address. This limitation does not apply to *Reveal Embedded*.
@@ -17,52 +22,10 @@ database's settings:
 To configure Oracle using SID, you will need to enter the following
 information:
 
-<img src="images/enter-oracle-details.png" alt="Configure Oracle SID mode details" class="responsive-img"/>
+<img src="images/enter-oracle-details-sid.png" alt="Configure Oracle SID mode details" class="responsive-img" width="50%"/>
 
-1. 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Oracle*. You can change it to your preference.
+ 1.  **Default name** of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Oracle*. You can change it to your preference.
 
-
-1.  [**Server**](#how-to-find-server): the computer name or IP address
-    assigned to the computer on which the server is running.
-
-2.  **Port**: if applicable, the server port details. If no information
-    is entered, Reveal will connect to the port in the hint text (1521)
-    by default.
-
-3.  **Connection Mode**: SID.
-
-4.  **SID**: the unique name of your Oracle database instance. By
-    default, the SID for Oracle is orcl. To find your SID, log into
-    Server Manager and type select instance from v$thread. This will
-    return your ORACLE\_SID.
-
-5.  **Credentials**: after selecting *Credentials*, you will be able to
-    enter the credentials for your Oracle server or select existing ones
-    if applicable.
-
-     - **Name**: the name for your data source account (default: _Oracle_). It will be
-        displayed in the list of accounts in the previous dialog.
-
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
-
-      - **Username**: the user account for the Oracle server.
-
-      - **Password**: the password to access the Oracle server.
-
-    Once ready, select **Create Account**. You can verify whether the
-    account is reaching the data source or not by selecting **Test
-    Connection**.
-
-<a name='using-service'></a>
-## Connecting to Oracle Using Service
-
-To configure Oracle using Service, you will need to enter the following
-information:
-
-<img src="images/enter-oracle-details-service-mode.png" alt="Configure Oracle Service mode details" class="responsive-img"/>
-
-1.  **Data Source Name**: this field will be displayed in the Data
-    Sources list.
 
 2.  [**Server**](#how-to-find-server): the computer name or IP address
     assigned to the computer on which the server is running.
@@ -71,27 +34,58 @@ information:
     is entered, Reveal will connect to the port in the hint text (1521)
     by default.
 
-4.  **Connection Mode**: Service.
+4.  **Connection Mode**: SID.
 
-5.  **Service Name**: the alias used when connecting to the database
+5.  **SID**: the unique name of your Oracle database instance. By
+    default, the SID for Oracle is orcl. To find your SID, log into
+    Server Manager and type select instance from v$thread. This will
+    return your ORACLE\_SID.
+
+6. **Credentials**: after selecting *Credentials*, you will be able to
+    enter the credentials for your Oracle server or select existing ones
+    if applicable.
+
+      - **Username**: the user account for the Oracle server or the name of the domain.
+
+      - **Password**: the password to access the Oracle server.
+
+      - **Alias**: the name for your data source account. It will be displayed in the list of accounts in the previous dialog.
+
+    Once ready, select **Add** and then **Add Server**.
+
+<a name='using-service'></a>
+## Connecting to Oracle Using Service
+
+To configure Oracle using Service, you will need to enter the following
+information:
+
+<img src="images/add-oracle-server-dialog-service-connection.png" alt="Configure Oracle Service mode details" class="responsive-img" width="50%"/>
+
+1.  [**Server**](#how-to-find-server): the computer name or IP address
+    assigned to the computer on which the server is running.
+
+2.  **Port**: if applicable, the server port details. If no information
+    is entered, Reveal will connect to the port in the hint text (1521)
+    by default.
+
+3.  **Connection Mode**: Service.
+
+4.  **Service Name**: the alias used when connecting to the database
     instance. To find your Service, log into Server Manager and run
     select sys\_context('userenv', 'service\_name') from dual;. This
     will return your Service\_name.
 
-6.  **Credentials**: after selecting *Credentials*, you will be able to
+5.  **Credentials**: after selecting *Credentials*, you will be able to
     enter the credentials for your Oracle server or select existing ones
     if applicable.
 
-      - **Name**: the name for your data source account (default: _Oracle_). It will be
-        displayed in the list of accounts in the previous dialog.
-
-      - *(Optional)* **Domain**: the name of the domain, if applicable.
-
-      - **Username**: the user account for the Oracle server.
+      - **Username**: the user account for the Oracle server or the name of the domain.
 
       - **Password**: the password to access the Oracle server.
 
-    Once ready, select **Create and Use**.
+      - **Alias**: the name for your data source account. It will be displayed in the list of accounts in the previous dialog.
+
+    Once ready, select **Add** and then **Add Server**.
 
 <a name='how-to-find-server'></a>
 ## How to find your Server Information
@@ -121,11 +115,11 @@ can select a particular
 [view](https://docs.oracle.com/cd/B19306_01/server.102/b14220/objects.htm#i440066)
 that returns a subset of data from a table or a set of tables instead.
 
-<img src="images/Oracle-views.png" alt="Oracle views dialog" class="responsive-img"/>
+<img src="images/views-oracle.png" alt="Oracle views dialog" class="responsive-img" width="50%"/>
 
 The **invoices** view, for example, contains information on sales
 projections taken from one of the tables in the database.
 
-<img src="images/oracle-view-sample-invoices.png" alt="A dashboard sample using Oracle view data" class="responsive-img"/>
+<img src="images/oracle-dashboard-example.png" alt="A dashboard sample using Oracle view data" class="responsive-img" width="88%"/>
 
 For more information on views and Oracle, visit [this documentation website](https://docs.oracle.com/cd/B19306_01/server.102/b14220/objects.htm#i440066).

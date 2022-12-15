@@ -1,3 +1,8 @@
+---
+title: How to Use Aggregation Calculated Fields in Slingshot
+_description: Learn how to use Aggregation formulas with different variants and tricks.
+---
+
 # Aggregation Calculated Fields
 
 

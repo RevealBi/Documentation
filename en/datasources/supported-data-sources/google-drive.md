@@ -1,20 +1,24 @@
+---
+title: How to add Google Drive as Your Data Source
+_description: Steps to use Google Drive as your data source in Slingshot.
+---
+
 # Google Drive
 
 If you are signed in with your Google account, you will have your Google
 Drive automatically added to your data sources:
 
-<img src="images/google-drive-data-source-automatic.png" alt="Google Drive account in your data sources list" class="responsive-img">
+<img src="images/google-drive-list-data-files.png" alt="Google Drive account in your data sources list" class="responsive-img" width="80%">
 
 To use your Google Drive data, follow the steps below.
 
-1.  Upon selecting your Google Drive (or a folder inside it), you will
-    see the following log in prompt:
+1.  Upon selecting your Google Drive (or a folder inside it), you will be prompt to choose an account and connect it to the app. Enter your **login credentials** or choose an an account and select *Next*.
 
-    <img src="images/google-drive-login.png" alt="Google Drive Login" class="responsive-img">
+    <img src="images/google-drive-login-credentials.png" alt="Google Drive Login" class="responsive-img" width="50%">
+    
+2. An **authorization prompt** will pop up. You can select **Allow** to finish the process.
 
-    Enter your **login credentials** and select *Next*.
-
-2. In the **authorization prompt**, select *Allow* to authorize Reveal to use (see, edit, create, and delete) your Google Drive files.
+   <img src="images/google-drive-permissions.png" alt="Google Drive Login" class="responsive-img" width="40%">
 
 You can now use your Google Drive data to build your visualizations and
 will not be asked for these permissions again.

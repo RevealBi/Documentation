@@ -20,12 +20,12 @@ For more information on both Native and HTTP mode, visit the [Microsoft Instance
 To configure the Microsoft Analysis Services data source for *Native*
 mode, you will need to enter the following information:
 
-<img src="images/microsoft-analysis-native-configuration.png" alt="Configure Microsoft Analysis Services connection" class="responsive-img"/>
+<img src="../images/native-configuration-microsoft-analysis-services.png" alt="Configure Microsoft Analysis Services connection" class="responsive-img" width="50%"/>
 
-1. *Default name* of the data source: Your data source name will be displayed in the list of accounts in the previous dialog. By default, Reveal names it *Microsoft Analysis Services*. You can change it to your preference.
+1. **Connection Mode**: two options to chose from: HTTP or Native.
 
 2.  **Server**: this is the hostname or IP address of the computer on
-    which the server is running
+    which the server is running.
 
     You can find the *hostname* by following the steps below. Please
     note that the commands should be executed on the server machine.
@@ -59,9 +59,9 @@ mode, you will need to enter the following information:
 To configure the Microsoft Analysis Services data source for *HTTP*
 mode, you will need to provide the following information:
 
-<img src="images/miscrosoft-analysis-http-config.png" alt="Configure Microsoft Analysis HTTP mode connection" class="responsive-img"/>
+<img src="../images/http-configuration-microsoft-analysis-services.png" alt="Configure Microsoft Analysis HTTP mode connection" class="responsive-img" width="50%"/>
 
-1.  **Data Source Name**: this field will be displayed in the Data Sources list. Default name: *Microsoft Analysis Services*.
+1. **Connection Mode**: two options to chose from: HTTP or Native.
 
 2.  **URL**: the HTTP eService URL to the server. For example,
     *10.1.0.15/olap/msmdpump.dll*.
@@ -71,22 +71,18 @@ mode, you will need to provide the following information:
 ## Configuring Databases
 
 After your credentials for the Analysis Services server are verified,
-Reveal will load and show the databases on the server:
+Reveal will load and show the databases on the server. Select a database and click/tap on **Select and continue** to set it up.
 
-<img src="images/MSAnalysisDatabases_All.png" alt="MSAnalysisDatabases\_All" class="responsive-img"/>
+Choose a database *cube* and click/tap on **Select Data** to continue to the *Visualizations Editor*.
 
-Select a database and click *Continue* to set it up.
-
-<img src="images/MSAnalysisCubes_All.png" alt="MSAnalysisCubes\_All" class="responsive-img"/>
-
-Choose a database *cube* and click/tap _Select Data_ to continue to the *Visualizations Editor*.
+<img src="images/data-source-cubes-microsoft-analysis-services.png" alt="A list of different cubes in the Data Source Details dialog" class="responsive-img" width="50%"/>
 
 <a name='visualization-editor'></a>
 ## Working in the Visualization Editor
 
 When you create a dashboard using a cube data source like Microsoft Analysis Services, you will see fields organized differently in the  *Visualizations Editor* (see screenshot below). Cube data sources consist of hierarchies and aggregations, which have been created by the cubes' designers in advance.
 
-<img src="images/VisEditorDimensionsMeasures_All.png" alt="VisEditorDimensionsMeasures\_All" class="responsive-img"/>
+<img src="images/visualization-editor-microsoft-analysis-services.png" alt="Using the Microsoft Analysis Service data source information in the visualization editor" class="responsive-img" width="85%"/>
 
 In the screenshot above, you may notice that there is no "Fields" heading on the left. Instead, there are two sections in their own query field:
 
@@ -106,7 +102,7 @@ In the screenshot above, you may notice that there is no "Fields" heading on the
 
 2.  **Measures** (depicted by *[123]* icon): Measures consist of numeric data.
 
-<img src="images/PivotTableExampleMSAnalysis_All.png" alt="PivotTableExampleMSAnalysis\_All" class="responsive-img"/>
+<img src="images/pivot-chart-microsoft-analysis-services.png" alt="Using the visualizatio editor with a pivot chart" class="responsive-img" width="85%"/>
 
 For more information on dimensions and measures, please visit this
 [Technet article](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms174527\(v=sql.110\)).
@@ -117,10 +113,29 @@ For more information on dimensions and measures, please visit this
 There is also a Sort by Caption option which defines whether the filter
 will be applied to the dimension's labels or to the corresponding
 values. When enabled, *Sort by Caption* sorts the dimensions
-alphabetically by their label
+alphabetically by their label.
 
 To enable it, select a dimension in *Rows* or *Columns*. Enable
 *Sorting* for the field by choosing *Ascending* or *Descending* to have
 the *Sort by Caption* option show up:
 
-<img src="images/SortByCaption_All.png" alt="SortByCaption\_All" class="responsive-img"/>
+<img src="../images/sort-by-option-ssas.png" alt="Dialog with the sort by caption option" class="responsive-img" width="35%" />
+
+## Settings 
+
+Depending on the chart type, you can make different changes in the settings. In this case we used the pivot chart type where you can adjust the following through the settings menu:
+- Show Title
+- Text Fields Alignment
+- Number Fields Alignment
+- Date Fields Alignment
+- Font Size
+- Show Grand Totals
+- Connect the visualization to another dashboard or a URL
+
+
+When you are ready with the visualization editor, you can save the dashboard in **My Analytics** > **My Dashboards** or in a specific workspace. 
+
+<img src="../images/ssas-dashboard-my-analytics.png" alt="Dasboard with an information from the microsoft analysis services data source in My Analytics" class="responsive-img" width="80%"/>
+
+In case you've entered wrong credentials, you will get an error message (screenshot below). You can click on *Log into Microsoft Analysis Services* and update your credentials. That should fix the issue. 
+ <img src="../images/microsoft-analysis-services-authentication-failed.png" alt="Displaying the error message authentication failed" class="responsive-img" width="85%"/>
