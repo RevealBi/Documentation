@@ -24,7 +24,7 @@ you need to:
 3.  Click/tap the icon, which appears in the top right section of the
     screen (see below).
 
-<img src="images/statistical-functions-icon.png" alt="Statistical functions icon" class="responsive-img" width="85%"/>
+<img src="images/statistical-functions-enable-icon.png" alt="Statistical functions icon" class="responsive-img" width="85%"/>
 
 >[!NOTE] **Enabling/Disabling Functions**.
 >You can have only one of the three functions enabled for a visualization at the same time. Click the enabled function again to turn it off or select another function from the list to switch to.
@@ -90,7 +90,7 @@ If you check the **visualization's underlying data** after the
 application of the Time series function, you will notice the forecasted
 values are highlighted in yellow (see below).
 
-<img src="images/underlying-data-time-series-example.png" alt="Underlying data in table format with highlighted forecasted data" class="responsive-img" width="85%"/>
+<img src="images/underlying-data-time-series.png" alt="Underlying data in table format with highlighted forecasted data" class="responsive-img" width="85%"/>
 
 >[!NOTE]
 **Time series function available only for charts over time**
@@ -122,7 +122,7 @@ Below you can see the *Linear regression* function applied to a
 visualization, where the line is extended for 6 months to show a
 prediction based on the observed tendency:
 
-<img src="images/linear-regression.png" alt="Linear regression with a forecast for 6 months" class="responsive-img" width="85%"/>
+<img src="images/linear-regression-example.png" alt="Linear regression with a forecast for 6 months" class="responsive-img" width="85%"/>
 
 The line rendered across the visualization above shows the extent to
 which changes in the sales (variable placed on the y-axis), can be
@@ -143,7 +143,7 @@ data. The *Detect outliers* function shows points that deviate
 considerably from the average values of the rest of the points in the
 data series.
 
-<img src="images/outlier-detection.png" alt="Outlier detection applied" class="responsive-img" width="85%"/>
+<img src="images/outlier-detection-example.png" alt="Outlier detection applied" class="responsive-img" width="85%"/>
 
 In the example above, the detected data points lay far from the rest of
 the distribution and show a sudden rise in sales in a particular moment,

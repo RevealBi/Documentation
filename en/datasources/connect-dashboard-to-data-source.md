@@ -9,7 +9,7 @@ In Reveal, you can connect to a data source [before](overview.md) or after a das
 
 A dashboard created with data sources you have not yet added into your application will look like shown below, when you open it for the first time: 
 
-<img src="images/dashboard-own-data-sources-example.png" alt="A dashboard not connected to its data source" class="responsive-img" width="85%"/>
+<img src="images/dashboard-own-data-sources-example.png" alt="A dashboard not connected to its data source" class="responsive-img" width="88%"/>
 
 Each visualization has a **Log into** button (*it can be accessed when you click/tap on Connect*) on it enabling you to *connect to the data source* used. To do this: 
 
