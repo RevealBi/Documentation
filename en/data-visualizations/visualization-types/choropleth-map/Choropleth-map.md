@@ -61,7 +61,7 @@ To follow this walkthrough, download the [2016 November General Election](https:
 1. Connect to the cloud provider where you uploaded the spreadsheet. For more information on adding a data source in Reveal, visit the [Data Sources](~/en/datasources/overview.md) section.
 2. In the visualization editor, select the Choropleth Map visualization:
 
-  <img src="images/chart-types-choropleth.png" alt="Select choropleth map visualization from the list of chart types" class="responsive-img" width="65%"/>
+  <img src="images/chart-types-choropleth.png" alt="Select choropleth map visualization from the list of chart types" class="responsive-img" width="75%"/>
 
 3. In the *Choropleth Data* section, select the US States map from the *Map* dropdown  An outline of the United States map will be displayed on the screen.
 
