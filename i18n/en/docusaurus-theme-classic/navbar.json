@@ -1,0 +1,58 @@
+{
+  "title": {
+    "message": "Reveal",
+    "description": "The title in the navbar"
+  },
+  "item.label.Documentaion": {
+    "message": "Documentaion",
+    "description": "Navbar item with label Documentaion"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.Learn": {
+    "message": "Learn",
+    "description": "Navbar item with label Learn"
+  },
+  "item.label.Web": {
+    "message": "Web",
+    "description": "Navbar item with label Web"
+  },
+  "item.label.WPF": {
+    "message": "WPF",
+    "description": "Navbar item with label WPF"
+  },
+  "item.label.DOM": {
+    "message": "DOM",
+    "description": "Navbar item with label DOM"
+  },
+  "item.label.ASP.NET": {
+    "message": "ASP.NET",
+    "description": "Navbar item with label ASP.NET"
+  },
+  "item.label.JAVA": {
+    "message": "JAVA",
+    "description": "Navbar item with label JAVA"
+  },
+  "item.label.JavaScript": {
+    "message": "JavaScript",
+    "description": "Navbar item with label JavaScript"
+  },
+  "item.label.Blogs": {
+    "message": "Blogs",
+    "description": "Navbar item with label Blogs"
+  },
+  "item.label.Developer Playground": {
+    "message": "Developer Playground",
+    "description": "Navbar item with label Developer Playground"
+  },
+  "item.label.Samples": {
+    "message": "Samples",
+    "description": "Navbar item with label Samples"
+  },
+  "item.label.Videos": {
+    "message": "Videos",
+    "description": "Navbar item with label Videos"
+  }
+}

@@ -1,0 +1,100 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+ @font-face {
+  font-family: "Roboto";
+  src: url('/static/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('/static/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('/static/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('/static/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-font-family-monospace: "Roboto";
+  --ifm-font-family-base: "Roboto";
+
+  --ifm-color-primary: #ec417a;
+  --ifm-color-primary-dark: #e92667;
+  --ifm-color-primary-darker: #e8185d;
+  --ifm-color-primary-darkest: #c0134d;
+  --ifm-color-primary-light: #ef5c8d;
+  --ifm-color-primary-lighter: #f06a97;
+  --ifm-color-primary-lightest: #f493b3;
+  --ifm-code-font-size: 95%;
+
+
+
+  /* --ifm-hero-background-color: linear-gradient(90deg, rgba(251, 179, 101, 1) 0%, rgba(236, 65, 122, 1) 40%); */
+
+  /* --ifm-footer-background-color: */
+  /* --ifm-footer-link-hover-color: */
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar__header > div > a {
+  padding: 15px 0 5px 0 !important;
+  position: relative;
+  font-size: 14px !important;
+  color: #000 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  margin-left: 2px;
+  pointer-events: none !important;
+}
+
+.sidebar__header > div:hover {
+  background: transparent !important;
+  
+}
+
+a.menu__link {
+  font-size: 13px;
+  font-weight: normal;
+  margin-left: -8px;
+}
+
+a.menu__link--active {
+  font-weight: 500;
+}
+
+.footer {
+  background-image: linear-gradient(90deg, rgba(251, 179, 101, 1) 0%, rgba(236, 65, 122, 1) 40%);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-footer-link-color);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .sidebar__header  > div > a {
+  color: #fff !important;
+}
