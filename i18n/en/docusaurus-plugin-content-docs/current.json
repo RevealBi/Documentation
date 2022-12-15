@@ -1,0 +1,298 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.webSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Creating the Server": {
+    "message": "Creating the Server",
+    "description": "The label for category Creating the Server in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Configuring the Server": {
+    "message": "Configuring the Server",
+    "description": "The label for category Configuring the Server in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Adding Data Sources": {
+    "message": "Adding Data Sources",
+    "description": "The label for category Adding Data Sources in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Replacing Data Sources": {
+    "message": "Replacing Data Sources",
+    "description": "The label for category Replacing Data Sources in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/overview"
+  },
+  "sidebar.webSidebar.doc.Installation": {
+    "message": "Installation",
+    "description": "The label for the doc item Installation in sidebar webSidebar, linking to the doc web/installation"
+  },
+  "sidebar.webSidebar.doc.ASP.NET Web API": {
+    "message": "ASP.NET Web API",
+    "description": "The label for the doc item ASP.NET Web API in sidebar webSidebar, linking to the doc web/getting-started-server"
+  },
+  "sidebar.webSidebar.doc.Node.js": {
+    "message": "Node.js",
+    "description": "The label for the doc item Node.js in sidebar webSidebar, linking to the doc web/getting-started-server-node"
+  },
+  "sidebar.webSidebar.doc.Node.js - TypeScript": {
+    "message": "Node.js - TypeScript",
+    "description": "The label for the doc item Node.js - TypeScript in sidebar webSidebar, linking to the doc web/getting-started-server-node-typescript"
+  },
+  "sidebar.webSidebar.doc.Spring Boot - Jersey": {
+    "message": "Spring Boot - Jersey",
+    "description": "The label for the doc item Spring Boot - Jersey in sidebar webSidebar, linking to the doc web/configuring-server-spring-boot-jersey"
+  },
+  "sidebar.webSidebar.doc.Angular": {
+    "message": "Angular",
+    "description": "The label for the doc item Angular in sidebar webSidebar, linking to the doc web/getting-started-angular"
+  },
+  "sidebar.webSidebar.doc.ASP.NET Core Web App": {
+    "message": "ASP.NET Core Web App",
+    "description": "The label for the doc item ASP.NET Core Web App in sidebar webSidebar, linking to the doc web/getting-started-aspnet"
+  },
+  "sidebar.webSidebar.doc.HTML/JavaScript": {
+    "message": "HTML/JavaScript",
+    "description": "The label for the doc item HTML/JavaScript in sidebar webSidebar, linking to the doc web/getting-started-javascript"
+  },
+  "sidebar.webSidebar.doc.React": {
+    "message": "React",
+    "description": "The label for the doc item React in sidebar webSidebar, linking to the doc web/getting-started-react"
+  },
+  "sidebar.webSidebar.doc.ASP.NET": {
+    "message": "ASP.NET ",
+    "description": "The label for the doc item ASP.NET in sidebar webSidebar, linking to the doc web/configuring-server-aspnet"
+  },
+  "sidebar.webSidebar.doc.Creating": {
+    "message": "Creating",
+    "description": "The label for the doc item Creating in sidebar webSidebar, linking to the doc web/creating-dashboards"
+  },
+  "sidebar.webSidebar.doc.Loading": {
+    "message": "Loading",
+    "description": "The label for the doc item Loading in sidebar webSidebar, linking to the doc web/loading-dashboards"
+  },
+  "sidebar.webSidebar.doc.Filtering": {
+    "message": "Filtering",
+    "description": "The label for the doc item Filtering in sidebar webSidebar, linking to the doc web/filtering-dashboards"
+  },
+  "sidebar.webSidebar.doc.Editing": {
+    "message": "Editing",
+    "description": "The label for the doc item Editing in sidebar webSidebar, linking to the doc web/editing-dashboards"
+  },
+  "sidebar.webSidebar.doc.Saving": {
+    "message": "Saving",
+    "description": "The label for the doc item Saving in sidebar webSidebar, linking to the doc web/saving-dashboards"
+  },
+  "sidebar.webSidebar.doc.Linking": {
+    "message": "Linking",
+    "description": "The label for the doc item Linking in sidebar webSidebar, linking to the doc web/linking-dashboards"
+  },
+  "sidebar.webSidebar.doc.Exporting": {
+    "message": "Exporting",
+    "description": "The label for the doc item Exporting in sidebar webSidebar, linking to the doc web/exporting-dashboards"
+  },
+  "sidebar.webSidebar.doc.Theming": {
+    "message": "Theming",
+    "description": "The label for the doc item Theming in sidebar webSidebar, linking to the doc web/theming-dashboards"
+  },
+  "sidebar.webSidebar.doc.Data Sources": {
+    "message": "Data Sources",
+    "description": "The label for the doc item Data Sources in sidebar webSidebar, linking to the doc web/datasources"
+  },
+  "sidebar.webSidebar.doc.Excel File": {
+    "message": "Excel File",
+    "description": "The label for the doc item Excel File in sidebar webSidebar, linking to the doc web/replacing-data-sources/excel-file"
+  },
+  "sidebar.webSidebar.doc.In Memory Data": {
+    "message": "In Memory Data",
+    "description": "The label for the doc item In Memory Data in sidebar webSidebar, linking to the doc web/adding-data-sources/in-memory-data"
+  },
+  "sidebar.webSidebar.doc.MS SQL Server": {
+    "message": "MS SQL Server",
+    "description": "The label for the doc item MS SQL Server in sidebar webSidebar, linking to the doc web/replacing-data-sources/ms-sql-server"
+  },
+  "sidebar.webSidebar.doc.Authentication": {
+    "message": "Authentication",
+    "description": "The label for the doc item Authentication in sidebar webSidebar, linking to the doc web/authentication"
+  },
+  "sidebar.webSidebar.doc.User Context": {
+    "message": "User Context",
+    "description": "The label for the doc item User Context in sidebar webSidebar, linking to the doc web/user-context"
+  },
+  "sidebar.webSidebar.doc.Obfuscate Connection Data": {
+    "message": "Obfuscate Connection Data",
+    "description": "The label for the doc item Obfuscate Connection Data in sidebar webSidebar, linking to the doc web/obfuscate-connection-data"
+  },
+  "sidebar.webSidebar.doc.Maximizing Visualizations": {
+    "message": "Maximizing Visualizations",
+    "description": "The label for the doc item Maximizing Visualizations in sidebar webSidebar, linking to the doc web/maximizing-visualizations"
+  },
+  "sidebar.webSidebar.doc.Responding to Click Events": {
+    "message": "Responding to Click Events",
+    "description": "The label for the doc item Responding to Click Events in sidebar webSidebar, linking to the doc web/click-events"
+  },
+  "sidebar.webSidebar.doc.Tooltips": {
+    "message": "Tooltips",
+    "description": "The label for the doc item Tooltips in sidebar webSidebar, linking to the doc web/tooltips"
+  },
+  "sidebar.webSidebar.doc.Known Issues": {
+    "message": "Known Issues",
+    "description": "The label for the doc item Known Issues in sidebar webSidebar, linking to the doc web/known-issues"
+  },
+  "sidebar.webSidebar.doc.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for the doc item Release Notes in sidebar webSidebar, linking to the doc web/release-notes"
+  },
+  "sidebar.webSidebar.doc.Third-Party Software": {
+    "message": "Third-Party Software",
+    "description": "The label for the doc item Third-Party Software in sidebar webSidebar, linking to the doc web/third-party-software"
+  },
+  "sidebar.webSidebar.doc.Data Limits": {
+    "message": "Data Limits",
+    "description": "The label for the doc item Data Limits in sidebar webSidebar, linking to the doc web/data-size-limits"
+  },
+  "sidebar.wpfSidebar.category.Adding Data Sources": {
+    "message": "Adding Data Sources",
+    "description": "The label for category Adding Data Sources in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.category.Replacing Data Sources": {
+    "message": "Replacing Data Sources",
+    "description": "The label for category Replacing Data Sources in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.doc.Installation": {
+    "message": "Installation",
+    "description": "The label for the doc item Installation in sidebar wpfSidebar, linking to the doc wpf/installation"
+  },
+  "sidebar.wpfSidebar.doc.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for the doc item Getting Started in sidebar wpfSidebar, linking to the doc wpf/getting-started"
+  },
+  "sidebar.wpfSidebar.doc.Creating": {
+    "message": "Creating",
+    "description": "The label for the doc item Creating in sidebar wpfSidebar, linking to the doc wpf/creating-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Loading": {
+    "message": "Loading",
+    "description": "The label for the doc item Loading in sidebar wpfSidebar, linking to the doc wpf/loading-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Filtering": {
+    "message": "Filtering",
+    "description": "The label for the doc item Filtering in sidebar wpfSidebar, linking to the doc wpf/filtering-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Editing": {
+    "message": "Editing",
+    "description": "The label for the doc item Editing in sidebar wpfSidebar, linking to the doc wpf/editing-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Saving": {
+    "message": "Saving",
+    "description": "The label for the doc item Saving in sidebar wpfSidebar, linking to the doc wpf/saving-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Linking": {
+    "message": "Linking",
+    "description": "The label for the doc item Linking in sidebar wpfSidebar, linking to the doc wpf/linking-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Formatting Data": {
+    "message": "Formatting Data",
+    "description": "The label for the doc item Formatting Data in sidebar wpfSidebar, linking to the doc wpf/formatting-data"
+  },
+  "sidebar.wpfSidebar.doc.Localizing": {
+    "message": "Localizing",
+    "description": "The label for the doc item Localizing in sidebar wpfSidebar, linking to the doc wpf/localizing-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Exporting": {
+    "message": "Exporting",
+    "description": "The label for the doc item Exporting in sidebar wpfSidebar, linking to the doc wpf/exporting-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Theming": {
+    "message": "Theming",
+    "description": "The label for the doc item Theming in sidebar wpfSidebar, linking to the doc wpf/theming-dashboards"
+  },
+  "sidebar.wpfSidebar.doc.Excel File": {
+    "message": "Excel File",
+    "description": "The label for the doc item Excel File in sidebar wpfSidebar, linking to the doc wpf/replacing-data-sources/excel-file"
+  },
+  "sidebar.wpfSidebar.doc.In Memory Data": {
+    "message": "In Memory Data",
+    "description": "The label for the doc item In Memory Data in sidebar wpfSidebar, linking to the doc wpf/adding-data-sources/in-memory-data"
+  },
+  "sidebar.wpfSidebar.doc.MS SQL Server": {
+    "message": "MS SQL Server",
+    "description": "The label for the doc item MS SQL Server in sidebar wpfSidebar, linking to the doc wpf/replacing-data-sources/ms-sql-server"
+  },
+  "sidebar.wpfSidebar.doc.Authentication": {
+    "message": "Authentication",
+    "description": "The label for the doc item Authentication in sidebar wpfSidebar, linking to the doc wpf/authentication"
+  },
+  "sidebar.wpfSidebar.doc.Maximizing Visualizations": {
+    "message": "Maximizing Visualizations",
+    "description": "The label for the doc item Maximizing Visualizations in sidebar wpfSidebar, linking to the doc wpf/maximizing-visualizations"
+  },
+  "sidebar.wpfSidebar.doc.Responding to Click Events": {
+    "message": "Responding to Click Events",
+    "description": "The label for the doc item Responding to Click Events in sidebar wpfSidebar, linking to the doc wpf/click-events"
+  },
+  "sidebar.wpfSidebar.doc.Tooltips": {
+    "message": "Tooltips",
+    "description": "The label for the doc item Tooltips in sidebar wpfSidebar, linking to the doc wpf/tooltips"
+  },
+  "sidebar.wpfSidebar.doc.Known Issues": {
+    "message": "Known Issues",
+    "description": "The label for the doc item Known Issues in sidebar wpfSidebar, linking to the doc wpf/known-issues"
+  },
+  "sidebar.wpfSidebar.doc.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for the doc item Release Notes in sidebar wpfSidebar, linking to the doc wpf/release-notes"
+  },
+  "sidebar.wpfSidebar.doc.Third-Party Software": {
+    "message": "Third-Party Software",
+    "description": "The label for the doc item Third-Party Software in sidebar wpfSidebar, linking to the doc wpf/third-party-software"
+  },
+  "sidebar.webSidebar.category.General": {
+    "message": "General",
+    "description": "The label for category General in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Working with Dashboards": {
+    "message": "Working with Dashboards",
+    "description": "The label for category Working with Dashboards in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Working with Data Sources": {
+    "message": "Working with Data Sources",
+    "description": "The label for category Working with Data Sources in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Working with Visualizations": {
+    "message": "Working with Visualizations",
+    "description": "The label for category Working with Visualizations in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Release Information": {
+    "message": "Release Information",
+    "description": "The label for category Release Information in sidebar webSidebar"
+  },
+  "sidebar.wpfSidebar.category.General": {
+    "message": "General",
+    "description": "The label for category General in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.category.Working with Dashboards": {
+    "message": "Working with Dashboards",
+    "description": "The label for category Working with Dashboards in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.category.Working with Data Sources": {
+    "message": "Working with Data Sources",
+    "description": "The label for category Working with Data Sources in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.category.Working with Visualizations": {
+    "message": "Working with Visualizations",
+    "description": "The label for category Working with Visualizations in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.category.Release Information": {
+    "message": "Release Information",
+    "description": "The label for category Release Information in sidebar wpfSidebar"
+  },
+  "sidebar.webSidebar.doc.Tomcat": {
+    "message": "Tomcat",
+    "description": "The label for the doc item Tomcat in sidebar webSidebar, linking to the doc web/configuring-server-tomcat"
+  }
+}

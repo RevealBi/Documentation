@@ -1,4 +1,0 @@
-- name: Integrating with Azure ML Models
-  href: azure-machine-learning-models.md
-- name: Integrating with BigQuery ML Models
-  href: bigquery-machine-learning-models.md

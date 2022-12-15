@@ -1,0 +1,64 @@
+- name: 一般
+  header: true
+- name: インストール
+  href: installation.md
+- name: 作業の開始
+  href: getting-started.md
+- name: ダッシュボードの使用
+  header: true
+- name: 作成
+  href: creating-dashboards.md
+- name: 読み込み
+  href: loading-dashboards.md
+- name: フィルタリング
+  href: filtering-dashboards.md
+- name: 編集
+  href: editing-dashboards.md
+- name: 保存
+  href: saving-dashboards.md
+- name: リンク
+  href: linking-dashboards.md
+- name: データの書式設定
+  href: formatting-data.md
+- name: ローカライズ
+  href: localizing-dashboards.md
+- name: エクスポート
+  href: exporting-dashboards.md
+- name: テーマ設定
+  href: theming-dashboards.md
+- name: データ ソースの使用
+  header: true
+- name: データ ソースの追加
+  items:
+    - name: Excel ファイル
+      href: adding-data-sources/excel-file.md
+    - name: インメモリ データ
+      href: adding-data-sources/in-memory-data.md
+    - name: MS SQL Server
+      href: adding-data-sources/ms-sql-server.md
+- name: データ ソースの置き換え
+  items:
+    - name: Excel ファイル
+      href: replacing-data-sources/excel-file.md
+    - name: MS SQL Server
+      href: replacing-data-sources/ms-sql-server.md
+- name: 認証
+  href: authentication.md
+- name: 表示形式の使用
+  header: true
+- name: 表示形式の最大化
+  href: maximizing-visualizations.md
+- name: クリック イベントへの応答
+  href: click-events.md
+- name: ツールチップ
+  href: tooltips.md
+- name: リリース情報
+  header: true
+- name: API リファレンス
+  href: api-reference.md
+- name: 既知の問題
+  href: known-issues.md
+- name: リリース ノート
+  href: release-notes.md
+- name: サードパーティ ソフトウェア
+  href: third-party-software.md

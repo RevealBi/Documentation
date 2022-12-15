@@ -1,0 +1,33 @@
+.executionBar {
+    height: 44px;
+    box-shadow: 0 .3px .9px #0000001c, 0 1.6px 3.6px #0002;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    box-sizing: border-box;
+    padding: 0 8px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .executionBar button {
+    align-items: center;
+    background-color: var(--ifm-button-background-color);
+    border: 1px solid var(--ifm-button-background-color);
+    display: inline-flex;
+    height: 44px;
+    width: 82px;
+    justify-content: space-around;
+    padding: 0 4px;
+    cursor: pointer;
+  }
+  
+  .executionBar button:hover {
+    background-color: var(--docusaurus-collapse-button-bg-hover);
+  }
+  
+  .iFrameContainer {
+    border-top: 1px solid var(--ifm-toc-border-color);
+  }

@@ -1,16 +1,38 @@
 # Documentation
- The documentation repo for https://revealbi.io
 
- # Build Status
+### Install the docs
 
-|          | Status | Deployment |
-| -------- | ------ | ---------- |
-| Staging | [<img src="https://infragistics.visualstudio.com/BusinessTools/_apis/build/status/RevealBi.Documentation?branchName=master" alt="Build Status" class="responsive-img"/>](https://infragistics.visualstudio.com/BusinessTools/_build/latest?definitionId=56&branchName=master) | [<img src="https://infragistics.vsrm.visualstudio.com/_apis/public/Release/badge/14a7928c-44bc-4aed-b2ca-9a0ffbb14d7a/1/1" alt="Deployment Status" class="responsive-img"/>](https://infragistics.vsrm.visualstudio.com/_apis/public/Release/badge/14a7928c-44bc-4aed-b2ca-9a0ffbb14d7a/1/1) |
-| Production | TBD | TBD |
+Clone/Fork the repo and run the following command
+```bash
+npm install
+```
 
- # Build the docs
- From a command line, run
+### Run the docs
 
- `docfx -docfx.json --serve`
+English
+```bash
+npm start
+```
 
- 
+Japanese
+```bash
+npm run start:ja
+```
+
+### Generate translation strings
+
+English
+```bash
+npm run write-translations
+```
+
+Japanese
+```bash
+npm run write-translations:ja
+```
+
+### Build the docs
+
+```bash
+npm run build
+```

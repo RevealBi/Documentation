@@ -1,0 +1,94 @@
+- name: 一般
+  header: true
+- name: 概要
+  href: overview.md
+- name: インストール
+  href: installation.md   
+- name: 作業の開始
+  items:
+    - name: サーバーの作成
+      items:
+        - name: ASP.NET Web API
+          href: getting-started-server.md
+        - name: Node.js
+          href: getting-started-server-node.md
+        - name: Node.js - TypeScript
+          href: getting-started-server-node-typescript.md
+        - name: Spring Boot - Jersey
+          href: getting-started-spring-boot-jersey.md
+    - name: Angular
+      href: getting-started-angular.md
+    - name: ASP.NET Core Web App
+      href: getting-started-aspnet.md
+    - name: HTML/JavaScript
+      href: getting-started-javascript.md
+    - name: React
+      href: getting-started-react.md
+- name: サーバーの構成
+  items:
+    - name: ASP.NET
+      href: configuring-server-aspnet.md
+- name: ダッシュボードの使用
+  header: true
+- name: 作成
+  href: creating-dashboards.md
+- name: 読み込み
+  href: loading-dashboards.md
+- name: フィルタリング
+  href: filtering-dashboards.md
+- name: 編集
+  href: editing-dashboards.md
+- name: 保存
+  href: saving-dashboards.md
+- name: リンク
+  href: linking-dashboards.md
+- name: エクスポート
+  href: exporting-dashboards.md
+- name: テーマ設定
+  href: theming-dashboards.md
+- name: データ ソースの使用
+  header: true
+- name: データ ソース
+  href: datasources.md
+- name: データ ソースの追加
+  items:
+    - name: Excel ファイル
+      href: adding-data-sources/excel-file.md
+    - name: インメモリ データ
+      href: adding-data-sources/in-memory-data.md
+    - name: MS SQL Server
+      href: adding-data-sources/ms-sql-server.md
+- name: データ ソースの置き換え
+  items:
+    - name: Excel ファイル
+      href: replacing-data-sources/excel-file.md
+    - name: MS SQL Server
+      href: replacing-data-sources/ms-sql-server.md
+    - name: オブジェクトのエンコード / デコード
+      href: replacing-data-sources/object-encode-decode.md
+- name: 認証
+  href: authentication.md
+- name: ユーザー コンテキスト
+  href: user-context.md
+- name: 表示形式の使用
+  header: true
+- name: 表示形式の最大化
+  href: maximizing-visualizations.md
+- name: クリック イベントへの応答
+  href: click-events.md
+- name: ツールチップ
+  href: tooltips.md
+- name: リリース情報
+  header: true
+- name: サーバー API リファレンス
+  href: api-reference-server.md
+- name: クライアント API リファレンス
+  href: api-reference-client.md
+- name: 既知の問題
+  href: known-issues.md
+- name: リリース ノート
+  href: release-notes.md
+- name: サードパーティ ソフトウェア
+  href: third-party-software.md
+- name: データ サイズの制限
+  href: data-size-limits.md
