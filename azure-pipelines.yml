@@ -13,15 +13,15 @@ steps:
 - checkout: self
   clean: true
 
-- task: Npm@1
-  displayName: 'npm install'
+- task: NodeTool@0
   inputs:
-    command: 'install'
+    versionSpec: '18'
+  displayName: Install Node.js
 
-- task: Npm@1
-  displayName: 'npm run build'
-  inputs:
-    command: 'run build'
+- script: |
+      npm install
+      npm run build
+    displayName: Install and build
 
 - task: PublishBuildArtifacts@1
   inputs:
