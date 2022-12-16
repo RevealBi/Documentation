@@ -32,7 +32,7 @@
     "description": "Navbar item with label JavaScript"
   },
   "item.label.Learn": {
-    "message": "Learn",
+    "message": "学ぶ",
     "description": "Navbar item with label Learn"
   },
   "item.label.DOM": {
@@ -40,19 +40,19 @@
     "description": "Navbar item with label DOM"
   },
   "item.label.Blogs": {
-    "message": "Blogs",
+    "message": "ブログ",
     "description": "Navbar item with label Blogs"
   },
   "item.label.Samples": {
-    "message": "Samples",
+    "message": "サンプル",
     "description": "Navbar item with label Samples"
   },
   "item.label.Videos": {
-    "message": "Videos",
+    "message": "ビデオ",
     "description": "Navbar item with label Videos"
   },
   "item.label.Developer Playground": {
-    "message": "Developer Playground",
+    "message": "開発者向けプレイグラウンド",
     "description": "Navbar item with label Developer Playground"
   }
 }
