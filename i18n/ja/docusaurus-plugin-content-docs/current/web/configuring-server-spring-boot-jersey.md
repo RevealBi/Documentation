@@ -1,14 +1,14 @@
 import Export from './_configuring-server-java-export.md';
 
-# Configuring a Spring Boot with Jersey Server
+# Spring Boot と Jersey サーバーの構成
 
-## Install
+## インストール
 
-The steps below describe how to install the Reveal SDK into an existing Spring Boot with Jersey project.
+以下の手順では、既存の Spring Boot と Jersey プロジェクトに Reveal SDKをインストールする方法を説明します。
 
-1 - Update the **pom.xml** file.
+1 - **pom.xml** ファイルを更新します。
 
-First, add the Reveal Maven repository.
+まず、Reveal Maven リポジトリを追加します。
 
 ```xml title="pom.xml"
 <repositories>
@@ -19,7 +19,7 @@ First, add the Reveal Maven repository.
 </repositories>
 ```
 
-Next, add the Reveal SDK as a dependency.
+次に、Reveal SDK を依存関係として追加します。
 
 ```xml title="pom.xml"
 <dependency>
@@ -29,7 +29,7 @@ Next, add the Reveal SDK as a dependency.
 </dependency>
 ```
 
-2 - Create a Jersey Config class and initialize the Reveal SDK by calling the `RevealEngineInitializer.initialize` method. In order for the Reveal SDK to function properly with Jersey, we need to register all of the Reveal SDK classes with Jersey. To register the Reveal SDK classes, loop through the classes returned by the `RevealEngineInitializer.getClassesToRegister` method, and register them with the Jersey Config.
+2 - Jersey Config クラスを作成し、`RevealEngineInitializer.initialize` メソッドを呼び出して Reveal SDK を初期化します。Reveal SDK を Jersey で正しく動作させるためには、Reveal SDK の全クラスを Jersey に登録する必要があります。Reveal SDK のクラスを登録するには、`RevealEngineInitializer.getClassesToRegister` メソッドによって返されるクラスをループして、Jersey Config にそれらを登録します。
 
 ```java title="RevealJerseyConfig.java"
 import org.glassfish.jersey.server.ResourceConfig;
@@ -55,6 +55,6 @@ public class RevealJerseyConfig extends ResourceConfig
 }
 ```
 
-## Export
+## エクスポート
 
 <Export />
