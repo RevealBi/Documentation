@@ -255,7 +255,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Close navigation bar",
+    "message": "ナビゲーションバーを閉じる",
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
@@ -263,7 +263,7 @@
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Toggle navigation bar",
+    "message": "ナビゲーションバーをトグルする",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.docs.sidebar.expandButtonTitle": {
@@ -316,16 +316,16 @@
     "message": "Excel ファイル"
   },
   "playground.sidebar.msSqlServer": {
-    "message": "MS Sql Server"
+    "message": "MS SQL サーバー"
   },
   "playground.sidebar.header.exporting": {
     "message": "エクスポート"
   },
   "playground.sidebar.showHideExportOptions": {
-    "message": "Show/Hide Export Options"
+    "message": "エクスポートオプションの表示 / 非表示"
   },
   "playground.sidebar.customImageExport": {
-    "message": "Custom Image Export"
+    "message": "カスタムイメージをエクスポート"
   },
   "playground.sidebar.header.filters": {
     "message": "フィルタリング"
@@ -364,7 +364,7 @@
     "message": "テーマの適用"
   },
   "playground.sidebar.refreshTheme": {
-    "message": "Refresh Theme"
+    "message": "テーマをリフレッシュ"
   },
   "playground.sidebar.cloneExistingTheme": {
     "message": "既存のテーマのクローン"
