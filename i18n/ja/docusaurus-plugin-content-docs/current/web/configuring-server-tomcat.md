@@ -74,6 +74,6 @@ public class RevealServletContextListener implements ServletContextListener {
 }
 ```
 
-## Export
+## エクスポート
 
 <Export />
