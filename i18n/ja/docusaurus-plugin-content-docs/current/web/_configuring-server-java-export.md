@@ -1,20 +1,21 @@
-In order to export dashboards to an **Image** (either programmatically or through user interaction) the Reveal SDK uses [Playwright](https://playwright.dev/java/). For exporting dashboards to **Excel**, **PDF** or **PowerPoint** the Reveal SDK uses an internal application called **ExportTool**.
+ (プログラム上またはユーザー インタラクションによって) ダッシュボードを**画像**にエクスポートするには、Reveal SDK は [Playwright](https://playwright.dev/java/) を使用します。ダッシュボードを **Excel**、**PDF**、または **PowerPoint** にエクスポートするには、Reveal SDK は **ExportTool** と呼ばれる内部アプリケーションを使用します。
 
 デフォルトでは、エンドユーザーがダッシュボードを画像、PDF、PowerPoint に初めてエクスポートしようとすると、Playwright と ExportTool の両方が必要なダウンロードを自動的に開始します。ただし、プラットフォームによっては、事前にインストールが必要な依存関係があったり、サーバー環境が外部ダウンロードを制限している場合があり、これらのツールを手動で設定する必要がある場合があります。
 
-### Playwright Configuration
+### Playwright の構成
 
-Playwright will try to download the required binaries, but if manual configuration is required you can check Playwright [documentation](https://playwright.dev/java/docs/intro).
+Playwright は必要なバイナリをダウンロードしようとしますが、手動での構成が必要な場合は、Playwright [documentation](https://playwright.dev/java/docs/intro) を確認してください。
 
-#### macOS Dependencies
+#### macOS 依存性
 
-The only required library for macOS is `libgdiplus`. [Installation Instructions](https://learn.microsoft.com/th-th/dotnet/core/install/macos#libgdiplus)
+macOS で必要なライブラリは `libgdiplus` のみです。[インストール方法](https://learn.microsoft.com/th-th/dotnet/core/install/macos#libgdiplus)
 
-#### Linux Dependencies
+#### Linux 依存性
 
-There are dependencies to multiple native libraries in Linux. The exact list of dependencies you need to install depends on the distribution used, the version, and list of packages previously installed.
+Linux では、複数のネイティブ・ライブラリに依存します。インストールする必要のある依存関係の正確なリストは、使用するディストリビューション、バージョン、および以前にインストールしたパッケージのリストに依存します。
 
-Below there's a list of libraries needed for a basic Ubuntu 18.0.4 distribution:
+以下に、基本的な Ubuntu 18.0.4 ディストリビューションに必要なライブラリの一覧を示します。
+
 
 ```bash
 sudo apt-get update
@@ -39,38 +40,38 @@ sudo apt-get install -y --no-install-recommends xvfb
 
 :::note
 
-If needed, you can get more information about missing libraries from errors included in the log file.
+必要であれば、ログファイルに含まれるエラーから、不足しているライブラリに関する詳細な情報を得ることができます。
 
 :::
 
-If using Ubuntu, you must install the Chromium dependencies using [Maven](https://maven.apache.org/install.html).
+Ubuntu を使用する場合は、[Maven](https://maven.apache.org/install.html) を使用して Chromium の依存関係をインストールする必要があります。
 
 ```bash
 mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install-deps chromium"
 ```
 
-For other environments, the following dependencies may be required:
+その他の環境では、以下の依存関係が必要な場合があります:
 
 ```bash
 sudo apt-get install -y --allow-unauthenticated libc6-dev
 sudo apt-get install -y --allow-unauthenticated libx11-dev
 ```
 
-### ExportTool Manual Setup
+### ExportTool の手動セットアップ
 
-The instructions below are required only in the following scenarios:
-- You're having issues with the automatic download mechanism
-- You want to have everything pre-installed in advance.
+ここからの手順は、以下のシナリオの場合のみ必要です。
+- 自動ダウンロードの仕組みに問題がある場合
+- 事前にすべてをインストールしておきたい場合。
 
-Step 1 -Download the required binaries for your platform: [Windows](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/win-x64.zip?gasource=(direct)&gamedium=(none)&gacampaign=(not%20set)&gaterm=&gagclid=&_ga=2.151744764.435154113.1670459953-590137784.1670459953), [Linux](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/linux-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953), or [macOS](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/osx-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953).
+ステップ 1 - お使いのプラットフォームに必要なバイナリをダウンロードします: [Windows](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/win-x64.zip?gasource=(direct)&gamedium=(none)&gacampaign=(not%20set)&gaterm=&gagclid=&_ga=2.151744764.435154113.1670459953-590137784.1670459953)、[Linux](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/linux-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953)、[macOS](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/osx-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953)
 
-Step 2 - Unzip the file to a directory in your server, where your Web Application is running (your user should be able to access that directory).
+ステップ 2 - Web アプリケーションが動作しているサーバーのディレクトリにファイルを解凍します (ユーザーはそのディレクトリにアクセスできる必要があります)。
 
-Step 3 - After extracting the zip file, you can get the ExportTool at this location: `<dir>/<version>/<arch>/ExportTool`, for example:
+ステップ 3 - ZIP ファイルを解凍した後、次の場所で ExportTool を入手できます: `<dir>/<version>/<arch>/ExportTool`。例:
 
 `<dir>/1.0.0/linux-x64/ExportTool.`
 
-Step 4 - While initializing Reveal, set the directory where you extracted the zip file. Should be similar to the following code snippet:
+ステップ 4 - Revealの初期化中に、ZIPファイルを解凍したディレクトリを設定します。以下のようなコードになるはずです:
 
 ```java
 String exportToolDir = "<dir>";
@@ -79,7 +80,7 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
     build());
 ```
 
-Alternatively, you can specify the directory through the system property **reveal.exportToolContainerPath**, as shown below:
+また、以下のようにシステムプロパティ **reveal.exportToolContainerPath** を通じてディレクトリを指定することもできます:
 
 ```bash
 java -Dreveal.exportToolContainerPath=<dir> -jar target/upmedia-backend-spring.war
