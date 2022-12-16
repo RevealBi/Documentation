@@ -1,13 +1,14 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Loading Dashboards
+# ダッシュボードを読み込む
 
-Reveal Dashboards are stored on the server. The client application will make a call to the `$.ig.RVDashboard.loadDashboard` method passing in the name of the dashboard to load. The request for the dashboard is sent to the server and the server will respond to the client with the requested dashboard. The client will take the dashboard provided in the server response, and set the `RevealView.dashboard` property.
+Reveal ダッシュボードはサーバーに保存されます。クライアント アプリケーションは `$.ig.RVDashboard.loadDashboard` メソッドを呼び出し、読み込むダッシュボードの名前を渡します。ダッシュボードのリクエストはサーバーに送信され、サーバーはリクエストされたダッシュボードでクライアントに応答します。クライアントはサーバーのレスポンスで提供されたダッシュボードを受け取り、`RevealView.dashboard` プロパティを設定します。
 
-By default, the Reveal SDK uses a convention to load dashboards from a file path. Specifically, the Reveal SDK will look for dashboards in a **Dashboards** folder in the working directory on the server.
+デフォルトでは Reveal SDK はファイル パスからダッシュボードをロードするための規約を使用しています。具体的には、Reveal SDK はサーバー上の作業ディレクトリにある **Dashboards** フォルダー内のダッシュボードを探します。
 
-1 - In the server application, create a folder named **Dashboards** in the working directory and place a dashboard file within the folder.
+1 - サーバー アプリケーションで、作業ディレクトリに **Dashboards** という名前のフォルダを作成しその中にダッシュボード ファイルを配置します。
+
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -18,9 +19,9 @@ By default, the Reveal SDK uses a convention to load dashboards from a file path
 
   <TabItem value="java" label="Java">
 
-:::danger Unsupported
+:::danger サポート対象外
 
-Java does not currently support a default dashboard loader. You must create a custom dashboard provider.
+Java では現在デフォルトのダッシュボード ローダーはサポートされていません。カスタムのダッシュボード プロバイダーを作成する必要があります。
 
 :::
 
@@ -33,7 +34,7 @@ Java does not currently support a default dashboard loader. You must create a cu
   </TabItem>
 </Tabs>
 
-2 - In the client application, call the `$.ig.RevealSdkSettings.setBaseUrl` method and pass in your server URL. When debugging, the server URL will be `https://localhost` followed by a port number. For example:
+2 - クライアント アプリケーションで、`$.ig.RevealSdkSettings.setBaseUrl`メソッドを呼び出しサーバーのURLを渡します。デバッグ時には、サーバーの URL は `https://localhost` の後にポート番号が付いたものになります。例えば:
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");   
@@ -41,11 +42,11 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");
 
 :::caution
 
-Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
+サーバーがクライアント アプリケーションと異なる URL で動作している場合、`$.ig.RevealSdkSettings.setBaseUrl` を呼び出すことが必要です。サーバー アプリケーションとクライアント アプリケーションの両方が同じ URL で実行されている場合、このメソッドは必要ありません。このメソッドは一度だけ呼び出す必要があります。
 
 :::
 
-3 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method has a callback which will provide the dashboard being requested from the server. Once you have received the dashboard from the callback, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+3 - `$.ig.RVDashboard.loadDashboard` メソッドを呼び出し、拡張子 .rdash を除いたダッシュボード ファイル名を渡します。このメソッドにはサーバーから要求されたダッシュボードを提供するコールバックがあります。コールバックからダッシュボードを受け取ったら、`$.ig.RevealView` のインスタンスを取得し、レスポンスにあるダッシュボードに `RevealView.dashboard` プロパティをセットします。
 
 ```js
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
@@ -54,17 +55,17 @@ $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
 });
 ```
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards).
+本サンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards) で公開しています。
 
 :::
 
-## Custom Dashboard Provider
+## カスタム ダッシュボード プロバイダー
 
-If the default **Dashboards** file directory is not an option for your application, you can provide a custom dashboard provider in which to load the dashboards instead.
+デフォルトの **Dashboards** ファイル ディレクトリと異なる場所をアプリケーションで使用する場合、代わりにダッシュボードをロードするためのカスタム ダッシュボード プロバイダを提供することができます。
 
-1 - Create the dashboard provider.
+1 - ダッシュボード プロバイダーを作成します。
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -116,7 +117,7 @@ const dashboardProvider = async (userContext:IRVUserContext | null, dashboardId:
   </TabItem>
 </Tabs>
 
-2 - Register the dashboard provider with the Reveal SDK.
+2 - ダッシュボード プロバイダーを Reveal SDK に登録します。
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -155,7 +156,7 @@ app.use("/", reveal(revealOptions));
 </Tabs>
 
 
-## Example: Load from File Path
+## 例: ファイル パスから読み込む
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -212,20 +213,21 @@ const dashboardProvider = async (userContext:IRVUserContext | null, dashboardId:
 
 :::info
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-File).
+このサンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-File) でご覧いただけます。
 
 :::
 
 
 
-## Example: Load from Resource
+## 例: リソースから読み込む
 
-1 - Embed a Reveal dashboard **.rdash** file as a resource in your server application.
+1 - サーバー アプリケーションにリソースとして Reveal ダッシュボード **.rdash** ファイルを埋め込む。
+
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
 
-To embed a Reveal dashboard **.rdash** file as a resource in your ASP.NET server application, open the Properties for the dashboard file in Visual Studio, and set the **Build Action** of the .rdash file to **EmbeddedResource**.
+ASP.NET サーバー アプリケーションにリソースとして Reveal ダッシュボード **.rdash** ファイルを埋め込むには、Visual Studio でダッシュボード ファイルのプロパティを開き、.rdash ファイルの **ビルド アクション** を **埋め込みリソース** に設定します。
 
 ![](images/loading-dashboard-as-resource.jpg)
 
@@ -233,7 +235,7 @@ To embed a Reveal dashboard **.rdash** file as a resource in your ASP.NET server
 
   <TabItem value="java" label="Java">
 
-To embed a Reveal dashboard **.rdash** file as a resource in your Java server application, place the dashboard file in the **resources** directory.
+Reveal ダッシュボード **.rdash** ファイルを Java サーバー アプリケーションのリソースとして埋め込むには、ダッシュボード ファイルを **resources** ディレクトリに配置します。
 
 ![](images/loading-dashboard-as-resource-java.jpg)
 
@@ -241,7 +243,7 @@ To embed a Reveal dashboard **.rdash** file as a resource in your Java server ap
 
 </Tabs>
 
-2 - Create the dashboard provider.
+2 - ダッシュボード プロバイダーを作成します。
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -268,7 +270,7 @@ public class DashboardProvider : IRVDashboardProvider
 
 :::note
 
-The `name` of the resource you will provide in the `Assembly.GetManifestResourceStream` method must include the `namespace` and file name of the .rdash file.
+`Assembly.GetManifestResourceStream` メソッドで提供するリソースの `name` には、.rdash ファイルの `namespace` とファイル名を含める必要があります。
 
 :::
 
@@ -296,15 +298,15 @@ public class RevealDashboardProvider implements IRVDashboardProvider {
 
 </Tabs>
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Resource).
+本サンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Resource) に掲載されています。
 
 :::
 
-## Example: Load From JSON
+## 例: JSON から読み込む
 
-For advanced users, or users that serialize Reveal dashboards into .json files instead of .rdash files, you can load these JSON based files using the `Dashboard.LoadFromJsonAsync` method on the server application.
+上級ユーザーや、Reveal ダッシュボードを .rdash ファイルではなく .json ファイルにシリアライズするユーザーのために、サーバー アプリケーションで `Dashboard.LoadFromJsonAsync` メソッドを使用してこれらの JSON ベースのファイルをロードすることができます。
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -331,9 +333,9 @@ public class DashboardProvider : IRVDashboardProvider
 
   <TabItem value="java" label="Java">
 
-:::danger Unsupported
+:::danger サポート対象外
 
-This feature is currently not supported by Java
+この機能は現在 Java ではサポートされていません。
 
 :::
 
@@ -341,9 +343,9 @@ This feature is currently not supported by Java
 
   <TabItem value="node" label="Node.js">    
 
-:::danger Unsupported
+:::danger サポート対象外
 
-This feature is currently not supported by Node.js
+この機能は現在 Node.jsではサポートされていません。
 
 :::
 
@@ -352,12 +354,12 @@ This feature is currently not supported by Node.js
 
 :::caution
 
-Manipulating or changing the contents of a Reveal dashboard after it has been serialized to JSON can break the integrity of the dashboard and cause irreversible damage to the contents of the dashboard. This could result in runtime exceptions being thrown in your application due to errors and/or a failure to load the dashboard.
+Reveal ダッシュボードが JSON にシリアライズされた後にその内容を操作または変更すると、ダッシュボードの整合性が失われ、ダッシュボードの内容に不可逆的な損傷が生じる可能性があります。その結果、ダッシュボードの読み込みエラーもしくは読み込み失敗によってアプリケーションで実行時例外がスローされる可能性があります。
 
 :::
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Json).
+本サンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Json)に掲載されています。
 
 :::
