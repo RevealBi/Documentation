@@ -1,14 +1,14 @@
 import Export from './_configuring-server-java-export.md';
 
-# Configuring a Tomcat Server
+# Tomcat サーバーの構成
 
-## Install
+## インストール
 
-The steps below describe how to install the Reveal SDK into an existing Tomcat application.
+以下の手順では既存の Tomcat アプリケーションに Reveal SDK をインストールする方法を説明します。
 
-1 - Update the **pom.xml** file.
+1 - **pom.xml** ファイルを更新してください。
 
-First, add the Reveal Maven repository.
+まず Reveal Maven リポジトリを追加します。
 
 ```xml title="pom.xml"
 <repositories>
@@ -19,7 +19,7 @@ First, add the Reveal Maven repository.
 </repositories>
 ```
 
-Next, add the Reveal SDK as a dependency.
+次に Reveal SDK を依存関係として追加します。
 
 ```xml title="pom.xml"
 <dependency>
@@ -29,11 +29,11 @@ Next, add the Reveal SDK as a dependency.
 </dependency>
 ```
 
-2 - Add a JAX-RS Dependency
+2 - JAX-RS の依存関係を追加する
 
-Add a dependency to a Jakarta RESTful Web Services (JAX-RS) implementation. You can choose between multiple options like Jersey, RESTeasy, Apache CXF, etc. Please follow the steps described by the provider of your preference.
+Jakarta RESTful Web Services（JAX-RS）実装への依存関係を追加します。Jersey、RESTeasy、Apache CXF など複数の選択肢の中から選ぶことができます。お好みのプロバイダー提供元が説明する手順に従ってください。
 
-As an example, here the dependencies you need to add for Jersey:
+例として Jersey 用に追加する必要がある依存関係を以下に示します:
 
 ```xml
 <dependency>
@@ -48,7 +48,7 @@ As an example, here the dependencies you need to add for Jersey:
 </dependency>
 ```
 
-3 - Create a ServletContextListener class and initialize the Reveal SDK by calling the `RevealEngineInitializer.initialize` method.
+3 - ServletContextListener クラスを作成し `RevealEngineInitializer.initialize` メソッドを呼び出して Reveal SDKを初期化します。
 
 ```java
 import javax.servlet.ServletContextEvent;
@@ -74,6 +74,6 @@ public class RevealServletContextListener implements ServletContextListener {
 }
 ```
 
-## Export
+## エクスポート
 
 <Export />
