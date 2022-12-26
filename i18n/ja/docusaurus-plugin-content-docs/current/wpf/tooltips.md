@@ -60,7 +60,7 @@ private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
 }
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/Tooltips) にあります。
 

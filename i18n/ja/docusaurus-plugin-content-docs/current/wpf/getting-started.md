@@ -79,7 +79,7 @@ xmlns:rv="http://revealbi.io/"
 - [新しいダッシュボードの作成](creating-dashboards.md)
 - [既存のダッシュボードの読み込み](loading-dashboards.md)
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/01-GettingStarted) にあります。
 

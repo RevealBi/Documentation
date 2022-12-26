@@ -43,7 +43,7 @@ Reveal SDK NuGet パッケージをポイントする Visual Studio に自動的
 
 ## ライセンス キーの追加
 
-By default, when you install the Reveal SDK only the **trial** product is used. In order to unlock the **licensed** product, you must provide a license key in the application.
+デフォルトでは、Reveal SDKをインストールすると、**試用版製品**のみが使用されます。**ライセンス製品**のロックを解除するには、アプリケーションでライセンス キーを提供する必要があります。
 
 ```cs
 RevealSdkSettings.License = "LICENSE_KEY";
