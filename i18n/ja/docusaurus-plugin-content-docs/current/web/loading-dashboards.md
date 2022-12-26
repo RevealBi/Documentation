@@ -3,9 +3,9 @@ import TabItem from '@theme/TabItem';
 
 # ダッシュボードを読み込む
 
-Reveal ダッシュボードはサーバーに保存されます。クライアント アプリケーションは `$.ig.RVDashboard.loadDashboard` メソッドを呼び出し、読み込むダッシュボードの名前を渡します。ダッシュボードのリクエストはサーバーに送信され、サーバーはリクエストされたダッシュボードでクライアントに応答します。クライアントはサーバーのレスポンスで提供されたダッシュボードを受け取り、`RevealView.dashboard` プロパティを設定します。
+Reveal ダッシュボードはサーバーに保存されます。クライアント アプリケーションは `$.ig.RVDashboard.loadDashboard` メソッドを呼び出し、読み込むダッシュボードの名前を渡します。ダッシュボードの要求はサーバーに送信され、サーバーは要求されたダッシュボードをクライアントに返信します。クライアントはサーバーから返信されてきたダッシュボードを受け取り、`RevealView.dashboard` プロパティに設定します。
 
-デフォルトでは Reveal SDK はファイル パスからダッシュボードをロードするための規約を使用しています。具体的には、Reveal SDK はサーバー上の作業ディレクトリにある **Dashboards** フォルダー内のダッシュボードを探します。
+デフォルトでは Reveal SDK はファイル パスからダッシュボードをロードする規約を使用しています。具体的には、Reveal SDK はサーバー上の作業ディレクトリにある **Dashboards** フォルダー内でダッシュボードを探します。
 
 1 - サーバー アプリケーションで、作業ディレクトリに **Dashboards** という名前のフォルダを作成しその中にダッシュボード ファイルを配置します。
 
@@ -34,7 +34,9 @@ Java では現在デフォルトのダッシュボード ローダーはサポ�
   </TabItem>
 </Tabs>
 
-2 - クライアント アプリケーションで、`$.ig.RevealSdkSettings.setBaseUrl`メソッドを呼び出しサーバーのURLを渡します。デバッグ時には、サーバーの URL は `https://localhost` の後にポート番号が付いたものになります。例えば:
+2 - クライアント アプリケーションで、`$.ig.RevealSdkSettings.setBaseUrl`メソッドを呼び出しサーバーの URL を渡します。デバッグ時には、サーバーの URL は `https://localhost` の後にポート番号が付いたものになります。
+
+例:
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");   
@@ -46,7 +48,7 @@ $.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");
 
 :::
 
-3 - `$.ig.RVDashboard.loadDashboard` メソッドを呼び出し、拡張子 .rdash を除いたダッシュボード ファイル名を渡します。このメソッドにはサーバーから要求されたダッシュボードを提供するコールバックがあります。コールバックからダッシュボードを受け取ったら、`$.ig.RevealView` のインスタンスを取得し、レスポンスにあるダッシュボードに `RevealView.dashboard` プロパティをセットします。
+3 - `$.ig.RVDashboard.loadDashboard` メソッドを呼び出し、拡張子 .rdash を除いたダッシュボード ファイル名を渡します。このメソッドには要求したダッシュボードをサーバーから受け取るコールバックがあります。コールバックでダッシュボードを受け取ったら、`$.ig.RevealView` のインスタンスを取得し、サーバーからの応答にあるダッシュボードを `RevealView.dashboard` プロパティにセットします。
 
 ```js
 $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
@@ -57,13 +59,13 @@ $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
 
 :::info コードの取得
 
-本サンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards) で公開しています。
+このサンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards) にあります。
 
 :::
 
 ## カスタム ダッシュボード プロバイダー
 
-デフォルトの **Dashboards** ファイル ディレクトリと異なる場所をアプリケーションで使用する場合、代わりにダッシュボードをロードするためのカスタム ダッシュボード プロバイダを提供することができます。
+デフォルトの **Dashboards** ディレクトリと異なる場所をアプリケーションで使用する場合、代わりにダッシュボードをロードするためのカスタム ダッシュボード プロバイダを提供することができます。
 
 1 - ダッシュボード プロバイダーを作成します。
 
@@ -213,7 +215,7 @@ const dashboardProvider = async (userContext:IRVUserContext | null, dashboardId:
 
 :::info
 
-このサンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-File) でご覧いただけます。
+このサンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-File) にあります。
 
 :::
 
@@ -300,7 +302,7 @@ public class RevealDashboardProvider implements IRVDashboardProvider {
 
 :::info コードの取得
 
-本サンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Resource) に掲載されています。
+このサンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Resource) にあります。
 
 :::
 
@@ -360,6 +362,6 @@ Reveal ダッシュボードが JSON にシリアライズされた後にその�
 
 :::info コードの取得
 
-本サンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Json)に掲載されています。
+このサンプルのソースコードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LoadingDashboards-Json) にあります。
 
 :::
