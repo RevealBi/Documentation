@@ -99,9 +99,9 @@
 ```
 
 このクラスの `Encode` メソッドは、表示形式がデータを取得するために使用する `RVDataSourceItem` を返します。
-`Encode` メソッドで引数として提供される `RVDataSourceItem` 項目を変更することにより、Datasource/DatasourceItem の機密情報を変更できます。
+`Encode` メソッドの引数に渡された `RVDataSourceItem` を変更して返すことにより、Datasource/DatasourceItem の機密情報を変更できます。
 
-**手順 2** - `Program.cs` ファイルの `AddReveal` メソッドを更新して、`RevealSetupBuilder.AddDataSourceProvider` メソッドを使用して作成した `IRVObjectEncoder` を `RevealSetupBuilder` に追加します。
+**手順 2** - `RevealSetupBuilder.AddObjectEncoder` メソッドを使用して、作成した `IRVObjectEncoder` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイルの `AddReveal` メソッドを更新します。
 
 ```csharp
 .AddReveal(builder =>
@@ -117,7 +117,7 @@
         });
 ```
 
-**手順 3** - ASP.NET Web API サーバー アプリケーションで、`IRVDataSourceProvider` を実装するクラスを作成します。このクラスは、データベース/REST 設定の実際の置換を実行します。このクラスの `ChangeDataSourceItemAsync` メソッドは、可視化がデータを取得するために使用する `RVDataSourceItem` を返します。`ChangeDataSourceItemAsync` メソッドで引数として提供される `RVDataSourceItem` 項目を変更することにより、データを取得するサーバーまたはテーブルを変更できます。各 `RVDataSource` を `RVSqlServerDataSource` としてキャストし、すべての `RVDataSourceItem` を `RVSqlServerDataSourceItem` としてキャストし、そのプロパティを次のように変更することにより、ダッシュボード内のすべての MS SQL Server データ ソース項目の MS SQL Server ホスト、データベース、ID、およびテーブル名を変更できます。
+**手順 3** - ASP.NET Web API サーバー アプリケーションで、`IRVDataSourceProvider` を実装するクラスを作成します。このクラスは、データベース/REST 設定の実際の置換を実行します。このクラスの `ChangeDataSourceItemAsync` メソッドは、表示形式がデータを取得するために使用する `RVDataSourceItem` を返します。`ChangeDataSourceItemAsync` メソッドで引数として提供される `RVDataSourceItem` 項目を変更することにより、データを取得するサーバーまたはテーブルを変更できます。各 `RVDataSource` を `RVSqlServerDataSource` としてキャストし、すべての `RVDataSourceItem` を `RVSqlServerDataSourceItem` としてキャストし、そのプロパティを次のように変更することにより、ダッシュボード内のすべての MS SQL Server データ ソース項目の MS SQL Server ホスト、データベース、ID、およびテーブル名を変更できます。
 
 ```csharp
     internal class LocalSamplesDataSourceProvider : IRVDataSourceProvider
@@ -209,7 +209,7 @@
 ```
 
 
-**手順 4** - `Program.cs` ファイルの `AddReveal` メソッドを更新して、`RevealSetupBuilder.AddDataSourceProvider` メソッドを使用して作成した `IRVDataSourceProvider` を `RevealSetupBuilder` に追加します。
+**手順 4** - `RevealSetupBuilder.AddDataSourceProvider` メソッドを使用して、作成した `IRVDataSourceProvider` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイルの `AddReveal` メソッドを更新します。
 
 ```cs
 .AddReveal(builder =>
