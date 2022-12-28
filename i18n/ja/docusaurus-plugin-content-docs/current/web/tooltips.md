@@ -1,10 +1,10 @@
 # ツールチップの作業
 
-ツールチップは、ダッシュボード表示形式でエンドユーザーがシリーズをホバーまたはクリックしたときに表示されるメッセージです。
+ツールチップは、ダッシュボードの表示形式でエンドユーザーがシリーズ上をホバーまたはクリックしたときに表示されるメッセージです。
 
 ![](images/tooltips.jpg)
 
-ダッシュボード表示形式にツールチップが表示されている場合、`RevealView.onTooltipShowing` イベントが呼び出されます。このイベントを処理すると、ツールチップ データの読み取りやツールチップの表示防止が可能になります。
+ダッシュボードの表示形式にツールチップが表示されるとき、`RevealView.onTooltipShowing` イベントが呼び出されます。このイベントを処理すると、ツールチップ データの読み取りやツールチップの表示防止が可能になります。
 
 ```javascript
 revealView.onTooltipShowing = (args) => {
@@ -19,13 +19,13 @@ revealView.onTooltipShowing = (args) => {
 
 :::info
 
-`RevealView.onTooltipShowing` イベントは、グリッドやゲージなどのツールチップをサポートしない表示形式ではトリガーされません。
+`RevealView.onTooltipShowing` イベントは、グリッドやゲージなどの、ツールチップをサポートしない表示形式ではトリガーされません。
 
 :::
 
 ## ツールチップ データの読み取り
 
-`TooltipShowingEventArgs.cell` および `TooltipShowingEventArgs.row` プロパティなど、イベント `TooltipShowingEventArgs` オブジェクトによって公開されるプロパティを使用することによって、ツールチップの表示に使用されるデータを読み取ることができます。
+`TooltipShowingEventArgs.cell` および `TooltipShowingEventArgs.row` プロパティなど、`TooltipShowingEventArgs` イベントオブジェクトによって公開されるプロパティを使用することによって、ツールチップの表示に使用されるデータを読み取ることができます。
 
 `TooltipShowingEventArgs.row` プロパティは、ツールチップの各データ ポイントを表す `RVDataCell` オブジェクトのコレクションを提供することを理解することが重要です。
 
@@ -42,7 +42,7 @@ revealView.onTooltipShowing = (args) => {
 ## ツールチップを表示しないようにする
 すべての表示形式または特定の表示形式でツールチップが表示されないようにするには、`TooltipShowingEventArgs.cancel` プロパティを `true` に設定します。
 
-この例では、`TooltipShowingEventArgs.visualization.title` プロパティが **Sales** であるかどうかを確認し、`TooltipShowingEventArgs.cancel` プロパティを `true` に設定してツールチップを表示しないようにします。
+この例では、`TooltipShowingEventArgs.visualization.title` プロパティが **Sales** であるかどうかを確認し、もしそうならば `TooltipShowingEventArgs.cancel` プロパティを `true` に設定してツールチップを表示しないようにします。
 
 ```javascript
 revealView.onTooltipShowing = (args) => {
