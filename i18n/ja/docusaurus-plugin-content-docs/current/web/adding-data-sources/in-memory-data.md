@@ -23,9 +23,9 @@ public class MyInMemoryDataProvider: IRVDataProvider
 }
 ```
 
-`GetData` メソッドは、`Task<IRVInMemoryData>` を返します。つまり、使用するインメモリ データはすべて `RVInMemoryData` オブジェクトでラップする必要があります。  `RVInMemoryData` オブジェクトの新しいインスタンスを作成し、インメモリ データをパラメーターとしてオブジェクト コンストラクターに渡すだけです。
+`GetData` メソッドは、`Task<IRVInMemoryData>` を返します。つまり、使用するインメモリ データはすべて `RVInMemoryData` オブジェクトでラップする必要があります。インメモリ データをコンストラクター引数に指定して `RVInMemoryData` オブジェクトの新しいインスタンスを作成するだけです。
 
-**手順 2** - `Program.cs` ファイル の `AddReveal` メソッドを更新して、`RevealSetupBuilder.AddDataProvider` メソッドを使用して作成した `IRVDataProvider` を `RevealSetupBuilder` に追加します。
+**手順 2** - `RevealSetupBuilder.AddDataProvider` メソッドを使用して、作成した `IRVDataProvider` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイル の `AddReveal` メソッドを更新します。
 
 ```cs
 builder.Services.AddControllers().AddReveal( builder =>
@@ -34,17 +34,17 @@ builder.Services.AddControllers().AddReveal( builder =>
 });
 ```
 
-**手順 3** - `RevealView.onDataSourcesRequested` イベントに `$.ig.RVInMemoryDataSourceItem` を作成します。
+**手順 3** - `RevealView.onDataSourcesRequested` イベント内で `$.ig.RVInMemoryDataSourceItem` を作成します。
 
 `RevealView.onDataSourcesRequested` にイベント ハンドラーを追加します。
 
-まず、`id` を `revealView` に設定して `<div>` タグを定義します。
+まず、`id` を `revealView` に設定した `<div>` タグを定義します。
 
 ```html
 <div id="revealView" style="height: 920px; width: 100%;"></div>
 ```
 
-次に、イベント ハンドラーで、`$.ig.RVInMemoryDataSourceItem` オブジェクトの新しいインスタンスを作成し、パラメーターとして一意の名前 / ID を指定します。この ID は、`IRVDataProvider` で、どのデータ ソースがデータを要求しているかを示すために使用されます。
+次に、イベント ハンドラーで、`$.ig.RVInMemoryDataSourceItem` オブジェクトの新しいインスタンスを作成し、パラメーターとして一意の名前 / ID を指定します。この ID は、`IRVDataProvider` で、要求しているデータはどのデータ ソースかを示すために使用されます。
 
 ```javascript
 var revealView = new $.ig.RevealView("#revealView");
@@ -67,7 +67,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ### ビジネス オブジェクトの作成
 
-ASP.NET Web API サーバー アプリケーションで、3 つのビジネス オブジェクトを作成します: `Product`、`Seller`、および `Sale`。これらのオブジェクトは、ダッシュボードに表示されるデータを保持するために使用されます。
+ASP.NET Web API サーバー アプリケーションで、`Product`、`Seller`、および `Sale` の 3 つのビジネス オブジェクトを作成します。これらのオブジェクトは、ダッシュボードに表示されるデータを保持するために使用されます。
 
 ```cs
 public class Product
@@ -229,7 +229,7 @@ public class SalesDataGenerator
 
 ダッシュボードで使用するデータを作成したので、次の手順は、そのデータを Reveal SDK で利用できるようにすることです。これを行うには、`IRVDataProvider` を実装する新しいクラスを作成する必要があります。 このインターフェイスは、Reveal SDK 内のインメモリ データの実装に特に使用されます。
 
-`MyInMemoryDataProvider` という新しいクラスを作成し、`IRVDataProvider` インターフェイスを実装しましょう。`SalesDataGenerator` を使用して 10,000 個のデータ レコードを生成する` _salesInMemoryData` という名前の変数を定義したことに注意してください。
+`MyInMemoryDataProvider` という新しいクラスを作成し、`IRVDataProvider` インターフェイスを実装しましょう。`_salesInMemoryData` という名前の変数を定義し、`SalesDataGenerator` を使用して生成した 10,000 個のデータ レコードを参照していることに注意してください。
 
 ```cs
 public class MyInMemoryDataProvider: IRVDataProvider
@@ -252,7 +252,7 @@ public class MyInMemoryDataProvider: IRVDataProvider
 
 ご覧のとおり、`GetData` メソッドでは、`DatasetId` で特定の値をチェックしています。この ID が `SalesRecords` データ ソース項目と一致する場合、ダッシュボードのデータ ソースとして `_salesInMemoryData` 変数に格納されているインメモリ ビジネス オブジェクト コレクションを使用します。
 
-データとデータ プロバイダーができたので、`Program.cs` ファイルの `AddReveal` メソッドを更新して、`RevealSetupBuilder.AddDataProvider` メソッドを使用して作成した `IRVDataProvider` を `RevealSetupBuilder` に追加する必要があります。
+データとデータ プロバイダーができたので、`RevealSetupBuilder.AddDataProvider` メソッドを使用して、作成した `IRVDataProvider` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイルの `AddReveal` メソッドを更新する必要があります。
 
 ```cs
 builder.Services.AddControllers().AddReveal( builder =>
@@ -267,7 +267,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 次の手順は、`RevealView.onDataSourcesRequested` イベントにイベント ハンドラーを追加することです。
 
-まず、`id` を `revealView` に設定して `<div>` タグを定義します。
+まず、`id` を `revealView` に設定した `<div>` タグを定義します。
 
 ```html
 <div id="revealView" style="height: 920px; width: 100%;"></div>
