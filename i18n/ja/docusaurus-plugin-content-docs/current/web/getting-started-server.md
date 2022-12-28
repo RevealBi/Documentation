@@ -40,7 +40,7 @@ builder.Services.AddControllers().AddReveal();
 
 ![](images/setting-up-server-create-dashboards-folder.jpg)
 
-デフォルトで、Reveal SDK は **Dashboards** フォルダーからすべてのダッシュボードを読み込む規則を使用します。この規則を変更でするにはカスタムの `IRVDashboardProvider` を作成します。詳細については、[ダッシュボードの読み込み](loading-dashboards.md)トピックを参照してください。
+デフォルトで、Reveal SDK は **Dashboards** フォルダーからすべてのダッシュボードを読み込む規則を使用します。この規則を変更するにはカスタムの `IRVDashboardProvider` を作成します。詳細については、[ダッシュボードの読み込み](loading-dashboards.md)トピックを参照してください。
 
 
 ## 手順 4 - CORs ポリシー (デバッグ) の設定
