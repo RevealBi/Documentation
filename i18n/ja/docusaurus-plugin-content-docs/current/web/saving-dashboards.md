@@ -1,4 +1,4 @@
-# ダッシュボードを保存
+# ダッシュボードの保存
 
 ダッシュボードの保存は、アプリケーションの `RevealView` コントロール内の保存ボタンを使用してエンドユーザーによって呼び出されます。
 
@@ -6,7 +6,7 @@
 - **保存** - 現在のダッシュボードを保存し、ディスク上の現在の **.rdash** ファイルを上書きします。
 - **名前を付けて保存** - 現在のダッシュボードを新しい **.rdash** ファイルとしてディスクに保存します。元の **.rdash** ファイルはそのままにしておきます。
 
-**保存**操作は、エンドユーザーが編集モードのときに呼び出され、`RevealView` の右上隅にある**チェック ボタン**をクリックします。
+エンドユーザーが編集モードのときに、`RevealView` の右上隅にある**チェック ボタン**をクリックすると、**保存**操作が呼び出されます。
 
 ![](images/saving-save-button.jpg)
 
@@ -15,7 +15,7 @@
 ![](images/saving-saveas-button.jpg)
 
 ## 保存の実装
-デフォルトでは、サーバーのダッシュボード フォルダーに **Dashboards** を配置するという規則に従っている場合、Reveal SDK は**保存**機能を提供します。ただし、ダッシュボードをサーバーの **Dashboards** フォルダーに保存しておらず、カスタム `IRVDashboardProvider` を作成している場合は、独自のカスタム保存ロジックも実装する必要があります。[ダッシュボードの読み込み](loading-dashboards.md#load-from-custom-file-path)トピックでは、カスタムの場所からダッシュボードを読み込む方法について説明します。
+サーバーの **Dashboards** フォルダーにダッシュボードを保存するという規約に従う場合、Reveal SDK はデフォルトの**保存**機能を提供します。ただし、ダッシュボードをサーバーの **Dashboards** フォルダーに保存せず、カスタムの `IRVDashboardProvider` を作成している場合は、独自のカスタム保存ロジックを実装する必要があります。[ダッシュボードの読み込み](loading-dashboards.md#load-from-custom-file-path)トピックでは、カスタムの保存場所からダッシュボードを読み込む方法について説明します。
 
 まず、既存の `IRVDashboardProvider` クラスを変更して、`IRVDashboardProvider.SaveDashboardAsync` メソッドを実装します。この例では、ダッシュボード ファイルを **MyDashboards** という名前のフォルダーに保存しています。
 
@@ -62,7 +62,7 @@ revealView.onSave = (rv, args) => {
 
 `DashboardSaveEventArgs` オブジェクトは、ダッシュボードの保存に役立つ次のプロパティとメソッドを提供します:
 - **name** - これは現在のダッシュボードのタイトル (`RevealView` のダッシュボードの上部に表示されるテキスト) です。**.rdash** の名前がダッシュボードのタイトルと一致することが重要です。
-- **dashboardId** - 保存されているダッシュボードの Id。既存のダッシュボードの場合、これは読み込み時に使用される ID です。新しいダッシュボードまたは名前を付けて保存の操作の場合、値は null になります。このプロパティの値は、既存のダッシュボードを「名前を付けて保存」するとき、または saveFinished を呼び出す前に新しいダッシュボードを保存するときに設定する必要があります。設定しないと、ダッシュボード名と一致すると見なされます。
+- **dashboardId** - 保存されているダッシュボードの Id。既存のダッシュボードの場合、これは読み込み時に使用される ID です。新しいダッシュボードまたは名前を付けて保存の操作の場合、値は null になります。このプロパティの値は、既存のダッシュボードを「名前を付けて保存」するとき、または新規ダッシュボードを保存するときに、 saveFinished を呼び出す前に設定する必要があります。設定しないと、ダッシュボード名と一致すると見なされます。
 - **isNew** - このイベントが新しく作成されたダッシュボードを保存することによって発生したかどうかを示すフラグ。既存のダッシュボードを保存または名前を付けて保存する場合は false になります。
 - **saveAs** - これが**名前を付けて保存**操作であるかどうかを判別します。
 - **serialize(bytes => { })** - 現在のダッシュボードをカスタム保存ロジックで使用できる `byte[]` に​​シリアル化します。**保存**操作で使用されます。
@@ -107,7 +107,7 @@ public class DashboardProvider : IRVDashboardProvider
 }
 ```
 
-`Program.cs` ファイルの `AddReveal` メソッドを更新して、`RevealSetupBuilder.AddDashboardProvider` メソッドを使用して作成した `IRVDashboardProvider` を `RevealSetupBuilder` に追加します。
+`RevealSetupBuilder.AddDashboardProvider` メソッドを使用して、作成した `IRVDashboardProvider` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイルの `AddReveal` メソッドを更新します。
 
 ```cs
 builder.Services.AddControllers().AddReveal( builder =>
@@ -142,7 +142,7 @@ revealView.onSave = (rv, args) => {
 };
 ```
 
-それでは、**名前を付けて保存**機能を実装しましょう。**名前を付けて保存**を実装する最初の手順は、一意のファイル名を処理していることを確認することです。ダッシュボード名がすでに存在するかどうかをクライアント アプリケーションに通知する REST エンドポイントを ASP.NET Core Web API サーバーに追加しましょう。`Program.cs` ファイルを開き、次のコードで変更します:
+それでは、**名前を付けて保存**機能を実装しましょう。**名前を付けて保存**を実装する最初の手順は、一意のファイル名を処理していることを確認することです。ダッシュボード名がすでに存在するかどうかをクライアント アプリケーションに通知する REST エンドポイントを ASP.NET Core Web API サーバーに追加しましょう。`Program.cs` ファイルを開き、次のコードを追加します:
 
 ```cs
 app.Map("/isduplicatename/{name}", (string name) =>
@@ -152,7 +152,7 @@ app.Map("/isduplicatename/{name}", (string name) =>
 });
 ```
 
-また、新しい API を使用するために呼び出すことができる関数をクライアント アプリケーションに追加する必要があります。
+また、新しい API を呼び出す関数をクライアント アプリケーションに追加する必要があります。
 
 ```javascript
 function isDuplicateName(name) {
@@ -217,7 +217,7 @@ revealView.onSave = (rv, args) => {
 
 
 ## 例: カスタム保存の実装
-この例では、クライアント アプリケーションに**保存**と**名前を付けて保存**の両方を実装しますが、実際の保存を実行するにはカスタム実装に依存します。
+この例では、クライアント アプリケーションに**保存**と**名前を付けて保存**の両方を実装しますが、実際の保存を実行する処理はカスタム実装にします。
 
 カスタム保存機能を実装するための最初の手順は、`revealView.serverSideSave` を `false` に設定することです。これは、クライアントが保存操作を処理することを Reveal SDK に通知します。
 
@@ -240,7 +240,7 @@ revealView.onSave = (rv, args) => {
 
 まず、**保存**機能を実装することから始めましょう。まず、ダッシュボードのサーバーへの保存を処理する REST サービス エンドポイントを ASP.NET Core Web API サーバー アプリケーションに追加する必要があります。`Program.cs` ファイルを変更し、既存のダッシュボード ファイルの更新を処理する **PUT** ルート エンドポイントをマップします。
 
-このサンプル コードでは、最初にファイルが存在することを確認し、存在しない場合はメソッドを終了します。存在する場合は、リクエストの本文からダッシュボード `byte[]` を取得する必要があります。`request.Body` からストリームを読み取り、既存のファイルを上書きして変更をディスクに書き込むために使用できる `byte []` に​​変換します。
+このサンプル コードでは、最初にファイルが存在することを確認し、存在しない場合はメソッドを終了します。存在する場合は、リクエストの本文からダッシュボードの `byte[]` 配列を取得する必要があります。`request.Body` からストリームを読み取り、`byte []` に格納し、既存のファイルを上書きして変更をディスクに書き込みます。
 
 ```cs
 app.MapPut("/dashboards/{name}", async (HttpRequest request, string name) =>
@@ -263,7 +263,7 @@ app.MapPut("/dashboards/{name}", async (HttpRequest request, string name) =>
 });
 ```
 
-次に、保存を実行する関数をクライアント アプリケーションに追加しましょう。この関数は、**保存**操作と**名前を付けて保存**の操作の両方を処理します。この関数には、ダッシュボードの `name`、ダッシュボードの内容を表す `byte[]`、およびこれが**保存**または**名前を付けて保存**の操作であるかどうかを判別する `isSaveAs` のパラメーターがあります。これが**名前を付けて保存**の操作の場合、リクエストの`メソッド`を **POST** に設定します。これは、新しいファイルが作成されることを示します。
+次に、保存を実行する関数をクライアント アプリケーションに追加しましょう。この関数は、**保存**操作と**名前を付けて保存**の操作の両方を処理します。この関数には、ダッシュボードの `name`、ダッシュボードの内容を表す `byte[]`、およびこれが**保存**または**名前を付けて保存**の操作であるかどうかを判別する `isSaveAs` のパラメーターがあります。**名前を付けて保存**の操作の場合、リクエストの`メソッド`を **POST** に設定します。これは、新しいファイルが作成されることを示します。
 
 ```javascript
 function saveDashboard(name, bytes, isSaveAs = false) {
@@ -299,7 +299,7 @@ revealView.onSave = (rv, args) => {
 };
 ```
 
-それでは、**名前を付けて保存**機能を実装しましょう。  **名前を付けて保存**を実装する最初の手順は、一意のファイル名を処理していることを確認することです。ダッシュボード名がすでに存在するかどうかをクライアント アプリケーションに通知する REST エンドポイントを ASP.NET Core Web API サーバーに追加しましょう。`Program.cs` ファイルを開き、次のコードで変更します:
+それでは、**名前を付けて保存**機能を実装しましょう。  **名前を付けて保存**を実装する最初の手順は、一意のファイル名を処理していることを確認することです。ダッシュボード名がすでに存在するかどうかをクライアント アプリケーションに通知する REST エンドポイントを ASP.NET Core Web API サーバーに追加しましょう。`Program.cs` ファイルを開き、次のコードを追加します:
 
 ```cs
 app.Map("/isduplicatename/{name}", (string name) =>
@@ -309,7 +309,7 @@ app.Map("/isduplicatename/{name}", (string name) =>
 });
 ```
 
-また、新しい API を使用するために呼び出すことができる関数をクライアント アプリケーションに追加する必要があります。
+また、新しい API を呼び出す関数をクライアント アプリケーションに追加します。
 
 ```javascript
 function isDuplicateName(name) {
@@ -337,7 +337,7 @@ if (args.saveAs) {
 
 **名前を付けて保存**の操作を完了するには、別の REST サービス エンドポイントを ASP.NET Core Web API サーバーに追加して **POST** を処理する必要があります。`Program.cs` ファイルを変更し、新しいダッシュボード ファイルの保存を処理する **POST** ルート エンドポイントをマップします。
 
-このサンプル コードでは、リクエストの本文からダッシュボード `byte[]` を取得することを想定しています。`request.Body` からストリームを読み取り、新しいダッシュボード ファイルの作成に使用できる `byte[]` に変換します。
+このサンプル コードでは、リクエストの本文からダッシュボード `byte[]` を取得することを想定しています。`request.Body` からストリームを読み取り、`byte[]` に格納し新しいダッシュボード ファイルを保存します。
 
 ```cs
 app.MapPost("/dashboards/{name}", async (HttpRequest request, string name) =>
@@ -354,7 +354,7 @@ app.MapPost("/dashboards/{name}", async (HttpRequest request, string name) =>
 });
 ```
 
-クライアント コードを更新して、**名前を付けて保存**操作を完了しましょう。保存を実行する前に、`DashboardSaveEventArgs.dashboardId` と `DashboardSaveEventArgs.name` をダッシュボードの新しい名前に設定しましょう。これにより、現在 `RevealView` に読み込まれているダッシュボードが更新され、サーバーに保存されているファイルと一致します。次に、`DashboardSaveEventArgs.serializeWithNewName` を呼び出して、現在のダッシュボードを `byte[]` にシリアル化する必要があります。このメソッドは、新しくシリアル化されたダッシュボードのタイトルと ID を更新する新しい `name` を使用して、ダッシュボードを `byte[]` にシリアル化します。`DashboardSaveEventArgs.serializeWithNewName` メソッドのコールバックで、前に作成した `saveDashboard` 関数を呼び出し、`DashboardSaveEventArgs.name`、`byte[]`、および `true` (名前を付けて保存を示す) を引数として渡します。`saveDashboard` が完了すると、`DashboardSaveEventArgs.saveFinished` メソッドを呼び出します。このメソッドは、保存が完了したことを Reveal SDK に通知し、`RevealView` を編集モードから外します。
+クライアント コードを更新して、**名前を付けて保存**操作を完了しましょう。保存を実行する前に、`DashboardSaveEventArgs.dashboardId` と `DashboardSaveEventArgs.name` をダッシュボードの新しい名前に設定しましょう。これにより、現在 `RevealView` に読み込まれているダッシュボードが更新され、サーバーに保存されているファイルと一致します。次に、`DashboardSaveEventArgs.serializeWithNewName` を呼び出して、現在のダッシュボードを `byte[]` にシリアル化する必要があります。このメソッドは、新しい `name` を使用してダッシュボードを `byte[]` にシリアライズし、新しくシリアライズされたダッシュボードのタイトルと ID を更新します。`DashboardSaveEventArgs.serializeWithNewName` メソッドのコールバックで、前に作成した `saveDashboard` 関数を呼び出し、`DashboardSaveEventArgs.name`、`byte[]`、および `true` (名前を付けて保存を示す) を引数として渡します。`saveDashboard` が完了すると、`DashboardSaveEventArgs.saveFinished` メソッドを呼び出します。このメソッドは、保存が完了したことを Reveal SDK に通知し、`RevealView` を編集モードから外します。
 
 ```javascript
 args.dashboardId = args.name = newName;
@@ -399,6 +399,6 @@ revealView.onSave = (rv, args) => {
 
 :::info Get the Code
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/SavingDashboards-Client)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/SavingDashboards-Client) にあります。
 
 :::
