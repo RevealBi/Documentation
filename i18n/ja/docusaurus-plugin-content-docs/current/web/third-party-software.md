@@ -1,8 +1,8 @@
-# Reveal SDK で使用されるサードパーティ ソフトウェア
+# Reveal SDK で使用しているサードパーティ ソフトウェア
 
 |              |                                                                                                               |                                                                                                            |
 | ------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **プラットフォーム** | **使用されたコード**                                                                                                 | **ライセンス**                                                                                                |
+| **プラットフォーム** | **使用しているコード**                                                                                                 | **ライセンス**                                                                                                |
 | Web          | [Emoji One Area](https://github.com/mervick/emojionearea)                                                     | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | Web          | [textcomplete](https://github.com/yuku/jquery-textcomplete)                                                   | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | Web          | [Google Analytics](https://marketingplatform.google.com/about/analytics/terms/us/)                            | カスタム                                                                                                     |
