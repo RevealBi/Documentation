@@ -2,7 +2,7 @@
 
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
-まず、`id` を `revealView` に設定して `<div>` タグを定義します。
+まず、`id` を `revealView` に設定した `<div>` タグを定義します。
 
 ```html
 <div id="revealView" style="height: 920px; width: 100%;"></div>
@@ -32,7 +32,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-アプリケーションが実行されたら、新しい表示形式を作成すると、[データ ソースの選択] ダイアログに新しく作成された  MS SQL Server データ ソースが表示されます。
+アプリケーションを開始し、新しい表示形式を作成すると、[データ ソースの選択] ダイアログに新しく作成された  MS SQL Server データ ソースが表示されます。
 
 ![](images/ms-sql-server-data-source.jpg)
 
@@ -55,7 +55,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-アプリケーションが実行されたら、新しい可否化を作成すると、[データ ソースの選択] ダイアログに新しく作成された MS SQL Server データ ソース項目が表示されます。
+アプリケーションを開始し、新しい表示形式を作成すると、[データ ソースの選択] ダイアログに新しく作成された MS SQL Server データ ソース項目が表示されます。
 
 ![](images/ms-sql-server-data-source-item.jpg)
 
