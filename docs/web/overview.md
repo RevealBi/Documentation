@@ -32,8 +32,9 @@ The Reveal SDK supports over 30 data sources, including analytics tools, content
 The Reveal SDK has two concepts regarding data sources.
 
 - A data source - this is the primary source of the data. For example, SQL Server could be a data source
-  A data source item - this is the specific item that is available from a data source. For example; a specific Table from SQL Server.
-- You can review the list of supported data sources in this [help topic](https://help.revealbi.io/en/web/datasources.html).
+- A data source item - this is the specific item that is available from a data source. For example; a specific Table from SQL Server.
+
+You can review the list of supported data sources in this [help topic](https://help.revealbi.io/en/web/datasources.html).
 
 
 ## Credentials & Security
