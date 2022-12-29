@@ -16,7 +16,7 @@ Reveal SDK をインストールするには、Reveal SDK インストーラー�
 2. Web ページの [Reveal SDK を試す] フォームに記入します。
 3. Reveal SDK インストーラーをディスクの既知の場所に保存します。
 
-保存した Reveal SDK インストーラー zip ファイルを抽出する前にブロックを解除する必要があります。zip ファイルを右クリックして [**プロパティ**] を選択します。ファイルのブロックを解除するチェック ボックスがあるプロパティ ダイアログが表示されます。[**ブロックの解除**] オプションをチェックして [**OK**] をクリックします。
+保存した Reveal SDK インストーラー zip ファイルを解凍する前にブロックを解除する必要があります。zip ファイルを右クリックして [**プロパティ**] を選択します。ファイルのブロックを解除するチェック ボックスがあるプロパティ ダイアログが表示されます。[**ブロックの解除**] オプションをチェックして [**OK**] をクリックします。
 
 ![](images/install-unblock-zip.jpg)
 
@@ -40,7 +40,7 @@ Reveal SDK をインストールするには、Reveal SDK インストーラー�
 - Reveal SDK NuGet パッケージ
 - Reveal SDK サンプル
 
-Reveal SDK NuGet パッケージをポイントする Visual Studio に自動的に追加されるローカル NuGet パッケージ ソースもあります。
+Reveal SDK NuGet パッケージをポイントする Visual Studio に、自動的に追加されるローカル NuGet パッケージ ソースもあります。
 
 ![](images/nuget-package-source-local-vs.jpg)
 
