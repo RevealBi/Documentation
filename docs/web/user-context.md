@@ -70,7 +70,7 @@ The user context within the Reveal SDK is represented by the `IRVUserContext` in
   ```cs
   builder.Services.AddControllers().AddReveal( builder =>
   {
-      builder..AddUserContextProvider<UserContextProvider>();
+      builder.AddUserContextProvider<UserContextProvider>();
   });
   ```
 
