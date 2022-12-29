@@ -1,13 +1,13 @@
 # ダッシュボードの作成
 
-新しいダッシュボードの作成は本当に簡単です。`RevealView.Dashboard` プロパティを `RVDashboard` オブジェクトの新しいインスタンスに設定する必要があります。
+新しいダッシュボードの作成は本当に簡単です。`RVDashboard` オブジェクトの新しいインスタンスを `RevealView.Dashboard` プロパティに設定するだけです。
 
-XAML で `RevealView` コントロールを定義することから始め、ファイルの背後にあるコードでコントロールにアクセスできるように `x:Name` を指定します:
+まずはじめに、XAML で `RevealView` コントロールを定義し、コードビハインドファイルでコントロールにアクセスできるように `x:Name` を指定します:
 ```xml
 <rv:RevealView x:Name="_revealView"/>
 ```
 
-次に、xaml ファイルの背後にあるコードで、`RevealView.Dashboard` プロパティを `RVDashboard` オブジェクトの新しいインスタンスに設定します:
+次に、xaml ファイルのコードビハインドで、`RVDashboard` オブジェクトの新しいインスタンスを `RevealView.Dashboard` プロパティに設定します:
 ```cs
 _revealView.Dashboard = new RVDashboard();
 ```
