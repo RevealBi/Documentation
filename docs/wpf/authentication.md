@@ -80,7 +80,7 @@ The `RVUsernamePasswordDataSourceCredential` is supported for the following data
 
 ## Bearer Token Authentication
 
-If your data source requires the use of a username and password, then you must return an instance of the `RVBearerTokenDataSourceCredential` class. The `RVBearerTokenDataSourceCredential` class provides constructor overloads to define the **token**, and the **user id**.
+If your data source requires the use of a bearer token, then you must return an instance of the `RVBearerTokenDataSourceCredential` class. The `RVBearerTokenDataSourceCredential` class provides constructor overloads to define the **token**, and the **user id**.
 
 ```cs
 public Task<IRVDataSourceCredential> ResolveCredentialsAsync(RVDashboardDataSource dataSource)
