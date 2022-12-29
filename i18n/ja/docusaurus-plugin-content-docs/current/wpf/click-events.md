@@ -17,7 +17,7 @@ private void RevealView_VisualizationDataPointClicked(object sender, Visualizati
 `VisualizationClickedEventArgs` クラスには、次のプロパティがあります:
 - **Cell** - クリックされたデータ ポイントを取得します。
 - **Row** - **Cell** に関連付けられているセル データのコレクションを取得します。
-- **Visualization** - クリックされた視覚化を取得します。
+- **Visualization** - クリックされた表示形式を取得します。
 
 `VisualizationClickedEventArgs.Cell` プロパティや `VisualizationClickedEventArgs.Row` プロパティなど、`VisualizationClickedEventArgs` クラスによって公開されるプロパティを使用することで、クリックされたデータ ポイントに関連付けられているデータを読み取ることができます。
 
