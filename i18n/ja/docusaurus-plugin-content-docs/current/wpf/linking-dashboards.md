@@ -50,7 +50,7 @@ private void RevealView_VisualizationLinkingDashboard(object sender, Visualizati
 }
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LinkingDashboards) にあります。
 

@@ -31,7 +31,7 @@ using (var fileStream = File.OpenRead(path))
 
 また、最初の表示形式をロックして、常に表示形式を 1 つのみ表示するようにすることもできます。これにより、ダッシュボードは単一の視覚化ダッシュボードのように機能します。これが「単一表示形式モード」の概念です。
 
-「SingleVisualizationMode」をオンにするには、以下に示すように、__SingleVisualizationMode__ プロパティを true に設定します。
+「単一表示形式モード」をオンにするには、以下に示すように、__SingleVisualizationMode__ プロパティを true に設定します。
 
 ``` csharp
 revealView.SingleVisualizationMode = true;

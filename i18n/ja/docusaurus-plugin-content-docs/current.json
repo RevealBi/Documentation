@@ -128,7 +128,7 @@
     "description": "The label for the doc item User Context in sidebar webSidebar, linking to the doc web/user-context"
   },
   "sidebar.webSidebar.doc.Obfuscate Connection Data": {
-    "message": "Obfuscate Connection Data",
+    "message": "接続データの難読化",
     "description": "The label for the doc item Obfuscate Connection Data in sidebar webSidebar, linking to the doc web/obfuscate-connection-data"
   },
   "sidebar.webSidebar.doc.Maximizing Visualizations": {

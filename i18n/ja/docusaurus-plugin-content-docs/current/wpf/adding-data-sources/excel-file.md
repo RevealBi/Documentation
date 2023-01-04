@@ -88,7 +88,7 @@ private void RevealView_DataSourcesRequested(object sender, Reveal.Sdk.DataSourc
 
 ![](images/excel-file-data-source.jpg)
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/AddingDataSources/ExcelFile) にあります。
 
