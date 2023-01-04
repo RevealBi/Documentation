@@ -187,7 +187,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 - Amazon Redshift
 - Microsoft Analysis Services サーバー
 - Microsoft Dynamics CRM (オンプレミスおよびオンライン)
-- Microsoft SQL サーバー
+- Microsoft SQL Server
 - MySQL
 - OData サービス
 - Oracle

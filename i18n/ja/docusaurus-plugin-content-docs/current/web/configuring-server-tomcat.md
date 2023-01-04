@@ -48,7 +48,7 @@ Jakarta RESTful Web Services（JAX-RS）実装への依存関係を追加しま�
 </dependency>
 ```
 
-3 - ServletContextListener クラスを作成し `RevealEngineInitializer.initialize` メソッドを呼び出して Reveal SDKを初期化します。
+3 - ServletContextListener クラスを作成し `RevealEngineInitializer.initialize` メソッドを呼び出して Reveal SDK を初期化します。
 
 ```java
 import javax.servlet.ServletContextEvent;
