@@ -16,7 +16,7 @@
 ![](images/filtering-date-filter.jpg)
 
 ### 日付間隔の使用
-事前定義された日付間隔のセットを使用してダッシュボードの**日付フィルター**を設定するには、`Dashboard.DateFilter` プロパティを `RVDateDashboardFilter` オブジェクトの新しいインスタンスに設定し、適切なRV `DateFilterType` 値をパラメーターとして使用する必要があります。
+事前定義された日付間隔のセットを使用してダッシュボードの**日付フィルター**を設定するには、`Dashboard.DateFilter` プロパティを `RVDateDashboardFilter` オブジェクトの新しいインスタンスに設定し、適切な `RVDateFilterType` 値をパラメーターとして使用する必要があります。
 
 例えば, このコード スニペットは、ダッシュボードの日付フィルターを **YearToDate** に設定します。
 ```cs
@@ -62,7 +62,7 @@ _revealView.Dashboard.DateFilter = new RVDateDashboardFilter(RVDateFilterType.Cu
 
 ![](images/filtering-date-filter-daterange.jpg)
 
-:::info Get the Code
+:::info コードを取得する
 
 日付フィルターを示すサンプルは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/FilteringDashboards-Dates) にあります。
 
@@ -158,7 +158,7 @@ var territoryFilter = _revealView.Dashboard.Filters.GetByTitle("Territory");
 territoryFilter.SelectedValues = new List<object>();
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/FilteringDashboards) でダッシュボード フィルターのデモ サンプルを見つけることができます。
 

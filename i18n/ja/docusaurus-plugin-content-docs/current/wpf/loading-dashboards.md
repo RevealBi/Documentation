@@ -29,7 +29,7 @@
 ![](images/load-dashboard-as-file.jpg)
 
 
-最初の手順は、四方込みしたい .rdash ファイルのファイルの場所を取得することです。ダッシュボードへのファイル パスを取得したら、`RVDashboard` の新しいインスタンスを作成し、ファイル パスを `RVDashboard` クラスのコンストラクターに渡します。 
+最初の手順は、読み込みたい .rdash ファイルのファイルの場所を取得することです。ダッシュボードへのファイル パスを取得したら、`RVDashboard` の新しいインスタンスを作成し、ファイル パスを `RVDashboard` クラスのコンストラクターに渡します。 
 
 この例では、`Environment.CurrentDirectory` を使用して、アプリケーションの現在の実行ディレクトリを取得しています。次に、`Path.Combine` メソッドを使用して、**Dashboards** ディレクトリにある **Sales.rdash** ダッシュボードの場所を追加します。**Sales.rdash** ダッシュボードへの正しいファイル パスを取得したら、コンストラクター引数としてファイル パスを使用して、`RevealView.Dashboard` プロパティを `RVDashboard` オブジェクトの新しいインスタンスに設定します。
 ```cs
@@ -43,7 +43,7 @@ var filePath = Path.Combine(Environment.CurrentDirectory, "Dashboards/Sales.rdas
 _revealView.Dashboard = await RVDashboard.LoadDashboardAsync(filePath);
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FilePath) にあります。
 
@@ -71,7 +71,7 @@ using (var stream = File.OpenRead(filePath))
 }
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FileStream) にあります。
 
@@ -109,7 +109,7 @@ using (resource)
 }
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FromResource) にあります。
 
@@ -145,7 +145,7 @@ JSON にシリアル化された後に Reveal ダッシュボードのコンテ�
 
 :::
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FromJson) にあります。
 

@@ -131,7 +131,7 @@ RevealSdkSettings.Theme = new MyUglyTheme();
 _revealView.RefreshTheme();
 ```
 
-:::info Get the Code
+:::info コードを取得する
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/ThemingDashboards) にあります。
 
