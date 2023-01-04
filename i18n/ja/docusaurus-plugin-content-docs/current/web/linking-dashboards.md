@@ -1,20 +1,20 @@
 # ダッシュボード リンク
 
-Reveal SDK はダッシュボードのリンクをサポートしているため、ユーザーはダッシュボードをナビゲートできます。ダッシュボードからダッシュボードに移動することで、業務上のハイレベルな概要からより詳細なビューに進むことができます。
+Reveal SDK は、ダッシュボード間を行き来することのできるダッシュボード リンクをサポートしています。ダッシュボードからダッシュボードに移動することで、業務上のハイレベルな概要からより詳細なビューに進むことができます。
 
-Reveal SDK の観点からは、ダッシュボードのリンクは、エンドユーザーがビジュアル化されたリンクをクリックして別のダッシュボードをロードするときに呼び出されます。
+Reveal SDK の観点からは、ダッシュボード リンクは、別のダッシュボードをロードする表示形式内のリンクをエンドユーザーがクリックしたときに呼び出されます。
 
 ![](images/linking-open-campaigns.jpg)
 
 :::info
 
-現在、ダッシュボードのリンクは Reveal SDK で作成できません。[Slingshot](https://my.slingshotapp.io/) などのネイティブ Reveal アプリケーションを使用する必要があります。
+現在、ダッシュボード リンクは Reveal SDK で作成できません。[Slingshot](https://my.slingshotapp.io/) などのネイティブ Reveal アプリケーションを使用する必要があります。
 
 :::
 
 ## ダッシュボード リンクへの応答
 
-ダッシュボード内で**ダッシュボード リンク**がクリックされたときに応答するには、ダッシュボードを読み込む `RVDashboard.loadDashboardAsync Promise` を返すメソッドに `RevealView.onLinkedDashboardProvider` プロパティを設定する必要があります。
+ダッシュボード内の **ダッシュボード リンク** がクリックされたときに応答するには、プロパティ `RevealView.onLinkedDashboardProvider ` に、ダッシュボードをロードする Promise を返す `RVDashboard.loadDashboardAsync` メソッドを設定する必要があります。
 
 ダッシュボード ID を使用する方法:
 ```javascript
@@ -23,7 +23,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 };
 ```
 
-ダッシュボードが [Reveal アプリ](https://app.revealbi.io/)で作成された場合、ダッシュボードの ID は自動生成されます。ダッシュボードの ID はシナリオに応じて使用しない場合があります。このため、代わりにダッシュボードのタイトルを使用できます。
+ダッシュボードが [Reveal アプリ](https://app.revealbi.io/)で作成された場合、ダッシュボードの ID は自動生成されます。しかしダッシュボードの ID はシナリオによっては使用しない場合があります。その場合、代わりにダッシュボードのタイトルを使用できます。
 
 ダッシュボード タイトルを使用する方法:
 ```javascript

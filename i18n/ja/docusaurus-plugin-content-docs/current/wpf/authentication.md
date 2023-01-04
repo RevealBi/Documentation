@@ -1,6 +1,6 @@
 # 認証
 
-Reveal SDK では、ユーザー名またはパスワードとベアラー トークンの両方の認証資格情報をデータ ソースに提供できます。
+Reveal SDK では、ユーザー名とパスワード、あるいはベアラー トークンのいずれも、認証資格情報としてデータ ソースに提供できます。
 
 **手順 1** - 認証情報をデータ ソースに提供するには、最初に `IRVAuthenticationProvider` インターフェイスを実装するクラスを作成し、`ResolveCredentialsAsync` メソッドを実装する必要があります。
 
@@ -14,7 +14,7 @@ public class AuthenticationProvider : IRVAuthenticationProvider
 }
 ```
 
-**手順 2** - ResolveCredentialsAsync メソッドは、`RVDashboardDataSource` をパラメーターとして提供します。これにより、資格情報を要求しているデータ ソースを特定できます。この例では、`RVSqlServerDataSource` オブジェクトを使用して、`RVDashboardDataSource` が SQL Server データ ソースかどうかを確認しています。
+**手順 2** - `ResolveCredentialsAsync` メソッドは、`RVDashboardDataSource` を引数として受け取ります。この引数により、資格情報を要求しているデータ ソースを特定できます。この例では、`RVSqlServerDataSource` オブジェクトを使用して、`RVDashboardDataSource` が SQL Server データ ソースかどうかを確認しています。
 
 ```cs
 public class AuthenticationProvider : IRVAuthenticationProvider
@@ -31,7 +31,7 @@ public class AuthenticationProvider : IRVAuthenticationProvider
 }
 ```
 
-**手順 3** - 最後に、`RevealSdkSettings.AuthenticationProvider` プロパティを認証プロバイダーのインスタンスに設定する必要があります。
+**手順 3** - 最後に、`RevealSdkSettings.AuthenticationProvider` プロパティに認証プロバイダーのインスタンスを設定する必要があります。
 
 ```cs
 RevealSdkSettings.AuthenticationProvider = new AuthenticationProvider();
@@ -69,7 +69,7 @@ if (dataSource is RVRESTDataSource)
 `RVUsernamePasswordDataSourceCredential` は、以下のデータ ソースでサポートされます。
 - Microsoft Analysis Services サーバー
 - Microsoft Dynamics CRM (オンプレミスおよびオンライン)
-- Microsoft SQL サーバー
+- Microsoft SQL Server
 - MySQL
 - OData サービス
 - Oracle
@@ -80,7 +80,7 @@ if (dataSource is RVRESTDataSource)
 
 ## ベアラー トークン認証
 
-データ ソースがユーザー名とパスワードの使用を要求する場合、`RVBearerTokenDataSourceCredential` クラスのインスタンスを返す必要があります。`RVBearerTokenDataSourceCredential` クラスは、**トークン**と**ユーザー ID** を定義するコンストラクターのオーバーロードを提供します。
+データ ソースがベアラー トークンの使用を要求する場合、`RVBearerTokenDataSourceCredential` クラスのインスタンスを返す必要があります。`RVBearerTokenDataSourceCredential` クラスは、**トークン**と**ユーザー ID** を定義するコンストラクターのオーバーロードを提供します。
 
 ```cs
 public Task<IRVDataSourceCredential> ResolveCredentialsAsync(RVDashboardDataSource dataSource)

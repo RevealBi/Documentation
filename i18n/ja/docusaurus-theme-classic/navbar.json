@@ -24,7 +24,7 @@
     "description": "Navbar item with label ASP.NET"
   },
   "item.label.JAVA": {
-    "message": "JAVA",
+    "message": "Java",
     "description": "Navbar item with label JAVA"
   },
   "item.label.JavaScript": {
@@ -32,7 +32,7 @@
     "description": "Navbar item with label JavaScript"
   },
   "item.label.Learn": {
-    "message": "学ぶ",
+    "message": "学習する",
     "description": "Navbar item with label Learn"
   },
   "item.label.DOM": {

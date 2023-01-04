@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Excel ファイル データ ソースの追加
 
-**手順 1** - サーバー アプリケーションで、Excel ファイルを含むフォルダーを作成します。
+**手順 1** - サーバー アプリケーションで、Excel ファイルを格納するフォルダーを作成します。
 
 <Tabs groupId="code">
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -66,7 +66,7 @@ app.use('/', reveal(revealOptions));
 
 **手順 3** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
-まず、`id` を `revealView` に設定して `<div>` タグを定義します。
+まず、`id` を `revealView` に設定した `<div>` タグを定義します。
 
 ```html
 <div id="revealView" style="height: 920px; width: 100%;"></div>
@@ -103,9 +103,9 @@ Excel ファイルパスの前に `local:/` を付ける必要があります。
 
 :::
 
-**手順 5** - `RVExcelDataSourceItem` オブジェクトの新しいインスタンスを作成し、前の手順で作成した `RVLocalFileDataSourceItem` インスタンスをオブジェクト コンストラクターの引数として渡します。`Title` プロパティを、Excel ファイル内のデータを説明する文字列に設定します。
+**手順 5** - 前の手順で作成した `RVLocalFileDataSourceItem` インスタンスをコンストラクター引数に指定して、`RVExcelDataSourceItem` オブジェクトの新しいインスタンスを作成し、`Title` プロパティを Excel ファイル内のデータを説明する文字列に設定します。
 
-最後に、`RVExcelDataSourceItem` オブジェクトを`コールバック`のデータ ソース項目配列に追加します。
+最後に、`RVExcelDataSourceItem` オブジェクトを `callback` のデータ ソース項目配列に追加します。
 
 ```javascript
 revealView.onDataSourcesRequested = (callback) => {
@@ -119,7 +119,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-アプリケーションが実行されたら、新しい表示形式を作成すると、[データ ソースの選択] ダイアログに新しく作成された Excel ファイル データ ソースが表示されます。
+アプリケーションを開始し、新しい表示形式を作成すると、[データ ソースの選択] ダイアログに新しく作成された Excel ファイル データ ソースが表示されます。
 
 ![](images/excel-file-data-source.jpg)
 

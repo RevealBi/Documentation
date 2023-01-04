@@ -70,7 +70,7 @@ Reveal SDK 内のユーザー コンテキストは、`IRVUserContext` インタ
   ```cs
   builder.Services.AddControllers().AddReveal( builder =>
   {
-      builder..AddUserContextProvider<UserContextProvider>();
+      builder.AddUserContextProvider<UserContextProvider>();
   });
   ```
 

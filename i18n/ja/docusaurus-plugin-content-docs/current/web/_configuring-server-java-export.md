@@ -1,10 +1,10 @@
  (プログラム上またはユーザー インタラクションによって) ダッシュボードを**画像**にエクスポートするには、Reveal SDK は [Playwright](https://playwright.dev/java/) を使用します。ダッシュボードを **Excel**、**PDF**、または **PowerPoint** にエクスポートするには、Reveal SDK は **ExportTool** と呼ばれる内部アプリケーションを使用します。
 
-デフォルトでは、エンドユーザーがダッシュボードを画像、PDF、PowerPoint に初めてエクスポートしようとすると、Playwright と ExportTool の両方が必要なダウンロードを自動的に開始します。ただし、プラットフォームによっては、事前にインストールが必要な依存関係があったり、サーバー環境が外部ダウンロードを制限している場合があり、これらのツールを手動で設定する必要がある場合があります。
+デフォルトでは、エンドユーザーがダッシュボードを画像、PDF、PowerPoint に初めてエクスポートしようとすると、Playwright と ExportTool の両方が、それらの動作に必要な依存関係のダウンロードを自動的に開始します。ただし、プラットフォームによっては、事前にインストールが必要な依存関係があったり、サーバー環境が外部ダウンロードを制限しているなど、これらのツールを手動でセットアップする必要がある場合があります。
 
 ### Playwright の構成
 
-Playwright は必要なバイナリをダウンロードしようとしますが、手動での構成が必要な場合は、Playwright [documentation](https://playwright.dev/java/docs/intro) を確認してください。
+Playwright は必要なバイナリをダウンロードしようとしますが、手動での構成が必要な場合は、Playwright の[ドキュメンテーション](https://playwright.dev/java/docs/intro) を確認してください。
 
 #### macOS 依存性
 
@@ -67,11 +67,11 @@ sudo apt-get install -y --allow-unauthenticated libx11-dev
 
 ステップ 2 - Web アプリケーションが動作しているサーバーのディレクトリにファイルを解凍します (ユーザーはそのディレクトリにアクセスできる必要があります)。
 
-ステップ 3 - ZIP ファイルを解凍した後、次の場所で ExportTool を入手できます: `<dir>/<version>/<arch>/ExportTool`。例:
+ステップ 3 - ZIP ファイルを解凍した後、`<dir>/<version>/<arch>/ExportTool` フォルダから ExportTool を入手できます。例を以下に示します。
 
 `<dir>/1.0.0/linux-x64/ExportTool.`
 
-ステップ 4 - Revealの初期化中に、ZIPファイルを解凍したディレクトリを設定します。以下のようなコードになるはずです:
+ステップ 4 - Reveal の初期化中に、ZIP ファイルを解凍したディレクトリを設定します。以下のようなコードになるはずです:
 
 ```java
 String exportToolDir = "<dir>";

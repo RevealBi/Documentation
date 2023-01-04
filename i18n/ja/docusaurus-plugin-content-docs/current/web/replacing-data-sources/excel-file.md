@@ -1,6 +1,6 @@
-# ファイル データ ソースの置き換え
+# Excel ファイル データ ソースの置き換え
 
-ダッシュボードは、クラウドに保存されている Excel ファイルを視覚化のデータ ソースとして使用して作成される場合があります。
+ダッシュボードは、クラウドに保存されている Excel ファイルを表示形式のデータ ソースとして作成される場合があります。
 
 アプリケーションに Reveal SDK を埋め込む場合、これらのクラウドベースのファイルを、実行時にサーバー上にあるローカル ディレクトリに保存されているファイルに置き換えることができます。
 
@@ -18,7 +18,7 @@ public class MyDataSourceProvider : IRVDataSourceProvider
 
 このクラスの `ChangeDataSourceItemAsync` メソッドは、表示形式がデータを取得するために使用する `RVDataSourceItem` を返します。`ChangeDataSourceItemAsync` メソッドで引数として提供される `RVDataSourceItem` 項目を変更することにより、データを取得する Excel ファイルを変更できます。
 
-**手順 2** - `Program.cs` ファイルの `AddReveal` メソッドを更新して、`RevealSetupBuilder.AddDataSourceProvider` メソッドを使用して作成した `IRVDataSourceProvider` を `RevealSetupBuilder` に追加します。
+**手順 2** - `RevealSetupBuilder.AddDataSourceProvider` メソッドを使用して、作成した `IRVDataSourceProvider` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイルの `AddReveal` メソッドを更新します。
 
 ```cs
 builder.Services.AddControllers().AddReveal( builder =>
@@ -31,7 +31,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 この例では、「Sales CloudExcelFile」という名前のクラウドベースの Excel ファイルを使用しているデータ ソース項目を「SalesLocalExcelFile.xlsx」という名前のローカル Excel ファイルに置き換えています。
 
-まず、受信 `RVDataSourceItem` をチェックして、それが `RVExcelDataSourceItem` であるかどうかを確認します。そうである場合は、既存の `RVDataSourceItem.ResourceItem` を取得し、その `Title` プロパティを確認します。タイトルが「SalesCloudExcel File」の場合、新しい `RVLocalFileDataSourceItem` を作成し、`Uri` を新しいローカル Excel ファイルの場所に設定します。ローカル Excel ファイル データ ソース項目のタイトルを設定した後、`RVExcelDataSourceItem.ResourceItem` を新しく作成した `RVLocalFileDataSourceItem` に置き換えます。
+まず、引数に渡された `RVDataSourceItem` をチェックして、それが `RVExcelDataSourceItem` であるかどうかを確認します。そうである場合は、既存の `RVDataSourceItem.ResourceItem` を取得し、その `Title` プロパティを確認します。タイトルが「SalesCloudExcel File」の場合、新しい `RVLocalFileDataSourceItem` を作成し、`Uri` を新しいローカル Excel ファイルの場所に設定します。ローカル Excel ファイル データ ソース項目のタイトルを設定した後、`RVExcelDataSourceItem.ResourceItem` を新しく作成した `RVLocalFileDataSourceItem` に置き換えます。
 
 ```cs
 public class MyDataSourceProvider : IRVDataSourceProvider
