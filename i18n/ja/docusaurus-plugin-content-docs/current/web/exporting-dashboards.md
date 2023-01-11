@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # エクスポート
 
 Reveal SDK を使用すると、ダッシュボードと表示形式の両方をエクスポートして、新しいドキュメント タイプまたは画像を生成できます。
@@ -235,9 +238,12 @@ var stream = await dashboardExporter.ExportToPdf(dashboardName, options: pdfOpti
 ### 例: サーバーでのエクスポート
 この例では、形式に基づいてダッシュボードをエクスポートするサービス エンドポイントを作成します。
 
-ASP.NET の最小限の API プロジェクトで、ダッシュボード エクスポート用の新しいルートを作成します。ダッシュボード名とエクスポート形式をルート パラメーターとして定義します。また、エクスポートを実行するために `IDashboardExporter` を挿入する必要があります。次に、エクスポート形式のルート パラメーターに基づいて、正しいエクスポートを実行するためのロジックを作成します。エクスポートの結果を返すときは、必ず正しいコンテンツ タイプを指定してください。
+サーバー プロジェクト内、ダッシュボード エクスポート用の新しいルートを作成します。ダッシュボード名とエクスポート形式をルート パラメーターとして定義します。また、エクスポートを実行するために `IDashboardExporter` を挿入する必要があります。次に、エクスポート形式のルート パラメーターに基づいて、正しいエクスポートを実行するためのロジックを作成します。エクスポートの結果を返すときは、必ず正しいコンテンツ タイプを指定してください。
 
-```csharp
+<Tabs groupId="code">
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
 app.MapGet("/dashboards/export/{name}", async (string name, string format, IDashboardExporter dashboardExporter) =>
 {
     Stream stream;
@@ -260,6 +266,70 @@ app.MapGet("/dashboards/export/{name}", async (string name, string format, IDash
     return Results.File(stream, contentType);
 });
 ```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+@Component
+@Path("dashboards/export/")
+public class RevealExportController {
+
+    @GET
+    @Path("{name}")
+    public void getDashboardExport(@Suspended final AsyncResponse response, @PathParam("name") String name, @QueryParam("format") String format) throws IOException {
+        IDashboardExporter exporter = RevealEngineLocator.dashboardExporter;
+
+        if (format.equalsIgnoreCase("xlsx")) {
+            exporter.exportToExcel(name, new ExportStreamCallback() {
+                @Override
+                public void onFailure(Exception e) {
+                    response.resume(e);
+                }
+    
+                @Override
+                public void onSuccess(InputStream stream) {
+                    ResponseBuilder resp = Response.ok(stream).type("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+                    response.resume(resp.build());
+                } 
+            });
+        }
+        else if (format.equalsIgnoreCase("pptx")) {
+            exporter.exportToPowerPoint(name, new ExportStreamCallback() {
+                @Override
+                public void onFailure(Exception e) {
+                    response.resume(e);
+                }
+    
+                @Override
+                public void onSuccess(InputStream stream) {
+                    ResponseBuilder resp = Response.ok(stream).type("application/vnd.openxmlformats-officedocument.presentationml.presentation");
+                    response.resume(resp.build());
+                } 
+            });            
+        }
+        else {
+            exporter.exportToPdf(name, new ExportStreamCallback() {
+                @Override
+                public void onFailure(Exception e) {
+                    response.resume(e);
+                }
+    
+                @Override
+                public void onSuccess(InputStream stream) {
+                    ResponseBuilder resp = Response.ok(stream).type("application/pdf");
+                    response.resume(resp.build());
+                } 
+            });
+        }
+    }
+}
+```
+
+  </TabItem>
+
+</Tabs>
 
 クライアント アプリケーションで、サービス エンドポイントを呼び出す関数を実行する一連のボタンを作成します。
 ```html

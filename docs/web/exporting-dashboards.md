@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Exporting
 
 The Reveal SDK allows you to export both dashboards and visualizations to generate new document types or images.
@@ -235,7 +238,10 @@ var stream = await dashboardExporter.ExportToPdf(dashboardName, options: pdfOpti
 ### Example: Exporting on the Server
 In this example, we will create a service endpoint that will export a dashboard based on the format.
 
-In an ASP.NET minimal API project, create a new route for the dashboard export. Define the dashboard name and the export format as the route parameters. You'll also need to inject the `IDashboardExporter` to perform the export. Next, create the logic to perform the correct export based on the export format route parameter. Be sure to provide the correct content type when returning the results of the export.
+In server project, create a new route for the dashboard export. Define the dashboard name and the export format as the route parameters. You'll also need to inject the `IDashboardExporter` to perform the export. Next, create the logic to perform the correct export based on the export format route parameter. Be sure to provide the correct content type when returning the results of the export.
+
+<Tabs groupId="code">
+  <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
 app.MapGet("/dashboards/export/{name}", async (string name, string format, IDashboardExporter dashboardExporter) =>
@@ -260,6 +266,70 @@ app.MapGet("/dashboards/export/{name}", async (string name, string format, IDash
     return Results.File(stream, contentType);
 });
 ```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+@Component
+@Path("dashboards/export/")
+public class RevealExportController {
+
+    @GET
+    @Path("{name}")
+    public void getDashboardExport(@Suspended final AsyncResponse response, @PathParam("name") String name, @QueryParam("format") String format) throws IOException {
+        IDashboardExporter exporter = RevealEngineLocator.dashboardExporter;
+
+        if (format.equalsIgnoreCase("xlsx")) {
+            exporter.exportToExcel(name, new ExportStreamCallback() {
+                @Override
+                public void onFailure(Exception e) {
+                    response.resume(e);
+                }
+    
+                @Override
+                public void onSuccess(InputStream stream) {
+                    ResponseBuilder resp = Response.ok(stream).type("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+                    response.resume(resp.build());
+                } 
+            });
+        }
+        else if (format.equalsIgnoreCase("pptx")) {
+            exporter.exportToPowerPoint(name, new ExportStreamCallback() {
+                @Override
+                public void onFailure(Exception e) {
+                    response.resume(e);
+                }
+    
+                @Override
+                public void onSuccess(InputStream stream) {
+                    ResponseBuilder resp = Response.ok(stream).type("application/vnd.openxmlformats-officedocument.presentationml.presentation");
+                    response.resume(resp.build());
+                } 
+            });            
+        }
+        else {
+            exporter.exportToPdf(name, new ExportStreamCallback() {
+                @Override
+                public void onFailure(Exception e) {
+                    response.resume(e);
+                }
+    
+                @Override
+                public void onSuccess(InputStream stream) {
+                    ResponseBuilder resp = Response.ok(stream).type("application/pdf");
+                    response.resume(resp.build());
+                } 
+            });
+        }
+    }
+}
+```
+
+  </TabItem>
+
+</Tabs>
 
 In the client application. Create a set of buttons that will invoke a function that will make a call to our service endpoint. 
 ```html
