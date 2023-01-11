@@ -19,7 +19,7 @@ Reveal SDK の観点からは、ダッシュボード リンクは、別のダ�
 ダッシュボード ID を使用する方法:
 ```javascript
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboardAsync(dashboardId);
+    return $.ig.RVDashboard.loadDashboard(dashboardId);
 };
 ```
 
@@ -28,7 +28,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 ダッシュボード タイトルを使用する方法:
 ```javascript
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboardAsync(title);
+    return $.ig.RVDashboard.loadDashboard(title);
 };
 ```
 

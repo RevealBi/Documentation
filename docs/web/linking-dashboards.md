@@ -19,7 +19,7 @@ To respond to when a **Dashboard Link** is clicked within a dashboard, you must 
 Using the dashboard Id:
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboardAsync(dashboardId);
+    return $.ig.RVDashboard.loadDashboard(dashboardId);
 };
 ```
 
@@ -28,11 +28,11 @@ The dashboard Id is auto-generated if the dashboard was created in the [Reveal A
 Using the dashboard title:
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboardAsync(title);
+    return $.ig.RVDashboard.loadDashboard(title);
 };
 ```
 
-The dashboard title is actually the file name of the dashboard .rdash file that is hosted on the server.
+The dashboard title is most commonly the file name of the dashboard .rdash file that is hosted on the server.
 
 :::info Get the Code
 
