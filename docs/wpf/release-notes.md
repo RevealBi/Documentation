@@ -1,5 +1,25 @@
 # Release Notes
 
+## 1.3.1 (Jan-2023)
+
+### IMPORTANT NOTICE
+- The Trial nuget packages are no longer updated. 
+- The `Reveal.Sdk.Wpf` nuget package is now available in nuget.org, and will work as a Trial version unless a license key is set.
+- The license key is now set in the initialization parameters of the Reveal SDK (previously, this was done in the installer). Here's how to set it:
+```
+RevealSdkSettings.License = "XYZ123";
+```
+
+### BUG FIXES
+- Fixed issue: when creating a REST datasource using parameters. If the back button was pressed, values were already populated but they were not really applied.
+- Fixed issue: Dashboard filter list of available values was always refreshed when opening a dashboard, no matter what expiration setting was set.
+- Fixed issue: Dashboard filter expiration value was not saved.
+- Fixed issue: Dashboard horizontal filter lost when maximizing and then restoring.
+- Fixed issue: the kebab menu in the dashboard view was not reachable using the keyboard (tab).
+- Fixed issue: Dashboard linking stops working after selecting a dashboard filter in the linked visualization.
+- Fixed issue: Wrong value shown for Scatter Map mouseover tooltip.
+- Fixed issue: Cancelling the MenuOpening event didn't really cancel.
+
 ## 1.3.0 (Nov-2022)
 
 ### New Features
