@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 ### BREAKING CHANGES
 
 #### ASP.NET
-- The `Reveal.Sdk.AspNetCore.Trial` nuget package has been **deprecated** and is **no longer updated**. 
+- The `Reveal.Sdk.Web.AspNetCore.Trial` nuget package has been **deprecated** and is **no longer updated**. 
 - The new `Reveal.Sdk.AspNetCore` nuget package is now available on [nuget.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore), and will work as both a Trial and Licensed version. To unlock the Trial, set the license key in the SDK.
 - The license key is now set in the initialization parameters of the Reveal SDK (previously, this was done in the installer). Here's how to set it:
 
