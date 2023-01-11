@@ -25,7 +25,7 @@ services
         });	
 ```
 
-### BUG FIXES
+### Bug Fixes
 
 #### All Platforms
 - Several improvements to headless export: 

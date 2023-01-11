@@ -11,7 +11,7 @@
 RevealSdkSettings.License = "XYZ123";
 ```
 
-### BUG FIXES
+### Bug Fixes
 - Fixed issue: when creating a REST datasource using parameters. If the back button was pressed, values were already populated but they were not really applied.
 - Fixed issue: Dashboard filter list of available values was always refreshed when opening a dashboard, no matter what expiration setting was set.
 - Fixed issue: Dashboard filter expiration value was not saved.
