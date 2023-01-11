@@ -1,7 +1,11 @@
 # 既知の問題
 
-- 散布図 / 階級区分図の表示形式は、プログラムによってエクスポートされたダッシュボードに表示されません。
+## v1.3.1
+- Headless export fails if ```DocumentExportOptions``` is used. Please use the format-specific classes instead (e.g. ```PdfExportOptions```).
 
-- NuGet パッケージを使用する際に、Reveal SDK のライセンス (SDK インストーラーに有効なキーを入力) 後もウォーターマークが表示されてしまいます。 
+## v1.3.0
+
+- 散布図 / 階級区分図の表示形式は、プログラムによってエクスポートされたダッシュボードに表示されません。
+- NuGet パッケージを使用する際に、Reveal SDK のライセンス (SDK インストーラーに有効なキーを入力) 後もウォーターマークが表示されてしまいます。
 
 **回避策**: プロジェクトから NuGet パッケージをアンインストールし、NuGet のキャッシュをクリアして、パッケージを再度インストールしてください。NuGet のすべてのキャッシュをクリアしたくない場合、キャッシュした場所を検索し、Infragistics Reveal 項目のみをクリアできます。場所は NuGet のバージョンと、*packages.config* または *PackageReferece* のどちらが使用されているかによって異なります。
