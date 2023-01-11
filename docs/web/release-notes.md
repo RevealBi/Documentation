@@ -25,7 +25,7 @@ services
 	- Visualization using Maps now show correctly.
 	- Decreased memory footprint when running.
 	- Fixed issue where a missing title in the dashboard would make the export fail.
-- Fixed issue:when creating a REST datasource using parameters. If the back button was pressed, values were already populated but they were not really applied.
+- Fixed issue: when creating a REST datasource using parameters. If the back button was pressed, values were already populated but they were not really applied.
 - Fixed issue: Dashboard filter list of available values was always refreshed when opening a dashboard, no matter what expiration setting was set.
 - Fixed issue: Dashboard filter expiration value was not saved.
 - Fixed issue: Dashboard horizontal filter lost when maximizing and then restoring.
