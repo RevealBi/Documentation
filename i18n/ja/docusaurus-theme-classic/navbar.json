@@ -3,7 +3,7 @@
     "message": "Reveal",
     "description": "The title in the navbar"
   },
-  "item.label.Documentaion": {
+  "item.label.Documentation": {
     "message": "ドキュメント",
     "description": "Navbar item with label Documentaion"
   },
