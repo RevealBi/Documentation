@@ -68,7 +68,7 @@ const config = {
         },
         items: [
           {
-            label: "Documentaion",
+            label: "Documentation",
             position: "left",
             items: [
               { label: "Web", to: "web" },
