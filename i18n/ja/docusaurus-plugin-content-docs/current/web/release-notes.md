@@ -41,9 +41,11 @@ services
 - Fixed issue: Dashboard linking stops working after selecting a dashboard filter in the linked visualization.
 - Fixed issue: Wrong value shown for Scatter Map mouseover tooltip.
 - Fixed issue: Cancelling the MenuOpening event didn't really cancel.
+- Fixed issue: In ChangeDataSourceItemAsync method, the userContext parameter was coming with null value.
 
 #### Java
 - Fixed issue: "Login failed due to client TLS version..." error when connecting to mssql in Azure.
+- Fixed issue: Could not add Google Analytics 4 interactively.
 
 ## 1.3.0 (2022 年 11 月)
 
