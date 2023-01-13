@@ -20,6 +20,7 @@ RevealSdkSettings.License = "XYZ123";
 - Fixed issue: Dashboard linking stops working after selecting a dashboard filter in the linked visualization.
 - Fixed issue: Wrong value shown for Scatter Map mouseover tooltip.
 - Fixed issue: Cancelling the MenuOpening event didn't really cancel.
+- Fixed issue: In ChangeDataSourceItemAsync method, the userContext parameter was coming with null value.
 
 ## 1.3.0 (11 月 2022 年)
 
