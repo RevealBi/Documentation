@@ -25,6 +25,9 @@ services
         });	
 ```
 
+#### Node
+- Renamed `RVUserNamePasswordDataSourceCredential` to `RVUsernamePasswordDataSourceCredential`. Changed the uppercase "N" to lowercase "n".
+
 ### Bug Fixes
 
 #### All Platforms
