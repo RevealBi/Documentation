@@ -10,7 +10,7 @@ const config = {
   tagline: 'Embedded Analytics & Business Intelligence Tools',
   url: 'https://help.revealbi.io',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
 
@@ -80,10 +80,10 @@ const config = {
             label: "API",
             position: "left",
             items: [
-              { label: "ASP.NET", to: "api/aspnet/latest/Reveal.Sdk.html", target: "blank" },
-              { label: "JAVA", to: "api/java/latest/", target: "blank" },
-              { label: "JavaScript", to: "api/javascript/latest/", target: "blank" },
-              { label: "WPF", to: "api/wpf/latest/Reveal.Sdk.html", target: "blank" }
+              { label: "ASP.NET", to: "https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.html", target: "blank" },
+              { label: "JAVA", to: "https://help.revealbi.io/api/java/latest/", target: "blank" },
+              { label: "JavaScript", to: "https://help.revealbi.io/api/javascript/latest/", target: "blank" },
+              { label: "WPF", to: "https://help.revealbi.io/api/wpf/latest/Reveal.Sdk.html", target: "blank" }
             ]
           },
           {
