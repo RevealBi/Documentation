@@ -71,7 +71,7 @@ const sidebars = {
           ]
         },
         {
-          type: "category", label: "Replacing Data Sources", items: [
+          type: "category", label: "Replacing Data Sources", link: { type: "doc", id: "web/replacing-datasources" }, items: [
             { type: "doc", label: "Excel File", id: "web/replacing-data-sources/excel-file" },
             { type: "doc", label: "MS SQL Server", id: "web/replacing-data-sources/ms-sql-server" },
           ]

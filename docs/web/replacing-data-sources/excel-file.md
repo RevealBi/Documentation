@@ -3,73 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Replacing an Excel File DataSource
 
-Sometimes dashboards are created using Excel files stored in the cloud as a data source for its visualizations.
-
-When embedding the Reveal SDK in your application, you can replace these cloud-based files with files stored in a local directory located on the server at runtime.
-
-**Step 1** - Create the data source provider.
-
-<Tabs groupId="code">
-  <TabItem value="aspnet" label="ASP.NET" default>
-
-```cs
-public class DataSourceProvider : IRVDataSourceProvider
-{
-    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
-    {
-        throw new NotImplementedException();
-    }
-}
-```
-
-  </TabItem>
-
-  <TabItem value="java" label="Java">
-
-```java
-public class DataSourceProvider implements IRVDataSourceProvider {
-
-	public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-		return null;
-	}
-
-	public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardsID, RVDataSourceItem dataSourceItem) {
-		return null;
-	}
-}
-```
-
-  </TabItem>
-
-</Tabs>
-
-**Step 2** - Register the data source provider with the Reveal SDK.
-
-<Tabs groupId="code">
-  <TabItem value="aspnet" label="ASP.NET" default>
-
-```cs
-builder.Services.AddControllers().AddReveal( builder =>
-{
-    builder.AddDataSourceProvider<DataSourceProvider>();
-});
-```
-
-  </TabItem>
-
-  <TabItem value="java" label="Java">
-
-```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setDataSourceProvider(new DataSourceProvider()).
-    build());
-```
-
-  </TabItem>
-
-</Tabs>
-
-## Example: Replacing an Excel File Data Source
+Sometimes dashboards are created using Excel files stored in the cloud as a data source for its visualizations. When embedding the Reveal SDK in your application, you can replace these cloud-based files with files stored in a local directory located on the server at runtime.
 
 In this example, we are replacing a data source item that is using a cloud-based Excel file named "Sales Cloud Excel File" with a local Excel file named "SalesLocalExcelFile.xlsx".
 
