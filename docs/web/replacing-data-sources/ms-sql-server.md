@@ -44,6 +44,20 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 
   </TabItem>
 
+  <TabItem value="node" label="Node.js">    
+
+```ts
+const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+	return null;
+}
+
+const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+	return null;
+}
+```
+
+  </TabItem>
+
 </Tabs>
 
 **Step 2** - Register the data source provider with the Reveal SDK.
@@ -70,6 +84,18 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
 
   </TabItem>
 
+  <TabItem value="node" label="Node.js">    
+
+```ts
+const revealOptions: RevealOptions = {
+	dataSourceProvider: dataSourceProvider,
+	dataSourceItemProvider: dataSourceItemProvider,
+}
+app.use('/', reveal(revealOptions));
+```
+
+  </TabItem>
+
 </Tabs>
 
 ## Example: Replace Host, Database, and Table
@@ -80,18 +106,18 @@ You can change the MS SQL Server host, database, and table name of every MS SQL 
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
-public class DataSourceProvider : IRVDataSourceProvider
+public class DataSourceProvider: IRVDataSourceProvider
 {
     public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
     {
         if (dataSourceItem is RVSqlServerDataSourceItem sqlServerDsi)
         {
-            // Change SQL Server host
+            // Optionally change SQL Server host here too - overrides the values set in ChangeDataSourceAsync
             var sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.DataSource;
-            sqlServerDS.Host = "10.0.0.20";
+            sqlServerDS.Host = "10.0.0.50";
 
             // Change SQL Server database and table/view
-            sqlServerDsi.Database = "Adventure Works";
+            sqlServerDsi.Database = "Adventure Works 2";
             sqlServerDsi.Table = "Employees";
         }
 
@@ -102,9 +128,9 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSource is RVSqlServerDataSource sqlDatasource)
         {
+            // Change SQL Server host and database
             sqlDatasource.Host = "10.0.0.20";
             sqlDatasource.Database = "Adventure Works";
-            sqlDatasource.Table = "Employees";
         }
 
         return Task.FromResult(dataSource);
@@ -118,22 +144,19 @@ public class DataSourceProvider : IRVDataSourceProvider
 
 ```java
 public class DataSourceProvider implements IRVDataSourceProvider {
-
     public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardsID, RVDataSourceItem dataSourceItem) {
 
         if (dataSourceItem instanceof RVSqlServerDataSourceItem sqlServerDsi)
         {
-            // Change SQL Server host
+            // Optionally change SQL Server host here too - overrides the values set in changeDataSource
             RVSqlServerDataSource sqlServerDS = (RVSqlServerDataSource)sqlServerDsi.getDataSource();
-            sqlServerDS.setHost("10.0.0.20");            
+            sqlServerDS.setHost("10.0.0.50");            
 
             // Change SQL Server database and table/view
-            sqlServerDsi.setDatabase("Adventure Works");
+            sqlServerDsi.setDatabase("Adventure Works 2");
             sqlServerDsi.setTable("Employees");
-
-            return (RVDataSourceItem)sqlServerDsi;
         }
-        return null;
+        return dataSourceItem;
     }
 
     public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
@@ -142,7 +165,6 @@ public class DataSourceProvider implements IRVDataSourceProvider {
         {
             sqlDatasource.setHost("10.0.0.20");
             sqlDatasource.setDatabase("Adventure Works");
-            sqlDatasource.setTable("Employees");
         }
         return dataSource;
     }
@@ -151,10 +173,45 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 
   </TabItem>
 
+  <TabItem value="node" label="Node.js">    
+
+```ts
+const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+	if (dataSource instanceof RVSqlServerDataSource) {
+		//Change SQL Server host and database
+		dataSource.host = "10.0.0.20";
+		dataSource.database = "Adventure Works";
+	}
+	return dataSource;
+}
+
+const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+	if (dataSourceItem instanceof RVSqlServerDataSourceItem) {
+
+		// Optionally change SQL Server host here too - overrides the values set in dataSourceProvider
+		const sqlServerDS = <RVSqlServerDataSource> dataSourceItem.dataSource;
+		sqlServerDS.host = "10.0.0.50";
+
+		// Change SQL Server database and table/view
+		dataSourceItem.database = "Adventure Works 2";
+		dataSourceItem.table = "Employees";
+	}
+	return dataSourceItem;
+}
+```
+
+  </TabItem>
+
 </Tabs>
 
-:::info
+:::caution
 
 The database **Host** can only be changed on the `RVSqlServerDataSource` object. For all other properties use the `RVSqlServerDataSourceItem`.
+
+:::
+
+:::info Get the Code
+
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/ReplacingDataSources/MsSqlServer)
 
 :::
