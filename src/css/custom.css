@@ -4,7 +4,7 @@
  * work well for content-centric websites.
  */
 
- @font-face {
+@font-face {
   font-family: "Roboto";
   src: url('/static/fonts/Roboto-Light.ttf') format('truetype');
   font-weight: 300;
@@ -46,17 +46,14 @@
   --ifm-color-primary-lightest: #f493b3;
   --ifm-code-font-size: 95%;
 
+  --site-primary-hue-saturation: 167 68%;
 
-
-  /* --ifm-hero-background-color: linear-gradient(90deg, rgba(251, 179, 101, 1) 0%, rgba(236, 65, 122, 1) 40%); */
-
-  /* --ifm-footer-background-color: */
-  /* --ifm-footer-link-hover-color: */
+  --docusaurus-announcement-bar-height: 45px !important;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-.sidebar__header > div > a {
+.sidebar__header>div>a {
   padding: 15px 0 5px 0 !important;
   position: relative;
   font-size: 14px !important;
@@ -67,9 +64,9 @@
   pointer-events: none !important;
 }
 
-.sidebar__header > div:hover {
+.sidebar__header>div:hover {
   background: transparent !important;
-  
+
 }
 
 a.menu__link {
@@ -95,6 +92,24 @@ a.menu__link--active {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-[data-theme='dark'] .sidebar__header  > div > a {
+[data-theme='dark'] .sidebar__header>div>a {
   color: #fff !important;
+}
+
+div[class^='announcementBar_'] {
+  --site-announcement-bar-stripe-color1: hsl(
+    var(--site-primary-hue-saturation) 85%
+  );
+  --site-announcement-bar-stripe-color2: hsl(
+    var(--site-primary-hue-saturation) 95%
+  );
+  background: repeating-linear-gradient(
+    35deg,
+    var(--site-announcement-bar-stripe-color1),
+    var(--site-announcement-bar-stripe-color1) 20px,
+    var(--site-announcement-bar-stripe-color2) 10px,
+    var(--site-announcement-bar-stripe-color2) 40px
+  );
+  font-size: x-large;
+  font-weight: bold;
 }

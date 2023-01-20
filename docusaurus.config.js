@@ -60,6 +60,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: "discordBar",
+        content: `⭐️ Join us on <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/Ped3sSK5Xw">Discord</a>! ⭐️`,
+      },
       navbar: {
         title: 'Reveal',
         logo: {
