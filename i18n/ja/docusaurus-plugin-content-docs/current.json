@@ -3,21 +3,9 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.webSidebar.category.Getting Started": {
-    "message": "作業の開始",
-    "description": "The label for category Getting Started in sidebar webSidebar"
-  },
-  "sidebar.webSidebar.category.Creating the Server": {
-    "message": "サーバーの作成",
-    "description": "The label for category Creating the Server in sidebar webSidebar"
-  },
   "sidebar.webSidebar.category.Configuring the Server": {
     "message": "サーバーの構成",
     "description": "The label for category Configuring the Server in sidebar webSidebar"
-  },
-  "sidebar.webSidebar.category.Adding Data Sources": {
-    "message": "データ ソースの追加",
-    "description": "The label for category Adding Data Sources in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Replacing Data Sources": {
     "message": "データ ソースの置き換え",
@@ -102,10 +90,6 @@
   "sidebar.webSidebar.doc.Theming": {
     "message": "テーマ設定",
     "description": "The label for the doc item Theming in sidebar webSidebar, linking to the doc web/theming-dashboards"
-  },
-  "sidebar.webSidebar.doc.Data Sources": {
-    "message": "データ ソース",
-    "description": "The label for the doc item Data Sources in sidebar webSidebar, linking to the doc web/datasources"
   },
   "sidebar.webSidebar.doc.Excel File": {
     "message": "Excel ファイル",
@@ -294,5 +278,17 @@
   "sidebar.wpfSidebar.category.Release Information": {
     "message": "リリース情報",
     "description": "The label for category Release Information in sidebar wpfSidebar"
+  },
+  "sidebar.webSidebar.category.Getting Started - Server": {
+    "message": "作業の開始 - サーバー",
+    "description": "The label for category Getting Started - Server in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Getting Started - Client": {
+    "message": "作業の開始 - クライアント",
+    "description": "The label for category Getting Started - Client in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Data Sources": {
+    "message": "データ ソース",
+    "description": "The label for category Data Sources in sidebar webSidebar"
   }
 }

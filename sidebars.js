@@ -21,15 +21,15 @@ const sidebars = {
         { type: "doc", label: "Overview", id: "web/overview" },
         { type: "doc", label: "Installation", id: "web/installation" },
         {
-          type: "category", label: "Getting Started", items: [
-            {
-              type: "category", label: "Creating the Server", items: [
-                { type: "doc", label: "ASP.NET Web API", id: "web/getting-started-server" },
-                { type: "doc", label: "Node.js", id: "web/getting-started-server-node" },
-                { type: "doc", label: "Node.js - TypeScript", id: "web/getting-started-server-node-typescript" },
-                { type: "doc", label: "Spring Boot - Jersey", id: "web/getting-started-spring-boot-jersey" },
-              ]
-            },
+          type: "category", label: "Getting Started - Server", items: [
+            { type: "doc", label: "ASP.NET Web API", id: "web/getting-started-server" },
+            { type: "doc", label: "Node.js", id: "web/getting-started-server-node" },
+            { type: "doc", label: "Node.js - TypeScript", id: "web/getting-started-server-node-typescript" },
+            { type: "doc", label: "Spring Boot - Jersey", id: "web/getting-started-spring-boot-jersey" },
+          ]
+        },
+        {
+          type: "category", label: "Getting Started - Client", items: [
             { type: "doc", label: "Angular", id: "web/getting-started-angular" },
             { type: "doc", label: "ASP.NET Core Web App", id: "web/getting-started-aspnet" },
             { type: "doc", label: "HTML/JavaScript", id: "web/getting-started-javascript" },
@@ -63,9 +63,8 @@ const sidebars = {
     /* -------------------- Working with Data Sources -------------------- */
     {
       type: "category", label: "Working with Data Sources", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Data Sources", id: "web/datasources" },
         {
-          type: "category", label: "Adding Data Sources", items: [
+          type: "category", label: "Data Sources", link: { type: "doc", id: "web/datasources" }, items: [ 
             { type: "doc", label: "Excel File", id: "web/adding-data-sources/excel-file" },
             { type: "doc", label: "In Memory Data", id: "web/adding-data-sources/in-memory-data" },
             { type: "doc", label: "MS SQL Server", id: "web/adding-data-sources/ms-sql-server" },

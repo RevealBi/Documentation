@@ -5,7 +5,7 @@
   },
   "item.label.Documentation": {
     "message": "ドキュメント",
-    "description": "Navbar item with label Documentaion"
+    "description": "Navbar item with label Documentation"
   },
   "item.label.API": {
     "message": "API",

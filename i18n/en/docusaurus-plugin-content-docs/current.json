@@ -3,21 +3,9 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.webSidebar.category.Getting Started": {
-    "message": "Getting Started",
-    "description": "The label for category Getting Started in sidebar webSidebar"
-  },
-  "sidebar.webSidebar.category.Creating the Server": {
-    "message": "Creating the Server",
-    "description": "The label for category Creating the Server in sidebar webSidebar"
-  },
   "sidebar.webSidebar.category.Configuring the Server": {
     "message": "Configuring the Server",
     "description": "The label for category Configuring the Server in sidebar webSidebar"
-  },
-  "sidebar.webSidebar.category.Adding Data Sources": {
-    "message": "Adding Data Sources",
-    "description": "The label for category Adding Data Sources in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Replacing Data Sources": {
     "message": "Replacing Data Sources",
@@ -98,10 +86,6 @@
   "sidebar.webSidebar.doc.Theming": {
     "message": "Theming",
     "description": "The label for the doc item Theming in sidebar webSidebar, linking to the doc web/theming-dashboards"
-  },
-  "sidebar.webSidebar.doc.Data Sources": {
-    "message": "Data Sources",
-    "description": "The label for the doc item Data Sources in sidebar webSidebar, linking to the doc web/datasources"
   },
   "sidebar.webSidebar.doc.Excel File": {
     "message": "Excel File",
@@ -294,5 +278,17 @@
   "sidebar.webSidebar.doc.Tomcat": {
     "message": "Tomcat",
     "description": "The label for the doc item Tomcat in sidebar webSidebar, linking to the doc web/configuring-server-tomcat"
+  },
+  "sidebar.webSidebar.category.Getting Started - Server": {
+    "message": "Getting Started - Server",
+    "description": "The label for category Getting Started - Server in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Getting Started - Client": {
+    "message": "Getting Started - Client",
+    "description": "The label for category Getting Started - Client in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Data Sources": {
+    "message": "Data Sources",
+    "description": "The label for category Data Sources in sidebar webSidebar"
   }
 }
