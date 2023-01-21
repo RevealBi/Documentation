@@ -94,10 +94,10 @@ const sidebars = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Known Issues", id: "web/known-issues" },
         { type: "doc", label: "Release Notes", id: "web/release-notes" },
-        { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },
+        { type: "doc", label: "Known Issues", id: "web/known-issues" },        
         { type: "doc", label: "Data Limits", id: "web/data-size-limits" },
+        { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },
       ]
     },
 
