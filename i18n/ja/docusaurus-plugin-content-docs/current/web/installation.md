@@ -1,6 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # インストール
 
 ## システム要件
@@ -43,44 +40,3 @@ Reveal SDK をインストールするには、Reveal SDK インストーラー�
 Reveal SDK NuGet パッケージをポイントする Visual Studio に、自動的に追加されるローカル NuGet パッケージ ソースもあります。
 
 ![](images/nuget-package-source-local-vs.jpg)
-
-## ライセンス キーの追加
-
-デフォルトでは、Reveal SDK をインストールすると、**trial** 製品のみが使用されます。**licensed** 製品を解除するには、アプリケーションにライセンス キーを追加する必要があります。
-
-<Tabs groupId="code">
-  <TabItem value="aspnet" label="ASP.NET" default>
-
-```cs
-services.AddMvc().AddReveal(builder => 
-{
-    builder.AddSettings(settings =>
-    {
-        settings.License = "LICENSE_KEY";
-    });
-});
-```
-
-  </TabItem>
-
-  <TabItem value="java" label="Java">
-
-```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setLicense("LICENSE_KEY").
-    build());
-```
-
-  </TabItem>
-
-  <TabItem value="node" label="Node.js">    
-
-```ts
-const revealOptions: RevealOptions = {
-	license: "LICENSE_KEY",
-};
-app.use("/", reveal(revealOptions));
-```
-
-  </TabItem>
-</Tabs>

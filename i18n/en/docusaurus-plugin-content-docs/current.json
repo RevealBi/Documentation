@@ -15,10 +15,6 @@
     "message": "Overview",
     "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/overview"
   },
-  "sidebar.webSidebar.doc.Installation": {
-    "message": "Installation",
-    "description": "The label for the doc item Installation in sidebar webSidebar, linking to the doc web/installation"
-  },
   "sidebar.webSidebar.doc.ASP.NET Web API": {
     "message": "ASP.NET Web API",
     "description": "The label for the doc item ASP.NET Web API in sidebar webSidebar, linking to the doc web/getting-started-server"
@@ -290,5 +286,21 @@
   "sidebar.webSidebar.category.Visualizations": {
     "message": "Visualizations",
     "description": "The label for category Visualizations in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category Installation in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.System Requirements": {
+    "message": "System Requirements",
+    "description": "The label for the doc item System Requirements in sidebar webSidebar, linking to the doc web/system-requirements"
+  },
+  "sidebar.webSidebar.doc.Using the Installer - Windows": {
+    "message": "Using the Installer - Windows",
+    "description": "The label for the doc item Using the Installer - Windows in sidebar webSidebar, linking to the doc web/installation"
+  },
+  "sidebar.webSidebar.doc.Adding a License Key": {
+    "message": "Adding a License Key",
+    "description": "The label for the doc item Adding a License Key in sidebar webSidebar, linking to the doc web/adding-license-key"
   }
 }

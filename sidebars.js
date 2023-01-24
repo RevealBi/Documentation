@@ -19,7 +19,11 @@ const sidebars = {
     {
       type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", id: "web/overview" },
-        { type: "doc", label: "Installation", id: "web/installation" },
+        { type: "category", label: "Installation", items: [
+          { type: "doc", label: "System Requirements", id: "web/system-requirements" },
+          { type: "doc", label: "Using the Installer - Windows", id: "web/installation" },
+          { type: "doc", label: "Adding a License Key", id: "web/adding-license-key" },
+        ]},
         {
           type: "category", label: "Getting Started - Server", items: [
             { type: "doc", label: "ASP.NET Web API", id: "web/getting-started-server" },
