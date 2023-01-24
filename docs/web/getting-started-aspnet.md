@@ -36,18 +36,10 @@ builder.Services.AddRazorPages().AddReveal();
 
 ## Step 3 - Add Reveal JavaScript API
 
-1 - Create a new folder called `reveal` under the `wwwroot/lib` folder.
-
-![](images/asp-net-core-web-app-create-reveal-folder.jpg)
-
-2 - Copy all the JavaScript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `wwwroot/lib/reveal` folder you created previously.
-
-![](images/asp-net-core-web-app-copy-reveal-files.jpg)
-
-3 - Open and modify the `Pages/Shared/_Layout.cshtml` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag, but after the `jquery.min.js` script.
+1 - Open and modify the `Pages/Shared/_Layout.cshtml` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag, but after the `jquery.min.js` script.
 
 ```html
-<script src="~/lib/reveal/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 ```
 
 :::info
@@ -56,7 +48,7 @@ The Reveal JavaScript API depends on `jQuery` version 2.2 or greater.
 
 :::
 
-4 - Install the remaining Reveal JavaScript API dependencies:
+2 - Install the remaining Reveal JavaScript API dependencies:
 
 - Day.js 1.8.15 or greater
 
@@ -69,13 +61,6 @@ The Reveal JavaScript API depends on `jQuery` version 2.2 or greater.
 ```html
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-```
-
-- Spectrum v 1.8.0 or newer (Optional) - this is only needed if you enable the UI for the end user to set the background color for a particular visualization.
-
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
 The final `_Layout.cshtml` files should look similar to this:
@@ -134,7 +119,7 @@ The final `_Layout.cshtml` files should look similar to this:
 
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-    <script src="~/lib/reveal/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
     // highlight-end
 
     @await RenderSectionAsync("Scripts", required: false)
@@ -192,12 +177,8 @@ Press **F5** to run the application.
 
 **Congratulations!** You have written your first Reveal SDK application.
 
-Next Steps:
-- [Create New Dashboards](creating-dashboards.md)
-- [Load Existing Dashboards](loading-dashboards.md)
-
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/01-GettingStarted-WebApp).
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/aspnet-webapp).
 
 :::

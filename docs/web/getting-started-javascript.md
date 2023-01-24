@@ -138,6 +138,6 @@ Double-click on the `index.html` file to launch the webpage in your default brow
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted).
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/html).
 
 :::

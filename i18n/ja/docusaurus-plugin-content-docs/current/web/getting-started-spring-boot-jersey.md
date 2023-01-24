@@ -263,11 +263,6 @@ public class RevealJerseyConfig extends ResourceConfig
 }
 ```
 
-次の手順:
-- [Angular クライアント アプリを作成する](getting-started-angular.md)
-- [Html/JS クライアント アプリを作成する](getting-started-javascript.md)
-- [React クライアント アプリを作成する](getting-started-react.md)
-
 :::info Get the Code
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot-jersey) にあります。

@@ -159,11 +159,6 @@ Then execute the **dev** script during development.
 npm run dev
 ```
 
-Next Steps:
-- [Create an Angular Client App](getting-started-angular.md)
-- [Create an Html/JS Client App](getting-started-javascript.md)
-- [Create a React Client App](getting-started-react.md)
-
 :::info Get The Code
 
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/nodejs-typescript).

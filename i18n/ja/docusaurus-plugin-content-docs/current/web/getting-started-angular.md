@@ -170,6 +170,6 @@ npm start
 
 :::info Get the Code
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted) にあります。
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/angular) にあります。
 
 :::

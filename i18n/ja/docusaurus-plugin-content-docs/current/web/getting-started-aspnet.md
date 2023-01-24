@@ -36,18 +36,10 @@ builder.Services.AddRazorPages().AddReveal();
 
 ## 手順 3 - Reveal JavaScript API の追加
 
-1 - `wwwroot/lib` フォルダーの下に `reveal` と呼ばれる新しいフォルダーを作成します。
-
-![](images/asp-net-core-web-app-create-reveal-folder.jpg)
-
-2 - `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` にあるすべての JavaScript ファイルを以前作成した `wwwroot/lib/reveal` フォルダーにコピーします。
-
-![](images/asp-net-core-web-app-copy-reveal-files.jpg)
-
-3 - `Pages/Shared/_Layout.cshtml` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前、`jquery.min.js` スクリプトの後) `infragistics.reveal.js` スクリプトを含めます。
+1 - `Pages/Shared/_Layout.cshtml` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前、`jquery.min.js` スクリプトの後) `infragistics.reveal.js` スクリプトを含めます。
 
 ```html
-<script src="~/lib/reveal/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 ```
 
 :::info
@@ -56,7 +48,7 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 
 :::
 
-4 - 残りの Reveal JavaScript API 依存関係をインストールします。
+2 - 残りの Reveal JavaScript API 依存関係をインストールします。
 
 - Day.js 1.8.15 またはそれ以降
 
@@ -69,13 +61,6 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 ```html
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-```
-
-- Spectrum v1.8.0 またはそれ以降 (オプション) - これは、エンドユーザーが特定の表示形式の背景色を設定できるように UI を有効にする場合にのみ必要です。
-
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
 最終の `_Layout.cshtml` ファイルは以下のようになります。
@@ -134,7 +119,7 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-    <script src="~/lib/reveal/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
     // highlight-end
 
     @await RenderSectionAsync("Scripts", required: false)
@@ -192,12 +177,8 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 
 完了しました! 最初の Reveal SDK アプリケーションを作成しました。
 
-次の手順:
-- [新しいダッシュボードの作成](creating-dashboards.md)
-- [既存のダッシュボードの読み込み](loading-dashboards.md)
-
 :::info Get the Code
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-aspnetcore/tree/main/01-GettingStarted-WebApp) にあります。
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/aspnet-webapp) にあります。
 
 :::

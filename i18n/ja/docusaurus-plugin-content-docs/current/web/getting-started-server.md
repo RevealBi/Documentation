@@ -69,11 +69,6 @@ if (app.Environment.IsDevelopment())
 
 ミドルウェアが実行される順序を理解することが重要です。`UseCors` は特定の順序で呼び出す必要があります。この例では、`UseHttpsRedirection()` の後と `UseAuthorization()` の前にあります。詳細については、[この Microsoft ヘルプ トピック](https://docs.microsoft.com/ja-jp/aspnet/core/security/cors?view=aspnetcore-6.0)を参照してください。
 
-次の手順:
-- [Angular クライアント アプリの作成](getting-started-angular.md)
-- [Html/JS クライアント アプリの作成](getting-started-javascript.md)
-- [React クライアント アプリの作成](getting-started-react.md)
-
 :::info Get the Code
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/aspnet) にあります。
