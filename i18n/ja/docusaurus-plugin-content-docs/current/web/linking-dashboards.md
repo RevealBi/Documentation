@@ -32,7 +32,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 };
 ```
 
-ダッシュボードのタイトルは、サーバーでホストされているダッシュボードの .rdash ファイルのファイル名です。
+ダッシュボードのタイトルは、サーバーでホストされているダッシュボードの .rdash ファイルのファイル名であることが最も一般的です。
 
 :::info Get the Code
 
