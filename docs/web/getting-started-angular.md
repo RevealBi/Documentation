@@ -21,21 +21,13 @@ code .
 
 ## Step 2 - Add Reveal JavaScript API
 
-1 - Create a new folder called `reveal` under the `assets` folder.
-
-![](images/angular-create-reveal-folder.jpg)
-
-2 - Copy all the JavaScript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `assets/reveal` folder you created previously.
-
-![](images/angular-copy-reveal-files.jpg)
-
-3 - Open and modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+1 - Open and modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
-<script src="assets/reveal/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 ```
 
-4 - Install the remaining Reveal JavaScript API dependencies:
+2 - Install the remaining Reveal JavaScript API dependencies:
 
 - Jquery 2.2 or greater
 
@@ -53,13 +45,6 @@ code .
 ```html
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-```
-
-- Spectrum v 1.8.0 or newer (Optional) - this is only needed if you enable the UI for the end user to set the background color for a particular visualization.
-
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
 The final `index.html` files should look similar to this:
@@ -81,7 +66,7 @@ The final `index.html` files should look similar to this:
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="assets/reveal/infragistics.reveal.js"></script>
+  <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 </body>
 </html>
 ```
@@ -189,6 +174,6 @@ Next Steps:
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-angular/tree/main/01-GettingStarted).
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted).
 
 :::
