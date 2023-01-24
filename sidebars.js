@@ -15,9 +15,9 @@
 const sidebars = {
   webSidebar: [
 
-    /* -------------------- General -------------------- */
+    /* -------------------- Getting Started -------------------- */
     {
-      type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+      type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", id: "web/overview" },
         { type: "category", label: "Installation", items: [
           { type: "doc", label: "System Requirements", id: "web/system-requirements" },
@@ -42,13 +42,18 @@ const sidebars = {
             { type: "doc", label: "React", id: "web/getting-started-react" },
           ]
         },
-        {
-          type: "category", label: "Configuring the Server", items: [
-            { type: "doc", label: "ASP.NET", id: "web/configuring-server-aspnet" },
-            { type: "doc", label: "Spring Boot - Jersey", id: "web/configuring-server-spring-boot-jersey" },
-            { type: "doc", label: "Tomcat", id: "web/configuring-server-tomcat" },
+      ]
+    },
+
+    /* -------------------- General -------------------- */
+    { 
+      type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Logging", id: "web/logging" },
+        { type: "category", label: "Server Export", link: { type: "doc", id: "web/server-export" }, items: [
+            { type: "doc", label: "Configure Export", id: "web/configure-export" },
           ]
         },
+        { type: "doc", label: "Theming", id: "web/theming-dashboards" },
       ]
     },
 
@@ -62,7 +67,6 @@ const sidebars = {
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
-        { type: "doc", label: "Theming", id: "web/theming-dashboards" },
         { type: "category", label: "Visualizations", items: [
           { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
           { type: "doc", label: "Responding to Click Events", id: "web/click-events" },

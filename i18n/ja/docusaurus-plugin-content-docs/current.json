@@ -3,10 +3,6 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.webSidebar.category.Configuring the Server": {
-    "message": "サーバーの構成",
-    "description": "The label for category Configuring the Server in sidebar webSidebar"
-  },
   "sidebar.webSidebar.category.Replacing Data Sources": {
     "message": "データ ソースの置き換え",
     "description": "The label for category Replacing Data Sources in sidebar webSidebar"
@@ -29,7 +25,7 @@
   },
   "sidebar.webSidebar.doc.Spring Boot - Jersey": {
     "message": "Spring Boot - Jersey",
-    "description": "The label for the doc item Spring Boot - Jersey in sidebar webSidebar, linking to the doc web/configuring-server-spring-boot-jersey"
+    "description": "The label for the doc item Spring Boot - Jersey in sidebar webSidebar, linking to the doc web/getting-started-spring-boot-jersey"
   },
   "sidebar.webSidebar.doc.Angular": {
     "message": "Angular",
@@ -46,14 +42,6 @@
   "sidebar.webSidebar.doc.React": {
     "message": "React",
     "description": "The label for the doc item React in sidebar webSidebar, linking to the doc web/getting-started-react"
-  },
-  "sidebar.webSidebar.doc.ASP.NET": {
-    "message": "ASP.NET ",
-    "description": "The label for the doc item ASP.NET in sidebar webSidebar, linking to the doc web/configuring-server-aspnet"
-  },
-  "sidebar.webSidebar.doc.Tomcat": {
-    "message": "Tomcat",
-    "description": "The label for the doc item Tomcat in sidebar webSidebar, linking to the doc web/configuring-server-tomcat"
   },
   "sidebar.webSidebar.doc.Creating": {
     "message": "作成",
@@ -310,5 +298,21 @@
   "sidebar.webSidebar.doc.Install Client SDK": {
     "message": "Install Client SDK",
     "description": "The label for the doc item Install Client SDK in sidebar webSidebar, linking to the doc web/install-client-sdk"
+  },
+  "sidebar.webSidebar.category.Getting Started": {
+    "message": "作業の開始",
+    "description": "The label for category Getting Started in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Server Export": {
+    "message": "サーバーのエクスポート",
+    "description": "The label for category Server Export in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.Logging": {
+    "message": "ログ",
+    "description": "The label for the doc item Logging in sidebar webSidebar, linking to the doc web/logging"
+  },
+  "sidebar.webSidebar.doc.Configure Export": {
+    "message": "エクスポートの構成",
+    "description": "The label for the doc item Configure Export in sidebar webSidebar, linking to the doc web/configure-export"
   }
 }
