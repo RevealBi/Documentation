@@ -1,4 +1,30 @@
- (プログラム上またはユーザー インタラクションによって) ダッシュボードを**画像**にエクスポートするには、Reveal SDK は [Playwright](https://playwright.dev/java/) を使用します。ダッシュボードを **Excel**、**PDF**、または **PowerPoint** にエクスポートするには、Reveal SDK は **ExportTool** と呼ばれる内部アプリケーションを使用します。
+# エクスポートの構成
+
+## ASP.NET
+
+ダッシュボードを**画像**、**PDF**、または **PowerPoint** に (プログラムで、またはユーザーの操作を通じて) エクスポートするために、RevealSDK は内部で [Playwright](https://playwright.dev/dotnet/) を使用します。
+
+デフォルトでは、ユーザーがダッシュボードを画像、PDF、または PowerPoint に初めてエクスポートしようとすると、Playwright は Chromium ブラウザーを現在のプラットフォームのデフォルトの場所にダウンロードしようとします。Windows の場合、デフォルトのパスは **%userprofile%/AppData/Local/ms-playwright** です。
+
+このダウンロードには時間がかかり、ダッシュボードをエクスポートしようとする最初のエンドユーザーユーザーに遅延が発生する可能性があります。これは開発中は問題ありませんが、プロダクション環境では望ましくない場合があります。これらのシナリオでは、以下の設定を使用して、エクスポートの動作を微調整できます。
+
+これらの設定は `RevealEmbedSettings.Export` のプロパティで公開されます。
+- CreateChromiumInstancesOnDemand - これを false に設定すると、アプリの起動時に Playwright の初期化が強制的に行われます。
+- ChromiumDownloadFolder - Chromium 実行可能ファイルがダウンロードされるパス。
+- ChromiumExecutablePath - Chromium 実行可能ファイルがサーバーに予めインストールされているパス。
+- MaxConcurrentExportingThreads - エクスポートに使用される最大同時スレッド数。
+- ExportingTimeout - エクスポート操作のタイムアウト期間 (ミリ秒単位)。デフォルト値は 30000 ms。指定されたタイムアウト期間内にエクスポート操作が終了しない場合、エクスポート操作は失敗します。
+
+Playwright と Chromium をサーバーに手動でインストールするには、[Playwright CLI](https://playwright.dev/dotnet/docs/cli) を使用します。
+
+```bash
+dotnet tool install --global Microsoft.Playwright.CLI
+playwright install chromium
+```
+
+## Java
+
+(プログラム上またはユーザー インタラクションによって) ダッシュボードを**画像**にエクスポートするには、Reveal SDK は [Playwright](https://playwright.dev/java/) を使用します。ダッシュボードを **Excel**、**PDF**、または **PowerPoint** にエクスポートするには、Reveal SDK は **ExportTool** と呼ばれる内部アプリケーションを使用します。
 
 デフォルトでは、エンドユーザーがダッシュボードを画像、PDF、PowerPoint に初めてエクスポートしようとすると、Playwright と ExportTool の両方が、それらの動作に必要な依存関係のダウンロードを自動的に開始します。ただし、プラットフォームによっては、事前にインストールが必要な依存関係があったり、サーバー環境が外部ダウンロードを制限しているなど、これらのツールを手動でセットアップする必要がある場合があります。
 
