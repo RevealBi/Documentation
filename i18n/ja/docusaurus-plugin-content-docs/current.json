@@ -280,11 +280,11 @@
     "description": "The label for category Data Sources in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Using the Reveal View": {
-    "message": "Using the Reveal View",
+    "message": "Reveal ビューの使用",
     "description": "The label for category Using the Reveal View in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Visualizations": {
-    "message": "Visualizations",
+    "message": "表示形式",
     "description": "The label for category Visualizations in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Installation": {
@@ -292,15 +292,15 @@
     "description": "The label for category Installation in sidebar webSidebar"
   },
   "sidebar.webSidebar.doc.System Requirements": {
-    "message": "System Requirements",
+    "message": "システム要件",
     "description": "The label for the doc item System Requirements in sidebar webSidebar, linking to the doc web/system-requirements"
   },
   "sidebar.webSidebar.doc.Using the Installer - Windows": {
-    "message": "Using the Installer - Windows",
+    "message": "インストーラーの使用 - Windows",
     "description": "The label for the doc item Using the Installer - Windows in sidebar webSidebar, linking to the doc web/installation"
   },
   "sidebar.webSidebar.doc.Adding a License Key": {
-    "message": "Adding a License Key",
+    "message": "ライセンス キーの追加",
     "description": "The label for the doc item Adding a License Key in sidebar webSidebar, linking to the doc web/adding-license-key"
   }
 }

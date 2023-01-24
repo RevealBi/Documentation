@@ -3,14 +3,13 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.3.1 (Jan-2023)
+## 1.3.1 (2023 年 1 月)
 
-### BREAKING CHANGES
+### 重大な変更
 
 #### ASP.NET
-- The `Reveal.Sdk.Web.AspNetCore.Trial` nuget package has been **deprecated** and is **no longer updated**. 
-- The new `Reveal.Sdk.AspNetCore` nuget package is now available on [nuget.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore), and will work as both a Trial and Licensed version. To unlock the Trial, set the license key in the SDK.
-- The license key is now set in the initialization parameters of the Reveal SDK (previously, this was done in the installer). Here's how to set it:
+- `Reveal.Sdk.Web.AspNetCore.Trial` nuget パッケージは、**非推奨**になり、**更新されなくなりました**。 
+- 新しい `Reveal.Sdk.AspNetCore` nuget パッケージが [nuget.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore) で利用できるようになり、試用版とライセンス版の両方として機能します。試用版のロックを解除するには、SDK でライセンス キーを設定します。ライセンス キーは、Reveal SDK の初期化パラメーターで設定されるようになりました (以前は、これはインストーラーで行われていました)。設定方法は次のとおりです。
 
 ```cs
 services
@@ -26,29 +25,29 @@ services
 ```
 
 #### Node
-- Renamed `RVUserNamePasswordDataSourceCredential` to `RVUsernamePasswordDataSourceCredential`. Changed the uppercase "N" to lowercase "n".
+- `RVUserNamePasswordDataSourceCredential` の名前を `RVUsernamePasswordDataSourceCredential` に変更しました。大文字の「N」を小文字の「n」に変更しました。
 
-### Bug Fixes
+### バグ修正
 
-#### All Platforms
-- Several improvements to headless export: 
-	- Improved API.
-	- Visualization using Maps now show correctly.
-	- Decreased memory footprint when running.
-	- Fixed issue where a missing title in the dashboard would make the export fail.
-- Fixed issue: when creating a REST datasource using parameters. If the back button was pressed, values were already populated but they were not really applied.
-- Fixed issue: Dashboard filter list of available values was always refreshed when opening a dashboard, no matter what expiration setting was set.
-- Fixed issue: Dashboard filter expiration value was not saved.
-- Fixed issue: Dashboard horizontal filter lost when maximizing and then restoring.
-- Fixed issue: the kebab menu in the dashboard view was not reachable using the keyboard (tab).
-- Fixed issue: Dashboard linking stops working after selecting a dashboard filter in the linked visualization.
-- Fixed issue: Wrong value shown for Scatter Map mouseover tooltip.
-- Fixed issue: Cancelling the MenuOpening event didn't really cancel.
-- Fixed issue: In ChangeDataSourceItemAsync method, the userContext parameter was coming with null value.
+#### すべてのプラットフォーム
+- ヘッドレス エクスポートのいくつかの改善点: 
+	- API を改善しました。
+	- マップを使用した表示形式が正しく表示されるようになりました。
+	- 実行時のメモリ フットプリントが減少しました。
+	- ダッシュボードにタイトルがないとエクスポートが失敗する問題を修正しました。
+- 修正された問題: パラメータを使用した REST データソースを作成するときに発生する問題。[戻る] ボタンが押された場合、値はすでに入力されていますが、実際には適用されませんでした。
+- 修正された問題: 有効期限の設定に関係なく、ダッシュボードを開くと、使用可能な値のダッシュボード フィルタ リストが常に更新されていました。
+- 修正された問題: ダッシュボード フィルタの有効期限の値が保存されませんでした。
+- 修正された問題: 最大化してから復元すると、ダッシュボードの水平フィルターが失われます。
+- 修正された問題: キーボード (タブ) を使用して、ダッシュボード ビューのケバブ メニューにアクセスできませんでした。
+- 修正された問題: リンクされた表示形式でダッシュボード フィルターを選択すると、ダッシュボードのリンクが機能しなくなります。
+- 修正された問題: 散布図のマウスオーバー ツールチップに間違った値が表示されます。
+- 修正された問題: MenuOpening イベントをキャンセルしても、実際にはキャンセルされませんでした。
+- 修正された問題: ChangeDataSourceItemAsync メソッドで、userContext パラメーターに null 値が含まれていました。
 
 #### Java
-- Fixed issue: "Login failed due to client TLS version..." error when connecting to mssql in Azure.
-- Fixed issue: Could not add Google Analytics 4 interactively.
+- 修正された問題: Azure で mssql に接続すると、「Login failed due to client TLS version...」エラーが発生します。
+- 修正された問題: Google アナリティクス 4 を対話的にに追加できませんでした。
 
 ## 1.3.0 (2022 年 11 月)
 
@@ -83,14 +82,18 @@ RevealEngineLocator.dashboardExporter.exportToPdf(dashboardId, new ExportStreamC
 
 </Tabs>
 
-- 新しいデータ ソース: Google アナリティクス 4
+
+- 新しいデータ ソース: Google アナリティクス 4。
 - インタラクティブなダッシュボードのフィルタリング。チャートまたはピボット テーブルのデータ ポイントをクリックして、同じデータ ソースを使用してすべての表示形式をフィルター処理します。`revealView.interactiveFilteringEnabled = true` で有効にします。
 - コールバックを含むメソッドには、promise メソッドの処理を可能にする追加の署名が含まれるようになりました。
+
 ```javascript
 $.ig.RevealUtility.loadDashboard(dashboardId).then(dashboard => {
   revealView.dashboard = dashboard;
 });
 ```
+
+async/await を使用する場合:
 
 ```javascript
 let dashboard = await $.ig.RevealUtility.loadDashboard(dashboardId);
@@ -101,7 +104,13 @@ revealView.dashboard = dashboard;
 - 計算フィールドに新しい 'DateDiff' 関数を追加しました。
 
 ### バグ修正
+
+#### すべてのプラットフォーム
 - Postgres & Redshift でブール値をフィルタリングする際のエラー (「演算子が存在しません」) を修正しました。
 - ロケールにハイフンが含まれている場合にローカリゼーションが機能しない問題を修正しました。
 - REST データ ソースから新しい表示形式を作成するときに、`IRVDataSourceProvider.ChangeDataSourceItem` が呼び出されない問題を修正しました。
 - v1.2.3 で誤って追加され、CORS で問題を引き起こしていた新しい http ヘッダー 'XRID' を削除しました。
+
+#### Java
+- sdk-ext: commons-text ライブラリを更新しました。
+- 一部の Excel ファイルを処理するときの応答時間が非常に遅い問題を修正しました。
