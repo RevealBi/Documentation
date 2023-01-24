@@ -46,9 +46,9 @@ const sidebars = {
       ]
     },
 
-    /* -------------------- Working with Dashboards -------------------- */
+    /* -------------------- Using the Reveal View -------------------- */
     {
-      type: "category", label: "Working with Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+      type: "category", label: "Using the Reveal View", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Creating", id: "web/creating-dashboards" },
         { type: "doc", label: "Loading", id: "web/loading-dashboards" },
         { type: "doc", label: "Filtering", id: "web/filtering-dashboards" },
@@ -57,6 +57,11 @@ const sidebars = {
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         { type: "doc", label: "Theming", id: "web/theming-dashboards" },
+        { type: "category", label: "Visualizations", items: [
+          { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
+          { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
+          { type: "doc", label: "Tooltips", id: "web/tooltips" },
+        ]}
       ]
     },
 
@@ -79,15 +84,6 @@ const sidebars = {
         { type: "doc", label: "Authentication", id: "web/authentication" },
         { type: "doc", label: "User Context", id: "web/user-context" },
         { type: "doc", label: "Obfuscate Connection Data", id: "web/obfuscate-connection-data" },
-      ]
-    },
-
-    /* -------------------- Working with Visualizations -------------------- */
-    {
-      type: "category", label: "Working with Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
-        { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
-        { type: "doc", label: "Tooltips", id: "web/tooltips" },
       ]
     },
 

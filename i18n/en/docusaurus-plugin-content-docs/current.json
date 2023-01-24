@@ -239,17 +239,9 @@
     "message": "General",
     "description": "The label for category General in sidebar webSidebar"
   },
-  "sidebar.webSidebar.category.Working with Dashboards": {
-    "message": "Working with Dashboards",
-    "description": "The label for category Working with Dashboards in sidebar webSidebar"
-  },
   "sidebar.webSidebar.category.Working with Data Sources": {
     "message": "Working with Data Sources",
     "description": "The label for category Working with Data Sources in sidebar webSidebar"
-  },
-  "sidebar.webSidebar.category.Working with Visualizations": {
-    "message": "Working with Visualizations",
-    "description": "The label for category Working with Visualizations in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Release Information": {
     "message": "Release Information",
@@ -290,5 +282,13 @@
   "sidebar.webSidebar.category.Data Sources": {
     "message": "Data Sources",
     "description": "The label for category Data Sources in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Using the Reveal View": {
+    "message": "Using the Reveal View",
+    "description": "The label for category Using the Reveal View in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Visualizations": {
+    "message": "Visualizations",
+    "description": "The label for category Visualizations in sidebar webSidebar"
   }
 }
