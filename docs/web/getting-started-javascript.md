@@ -21,21 +21,13 @@
 
 ## Step 2 - Add Reveal JavaScript API
 
-1 - Create a new folder called `assets` and then create another folder called `reveal` within the `assets` folder.
-
-![](images/javascript-create-reveal-folder.jpg)
-
-2 - Copy all the JavaScript files located at `%public%/Documents/Infragistics/Reveal/SDK/Web/JS/Client` into the `assets/reveal` folder you created previously.
-
-![](images/javascript-copy-reveal-files.jpg)
-
-3 - Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+1 - Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
-<script src="./assets/reveal/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 ```
 
-4 - Install the remaining Reveal JavaScript API dependencies:
+2 - Install the remaining Reveal JavaScript API dependencies:
 
 - Jquery 2.2 or greater
 
@@ -53,13 +45,6 @@
 ```html
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-```
-
-- Spectrum v 1.8.0 or newer (Optional) - this is only needed if you enable the UI for the end user to set the background color for a particular visualization.
-
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
 The final `index.html` files should look similar to this:
@@ -81,7 +66,7 @@ The final `index.html` files should look similar to this:
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>    
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="./assets/reveal/infragistics.reveal.js"></script>   
+    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
     // highlight-end
 </body>
 </html>
@@ -127,7 +112,7 @@ The final `index.html` file should look like this:
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>    
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="./assets/reveal/infragistics.reveal.js"></script>   
+    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
         var revealView = new $.ig.RevealView("#revealView");
@@ -150,10 +135,6 @@ Double-click on the `index.html` file to launch the webpage in your default brow
 ![](images/angular-app-running.jpg)
 
 **Congratulations!** You have written your first Reveal SDK application.
-
-Next Steps:
-- [Create New Dashboards](creating-dashboards.md)
-- [Load Existing Dashboards](loading-dashboards.md)
 
 :::info Get the Code
 

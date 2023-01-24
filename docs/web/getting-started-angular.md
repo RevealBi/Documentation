@@ -168,10 +168,6 @@ npm start
 
 **Congratulations!** You have written your first Reveal SDK Angular application.
 
-Next Steps:
-- [Create New Dashboards](creating-dashboards.md)
-- [Load Existing Dashboards](loading-dashboards.md)
-
 :::info Get the Code
 
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted).

@@ -168,10 +168,6 @@ npm start
 
 完了しました! 最初の Reveal SDK Angular アプリケーションを作成しました。
 
-次の手順:
-- [新しいダッシュボードの作成](creating-dashboards.md)
-- [既存のダッシュボードの読み込み](loading-dashboards.md)
-
 :::info Get the Code
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted) にあります。
