@@ -302,5 +302,13 @@
   "sidebar.webSidebar.doc.Adding a License Key": {
     "message": "Adding a License Key",
     "description": "The label for the doc item Adding a License Key in sidebar webSidebar, linking to the doc web/adding-license-key"
+  },
+  "sidebar.webSidebar.doc.Install Server SDK": {
+    "message": "Install Server SDK",
+    "description": "The label for the doc item Install Server SDK in sidebar webSidebar, linking to the doc web/install-server-sdk"
+  },
+  "sidebar.webSidebar.doc.Install Client SDK": {
+    "message": "Install Client SDK",
+    "description": "The label for the doc item Install Client SDK in sidebar webSidebar, linking to the doc web/install-client-sdk"
   }
 }

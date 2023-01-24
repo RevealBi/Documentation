@@ -1,31 +1,5 @@
 # ASP.NET Core Server の構成
 
-## インストール
-
-以下の手順では、Reveal SDK を既存の ASP.NET Core プロジェクトにインストールする方法について説明します。
-
-1 - ソリューションまたはプロジェクトを右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。
-
-![](images/getting-started-nuget-packages-manage.jpg)
-
-2 - パッケージ マネージャー ダイアログで **[参照]** タブを開き、**Infragistics (Local)** パッケージ ソースを選択して **Reveal.Sdk.AspNetCore** NuGet パッケージをプロジェクトにインストールします。
-
-![](images/getting-started-nuget-packages-install.jpg)
-
-3 - `Program.cs` ファイルを開き、`using Reveal.Sdk` 名前空間を追加します。次に、既存の `builder.Services.AddControllers()` メソッドに `IMcvBuilder.AddReveal()` の呼び出しを追加します。
-
-```cs
-using Reveal.Sdk;
-
-builder.Services.AddControllers().AddReveal();
-```
-
-4 - プロジェクトを右クリックし、**[追加] -> [新しいフォルダー]** を選択します。フォルダーの名前は **「Dashboards」** にしてください。
-
-![](images/setting-up-server-create-dashboards-folder.jpg)
-
-デフォルトで、Reveal SDK は **Dashboards** フォルダーからすべてのダッシュボードを読み込む規則を使用します。この規則を変更するにはカスタムの `IRVDashboardProvider` を作成します。詳細については、[ダッシュボードの読み込み](loading-dashboards.md)トピックを参照してください。
-
 ## エクスポート
 
 ダッシュボードを**画像**、**PDF**、または **PowerPoint** に (プログラムで、またはユーザーの操作を通じて) エクスポートするために、RevealSDK は内部で [Playwright](https://playwright.dev/dotnet/) を使用します。

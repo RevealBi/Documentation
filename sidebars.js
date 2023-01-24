@@ -22,6 +22,8 @@ const sidebars = {
         { type: "category", label: "Installation", items: [
           { type: "doc", label: "System Requirements", id: "web/system-requirements" },
           { type: "doc", label: "Using the Installer - Windows", id: "web/installation" },
+          { type: "doc", label: "Install Server SDK", id: "web/install-server-sdk" },
+          { type: "doc", label: "Install Client SDK", id: "web/install-client-sdk" },
           { type: "doc", label: "Adding a License Key", id: "web/adding-license-key" },
         ]},
         {

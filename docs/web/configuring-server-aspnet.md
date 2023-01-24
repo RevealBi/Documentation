@@ -1,31 +1,5 @@
 # Configuring an ASP.NET Core Server
 
-## Install
-
-The steps below describe how to install the Reveal SDK into an existing ASP.NET Core project.
-
-1 - Right click the Solution, or Project, and select **Manage NuGet Packages** for Solution.
-
-![](images/getting-started-nuget-packages-manage.jpg)
-
-2 - In the package manager dialog, open the **Browse** tab, select the **Infragistics (Local)** package source, and install the **Reveal.Sdk.AspNetCore** NuGet package into the project.
-
-![](images/getting-started-nuget-packages-install.jpg)
-
-3 - Open and modify the `Program.cs` file to add the namespace `using Reveal.Sdk;`. Then, add the call to `IMcvBuilder.AddReveal()` to the existing `builder.Services.AddControllers()` method as follows:
-
-```cs
-using Reveal.Sdk;
-
-builder.Services.AddControllers().AddReveal();
-```
-
-4 - Right-click the project and select **Add -> New Folder**. The folder MUST be named **Dashboards** .
-
-![](images/setting-up-server-create-dashboards-folder.jpg)
-
-By default, the Reveal SDK uses a convention that will load all dashboards from the **Dashboards** folder. You can change this convention by creating a custom `IRVDashboardProvider`. You can learn more about this in the [Loading Dashboards](loading-dashboards.md) topic.
-
 ## Export
 
 In order to export dashboards to **Image**, **PDF** or **PowerPoint** (either programmatically or through user interaction) the Reveal SDK uses [Playwright](https://playwright.dev/dotnet/) internally.
