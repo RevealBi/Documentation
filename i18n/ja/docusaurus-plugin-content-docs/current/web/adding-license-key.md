@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 デフォルトでは、Reveal SDK をインストールすると、**trial** 製品のみが使用されます。**licensed** 製品を解除するには、アプリケーションにライセンス キーを追加する必要があります。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

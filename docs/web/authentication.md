@@ -9,7 +9,7 @@ The authentication provider is used to check which data source is requesting aut
 
 **Step 1** - Create the authentication provider.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -50,7 +50,7 @@ const authenticationProvider = async (userContext: IRVUserContext | null, dataSo
 
 **Step 2** - Register the authentication provider with the Reveal SDK.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -89,7 +89,7 @@ app.use('/', reveal(revealOptions));
 
 If your data source requires the use of a username and password, then you must return an instance of the `RVUsernamePasswordDataSourceCredential` class. The `RVUsernamePasswordDataSourceCredential` class provides constructor overloads to define the **username**, the **password**, and optionally the **domain**.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -150,7 +150,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 
 If your data source is using an anonymous login, without authentication, you can use the `RVUsernamePasswordDataSourceCredential` with its empty constructor.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -200,7 +200,7 @@ The `RVUsernamePasswordDataSourceCredential` is supported for the following data
 
 If your data source requires the use of security tokens, then you must return an instance of the `RVBearerTokenDataSourceCredential` class. The `RVBearerTokenDataSourceCredential` class provides constructor overloads to define the **token**, and the **user id**.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -266,7 +266,7 @@ The `RVBearerTokenDataSourceCredential` is supported for the following data sour
 
 If your data source uses Amazon Web Services (AWS), then you must return an instance of the `RVAmazonWebServicesCredentials` class. The `RVAmazonWebServicesCredentials` class provides constructor overloads to define the **key**, and the **secret**.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

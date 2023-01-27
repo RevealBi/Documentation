@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 **手順 1** - サーバー アプリケーションで、Excel ファイルを格納するフォルダーを作成します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ![](images/excel-file-folder.jpg)
@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 **手順 2** - `RevealEmbedSettings.LocalFileStoragePath` プロパティを**手順 1** で作成したフォルダーの場所に設定します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

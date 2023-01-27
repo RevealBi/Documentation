@@ -54,7 +54,7 @@ services
 ### 新機能
 - バックエンドからダッシュボードをエクスポートできるようににりました:
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
