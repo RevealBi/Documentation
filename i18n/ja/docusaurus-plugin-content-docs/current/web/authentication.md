@@ -254,6 +254,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 - Box
 - Dropbox
 - Google アナリティクス
+- Google Big Query
 - Google Drive
 - OData サービス
 - OneDrive

@@ -254,6 +254,7 @@ The `RVBearerTokenDataSourceCredential` is supported for the following data sour
 - Box
 - Dropbox
 - Google Analytics
+- Google Big Query
 - Google Drive
 - OData Services
 - OneDrive
