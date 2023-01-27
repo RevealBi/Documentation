@@ -55,7 +55,7 @@ services
 ### New Features
 - Export dashboards from the backend:
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

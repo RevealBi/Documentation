@@ -11,7 +11,7 @@ A data source provider can be created with two steps:
 
 ***Step 1** - Create the data source provider.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -66,7 +66,7 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
 
 **Step 2** - Register the data source provider with the Reveal SDK.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

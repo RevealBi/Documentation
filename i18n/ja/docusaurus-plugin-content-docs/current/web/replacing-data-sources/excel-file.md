@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 まず、引数に渡された `RVDataSourceItem` をチェックして、それが `RVExcelDataSourceItem` であるかどうかを確認します。そうである場合は、既存の `RVDataSourceItem.ResourceItem` を取得し、その `Title` プロパティを確認します。タイトルが「SalesCloudExcel File」の場合、新しい `RVLocalFileDataSourceItem` を作成し、`Uri` を新しいローカル Excel ファイルの場所に設定します。ローカル Excel ファイル データ ソース項目のタイトルを設定した後、`RVExcelDataSourceItem.ResourceItem` を新しく作成した `RVLocalFileDataSourceItem` に置き換えます。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

@@ -99,7 +99,7 @@ var stream = await dashboardExporter.ExportToPdf(dashboardName, options: pdfOpti
 
 サーバー プロジェクト内、ダッシュボード エクスポート用の新しいルートを作成します。ダッシュボード名とエクスポート形式をルート パラメーターとして定義します。また、エクスポートを実行するために `IDashboardExporter` を挿入する必要があります。次に、エクスポート形式のルート パラメーターに基づいて、正しいエクスポートを実行するためのロジックを作成します。エクスポートの結果を返すときは、必ず正しいコンテンツ タイプを指定してください。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

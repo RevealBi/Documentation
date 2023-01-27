@@ -9,7 +9,7 @@ Reveal SDK 内のユーザー コンテキストは、`IRVUserContext` インタ
 
 **手順 1** - ユーザー コンテキスト プロバイダーを作成します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
   ```cs
@@ -64,7 +64,7 @@ Reveal SDK 内のユーザー コンテキストは、`IRVUserContext` インタ
 
 **手順 2** - ユーザー コンテキスト プロバイダーを Reveal SDK に登録します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
   ```cs

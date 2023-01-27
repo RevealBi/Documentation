@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 1** - In the server application, create a folder that will contain your Excel files.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ![](images/excel-file-folder.jpg)
@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 2** - Set the `RevealEmbedSettings.LocalFileStoragePath` property to the location of the folder created in **Step 1**
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

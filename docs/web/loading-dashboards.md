@@ -9,7 +9,7 @@ By default, the Reveal SDK uses a convention to load dashboards from a file path
 
 1 - In the server application, create a folder named **Dashboards** in the working directory and place a dashboard file within the folder.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ![](images/loading-dashboards-default-directory.jpg)
@@ -66,7 +66,7 @@ If the default **Dashboards** file directory is not an option for your applicati
 
 1 - Create the dashboard provider.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -118,7 +118,7 @@ const dashboardProvider = async (userContext:IRVUserContext | null, dashboardId:
 
 2 - Register the dashboard provider with the Reveal SDK.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -157,7 +157,7 @@ app.use("/", reveal(revealOptions));
 
 ## Example: Load from File Path
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -222,7 +222,7 @@ The source code to this sample can be found on [GitHub](https://github.com/Revea
 
 1 - Embed a Reveal dashboard **.rdash** file as a resource in your server application.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 To embed a Reveal dashboard **.rdash** file as a resource in your ASP.NET server application, open the Properties for the dashboard file in Visual Studio, and set the **Build Action** of the .rdash file to **EmbeddedResource**.
@@ -243,7 +243,7 @@ To embed a Reveal dashboard **.rdash** file as a resource in your Java server ap
 
 2 - Create the dashboard provider.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -306,7 +306,7 @@ The source code to this sample can be found on [GitHub](https://github.com/Revea
 
 For advanced users, or users that serialize Reveal dashboards into .json files instead of .rdash files, you can load these JSON based files using the `Dashboard.LoadFromJsonAsync` method on the server application.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs

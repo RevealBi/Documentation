@@ -9,7 +9,7 @@ The user context within the Reveal SDK is represented by the `IRVUserContext` in
 
 **Step 1** - Create the user context provider
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
   ```cs
@@ -64,7 +64,7 @@ The user context within the Reveal SDK is represented by the `IRVUserContext` in
 
 **Step 2** - Register the user context provider with the Reveal SDK.
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
   ```cs

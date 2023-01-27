@@ -10,7 +10,7 @@ Reveal ダッシュボードはサーバーに保存されます。クライア�
 1 - サーバー アプリケーションで、作業ディレクトリに **Dashboards** という名前のフォルダを作成しその中にダッシュボード ファイルを配置します。
 
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ![](images/loading-dashboards-default-directory.jpg)
@@ -69,7 +69,7 @@ $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
 
 1 - ダッシュボード プロバイダーを作成します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -121,7 +121,7 @@ const dashboardProvider = async (userContext:IRVUserContext | null, dashboardId:
 
 2 - ダッシュボード プロバイダーを Reveal SDK に登録します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -160,7 +160,7 @@ app.use("/", reveal(revealOptions));
 
 ## 例: ファイル パスから読み込む
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -226,7 +226,7 @@ const dashboardProvider = async (userContext:IRVUserContext | null, dashboardId:
 1 - サーバー アプリケーションにリソースとして Reveal ダッシュボード **.rdash** ファイルを埋め込む。
 
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ASP.NET サーバー アプリケーションにリソースとして Reveal ダッシュボード **.rdash** ファイルを埋め込むには、Visual Studio でダッシュボード ファイルのプロパティを開き、.rdash ファイルの **ビルド アクション** を **埋め込みリソース** に設定します。
@@ -247,7 +247,7 @@ Reveal ダッシュボード **.rdash** ファイルを Java サーバー アプ
 
 2 - ダッシュボード プロバイダーを作成します。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
@@ -310,7 +310,7 @@ public class RevealDashboardProvider implements IRVDashboardProvider {
 
 上級ユーザーや、Reveal ダッシュボードを .rdash ファイルではなく .json ファイルにシリアライズするユーザーのために、サーバー アプリケーションで `Dashboard.LoadFromJsonAsync` メソッドを使用してこれらの JSON ベースのファイルをロードすることができます。
 
-<Tabs groupId="code">
+<Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
