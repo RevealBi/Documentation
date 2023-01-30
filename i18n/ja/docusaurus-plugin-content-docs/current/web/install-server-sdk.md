@@ -8,11 +8,11 @@
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - パッケージ マネージャー ダイアログで **[参照]** タブを開き、**Infragistics (Local)** パッケージ ソースを選択して **Reveal.Sdk.AspNetCore** NuGet パッケージをプロジェクトにインストールします。
+2 - パッケージ マネージャー ダイアログで **[参照]** タブを開き、**nuget.org** パッケージ ソースまたは **Infragistics (Local)** パッケージ ソースを選択して **Reveal.Sdk.AspNetCore** NuGet パッケージをプロジェクトにインストールします。
 
 ![](images/getting-started-nuget-packages-install.jpg)
 
-3 - `Program.cs` ファイルを開き、`using Reveal.Sdk` 名前空間を追加します。次に、既存の `builder.Services.AddControllers()` メソッドに `IMcvBuilder.AddReveal()` の呼び出しを追加します。
+3 - `Program.cs` ファイルを開き、`using Reveal.Sdk;` 名前空間を追加します。次に、既存の `builder.Services.AddControllers()` メソッドに `IMcvBuilder.AddReveal()` の呼び出しを追加します。
 
 ```cs
 using Reveal.Sdk;
@@ -36,17 +36,17 @@ npm install reveal-sdk-node
 
 2 - `app.ts` ファイルを変更して Reveal を追加します。
 
-```js title="app.ts"
-import express, { Application } from 'express';
+```js
+var express = require('express');
 // highlight-next-line
-import reveal from 'reveal-sdk-node';
+var reveal = require('reveal-sdk-node');
 
-const app: Application = express();
+const app = express();
 
 // highlight-next-line
-app.use("/", reveal());
+app.use('/', reveal());
 
-app.listen(5111, () => {
+app.listen(8080, () => {
 	console.log(`Reveal server accepting http requests`);
 });
 ```
@@ -58,6 +58,8 @@ app.listen(5111, () => {
 デフォルトで、Reveal SDK は **dashboards** フォルダーからすべてのダッシュボードを読み込む規則を使用します。この規則を変更でするにはカスタムの `IRVDashboardProvider` を作成します。
 
 ## Java
+
+以下の手順では、Reveal SDK を既存の Java アプリケーションにインストールする方法について説明します。
 
 1 - **pom.xml** ファイルを更新します。Reveal Maven リポジトリを追加します。
 
@@ -76,7 +78,7 @@ app.listen(5111, () => {
 <dependency>
     <groupId>com.infragistics.reveal.sdk</groupId>
     <artifactId>reveal-sdk</artifactId>
-    <version>1.3.0</version>
+    <version>1.3.1</version>
 </dependency>
 ```
 
@@ -110,7 +112,7 @@ public class RevealJerseyConfig extends ResourceConfig
 
 ### Tomcat
 
-1 - Jakarta RESTful Web Services（JAX-RS）実装への依存関係を追加します。Jersey、RESTeasy、Apache CXF など複数の選択肢の中から選ぶことができます。お好みのプロバイダー提供元が説明する手順に従ってください。
+1 - Jakarta RESTful Web Services (JAX-RS) 実装への依存関係を追加します。Jersey、RESTeasy、Apache CXF など複数の選択肢の中から選ぶことができます。お好みのプロバイダー提供元が説明する手順に従ってください。
 
 例として Jersey 用に追加する必要がある依存関係を以下に示します:
 

@@ -62,7 +62,7 @@ code .
 
 次のコードを追加します:
 
-```javascript
+```js
 import express, { Application } from 'express';
 
 const app: Application = express();

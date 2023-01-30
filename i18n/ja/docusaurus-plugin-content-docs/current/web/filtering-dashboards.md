@@ -19,7 +19,7 @@
 事前定義された日付間隔のセットを使用してダッシュボードの**日付フィルター**を設定するには、`Dashboard.dateFilter` プロパティを `RVDateDashboardFilter` オブジェクトの新しいインスタンスに設定し、適切なRV `DateFilterType` 値をパラメーターとして使用する必要があります。
 
 例えば, このコード スニペットは、ダッシュボードの日付フィルターを **[年度累計]** に設定します。
-```javascript
+```js
 revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.YearToDate);
 ```
 ここでは、ダッシュボード UI が Date Filter を **[年度累計]** に更新したことを確認できます。
@@ -52,7 +52,7 @@ revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilt
 カスタムの日付範囲を設定するには、`Dashboard.dateFilter` プロパティを `RVDateDashboardFilter` オブジェクトの新しいインスタンスに設定し、`RVDateFilterType.CustomRange` 値をパラメーターとして使用し、`RVDateRange` (fromDate 引数と toDate 引数を提供する) を 2 番目のパラメーターに指定する必要があります。
 
 この例では、`日付フィルター`を過去 75 日間にわたるカスタムの日付範囲に設定します。
-```javascript
+```js
 var fromDate = new Date();
 fromDate.setDate(fromDate.getDate() - 75);
 var toDate = new Date();  
@@ -90,7 +90,7 @@ revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilt
 ### すべてのフィルターの取得
 
 ダッシュボード フィルターには、`RVDashboard.filters` プロパティを使用してアクセスできます。`RVDashboard.filters` プロパティは、ダッシュボードに定義されているすべてのフィルターを返します。
-```javascript
+```js
 var allDashboardFilters = revealView.dashboard.filters;
 ```
 
@@ -101,13 +101,13 @@ Reveal SDK は、`RVDashboard.filters` プロパティをループすること�
 
 ##### ID で取得
 
-```javascript
+```js
 var territoryFilter = revealView.dashboard.filters.getById("ddf3fa65-6893-4d8b-73ad-0b28fc1af330");
 ```
 
 ##### Title で取得
 
-```javascript
+```js
 var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 ```
 
@@ -116,7 +116,7 @@ var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 ### 利用可能なフィルター値の取得
 
  ダッシュボード フィルターで使用可能なすべてのフィルター値のコレクションを取得するには、`RVDashboardFilter.getFilterValues()` メソッドを使用します。
-```javascript
+```js
 var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 territoryFilter.GetFilterValues( filterValues => {
     //handle filterValues
@@ -131,7 +131,7 @@ territoryFilter.GetFilterValues( filterValues => {
 ### 選択したフィルター値の取得
 
 ダッシュボード フィルターに対して現在選択されているフィルター値のコレクションを取得するには、`RVDashboardFilter.selectedValues` プロパティを使用できます。
-```javascript
+```js
 var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 var selectedFilterValues = territoryFilter.selectedValues;
 ```
@@ -142,14 +142,14 @@ var selectedFilterValues = territoryFilter.selectedValues;
 
 ##### 単一の選択したフィルター値の設定
 
-```javascript
+```js
 var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 territoryFilter.selectedValues = [ "Japan" ];
 ```
 
 ##### 複数の選択したフィルターの設定
 
-```javascript
+```js
 var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 territoryFilter.selectedValues = [ "Japan", "India" ];
 ```

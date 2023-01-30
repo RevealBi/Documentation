@@ -8,7 +8,7 @@
 **手順 1** - ASP.NET Web API サーバー アプリケーションで、`IRVObjectEncoder` を実装するクラスを作成します。 
 このクラスは、MS SQL Server 情報をエンコードされた値で実際に置換します。
 
-```csharp
+```cs
     internal class SampleEncoder : IRVObjectEncoder
     {
         public Task<RVDashboardDataSource> Encode(IRVUserContext userContext, RVDashboardDataSource dataSource)
@@ -103,7 +103,7 @@
 
 **手順 2** - `RevealSetupBuilder.AddObjectEncoder` メソッドを使用して、作成した `IRVObjectEncoder` を `RevealSetupBuilder` に追加するよう、`Program.cs` ファイルの `AddReveal` メソッドを更新します。
 
-```csharp
+```cs
 .AddReveal(builder =>
         {
             builder
@@ -119,7 +119,7 @@
 
 **手順 3** - ASP.NET Web API サーバー アプリケーションで、`IRVDataSourceProvider` を実装するクラスを作成します。このクラスは、データベース/REST 設定の実際の置換を実行します。このクラスの `ChangeDataSourceItemAsync` メソッドは、表示形式がデータを取得するために使用する `RVDataSourceItem` を返します。`ChangeDataSourceItemAsync` メソッドで引数として提供される `RVDataSourceItem` 項目を変更することにより、データを取得するサーバーまたはテーブルを変更できます。各 `RVDataSource` を `RVSqlServerDataSource` としてキャストし、すべての `RVDataSourceItem` を `RVSqlServerDataSourceItem` としてキャストし、そのプロパティを次のように変更することにより、ダッシュボード内のすべての MS SQL Server データ ソース項目の MS SQL Server ホスト、データベース、ID、およびテーブル名を変更できます。
 
-```csharp
+```cs
     internal class LocalSamplesDataSourceProvider : IRVDataSourceProvider
     {
         public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)

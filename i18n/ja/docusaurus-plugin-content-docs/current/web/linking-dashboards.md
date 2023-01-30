@@ -17,7 +17,7 @@ Reveal SDK の観点からは、ダッシュボード リンクは、別のダ�
 ダッシュボード内の **ダッシュボード リンク** がクリックされたときに応答するには、プロパティ `RevealView.onLinkedDashboardProvider ` に、ダッシュボードをロードする Promise を返す `RVDashboard.loadDashboardAsync` メソッドを設定する必要があります。
 
 ダッシュボード ID を使用する方法:
-```javascript
+```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
     return $.ig.RVDashboard.loadDashboard(dashboardId);
 };
@@ -26,7 +26,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 ダッシュボードが [Reveal アプリ](https://app.revealbi.io/)で作成された場合、ダッシュボードの ID は自動生成されます。しかしダッシュボードの ID はシナリオによっては使用しない場合があります。その場合、代わりにダッシュボードのタイトルを使用できます。
 
 ダッシュボード タイトルを使用する方法:
-```javascript
+```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
     return $.ig.RVDashboard.loadDashboard(title);
 };

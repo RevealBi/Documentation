@@ -17,25 +17,25 @@ Reveal SDK には、適用できる 4 つの定義済みテーマが付属して
 
 ##### Mountain Light
 
-```javascript
+```js
 $.ig.RevealSdkSettings.theme = new $.ig.MountainLightTheme();
 ```
 
 ##### Mountain Dark
 
-```javascript
+```js
 $.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();
 ```
 
 ##### Ocean Light
 
-```javascript
+```js
 $.ig.RevealSdkSettings.theme = new $.ig.OceanLightTheme();
 ```
 
 ##### Ocean Dark
 
-```javascript
+```js
 $.ig.RevealSdkSettings.theme = new $.ig.OceanDarkTheme();
 ```
 
@@ -77,7 +77,7 @@ Reveal SDK を既存のアプリケーションに埋め込む場合、ダッシ
 
 既存のテーマの値に基づいてテーマを作成する場合は、変更を加える前に現在の `RevealTheme` のクローンを作成できます。  テーマのクローンを作成するには、`RevealTheme.clone()` メソッドを使用するだけです。テーマのクローンを作成したら、テーマのプロパティを設定して、新しいテーマとして使用できます。
 
-```javascript
+```js
 function cloneCurrentTheme() {
     var theme = $.ig.RevealSdkSettings.theme.clone();
 
@@ -94,7 +94,7 @@ function cloneCurrentTheme() {
 
 テーマのクローンを作成して変更し、既存のテーマを変更したら、テーマを適用できます。
 
-```javascript
+```js
 $.ig.RevealSdkSettings.theme = this.cloneCurrentTheme();
 ```
 
@@ -110,7 +110,7 @@ $.ig.RevealSdkSettings.theme = this.cloneCurrentTheme();
 
 カスタム テーマの例を次に示します:
 
-```javascript
+```js
 function createCustomTheme(){
     var theme = new $.ig.RevealTheme();
 
@@ -130,7 +130,7 @@ function createCustomTheme(){
 
 カスタム テーマを作成したら、テーマを適用できます。
 
-```javascript
+```js
 $.ig.RevealSdkSettings.theme = this.createCustomTheme();
 ```
 

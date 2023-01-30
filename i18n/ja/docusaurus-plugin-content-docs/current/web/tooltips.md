@@ -6,7 +6,7 @@
 
 ダッシュボードの表示形式にツールチップが表示されるとき、`RevealView.onTooltipShowing` イベントが呼び出されます。このイベントを処理すると、ツールチップ データの読み取りやツールチップの表示防止が可能になります。
 
-```javascript
+```js
 revealView.onTooltipShowing = (args) => {
 
 };
@@ -44,7 +44,7 @@ revealView.onTooltipShowing = (args) => {
 
 この例では、`TooltipShowingEventArgs.visualization.title` プロパティが **Sales** であるかどうかを確認し、もしそうならば `TooltipShowingEventArgs.cancel` プロパティを `true` に設定してツールチップを表示しないようにします。
 
-```javascript
+```js
 revealView.onTooltipShowing = (args) => {
     if (args.visualization.title == "Sales") {
              args.cancel = true;
