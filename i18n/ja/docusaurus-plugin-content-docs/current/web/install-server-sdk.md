@@ -34,7 +34,7 @@ builder.Services.AddControllers().AddReveal();
 npm install reveal-sdk-node
 ```
 
-2 - `app.ts` ファイルを変更して Reveal を追加します。
+2 - `main.js` ファイルを変更して Reveal を追加します。
 
 ```js
 var express = require('express');
@@ -53,7 +53,7 @@ app.listen(8080, () => {
 
 3 - Visual Studio Code で、エクスプローラーの **[新しいフォルダー]** ボタンをクリックし、**dashboards** という名前を付けます。フォルダーは **dashboards** という名前で、アプリケーションの作業ディレクトリに作成する必要があります。
 
-![](images/getting-started-server-node-typescript-create-dashboards-folder.jpg)
+![](images/getting-started-server-node-create-dashboards-folder.jpg)
 
 デフォルトで、Reveal SDK は **dashboards** フォルダーからすべてのダッシュボードを読み込む規則を使用します。この規則を変更でするにはカスタムの `IRVDashboardProvider` を作成します。
 
