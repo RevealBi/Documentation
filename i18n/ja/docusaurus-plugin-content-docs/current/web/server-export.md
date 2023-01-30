@@ -7,18 +7,18 @@ import TabItem from '@theme/TabItem';
 
 `IDashboardExporter` は、次のように ASP.NET コントローラーまたは最小限の API 関数に挿入することで取得できます。
 
-```csharp
+```cs
 app.MapGet("/dashboards/export/{name}", async (string name, IDashboardExporter dashboardExporter) =>
 {
 
 }
 ```
 
-### ダッシュボードをエクスポートする方法
+## ダッシュボードをエクスポートする方法
 `IDashboardExporter` は、ダッシュボードをファイル ストリームとして、またはディスク上のファイル パスにエクスポートするための API を提供します。サポートされている各エクスポート形式には、エクスポート プロセスを簡素化するための API があります。
 
 **Excel**
-```csharp 
+```cs
 //export to stream
 var stream = await dashboardExporter.ExportToExcel(dashboardName);
 
@@ -27,7 +27,7 @@ await dashboardExporter.ExportToExcel(dashboardName, filePath);
 ```
 
 **PDF**
-```csharp 
+```cs
 //export to stream
 var stream = await dashboardExporter.ExportToPdf(dashboardName);
 
@@ -36,7 +36,7 @@ await dashboardExporter.ExportToPdf(dashboardName, filePath);
 ```
 
 **PowerPoint**
-```csharp 
+```cs 
 //export to stream
 var stream = await dashboardExporter.ExportToPowerPoint(dashboardName);
 
@@ -55,7 +55,7 @@ PDF または PowerPoint 形式へのエクスポートには、時間がかか�
 
 `IRVUserContext` を取得する最初の手順は、`IRVUserContextProvider` と `IHttpContextAccessor` を ASP.NET コントローラーまたは最小限の API 関数に挿入することです。次に、引数として `IHttpContextAccessor.HttpContext` を渡して `IRVUserContextProvider.GetUserContext` を呼び出します。
 
-```csharp
+```cs
 app.MapGet("/dashboards/export/{name}", async (string name, IDashboardExporter dashboardExporter, 
     IRVUserContextProvider userContextProvider, IHttpContextAccessor httpContextAccessor) =>
 {
@@ -65,7 +65,7 @@ app.MapGet("/dashboards/export/{name}", async (string name, IDashboardExporter d
 
 `IRVUserContext` インスタンスを取得したら、それを引数として export メソッドに渡すことができます。
 
-```csharp
+```cs
 //export to stream
 var stream = await dashboardExporter.ExportToExcel(dashboardName, userContext);
 
@@ -73,7 +73,7 @@ var stream = await dashboardExporter.ExportToExcel(dashboardName, userContext);
 await dashboardExporter.ExportToExcel(dashboardName, filePath, userContext);
 ```
 
-### エクスポート オプション
+## エクスポート オプション
 各エクスポート形式は、ダッシュボードをエクスポートする際のさまざまなオプションをサポートしています。たとえば、各ページのヘッダーに著者名を追加したり、各ページのフッターに会社名を追加したりできます。
 
 各エクスポート形式には、特定のオプション オブジェクトがあります:
@@ -83,7 +83,7 @@ await dashboardExporter.ExportToExcel(dashboardName, filePath, userContext);
 
 ダッシュボード エクスポートのオプションを設定するには、エクスポート形式オプション クラスのインスタンスを作成し、それを引数として export メソッドに提供します。
 
-```csharp
+```cs
 //create Pdf options
 var pdfOptions = new PdfExportOptions()
 {
@@ -94,7 +94,7 @@ var pdfOptions = new PdfExportOptions()
 var stream = await dashboardExporter.ExportToPdf(dashboardName, options: pdfOptions);
 ```
 
-### 例: サーバーでのエクスポート
+## 例: サーバーでのエクスポート
 この例では、形式に基づいてダッシュボードをエクスポートするサービス エンドポイントを作成します。
 
 サーバー プロジェクト内、ダッシュボード エクスポート用の新しいルートを作成します。ダッシュボード名とエクスポート形式をルート パラメーターとして定義します。また、エクスポートを実行するために `IDashboardExporter` を挿入する必要があります。次に、エクスポート形式のルート パラメーターに基づいて、正しいエクスポートを実行するためのロジックを作成します。エクスポートの結果を返すときは、必ず正しいコンテンツ タイプを指定してください。
@@ -198,7 +198,7 @@ public class RevealExportController {
 ```
 
 この例では、**Sales** という名前のダッシュボードをエクスポートしています。これは、クリックされたボタンによって提供されたエクスポート形式を使用します。
-```javascript
+```js
 function onExportButtonClicked(format) {
     fetch(`http://localhost:5111/dashboards/export/Sales?format=${format}`)
     .then(resp => resp.blob())

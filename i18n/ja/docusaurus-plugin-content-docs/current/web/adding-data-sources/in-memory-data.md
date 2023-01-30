@@ -46,7 +46,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 次に、イベント ハンドラーで、`$.ig.RVInMemoryDataSourceItem` オブジェクトの新しいインスタンスを作成し、パラメーターとして一意の名前 / ID を指定します。この ID は、`IRVDataProvider` で、要求しているデータはどのデータ ソースかを示すために使用されます。
 
-```javascript
+```js
 var revealView = new $.ig.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
@@ -275,7 +275,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 ここで、`revealView` を初期化し、`RevealView.onDataSourcesRequested` イベントを処理します。この例では、**SalesRecords** の `id` と **SalesRecords** に設定された `title` で新しい `$.ig.RVInMemoryDataSourceItem` を作成しています。
 
-```javascript
+```js
 var revealView = new $.ig.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 

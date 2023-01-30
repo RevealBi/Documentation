@@ -1,16 +1,16 @@
-# Installing the Client SDK
+# Client SDK のインストール
 
-## Install Using Script Files
+## スクリプト ファイルを使用してインストールする
 
-### Using the CDN
-Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+### CDN を使用してインストールする
+`index.html` ファイルを変更し、ページの下部に (`</body>` 終了タグの直前) `infragistics.reveal.js` スクリプトを含めます。
 
 ```html
 <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
 ```
 
-### Using JavaScript Files
-If using the Reveal CDN is not an option, you can also host the Reveal SDK JavaScript files on your own domain. The Reveal JavaScript files are installed with the [Reveal SDK Installer](installation.md).
+### JavaScript ファイルを使用してインストールする
+Reveal CDN を使用できない場合は、独自のドメインで Reveal SDK JavaScript ファイルをホストすることもできます。Reveal JavaScript ファイルは、[Reveal SDK インストーラー](installation.md)でインストールします。
 
 1 - `assets` と呼ばれる新しいフォルダーを作成し、`assets` フォルダー内に `reveal` と呼ばれる別のフォルダーを作成します。
 
@@ -26,8 +26,8 @@ If using the Reveal CDN is not an option, you can also host the Reveal SDK JavaS
 <script src="./assets/reveal/infragistics.reveal.js"></script>
 ```
 
-### Add Dependencies
-The Reveal SDK requires the following dependencies in order to properly function.
+### 依存関係の追加
+Reveal SDK が正しく機能するには、次の依存関係が必要です。
 
 **Jquery 2.2 またはそれ以降**
 
@@ -54,7 +54,7 @@ The Reveal SDK requires the following dependencies in order to properly function
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
-Modify the `index.html` file to include all depedency scripts at the bottom of the page just before the `infragistics.reveal.js` script.
+`index.html` ファイルを変更し、ページの下部に (`infragistics.reveal.js` スクリプトの直前) すべての依存関係スクリプトを含めます。
 
 最終の `index.html` ファイルは以下のようになります。
 

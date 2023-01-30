@@ -46,13 +46,13 @@ Reveal SDK で**名前を付けて保存**を実行するには、次の 2 つ�
 
 カスタム保存ロジックを実装する場合、つまりダッシュボードを手動でシリアル化し、結果をカスタム REST サービスエンドポイントに POST/PUT する場合は、`RevealView.serverSideSave` プロパティを `false` に設定する必要があります。これにより、すべての保存操作がクライアント アプリケーションによって制御され、サーバーに存在する可能性のある `IRVDashboardProvider` 実装を使用しないことが Reveal SDK に指示されます。
 
-```javascript
+```js
 revealView.serverSideSave = false;
 ```
 
 クライアントで保存操作を実行するには、`RevealView.onSave` イベントにイベント ハンドラーを追加する必要があります。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     //handle save
 };
@@ -74,13 +74,13 @@ revealView.onSave = (rv, args) => {
 
 **保存**操作を無効にするには、`RevealView.canEdit` プロパティを `false` に設定して、編集を完全に無効にする必要があります。
 
-```javascript
+```js
 revealView.canEdit="false";
 ```
 
 **名前を付けて保存**の操作を無効にするには、`RevealView.canSaveAs` プロパティを `false` に設定する必要があります。
 
-```javascript
+```js
 revealView.canSaveAs="false";
 ```
 
@@ -118,7 +118,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 次に、クライアント アプリケーションを開き、`RevealView.onSave` イベントのイベント ハンドラーを追加し、`DashboardSaveEventArgs.saveAs` プロパティをチェックして、**保存**または**名前を付けて保存**の操作を処理しているかどうかを確認します。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
 
@@ -131,7 +131,7 @@ revealView.onSave = (rv, args) => {
 
 まず、**保存**機能を実装することから始めましょう。これは、`DashboardSaveEventArgs.saveFinished` を呼び出すだけで実行できます。これにより、`IRVDashboardProvider` で提供されるサーバー側の保存コードが呼び出され、編集モードが終了します。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
         //todo
@@ -154,7 +154,7 @@ app.Map("/isduplicatename/{name}", (string name) =>
 
 また、新しい API を呼び出す関数をクライアント アプリケーションに追加する必要があります。
 
-```javascript
+```js
 function isDuplicateName(name) {
     return fetch(`https://localhost:7111/isduplicatename/${name}`).then(resp => resp.text());
 }
@@ -162,7 +162,7 @@ function isDuplicateName(name) {
 
 それでは、**名前を付けて保存**の操作の実装を始めましょう。まず、エンドユーザーから新しい名前を取得しましょう。  次に、ユーザーが指定した名前が重複していないかどうかを確認します。重複している場合は、既存のファイルを上書きするようにユーザーにプロンプトを出します。エンドユーザーが既存のダッシュボード ファイルを上書きしたくない場合は、`return` ステートメントを呼び出して保存プロセスをキャンセルします。
 
-```javascript
+```js
 if (args.saveAs) {
     var newName = prompt("Please enter the dashboard name");
     isDuplicateName(newName).then(isDuplicate => {
@@ -179,7 +179,7 @@ if (args.saveAs) {
 
 **名前を付けて保存**の操作を完了するには、`DashboardSaveEventArgs.dashboardId` と `DashboardSaveEventArgs.name` をダッシュボードの新しい名前に設定しましょう。これにより、現在 `RevealView` に読み込まれているダッシュボードが更新され、サーバーに保存されているファイルと一致します。次に、`DashboardSaveEventArgs.saveFinished` メソッドを呼び出します。このメソッドは、`IRVDashboardProvider` で提供されるサーバー側の保存コードを呼び出し、編集モードを終了します。
 
-```javascript
+```js
 args.dashboardId = args.name = newName;
 args.saveFinished();
 }
@@ -187,7 +187,7 @@ args.saveFinished();
 
 `RevealView.onSave` イベントの最終的なコードは次のようになります。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
         var newName = prompt("Please enter the dashboard name");
@@ -221,13 +221,13 @@ revealView.onSave = (rv, args) => {
 
 カスタム保存機能を実装するための最初の手順は、`revealView.serverSideSave` を `false` に設定することです。これは、クライアントが保存操作を処理することを Reveal SDK に通知します。
 
-```javascript
+```js
 revealView.serverSideSave = false;
 ```
 
 次に、保存イベントのイベント ハンドラーを追加し、`DashboardSaveEventArgs.saveAs` プロパティを確認して、**保存**または**名前を付けて保存**の操作を処理しているかどうかを確認します。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
 
@@ -265,7 +265,7 @@ app.MapPut("/dashboards/{name}", async (HttpRequest request, string name) =>
 
 次に、保存を実行する関数をクライアント アプリケーションに追加しましょう。この関数は、**保存**操作と**名前を付けて保存**の操作の両方を処理します。この関数には、ダッシュボードの `name`、ダッシュボードの内容を表す `byte[]`、およびこれが**保存**または**名前を付けて保存**の操作であるかどうかを判別する `isSaveAs` のパラメーターがあります。**名前を付けて保存**の操作の場合、リクエストの`メソッド`を **POST** に設定します。これは、新しいファイルが作成されることを示します。
 
-```javascript
+```js
 function saveDashboard(name, bytes, isSaveAs = false) {
 
     let url = `https://localhost:7111/dashboards/${name}`;
@@ -284,7 +284,7 @@ function saveDashboard(name, bytes, isSaveAs = false) {
 
 `RevealView.onSave` イベントに**保存**ロジックを実装しましょう。まず、`DashboardSaveEventArgs.serialize` メソッドを呼び出して現在のダッシュボードを `byte[]` に​​シリアル化して、REST サービス エンドポイントに送信できるようにする必要があります。`DashboardSaveEventArgs.serialize` メソッドのコールバックで、前に作成した `saveDashboard` 関数を呼び出し、`DashboardSaveEventArgs.name` と `byte[]` を引数として渡します。`saveDashboard` が完了すると、`DashboardSaveEventArgs.saveFinished` メソッドを呼び出します。このメソッドは、保存が完了したことを Reveal SDK に通知し、`RevealView` を編集モードから外します。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
         //todo
@@ -311,7 +311,7 @@ app.Map("/isduplicatename/{name}", (string name) =>
 
 また、新しい API を呼び出す関数をクライアント アプリケーションに追加します。
 
-```javascript
+```js
 function isDuplicateName(name) {
     return fetch(`https://localhost:7111/isduplicatename/${name}`).then(resp => resp.text());
 }
@@ -319,7 +319,7 @@ function isDuplicateName(name) {
 
 それでは、**名前を付けて保存**の操作の実装を始めましょう。まず、エンドユーザーから新しい名前を取得しましょう。  次に、ユーザーが指定した名前が重複していないかどうかを確認します。重複している場合は、既存のファイルを上書きするようにユーザーにプロンプトを出します。エンドユーザーが既存のダッシュボード ファイルを上書きしたくない場合は、保存プロセスをキャンセルします。まず、`DashboardSaveEventArgs.saveFinished` メソッドを呼び出して、`RevealView` を強制的に編集モードを終了させてから、`return` を実行して、保存操作を実行せずに保存イベントを終了します。
 
-```javascript
+```js
 if (args.saveAs) {
     var newName = prompt("Please enter the dashboard name");
     isDuplicateName(newName).then(isDuplicate => {
@@ -356,7 +356,7 @@ app.MapPost("/dashboards/{name}", async (HttpRequest request, string name) =>
 
 クライアント コードを更新して、**名前を付けて保存**操作を完了しましょう。保存を実行する前に、`DashboardSaveEventArgs.dashboardId` と `DashboardSaveEventArgs.name` をダッシュボードの新しい名前に設定しましょう。これにより、現在 `RevealView` に読み込まれているダッシュボードが更新され、サーバーに保存されているファイルと一致します。次に、`DashboardSaveEventArgs.serializeWithNewName` を呼び出して、現在のダッシュボードを `byte[]` にシリアル化する必要があります。このメソッドは、新しい `name` を使用してダッシュボードを `byte[]` にシリアライズし、新しくシリアライズされたダッシュボードのタイトルと ID を更新します。`DashboardSaveEventArgs.serializeWithNewName` メソッドのコールバックで、前に作成した `saveDashboard` 関数を呼び出し、`DashboardSaveEventArgs.name`、`byte[]`、および `true` (名前を付けて保存を示す) を引数として渡します。`saveDashboard` が完了すると、`DashboardSaveEventArgs.saveFinished` メソッドを呼び出します。このメソッドは、保存が完了したことを Reveal SDK に通知し、`RevealView` を編集モードから外します。
 
-```javascript
+```js
 args.dashboardId = args.name = newName;
 args.serializeWithNewName(newName, bytes => {
     this.saveDashboard(newName, bytes, true).then(() => {
@@ -367,7 +367,7 @@ args.serializeWithNewName(newName, bytes => {
 
 `RevealView.onSave` イベントの最終的なコードは次のようになります。
 
-```javascript
+```js
 revealView.onSave = (rv, args) => {
     if (args.saveAs) {
         var newName = prompt("Please enter the dashboard name");

@@ -10,7 +10,7 @@
 
 `revealView` を初期化し、イベント ハンドラーを追加します。
 
-```javascript
+```js
 var revealView = new $.ig.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
@@ -20,7 +20,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 **手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSqlServerDataSource` オブジェクトの新しいインスタンスを作成します。`Host`、`Database`、`Port`、および `Title` プロパティを、MS SQL Server に対応する値に設定します。`RVSqlServerDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
-```javascript
+```js
 revealView.onDataSourcesRequested = (callback) => {
     var sqlDataSource = new $.ig.RVSqlServerDataSource();
     sqlDataSource.host = "your-db-host";
@@ -38,7 +38,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 **手順 3** - `RVSqlServerDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`Title`、および `Table` プロパティを設定します。`RVSqlServerDataSourceItem` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
-```javascript
+```js
 revealView.onDataSourcesRequested = (callback) => {
     var sqlDataSource = new $.ig.RVSqlServerDataSource();
     sqlDataSource.host = "your-db-host";

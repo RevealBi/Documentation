@@ -16,13 +16,13 @@
 
 少数のチャート タイプを使用する場合は、すべてのチャート タイプを削除して、使用可能にしたいチャートのみを追加する方が簡単な場合があります。これを行うには、RevealView.AvailableChartTypes プロパティを、ユーザーが利用できるようにするチャートの種類のみを含む配列に設定します。
 
-```javascript
+```js
 revealView.availableChartTypes = [$.ig.RVChartType.BarChart, $.ig.RVChartType.ColumnChart];
 ```
 
 `RevealView.availableChartTypes` から特定のチャート タイプを削除するには、この例のようなコードを使用して、`RevealView.AvailableChartTypes` から `RVChartType.AreaChart`、`RVChartType.Indicator`、および `RVChartType.IndicatorTarget` (KPI とも呼ばれます) を削除します。
 
-```javascript
+```js
 var chartTypesToRemove = [$.ig.RVChartType.AreaChart, $.ig.RVChartType.Indicator, $.ig.RVChartType.IndicatorTarget];
 revealView.availableChartTypes = revealView.availableChartTypes.filter(t => !chartTypesToRemove.includes(t));
 ```
@@ -80,7 +80,7 @@ revealView.availableChartTypes = revealView.availableChartTypes.filter(t => !cha
 
 ![](images/editing-canaddcalculatedfields.jpg)
 
-```javascript
+```js
 revealView.canAddCalculatedFields = false;
 ```
 
@@ -90,7 +90,7 @@ revealView.canAddCalculatedFields = false;
 
 ![](images/editing-canadddashboardfilter.jpg)
 
-```javascript
+```js
 revealView.canAddDashboardFilter = false;
 ```
 
@@ -100,7 +100,7 @@ revealView.canAddDashboardFilter = false;
 
 ![](images/editing-canadddatefilter.jpg)
 
-```javascript
+```js
 revealView.canAddDateFilter = false;
 ```
 
@@ -110,7 +110,7 @@ revealView.canAddDateFilter = false;
 
 ![](images/editing-canaddpostcalculatedfields.jpg)
 
-```javascript
+```js
 revealView.canAddPostCalculatedFields = false;
 ```
 
@@ -118,7 +118,7 @@ revealView.canAddPostCalculatedFields = false;
 
 このプロパティは、編集モードのときにダッシュボードの **[+ 追加]** ボタンを表示/非表示にします。
 
-```javascript
+```js
 revealView.canAddVisualization = false;
 ```
 
@@ -128,7 +128,7 @@ revealView.canAddVisualization = false;
 
 ![](images/editing-canChangeVisualizationBackgroundColor.jpg)
 
-```javascript
+```js
 revealView.canChangeVisualizationBackgroundColor = true;
 ```
 
@@ -147,7 +147,7 @@ revealView.canChangeVisualizationBackgroundColor = true;
 
 ![](images/editing-cancopyvisualization.jpg)
 
-```javascript
+```js
 revealView.canCopyVisualization = false;
 ```
 
@@ -157,7 +157,7 @@ revealView.canCopyVisualization = false;
 
 ![](images/editing-canduplicatevisualization.jpg)
 
-```javascript
+```js
 revealView.canDuplicateVisualization = false;
 ```
 
@@ -167,7 +167,7 @@ revealView.canDuplicateVisualization = false;
 
 ![](images/editing-canedit.jpg)
 
-```javascript
+```js
 revealView.canEdit = false;
 ```
 
@@ -179,7 +179,7 @@ revealView.canEdit = false;
 
 ![](images/editing-canMaximizeVisualization.jpg)
 
-```javascript
+```js
 revealView.canMaximizeVisualization = false;
 ```
 
@@ -189,7 +189,7 @@ revealView.canMaximizeVisualization = false;
 
 ![](images/editing-canSaveAs.jpg)
 
-```javascript
+```js
 revealView.canSaveAs = false;
 ```
 
@@ -199,7 +199,7 @@ revealView.canSaveAs = false;
 
 ![](images/editing-showChangeDataSource.jpg)
 
-```javascript
+```js
 revealView.showChangeDataSource = false;
 ```
 
@@ -209,7 +209,7 @@ revealView.showChangeDataSource = false;
 
 ![](images/editing-showeditdatasource.jpg)
 
-```javascript
+```js
 revealView.showEditDataSource = false;
 ```
 
@@ -219,7 +219,7 @@ revealView.showEditDataSource = false;
 
 ![](images/editing-showExportImage.jpg)
 
-```javascript
+```js
 revealView.showExportImage = false;
 ```
 
@@ -229,7 +229,7 @@ revealView.showExportImage = false;
 
 ![](images/editing-showExportToExcel.jpg)
 
-```javascript
+```js
 revealView.showExportToExcel = false;
 ```
 
@@ -239,7 +239,7 @@ revealView.showExportToExcel = false;
 
 ![](images/editing-showExportToPDF.jpg)
 
-```javascript
+```js
 revealView.showExportToPDF = false;
 ```
 
@@ -249,7 +249,7 @@ revealView.showExportToPDF = false;
 
 ![](images/editing-showExportToPowerPoint.jpg)
 
-```javascript
+```js
 revealView.showExportToPowerPoint = false;
 ```
 
@@ -259,7 +259,7 @@ revealView.showExportToPowerPoint = false;
 
 ![](images/editing-showFilters.jpg)
 
-```javascript
+```js
 revealView.showFilters = false;
 ```
 
@@ -267,7 +267,7 @@ revealView.showFilters = false;
 
 このプロパティは、ダッシュボードのタイトルとダッシュボード メニューを含むダッシュボード ヘッダー全体を表示/非表示にします。
 
-```javascript
+```js
 revealView.showHeader = false;
 ```
 
@@ -275,7 +275,7 @@ revealView.showHeader = false;
 
 このプロパティは、`RevealView` の右上隅に配置されているダッシュボード メニューを表示/非表示にします。
 
-```javascript
+```js
 revealView.showMenu = false;
 ```
 
@@ -285,7 +285,7 @@ revealView.showMenu = false;
 
 ![](images/editing-showRefresh.jpg)
 
-```javascript
+```js
 revealView.showRefresh = false;
 ```
 
@@ -295,7 +295,7 @@ revealView.showRefresh = false;
 
 ![](images/editing-startineditmode.jpg)
 
-```javascript
+```js
 revealView.startInEditMode = false;
 ```
 
@@ -305,7 +305,7 @@ revealView.startInEditMode = false;
 
 ![](images/editing-startwithnewvisualization.jpg)
 
-```javascript
+```js
 revealView.startWithNewVisualization = false;
 ```
 
@@ -321,7 +321,7 @@ revealView.startWithNewVisualization = false;
 
 表示形式エディターが開く**前**にアプリケーション ロジックを実行したい場合や、条件が満たされるまでエディターが開かないようにしたい場合もあります。これを行うには、イベント ハンドラーを `RevealView.onVisualizationEditorOpening` イベントに追加します。
 
-```javascript
+```js
 revealView.onVisualizationEditorOpening = function (args) {
     if(args.isNewVisualization == false){ //the user is trying to edit an existing visualization
         args.cancel = true; //prevent it
@@ -344,7 +344,7 @@ revealView.onVisualizationEditorOpening = function (args) {
 
 表示形式エディターを開いた**後**、既存の表示形式を編集するとき、または新しい表示形式を作成するときに通知を受け取りたい場合は、`RevealView.onVisualizationEditorOpened` イベントにイベント ハンドラーを追加できます。
 
-```javascript
+```js
 revealView.onVisualizationEditorOpened = function (args) {
     if(args.isNewVisualization == false) { 
         //the user is editing an existing visualization
@@ -360,7 +360,7 @@ revealView.onVisualizationEditorOpened = function (args) {
 
 表示形式エディターが閉じる**前**にアプリケーション ロジックを実行したい場合や、条件が満たされるまでエディターが閉じないようにしたい場合もあります。これを行うには、`RevealView.onVisualizationEditorClosing` イベントにイベント ハンドラーを追加します。
 
-```javascript
+```js
 revealView.onVisualizationEditorClosing = function (args) {
     if(args.isNewVisualization == false) {  //the user is editing
          args.resetVisualization = true; //puts the widget to the state when it was when the user started editing it
@@ -383,7 +383,7 @@ revealView.onVisualizationEditorClosing = function (args) {
 ### onVisualizationEditorClosed
 エンドユーザーが `RevealView` で単一の表示形式を編集するときはいつでも、エディターが閉じられた**後**に `RevealView.onVisualizationEditorClosed` イベントが発生します。これは、既存の表示形式の編集、または新しい表示形式の追加に対応する場合があります。`RevealView.onVisualizationEditorClosed` イベントにイベント ハンドラーを追加することで、このイベントに応答できます。
 
-```javascript
+```js
 revealView.onVisualizationEditorClosed = function (args) {
     if(args.isNewVisualization == false) { 
     }

@@ -8,7 +8,7 @@
 ```
 
 次に、JavaScript で、`$.ig.RevealView.Dashboard` プロパティを `$.ig.RVDashboard` オブジェクトの新しいインスタンスに設定します。
-```javascript
+```js
 var revealView = new $.ig.RevealView("#revealView");
 revealView.dashboard = new $.ig.RVDashboard();
 ```

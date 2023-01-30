@@ -74,7 +74,7 @@ app.use('/', reveal(revealOptions));
 
 `revealView` を初期化し、イベント ハンドラーを追加します。
 
-```javascript
+```js
 var revealView = new $.ig.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
@@ -84,7 +84,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 **手順 4** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVLocalFileDataSourceItem` オブジェクトの新しいインスタンスを作成します。`Uri` プロパティを、データ ソースとして使用する Excel ファイルのパス (ファイル名を含む) に設定します。
 
-```javascript
+```js
 revealView.onDataSourcesRequested = (callback) => {
     var localFileItem = new $.ig.RVLocalFileDataSourceItem();
     localFileItem.uri = "local:/Samples.xlsx";
@@ -107,7 +107,7 @@ Excel ファイルパスの前に `local:/` を付ける必要があります。
 
 最後に、`RVExcelDataSourceItem` オブジェクトを `callback` のデータ ソース項目配列に追加します。
 
-```javascript
+```js
 revealView.onDataSourcesRequested = (callback) => {
     var localFileItem = new $.ig.RVLocalFileDataSourceItem();
     localFileItem.uri = "local:/Samples.xlsx";

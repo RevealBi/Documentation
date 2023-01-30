@@ -18,7 +18,7 @@
 
 表示形式を最大化した状態でダッシュボードを開くには、__revealView__ の dashboard プロパティにダッシュボードを設定する必要があります。次に、__$.ig.RevealView__ インスタンスの __maximizedVisualization__ プロパティに、最大化する表示形式を設定します。このプロパティに表示形式を設定しないと、ダッシュボード全体が表示されます。
 
-``` javascript
+``` js
 $.ig.RVDashboard.loadDashboard("AllDivisions", function (dashboard) {
     var revealView = new $.ig.RevealView("#revealView");
     revealView.dashboard = dashboard;
@@ -57,7 +57,7 @@ revealView.singleVisualizationMode = true;
 </section>
 ```
 
-```javascript
+```js
 var dashboardId = 'AllDivisions';
 
 $.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {

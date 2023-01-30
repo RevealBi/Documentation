@@ -2,7 +2,7 @@
 
 エンドユーザーが表示形式内のデータ ポイントをクリックすると、`onVisualizationDataPointClicked` イベントが呼び出されます。`onVisualizationDataPointClicked` イベントにイベント ハンドラーを追加することで、このイベントに応答できます。
 
-```javascript
+```js
 revealView.onVisualizationDataPointClicked = (visualization, cell, row) => {
     
 };

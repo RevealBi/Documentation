@@ -26,7 +26,7 @@ Reveal SDK を使用すると、ダッシュボードと表示形式の両方を
 
 **[Excel]** メニュー項目は、`RevealView.showExportToExcel` プロパティを設定することで表示/非表示にできます。
 
-```javascript
+```js
 revealView.showExportToExcel = false;
 ```
 
@@ -47,7 +47,7 @@ Reveal SDK では、ダッシュボードまたは表示形式を画像にエク
 
 **[画像]** メニュー項目は、`RevealView.showExportImage` プロパティを設定することで表示/非表示にできます。
 
-```javascript
+```js
 revealView.showExportImage = false;
 ```
 
@@ -60,7 +60,7 @@ revealView.showExportImage = false;
 
 カスタム画像エクスポートを使用するには、`RevealView.onImageExported` イベントにイベント ハンドラーを追加する必要があります。
 
-```javascript
+```js
 revealView.onImageExported = (image) => {
 
 };
@@ -71,7 +71,7 @@ revealView.onImageExported = (image) => {
 
 #### 例: カスタム画像のエクスポート
 
-```javascript
+```js
 revealView.onImageExported = (image) => {
     var body = window.open("about:blank").document.body;
     body.appendChild(image);
@@ -93,7 +93,7 @@ revealView.toImage( image => {
 <button onclick="exportToImage()">Export to Image</button>
 ```
 
-```javascript
+```js
 function exportToImage() {
     revealView.toImage(image => {
         console.log(image);
@@ -116,7 +116,7 @@ PDF エクスポートは、エンドユーザーが **[エクスポート]** �
 
 **[PDF]** メニュー項目は、`RevealView.ShowExportToPDF` プロパティを設定することで表示/非表示にできます。
 
-```javascript
+```js
 revealView.showExportToPDF = false;
 ```
 
@@ -131,7 +131,7 @@ revealView.showExportToPDF = false;
 
 **PowerPoint** メニュー項目は、`RevealView.ShowExportToPowerpoint` プロパティを設定することで表示/非表示にできます。
 
-```javascript
+```js
 revealView.showExportToPowerPoint = false;
 ```
 
