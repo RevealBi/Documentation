@@ -52,7 +52,7 @@
     "description": "The label of footer link with label=Blogs linking to https://www.revealbi.io/blog"
   },
   "copyright": {
-    "message": "Copyright © 2022 Infragistics. All Rights Reserved.",
+    "message": "Copyright © 2023 Infragistics. All Rights Reserved.",
     "description": "The footer copyright"
   },
   "link.title.Legal": {
