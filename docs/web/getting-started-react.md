@@ -21,7 +21,7 @@ code .
 
 ## Step 2 - Add Reveal JavaScript API
 
-1 - Open and modify the `index.html` file in the \public folder to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+1 - Open and modify the `public/index.html` file  to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
 <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
