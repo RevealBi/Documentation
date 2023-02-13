@@ -21,7 +21,7 @@ code .
 
 ## 手順 2 - Reveal JavaScript API の追加
 
-1 - `index.html` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前) `infragistics.reveal.js` スクリプトを含めます。
+1 - `public/index.html` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前) `infragistics.reveal.js` スクリプトを含めます。
 
 ```html
 <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
@@ -107,7 +107,7 @@ code .
 
 1 - `src/app.tsx` ファイルを開いて変更します。`return` ステートメント内のすべてのコンテンツを削除し、新しい `<div>` タグを追加し、`id` を `revealView` に設定します。
 
-```ts
+```ts title="src/app.tsx"
 function App() {
   return (
     //highlight-next-line
@@ -131,9 +131,9 @@ useEffect(() => {
 }, [])
 ```
 
-次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
+この JavaScript コードは、`useEffect` フックを使用して、コードが一度だけ呼び出されるようにします。次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
 
-最終の `index.html` ファイルは以下のようになります。
+最終の `app.tsx` ファイルは以下のようになります。
 
 ```ts title="src/app.tsx"
 import React, { useEffect } from 'react';

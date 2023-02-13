@@ -26,7 +26,13 @@
 
 ![](images/getting-started-nuget-packages-install.jpg)
 
-3 - `Program.cs` ファイルを開き、`using Reveal.Sdk` 名前空間を追加します。次に、既存の `builder.Services.AddControllers()` メソッドに `IMcvBuilder.AddReveal()` の呼び出しを追加します。
+:::info
+
+トライアル版をお使いの場合、[NuGet.org](https://www.nuget.org/packages/Reveal.Sdk.Web.AspNetCore.Trial/) にある **Reveal.Sdk.Web.AspNetCore.Trial** NuGet パッケージをインストールできます。
+
+:::
+
+3 - `Program.cs` ファイルを開き、`using Reveal.Sdk;` 名前空間を追加します。次に、既存の `builder.Services.AddControllers()` メソッドに `IMcvBuilder.AddReveal()` の呼び出しを追加します。
 
 ```cs
 using Reveal.Sdk;
