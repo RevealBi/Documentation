@@ -127,7 +127,7 @@ app.get("/dashboards/", (req, res) => {
 </dialog>
 ```
 
-3 - Handle the `onDashboardSelectorRequested` event on the RevealView and pass the callback.
+3 - Handle the `onDashboardSelectorRequested` event on the RevealView. In this event, we will call a method responsible for displaying the custom UI. We will pass the callback to the function so it can be used by the custom UI.
 
 ```js
 revealView.onDashboardSelectorRequested = (args) => {
