@@ -1,26 +1,26 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Linking Dashboards
+# ダッシュボード リンク
 
-The Reveal SDK supports dashboard linking, which allows users to navigate through dashboards. By moving from dashboard to dashboard, you can go from a high level overview of the business' reality to a more detailed view with the specifics.
+Reveal SDK はダッシュボードのリンクをサポートしているため、ユーザーはダッシュボードをナビゲートできます。ダッシュボードからダッシュボードに移動することで、業務上のハイレベルな概要からより詳細なビューに進むことができます。
 
-From a Reveal SDK perspective, dashboard linking is invoked when an end-user clicks on a link in a visualization which invokes the loading of another dashboard.
+Reveal SDK の観点からは、ダッシュボードのリンクは、エンドユーザーがビジュアル化されたリンクをクリックして別のダッシュボードをロードするときに呼び出されます。
 
 ![](images/linking-open-campaigns.jpg)
 
 
-## Creating Dashboard Links
+## ダッシュボード リンクの作成
 
-Dashboard links are created in the visualization editor by clicking the "+" button in the **Links** section of the **Settings** tab.
+**[設定]** タブの **[リンク]** セクションにある [+] ボタンをクリックすると、表示形式エディターでダッシュボード リンクが作成されます。
 
 ![](images/linking-add.jpg)
 
-When this button is clicked, a dialog is shown which gives the end-user the ability to choose a dashboard. A dashboard selection dialog is shown when the **Select Dashboard** item is clicked. 
+このボタンをクリックすると、エンドユーザーがダッシュボードを選択できるダイアログが表示されます。**[ダッシュボードの選択]** 項目をクリックすると、ダッシュボード選択ダイアログが表示されます。 
 
 ![](images/linking-select-dashboard.jpg)
 
-At this point, it is now the responsibility of the developer to create a custom user interface that showcases the range of available dashboards that users can choose from. To facilitate this process, the Reveal SDK features an `onDashboardSelectorRequested` event that serves as a trigger for displaying the customized UI. Within this event, the event arguments contain a callback function that delivers the unique id of the selected dashboard, linking it back to the SDK.
+この時点で、開発者は、ユーザーが選択できるダッシュボードの範囲を紹介するカスタム ユーザー インターフェイスを作成する必要があります。このプロセスを容易にするために、Reveal SDK には、カスタマイズされた UI を表示するためのトリガーとして機能する `onDashboardSelectorRequested` イベントが用意されています。このイベント内のイベント引数には、選択したダッシュボードの一意の ID を提供し、それを SDK にリンクするコールバック関数が含まれています。
 
 ```js
 revealView.onDashboardSelectorRequested = (args) => {
@@ -31,7 +31,7 @@ revealView.onDashboardSelectorRequested = (args) => {
 }
 ```
 
-When the dashboard is selected from the custom UI, the next step is to instruct the SDK on how to load the linked dashboard. For this, the SDK provides the `onLinkedDashboardProviderAsync` event. In this event, the linked dashboard instance should be returned.
+カスタム UI からダッシュボードが選択されたら、次の手順は、リンクされたダッシュボードをロードする方法を SDK に指示することです。このために、SDK は `onLinkedDashboardProviderAsync` イベントを提供します。このイベントでは、リンクされたダッシュボード インスタンスが返されます。
 
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
@@ -41,15 +41,15 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 
 :::info
 
-The `onLinkedDashboardProviderAsync` event is also invoked when the **Dashboard Link** is clicked within the tooltip of a visualization.
+`onLinkedDashboardProviderAsync` イベントは、**ダッシュボード リンク**が表示形式のツールチップ内でクリックされたときにも呼び出されます。
 
 :::
 
-## Example: Dashboard Linking
+## 例: ダッシュボード リンク
 
-This is a high-level example of the steps required to implement a custom dashboard selection UI for adding dashboard links. For full source code of the working example, see the GitHub link at the end of the sample.
+これは、ダッシュボード リンクを追加するためのカスタム ダッシュボード選択 UI を実装するために必要な手順の高レベルの例です。作業例の完全なソース コードについては、サンプルの終了にある GitHub リンクを参照してください。
 
-1 - In the server application, expose a service endpoint which returns the names of all the available dashboards to display in the custom UI.
+1 - サーバー アプリケーションで、利用可能なすべてのダッシュボードの名前を返すサービス エンドポイントを公開して、カスタム UI に表示します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -118,7 +118,7 @@ app.get("/dashboards/", (req, res) => {
   </TabItem>
 </Tabs>
 
-2 - Create an HTML dialog to use as the custom dashboard selector UI
+2 - カスタム ダッシュボード セレクター UI として使用する HTML ダイアログを作成します。
 
 ```html
 <dialog id="dbSelector" class="modal">
@@ -127,7 +127,7 @@ app.get("/dashboards/", (req, res) => {
 </dialog>
 ```
 
-3 - Handle the `onDashboardSelectorRequested` event on the RevealView. In this event, we will call a method responsible for displaying the custom UI. We will pass the callback to the function so it can be used by the custom UI.
+3 - RevealView で `onDashboardSelectorRequested` イベントを処理します。このイベントでは、カスタム UI の表示を担当するメソッドを呼び出します。カスタム UI で使用できるように、コールバックを関数に渡します。
 
 ```js
 revealView.onDashboardSelectorRequested = (args) => {
@@ -135,7 +135,7 @@ revealView.onDashboardSelectorRequested = (args) => {
 }
 ```
 
-4 - Implement the `openDialog` function which will get all the dashboard file names from our service endpoint, and then dynamically build a list of dashboards to display in our dialog.
+4 - サービス エンドポイントからすべてのダッシュボード ファイル名を取得する `openDialog` 関数を実装し、ダイアログに表示するダッシュボードのリストを動的に作成します。
 
 ```js
 const dialog = document.getElementById("dbSelector");
@@ -170,7 +170,7 @@ function closeDialog() {
 }
 ```
 
-5 - Handle the `onLinkedDashboardProviderAsync` event to load the linked dashboards.
+5 - `onLinkedDashboardProviderAsync` イベントを処理して、リンクされたダッシュボードを読み込みます。
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
     return $.ig.RVDashboard.loadDashboard(dashboardId);
@@ -179,6 +179,6 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LinkingDashboards-UI)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LinkingDashboards-UI) にあります。
 
 :::
