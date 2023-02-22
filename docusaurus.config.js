@@ -155,7 +155,7 @@ const config = {
             items: [
               {
                 label: 'Support',
-                href: 'https://www.infragistics.com/my-account/submit-support-request/reveal',
+                href: 'https://github.com/RevealBi/Reveal.Sdk/issues',
                 "href_jp": "https://jp.infragistics.com/my-account/submit-support-request/reveal",
               },
               {
