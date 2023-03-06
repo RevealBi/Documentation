@@ -36,6 +36,9 @@ revealView.onFieldsInitializing = function (args) {
 * The Athena DataSourceItem errors out unless you specify the Database property on the Client (Web only)
 * RVSnowflakeDataSourceItem Does Not Work
 
+#### ASP.NET
+* Headless export fails if DocumentExportOptions is used.
+
 #### Java
 * "Fail to retrieve row count for first arrow chunk" error in Snowflake (Java only)
 
