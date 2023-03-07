@@ -12,9 +12,9 @@
 
 :::info
 
-If developing on a Mac M1/M2, Rosetta must be installed.
+Mac M1/M2 で開発する場合は、Rosetta をインストールする必要があります。
 
-To manually install Rosetta run the following command in the terminal:
+Rosetta を手動でインストールするには、ターミナルで次のコマンドを実行します:
 ```bash
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 ```
