@@ -1,5 +1,8 @@
 # 既知の問題
 
+## v1.4.0
+- Headless export in Node.js SDK is not available for Linux/MacOSX
+
 ## v1.3.1
 - ```DocumentExportOptions``` が使用されている場合、ヘッドレス エクスポートは失敗します。代わりにフォーマット固有のクラス (例: ```PdfExportOptions```) を使用してください。
 
