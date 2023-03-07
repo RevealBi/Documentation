@@ -1,5 +1,8 @@
 # Known Issues
 
+## v1.4.0
+- Headless export in Node.js SDK is not available for Linux/MacOSX
+
 ## v1.3.1
 - Headless export fails if ```DocumentExportOptions``` is used. Please use the format-specific classes instead (e.g. ```PdfExportOptions```).
 
