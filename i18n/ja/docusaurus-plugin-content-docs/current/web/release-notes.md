@@ -25,6 +25,23 @@ revealView.onFieldsInitializing = function (args) {
 * (ベータ版) node.js SDK のヘッドレス エクスポート。現在、Windows プラットフォームでのみ機能します。
 * Node.js SDK で `RVHeadersDataSourceCredentials` が利用可能になりました。
 
+### バグ修正
+
+#### すべてのプラットフォーム
+* 3 番目のデータセットに結合しようとすると、アプリがフリーズする問題。
+* Id プロパティが設定されていない場合に、RVDashboardDataSource を使用するとクラッシュする 問題。(Web のみ)
+* onDateFilterChanged の range パラメーターで送信された日付の時間部分に一貫性がない問題。
+* グローバル フィルター範囲セレクターに一貫性のない日が表示される問題。「今日」または「昨日」を使用すると、2 つの異なる日が表示されました。
+* フィールドが以前のデータ ブレンドからのものである場合、結合に使用されたフィールドがデータ ブレンド エディターに表示されない問題。
+* クライアントで Database プロパティを指定しない限り、Athena DataSourceItem はエラーを発生する問題。 (Web のみ)。
+* RVSnowflakeDataSourceItem が正しく機能しない問題。
+
+#### ASP.NET
+* DocumentExportOptions が使用されている場合、ヘッドレス エクスポートは失敗します。
+
+#### Java
+* Snowflake で 「Fail to retrieve row count for first arrow chunk」 というエラーが発生する問題。(Java のみ)
+
 ## 1.3.1 (2023 年 1 月)
 
 ### 重大な変更
