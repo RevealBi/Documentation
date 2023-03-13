@@ -81,11 +81,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-Next, in our server application, we need create a data source provider. The Data Source Provider is used to modify the various properties of data sources and data source items which instruct the Reveal SDK how to connect to them.
+Next, in our server application, we need create a data source provider. The data source provider is used to modify the various properties of data sources and data source items which instruct the Reveal SDK how to connect to them.
 
 A data source provider can be created with two steps:
 
-**Step 1** - Create the data source provider. In this example, we are providing connection information to connect to our **MS SQL Server** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and setting the available properties on the data source/item object.
+**Step 1** - Create the data source provider. In this example, we are providing connection information to connect to our **MS SQL Server** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and set the available properties on the object.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -97,14 +97,14 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSourceItem is RVSqlServerDataSourceItem sqlServerDsi)
         {
-            //update underlying data source host and database
+            //required: update underlying data source
             ChangeDataSourceAsync(userContext, sqlServerDsi.DataSource);
 
             //only change the table if we have selected our data source item
             if (sqlServerDsi.Id == "MySqlServerDatasourceItem")
             {
-                // Set the table/view
-                sqlServerDsi.Table = "Autos";
+                //set the table/view
+                sqlServerDsi.Table = "Orders";
             }
         }
         return Task.FromResult(dataSourceItem);
@@ -114,9 +114,9 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSource is RVSqlServerDataSource sqlDatasource)
         {
-            // Set host and database
-            sqlDatasource.Host = "autosdbserver.database.windows.net";
-            sqlDatasource.Database = "AutoPeople";
+            sqlDatasource.Host = "10.0.0.20";
+            sqlDatasource.Database = "Northwind";
+            sqlDatasource.Schema = "dbo";
         }
         return Task.FromResult(dataSource);
     }
@@ -130,13 +130,28 @@ public class DataSourceProvider : IRVDataSourceProvider
 ```java
 public class DataSourceProvider implements IRVDataSourceProvider {
 
-	public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-		return null;
-	}
+    public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardsID, RVDataSourceItem dataSourceItem) {
 
-	public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardsID, RVDataSourceItem dataSourceItem) {
-		return null;
-	}
+        if (dataSourceItem instanceof RVSqlServerDataSourceItem sqlServerDsi) {            
+            //required: update underlying data source
+            changeDataSource(userContext, dataSourceItem.getDataSource());
+
+            //only change the table if we have selected our custom data source item
+            if (dataSourceItem.getId() == "MySqlServerDatasourceItem") {
+                sqlServerDsi.setTable("Orders");
+            }            
+        }
+        return dataSourceItem;
+    }
+
+    public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVSqlServerDataSource sqlDatasource) {
+            sqlDatasource.setHost("10.0.0.20");
+            sqlDatasource.setDatabase("Northwind");
+            sqlDatasource.setSchema("dbo");
+        }
+        return dataSource;
+    }
 }
 ```
 
@@ -145,12 +160,27 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   <TabItem value="node" label="Node.js">    
 
 ```ts
-const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-	return null;
+const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+	if (dataSourceItem instanceof RVSqlServerDataSourceItem) {
+
+		//required: update underlying data source
+		dataSourceProvider(userContext, dataSourceItem.dataSource);
+
+		//only change the table if we have selected our data source item
+		if (dataSourceItem.id === "MySqlServerDatasourceItem") {
+			dataSourceItem.table = "Orders";
+		}		
+	}
+	return dataSourceItem;
 }
 
-const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
-	return null;
+const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+	if (dataSource instanceof RVSqlServerDataSource) {
+		dataSource.host = "10.0.0.20";
+		dataSource.database = "Northwind";
+		dataSource.schema = "dbo";
+	}
+	return dataSource;
 }
 ```
 
