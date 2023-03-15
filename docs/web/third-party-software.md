@@ -16,3 +16,10 @@
 | Web          | [Babel JS Compiler](https://github.com/babel/babel)                                                           | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | Web          | [Playwright for .NET](https://github.com/microsoft/playwright-dotnet)                                         | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
 | Web          | [Simple JavaScript Inheritance](https://johnresig.com/blog/simple-javascript-inheritance/)                    | [MIT](https://opensource.org/licenses/mit-license.html)                                                    |
+
+## Javascript (client-side) 
+
+|Dependency|License|
+|----------|-------|
+|[jquery](https://jquery.com/)|[MIT](https://opensource.org/licenses/mit-license.html)|
+|[day.js](https://github.com/iamkun/dayjs)|[MIT](https://opensource.org/licenses/mit-license.html)|
