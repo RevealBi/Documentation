@@ -74,3 +74,12 @@
 |[slf4j-simple](https://www.slf4j.org/manual.html)|[MIT](https://opensource.org/licenses/mit-license.html)|
 |[resteasy-servlet-initializer](https://github.com/resteasy/Resteasy/blob/main/resteasy-servlet-initializer/src/main/java/org/jboss/resteasy/plugins/servlet/ResteasyServletInitializer.java)|[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)|
 |[jersey-cdi2-se](https://github.com/topics/jersey-cdi2-se)|[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)|
+
+## Javascript (client-side) 
+
+| **使用しているコード**| **ライセンス** |
+|----------|-------|
+|[jquery](https://jquery.com/)|[MIT](https://opensource.org/licenses/mit-license.html)|
+|[day.js](https://github.com/iamkun/dayjs)|[MIT](https://opensource.org/licenses/mit-license.html)|
+|[quill.js](https://github.com/quilljs/quill)|[BSD 3-Clause](https://opensource.org/license/bsd-3-clause/)|
+|[spectrum](https://bgrins.github.io/spectrum/)|[MIT](https://opensource.org/licenses/mit-license.html)|
