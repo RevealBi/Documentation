@@ -1,6 +1,6 @@
 # Third-Party Software Used by Reveal SDK (web)
 
-**ASP .NET**
+## ASP .NET
 
 Dependency|License|
 ----------|-------|
@@ -27,7 +27,7 @@ Dependency|License|
 |[System.Configuration.ConfigurationManager](https://dot.net/)|[MIT](https://opensource.org/license/mit/)|
 
 
-**NodeJS**
+## NodeJS
 
 |Dependency|License|
 |----------|-------|
@@ -39,7 +39,7 @@ Dependency|License|
 |[puppeteer-core](https://www.npmjs.com/package/puppeteer)|[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)| 
 
 
-** Java **
+## Java 
 
 |Dependency|License|
 |----------|-------|

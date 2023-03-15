@@ -2,7 +2,7 @@
 # Reveal SDK で使用しているサードパーティ ソフトウェア
 
 
-**ASP .NET**
+## ASP .NET
 
 | **使用しているコード**| **ライセンス** |
 ----------|-------|
@@ -29,7 +29,7 @@
 |[System.Configuration.ConfigurationManager](https://dot.net/)|[MIT](https://opensource.org/license/mit/)|
 
 
-**NodeJS**
+## NodeJS
 
 | **使用しているコード**| **ライセンス** |
 ----------|-------|
@@ -41,7 +41,7 @@
 |[puppeteer-core](https://www.npmjs.com/package/puppeteer)|[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)| 
 
 
-** Java **
+## Java
 
 | **使用しているコード**| **ライセンス** |
 ----------|-------|
