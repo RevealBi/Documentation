@@ -1,5 +1,11 @@
 # Release Notes
 
+## 1.4.1 (April 4th, 2023)
+_This is a nuget.org only update._
+
+### Bug Fixes
+* Fixes error `Failed to add reference to 'libigsslic32'.` when referencing the Reveal WPF SDK using the Nuget Package Manager.
+
 ## 1.4.0 (Feb-2023)
 
 ### Breaking Changes
