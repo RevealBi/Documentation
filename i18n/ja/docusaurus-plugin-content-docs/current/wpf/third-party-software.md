@@ -3,7 +3,7 @@
 |**使用されたコード**| **ライセンス**|
 |----------|-------|
 |[CefSharp](https://github.com/cefsharp/cefsharp)|[CefSharp](https://raw.githubusercontent.com/cefsharp/cef-binary/master/LICENSE.txt)|
-|[SQLite](https://www.sqlite.org/copyright.html)| Public|
+|[SQLite](https://www.sqlite.org/copyright.html)| パブリック|
 |[Microsoft.Data.SqlClient](https://aka.ms/sqlclientproject)|[MIT](https://opensource.org/licenses/mit-license.html)|
 |[AngleSharp](https://github.com/AngleSharp/AngleSharp)|[MIT](https://opensource.org/licenses/mit-license.html)|
 |[Newtonsoft.Json](https://www.newtonsoft.com/json)|[MIT](https://opensource.org/licenses/mit-license.html)|
