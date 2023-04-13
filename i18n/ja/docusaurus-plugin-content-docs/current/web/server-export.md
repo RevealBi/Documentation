@@ -188,7 +188,7 @@ public class RevealExportController {
 
   </TabItem>
 
-    <TabItem value="node" label="Node.js">    
+<TabItem value="node" label="Node.js">    
 
 ```ts
 app.get("/dashboards/export/:name", async (req, resp) => {

@@ -85,12 +85,12 @@ const sidebars = {
             { type: "doc", label: "MS SQL Server", id: "web/adding-data-sources/ms-sql-server" },
           ]
         },
-        {
-          type: "category", label: "Replacing Data Sources", link: { type: "doc", id: "web/replacing-datasources" }, items: [
-            { type: "doc", label: "Excel File", id: "web/replacing-data-sources/excel-file" },
-            { type: "doc", label: "MS SQL Server", id: "web/replacing-data-sources/ms-sql-server" },
-          ]
-        },
+        // {
+        //   type: "category", label: "Replacing Data Sources", link: { type: "doc", id: "web/replacing-datasources" }, items: [
+        //     { type: "doc", label: "Excel File", id: "web/replacing-data-sources/excel-file" },
+        //     { type: "doc", label: "MS SQL Server", id: "web/replacing-data-sources/ms-sql-server" },
+        //   ]
+        // },
         { type: "doc", label: "Authentication", id: "web/authentication" },
         { type: "doc", label: "User Context", id: "web/user-context" },
         { type: "doc", label: "Obfuscate Connection Data", id: "web/obfuscate-connection-data" },
