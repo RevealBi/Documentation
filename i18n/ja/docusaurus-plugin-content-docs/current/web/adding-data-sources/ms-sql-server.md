@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # MS SQL Server データ ソースの追加
 
-## On the Client
+## クライアント側
 
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
@@ -48,7 +48,7 @@ revealView.onDataSourcesRequested = (callback) => {
     sqlDataSource.title = "My SQL Server";
 
     var sqlServerDsi = new $.ig.RVSqlServerDataSourceItem(sqlDataSource);
-    sqlServerDsi.id = "MyCustomId";
+    sqlServerDsi.id = "MySqlServerDatasourceItem";
     sqlServerDsi.title = "My SQL Server Item";
     sqlServerDsi.table = "TableName";    
 
@@ -60,9 +60,9 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/ms-sql-server-data-source-item.jpg)
 
-## On the Server
+## サーバー側
 
-**Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provie an `id`, `title`, and/or `subtitle`.
+**手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを提供します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -80,7 +80,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - Create the data source provider. In this example, we are providing connection information to connect to our **MS SQL Server** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and set the available properties on the object.
+**手順 2** - データ ソース プロバイダーを作成します。この例では、クライアントで定義された **MS SQL Server** データベースに接続するための接続情報を提供しています。これを実現するために、使用しているデータ ソース/項目のタイプを決定し、オブジェクトで使用可能なプロパティを設定します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -185,6 +185,6 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer) にあります。
 
 :::
