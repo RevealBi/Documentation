@@ -243,7 +243,7 @@ app.use('/', reveal(revealOptions));
 - CSV (カンマで区切られた値)
 - Dropbox
 - [Excel / Microsoft Excel](adding-data-sources/excel-file.md)
-- Google アナリティクス 4
+- Google Analytics 4
 - Google BigQuery
 - Google ドライブ
 - Google スプレッドシート
