@@ -1,25 +1,25 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Data Sources
+# データ ソース
 
-The Reveal SDK supports over 30 data sources, including analytics tools, content managers, cloud services, CRMs, databases, spreadsheets, and public data sources, with more shipping every month.  Data sources define where the data comes from in a dashboard, with each data source having unique properties, like connection strings, user id, password, and more that you set in code to connect to and retrieve data.
+Reveal SDK は、分析ツール、コンテンツ マネージャー、クラウド サービス、CRM、データベース、スプレッドシート、公開データ ソースなど、30 を超えるデータ ソースをサポートしており、毎月さらに多くのデータソースが出荷されています。  データ ソースは、ダッシュボードのどこからデータが取得されるかを定義します。各データ ソースには、接続文字列、ユーザー ID、パスワードなど、データに接続してデータを取得するためにコードで設定した固有のプロパティがあります。
 
-The Reveal SDK has two concepts regarding data sources.
-1. A data source - this is the primary source of the data. For example, SQL Server could be a data source
-2. A data source item - this is the specific item that is available from a data source. For example; a specific Table from SQL Server.
+Reveal SDK には、データ ソースに関して 2 つの概念があります。
+1. データ ソース - これはデータの主要なソースです。たとえば、SQL Server をデータ ソースにすることができます。
+2. データ ソース項目 - これは、データ ソースから利用できる特定の項目です。例えば、SQL Server の特定のテーブル。
 
-Data Sources (Data Stores) and Data Source Items (Data Items) are categorized separately in the Reveal View **Select a Data Source** dialog.
+データ ソース (データ ストア) とデータ ソース項目 (データ項目) は、Reveal View の **[データソースの選択]** ダイアログで別々に分類されます。
 
 ![](adding-data-sources/images/ms-sql-server-data-source-item.jpg)
 
-There are two approaches to creating data sources in the Reveal SDK.
-1. On the client
-2. On the server
+Reveal SDK でデータ ソースを作成するには、2 つの方法があります。
+1. クライアント側
+2. サーバー側
 
-## Creating Data Sources on the Client
+## クライアントでのデータ ソースの作成
 
-To add a data source or data source item on the client, add an event handler to the `RevealView.onDataSourcesRequested` event. In the event handler, you will write code to create instances of various types of data sources, or data source items, that will be used in the dashboard. You then pass those instances to the `callback` to make them available in the **Select a Data Source** dialog.
+クライアントでデータ ソースまたはデータ ソース項目を追加するには、`RevealView.onDataSourcesRequested` イベントにイベント ハンドラーを追加します。イベント ハンドラーでは、ダッシュボードで使用されるさまざまなタイプのデータ ソースまたはデータ ソース項目のインスタンスを作成するコードを記述します。次に、これらのインスタンスを `callback` に渡して、**[データ ソースの選択]** ダイアログで使用できるようにします。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -29,11 +29,11 @@ revealView.onDataSourcesRequested = (callback) => {
     callback(new $.ig.RevealDataSources([], [], false));
 };
 ```
-- Data Sources are provided as an array in the first parameter in the callback
-- Data Source Items are provided as an array in the second parameter in the callback
-- The third parameter will determine whether the data sources stored in the dashboard will be visible in the **Select a Data Source** dialog. If `false`, only the data sources created in the `onDataSourcesRequested` event will be visible.
+- データ ソースは、コールバックの最初のパラメーターに配列として提供されます。
+- データ ソース項目は、コールバックの 2 番目のパラメーターに配列として提供されます。
+- 3 番目のパラメーターは、ダッシュボードに保存されているデータ ソースが **[データ ソースの選択]** ダイアログに表示されるかどうかを決定します。`false` の場合、`onDataSourcesRequested` イベントで作成されたデータ ソースのみが表示されます。
 
-When creating data sources on the client, it is important that all connection information for a data source, or data source item, be provided. For example; if you were creating a data source for **MS SQL Server**, you would need to provide the connection information such as the `host` and `database`. For the data source item, you would need to provide the `table`.
+クライアントでデータ ソースを作成するときは、データ ソースまたはデータ ソース項目のすべての接続情報を提供することが重要です。例えば、MS SQL Server のデータ ソースを作成する場合は、`host` や `database` などの接続情報を提供する必要があります。データ ソース項目の場合は、`table` を提供する必要があります。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -51,19 +51,19 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-To learn which properties for a data source or data source item are available, please read the data source's corresponding help topic or refer to the [API Docs](https://help.revealbi.io/api/javascript/latest/)
+データ ソースまたはデータ ソース項目で使用できるプロパティについては、データ ソースの対応するヘルプ トピックまたは [API ドキュメント](https://help.revealbi.io/api/javascript/latest/)を参照してください。
 
 :::warning
 
-When you create data sources and data source items using JavaScript on the client, all your connection information, such as server names, host names, IP addresses, port numbers, end-points, and more are exposed in the browser. This not only allows users to view these values but also provides them with the ability to modify them. It is crucial to be careful about the information you are exposing and consider any potential security risks associated with using the client-side approach for creating data sources.
+クライアントで JavaScript を使用してデータ ソースとデータ ソース項目を作成すると、サーバー名、ホスト名、IP アドレス、ポート番号、エンドポイントなどのすべての接続情報がブラウザーに公開されます。これにより、ユーザーはこれらの値を表示できるだけでなく、変更することもできます。公開する情報に注意し、クライアント側のアプローチを使用してデータ ソースを作成することに関連する潜在的なセキュリティ リスクを考慮することが重要です。
 
 :::
 
-## Creating Data Sources on the Server
+## サーバーでのデータ ソースの作成
 
-Creating a data source or data source item on the server is similar to creating them on the client. The main difference being that no connection information is provided on the client. All the connection information is provided on the server by implementing the `IRVDataSourceProvider`.
+サーバーでのデータ ソースまたはデータ ソース項目の作成は、クライアントでの作成と似ています。主な違いは、クライアントで接続情報が提供されないことです。`IRVDataSourceProvider` を実装することにより、すべての接続情報がサーバー上で提供されます。
 
-Start by adding an event handler to the `RevealView.onDataSourcesRequested` event, and create a data source and data source item. In this example, we are using **MS SQL Server**. Notice that we are only setting an `id` which we can use to identify the data source, and the `title` which will be displayed in the **Select a Data Source** dialog.
+イベント ハンドラーを `RevealView.onDataSourcesRequested` イベントに追加することから始め、データ ソースとデータ ソース項目を作成します。この例では、**MS SQL Server** を使用しています。データ ソースの識別に使用できる `id` と、**[データ ソースの選択]** ダイアログに表示される `title` のみを設定していることに注意してください。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -81,11 +81,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-Next, in our server application, we need create a data source provider. The data source provider is used to modify the various properties of data sources and data source items which instruct the Reveal SDK how to connect to them.
+次に、サーバー アプリケーションで、データ ソース プロバイダーを作成する必要があります。データ ソース プロバイダーは、Reveal SDK に接続方法を指示するデータ ソースおよびデータ ソース項目のさまざまなプロパティを変更するために使用されます。
 
-A data source provider can be created with two steps:
+データ ソース プロバイダーは、次の 2 つの手順で作成できます。
 
-**Step 1** - Create the data source provider. In this example, we are providing connection information to connect to our **MS SQL Server** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and set the available properties on the object.
+**手順 1** - データ ソース プロバイダーを作成します。この例では、クライアントで定義された **MS SQL Server** データベースに接続するための接続情報を提供しています。これを実現するために、使用しているデータ ソース/項目のタイプを決定し、オブジェクトで使用可能なプロパティを設定します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -188,7 +188,7 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
-**Step 2** - Register the data source provider with the Reveal SDK.
+**手順 2** - データ ソース プロバイダーを Reveal SDK に登録します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -228,27 +228,27 @@ app.use('/', reveal(revealOptions));
 
 :::danger Important
 
-Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the example above.
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えられた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。どちらの方法でも、データ ソース プロパティを**更新する必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で `ChangeDataSourceAsync` メソッドを呼び出し、データ ソース項目の基になるデータ ソースをパラメーターとして渡すことをお勧めします。
 
 :::
 
-## Supported Data Sources
+## サポートされるデータ ソース
 
-The following data sources are supported in the Reveal SDK:
+次のデータ ソースが Reveal SDK でサポートされています:
 
 - Amazon Athena
 - Amazon Redshift
 - Amazon S3
 - Box
-- CSV (Comma Separated Values)
+- CSV (カンマで区切られた値)
 - Dropbox
 - [Excel / Microsoft Excel](adding-data-sources/excel-file.md)
 - Google Analytics 4
 - Google BigQuery
-- Google Drive
-- Google Sheets
+- Google ドライブ
+- Google スプレッドシート
 - Hubspot
-- [In-Memory Data](adding-data-sources/in-memory-data.md)
+- [インメモリ データ](adding-data-sources/in-memory-data.md)
 - Marketo
 - Microsoft Analysis Services
 - Microsoft Azure Analysis Services
@@ -265,7 +265,7 @@ The following data sources are supported in the Reveal SDK:
 - Quickbooks
 - REST API
 - Salesforce
-- Spreadsheets (XLSX, XLS)
+- スプレッドシート (XLSX、XLS)
 - SharePoint
 - Sybase
-- TSV  (Tab Separated Values)
+- TSV (タブで区切られた値)
