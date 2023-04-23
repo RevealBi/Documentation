@@ -36,7 +36,7 @@ Java does not currently support a default dashboard loader. You must create a cu
 2 - In the client application, call the `$.ig.RevealSdkSettings.setBaseUrl` method and pass in your server URL. When debugging, the server URL will be `https://localhost` followed by a port number. For example:
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");   
+$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");   
 ```
 
 :::caution

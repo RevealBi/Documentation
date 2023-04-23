@@ -37,7 +37,7 @@ Java では現在デフォルトのダッシュボード ローダーはサポ�
 2 - クライアント アプリケーションで、`$.ig.RevealSdkSettings.setBaseUrl`メソッドを呼び出しサーバーのURLを渡します。デバッグ時には、サーバーの URL は `https://localhost` の後にポート番号が付いたものになります。例えば:
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");   
+$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");   
 ```
 
 :::caution
