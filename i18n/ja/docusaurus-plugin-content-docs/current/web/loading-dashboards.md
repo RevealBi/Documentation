@@ -39,7 +39,7 @@ Java では現在デフォルトのダッシュボード ローダーはサポ�
 例:
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("https://localhost:/5111");   
+$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");   
 ```
 
 :::caution
