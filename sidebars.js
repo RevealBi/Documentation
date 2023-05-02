@@ -113,7 +113,10 @@ const sidebars = {
     /* -------------------- General -------------------- */
     {
       type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Installation", id: "wpf/installation" },
+        { type: "category", label: "Installation", items: [
+          { type: "doc", label: "Installation", id: "wpf/installation"},
+          { type: "doc", label: "Adding a License Key", id: "wpf/adding-license-key" }
+        ]},
         { type: "doc", label: "Getting Started", id: "wpf/getting-started" },
       ]
     },
