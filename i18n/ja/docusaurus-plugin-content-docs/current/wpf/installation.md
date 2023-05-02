@@ -1,11 +1,5 @@
 # インストール
 
-## システム要件
-
-- Windows 10 またはそれ以降
-- Visual Studio 2019 またはそれ以降
-- .NET Framework 4.6.2 またはそれ以降 (.NET Core はサポートされていません。)
-
 ## Reveal SDK のインストール
 
 Reveal SDK をインストールするには、Reveal SDK インストーラーをダウンロードして実行する必要があります。以下はインストール方法です。
