@@ -1,5 +1,8 @@
 # Known Issues
 
+## v1.5.0
+_Nothing specific for this version_
+
 ## v1.4.0
 - Headless export in Node.js SDK is not available for Linux/MacOSX
 
