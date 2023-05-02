@@ -314,5 +314,21 @@
   "sidebar.webSidebar.doc.Configure Export": {
     "message": "エクスポートの構成",
     "description": "The label for the doc item Configure Export in sidebar webSidebar, linking to the doc web/configure-export"
+  },
+  "sidebar.wpfSidebar.category.Installation": {
+    "message": "インストール",
+    "description": "The label for category Installation in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.doc.System Requirements": {
+    "message": "システム要件",
+    "description": "The label for the doc item System Requirements in sidebar wpfSidebar, linking to the doc wpf/system-requirements"
+  },
+  "sidebar.wpfSidebar.doc.Using the Installer": {
+    "message": "インストーラーの使用",
+    "description": "The label for the doc item Using the Installer in sidebar wpfSidebar, linking to the doc wpf/installation"
+  },
+  "sidebar.wpfSidebar.doc.Adding a License Key": {
+    "message": "ライセンス キーの追加",
+    "description": "The label for the doc item Adding a License Key in sidebar wpfSidebar, linking to the doc wpf/adding-license-key"
   }
 }
