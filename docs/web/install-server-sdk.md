@@ -8,7 +8,7 @@ The steps below describe how to install the Reveal SDK into an existing ASP.NET 
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - In the package manager dialog, open the **Browse** tab, select the **nuget.org** package source, or the **Infragistics (Local)** package source is available, and install the **Reveal.Sdk.AspNetCore** NuGet package into the project.
+2 - In the package manager dialog, open the **Browse** tab, select the **nuget.org** package source and install the **Reveal.Sdk.AspNetCore** NuGet package into the project.
 
 ![](images/getting-started-nuget-packages-install.jpg)
 
