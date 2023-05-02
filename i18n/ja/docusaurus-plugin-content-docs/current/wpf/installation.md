@@ -40,11 +40,3 @@ Reveal SDK をインストールするには、Reveal SDK インストーラー�
 Reveal SDK NuGet パッケージをポイントする Visual Studio に自動的に追加されるローカル NuGet パッケージ ソースもあります。
 
 ![](images/nuget-package-source-local-vs.jpg)
-
-## ライセンス キーの追加
-
-デフォルトでは、Reveal SDKをインストールすると、**試用版製品**のみが使用されます。**ライセンス製品**のロックを解除するには、アプリケーションでライセンス キーを提供する必要があります。
-
-```cs
-RevealSdkSettings.License = "LICENSE_KEY";
-```
