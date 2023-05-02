@@ -1,4 +1,4 @@
-# Installation
+# Using the Installer
 
 ## Installing the Reveal SDK
 
