@@ -135,10 +135,6 @@
     "message": "データ ソースの置き換え",
     "description": "The label for category Replacing Data Sources in sidebar wpfSidebar"
   },
-  "sidebar.wpfSidebar.doc.Installation": {
-    "message": "インストール",
-    "description": "The label for the doc item Installation in sidebar wpfSidebar, linking to the doc wpf/installation"
-  },
   "sidebar.wpfSidebar.doc.Getting Started": {
     "message": "作業の開始",
     "description": "The label for the doc item Getting Started in sidebar wpfSidebar, linking to the doc wpf/getting-started"

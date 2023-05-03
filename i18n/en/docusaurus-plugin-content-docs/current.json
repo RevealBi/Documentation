@@ -135,10 +135,6 @@
     "message": "Replacing Data Sources",
     "description": "The label for category Replacing Data Sources in sidebar wpfSidebar"
   },
-  "sidebar.wpfSidebar.doc.Installation": {
-    "message": "Installation",
-    "description": "The label for the doc item Installation in sidebar wpfSidebar, linking to the doc wpf/installation"
-  },
   "sidebar.wpfSidebar.doc.Getting Started": {
     "message": "Getting Started",
     "description": "The label for the doc item Getting Started in sidebar wpfSidebar, linking to the doc wpf/getting-started"
