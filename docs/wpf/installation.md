@@ -1,10 +1,4 @@
-# Installation
-
-## System Requirements
-
-- Windows 10 or higher
-- Visual Studio 2019 or higher
-- .NET Framework 4.6.2 or higher (.NET Core is not supported)
+# Using the Installer
 
 ## Installing the Reveal SDK
 
@@ -40,11 +34,3 @@ Once the installation is complete, you should have the following items installed
 There is also a local NuGet package source automatically added to Visual Studio that points to the Reveal SDK NuGet packages.
 
 ![](images/nuget-package-source-local-vs.jpg)
-
-## Adding Your License Key
-
-By default, when you install the Reveal SDK only the **trial** product is used. In order to unlock the **licensed** product, you must provide a license key in the application.
-
-```cs
-RevealSdkSettings.License = "LICENSE_KEY";
-```
