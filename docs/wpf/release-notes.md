@@ -1,5 +1,48 @@
 # Release Notes
 
+## 1.5.0 (May 4th, 2023)
+
+### Breaking Changes
+* We're no longer releasing an installer. The nuget package can be found at https://www.nuget.org/packages/Reveal.Sdk.Wpf, samples can be found at https://github.com/RevealBi/sdk-samples-wpf.
+
+### New Features
+* (Beta) Chart actions available while hovering the mouse. Turn on using `RevealSdkSettings.EnableActionsOnHoverTooltip = true`.
+
+### Bug Fixes
+* Fixes and performance improvements for the new category charts
+* Setting the Host property in MsSql provider in the IRVDataSourceProvider but not in the client causes error
+* Redshift queries fail if the Schema property is not set in the dataSourceItem (should use the default, 'public', schema)
+* All database datasources required the Database property to be set in the DataSourceItem (even if it was set in the DataSource). Now the property has been deprecated in the DataSourceItem, and setting it in the Database just works.
+* Opening a linked dashboard caused a crash
+* Treemap showing Redshift/Postgres data failed
+* Error using Standard Deviation aggregation with Redshift or Postgres
+* Setting a different Sheet for an Excel datasource using IRVDataSourceProvider didn't work
+* Error if clicking in blank space between the title and statistics icon while in Visualization Editor mode.
+* Cannot change the title of a new visualization (when it is initialized as a blank title)
+* PostgresSQL connection to localhost doesn't work
+* If a JSON attribute name begins with a number the extracted value is always empty
+* Data Blending field panels don't scroll with mouse wheel or trackpad
+* Unable to move filter when there are 10+ of them in edit mode
+* Fixed a concurrency issue if several visualizations accessed the same data at the same time.
+* Sybase ds item wrapper with configured custom query property still returns all data
+* Replacing Analysis Services data source doesn't work
+* Dynamics CRM - NRE is thrown when you try to get data using a data source item
+* An exception is thrown when no image is set in DashboardEmptyState
+* RVReportingServicesDataSourceItem seems to be missing properties for configuring parameters
+* It is not possible to render a pdf report using RVReportingServicesDataSourceItem
+* "No Url specified for web resource" error replacing DataSource WebResource URL 
+* Calls to IRVDataSourceProvider.ChangeDataSourceItemAsync always has null for dashboardId argument
+* KPI Indicators - "There's no data to display" has wrong style
+* Some global filters are being reset when start selecting their options
+* Null Reference Exception thrown when using a specific Excel sheet with custom styles.
+* MySQL timestamp columns are read as UTC datetimes when they're actually in the session timezone.
+* The nuget files contains more dependencies than it should
+* Very bad performance on Redshift blending when using a RVRedshiftDataSourceItem
+* Error when using InMemory datasource in SDK
+* Error in Salesforce visualization when using Lead's ConvertedDate as a filter
+* S3 Excel resource item not working after replace DS/DSI scenario (app kept in loading after sheet selection when creating widget)
+* The Rest API URL should not be shown in errors
+
 ## 1.4.1 (April 4th, 2023)
 _This is a nuget.org only update._
 
