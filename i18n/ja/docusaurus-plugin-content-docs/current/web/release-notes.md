@@ -3,6 +3,61 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.5.0 (May 4th, 2023)
+
+### Breaking Changes
+* In some scenarios, the information set in IRVDataSourceProvider was visible to the client and also stored in the dashboard file. That was not a desirable behavior, but it also produced some hard to reproduce issues when editing dashboards. Starting on 1.5.0, the datasource information set in IRVDataSourceProvider does not leave the server. Depending on the specific implementation of IRVDataSourceProvider, this might have a big impact. To make sure your implementation is right, generally speaking, make sure that if you have a non-trivial implementation of ChangeDataSource, then you also implement ChangeDataSourceItem, and that this ChangeDataSourceItem invokes ChangeDataSource on the dataSourceItem.dataSource object. In addition, when working with CSV, Json, Excel files coming from datasources like S3, Rest, etc., please take into account that you might receive a call to ChangeDataSourceItem with the csv/json/excel datasource item, and in that case you must make sure that the dataSourceItem.resourceItem is properly 'changed', which also means invoking ChangeDataSource for dataSourceItem.resourceItem.dataSource.
+* IRVDataSourceProvider now requires the implementation of ChangeDataSourceAsync.
+* We're no longer releasing an installer for the asp.net SDK. To get started, check the documentation at https://help.revealbi.io/web/getting-started-server
+
+### Bug Fixes
+
+#### All Platforms
+* Headless export: landscape is now the default orientation.
+* Fixes and performance improvements for the new category charts
+* Setting the Host property in MsSql provider in the IRVDataSourceProvider but not in the client causes error
+* Redshift queries fail if the Schema property is not set in the dataSourceItem (should use the default, 'public', schema)
+* Financial charts were not working properly  
+* host property had always a value of null in IRVAuthenticationProvider for RVSqlServerDataSource.
+* All database datasources required the Database property to be set in the DataSourceItem (even if it was set in the DataSource). Now the property has been deprecated in the DataSourceItem, and setting it in the Database just works.
+* Opening a linked dashboard caused a crash
+* Treemap showing Redshift/Postgres data failed
+* Error using Standard Deviation aggregation with Redshift or Postgres
+* Setting a different Sheet for an Excel datasource using IRVDataSourceProvider didn't work
+* Error if clicking in blank space between the title and statistics icon while in Visualization Editor mode.
+* Cannot change the title of a new visualization (when it is initialized as a blank title)
+* If a JSON attribute name begins with a number the extracted value is always empty
+* Data Blending field panels don't scroll with mouse wheel or trackpad
+* Unable to move filter when there are 10+ of them in edit mode
+* Sybase ds item wrapper with configured custom query property still returns all data
+* Replacing Analysis Services data source doesn't work
+* Dynamics CRM - NRE is thrown when you try to get data using a data source item
+* An exception is thrown when no image is set in DashboardEmptyState
+* RVReportingServicesDataSourceItem seems to be missing properties for configuring parameters
+* It is not possible to render a pdf report using RVReportingServicesDataSourceItem
+* "No Url specified for web resource" error replacing DataSource WebResource URL 
+* Calls to `IRVDataSourceProvider.ChangeDataSourceItemAsync` always has null for dashboardId argument
+* KPI Indicators - "There's no data to display" has wrong style
+* Some global filters are being reset when start selecting their options
+* Null Reference Exception thrown when using a specific Excel sheet with custom styles.
+* MySQL timestamp columns are read as UTC datetimes when they're actually in the session timezone.
+* The nuget files contains more dependencies than it should
+* Very bad performance on Redshift blending when using a RVRedshiftDataSourceItem
+* Error when using InMemory datasource in SDK
+* Error in Salesforce visualization when using Lead's ConvertedDate as a filter
+* S3 Excel resource item not working after replace DS/DSI scenario (app kept in loading after sheet selection when creating widget)
+* The Rest API URL should not be shown in errors
+* Change RVDashboard.visualizations type in d.ts to VisualizationsArray
+
+#### Node
+* Several improvements on headless export for the Node.js SDK. Now it is available for Linux/MacOS.
+
+#### Java
+* 'Schema' property for the Snowflake DataSource was being ignored.
+* Asset visualization not working when using the java SDK.
+* Redshift queries for tables using column of type 'timestamptz' failed if it contained null values.
+* MaxDownloadSize limit is being ignored in Java SDK
+
 ## 1.4.0 (2023 年 2 月)
 
 ### 重大な変更
