@@ -37,7 +37,7 @@
   },
   "link.item.label.Support": {
     "message": "Support",
-    "description": "The label of footer link with label=Support linking to https://www.infragistics.com/my-account/submit-support-request/reveal"
+    "description": "The label of footer link with label=Support linking to https://github.com/RevealBi/Reveal.Sdk/issues"
   },
   "link.item.label.Glossary": {
     "message": "Glossary",

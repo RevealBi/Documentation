@@ -37,7 +37,7 @@
   },
   "link.item.label.Support": {
     "message": "サポート",
-    "description": "The label of footer link with label=Support linking to https://www.infragistics.com/my-account/submit-support-request/reveal"
+    "description": "The label of footer link with label=Support linking to https://github.com/RevealBi/Reveal.Sdk/issues"
   },
   "link.item.label.Glossary": {
     "message": "用語集 (英語)",

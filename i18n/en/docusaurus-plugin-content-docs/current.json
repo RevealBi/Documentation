@@ -3,10 +3,6 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.webSidebar.category.Replacing Data Sources": {
-    "message": "Replacing Data Sources",
-    "description": "The label for category Replacing Data Sources in sidebar webSidebar"
-  },
   "sidebar.webSidebar.doc.Overview": {
     "message": "Overview",
     "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/overview"
@@ -77,7 +73,7 @@
   },
   "sidebar.webSidebar.doc.Excel File": {
     "message": "Excel File",
-    "description": "The label for the doc item Excel File in sidebar webSidebar, linking to the doc web/replacing-data-sources/excel-file"
+    "description": "The label for the doc item Excel File in sidebar webSidebar, linking to the doc web/adding-data-sources/excel-file"
   },
   "sidebar.webSidebar.doc.In Memory Data": {
     "message": "In Memory Data",
@@ -85,7 +81,7 @@
   },
   "sidebar.webSidebar.doc.MS SQL Server": {
     "message": "MS SQL Server",
-    "description": "The label for the doc item MS SQL Server in sidebar webSidebar, linking to the doc web/replacing-data-sources/ms-sql-server"
+    "description": "The label for the doc item MS SQL Server in sidebar webSidebar, linking to the doc web/adding-data-sources/ms-sql-server"
   },
   "sidebar.webSidebar.doc.Authentication": {
     "message": "Authentication",
