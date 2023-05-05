@@ -1,11 +1,5 @@
 # Setting up the Reveal SDK Server with Node.js
 
-:::caution
-
-Node server support is currently available as a **Beta** versioned product. Some features may not work, or be missing completely. The API will experience breaking changes before the RTM release.
-
-:::
-
 ## Step 1 - Create the Node.js Project
 
 1 - Open a command line and create a directory named **reveal-server-node**
