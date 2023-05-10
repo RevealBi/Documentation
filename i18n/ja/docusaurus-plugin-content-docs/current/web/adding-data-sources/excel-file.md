@@ -125,7 +125,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::info Get the Code
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/AddingDataSources/ExcelFile) にあります。
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/ExcelFile) にあります。
 
 :::
 

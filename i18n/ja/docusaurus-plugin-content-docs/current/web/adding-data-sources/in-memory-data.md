@@ -288,6 +288,6 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::info Get the Code
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/AddingDataSources/InMemory) にあります。
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/InMemory) にあります。
 
 :::
