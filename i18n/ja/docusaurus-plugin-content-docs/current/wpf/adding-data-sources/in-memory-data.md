@@ -23,7 +23,7 @@ class MyInMemoryDataProvider : IRVDataProvider
 }
 ```
 
-`GetData` メソッドは、`Task<IRVInMemoryData>` を返します。つまり、使用するインメモリ データはすべて `RVInMemoryData` オブジェクトでラップする必要があります。  `RVInMemoryData` オブジェクトの新しいインスタンスを作成し、インメモリ データをパラメーターとしてオブジェクト コンストラクターに渡すだけです。
+`GetData` メソッドは、`Task<IRVInMemoryData>` を返します。つまり、使用するインメモリ データはすべて `RVInMemoryData` オブジェクトでラップする必要があります。`RVInMemoryData` オブジェクトの新しいインスタンスを作成し、インメモリ データをパラメーターとしてオブジェクト コンストラクターに渡すだけです。
 
 **手順 2** - `RevealSdkSettings.DataProvider` を `IRVDataProvider` を実装するクラスのインスタンスに設定します。
 
@@ -232,7 +232,7 @@ public MainWindow()
 
 ### データプロバイダーの作成
 
-ダッシュボードで使用するデータを作成したので、次の手順は、そのデータを Reveal SDK で利用できるようにすることです。これを行うには、`IRVDataProvider` を実装する新しいクラスを作成する必要があります。  このインターフェイスは、Reveal SDK 内のインメモリ データの実装に特に使用されます。
+ダッシュボードで使用するデータを作成したので、次の手順は、そのデータを Reveal SDK で利用できるようにすることです。これを行うには、`IRVDataProvider` を実装する新しいクラスを作成する必要があります。このインターフェイスは、Reveal SDK 内のインメモリ データの実装に特に使用されます。
 
 `InMemoryDataProvider` という新しいクラスを作成し、`IRVDataProvider` インターフェイスを実装しましょう。`IEnumerable<Sale>` を受け入れるコンストラクターも定義したことに注意してください。これにより、前の手順で生成された売上データを渡すことができます。
 

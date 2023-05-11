@@ -90,7 +90,7 @@ Reveal ダッシュボード **.rdash** ファイルをリソースとしてア�
 
 `Assembly.GetManifestResourceStream` メソッドで指定するリソースの`名前`には、.rdash ファイルの`名前空間`とファイル名が含まれている必要があることに注意してください。
 
-この例では、リソースの名前は、アプリケーションのルート名前空間 LoadingDashboards と、ダッシュボード ファイルを含むディレクトリである Dashboards で始まり、その後に .rdash ファイル Sales.rdash の名前が続きます。  これにより、`LoadingDashboards.Dashboards.Sales.rdash` の完全なリソース名が得られます。
+この例では、リソースの名前は、アプリケーションのルート名前空間 LoadingDashboards と、ダッシュボード ファイルを含むディレクトリである Dashboards で始まり、その後に .rdash ファイル Sales.rdash の名前が続きます。これにより、`LoadingDashboards.Dashboards.Sales.rdash` の完全なリソース名が得られます。
 
 ```cs
 var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream($"LoadingDashboards.Dashboards.Sales.rdash");
