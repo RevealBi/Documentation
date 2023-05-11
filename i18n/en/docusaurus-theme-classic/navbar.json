@@ -54,5 +54,9 @@
   "item.label.Videos": {
     "message": "Videos",
     "description": "Navbar item with label Videos"
+  },
+  "logo.alt": {
+    "message": "Reveal",
+    "description": "The alt text of navbar logo"
   }
 }

@@ -25,7 +25,7 @@
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "もう一度試してください",
-    "description": "The label of the button to try again when the page crashed"
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.NotFound.title": {
     "message": "ページが見つかりません",

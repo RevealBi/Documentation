@@ -54,5 +54,9 @@
   "item.label.Developer Playground": {
     "message": "開発者向けプレイグラウンド",
     "description": "Navbar item with label Developer Playground"
+  },
+  "logo.alt": {
+    "message": "Reveal",
+    "description": "The alt text of navbar logo"
   }
 }
