@@ -51,6 +51,7 @@ import TabItem from '@theme/TabItem';
 
 #### Node
 * Node.js SDK のヘッドレス エクスポートに関するいくつかの改善。Linux/MacOS で利用できるようになりました。
+
 #### Java
 * Snowflake DataSource の 'Schema' プロパティが無視されていた問題。
 * Java SDK の使用時にアセットの表示形式が機能しない問題。
