@@ -330,5 +330,9 @@
   "sidebar.webSidebar.doc.Google Sheets": {
     "message": "Google Sheets",
     "description": "The label for the doc item Google Sheets in sidebar webSidebar, linking to the doc web/adding-data-sources/google-sheets"
+  },
+  "sidebar.webSidebar.doc.Google Big Query": {
+    "message": "Google Big Query",
+    "description": "The label for the doc item Google Big Query in sidebar webSidebar, linking to the doc web/adding-data-sources/google-big-query"
   }
 }
