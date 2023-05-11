@@ -346,5 +346,9 @@
   "sidebar.webSidebar.doc.JSON": {
     "message": "JSON",
     "description": "The label for the doc item JSON in sidebar webSidebar, linking to the doc web/adding-data-sources/json"
+  },
+  "sidebar.webSidebar.doc.REST": {
+    "message": "REST",
+    "description": "The label for the doc item REST in sidebar webSidebar, linking to the doc web/adding-data-sources/rest"
   }
 }
