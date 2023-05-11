@@ -1,0 +1,67 @@
+---
+pagination_next: web/authentication
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Adding a CSV Data Source
+
+**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+
+```js
+var revealView = new $.ig.RevealView("#revealView");
+revealView.onDataSourcesRequested = (callback) => {
+    //add code here
+    callback(new $.ig.RevealDataSources([], [], false));
+};
+```
+
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) object. Set the `URL` property to the url of the CSV resource, and set the `useAnonymousAuthentication` property to `false` if there is no authentication required to access the CSV resource. Optionally, you can add the `RVWebResourceDataSource` object to the data source collection of the callback to display it in the RevealView's Data Source Dialog.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    const webDS = new $.ig.RVWebResourceDataSource();
+    webDS.title = "Web Data Source";
+    webDS.subtitle = "Web Data Source Subtitle";
+    webDS.url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv";
+    webDS.useAnonymousAuthentication = true;
+
+    callback(new $.ig.RevealDataSources([webDS], [], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created Web Resource data source listed in the "Select a Data Source" dialog.
+
+![](images/web-resource-data-source.jpg)
+
+**Step 3** - To bypass the **Set up your CSV** screen of the data source dialog and use the CSV data directly, create a new instance of the [RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html), and pass the `RVWebResourceDataSource` object created in the previous step as a constructor argument. Next, create a new instance of the [RVCsvDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvcsvdatasourceitem.html) and pass the `RVWebResourceDataSourceItem` as the contructor argument. Set the `Title`, `Subtitle`, and any other properties that are needed. After you have created the `RVCsvDataSourceItem` object, add it to the data source items collection.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    const webDS = new $.ig.RVWebResourceDataSource();
+    webDS.title = "Web Data Source";
+    webDS.subtitle = "Web Data Source Subtitle";
+    webDS.url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv";
+    webDS.useAnonymousAuthentication = true;
+
+    //to skip the "Set up your CSV" dialog and directly use the CSV data
+    const webDSI = new $.ig.RVWebResourceDataSourceItem(webDS);            
+    const csvDSI = new $.ig.RVCsvDataSourceItem(webDSI);
+    csvDSI.title = "CSV Data";
+    csvDSI.subtitle = "CSV Data Subtitle";
+
+    callback(new $.ig.RevealDataSources([webDS], [csvDSI], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created CSV data source item listed in the "Select a Data Source" dialog.
+
+![](images/csv-data-source-item.jpg)
+
+
+:::info Get the Code
+
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Csv)
+
+:::

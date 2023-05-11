@@ -338,5 +338,9 @@
   "sidebar.webSidebar.doc.Amazon S3": {
     "message": "Amazon S3",
     "description": "The label for the doc item Amazon S3 in sidebar webSidebar, linking to the doc web/adding-data-sources/amazon-s3"
+  },
+  "sidebar.webSidebar.doc.CSV": {
+    "message": "CSV",
+    "description": "The label for the doc item CSV in sidebar webSidebar, linking to the doc web/adding-data-sources/csv"
   }
 }
