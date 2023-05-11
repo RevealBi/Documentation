@@ -326,5 +326,9 @@
   "sidebar.webSidebar.doc.Google Drive": {
     "message": "Google Drive",
     "description": "The label for the doc item Google Drive in sidebar webSidebar, linking to the doc web/adding-data-sources/google-drive"
+  },
+  "sidebar.webSidebar.doc.Google Sheets": {
+    "message": "Google Sheets",
+    "description": "The label for the doc item Google Sheets in sidebar webSidebar, linking to the doc web/adding-data-sources/google-sheets"
   }
 }
