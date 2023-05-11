@@ -334,5 +334,9 @@
   "sidebar.webSidebar.doc.Google Big Query": {
     "message": "Google Big Query",
     "description": "The label for the doc item Google Big Query in sidebar webSidebar, linking to the doc web/adding-data-sources/google-big-query"
+  },
+  "sidebar.webSidebar.doc.Amazon S3": {
+    "message": "Amazon S3",
+    "description": "The label for the doc item Amazon S3 in sidebar webSidebar, linking to the doc web/adding-data-sources/amazon-s3"
   }
 }

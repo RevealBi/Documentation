@@ -80,6 +80,7 @@ const sidebars = {
       type: "category", label: "Working with Data Sources", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         {
           type: "category", label: "Data Sources", link: { type: "doc", id: "web/datasources" }, items: [ 
+            { type: "doc", label: "Amazon S3", id: "web/adding-data-sources/amazon-s3" },
             { type: "doc", label: "Excel File", id: "web/adding-data-sources/excel-file" },
             { type: "doc", label: "Google Big Query", id: "web/adding-data-sources/google-big-query" },
             { type: "doc", label: "Google Drive", id: "web/adding-data-sources/google-drive" },
