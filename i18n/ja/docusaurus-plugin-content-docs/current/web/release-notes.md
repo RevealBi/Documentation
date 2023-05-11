@@ -3,60 +3,60 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.5.0 (May 4th, 2023)
+## 1.5.0 (2023 年 5 月 4 日)
 
-### Breaking Changes
-* In some scenarios, the information set in IRVDataSourceProvider was visible to the client and also stored in the dashboard file. That was not a desirable behavior, but it also produced some hard to reproduce issues when editing dashboards. Starting on 1.5.0, the datasource information set in IRVDataSourceProvider does not leave the server. Depending on the specific implementation of IRVDataSourceProvider, this might have a big impact. To make sure your implementation is right, generally speaking, make sure that if you have a non-trivial implementation of ChangeDataSource, then you also implement ChangeDataSourceItem, and that this ChangeDataSourceItem invokes ChangeDataSource on the dataSourceItem.dataSource object. In addition, when working with CSV, Json, Excel files coming from datasources like S3, Rest, etc., please take into account that you might receive a call to ChangeDataSourceItem with the csv/json/excel datasource item, and in that case you must make sure that the dataSourceItem.resourceItem is properly 'changed', which also means invoking ChangeDataSource for dataSourceItem.resourceItem.dataSource.
-* IRVDataSourceProvider now requires the implementation of ChangeDataSourceAsync.
-* We're no longer releasing an installer for the asp.net SDK. To get started, check the documentation at https://help.revealbi.io/web/getting-started-server
+### 重大な変更
+* 一部のシナリオでは、IRVDataSourceProvider で設定された情報がクライアントに表示され、ダッシュボード ファイルにも格納されていました。これは望ましい動作ではありませんでした。またダッシュボードの編集時に再現が困難な問題の発生原因でもありました。1.5.0 以降、IRVDataSourceProvider で設定されたデータ ソース情報はクライアントに送信されません。IRVDataSourceProvider の特定の実装によっては、これが大きな影響を与える可能性があります。一般的に言えば、実装が正しいことを確認するには、ChangeDataSource の重要な実装がある場合は、ChangeDataSourceItem も実装し、この ChangeDataSourceItem が dataSourceItem.dataSource オブジェクトで ChangeDataSource を呼び出すようにします。さらに、S3、Rest などのデータ ソースからの CSV、Json、Excel ファイルを操作する場合は、csv/json/excel データ ソース項目で ChangeDataSourceItem への呼び出しを受け取る可能性があることを考慮してください。その場合、dataSourceItem.resourceItem が適切に変更されていることを確認する必要があります。これは、dataSourceItem.resourceItem.dataSource に対して ChangeDataSource を呼び出すことも意味します。
+* IRVDataSourceProvider には、ChangeDataSourceAsync の実装が必要になりました。
+* ASP.NET SDK のインストーラーはリリースされなくなりました。開始するには、https://help.revealbi.io/web/getting-started-server でドキュメントを確認してください。
 
-### Bug Fixes
+### バグ修正
 
-#### All Platforms
-* Headless export: landscape is now the default orientation.
-* Fixes and performance improvements for the new category charts
-* Setting the Host property in MsSql provider in the IRVDataSourceProvider but not in the client causes error
-* Redshift queries fail if the Schema property is not set in the dataSourceItem (should use the default, 'public', schema)
-* Financial charts were not working properly  
-* host property had always a value of null in IRVAuthenticationProvider for RVSqlServerDataSource.
-* All database datasources required the Database property to be set in the DataSourceItem (even if it was set in the DataSource). Now the property has been deprecated in the DataSourceItem, and setting it in the Database just works.
-* Opening a linked dashboard caused a crash
-* Treemap showing Redshift/Postgres data failed
-* Error using Standard Deviation aggregation with Redshift or Postgres
-* Setting a different Sheet for an Excel datasource using IRVDataSourceProvider didn't work
-* Error if clicking in blank space between the title and statistics icon while in Visualization Editor mode.
-* Cannot change the title of a new visualization (when it is initialized as a blank title)
-* If a JSON attribute name begins with a number the extracted value is always empty
-* Data Blending field panels don't scroll with mouse wheel or trackpad
-* Unable to move filter when there are 10+ of them in edit mode
-* Sybase ds item wrapper with configured custom query property still returns all data
-* Replacing Analysis Services data source doesn't work
-* Dynamics CRM - NRE is thrown when you try to get data using a data source item
-* An exception is thrown when no image is set in DashboardEmptyState
-* RVReportingServicesDataSourceItem seems to be missing properties for configuring parameters
-* It is not possible to render a pdf report using RVReportingServicesDataSourceItem
-* "No Url specified for web resource" error replacing DataSource WebResource URL 
-* Calls to `IRVDataSourceProvider.ChangeDataSourceItemAsync` always has null for dashboardId argument
-* KPI Indicators - "There's no data to display" has wrong style
-* Some global filters are being reset when start selecting their options
-* Null Reference Exception thrown when using a specific Excel sheet with custom styles.
-* MySQL timestamp columns are read as UTC datetimes when they're actually in the session timezone.
-* The nuget files contains more dependencies than it should
-* Very bad performance on Redshift blending when using a RVRedshiftDataSourceItem
-* Error when using InMemory datasource in SDK
-* Error in Salesforce visualization when using Lead's ConvertedDate as a filter
-* S3 Excel resource item not working after replace DS/DSI scenario (app kept in loading after sheet selection when creating widget)
-* The Rest API URL should not be shown in errors
-* Change RVDashboard.visualizations type in d.ts to VisualizationsArray
+#### すべてのプラットフォーム
+* ヘッドレス エクスポート: 横向きがデフォルトの向きになりました。
+* 新しいカテゴリ チャートの修正とパフォーマンスの向上。
+* クライアントではなく IRVDataSourceProvider の MsSql プロバイダーで Host プロパティを設定するとエラーが発生する問題。
+* Schema プロパティが dataSourceItem で設定されていない場合、Redshift クエリは失敗します (デフォルトの 'public' スキーマを使用する必要があります)。
+* 財務チャートが正しく機能していませんでした。 
+* host プロパティは、RVSqlServerDataSource の IRVAuthenticationProvider で常に null の値を持っていました。
+* すべてのデータベース データ ソースでは、DataSourceItem で Database プロパティを設定する必要がありました (DataSource で設定されている場合でも)。現在、プロパティは DataSourceItem で非推奨になり、Database で設定するだけで機能します。
+* リンクされたダッシュボードを開くとクラッシュする問題。
+* Redshift/Postgres データを示すツリーマップが失敗した問題。
+* Redshift または Postgres で標準偏差集計を使用すると、エラーが発生する問題。
+* IRVDataSourceProvider を使用して Excel データ ソースに別のシートを設定しても機能しませんでした。
+* 表示形式エディター モードで、タイトルと統計アイコンの間の空白スペースをクリックするとエラーが発生する問題。
+* 新しい表示形式 (空白のタイトルとして初期化されている場合) のタイトルを変更できない問題。
+* JSON 属性名が数字で始まる場合、抽出される値は常に空である問題。
+* データ ブレンド フィールド パネルがマウス ホイールまたはトラックパッドでスクロールしない問題。
+* 編集モードでフィルターが 10 個以上ある場合、フィルターを移動できない問題。
+* カスタム クエリ プロパティが構成された Sybase ds 項目ラッパーがすべてのデータを返す問題。
+* Analysis Services データ ソースの置き換えが機能しない問題。
+* Dynamics CRM - データ ソース項目を使用してデータを取得しようとすると、NRE がスローされる問題。
+* DashboardEmptyState に画像が設定されていない場合に例外がスローされる問題。
+* RVReportingServicesDataSourceItem には、パラメーターを設定するためのプロパティが表示されない問題。
+* RVReportingServicesDataSourceItem を使用して PDF レポートをレンダリングすることはできない問題。
+* DataSource WebResource URL の代わりに 「No Url specified for web resource」エラーが発生する問題。
+* `IRVDataSourceProvider.ChangeDataSourceItemAsync` への呼び出しは、dashboardId 引数に対して常に null を持つ問題。
+* KPI インジケーター - 「表示するデータがありません。」のスタイルが間違っている問題。
+* オプションの選択を開始すると、一部のグローバル フィルターがリセットされる問題。
+* カスタム スタイルを含む特定の Excel シートを使用すると、Null 参照例外がスローされる問題。
+* MySQL タイムスタンプ列は、実際にセッションのタイムゾーンにある場合、UTC 日時として読み取られる問題。
+* nuget ファイルには、必要以上の依存関係が含まれている問題。
+* RVRedshiftDataSourceItem を使用すると、Redshift ブレンディングのパフォーマンスが低下する問題。
+* SDK で InMemory データ ソースを使用する際にエラーが発生する問題。
+* Lead の ConvertedDate をフィルターとして使用すると、Salesforce 表示形式でエラーが発生する問題。
+* DS/DSI シナリオの置換後に S3 Excel リソース項目が機能しない問題 (ウィジェットの作成時にシートを選択した後、アプリがロードされたままになる)。
+* Rest API URL はエラーに表示されるべきではありません。
+* d.ts の RVDashboard.visualizations タイプを VisualizationsArray に変更しました。
 
 #### Node
-* Several improvements on headless export for the Node.js SDK. Now it is available for Linux/MacOS.
+* Node.js SDK のヘッドレス エクスポートに関するいくつかの改善。Linux/MacOS で利用できるようになりました。
 
 #### Java
-* 'Schema' property for the Snowflake DataSource was being ignored.
-* Asset visualization not working when using the java SDK.
-* Redshift queries for tables using column of type 'timestamptz' failed if it contained null values.
-* MaxDownloadSize limit is being ignored in Java SDK
+* Snowflake DataSource の 'Schema' プロパティが無視されていた問題。
+* Java SDK の使用時にアセットの表示形式が機能しない問題。
+* タイプ 'timestamptz' の列を使用するテーブルの Redshift クエリは、null 値が含まれている場合に失敗した問題。
+* Java SDK で MaxDownloadSize 制限が無視されている問題。
 
 ## 1.4.0 (2023 年 2 月)
 
@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 ### 新機能
 
 #### すべてのプラットフォーム
-* フィールドの削除、名前の変更、または並べ替えによって、表示形式エディターに表示されるフィールドのリストをカスタマイズできるようにする新しい API - `onFieldsInitializing` - を追加しました。 使用例: 
+* フィールドの削除、名前の変更、または並べ替えによって、表示形式エディターに表示されるフィールドのリストをカスタマイズできるようにする新しい API - `onFieldsInitializing` - を追加しました。使用例: 
 ```
 revealView.onFieldsInitializing = function (args) {
 	args.fields = args.fields.filter(f => !["Avg.CPC", "Avg. CPC"].some(e => e == f.name));
@@ -88,7 +88,7 @@ revealView.onFieldsInitializing = function (args) {
 * onDateFilterChanged の range パラメーターで送信された日付の時間部分に一貫性がない問題。
 * グローバル フィルター範囲セレクターに一貫性のない日が表示される問題。「今日」または「昨日」を使用すると、2 つの異なる日が表示されました。
 * フィールドが以前のデータ ブレンドからのものである場合、結合に使用されたフィールドがデータ ブレンド エディターに表示されない問題。
-* クライアントで Database プロパティを指定しない限り、Athena DataSourceItem はエラーを発生する問題。 (Web のみ)。
+* クライアントで Database プロパティを指定しない限り、Athena DataSourceItem はエラーを発生する問題。(Web のみ)。
 * RVSnowflakeDataSourceItem が正しく機能しない問題。
 
 #### ASP.NET
@@ -129,7 +129,7 @@ services
 	- マップを使用した表示形式が正しく表示されるようになりました。
 	- 実行時のメモリ フットプリントが減少しました。
 	- ダッシュボードにタイトルがないとエクスポートが失敗する問題を修正しました。
-- 修正された問題: パラメータを使用した REST データソースを作成するときに発生する問題。[戻る] ボタンが押された場合、値はすでに入力されていますが、実際には適用されませんでした。
+- 修正された問題: パラメータを使用した REST データ ソースを作成するときに発生する問題。[戻る] ボタンが押された場合、値はすでに入力されていますが、実際には適用されませんでした。
 - 修正された問題: 有効期限の設定に関係なく、ダッシュボードを開くと、使用可能な値のダッシュボード フィルタ リストが常に更新されていました。
 - 修正された問題: ダッシュボード フィルタの有効期限の値が保存されませんでした。
 - 修正された問題: 最大化してから復元すると、ダッシュボードの水平フィルターが失われます。

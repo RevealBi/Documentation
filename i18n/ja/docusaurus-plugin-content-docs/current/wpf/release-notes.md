@@ -1,47 +1,47 @@
 # リリース ノート
 
-## 1.5.0 (May 4th, 2023)
+## 1.5.0 (2023 年 5 月 4 日)
 
-### Breaking Changes
-* We're no longer releasing an installer. The nuget package can be found at https://www.nuget.org/packages/Reveal.Sdk.Wpf, samples can be found at https://github.com/RevealBi/sdk-samples-wpf.
+### 重大な変更
+* インストーラーはリリースされなくなりました。nuget パッケージは https://www.nuget.org/packages/Reveal.Sdk.Wpf で見つけることができ、サンプルは https://github.com/RevealBi/sdk-samples-wpf で見つけることができます。
 
-### New Features
-* (Beta) Chart actions available while hovering the mouse. Turn on using `RevealSdkSettings.EnableActionsOnHoverTooltip = true`.
+### 新機能
+* (ベータ版) マウスをホバーしているときにチャート アクションを使用できます。`RevealSdkSettings.EnableActionsOnHoverTooltip = true` を使用してオンにします。
 
-### Bug Fixes
-* Fixes and performance improvements for the new category charts
-* Setting the Host property in MsSql provider in the IRVDataSourceProvider but not in the client causes error
-* Redshift queries fail if the Schema property is not set in the dataSourceItem (should use the default, 'public', schema)
-* All database datasources required the Database property to be set in the DataSourceItem (even if it was set in the DataSource). Now the property has been deprecated in the DataSourceItem, and setting it in the Database just works.
-* Opening a linked dashboard caused a crash
-* Treemap showing Redshift/Postgres data failed
-* Error using Standard Deviation aggregation with Redshift or Postgres
-* Setting a different Sheet for an Excel datasource using IRVDataSourceProvider didn't work
-* Error if clicking in blank space between the title and statistics icon while in Visualization Editor mode.
-* Cannot change the title of a new visualization (when it is initialized as a blank title)
-* PostgresSQL connection to localhost doesn't work
-* If a JSON attribute name begins with a number the extracted value is always empty
-* Data Blending field panels don't scroll with mouse wheel or trackpad
-* Unable to move filter when there are 10+ of them in edit mode
-* Fixed a concurrency issue if several visualizations accessed the same data at the same time.
-* Sybase ds item wrapper with configured custom query property still returns all data
-* Replacing Analysis Services data source doesn't work
-* Dynamics CRM - NRE is thrown when you try to get data using a data source item
-* An exception is thrown when no image is set in DashboardEmptyState
-* RVReportingServicesDataSourceItem seems to be missing properties for configuring parameters
-* It is not possible to render a pdf report using RVReportingServicesDataSourceItem
-* "No Url specified for web resource" error replacing DataSource WebResource URL 
-* Calls to IRVDataSourceProvider.ChangeDataSourceItemAsync always has null for dashboardId argument
-* KPI Indicators - "There's no data to display" has wrong style
-* Some global filters are being reset when start selecting their options
-* Null Reference Exception thrown when using a specific Excel sheet with custom styles.
-* MySQL timestamp columns are read as UTC datetimes when they're actually in the session timezone.
-* The nuget files contains more dependencies than it should
-* Very bad performance on Redshift blending when using a RVRedshiftDataSourceItem
-* Error when using InMemory datasource in SDK
-* Error in Salesforce visualization when using Lead's ConvertedDate as a filter
-* S3 Excel resource item not working after replace DS/DSI scenario (app kept in loading after sheet selection when creating widget)
-* The Rest API URL should not be shown in errors
+### バグ修正
+* 新しいカテゴリ チャートの修正とパフォーマンスの向上。
+* クライアントではなく IRVDataSourceProvider の MsSql プロバイダーで Host プロパティを設定するとエラーが発生する問題。
+* Schema プロパティが dataSourceItem で設定されていない場合、Redshift クエリは失敗します (デフォルトの 'public' スキーマを使用する必要があります)。
+* すべてのデータベース データ ソースでは、DataSourceItem で Database プロパティを設定する必要がありました (DataSource で設定されている場合でも)。現在、プロパティは DataSourceItem で非推奨になり、Database で設定するだけで機能します。
+* リンクされたダッシュボードを開くとクラッシュする問題。
+* Redshift/Postgres データを示すツリーマップが失敗した問題。
+* Redshift または Postgres で標準偏差集計を使用すると、エラーが発生する問題。
+* IRVDataSourceProvider を使用して Excel データ ソースに別のシートを設定しても機能しませんでした。
+* 表示形式エディター モードで、タイトルと統計アイコンの間の空白スペースをクリックするとエラーが発生する問題。
+* 新しい表示形式 (空白のタイトルとして初期化されている場合) のタイトルを変更できない問題。
+* localhost への PostgresSQL 接続が機能しない問題。
+* JSON 属性名が数字で始まる場合、抽出される値は常に空である問題。
+* データ ブレンド フィールド パネルがマウス ホイールまたはトラックパッドでスクロールしない問題。
+* 編集モードでフィルターが 10 個以上ある場合、フィルターを移動できない問題。
+* 複数の表示形式が同じデータに同時にアクセスした場合の同時実行の問題が修正されました。
+* カスタム クエリ プロパティが構成された Sybase ds 項目ラッパーがすべてのデータを返す問題。
+* Analysis Services データ ソースの置き換えが機能しない問題。
+* Dynamics CRM - データ ソース項目を使用してデータを取得しようとすると、NRE がスローされる問題。
+* DashboardEmptyState に画像が設定されていない場合に例外がスローされる問題。
+* RVReportingServicesDataSourceItem には、パラメーターを設定するためのプロパティが表示されない問題。
+* RVReportingServicesDataSourceItem を使用して PDF レポートをレンダリングすることはできない問題。
+* DataSource WebResource URL の代わりに 「No Url specified for web resource」エラーが発生する問題。 
+* IRVDataSourceProvider.ChangeDataSourceItemAsync への呼び出しは、dashboardId 引数に対して常に null を持つ問題。
+* KPI インジケーター - 「表示するデータがありません。」のスタイルが間違っている問題。
+* オプションの選択を開始すると、一部のグローバル フィルターがリセットされる問題。
+* カスタム スタイルを含む特定の Excel シートを使用すると、Null 参照例外がスローされる問題。
+* MySQL タイムスタンプ列は、実際にセッションのタイムゾーンにある場合、UTC 日時として読み取られる問題。
+* nuget ファイルには、必要以上の依存関係が含まれている問題。
+* RVRedshiftDataSourceItem を使用すると、Redshift ブレンディングのパフォーマンスが低下する問題。
+* SDK で InMemory データ ソースを使用する際にエラーが発生する問題。
+* Lead の ConvertedDate をフィルターとして使用すると、Salesforce 表示形式でエラーが発生する問題。
+* DS/DSI シナリオの置換後に S3 Excel リソース項目が機能しない問題 (ウィジェットの作成時にシートを選択した後、アプリがロードされたままになる)。
+* Rest API URL はエラーに表示されるべきではありません。
 
 ## 1.4.1 (2023 年 4 月)
 _これは nuget.org のみの更新です。_
@@ -56,7 +56,7 @@ _これは nuget.org のみの更新です。_
 * データ ソース項目のサブタイトルは自動生成されなくなりました。Subtitle プロパティのみが考慮されます。
 
 ### 新機能
-* フィールドの削除、名前の変更、または並べ替えによって、表示形式エディターに表示されるフィールドのリストをカスタマイズできるようにする新しい API - `onFieldsInitializing` - を追加しました。 使用例: 
+* フィールドの削除、名前の変更、または並べ替えによって、表示形式エディターに表示されるフィールドのリストをカスタマイズできるようにする新しい API - `onFieldsInitializing` - を追加しました。使用例: 
 ```
 revealView.onFieldsInitializing = function (args) {
 	args.fields = args.fields.filter(f => !["Avg.CPC", "Avg. CPC"].some(e => e == f.name));
@@ -85,7 +85,7 @@ RevealSdkSettings.License = "XYZ123";
 ```
 
 ### バグ修正
-- 修正された問題: パラメータを使用した REST データソースを作成するときに発生する問題。[戻る] ボタンが押された場合、値はすでに入力されていますが、実際には適用されませんでした。
+- 修正された問題: パラメータを使用した REST データ ソースを作成するときに発生する問題。[戻る] ボタンが押された場合、値はすでに入力されていますが、実際には適用されませんでした。
 - 修正された問題: 有効期限の設定に関係なく、ダッシュボードを開くと、使用可能な値のダッシュボード フィルタ リストが常に更新されていました。
 - 修正された問題: ダッシュボード フィルタの有効期限の値が保存されませんでした。
 - 修正された問題: 最大化してから復元すると、ダッシュボードの水平フィルターが失われます。

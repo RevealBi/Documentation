@@ -227,7 +227,7 @@ public class SalesDataGenerator
 
 ### データ プロバイダーの作成
 
-ダッシュボードで使用するデータを作成したので、次の手順は、そのデータを Reveal SDK で利用できるようにすることです。これを行うには、`IRVDataProvider` を実装する新しいクラスを作成する必要があります。 このインターフェイスは、Reveal SDK 内のインメモリ データの実装に特に使用されます。
+ダッシュボードで使用するデータを作成したので、次の手順は、そのデータを Reveal SDK で利用できるようにすることです。これを行うには、`IRVDataProvider` を実装する新しいクラスを作成する必要があります。このインターフェイスは、Reveal SDK 内のインメモリ データの実装に特に使用されます。
 
 `MyInMemoryDataProvider` という新しいクラスを作成し、`IRVDataProvider` インターフェイスを実装しましょう。`_salesInMemoryData` という名前の変数を定義し、`SalesDataGenerator` を使用して生成した 10,000 個のデータ レコードを参照していることに注意してください。
 
