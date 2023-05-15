@@ -350,5 +350,9 @@
   "sidebar.webSidebar.doc.REST": {
     "message": "REST",
     "description": "The label for the doc item REST in sidebar webSidebar, linking to the doc web/adding-data-sources/rest"
+  },
+  "sidebar.webSidebar.doc.Amazon Athena": {
+    "message": "Amazon Athena",
+    "description": "The label for the doc item Amazon Athena in sidebar webSidebar, linking to the doc web/adding-data-sources/amazon-athena"
   }
 }
