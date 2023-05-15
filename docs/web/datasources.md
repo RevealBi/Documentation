@@ -236,19 +236,20 @@ Any changes made to the data source in the `ChangeDataSourceAsync` method are no
 
 The following data sources are supported in the Reveal SDK:
 
-- Amazon Athena
+- [Amazon Athena](adding-data-sources/amazon-athena.md)
 - Amazon Redshift
-- Amazon S3
+- [Amazon S3](adding-data-sources/amazon-s3.md)
 - Box
-- CSV (Comma Separated Values)
+- [CSV (Comma Separated Values)](adding-data-sources/csv.md)
 - Dropbox
 - [Excel / Microsoft Excel](adding-data-sources/excel-file.md)
 - Google Analytics 4
-- Google BigQuery
-- Google Drive
-- Google Sheets
+- [Google BigQuery](adding-data-sources/google-big-query.md)
+- [Google Drive](adding-data-sources/google-drive.md)
+- [Google Sheets](adding-data-sources/google-sheets.md)
 - Hubspot
 - [In-Memory Data](adding-data-sources/in-memory-data.md)
+- [JSON](adding-data-sources/json.md)
 - Marketo
 - Microsoft Analysis Services
 - Microsoft Azure Analysis Services
@@ -263,7 +264,7 @@ The following data sources are supported in the Reveal SDK:
 - Oracle
 - PostgreSQL
 - Quickbooks
-- REST API
+- [REST](adding-data-sources/rest.md)
 - Salesforce
 - Spreadsheets (XLSX, XLS)
 - SharePoint
