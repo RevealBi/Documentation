@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a REST Data Source
+# REST データ ソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVRESTDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvrestdatasource.html) object. Set the `URL` property to the url of the REST endpoint, and set the `useAnonymousAuthentication` property to false if there is no authentication required to access the REST endpoint. After you have created the `RVRESTDataSource` object, add it to the data sources collection.
+**手順 2 ** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVRESTDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvrestdatasource.html) オブジェクトの新しいインスタンスを作成します。REST エンドポイントへのアクセスに認証が必要ない場合は、`URL` プロパティを REST エンドポイントの URL に設定し、`useAnonymousAuthentication` プロパティを false に設定します。`RVRESTDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -31,13 +31,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created REST data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された REST データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/rest-data-source.jpg)
 
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/RestService)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/RestService) にあります。
 
 :::

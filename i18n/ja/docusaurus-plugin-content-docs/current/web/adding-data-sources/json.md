@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a JSON Data Source
+# JSON データ ソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) object. Set the `URL` property to the url of the CSV resource, and set the `useAnonymousAuthentication` property to `false` if there is no authentication required to access the CSV resource. Optionally, you can add the `RVWebResourceDataSource` object to the data source collection of the callback to display it in the RevealView's Data Source Dialog.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) オブジェクトの新しいインスタンスを作成します。CSV リソースへのアクセスに認証が必要ない場合は、`URL` プロパティを CSV リソースの URL に設定し、`useAnonymousAuthentication` プロパティを `false` に設定します。オプションで、`RVWebResourceDataSource` オブジェクトをコールバックのデータ ソース コレクションに追加して、RevealView の [データ ソース] ダイアログに表示できます。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -31,13 +31,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Web Resource data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Web リソース データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/web-resource-data-source.jpg)
 
-**Step 3** - To bypass the **Set up your JSON** screen of the data source dialog and use the JSON data directly, create a new instance of the [RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html), and pass the `RVWebResourceDataSource` object created in the previous step as a constructor argument. Next, create a new instance of the [RVJsonDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvjsondatasourceitem.html) and pass the `RVWebResourceDataSourceItem` as the contructor argument. Set the `Title` and `Subtitle` properties. Finally, you **MUST** set the `Config` property to a JSON string that represents the structure of the data. To make this process easier, you can use the [RVJsonSchemaConfigBuilder](https://help.revealbi.io/api/javascript/latest/classes/rvjsonschemaconfigbuilder.html) class to help build the JSON structure using a fluent API.
+**手順 3** - データ ソース ダイアログの **[JSON の設定]** 画面をスキップして JSON データを直接使用するには、[RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html) の新しいインスタンスを作成し、前の手順で作成した `RVWebResourceDataSource` オブジェクトをコンストラクター引数として渡します。次に、[RVJsonDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvjsondatasourceitem.html) の新しいインスタンスを作成し、「RVWebResourceDataSourceItem」 をコンストラクター引数として渡します。 `Title` と `Subtitle` プロパティを設定します。最後に、`Config` プロパティをデータの構造を表す JSON 文字列に設定する**必要があります**。 このプロセスを簡単にするために、[RVJsonSchemaConfigBuilder](https://help.revealbi.io/api/javascript/latest/classes/rvjsonschemaconfigbuilder.html) クラスを使用して、流暢な API を使用して JSON 構造を構築できます。
 
-After you have created the `RVJsonDataSourceItem` object, add it to the data source items collection.
+`RVJsonDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -63,13 +63,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created JSON data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい3可視化を作成すると、[データ ソースの選択] ダイアログに新しく作成された JSON データ ソース項目が表示されます。
 
 ![](images/json-data-source-item.jpg)
 
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Json)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Json) にあります。
 
 :::
