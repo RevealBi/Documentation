@@ -52,7 +52,7 @@ revealView.onTooltipShowing = (args) => {
 };
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/Tooltips) にあります。
 

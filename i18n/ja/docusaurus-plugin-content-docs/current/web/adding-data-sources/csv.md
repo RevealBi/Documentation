@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) オブジェクトの新しいインスタンスを作成します。CSV リソースへのアクセスに認証が必要ない場合は、`URL` プロパティを CSV リソースの URL に設定し、`useAnonymousAuthentication` プロパティを `true` に設定します。オプションで、`RVWebResourceDataSource` オブジェクトをコールバックのデータ ソース コレクションに追加して、RevealView の [データ ソース] ダイアログに表示できます。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) オブジェクトの新しいインスタンスを作成します。CSV リソースへのアクセスに認証が必要ない場合は、`URL` プロパティを CSV リソースの URL に設定し、`useAnonymousAuthentication` プロパティを `false` に設定します。オプションで、`RVWebResourceDataSource` オブジェクトをコールバックのデータ ソース コレクションに追加して、RevealView の [データ ソース] ダイアログに表示できます。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -35,7 +35,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/web-resource-data-source.jpg)
 
-**手順 3** - [データ ソース] ダイアログの **[CSV の設定]** 画面をスキップして CSV データを直接使用するには、[RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html) の新しいインスタンスを作成し、前の手順で作成した `RVWebResourceDataSource` オブジェクトをコンストラクター引数として渡します。次に、[RVCsvDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvcsvdatasourceitem.html) の新しいインスタンスを作成し、`RVWebResourceDataSourceItem` をコンストラクター引数として渡します。 `Title`、`Subtitle`、およびその他の必要なプロパティを設定します。`RVCsvDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 3** - [データ ソース] ダイアログの **[CSV の設定]** 画面をスキップして CSV データを直接使用するには、[RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html) の新しいインスタンスを作成し、前の手順で作成した `RVWebResourceDataSource` オブジェクトをコンストラクター引数として渡します。次に、[RVCsvDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvcsvdatasourceitem.html) の新しいインスタンスを作成し、`RVWebResourceDataSourceItem` をコンストラクター引数として渡します。`Title`、`Subtitle`、およびその他の必要なプロパティを設定します。`RVCsvDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {

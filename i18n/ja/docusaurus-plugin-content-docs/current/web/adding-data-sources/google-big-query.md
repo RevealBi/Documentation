@@ -35,7 +35,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::note
 
-`RVBigQueryDataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてテーブルを読み込みます。Google Big Query は `RVBearerTokenDataSourceCredential` を使用して認証します。 詳細については、[認証](../authentication#bearer-token-authentication)トピックを参照してください。
+`RVBigQueryDataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてテーブルを読み込みます。Google Big Query は `RVBearerTokenDataSourceCredential` を使用して認証します。詳細については、[認証](../authentication#ベアラー-トークン認証)トピックを参照してください。
 
 :::
 

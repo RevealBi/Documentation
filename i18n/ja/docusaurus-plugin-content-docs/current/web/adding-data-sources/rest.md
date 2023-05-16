@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2 ** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVRESTDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvrestdatasource.html) オブジェクトの新しいインスタンスを作成します。REST エンドポイントへのアクセスに認証が必要ない場合は、`URL` プロパティを REST エンドポイントの URL に設定し、`useAnonymousAuthentication` プロパティを false に設定します。`RVRESTDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVRESTDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvrestdatasource.html) オブジェクトの新しいインスタンスを作成します。REST エンドポイントへのアクセスに認証が必要ない場合は、`URL` プロパティを REST エンドポイントの URL に設定し、`useAnonymousAuthentication` プロパティを false に設定します。`RVRESTDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {

@@ -177,7 +177,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 };
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LinkingDashboards-UI) にあります。
 

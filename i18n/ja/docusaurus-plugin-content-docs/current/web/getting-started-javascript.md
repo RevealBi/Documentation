@@ -136,7 +136,7 @@
 
 完了しました! 最初の Reveal SDK アプリケーションを作成しました。
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/html) にあります。
 

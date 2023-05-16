@@ -65,7 +65,7 @@ revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilt
 
 ![](images/filtering-date-filter-daterange.jpg)
 
-:::info Get the Code
+:::info コードの取得
 
 日付フィルターを示すサンプルは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/master/FilteringDashboards-Dates) にあります。
 
@@ -163,7 +163,7 @@ var territoryFilter = revealView.dashboard.filters.getByTitle("Territory");
 territoryFilter.selectedValues = [];
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/master/FilteringDashboards) でダッシュボード フィルターのデモ サンプルを見つけることができます。
 

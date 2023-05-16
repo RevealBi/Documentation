@@ -35,7 +35,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::note
 
-`RVGoogleDriveDataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてフォルダーとファイルを読み込みます。Google ドライブは `RVBearerTokenDataSourceCredential` を使用して認証します。詳細については、「[認証](../authentication#bearer-token-authentication)」トピックを参照してください。
+`RVGoogleDriveDataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてフォルダーとファイルを読み込みます。Google ドライブは `RVBearerTokenDataSourceCredential` を使用して認証します。詳細については、「[認証](../authentication#ベアラー-トークン認証)」トピックを参照してください。
 
 :::
 
