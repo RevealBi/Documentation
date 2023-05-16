@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a Google Sheet Data Source
+# Google スプレッドシート データソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVGoogleDriveDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvgoogledrivedatasourceitem.html) object. Set the `Identifier` property to the Google Spreadsheet ID.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVGoogleDriveDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvgoogledrivedatasourceitem.html) オブジェクトの新しいインスタンスを作成します。`Identifier` プロパティを Google スプレッドシート ID に設定します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -29,13 +29,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-The Google Spreadsheet ID, also known as the `Identifier`, is a unique identifier for each spreadsheet you create in Google Sheets. The easiest way to find the `Identifier` is to look at the URL of the spreadsheet. In the URL, the spreadsheet ID is the string of letters and numbers that comes after the “/d/” portion of the URL.
+`Identifier` とも呼ばれる Google スプレッドシート ID は、Google スプレッドシートで作成する各スプレッドシートの一意の識別子です。`Identifier` を見つける最も簡単な方法は、スプレッドシートの URL を確認することです。URL では、スプレッドシート ID は、URL の「/d/」部分の後に続く文字と数字の文字列です。
 
 ![](images/google-sheets-url-identifier.jpg)
 
-In this example, the `Identifier` is **1Tv8z8ya_qTfaiRSYv0U_z21nubgzE_-ZskuPbP1VDxA**
+この例では、`Identifier` は **1Tv8z8ya_qTfaiRSYv0U_z21nubgzE_-ZskuPbP1VDxA** です。
 
-**Step 3** - Create a new Google Sheet Data Source Item by creating a new instance of the [RVGoogleSheetDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvgooglesheetdatasourceitem.html) object. Set the `Title`, `Subtitle`, and `Sheet` properties that correspond to your values. After you have created the `RVGoogleSheetDataSourceItem` object, add it to the data source items collection.
+**手順 3** - [RVGoogleSheetDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvgooglesheetdatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Google スプレッドシート データ ソース項目を作成します。値に対応する `Title`、`Subtitle`、および `Sheet` プロパティを設定します。`RVGoogleSheetDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -53,13 +53,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Google Sheet data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Google スプレッド データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/google-sheets-data-source.jpg)
 
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/GoogleSheets-ServiceAccount)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/GoogleSheets-ServiceAccount) にあります。
 
 :::

@@ -123,7 +123,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/excel-file-data-source.jpg)
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/ExcelFile) にあります。
 

@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a Google Drive Data Source
+# スタンドアロン コンポーネントの使用方法
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVGoogleDriveDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvgoogledrivedatasource.html) object. Set the `Title` and `Subtitle` properties to values that correspond to your Google Drive. After you have created the `RVGoogleDriveDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVGoogleDriveDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvgoogledrivedatasource.html) オブジェクトの新しいインスタンスを作成します。`Title` プロパティと `Subtitle` プロパティを、Google ドライブに対応する値に設定します。`RVGoogleDriveDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -29,18 +29,18 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Google Drive data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Google ドライブ データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/google-drive-data-source.jpg)
 
 :::note
 
-The `RVGoogleDriveDataSource` loads folders and files based on the authentication provider registered with the Reveal SDK. Google Drive authenticates using a `RVBearerTokenDataSourceCredential`. See the [Authentication](../authentication#bearer-token-authentication) topic for more information.
+`RVGoogleDriveDataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてフォルダーとファイルを読み込みます。Google ドライブは `RVBearerTokenDataSourceCredential` を使用して認証します。詳細については、「[認証](../authentication#ベアラー-トークン認証)」トピックを参照してください。
 
 :::
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/GoogleDrive-ServiceAccount)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/GoogleDrive-ServiceAccount) にあります。
 
 :::

@@ -183,7 +183,7 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer) にあります。
 

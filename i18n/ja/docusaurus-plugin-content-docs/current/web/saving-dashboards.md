@@ -209,7 +209,7 @@ revealView.onSave = (rv, args) => {
 }
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/SavingDashboards-Server) にあります。
 
@@ -397,7 +397,7 @@ revealView.onSave = (rv, args) => {
 };
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/SavingDashboards-Client) にあります。
 

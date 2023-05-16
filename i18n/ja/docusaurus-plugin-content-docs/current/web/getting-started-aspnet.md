@@ -177,7 +177,7 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 
 完了しました! 最初の Reveal SDK アプリケーションを作成しました。
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/aspnet-webapp) にあります。
 

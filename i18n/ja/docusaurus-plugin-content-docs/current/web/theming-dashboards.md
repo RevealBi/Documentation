@@ -134,7 +134,7 @@ function createCustomTheme(){
 $.ig.RevealSdkSettings.theme = this.createCustomTheme();
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/ThemingDashboards) にあります。
 

@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a Google Big Query Data Source
+# Google BigQuery データソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVBigQueryDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasource.html) object. Set the `Title`, `Subtitle`, and `ProjectId` properties. After you have created the `RVBigQueryDataSource` object, add it to the data source items collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVBigQueryDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasource.html) オブジェクトの新しいインスタンスを作成します。`Title`、`Subtitle`、および `ProjectId` プロパティを設定します。`RVBigQueryDataSource` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -29,17 +29,17 @@ revealView.onDataSourcesRequested = (callback) => {
     callback(new $.ig.RevealDataSources([bigQuery], [], false));
 };
 ```
-When the application runs, create a new Visualization and you will see the newly created Big Query data source listed in the "Select a Data Source" dialog.
+アプリケーションを実行し、新しい可視化を作成すると、新しく作成された Big Query データ ソースが [データ ソースの選択] ダイアログに 表示されます。
 
 ![](images/big-query-data-source.jpg)
 
 :::note
 
-The `RVBigQueryDataSource` loads tables based on the authentication provider registered with the Reveal SDK. Google Big Query authenticates using a `RVBearerTokenDataSourceCredential`. See the [Authentication](../authentication#bearer-token-authentication) topic for more information.
+`RVBigQueryDataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてテーブルを読み込みます。Google Big Query は `RVBearerTokenDataSourceCredential` を使用して認証します。詳細については、[認証](../authentication#ベアラー-トークン認証)トピックを参照してください。
 
 :::
 
-**Step 3** - Create a new Big Query Data Source Item by creating a new instance of the [RVBigQueryDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasourceitem.html) object. Specify the values for the `Title`, `Subtitle`, `ProjectId`, `DatasetId`, and `Table` properties. After you have created the `RVBigQueryDataSourceItem` object, add it to the data source items collection.
+**手順 3** - [RVBigQueryDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Big Query データ ソース項目を作成します。`Title`、`Subtitle`、`ProjectId`、`DatasetId`、および `Table` プロパティの値を指定します。`RVBigQueryDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -59,13 +59,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Big Query data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Big Query データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/big-query-data-source-item.jpg)
 
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/BigQuery-ServiceAccount)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/BigQuery-ServiceAccount) にあります。
 
 :::

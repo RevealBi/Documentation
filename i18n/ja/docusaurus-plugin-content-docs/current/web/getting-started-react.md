@@ -176,7 +176,7 @@ npm start
 
 完了しました! 最初の Reveal SDK React アプリケーションを作成しました。
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/react) にあります。
 

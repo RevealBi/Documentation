@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a CSV Data Source
+# CSV データ ソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) object. Set the `URL` property to the url of the CSV resource, and set the `useAnonymousAuthentication` property to `false` if there is no authentication required to access the CSV resource. Optionally, you can add the `RVWebResourceDataSource` object to the data source collection of the callback to display it in the RevealView's Data Source Dialog.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVWebResourceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasource.html) オブジェクトの新しいインスタンスを作成します。CSV リソースへのアクセスに認証が必要ない場合は、`URL` プロパティを CSV リソースの URL に設定し、`useAnonymousAuthentication` プロパティを `false` に設定します。オプションで、`RVWebResourceDataSource` オブジェクトをコールバックのデータ ソース コレクションに追加して、RevealView の [データ ソース] ダイアログに表示できます。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -31,11 +31,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Web Resource data source listed in the "Select a Data Source" dialog.
+アプリケーションを実行し、新しい可視化を作成すると、新しく作成された Web リソース データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/web-resource-data-source.jpg)
 
-**Step 3** - To bypass the **Set up your CSV** screen of the data source dialog and use the CSV data directly, create a new instance of the [RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html), and pass the `RVWebResourceDataSource` object created in the previous step as a constructor argument. Next, create a new instance of the [RVCsvDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvcsvdatasourceitem.html) and pass the `RVWebResourceDataSourceItem` as the contructor argument. Set the `Title`, `Subtitle`, and any other properties that are needed. After you have created the `RVCsvDataSourceItem` object, add it to the data source items collection.
+**手順 3** - [データ ソース] ダイアログの **[CSV の設定]** 画面をスキップして CSV データを直接使用するには、[RVWebResourceDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvwebresourcedatasourceitem.html) の新しいインスタンスを作成し、前の手順で作成した `RVWebResourceDataSource` オブジェクトをコンストラクター引数として渡します。次に、[RVCsvDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvcsvdatasourceitem.html) の新しいインスタンスを作成し、`RVWebResourceDataSourceItem` をコンストラクター引数として渡します。`Title`、`Subtitle`、およびその他の必要なプロパティを設定します。`RVCsvDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -55,13 +55,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created CSV data source item listed in the "Select a Data Source" dialog.
+アプリケーションを実行し、新しい可視化を作成すると、新しく作成された CSV データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/csv-data-source-item.jpg)
 
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Csv)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Csv) にあります。
 
 :::

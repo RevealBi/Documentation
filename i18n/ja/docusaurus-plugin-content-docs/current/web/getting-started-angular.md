@@ -168,7 +168,7 @@ npm start
 
 完了しました! 最初の Reveal SDK Angular アプリケーションを作成しました。
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/client/angular) にあります。
 

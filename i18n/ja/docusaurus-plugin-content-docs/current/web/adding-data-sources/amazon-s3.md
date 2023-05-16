@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding an Amazon S3 Data Source
+# Amazon S3 データ ソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVS3DataSource](https://help.revealbi.io/api/javascript/latest/classes/rvgoogledrivedatasource.html) object. Set the `Title`, `Subtitle`, and `Region` properties. After you have created the `RVS3DataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVS3DataSource](https://help.revealbi.io/api/javascript/latest/classes/rvgoogledrivedatasource.html) オブジェクトの新しいインスタンスを作成します。`Title`、`Subtitle`、および `Region` プロパティを設定します。`RVS3DataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -30,18 +30,18 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Amazon S3 data source listed in the "Select a Data Source" dialog.
+アプリケーションを実行し、新しい可視化を作成すると、新しく作成された Amazon S3 データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/amazon-s3-data-source.jpg)
 
 :::note
 
-The `RVS3DataSource` loads folders and files based on the authentication provider registered with the Reveal SDK. Amazon S3 authenticates using a `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
+`RVS3DataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてフォルダーとファイルを読み込みます。Amazon S3 は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication#amazon-web-services)トピックを参照してください。
 
 :::
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Amazon-S3)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Amazon-S3) にあります。
 
 :::
