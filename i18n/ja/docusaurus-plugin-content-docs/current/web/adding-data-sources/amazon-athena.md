@@ -5,9 +5,9 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding an Amazon Athena Data Source
+# Amazon Athena データ ソースの追加
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -17,7 +17,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVAthenaDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasource.html) object. Set the `Title`, `Subtitle`, `Region`, and `Database` properties. After you have created the `RVAthenaDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVAthenaDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasource.html) オブジェクトの新しいインスタンスを作成します。`Title`、`Subtitle`、`Region`、および `Database` のプロパティを設定します。`RVAthenaDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -31,11 +31,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Amazon Athena data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Amazon Athena データ ソースが [データ ソースの選択] ダイアログにリストされます。
 
 ![](images/amazon-athena-data-source.jpg)
 
-**Step 3** - Create a new Amazon Athena Data Source Item by creating a new instance of the [RVAthenaDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasourceitem.html) object. Specify the values for the `Title`, `Subtitle`, and `Table` properties. After you have created the `RVAthenaDataSourceItem` object, add it to the data source items collection.
+**手順 3** - [RVAthenaDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Amazon Athena データ ソース項目を作成します。`Title`、`Subtitle`、`Table` の各プロパティの値を指定します。`RVAthenaDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -54,18 +54,18 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Amazon Athena data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Amazon Athena データ ソース項目が [データ ソースの選択] ダイアログにリストされます。
 
 ![](images/amazon-athena-data-source-item.jpg)
 
 :::note
 
-Amazon Athena authenticates using a `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
+Amazon Athena は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication#amazon-web-services)トピックを参照してください。
 
 :::
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Amazon-Athena)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Amazon-Athena) にあります。
 
 :::
