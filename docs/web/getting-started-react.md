@@ -24,27 +24,15 @@ code .
 1 - Open and modify the `public/index.html` file  to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
 2 - Install the remaining Reveal JavaScript API dependencies:
 
-- Jquery 2.2 or greater
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
 - Day.js 1.8.15 or greater
 
 ```html
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-- Quill RTE 1.3.6 or greater
-
-```html
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
-<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 ```
 
 The final `index.html` files should look similar to this:
@@ -76,8 +64,6 @@ The final `index.html` files should look similar to this:
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    //highlight-next-line
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">  
     <title>React App</title>
   </head>
   <body>
@@ -94,10 +80,8 @@ The final `index.html` files should look similar to this:
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     //highlight-start
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
     //highlight-end
   </body>
 </html>

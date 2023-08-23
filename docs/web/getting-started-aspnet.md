@@ -39,14 +39,8 @@ builder.Services.AddRazorPages().AddReveal();
 1 - Open and modify the `Pages/Shared/_Layout.cshtml` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag, but after the `jquery.min.js` script.
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
-
-:::info
-
-The Reveal JavaScript API depends on `jQuery` version 2.2 or greater.
-
-:::
 
 2 - Install the remaining Reveal JavaScript API dependencies:
 
@@ -54,13 +48,6 @@ The Reveal JavaScript API depends on `jQuery` version 2.2 or greater.
 
 ```html
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-- Quill RTE 1.3.6 or greater
-
-```html
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
-<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 ```
 
 The final `_Layout.cshtml` files should look similar to this:
@@ -75,8 +62,6 @@ The final `_Layout.cshtml` files should look similar to this:
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GettingStarted.styles.css" asp-append-version="true" />
-    // highlight-next-line
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">   
 </head>
 <body>
     <header>
@@ -112,14 +97,14 @@ The final `_Layout.cshtml` files should look similar to this:
         </div>
     </footer>
 
-    // highlight-start
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
+    // highlight-start
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
     // highlight-end
 
     @await RenderSectionAsync("Scripts", required: false)
