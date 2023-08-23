@@ -2,22 +2,24 @@ const visit = require('unist-util-visit');
 
 const plugin = (options) => {
 
-    const pattern = /\[var:([^[\]]+)\]/g;
-
     const transformer = async (ast) => {
-        visit(ast, ['code'], (node) => {
-
-            let value = node.value;
-
-            value = value.replace(pattern, (match, variableName) => {
-                const variable = options.variables.find(varObj => varObj.name === variableName);
-                return variable ? variable.value : match;
-            });
-
-            node.value = value;
+        visit(ast, ["text", "code", "link"], (node) => {
+            if (node.type === "link") {
+                node.url = getValue(node.url, options);
+            } else {
+                node.value = getValue(node.value, options);
+            }            
         });
     };
     return transformer;
+};
+
+const pattern = /\[var:([^[\]]+)\]/g;
+const getValue = (value, options) => {
+    return value.replace(pattern, (match, variableName) => {
+        const variable = options.variables.find(varObj => varObj.name === variableName);
+        return variable ? variable.value : match;
+    });
 };
 
 module.exports = plugin;
