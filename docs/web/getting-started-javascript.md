@@ -1,6 +1,6 @@
 # Getting Started with Reveal SDK for HTML/JavaScript
 
-## Step 1 - Create an HTML File
+## Step 1 - Create an HTML File 
 
 1 - Open your favorite code editor and create a new HTML file and save the file with the name `index.html`
 
@@ -24,7 +24,7 @@
 1 - Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
 2 - Install the remaining Reveal JavaScript API dependencies:
@@ -66,7 +66,7 @@ The final `index.html` files should look similar to this:
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>    
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
     // highlight-end
 </body>
 </html>
@@ -112,7 +112,7 @@ The final `index.html` file should look like this:
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>    
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
         var revealView = new $.ig.RevealView("#revealView");
