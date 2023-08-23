@@ -32,10 +32,6 @@ By default, the first time an end-user tries to export a dashboard to an image, 
 
 Playwright will try to download the required binaries, but if manual configuration is required you can check Playwright [documentation](https://playwright.dev/java/docs/intro).
 
-#### macOS Dependencies
-
-The only required library for macOS is `libgdiplus`. [Installation Instructions](https://learn.microsoft.com/th-th/dotnet/core/install/macos#libgdiplus)
-
 #### Linux Dependencies
 
 There are dependencies to multiple native libraries in Linux. The exact list of dependencies you need to install depends on the distribution used, the version, and list of packages previously installed.
@@ -45,8 +41,7 @@ Below there's a list of libraries needed for a basic Ubuntu 18.0.4 distribution:
 ```bash
 sudo apt-get update
 
-sudo apt-get install -y libgdiplus\
-        libatk1.0-0\
+sudo apt-get install -y libatk1.0-0\
         libatk-bridge2.0-0\
         libxkbcommon0\
         libxcomposite1\
