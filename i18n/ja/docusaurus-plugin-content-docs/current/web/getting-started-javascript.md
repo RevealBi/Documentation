@@ -92,7 +92,7 @@
     <div id="revealView" style="height: 920px; width: 100%;"></div>
  
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
         var revealView = new $.ig.RevealView("#revealView");
