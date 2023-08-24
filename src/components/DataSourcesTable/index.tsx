@@ -98,7 +98,11 @@ export default function DataSourcesTable({ isWpf = false }: { isWpf?: boolean })
                 {DataSources.map((props, idx) => (
                     <tr key={idx}>
                         <td>
-                            {createHyperLink(props)}
+                            {isWpf ? (
+                                <span>{props.title}</span>
+                            ) : (
+                                createHyperLink(props)
+                            )}                            
                         </td>
                         {!isWpf ? (
                             <>

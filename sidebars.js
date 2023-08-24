@@ -143,7 +143,7 @@ const sidebars = {
     {
       type: "category", label: "Working with Data Sources", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         {
-          type: "category", label: "Adding Data Sources", items: [
+          type: "category", label: "Data Sources", link: { type: "doc", id: "wpf/datasources" }, items: [
             { type: "doc", label: "Excel File", id: "wpf/adding-data-sources/excel-file" },
             { type: "doc", label: "In Memory Data", id: "wpf/adding-data-sources/in-memory-data" },
             { type: "doc", label: "MS SQL Server", id: "wpf/adding-data-sources/ms-sql-server" },
