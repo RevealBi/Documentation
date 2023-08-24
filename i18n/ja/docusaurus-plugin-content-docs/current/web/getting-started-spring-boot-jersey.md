@@ -74,7 +74,7 @@ Visual Studio Code と Java の使用を開始する方法の詳細について�
 <dependency>
     <groupId>com.infragistics.reveal.sdk</groupId>
     <artifactId>reveal-sdk</artifactId>
-    <version>1.3.0</version>
+    <version>[var:sdkVersion]</version>
 </dependency>
 ```
 

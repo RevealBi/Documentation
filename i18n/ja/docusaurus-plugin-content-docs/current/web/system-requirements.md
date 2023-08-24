@@ -1,7 +1,7 @@
 # システム要件
 
 ## ASP.NET
-- ASP.NET Core 3.1 またはそれ以降
+- ASP.NET 6.0 またはそれ以降
 
 ## Java
 - Java SDK 11.0.10 およびそれ以降

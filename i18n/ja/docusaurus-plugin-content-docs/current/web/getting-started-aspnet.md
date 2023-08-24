@@ -39,7 +39,7 @@ builder.Services.AddRazorPages().AddReveal();
 1 - `Pages/Shared/_Layout.cshtml` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前、`jquery.min.js` スクリプトの後) `infragistics.reveal.js` スクリプトを含めます。
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
 :::info
@@ -56,13 +56,6 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 ```
 
-- Quill RTE 1.3.6 またはそれ以降
-
-```html
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
-<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-```
-
 最終の `_Layout.cshtml` ファイルは以下のようになります。
 
 ```html title="Pages/Shared/_Layout.cshtml"
@@ -75,8 +68,6 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GettingStarted.styles.css" asp-append-version="true" />
-    // highlight-next-line
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">   
 </head>
 <body>
     <header>
@@ -111,14 +102,13 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
             &copy; 2022 - GettingStarted - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
-    // highlight-start
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
+    // highlight-start
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
     // highlight-end
 
@@ -147,7 +137,7 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 }
 ```
 
-この JavaScript コードは最初に `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` を呼び出してすべてのフォントが正しく読み込まれたことを確認します。次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
+次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
 
 最終の `Index.cshtml` ファイルは以下のようになります。
 

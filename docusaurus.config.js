@@ -46,7 +46,12 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
           remarkPlugins: [
-            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
+            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
+            [require("./plugins/remark/replace-variables"), {
+              variables: [
+                { name: "sdkVersion", value: "1.6.0" }
+              ]
+            }],
           ],
         },
         blog: false,
@@ -95,7 +100,7 @@ const config = {
             position: "left",
             items: [
               { label: "Blogs", to: "https://www.revealbi.io/blog" },
-              { label: "Developer Playground", to: "playground" },           
+              { label: "Developer Playground", to: "playground" },
               { label: "Samples", to: "https://github.com/RevealBi/sdk-samples-javascript" },
               { label: "Videos", to: "https://www.youtube.com/playlist?list=PLZ4rRHIJepBt-USWdh-9BimHh-GjPAGUH" }
             ]
@@ -104,7 +109,7 @@ const config = {
           //   type: "docsVersionDropdown",
           //   position: "left",
           // },
-          { 
+          {
             type: "localeDropdown",
             position: "right"
           },
@@ -205,4 +210,3 @@ const config = {
 };
 
 module.exports = config;
-

@@ -1,7 +1,7 @@
 # System Requirements
 
 ## ASP.NET
-- ASP.NET Core 3.1 or higher
+- ASP.NET 6.0 or higher
 
 ## Java
 - Java SDK 11.0.10 and higher

@@ -24,32 +24,20 @@ code .
 1 - Open and modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
 2 - Install the remaining Reveal JavaScript API dependencies:
 
-- Jquery 2.2 or greater
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
 - Day.js 1.8.15 or greater
 
 ```html
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 ```
 
-- Quill RTE 1.3.6 or greater
-
-```html
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
-<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-```
-
 The final `index.html` files should look similar to this:
 
-```html title="index.html" {9,14-17}
+```html title="index.html"
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,16 +45,15 @@ The final `index.html` files should look similar to this:
   <title>GettingStarted</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
+  <link rel="icon" type="image/x-icon" href="favicon.ico">  
 </head>
 <body>
   <app-root></app-root>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  //highlight-start
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+  <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+  //highlight-end
 </body>
 </html>
 ```
@@ -125,7 +112,7 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-This code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
+Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
 
 The final `app.component.ts` file should look like this:
 

@@ -78,7 +78,7 @@ app.listen(8080, () => {
 <dependency>
     <groupId>com.infragistics.reveal.sdk</groupId>
     <artifactId>reveal-sdk</artifactId>
-    <version>1.3.1</version>
+    <version>[var:sdkVersion]</version>
 </dependency>
 ```
 
