@@ -44,7 +44,7 @@ builder.Services.AddRazorPages().AddReveal();
 
 2 - Install the remaining Reveal JavaScript API dependencies:
 
-**Jquery 2.2 or greater**
+- Jquery 2.2 or greater
 
 ```html
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
