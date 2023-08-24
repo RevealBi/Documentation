@@ -13,31 +13,13 @@ The steps below describe how to create a new WPF project. If you want to add the
 
 ## Step 2 - Add Reveal SDK
 
-### NuGet
-
 1 - Right click the Solution, or Project, and select **Manage NuGet Packages** for Solution.
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - In the package manager dialog, open the **Browse** tab, select the **Infragistics (Local)** package source, and install the **Reveal.Sdk.Wpf** NuGet package into the project.
+2 - In the package manager dialog, open the **Browse** tab, and install the **Reveal.Sdk.Wpf** NuGet package into the project.
 
 ![](images/getting-started-nuget-packages-install.jpg)
-
-### Manually
-
-1 - Right click the References node in the Solution Explorer, and select **Add Reference**.
-
-![](images/getting-started-references-add.jpg)
-
-2 - Click the **Browse** button and select all the assemblies dropped by the installer at **%public%\Documents\Infragistics\Reveal\SDK\WPF\Binaries**.
-
-![](images/getting-started-references-browse.jpg)
-
-3 - Install the following NuGet packages, which the Reveal SDK depends on:
-   1. CefSharp.Wpf (87.1.132+) 
-   2. SkiaSharp (1.68.0+)
-   3. System.Data.SQLite.Core (1.0.108+)
-   4. Microsoft.Data.SqlClient (1.1.3+)
 
 ## Step 3 - Add RevealView Control
 
