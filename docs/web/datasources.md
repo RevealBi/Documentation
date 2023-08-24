@@ -236,37 +236,72 @@ Any changes made to the data source in the `ChangeDataSourceAsync` method are no
 
 The following data sources are supported in the Reveal SDK:
 
-- [Amazon Athena](adding-data-sources/amazon-athena.md)
-- Amazon Redshift
-- [Amazon S3](adding-data-sources/amazon-s3.md)
-- Box
-- [CSV (Comma Separated Values)](adding-data-sources/csv.md)
-- Dropbox
-- [Excel / Microsoft Excel](adding-data-sources/excel-file.md)
-- Google Analytics 4
-- [Google BigQuery](adding-data-sources/google-big-query.md)
-- [Google Drive](adding-data-sources/google-drive.md)
-- [Google Sheets](adding-data-sources/google-sheets.md)
-- Hubspot
-- [In-Memory Data](adding-data-sources/in-memory-data.md)
-- [JSON](adding-data-sources/json.md)
-- Marketo
-- Microsoft Analysis Services
-- Microsoft Azure Analysis Services
-- Microsoft Azure SQL Database
-- Microsoft Azure Synapse Analytics
-- Microsoft Dynamics CRM
-- Microsoft Reporting Services (SSRS)
-- [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
-- MySQL
-- OData Feed
-- OneDrive
-- Oracle
-- PostgreSQL
-- Quickbooks
-- [REST](adding-data-sources/rest.md)
-- Salesforce
-- Spreadsheets (XLSX, XLS)
-- SharePoint
-- Sybase
-- TSV  (Tab Separated Values)
+
+
+| Data Source                                                 | ASP.NET                                               | Java | Node.js |
+|-------------------------------------------------------------|-------------------------------------------------------|------|---------|
+|[Amazon Athena](adding-data-sources/amazon-athena.md)        | [![NugetShield]][AmazonAthena]                   | TBD | TBD
+| Amazon Redshift                                             | [![NugetShield]][AmazonRedshift]                 | TBD | TBD
+|[Amazon S3](adding-data-sources/amazon-s3.md)                | [![NugetShield]][AmazonS3]                       | TBD | TBD
+|Box                                                          | [![NugetShield]][Box]                            | TBD | TBD
+|[CSV (Comma Separated Values)](adding-data-sources/csv.md)   | TBD                                                   | TBD | TBD
+|Dropbox                                                      | [![NugetShield]][Dropbox]                        | TBD | TBD
+|[Excel / Microsoft Excel](adding-data-sources/excel-file.md) | TBD                                                   | TBD | TBD
+|Google Analytics 4                                           | [![NugetShield]][GoogleAnalytics4]               | TBD | TBD
+|[Google BigQuery](adding-data-sources/google-big-query.md)   | [![NugetShield]][GoogleBigQuery]                 | TBD | TBD
+|[Google Drive](adding-data-sources/google-drive.md)          | [![NugetShield]][GoogleDrive]                    | TBD | TBD
+|[Google Sheets](adding-data-sources/google-sheets.md)        | [![NugetShield]][GoogleSheets]                   | TBD | TBD
+|Hubspot                                                      | [![NugetShield]][Hubspot]                        | TBD | TBD
+|[In-Memory Data](adding-data-sources/in-memory-data.md)      | TBD                                                   | TBD | TBD
+|[JSON](adding-data-sources/json.md)                          | TBD                                                   | TBD | TBD
+|Marketo                                                      | [![NugetShield]][Marketo]                        | TBD | TBD
+|Microsoft Analysis Services                                  | [![NugetShield]][MicrosoftAnalysisServices]      | TBD | TBD
+|Microsoft Azure Analysis Services                            | [![NugetShield]][MicrosoftAnalysisServices]      | TBD | TBD
+|Microsoft Azure SQL Database                                 | [![NugetShield]][MicrosoftSQLServer]             | TBD | TBD
+|Microsoft Azure Synapse Analytics                            | [![NugetShield]][MicrosoftAzureSynapseAnalytics] | TBD | TBD
+|Microsoft Dynamics CRM                                       | [![NugetShield]][MicrosoftDynamics]              | TBD | TBD
+|Microsoft OneDrive                                           | [![NugetShield]][MicrosoftOneDrive]              | TBD | TBD
+|Microsoft Reporting Services (SSRS)                          | [![NugetShield]][MicrosoftReportingServices]     | TBD | TBD
+|[Microsoft SQL Server](adding-data-sources/ms-sql-server.md) | [![NugetShield]][MicrosoftSQLServer]             | TBD | TBD
+|MySQL                                                        | [![NugetShield]][MySQL]                          | TBD | TBD
+|OData Feed                                                   | TBD                                                   | TBD | TBD
+|Oracle                                                       | [![NugetShield]][Oracle]                         | TBD | TBD
+|PostgreSQL                                                   | [![NugetShield]][PostgreSQL]                     | TBD | TBD
+|Quickbooks                                                   | [![NugetShield]][Quickbooks]                     | TBD | TBD
+|[REST](adding-data-sources/rest.md)                          | TBD                                                   | TBD | TBD
+|Salesforce                                                   | [![NugetShield]][Salesforce]                     | TBD | TBD
+|Spreadsheets (XLSX, XLS)                                     | TBD                                                   | TBD | TBD
+|SharePoint                                                   | [![NugetShield]][SharePoint]                     | TBD | TBD
+|Snowflake                                                    | [![NugetShield]][Snowflake]                      | TBD | TBD
+|Sybase                                                       | [![NugetShield]][Sybase]                         | TBD | TBD
+|TSV  (Tab Separated Values)                                  | TBD                                                   | TBD | TBD
+
+
+[NugetShield]: https://img.shields.io/badge/nuget-v1.6.0-blue
+
+<!-- [AmazonAthenaShield]: https://img.shields.io/nuget/v/Reveal.Sdk.Data.Amazon.Athena -->
+[AmazonAthena]: https://www.nuget.org/packages/Reveal.Sdk.Data.Amazon.Athena
+[AmazonRedshift]: https://www.nuget.org/packages/Reveal.Sdk.Data.Amazon.Redshift
+[AmazonS3]: https://www.nuget.org/packages/Reveal.Sdk.Data.Amazon.S3
+[Box]: https://www.nuget.org/packages/Reveal.Sdk.Data.Box
+[Dropbox]: https://www.nuget.org/packages/Reveal.Sdk.Data.Dropbox
+[GoogleAnalytics4]: https://www.nuget.org/packages/Reveal.Sdk.Data.Google.Analytics4
+[GoogleBigQuery]: https://www.nuget.org/packages/Reveal.Sdk.Data.Google.BigQuery
+[GoogleDrive]: https://www.nuget.org/packages/Reveal.Sdk.Data.Google.Drive
+[GoogleSheets]: https://www.nuget.org/packages/Reveal.Sdk.Data.Google.Sheets
+[Hubspot]: https://www.nuget.org/packages/Reveal.Sdk.Data.HubSpot
+[Marketo]: https://www.nuget.org/packages/Reveal.Sdk.Data.Marketo
+[MicrosoftAnalysisServices]: https://www.nuget.org/packages/Reveal.Sdk.Data.Microsoft.AnalysisServices
+[MicrosoftAzureSynapseAnalytics]: https://www.nuget.org/packages/Reveal.Sdk.Data.Microsoft.SynapseAnalytics
+[MicrosoftDynamics]: https://www.nuget.org/packages/Reveal.Sdk.Data.Microsoft.Dynamics
+[MicrosoftOneDrive]: https://www.nuget.org/packages/Reveal.Sdk.Data.Microsoft.OneDrive
+[MicrosoftReportingServices]: https://www.nuget.org/packages/Reveal.Sdk.Data.Microsoft.ReportingServices
+[MicrosoftSQLServer]: https://www.nuget.org/packages/Reveal.Sdk.Data.Microsoft.SqlServer
+[MySQL]: https://www.nuget.org/packages/Reveal.Sdk.Data.MySql
+[Oracle]: https://www.nuget.org/packages/Reveal.Sdk.Data.Oracle
+[PostgreSQL]: https://www.nuget.org/packages/Reveal.Sdk.Data.PostgreSQL
+[Quickbooks]: https://www.nuget.org/packages/Reveal.Sdk.Data.Quickbooks
+[Salesforce]: https://www.nuget.org/packages/Reveal.Sdk.Data.Salesforce
+[SharePoint]: https://www.nuget.org/packages/Reveal.Sdk.Data.SharePoint
+[Snowflake]: https://www.nuget.org/packages/Reveal.Sdk.Data.Snowflake
+[Sybase]: https://www.nuget.org/packages/Reveal.Sdk.Data.Sybase
