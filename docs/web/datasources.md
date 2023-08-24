@@ -4,6 +4,12 @@ import DataSourcesTable from '@site/src/components/DataSourcesTable';
 
 # Data Sources
 
+:::danger breaking changes
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+
+:::
+
 The Reveal SDK supports over 30 data sources, including analytics tools, content managers, cloud services, CRMs, databases, spreadsheets, and public data sources, with more shipping every month.  Data sources define where the data comes from in a dashboard, with each data source having unique properties, like connection strings, user id, password, and more that you set in code to connect to and retrieve data.
 
 The Reveal SDK has two concepts regarding data sources.
@@ -17,6 +23,48 @@ Data Sources (Data Stores) and Data Source Items (Data Items) are categorized se
 There are two approaches to creating data sources in the Reveal SDK.
 1. On the client
 2. On the server
+
+## Installing Data Sources
+
+Before creating data sources for use in the Reveal SDK, you must install the correct package for each data source you wish to use in your Reveal SDK application.
+
+**Step 1** - Install the package for the data source you would like to use. To learn which data sources are supported and which packages you must install, refer to the [Supported Data Sources](#supported-data-sources) section.
+
+**Step 2** - After you have installed the data source package, register the data source with the Reveal SDK.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+using Reveal.Sdk;
+using Reveal.Sdk.Data;
+
+builder.Services.AddControllers().AddReveal( builder =>
+{
+    //all data sources use the RegisterXXX naming convention
+    builder.DataSources.RegisterMicrosoftSqlServer();
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Coming Soon...
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```ts
+Coming Soon...
+```
+
+  </TabItem>
+
+</Tabs>
 
 ## Creating Data Sources on the Client
 
@@ -235,6 +283,14 @@ Any changes made to the data source in the `ChangeDataSourceAsync` method are no
 
 ## Supported Data Sources
 
-The following data sources are supported in the Reveal SDK:
+:::tip Enhancments Coming
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. Not only will this reduce the size of your application, it will also make releasing new data sources and updating existing data sources easier. We appreciate your patience as we work towards this next evolution of the Reveal SDK.
+
+:::
+
+Use the table below to see which data sources are supported and which packages you must install for your target framework.
 
 <DataSourcesTable></DataSourcesTable>
+
+_**Included in SDK** - there is not a separate package to install for this data source. The data source ships with the Reveal SDK._

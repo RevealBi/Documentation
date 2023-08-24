@@ -1,5 +1,11 @@
 # Adding an In-Memory Data Source
 
+:::danger breaking changes
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+
+:::
+
 The Reveal SDK allows you to create dashboards using data that has been generated at run-time. This data is usually backed by a business object (POCO class) that is used within the ASP.NET Web API server application. This type of data is referred to as **in-memory data**.
 
 There are three primary steps to add an application's in-memory data as a data source item in the Reveal SDK.

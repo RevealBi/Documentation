@@ -3,6 +3,12 @@ import TabItem from '@theme/TabItem';
 
 # データ ソース
 
+:::danger breaking changes
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+
+:::
+
 Reveal SDK は、分析ツール、コンテンツ マネージャー、クラウド サービス、CRM、データベース、スプレッドシート、公開データ ソースなど、30 を超えるデータ ソースをサポートしており、毎月さらに多くのデータ ソースが出荷されています。データ ソースは、ダッシュボードのどこからデータが取得されるかを定義します。各データ ソースには、接続文字列、ユーザー ID、パスワードなど、データに接続してデータを取得するためにコードで設定した固有のプロパティがあります。
 
 Reveal SDK には、データ ソースに関して 2 つの概念があります。
@@ -16,6 +22,48 @@ Reveal SDK には、データ ソースに関して 2 つの概念がありま�
 Reveal SDK でデータ ソースを作成するには、2 つの方法があります。
 1. クライアント側
 2. サーバー側
+
+## Installing Data Sources
+
+Before creating data sources for use in the Reveal SDK, you must install the correct package for each data source you wish to use in your Reveal SDK application.
+
+**Step 1** - Install the package for the data source you would like to use. To learn which data sources are supported and which packages you must install, refer to the [Supported Data Sources](#supported-data-sources) section.
+
+**Step 2** - After you have installed the data source package, register the data source with the Reveal SDK.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+using Reveal.Sdk;
+using Reveal.Sdk.Data;
+
+builder.Services.AddControllers().AddReveal( builder =>
+{
+    //all data sources use the RegisterXXX naming convention
+    builder.DataSources.RegisterMicrosoftSqlServer();
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Coming Soon...
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```ts
+Coming Soon...
+```
+
+  </TabItem>
+
+</Tabs>
 
 ## クライアントでのデータ ソースの作成
 
@@ -234,38 +282,14 @@ app.use('/', reveal(revealOptions));
 
 ## サポートされるデータ ソース
 
-次のデータ ソースが Reveal SDK でサポートされています:
+:::tip Enhancments Coming
 
-- Amazon Athena
-- Amazon Redshift
-- Amazon S3
-- Box
-- CSV (カンマで区切られた値)
-- Dropbox
-- [Excel / Microsoft Excel](adding-data-sources/excel-file.md)
-- Google Analytics 4
-- Google BigQuery
-- Google ドライブ
-- Google スプレッドシート
-- Hubspot
-- [インメモリ データ](adding-data-sources/in-memory-data.md)
-- Marketo
-- Microsoft Analysis Services
-- Microsoft Azure Analysis Services
-- Microsoft Azure SQL Database
-- Microsoft Azure Synapse Analytics
-- Microsoft Dynamics CRM
-- Microsoft Reporting Services (SSRS)
-- [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
-- MySQL
-- OData Feed
-- OneDrive
-- Oracle
-- PostgreSQL
-- Quickbooks
-- REST API
-- Salesforce
-- スプレッドシート (XLSX、XLS)
-- SharePoint
-- Sybase
-- TSV (タブで区切られた値)
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. Not only will this reduce the size of your application, it will also make releasing new data sources and updating existing data sources easier. We appreciate your patience as we work towards this next evolution of the Reveal SDK.
+
+:::
+
+Use the table below to see which data sources are supported and which packages you must install for your target framework.
+
+<DataSourcesTable></DataSourcesTable>
+
+_**Included in SDK** - there is not a separate package to install for this data source. The data source ships with the Reveal SDK._
