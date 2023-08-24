@@ -37,7 +37,7 @@ code .
 
 最終の `index.html` ファイルは以下のようになります。
 
-```html title="index.html" {9,14-17}
+```html title="index.html"
 <!doctype html>
 <html lang="en">
 <head>
@@ -50,8 +50,10 @@ code .
 <body>
   <app-root></app-root>
 
+  //highlight-start
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+  //highlight-end
 </body>
 </html>
 ```

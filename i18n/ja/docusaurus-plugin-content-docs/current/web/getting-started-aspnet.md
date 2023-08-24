@@ -42,12 +42,6 @@ builder.Services.AddRazorPages().AddReveal();
 <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
-:::info
-
-Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存します。
-
-:::
-
 2 - 残りの Reveal JavaScript API 依存関係をインストールします。
 
 - Day.js 1.8.15 またはそれ以降
@@ -102,6 +96,7 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
             &copy; 2022 - GettingStarted - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -109,7 +104,7 @@ Reveal JavaScript API は、`jQuery` バージョン 2.2 以降に依存しま�
 
     // highlight-start
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
     // highlight-end
 
     @await RenderSectionAsync("Scripts", required: false)
