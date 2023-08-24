@@ -132,7 +132,7 @@ The final `_Layout.cshtml` files should look similar to this:
 }
 ```
 
-This JavaScript code first calls the `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` to ensure that all fonts have been properly loaded. Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
+Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
 
 The final `Index.cshtml` file should look like this:
 

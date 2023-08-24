@@ -24,27 +24,15 @@ code .
 1 - `index.html` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前) `infragistics.reveal.js` スクリプトを含めます。
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
 2 - 残りの Reveal JavaScript API 依存関係をインストールします。
 
-- jQuery 2.2 またはそれ以降
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
 - Day.js 1.8.15 またはそれ以降
 
 ```html
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-- Quill RTE 1.3.6 またはそれ以降
-
-```html
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
-<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 ```
 
 最終の `index.html` ファイルは以下のようになります。
@@ -58,15 +46,12 @@ code .
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css">    
 </head>
 <body>
   <app-root></app-root>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+  <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 </body>
 </html>
 ```
@@ -125,7 +110,7 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-このコードはまずすべてのフォントが正しく読み込まれるように `$.ig.RevealSdkSettings.ensureFontsLoadedAsync` を呼び出します。次に、新しい `$.ig.RevealView` を作成し、`ViewChild` プロパティに保存されている `revealView` 要素を渡すことで、`RevealView` の新しいインスタンスを作成します。
+次に、新しい `$.ig.RevealView` を作成し、`ViewChild` プロパティに保存されている `revealView` 要素を渡すことで、`RevealView` の新しいインスタンスを作成します。
 
 最終の `app.component.ts` ファイルは以下のようになります。
 
