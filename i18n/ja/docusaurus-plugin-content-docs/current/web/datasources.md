@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import DataSourcesTable from '@site/src/components/DataSourcesTable';
 
 # データ ソース
 
