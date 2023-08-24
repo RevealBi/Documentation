@@ -307,10 +307,6 @@
     "message": "System Requirements",
     "description": "The label for the doc item System Requirements in sidebar wpfSidebar, linking to the doc wpf/system-requirements"
   },
-  "sidebar.wpfSidebar.doc.Using the Installer": {
-    "message": "Using the Installer",
-    "description": "The label for the doc item Using the Installer in sidebar wpfSidebar, linking to the doc wpf/installation"
-  },
   "sidebar.wpfSidebar.doc.Adding a License Key": {
     "message": "Adding a License Key",
     "description": "The label for the doc item Adding a License Key in sidebar wpfSidebar, linking to the doc wpf/adding-license-key"
@@ -350,5 +346,9 @@
   "sidebar.wpfSidebar.category.Data Sources": {
     "message": "Data Sources",
     "description": "The label for category Data Sources in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.doc.Install the Reveal SDK": {
+    "message": "Install the Reveal SDK",
+    "description": "The label for the doc item Install the Reveal SDK in sidebar wpfSidebar, linking to the doc wpf/installation"
   }
 }

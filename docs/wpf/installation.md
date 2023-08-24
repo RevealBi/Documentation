@@ -1,36 +1,17 @@
-# Using the Installer
+# Installing the Reveal SDK
 
-## Installing the Reveal SDK
+The steps below describe how to install the Reveal SDK into an existing WPF project.
 
-To install the Reveal SDK, you need to download and execute the Reveal SDK Installer. To achieve this, use the following steps:
-1. Download the Reveal SDK Installer from the [Reveal website](https://www.revealbi.io/download-sdk)
-2. Fill out the "Try the Reveal SDK" form on the webpage
-3. Save the Reveal SDK installer to a known location on your disk
+1 - Right click the Solution, or Project, and select **Manage NuGet Packages** for Solution.
 
-Before extracting the saved Reveal SDK Installer zip file, you should unblock it. Right-click the zip file and select **Properties**. The properties dialog will appear with a checkbox option to unblock the file. Check the **Unblock** option and press **Apply**.
+![](images/getting-started-nuget-packages-manage.jpg)
 
-![](images/install-unblock-zip.jpg)
+2 - In the package manager dialog, open the **Browse** tab, and install the **Reveal.Sdk.Wpf** NuGet package into the project.
 
-After unblocking the platform installer zip file, follow these steps:
-1. Extract the zip to the current location.
-2. Find the extracted Reveal SDK Installer EXE file and double click to start it.
-3. Select the install location
-4. Accept the terms of the license agreement and continue the installation process. (By clicking install you agree)
+![](images/getting-started-nuget-packages-install.jpg)
 
-![](images/install-start.png)
+3 - Right-click the project and select **Add -> New Folder**. The folder MUST be named **Dashboards** .
 
-Once the installation is completed, you will be presented the Reveal SDK installer’s finish screen. At this point, feel free to explore the Reveal SDK samples by clicking the "Open SDK Sample" button, read our [documentation](https://help.revealbi.io/), visit our community [blogs](https://www.revealbi.io/blog), or learn a few tips and tricks by watching our [videos](https://www.youtube.com/revealbi).
+![](images/load-dashboards-dashboard-directory.jpg)
 
-![](images/install-finish.png)
-
-## What Gets Installed
-
-Once the installation is complete, you should have the following items installed in the local folder **"%public%\Documents\Infragistics\Reveal\SDK\"**:
-
-- The Reveal SDK Binaries (for manual use)
-- The Reveal SDK NuGet Packages
-- The Reveal SDK Samples
-
-There is also a local NuGet package source automatically added to Visual Studio that points to the Reveal SDK NuGet packages.
-
-![](images/nuget-package-source-local-vs.jpg)
+By default, the Reveal SDK uses a convention that will load all dashboards from the **Dashboards** folder. You can change this convention by creating a custom `IRVDashboardProvider`. You can learn more about this in the [Loading Dashboards](loading-dashboards.md) topic.
