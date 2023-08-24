@@ -29,6 +29,12 @@ code .
 
 2 - Install the remaining Reveal JavaScript API dependencies:
 
+**Jquery 2.2 or greater**
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+```
+
 - Day.js 1.8.15 or greater
 
 ```html
@@ -51,6 +57,7 @@ The final `index.html` files should look similar to this:
   <app-root></app-root>
 
   //highlight-start
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
   //highlight-end
