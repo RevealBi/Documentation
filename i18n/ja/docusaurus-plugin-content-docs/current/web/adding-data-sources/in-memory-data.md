@@ -1,5 +1,11 @@
 # インメモリ データ ソースの追加
 
+:::danger breaking changes
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+
+:::
+
 Reveal SDK を使用すると、実行時に生成されたデータを使用してダッシュボードを作成できます。このデータは通常、ASP.NET Web API サーバー アプリケーション内で使用されるビジネス オブジェクト (POCO クラス) によってサポートされます。このタイプのデータは、**インメモリ データ**と呼ばれます。
 
 アプリケーションのインメモリ データを Reveal SDK のデータ ソース項目として追加するには、主に 3 つの手順があります。

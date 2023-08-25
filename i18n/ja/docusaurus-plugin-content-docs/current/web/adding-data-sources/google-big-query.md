@@ -5,7 +5,13 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Google BigQuery データソースの追加
+# Google BigQuery データ ソースの追加
+
+:::danger breaking changes
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+
+:::
 
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 

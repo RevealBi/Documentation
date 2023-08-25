@@ -96,7 +96,7 @@
 <body>
     //highlight-start
     <div id="revealView" style="height: 920px; width: 100%;"></div>
- 
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
     <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>

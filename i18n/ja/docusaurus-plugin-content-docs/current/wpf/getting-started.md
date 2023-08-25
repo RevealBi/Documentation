@@ -13,31 +13,15 @@
 
 ## 手順 2 - Reveal SDK の追加
 
-### NuGet
 
 1 - ソリューションまたはプロジェクトを右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。
 
 ![](images/getting-started-nuget-packages-manage.jpg)
 
-2 - パッケージ マネージャー ダイアログで **[参照]** タブを開き、**Infragistics (Local)** パッケージ ソースを選択して **Reveal.Sdk.Wpf** NuGet パッケージをプロジェクトにインストールします。
+2 - パッケージ マネージャー ダイアログで **[参照]** タブを開いて NuGet パッケージをプロジェクトにインストールします。
 
 ![](images/getting-started-nuget-packages-install.jpg)
 
-### 手動
-
-1 - ソリューション エクスプローラーの [参照] ノードを右クリックし、**[参照の追加]** を選択します。
-
-![](images/getting-started-references-add.jpg)
-
-2 - **[参照]** ボタンをクリックし、インストーラーが **%public%\Documents\Infragistics\Reveal\SDK\WPF\Binaries** でドロップしたすべてのアセンブリを選択します。
-
-![](images/getting-started-references-browse.jpg)
-
-3 - Reveal SDK が依存する以下の NuGet パッケージをインストールします。
-   1. CefSharp.Wpf (87.1.132 またはそれ以降) 
-   2. SkiaSharp (1.68.0 またはそれ以降)
-   3. System.Data.SQLite.Core (1.0.108 またはそれ以降)
-   4. Microsoft.Data.SqlClient (1.1.3 またはそれ以降)
 
 ## 手順 3 - RevealView コントロールの追加
 

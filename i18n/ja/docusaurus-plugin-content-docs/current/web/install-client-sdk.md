@@ -14,7 +14,7 @@ Reveal CDN を使用できない場合は、独自のドメインで Reveal SDK 
 
 https://download.infragistics.com/reveal/libs/[var:sdkVersion].0/reveal-sdk-distribution-js.zip
 
-1 - `assets` と呼ばれる新しいフォルダーを作成し、`assets` フォルダー内に `reveal` と呼ばれる別のフォルダーを作成します。
+1 - クライアント アプリケーションで `assets` と呼ばれる新しいフォルダーを作成し、`assets` フォルダー内に `reveal` と呼ばれる別のフォルダーを作成します。
 
 ![](images/javascript-create-reveal-folder.jpg)
 

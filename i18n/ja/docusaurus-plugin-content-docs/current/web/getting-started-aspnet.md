@@ -102,7 +102,6 @@ builder.Services.AddRazorPages().AddReveal();
             &copy; 2022 - GettingStarted - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
     
     // highlight-next-line
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
