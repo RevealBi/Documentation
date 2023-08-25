@@ -44,6 +44,12 @@ builder.Services.AddRazorPages().AddReveal();
 
 2 - 残りの Reveal JavaScript API 依存関係をインストールします。
 
+- Jquery 2.2 またはそれ以降
+
+```html
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+```
+
 - Day.js 1.8.15 またはそれ以降
 
 ```html
@@ -98,6 +104,7 @@ builder.Services.AddRazorPages().AddReveal();
     </footer>
 
     
+    // highlight-next-line
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

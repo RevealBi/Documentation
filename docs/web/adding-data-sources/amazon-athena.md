@@ -7,6 +7,12 @@ import TabItem from '@theme/TabItem';
 
 # Adding an Amazon Athena Data Source
 
+:::danger breaking changes
+
+Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+
+:::
+
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
@@ -60,7 +66,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 :::note
 
-Amazon Athena authenticates using a `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
+Amazon Athena authenticates uses the `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
 
 :::
 

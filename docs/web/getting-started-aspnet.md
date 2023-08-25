@@ -44,6 +44,12 @@ builder.Services.AddRazorPages().AddReveal();
 
 2 - Install the remaining Reveal JavaScript API dependencies:
 
+- Jquery 2.2 or greater
+
+```html
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+```
+
 - Day.js 1.8.15 or greater
 
 ```html
@@ -97,7 +103,7 @@ The final `_Layout.cshtml` files should look similar to this:
         </div>
     </footer>
 
-    
+    // highlight-next-line
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

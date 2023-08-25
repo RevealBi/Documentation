@@ -29,6 +29,12 @@ code .
 
 2 - 残りの Reveal JavaScript API 依存関係をインストールします。
 
+- Jquery 2.2 またはそれ以降
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+```
+
 - Day.js 1.8.15 またはそれ以降
 
 ```html
@@ -51,6 +57,10 @@ code .
   <app-root></app-root>
 
   //highlight-start
+<<<<<<< HEAD
+=======
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+>>>>>>> 60aab9afac2620ba5e238716ebce5e5acab49520
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
   //highlight-end

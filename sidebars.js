@@ -116,7 +116,7 @@ const sidebars = {
       type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "category", label: "Installation", items: [
           { type: "doc", label: "System Requirements", id: "wpf/system-requirements" },
-          { type: "doc", label: "Using the Installer", id: "wpf/installation"},
+          { type: "doc", label: "Install the Reveal SDK", id: "wpf/installation"},
           { type: "doc", label: "Adding a License Key", id: "wpf/adding-license-key" }
         ]},
         { type: "doc", label: "Getting Started", id: "wpf/getting-started" },
@@ -143,7 +143,7 @@ const sidebars = {
     {
       type: "category", label: "Working with Data Sources", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         {
-          type: "category", label: "Adding Data Sources", items: [
+          type: "category", label: "Data Sources", link: { type: "doc", id: "wpf/datasources" }, items: [
             { type: "doc", label: "Excel File", id: "wpf/adding-data-sources/excel-file" },
             { type: "doc", label: "In Memory Data", id: "wpf/adding-data-sources/in-memory-data" },
             { type: "doc", label: "MS SQL Server", id: "wpf/adding-data-sources/ms-sql-server" },

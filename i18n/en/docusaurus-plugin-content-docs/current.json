@@ -123,10 +123,6 @@
     "message": "Data Limits",
     "description": "The label for the doc item Data Limits in sidebar webSidebar, linking to the doc web/data-size-limits"
   },
-  "sidebar.wpfSidebar.category.Adding Data Sources": {
-    "message": "Adding Data Sources",
-    "description": "The label for category Adding Data Sources in sidebar wpfSidebar"
-  },
   "sidebar.wpfSidebar.category.Replacing Data Sources": {
     "message": "Replacing Data Sources",
     "description": "The label for category Replacing Data Sources in sidebar wpfSidebar"
@@ -275,10 +271,6 @@
     "message": "System Requirements",
     "description": "The label for the doc item System Requirements in sidebar webSidebar, linking to the doc web/system-requirements"
   },
-  "sidebar.webSidebar.doc.Using the Installer - Windows": {
-    "message": "Using the Installer - Windows",
-    "description": "The label for the doc item Using the Installer - Windows in sidebar webSidebar, linking to the doc web/installation"
-  },
   "sidebar.webSidebar.doc.Adding a License Key": {
     "message": "Adding a License Key",
     "description": "The label for the doc item Adding a License Key in sidebar webSidebar, linking to the doc web/adding-license-key"
@@ -315,10 +307,6 @@
     "message": "System Requirements",
     "description": "The label for the doc item System Requirements in sidebar wpfSidebar, linking to the doc wpf/system-requirements"
   },
-  "sidebar.wpfSidebar.doc.Using the Installer": {
-    "message": "Using the Installer",
-    "description": "The label for the doc item Using the Installer in sidebar wpfSidebar, linking to the doc wpf/installation"
-  },
   "sidebar.wpfSidebar.doc.Adding a License Key": {
     "message": "Adding a License Key",
     "description": "The label for the doc item Adding a License Key in sidebar wpfSidebar, linking to the doc wpf/adding-license-key"
@@ -354,5 +342,13 @@
   "sidebar.webSidebar.doc.Amazon Athena": {
     "message": "Amazon Athena",
     "description": "The label for the doc item Amazon Athena in sidebar webSidebar, linking to the doc web/adding-data-sources/amazon-athena"
+  },
+  "sidebar.wpfSidebar.category.Data Sources": {
+    "message": "Data Sources",
+    "description": "The label for category Data Sources in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.doc.Install the Reveal SDK": {
+    "message": "Install the Reveal SDK",
+    "description": "The label for the doc item Install the Reveal SDK in sidebar wpfSidebar, linking to the doc wpf/installation"
   }
 }
