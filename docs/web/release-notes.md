@@ -3,6 +3,92 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.6.0 (August 28th, 2023)
+
+### Breaking Changes
+
+#### All Platforms
+* Changes in license keys: License key is now required, even for trial mode. The SDK will fail to initialize if the license key is missing or invalid. In addition, the license format has changed and the new format is the only one supported. Request your new license key to your sales rep. Trial license keys are available by registering [here](https://www.revealbi.io/request-demo).
+* `availableChartTypes` property has been removed. It's replacement is the 'chartTypes' property described in the 'New Features' section below.
+
+#### ASP.NET
+* Most data sources have been removed from the core package. They're now available as separate packages. The information about the supported data sources and the corresponding add-in nuget packages can be found [here](https://help.revealbi.io/web/datasources/#supported-data-sources).   
+* Reveal now requires .net 6.0 or newer. Along with this the dependency to 'libgdiplus' has been removed to enhance our cross-platform performance. 
+ 
+### New Features
+
+#### All Platforms
+
+* Ability to add custom visualization as Chart Types in the visualization editor. The new `chartTypes' property allows this, as well as modifying the icon, title and grouping of existing chart types, or making them unavailable:
+```
+//Update existing configuration
+var barConfig = revealView.chartTypes.find(x => x.chartType == 'BarChart');
+barConfig.icon = 'https://host:port/images/bar-chart.png';
+barConfig.groups = ["Enterprise Visualizations", "HR", "Category"];
+
+//Add pre-configured custom visualization
+revealView.chartTypes.push({
+            title: "Custom Visualization",
+            url: "https://host:port/customViz.html",
+            icon: "https://host:port/icon.png",
+            groups: ["HR"]
+        });
+
+//Delete Grid configuration
+var gridConfig = revealView.chartTypes.find(x => x.chartType == 'Grid');
+revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
+```
+* The SDK no longer depends on Quill.js.
+* (Beta) Chart actions available while hovering the mouse. Turn on using `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip = true`.
+* Calculated fields expression language now support decimals specified without a leading '0' (e.g. '.5' meaning '0.5').
+* Added support in BigQuery data source for the following calculated-fields functions: YEAR, QUARTER, MONTH, DAY, HOUR, MINUTE, SECOND, REPLACE, WEEKDAY, MONTHNAME, MONTHSHORTNAME, EMPTY, RANDBETWEEN.
+* Improved Copy & Paste. Now it works across browser tabs / pages refreshes.
+* Make the RevealView resize itself when its container is resized.
+* Add Stored procedure support to Oracle data source (not yet available in Java).
+* Allow joining Athena datasources.
+
+### Bug Fixes
+
+#### All Platforms
+* Pushing multiple menu items with menuItem action functions calls the last action function.
+* Donut chart doesn't show legend for <null> values but shows a section for them.
+* Export for Pdf is not taking the assigned Theme.
+* Unable to click text "X Selected"/"Show All" on a filter.
+* Cell background is not full wide on filters for text "X Selected"/"Show All".
+* Using custom theme font doesn't affect the KPI visualization.
+* "No providerid specified..." error in Oracle data source defined on javascript client.
+* The position of the search bar in the data selection view is not reset, in a certain scenario.
+* Search table on data source dialog causes error/crash after scrolling tables.
+* DefaultRefreshRate of 0 prevents image/pdf web resource from loading.
+* Number formatting is not applied in Sparkline.
+* Tooltip for gauge does not display number formatting.
+* The "NUMERIC" data type in BigQuery isn't properly supported and causes Error.
+* BigQuery is missing Quarter aggregation.
+* The "MOD" function in BigQuery does not allow you to use two different types of numeric data (e.g. float64 and int64).
+* 'Function does not exist' error in postgres when schema is not set in the datasourceItem.
+* Statistical functions are not displayed when viewing data as grid.
+* Export xlsx for charts visualization is not correct when changing them in reveal sdk.
+* Inconsistent checkbox state in when scrolling a large list of data sets in BigQuery add data source screen.
+* BigQuery DataSourceItem doesn't work if the project id is set only on the DS.
+* When data is obtained from an excel cell that has a custom format that includes any of the letters 'y', 'm', 'd' or 'h' it is always interpreted as date type.
+* Treemap does not respect number formatting.
+* Number formatting is not displayed in Financial chart tooltip.
+* Number formatting is not displayed in the tooltip of the Radial chart.
+* Athena and BigQuery don't show the 100k cell limit warning.
+* Math function Log stopped working for Athena.
+
+#### ASP.NET
+* Export -both headless and interactive- doesn't work on linux.
+* Fix issue when Microsoft.Data.SqlClient >= 5.0.0 is used by a Asp.net project.
+* Verify Credentials error on Oracle data source.
+
+#### Node
+* Request headers do not work for RVRESTDataSource when using the NodeSDK.
+
+#### Java
+* Encoding issues in data read from BigQuery if the system's default charset is not UTF-8.
+* Getting null IRVUserContext in IRVDataSourceProvider.changeDataSourceItem in createwidget API.
+ 
 ## 1.5.0 (May 4th, 2023)
 
 ### Breaking Changes
