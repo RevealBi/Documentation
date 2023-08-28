@@ -1,5 +1,57 @@
 # Release Notes
 
+## 1.6.0 (August 28th, 2023)
+
+### Breaking Changes
+
+* Changes in license keys: License key is now required, even for trial mode. The SDK will fail to initialize if the license key is missing or invalid. In addition, the license format has changed and the new format is the only one supported. Request your new license key to your sales rep. Trial license keys are available by registering [here](https://www.revealbi.io/request-demo).
+* `AvailableChartTypes` property has been removed. It's replacement is the 'ChartTypes' property described in the 'New Features' section below.
+* Most data sources have been removed from the core package. They're now available as separate packages. The information about the supported data sources and the corresponding add-in nuget packages can be found [here](https://help.revealbi.io/wpf/datasources/#supported-data-sources).   
+ 
+### New Features
+
+* Ability to add custom visualization as Chart Types in the visualization editor. The new `ChartTypes' property allows this, as well as modifying the icon, title and grouping of existing chart types, or making them unavailable:
+```
+//Update existing configuration
+var barConfig = revealView.ChartTypes.First(x => x.ChartType == RVChartType.BarChart);
+barConfig.Icon = @"C:\images\bar-chart.png";
+barConfig.Groups = new string[] {"Enterprise Visualizations", "HR",  "Category" });
+
+//Add pre-configured custom visualization		
+revealView.ChartTypes.Add(new RVChartTypeCustomItem("Custom Visualization", "https://host:port/customViz.html", @"C:\images\icon.png", new string[] { "HR" }));
+
+//Delete Grid configuration
+revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartType == RVChartType.Grid));
+```
+* Calculated fields expression language now support decimals specified without a leading '0' (e.g. '.5' meaning '0.5').
+* Added support in BigQuery data source for the following calculated-fields functions: YEAR, QUARTER, MONTH, DAY, HOUR, MINUTE, SECOND, REPLACE, WEEKDAY, MONTHNAME, MONTHSHORTNAME, EMPTY, RANDBETWEEN.
+* Add Stored procedure support to Oracle data source.
+* Allow joining Athena datasources.
+
+### Bug Fixes
+
+* Donut chart doesn't show legend for `<null>` values but shows a section for them.
+* Unable to click text "X Selected"/"Show All" on a filter.
+* Cell background is not full wide on filters for text "X Selected"/"Show All".
+* The position of the search bar in the data selection view is not reset, in a certain scenario.
+* Search table on data source dialog causes error/crash after scrolling tables.
+* Number formatting is not applied in Sparkline.
+* Tooltip for gauge does not display number formatting.
+* The "NUMERIC" data type in BigQuery isn't properly supported and causes Error.
+* BigQuery is missing Quarter aggregation.
+* The "MOD" function in BigQuery does not allow you to use two different types of numeric data (e.g. float64 and int64).
+* 'Function does not exist' error in postgres when schema is not set in the datasourceItem.
+* Statistical functions are not displayed when viewing data as grid.
+* Export xlsx for charts visualization is not correct when changing them in reveal sdk.
+* Inconsistent checkbox state in when scrolling a large list of data sets in BigQuery add data source screen.
+* BigQuery DataSourceItem doesn't work if the project id is set only on the DS.
+* When data is obtained from an excel cell that has a custom format that includes any of the letters 'y', 'm', 'd' or 'h' it is always interpreted as date type.
+* Treemap does not respect number formatting.
+* Number formatting is not displayed in Financial chart tooltip.
+* Number formatting is not displayed in the tooltip of the Radial chart.
+* Athena and BigQuery don't show the 100k cell limit warning.
+* Math function Log stopped working for Athena.
+
 ## 1.5.0 (May 4th, 2023)
 
 ### Breaking Changes
