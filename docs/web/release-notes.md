@@ -10,10 +10,12 @@ import TabItem from '@theme/TabItem';
 #### All Platforms
 * Changes in license keys: License key is now required, even for trial mode. The SDK will fail to initialize if the license key is missing or invalid. In addition, the license format has changed and the new format is the only one supported. Request your new license key to your sales rep. Trial license keys are available by registering [here](https://www.revealbi.io/request-demo).
 * `availableChartTypes` property has been removed. It's replacement is the 'chartTypes' property described in the 'New Features' section below.
+*  The dependency to 'libgdiplus' has been removed to enhance our cross-platform performance. 
+* The SDK no longer depends on Quill.js.
 
 #### ASP.NET
 * Most data sources have been removed from the core package. They're now available as separate packages. The information about the supported data sources and the corresponding add-in nuget packages can be found [here](https://help.revealbi.io/web/datasources/#supported-data-sources).   
-* Reveal now requires .net 6.0 or newer. Along with this the dependency to 'libgdiplus' has been removed to enhance our cross-platform performance. 
+* Reveal now requires .net 6.0 or newer.
  
 ### New Features
 
@@ -38,7 +40,6 @@ revealView.chartTypes.push({
 var gridConfig = revealView.chartTypes.find(x => x.chartType == 'Grid');
 revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ```
-* The SDK no longer depends on Quill.js.
 * (Beta) Chart actions available while hovering the mouse. Turn on using `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip = true`.
 * Calculated fields expression language now support decimals specified without a leading '0' (e.g. '.5' meaning '0.5').
 * Added support in BigQuery data source for the following calculated-fields functions: YEAR, QUARTER, MONTH, DAY, HOUR, MINUTE, SECOND, REPLACE, WEEKDAY, MONTHNAME, MONTHSHORTNAME, EMPTY, RANDBETWEEN.
@@ -51,7 +52,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 
 #### All Platforms
 * Pushing multiple menu items with menuItem action functions calls the last action function.
-* Donut chart doesn't show legend for <null> values but shows a section for them.
+* Donut chart doesn't show legend for `<null>` values but shows a section for them.
 * Export for Pdf is not taking the assigned Theme.
 * Unable to click text "X Selected"/"Show All" on a filter.
 * Cell background is not full wide on filters for text "X Selected"/"Show All".
