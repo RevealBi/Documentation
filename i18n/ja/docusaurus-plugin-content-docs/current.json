@@ -350,5 +350,9 @@
   "sidebar.wpfSidebar.doc.Install the Reveal SDK": {
     "message": "Install the Reveal SDK",
     "description": "The label for the doc item Install the Reveal SDK in sidebar wpfSidebar, linking to the doc wpf/installation"
+  },
+  "sidebar.webSidebar.doc.Chart Types": {
+    "message": "Chart Types",
+    "description": "The label for the doc item Chart Types in sidebar webSidebar, linking to the doc web/chart-types"
   }
 }
