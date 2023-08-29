@@ -165,6 +165,7 @@ const sidebars = {
     /* -------------------- Working with Visualizations -------------------- */
     {
       type: "category", label: "Working with Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Chart Types", id: "wpf/chart-types" },
         { type: "doc", label: "Maximizing Visualizations", id: "wpf/maximizing-visualizations" },
         { type: "doc", label: "Responding to Click Events", id: "wpf/click-events" },
         { type: "doc", label: "Tooltips", id: "wpf/tooltips" },
