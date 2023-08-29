@@ -59,6 +59,10 @@ app.use("/", reveal(revealOptions));
   </TabItem>
 </Tabs>
 
+## Upgrade to ASP.NET 6.0 (ASP.NET Only)
+The Reveal SDK v1.6.0 now **requires** ASP.NET 6.0 (also known as ASP.NET Core 6.0) or greater. If you are using a version older than ASP.NET 6.0, you will need to upgrade your ASP.NET project.
+
+
 ## Data Sources (ASP.NET Only)
 Data Sources have been moved into different NuGet packages. This means all code using any data sources will now be broken. Not only have the data sources been moved into separate packages, all the namespaces related to data have been moved into a new `Reveal.Sdk.Data` namespace.
 
@@ -118,3 +122,9 @@ If using the Quill.js CDN links, do the folowing:
 ```
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js" ></script>
 ```
+
+## Remove availableChartTypes
+
+The `revealView.availableChartTypes` property has been removed in favor of the new `revealView.chartTypes` property.
+
+The new `chartTypes` property is now an array of items that provides more flexibility around controlling the items in the chart type drop down. To learn more about this new feature, visit the [Chart Types](/web/chart-types) topic.
