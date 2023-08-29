@@ -102,7 +102,9 @@ const sidebars = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Release Notes", id: "web/release-notes" },
+        { type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
+          { type: "doc", label: "1.6.0 Upgrade Guide", id: "web/upgrade-guide-v1.6.0" },
+        ]},
         { type: "doc", label: "Known Issues", id: "web/known-issues" },        
         { type: "doc", label: "Data Limits", id: "web/data-size-limits" },
         { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },

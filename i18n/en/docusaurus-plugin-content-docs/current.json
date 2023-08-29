@@ -111,10 +111,6 @@
     "message": "Known Issues",
     "description": "The label for the doc item Known Issues in sidebar webSidebar, linking to the doc web/known-issues"
   },
-  "sidebar.webSidebar.doc.Release Notes": {
-    "message": "Release Notes",
-    "description": "The label for the doc item Release Notes in sidebar webSidebar, linking to the doc web/release-notes"
-  },
   "sidebar.webSidebar.doc.Third-Party Software": {
     "message": "Third-Party Software",
     "description": "The label for the doc item Third-Party Software in sidebar webSidebar, linking to the doc web/third-party-software"
@@ -354,5 +350,13 @@
   "sidebar.webSidebar.doc.Chart Types": {
     "message": "Chart Types",
     "description": "The label for the doc item Chart Types in sidebar webSidebar, linking to the doc web/chart-types"
+  },
+  "sidebar.webSidebar.category.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for category Release Notes in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.1.6.0 Upgrade Guide": {
+    "message": "1.6.0 Upgrade Guide",
+    "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar webSidebar, linking to the doc web/upgrade-guide-v1.6.0"
   }
 }
