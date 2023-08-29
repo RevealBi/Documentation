@@ -16,6 +16,8 @@ import TabItem from '@theme/TabItem';
 #### ASP.NET
 * Most data sources have been removed from the core package. They're now available as separate packages. The information about the supported data sources and the corresponding add-in nuget packages can be found [here](/web/datasources#supported-data-sources).   
 * Reveal now requires .net 6.0 or newer.
+* Data related objects have been moved into the `Reveal.Sdk.Data` namespace
+* Data Source objects (ex: RVSqlServerDataSource) have been moved into their respective namespaces (ex: `Reveal.Sdk.Data.Microsoft.SqlServer`)
  
 ### New Features
 
