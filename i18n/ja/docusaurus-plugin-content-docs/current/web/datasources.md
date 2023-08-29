@@ -4,9 +4,9 @@ import DataSourcesTable from '@site/src/components/DataSourcesTable';
 
 # データ ソース
 
-:::danger breaking changes
+:::danger 重大な変更
 
-Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース) トピックを参照してください。
 
 :::
 
@@ -285,7 +285,7 @@ app.use('/', reveal(revealOptions));
 
 :::tip Enhancments Coming
 
-Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. Not only will this reduce the size of your application, it will also make releasing new data sources and updating existing data sources easier. We appreciate your patience as we work towards this next evolution of the Reveal SDK.
+現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。 Not only will this reduce the size of your application, it will also make releasing new data sources and updating existing data sources easier. We appreciate your patience as we work towards this next evolution of the Reveal SDK.
 
 :::
 

@@ -1,8 +1,8 @@
 # リリース ノート
 
-## 1.6.0 (August 28th, 2023)
+## 1.6.0 (2023 年 8 月 28 日)
 
-### Breaking Changes
+### 重大な変更
 
 * Changes in license keys: License key is now required, even for trial mode. The SDK will fail to initialize if the license key is missing or invalid. In addition, the license format has changed and the new format is the only one supported. Request your new license key to your sales rep. Trial license keys are available by registering [here](https://www.revealbi.io/download-sdk).
 * `AvailableChartTypes` property has been removed. It's replacement is the 'ChartTypes' property described in the 'New Features' section below.

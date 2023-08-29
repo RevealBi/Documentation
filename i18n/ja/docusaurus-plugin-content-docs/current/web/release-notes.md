@@ -3,9 +3,9 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.6.0 (August 28th, 2023)
+## 1.6.0 (2023 年 8 月 28 日)
 
-### Breaking Changes
+### 重大な変更
 
 #### All Platforms
 * Changes in license keys: License key is now required, even for trial mode. The SDK will fail to initialize if the license key is missing or invalid. In addition, the license format has changed and the new format is the only one supported. Request your new license key to your sales rep. Trial license keys are available by registering [here](https://www.revealbi.io/download-sdk).
@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 * Most data sources have been removed from the core package. They're now available as separate packages. The information about the supported data sources and the corresponding add-in nuget packages can be found [here](/web/datasources#supported-data-sources).   
 * Reveal now requires .net 6.0 or newer.
  
-### New Features
+### 新機能
 
 #### All Platforms
 
@@ -48,7 +48,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 * Add Stored procedure support to Oracle data source (not yet available in Java).
 * Allow joining Athena datasources.
 
-### Bug Fixes
+### バグ修正
 
 #### All Platforms
 * Pushing multiple menu items with menuItem action functions calls the last action function.

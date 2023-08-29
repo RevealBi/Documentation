@@ -13,7 +13,6 @@
 
 ## 手順 2 - Reveal SDK の追加
 
-
 1 - ソリューションまたはプロジェクトを右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。
 
 ![](images/getting-started-nuget-packages-manage.jpg)
@@ -21,7 +20,6 @@
 2 - パッケージ マネージャー ダイアログで **[参照]** タブを開いて NuGet パッケージをプロジェクトにインストールします。
 
 ![](images/getting-started-nuget-packages-install.jpg)
-
 
 ## 手順 3 - RevealView コントロールの追加
 
