@@ -175,8 +175,10 @@ const sidebars = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Known Issues", id: "wpf/known-issues" },
-        { type: "doc", label: "Release Notes", id: "wpf/release-notes" },
+        { type: "category", label: "Release Notes", link: { type: "doc", id: "wpf/release-notes" }, items: [
+          { type: "doc", label: "1.6.0 Upgrade Guide", id: "wpf/upgrade-guide-v1.6.0" },
+        ]},
+        { type: "doc", label: "Known Issues", id: "wpf/known-issues" },        
         { type: "doc", label: "Third-Party Software", id: "wpf/third-party-software" },
       ]
     },
