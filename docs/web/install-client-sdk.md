@@ -12,7 +12,7 @@ Modify the `index.html` file to include the `infragistics.reveal.js` script at t
 ### Using JavaScript Files
 If using the Reveal CDN is not an option, you can also host the Reveal SDK JavaScript files on your own domain. The Reveal SDK Distribution files can be downloaded from the following link:
 
-https://download.infragistics.com/reveal/libs/[var:sdkVersion].0/reveal-sdk-distribution-js.zip
+https://download.infragistics.com/reveal/libs/[var:sdkVersion]/reveal-sdk-distribution-js.zip
 
 1 - In your client application, create a new folder called `assets` and then create another folder called `reveal` within the `assets` folder.
 
