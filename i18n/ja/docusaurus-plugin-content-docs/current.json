@@ -199,10 +199,6 @@
     "message": "既知の問題",
     "description": "The label for the doc item Known Issues in sidebar wpfSidebar, linking to the doc wpf/known-issues"
   },
-  "sidebar.wpfSidebar.doc.Release Notes": {
-    "message": "リリース ノート",
-    "description": "The label for the doc item Release Notes in sidebar wpfSidebar, linking to the doc wpf/release-notes"
-  },
   "sidebar.wpfSidebar.doc.Third-Party Software": {
     "message": "サードパーティ ソフトウェア",
     "description": "The label for the doc item Third-Party Software in sidebar wpfSidebar, linking to the doc wpf/third-party-software"
@@ -362,5 +358,13 @@
   "sidebar.wpfSidebar.doc.Chart Types": {
     "message": "Chart Types",
     "description": "The label for the doc item Chart Types in sidebar wpfSidebar, linking to the doc wpf/chart-types"
+  },
+  "sidebar.wpfSidebar.category.Release Notes": {
+    "message": "リリース ノート",
+    "description": "The label for category Release Notes in sidebar wpfSidebar"
+  },
+  "sidebar.wpfSidebar.doc.1.6.0 Upgrade Guide": {
+    "message": "1.6.0 Upgrade Guide",
+    "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar wpfSidebar, linking to the doc wpf/upgrade-guide-v1.6.0"
   }
 }
