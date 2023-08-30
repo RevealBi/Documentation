@@ -4,13 +4,13 @@
 
 ### 重大な変更
 
-* Changes in license keys: License key is now required, even for trial mode. The SDK will fail to initialize if the license key is missing or invalid. In addition, the license format has changed and the new format is the only one supported. Request your new license key to your sales rep. Trial license keys are available by registering [here](https://www.revealbi.io/download-sdk).
-* `AvailableChartTypes` property has been removed. It's replacement is the 'ChartTypes' property described in the 'New Features' section below.
-* Most data sources have been removed from the core package. They're now available as separate packages. The information about the supported data sources and the corresponding add-in nuget packages can be found [here](/wpf/datasources#supported-data-sources).   
+* ライセンス キーの変更: 試用モードでもライセンス キーが必要になりました。ライセンス キーが見つからないか無効な場合、SDK は初期化に失敗します。さらに、ライセンス形式が変更され、新しい形式がサポートされる唯一の形式になります。新しいライセンス キーを営業担当者にリクエストしてください。 試用版ライセンス キーは、[こちら](https://www.revealbi.io/ja/download-sdk)に登録することで入手できます。
+* `availableChartTypes` プロパティは削除されました。これに代わるのは、以下の「新機能」セクションで説明する `chartTypes` プロパティです。
+* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](web/datasources#サポートされているデータ-ソース)にあります。
  
-### New Features
+### 新機能
 
-* Ability to add custom visualization as Chart Types in the visualization editor. The new `ChartTypes' property allows this, as well as modifying the icon, title and grouping of existing chart types, or making them unavailable:
+* 可視化エディターでカスタム可視化をチャート タイプとして追加する機能。新しい `chartTypes' プロパティを使用すると、これが可能になるだけでなく、既存のチャート タイプのアイコン、タイトル、グループ化を変更したり、それらを使用できなくしたりすることもできます。
 ```
 //Update existing configuration
 var barConfig = revealView.ChartTypes.First(x => x.ChartType == RVChartType.BarChart);
@@ -23,34 +23,34 @@ revealView.ChartTypes.Add(new RVChartTypeCustomItem("Custom Visualization", "htt
 //Delete Grid configuration
 revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartType == RVChartType.Grid));
 ```
-* Calculated fields expression language now support decimals specified without a leading '0' (e.g. '.5' meaning '0.5').
-* Added support in BigQuery data source for the following calculated-fields functions: YEAR, QUARTER, MONTH, DAY, HOUR, MINUTE, SECOND, REPLACE, WEEKDAY, MONTHNAME, MONTHSHORTNAME, EMPTY, RANDBETWEEN.
-* Add Stored procedure support to Oracle data source.
-* Allow joining Athena datasources.
+* 計算フィールドの式言語は、先頭に '0' を付けずに指定された小数をサポートするようになりました (例: '0.5' を意味する '.5')。
+* 次の計算フィールド関数に対する BigQuery データ ソースのサポートが追加されました: YEAR、QUARTER、MONTH、DAY、HOUR、MINUTE、SECOND、REPLACE、WEEKDAY、MONTHNAME、MONTHSHORTNAME、EMPTY、RANDBETWEEN。
+* ストアド プロシージャのサポートを Oracle データ ソースに追加しました。
+* Athena データ ソースへの参加を許可しました。
 
-### Bug Fixes
+### バグ修正
 
-* Donut chart doesn't show legend for `<null>` values but shows a section for them.
-* Unable to click text "X Selected"/"Show All" on a filter.
-* Cell background is not full wide on filters for text "X Selected"/"Show All".
-* The position of the search bar in the data selection view is not reset, in a certain scenario.
-* Search table on data source dialog causes error/crash after scrolling tables.
-* Number formatting is not applied in Sparkline.
-* Tooltip for gauge does not display number formatting.
-* The "NUMERIC" data type in BigQuery isn't properly supported and causes Error.
-* BigQuery is missing Quarter aggregation.
-* The "MOD" function in BigQuery does not allow you to use two different types of numeric data (e.g. float64 and int64).
-* 'Function does not exist' error in postgres when schema is not set in the datasourceItem.
-* Statistical functions are not displayed when viewing data as grid.
-* Export xlsx for charts visualization is not correct when changing them in reveal sdk.
-* Inconsistent checkbox state in when scrolling a large list of data sets in BigQuery add data source screen.
-* BigQuery DataSourceItem doesn't work if the project id is set only on the DS.
-* When data is obtained from an excel cell that has a custom format that includes any of the letters 'y', 'm', 'd' or 'h' it is always interpreted as date type.
-* Treemap does not respect number formatting.
-* Number formatting is not displayed in Financial chart tooltip.
-* Number formatting is not displayed in the tooltip of the Radial chart.
-* Athena and BigQuery don't show the 100k cell limit warning.
-* Math function Log stopped working for Athena.
+* ドーナツ チャートには `<null>` 値の凡例は表示されませんが、それらのセクションが表示される問題。
+* フィルター上のテキスト [X Selected/Show All] (X 選択 / すべて表示) をクリックできない問題。
+* テキスト [X Selected/Show All] (X 選択 / すべて表示) のフィルターでは、セルの背景が全幅に表示されない問題。 
+* 特定のシナリオでは、データ選択ビューの検索バーの位置がリセットされない問題。
+* データ ソース ダイアログでテーブルを検索すると、テーブルをスクロールした後にエラー / クラッシュが発生する問題。
+* スパークラインでは数値の書式設定は適用されない問題。
+* ゲージのツールチップには数値の書式設定が表示されない問題。
+* BigQuery の「NUMERIC」データ型は適切にサポートされていないため、エラーが発生する問題。
+* BigQuery には四半期集計がない問題。
+* BigQuery の「MOD」関数では、2 つの異なるタイプの数値データ（float64 と int64 など）を使用することはできない問題。
+* datasourceItem にスキーマが設定されていない場合、postgres で [Function does not exist] (関数が存在しません) エラーが発生する問題。
+* データをグリッドとして表示する場合、統計関数は表示されない問題。
+* チャート視覚化用のエクスポート xlsx は、Reveal SDK で変更すると正しくない問題。
+* BigQuery のデータ ソースの追加画面でデータセットの大きなリストをスクロールすると、チェックボックスの状態が一貫性がなくなる問題。
+* プロジェクト ID が DS 上でのみ設定されている場合、BigQuery DataSourceItem は機能しない問題。
+* 文字 「y」、「m」、「d」、または「h」のいずれかを含むカスタム形式の Excel セルからデータが取得される場合、そのデータは常に日付型として解釈される問題。
+* ツリーマップは数値の書式設定を準拠しない問題。
+* 数値の書式設定は財務チャートのツールチップには表示されない問題。
+* ラジアル チャートのツールチップには数値の書式設定は表示されない問題。
+* Athena と BigQuery では、100k セル制限の警告が表示されない問題。
+* 数学関数ログが Athena で動作しなくなった問題。
 
 ## 1.5.0 (2023 年 5 月 4 日)
 

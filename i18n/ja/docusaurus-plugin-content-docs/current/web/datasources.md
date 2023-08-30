@@ -24,13 +24,13 @@ Reveal SDK でデータ ソースを作成するには、2 つの方法があり
 1. クライアント側
 2. サーバー側
 
-## Installing Data Sources
+## データ ソースのインストール
 
-Before creating data sources for use in the Reveal SDK, you must install the correct package for each data source you wish to use in your Reveal SDK application.
+Reveal SDK で使用するデータ ソースを作成する前に、Reveal SDK アプリケーションで使用するデータ ソースごとに正しいパッケージをインストールする必要があります。
 
-**Step 1** - Install the package for the data source you would like to use. To learn which data sources are supported and which packages you must install, refer to the [Supported Data Sources](#supported-data-sources) section.
+**手順 1** - 使用するデータ ソースのパッケージをインストールします。どのデータ ソースがサポートされているか、およびどのパッケージをインストールする必要があるかについては、[サポートされているデータ ソース](#サポートされているデータ-ソース) セクションを参照してください。
 
-**Step 2** - After you have installed the data source package, register the data source with the Reveal SDK.
+**手順 2** - データ ソース パッケージをインストールした後、データ ソースを Reveal SDK に登録します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -283,14 +283,14 @@ app.use('/', reveal(revealOptions));
 
 ## サポートされるデータ ソース
 
-:::tip Enhancments Coming
+:::tip 今後の拡張機能
 
-現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。 Not only will this reduce the size of your application, it will also make releasing new data sources and updating existing data sources easier. We appreciate your patience as we work towards this next evolution of the Reveal SDK.
+現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。これにより、アプリケーションのサイズが削減されるだけでなく、新しいデータ ソースのリリースや既存のデータ ソースの更新も容易になります。Reveal SDK の次の進化に向けて取り組んでまいりますので、今しばらくお待ちいただきますようお願いいたします。
 
 :::
 
-Use the table below to see which data sources are supported and which packages you must install for your target framework.
+以下の表を使用して、サポートされているデータ ソースと、ターゲット フレームワークにインストールする必要があるパッケージを確認してください。
 
 <DataSourcesTable></DataSourcesTable>
 
-_**Included in SDK** - there is not a separate package to install for this data source. The data source ships with the Reveal SDK._
+**SDK に含まれている** - このデータ ソースにインストールするための個別のパッケージはありません。データ ソースは Reveal SDK に含まれています。
