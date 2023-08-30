@@ -5,8 +5,10 @@
 ### 重大な変更
 
 * ライセンス キーの変更: 試用モードでもライセンス キーが必要になりました。ライセンス キーが見つからないか無効な場合、SDK は初期化に失敗します。さらに、ライセンス形式が変更され、新しい形式がサポートされる唯一の形式になります。新しいライセンス キーを営業担当者にリクエストしてください。 試用版ライセンス キーは、[こちら](https://www.revealbi.io/ja/download-sdk)に登録することで入手できます。
-* `availableChartTypes` プロパティは削除されました。これに代わるのは、以下の「新機能」セクションで説明する `chartTypes` プロパティです。
-* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](web/datasources#サポートされているデータ-ソース)にあります。
+* `AvailableChartTypes` プロパティは削除されました。これに代わるのは、以下の「新機能」セクションで説明する 'ChartTypes' プロパティです。
+* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。Data Source packages are **REQUIRED** to be [registered](/wpf/datasources#installing-data-sources). The information about the supported data sources and the corresponding add-in nuget packages can be found [here](/wpf/datasources#supported-data-sources).   
+* Data related objects have been moved into the `Reveal.Sdk.Data` namespace
+* Data Source objects (ex: RVSqlServerDataSource) have been moved into their respective namespaces (ex: `Reveal.Sdk.Data.Microsoft.SqlServer`)
  
 ### 新機能
 

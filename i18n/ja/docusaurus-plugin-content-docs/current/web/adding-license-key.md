@@ -3,9 +3,9 @@ import TabItem from '@theme/TabItem';
 
 # ライセンス キーを追加
 
-Reveal SDK をインストールするときは、ライセンス キーを指定する必要があります。指定しない場合、SDK は機能しません。ライセンス キーは 2 種類あります:
-- トライアル - [Reveal SDK Web サイト](https://www.revealbi.io/ja/download-sdk)からトライアルをリクエストすると取得されます。
-- ライセンス済み - Reveal SDK の購入時に取得されます。
+When you install the Reveal SDK, a license key must be provided or the SDK will not function. There are two types of license keys
+- Trial - obtained when requesting a trial from the [Reveal SDK Website](https://www.revealbi.io/download-sdk)
+- Licensed - obtained when the Reveal SDK is purchased and is available in the [customer portal](https://account.infragistics.com/subscriptions)
 
 ## キー ファイル
 デフォルトでは、Reveal SDK は、ユーザーの「ホーム」ディレクトリの下で `.revealbi-sdk` という名前のフォルダー内の `license.key` というファイルで有効なライセンスを検索します。

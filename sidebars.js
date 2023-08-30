@@ -67,6 +67,7 @@ const sidebars = {
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         { type: "category", label: "Visualizations", items: [
+          { type: "doc", label: "Chart Types", id: "web/chart-types" },
           { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
           { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
           { type: "doc", label: "Tooltips", id: "web/tooltips" },
@@ -101,7 +102,9 @@ const sidebars = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Release Notes", id: "web/release-notes" },
+        { type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
+          { type: "doc", label: "1.6.0 Upgrade Guide", id: "web/upgrade-guide-v1.6.0" },
+        ]},
         { type: "doc", label: "Known Issues", id: "web/known-issues" },        
         { type: "doc", label: "Data Limits", id: "web/data-size-limits" },
         { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },
@@ -162,6 +165,7 @@ const sidebars = {
     /* -------------------- Working with Visualizations -------------------- */
     {
       type: "category", label: "Working with Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Chart Types", id: "wpf/chart-types" },
         { type: "doc", label: "Maximizing Visualizations", id: "wpf/maximizing-visualizations" },
         { type: "doc", label: "Responding to Click Events", id: "wpf/click-events" },
         { type: "doc", label: "Tooltips", id: "wpf/tooltips" },
@@ -171,8 +175,10 @@ const sidebars = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Known Issues", id: "wpf/known-issues" },
-        { type: "doc", label: "Release Notes", id: "wpf/release-notes" },
+        { type: "category", label: "Release Notes", link: { type: "doc", id: "wpf/release-notes" }, items: [
+          { type: "doc", label: "1.6.0 Upgrade Guide", id: "wpf/upgrade-guide-v1.6.0" },
+        ]},
+        { type: "doc", label: "Known Issues", id: "wpf/known-issues" },        
         { type: "doc", label: "Third-Party Software", id: "wpf/third-party-software" },
       ]
     },

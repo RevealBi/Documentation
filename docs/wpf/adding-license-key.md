@@ -2,7 +2,7 @@
 
 When you install the Reveal SDK, a license key must be provided or the SDK will not function. There are two types of license keys
 - Trial - obtained when requesting a trial from the [Reveal SDK Website](https://www.revealbi.io/download-sdk)
-- Licensed - obtained when the Reveal SDK is purchased
+- Licensed - obtained when the Reveal SDK is purchased and is available in the [customer portal](https://account.infragistics.com/subscriptions)
 
 ## Key File
 By default, the Reveal SDK will look for a valid license in a file called `license.key` within a folder named `.revealbi-sdk` in the user's "Home" directory.
