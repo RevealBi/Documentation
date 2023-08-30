@@ -1,24 +1,24 @@
 import DataSourcesTable from '@site/src/components/DataSourcesTable';
 
-# Data Sources
+# データ ソース
 
-The Reveal SDK supports over 30 data sources, including analytics tools, content managers, cloud services, CRMs, databases, spreadsheets, and public data sources, with more shipping every month.  Data sources define where the data comes from in a dashboard, with each data source having unique properties, like connection strings, user id, password, and more that you set in code to connect to and retrieve data.
+Reveal SDK は、分析ツール、コンテンツ マネージャー、クラウド サービス、CRM、データベース、スプレッドシート、公開データ ソースなど、30 を超えるデータ ソースをサポートしており、毎月さらに多くのデータソースが出荷されています。データ ソースは、ダッシュボードのどこからデータが取得されるかを定義します。各データ ソースには、接続文字列、ユーザー ID、パスワードなど、データに接続してデータを取得するためにコードで設定した固有のプロパティがあります。
 
-The Reveal SDK has two concepts regarding data sources.
-1. A data source - this is the primary source of the data. For example, SQL Server could be a data source
-2. A data source item - this is the specific item that is available from a data source. For example; a specific Table from SQL Server.
+Reveal SDK には、データ ソースに関して 2 つの概念があります。
+1. データ ソース - これはデータの主要なソースです。 たとえば、SQL Server をデータ ソースにすることができます。
+2. データ ソース項目 - これは、データ ソースから利用できる特定の項目です。例えば、SQL Server の特定のテーブル。
 
-Data Sources (Data Stores) and Data Source Items (Data Items) are categorized separately in the Reveal View **Select a Data Source** dialog.
+データ ソース (データ ストア) とデータ ソース項目 (データ項目) は、Reveal View の **[データソースの選択]** ダイアログで別々に分類されます。
 
 ![](adding-data-sources/images/ms-sql-server-data-source-item.jpg)
 
-## Installing Data Sources
+## データ ソースのインストール
 
-Before creating data sources for use in the Reveal SDK, you must install the correct package for each data source you wish to use in your Reveal SDK application.
+Reveal SDK で使用するデータ ソースを作成する前に、Reveal SDK アプリケーションで使用するデータ ソースごとに正しいパッケージをインストールする必要があります。
 
-**Step 1** - Install the package for the data source you would like to use. To learn which data sources are supported and which packages you must install, refer to the [Supported Data Sources](#supported-data-sources) section.
+**手順 1** - 使用するデータ ソースのパッケージをインストールします。 どのデータ ソースがサポートされているか、およびどのパッケージをインストールする必要があるかについては、[サポートされているデータ ソース](#サポートされているデータ-ソース) セクションを参照してください。
 
-**Step 2** - After you have installed the data source package, register the data source with the Reveal SDK.
+**手順 2** - データ ソース パッケージをインストールした後、データ ソースを Reveal SDK に登録します。
 
 ```cs
 using Reveal.Sdk;
@@ -28,10 +28,10 @@ using Reveal.Sdk.Data;
 RevealSdkSettings.DataSources.RegisterMicrosoftSqlServer();
 ```
 
-## Supported Data Sources
+## サポートされるデータ ソース
 
-Use the table below to see which data sources are supported and which packages you must install.
+以下の表を使用して、サポートされているデータ ソースとインストールする必要があるパッケージを確認してください。
 
 <DataSourcesTable isWpf={true}></DataSourcesTable>
 
-_**Included in SDK** - there is not a separate package to install for this data source. The data source ships with the Reveal SDK._
+**SDK に含まれている** - このデータ ソースにインストールする個別のパッケージはありません。データ ソースは Reveal SDK に含まれています。

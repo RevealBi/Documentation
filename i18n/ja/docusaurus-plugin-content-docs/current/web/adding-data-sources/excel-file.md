@@ -3,6 +3,12 @@ import TabItem from '@theme/TabItem';
 
 # Excel ファイル データ ソースの追加
 
+:::danger breaking changes
+
+現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。 プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。 詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース) トピックを参照してください。
+
+:::
+
 **手順 1** - サーバー アプリケーションで、Excel ファイルを格納するフォルダーを作成します。
 
 <Tabs groupId="code" queryString>

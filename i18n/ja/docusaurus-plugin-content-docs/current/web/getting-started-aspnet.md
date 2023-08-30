@@ -110,7 +110,7 @@ builder.Services.AddRazorPages().AddReveal();
 
     // highlight-start
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/1.3.1/infragistics.reveal.js"></script>
+    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
     // highlight-end
 
     @await RenderSectionAsync("Scripts", required: false)

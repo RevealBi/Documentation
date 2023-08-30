@@ -43,7 +43,7 @@ code .
 
 最終の `index.html` ファイルは以下のようになります。
 
-```html title="index.html" {9,14-17}
+```html title="index.html"
 <!doctype html>
 <html lang="en">
 <head>

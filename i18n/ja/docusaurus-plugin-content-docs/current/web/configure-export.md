@@ -32,10 +32,6 @@ playwright install chromium
 
 Playwright は必要なバイナリをダウンロードしようとしますが、手動での構成が必要な場合は、Playwright の[ドキュメンテーション](https://playwright.dev/java/docs/intro) を確認してください。
 
-#### macOS 依存性
-
-macOS で必要なライブラリは `libgdiplus` のみです。[インストール方法](https://learn.microsoft.com/th-th/dotnet/core/install/macos#libgdiplus)
-
 #### Linux 依存性
 
 Linux では、複数のネイティブ・ライブラリに依存します。インストールする必要のある依存関係の正確なリストは、使用するディストリビューション、バージョン、および以前にインストールしたパッケージのリストに依存します。
@@ -46,8 +42,7 @@ Linux では、複数のネイティブ・ライブラリに依存します。�
 ```bash
 sudo apt-get update
 
-sudo apt-get install -y libgdiplus\
-        libatk1.0-0\
+sudo apt-get install -y libatk1.0-0\
         libatk-bridge2.0-0\
         libxkbcommon0\
         libxcomposite1\

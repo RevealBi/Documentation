@@ -1,27 +1,27 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a License Key
+# ライセンス キーを追加
 
-When you install the Reveal SDK, a license key must be provided or the SDK will not function. There are two types of license keys
-- Trial - obtained when requesting a trial from the [Reveal SDK Website](https://www.revealbi.io/download-sdk)
-- Licensed - obtained when the Reveal SDK is purchased and is available in the [customer portal](https://account.infragistics.com/subscriptions)
+Reveal SDK をインストールするときは、ライセンス キーを指定する必要があります。指定しない場合、SDK は機能しません。ライセンス キーは 2 種類あります:
+- トライアル - [Reveal SDK Web サイト](https://www.revealbi.io/ja/download-sdk)からトライアルをリクエストすると取得されます。
+- ライセンス済み - obtained when the Reveal SDK is purchased and is available in the [customer portal](https://account.infragistics.com/subscriptions)
 
-## Key File
-By default, the Reveal SDK will look for a valid license in a file called `license.key` within a folder named `.revealbi-sdk` in the user's "Home" directory.
+## キー ファイル
+デフォルトでは、Reveal SDK は、ユーザーの「ホーム」ディレクトリの下で `.revealbi-sdk` という名前のフォルダー内の `license.key` というファイルで有効なライセンスを検索します。
 
-The "Home" directory differs depending on the OS you are using.
+「ホーム」ディレクトリは、お使いの OS によって異なります。
 - Windows: `C:/Users/your-user-name/`
 - Mac: `/Users/your-user-name/`
 - Linux: `/home/your-user-name/`
 
-When you receive your license key, create a text file named `license.key` within a directory named `.reveabi-sdk` located in your "Home" directory. Populate this file with your license key as its content.
+ライセンス キーを受け取ったら、「ホーム」ディレクトリにある `.reveabi-sdk` という名前のディレクトリ内に `license.key` という名前のテキスト ファイルを作成してください。このファイルにライセンス キーをコンテンツとして記載します。
 
-For example; if using Windows the license file location should be located at `C:/Users/your-user-name/.revealbi-sdk/license.key`.
+例えば、Windows を使用している場合、ライセンス ファイルの場所は `C:/Users/ユーザー名/.revealbi-sdk/license.key` になります。
 
-## Set In Code
+## コードで設定
 
-The license key can also be provide in the application code.
+ライセンス キーはアプリケーション コードで指定することもできます。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>

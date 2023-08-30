@@ -336,11 +336,11 @@
     "description": "The label for the doc item Amazon Athena in sidebar webSidebar, linking to the doc web/adding-data-sources/amazon-athena"
   },
   "sidebar.wpfSidebar.category.Data Sources": {
-    "message": "Data Sources",
+    "message": "データ ソース",
     "description": "The label for category Data Sources in sidebar wpfSidebar"
   },
   "sidebar.wpfSidebar.doc.Install the Reveal SDK": {
-    "message": "Install the Reveal SDK",
+    "message": "Reveal SDK のインストール",
     "description": "The label for the doc item Install the Reveal SDK in sidebar wpfSidebar, linking to the doc wpf/installation"
   },
   "sidebar.webSidebar.doc.Chart Types": {
