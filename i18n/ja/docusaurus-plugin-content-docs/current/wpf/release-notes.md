@@ -4,15 +4,15 @@
 
 ### 重大な変更
 
-* ライセンス キーの変更: 試用モードでもライセンス キーが必要になりました。ライセンス キーが見つからないか無効な場合、SDK は初期化に失敗します。さらに、ライセンス形式が変更され、新しい形式がサポートされる唯一の形式になります。新しいライセンス キーを営業担当者にリクエストしてください。 試用版ライセンス キーは、[こちら](https://www.revealbi.io/ja/download-sdk)に登録することで入手できます。
-* `AvailableChartTypes` プロパティは削除されました。これに代わるのは、以下の「新機能」セクションで説明する 'ChartTypes' プロパティです。
-* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。Data Source packages are **REQUIRED** to be [registered](/wpf/datasources#installing-data-sources).サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](wpf/datasources#サポートされているデータ-ソース)にあります。
-* Data related objects have been moved into the `Reveal.Sdk.Data` namespace
-* Data Source objects (ex: RVSqlServerDataSource) have been moved into their respective namespaces (ex: `Reveal.Sdk.Data.Microsoft.SqlServer`)
+* ライセンス キーの変更: 試用モードでもライセンス キーが必要になりました。ライセンス キーが見つからないか無効な場合、SDK は初期化に失敗します。さらに、ライセンス形式が変更され、新しい形式がサポートされる唯一の形式になります。新しいライセンス キーを営業担当者にリクエストしてください。試用版ライセンス キーは、[こちら](https://www.revealbi.io/ja/download-sdk)に登録することで入手できます。
+* `AvailableChartTypes` プロパティは削除されました。これに代わるのは、以下の「新機能」セクションで説明する `chartTypes` プロパティです。
+* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。データ ソース パッケージは[登録](/wpf/datasources#データ-ソースーをインストール)することが**必須**です。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](wpf/datasources#サポートされているデータ-ソース)にあります。
+* データ関連のオブジェクトは `Reveal.Sdk.Data` 名前空間に移動されました。
+* データ ソース オブジェクト (例: RVSqlServerDataSource) は、それぞれの名前空間 (例: `Reveal.Sdk.Data.Microsoft.SqlServer`) に移動されました。
  
 ### 新機能
 
-* 可視化エディターでカスタム可視化をチャート タイプとして追加する機能。新しい `chartTypes' プロパティを使用すると、これが可能になるだけでなく、既存のチャート タイプのアイコン、タイトル、グループ化を変更したり、それらを使用できなくしたりすることもできます。
+* 可視化エディターでカスタム可視化をチャート タイプとして追加する機能。新しい `chartTypes` プロパティを使用すると、これが可能になるだけでなく、既存のチャート タイプのアイコン、タイトル、グループ化を変更したり、それらを使用できなくしたりすることもできます。
 ```
 //Update existing configuration
 var barConfig = revealView.ChartTypes.First(x => x.ChartType == RVChartType.BarChart);
@@ -47,7 +47,7 @@ revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartTy
 * チャート視覚化用のエクスポート xlsx は、Reveal SDK で変更すると正しくない問題。
 * BigQuery のデータ ソースの追加画面でデータセットの大きなリストをスクロールすると、チェックボックスの状態が一貫性がなくなる問題。
 * プロジェクト ID が DS 上でのみ設定されている場合、BigQuery DataSourceItem は機能しない問題。
-* 文字 「y」、「m」、「d」、または「h」のいずれかを含むカスタム形式の Excel セルからデータが取得される場合、そのデータは常に日付型として解釈される問題。
+* 文字「y」、「m」、「d」、または「h」のいずれかを含むカスタム形式の Excel セルからデータが取得される場合、そのデータは常に日付型として解釈される問題。
 * ツリーマップは数値の書式設定を準拠しない問題。
 * 数値の書式設定は財務チャートのツールチップには表示されない問題。
 * ラジアル チャートのツールチップには数値の書式設定は表示されない問題。
