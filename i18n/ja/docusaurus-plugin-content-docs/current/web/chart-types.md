@@ -1,26 +1,26 @@
-# Chart Types
+# チャート タイプ
 
-**Chart Types** represent various types of charts that can be used as a dashboard visualization. When creating or editing a visualization, the chart type is chosen from the Chart Types drop-down menu.
+**チャート タイプ**は、ダッシュボードの視覚化として使用できるさまざまなタイプのチャートを表します。 可視化を作成または編集する場合、チャート タイプは [チャート タイプ] ドロップダウン メニューから選択します。
 
 ![](images/chart-types.jpg)
 
-The Reveal SDK provides 37 different types of charts placed in various groups. The groups are as follows:
+Reveal SDK は、さまざまなグループに配置された 37 タイプのチャートを提供します。グループは次のとおりです。
 
-- Most Popular
-- Grids
-- Category
-- Gauges
-- Maps
-- Scatter
-- Financial
-- Time
-- Other
+- 最も人気
+- グリッド
+- カテゴリ
+- ゲージ
+- マップ
+- 散布
+- 財務
+- 時間
+- その他
 
-## Customizing Chart Types
-To modify, remove, or add custom visualizations to the chart types drop down, simply modify the items in the `revealView.chartTypes` array.
+## チャート タイプのカスタマイズ
+カスタム可視化を変更、削除、またはチャート タイプ ドロップダウンに追加するには、`revealView.chartTypes` 配列内の項目を変更するだけです。
 
-### Update Chart Type
-To update an existing chart type, find the chart type in the `revealView.chartTypes` property. Modify the various properties of the chart type to either rename, change the icon, or regroup the chart type item.
+### チャート タイプを更新
+既存のチャート タイプを更新するには、`revealView.chartTypes` プロパティでチャート タイプを見つけます。チャート タイプのさまざまなプロパティを変更して、チャート タイプ項目の名前変更、アイコンの変更、または再グループ化を行います。
 
 ```js
 var barConfig = revealView.chartTypes.find(x => x.chartType == 'BarChart');
@@ -29,16 +29,16 @@ barConfig.icon = 'https://help.revealbi.io/img/logo.png';
 barConfig.groups = ["Enterprise Visualizations", "HR", "Some Other Category"];
 ```
 
-### Remove Chart Type
-Remove a chart type by finding the index of the chart type item you want remove, and remove it from the `chartTypes` array.
+### チャート タイプの削除
+削除するチャート タイプ項目のインデックスを見つけて、それを `chartTypes` 配列から削除することで、チャート タイプを削除します。
 
 ```js
 var gridConfig = revealView.chartTypes.find(x => x.chartType == 'Grid');
 revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ```
 
-### Add Custom Chart Type
-Besides updating and removing existing chart type items, you can also add your Custom Visualizations as a new chart type in the Chart Types drop down.
+### カスタム チャート タイプの追加
+既存のチャート タイプ項目を更新および削除するだけでなく、カスタム可視化を新しいチャート タイプとして [チャート タイプ] ドロップダウンに追加することもできます。
 
 ```js
 revealView.chartTypes.push({
@@ -49,21 +49,21 @@ revealView.chartTypes.push({
 });
 ```
 
-## Set the Default Chart Type
-By default, the Reveal SDK sets the `ColumnChart` chart as the default chart type. You can change the default chart type by setting the `revealView.defaultChartType` property to one of the [RVChartType](https://help.revealbi.io/api/javascript/latest/enums/rvcharttype.html) enumeration members.
+## デフォルトのチャート タイプを設定する
+デフォルトでは、Reveal SDK はデフォルトのチャート タイプとして `ColumnChart` チャートを設定します。デフォルトのチャート タイプを変更するには、`revealView.defaultChartType` プロパティを [RVChartType](https://help.revealbi.io/api/javascript/latest/enums/rvcharttype.html) 列挙メンバーの 1 つに設定します。
 
 ```js
 revealView.defaultChartType = "StackedColumnChart";
 ```
 
-If you want to set the default chart type to a Custom Visualization, then you need to set the `revealView.defaultCustomChartType` property to the title of the custom visualization.
+デフォルトのチャート タイプをカスタム可視化に設定する場合は、`revealView.defaultCustomChartType` プロパティをカスタム可視化のタイトルに設定する必要があります。
 
 ```js
 revealView.defaultChartType = "My Custom Viz";
 ```
 
-:::info Get the Code
+:::info コードの取得
 
-You can find a sample demonstrating Chart Types on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/ChartTypes).
+チャート タイプを示すサンプルは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/ChartTypes) で見つけることができます。
 
 :::

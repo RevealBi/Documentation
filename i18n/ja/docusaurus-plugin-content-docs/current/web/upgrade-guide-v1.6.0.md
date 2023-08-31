@@ -1,26 +1,26 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Upgrading to 1.6.0
+# 1.6.0 へのアップグレード
 
-The Reveal SDK v1.6.0 release introduced a number a breaking changes. Use this guide to learn what steps are neccessary to update your application.
+Reveal SDK v1.6.0 リリースでは、多数の重大な変更が導入されました。このガイドを使用して、アプリケーションを更新するために必要な手順を参照してください。
 
-## Licensing
+## ライセンス
 
-There are major changes to how the Reveal SDK is licensed. Customers need to open their [customer portal](https://account.infragistics.com/subscriptions) and obtain their new license key.
+Reveal SDK のライセンス付与方法に大きな変更があります。カスタマーは、[カスタマー ポータル](https://account.infragistics.com/subscriptions)を開いて、新しいライセンス キーを取得する必要があります。
 
-By default, the Reveal SDK will look for a valid license in a file called `license.key` within a folder named `.revealbi-sdk` in the user's "Home" directory.
+デフォルトでは、Reveal SDK は、ユーザーの「ホーム」ディレクトリの下で `.revealbi-sdk` という名前のフォルダー内の `license.key` というファイルで有効なライセンスを検索します。
 
-The "Home" directory differs depending on the OS you are using.
+「ホーム」ディレクトリは、お使いの OS によって異なります。
 - Windows: `C:/Users/your-user-name/`
 - Mac: `/Users/your-user-name/`
 - Linux: `/home/your-user-name/`
 
-When you receive your license key, create a text file named `license.key` within a directory named `.reveabi-sdk` located in your "Home" directory. Populate this file with your license key as its content.
+ライセンス キーを受け取ったら、「ホーム」ディレクトリにある `.reveabi-sdk` という名前のディレクトリ内に `license.key` という名前のテキスト ファイルを作成してください。このファイルにライセンス キーをコンテンツとして記載します。
 
-For example; if using Windows the license file location should be located at `C:/Users/your-user-name/.revealbi-sdk/license.key`.
+例えば、Windows を使用している場合、ライセンス ファイルの場所は `C:/Users/ユーザー名/.revealbi-sdk/license.key` になります。
 
-The license key can also be provide in the application code.
+ライセンス キーはアプリケーション コードで指定することもできます。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -59,18 +59,18 @@ app.use("/", reveal(revealOptions));
   </TabItem>
 </Tabs>
 
-## Upgrade to ASP.NET 6.0 (ASP.NET Only)
-The Reveal SDK v1.6.0 now **requires** ASP.NET 6.0 (also known as ASP.NET Core 6.0) or greater. If you are using a version older than ASP.NET 6.0, you will need to upgrade your ASP.NET project.
+## ASP.NET 6.0 へのアップグレード (ASP.NET のみ)
+Reveal SDK v1.6.0 には、ASP.NET 6.0 (ASP.NET Core 6.0 とも呼ばれる) 以降が**必要**になりました。ASP.NET 6.0 よりも古いバージョンを使用している場合は、ASP.NET プロジェクトをアップグレードする必要があります。
 
 
-## Data Sources (ASP.NET Only)
-Data Sources have been moved into different NuGet packages. This means all code using any data sources will now be broken. Not only have the data sources been moved into separate packages, all the namespaces related to data have been moved into a new `Reveal.Sdk.Data` namespace.
+## データ ソース (ASP.NET のみ)
+データ ソースは別の NuGet パッケージに移動されました。これは、データ ソースを使用するすべてのコードが壊れることを意味します。データ ソースが個別のパッケージに移動されただけでなく、データに関連するすべての名前空間が新しい `Reveal.Sdk.Data` 名前空間に移動されました。
 
-The following steps will guide you through fixing your data sources
+次の手順では、データ ソースを修正する手順を説明します。
 
-**Step 1**: Install the data source package from NuGet. Review this list of [supported data sources](/web/datasources#supported-data-sources) and install your required data sources from NuGet.
+**手順 1**: NuGet からデータ ソース パッケージをインストールします。この[サポートされているデータ ソース](/web/datasources#サポートされているデータ-ソース)のリストを確認し、NuGet から必要なデータ ソースをインストールします。
 
-**Step 2** - Register the data sources with the Reveal SDK. Each data source will require you to call the `builder.DataSources.RegisterXXX` method to register the data source with the SDK. For example:
+**手順 2** - データ ソースを Reveal SDK に登録します。 各データ ソースでは、`builder.DataSources.RegisterXXX` メソッドを呼び出してデータ ソースを SDK に登録する必要があります。例:
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -92,15 +92,15 @@ builder.Services.AddControllers().AddReveal( builder =>
 
 </Tabs>
 
-**Step 3** - Add the `using Reveal.Sdk.Data;` namespace to the **AuthenticationProvider** and the **DataSourceProvider** classes. Objects such as the `IRVAuthenticationProvider`, `IRVUserContext`, and `RVDashboardDataSource` have been moved into the `Reveal.Sdk.Data` namespace.
+**手順 3** - `using Reveal.Sdk.Data;` 名前空間を **AuthenticationProvider** クラスと **DataSourceProvider** クラスに追加します。`IRVAuthenticationProvider`、`IRVUserContext`、`RVDashboardDataSource` などのオブジェクトは、`Reveal.Sdk.Data` 名前空間に移動されました。
 
 ```cs
 using Reveal.Sdk.Data;
 ```
 
-**Step 4** - Add new data source namespaces to the **AuthenticationProvider** and the **DataSourceProvider** classes
+**手順 4** - 新しいデータ ソースの名前空間を **AuthenticationProvider** クラスと **DataSourceProvider** クラスに追加します。
 
-The namespaces for each data source has been changed to match the NuGet package name. For example; if using `RVSqlServerDataSourceItem`, `RVAthenaDataSource`, and `RVGoogleDriveDataSource`, you'll need to add the following namespaces:
+各データ ソースの名前空間は、NuGet パッケージ名と一致するように変更されました。例えば、`RVSqlServerDataSourceItem`、`RVAthenaDataSource`、`RVGoogleDriveDataSource` を使用する場合は、次の名前空間を追加する必要があります。
 
 ```cs
 using Reveal.Sdk.Data.Microsoft.SqlServer;
@@ -108,23 +108,23 @@ using Reveal.Sdk.Data.Amazon.Athena;
 using Reveal.Sdk.Data.Google.Drive;
 ```
 
-## Remove Quill.js
-The Reveal SDK no longer depends on Quill.js. Find and remove all references to Quill.js.
+## Quill.js を削除する
+Reveal SDK は Quill.js に依存しなくなりました。Quill.js へのすべての参照を見つけて削除します。
 
-If using the Quill.js CDN links, do the folowing:
+Quill.js CDN リンクを使用する場合は、次の手順を実行します。
 
-- Find the following css link and remove it.
+- 次の CSS リンクを見つけて削除します。
 ```
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css" >
 ```
 
-- Find the following javascript link and remove it:
+- 次の JavaScript リンクを見つけて削除します。
 ```
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js" ></script>
 ```
 
-## Remove availableChartTypes
+## availableChartTypes を削除する
 
-The `revealView.availableChartTypes` property has been removed in favor of the new `revealView.chartTypes` property.
+`revealView.availableChartTypes` プロパティは削除され、新しい `revealView.chartTypes` プロパティが使用されます。
 
-The new `chartTypes` property is now an array of items that provides more flexibility around controlling the items in the chart type drop down. To learn more about this new feature, visit the [Chart Types](/web/chart-types) topic.
+新しい `chartTypes` プロパティは項目の配列となり、チャート タイプ ドロップダウンの項目をより柔軟に制御できるようになりました。この新機能の詳細については、[チャート タイプ](/web/chart-types)トピックを参照してください。
