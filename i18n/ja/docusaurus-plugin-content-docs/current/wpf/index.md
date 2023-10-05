@@ -10,6 +10,5 @@ Reveal は、埋め込み分析用に構築された最新の BI ソリューシ
 ユーザー エクスペリエンスのエキスパートによって構築され、ビジネス ユーザー向けに設計された Reveal は、表示形式の作成、表示、チームとの共有を簡単にします。使用しているデバイスに関係なく、シームレスで同一のエクスペリエンスを提供します。
 
 **参照リンク:**
-1. [Reveal SDK のダウンロード](https://www.revealbi.io/ja/download-sdk)
-2. [インストール](installation.md)
-3. [はじめてのアプリ作成](getting-started.md)
+1. [インストール](installation.md)
+2. [はじめてのアプリ作成](getting-started.md)

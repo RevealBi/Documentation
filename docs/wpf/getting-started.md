@@ -3,7 +3,7 @@
 ## Step 1 - Create a New WPF Project
 The steps below describe how to create a new WPF project. If you want to add the Reveal SDK to an existing application, go to [Step 2](#step-2---add-reveal-sdk).
 
-1 - Start Visual Studio 2019 and click **Create a new project** on the start page, select the **WPF App (.NET Framework)** template, and click **Next**.
+1 - Start Visual Studio and click **Create a new project** on the start page, select the **WPF App (.NET Framework)** template, and click **Next**.
 
 ![](images/getting-started-new-wpf-project.jpg)
 

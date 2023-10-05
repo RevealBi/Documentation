@@ -4,7 +4,7 @@
 
 The steps below describe how to create a new ASP.NET Core Web API project. If you want to add the Reveal SDK to an existing application, go to Step 2.
 
-1 - Start Visual Studio 2019 and click **Create a new project** on the start page, select the **ASP.NET Core Web API** template, and click **Next**.
+1 - Start Visual Studio and click **Create a new project** on the start page, select the **ASP.NET Core Web API** template, and click **Next**.
 
 ![](images/getting-started-angular-project.jpg)
 
