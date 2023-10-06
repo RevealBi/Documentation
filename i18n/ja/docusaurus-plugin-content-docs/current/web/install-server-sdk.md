@@ -1,4 +1,4 @@
-# Installing the Server SDK
+# Server SDK のインストール
 
 ## ASP.NET
 
