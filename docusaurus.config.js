@@ -65,10 +65,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      announcementBar: {
-        id: "discordBar",
-        content: `⭐️ Join us on <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/Ped3sSK5Xw">Discord</a>! ⭐️`,
-      },
       navbar: {
         title: 'Reveal',
         logo: {
@@ -105,10 +101,6 @@ const config = {
               { label: "Videos", to: "https://www.youtube.com/playlist?list=PLZ4rRHIJepBt-USWdh-9BimHh-GjPAGUH" }
             ]
           },
-          // {
-          //   type: "docsVersionDropdown",
-          //   position: "left",
-          // },
           {
             type: "localeDropdown",
             position: "right"
