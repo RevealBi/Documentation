@@ -1,5 +1,18 @@
 # Known Issues
 
+## v1.6.1
+
+### MongoDB Connector
+
+- [Embeddings](https://www.mongodb.com/basics/embedded-mongodb) are not supported; however, single-valued embeddings are
+- Server-side blending is not supported
+- Custom queries are not supported
+- MongoDB version greater than or equal to v5.0 is supported
+- Fields with a dot (".") or a dollar sign ("$") in their names are ignored. Most cases require special treatment: [Dot & Dollar Considerations](https://www.mongodb.com/docs/manual/core/dot-dollar-considerations/)
+- Not filtering documents without a field set when filtering by empty fields (in MongoDB, a missing field isn't the same as a field with a null value)
+- Filtering by a field of type ObjectId
+- When performing a sum that includes null in MongoDB, the result is 0, not null as in SQL server
+
 ## v1.4.0
 - Headless export in Node.js SDK is not available for Linux/MacOSX
 
