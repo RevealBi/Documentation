@@ -4,21 +4,15 @@
 
 ### Breaking Changes
 
-#### All Platforms
-
 - Enabling single visualization mode now automatically sets these properties to `false` on the `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters`.
 
 ### New Features
-
-#### All Platforms
 
 - The property `VisualizationMargin` was added to `RevealTheme` for changing the margin between visualizations
 - Improvements to the single visualization; 1) Dashboard title, and breadcrumb control using the properties `ShowBreadcrumb` & `ShowBreadcrumbDashboardTitle`, 2) the property `ShowTitle` was added to `RVVisualization`, and 3) the properties `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters` are automatically set to `false` when enabling single visualization mode
 - SQL-based stored procedure output their query to the log and inform of data type mismatches
 
 ### Bug Fixes
-
-#### All Platforms
 
 - Postgres extremely slow when loading list of tables when having hundreds of schemas. Schemas are now filtered on the server to improve performance
 - Repeated uses of the chart chooser would cause the app to become non-responsive

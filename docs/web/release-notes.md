@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 - Improvements to the single visualization; 1) Dashboard title, and breadcrumb control using the properties `showBreadcrumb` & `showBreadcrumbDashboardTitle`, 2) the property `showTitle` was added to `RVVisualization`, and 3) the properties `RevealView`: `showChangeVisualization`, `canEdit`, `showMenu`, `showStatisticalFunctions`, `showFilters` are automatically set to `false` when enabling single visualization mode
 - SQL-based stored procedure output their query to the log and inform of data type mismatches
 
-#### ASP.NET
+#### ASP.NET & Node
 
 - New Data Source: MongoDB
 
