@@ -1,5 +1,38 @@
 # Release Notes
 
+## 1.6.1 (October 25th, 2023)
+
+### Breaking Changes
+
+#### All Platforms
+
+- Enabling single visualization mode now automatically sets these properties to `false` on the `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters`.
+
+### New Features
+
+#### All Platforms
+
+- The property `VisualizationMargin` was added to `RevealTheme` for changing the margin between visualizations
+- Improvements to the single visualization; 1) Dashboard title, and breadcrumb control using the properties `ShowBreadcrumb` & `ShowBreadcrumbDashboardTitle`, 2) the property `ShowTitle` was added to `RVVisualization`, and 3) the properties `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters` are automatically set to `false` when enabling single visualization mode
+- SQL-based stored procedure output their query to the log and inform of data type mismatches
+
+### Bug Fixes
+
+#### All Platforms
+
+- Postgres extremely slow when loading list of tables when having hundreds of schemas. Schemas are now filtered on the server to improve performance
+- Repeated uses of the chart chooser would cause the app to become non-responsive
+- Can't filter null values
+- Tables and views tabs not visible when using a dark theme
+- Choropleth chart displays green color on areas with no data when language is not set to English
+- Exception when exiting editor after changing calculated field used with the KPI visualization
+- Treemap not visible in PowerPoint and PDF export
+- Error dialog when using an image or PDF with an `RVWebResourceDataItem`
+- Export options popover doesn't close once an option is selected
+- `RVODataDataSource`'s `Url` property was being copied over to the `RVODataDataSourceItem`
+- Assigning color to series offset colors when "Others" category was visible
+- Sybase column of type Money is taken as String 
+
 ## 1.6.0 (August 28th, 2023)
 
 ### Breaking Changes
@@ -13,6 +46,7 @@
 ### New Features
 
 * Ability to add custom visualization as Chart Types in the visualization editor. The new `ChartTypes' property allows this, as well as modifying the icon, title and grouping of existing chart types, or making them unavailable:
+
 ```
 //Update existing configuration
 var barConfig = revealView.ChartTypes.First(x => x.ChartType == RVChartType.BarChart);
@@ -25,6 +59,7 @@ revealView.ChartTypes.Add(new RVChartTypeCustomItem("Custom Visualization", "htt
 //Delete Grid configuration
 revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartType == RVChartType.Grid));
 ```
+
 * Calculated fields expression language now support decimals specified without a leading '0' (e.g. '.5' meaning '0.5').
 * Added support in BigQuery data source for the following calculated-fields functions: YEAR, QUARTER, MONTH, DAY, HOUR, MINUTE, SECOND, REPLACE, WEEKDAY, MONTHNAME, MONTHSHORTNAME, EMPTY, RANDBETWEEN.
 * Add Stored procedure support to Oracle data source.
