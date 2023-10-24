@@ -27,7 +27,7 @@
 |[System.Text.RegularExpresions](https://dot.net/)|[MS .NET Library](https://dotnet.microsoft.com/en-us/dotnet_library_license.htm)|
 |[log4net](https://logging.apache.org/log4net/)|[Apache 2.0](https://opensource.org/license/apache-2-0/)|
 |[System.Configuration.ConfigurationManager](https://dot.net/)|[MIT](https://opensource.org/license/mit/)|
-
+|[MongoDB.Driver](https://www.mongodb.com/docs/drivers/csharp/current/)|[Apache 2.0](https://opensource.org/license/apache-2-0/)|
 
 ## NodeJS
 
