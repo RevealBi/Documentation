@@ -11,6 +11,7 @@ import TabItem from '@theme/TabItem';
 
 - Enabling single visualization mode now automatically sets these properties to `false` on the `RevealView`: `showChangeVisualization`, `canEdit`, `showMenu`, `showStatisticalFunctions`, `showFilters`.
 - The `window.revealDisableKeyboardManagement` property is now set to `true` by default. When set to `true` tab focus does not stop on the RevealView.
+- Slice Charts (pie, funnel, and donut) have a new look & feel. The old L&F is deprecated but if needed, they can be restored by doing `RevealSdkSettings.enableNewCharts = false`.
 
 ### New Features
 

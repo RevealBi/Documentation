@@ -5,6 +5,7 @@
 ### Breaking Changes
 
 - Enabling single visualization mode now automatically sets these properties to `false` on the `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters`.
+- Slice Charts (pie, funnel, and donut) have a new look & feel. The old L&F are deprecated but if needed, they can be restored by doing `RevealSdkSettings.EnableNewCharts = false`.
 
 ### New Features
 
