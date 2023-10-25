@@ -5,12 +5,14 @@
 ### Breaking Changes
 
 - Enabling single visualization mode now automatically sets these properties to `false` on the `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters`.
+- Slice Charts (pie, funnel, and donut) have a new look & feel. The old L&F are deprecated but if needed, they can be restored by doing `RevealSdkSettings.EnableNewCharts = false`.
 
 ### New Features
 
 - The property `VisualizationMargin` was added to `RevealTheme` for changing the margin between visualizations
 - Improvements to the single visualization; 1) Dashboard title, and breadcrumb control using the properties `ShowBreadcrumb` & `ShowBreadcrumbDashboardTitle`, 2) the property `ShowTitle` was added to `RVVisualization`, and 3) the properties `RevealView`: `ShowChangeVisualization`, `CanEdit`, `ShowMenu`, `ShowStatisticalFunctions`, `ShowFilters` are automatically set to `false` when enabling single visualization mode
 - SQL-based stored procedure output their query to the log and inform of data type mismatches
+
 
 ### Bug Fixes
 
