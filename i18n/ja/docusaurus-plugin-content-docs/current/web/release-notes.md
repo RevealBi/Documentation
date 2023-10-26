@@ -3,6 +3,53 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.6.1 (2023 年 10 月 25 日)
+
+### 重大な変更
+
+#### すべてのプラットフォーム
+
+- 単一視覚化モードを有効にすると、`RevealView` の次のプロパティが自動的に `false` に設定されます: `showChangeVisualization`、`canEdit`、`showMenu`、`showStatisticalFunctions`、`showFilters`。
+- `window.revealDisableKeyboardManagement` プロパティはデフォルトで `true` に設定されるようになりました。`true` に設定すると、タブのフォーカスは RevealView で停止しません。
+- スライス チャート (円チャート、ファンネル チャート、ドーナツ チャート) のルック アンド フィールが変わりました。古いルック アンド フィールは非推奨ですが、必要に応じて `RevealSdkSettings.enableNewCharts = false` を実行することで復元できます。
+
+### 新機能
+
+#### すべてのプラットフォーム
+
+- 個々の可視化のヘッドレス エクスポート。
+- 外部ダッシュボード リンクに `noopener` 属性が追加されました
+- 可視化間のマージンを変更するために、プロパティ `VisualizationMargin` が `RevealTheme` に追加されました
+- 単一の可視化の改善: 1) プロパティ `showBreadcrumb` および `showBreadcrumbDashboardTitle` を使用したダッシュボード タイトルとブレッドクラム コントロール、2) プロパティ `showTitle` が `RVVisualization` に追加、3) `RevealView` のプロパティ : `showChangeVisualization`、`canEdit`、`showMenu`、`showStatisticalFunctions`、`showFilters` は、単一視覚化モードを有効にするときに自動的に `false` に設定されます。
+- SQL ベースのストアド プロシージャはクエリをログに出力し、データ型の不一致を通知します。
+
+#### ASP.NET & Node
+
+- 新しいデータ ソース: MongoDB
+
+### バグ修正
+
+#### すべてのプラットフォーム
+
+- PostgreSQL で何百ものスキーマがある場合に、テーブルのリストの読み込みが非常に遅くなる問題を修正しました。 パフォーマンスを向上させるために、サーバー上でスキーマがフィルタリングされるようになりました。
+- `window.revealDisableKeyboardManagement` プロパティはデフォルトで `true` に設定されるようになりました。 `true` に設定すると、タブのフォーカスは RevealView で停止しません。
+- チャート セレクターを繰り返し使用すると、アプリが応答しなくなることがある問題を修正しました。
+- 散布図で小数点以下の桁を使用する値が正しく表示されない問題を修正しました。
+- null 値をフィルタリングできない問題を修正しました。
+- RevealView は font-family で指定されたバックアップ フォントをサポートしていない問題を修正しました。
+- ダーク テーマを使用するとテーブルとビューのタブが表示されない問題を修正しました。
+- 言語が英語に設定されていない場合、Choropleth　チャートでデータのない領域が緑色で表示される問題を修正しました。
+- KPI 可視化で使用される計算フィールドを変更した後にエディターを終了すると例外が発生する問題を修正しました。
+- PowerPoint および PDF エクスポートでツリーマップが表示されない問題を修正しました。
+- `RVWebResourceDataItem` で画像または PDF を使用する場合のエラー ダイアログが表示される問題を修正しました。
+- オプションを選択してもエクスポート オプションのポップオーバーが閉じない問題を修正しました。
+- `RVODataDataSource` の `url` プロパティが `RVODataDataSourceItem` にコピーされる問題を修正しました。
+-「その他」カテゴリが表示されている場合にシリーズのオフセット色に色を割り当てる問題を修正しました。
+
+#### Java
+
+- ヘッドレス エクスポートが Linux で機能しない問題を修正しました。
+
 ## 1.6.0 (2023 年 8 月 28 日)
 
 ### 重大な変更
