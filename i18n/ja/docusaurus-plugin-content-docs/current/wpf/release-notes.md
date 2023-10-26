@@ -1,5 +1,33 @@
 # リリース ノート
 
+## 1.6.1 (2023 年 10 月 25 日)
+
+### 重大な変更
+
+- 単一視覚化モードを有効にすると、`RevealView`の次のプロパティが自動的に `false` に設定されるようになりました: `ShowChangeVisualization`、`CanEdit`、`ShowMenu`、`ShowStatisticalFunctions`、`ShowFilters`。
+- スライス チャート (円チャート、ファンネル チャート、ドーナツ チャート) のルック アンド フィールが変わりました。古いルック アンド フィールは非推奨ですが、必要に応じて `RevealSdkSettings.enableNewCharts = false` を実行することで復元できます。
+
+### 新機能
+
+- 可視化間のマージンを変更するために、プロパティ `VisualizationMargin` が `RevealTheme` に追加されました。
+- 単一の可視化の改善: 1) プロパティ `ShowBreadcrumb` および `ShowBreadcrumbDashboardTitle` を使用したダッシュボード タイトル、およびパンくずリスト コントロール、2) プロパティ `ShowTitle` が `RVVisualization` に追加、3) `RevealView` のプロパティ: `ShowChangeVisualization`、`CanEdit`、`ShowMenu`、`ShowStatisticalFunctions`、`ShowFilters` は、単一視覚化モードを有効にするときに自動的に `false` に設定されます。
+- SQL ベースのストアド プロシージャはクエリをログに出力し、データ型の不一致を通知します。
+
+### バグ修正
+
+- PostgreSQL で何百ものスキーマがある場合に、テーブルのリストの読み込みが非常に遅くなる問題を修正しました。パフォーマンスを向上させるために、サーバー上でスキーマがフィルタリングされるようになりました。
+- チャート セレクターを繰り返し使用すると、アプリが応答しなくなることがある問題を修正しました。
+- null 値をフィルタリングできない問題を修正しました。
+- ダーク テーマを使用するとテーブルとビューのタブが表示されない問題を修正しました。
+- 言語が英語に設定されていない場合、Choropleth チャートでデータのない領域が緑色で表示される問題を修正しました。
+- KPI 可視化で使用される計算フィールドを変更した後にエディターを終了すると例外が発生する問題を修正しました。
+- PowerPoint および PDF エクスポートでツリーマップが表示されない問題を修正しました。
+- `RVWebResourceDataItem` で画像または PDF を使用する場合のエラー ダイアログが表示される問題を修正しました。
+- オプションを選択してもエクスポート オプションのポップオーバーが閉じない問題を修正しました。
+- `RVODataDataSource` の `Url` プロパティが `RVODataDataSourceItem` にコピーされる問題を修正しました。
+- 「その他」カテゴリが表示されている場合にシリーズのオフセット色に色を割り当てる問題を修正しました。
+- Money 型の Sybase 列が文字列として扱われる問題を修正しました。
+
 ## 1.6.0 (2023 年 8 月 28 日)
 
 ### 重大な変更
@@ -13,6 +41,7 @@
 ### 新機能
 
 * 可視化エディターでカスタム可視化をチャート タイプとして追加する機能。新しい `ChartTypes` プロパティを使用すると、これが可能になるだけでなく、既存のチャート タイプのアイコン、タイトル、グループ化を変更したり、それらを使用できなくしたりすることもできます。
+
 ```
 //Update existing configuration
 var barConfig = revealView.ChartTypes.First(x => x.ChartType == RVChartType.BarChart);
@@ -25,6 +54,7 @@ revealView.ChartTypes.Add(new RVChartTypeCustomItem("Custom Visualization", "htt
 //Delete Grid configuration
 revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartType == RVChartType.Grid));
 ```
+
 * 計算フィールドの式言語は、先頭に '0' を付けずに指定された小数をサポートするようになりました (例: '0.5' を意味する '.5')。
 * 次の計算フィールド関数に対する BigQuery データ ソースのサポートが追加されました: YEAR、QUARTER、MONTH、DAY、HOUR、MINUTE、SECOND、REPLACE、WEEKDAY、MONTHNAME、MONTHSHORTNAME、EMPTY、RANDBETWEEN。
 * ストアド プロシージャのサポートを Oracle データ ソースに追加しました。
