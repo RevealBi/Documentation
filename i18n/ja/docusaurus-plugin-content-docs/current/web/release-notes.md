@@ -31,14 +31,14 @@ import TabItem from '@theme/TabItem';
 
 #### すべてのプラットフォーム
 
-- PostgreSQL で何百ものスキーマがある場合に、テーブルのリストの読み込みが非常に遅くなる問題を修正しました。 パフォーマンスを向上させるために、サーバー上でスキーマがフィルタリングされるようになりました。
-- `window.revealDisableKeyboardManagement` プロパティはデフォルトで `true` に設定されるようになりました。 `true` に設定すると、タブのフォーカスは RevealView で停止しません。
+- PostgreSQL で何百ものスキーマがある場合に、テーブルのリストの読み込みが非常に遅くなる問題を修正しました。パフォーマンスを向上させるために、サーバー上でスキーマがフィルタリングされるようになりました。
+- `window.revealDisableKeyboardManagement` プロパティはデフォルトで `true` に設定されるようになりました。`true` に設定すると、タブのフォーカスは RevealView で停止しません。
 - チャート セレクターを繰り返し使用すると、アプリが応答しなくなることがある問題を修正しました。
 - 散布図で小数点以下の桁を使用する値が正しく表示されない問題を修正しました。
 - null 値をフィルタリングできない問題を修正しました。
 - RevealView は font-family で指定されたバックアップ フォントをサポートしていない問題を修正しました。
 - ダーク テーマを使用するとテーブルとビューのタブが表示されない問題を修正しました。
-- 言語が英語に設定されていない場合、Choropleth　チャートでデータのない領域が緑色で表示される問題を修正しました。
+- 言語が英語に設定されていない場合、Choropleth チャートでデータのない領域が緑色で表示される問題を修正しました。
 - KPI 可視化で使用される計算フィールドを変更した後にエディターを終了すると例外が発生する問題を修正しました。
 - PowerPoint および PDF エクスポートでツリーマップが表示されない問題を修正しました。
 - `RVWebResourceDataItem` で画像または PDF を使用する場合のエラー ダイアログが表示される問題を修正しました。
@@ -89,6 +89,7 @@ revealView.chartTypes.push({
 var gridConfig = revealView.chartTypes.find(x => x.chartType == 'Grid');
 revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ```
+
 * (ベータ版) マウスをホバーしているときにチャート アクションを使用できます。`$.ig.RevealSdkSettings.enableActionsOnHoverTooltip = true` を使用してオンにします。
 * 計算フィールドの式言語は、先頭に '0' を付けずに指定された小数をサポートするようになりました (例: '0.5' を意味する '.5')。
 * 次の計算フィールド関数に対する BigQuery データ ソースのサポートが追加されました: YEAR、QUARTER、MONTH、DAY、HOUR、MINUTE、SECOND、REPLACE、WEEKDAY、MONTHNAME、MONTHSHORTNAME、EMPTY、RANDBETWEEN。
