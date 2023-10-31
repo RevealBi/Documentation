@@ -42,7 +42,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 ![](images/mongodb-data-source.jpg)
 
-**Step 3** - Add a new Data Source Item by creating a new instance of the `RVMongoDBDataSourceItem` object. Set the `id`,`title`, and `collection` properties that correspond to your database table. After you have created the `RVMongoDBDataSourceItem` object, add it to the data source items collection.
+**Step 3** - Add a new Data Source Item by creating a new instance of the `RVMongoDBDataSourceItem` object. Set the `id`,`title`, and `collection` properties that correspond to your database collection. After you have created the `RVMongoDBDataSourceItem` object, add it to the data source items collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -123,17 +123,13 @@ public class DataSourceProvider : IRVDataSourceProvider
 
   </TabItem>
 
-  <TabItem value="java" label="Java">
 
-
-
-  </TabItem>
 
   <TabItem value="node" label="Node.js">    
 
 ```ts
 const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
-	if (dataSourceItem instanceof RVMongoDBDataSourceItem) {
+	if (dataSourceItem instanceof reveal.RVMongoDBDataSourceItem) {
 
 		//required: update underlying data source
 		dataSourceProvider(userContext, dataSourceItem.dataSource);
@@ -147,7 +143,7 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
 }
 
 const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-	if (dataSource instanceof RVSqlServerDataSource) {
+	if (dataSource instanceof reveal.RVMongoDBDataSource) {
 		dataSource.connectionString = "mongodb+srv://cluster0.ta2xrrt.mongodb.net/";
 		dataSource.database = "test";
 	}
