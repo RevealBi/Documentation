@@ -34,7 +34,7 @@ revealView.onDataSourcesRequested = (callback) => {
     mongoDataSource.database = "your-db-name";
     mongoDataSource.title = "My MongoDB";
 
-    callback(new $.ig.RevealDataSources([sqlDataSource], [], false));
+    callback(new $.ig.RevealDataSources([mongoDataSource], [], false));
 };
 ```
 
