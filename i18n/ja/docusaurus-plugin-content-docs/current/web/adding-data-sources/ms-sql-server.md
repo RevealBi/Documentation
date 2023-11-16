@@ -160,9 +160,16 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 
   <TabItem value="node" label="Node.js">    
 
-```ts
-const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
-	if (dataSourceItem instanceof RVSqlServerDataSourceItem) {
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVSqlServerDataSource) {
+        return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
+    }
+    return null;
+}
+
+const dataSourceItemProvider = async (userContext, dataSourceItem) => {
+	if (dataSourceItem instanceof reveal.RVSqlServerDataSourceItem) {
 
 		//required: update underlying data source
 		dataSourceProvider(userContext, dataSourceItem.dataSource);
@@ -175,14 +182,24 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
 	return dataSourceItem;
 }
 
-const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-	if (dataSource instanceof RVSqlServerDataSource) {
+const dataSourceProvider = async (userContext, dataSource) => {
+	if (dataSource instanceof reveal.RVSqlServerDataSource) {
 		dataSource.host = "10.0.0.20";
 		dataSource.database = "Northwind";
 		dataSource.schema = "dbo";
 	}
 	return dataSource;
 }
+
+// required: define revealOptions
+const revealOptions = {
+    authenticationProvider: authenticationProvider,
+    dataSourceProvider: dataSourceProvider,
+    dataSourceItemProvider: dataSourceItemProvider,
+}
+
+// required: pass revealOptions to the middleware
+app.use('/', reveal(revealOptions));
 ```
 
   </TabItem>
@@ -191,6 +208,6 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 :::info コードの取得
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer) にあります。
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer/server/nodejs-js) にあります。
 
 :::
