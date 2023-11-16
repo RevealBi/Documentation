@@ -75,3 +75,9 @@ private void RevealView_DataSourcesRequested(object sender, Reveal.Sdk.DataSourc
 アプリケーションが実行されたら、新しい可否化を作成すると、[データ ソースの選択] ダイアログに新しく作成された MS SQL Server データ ソース項目が表示されます。
 
 ![](images/ms-sql-server-data-source-item.jpg)
+
+:::info コードを取得する
+
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/AddingDataSources/MsSqlServer) にあります。
+
+:::

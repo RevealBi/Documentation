@@ -75,3 +75,9 @@ private void RevealView_DataSourcesRequested(object sender, Reveal.Sdk.DataSourc
 When the application runs, create a new Visualization and you will see the newly created MS SQL Server data source item listed in the "Select a Data Source" dialog.
 
 ![](images/ms-sql-server-data-source-item.jpg)
+
+:::info Get the Code
+
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/AddingDataSources/MsSqlServer).
+
+:::
