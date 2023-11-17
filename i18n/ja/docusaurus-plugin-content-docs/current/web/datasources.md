@@ -58,6 +58,14 @@ Coming Soon...
 
   <TabItem value="node" label="Node.js">    
 
+```js
+Coming Soon...
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
 ```ts
 Coming Soon...
 ```
@@ -208,6 +216,35 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 
   <TabItem value="node" label="Node.js">    
 
+```js
+const dataSourceItemProvider = async (userContext, dataSourceItem) => {
+	if (dataSourceItem instanceof reveal.RVSqlServerDataSourceItem) {
+
+		//required: update underlying data source
+		dataSourceProvider(userContext, dataSourceItem.dataSource);
+
+		//only change the table if we have selected our data source item
+		if (dataSourceItem.id === "MySqlServerDatasourceItem") {
+			dataSourceItem.table = "Orders";
+		}		
+	}
+	return dataSourceItem;
+}
+
+const dataSourceProvider = async (userContext, dataSource) => {
+	if (dataSource instanceof reveal.RVSqlServerDataSource) {
+		dataSource.host = "10.0.0.20";
+		dataSource.database = "Northwind";
+		dataSource.schema = "dbo";
+	}
+	return dataSource;
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
 ```ts
 const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
 	if (dataSourceItem instanceof RVSqlServerDataSourceItem) {
@@ -262,6 +299,18 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
   </TabItem>
 
   <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+	dataSourceProvider: dataSourceProvider,
+	dataSourceItemProvider: dataSourceItemProvider,
+}
+app.use('/', reveal(revealOptions));
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
 
 ```ts
 const revealOptions: RevealOptions = {

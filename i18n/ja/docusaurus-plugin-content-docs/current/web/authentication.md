@@ -40,6 +40,16 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   <TabItem value="node" label="Node.js">    
 
 ```js
+const authenticationProvider = async (userContext, dataSource) => {
+    ...
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     ...
 }
@@ -73,6 +83,18 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
   </TabItem>
 
   <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+	authenticationProvider: authenticationProvider
+};
+
+app.use('/', reveal(revealOptions));
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
 
 ```js
 const revealOptions: RevealOptions = {

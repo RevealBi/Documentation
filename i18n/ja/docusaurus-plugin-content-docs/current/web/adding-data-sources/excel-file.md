@@ -29,6 +29,12 @@ import TabItem from '@theme/TabItem';
 ![](images/excel-file-folder-node.jpg)
 
   </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+![](images/excel-file-folder-node.jpg)
+
+  </TabItem>
 </Tabs>
 
 **手順 2** - `RevealEmbedSettings.LocalFileStoragePath` プロパティを**手順 1** で作成したフォルダーの場所に設定します。
@@ -59,6 +65,17 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder()
   </TabItem>
 
   <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+    localFileStoragePath: "data"
+}
+app.use('/', reveal(revealOptions));
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
 
 ```ts
 const revealOptions: RevealOptions = {
