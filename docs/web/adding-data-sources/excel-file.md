@@ -29,6 +29,13 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 ![](images/excel-file-folder-node.jpg)
 
   </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+![](images/excel-file-folder-node.jpg)
+
+  </TabItem>
+
 </Tabs>
 
 **Step 2** - Set the `RevealEmbedSettings.LocalFileStoragePath` property to the location of the folder created in **Step 1**
@@ -59,6 +66,17 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder()
   </TabItem>
 
   <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+    localFileStoragePath: "data"
+}
+app.use('/', reveal(revealOptions));
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
 
 ```ts
 const revealOptions: RevealOptions = {

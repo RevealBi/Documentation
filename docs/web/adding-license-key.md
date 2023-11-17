@@ -50,6 +50,17 @@ RevealEngineInitializer.initialize(new InitializeParameterBuilder().
 
   <TabItem value="node" label="Node.js">    
 
+```js
+const revealOptions = {
+	license: "LICENSE_KEY",
+};
+app.use("/", reveal(revealOptions));
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
 ```ts
 const revealOptions: RevealOptions = {
 	license: "LICENSE_KEY",
