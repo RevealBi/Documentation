@@ -33,6 +33,7 @@ const DataSources: DataSourceItem[] = [
     { title: "Microsoft Reporting Services (SSRS)", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.ReportingServices" },
     { title: "Microsoft SharePoint", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SharePoint" },
     { title: "Microsoft SQL Server", topic: "adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
+    { title: "MongoDB", topic: "adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb"},
     { title: "MySQL", topic: "", nuget: "Reveal.Sdk.Data.MySql" },
     { title: "OData Feed", topic: "" },
     { title: "Oracle", topic: "", nuget: "Reveal.Sdk.Data.Oracle" },
