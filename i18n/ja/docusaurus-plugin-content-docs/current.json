@@ -366,5 +366,9 @@
   "sidebar.wpfSidebar.doc.1.6.0 Upgrade Guide": {
     "message": "1.6.0 Upgrade Guide",
     "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar wpfSidebar, linking to the doc wpf/upgrade-guide-v1.6.0"
+  },
+  "sidebar.webSidebar.doc.MongoDB": {
+    "message": "MongoDB",
+    "description": "The label for the doc item MongoDB in sidebar webSidebar, linking to the doc web/adding-data-sources/mongodb"
   }
 }
