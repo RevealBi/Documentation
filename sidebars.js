@@ -90,6 +90,7 @@ const sidebars = {
             { type: "doc", label: "In Memory Data", id: "web/adding-data-sources/in-memory-data" },
             { type: "doc", label: "JSON", id: "web/adding-data-sources/json" },
             { type: "doc", label: "MS SQL Server", id: "web/adding-data-sources/ms-sql-server" },
+            { type: "doc", label: "PostgreSQL", id: "web/adding-data-sources/postgres" },
             { type: "doc", label: "REST", id: "web/adding-data-sources/rest" },
           ]
         },
