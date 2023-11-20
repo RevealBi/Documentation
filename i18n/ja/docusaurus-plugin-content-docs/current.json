@@ -370,5 +370,9 @@
   "sidebar.webSidebar.doc.PostgreSQL": {
     "message": "PostgreSQL",
     "description": "The label for the doc item PostgreSQL in sidebar webSidebar, linking to the doc web/adding-data-sources/postgres"
+  },
+  "sidebar.webSidebar.doc.MongoDB": {
+    "message": "MongoDB",
+    "description": "The label for the doc item MongoDB in sidebar webSidebar, linking to the doc web/adding-data-sources/mongodb"
   }
 }
