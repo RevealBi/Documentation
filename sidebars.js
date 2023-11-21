@@ -91,6 +91,7 @@ const sidebars = {
             { type: "doc", label: "JSON", id: "web/adding-data-sources/json" },
             { type: "doc", label: "MongoDB", id: "web/adding-data-sources/mongodb" },
             { type: "doc", label: "MS SQL Server", id: "web/adding-data-sources/ms-sql-server" },
+            { type: "doc", label: "MySQL", id: "web/adding-data-sources/mysql" },
             { type: "doc", label: "PostgreSQL", id: "web/adding-data-sources/postgres" },
             { type: "doc", label: "REST", id: "web/adding-data-sources/rest" },
           ]
