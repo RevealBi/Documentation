@@ -52,7 +52,7 @@ Reveal SDK 内のユーザー コンテキストは、`IRVUserContext` インタ
   ```js
   const userContextProvider = (request) => {
     // this can be used to store values coming from the request.
-    var props = new Map<string, Object>();
+    var props = new Map();
     props.set("some-property", "some-value"); 
     
     return new reveal.RVUserContext("user identifier", props);
