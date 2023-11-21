@@ -94,6 +94,7 @@ const sidebars = {
             { type: "doc", label: "MySQL", id: "web/adding-data-sources/mysql" },
             { type: "doc", label: "PostgreSQL", id: "web/adding-data-sources/postgres" },
             { type: "doc", label: "REST", id: "web/adding-data-sources/rest" },
+            { type: "doc", label: "Snowflake", id: "web/adding-data-sources/snowflake" },
           ]
         },
         { type: "doc", label: "Authentication", id: "web/authentication" },

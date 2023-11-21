@@ -40,7 +40,7 @@ const DataSources: DataSourceItem[] = [
     { title: "PostgreSQL", topic: "adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },
     { title: "Quickbooks", topic: "", nuget: "Reveal.Sdk.Data.Quickbooks" },
     { title: "REST", topic: "adding-data-sources/rest" },
-    { title: "Snowflake", topic: "", nuget: "Reveal.Sdk.Data.Snowflake" },
+    { title: "Snowflake", topic: "adding-data-sources/snowflake", nuget: "Reveal.Sdk.Data.Snowflake" },
     { title: "Sybase", topic: "", nuget: "Reveal.Sdk.Data.Sybase" },
     { title: "TSV (Tab Separated Values)", topic: "" },
 ]
