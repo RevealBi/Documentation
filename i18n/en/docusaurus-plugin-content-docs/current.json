@@ -374,5 +374,9 @@
   "sidebar.webSidebar.doc.MongoDB": {
     "message": "MongoDB",
     "description": "The label for the doc item MongoDB in sidebar webSidebar, linking to the doc web/adding-data-sources/mongodb"
+  },
+  "sidebar.webSidebar.doc.Snowflake": {
+    "message": "Snowflake",
+    "description": "The label for the doc item Snowflake in sidebar webSidebar, linking to the doc web/adding-data-sources/snowflake"
   }
 }
