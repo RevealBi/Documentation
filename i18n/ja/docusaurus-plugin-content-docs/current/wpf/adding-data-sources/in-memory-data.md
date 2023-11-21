@@ -301,7 +301,7 @@ private void RevealView_DataSourcesRequested(object sender, DataSourcesRequested
 }
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/AddingDataSources/InMemory) にあります。
 

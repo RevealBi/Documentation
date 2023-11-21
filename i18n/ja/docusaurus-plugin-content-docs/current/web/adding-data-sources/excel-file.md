@@ -35,6 +35,7 @@ import TabItem from '@theme/TabItem';
 ![](images/excel-file-folder-node.jpg)
 
   </TabItem>
+
 </Tabs>
 
 **手順 2** - `RevealEmbedSettings.LocalFileStoragePath` プロパティを**手順 1** で作成したフォルダーの場所に設定します。
@@ -123,7 +124,6 @@ Excel ファイルパスの前に `local:/` を付ける必要があります。
 例:
 * サブフォルダーなし - `RVLocalFileDataSourceItem.Uri = "local:/FileName.xlsx"`
 * サブフォルダーあり - `RVLocalFileDataSourceItem.Uri = "local:/SubFolder/FileName.xlsx"`
-
 :::
 
 **手順 5** - 前の手順で作成した `RVLocalFileDataSourceItem` インスタンスをコンストラクター引数に指定して、`RVExcelDataSourceItem` オブジェクトの新しいインスタンスを作成し、`Title` プロパティを Excel ファイル内のデータを説明する文字列に設定します。

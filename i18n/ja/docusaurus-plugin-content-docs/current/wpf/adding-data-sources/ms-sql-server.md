@@ -76,7 +76,7 @@ private void RevealView_DataSourcesRequested(object sender, Reveal.Sdk.DataSourc
 
 ![](images/ms-sql-server-data-source-item.jpg)
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/AddingDataSources/MsSqlServer) にあります。
 

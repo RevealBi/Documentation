@@ -43,7 +43,7 @@ var filePath = Path.Combine(Environment.CurrentDirectory, "Dashboards/Sales.rdas
 _revealView.Dashboard = await RVDashboard.LoadDashboardAsync(filePath);
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FilePath) にあります。
 
@@ -71,7 +71,7 @@ using (var stream = File.OpenRead(filePath))
 }
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FileStream) にあります。
 
@@ -109,7 +109,7 @@ using (resource)
 }
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FromResource) にあります。
 
@@ -145,7 +145,7 @@ JSON にシリアル化された後に Reveal ダッシュボードのコンテ�
 
 :::
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/LoadingDashboards-FromJson) にあります。
 

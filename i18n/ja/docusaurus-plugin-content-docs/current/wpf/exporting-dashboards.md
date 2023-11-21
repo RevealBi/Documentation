@@ -126,7 +126,7 @@ private void ExportButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/Exporting-Image) にあります。
 

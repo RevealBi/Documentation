@@ -157,6 +157,21 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   <TabItem value="node" label="Node.js">    
 
 ```js
+const authenticationProvider = async (userContext, dataSource) => {
+	if (dataSource instanceof reveal.RVPostgresDataSource) {
+		return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
+	} else if (dataSource instanceof reveal.RVSqlServerDataSource) {
+		return new reveal.RVUsernamePasswordDataSourceCredential("username", "password", "domain");
+	}
+	return null;
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
 const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
 	if (dataSource instanceof RVPostgresDataSource) {
 		return new RVUsernamePasswordDataSourceCredential("username", "password");
@@ -197,6 +212,16 @@ if (dataSource instanceof RVSqlServerDataSource) {
   <TabItem value="node" label="Node.js">    
 
 ```js
+if (dataSource instanceof reveal.RVSqlServerDataSource) {
+    return new reveal.RVUsernamePasswordDataSourceCredential();
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
 if (dataSource instanceof RVSqlServerDataSource) {
     return new RVUsernamePasswordDataSourceCredential();
 }
@@ -261,6 +286,19 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   <TabItem value="node" label="Node.js">    
 
 ```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVGoogleDriveDataSource) {
+        return new reveal.RVBearerTokenDataSourceCredential("token", "userid");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
 const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVGoogleDriveDataSource) {
         return new RVBearerTokenDataSourceCredential("token", "userid");
@@ -327,6 +365,19 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   <TabItem value="node" label="Node.js">    
 
 ```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVS3DataSource) {
+        return new reveal.RVAmazonWebServicesCredentials("key", "secret");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
 const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVS3DataSource) {
         return new RVAmazonWebServicesCredentials("key", "secret");
