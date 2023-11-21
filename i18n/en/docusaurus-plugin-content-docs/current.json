@@ -378,5 +378,9 @@
   "sidebar.webSidebar.doc.Snowflake": {
     "message": "Snowflake",
     "description": "The label for the doc item Snowflake in sidebar webSidebar, linking to the doc web/adding-data-sources/snowflake"
+  },
+  "sidebar.webSidebar.doc.MySQL": {
+    "message": "MySQL",
+    "description": "The label for the doc item MySQL in sidebar webSidebar, linking to the doc web/adding-data-sources/mysql"
   }
 }
