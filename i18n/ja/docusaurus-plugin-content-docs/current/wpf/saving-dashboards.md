@@ -174,7 +174,7 @@ private async void RevealView_SaveDashboard(object sender, Reveal.Sdk.DashboardS
 }
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/SavingDashboards) にあります。
 

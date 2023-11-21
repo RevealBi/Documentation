@@ -62,7 +62,7 @@ _revealView.Dashboard.DateFilter = new RVDateDashboardFilter(RVDateFilterType.Cu
 
 ![](images/filtering-date-filter-daterange.jpg)
 
-:::info コードを取得する
+:::info コードの取得
 
 日付フィルターを示すサンプルは [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/FilteringDashboards-Dates) にあります。
 
@@ -158,7 +158,7 @@ var territoryFilter = _revealView.Dashboard.Filters.GetByTitle("Territory");
 territoryFilter.SelectedValues = new List<object>();
 ```
 
-:::info コードを取得する
+:::info コードの取得
 
 [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/FilteringDashboards) でダッシュボード フィルターのデモ サンプルを見つけることができます。
 
