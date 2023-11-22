@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # PostgreSQL データ ソースの追加
 
-:::danger breaking changes
+:::danger 重大な変更
 
 現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース) トピックを参照してください。
 

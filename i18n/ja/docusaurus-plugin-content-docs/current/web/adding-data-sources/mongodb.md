@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # MongoDB データ ソースの追加
 
-:::danger breaking changes
+:::danger 重大な変更
 
 現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース)] トピックを参照してください。
 
@@ -25,7 +25,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVMongoDBDataSource` オブジェクトの新しいインスタンスを作成します。`connectionString`、`database`、`Title`、および Title プロパティを、MongoDB Server に対応する値に設定します。`RVMongoDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVMongoDBDataSource` オブジェクトの新しいインスタンスを作成します。`connectionString`、`database`、および `Title` プロパティを、MongoDB Server に対応する値に設定します。`RVMongoDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
