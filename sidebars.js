@@ -98,8 +98,9 @@ const sidebars = {
           ]
         },
         { type: "doc", label: "Authentication", id: "web/authentication" },
-        { type: "doc", label: "User Context", id: "web/user-context" },
+        { type: "doc", label: "Custom Queries", id: "web/custom-queries" },
         { type: "doc", label: "Obfuscate Connection Data", id: "web/obfuscate-connection-data" },
+        { type: "doc", label: "User Context", id: "web/user-context" },
       ]
     },
 
