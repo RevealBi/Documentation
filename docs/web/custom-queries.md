@@ -29,7 +29,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ## On the server
 
-Override the data source items on the server
+Override the data source items on the server.
 
 ```cs
 //John Orders
