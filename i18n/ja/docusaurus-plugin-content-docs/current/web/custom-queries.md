@@ -13,15 +13,13 @@ Custom Queries are supported for the following data sources:
 - Amazon Redshift
 - Microsoft Azure SQL Database
 - Microsoft Azure Synapse Analytics
-- Microsoft Dynamics CRM
 - [Microsoft SQL Server](adding-data-sources/ms-sql-server)
 - [MySQL](adding-data-sources/mysql)
 - [Oracle](adding-data-sources/oracle)
 - [PostgreSQL](adding-data-sources/postgres)
 - [Snowflake](adding-data-sources/snowflake)
-- Sybase
 
-## Step 1 - Define the data source items on the client
+**Step 1** - Define the data source items on the client
 
 Add an event handler for the `RevealView.onDataSourcesRequested` event. Create in this step the data sources you want to
 override with custom queries. In this example, we are using `RVSqlServerDataSource` to connect to our SQL Server.
@@ -40,7 +38,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-## Step 2 - Override the data source items on the server
+**Step 2** - Override the data source items on the server
 
 ```cs
 if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
@@ -55,9 +53,29 @@ if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 ```
 
 ## Example - Building a custom query using client provided values
-### Step 1 - Define the data source items on the client and set the additional headers provider
 
-Use the method `$.ig.RevealSdkSettings.setAdditionalHeadersProvider()` to set the additional headers to send to the server. In this example we are using a header named `x-sales-person-id`.
+1 - Define the data source items on the client.
+
+```js
+$.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+var revealView = new $.ig.RevealView("#revealView");
+revealView.startInEditMode = true;
+
+revealView.onDataSourcesRequested = (callback) => {
+    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    sqlServerDataSource.id = "MySqlServerDataSource";
+    sqlServerDataSource.title = "My SQL Server";
+
+    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
+    sqlServerDataSourceItem.title = "John Orders";
+
+    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+};
+```
+
+2 - In the client, use the method `$.ig.RevealSdkSettings.setAdditionalHeadersProvider()` to set the additional headers to send to the server. In this example we are using a header named `x-sales-person-id`.
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
@@ -84,9 +102,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-### Step 2 - Get the headers on the server and extract the needed property
-
-Define and register a `RVUserContextProvider` to handle the headers on the server. You need to extract the headers and register the appropriate property.
+3 - Define and register a `RVUserContextProvider` to handle the headers on the server. You need to extract the headers and register the appropriate property.
 
 ```cs
 public class UserContextProvider : IRVUserContextProvider
@@ -108,22 +124,46 @@ public class UserContextProvider : IRVUserContextProvider
 }
 ```
 
-### Step 3 - Build your custom query based on the previously registered property
+4 - In the data source provider, override the data source item to define your custom query.
 
 ```cs
-if (dataSourceItem is RVSqlServerDataSourceItem sqlDataSourceItem)
+public class DataSourceProvider : IRVDataSourceProvider
 {
-    var sqlDataSource = (RVSqlServerDataSource)sqlDataSourceItem.DataSource;
-    UpdateDataSource(sqlDataSource);
-
-    if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
+    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId,
+        RVDataSourceItem dataSourceItem)
     {
-        //get the sales-person-id from the userContext
-        var salesPersonId = userContext.Properties["sales-person-id"];
+        if (dataSourceItem is RVSqlServerDataSourceItem sqlDataSourceItem)
+        {
+            var sqlDataSource = (RVSqlServerDataSource)sqlDataSourceItem.DataSource;
+            UpdateDataSource(sqlDataSource);
 
-        //parametrize your custom query with the property obtained before
-        sqlDataSourceItem.CustomQuery =
-            $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
+            if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
+            {
+                //get the sales-person-id from the userContext
+                var salesPersonId = userContext.Properties["sales-person-id"];
+
+                //parametrize your custom query with the property obtained before
+                sqlDataSourceItem.CustomQuery =
+                    $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
+            }
+        }
+
+        return Task.FromResult(dataSourceItem);
+    }
+
+    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext,
+        RVDashboardDataSource dataSource)
+    {
+        if (dataSource is RVSqlServerDataSource sqlDataSource)
+            UpdateDataSource(sqlDataSource);
+
+        return Task.FromResult(dataSource);
+    }
+
+    private void UpdateDataSource(RVSqlServerDataSource sqlDataSource)
+    {
+        sqlDataSource.Host = "your-host";
+        sqlDataSource.Database = "your-database";
     }
 }
 ```
