@@ -3,11 +3,31 @@ import TabItem from '@theme/TabItem';
 
 # Custom Queries
 
-Custom queries are specially crafted instructions for retrieving or manipulating data in a database according to specific requirements. Unlike predefined queries in database management systems, custom queries are tailored to meet unique or complex data retrieval and manipulation needs.
+Custom queries are specially crafted instructions for retrieving or manipulating data in a database according to
+specific requirements. Unlike predefined queries in database management systems, custom queries are tailored to meet
+unique or complex data retrieval and manipulation needs.
+
+## Supported Data Sources
+
+| Data Source                                               |
+|-----------------------------------------------------------|
+| [Amazon Athena](adding-data-sources/amazon-athena)        |
+| Amazon Redshift                                           |
+| [Google Big Query](adding-data-sources/google-big-query)  |
+| Microsoft Azure SQL Database                              |
+| Microsoft Azure Synapse Analytics                         |
+| Microsoft Dynamics CRM                                    |
+| [Microsoft SQL Server](adding-data-sources/ms-sql-server) |
+| [MySQL](adding-data-sources/mysql)                        |
+| [Oracle](adding-data-sources/oracle)                      |
+| [PostgreSQL](adding-data-sources/postgres)                |
+| [Snowflake](adding-data-sources/snowflake)                |
+| Sybase                                                    |
 
 ## On the Client
 
-Add an event handler for the `RevealView.onDataSourcesRequested` event. Create in this step the data sources you want to override with custom queries. In this example, we are using `RVSqlServerDataSource` to connect to our SQL Server.
+Add an event handler for the `RevealView.onDataSourcesRequested` event. Create in this step the data sources you want to
+override with custom queries. In this example, we are using `RVSqlServerDataSource` to connect to our SQL Server.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -15,15 +35,11 @@ revealView.onDataSourcesRequested = (callback) => {
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem1 = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
-    sqlServerDataSourceItem1.id = "MySqlServerDataSourceItem1";
-    sqlServerDataSourceItem1.title = "John Orders";
+    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
+    sqlServerDataSourceItem.title = "John Orders";
 
-    const sqlServerDataSourceItem2 = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
-    sqlServerDataSourceItem2.id = "MySqlServerDataSourceItem2";
-    sqlServerDataSourceItem2.title = "Jane Orders";
-
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem1, sqlServerDataSourceItem2], true));
+    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 
@@ -32,21 +48,20 @@ revealView.onDataSourcesRequested = (callback) => {
 Override the data source items on the server.
 
 ```cs
-//John Orders
-if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem1")
+if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 {
-    sqlDataSourceItem.CustomQuery = "SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = 279";
-}
-             
-//Jane Orders   
-if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem2")
-{
-    sqlDataSourceItem.CustomQuery = "SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = 282";
+    //get the sales-person-id from the userContext
+    var salesPersonId = userContext.Properties["sales-person-id"];
+
+    //parametrize your custom query with the property obtained before
+    sqlDataSourceItem.CustomQuery =
+        $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
 }
 ```
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/CustomQueries)
+The source code to this sample can be found
+on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/CustomQueries)
 
 :::
