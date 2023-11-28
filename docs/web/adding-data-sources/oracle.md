@@ -29,25 +29,23 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    //adjust the type as you need
-    const type = "sid";
+    //if you are using SID
+    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
+    oracleSIDDataSource.id = "MyOracleSIDDataSource";
+    oracleSIDDataSource.title = "My Oracle SID";
+    oracleSIDDataSource.host = "your-host";
+    oracleSIDDataSource.port = "your-port";
+    oracleSIDDataSource.database = "your-database";
 
-    var oracleDataSource = null;
-    if (type === "sid") {
-        oracleDataSource = new $.ig.RVOracleSIDDataSource();
-        oracleDataSource.sID = "your-sid";
-    } else {
-        oracleDataSource = new $.ig.RVOracleServiceDataSource();
-        oracleDataSource.service = "your-service-name";
-    }
+    //if you are using Service Name
+    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
+    oracleServiceDataSource.id = "MyOracleServiceDataSource";
+    oracleServiceDataSource.title = "My Oracle Service";
+    oracleServiceDataSource.host = "your-host";
+    oracleServiceDataSource.port = "your-port";
+    oracleServiceDataSource.database = "your-database";
 
-    oracleDataSource.id = "MyOracleServiceDataSource";
-    oracleDataSource.title = "My Oracle";
-    oracleDataSource.host = "your-host";
-    oracleDataSource.port = "your-port";
-    oracleDataSource.database = "your-database";
-
-    callback(new $.ig.RevealDataSources([oracleDataSource], [], true));
+    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [], true));
 };
 ```
 
@@ -59,29 +57,31 @@ When the application runs, create a new Visualization and you will see the newly
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    //adjust the type as you need
-    const type = "sid";
+    //if you are using SID
+    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
+    oracleSIDDataSource.id = "MyOracleSIDDataSource";
+    oracleSIDDataSource.title = "My Oracle SID";
+    oracleSIDDataSource.host = "your-host";
+    oracleSIDDataSource.port = "your-port";
+    oracleSIDDataSource.database = "your-database";
 
-    var oracleDataSource = null;
-    if (type === "sid") {
-        oracleDataSource = new $.ig.RVOracleSIDDataSource();
-        oracleDataSource.sID = "your-sid";
-    } else {
-        oracleDataSource = new $.ig.RVOracleServiceDataSource();
-        oracleDataSource.service = "your-service-name";
-    }
+    //if you are using Service Name
+    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
+    oracleServiceDataSource.id = "MyOracleServiceDataSource";
+    oracleServiceDataSource.title = "My Oracle Service";
+    oracleServiceDataSource.host = "your-host";
+    oracleServiceDataSource.port = "your-port";
+    oracleServiceDataSource.database = "your-database";
 
-    oracleDataSource.id = "MyOracleServiceDataSource";
-    oracleDataSource.title = "My Oracle";
-    oracleDataSource.host = "your-host";
-    oracleDataSource.port = "your-port";
-    oracleDataSource.database = "your-database";
+    const oracleSIDDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleSIDDataSource);
+    oracleSIDDataSourceItem.id = "MyOracleSIDDataSourceItem";
+    oracleSIDDataSourceItem.title = "My Oracle SID Item";
 
-    var oracleDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleDataSource);
-    oracleDataSourceItem.id = "MyOracleDataSourceItem";
-    oracleDataSourceItem.title = "My Oracle Item";
+    const oracleServiceDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleServiceDataSource);
+    oracleServiceDataSourceItem.id = "MyOracleServiceDataSourceItem";
+    oracleServiceDataSourceItem.title = "My Oracle Service Item";
 
-    callback(new $.ig.RevealDataSources([oracleDataSource], [oracleDataSourceItem], true));
+    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
 };
 ```
  
@@ -95,26 +95,25 @@ When the application runs, create a new Visualization and you will see the newly
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    //adjust the type as you need
-    const type = "sid";
+    //if you are using SID
+    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
+    oracleSIDDataSource.id = "MyOracleSIDDataSource";
+    oracleSIDDataSource.title = "My Oracle SID";
 
-    var oracleDataSource = null;
-    if (type === "sid") {
-        oracleDataSource = new $.ig.RVOracleSIDDataSource();
-        oracleDataSource.sID = "your-sid";
-    } else {
-        oracleDataSource = new $.ig.RVOracleServiceDataSource();
-        oracleDataSource.service = "your-service-name";
-    }
+    //if you are using Service Name
+    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
+    oracleServiceDataSource.id = "MyOracleServiceDataSource";
+    oracleServiceDataSource.title = "My Oracle Service";
 
-    oracleDataSource.id = "MyOracleServiceDataSource";
-    oracleDataSource.title = "My Oracle";
+    const oracleSIDDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleSIDDataSource);
+    oracleSIDDataSourceItem.id = "MyOracleSIDDataSourceItem";
+    oracleSIDDataSourceItem.title = "My Oracle SID Item";
 
-    var oracleDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleDataSource);
-    oracleDataSourceItem.id = "MyOracleDataSourceItem";
-    oracleDataSourceItem.title = "My Oracle Item";
+    const oracleServiceDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleServiceDataSource);
+    oracleServiceDataSourceItem.id = "MyOracleServiceDataSourceItem";
+    oracleServiceDataSourceItem.title = "My Oracle Service Item";
 
-    callback(new $.ig.RevealDataSources([oracleDataSource], [oracleDataSourceItem], true));
+    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
 };
 ``` 
 
@@ -135,7 +134,12 @@ public class DataSourceProvider : IRVDataSourceProvider
             ChangeDataSourceAsync(userContext, oracleDataSourceItem.DataSource);
 
             //only change the table if we have selected our custom data source item
-            if (oracleDataSourceItem.Id == "MyOracleDataSourceItem")
+            if (oracleDataSourceItem.Id == "MyOracleSIDDataSourceItem")
+            {
+                oracleDataSourceItem.Table = "your-table";
+            }
+            
+            if (oracleDataSourceItem.Id == "MyOracleServiceDataSourceItem")
             {
                 oracleDataSourceItem.Table = "your-table";
             }
@@ -182,7 +186,11 @@ public class DataSourceProvider implements IRVDataSourceProvider {
             changeDataSource(userContext, dataSourceItem.getDataSource());
 
             //only change the table if we have selected our custom data source item
-            if (Objects.equals(dataSourceItem.getId(), "MyOracleDataSourceItem")) {
+            if (Objects.equals(dataSourceItem.getId(), "MyOracleSIDDataSourceItem")) {
+                oracleDataSourceItem.setTable("your-table");
+            }
+
+            if (Objects.equals(dataSourceItem.getId(), "MyOracleServiceDataSourceItem")) {
                 oracleDataSourceItem.setTable("your-table");
             }
         }
@@ -221,7 +229,11 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
         dataSourceProvider(userContext, dataSourceItem.dataSource);
 
         //only change the table if we have selected our data source item
-        if (dataSourceItem.id === "MyOracleDataSourceItem") {
+        if (dataSourceItem.id === "MyOracleSIDDataSourceItem") {
+            dataSourceItem.table = "your-table";
+        }
+
+        if (dataSourceItem.id === "MyOracleServiceDataSourceItem") {
             dataSourceItem.table = "your-table";
         }
     }
@@ -258,7 +270,11 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
         dataSourceProvider(userContext, dataSourceItem.dataSource);
 
         //only change the table if we have selected our data source item
-        if (dataSourceItem.id === "MyOracleDataSourceItem") {
+        if (dataSourceItem.id === "MyOracleSIDDataSourceItem") {
+            dataSourceItem.table = "your-table";
+        }
+
+        if (dataSourceItem.id === "MyOracleServiceDataSourceItem") {
             dataSourceItem.table = "your-table";
         }
     }
