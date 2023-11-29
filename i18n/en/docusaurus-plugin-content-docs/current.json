@@ -386,5 +386,9 @@
   "sidebar.webSidebar.doc.Custom Queries": {
     "message": "Custom Queries",
     "description": "The label for the doc item Custom Queries in sidebar webSidebar, linking to the doc web/custom-queries"
+  },
+  "sidebar.webSidebar.doc.Oracle": {
+    "message": "Oracle",
+    "description": "The label for the doc item Oracle in sidebar webSidebar, linking to the doc web/adding-data-sources/oracle"
   }
 }
