@@ -171,6 +171,6 @@ public class DataSourceProvider : IRVDataSourceProvider
 :::info Get the Code
 
 The source code to this sample can be found
-on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/CustomQueries)
+on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomQueries)
 
 :::
