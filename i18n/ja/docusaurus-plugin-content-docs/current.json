@@ -344,7 +344,7 @@
     "description": "The label for the doc item Install the Reveal SDK in sidebar wpfSidebar, linking to the doc wpf/installation"
   },
   "sidebar.webSidebar.doc.Chart Types": {
-    "message": "Chart Types",
+    "message": "チャート タイプ",
     "description": "The label for the doc item Chart Types in sidebar webSidebar, linking to the doc web/chart-types"
   },
   "sidebar.webSidebar.category.Release Notes": {
@@ -352,11 +352,11 @@
     "description": "The label for category Release Notes in sidebar webSidebar"
   },
   "sidebar.webSidebar.doc.1.6.0 Upgrade Guide": {
-    "message": "1.6.0 Upgrade Guide",
+    "message": "1.6.0 アップグレード ガイド",
     "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar webSidebar, linking to the doc web/upgrade-guide-v1.6.0"
   },
   "sidebar.wpfSidebar.doc.Chart Types": {
-    "message": "Chart Types",
+    "message": "チャート タイプ",
     "description": "The label for the doc item Chart Types in sidebar wpfSidebar, linking to the doc wpf/chart-types"
   },
   "sidebar.wpfSidebar.category.Release Notes": {
@@ -364,7 +364,7 @@
     "description": "The label for category Release Notes in sidebar wpfSidebar"
   },
   "sidebar.wpfSidebar.doc.1.6.0 Upgrade Guide": {
-    "message": "1.6.0 Upgrade Guide",
+    "message": "1.6.0 アップグレード ガイド",
     "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar wpfSidebar, linking to the doc wpf/upgrade-guide-v1.6.0"
   },
   "sidebar.webSidebar.doc.PostgreSQL": {
