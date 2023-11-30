@@ -5,17 +5,17 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding an Oracle Data Source
+# Oracle データ ソースの追加
 
 :::danger breaking changes
 
-Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#supported-data-sources)] トピックを参照してください。
 
 :::
 
-## On the Client
+## クライアント側
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 var revealView = new $.ig.RevealView("#revealView");
@@ -25,7 +25,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVOracleSIDDataSource` or `RVOracleServiceDataSource` object (depending on your setup). Set the `Host`, `Database`, `Port`, `Title` and `SID` or `Service` (depending on if you are using SID or Service Name) properties to values that correspond to your Oracle server. After you have created the `RVOracleXXXXDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVOracleSIDDataSource` または `RVOracleServiceDataSource` オブジェクト (セットアップに応じて) の新しいインスタンスを作成します。`Host`、`Database`、`Port`、`Title`、および `SID` または `Service` (SID またはサービス名を使用しているかどうかに応じて) プロパティを Oracle サーバーに対応する値に設定します。`RVOracleXXXXDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -49,11 +49,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Oracle data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Oracle データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/oracle-data-source.jpg)
 
-**Step 3** - Add a new Data Source Item by creating a new instance of the `RVOracleDataSourceItem` object. Set the `Id`,`Title`, and `Table` properties that correspond to your database table. After you have created the `RVOracleDataSourceItem` object, add it to the data source items collection.
+**手順 3** - `RVOracleDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`、および `Table` プロパティを設定します。`RVOracleDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -85,13 +85,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
  
-When the application runs, create a new Visualization and you will see the newly created Oracle data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Oracle データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/oracle-data-source-item.jpg)
 
-## On the Server
+## サーバー側
 
-**Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provie an `id`, `title`, and/or `subtitle`.
+**手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを入力してください。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -117,7 +117,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ``` 
 
-**Step 2** - Create the data source provider. In this example, we are providing connection information to connect to our **Oracle** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and set the available properties on the object.
+**手順 2** - データ ソース プロバイダーを作成します。この例では、クライアントで定義された **Oracle** データベースに接続するための接続情報を提供しています。これを実現するために、使用しているデータ ソース/項目のタイプを決定し、オブジェクトで使用可能なプロパティを設定します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -303,8 +303,8 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Oracle)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Oracle) にあります。
 
 :::
