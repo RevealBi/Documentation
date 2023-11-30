@@ -25,7 +25,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVOracleSIDDataSource` または `RVOracleServiceDataSource` オブジェクト (セットアップに応じて) の新しいインスタンスを作成します。`Host`、`Database`、`Port`、`Title`、および `SID` または `Service` (SID またはサービス名を使用しているかどうかに応じて) プロパティを Oracle サーバーに対応する値に設定します。`RVOracleXXXXDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVOracleSIDDataSource` または `RVOracleServiceDataSource` オブジェクト (セットアップに応じて) の新しいインスタンスを作成します。`Host`、`Database`、`Port`、`Title`、および `SID` / `Service` (SID またはサービス名を使用しているかどうかに応じて) プロパティを Oracle サーバーに対応する値に設定します。`RVOracleXXXXDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -53,7 +53,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/oracle-data-source.jpg)
 
-**手順 3** - `RVOracleDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`、および `Table` プロパティを設定します。`RVOracleDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 3** - `RVOracleDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`Title`、および `Table` プロパティを設定します。`RVOracleDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
