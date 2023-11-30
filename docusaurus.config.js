@@ -199,6 +199,10 @@ const config = {
         additionalLanguages: ["csharp", "java"],
       },
     }),
+  markdown: {
+      mermaid: true
+  },
+  themes: ['@docusaurus/theme-mermaid']
 };
 
 module.exports = config;
