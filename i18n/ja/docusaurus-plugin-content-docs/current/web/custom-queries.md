@@ -1,13 +1,12 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Custom Queries
+# カスタム クエリ
 
-Custom queries are specially crafted instructions for retrieving or manipulating data in a database according to
-specific requirements. Unlike predefined queries in database management systems, custom queries are tailored to meet
-unique or complex data retrieval and manipulation needs.
+カスタム クエリは、特定の要件に従ってデータベース内のデータを取得または操作するために特別に作成された命令です。
+データベース管理システムの事前定義クエリとは異なり、カスタム クエリは、独自のまたは複雑なデータの取得と操作のニーズを満たすように調整されています。
 
-Custom Queries are supported for the following data sources:
+カスタム クエリは、次のデータ ソースでサポートされています。
 
 - [Amazon Athena](adding-data-sources/amazon-athena)
 - Amazon Redshift
@@ -19,10 +18,10 @@ Custom Queries are supported for the following data sources:
 - [PostgreSQL](adding-data-sources/postgres)
 - [Snowflake](adding-data-sources/snowflake)
 
-**Step 1** - Define the data source items on the client
+**手順 1** - クライアント上のデータ ソース項目を定義します。
 
-Add an event handler for the `RevealView.onDataSourcesRequested` event. Create in this step the data sources you want to
-override with custom queries. In this example, we are using `RVSqlServerDataSource` to connect to our SQL Server.
+`RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。この手順では、カスタム クエリでオーバーライドするデータ ソースを作成します。
+この例では、`RVSqlServerDataSource` を使用して SQL Server に接続しています。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -38,7 +37,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - Override the data source items on the server
+**手順 2** - サーバー上のデータ ソース項目をオーバーライドします。
 
 ```cs
 if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
@@ -52,9 +51,9 @@ if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 }
 ```
 
-## Example - Building a custom query using client provided values
+## 例 - クライアントが提供する値を使用したカスタム クエリの作成
 
-1 - Define the data source items on the client.
+1 - クライアント上のデータ ソース項目を定義します。
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
@@ -75,7 +74,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-2 - In the client, use the method `$.ig.RevealSdkSettings.setAdditionalHeadersProvider()` to set the additional headers to send to the server. In this example we are using a header named `x-sales-person-id`.
+2 - クライアントでは、`$.ig.RevealSdkSettings.setAdditionalHeadersProvider()` メソッドを使用して、サーバーに送信する追加ヘッダーを設定します。この例では、`x-sales-person-id` という名前のヘッダーを使用しています。
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
@@ -102,7 +101,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-3 - Define and register a `RVUserContextProvider` to handle the headers on the server. You need to extract the headers and register the appropriate property.
+3 - サーバー上のヘッダーを処理するための `RVUserContextProvider` を定義して登録します。ヘッダーを抽出し、適切なプロパティを登録する必要があります。
 
 ```cs
 public class UserContextProvider : IRVUserContextProvider
@@ -124,7 +123,7 @@ public class UserContextProvider : IRVUserContextProvider
 }
 ```
 
-4 - In the data source provider, override the data source item to define your custom query.
+4 - データ ソース プロバイダーで、データ ソース項目をオーバーライドしてカスタム クエリを定義します。
 
 ```cs
 public class DataSourceProvider : IRVDataSourceProvider
@@ -168,9 +167,8 @@ public class DataSourceProvider : IRVDataSourceProvider
 }
 ```
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found
-on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomQueries)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomQueries) にあります。
 
 :::
