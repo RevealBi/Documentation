@@ -390,5 +390,9 @@
   "sidebar.webSidebar.doc.Oracle": {
     "message": "Oracle",
     "description": "The label for the doc item Oracle in sidebar webSidebar, linking to the doc web/adding-data-sources/oracle"
+  },
+  "sidebar.webSidebar.doc.Custom Menu Items": {
+    "message": "Custom Menu Items",
+    "description": "The label for the doc item Custom Menu Items in sidebar webSidebar, linking to the doc web/custom-menu-items"
   }
 }
