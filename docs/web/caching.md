@@ -73,11 +73,9 @@ The size of individual datasets is indirectly restricted by a set of parameters:
 
 **Tabular Data** - This cache holds the result after executing all stages.
 
-The data is serialized as JSON and stored in the `[RevealCache]/tabulardata.sqlite` file.
+The data is serialized as JSON and temporarily stored in an in-memory cache.
 
-It is also linked to an in-memory cache. In case of a cache miss, the system resorts to the SQLite storage.
-
-The size of the `tabulardata.sqlite` file is unrestricted.
+The size of the cache is unrestricted.
 
 ## Refreshing the cache
 Refreshing the cache involves updating or renewing the stored data within the cache to maintain accuracy and reflect the most recent information. By default, the cache is set to update `Once a day`. The behavior of cache refreshing can be modified from the visualization UI, allowing users to change the update period or trigger a manual update based on their specific requirements.
