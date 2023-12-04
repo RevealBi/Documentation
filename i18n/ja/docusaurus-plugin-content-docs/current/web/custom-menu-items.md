@@ -30,7 +30,7 @@ revealView.onMenuOpening = function (visualization, args) {
 };
 ```
 
-Furthermore, you have the flexibility to determine when to include a menu based on additional properties, such as the visualization `title`.
+Furthermore, you have the flexibility to customize the behavior based on additional properties, such as the `title` of the visualization.
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -47,10 +47,7 @@ revealView.onMenuOpening = function (visualization, args) {
 
         //adding a new menu item to the "Tasks completed" visualization
         if(visualization.title === "Tasks Completed") {
-            const menuItem = new $.ig.RVMenuItem("Custom Item on Tasks Completed", new $.ig.RVImage("https://i.pinimg.com/736x/03/c8/a2/03c8a2aff8be6bee9064eef9b5d72d66.jpg", "Icon"), () => {
-                alert('my action');
-            })
-            args.menuItems.push(menuItem);
+           ...
         }
     }
 };
