@@ -133,8 +133,8 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSourceItem is RVSqlServerDataSourceItem sqlDataSourceItem)
         {
-            var sqlDataSource = (RVSqlServerDataSource)sqlDataSourceItem.DataSource;
-            UpdateDataSource(sqlDataSource);
+            //update underlying data source
+            ChangeDataSourceAsync(userContext, sqlDataSourceItem.DataSource);
 
             if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
             {
@@ -147,6 +147,22 @@ public class DataSourceProvider : IRVDataSourceProvider
             }
         }
 
+        if (dataSourceItem is RVMySqlDataSourceItem mySqlDataSourceItem)
+        {
+            //update underlying data source
+            ChangeDataSourceAsync(userContext, dataSourceItem.DataSource);
+
+            if (mySqlDataSourceItem.Id == "MyMySqlDataSourceItem")
+            {
+                //get the sales-person-id from the userContext
+                var salesPersonId = userContext.Properties["sales-person-id"];
+
+                //parametrize your custom query with the property obtained before
+                mySqlDataSourceItem.CustomQuery =
+                    $"SELECT * FROM Sales_SalesOrderHeader WHERE SalesPersonId = {salesPersonId}";
+            }
+        }
+
         return Task.FromResult(dataSourceItem);
     }
 
@@ -154,15 +170,18 @@ public class DataSourceProvider : IRVDataSourceProvider
         RVDashboardDataSource dataSource)
     {
         if (dataSource is RVSqlServerDataSource sqlDataSource)
-            UpdateDataSource(sqlDataSource);
+        {
+            sqlDataSource.Host = "your-host";
+            sqlDataSource.Database = "your-database";
+        }
+
+        if (dataSource is RVMySqlDataSource mySqlDataSource)
+        {
+            mySqlDataSource.Host = "your-host";
+            mySqlDataSource.Database = "your-database";
+        }
 
         return Task.FromResult(dataSource);
-    }
-
-    private void UpdateDataSource(RVSqlServerDataSource sqlDataSource)
-    {
-        sqlDataSource.Host = "your-host";
-        sqlDataSource.Database = "your-database";
     }
 }
 ```
