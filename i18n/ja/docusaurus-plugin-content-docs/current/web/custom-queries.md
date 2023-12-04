@@ -133,8 +133,8 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSourceItem is RVSqlServerDataSourceItem sqlDataSourceItem)
         {
-            var sqlDataSource = (RVSqlServerDataSource)sqlDataSourceItem.DataSource;
-            UpdateDataSource(sqlDataSource);
+            //update underlying data source
+            ChangeDataSourceAsync(userContext, sqlDataSourceItem.DataSource);
 
             if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
             {
@@ -145,7 +145,7 @@ public class DataSourceProvider : IRVDataSourceProvider
                 sqlDataSourceItem.CustomQuery =
                     $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
             }
-        }
+        } 
 
         return Task.FromResult(dataSourceItem);
     }
@@ -154,18 +154,21 @@ public class DataSourceProvider : IRVDataSourceProvider
         RVDashboardDataSource dataSource)
     {
         if (dataSource is RVSqlServerDataSource sqlDataSource)
-            UpdateDataSource(sqlDataSource);
+        {
+            sqlDataSource.Host = "your-host";
+            sqlDataSource.Database = "your-database";
+        }
 
         return Task.FromResult(dataSource);
     }
-
-    private void UpdateDataSource(RVSqlServerDataSource sqlDataSource)
-    {
-        sqlDataSource.Host = "your-host";
-        sqlDataSource.Database = "your-database";
-    }
 }
 ```
+
+:::caution
+
+When using a `MySqlDataSourceItem` in Java, make sure to use the fully qualified name for tables; otherwise, it won't work. A fully qualified table name comprises a database identifier and a table identifier, for example, `database.table`. Ensure that your queries reflect this structure, such as `SELECT * FROM database.table`.
+
+:::
 
 :::info コードの取得
 
