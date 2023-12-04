@@ -68,6 +68,7 @@ const sidebars = {
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         { type: "category", label: "Visualizations", items: [
           { type: "doc", label: "Chart Types", id: "web/chart-types" },
+          { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items"},
           { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
           { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
           { type: "doc", label: "Tooltips", id: "web/tooltips" },
