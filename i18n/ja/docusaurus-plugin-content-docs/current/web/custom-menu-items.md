@@ -1,8 +1,8 @@
-# Custom Menu Items
+# カスタム メニュー項目
 
-The Reveal SDK supports adding Custom Menu Items, enabling users to modify the behavior of the contextual menu in dashboards and visualizations. By adding custom menu items, users can incorporate their own functionality into the menu.
+Reveal SDK はカスタム メニュー項目の追加をサポートしており、ユーザーはダッシュボードや可視化のコンテキスト メニューの動作を変更できます。カスタム メニュー項目を追加することで、ユーザーは独自の機能をメニューに組み込むことができます。
 
-To manipulate the menu, you should add an event handler for the `revealView.onMenuOpening` event on the client.
+メニューを操作するには、クライアントに `revealView.onMenuOpening` イベントのイベント ハンドラーを追加する必要があります。
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -12,7 +12,7 @@ revealView.onMenuOpening = function (visualization, args) {
 };
 ```
 
-You can customize the behavior of menu items either dashboard-wide or visualization-wide by utilizing the `menuLocation` property. A value of `Dashboard` signifies that the menu is situated on the dashboard, whereas a value of `Visualization` indicates that the menu is specific to a visualization.
+`menuLocation` プロパティを利用することで、ダッシュボード全体または可視化全体のメニュー項目の動作をカスタマイズできます。値 `Dashboard` はメニューがダッシュボード上にあることを示し、`Visualization` はメニューが可視化用であることを示します。
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -30,7 +30,7 @@ revealView.onMenuOpening = function (visualization, args) {
 };
 ```
 
-Furthermore, you have the flexibility to customize the behavior based on additional properties, such as the `title` of the visualization.
+さらに、可視化の `title` などの追加プロパティに基づいて動作を柔軟にカスタマイズできます。
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -53,11 +53,11 @@ revealView.onMenuOpening = function (visualization, args) {
 };
 ```
 
-## Example: Creating a Custom Menu Item on a specific visualization
+## 例: 特定の可視化でのカスタム メニュー項目の作成
 
-**Step 1** - Add an event handler for the `revealView.onMenuOpening` event on the client.
+**手順 1** - クライアントに `revealView.onMenuOpening` イベントのイベント ハンドラーを追加します。
 
-**Step 2** - Create a new instance of the class `RVMenuItem` and push it to the `args.menuItems` array. The callback specified in the `RVMenuItem` will be called when clicked.
+**手順 2** - クラス `RVMenuItem` の新しいインスタンスを作成し、それを `args.menuItems` 配列にプッシュします。`RVMenuItem` に指定されたコールバックは、クリックされると呼び出されます。
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
@@ -83,11 +83,11 @@ $.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
 
 ![](images/adding-custom-menu-item.jpg)
 
-## Example: Hiding a predefined Menu Item
+## 例: 事前定義されたメニュー項目の非表示
 
-**Step 1** - Add an event handler for the `revealView.onMenuOpening` event on the client.
+**手順 1** - クライアントに `revealView.onMenuOpening` イベントのイベント ハンドラーを追加します。
 
-**Step 2** - In the `args.menuItems` array, locate the element you want to hide and set its `isHidden` property to `true`.
+**手順 2** - `args.menuItems` 配列で、非表示にする要素を見つけて、その `isHidden` プロパティを `true` に設定します。
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
@@ -109,6 +109,6 @@ $.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomMenuItems)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomMenuItems) にあります。
 
 :::

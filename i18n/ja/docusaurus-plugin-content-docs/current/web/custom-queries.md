@@ -166,7 +166,7 @@ public class DataSourceProvider : IRVDataSourceProvider
 
 :::caution
 
-When using a `MySqlDataSourceItem` in Java, make sure to use the fully qualified name for tables; otherwise, it won't work. A fully qualified table name comprises a database identifier and a table identifier, for example, `database.table`. Ensure that your queries reflect this structure, such as `SELECT * FROM database.table`.
+Java で `MySqlDataSourceItem` を使用する場合は、必ずテーブルの完全修飾名を使用してください。そうしないと機能しません。完全修飾テーブル名は、データベース識別子とテーブル識別子で構成されます (例: `database.table`)。クエリにこの構造が反映されていることを確認してください (`SELECT * FROM database.table` など)。
 
 :::
 
