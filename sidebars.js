@@ -65,6 +65,7 @@ const sidebars = {
         { type: "doc", label: "Editing", id: "web/editing-dashboards" },
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
+        { type: "doc", label: "Localizing", id: "web/localizing" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         { type: "category", label: "Visualizations", items: [
           { type: "doc", label: "Chart Types", id: "web/chart-types" },

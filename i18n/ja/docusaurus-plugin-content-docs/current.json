@@ -394,5 +394,9 @@
   "sidebar.webSidebar.doc.Custom Menu Items": {
     "message": "Custom Menu Items",
     "description": "The label for the doc item Custom Menu Items in sidebar webSidebar, linking to the doc web/custom-menu-items"
+  },
+  "sidebar.webSidebar.doc.Localizing": {
+    "message": "Localizing",
+    "description": "The label for the doc item Localizing in sidebar webSidebar, linking to the doc web/localizing"
   }
 }
