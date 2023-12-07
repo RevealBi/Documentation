@@ -73,6 +73,19 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/json-data-source-item.jpg)
 
+# Working with nested properties
+
+In JSON, data is organized hierarchically, often featuring nested structures where objects contain other objects or arrays. To navigate these structures programmatically, you can specify nested properties, which are essentially a sequence of keys or indices that lead to the desired data.
+```js
+const jsonDsItem = new $.ig.RVJsonDataSourceItem(dsItem);
+jsonDsItem.config = new RevealApi.RVJsonSchemaConfigBuilder()
+        .addStringField("fieldA")
+        .addNumericField("fieldB")
+        .addNumericField("/geo/location/lat")
+        .addNumericField("/geo/location/lng")
+        .setIterationDepth(0)
+        .build();
+```
 
 :::info コードの取得
 
