@@ -1,10 +1,10 @@
-# Localizing
+# ローカライズ
 
-The Reveal SDK offers robust support for localization, enhancing its versatility and appeal across diverse global markets. Featuring a user-friendly and comprehensive localization framework, developers can seamlessly adapt the application to various languages.
+Reveal SDK はローカリゼーションの強力なサポートを提供し、多様な世界市場にわたってその多用途性と魅力を強化します。わかりやすく包括的なローカリゼーション フレームワークより、開発者はアプリケーションをさまざまな言語にシームレスに適応させることができます。
 
-The current localization locale is automatically determined by the user's browser by default. However, to enable string localization, it is necessary to set the locale for the SDK itself. This step allows for the customization of the display language for internal strings. The SDK supports the following locales: `de`, `es`, `fr`, `it`, `ja`, `ko`, `ms`, `nl`, `pt`, `ru`, `zh-cn`, and `zh-tw`. You can reference this list by examining the `$.ig.SupportedLocales` property.
+現在のローカリゼーション ロケールは、デフォルトではユーザーのブラウザーによって自動的に決定されます。ただし、文字列のローカライズを有効にするには、SDK 自体のロケールを設定する必要があります。この手順では、内部文字列の表示言語をカスタマイズできます。SDK は次のロケールをサポートします: `de`、`es`、`fr`、`it`、`ja`、`ko`、`ms`、`nl`、`pt`、`ru`、`zh- cn`、`zh-tw`。このリストは、`$.ig.SupportedLocales` プロパティを調べることで参照できます。
 
-To set the locale, use the method `$.ig.RevealSdkSettings.overrideLocale` and pass the desired locale from the aforementioned list as a parameter. It is crucial to await the promise before attempting to override the locale again. Ensure that you follow this sequence to avoid potential issues.
+ロケールを設定するには、メソッド `$.ig.RevealSdkSettings.overrideLocale` を使用し、前述のリストから目的のロケールをパラメーターとして渡します。ロケールを再度オーバーライドする前に、promise を待つことが重要です。問題を回避するには、必ずこの順序に従ってください。
 
 ```js
 $.ig.RevealSdkSettings.overrideLocale('ja').then(_ => {
@@ -12,13 +12,13 @@ $.ig.RevealSdkSettings.overrideLocale('ja').then(_ => {
 })
 ```
 
-It should change all internal text to japanese.
+すべての内部テキストが日本語に変更されるはずです。
 
 ![](images/localization-override.jpg)
 
-After that, we are ready to start localizing our strings, such as visualization titles and column names.
+その後、可視化のタイトルや列名などの文字列のローカライズを開始する準備が整います。
 
-To provide your custom translations, you need to add a handler for the `$.ig.RevealSdkSettings.localizedStringsProvider` event on the client. This event receives an `RVLocalizationElement` and an `RVLocalizationContext` and should return a localized string.
+カスタム翻訳を提供するには、クライアントに `$.ig.RevealSdkSettings.localizedStringsProvider` イベントのハンドラーを追加する必要があります。このイベントは `RVLocalizationElement` と `RVLocalizationContext` を受け取り、ローカライズされた文字列を返す必要があります。
 
 ```js
 $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
@@ -27,7 +27,7 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 };
 ```
 
-We will add an event handler to consistently return the localized string `test` for any input string.
+ここでは、あらゆる入力文字列に対してローカライズされた文字列 `test` を一貫して返すイベント ハンドラーを追加してみます。
 
 ```js
 $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
@@ -35,11 +35,11 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 };
 ```
 
-After being added, the dashboard should appear as follows.
+追加後、ダッシュボードは次のように表示されます。
 
 ![](images/localization-test.jpg)
 
-Let's delve a bit deeper. Instead of returning `test` for everything, let's return `test` only for visualization field labels.
+もう少し詳しく見てみましょう。 すべてに対して `test` を返すのではなく、視覚化フィールド ラベルに対してのみ `test` を返すようにしましょう。
 
 ```js
 $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
@@ -52,11 +52,11 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 
 ![](images/localization-test-visualization-fields.jpg)
 
-You can use this way to customize the localization behavior for the following element types: `DashboardFilterTitle`, `DashboardTitle`, `FieldLabel`, `VisualizationFieldLabel` and `VisualizationTitle`.
+この方法を使用して、要素タイプ `DashboardFilterTitle`、`DashboardTitle`、`FieldLabel`、`VisualizationFieldLabel`、および `VisualizationTitle` のローカライズ動作をカスタマイズできます。
 
-## Example: Selecting the locale from a combo box
+## 例: コンボ ボックスからロケールを選択する
 
-**Step 1** - Add a combo box to the page with the available localization options
+**手順 1** - 利用可能なローカリゼーション オプションを含むコンボ ボックスをページに追加します。
 
 ```html
 <div class="dropdown">
@@ -73,7 +73,7 @@ You can use this way to customize the localization behavior for the following el
 </div>
 ```
 
-**Step 2** - Add the `changeLang` method
+**手順 2** - `changeLang` メソッドを追加します。
 
 ```js
 //function to set the language from the combobox and save it on sessionStorage
@@ -83,7 +83,7 @@ function changeLang(lang) {
 }
 ```
 
-**Step 3** - Create a dictionary with the required words
+**手順 3** - 必要な単語を含むディクショナリを作成します。
 
 ```js
 //this map helps us get the index by lang
@@ -105,7 +105,7 @@ const dictionaryTable = {
 };
 ```
 
-**Step 4** - Create a function to translate from our dictionary
+**手順 4** - ディクショナリから翻訳する関数を作成します。
 
 ```js
 //function to translate, expects an RVLocalizationElement and returns a localized string
@@ -118,7 +118,7 @@ function translate(element) {
 }
 ```
 
-**Step 5** - Add a handler for the `$.ig.RevealSdkSettings.localizedStringsProvider` event.
+**手順 5** - `$.ig.RevealSdkSettings.localizedStringsProvider` イベントのハンドラーを追加します。
 
 ```js
 $.ig.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
@@ -128,7 +128,7 @@ $.ig.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
 })
 ```
 
-**Step 6** - Add the remaining the code to load our dashboard
+**手順 6** - 残りのコードを追加してダッシュボードを読み込みます。
 
 ```js
 const sessionLang = sessionStorage.getItem('lang') ?? 'en';
@@ -181,6 +181,6 @@ $.ig.RVDashboard.loadDashboard("Marketing").then(dashboard => {
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LocalizingDashboards)
+このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LocalizingDashboards) にあります。
 
 :::
