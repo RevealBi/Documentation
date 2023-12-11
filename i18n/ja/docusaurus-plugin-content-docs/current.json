@@ -398,5 +398,9 @@
   "sidebar.webSidebar.doc.Localizing": {
     "message": "Localizing",
     "description": "The label for the doc item Localizing in sidebar webSidebar, linking to the doc web/localizing"
+  },
+  "sidebar.webSidebar.doc.Customizing Map Tiles": {
+    "message": "Customizing Map Tiles",
+    "description": "The label for the doc item Customizing Map Tiles in sidebar webSidebar, linking to the doc web/customizing-map-tiles"
   }
 }
