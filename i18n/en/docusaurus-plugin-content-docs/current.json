@@ -394,5 +394,17 @@
   "sidebar.webSidebar.doc.Caching": {
     "message": "Caching",
     "description": "The label for the doc item Caching in sidebar webSidebar, linking to the doc web/caching"
+  },
+  "sidebar.webSidebar.doc.Custom Menu Items": {
+    "message": "Custom Menu Items",
+    "description": "The label for the doc item Custom Menu Items in sidebar webSidebar, linking to the doc web/custom-menu-items"
+  },
+  "sidebar.webSidebar.doc.Localizing": {
+    "message": "Localizing",
+    "description": "The label for the doc item Localizing in sidebar webSidebar, linking to the doc web/localizing"
+  },
+  "sidebar.webSidebar.doc.Customizing Map Tiles": {
+    "message": "Customizing Map Tiles",
+    "description": "The label for the doc item Customizing Map Tiles in sidebar webSidebar, linking to the doc web/customizing-map-tiles"
   }
 }

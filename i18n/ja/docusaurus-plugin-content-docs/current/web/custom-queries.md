@@ -133,8 +133,8 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSourceItem is RVSqlServerDataSourceItem sqlDataSourceItem)
         {
-            var sqlDataSource = (RVSqlServerDataSource)sqlDataSourceItem.DataSource;
-            UpdateDataSource(sqlDataSource);
+            //update underlying data source
+            ChangeDataSourceAsync(userContext, sqlDataSourceItem.DataSource);
 
             if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
             {
@@ -145,7 +145,7 @@ public class DataSourceProvider : IRVDataSourceProvider
                 sqlDataSourceItem.CustomQuery =
                     $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
             }
-        }
+        } 
 
         return Task.FromResult(dataSourceItem);
     }
@@ -154,18 +154,21 @@ public class DataSourceProvider : IRVDataSourceProvider
         RVDashboardDataSource dataSource)
     {
         if (dataSource is RVSqlServerDataSource sqlDataSource)
-            UpdateDataSource(sqlDataSource);
+        {
+            sqlDataSource.Host = "your-host";
+            sqlDataSource.Database = "your-database";
+        }
 
         return Task.FromResult(dataSource);
     }
-
-    private void UpdateDataSource(RVSqlServerDataSource sqlDataSource)
-    {
-        sqlDataSource.Host = "your-host";
-        sqlDataSource.Database = "your-database";
-    }
 }
 ```
+
+:::caution
+
+Java で `MySqlDataSourceItem` を使用する場合は、必ずテーブルの完全修飾名を使用してください。そうしないと機能しません。完全修飾テーブル名は、データベース識別子とテーブル識別子で構成されます (例: `database.table`)。クエリにこの構造が反映されていることを確認してください (`SELECT * FROM database.table` など)。
+
+:::
 
 :::info コードの取得
 

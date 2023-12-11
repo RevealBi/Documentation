@@ -66,9 +66,12 @@ const sidebars = {
         { type: "doc", label: "Editing", id: "web/editing-dashboards" },
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
+        { type: "doc", label: "Localizing", id: "web/localizing" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         { type: "category", label: "Visualizations", items: [
           { type: "doc", label: "Chart Types", id: "web/chart-types" },
+          { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items"},
+          { type: "doc", label: "Customizing Map Tiles", id: "web/customizing-map-tiles"},
           { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
           { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
           { type: "doc", label: "Tooltips", id: "web/tooltips" },
