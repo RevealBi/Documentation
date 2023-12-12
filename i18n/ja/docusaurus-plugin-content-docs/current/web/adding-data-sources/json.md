@@ -73,9 +73,9 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/json-data-source-item.jpg)
 
-# Working with nested properties
+# ネストされたプロパティの操作
 
-In JSON, data is organized hierarchically, often featuring nested structures where objects contain other objects or arrays. To navigate these structures programmatically, you can specify nested properties, which are essentially a sequence of keys or indices that lead to the desired data.
+JSON では、データは階層的に編成され、多くの場合、オブジェクトに他のオブジェクトまたは配列が含まれる入れ子構造が特徴です。これらの構造をプログラムでナビゲートするには、ネストされたプロパティを指定できます。これは基本的に、目的のデータにつながるキーまたはインデックスのシーケンスです。
 ```js
 const jsonDsItem = new $.ig.RVJsonDataSourceItem(dsItem);
 jsonDsItem.config = new RevealApi.RVJsonSchemaConfigBuilder()

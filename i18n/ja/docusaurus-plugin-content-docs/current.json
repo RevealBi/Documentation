@@ -400,7 +400,7 @@
     "description": "The label for the doc item Custom Menu Items in sidebar webSidebar, linking to the doc web/custom-menu-items"
   },
   "sidebar.webSidebar.doc.Localizing": {
-    "message": "Localizing",
+    "message": "ローカライズ",
     "description": "The label for the doc item Localizing in sidebar webSidebar, linking to the doc web/localizing"
   },
   "sidebar.webSidebar.doc.Customizing Map Tiles": {
