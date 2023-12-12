@@ -406,5 +406,9 @@
   "sidebar.webSidebar.doc.Customizing Map Tiles": {
     "message": "Customizing Map Tiles",
     "description": "The label for the doc item Customizing Map Tiles in sidebar webSidebar, linking to the doc web/customizing-map-tiles"
+  },
+  "sidebar.webSidebar.doc.Custom Visualizations": {
+    "message": "Custom Visualizations",
+    "description": "The label for the doc item Custom Visualizations in sidebar webSidebar, linking to the doc web/custom-visualizations"
   }
 }

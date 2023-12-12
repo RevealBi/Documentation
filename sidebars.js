@@ -71,6 +71,7 @@ const sidebars = {
         { type: "category", label: "Visualizations", items: [
           { type: "doc", label: "Chart Types", id: "web/chart-types" },
           { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items"},
+          { type: "doc", label: "Custom Visualizations", id: "web/custom-visualizations"},
           { type: "doc", label: "Customizing Map Tiles", id: "web/customizing-map-tiles"},
           { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
           { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
