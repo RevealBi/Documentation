@@ -70,7 +70,7 @@ Reveal SDK v1.6.0 には、ASP.NET 6.0 (ASP.NET Core 6.0 とも呼ばれる) 以
 
 **手順 1**: NuGet からデータ ソース パッケージをインストールします。この[サポートされているデータ ソース](/web/datasources#サポートされているデータ-ソース)のリストを確認し、NuGet から必要なデータ ソースをインストールします。
 
-**手順 2** - データ ソースを Reveal SDK に登録します。 各データ ソースでは、`builder.DataSources.RegisterXXX` メソッドを呼び出してデータ ソースを SDK に登録する必要があります。例:
+**手順 2** - データ ソースを Reveal SDK に登録します。各データ ソースでは、`builder.DataSources.RegisterXXX` メソッドを呼び出してデータ ソースを SDK に登録する必要があります。例:
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>

@@ -1,12 +1,12 @@
-# Caching
+# キャッシュ
 
-In Reveal SDK, caching is a default mechanism designed to optimize performance by storing all queried data in a faster and embedded database, referred to as a cache. This process ensures that frequently accessed data is readily available, and upon initiating a query, the SDK automatically checks if the requested data is already present in the cache. In the event of a cache hit, the SDK swiftly retrieves the information without the need for an additional request to the original source.
+Reveal SDK のキャッシュは、クエリされたすべてのデータを、キャッシュと呼ばれる高速な組み込みデータベースに保存することでパフォーマンスを最適化するように設計されたデフォルトの仕組みです。このプロセスにより、頻繁にアクセスされるデータがすぐに利用できるようになり、クエリの開始時に、要求されたデータがすでにキャッシュに存在するかどうかが SDK によって自動的にチェックされます。キャッシュ ヒットの場合、SDK は元のソースへの追加リクエストを必要とせずに、情報を迅速に取得します。
 
-## How caching works
-When you query data through the SDK, a new *key* is created, encompassing all the options used to obtain that data, for each pipeline step. This *key* is stored alongside the resultant data from the pipeline step. Upon repeating the same operation, the key specific to each pipeline step will be recognized, and the corresponding data will be retrieved from the cache. However, if you alter any aspect of the data query for a particular step, such as ordering or filtering, the *key* won't match, and only the affected step and subsequent steps will perform the process. This new query will be saved alongside its results. For instance, changing the order of data obtained from an Excel file won't trigger the file to be downloaded again; only the specific step requiring modification, like the filter and the steps after it, will perform the process.
+## キャッシュの仕組み
+SDK を通じてデータをクエリすると、パイプライン ステップごとに、そのデータを取得するために使用されるすべてのオプションを含む新しい**キー**が作成されます。この**キー**は、パイプライン ステップからの結果データと一緒に保存されます。同じ操作を繰り返すと、各パイプライン ステップに固有のキーが認識され、対応するデータがキャッシュから取得されます。ただし、順序付けやフィルタリングなど、特定のステップのデータ クエリの構成を変更すると、**キー**は一致せず、影響を受けるステップおよびそれ以降のステップで処理が実行されます。この新しいクエリは結果とともに保存されます。たとえば、Excel ファイルから取得したデータの順序を変更しても、ファイルが再度ダウンロードされることはなく、フィルターやその後のステップなど、変更が必要な特定のステップの処理のみが実行されます。
 
-### Processing pipeline
-The processing pipeline outlines the sequential stages through which data is systematically processed. Understanding the processing pipeline is important to discern where and how the cache comes into action, playing a significant role in optimizing data retrieval and enhancing overall processing efficiency.
+### 処理パイプライン
+処理パイプラインは、データがシステムで処理される一連のステージを示します。処理パイプラインを理解することは、キャッシュがどこでどのように動作するかを識別するために重要であり、データ取得の最適化と全体的な処理効率の向上に重要な役割を果たします。
 
 ```mermaid
 graph LR;
@@ -15,12 +15,12 @@ graph LR;
 
 <br/>
 
-- The `[Download Resource]` stage only applies when using resource-based data sources, from which we typically download CSV/Json/Excel files.
-- Some stages may be skipped or end up not making any changes, depending on the requested data. For instance, there might be no post-pivot calculated fields to process, or perhaps all filters are included in a query sent to the data source, making the `[Filter]` step unnecessary.
-- These stages do not apply to the SSAS datasource, as it uses a different processing pipeline.
+- `[Download Resource]` ステージは、通常、CSV/Json/Excel ファイルをダウンロードするリソースベースのデータ ソースを使用する場合にのみ適用されます。
+- 要求されたデータによっては、一部のステージがスキップされたり、変更が加えられなかったりする場合があります。たとえば、処理するピボット後の計算フィールドがないか、データ ソースに送信されるクエリにすべてのフィルターが含まれている場合は、`[Filter]` ステップが不要になる可能性があります。
+- SSAS データ ソースは別の処理パイプラインを使用するため、これらのステージは SSAS データ ソースには適用されません。
 
-### Cache files
-By default, cache files are stored in a folder inside the current user's temporary directory named `RevealCache_XXXX`, where `XXXX` is a number that identifies our instance. Two configuration properties, `CachePath` and `DataCachePath`, can be used to override this default behavior.
+### キャッシュ ファイル
+デフォルトでは、キャッシュ ファイルは現在のユーザーの一時ディレクトリ内の `RevealCache_XXXX` という名前のフォルダーに保存されます。`XXXX` はインスタンスを識別する番号です。`CachePath` と `DataCachePath` という 2 つの構成プロパティを使用して、このデフォルトの動作をオーバーライドできます。
 
 ```cs
 builder.Services
@@ -35,10 +35,10 @@ builder.Services
     });
 ```
 
-- `CachePath` refers to the directory where the rest of cache files (like downloaded files) will be stored, it defaults to a directory named `RevealCache_XXXX` in the temporary directory in the system.
-- `DataCachePath` refers to Directory where files caching data will be stored, it defaults to `CachePath`.
+- `CachePath` は、残りのキャッシュ ファイル (ダウンロード ファイルなど) が保存されるディレクトリを指します。デフォルトでは、システムの一時ディレクトリにある `RevealCache_XXXX` という名前のディレクトリになります。
+- `DataCachePath` は、ファイル キャッシュ データが保存されるディレクトリを指します。デフォルトは `CachePath` です。
 
-You can configure additional properties to exert control over the cache size:
+追加のプロパティを構成して、キャッシュ サイズを制御できます。
 
 ```cs
 builder.Services.AddControllers().AddReveal(revealSetupBuilder =>
@@ -53,54 +53,54 @@ builder.Services.AddControllers().AddReveal(revealSetupBuilder =>
 });
 ```
 
-- `MaxStorageCells` refers to the expected maximum size of cells to be processed from any data source. The engine avoids using too much disk space for its cache, and this setting provides a hint for its caching management. The default is 10 million cells.
-- `MaxDownloadSize` refers to the maximum size of a single download (e.g., a CSV file), expressed in bytes. The default is 200 MB.
-- `MaxStringCellSize` refers to the limit on the number of characters any string in a dataset column may have. The default is 256.
-- `MaxTotalStringsSize` refers to the expected maximum size of pivot tables or grids, given as the total number of characters in all of its cells. The engine avoids using too much memory, and this setting provides a hint for its memory management. The default is 64 million.
+- `MaxStorageCells` は、任意のデータ ソースから処理されるセルの予想される最大サイズを指します。エンジンは、キャッシュにディスク領域を使いすぎないようにします。この設定は、キャッシュ管理のヒントを提供します。デフォルトは 1000 万セルです。
+- `MaxDownloadSize` は、1 回のダウンロード (CSV ファイルなど) の最大サイズをバイト単位で表します。デフォルトは 200 MB です。
+- `MaxStringCellSize` は、データセット列の文字列が持つことができる文字数の制限を指します。デフォルトは 256 です。
+- `MaxTotalStringsSize` は、すべてのセルの文字の総数として指定された、ピボット テーブルまたはグリッドの予想される最大サイズを指します。この設定によりメモリ管理のヒントを提供し、エンジンによるメモリの過多な使用を避けます。デフォルトは 6400 万です。
 
-### Cache types
-**Download** - Utilized by the `[Download Resource]` stage, this cache stores the downloaded resource when reading data from CSV/Excel/Json files. The filesystem cache is saved in `[RevealCache]/download`, with associated metadata stored in `[RevealCache]/download.sqlite`.
+### キャッシュの種類
+**Download (ダウンロード)** - `[Download Resource]` ステージで使用されるこのキャッシュは、CSV/Excel/Json ファイルからデータを読み取るときに、ダウンロードされたリソースを保存します。ファイルシステム キャッシュは `[RevealCache]/download` に保存され、関連するメタデータは `[RevealCache]/download.sqlite` に保存されます。
 
-Individual downloads are constrained by the number of bytes specified in the `MaxDownloadSize` setting. Please note that the overall size of the downloads cache is fixed at 5GB, and as of now, there is no available API to modify this limit.
+個々のダウンロードは、`MaxDownloadSize` 設定で指定されたバイト数によって制限されます。ダウンロード キャッシュの全体的なサイズは 5GB に固定されています。現時点ではこの制限を変更するための API が存在しないことに注意してください。
 
-**Dataset** - Utilized by the `[Create Dataset]` and `[Calculate Fields]` stages.
+**Dataset (データセット)** - `[Create Dataset]` ステージと `[Calculate Fields]` ステージで使用されます。
 
-Sqlite files are stored in `[RevealCache]/dataset`, with metadata residing in `dataset.sqlite`.
+Sqlite ファイルは `[RevealCache]/dataset` に保存され、メタデータは `dataset.sqlite` に存在します。
 
-Some datasets are generated in memory and are also saved in an in-memory dataset cache.
+一部のデータセットはメモリ内に生成され、メモリ内のデータセット キャッシュにも保存されます。
 
-The size of individual datasets is indirectly restricted by a set of parameters: `MaxStorageCells` and `MaxTotalStringsSize`. The total size of the dataset cache is fixed at 5GB, and as of now, there is no available API to modify this limit.
+個々のデータセットのサイズは、一連のパラメーターによって間接的に制限されます: `MaxStorageCells` および `MaxTotalStringsSize`。データセット キャッシュの合計サイズは 5 GB に固定されています。現時点では、この制限を変更するために使用できる API はありません。
 
-**Tabular Data** - This cache holds the result after executing all stages.
+**Tabular Data (表形式のデータ)** - このキャッシュは、すべてのステージを実行した後の結果を保持します。
 
-The data is serialized as JSON and temporarily stored in an in-memory cache.
+データは JSON としてシリアル化され、メモリ内キャッシュに一時的に保存されます。
 
-The size of the cache is unrestricted.
+キャッシュのサイズに制限はありません。
 
-## Refreshing the cache
-Refreshing the cache involves updating or renewing the stored data within the cache to maintain accuracy and reflect the most recent information. By default, the cache is set to update `Once a day`. The behavior of cache refreshing can be modified from the visualization UI, allowing users to change the update period or trigger a manual update based on their specific requirements.
+## キャッシュの更新
+キャッシュの更新には、精度を維持し、最新の情報を反映するために、キャッシュ内に保存されているデータを更新することが含まれます。デフォルトでは、キャッシュは `1 日に 1 回`更新されるように設定されています。キャッシュ更新の動作は視覚化 UI から変更でき、ユーザーは特定の要件に基づいて更新期間を変更したり、手動更新をトリガーしたりできます。
 
-You can trigger a manual update just by clicking the refresh option in the menu (indicated by three dots).
+メニューの更新オプション (3 つの点で示されている) をクリックするだけで、手動更新をトリガーできます。
 
 ![](images/cache-refresh.jpg)
 
-You can change the update frequency by selecting another value from the refresh data frequency combo box. This option is available in the data source configuration dialog.
+データの更新頻度コンボ ボックスから別の値を選択することで、更新頻度を変更できます。このオプションは、データ ソース構成ダイアログで使用できます。
 
-The available options are the following:
-- Always
-- Once an hour
-- Once a day
-- Once a week
+使用できるオプションは以下のとおりです。
+- 常に
+- 1 時間に 1 回
+- 1 日に 1 回
+- 週に １ 回
 
 ![](images/cache-frequency.jpg)
 
-## Disabling caching
-Disabling caching is not an available option; however, you can achieve a similar result by setting the data source refresh data frequency to `Always`. This configuration ensures that the application consistently retrieves fresh data, bypassing the cache. It's essential to note that even if the cache is not consulted during queries, the processed data will still be saved. While this approach guarantees access to the most up-to-date information, it's important to be mindful of potential performance impacts due to the increased load on the data source when utilizing real-time access. Developers may opt for this configuration temporarily for debugging purposes or when working with dynamic data that frequently changes.
+## キャッシュの無効化
+キャッシュを無効にすることは利用可能なオプションではありません。ただし、データ ソースのデータ更新頻度を `[常に]` に設定すると、同様の結果が得られます。この構成により、アプリケーションはキャッシュをバイパスして常に新しいデータを取得できるようになります。クエリ中にキャッシュが参照されない場合でも、処理されたデータは保存されることに注意してください。このアプローチでは最新の情報へのアクセスが保証されますが、リアルタイム アクセスを利用する場合、データ ソースへの負荷の増加による潜在的なパフォーマンスへの影響に留意することが重要です。開発者は、デバッグ目的や、頻繁に変更される動的データを扱う場合に、一時的にこの構成を選択することがあります。
 
-To bypass caching, set the data source refresh data frequency to `Always`.
+キャッシュをバイパスするには、データ ソースのデータ更新頻度を `[常に]` に設定します。
 
 ![](images/cache-disable.jpg)
 
-## Clearing the cache
+## キャッシュのクリア
 
-Clearing the cache is as simple as deleting the contents of the folder where the cache is stored. This process helps free up storage space and ensures that the cache is reset. Additionally, it allows the application to retrieve the latest data from the original source upon the next query, providing a refreshed and up-to-date experience.
+キャッシュのクリアは、キャッシュが保存されているフォルダーの内容を削除するだけ、と簡単です。このプロセスはストレージ領域を解放し、キャッシュを確実にリセットするのに役立ちます。さらに、アプリケーションは次のクエリ時に元のソースから最新のデータを取得できるため、更新された最新のエクスペリエンスが提供されます。
