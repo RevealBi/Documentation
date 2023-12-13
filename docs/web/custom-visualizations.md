@@ -78,17 +78,6 @@ window.addEventListener('message', processMessageFromHost, false);
 
 # Defining a Custom Visualization
 
-To define a Custom Visualization, you should add an `RVChartTypeItem` object to the `revealView.chartTypes` array. Ensure that you specify the required properties: `title`, `url`, `icon`, and `groups`. The `url` property should reference the location of your defined component.
-
-```ts
-revealView.chartTypes.push({
-    title: "HTML Table",
-    url: "http://localhost:4200/table", //provide the url to your custom vizualization
-    icon: "https://help.revealbi.io/img/logo.png",
-    groups: ["Custom Vizualizations"]
-});
-```
-
 In this example, we are using Angular. Let's create an Angular component. Within the component, we should include an event handler for the `window.revealBridgeListener` that was previously defined in the bridge.
 
 ```ts
@@ -168,6 +157,10 @@ We are now ready to present our data as desired. The following represents our te
 
 As a final step, we need to register the custom visualization with the SDK, referencing the previously defined component. This code should be called within the component that contains the Reveal view.
 
+Add an `RVChartTypeItem` object to the `revealView.chartTypes` array. Ensure that you specify the required properties: `title`, `url`, `icon`, and `groups`. The `url` property should reference the location of your previously defined component.
+
+If you require additional information on registering a chart type, please refer to the documentation on [adding custom chart types](chart-types.md#add-custom-chart-type).
+
 ```ts
 export class DashboardViewerComponent implements AfterViewInit {
 
@@ -189,7 +182,7 @@ export class DashboardViewerComponent implements AfterViewInit {
 }
 ```
 
-We should see the previously added visualization in the **Chart Types** dialog.
+We should see the previously added visualization in the **Chart Types** drop down.
 
 ![](images/custom-visualizations-dialog.jpg)
 
