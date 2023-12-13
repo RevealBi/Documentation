@@ -392,7 +392,7 @@
     "description": "The label for the doc item Oracle in sidebar webSidebar, linking to the doc web/adding-data-sources/oracle"
   },
   "sidebar.webSidebar.doc.Caching": {
-    "message": "Caching",
+    "message": "キャッシュ",
     "description": "The label for the doc item Caching in sidebar webSidebar, linking to the doc web/caching"
   },
   "sidebar.webSidebar.doc.Custom Menu Items": {
@@ -404,7 +404,7 @@
     "description": "The label for the doc item Localizing in sidebar webSidebar, linking to the doc web/localizing"
   },
   "sidebar.webSidebar.doc.Customizing Map Tiles": {
-    "message": "Customizing Map Tiles",
+    "message": "マップ タイルのカスタマイズ",
     "description": "The label for the doc item Customizing Map Tiles in sidebar webSidebar, linking to the doc web/customizing-map-tiles"
   }
 }

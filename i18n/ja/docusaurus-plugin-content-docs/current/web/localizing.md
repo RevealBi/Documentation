@@ -179,7 +179,7 @@ $.ig.RVDashboard.loadDashboard("Marketing").then(dashboard => {
 })
 ```
 
-:::info Get the Code
+:::info コードの取得
 
 このサンプルのソース コードは、[GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LocalizingDashboards) にあります。
 

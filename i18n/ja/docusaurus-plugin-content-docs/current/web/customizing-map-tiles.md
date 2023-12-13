@@ -1,16 +1,16 @@
-# Customizing Map Tiles
+# マップ タイルのカスタマイズ
 
-The Reveal SDK includes a scatter map visualization type. By default, this visualization positions data points directly on the map without providing additional context. Yet, developers enjoy the flexibility to tailor this behavior according to their needs. Rather than a straightforward display of raw data, they can choose to employ a map tile, enhancing the visualization by presenting map information alongside the fed data. This option offers a more comprehensive and visually engaging representation of geographical data.
+Reveal SDK には、散布マップ (散布図) の表示形式タイプが含まれています。デフォルトでは、この表示形式は追加のコンテキストを提供せずに、データ ポイントをマップ上に直接配置します。ただし、開発者は、ニーズに応じてこの動作を柔軟に調整できます。生データを直接表示するのではなく、マップ タイルを使用することを選択でき、フィードされたデータと一緒にマップ情報を表示することで表示形式を強化できます。このオプションは、地理データのより包括的で視覚的に魅力的な表現を提供します。
 
-Currently, the following tile map providers are supported in our system: `Bing`, `Esri`, `MapBox`, and `OpenStreetMap`.
+現在、以下のタイル マップ プロバイダーがシステムでサポートされています: `Bing`、`Esri`、`MapBox`、および `OpenStreetMap` です。
 
-To get started, you first need to create a default scatter map. This serves as the initial step in the process, allowing you to explore the basic functionality of the scatter map.
+開始するには、まずデフォルトの散布マップを作成する必要があります。これはプロセスの最初の手順として機能し、散布マップの基本機能を探索できるようになります。
 
 ![](images/customizing-map-tiles-default.jpg)
 
-As you can observe, the generated map lacks context, even if the points are generated correctly. To address this issue, you need to add tiles to the map. By incorporating tiles, you provide the necessary background and visual framework that enhances the overall context of the map, making it more informative and engaging for users.
+ご覧のとおり、ポイントが正しく生成された場合でも、生成されたマップにはコンテキストが欠けています。この問題を解決するには、マップにタイルを追加する必要があります。タイルを組み込むことで、マップの全体的なコンテキストを強化する必要な背景と視覚的なフレームワークが提供され、マップがより有益でユーザーにとって魅力的なものになります。
 
-To incorporate the tiles, you must establish a connection between the SDK and the chosen provider. In this case, we are utilizing `OpenStreetMap` as the selected provider. 
+タイルを組み込むには、SDK と選択したプロバイダーとの間の接続を確立する必要があります。この場合、選択したプロバイダーとして `OpenStreetMap` を利用しています。
 
 ```js
 const url = 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png'
@@ -19,15 +19,15 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = $.ig.ScatterMapVisualization
 
 ![](images/customizing-map-tiles-tiles.jpg)
 
-## Other providers
+## 他のプロバイダー
 
 ### Bing
 
-**Step 1** - Create an account at [Bing Maps Portal](https://www.bingmapsportal.com/)
+**手順 1** - [Bing Maps Portal](https://www.bingmapsportal.com/) でアカウントを作成します。
 
-**Step 2** - Create a new key in `My account` -> `My Keys`
+**手順 2** - `[My account]` -> `[My Keys]` で新しいキーを作成します。
 
-**Step 3** - Add the previously generated key to your application
+**手順 3** - 以前に生成したキーをアプリケーションに追加します。
 
 ```js
 $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("Bing", "your-key");
@@ -35,11 +35,11 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualiza
 
 ### Esri
 
-**Step 1** - Create an account at [ArcGIS](https://www.arcgis.com/)
+**手順 1** - [ArcGIS](https://www.arcgis.com/) でアカウントを作成します。
 
-**Step 2** - [Generate a new token](https://developers.arcgis.com/rest/users-groups-and-items/generate-token.htm)
+**手順 2** - [新しいトークンを生成します](https://developers.arcgis.com/rest/users-groups-and-items/generate-token.htm)。
 
-**Step 3** - Add the generated token to your application
+**手順 3** - 生成されたトークンをアプリケーションに追加します。
 
 ```js
 $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("Esri", "your-token");
@@ -47,19 +47,18 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualiza
 
 ### MapBox
 
-**Step 1** - Create an account at [MapBox](https://www.mapbox.com/)
+**手順 1** - [MapBox](https://www.mapbox.com/) でアカウントを作成します。
 
-**Step 2** - Go to `Tokens` -> `Create a token` (or use the public one)
+**手順 2** - `[Tokens]` -> `[Create a token]` (または公開トークンを使用します)。
 
-**Step 3** - Add the generated token to your application
+**手順 3** - 生成されたトークンをアプリケーションに追加します。
 
 ```js
 $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("MapBox", "your-token");
 ```
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found
-on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomizingMapTiles)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomizingMapTiles) にあります。
 
 :::
