@@ -1,14 +1,14 @@
-# Custom Visualizations
+# カスタム表示形式
 
-The Reveal SDK provides users with a comprehensive set of predefined visualizations that seamlessly integrate into your application by default. These visualizations offer a quick and efficient way to showcase your data. However, in certain unique situations or edge cases, you may find the need to tailor the presentation of your data according to specific requirements. In such instances, the Reveal SDK offers a solution through Custom Visualizations.
+Reveal SDK は、アプリケーションにシームレスに統合される、豊富な種類の事前定義された表示形式を、デフォルトでユーザーに提供します。これらの表示形式は、データを素早く効率的に表示するための手段を提供します。ただし、特殊な状況や特別なケースでは、特有の要件に従ってデータの表示をカスタマイズする必要がある場合があります。このような場合、Reveal SDK はカスタム表示形式を通じてソリューションを提供します。
 
-Custom Visualizations serve as bespoke components that you have the flexibility to define. These components have the capability to receive data directly from the Reveal SDK, empowering you to present your information in a highly customized and non-standard manner. This level of customization ensures that you can meet the specific visual and analytical needs of your application, offering a more tailored and user-centric experience. Whether it's a specialized chart, a unique graph, or a distinctive representation of your data, Custom Visualizations provide the tools for developers to craft a truly personalized and effective data presentation solution.
+カスタム表示形式は、自由に定義できる特注のコンポーネントとして機能します。これらのコンポーネントは Reveal SDK から直接データを受け取ることができ、標準にはない高度にカスタマイズされた方法で情報を表示できるようになります。このようなカスタマイズにより、アプリケーションの特定の視覚的および分析的ニーズを確実に満たすことができ、よりカスタマイズされたユーザー中心のエクスペリエンスを提供できます。特殊なチャート、独自のグラフ、またはデータの独特な表現のいずれであっても、カスタム表示形式は、真にパーソナライズされた効果的なデータ プレゼンテーション ソリューションを作成するためのツールを開発者に提供します。
 
-To create a custom visualization, you require both a **pre-defined component** (indicating what the visualization will render) and a **bridge** (acting as the connection between your component and the data managed by the Reveal SDK). The bridge should expose an event for data changes, and your component should subscribe to this event to retrieve the updated data.
+カスタム表示形式を作成するには、**事前定義されたコンポーネント** (表示形式が描画する方法を示す) と**ブリッジ** (コンポーネントと Reveal SDK によって管理されるデータとの間の接続として機能する) の両方が必要です。ブリッジはデータ変更のイベントを公開する必要があり、コンポーネントはこのイベントをサブスクライブして更新されたデータを取得する必要があります。
 
-# Setting up the bridge
+# ブリッジのセットアップ
 
-As mentioned earlier, to consume data from the SDK, you must define the bridge. The following demonstrates how the bridge should be structured:
+上記に記述した通り、SDK からのデータを使用するには、ブリッジを定義する必要があります。以下は、ブリッジがどのように構造化されるかを示しています。
 
 ```js
 var host;
@@ -76,9 +76,9 @@ function processMessageFromHost(message) {
 window.addEventListener('message', processMessageFromHost, false);
 ```
 
-# Defining a Custom Visualization
+# カスタム表示形式の定義
 
-In this example, we are using Angular. Let's create an Angular component. Within the component, we should include an event handler for the `window.revealBridgeListener` that was previously defined in the bridge.
+この例では、Angular を使用しています。Angular コンポーネントを作成しましょう。コンポーネント内には、ブリッジで事前に定義された `window.revealBridgeListener` のイベント ハンドラーを含める必要があります。
 
 ```ts
 export class TableComponent implements OnInit {
@@ -136,7 +136,7 @@ export class TableComponent implements OnInit {
 }
 ```
 
-We are now ready to present our data as desired. The following represents our template.
+これで、必要に応じてデータを表示する準備が整いました。以下はテンプレートを表しています。
 
 ```html
 <div class="container">
@@ -155,11 +155,11 @@ We are now ready to present our data as desired. The following represents our te
 </div>
 ```
 
-As a final step, we need to register the custom visualization with the SDK, referencing the previously defined component. This code should be called within the component that contains the Reveal view.
+最後の手順として、このように定義したコンポーネントを参照して、カスタム表示形式を SDK に登録する必要があります。このコードは、Reveal ビューを含むコンポーネント内で呼び出す必要があります。
 
-Add an `RVChartTypeItem` object to the `revealView.chartTypes` array. Ensure that you specify the required properties: `title`, `url`, `icon`, and `groups`. The `url` property should reference the location of your previously defined component.
+`RVChartTypeItem` オブジェクトを `revealView.chartTypes` 配列に追加します。必須のプロパティ (`title`、`url`、`icon`、および `groups`) を必ず指定してください。`url` プロパティは、定義したコンポーネントの場所を参照する必要があります。
 
-If you require additional information on registering a chart type, please refer to the documentation on [adding custom chart types](chart-types.md#add-custom-chart-type).
+チャート タイプの登録について、追加情報が必要な場合は、[カスタム チャート タイプの追加](chart-types.md#カスタム-チャート-タイプの追加)に関するドキュメントを参照してください。
 
 ```ts
 export class DashboardViewerComponent implements AfterViewInit {
@@ -182,17 +182,16 @@ export class DashboardViewerComponent implements AfterViewInit {
 }
 ```
 
-We should see the previously added visualization in the **Chart Types** drop down.
+**[チャート タイプ]** ドロップダウンに、追加した表示形式が表示されます。
 
 ![](images/custom-visualizations-dialog.jpg)
 
-After our visualization has been added to the dashboard, it should look like this:
+表示形式がダッシュボードに追加されると、次のようになります:
 
 ![](images/custom-visualizations-data.jpg)
 
-:::info Get the Code
+:::info コードの取得
 
-The source code to this sample can be found
-on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomVisualization)
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/CustomVisualization) にあります。
 
 :::
