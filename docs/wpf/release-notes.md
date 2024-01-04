@@ -49,7 +49,6 @@ private void ExitEditMode_Click(object sender, RoutedEventArgs e)
 	revealView.ExitEditMode(save);
 }
 ```
-- Added support for ARM64 for ASP.NET on MacOS and Linux
 - Added a `Role` property to `RVSnowflakeDataSoure` to allow for accessing different databases for different connections
 - Added support for stored procedures in the MySQL connector
 - Added a `MaxFilterSize` property to `RevealSdkSettings` for controlling the maximum number of values displayed in a dashboard filter

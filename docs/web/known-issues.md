@@ -19,6 +19,10 @@
 - XMLA filters are not currently supported in ASP.NET
 - Global filters for Node.js are not currently supported
 
+### MacOS ARM64 Support (beta)
+
+- There may be locale issues depending on the machine's configuration (e.g. 9,5 vs 9.5)
+
 ## v1.6.1
 
 ### MongoDB Connector
