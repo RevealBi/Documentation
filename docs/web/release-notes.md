@@ -105,6 +105,7 @@ revealServer.exporter.exportPdf("Cybersecurity_Sample_ManyFilters_Values", "c:\\
   </TabItem>
 
 </Tabs>
+
 - Added the ability to control edit mode
   - `enterEditMode()`
   - `exitEditMode(applyChanges: boolean)`
