@@ -10,6 +10,7 @@
 
 ### New Features
 
+- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
 - New client event named `UrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
 
 ```cs
@@ -55,7 +56,6 @@ private void ExitEditMode_Click(object sender, RoutedEventArgs e)
 
 ### Bug Fixes
 
-- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
 - Redshift filters don't show values besides the 3k limit when using search on select values
 - Pivot grid when using the SSAS connector mixed up rows when sorting
 - KPI vs Time - overlapping text when state changes from having data to having no data to display

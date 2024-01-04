@@ -9,13 +9,22 @@ import TabItem from '@theme/TabItem';
 
 #### All Platforms
 
-- The visualization background color picker was updated to use [Coloris](https://github.com/mdbassit/Coloris). With this enhancement the property `canChangeVisualizationBackgroundColor` has been marked as obsolete because we are now enabling the visibility of background color setting by default.
+- The visualization background color picker was updated to use [Coloris](https://github.com/mdbassit/Coloris). With this enhancement the property `canChangeVisualizationBackgroundColor` has been marked as obsolete because we are now enabling the visibility of background color setting by default. Additionally, the [Spectrum](https://bgrins.github.io/spectrum/) dependency is no longer required.
 - The sqlite storage for cache file `tabulardata.sqlite` is now disabled by default to prevent growing without limit
 - When `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
 
 ### New Features
 
 #### All Platforms
+
+- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
+- New client event named `onUrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
+
+```javascript
+revealView.onUrlLinkRequested = (args) => {
+    return args.url + "&webUpdated=true&cellValue=" + args.cell.value();                
+};
+```
 
 - Support added for custom colors on client & server export
 
@@ -156,13 +165,6 @@ await _exporter.ExportToPdf(dashboardId, path, options);
 
 #### ASP.NET & Node
 
-- New client event named `onUrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
-
-```javascript
-revealView.onUrlLinkRequested = (args) => {
-    return args.url + "&webUpdated=true&cellValue=" + args.cell.value();                
-};
-```
 - Added custom query support for the MongoDB connector
 - Added support for data blending (joining) on server for the MongoDB connector
 - Added support for ARM64 for ASP.NET and Node on MacOS and Linux
@@ -187,7 +189,6 @@ options.getFilters().add(new RVDashboardFilter("incident_severity", new ArrayLis
 
 #### All Platforms
 
-- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
 - Setting `canAddDateFilter` caused an exception
 - Redshift filters don't show values besides the 3k limit when using search on select values
 - The text "Show Data Labels" is not translated when viewing field settings in the visualization editor
