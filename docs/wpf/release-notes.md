@@ -2,14 +2,11 @@
 
 ## 1.6.2 (January 5th, 2024)
 
-### Enhancements
+### New Features
 
 - Updated the `Reveal.Data.Microsoft.SqlServer` v1.1.4 dependency of `Microsoft.Data.SqlClient` to v5.1.2
 - The sqlite storage for cache file `tabulardata.sqlite` is now disabled by default to prevent growing without limit
-- - When `RevealSdkSettings.EnableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
-
-### New Features
-
+- When `RevealSdkSettings.EnableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
 - Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
 - New client event named `UrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
 
