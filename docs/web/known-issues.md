@@ -1,5 +1,19 @@
 # Known Issues
 
+## v1.6.2
+
+### MongoDB Connector
+
+- Blending by a calculated field using the `currentTimeZone` function fails
+- Blending by a calculated field referencing the `_id` column fails
+- The `concatenate` function does not implicitly cast to string the parameters, which might produce errors when evaluating non-string column references / functions
+- A pivot with no fields in row, but one or more dimensions in columns will not produce any rows in the pivot
+
+### Headless Export - Global Filters
+
+- XMLA filters are not currently supported in ASP.NET
+- Global filters for Node.js are not currently supported
+
 ## v1.6.1
 
 ### MongoDB Connector
