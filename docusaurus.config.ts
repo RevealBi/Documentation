@@ -1,6 +1,8 @@
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
+import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
+import replace from './plugins/remark/replace-variables';
 
 const config: Config = {
   title: 'Reveal',
@@ -42,12 +44,12 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
           remarkPlugins: [
-            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
-            [require("./plugins/remark/replace-variables"), {
+            [ npm2yarn, { sync: true } ],
+            [ replace, {
               variables: [
                 { name: "sdkVersion", value: "1.6.2" }
               ]
-            }],
+            }]
           ],
         },
         blog: false,
