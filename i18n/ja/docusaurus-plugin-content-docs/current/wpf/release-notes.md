@@ -1,5 +1,67 @@
 # リリース ノート
 
+## 1.6.2 (January 5th, 2024)
+
+### New Features
+
+- Updated the `Reveal.Data.Microsoft.SqlServer` v1.1.4 dependency of `Microsoft.Data.SqlClient` to v5.1.2
+- The sqlite storage for cache file `tabulardata.sqlite` is now disabled by default to prevent growing without limit
+- When `RevealSdkSettings.EnableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
+- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
+- New client event named `UrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
+
+```cs
+revealView.UrlLinkRequested = (args) => {
+   return args.Url + "$changed=true";
+};
+```
+
+- Added the ability to control edit mode
+  - `EnterEditMode()`
+  - `ExitEditMode(applyChanges: boolean)`
+  - `EditModeEntered`
+  - `EditModeExited`
+  
+```cs
+public MainWindow()
+{
+	InitializeComponent();
+
+	var filePath = Path.Combine(Environment.CurrentDirectory, "Dashboards/Sales.rdash");
+	revealView.Dashboard = new RVDashboard(filePath);
+	revealView.EditModeExited += RevealView_EditModeExited;
+	revealView.SaveDashboard += RevealView_SaveDashboard;
+}
+
+private void RevealView_SaveDashboard(object sender, DashboardSaveEventArgs e)
+{
+	e.SaveFinished();
+}
+
+private void RevealView_EditModeExited(object sender, EditModeExitedArgs e){}
+
+private void ExitEditMode_Click(object sender, RoutedEventArgs e)
+{
+	var save = saveChanges.IsChecked.HasValue ? saveChanges.IsChecked.Value : false;
+	revealView.ExitEditMode(save);
+}
+```
+- Added a `Role` property to `RVSnowflakeDataSoure` to allow for accessing different databases for different connections
+- Added support for stored procedures in the MySQL connector
+- Added a `MaxFilterSize` property to `RevealSdkSettings` for controlling the maximum number of values displayed in a dashboard filter
+
+### Bug Fixes
+
+- Redshift filters don't show values besides the 3k limit when using search on select values
+- Pivot grid when using the SSAS connector mixed up rows when sorting
+- KPI vs Time - overlapping text when state changes from having data to having no data to display
+- Pointer cursor shows when hovering over "add your first visualization" when there is no click event
+- Tooltip showing blank hint in the New Calculated Field window
+- Data source items should not copy over the data source subtitle
+- Grid visualization takes forever to load when there's a lot of data
+- Spanish translation for Snowflake host shows "Anfitrion" and it shouldn't
+- When configuring `ChartTypes` the `AreaChart` doesn't seem to respond to any changes
+
 ## 1.6.1 (2023 年 10 月 25 日)
 
 ### 重大な変更
