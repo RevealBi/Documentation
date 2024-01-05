@@ -49,7 +49,7 @@ const config = {
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
             [require("./plugins/remark/replace-variables"), {
               variables: [
-                { name: "sdkVersion", value: "1.6.1" }
+                { name: "sdkVersion", value: "1.6.2" }
               ]
             }],
           ],
