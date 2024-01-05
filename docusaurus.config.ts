@@ -192,7 +192,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,
-      additionalLanguages: ["csharp", "java"],
+      additionalLanguages: ["csharp", "java", "bash"],
     },
   } satisfies Preset.ThemeConfig,
   markdown: {
