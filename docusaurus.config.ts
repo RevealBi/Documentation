@@ -1,10 +1,7 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 import type { Config } from '@docusaurus/types';
-import {themes as prismThemes} from 'prism-react-renderer';
 import type * as Preset from '@docusaurus/preset-classic';
+import {themes as prismThemes} from 'prism-react-renderer';
 
-/** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: 'Reveal',
   tagline: 'Embedded Analytics & Business Intelligence Tools',
