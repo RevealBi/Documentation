@@ -1,4 +1,4 @@
-const visit = require('unist-util-visit');
+import { visit } from 'unist-util-visit';
 
 const plugin = (options) => {
 
@@ -22,4 +22,4 @@ const getValue = (value, options) => {
     });
 };
 
-module.exports = plugin;
+export default plugin;

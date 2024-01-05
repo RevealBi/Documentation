@@ -46,11 +46,11 @@ const config: Config = {
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
           remarkPlugins: [
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
-            // [require("./plugins/remark/replace-variables"), {
-            //   variables: [
-            //     { name: "sdkVersion", value: "1.6.2" }
-            //   ]
-            // }],
+            [require("./plugins/remark/replace-variables"), {
+              variables: [
+                { name: "sdkVersion", value: "1.6.2" }
+              ]
+            }],
           ],
         },
         blog: false,
