@@ -1,5 +1,28 @@
 # Known Issues
 
+## v1.6.2
+
+### MongoDB Connector
+
+- Blending by a calculated field using the `currentTimeZone` function fails
+- Blending by a calculated field referencing the `_id` column fails
+- The `concatenate` function does not implicitly cast to string the parameters, which might produce errors when evaluating non-string column references / functions
+- A pivot with no fields in row, but one or more dimensions in columns will not produce any rows in the pivot
+- [Embeddings](https://www.mongodb.com/basics/embedded-mongodb) are not supported; however, single-valued embeddings are
+- MongoDB version greater than or equal to v5.0 is supported
+- Fields with a dot (".") or a dollar sign ("$") in their names are ignored. Most cases require special treatment: [Dot & Dollar Considerations](https://www.mongodb.com/docs/manual/core/dot-dollar-considerations/)
+- Filtering by a field of type ObjectId
+- When performing a sum that includes null in MongoDB, the result is 0, not null as in SQL server
+
+### Headless Export - Global Filters
+
+- XMLA filters are not currently supported in ASP.NET
+- Global filters for Node.js are not currently supported
+
+### MacOS ARM64 Support (beta)
+
+- There may be locale issues depending on the machine's configuration (e.g. 9,5 vs 9.5)
+
 ## v1.6.1
 
 ### MongoDB Connector

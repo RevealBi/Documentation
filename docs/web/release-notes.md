@@ -3,6 +3,207 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.6.2 (January 5th, 2024)
+
+### New Features
+
+#### All Platforms
+
+- The visualization background color picker was updated to use [Coloris](https://github.com/mdbassit/Coloris). With this enhancement the property `canChangeVisualizationBackgroundColor` has been marked as obsolete because we are now enabling the visibility of background color setting by default. Additionally, the [Spectrum](https://bgrins.github.io/spectrum/) dependency is no longer required.
+- The sqlite storage for cache file `tabulardata.sqlite` is now disabled by default to prevent growing without limit
+- When `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
+- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
+- New client event named `onUrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
+
+```javascript
+revealView.onUrlLinkRequested = (args) => {
+    return args.url + "&webUpdated=true&cellValue=" + args.cell.value();                
+};
+```
+
+- Support added for custom colors on client & server export
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+PdfExportOptions options = new PdfExportOptions();
+
+options.InitScript = @"
+	function init(revealView){
+		$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();                   
+
+		revealView.refreshTheme();                
+
+		revealView.onVisualizationSeriesColorAssigning = function (visualization, defaultColor, fieldName, categoryName) {
+			if (categoryName === ""Critical"") {
+					return ""rgb(0,0,0)"";
+			}
+			return defaultColor;
+		}
+	}";
+
+await _exporter.ExportToPdf(dashboardId, path, options);
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+PdfExportOptions options = new PdfExportOptions();	
+			
+options.setInitScript("function init(revealView){\r\n"
+		+ "		$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();                   \r\n"
+		+ "\r\n"
+		+ "		revealView.refreshTheme();                \r\n"
+		+ "\r\n"
+		+ "		revealView.onVisualizationSeriesColorAssigning = function (visualization, defaultColor, fieldName, categoryName) {\r\n"
+		+ "			if (categoryName === \"Critical\") {\r\n"
+		+ "					return \"rgb(0,0,0)\";\r\n"
+		+ "			}\r\n"
+		+ "			return defaultColor;\r\n"
+		+ "		}\r\n"
+		+ "	}");
+
+String filePath = rootFileName + dashboardId + "_stream.pdf";
+
+RevealEngineLocator.dashboardExporter.exportToPdf(dashboardId, null, options ,new ExportStreamCallback() {
+
+	@Override
+	public void onSuccess(InputStream stream) {
+		//Do something
+	}
+
+	@Override
+	public void onFailure(Exception e) {
+		asyncResponse.resume(e);							
+	}
+	
+});
+```
+
+  </TabItem>
+  
+  <TabItem value="node" label="Node.js">    
+
+```javascript
+var options = new PdfExportOptions();
+options.initScript = `
+function init(revealView){
+	$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();                   
+
+	revealView.refreshTheme();                
+
+	revealView.onVisualizationSeriesColorAssigning = function (visualization, defaultColor, fieldName, categoryName) {
+		if (categoryName === "Critical") {
+				return "rgb(0,0,0)";
+		}
+		return defaultColor;
+	}
+}`;
+	
+revealServer.exporter.exportPdf("Cybersecurity_Sample_ManyFilters_Values", "c:\\Temp\\Exports\\export_node.pdf", options, new RVUserContext("someone"));
+```
+
+  </TabItem>
+
+</Tabs>
+
+- Added the ability to control edit mode
+  - `enterEditMode()`
+  - `exitEditMode(applyChanges: boolean)`
+  - `onEditModeEntered`
+  - `onEditModeExited`
+  
+```javascript
+<button onclick="revealView.enterEditMode()">Start editing</button>
+<button onclick="revealView.exitEditMode(false)">Stop editing (discard)</button>
+<button onclick="revealView.exitEditMode(true)">Stop editing (save)</button>
+
+<div id="revealView" style="height: 920px; width: 100%;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js" ></script>    
+<script src="https://dl.revealbi.io/reveal/libs/1.6.2/infragistics.reveal.js"></script>
+<script type="text/javascript">
+        
+        //set this to your server url
+        $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");   
+        var revealView = new $.ig.RevealView("#revealView");
+		
+        $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
+            revealView.dashboard = dashboard;
+        });
+        
+</script>
+```
+- Added a `role` property to `RVSnowflakeDataSoure` to allow for accessing different databases for different connections
+- Added support for stored procedures in the MySQL connector
+- Added a `maxFilterSize` property to `RevealSdkSettings` for controlling the maximum number of values displayed in a dashboard filter
+
+#### ASP.NET
+
+- Added support for setting global filters for headless exports
+
+```cs
+PdfExportOptions options = new PdfExportOptions();
+options.DateFilter = new RVDateDashboardFilter(RVDateFilterType.CustomRange,
+                                        new RVDateRange(new DateTime(2022,4,1), DateTime.Now)
+                                );
+
+options.Filters.Add(new RVDashboardFilter("incident_severity", new List<object> { "Medium", "Critical" }));
+options.Filters.Add(new RVDashboardFilter("team", new List<object> { "Digital Security Center"}));
+
+await _exporter.ExportToPdf(dashboardId, path, options);
+```
+
+#### ASP.NET & Node
+
+- Added custom query support for the MongoDB connector
+- Added support for data blending (joining) on server for the MongoDB connector
+- Added support for ARM64 for ASP.NET and Node on MacOS and Linux
+
+#### Java
+
+- JavaScript SDK distributions will no longer be available at https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/x.y.z/reveal-sdk-distribution-x.y.z-js.zip. Instead, the location will be https://dl.infragistics.com/reveal/libs/x.y.z/reveal-sdk-distribution-js.zip.
+- Added support for setting global filters for headless exports
+
+```java
+PdfExportOptions options = new PdfExportOptions();	
+
+RVDateDashboardFilter dateFilter = new RVDateDashboardFilter(RVDateFilterType.CUSTOM_RANGE,
+			new RVDateRange( new GregorianCalendar(2022,4,1), new GregorianCalendar())
+                        );
+						
+options.setDateFilter(dateFilter);
+					
+options.getFilters().add(new RVDashboardFilter("incident_severity", new ArrayList<Object>(Arrays.asList("Medium", "Critical"))));
+```
+
+### Bug Fixes
+
+#### All Platforms
+
+- Setting `canAddDateFilter` caused an exception
+- Redshift filters don't show values besides the 3k limit when using search on select values
+- The text "Show Data Labels" is not translated when viewing field settings in the visualization editor
+- Pivot grid when using the SSAS connector mixed up rows when sorting
+- KPI vs Time - overlapping text when state changes from having data to having no data to display
+- Pointer cursor shows when hovering over "add your first visualization" when there is no click event
+- Localization issue on server side when client is using another language
+- REST connector crashes when no url is provided in client
+- Tooltip showing blank hint in the New Calculated Field window
+- Data source items should not copy over the data source subtitle
+- Grid visualization takes forever to load when there's a lot of data
+- Spanish translation for Snowflake host shows "Anfitrion" and it shouldn't
+- When configuring `chartTypes` the `AreaChart` doesn't seem to respond to any changes
+- Server-side dashboard export problem due to build number appending to version
+
+#### ASP.NET & Node
+
+- The MongoDB connector wasn't filtering documents without a field set when filtering by empty fields.
+
 ## 1.6.1 (October 25th, 2023)
 
 ### Breaking Changes
