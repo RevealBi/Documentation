@@ -23,6 +23,10 @@
 
 - There may be locale issues depending on the machine's configuration (e.g. 9,5 vs 9.5)
 
+### Exporting on Linux ARM64 for Node
+
+- [Chromium can't be installed automatically when running on Linux ARM64](https://github.com/puppeteer/puppeteer/issues/7740) when using Node.js, so it must be installed using your package manager or a manual install before attempting to export a dashboard. Reveal searches from the Chromium binary under `/usr/bin/chromium`.
+
 ## v1.6.1
 
 ### MongoDB Connector
