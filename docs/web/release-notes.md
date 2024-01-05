@@ -166,6 +166,7 @@ await _exporter.ExportToPdf(dashboardId, path, options);
 
 #### Java
 
+- JavaScript SDK distributions will no longer be available at https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/x.y.z/reveal-sdk-distribution-x.y.z-js.zip. Instead, the location will be https://dl.infragistics.com/reveal/libs/x.y.z/reveal-sdk-distribution-js.zip.
 - Added support for setting global filters for headless exports
 
 ```java
