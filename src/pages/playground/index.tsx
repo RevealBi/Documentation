@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import MainStyles from '@docusaurus/theme-classic/lib/theme/DocPage/Layout/Main/styles.module.css';
-import DocPageStyles from '@docusaurus/theme-classic/lib/theme/DocPage/Layout/styles.module.css';
+import MainStyles from '@docusaurus/theme-classic/lib/theme/DocRoot/Layout/Main/styles.module.css';
+import DocPageStyles from '@docusaurus/theme-classic/lib/theme/DocRoot/Layout/styles.module.css';
 import styles from './styles.module.css';
 import Translate from '@docusaurus/Translate';
 import { ApiFeatures } from './_apiFeatures';
