@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import DocSidebarItemHtml from '@theme/DocSidebarItem/Html';
 
 import { ThemeClassNames } from '@docusaurus/theme-common';
-import SidebarStyles from '@docusaurus/theme-classic/lib/theme/DocPage/Layout/Sidebar/styles.module.css';
+import SidebarStyles from '@docusaurus/theme-classic/lib/theme/DocRoot/Layout/Sidebar/styles.module.css';
 import styles from './styles.module.css';
 
 interface PageSidebarProps {
