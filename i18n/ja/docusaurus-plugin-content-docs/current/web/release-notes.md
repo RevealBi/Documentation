@@ -3,17 +3,17 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.6.2 (January 5th, 2024)
+## 1.6.2 (2024 年 1 月 5 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- The visualization background color picker was updated to use [Coloris](https://github.com/mdbassit/Coloris). With this enhancement the property `canChangeVisualizationBackgroundColor` has been marked as obsolete because we are now enabling the visibility of background color setting by default. Additionally, the [Spectrum](https://bgrins.github.io/spectrum/) dependency is no longer required.
-- The sqlite storage for cache file `tabulardata.sqlite` is now disabled by default to prevent growing without limit
-- When `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
-- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
-- New client event named `onUrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
+- 表示形式の背景色ピッカーが [Coloris](https://github.com/mdbassit/Coloris) を使用するように更新されました。この機能強化により、デフォルトで背景色設定の可視性が有効になったため、プロパティ `canChangeVisualizationBackgroundColor` は廃止対象とされています。さらに、[Spectrum](https://bgrins.github.io/spectrum/) の依存関係は必要なくなりました。
+- キャッシュ ファイル `tabulardata.sqlite` の sqlite ストレージは、無制限に増大することを防ぐためにデフォルトで無効になりました。
+- `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip` が有効になっている場合、アクション ツールチップがピボット表示形式で利用できるようになりました。チャート表示形式上にマウスを置くと、データ ポイントから特定のピクセル数以内にツールチップが表示されるようになりました。
+- 「サーバーでデータを処理」が有効になっている SQL Server データ ソースで次の関数を使用する計算フィールドのサポート: `fyear`、`and`、`or`、`concatenate`、`replace`、`date`、`time`、`hour`、`minute`、`second`、`formatdate`、および `datevalue`。
+- 実行時にダッシュボード内の URL リンクをインターセプトおよび変更できるようにするために、`onUrlLinkRequested` という名前の新しいクライアント イベントが追加されました。
 
 ```javascript
 revealView.onUrlLinkRequested = (args) => {
@@ -21,7 +21,7 @@ revealView.onUrlLinkRequested = (args) => {
 };
 ```
 
-- Support added for custom colors on client & server export
+- クライアントおよびサーバーのエクスポートでのカスタム カラーのサポートが追加されました。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -110,7 +110,7 @@ revealServer.exporter.exportPdf("Cybersecurity_Sample_ManyFilters_Values", "c:\\
 
 </Tabs>
 
-- Added the ability to control edit mode
+- 編集モードを制御する機能を追加しました。
   - `enterEditMode()`
   - `exitEditMode(applyChanges: boolean)`
   - `onEditModeEntered`
@@ -138,13 +138,13 @@ revealServer.exporter.exportPdf("Cybersecurity_Sample_ManyFilters_Values", "c:\\
         
 </script>
 ```
-- Added a `role` property to `RVSnowflakeDataSoure` to allow for accessing different databases for different connections
-- Added support for stored procedures in the MySQL connector
-- Added a `maxFilterSize` property to `RevealSdkSettings` for controlling the maximum number of values displayed in a dashboard filter
+- 異なる接続で異なるデータベースにアクセスできるようにするために、`RVSnowflakeDataSoure` に `role` プロパティが追加されました。
+- MySQL コネクターでのストアド プロシージャーのサポートが追加されました。
+- ダッシュボード フィルターに表示される値の最大数を制御するために、`RevealSdkSettings` プロパティに `maxFilterSize` が追加されました。
 
 #### ASP.NET
 
-- Added support for setting global filters for headless exports
+- ヘッドレス エクスポートのグローバル フィルター設定のサポートが追加されました。
 
 ```cs
 PdfExportOptions options = new PdfExportOptions();
@@ -160,14 +160,14 @@ await _exporter.ExportToPdf(dashboardId, path, options);
 
 #### ASP.NET & Node
 
-- Added custom query support for the MongoDB connector
-- Added support for data blending (joining) on server for the MongoDB connector
-- Added support for ARM64 for ASP.NET and Node on MacOS and Linux
+- MongoDB コネクターのカスタム クエリのサポートが追加されました。
+- MongoDB コネクターのサーバー上でのデータ ブレンディング (結合) のサポートが追加されました。
+- MacOS および Linux 上の ASP.NET および Node 用の ARM64 のサポートが追加されました。
 
 #### Java
 
-- JavaScript SDK distributions will no longer be available at https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/x.y.z/reveal-sdk-distribution-x.y.z-js.zip. Instead, the location will be https://dl.infragistics.com/reveal/libs/x.y.z/reveal-sdk-distribution-js.zip.
-- Added support for setting global filters for headless exports
+- JavaScript SDK ディストリビューションは https://maven.revealbi.io/repository/public/com/infragistics/reveal/sdk/reveal-sdk-distribution/x.y.z/reveal-sdk-distribution-x.y.z-js.zip で利用できなくなります。代わりに、場所は https://dl.infragistics.com/reveal/libs/x.y.z/reveal-sdk-distribution-js.zip になります。
+- ヘッドレス エクスポートのグローバル フィルター設定のサポートが追加されました。
 
 ```java
 PdfExportOptions options = new PdfExportOptions();	
@@ -181,28 +181,28 @@ options.setDateFilter(dateFilter);
 options.getFilters().add(new RVDashboardFilter("incident_severity", new ArrayList<Object>(Arrays.asList("Medium", "Critical"))));
 ```
 
-### Bug Fixes
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Setting `canAddDateFilter` caused an exception
-- Redshift filters don't show values besides the 3k limit when using search on select values
-- The text "Show Data Labels" is not translated when viewing field settings in the visualization editor
-- Pivot grid when using the SSAS connector mixed up rows when sorting
-- KPI vs Time - overlapping text when state changes from having data to having no data to display
-- Pointer cursor shows when hovering over "add your first visualization" when there is no click event
-- Localization issue on server side when client is using another language
-- REST connector crashes when no url is provided in client
-- Tooltip showing blank hint in the New Calculated Field window
-- Data source items should not copy over the data source subtitle
-- Grid visualization takes forever to load when there's a lot of data
-- Spanish translation for Snowflake host shows "Anfitrion" and it shouldn't
-- When configuring `chartTypes` the `AreaChart` doesn't seem to respond to any changes
-- Server-side dashboard export problem due to build number appending to version
+- `canAddDateFilter` を設定すると例外が発生する問題。
+- 選択した値の検索を使用すると、Redshift フィルターで 3k 制限を超える値が表示されない問題。
+- 表示形式エディターでフィールド設定を表示するときに「データ ラベルを表示」というテキストが翻訳されない問題。
+- SSAS コネクターを使用する場合、並べ替え時にピボット グリッドが行を混同する問題。
+- KPI vs Time - データがある状態から表示するデータがない状態に変化したときにテキストが重なる問題。
+- クリック イベントがないときに「最初の表示形式を追加」の上にマウスを置くとポインター カーソルが表示される問題。
+- クライアントが別の言語を使用している場合のサーバー側のローカリゼーションの問題。
+- クライアントが別の言語を使用している場合のサーバー側のローカリゼーションの問題。
+- [新しい計算フィールド] ウィンドウのツールチップに空白のヒントが表示される問題。
+- データ ソース項目はデータ ソースのサブタイトルを上書きしてはなりません。
+- 大量のデータがある場合、グリッド表示形式の読み込みに時間がかかる問題。
+- Snowflake ホストのスペイン語翻訳では 「Anfitrion」 と表示される問題。
+- `chartTypes` を構成するときに、`AreaChart` が変更に応答しない問題。
+- バージョンにビルド番号が付加されることによるサーバー側のダッシュボードのエクスポートの問題。
 
 #### ASP.NET & Node
 
-- The MongoDB connector wasn't filtering documents without a field set when filtering by empty fields.
+- MongoDB コネクターで、空のフィールドでフィルタリングするときに、フィールドが設定されていないドキュメントをフィルタリングしない問題。
 
 ## 1.6.1 (2023 年 10 月 25 日)
 
@@ -355,7 +355,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 * 新しいカテゴリ チャートの修正とパフォーマンスの向上。
 * クライアントではなく IRVDataSourceProvider の MsSql プロバイダーで Host プロパティを設定するとエラーが発生する問題。
 * Schema プロパティが dataSourceItem で設定されていない場合、Redshift クエリは失敗します (デフォルトの 'public' スキーマを使用する必要があります)。
-* 財務チャートが正しく機能していませんでした。 
+* 財務チャートが正しく機能していませんでした。
 * host プロパティは、RVSqlServerDataSource の IRVAuthenticationProvider で常に null の値を持っていました。
 * すべてのデータベース データ ソースでは、DataSourceItem で Database プロパティを設定する必要がありました (DataSource で設定されている場合でも)。現在、プロパティは DataSourceItem で非推奨になり、Database で設定するだけで機能します。
 * リンクされたダッシュボードを開くとクラッシュする問題。
@@ -440,7 +440,7 @@ revealView.onFieldsInitializing = function (args) {
 ### 重大な変更
 
 #### ASP.NET
-- `Reveal.Sdk.Web.AspNetCore.Trial` nuget パッケージは、**非推奨**になり、**更新されなくなりました**。 
+- `Reveal.Sdk.Web.AspNetCore.Trial` nuget パッケージは、**非推奨**になり、**更新されなくなりました**。
 - 新しい `Reveal.Sdk.AspNetCore` nuget パッケージが [nuget.org](https://www.nuget.org/packages/Reveal.Sdk.AspNetCore) で利用できるようになり、試用版とライセンス版の両方として機能します。試用版のロックを解除するには、SDK でライセンス キーを設定します。ライセンス キーは、Reveal SDK の初期化パラメーターで設定されるようになりました (以前は、これはインストーラーで行われていました)。設定方法は次のとおりです。
 
 ```cs

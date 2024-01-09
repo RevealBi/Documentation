@@ -1,14 +1,14 @@
 # リリース ノート
 
-## 1.6.2 (January 5th, 2024)
+## 1.6.2 (2024 年 1 月 5 日)
 
-### New Features
+### 新機能
 
-- Updated the `Reveal.Data.Microsoft.SqlServer` v1.1.4 dependency of `Microsoft.Data.SqlClient` to v5.1.2
-- The sqlite storage for cache file `tabulardata.sqlite` is now disabled by default to prevent growing without limit
-- When `RevealSdkSettings.EnableActionsOnHoverTooltip` is enabled, the actions tooltip is now available on the Pivot visualization. Hovering on a chart visualization will now show the tooltip when within a certain number of pixels from the data point.
-- Support for calculated fields using the following functions on a SQL Server data source with "Process Data on Server" enabled; `fyear`, `and`, `or`, `concatenate`, `replace`, `date`, `time`, `hour`, `minute`, `second`, `formatdate`, and `datevalue`.
-- New client event named `UrlLinkRequested` added to allow for intercepting and modifying URL links in dashboards at runtime
+- `Reveal.Data.Microsoft.SqlServer` v1.1.4 の依存関係 `Microsoft.Data.SqlClient` を v5.1.2 に更新しました。
+- キャッシュ ファイル `tabulardata.sqlite` の sqlite ストレージは、無制限に増大することを防ぐためにデフォルトで無効になりました。
+- `RevealSdkSettings.EnableActionsOnHoverTooltip` が有効になっている場合、アクション ツールチップがピボット表示形式で利用できるようになりました。チャート表示形式上にマウスを置くと、データ ポイントから特定のピクセル数以内にツールチップが表示されるようになりました。
+- 「サーバーでデータを処理」が有効になっている SQL Server データ ソースで次の関数を使用する計算フィールドのサポート:  `fyear`、`and`、`or`、`concatenate`、`replace`、`date`、`time`、`hour`、`minute`、`second`、`formatdate`、および `datevalue`。
+- 実行時にダッシュボード内の URL リンクをインターセプトおよび変更できるようにするために、`UrlLinkRequested` という名前の新しいクライアント イベントが追加されました。
 
 ```cs
 revealView.UrlLinkRequested = (args) => {
@@ -16,7 +16,7 @@ revealView.UrlLinkRequested = (args) => {
 };
 ```
 
-- Added the ability to control edit mode
+- 編集モードを制御する機能を追加しました。
   - `EnterEditMode()`
   - `ExitEditMode(applyChanges: boolean)`
   - `EditModeEntered`
@@ -46,21 +46,21 @@ private void ExitEditMode_Click(object sender, RoutedEventArgs e)
 	revealView.ExitEditMode(save);
 }
 ```
-- Added a `Role` property to `RVSnowflakeDataSoure` to allow for accessing different databases for different connections
-- Added support for stored procedures in the MySQL connector
-- Added a `MaxFilterSize` property to `RevealSdkSettings` for controlling the maximum number of values displayed in a dashboard filter
+- 異なる接続で異なるデータベースにアクセスできるようにするために、`RVSnowflakeDataSoure` に `Role` プロパティが追加されました。
+- MySQL コネクターでのストアド プロシージャーのサポートが追加されました。
+- ダッシュボード フィルターに表示される値の最大数を制御するために、`RevealSdkSettings` プロパティに `MaxFilterSize` が追加されました。
 
-### Bug Fixes
+### バグ修正
 
-- Redshift filters don't show values besides the 3k limit when using search on select values
-- Pivot grid when using the SSAS connector mixed up rows when sorting
-- KPI vs Time - overlapping text when state changes from having data to having no data to display
-- Pointer cursor shows when hovering over "add your first visualization" when there is no click event
-- Tooltip showing blank hint in the New Calculated Field window
-- Data source items should not copy over the data source subtitle
-- Grid visualization takes forever to load when there's a lot of data
-- Spanish translation for Snowflake host shows "Anfitrion" and it shouldn't
-- When configuring `ChartTypes` the `AreaChart` doesn't seem to respond to any changes
+- 選択した値の検索を使用すると、Redshift フィルターで 3k 制限を超える値が表示されない問題。
+- SSAS コネクターを使用する場合、並べ替え時にピボット グリッドが行を混同する問題。
+- KPI vs Time - データがある状態から表示するデータがない状態に変化したときにテキストが重なる問題。
+- クリック イベントがないときに「最初の表示形式を追加」の上にマウスを置くとポインター カーソルが表示される問題。
+- [新しい計算フィールド] ウィンドウのツールチップに空白のヒントが表示される問題。
+- データ ソース項目はデータ ソースのサブタイトルを上書きしてはなりません。
+- 大量のデータがある場合、グリッド表示形式の読み込みに時間がかかる問題。
+- Snowflake ホストのスペイン語翻訳では 「Anfitrion」 と表示される問題。
+- `ChartTypes` を構成するときに、`AreaChart` が変更に応答しない問題。
 
 ## 1.6.1 (2023 年 10 月 25 日)
 
@@ -126,7 +126,7 @@ revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartTy
 
 * ドーナツ チャートには `<null>` 値の凡例は表示されませんが、それらのセクションが表示される問題。
 * フィルター上のテキスト [X Selected/Show All] (X 選択 / すべて表示) をクリックできない問題。
-* テキスト [X Selected/Show All] (X 選択 / すべて表示) のフィルターでは、セルの背景が全幅に表示されない問題。 
+* テキスト [X Selected/Show All] (X 選択 / すべて表示) のフィルターでは、セルの背景が全幅に表示されない問題。
 * 特定のシナリオでは、データ選択ビューの検索バーの位置がリセットされない問題。
 * データ ソース ダイアログでテーブルを検索すると、テーブルをスクロールした後にエラー / クラッシュが発生する問題。
 * スパークラインでは数値の書式設定は適用されない問題。
@@ -176,7 +176,7 @@ revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartTy
 * DashboardEmptyState に画像が設定されていない場合に例外がスローされる問題。
 * RVReportingServicesDataSourceItem には、パラメーターを設定するためのプロパティが表示されない問題。
 * RVReportingServicesDataSourceItem を使用して PDF レポートをレンダリングすることはできない問題。
-* DataSource WebResource URL の代わりに 「No Url specified for web resource」エラーが発生する問題。 
+* DataSource WebResource URL の代わりに 「No Url specified for web resource」 エラーが発生する問題。
 * IRVDataSourceProvider.ChangeDataSourceItemAsync への呼び出しは、dashboardId 引数に対して常に null を持つ問題。
 * KPI インジケーター - 「表示するデータがありません。」のスタイルが間違っている問題。
 * オプションの選択を開始すると、一部のグローバル フィルターがリセットされる問題。
@@ -193,7 +193,7 @@ revealView.ChartTypes.Remove(revealView.ChartTypes.FirstOrDefault(x => x.ChartTy
 _これは nuget.org のみの更新です。_
 
 ### バグ修正
-* NuGet パッケージマネージャーを使用して Reveal WPF SDK を参照した場合の「'libigsslic32' への参照を追加できませんでした」エラーを修正しました。
+* NuGet パッケージマネージャーを使用して Reveal WPF SDK を参照した場合の 「'libigsslic32' への参照を追加できませんでした」 エラーを修正しました。
 
 ## 1.4.0 (2023 年 2 月)
 

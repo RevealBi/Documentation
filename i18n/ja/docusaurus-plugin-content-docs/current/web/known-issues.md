@@ -2,30 +2,30 @@
 
 ## v1.6.2
 
-### MongoDB Connector
+### MongoDB コネクター
 
-- Blending by a calculated field using the `currentTimeZone` function fails
-- Blending by a calculated field referencing the `_id` column fails
-- The `concatenate` function does not implicitly cast to string the parameters, which might produce errors when evaluating non-string column references / functions
-- A pivot with no fields in row, but one or more dimensions in columns will not produce any rows in the pivot
-- [Embeddings](https://www.mongodb.com/basics/embedded-mongodb) are not supported; however, single-valued embeddings are
-- MongoDB version greater than or equal to v5.0 is supported
-- Fields with a dot (".") or a dollar sign ("$") in their names are ignored. Most cases require special treatment: [Dot & Dollar Considerations](https://www.mongodb.com/docs/manual/core/dot-dollar-considerations/)
-- Filtering by a field of type ObjectId
-- When performing a sum that includes null in MongoDB, the result is 0, not null as in SQL server
+- `currentTimeZone` 関数を使用した計算フィールドによる結合が失敗する問題。
+- `_id` 列を参照する計算フィールドによる結合が失敗する問題。
+- `concatenate` 関数はパラメーターを文字列に暗黙的にキャストしないため、非文字列の列参照/関数を評価するときにエラーが発生する可能性があります。
+- 行にフィールドがなく、列に 1 つ以上のディメンションがあるピボットに、行が生成されない問題。
+- [埋め込み](https://www.mongodb.com/basics/embedded-mongodb)はサポートされていませんが単一値の埋め込みはサポートされています。
+- MongoDB バージョン v5.0 以上がサポートされています。
+- 名前にドット 「.」 またはドル記号 「$」 が含まれるフィールドは無視されます。ほとんどの場合、特別な処理が必要です: [ドットとドル記号の考慮事項](https://www.mongodb.com/docs/manual/core/dot-dollar-considerations/)。
+- ObjectId 型のフィールドによるフィルタリング
+- MongoDB で null を含む合計を実行すると、結果は SQL サーバーのような null ではなく 0 になります。
 
-### Headless Export - Global Filters
+### ヘッドレス エクスポート - グローバル フィルター
 
-- XMLA filters are not currently supported in ASP.NET
-- Global filters for Node.js are not currently supported
+- XMLA フィルターは現在 ASP.NET ではサポートされません。
+- Node.js のグローバル フィルターは現在サポートされません。
 
-### MacOS ARM64 Support (beta)
+### MacOS ARM64 のサポート (ベータ版)
 
-- There may be locale issues depending on the machine's configuration (e.g. 9,5 vs 9.5)
+- マシンの構成によってはロケールの問題 (例: 9,5 と 9.5) が発生する可能性があります。
 
-### Exporting on Linux ARM64 for Node
+### Linux ARM64 Node でのエクスポート
 
-- [Chromium can't be installed automatically when running on Linux ARM64](https://github.com/puppeteer/puppeteer/issues/7740) when using Node.js, so it must be installed using your package manager or a manual install before attempting to export a dashboard. Reveal searches from the Chromium binary under `/usr/bin/chromium`.
+- Node.js を使用していて、[Linux ARM64 上で実行する場合、Chromium は自動的にインストールできません](https://github.com/puppeteer/puppeteer/issues/7740)。そのため、ダッシュボードをエクスポートする前に、パッケージ マネージャーを使用して、または手動で、Chromiumをインストールする必要があります。Reveal は Chromium バイナリを `/usr/bin/chromium` の下で探します。
 
 ## v1.6.1
 
