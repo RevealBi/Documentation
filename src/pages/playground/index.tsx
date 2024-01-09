@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import MainStyles from '@docusaurus/theme-classic/lib/theme/DocRoot/Layout/Main/styles.module.css';
-import DocPageStyles from '@docusaurus/theme-classic/lib/theme/DocRoot/Layout/styles.module.css';
+import DocRootStyles from '@docusaurus/theme-classic/lib/theme/DocRoot/Layout/styles.module.css';
 import styles from './styles.module.css';
 import Translate from '@docusaurus/Translate';
 import { ApiFeatures } from './_apiFeatures';
@@ -74,7 +74,7 @@ export default function Playground(): JSX.Element {
 
     return (
         <Layout title="Developer Playground" description="">
-            <div className={DocPageStyles.docPage}>
+            <div className={DocRootStyles.docRoot}>
                 <PageSideBar items={ApiFeatures} onItemClick={onFeatureClick}/>
                 <main className={clsx(MainStyles.docMainContainer)}>
                     <div className="col" style={{ padding: "0" }}>
