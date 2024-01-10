@@ -21,6 +21,80 @@ revealView.onUrlLinkRequested = (args) => {
 };
 ```
 
+- Added ability to export a single visualization using server export.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+var pdfOptions = new PdfExportOptions();
+
+pdfOptions.Visualizations.Add(new VisualizationExport() {Title = "Sales by Product" });
+pdfOptions.Visualizations.Add(new VisualizationExport("9ea0b74d-8944-474c-5e8c-78ce2b30d16c"));
+
+//or
+pdfOptions.Visualizations.AddByTitle("Sales by Product");
+pdfOptions.Visualizations.AddById("9ea0b74d-8944-474c-5e8c-78ce2b30d16c");
+
+
+await _exporter.ExportToPdf(dashboardId,  path + ".pdf", pdfOptions);
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+ArrayList<VisualizationExport> viz = new ArrayList<VisualizationExport>();
+
+viz.add(new VisualizationExport("9ea0b74d-8944-474c-5e8c-78ce2b30d16c"));
+
+VisualizationExport ve = new VisualizationExport();
+ve.setTitle("Sales by Product");
+viz.add(ve);
+
+PdfExportOptions options = new PdfExportOptions();
+options.setVisualizations(viz);	
+
+RevealEngineLocator.dashboardExporter.exportToPdf(dashboardId, null, options ,new ExportStreamCallback() {
+	@Override
+	public void onSuccess(InputStream stream) {
+		try {								
+			Files.copy(stream, Paths.get(filePath), StandardCopyOption.REPLACE_EXISTING);
+			asyncResponse.resume(filePath);
+		}
+		catch(Exception e) {
+			asyncResponse.resume(e);
+		}
+	}
+
+	@Override
+	public void onFailure(Exception e) {
+		asyncResponse.resume(e);							
+	}	
+});
+```
+
+  </TabItem>
+  
+  <TabItem value="node" label="Node.js">    
+
+```javascript
+import reveal, { ExportFormat, IDashboardExporter, PdfExportOptions, VisualizationExport } from 'reveal-sdk-node';
+
+var options = new PdfExportOptions();
+var ve = new VisualizationExport();
+ve.title = "Spend vs Budget";
+
+options.visualizations.push(ve);    
+
+revealServer.exporter.exportPdf("Marketing", fileName, options, null);
+```
+
+  </TabItem>
+
+</Tabs>
+
 - Support added for custom colors on client & server export
 
 <Tabs groupId="code" queryString>
