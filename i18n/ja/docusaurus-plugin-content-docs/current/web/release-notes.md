@@ -21,7 +21,7 @@ revealView.onUrlLinkRequested = (args) => {
 };
 ```
 
-- Added ability to export a single visualization using server export.
+- サーバー エクスポートを使用して単一の表示形式をエクスポートする機能が追加されました。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
