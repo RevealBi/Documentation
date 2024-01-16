@@ -3,6 +3,10 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.6.3 (January 15th, 2024)
+
+- Patch release to fix dependency conflict for projects targeting **ASP.NET 7.0**. Updated `System.Security.Cryptography.Pkcs` 6.0.3 => 7.0.0
+
 ## 1.6.2 (January 5th, 2024)
 
 ### New Features
