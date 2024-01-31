@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 ## 1.6.3 (2024 年 1 月 15 日)
 
-- Patch release to fix dependency conflict for projects targeting **ASP.NET 7.0**. Updated `System.Security.Cryptography.Pkcs` 6.0.3 => 7.0.0
+- **ASP.NET 7.0** をターゲットとするプロジェクトの依存関係の競合を修正するパッチ リリース。`System.Security.Cryptography.Pkcs` を更新しました (6.0.3 => 7.0.0)。
 
 ## 1.6.2 (2024 年 1 月 5 日)
 
