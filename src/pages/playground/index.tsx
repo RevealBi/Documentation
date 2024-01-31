@@ -34,7 +34,6 @@ export default function Playground(): JSX.Element {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css" >  
             <title>Reveal Sdk</title>
             </head>
             <body>  
@@ -42,9 +41,8 @@ export default function Playground(): JSX.Element {
             <div id="revealView" style="height: 800px; width: 100%;"></div>
         
             <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
-            <script src="https://cdn.quilljs.com/1.3.6/quill.min.js" ></script>    
             <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js" ></script>    
-            <script src="https://dl.revealbi.io/reveal/libs/1.3.0/infragistics.reveal.js"></script>
+            <script src="https://dl.revealbi.io/reveal/libs/1.6.2/infragistics.reveal.js"></script>
         
             <script type="text/javascript">      
                 $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/"); 
