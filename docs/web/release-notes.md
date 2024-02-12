@@ -3,6 +3,55 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.6.4 (February 13th, 2024)
+
+### Breaking Changes
+
+- Property name `showExportToPowerpoint` changed to `showExportToPowerPoint`
+- Scatter and Bubble Charts have a new look & feel. The old look & feel are deprecated, if needed they can be restored by doing `RevealSdkSettings.enableNewCharts = false`
+- The property `showEditDataSource` is now set to `false` by default
+
+### New Features
+
+#### All Platforms
+
+- Exposed `description` property on `RVDashboard`
+- Added dashboard title to individual Excel sheets
+- Include dashboard filters when exporting to Excel and PDF
+- Removed PostgreSQL stored procedures from tab as they're not currently supported
+
+### Bug Fixes
+
+#### All Platforms
+
+- Athena error message not helpful when missing data source item setting
+- S3 DS "Region has not been set" error when source item provider is not implemented
+- Redshift DS "Host can't be null" error when source item provider is not implemented
+- MySql "unable to connect" error when source item provider is not implemented
+- Postgres error selecting table when data source item provider is not implemented
+- Wrong case-insensitive grid sorting in some scenarios
+- FilterChanged event does not fire when changes are made to selected items
+- Wrong initialization of "Process Data On Server" flag
+- Error on formatting uncaught "TypeError: t.mkFormat is not a function"
+- SQLite exceptions cause crash on M1 Mac/ARM64
+- Incorrect `CURRENTTIMEZONE()` when adding fields from another data source
+- KPI vs Time Now Showing Empty Values in Current Month
+- Malfunction of date type column sorting in grid or pivot type visualizations
+- Multiple popups displayed when exporting while visualizations are being loaded
+- When exporting an 413 error is thrown
+- Multiple instances of RevealView not supported
+- Map location name comparison is case sensitive
+
+#### Java
+
+- Number rounding is not working for SSRS or CSV data
+- MySql setting custom query doesn't work
+- Export timing out and producing error
+
+#### Node
+
+- Current Chromium version not working in Node + MAC M1
+
 ## 1.6.3 (January 15th, 2024)
 
 - Patch release to fix dependency conflict for projects targeting **ASP.NET 7.0**. Updated `System.Security.Cryptography.Pkcs` 6.0.3 => 7.0.0
