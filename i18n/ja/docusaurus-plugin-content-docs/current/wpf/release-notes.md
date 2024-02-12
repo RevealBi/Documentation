@@ -6,7 +6,6 @@
 
 - Property name `ShowExportToPowerpoint` changed to `ShowExportToPowerPoint`
 - Scatter and Bubble Charts have a new look & feel. The old look & feel are deprecated, if needed they can be restored by doing `RevealSdkSettings.EnableNewCharts = false`
-- The property `ShowEditDataSource` is now set to `false` by default
 
 ### New Features
 

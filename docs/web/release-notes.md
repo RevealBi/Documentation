@@ -9,7 +9,6 @@ import TabItem from '@theme/TabItem';
 
 - Property name `showExportToPowerpoint` changed to `showExportToPowerPoint`
 - Scatter and Bubble Charts have a new look & feel. The old look & feel are deprecated, if needed they can be restored by doing `RevealSdkSettings.enableNewCharts = false`
-- The property `showEditDataSource` is now set to `false` by default
 
 ### New Features
 
