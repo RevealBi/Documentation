@@ -1,5 +1,35 @@
 # リリース ノート
 
+## 1.6.4 (February 14th, 2024)
+
+### Breaking Changes
+
+- Property name `ShowExportToPowerpoint` changed to `ShowExportToPowerPoint`
+- Scatter and Bubble Charts have a new look & feel. The old look & feel are deprecated, if needed they can be restored by doing `RevealSdkSettings.EnableNewCharts = false`
+
+### New Features
+
+- Updated the `Reveal.Sdk.Data` v4.7.2 dependency of `Antlr4.Runtime.Standard` to 4.8
+- Exposed `Description` property on `RVDashboard`
+- Added dashboard title to individual Excel sheets
+- Include dashboard filters when exporting to Excel and PDF
+- Removed PostgreSQL stored procedures from tab as they're not currently supported
+
+### Bug Fixes
+
+- Athena error message not helpful when missing data source item setting
+- S3 DS "Region has not been set" error when source item provider is not implemented
+- Redshift DS "Host can't be null" error when source item provider is not implemented
+- MySql "unable to connect" error when source item provider is not implemented
+- Postgres error selecting table when data source item provider is not implemented
+- Wrong case-insensitive grid sorting in some scenarios
+- Wrong initialization of "Process Data On Server" flag
+- Incorrect `CURRENTTIMEZONE()` when adding fields from another data source
+- KPI vs Time Now Showing Empty Values in Current Month
+- Malfunction of date type column sorting in grid or pivot type visualizations
+- Multiple popups displayed when exporting while visualizations are being loaded
+- Map location name comparison is case sensitive
+
 ## 1.6.2 (2024 年 1 月 5 日)
 
 ### 新機能
