@@ -3,53 +3,53 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.6.4 (February 14th, 2024)
+## 1.6.4 (2024 年 2 月 14 日)
 
-### Breaking Changes
+### 重大な変更
 
-- Property name `showExportToPowerpoint` changed to `showExportToPowerPoint`
-- Scatter and Bubble Charts have a new look & feel. The old look & feel are deprecated, if needed they can be restored by doing `RevealSdkSettings.enableNewCharts = false`
+- プロパティ名 `showExportToPowerpoint` が `showExportToPowerPoint` に変更されました。
+- 散布図とバブル チャートの新しいルック & フィール。古いルック アンド フィールは廃止されました。必要に応じて、`RevealSdkSettings.enableNewCharts = false` を実行することで復元できます。
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Exposed `description` property on `RVDashboard`
-- Added dashboard title to individual Excel sheets
-- Include dashboard filters when exporting to Excel and PDF
-- Removed PostgreSQL stored procedures from tab as they're not currently supported
+- `RVDashboard` の `description` プロパティを公開しました。
+- ダッシュボードのタイトルを個々の Excel シートに追加しました。
+- Excel および PDF にエクスポートする際にダッシュボード フィルターが含まれるようになりました。
+- PostgreSQL ストアド プロシージャは現在サポートされていないため、タブから削除しました。
 
-### Bug Fixes
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Athena error message not helpful when missing data source item setting
-- S3 DS "Region has not been set" error when source item provider is not implemented
-- Redshift DS "Host can't be null" error when source item provider is not implemented
-- MySql "unable to connect" error when source item provider is not implemented
-- Postgres error selecting table when data source item provider is not implemented
-- Wrong case-insensitive grid sorting in some scenarios
-- FilterChanged event does not fire when changes are made to selected items
-- Wrong initialization of "Process Data On Server" flag
-- Error on formatting uncaught "TypeError: t.mkFormat is not a function"
-- SQLite exceptions cause crash on M1 Mac/ARM64
-- Incorrect `CURRENTTIMEZONE()` when adding fields from another data source
-- KPI vs Time Now Showing Empty Values in Current Month
-- Malfunction of date type column sorting in grid or pivot type visualizations
-- Multiple popups displayed when exporting while visualizations are being loaded
-- When exporting an 413 error is thrown
-- Multiple instances of RevealView not supported
-- Map location name comparison is case sensitive
+- データ ソース項目の設定が欠落している場合、Athena エラー メッセージが不十分である問題。
+- ソース項目プロバイダーが実装されていない場合に、S3 DS 「Region has not been set (地域が設定されていません)」 エラーが発生する問題。
+- ソース項目プロバイダーが実装されていない場合に、Redshift DS 「Host can't be null (ホストを null にすることはできません)」 エラーが発生する問題。
+- ソース項目プロバイダーが実装されていない場合に、MySql 「unable to connect (接続できません)」 エラーが発生する問題。
+- データ ソース項目プロバイダーが実装されていない場合に、テーブル選択時に Postgres エラーが発生する問題。
+- 一部のグリッドのシナリオで大文字と小文字を区別しない並べ替えが正しくない問題。
+- 選択した項目に変更が加えられた際に FilterChanged イベントが発生しない問題。
+- 「サーバーでデータを処理」フラグの初期化が誤っている問題。
+- フィールドのフォーマットを構成時に 「Uncaught TypeError: t.mkFormat is not a function (キャッチされない TypeError: t.mkFormat は関数ではありません)」 のエラーが発生する問題。
+- M1 Mac/ARM64 で SQLite の例外がクラッシュを引き起こす問題。
+- 別のデータ ソースからフィールドを追加する際の `CURRENTTIMEZONE()` が正しくない問題。
+- KPI vs Time で今月の空の値が表示されるようになりました。
+- グリッドまたはピボット タイプの表示形式における日付タイプの列の並べ替えが正しく動作しない問題。
+- 表示形式の読み込み中にエクスポートを実行すると複数のポップアップが表示される問題。
+- エクスポートする際に 413 エラーが発生する問題。
+- RevealView の複数のインスタンスがサポートされない問題。
+- マップの場所名の比較では大文字と小文字が区別される問題。
 
 #### Java
 
-- Number rounding is not working for SSRS or CSV data
-- MySql setting custom query doesn't work
-- Export timing out and producing error
+- SSRS または CSV データに対して数値の丸めが機能しない問題。
+- MySql - カスタム クエリの設定が機能しない問題。
+- エクスポートがタイムアウトしてエラーが発生する問題。
 
 #### Node
 
-- Current Chromium version not working in Node + MAC M1
+- 現在の Chromium バージョンが Node + MAC M1 で動作しない問題。
 
 ## 1.6.3 (2024 年 1 月 15 日)
 
