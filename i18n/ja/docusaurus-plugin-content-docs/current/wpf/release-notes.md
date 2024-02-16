@@ -1,34 +1,34 @@
 # リリース ノート
 
-## 1.6.4 (February 14th, 2024)
+## 1.6.4 (2024 年 2 月 14 日)
 
-### Breaking Changes
+### 重大な変更
 
-- Property name `ShowExportToPowerpoint` changed to `ShowExportToPowerPoint`
-- Scatter and Bubble Charts have a new look & feel. The old look & feel are deprecated, if needed they can be restored by doing `RevealSdkSettings.EnableNewCharts = false`
+- プロパティ名 `ShowExportToPowerpoint` が `ShowExportToPowerPoint` に変更されました。
+- 散布図とバブル チャートの新しいルック & フィール。古いルック アンド フィールは廃止されました。必要に応じて、`RevealSdkSettings.EnableNewCharts = false` を実行することで復元できます。
 
-### New Features
+### 新機能
 
-- Updated the `Reveal.Sdk.Data` v4.7.2 dependency of `Antlr4.Runtime.Standard` to 4.8
-- Exposed `Description` property on `RVDashboard`
-- Added dashboard title to individual Excel sheets
-- Include dashboard filters when exporting to Excel and PDF
-- Removed PostgreSQL stored procedures from tab as they're not currently supported
+- `Antlr4.Runtime.Standard` の `Reveal.Sdk.Data` v4.7.2 依存関係を 4.8 に更新しました。
+- `RVDashboard` の `Description` プロパティを公開しました。
+- ダッシュボードのタイトルを個々の Excel シートに追加しました。
+- Excel および PDF にエクスポートする際にダッシュボード フィルターが含まれるようになりました。
+- PostgreSQL ストアド プロシージャは現在サポートされていないため、タブから削除しました。
 
-### Bug Fixes
+### バグ修正
 
-- Athena error message not helpful when missing data source item setting
-- S3 DS "Region has not been set" error when source item provider is not implemented
-- Redshift DS "Host can't be null" error when source item provider is not implemented
-- MySql "unable to connect" error when source item provider is not implemented
-- Postgres error selecting table when data source item provider is not implemented
-- Wrong case-insensitive grid sorting in some scenarios
-- Wrong initialization of "Process Data On Server" flag
-- Incorrect `CURRENTTIMEZONE()` when adding fields from another data source
-- KPI vs Time Now Showing Empty Values in Current Month
-- Malfunction of date type column sorting in grid or pivot type visualizations
-- Multiple popups displayed when exporting while visualizations are being loaded
-- Map location name comparison is case sensitive
+- データ ソース項目の設定が欠落している場合、Athena エラー メッセージが不十分である問題。
+- ソース項目プロバイダーが実装されていない場合に、S3 DS 「Region has not been set (地域が設定されていません)」 エラーが発生する問題。
+- ソース項目プロバイダーが実装されていない場合に、Redshift DS 「Host can't be null (ホストを null にすることはできません)」 エラーが発生する問題。
+- ソース項目プロバイダーが実装されていない場合に、MySql 「unable to connect (接続できません)」 エラーが発生する問題。
+- データ ソース項目プロバイダーが実装されていない場合に、テーブル選択時に Postgres エラーが発生する問題。
+- 一部のグリッドのシナリオで大文字と小文字を区別しない並べ替えが正しくない問題。
+- 「サーバーでデータを処理」フラグの初期化が誤っている問題。
+- 別のデータ ソースからフィールドを追加する際の `CURRENTTIMEZONE()` が正しくない問題。
+- KPI vs Time で今月の空の値が表示されるようになりました。
+- グリッドまたはピボット タイプの表示形式における日付タイプの列の並べ替えが正しく動作しない問題。
+- 表示形式の読み込み中にエクスポートを実行すると複数のポップアップが表示される問題。
+- マップの場所名の比較では大文字と小文字が区別される問題。
 
 ## 1.6.2 (2024 年 1 月 5 日)
 
