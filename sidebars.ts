@@ -198,6 +198,14 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Linking", id: "user/dashboard-linking" },
+        { type: "category", label: "Exporting", link: { type: "doc", id: "user/dashboard-export" }, items: [
+          { type: "doc", label: "Exporting to PDF", id: "user/dashboard-export-pdf" },
+          { type: "doc", label: "Exporting to Excel", id: "user/dashboard-export-excel" },
+          { type: "doc", label: "Exporting to Image", id: "user/dashboard-export-image" },
+          { type: "doc", label: "Exporting to PowerPoint", id: "user/dashboard-export-powerpoint" }, 
+        ],
+      }
+          
       ]
     }
   ],
