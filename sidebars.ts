@@ -211,7 +211,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Linking", id: "user/dashboard-linking" },
+        { type: "doc", label: "Overview", id: "user/dashboard-linking" },
       ]
     },
 
@@ -228,7 +228,16 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category", label: "Tutorials", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "user/filters-overview" },
+        { type: "doc", label: "Overview", id: "user/tutorials-overview" },
+        { type: "doc", label: "Candlestick Charts", id: "user/tutorials-candlestick" },
+        { type: "doc", label: "Gauge Charts", id: "user/tutorials-gauge" },
+        { type: "doc", label: "Image Charts", id: "user/tutorials-image" },
+        { type: "doc", label: "KPI Gauges", id: "user/tutorials-kpi-gauge" },
+        { type: "doc", label: "OHLC Charts", id: "user/tutorials-ohlc" },
+        { type: "doc", label: "Simple-Series Charts", id: "user/tutorials-simple-charts" },
+        { type: "doc", label: "Sparkline Charts", id: "user/tutorials-sparkline-charts" },
+        { type: "doc", label: "Stacked Charts", id: "user/tutorials-stacked-charts" },
+        { type: "doc", label: "Text View", id: "user/tutorials-text-view" },
       ]
     },
   ],
