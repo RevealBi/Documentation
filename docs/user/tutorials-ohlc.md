@@ -89,8 +89,8 @@ In order to access the axis configuration menu:
 
 |                                             |                                                                                      |                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**            | <img src="images/tutorials-settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>               | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Navigate to the Axis Bounds section** | <img src="images/bounds-axis.png" alt="Tutorial-Access-Axis-Configuration" class="responsive-img"/> | The settings you will change will be the **Axis Bounds**.   |
+| 1\. **Access the Settings Menu**            | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)               | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Navigate to the Axis Bounds section** | ![Tutorial-Access-Axis-Configuration](images/bounds-axis.png) | The settings you will change will be the **Axis Bounds**.   |
 
 Depending on whether you want to set the minimum or maximum value (or
 both), you will need to access one of the following options:
@@ -111,5 +111,5 @@ the value you want for the chart's top limit.
 
 |                                        |                                                                                                       |                                                             |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**       | <img src="images/tutorials-settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>                                | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Change the Axis to Logarithmic** | <img src="images/ohlc-candlestick-logarithmic-axis.png" alt="Tutorial-Access-OHLC-Axis-Configuration" class="responsive-img"/> | Open the **Axis** dropdown and select **Logarithmic**.      |
+| 1\. **Access the Settings Menu**       | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)                                | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Change the Axis to Logarithmic** | ![Tutorial-Access-OHLC-Axis-Configuration](images/ohlc-candlestick-logarithmic-axis.png) | Open the **Axis** dropdown and select **Logarithmic**.      |

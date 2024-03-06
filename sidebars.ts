@@ -211,7 +211,53 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "user/dashboard-linking" },
+        { type: "doc", label: "Overview", id: "user/visualizations-overview" },
+        { type: "doc", label: "Visualization Editor", id: "user/visualization-editor" },
+        { type: "category", label: "Chart Types", items: [
+          { type: "doc", label: "Category", id: "user/visualization-types/category-charts" },
+          { type: "category", label: "Choropleth ", link: { type: "doc", id: "user/visualization-types/choropleth-map" }, items: [
+            { type: "doc", label: "Location Data", id: "user/visualization-types/location-data-requirements" },
+            { type: "doc", label: "Settings", id: "user/visualization-types/settings-choropleth-map" },
+          ]},
+          { type: "doc", label: "Combo", id: "user/visualization-types/combo-charts" },
+          { type: "doc", label: "Financial", id: "user/visualization-types/financial-charts" },
+          { type: "doc", label: "Gauges", id: "user/visualization-types/gauge-charts" },
+          { type: "doc", label: "Grid", id: "user/visualization-types/grid-chart" },
+          { type: "doc", label: "Image", id: "user/visualization-types/image-chart" },
+          { type: "doc", label: "KPI", id: "user/visualization-types/kpi-gauge" },
+          { type: "doc", label: "Pivot", id: "user/visualization-types/pivot-table" },
+          { type: "doc", label: "Radial", id: "user/visualization-types/radial-charts" },
+          { type: "doc", label: "Scatter and Bubble", id: "user/visualization-types/scatter-bubble-charts" },
+          { type: "category", label: "Scatter Map", link: { type: "doc", id: "user/visualization-types/scatter-map" }, items: [
+            { type: "doc", label: "Using Image Tiles", id: "user/visualization-types/map-image-tiles" },
+          ]},
+          { type: "doc", label: "Sparkline", id: "user/visualization-types/sparkline-charts" },
+          { type: "doc", label: "Text Box", id: "user/visualization-types/text-box" },
+          { type: "doc", label: "Text View", id: "user/visualization-types/text-view" },
+          { type: "doc", label: "Time Series", id: "user/visualization-types/time-series-charts" },
+          { type: "doc", label: "Tree Map", id: "user/visualization-types/treemap-charts" },
+        ]},
+
+
+        { type: "category", label: "Fields ", link: { type: "doc", id: "user/fields/overview" }, items: [
+          { type: "doc", label: "Field Settings", id: "user/fields/field-settings" },
+          { type: "doc", label: "Sort by Field", id: "user/fields/sort-by-field" },
+          { type: "doc", label: "Ad-Hoc Hierarchies", id: "user/fields/adhoc-hierarchies" },
+          { type: "doc", label: "Conditional Formatting", id: "user/fields/conditional-formatting" },
+          { type: "category", label: "Calculated Fields ", link: { type: "doc", id: "user/fields/calculated/overview" }, items: [
+            { type: "doc", label: "Aggregation", id: "user/fields/calculated/aggregation" },
+            { type: "doc", label: "Date", id: "user/fields/calculated/date" },
+            { type: "doc", label: "Information", id: "user/fields/calculated/information" },
+            { type: "doc", label: "Logic", id: "user/fields/calculated/logic" },
+            { type: "doc", label: "Lookup & Reference", id: "user/fields/calculated/lookup-reference" },
+            { type: "doc", label: "Math", id: "user/fields/calculated/math" },
+            { type: "doc", label: "String", id: "user/fields/calculated/string" },
+            { type: "doc", label: "Samples and Tips", id: "user/fields/calculated/samples" },
+          ]},
+        ]},
+
+        { type: "doc", label: "Reusing Visualizations", id: "user/reusing-visualizations" },
+        { type: "doc", label: "Statistical Functions", id: "user/statistical-functions" },
       ]
     },
 

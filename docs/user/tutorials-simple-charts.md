@@ -93,8 +93,8 @@ information. In order to do this:
 
 |                                     |                                                                        |                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 1\. **Change Settings**             | <img src="images/settings-tutorials.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/> | Go to the **Settings** section of the Visualization Editor.      |
-| 2\. **Access the Chart Trendlines** | <img src="images/chart-trendline-simple-series-charts.png" alt="Chart Trendlines option in the settings" class="responsive-img"/> | Expand the Chart Trendline dropdown by selecting the down arrow to select one of Slingshot's predefined trendlines. |
+| 1\. **Change Settings**             | ![Tutorials-Navigate-Settings](images/settings-tutorials.png) | Go to the **Settings** section of the Visualization Editor.      |
+| 2\. **Access the Chart Trendlines** | ![Chart Trendlines option in the settings](images/chart-trendline-simple-series-charts.png) | Expand the Chart Trendline dropdown by selecting the down arrow to select one of Slingshot's predefined trendlines. |
 
 <a name='change-axis-configuration'></a>
 ## Changing your Axis Configuration
@@ -106,8 +106,8 @@ data.
 
 |                                        |                                                                                      |                                                                                                                                       |
 | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                | <img src="images/settings-tutorials.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>               | Go to the **Settings** section of the Visualization Editor.                                                                           |
-| 2\. **Access the Axis Bounds section** | <img src="images/axis-bounds-section.png" alt="Axis bounds in the settings options" class="responsive-img"/>                           | Navigate to *Axis Bounds*. Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
+| 1\. **Change Settings**                | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)               | Go to the **Settings** section of the Visualization Editor.                                                                           |
+| 2\. **Access the Axis Bounds section** | ![Axis bounds in the settings options](images/axis-bounds-section.png)                           | Navigate to *Axis Bounds*. Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 
 <a name='set-logarithmic-axis'></a>
@@ -123,13 +123,13 @@ data.
 
 |                                                   |                                                                                |                                                                                           |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                           | <img src="images/settings-tutorials.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>         | Go to the **Settings** section of the Visualization Editor.                               |
-| 2\. **Access the Start Position section**         | <img src="images/start-position-settings.png" alt="Start position settings" class="responsive-img"/>               | Expand the *Start Position* dropdown by selecting the down arrow. Select one of Slingshot's predefined start positions for your chart (0°, 90°, 180° or 270°).                          |
+| 1\. **Change Settings**                           | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)         | Go to the **Settings** section of the Visualization Editor.                               |
+| 2\. **Access the Start Position section**         | ![Start position settings](images/start-position-settings.png)               | Expand the *Start Position* dropdown by selecting the down arrow. Select one of Slingshot's predefined start positions for your chart (0°, 90°, 180° or 270°).                          |
 
 <a name='change-slice-labels'></a>
 ## Changing the Slice Labels for Doughnut, Funnel and Pie Charts
 
 |                                                |                                                                          |                                                                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| 1\. **Change Settings**                        | <img src="images/settings-tutorials.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>   | Go to the **Settings** section of the Visualization Editor.                                            |
-| 2\. **Access the Slice Label section**         | <img src="images/slice-label-settings.png" alt="Tutorials-Slice-Label" class="responsive-img"/>               | Expand the Slice Labels dropdown by selecting the down arrow. Select one of Slingshot's predefined labeling options (*Percentage*, *Value* or *Value and Percentage*).                                       |
+| 1\. **Change Settings**                        | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | Go to the **Settings** section of the Visualization Editor.                                            |
+| 2\. **Access the Slice Label section**         | ![Tutorials-Slice-Label](images/slice-label-settings.png)               | Expand the Slice Labels dropdown by selecting the down arrow. Select one of Slingshot's predefined labeling options (*Percentage*, *Value* or *Value and Percentage*).                                       |

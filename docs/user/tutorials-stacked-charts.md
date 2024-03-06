@@ -86,8 +86,8 @@ data.
 
 |                                           |                                                                          |                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Change Settings**                   | <img src="images/tutorials-settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>   | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Access the Axis option**            | <img src="images/axis-bounds-logarithmic.png" alt="Tutorials-Axis-Bounds" class="responsive-img"/>               | Expand the Axis dropdown by selecting the down arrow. Then select *Logarithmic*.|      
+| 1\. **Change Settings**                   | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)   | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Access the Axis option**            | ![Tutorials-Axis-Bounds](images/axis-bounds-logarithmic.png)               | Expand the Axis dropdown by selecting the down arrow. Then select *Logarithmic*.|      
 
 <a name='enable-percentage-distribution'></a>
 ## Enabling Percentage Distribution
@@ -98,5 +98,5 @@ for those types of charts. In order to do this:
 
 |                                        |                                                                                    |                                                                                           |
 | -------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                | <img src="images/tutorials-settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/>             | Go to the **Settings** section of the Visualization Editor.                               |
-| 2\. **Enable Percentage Distribution** | <img src="images/percentage-distribution.png" alt="Tutorials-Percentage-Distribution" class="responsive-img"/> | Enable the percentage distribution setting by checking the *Percentage Distribution* box. |
+| 1\. **Change Settings**                | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)             | Go to the **Settings** section of the Visualization Editor.                               |
+| 2\. **Enable Percentage Distribution** | ![Tutorials-Percentage-Distribution](images/percentage-distribution.png) | Enable the percentage distribution setting by checking the *Percentage Distribution* box. |

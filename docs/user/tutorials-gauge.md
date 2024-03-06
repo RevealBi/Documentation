@@ -159,8 +159,8 @@ specific data. In order to do this:
 
 |                                                |                                                                        |                                                                                                                                       |
 | ---------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                        | <img src="images/tutorials-settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/> | Go to the **Settings** section of the Visualization Editor.                                                                           |
-| 2\. **Change the Default selection in Limits** | <img src="images/limit-options.png" alt="Tutorials-Limits-Bounds" class="responsive-img"/>         | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
+| 1\. **Change Settings**                        | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                           |
+| 2\. **Change the Default selection in Limits** | ![Tutorials-Limits-Bounds](images/limit-options.png)         | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 <a name='modify-bands'></a>
 ## Changing Band Colors
@@ -171,6 +171,6 @@ so:
 
 |                                    |                                                                        |                                                                          |
 | ---------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 1\. **Change Settings**            | <img src="images/tutorials-settings.png" alt="Tutorials-Navigate-Settings" class="responsive-img"/> | Go to the **Settings** section of the Visualization Editor.              |
-| 2\. **Access the Colors dropdown** | <img src="images/band-color-options.png" alt="Tutorials-Colors-Dropdown" class="responsive-img"/>     | Expand the dropdown of the range for which you want to change the color. Select one of Slingshot's three predefined colors for your band color.|
+| 1\. **Change Settings**            | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | Go to the **Settings** section of the Visualization Editor.              |
+| 2\. **Access the Colors dropdown** | ![Tutorials-Colors-Dropdown](images/band-color-options.png)     | Expand the dropdown of the range for which you want to change the color. Select one of Slingshot's three predefined colors for your band color.|
 
