@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   webSidebar: [
@@ -7,12 +7,14 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", id: "web/overview" },
-        { type: "category", label: "Installation", items: [
-          { type: "doc", label: "System Requirements", id: "web/system-requirements" },
-          { type: "doc", label: "Install Server SDK", id: "web/install-server-sdk" },
-          { type: "doc", label: "Install Client SDK", id: "web/install-client-sdk" },
-          { type: "doc", label: "Adding a License Key", id: "web/adding-license-key" },
-        ]},
+        {
+          type: "category", label: "Installation", items: [
+            { type: "doc", label: "System Requirements", id: "web/system-requirements" },
+            { type: "doc", label: "Install Server SDK", id: "web/install-server-sdk" },
+            { type: "doc", label: "Install Client SDK", id: "web/install-client-sdk" },
+            { type: "doc", label: "Adding a License Key", id: "web/adding-license-key" },
+          ]
+        },
         {
           type: "category", label: "Getting Started - Server", items: [
             { type: "doc", label: "ASP.NET Web API", id: "web/getting-started-server" },
@@ -37,7 +39,8 @@ const sidebars: SidebarsConfig = {
       type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Caching", id: "web/caching" },
         { type: "doc", label: "Logging", id: "web/logging" },
-        { type: "category", label: "Server Export", link: { type: "doc", id: "web/server-export" }, items: [
+        {
+          type: "category", label: "Server Export", link: { type: "doc", id: "web/server-export" }, items: [
             { type: "doc", label: "Configure Export", id: "web/configure-export" },
           ]
         },
@@ -56,15 +59,17 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Localizing", id: "web/localizing" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
-        { type: "category", label: "Visualizations", items: [
-          { type: "doc", label: "Chart Types", id: "web/chart-types" },
-          { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items"},
-          { type: "doc", label: "Custom Visualizations", id: "web/custom-visualizations"},
-          { type: "doc", label: "Customizing Map Tiles", id: "web/customizing-map-tiles"},
-          { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
-          { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
-          { type: "doc", label: "Tooltips", id: "web/tooltips" },
-        ]}
+        {
+          type: "category", label: "Visualizations", items: [
+            { type: "doc", label: "Chart Types", id: "web/chart-types" },
+            { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items" },
+            { type: "doc", label: "Custom Visualizations", id: "web/custom-visualizations" },
+            { type: "doc", label: "Customizing Map Tiles", id: "web/customizing-map-tiles" },
+            { type: "doc", label: "Maximizing Visualizations", id: "web/maximizing-visualizations" },
+            { type: "doc", label: "Responding to Click Events", id: "web/click-events" },
+            { type: "doc", label: "Tooltips", id: "web/tooltips" },
+          ]
+        }
       ]
     },
 
@@ -101,9 +106,11 @@ const sidebars: SidebarsConfig = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
-          { type: "doc", label: "1.6.0 Upgrade Guide", id: "web/upgrade-guide-v1.6.0" },
-        ]},
+        {
+          type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
+            { type: "doc", label: "1.6.0 Upgrade Guide", id: "web/upgrade-guide-v1.6.0" },
+          ]
+        },
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
         { type: "doc", label: "Data Limits", id: "web/data-size-limits" },
         { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },
@@ -116,11 +123,13 @@ const sidebars: SidebarsConfig = {
     /* -------------------- General -------------------- */
     {
       type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "category", label: "Installation", items: [
-          { type: "doc", label: "System Requirements", id: "wpf/system-requirements" },
-          { type: "doc", label: "Install the Reveal SDK", id: "wpf/installation"},
-          { type: "doc", label: "Adding a License Key", id: "wpf/adding-license-key" }
-        ]},
+        {
+          type: "category", label: "Installation", items: [
+            { type: "doc", label: "System Requirements", id: "wpf/system-requirements" },
+            { type: "doc", label: "Install the Reveal SDK", id: "wpf/installation" },
+            { type: "doc", label: "Adding a License Key", id: "wpf/adding-license-key" }
+          ]
+        },
         { type: "doc", label: "Getting Started", id: "wpf/getting-started" },
       ]
     },
@@ -174,14 +183,24 @@ const sidebars: SidebarsConfig = {
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "category", label: "Release Notes", link: { type: "doc", id: "wpf/release-notes" }, items: [
-          { type: "doc", label: "1.6.0 Upgrade Guide", id: "wpf/upgrade-guide-v1.6.0" },
-        ]},
+        {
+          type: "category", label: "Release Notes", link: { type: "doc", id: "wpf/release-notes" }, items: [
+            { type: "doc", label: "1.6.0 Upgrade Guide", id: "wpf/upgrade-guide-v1.6.0" },
+          ]
+        },
         { type: "doc", label: "Known Issues", id: "wpf/known-issues" },
         { type: "doc", label: "Third-Party Software", id: "wpf/third-party-software" },
       ]
     },
-  ]
+  ],
+
+  userSideBar: [
+    {
+      type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Linking", id: "user/dashboard-linking" },
+      ]
+    }
+  ],
 };
 
 export default sidebars;

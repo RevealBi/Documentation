@@ -44,15 +44,15 @@ const FeatureList: FeatureItem[] = [
   {
     title: (
       <>
-        <Translate id="homepage.feature.video.title" description="The title of the Training Videos feature on the homepage">Training Videos</Translate>
+        <Translate id="homepage.feature.user.title" description="The title of the Training Videos feature on the homepage">User Documentation</Translate>
       </>
     ),
     Svg: require('@site/static/img/empty-states.svg').default,
-    link: "https://www.youtube.com/playlist?list=PLZ4rRHIJepBt-USWdh-9BimHh-GjPAGUH",
+    link: "user/dashboard-linking",
     description: (
       <>
-        <Translate id="homepage.feature.video"
-          description="The words used to describe the video section on the homepage">Follow walkthrough videos and start using our sample visualizations and sample data to help you get up and running.</Translate>
+        <Translate id="homepage.feature.user"
+          description="The words used to describe the user section on the homepage">TBD</Translate>
       </>
     ),
   },
