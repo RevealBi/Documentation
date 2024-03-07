@@ -13,7 +13,7 @@ Reveal is a business intelligence solution that is purpose-built for embedded an
 Reveal has 2 core components that enable the delivery of dashboards to your client application.
 
 - **Reveal Client SDK**: a set of JavaScript libraries and CSS files that need to be integrated into your web application. The Reveal Client SDK is shipped as a Web Component, which can be used in any client app (Angular, React, Blazor, Vue, etc.).
-- **Reveal Server SDK**: a server-side component that you integrate into your server application. This currently ships in ASP.NET (.NET 4.6.2+), Java and Node.js.
+- **Reveal Server SDK**: a server-side component that you integrate into your server application. This currently ships in .NET Core, Java and Node.js.
 
 This diagram describes the SDK components.  
 
