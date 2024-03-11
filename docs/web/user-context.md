@@ -130,11 +130,11 @@ Follow these steps to implement the `UserContextProvider`.
 Your server is now set up to retrieve and store context-specific information passed via HTTP headers.  Once you've added your server implementation, you use the client-side callback `setAdditionalHeadersProvider`.
 
 
-## Passing Client-Side Headers
+#### Passing Client-Side Headers
 
-To pass values to the your `UserContextProvider`, you use the `setAdditionalHeadersProvider` client-side callback function. The   `setAdditionalHeadersProvider` callback is optionally invoked before a request is made to the Reveal server so you can return additional headers with your server request.
+To pass values to the `UserContextProvider`, you use the `setAdditionalHeadersProvider` client-side callback function. The   `setAdditionalHeadersProvider` callback is optionally invoked before a request is made to the Reveal server so you can return additional headers with your server request.
 
-The `setAdditionalHeadersProvider` callback function is expected to return an object array with the headers, like: `{ 'SessionId': sessionId }`, `{ 'UserId': userId }`, or simply parameters to execute custom queries, stored procedures or functions. Any value required on the server can be sent using the `setAdditionalHeadersProvider` in conjunction with the `UserContextProvider`.
+The `setAdditionalHeadersProvider` callback function is expected to return an object array with the headers, like: `{ 'SessionId': sessionId }`, `{ 'UserId': userId }`, or parameters to execute custom queries, stored procedures or functions. Any value required on the server can be sent using the `setAdditionalHeadersProvider` in conjunction with the `UserContextProvider`.
 
 <Tabs groupId="code" queryString>
   <TabItem value="javascript" label="JavaScript" default>
@@ -147,7 +147,8 @@ RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
   return headers;
 });
 ```
-</TabItem>
+  </TabItem>
+  
   <TabItem value="typescript" label="TypeScript" default>
 
 ```ts
@@ -158,18 +159,18 @@ RevealSdkSettings.setAdditionalHeadersProvider((url: string) => {
   return headers;
 });
 ```
-</TabItem>
-<Tabs>
+  </TabItem>
+</Tabs>
 
-# Step-by-Step Example Implementing User Context 
+## Example: Implementing User Context 
 
 The `IRVUserContextProvider` interface in Reveal BI allows you to pass client-side information to the server. This information can be used in custom queries, as parameters for stored procedures and functions, and more. This document will guide you on how to use the `IRVUserContextProvider` and how to pass parameters from the client to the server.
 
-You can watch and end-to-end webinar explaing this step-by-step here:
+You can watch and end-to-end webinar explaining this step-by-step here:
 
 https://youtu.be/q9mbN2kIXFs
 
-## Client-Side Example
+### Client-Side Example
 
 Here is an example of how to pass several property values from the client to the server.  In this case, there are three HTML selects that have orderId, employeeId, and customerId values.  These values are passed to the server in the  `setAdditionalHeadersProvider` callback.
 
@@ -262,7 +263,7 @@ This is the full HTML for the client.
 </html>
 ```
 
-## Server-Side Example
+### Server-Side Example
 
 On the server side, these values are picked up and stored as key-value pair properties that can be used in other functions as described earlier in this topic.  Note that each requested header is added to either the default `UserId` property, or as a key-value pair in a Dictionary object.
 
@@ -450,5 +451,3 @@ When passing parameters from the client to the server, it's important to conside
 - Validate and sanitize input: Ensure that the input is valid and safe to use.
 - Use HTTPS for secure transport: This encrypts the data during transmission, preventing it from being intercepted.
 - Server-side authorization should verify the authenticity and authorization of the user context: This ensures that the user is who they claim to be and that they have the necessary permissions.
-
-For more information, refer to the [Reveal BI SDK documentation](https://help.revealbi.io/api/javascript/latest/).
