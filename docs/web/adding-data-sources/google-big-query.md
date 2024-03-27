@@ -23,14 +23,12 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVBigQueryDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasource.html) object. Set the `Title`, `Subtitle`, and `ProjectId` properties. After you have created the `RVBigQueryDataSource` object, add it to the data source items collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVBigQueryDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasource.html) object. Set the `Title` property. After you have created the `RVBigQueryDataSource` object, add it to the data source items collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var bigQuery = new $.ig.RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
-    bigQuery.subtitle = "My Big Query Subtitle";
-    bigQuery.projectId = "bigquery-public-data";
 
     callback(new $.ig.RevealDataSources([bigQuery], [], false));
 };
@@ -45,21 +43,17 @@ The `RVBigQueryDataSource` loads tables based on the authentication provider reg
 
 :::
 
-**Step 3** - Create a new Big Query Data Source Item by creating a new instance of the [RVBigQueryDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasourceitem.html) object. Specify the values for the `Title`, `Subtitle`, `ProjectId`, `DatasetId`, and `Table` properties. After you have created the `RVBigQueryDataSourceItem` object, add it to the data source items collection.
+**Step 3** - Create a new Big Query Data Source Item by creating a new instance of the [RVBigQueryDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasourceitem.html) object. Specify the values for the `Title` and `Subtitle` properties. After you have created the `RVBigQueryDataSourceItem` object, add it to the data source items collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var bigQuery = new $.ig.RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
     bigQuery.subtitle = "My Big Query Subtitle";
-    bigQuery.projectId = "bigquery-public-data";
 
     var bigQueryItem = new $.ig.RVBigQueryDataSourceItem(bigQuery);
     bigQueryItem.title = "My Big Query Item";
     bigQueryItem.subtitle = "My Big Query Item Subtitle";         
-    bigQueryItem.projectId = "bigquery-public-data";
-    bigQueryItem.datasetId = "austin_311";
-    bigQueryItem.table = "311_service_requests";
 
     callback(new $.ig.RevealDataSources([bigQuery], [bigQueryItem], false));
 };
