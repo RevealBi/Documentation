@@ -25,14 +25,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVSnowflakeDataSource` object. Set the `Host`, `Account` and `Database` properties to values that correspond to your Snowflake account. After you have created the `RVSnowflakeSource` object, add it to the data sources collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVSnowflakeDataSource` object. Set the `Title` property. After you have created the `RVSnowflakeSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var snowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    snowflakeDataSource.account = "your-snowflake-account"
-    snowflakeDataSource.host = "your-snowflake-host";
-    snowflakeDataSource.database = "your-snowflake-database";
     snowflakeDataSource.title = "My Snowflake";
 
     callback(new $.ig.RevealDataSources([snowflakeDataSource], [], false));
@@ -43,7 +40,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 ![](images/snowflake-data-source.jpg)
 
-**Step 3** - Add a new Data Source Item by creating a new instance of the `RVSnowflakeDataSourceItem` object. Set the `Id`, `Title`, `Schema`, and `Table` properties that correspond to your database table. After you have created the `RVSnowflakeDataSourceItem` object, add it to the data source items collection.
+**Step 3** - Add a new Data Source Item by creating a new instance of the `RVSnowflakeDataSourceItem` object. Set the `Id` and `Title` properties that correspond to your database table. After you have created the `RVSnowflakeDataSourceItem` object, add it to the data source items collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -54,8 +51,6 @@ revealView.onDataSourcesRequested = (callback) => {
     var mySnowflakeDataSourceItem = new $.ig.RVSnowflakeDataSourceItem(mySnowflakeDataSource);
     mySnowflakeDataSourceItem.id = "MySnowflakeDataSourceItem";
     mySnowflakeDataSourceItem.title = "My Snowflake Item";
-    mySnowflakeDataSourceItem.schema = "TPCDS_SF100TCL"
-    mySnowflakeDataSourceItem.table = "CUSTOMER"
 
     callback(new $.ig.RevealDataSources([mySnowflakeDataSource], [mySnowflakeDataSourceItem], true));
 };
