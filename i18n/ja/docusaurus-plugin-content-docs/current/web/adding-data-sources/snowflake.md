@@ -25,14 +25,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSnowflakeDataSource` オブジェクトの新しいインスタンスを作成します。`Host`、`Account`、および `Database` プロパティを、Snowflake アカウントに対応する値に設定します。`RVSnowflakeSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSnowflakeDataSource` オブジェクトの新しいインスタンスを作成します。`Title` プロパティを設定します。`RVSnowflakeSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var snowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    snowflakeDataSource.account = "your-snowflake-account"
-    snowflakeDataSource.host = "your-snowflake-host";
-    snowflakeDataSource.database = "your-snowflake-database";
     snowflakeDataSource.title = "My Snowflake";
 
     callback(new $.ig.RevealDataSources([snowflakeDataSource], [], false));
@@ -43,7 +40,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/snowflake-data-source.jpg)
 
-**手順 3** - `RVSnowflakeDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`Title`、`Schema`、および `Table` プロパティを設定します。`RVSnowflakeDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 3** - `RVSnowflakeDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id` および `Title` プロパティを設定します。`RVSnowflakeDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -54,8 +51,6 @@ revealView.onDataSourcesRequested = (callback) => {
     var mySnowflakeDataSourceItem = new $.ig.RVSnowflakeDataSourceItem(mySnowflakeDataSource);
     mySnowflakeDataSourceItem.id = "MySnowflakeDataSourceItem";
     mySnowflakeDataSourceItem.title = "My Snowflake Item";
-    mySnowflakeDataSourceItem.schema = "TPCDS_SF100TCL"
-    mySnowflakeDataSourceItem.table = "CUSTOMER"
 
     callback(new $.ig.RevealDataSources([mySnowflakeDataSource], [mySnowflakeDataSourceItem], true));
 };

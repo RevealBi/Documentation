@@ -23,14 +23,12 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVBigQueryDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasource.html) オブジェクトの新しいインスタンスを作成します。`Title`、`Subtitle`、および `ProjectId` プロパティを設定します。`RVBigQueryDataSource` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVBigQueryDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasource.html) オブジェクトの新しいインスタンスを作成します。`Title` プロパティを設定します。`RVBigQueryDataSource` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var bigQuery = new $.ig.RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
-    bigQuery.subtitle = "My Big Query Subtitle";
-    bigQuery.projectId = "bigquery-public-data";
 
     callback(new $.ig.RevealDataSources([bigQuery], [], false));
 };
@@ -45,21 +43,17 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::
 
-**手順 3** - [RVBigQueryDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Big Query データ ソース項目を作成します。`Title`、`Subtitle`、`ProjectId`、`DatasetId`、および `Table` プロパティの値を指定します。`RVBigQueryDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 3** - [RVBigQueryDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvbigquerydatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Big Query データ ソース項目を作成します。`Title` および `Subtitle` プロパティの値を指定します。`RVBigQueryDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var bigQuery = new $.ig.RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
     bigQuery.subtitle = "My Big Query Subtitle";
-    bigQuery.projectId = "bigquery-public-data";
 
     var bigQueryItem = new $.ig.RVBigQueryDataSourceItem(bigQuery);
     bigQueryItem.title = "My Big Query Item";
     bigQueryItem.subtitle = "My Big Query Item Subtitle";         
-    bigQueryItem.projectId = "bigquery-public-data";
-    bigQueryItem.datasetId = "austin_311";
-    bigQueryItem.table = "311_service_requests";
 
     callback(new $.ig.RevealDataSources([bigQuery], [bigQueryItem], false));
 };
