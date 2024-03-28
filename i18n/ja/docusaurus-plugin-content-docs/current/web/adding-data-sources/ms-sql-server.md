@@ -25,14 +25,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSqlServerDataSource` オブジェクトの新しいインスタンスを作成します。`Host`、`Database`、`Port`、および `Title` プロパティを、MS SQL Server に対応する値に設定します。`RVSqlServerDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSqlServerDataSource` オブジェクトの新しいインスタンスを作成します。MS SQL Server に対応する `Title` プロパティを設定します。`RVSqlServerDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var sqlDataSource = new $.ig.RVSqlServerDataSource();
-    sqlDataSource.host = "your-db-host";
-    sqlDataSource.database = "your-db-name";
-    sqlDataSource.port = 1234;
     sqlDataSource.title = "My SQL Server";
 
     callback(new $.ig.RevealDataSources([sqlDataSource], [], false));
@@ -43,20 +40,16 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/ms-sql-server-data-source.jpg)
 
-**手順 3** - `RVSqlServerDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`Title`、および `Table` プロパティを設定します。`RVSqlServerDataSourceItem` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 3** - `RVSqlServerDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id` および `Title` プロパティを設定します。`RVSqlServerDataSourceItem` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var sqlDataSource = new $.ig.RVSqlServerDataSource();
-    sqlDataSource.host = "your-db-host";
-    sqlDataSource.database = "your-db-name";
-    sqlDataSource.port = 1234;
     sqlDataSource.title = "My SQL Server";
 
     var sqlServerDsi = new $.ig.RVSqlServerDataSourceItem(sqlDataSource);
     sqlServerDsi.id = "MySqlServerDatasourceItem";
-    sqlServerDsi.title = "My SQL Server Item";
-    sqlServerDsi.table = "TableName";    
+    sqlServerDsi.title = "My SQL Server Item";  
 
     callback(new $.ig.RevealDataSources([sqlDataSource], [sqlServerDsi], false));
 };
