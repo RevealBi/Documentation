@@ -75,8 +75,6 @@ The size of individual datasets is indirectly restricted by a set of parameters:
 
 The data is serialized as JSON and temporarily stored in an in-memory cache.
 
-The size of the cache is unrestricted.
-
 ## Refreshing the cache
 Refreshing the cache involves updating or renewing the stored data within the cache to maintain accuracy and reflect the most recent information. By default, the cache is set to update `Once a day`. The behavior of cache refreshing can be modified from the visualization UI, allowing users to change the update period or trigger a manual update based on their specific requirements.
 
@@ -101,6 +99,32 @@ To bypass caching, set the data source refresh data frequency to `Always`.
 
 ![](images/cache-disable.jpg)
 
-## Clearing the cache
+## FAQ
 
-Clearing the cache is as simple as deleting the contents of the folder where the cache is stored. This process helps free up storage space and ensures that the cache is reset. Additionally, it allows the application to retrieve the latest data from the original source upon the next query, providing a refreshed and up-to-date experience.
+**Q: Does the cache consume a lot of disk space?**
+
+**A:** The cache is engineered to utilize approximately 20GB, automatically removing older entries if necessary. Currently, there is no public setting to adjust this size.
+
+**Q: My disk is filling up, and I think Reveal is to blame**
+
+**A:** Before reporting a bug, check if the OS temporary directory is not being cleared. Reveal and other processes can generate temporary files that the OS might not remove until it restarts. Consider scheduling a cleanup process to manage this directory periodically. Reveal does create some temporary files that are automatically deleted, so ensure that your cleanup process does not delete recently created files, as they may be part of ongoing operations in Reveal. Additionally, if Reveal's cache folder resides within the OS temporary directory, it should not be deleted by the cleanup process.
+
+**Q: How can I segregate cache entries for different users?**
+
+**A:** This is often done for security reasons. However, if different users have equal access rights to the underlying data source, sharing cache entries can enhance the overall performance. Reveal, by default, leans toward the later approach. When it comes to security, you need to:
+  - Set the `IRVUserContext.UserId` property in the `IRVUserContextProvider` to identify the current user. This context is accessible in the `IRVDataSourceProvider` and `IRVAuthenticationProvider`, enabling user-specific decisions.
+  - Configure the data source in the `IRVDataSourceProvider` for the current user. Limit data sources to those relevant to the user's role, and adjust properties accordingly (e.g., ensure Database/Table/CustomQuery properties align with the user's permissions).
+  - Assign appropriate credentials for the user in the `IRVAuthenticationProvider`.
+
+  These steps are crucial for security, regardless of caching. Regarding caching, Reveal utilizes provided information (data source, credentials, and sometimes UserId) to create cache entries. These entries may be shared among users only if they share the same data source and credentials, indicating they can execute identical queries with matching permissions.
+
+**Q: How does `IRVUserContext.UserId` impact cache entries?**
+
+**A:** Currently, there's no assurance that distinct UserId values will generate separate entries in the cache. However, it's crucial to ensure that the UserId is correctly set when using `RVHeadersDataSourceCredentials` credentials type, as not doing so can lead to cache issues.
+
+**Q: How does the `RVBearerTokenDataSourceCredential.UserId` property impact cache entries?**
+
+**A:** If the `RVBearerTokenDataSourceCredential.UserId` is set, it will be used when creating the cache entry key, and it is recommended to do so to improve performance. Note that the UserId in `RVBearerTokenDataSourceCredential` may differ from the one in `IRVUserContext`; it corresponds to the UserId linked with the `RVBearerTokenDataSourceCredential' access token.
+
+Q: In my deployment, there will be several instances of the Reveal server. How can they share the cache? 
+A: Currently, caches cannot be shared among multiple Reveal server instances. We recommend the following approach: configure your load balancer to direct the same group of users to the same Reveal server instance. This will ensure that cache entries are created within a specific instance, and subsequent requests from those users will hit the same instance, utilizing the cached data efficiently.
