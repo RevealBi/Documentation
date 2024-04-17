@@ -3,6 +3,57 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.6.5 (April 18th, 2024)
+
+### New Features
+
+#### All Platforms
+
+- Added an optional description text box, controlled by the property `showDescription`, to the RevealView.
+- Exporting a grid or pivot to PDF will now generate "overflow" tables containing the columns that would otherwise not fit the width of the page.
+- Grid column width is now respected on PDF export.
+- Improved pivot grid visualization appearance in exports to Excel.
+- (Beta) Added server side paging support to the grid visualization. To enable this functionality and have it appear in the visualization editor Settings pane, set `$.ig.RevealSdkSettings.enableBetaFeatures` to `true`. Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. The providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. Additionally, paging is not available when processing data on server is false, as well as when using blended data.
+- `SkiaSharp`, `SkiaSharp.HarfBuzz`, and `SkiaSharp.NativeAssets.Linux` v2.88.3 dependency updated to v2.88.7. 
+- A flag was added to the RevealView to control whether or not data tooltip previews in the visualization editor. They are turned off by default to prevent a query getting the first 5 rows. To enable this tooltip, set `isPreviewDataInVisualizationEditorEnabled` to `true`.
+- Blending is now supported in MySql when using process data on server.
+- Radial charts have a new look & feel. The old L&F are deprecated but if needed, they can be restored by setting `RevealSdkSettings.EnableNewCharts = false`.
+- Bar and column charts now include an overlap and gap setting in the visualization editor Settings pane. This allows you to control the amount of overlap between the bars and the amount of space between the groups.
+- The Treemap visualization now shows a tooltip on hover and highlights the node.
+- `Playwright` v1.27.2 dependency updated to v1.42.0.
+
+### Bug Fixes
+
+#### All Platforms
+
+- Pie & Doughnut charts are not displayed when exporting from UI.
+- Deleting a data blend while a calculated field depends on it won't delete the calculated field.
+- Calling a function in Redshift produces an error.
+- Postgres functions not working.
+- RevealView positioning and sizing when using transform:scale style on the container or any ancestor element.
+- Setting `canAddDateFilter` causes exception.
+- Save event `args.isNew` is `false` if dashboard property is set to null or undefined.
+- Stored procedures parameter screen will sometimes pull previous data or nothing at all.
+- Scroll stops working on pop-up element when using search bar.
+- Scatter Map indicators hover region shifts with zoom.
+- Fraction digits are not shown in Choropleth Map tooltip.
+- Filter value above 3000+ is not preserved.
+- Errors with renamed pivot fields in post-calculated field UI.
+- Preview data cell is not being reused causing it to be rendered multiple times.
+- Grids crash on MacOS ARM64.
+- Pie chart legend disappears when there is enough space to show it.
+- MySql blending with Process Data on Server off produces error.
+- Hover event not behaving as intended on slice charts.
+- Grand Totals are not shown in the Pivot Grid visualizations.
+- Incorrect grand totals values shown when using Analysis Services data provider.
+- Dashboard and visualization filters with wrong grand totals when using Analysis Services data provider.
+- Field name modifications lost after reordering values on Pivot Grid.
+- Error "<some hierarchy> hierarchy already appears in the Axis1 axis." in Analysis Services.
+- Wrong results when applying 'Top N' filter in Analysis Services.
+- Resource based visualization fetches wrong cache entry.
+- Wrong cache entry is hit when using blending.
+- Can't set focus to search box after the browser goes to background.
+
 ## 1.6.4 (2024 年 2 月 14 日)
 
 ### 重大な変更
