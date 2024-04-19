@@ -1,44 +1,44 @@
 # リリース ノート
 
-## 1.6.5 (April 18th, 2024)
+## 1.6.5 (2024 年 4 月 18 日)
 
-### New Features
+### 新機能
 
-- Added an optional description text box, controlled by the property `ShowDescription`, to the RevealView.
-- Exporting a grid or pivot to PDF will now generate "overflow" tables containing the columns that would otherwise not fit the width of the page.
-- Grid column width is now respected on PDF export.
-- Improved pivot grid visualization appearance in exports to Excel.
-- (Beta) Added server side paging support to the grid visualization. To enable this functionality and have it appear in the visualization editor Settings pane, set `RevealSdkSettings.EnableBetaFeatures` to `true`. Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. The providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. Additionally, paging is not available when processing data on server is false, as well as when using blended data.
-- A flag was added to the RevealView to control whether or not data tooltip previews in the visualization editor. They are turned off by default to prevent a query getting the first 5 rows. To enable this tooltip, set `IsPreviewDataInVisualizationEditorEnabled` to `true`.
-- Blending is now supported in MySql when using process data on server.
-- Radial charts have a new look & feel. The old L&F are deprecated but if needed, they can be restored by setting `RevealSdkSettings.EnableNewCharts = false`.
-- Bar and column charts now include an overlap and gap setting in the visualization editor Settings pane. This allows you to control the amount of overlap between the bars and the amount of space between the groups.
-- The Treemap visualization now shows a tooltip on hover and highlights the node. 
+- `ShowDescription` プロパティによって制御されるオプションの説明テキスト ボックスを RevealView に追加しました。
+- グリッドまたはピボットを PDF にエクスポートすると、ページの幅に収まらない列を含むオーバーフロー テーブルが生成されるようになりました。
+- PDF エクスポート時にグリッド列の幅が優先されるようになりました。
+- Excel へのエクスポートにおけるピボット グリッドの表示形式の外観が改善されました。
+- (ベータ版) グリッド表示形式にサーバー側のページング サポートが追加されました。この機能を有効にして、表示形式エディターの設定ペインに表示するには、`RevealSdkSettings.EnableBetaFeatures` を `true` に設定します。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
+- 表示形式エディターでデータ ツールチップをプレビューするかどうかを制御するフラグが RevealView に追加されました。クエリが最初の 5 行を取得するのを防ぐため、これらはデフォルトでオフになっています。このツールチップを有効にするには、`IsPreviewDataInVisualizationEditorEnabled` を `true` に設定します。
+- サーバー上でプロセス データを使用する場合、MySql でブレンディングがサポートされるようになりました。
+- ラジアル チャートの新しいルック & フィール。以前のルック & フィールは非推奨ですが、必要に応じて `RevealSdkSettings.EnableNewCharts = false` を実行することで復元できます。
+- 棒チャートと柱状チャートには、表示形式エディターの設定ペインに重複とギャップの設定が含まれるようになりました。これにより、バー間の重なりの量とグループ間のスペースの量を制御できます。
+- ツリーマップの表示形式では、マウスをホバーするとツールヒントが表示され、ノードが強調表示されるようになりました。
 
-### Bug Fixes
+### バグ修正
 
-- Pie & Doughnut charts are not displayed when exporting from UI.
-- Deleting a data blend while a calculated field depends on it won't delete the calculated field.
-- Calling a function in Redshift produces an error.
-- Postgres functions not working.
-- Setting `CanAddDateFilter` causes exception.
-- Stored procedures parameter screen will sometimes pull previous data or nothing at all.
-- Scroll stops working on pop-up element when using search bar.
-- Fraction digits are not shown in Choropleth Map tooltip.
-- Filter value above 3000+ is not preserved.
-- Errors with renamed pivot fields in post-calculated field UI.
-- Transposed fields from stored procedure not working.
-- Pie chart legend disappears when there is enough space to show it.
-- MySql blending with Process Data on Server off produces error.
-- Hover event not behaving as intended on slice charts.
-- Grand Totals are not shown in the Pivot Grid visualizations.
-- Incorrect grand totals values shown when using Analysis Services data provider.
-- Dashboard and visualization filters with wrong grand totals when using Analysis Services data provider.
-- Field name modifications lost after reordering values on Pivot Grid.
-- Error "<some hierarchy> hierarchy already appears in the Axis1 axis." in Analysis Services.
-- Wrong results when applying 'Top N' filter in Analysis Services.
-- Resource based visualization fetches wrong cache entry.
-- Wrong cache entry is hit when using blending.
+- UI からエクスポートする場合、円チャートとドーナツ型チャートが表示されない問題。
+- 計算フィールドが依存しているデータ ブレンドを削除しても、計算フィールドが削除されない問題。
+- Redshift で関数を呼び出すとエラーが発生する問題。
+- Postgres 関数が正しく動作しない問題。
+- `CanAddDateFilter` を設定すると例外が発生する問題。
+- ストアド プロシージャー パラメーター画面では、以前のデータが取得されたり、まったく取得されなかったりする場合があります。
+- 検索バーを使用すると、ポップアップ要素でスクロールが機能しなくなる問題。
+- 分数の数字は、階級区分図のツールチップには表示されない問題。
+- 3000 を超えるフィルター値は保持されない問題。
+- 事後計算フィールドの UI で名前が変更されたピボット フィールドに関するエラーが発生する問題。
+- ストアド プロシージャーの入れ替えフィールドが正しく動作しない問題。
+- 円チャートの凡例が、表示するのに十分なスペースがある場合に表示されなくなる問題。
+- サーバー上のプロセス データをオフにした状態で MySql をブレンドするとエラーが発生する問題。
+- スライス チャートでホバー イベントが意図したとおりに動作しない問題。
+- ピボット グリッドの表示形式に総計が表示されない問題。
+- Analysis Services データ プロバイダーを使用すると、誤った総計値が表示される問題。
+- Analysis Services データ プロバイダーを使用すると、ダッシュボードと視覚化フィルターに誤った総計が表示される問題。
+- ピボット グリッドで値を並べ替えた後、フィールド名の変更が失われる問題。
+- 「`<some hierarchy>` hierarchy already appears in the Axis1 axis. 」 エラーが Analysis Services で発生する問題。
+- Analysis Services で 「上の N」 フィルターを適用すると、誤った結果が返される問題。
+- リソースベースの表示形式では誤ったキャッシュ エントリが取得される問題。
+- ブレンディングを使用すると、誤ったキャッシュ エントリがヒットされる問題。
 
 ## 1.6.4 (2024 年 2 月 14 日)
 
