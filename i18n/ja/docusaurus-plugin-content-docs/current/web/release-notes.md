@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.6.5 (2024 年 4 月 18 日)
+## 1.6.6 (2024 年 4 月 19 日)
 
 ### 新機能
 
@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
 - Analysis Services データ プロバイダーを使用すると、誤った総計値が表示される問題。
 - Analysis Services データ プロバイダーを使用すると、ダッシュボードと視覚化フィルターに誤った総計が表示される問題。
 - ピボット グリッドで値を並べ替えた後、フィールド名の変更が失われる問題。
-- 「`<some hierarchy>` hierarchy already appears in the Axis1 axis. 」 エラーが Analysis Services で発生する問題。
+- 「...hierarchy already appears in the Axis1 axis. 」 エラーが Analysis Services で発生する問題。
 - Analysis Services で 「上の N」 フィルターを適用すると、誤った結果が返される問題。
 - リソースベースの表示形式では誤ったキャッシュ エントリが取得される問題。
 - ブレンディングを使用すると、誤ったキャッシュ エントリがヒットされる問題。
