@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
-## 1.6.5 (April 18th, 2024)
+## 1.6.6 (April 19th, 2024)
 
 ### New Features
 
@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
 - Incorrect grand totals values shown when using Analysis Services data provider.
 - Dashboard and visualization filters with wrong grand totals when using Analysis Services data provider.
 - Field name modifications lost after reordering values on Pivot Grid.
-- Error "<some hierarchy> hierarchy already appears in the Axis1 axis." in Analysis Services.
+- Error "...hierarchy already appears in the Axis1 axis." in Analysis Services.
 - Wrong results when applying 'Top N' filter in Analysis Services.
 - Resource based visualization fetches wrong cache entry.
 - Wrong cache entry is hit when using blending.
