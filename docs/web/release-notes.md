@@ -22,6 +22,12 @@ import TabItem from '@theme/TabItem';
 - The Treemap visualization now shows a tooltip on hover and highlights the node.
 - `Playwright` v1.27.2 dependency updated to v1.42.0.
 
+#### Node
+- Added `dataSourceItemFilter` property to the RevealOptions that allows the filtering of data sources items in the data source dialog
+```ts
+dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => Promise<boolean>
+```
+
 ### Bug Fixes
 
 #### All Platforms
