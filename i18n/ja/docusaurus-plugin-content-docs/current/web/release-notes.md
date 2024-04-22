@@ -22,6 +22,12 @@ import TabItem from '@theme/TabItem';
 - ツリーマップの表示形式では、マウスをホバーするとツールヒントが表示され、ノードが強調表示されるようになりました。
 - `Playwright` v1.27.2 の依存関係が v1.42.0 に更新されました。
 
+#### Node
+- Added `dataSourceItemFilter` property to the RevealOptions that allows the filtering of data sources items in the data source dialog
+```ts
+dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => Promise<boolean>
+```
+
 ### バグ修正
 
 #### すべてのプラットフォーム
