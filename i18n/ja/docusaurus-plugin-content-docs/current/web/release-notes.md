@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 - `Playwright` v1.27.2 の依存関係が v1.42.0 に更新されました。
 
 #### Node
-- Added `dataSourceItemFilter` property to the RevealOptions that allows the filtering of data sources items in the data source dialog
+- データ ソース ダイアログでデータ ソース項目をフィルター処理できるようにする `dataSourceItemFilter` プロパティが RevealOptions に追加されました。
 ```ts
 dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => Promise<boolean>
 ```
@@ -54,7 +54,7 @@ dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDa
 - Analysis Services データ プロバイダーを使用すると、誤った総計値が表示される問題。
 - Analysis Services データ プロバイダーを使用すると、ダッシュボードと視覚化フィルターに誤った総計が表示される問題。
 - ピボット グリッドで値を並べ替えた後、フィールド名の変更が失われる問題。
-- 「...hierarchy already appears in the Axis1 axis. 」 エラーが Analysis Services で発生する問題。
+- 「...hierarchy already appears in the Axis1 axis.」 エラーが Analysis Services で発生する問題。
 - Analysis Services で 「上の N」 フィルターを適用すると、誤った結果が返される問題。
 - リソースベースの表示形式では誤ったキャッシュ エントリが取得される問題。
 - ブレンディングを使用すると、誤ったキャッシュ エントリがヒットされる問題。
