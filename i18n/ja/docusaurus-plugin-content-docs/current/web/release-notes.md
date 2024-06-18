@@ -3,6 +3,71 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.6.7 (June 24th, 2024)
+
+### New Features
+
+#### All Platforms
+
+- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. Currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar. To enable this functionality, set `interactiveFilteringEnabled` to `true` on the RevealView.
+- (Beta) Visualization toolbar was added to quickly access trend-lines, labels, zooming, etc. To enable this functionality, set `enableNewToolbar` to `true` on `$.ig.RevealSdkSettings`.
+- Removed the ability to provide a custom query client-side on SQL-based data sources.
+- Removed RVGoogleAnalyticsDataSource and RVGoogleAnalyticsDataSourceItem as Google will sunset the API for that connector on July 1st, 2024.
+- Added `onDashboardChanged` event to RevealView.
+
+```js
+revealView.onDashboardChanged = function (args: DashboardChangedEventArgs) {
+  console.log('Dashboard has changed.');
+  console.log('Old Dashboard:', args.oldValue);
+  console.log('New Dashboard:', args.newValue);
+
+  // Accessing filters for the old and new dashboard
+  if(args.oldValue) {
+    console.log('Old Dashboard Filters:', args.oldValue.filters);
+  }
+  if(args.newValue) {
+    console.log('New Dashboard Filters:', args.newValue.filters);
+  }
+};
+```
+- Tables in the data source dialog are now sorted alphabetically. This change applies to connectors for: SQL Server, MySql, Postgres, Redshift, Oracle, and Snowflake.
+- Headless export now includes grid data.
+- RVGoogleAnalytics4DataSource now includes `accountId` & `propertyId` properties, and deprecating the corresponding properties in RVGoogleAnalytics4DataSourceItem.
+
+#### Java
+
+- Added a default RVDashboardProvider to enable the saving of dashboards to the server without needing to implement a provider.
+
+### Bug Fixes
+
+#### All Platforms
+
+- Excel export crash when exporting a XMLA-based visualization that has no field set in the Label section.
+- Incorrect DataSource ID in ChangeDataSourceItemAsync.
+- Exception caused when a Sparkline visualization was loaded with the dashboard.
+- Exception caused by invalid cast in the Grid visualization.
+- Stored procedures are shown as a valid additional data source in the blending UI.
+- Error reading DateTime.MaxValue from database.
+- Exporting an Excel file with a widget with no title crashes.
+- Excel export containing expanded rows in the Pivot visualization mixes up columns.
+- Null row header when exporting Line chart visualization.
+- Reserved characters aren't filtered correctly when exporting to Excel.
+- Date formatting is not applied on Excel export.
+- Filter editor fields list affects the expression editor fields list.
+- SharePoint O365 datasource doesn't work.
+- Calculated expression `datediff` works with double quotes not single quotes.
+- Wrong BigQuery date precision handling.
+- Editor search bar rendered multiple times.
+- Filtered field list is incorrect after adding a calculated field.
+
+#### ASP.NET & Java
+
+- RDASH properties take precedence over what is set on the server.
+
+#### Java
+
+- ExportTool is created in wrong path.
+
 ## 1.6.6 (2024 年 4 月 19 日)
 
 ### 新機能
