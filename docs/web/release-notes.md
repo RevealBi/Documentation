@@ -9,6 +9,20 @@ import TabItem from '@theme/TabItem';
 
 #### All Platforms
 
+- Added API to programmatically access visualization filters (aka Quick Filters) and modify their selected values.
+
+```js
+//Add a selected value, specified by index from the list of available values, to a field given its name.
+function addSelValueToFilter(fieldName, valueIdx) {
+	var flt = revealView.dashboard.visualizations[0].filters.getByFieldName(fieldName);
+	var valuesPromise = flt.getFilterValues(); //Retrieve the selectable values for the filter
+	valuesPromise.then(function (values) {              
+		var selValues = flt.selectedValues;
+		selValues.push(values[valueIdx]); //Add the specified value to the selection
+		flt.selectedValues = selValues;
+	});
+}
+```
 - (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. Currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar. To enable this functionality, set `interactiveFilteringEnabled` to `true` on the RevealView.
 - (Beta) Visualization toolbar was added to quickly access trend-lines, labels, zooming, etc. To enable this functionality, set `enableNewToolbar` to `true` on `$.ig.RevealSdkSettings`.
 - Removed the ability to provide a custom query client-side on SQL-based data sources.

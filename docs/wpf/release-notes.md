@@ -4,6 +4,19 @@
 
 ### New Features
 
+- Added API to programmatically access visualization filters (aka Quick Filters) and modify their selected values.
+
+```cs
+//Add a selected value, specified by index from the list of available values, to a field given its name.
+async Task AddSelValueToFilter(string fieldName, int valueIdx)
+{
+	var flt = RevealView.Dashboard.Visualizations[0].Filters.GetByFieldName(fieldName);
+	var filterSelValues = flt.SelectedValues.ToList();
+	var filterValues = (await flt.GetFilterValuesAsync()).ToList(); //Retrieve the selectable values for the filter
+	filterSelValues.Add(filterValues[valueIdx]); //Add the specified value to the selection
+	flt.SelectedValues = filterSelValues;
+}
+```
 - (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. Currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar. To enable this functionality, set `InteractiveFilteringEnabled` to `true` on the RevealView.
 - (Beta) Visualization toolbar was added to quickly access trend-lines, labels, zooming, etc. To enable this functionality, set `EnableNewToolbar` to `true` on RevealSdkSettings.
 - Removed the ability to provide a custom query client-side on SQL-based data sources.
