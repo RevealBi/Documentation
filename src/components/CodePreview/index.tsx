@@ -78,7 +78,6 @@ const CodeSnippet = ({ language, code }: { language: string, code: string }) => 
     </CodeBlock>
 );
 
-
 const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
     const [currentTab, setCurrentTab] = useState(LANGUAGES.HTML);
     const [showSource, setShowSource] = useState(true);
@@ -92,7 +91,46 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
     };
 
     const openCodePen = () => {
-        console.log('open codepen');
+        const reactVersion = '18.2.0';
+        let htmlTemplate = codeBlocks[LANGUAGES.HTML] || '';
+        let cssTemplate = '';
+        let jsTemplate = codeBlocks[LANGUAGES.JS] || '';
+        let jsPreProcessor = 'none';
+        let editors = '101'; // default editors (HTML, CSS, JS)
+
+        if (currentTab === LANGUAGES.REACT) {
+            jsPreProcessor = 'babel';
+            editors = '0010'
+            htmlTemplate = '<div id="root"></div>';
+            jsTemplate =
+            `import React from 'https://esm.sh/react@${reactVersion}';\n` +
+            `import ReactDOM from 'https://esm.sh/react-dom@${reactVersion}';\n` +
+            `\n${codeBlocks[LANGUAGES.REACT]}\n` +
+            `ReactDOM.render(<App />, document.getElementById('root'));`;
+            
+        }
+
+        const codepenData: any = {
+            title: "Code Preview",
+            html: htmlTemplate,
+            js: jsTemplate,
+            css: cssTemplate,
+            js_pre_processor: jsPreProcessor,
+            editors: editors,
+        };
+
+        const form = document.createElement('form');
+        form.action = 'https://codepen.io/pen/define';
+        form.method = 'POST';
+        form.target = '_blank';
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'data';
+        input.value = JSON.stringify(codepenData).replace(/"/g, "&quot;").replace(/'/g, "&apos;"); // Quotes will screw up the JSON
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
     };
 
     return (
