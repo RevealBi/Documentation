@@ -1,5 +1,72 @@
 # Release Notes
 
+## 1.6.7 (June 26th, 2024)
+
+### New Features
+
+- Added API to programmatically access visualization filters (aka Quick Filters) and modify their selected values.
+
+```cs
+//Add a selected value, specified by index from the list of available values, to a field given its name.
+async Task AddSelValueToFilter(string fieldName, int valueIdx)
+{
+	var flt = RevealView.Dashboard.Visualizations[0].Filters.GetByFieldName(fieldName);
+	var filterSelValues = flt.SelectedValues.ToList();
+	var filterValues = (await flt.GetFilterValuesAsync()).ToList(); //Retrieve the selectable values for the filter
+	filterSelValues.Add(filterValues[valueIdx]); //Add the specified value to the selection
+	flt.SelectedValues = filterSelValues;
+}
+```
+- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. Currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar. To enable this functionality, set `InteractiveFilteringEnabled` to `true` on the RevealView.
+- (Beta) Visualization toolbar was added to quickly access trend-lines, labels, zooming, etc. To enable this functionality, set `EnableNewToolbar` to `true` on RevealSdkSettings.
+- Removed the ability to provide a custom query client-side on SQL-based data sources.
+- Removed RVGoogleAnalyticsDataSource and RVGoogleAnalyticsDataSourceItem as Google will sunset the API for that connector on July 1st, 2024.
+- Added `DashboardChanged` event to RevealView.
+
+```cs
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+
+        revealView.DashboardChanged += RevealView_DashboardChanged;
+    }
+
+    private void RevealView_DashboardChanged(object sender, DashboardChangedEventArgs e)
+    {
+        // Access the old and new dashboard
+        var oldDashboard = e.OldValue;
+        var newDashboard = e.NewValue;
+
+        // Implement your logic here
+        Console.WriteLine($"Dashboard has changed from {oldDashboard.Title} to {newDashboard.Title}");
+    }
+}
+```
+- Tables in the data source dialog are now sorted alphabetically. This change applies to connectors for: SQL Server, MySql, Postgres, Redshift, Oracle, and Snowflake.
+- RVGoogleAnalytics4DataSource now includes `AccountId` & `PropertyId` properties, and deprecating the corresponding properties in RVGoogleAnalytics4DataSourceItem.
+
+### Bug Fixes
+
+- Excel export crash when exporting a XMLA-based visualization that has no field set in the Label section.
+- Incorrect DataSource ID in ChangeDataSourceItemAsync.
+- Exception caused when a Sparkline visualization was loaded with the dashboard.
+- Exception caused by invalid cast in the Grid visualization.
+- Stored procedures are shown as a valid additional data source in the blending UI.
+- Error reading DateTime.MaxValue from database.
+- Exporting an Excel file with a widget with no title crashes.
+- Excel export containing expanded rows in the Pivot visualization mixes up columns.
+- Null row header when exporting Line chart visualization.
+- Reserved characters aren't filtered correctly when exporting to Excel.
+- Date formatting is not applied on Excel export.
+- Filter editor fields list affects the expression editor fields list.
+- SharePoint O365 datasource doesn't work.
+- Calculated expression `datediff` works with double quotes not single quotes.
+- Wrong BigQuery date precision handling.
+- Selected values are not shown for visualization filter based on numeric field.
+- Filtered field list is incorrect after adding a calculated field.
+
 ## 1.6.6 (April 19th, 2024)
 
 ### New Features
