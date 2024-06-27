@@ -1,10 +1,10 @@
 # リリース ノート
 
-## 1.6.7 (June 26th, 2024)
+## 1.6.7 (2024 年 6 月 26 日)
 
-### New Features
+### 新機能
 
-- Added API to programmatically access visualization filters (aka Quick Filters) and modify their selected values.
+- 表示形式フィルター (クイック フィルターとも呼ばれます) にプログラムでアクセスし、選択した値を変更するための API が追加されました。
 
 ```cs
 //Add a selected value, specified by index from the list of available values, to a field given its name.
@@ -17,11 +17,11 @@ async Task AddSelValueToFilter(string fieldName, int valueIdx)
 	flt.SelectedValues = filterSelValues;
 }
 ```
-- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. Currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar. To enable this functionality, set `InteractiveFilteringEnabled` to `true` on the RevealView.
-- (Beta) Visualization toolbar was added to quickly access trend-lines, labels, zooming, etc. To enable this functionality, set `EnableNewToolbar` to `true` on RevealSdkSettings.
-- Removed the ability to provide a custom query client-side on SQL-based data sources.
-- Removed RVGoogleAnalyticsDataSource and RVGoogleAnalyticsDataSourceItem as Google will sunset the API for that connector on July 1st, 2024.
-- Added `DashboardChanged` event to RevealView.
+- (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。シリーズのツールチップには、選択した値でフィルタリングするオプションが含まれます。表示形式の残りの部分には、フィルタリングされた値と元の値を簡単に比較できるように、両方の値が表示されます。現在、次のチャート タイプがサポートされています: 縦棒、棒、折れ線、時系列、エリア、ステップ エリア、スプライン、積層型縦棒、積層型エリア、積層型棒。この機能を有効にするには、RevealView で `InteractiveFilteringEnabled` を `true` に設定します。
+- (ベータ版) トレンドライン、ラベル、ズームなどにすばやくアクセスするための表示形式ツールバーが追加されました。この機能を有効にするには、RevealSdkSettings で `EnableNewToolbar` を `true` に設定します。
+- SQL ベースのデータ ソースに対しクライアント側でカスタム クエリを提供できる機能を削除しました。
+- RVGoogleAnalyticsDataSource と RVGoogleAnalyticsDataSourceItem は、Google がこのコネクタの API を 2024 年 7 月 1 日に廃止する予定であるため、削除されました。
+- RevealView に `DashboardChanged` イベントを追加しました。
 
 ```cs
 public partial class MainWindow : Window
@@ -44,28 +44,28 @@ public partial class MainWindow : Window
     }
 }
 ```
-- Tables in the data source dialog are now sorted alphabetically. This change applies to connectors for: SQL Server, MySql, Postgres, Redshift, Oracle, and Snowflake.
-- RVGoogleAnalytics4DataSource now includes `AccountId` & `PropertyId` properties, and deprecating the corresponding properties in RVGoogleAnalytics4DataSourceItem.
+- データ ソース ダイアログ内のテーブルがアルファベット順に並べ替えられるようになりました。この変更は次のコネクタに適用されます: SQL Server、MySql、Postgres、Redshift、Oracle、Snowflake。
+- RVGoogleAnalytics4DataSource に `AccountId` および `PropertyId` プロパティが含まれるようになり、RVGoogleAnalytics4DataSourceItem の該当するプロパティは非推奨になりました。
 
-### Bug Fixes
+### バグ修正
 
-- Excel export crash when exporting a XMLA-based visualization that has no field set in the Label section.
-- Incorrect DataSource ID in ChangeDataSourceItemAsync.
-- Exception caused when a Sparkline visualization was loaded with the dashboard.
-- Exception caused by invalid cast in the Grid visualization.
-- Stored procedures are shown as a valid additional data source in the blending UI.
-- Error reading DateTime.MaxValue from database.
-- Exporting an Excel file with a widget with no title crashes.
-- Excel export containing expanded rows in the Pivot visualization mixes up columns.
-- Null row header when exporting Line chart visualization.
-- Reserved characters aren't filtered correctly when exporting to Excel.
-- Date formatting is not applied on Excel export.
-- Filter editor fields list affects the expression editor fields list.
-- SharePoint O365 datasource doesn't work.
-- Calculated expression `datediff` works with double quotes not single quotes.
-- Wrong BigQuery date precision handling.
-- Selected values are not shown for visualization filter based on numeric field.
-- Filtered field list is incorrect after adding a calculated field.
+- ラベル セクションにフィールドが設定されていない XMLA ベースの表示形式をエクスポートすると、Excel エクスポートがクラッシュする問題。
+- ChangeDataSourceItemAsync の DataSource ID が正しくない問題。
+- ダッシュボードに Sparkline 表示形式が読み込まれたときに例外が発生する問題。
+- 無効なキャストによって、グリッド表示形式で例外が発生する問題。
+- ブレンディング UI で、ストアド プロシージャーが有効な追加データ ソースとして表示される問題。
+- データベースから DateTime.MaxValue を読み取るときにエラーが発生する問題。
+- タイトルのないウィジェットを含む Excel ファイルをエクスポートするとクラッシュする問題。
+- ピボット表示形式の Excel エクスポートで、展開された行を含む場合に列が混在する問題。
+- 折れ線チャートの表示形式をエクスポートするときに、行ヘッダーが null になる問題。
+- Excel にエクスポートするときに、予約文字が正しくフィルタリングされない問題。
+- Excel エクスポートで、日付の書式設定が適用されない問題。
+- フィルター エディターのフィールド リストが、式エディターのフィールド リストに影響する問題。
+- SharePoint O365 データ ソースが正しく機能しない問題。
+- `datediff` 計算式が、一重引用符ではなく二重引用符で機能する問題。
+- BigQuery の日付精密ハンドリングが間違っている問題。
+- 数値フィールドに基づく表示形式フィルターで、選択した値が表示されない問題。
+- 計算フィールドを追加した後、フィルターされたフィールド リストが正しくない問題。
 
 ## 1.6.6 (2024 年 4 月 19 日)
 
