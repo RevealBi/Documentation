@@ -16,6 +16,14 @@ iframe {
   overflow-x: auto;
 }
 
+.code-block {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
 .tabs-container {
   display: flex;
   border-top: 1px solid #ddd;  

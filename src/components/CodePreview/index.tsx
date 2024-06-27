@@ -1,21 +1,57 @@
-import { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import './code-preview.css';
+import CodeBlock from '@theme/CodeBlock';
 
-const CodePreview = ({ html, react, angular }) => {
+interface CodeSnippetProps {
+    children: ReactNode;
+}
+
+interface Snippet {
+    code: string | string[];
+    element: React.ReactElement;
+}
+
+const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
     const [currentTab, setCurrentTab] = useState('html');
     const [showSource, setShowSource] = useState(true);
     const iframeRef = useRef(null);
 
-    const htmlTemplate = (bodyContent) => `
-    <!DOCTYPE html>
-    <html>
-    <head>
-    </head>
-    <body>
-      ${bodyContent}
-    </body>
-    </html>
-  `;
+    const codeBlocks: { [key: string]: Snippet | null } = {
+        html: null,
+        js: null,
+        tsx: null, //react
+        ts: null, //angular
+    };
+
+    React.Children.forEach(children, child => {
+        if (typeof child === 'string') {
+            return;
+        } else if (React.isValidElement(child)) {
+            const preElement = child.props.children;
+            const codeElement: any = React.Children.toArray(preElement).find((c: any) => c && c.props && c.props.className);
+
+            if (codeElement) {
+                const language = codeElement.props.className.replace('language-', '');
+                if (codeBlocks.hasOwnProperty(language)) {
+                    codeBlocks[language] = {
+                        code: codeElement.props.children,
+                        element: codeElement,
+                    };
+                }
+            }
+        }
+    });
+
+    const htmlTemplate = (body, script) => `
+        <!DOCTYPE html>
+        <html>
+        <head></head>
+        <body>
+        ${body}
+        <script>${script}</script>
+        </body>
+        </html>
+    `;
 
     useEffect(() => {
         if (currentTab === 'html' && iframeRef.current) {
@@ -24,16 +60,19 @@ const CodePreview = ({ html, react, angular }) => {
                 iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 16 + 'px';
             };
         }
-    }, [currentTab, html]);
+    }, [currentTab]);
 
     const renderCodeSnippet = () => {
         switch (currentTab) {
             case 'react':
-                return <pre><code>{react}</code></pre>;
+                return <CodeBlock language="tsx" className="code-block">{codeBlocks["tsx"].code}</CodeBlock>
             case 'angular':
-                return <pre><code>{angular}</code></pre>;
+                return <CodeBlock language="ts" className="code-block">{codeBlocks["ts"].code}</CodeBlock>
             default:
-                return <pre><code>{html}</code></pre>;
+                return <>
+                    <CodeBlock language="html" className="code-block">{codeBlocks["html"].code}</CodeBlock>
+                    <CodeBlock language="js" className="code-block">{codeBlocks["js"].code}</CodeBlock>
+                </>;
         }
     };
 
@@ -45,7 +84,7 @@ const CodePreview = ({ html, react, angular }) => {
         <div className="interactive-code-preview">
             <div style={{ padding: '24px' }}>
                 <iframe ref={iframeRef}
-                    srcDoc={htmlTemplate(html)}
+                    srcDoc={htmlTemplate(codeBlocks["html"].code, codeBlocks["js"].code)}
                     style={{ width: '100%', border: 'none' }}
                 ></iframe>
             </div>
