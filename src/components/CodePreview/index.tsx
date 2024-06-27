@@ -68,11 +68,10 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
                 return <CodeBlock language="tsx" className="code-block">{codeBlocks["tsx"].code}</CodeBlock>
             case 'angular':
                 return <CodeBlock language="ts" className="code-block">{codeBlocks["ts"].code}</CodeBlock>
+            case 'js':
+                return <CodeBlock language="js" className="code-block">{codeBlocks["js"].code}</CodeBlock>
             default:
-                return <>
-                    <CodeBlock language="html" className="code-block">{codeBlocks["html"].code}</CodeBlock>
-                    <CodeBlock language="js" className="code-block">{codeBlocks["js"].code}</CodeBlock>
-                </>;
+                return <CodeBlock language="html" className="code-block">{codeBlocks["html"].code}</CodeBlock>
         }
     };
 
@@ -107,6 +106,12 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
                         className={currentTab === 'html' ? 'active' : ''}
                     >
                         HTML
+                    </button>
+                    <button
+                        onClick={() => setCurrentTab('js')}
+                        className={currentTab === 'js' ? 'active' : ''}
+                    >
+                        JS
                     </button>
                     <button
                         onClick={() => setCurrentTab('react')}
