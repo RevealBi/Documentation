@@ -1,4 +1,38 @@
+import CodePreview from "@site/src/components/CodePreview";
+
 # Reveal Overview
+
+<CodePreview>
+
+```html
+<button id="myButton">This is an HTML test</button>
+```
+
+```js
+var button = document.getElementById("myButton");
+button.addEventListener("click", () => {
+    console.log("clicked")
+})
+```
+
+```tsx
+const App = () => <button>This is a React test</button>
+```
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `<h1>Hello, {{ name }}!</h1>`,
+})
+export class AppComponent {
+  name = 'Angular';
+}
+```
+
+</CodePreview>
+
 
 Reveal is a business intelligence solution that is purpose-built for embedded analytics. With Reveal, you can:
 
