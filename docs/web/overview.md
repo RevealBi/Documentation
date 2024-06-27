@@ -1,3 +1,5 @@
+import CodePreview from "@site/src/components/CodePreview";
+
 # Reveal Overview
 
 Reveal is a business intelligence solution that is purpose-built for embedded analytics. With Reveal, you can:
