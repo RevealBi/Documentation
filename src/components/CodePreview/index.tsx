@@ -6,21 +6,19 @@ interface CodeSnippetProps {
     children: ReactNode;
 }
 
-interface Snippet {
-    code: string | string[];
-    element: React.ReactElement;
-}
+const LANGUAGES = {
+    HTML: 'html',
+    JS: 'js',
+    REACT: 'tsx',
+    ANGULAR: 'ts',
+};
 
-const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
-    const [currentTab, setCurrentTab] = useState('html');
-    const [showSource, setShowSource] = useState(true);
-    const iframeRef = useRef(null);
-
-    const codeBlocks: { [key: string]: Snippet | null } = {
-        html: null,
-        js: null,
-        tsx: null, //react
-        ts: null, //angular
+const extractCodeBlocks = (children: ReactNode) => {
+    const codeBlocks: { [key: string]: string | null } = {
+        [LANGUAGES.HTML]: null,
+        [LANGUAGES.JS]: null,
+        [LANGUAGES.REACT]: null,
+        [LANGUAGES.ANGULAR]: null,
     };
 
     React.Children.forEach(children, child => {
@@ -33,59 +31,74 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
             if (codeElement) {
                 const language = codeElement.props.className.replace('language-', '');
                 if (codeBlocks.hasOwnProperty(language)) {
-                    codeBlocks[language] = {
-                        code: codeElement.props.children,
-                        element: codeElement,
-                    };
+                    codeBlocks[language] = codeElement.props.children;
                 }
             }
         }
     });
 
-    const htmlTemplate = (body, script) => `
-        <!DOCTYPE html>
-        <html>
-        <head></head>
-        <body>
-        ${body}
-        <script>${script}</script>
-        </body>
-        </html>
-    `;
+    return codeBlocks;
+};
+
+const htmlTemplate = (body: string, script: string) => `
+    <!DOCTYPE html>
+    <html>
+    <head></head>
+    <body>
+    ${body}
+    <script>${script}</script>
+    </body>
+    </html>
+`;
+
+const Iframe = ({ srcDoc }: { srcDoc: string }) => {
+    const iframeRef = useRef<HTMLIFrameElement>(null);
 
     useEffect(() => {
-        if (currentTab === 'html' && iframeRef.current) {
+        if (iframeRef.current) {
             const iframe = iframeRef.current;
             iframe.onload = () => {
-                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 16 + 'px';
+                iframe.style.height = iframe.contentWindow?.document.body.scrollHeight + 16 + 'px';
             };
         }
-    }, [currentTab]);
+    }, [srcDoc]);
+
+    return (
+        <iframe
+            ref={iframeRef}
+            srcDoc={srcDoc}
+            style={{ width: '100%', border: 'none' }}
+        ></iframe>
+    );
+};
+
+const CodeSnippet = ({ language, code }: { language: string, code: string }) => (
+    <CodeBlock language={language} className="code-block">
+        {code}
+    </CodeBlock>
+);
+
+
+const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
+    const [currentTab, setCurrentTab] = useState(LANGUAGES.HTML);
+    const [showSource, setShowSource] = useState(true);
+
+    const codeBlocks = extractCodeBlocks(children);
+    const srcDoc = htmlTemplate(codeBlocks[LANGUAGES.HTML] as string, codeBlocks[LANGUAGES.JS] as string);
 
     const renderCodeSnippet = () => {
-        switch (currentTab) {
-            case 'react':
-                return <CodeBlock language="tsx" className="code-block">{codeBlocks["tsx"].code}</CodeBlock>
-            case 'angular':
-                return <CodeBlock language="ts" className="code-block">{codeBlocks["ts"].code}</CodeBlock>
-            case 'js':
-                return <CodeBlock language="js" className="code-block">{codeBlocks["js"].code}</CodeBlock>
-            default:
-                return <CodeBlock language="html" className="code-block">{codeBlocks["html"].code}</CodeBlock>
-        }
+        const code = codeBlocks[currentTab];
+        return code ? <CodeSnippet language={currentTab} code={code} /> : null;
     };
 
-    function openCodePen(): void {
+    const openCodePen = () => {
         console.log('open codepen');
-    }
+    };
 
     return (
         <div className="interactive-code-preview">
             <div style={{ padding: '24px' }}>
-                <iframe ref={iframeRef}
-                    srcDoc={htmlTemplate(codeBlocks["html"].code, codeBlocks["js"].code)}
-                    style={{ width: '100%', border: 'none' }}
-                ></iframe>
+                <Iframe srcDoc={srcDoc} />
             </div>
 
             {showSource && (
@@ -97,34 +110,21 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
             <div className="tabs-container">
                 <div className="source-toggle">
                     <button onClick={() => setShowSource(!showSource)}>
-                        SOURCE {showSource ? '↑' : '↓'}
+                        SOURCE {currentTab ? '↑' : '↓'}
                     </button>
                 </div>
                 <div className="tabs">
-                    <button
-                        onClick={() => setCurrentTab('html')}
-                        className={currentTab === 'html' ? 'active' : ''}
-                    >
-                        HTML
-                    </button>
-                    <button
-                        onClick={() => setCurrentTab('js')}
-                        className={currentTab === 'js' ? 'active' : ''}
-                    >
-                        JS
-                    </button>
-                    <button
-                        onClick={() => setCurrentTab('react')}
-                        className={currentTab === 'react' ? 'active' : ''}
-                    >
-                        REACT
-                    </button>
-                    <button
-                        onClick={() => setCurrentTab('angular')}
-                        className={currentTab === 'angular' ? 'active' : ''}
-                    >
-                        ANGULAR
-                    </button>
+                    {Object.keys(LANGUAGES).map(lang => (
+                        codeBlocks[LANGUAGES[lang]] && (
+                            <button
+                                key={lang}
+                                onClick={() => setCurrentTab(LANGUAGES[lang])}
+                                className={currentTab === LANGUAGES[lang] ? 'active' : ''}
+                            >
+                                {lang.toUpperCase()}
+                            </button>
+                        )
+                    ))}
                     <a onClick={openCodePen} target="_blank" rel="noopener noreferrer">
                         CODEPEN
                     </a>
@@ -132,5 +132,5 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
             </div>
         </div>
     );
-}
+};
 export default CodePreview;
