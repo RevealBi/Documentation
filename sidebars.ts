@@ -181,6 +181,23 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Third-Party Software", id: "wpf/third-party-software" },
       ]
     },
+  ],
+
+  canarySidebar: [
+      /* -------------------- Getting Started -------------------- */
+      {
+        type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+          { type: "doc", label: "Installation", id: "canary/index" },
+        ]
+      },
+
+      {
+        type: "category", label: "Components", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+          { type: "doc", label: "Dialog", id: "canary/dialog" },
+          { type: "doc", label: "Reveal View", id: "canary/reveal-view" },
+          { type: "doc", label: "Vizualization Viewer", id: "canary/visualization-viewer" },
+        ]
+      },
   ]
 };
 
