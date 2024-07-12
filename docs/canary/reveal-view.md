@@ -1,4 +1,5 @@
 import CodePreview from '@site/src/components/CodePreview'
+import ApiDocs from "./_api-docs.md";
 
 # Reveal View
 
@@ -9,3 +10,5 @@ import CodePreview from '@site/src/components/CodePreview'
 ```
 
 </CodePreview>
+
+<ApiDocs path="reveal-view/reveal-view.component.ts" />

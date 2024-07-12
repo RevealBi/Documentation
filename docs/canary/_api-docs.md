@@ -4,4 +4,4 @@ import ApiDocGenerator from '@site/src/components/ApiDocGenerator';
 
 export const toc = [
   ...ApiDocGenerator?.toc?.()
-] 
+]

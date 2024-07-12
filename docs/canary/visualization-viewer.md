@@ -1,4 +1,5 @@
 import CodePreview from '@site/src/components/CodePreview'
+import ApiDocs from "./_api-docs.md";
 
 # Visualization Viewer
 
@@ -9,3 +10,5 @@ import CodePreview from '@site/src/components/CodePreview'
 ```
 
 </CodePreview>
+
+<ApiDocs path="visualization-viewer/visualization-viewer.component.ts" />
