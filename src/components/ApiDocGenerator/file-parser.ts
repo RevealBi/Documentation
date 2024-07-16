@@ -1,3 +1,4 @@
+import { parseJsDocs, JsDocParam, JsDoc } from './jsdoc-parser';
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
@@ -18,20 +19,8 @@ export interface Property {
 
 export interface Method {
     name: string;
-    arguments: Param[];
+    arguments: JsDocParam[];
     description: string;
-    returns?: string;
-}
-
-export interface Param {
-    name: string;
-    description: string;
-}
-
-export interface JsDoc {
-    description: string;
-    example?: string;
-    params?: Param[];
     returns?: string;
 }
 
@@ -66,66 +55,8 @@ const isPublicMethod = (node: t.ClassMethod): boolean => {
         decorator.expression.callee.name === 'override'
     );
     const isGetter = node.kind === 'get'; //ignore property getter methods
-    return isPublic && !isOverride && !isGetter;
-};
-
-const parseJsDocs = (comment: string): JsDoc => {
-    const lines = comment
-        .replace(/^\/\*\*/, '') // Remove leading /**
-        .replace(/\*\/$/, '')   // Remove trailing */
-        .split('\n')
-        .map(line => line.replace(/^\s*\*\s?/, '')); // Remove leading * and optional whitespace
-
-    const descriptionLines: string[] = [];
-    const params: Param[] = [];
-    let returns: string | null = null;
-    let exampleLines: string[] = [];
-    let inExampleBlock = false;
-
-    for (const line of lines) {
-        if (line.trim().startsWith('@example')) {
-            inExampleBlock = true;
-            continue;
-        }
-
-        if (inExampleBlock) {
-            if (line.trim().startsWith('```')) {
-                if (exampleLines.length > 0) {
-                    inExampleBlock = !inExampleBlock;
-                    continue;
-                } else {
-                    // Start of code block, skip the line with ```
-                    continue;
-                }
-            }
-            exampleLines.push(line);
-        } else if (line.trim().startsWith('@param')) {
-            const match = line.match(/@param\s+(\w+)\s+-?\s*(.*)/);
-            if (match) {
-                const [, name, description] = match;
-                params.push({ name, description });
-            }
-        } else if (line.trim().startsWith('@returns')) {
-            const match = line.match(/@returns?\s+-?\s*(.*)/);
-            if (match) {
-                returns = match[1].trim();
-            }
-        } else if (line.trim().startsWith('@')) {
-            // Ignore other tags
-            continue;
-        } else {
-            if (line.trim() !== '') {
-                descriptionLines.push(line);
-            }
-        }
-    }
-
-    return {
-        description: descriptionLines.join(' ').trim(),
-        params: params,
-        returns: returns,
-        example: exampleLines.length > 0 ? exampleLines.join('\n').trim() : null,
-    };
+    const isSetter = node.kind === 'set'; //ignore property setter methods
+    return isPublic && !isOverride && !isGetter && !isSetter;
 };
 
 function extractTypeAnnotation(typeAnnotation: t.TypeAnnotation | t.TSTypeAnnotation | t.Noop | null | undefined): string {
@@ -150,11 +81,25 @@ function extractTypeAnnotation(typeAnnotation: t.TypeAnnotation | t.TSTypeAnnota
     return '';
 }
 
-const parseProperty = (node: t.ClassProperty): Property => {
+const parsePropertyDetails = (node: t.ClassProperty | t.ClassMethod, type: string): Property | null => {
+    const name = t.isIdentifier(node.key) ? node.key.name : 'Not Found';   
 
-    if (!t.isIdentifier(node.key)) {
-        return null;
-    }
+    // Extract JSDocs
+    const jsDocComments = (node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
+    let jsDoc: JsDoc | null = null;
+    if (jsDocComments.length > 0) {
+        jsDoc = parseJsDocs(jsDocComments[0].value);
+    }    
+
+    return {
+        name: name,
+        type: type,
+        description: jsDoc?.description || 'Description missing',
+        example: jsDoc?.example,
+    };
+};
+
+const parseProperty = (node: t.ClassProperty): Property | null => {
 
     // Check if the property has the @property decorator
     if (!hasPropertyDecorator(node.decorators)) {
@@ -164,25 +109,24 @@ const parseProperty = (node: t.ClassProperty): Property => {
     // Extract type
     const type = extractTypeAnnotation(node.typeAnnotation);
 
-    // Extract JSDocs
-    const jsDocComments = (node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
-    if (jsDocComments.length === 0) {
-        return null;
-    }
-    const jsDoc = parseJsDocs(jsDocComments[0].value);
-
-    return {
-        name: node.key.name,
-        type: type,
-        description: jsDoc.description,
-        example: jsDoc.example,
-    };
+    return parsePropertyDetails(node, type);
 }
 
-const parseMethod = (node: t.ClassMethod) => {
-    if (!t.isIdentifier(node.key)) {
-        return null;
+const parseAccessorProperty = (node: t.ClassMethod): Property | null => {
+
+    // Extract return type for getter or parameter type for setter
+    let type = '';
+    if (node.kind === 'get') {
+        type = extractTypeAnnotation(node.returnType);
+    } else if (node.kind === 'set' && node.params.length > 0) {
+        type = extractTypeAnnotation((node.params[0] as t.Identifier).typeAnnotation);
     }
+
+    return parsePropertyDetails(node, type);
+};
+
+const parseMethod = (node: t.ClassMethod): Method | null => {
+    const name = t.isIdentifier(node.key) ? node.key.name : 'Not Found';
 
     // Check if the method is public and not an override
     if (!isPublicMethod(node)) {
@@ -191,16 +135,16 @@ const parseMethod = (node: t.ClassMethod) => {
 
     // Extract JSDocs
     const jsDocComments = (node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
-    if (jsDocComments.length === 0) {
-        return null;
-    }
-    const jsDoc = parseJsDocs(jsDocComments[0].value);
+    let jsDoc: JsDoc | null = null;
+    if (jsDocComments.length > 0) {
+        jsDoc = parseJsDocs(jsDocComments[0].value);
+    }    
 
     return {
-        name: node.key.name,
-        arguments: jsDoc.params,
-        description: jsDoc.description,
-        returns: jsDoc.returns,
+        name: name,
+        arguments: jsDoc?.params,
+        description: jsDoc?.description || 'Description missing',
+        returns: jsDoc?.returns,
     };
 }
 
@@ -221,24 +165,46 @@ export const parseComponentFile = async (path: string) => {
         methods: [],
     };
 
+    const propertyMap = new Map<string, Property>();
+
     traverse(ast, {
         ClassDeclaration(path) {
             component.name = path.node.id.name;
             path.node.body.body.forEach((member: t.Node) => {
                 if (t.isClassMethod(member)) {
-                    const method = parseMethod(member);
-                    if (method) {
-                        component.methods.push(method);
+                    //lets see if we are dealing wiht getter/setter properties
+                    if (member.kind === 'get' || member.kind === 'set') {
+                        const property = parseAccessorProperty(member);
+                        if (property) {
+                            const existingProperty = propertyMap.get(property.name);
+                            if (existingProperty) {
+                                propertyMap.set(property.name, {
+                                    ...existingProperty,
+                                    type: property.type || existingProperty.type,
+                                    description: property.description || existingProperty.description,
+                                    example: property.example || existingProperty.example,
+                                });
+                            } else {
+                                propertyMap.set(property.name, property);
+                            }
+                        }
+                    } else {
+                        const method = parseMethod(member);
+                        if (method) {
+                            component.methods.push(method);
+                        }
                     }
                 } else if (t.isClassProperty(member)) {
                     const property = parseProperty(member);
                     if (property) {
-                        component.properties.push(property);
+                        propertyMap.set(property.name, property);
                     }
                 }
             });
         },
     });
+
+    component.properties = Array.from(propertyMap.values());
 
     // Sort properties and methods alphabetically by name
     component.properties.sort((a, b) => a.name.localeCompare(b.name));

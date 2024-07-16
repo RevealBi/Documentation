@@ -34,7 +34,7 @@ const ApiDocGenerator = ({ path }) => {
                                 <tr key={index}>
                                     <td>{property.name}</td>
                                     <td>{property.description}</td>
-                                    <td><code>{property.type}</code></td>
+                                    <td><pre style={{background: "none"}}>{property.type}</pre></td>
                                     <td>{property.example && <CodeBlock language="typescript">{property.example}</CodeBlock>}</td>
                                 </tr>
                             ))}
@@ -63,12 +63,10 @@ const ApiDocGenerator = ({ path }) => {
                                     <td>{method.name}</td>
                                     <td>{method.description}</td>
                                     <td>
-                                        {method.arguments.length > 0 ? (
+                                        {method.arguments.length > 0 && (
                                             method.arguments.map((param, paramIndex) => (
                                                 <span key={paramIndex}><code>{param.name}</code>: {param.description}</span>
                                             ))
-                                        ) : (
-                                            <code>none</code>
                                         )}
                                     </td>
                                     <td>{method.returns}</td>
