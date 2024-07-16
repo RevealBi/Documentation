@@ -13,18 +13,26 @@ export interface Property {
     name: string;
     type: string;
     description: string;
-    defaultValue: string | null;
+    example?: string;
 }
 
 export interface Method {
     name: string;
     arguments: Param[];
     description: string;
+    returns?: string;
 }
 
 export interface Param {
     name: string;
     description: string;
+}
+
+export interface JsDoc {
+    description: string;
+    example?: string;
+    params?: Param[];
+    returns?: string;
 }
 
 const fetchFileContents = async (path: string) => {
@@ -40,36 +48,7 @@ const fetchFileContents = async (path: string) => {
     }
 }
 
-const parseProperty = (node: t.ClassProperty) => {
-
-    if (!t.isIdentifier(node.key)) {
-        return null;
-    }
-
-    // Check if the property has the @property decorator
-    if (!isProperty(node.decorators)) {
-        return null;
-    }
-
-    // Extract type
-    const type = extractTypeAnnotation(node.typeAnnotation);
-
-    // Extract JSDoc description
-    const jsDocComments = (node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
-    const description = jsDocComments.map(comment => getJsDocDescription(comment.value)).join('\n').trim();
-
-    // Extract default value
-    const defaultValue = node.value ? generate(node.value).code : null;
-
-    return {
-        name: node.key.name,
-        type: type,
-        description: description,
-        defaultValue: defaultValue,
-    };
-}
-
-const isProperty = (decorators: t.Decorator[] | undefined): boolean => {
+const hasPropertyDecorator = (decorators: t.Decorator[] | undefined): boolean => {
     if (!decorators) return false;
     return decorators.some(decorator => {
         if (t.isCallExpression(decorator.expression) && t.isIdentifier(decorator.expression.callee)) {
@@ -86,10 +65,11 @@ const isPublicMethod = (node: t.ClassMethod): boolean => {
         t.isIdentifier(decorator.expression.callee) &&
         decorator.expression.callee.name === 'override'
     );
-    return isPublic && !isOverride;
+    const isGetter = node.kind === 'get'; //ignore property getter methods
+    return isPublic && !isOverride && !isGetter;
 };
 
-const getJsDocDescription = (comment: string): string => {
+const parseJsDocs = (comment: string): JsDoc => {
     const lines = comment
         .replace(/^\/\*\*/, '') // Remove leading /**
         .replace(/\*\/$/, '')   // Remove trailing */
@@ -97,34 +77,55 @@ const getJsDocDescription = (comment: string): string => {
         .map(line => line.replace(/^\s*\*\s?/, '')); // Remove leading * and optional whitespace
 
     const descriptionLines: string[] = [];
+    const params: Param[] = [];
+    let returns: string | null = null;
+    let exampleLines: string[] = [];
+    let inExampleBlock = false;
+
     for (const line of lines) {
-        if (line.trim().startsWith('@')) {
-            break; // Stop processing when encountering the first @ symbol
+        if (line.trim().startsWith('@example')) {
+            inExampleBlock = true;
+            continue;
         }
-        if (line.trim() !== '') {
-            descriptionLines.push(line);
+
+        if (inExampleBlock) {
+            if (line.trim().startsWith('```')) {
+                if (exampleLines.length > 0) {
+                    inExampleBlock = !inExampleBlock;
+                    continue;
+                } else {
+                    // Start of code block, skip the line with ```
+                    continue;
+                }
+            }
+            exampleLines.push(line);
+        } else if (line.trim().startsWith('@param')) {
+            const match = line.match(/@param\s+(\w+)\s+-?\s*(.*)/);
+            if (match) {
+                const [, name, description] = match;
+                params.push({ name, description });
+            }
+        } else if (line.trim().startsWith('@returns')) {
+            const match = line.match(/@returns?\s+-?\s*(.*)/);
+            if (match) {
+                returns = match[1].trim();
+            }
+        } else if (line.trim().startsWith('@')) {
+            // Ignore other tags
+            continue;
+        } else {
+            if (line.trim() !== '') {
+                descriptionLines.push(line);
+            }
         }
     }
 
-    return descriptionLines.join(' ').trim();
-};
-
-const getParamsFromJsDoc = (comment: string): Param[] => {
-    return comment
-        .replace(/^\/\*\*/, '') // Remove leading /**
-        .replace(/\*\/$/, '')   // Remove trailing */
-        .split('\n')
-        .map(line => line.replace(/^\s*\*\s?/, '')) // Remove leading * and optional whitespace
-        .map(line => line.match(/@param\s+(\w+)\s+(.*)/))
-        .filter(match => match !== null)
-        .map(match => {
-            if (match) {
-                const [, name, description] = match;
-                return { name, description };
-            }
-            return null;
-        })
-        .filter((param): param is Param => param !== null); // Type guard to filter out nulls
+    return {
+        description: descriptionLines.join(' ').trim(),
+        params: params,
+        returns: returns,
+        example: exampleLines.length > 0 ? exampleLines.join('\n').trim() : null,
+    };
 };
 
 function extractTypeAnnotation(typeAnnotation: t.TypeAnnotation | t.TSTypeAnnotation | t.Noop | null | undefined): string {
@@ -140,9 +141,42 @@ function extractTypeAnnotation(typeAnnotation: t.TypeAnnotation | t.TSTypeAnnota
             return 'boolean';
         } else if (t.isTSAnyKeyword(type)) {
             return 'any';
+        } else if (t.isTSFunctionType(type)) {
+            return generate(type).code; // Generate the function type signature
+        } else if (t.isTSUnionType(type)) {
+            return type.types.map(subType => generate(subType).code).join(' | '); // Handle union types
         }
     }
     return '';
+}
+
+const parseProperty = (node: t.ClassProperty): Property => {
+
+    if (!t.isIdentifier(node.key)) {
+        return null;
+    }
+
+    // Check if the property has the @property decorator
+    if (!hasPropertyDecorator(node.decorators)) {
+        return null;
+    }
+
+    // Extract type
+    const type = extractTypeAnnotation(node.typeAnnotation);
+
+    // Extract JSDocs
+    const jsDocComments = (node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
+    if (jsDocComments.length === 0) {
+        return null;
+    }
+    const jsDoc = parseJsDocs(jsDocComments[0].value);
+
+    return {
+        name: node.key.name,
+        type: type,
+        description: jsDoc.description,
+        example: jsDoc.example,
+    };
 }
 
 const parseMethod = (node: t.ClassMethod) => {
@@ -155,15 +189,18 @@ const parseMethod = (node: t.ClassMethod) => {
         return null;
     }
 
-    // Extract JSDoc description and parameters
+    // Extract JSDocs
     const jsDocComments = (node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
-    const description = jsDocComments.map(comment => getJsDocDescription(comment.value)).join('\n').trim();
-    const params = jsDocComments.flatMap(comment => getParamsFromJsDoc(comment.value));
+    if (jsDocComments.length === 0) {
+        return null;
+    }
+    const jsDoc = parseJsDocs(jsDocComments[0].value);
 
     return {
         name: node.key.name,
-        arguments: params,
-        description: description,
+        arguments: jsDoc.params,
+        description: jsDoc.description,
+        returns: jsDoc.returns,
     };
 }
 

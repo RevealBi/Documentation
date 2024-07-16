@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { parseComponentFile, Component, Property, Method } from "./file-parser";
+import CodeBlock from '@theme/CodeBlock';
+import './index.css';
 
 
 const ApiDocGenerator = ({ path }) => {
@@ -16,23 +18,24 @@ const ApiDocGenerator = ({ path }) => {
         <>
             <h2 id="properties">Properties<a className="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="#properties"></a></h2>
             {component && component.properties.length > 0 ? (
-                <div className="table-container">
+                <div className="api-table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Name</th>                          
-                                <th>Description</th>
-                                <th>Type</th>      
-                                <th>Default</th>
+                                <th>Name</th>
+                                <th style={{minWidth: "500px"}}>Description</th>
+                                <th>Type</th>
+                                <th>Example</th>
                             </tr>
                         </thead>
+
                         <tbody>
                             {component.properties.map((property, index) => (
                                 <tr key={index}>
                                     <td>{property.name}</td>
                                     <td>{property.description}</td>
                                     <td><code>{property.type}</code></td>
-                                    <td><code>{property.defaultValue || 'null'}</code></td>
+                                    <td>{property.example && <CodeBlock language="typescript">{property.example}</CodeBlock>}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -44,13 +47,14 @@ const ApiDocGenerator = ({ path }) => {
 
             <h2 id="methods">Methods<a className="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="#methods"></a></h2>
             {component && component.methods.length > 0 ? (
-                <div className="table-container">
+                <div className="api-table-container">
                     <table>
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Description</th>
-                                <th>Arguments</th>                                
+                                <th style={{minWidth: "500px"}}>Description</th>
+                                <th style={{minWidth: "500px"}}>Arguments</th>
+                                <th style={{minWidth: "500px"}}>Returns</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,7 +70,8 @@ const ApiDocGenerator = ({ path }) => {
                                         ) : (
                                             <code>none</code>
                                         )}
-                                    </td>                                    
+                                    </td>
+                                    <td>{method.returns}</td>
                                 </tr>
                             ))}
                         </tbody>
