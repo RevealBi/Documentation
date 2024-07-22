@@ -62,6 +62,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: 'QBVJ183IXZ',
+      apiKey: 'be244eaae98ce29feeb1882558494e62',
+      indexName: 'help-revealbi',
+    },
     navbar: {
       title: 'Reveal',
       logo: {
