@@ -7,15 +7,19 @@ The Reveal SDK Web Components requires the following dependencies in order to pr
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.8.21/dayjs.min.js"></script>
 <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
-## CDN Installation (Easiest)
+## CDN Installation
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@revealbi/ui@0.2.0/themes/light.css">
-<script src="https://unpkg.com/@revealbi/ui@0.2.1/index.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@revealbi/ui/themes/light.css">
+<script type="module">
+    import { RevealSdkSettings } from "https://cdn.jsdelivr.net/npm/@revealbi/ui";
+    //change to your Reveal SDK server
+    RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
+</script>
 ```
 
 ## Npm Installation
