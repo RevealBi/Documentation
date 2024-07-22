@@ -62,7 +62,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 :::note
 
-Amazon Athena authenticates uses the `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
+Amazon Athena authenticates uses the `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication.md#amazon-web-services) topic for more information.
 
 :::
 

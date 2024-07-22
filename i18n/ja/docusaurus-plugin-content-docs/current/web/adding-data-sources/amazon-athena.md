@@ -62,7 +62,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::note
 
-Amazon Athena は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication#amazon-web-services)トピックを参照してください。
+Amazon Athena は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication.md#amazon-web-services)トピックを参照してください。
 
 :::
 

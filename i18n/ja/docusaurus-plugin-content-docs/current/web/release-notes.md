@@ -524,7 +524,7 @@ options.getFilters().add(new RVDashboardFilter("incident_severity", new ArrayLis
 * SDK は Quill.js に依存しなくなりました。
 
 #### ASP.NET
-* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。データ ソース パッケージは[登録](/web/datasources#データ-ソースのインストール)することが**必須**です。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](/web/datasources#サポートされているデータ-ソース)にあります。
+* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。データ ソース パッケージは[登録](/web/datasources.md#データ-ソースのインストール)することが**必須**です。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](/web/datasources.md#サポートされるデータ-ソース)にあります。
 * Reveal には .net 6.0 以降が必要になりました。
 * データ関連のオブジェクトは `Reveal.Sdk.Data` 名前空間に移動されました。
 * データ ソース オブジェクト (例: RVSqlServerDataSource) は、それぞれの名前空間 (例: `Reveal.Sdk.Data.Microsoft.SqlServer`) に移動されました。
