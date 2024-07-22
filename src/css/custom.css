@@ -87,6 +87,14 @@ a.menu__link--active {
   color: var(--ifm-footer-link-color);
 }
 
+/* Hide the Algolia search button and logo */
+.DocSearch-Button-Keys {
+  display: none !important;
+}
+.DocSearch-Logo {
+  display: none !important;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
