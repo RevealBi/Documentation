@@ -3,9 +3,27 @@ export interface JsDoc {
     example?: string;
     params?: JsDocParam[];
     returns?: string;
+    cssParts?: JsDocCssPart[];
+    cssProperties?: JsDocCssProperty[];
+    slots?: JsDocSlot[];
 }
 
 export interface JsDocParam {
+    name: string;
+    description: string;
+}
+
+export interface JsDocCssPart {
+    name: string;
+    description: string;
+}
+
+export interface JsDocCssProperty {
+    name: string;
+    description: string;
+}
+
+export interface JsDocSlot {
     name: string;
     description: string;
 }
@@ -83,17 +101,66 @@ const parseExample = (lines: string[]): string | null => {
     return exampleLines.length > 0 ? exampleLines.join('\n').trim() : null;
 };
 
+const parseCssParts = (lines: string[]): JsDocCssPart[] => {
+    const cssParts: JsDocCssPart[] = [];
+    for (const line of lines) {
+        if (line.trim().startsWith('@csspart')) {
+            const match = line.match(/@csspart\s+([\w-]+)\s+-?\s*(.*)/);
+            if (match) {
+                const [, name, description] = match;
+                cssParts.push({ name, description });
+            }
+        }
+    }
+    return cssParts;
+};
+
+const parseCssProperties = (lines: string[]): JsDocCssProperty[] => {
+    const cssProperties: JsDocCssProperty[] = [];
+    for (const line of lines) {
+        if (line.trim().startsWith('@cssproperty')) {
+            const match = line.match(/@cssproperty\s+--([\w-]+)\s+-?\s*(.*)/);
+            if (match) {
+                const [, name, description] = match;
+                cssProperties.push({ name: `--${name}`, description });
+            }
+        }
+    }
+    return cssProperties;
+};
+
+const parseSlots = (lines: string[]): JsDocSlot[] => {
+    const slots: JsDocSlot[] = [];
+    for (const line of lines) {
+        if (line.trim().startsWith('@slot')) {
+            const match = line.match(/@slot\s*([\w-]*)\s+-?\s*(.*)/);
+            if (match) {
+                const [, name = '', description] = match;
+                slots.push({ name: name.trim() || 'default', description });
+            }
+        }
+    }
+    return slots;
+};
+
 export const parseJsDocs = (comment: string): JsDoc => {
     const lines = removeCommentSyntax(comment);
     const description = parseDescription(lines);
     const params = parseParams(lines);
     const returns = parseReturns(lines);
     const example = parseExample(lines);
+    const cssParts = parseCssParts(lines);
+    const cssProperties = parseCssProperties(lines);
+    const slots = parseSlots(lines);
+
 
     return {
         description,
         params,
         returns,
         example,
+        cssParts,
+        cssProperties,
+        slots
     };
 };

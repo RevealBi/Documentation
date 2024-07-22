@@ -8,7 +8,7 @@ The Reveal SDK Web Components requires the following dependencies in order to pr
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-<script src="https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
 ## CDN Installation (Easiest)

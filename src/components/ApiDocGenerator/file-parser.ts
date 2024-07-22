@@ -1,4 +1,4 @@
-import { parseJsDocs, JsDocParam, JsDoc } from './jsdoc-parser';
+import { parseJsDocs, JsDocParam, JsDoc, JsDocCssPart, JsDocCssProperty, JsDocSlot } from './jsdoc-parser';
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
@@ -8,6 +8,9 @@ export interface Component {
     name: string;
     properties: Property[];
     methods: Method[];
+    cssParts?: JsDocCssPart[];
+    cssProperties?: JsDocCssProperty[];
+    slots?: JsDocSlot[];
 }
 
 export interface Property {
@@ -170,6 +173,16 @@ export const parseComponentFile = async (path: string) => {
     traverse(ast, {
         ClassDeclaration(path) {
             component.name = path.node.id.name;
+
+            // Extract JSDoc for the class itself
+            let jsDocComments = (path.parentPath.node.leadingComments || []).filter(comment => comment.type === 'CommentBlock');
+            if (jsDocComments.length > 0) {
+                const classJsDoc = parseJsDocs(jsDocComments[0].value);
+                component.cssParts = classJsDoc.cssParts || [];
+                component.cssProperties = classJsDoc.cssProperties || [];
+                component.slots = classJsDoc.slots || [];
+            }
+
             path.node.body.body.forEach((member: t.Node) => {
                 if (t.isClassMethod(member)) {
                     //lets see if we are dealing wiht getter/setter properties
