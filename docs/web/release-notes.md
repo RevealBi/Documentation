@@ -609,7 +609,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ### Breaking Changes
 * In some scenarios, the information set in IRVDataSourceProvider was visible to the client and also stored in the dashboard file. That was not a desirable behavior, but it also produced some hard to reproduce issues when editing dashboards. Starting on 1.5.0, the datasource information set in IRVDataSourceProvider does not leave the server. Depending on the specific implementation of IRVDataSourceProvider, this might have a big impact. To make sure your implementation is right, generally speaking, make sure that if you have a non-trivial implementation of ChangeDataSource, then you also implement ChangeDataSourceItem, and that this ChangeDataSourceItem invokes ChangeDataSource on the dataSourceItem.dataSource object. In addition, when working with CSV, Json, Excel files coming from datasources like S3, Rest, etc., please take into account that you might receive a call to ChangeDataSourceItem with the csv/json/excel datasource item, and in that case you must make sure that the dataSourceItem.resourceItem is properly 'changed', which also means invoking ChangeDataSource for dataSourceItem.resourceItem.dataSource.
 * IRVDataSourceProvider now requires the implementation of ChangeDataSourceAsync.
-* We're no longer releasing an installer for the asp.net SDK. To get started, check the documentation at https://help.revealbi.io/web/getting-started-server
+* We're no longer releasing an installer for the asp.net SDK. To get started, check the documentation at https://help.revealbi.io/web/getting-started-server/
 
 ### Bug Fixes
 
