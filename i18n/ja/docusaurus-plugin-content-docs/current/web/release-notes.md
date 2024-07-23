@@ -608,7 +608,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ### 重大な変更
 * 一部のシナリオでは、IRVDataSourceProvider で設定された情報がクライアントに表示され、ダッシュボード ファイルにも格納されていました。これは望ましい動作ではありませんでした。またダッシュボードの編集時に再現が困難な問題の発生原因でもありました。1.5.0 以降、IRVDataSourceProvider で設定されたデータ ソース情報はクライアントに送信されません。IRVDataSourceProvider の特定の実装によっては、これが大きな影響を与える可能性があります。一般的に言えば、実装が正しいことを確認するには、ChangeDataSource の重要な実装がある場合は、ChangeDataSourceItem も実装し、この ChangeDataSourceItem が dataSourceItem.dataSource オブジェクトで ChangeDataSource を呼び出すようにします。さらに、S3、Rest などのデータ ソースからの CSV、Json、Excel ファイルを操作する場合は、csv/json/excel データ ソース項目で ChangeDataSourceItem への呼び出しを受け取る可能性があることを考慮してください。その場合、dataSourceItem.resourceItem が適切に変更されていることを確認する必要があります。これは、dataSourceItem.resourceItem.dataSource に対して ChangeDataSource を呼び出すことも意味します。
 * IRVDataSourceProvider には、ChangeDataSourceAsync の実装が必要になりました。
-* ASP.NET SDK のインストーラーはリリースされなくなりました。開始するには、https://help.revealbi.io/web/getting-started-server でドキュメントを確認してください。
+* ASP.NET SDK のインストーラーはリリースされなくなりました。開始するには、https://help.revealbi.io/web/getting-started-server/ でドキュメントを確認してください。
 
 ### バグ修正
 
