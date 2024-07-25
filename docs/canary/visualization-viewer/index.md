@@ -1,5 +1,5 @@
 import CodePreview from '@site/src/components/CodePreview'
-import ApiDocs from "./_api-docs.md";
+import ApiDocs from "../_api-docs.md";
 
 # Visualization Viewer
 

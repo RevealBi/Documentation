@@ -191,16 +191,17 @@ const sidebars: SidebarsConfig = {
           { type: "category", label: "Installation", link: { type: "doc", id: "canary/installation" }, items: [
             { type: "doc", label: "Angular", id: "canary/installation-angular" },
             { type: "doc", label: "React", id: "canary/installation-react" },
-          ]
-        },
+          ]},
         ]
       },
 
       {
         type: "category", label: "Components", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-          { type: "doc", label: "Dialog", id: "canary/dialog" },
-          { type: "doc", label: "Reveal View", id: "canary/reveal-view" },
-          { type: "doc", label: "Vizualization Viewer", id: "canary/visualization-viewer" },
+          { type: "doc", label: "Dialog", id: "canary/dialog/index" },
+          { type: "category", label: "Reveal View", link: { type: "doc", id: "canary/reveal-view/index" }, items: [
+            { type: "doc", label: "Options", id: "canary/reveal-view/options" },
+          ]},
+          { type: "doc", label: "Vizualization Viewer", id: "canary/visualization-viewer/index" },
         ]
       },
   ]
