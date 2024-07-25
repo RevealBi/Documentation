@@ -201,7 +201,9 @@ const sidebars: SidebarsConfig = {
           { type: "category", label: "Reveal View", link: { type: "doc", id: "canary/reveal-view/index" }, items: [
             { type: "doc", label: "Options", id: "canary/reveal-view/options" },
           ]},
-          { type: "doc", label: "Vizualization Viewer", id: "canary/visualization-viewer/index" },
+          { type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "canary/visualization-viewer/index" }, items: [
+            { type: "doc", label: "Options", id: "canary/visualization-viewer/options" },
+          ]},
         ]
       },
   ]
