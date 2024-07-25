@@ -3,12 +3,14 @@ import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
+const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
   title: 'Reveal',
   tagline: 'Embedded Analytics & Business Intelligence Tools',
   url: 'https://help.revealbi.io',
   baseUrl: '/',
+  onBrokenAnchors: 'warn',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -18,6 +20,10 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'RevealBi', // Usually your GitHub org/user name.
   projectName: 'Documentation', // Usually your repo name.
+
+  plugins: [
+    ["docusaurus-node-polyfills", { onlyAliases: ["process"] }]
+  ],
 
   i18n: {
     defaultLocale: 'en',
