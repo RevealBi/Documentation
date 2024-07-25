@@ -1,31 +1,15 @@
-# Installation
+# Reveal SDK Web Components Overview
 
-You can load the Reveal SDK Web Components via CDN or by installing it locally. If you’re using a framework, make sure to check out the pages for React, Vue, and Angular for additional information.
+Welcome to the Reveal SDK Web Components documentation! This project is a [community-driven](https://github.com/RevealBi/revealbi-ui) initiative aimed at modernizing and enhancing the Reveal SDK. Our goal is to provide a robust and user-friendly web component wrapper around the existing jQuery-based RevealView component, alongside additional web components to streamline application development with the Reveal SDK.
 
-## Dependencies
-The Reveal SDK Web Components requires the following dependencies in order to properly function.
+### Why Reveal SDK Web Components?
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1.8.21/dayjs.min.js"></script>
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-```
+In the ever-evolving landscape of web development, ease of use, seamless integration, and continuous improvement are paramount. The Reveal SDK Web Components project focuses on these key aspects to help developers create sophisticated data visualizations with minimal effort. Here’s how:
 
-## CDN Installation
+1. **Enhanced Usability**: We aim to simplify the use of the Reveal SDK client libraries, making it more accessible for developers of all skill levels. Our web components encapsulate complex functionalities into easy-to-use elements, reducing the learning curve and speeding up development.
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@revealbi/ui/themes/light.css">
-<script type="module">
-    import { RevealSdkSettings } from "https://cdn.jsdelivr.net/npm/@revealbi/ui";
-    //change to your Reveal SDK server
-    RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
-</script>
-```
+2. **Seamless Integration**: Integrating the Reveal SDK with popular JavaScript frameworks like Angular and React has never been easier. Our components are designed to work out-of-the-box with these frameworks, enabling you to leverage their full potential without compatibility issues or extensive configuration.
 
-## Npm Installation
+3. **Continuous Improvement**: We are committed to refining the Reveal APIs based on direct customer feedback. By experimenting with new features and enhancements, we strive to provide an ever-improving toolkit that meets the evolving needs of our users.
 
-If you don’t want to use the CDN, you can install Reveal SDK Web Components from npm with the following command.
-
-```bash npm2yarn
-npm install @revealbi/ui
-```
+By leveraging the Reveal SDK Web Components, you can create more powerful, responsive, and user-friendly data visualizations. Start exploring today and see how easy it is to bring your data to life!

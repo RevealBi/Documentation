@@ -187,7 +187,12 @@ const sidebars: SidebarsConfig = {
       /* -------------------- Getting Started -------------------- */
       {
         type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-          { type: "doc", label: "Installation", id: "canary/index" },
+          { type: "doc", label: "Overview", id: "canary/index" },
+          { type: "category", label: "Installation", link: { type: "doc", id: "canary/installation" }, items: [
+            { type: "doc", label: "Angular", id: "canary/installation-angular" },
+            { type: "doc", label: "React", id: "canary/installation-react" },
+          ]
+        },
         ]
       },
 
