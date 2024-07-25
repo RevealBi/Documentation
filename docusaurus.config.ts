@@ -10,6 +10,7 @@ const config: Config = {
   tagline: 'Embedded Analytics & Business Intelligence Tools',
   url: 'https://help.revealbi.io',
   baseUrl: '/',
+  onBrokenAnchors: 'warn',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
