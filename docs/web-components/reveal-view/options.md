@@ -36,7 +36,8 @@ revealView.options = options;
 ```
 
 ```tsx
-import { RvRevealView, RevealViewOptions } from "https://esm.sh/@revealbi/ui-react";
+import { RevealViewOptions } from "https://esm.sh/@revealbi/ui";
+import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
 
 const App = () => {
     const options: RevealViewOptions = {

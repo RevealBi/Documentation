@@ -27,7 +27,8 @@ viewer.options = options;
 ```
 
 ```tsx
-import { RvVisualizationViewer, VisualizationViewerOptions } from "https://esm.sh/@revealbi/ui-react";
+import { VisualizationViewerOptions } from "https://esm.sh/@revealbi/ui";
+import { RvVisualizationViewer } from "https://esm.sh/@revealbi/ui-react";
 
 const App = () => {
     const options: VisualizationViewerOptions = {
