@@ -50,10 +50,6 @@ const htmlTemplate = (body: string, script: string) => `
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
         <script src="https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js"></script>
-        <script type="module">
-            import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";
-            RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
-        </script>
         <style>
             html, body {
                 height: 100%;
@@ -64,7 +60,9 @@ const htmlTemplate = (body: string, script: string) => `
     </head>
     <body>
         ${body}
-        <script>
+        <script type="module">
+            import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";
+            RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
             ${script}
         </script>
     </body>
@@ -169,7 +167,7 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
 
     return (
         <div className="interactive-code-preview">
-            <div style={{ padding: '24px' }}>
+            <div style={{ padding: '5px' }}>
                 <Iframe srcDoc={srcDoc} height={previewHeight} />
             </div>
 

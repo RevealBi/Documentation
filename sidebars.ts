@@ -200,6 +200,7 @@ const sidebars: SidebarsConfig = {
           { type: "doc", label: "Dialog", id: "web-components/dialog/index" },
           { type: "category", label: "Reveal View", link: { type: "doc", id: "web-components/reveal-view/index" }, items: [
             { type: "doc", label: "Options", id: "web-components/reveal-view/options" },
+            { type: "doc", label: "Loading Dashboards", id: "web-components/reveal-view/loading-dashboards" },
           ]},
           { type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web-components/visualization-viewer/index" }, items: [
             { type: "doc", label: "Options", id: "web-components/visualization-viewer/options" },
