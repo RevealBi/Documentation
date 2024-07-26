@@ -35,6 +35,34 @@ const revealView = document.getElementById("viewer");
 revealView.options = options;
 ```
 
+```tsx
+import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
+
+const App = () => {
+    const options = {
+        canEdit: false,
+        filters: {
+            showFilters: false,
+        },
+        header: {
+            menu: {
+                refresh: false,
+                items: [
+                    { 
+                        icon: "https://brianlagunas.com/wp-content/uploads/2019/08/cropped-brian-lagunas-512x512.png", 
+                        title: "Brian's Blog", 
+                        click: () => window.open("https://brianlagunas.com/", "_blank") 
+                    },
+                ]}
+        },
+    } 
+
+    return (
+        <RvRevealView dashboard="Sales" options={options}></RvRevealView>
+    );
+};
+```
+
 </CodePreview>
 
 ## RevealView Options

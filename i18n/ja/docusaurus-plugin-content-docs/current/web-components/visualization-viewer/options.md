@@ -14,16 +14,35 @@ The `RvRevealView` web component wraps around the existing jQuery component to s
 
 ```js
 const options = {
-    crosshairs: true,
-    menu: {
-        showMenu: true,
-        copy: false,
-        exportToExcel: false,
-    }
-} 
+  crosshairs: true,
+  menu: {
+    showMenu: true,
+    copy: false,
+    exportToExcel: false,
+  },
+};
 
 const viewer = document.getElementById("viewer");
 viewer.options = options;
+```
+
+```tsx
+import { RvVisualizationViewer } from "https://esm.sh/@revealbi/ui-react";
+
+const App = () => {
+    const options = {
+        crosshairs: true,
+        menu: {
+            showMenu: true,
+            copy: false,
+            exportToExcel: false,
+        },
+    };
+
+    return (
+        <RvVisualizationViewer dashboard="Sales" visualization="Leads by Year" options={options} ></RvVisualizationViewer>
+    );
+};
 ```
 
 </CodePreview>
@@ -34,21 +53,21 @@ The following options can be configured for `RvVisualizationViewer`:
 
 ```ts
 export interface VisualizationViewerOptions {
-    showFilters?: boolean;
-    categoryGroupingSeparator?: string;
-    crosshairs?: boolean;
-    hoverTooltips?: boolean;
-    changeChartType?: boolean;
-    statisticalFunctions?: boolean;
-    menu?: {
-        items?: MenuItem[];
-        copy?: boolean;
-        duplicate?: boolean;
-        exportToExcel?: boolean;
-        exportToImage?: boolean;
-        showMenu?: boolean;
-        refresh?: boolean;
-    }
+  showFilters?: boolean;
+  categoryGroupingSeparator?: string;
+  crosshairs?: boolean;
+  hoverTooltips?: boolean;
+  changeChartType?: boolean;
+  statisticalFunctions?: boolean;
+  menu?: {
+    items?: MenuItem[];
+    copy?: boolean;
+    duplicate?: boolean;
+    exportToExcel?: boolean;
+    exportToImage?: boolean;
+    showMenu?: boolean;
+    refresh?: boolean;
+  };
 }
 ```
 
