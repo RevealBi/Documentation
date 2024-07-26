@@ -182,7 +182,7 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
             <div className="code-tabs-container">
                 <div className="source-toggle">
                     <button onClick={() => setShowSource(!showSource)}>
-                        SOURCE {currentTab ? '↑' : '↓'}
+                        SOURCE {showSource ? '↑' : '↓'}
                     </button>
                 </div>
                 <div className="tabs">
