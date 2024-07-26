@@ -129,7 +129,7 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
                                   `RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";\n\n`;
 
         if (currentTab === LANGUAGES.REACT) {
-            jsPreProcessor = 'babel';
+            jsPreProcessor = 'typescript';
             editors = '0010'
             htmlTemplate = '<div id="root"></div>';
             jsTemplate =

@@ -16,15 +16,15 @@ Dialogs appear above the page and require the user's immediate attention. They i
 ```
 
 ```tsx
-import { RvDialog } from "https://esm.sh/@revealbi/ui-react";
+import { RvDialog, RvDialogRef } from "https://esm.sh/@revealbi/ui-react";
 
 const App = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const ref = useRef<RvDialogRef>();
 
     return (
         <div>
-            <button onClick={() => setIsOpen(!isOpen)}>Open Dialog</button>
-            <RvDialog title="Dialog" open={isOpen}>
+            <button onClick={() => ref.current.open=true}>Open Dialog</button>
+            <RvDialog ref={ref} title="Dialog" open={true}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </RvDialog>
         </div>
