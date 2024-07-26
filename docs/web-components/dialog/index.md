@@ -8,7 +8,9 @@ Dialogs appear above the page and require the user's immediate attention. They i
 <CodePreview previewHeight="450" sourceOpen="true">
 
 ```html
-<button onclick="dialog.open = true">Open Dialog</button>
+<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+    <button onclick="dialog.open = true">Open Dialog</button>
+</div>
 
 <rv-dialog id="dialog" title="Dialog" open>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -22,12 +24,14 @@ const App = () => {
     const ref = useRef<RvDialogRef>();
 
     return (
-        <div>
-            <button onClick={() => ref.current.open=true}>Open Dialog</button>
+        <>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                <button onClick={() => ref.current.open = true}>Open Dialog</button>
+            </div>
             <RvDialog ref={ref} title="Dialog" open={true}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </RvDialog>
-        </div>
+        </>
     );
 };
 ```
