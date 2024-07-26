@@ -27,7 +27,7 @@ Import the Reveal SDK theme in your application's main stylesheet. This ensures 
 ```css
 @import "@revealbi/ui/themes/light.css";
 
-html, body, #root {
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
