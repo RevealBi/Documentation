@@ -187,22 +187,22 @@ const sidebars: SidebarsConfig = {
       /* -------------------- Getting Started -------------------- */
       {
         type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-          { type: "doc", label: "Overview", id: "canary/index" },
-          { type: "category", label: "Installation", link: { type: "doc", id: "canary/installation" }, items: [
-            { type: "doc", label: "Angular", id: "canary/installation-angular" },
-            { type: "doc", label: "React", id: "canary/installation-react" },
+          { type: "doc", label: "Overview", id: "web-components/index" },
+          { type: "category", label: "Installation", link: { type: "doc", id: "web-components/installation" }, items: [
+            { type: "doc", label: "Angular", id: "web-components/installation-angular" },
+            { type: "doc", label: "React", id: "web-components/installation-react" },
           ]},
         ]
       },
 
       {
         type: "category", label: "Components", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-          { type: "doc", label: "Dialog", id: "canary/dialog/index" },
-          { type: "category", label: "Reveal View", link: { type: "doc", id: "canary/reveal-view/index" }, items: [
-            { type: "doc", label: "Options", id: "canary/reveal-view/options" },
+          { type: "doc", label: "Dialog", id: "web-components/dialog/index" },
+          { type: "category", label: "Reveal View", link: { type: "doc", id: "web-components/reveal-view/index" }, items: [
+            { type: "doc", label: "Options", id: "web-components/reveal-view/options" },
           ]},
-          { type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "canary/visualization-viewer/index" }, items: [
-            { type: "doc", label: "Options", id: "canary/visualization-viewer/options" },
+          { type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web-components/visualization-viewer/index" }, items: [
+            { type: "doc", label: "Options", id: "web-components/visualization-viewer/options" },
           ]},
         ]
       },
