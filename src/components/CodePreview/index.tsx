@@ -124,17 +124,9 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
             `https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js`,
             `https://unpkg.com/dayjs@1.8.21/dayjs.min.js`,
             `https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js`,
-            `https://unpkg.com/@revealbi/ui@0.2.1/index.umd.js`,
         ];
-
-        if (htmlTemplate.includes("<rv-reveal-view") || htmlTemplate.includes("<rv-visualization-viewer")) {
-            jsTemplate = 
-            `import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";\n` +
-            `RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";\n` +
-            `\n${jsTemplate}\n`;
-            
-            jsExternal.pop(); //remove the reveal ui script
-        }
+        const revealSdkSettings = `import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";\n` +
+                                  `RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";\n\n`;
 
         if (currentTab === LANGUAGES.REACT) {
             jsPreProcessor = 'babel';
@@ -143,10 +135,11 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
             jsTemplate =
             `import React, { useRef, useState, useEffect } from 'https://esm.sh/react@${reactVersion}';\n` +
             `import ReactDOM from 'https://esm.sh/react-dom@${reactVersion}';\n` +
-            `import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";\n` +
-            `RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";\n` +
-            `\n${codeBlocks[LANGUAGES.REACT]}\n` +
+            `${revealSdkSettings}` +
+            `${codeBlocks[LANGUAGES.REACT]}\n` +
             `ReactDOM.render(<App />, document.getElementById('root'));`;
+        } else {
+            jsTemplate = `${revealSdkSettings}${jsTemplate}\n`;
         }
 
         const codepenData: any = {
