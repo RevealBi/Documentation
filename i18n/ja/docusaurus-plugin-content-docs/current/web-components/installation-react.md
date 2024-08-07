@@ -1,18 +1,18 @@
-# Installing Reveal SDK Web Components in React
+# React に Reveal SDK Web Components をインストールする
 
-Reveal SDK provides a React-friendly version of each component, ensuring an idiomatic experience for React developers. You can easily switch between HTML and React examples throughout the documentation.
+Reveal SDK は、React 開発者にとって自然な体験を保証するため、各コンポーネントの React 対応バージョンを提供しています。ドキュメント全体を通して HTML と React の例を簡単に切り替えることができます。
 
-## Installation
+## インストール
 
-To add the Reveal SDK Web Components to your React app, install the necessary packages from npm:
+React アプリに Reveal SDK Web Components を追加するには、npm から必要なパッケージをインストールします:
 
 ```bash npm2yarn
 npm install @revealbi/ui @revealbi/ui-react
 ```
 
-## Configuration
+## 構成
 
-Set the `RevealSdkSettings.serverUrl` property to point to your Reveal API server. A common place for this configuration is in the `index.tsx` file:
+`RevealSdkSettings.serverUrl` プロパティを Reveal API サーバーを指すように設定します。この構成の一般的な場所は `index.tsx` ファイルです。
 
 ```tsx
 import { RevealSdkSettings } from '@revealbi/ui';
@@ -20,9 +20,9 @@ import { RevealSdkSettings } from '@revealbi/ui';
 RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
 ```
 
-## Styling
+## スタイル設定
 
-Import the Reveal SDK theme in your application's main stylesheet. This ensures that your web components have the appropriate styling:
+アプリケーションのメイン スタイルシートに Reveal SDK テーマをインポートします。これにより、Web コンポーネントに適切なスタイルが設定されます。
 
 ```css
 @import "@revealbi/ui/themes/light.css";
@@ -36,13 +36,13 @@ html, body, #root {
 }
 ```
 
-## Using Reveal SDK Web Components
+## Reveal SDK Web Components の使用
 
-Now you're ready to use Reveal SDK Web Components in your React application. Here's an example of how to integrate a dialog component:
+これで、React アプリケーションで Reveal SDK Web Components を使用する準備が整いました。以下は、ダイアログ コンポーネントを統合する方法の例です。
 
-### Importing and Using Components
+### コンポーネントのインポートと使用
 
-Every Reveal SDK Web Component is available as a React component. Here's an example of using the `RvDialog` component:
+すべての Reveal SDK Web コンポーネントは React コンポーネントとして利用できます。以下は `RvDialog` コンポーネントの使用例です:
 
 ```tsx
 import React from 'react';
@@ -61,4 +61,4 @@ function App() {
 export default App;
 ```
 
-With these steps, you've successfully integrated Reveal SDK Web Components into your React application. You can now leverage Reveal's powerful data visualization capabilities to enhance your projects. Explore more components and features to create a rich and interactive user experience.
+これらの手順により、Reveal SDK Web Components が React アプリケーションに正常に統合されました。これで、Reveal の強力なデータ表示形式機能を活用してプロジェクトを強化できるようになりました。その他のコンポーネントと機能を調べて、豊かでインタラクティブなユーザー エクスペリエンスを作成します。

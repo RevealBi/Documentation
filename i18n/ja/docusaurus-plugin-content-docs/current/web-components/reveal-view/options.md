@@ -1,10 +1,10 @@
 import CodePreview from '@site/src/components/CodePreview'
 
-# Options
+# オプション
 
-The `RvRevealView` web component wraps around the existing jQuery component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
+`RvRevealView` Web コンポーネントは、既存の jQuery コンポーネントをラップして、その使用を簡素化します。これを容易にするために、UI のさまざまな部分を Web に適した方法で制御できる `options` の概念を導入しました。
 
-# Reveal View
+# Reveal View (Reveal ビュー)
 
 <CodePreview previewHeight="600" sourceOpen="true">
 
@@ -65,9 +65,9 @@ const App = () => {
 
 </CodePreview>
 
-## RevealView Options
+## RevealView オプション
 
-The following options can be configured for `RvRevealView`:
+`RvRevealView` には以下のオプションを設定できます:
 
 ```ts
 export interface RevealViewOptions {
@@ -107,9 +107,9 @@ export interface RevealViewOptions {
 }
 ```
 
-## DataSourceDialog Options
+## DataSourceDialog オプション
 
-Configure the behavior of the data source dialog with the following options:
+以下のオプションを使用して、データ ソース ダイアログの動作を構成します:
 
 ```ts
 export interface DataSourceDialogOptions {
@@ -124,9 +124,9 @@ export interface DataSourceDialogOptions {
 }
 ```
 
-## Editor Options
+## エディター オプション
 
-Modify the chart editor behavior using these options:
+以下のオプションを使用してチャート エディターの動作を変更します:
 
 ```ts
 export interface EditorOptions {
@@ -171,9 +171,9 @@ export interface EditorOptions {
 }
 ```
 
-## Filter Options
+## フィルター オプション
 
-Configure the filter options for the dashboard with these settings:
+以下の設定を使用して、ダッシュボードのフィルター オプションを構成します:
 
 ```ts
 export interface FilterOptions {
@@ -196,9 +196,9 @@ export interface FilterOptions {
 }
 ```
 
-## Header Options
+## ヘッダー オプション
 
-Configure the header section of the dashboard with these options:
+以下のオプションを使用してダッシュボードのヘッダー セクションを構成します:
 
 ```ts
 export interface HeaderOptions {
@@ -243,9 +243,9 @@ export interface HeaderOptions {
 }
 ```
 
-## Visualization Options
+## 表示形式オプション
 
-Adjust the visualization settings with these options:
+以下のオプションを使用して表示形式の設定を調整します:
 
 ```ts
 export interface VisualizationOptions {
@@ -290,4 +290,4 @@ export interface VisualizationOptions {
 }
 ```
 
-By configuring these options, you can tailor the behavior and appearance of the `RvRevealView` component to suit your specific needs, providing a more customized and user-friendly experience.
+これらのオプションを構成することで、`RvRevealView` コンポーネントの動作と外観を特定のニーズに合わせて調整し、よりカスタマイズされたユーザーフレンドリーなエクスペリエンスを提供できます。

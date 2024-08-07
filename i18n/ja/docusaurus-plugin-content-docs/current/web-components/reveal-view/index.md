@@ -1,7 +1,7 @@
 import CodePreview from '@site/src/components/CodePreview'
 import ApiDocs from "../_api-docs.md";
 
-# Reveal View
+# Reveal View (Reveal ビュー)
 
 <CodePreview previewHeight="600" sourceOpen="true">
 

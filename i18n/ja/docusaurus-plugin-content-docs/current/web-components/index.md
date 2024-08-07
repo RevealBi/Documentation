@@ -1,15 +1,15 @@
-# Reveal SDK Web Components Overview
+# Reveal SDK Web Components の概要
 
-Welcome to the Reveal SDK Web Components documentation! This project is a [community-driven](https://github.com/RevealBi/revealbi-ui) initiative aimed at modernizing and enhancing the Reveal SDK. Our goal is to provide a robust and user-friendly web component wrapper around the existing jQuery-based RevealView component, alongside additional web components to streamline application development with the Reveal SDK.
+Reveal SDK Web Components ドキュメントへようこそ! このプロジェクトは、Reveal SDK をモダン化し強化することを目的とした[コミュニティ主導](https://github.com/RevealBi/revealbi-ui)の取り組みです。当社の目標は、既存の jQuery ベースの RevealView コンポーネントの周りに堅牢で使いやすい Web コンポーネントのラッパーを提供すること、そして、Reveal SDK を使用したアプリケーション開発を効率化するための追加の Web コンポーネントを提供することです。
 
-### Why Reveal SDK Web Components?
+### なぜ Reveal SDK Web Components なのか?
 
-In the ever-evolving landscape of web development, ease of use, seamless integration, and continuous improvement are paramount. The Reveal SDK Web Components project focuses on these key aspects to help developers create sophisticated data visualizations with minimal effort. Here’s how:
+進化し続ける Web 開発の世界では、使いやすさ、シームレスな統合、継続的な改善が重要です。Reveal SDK Web Components プロジェクトは、開発者が最小限の労力で高度なデータ表示形式を作成できるように、これらの主要な側面に焦点を当てています。
 
-1. **Enhanced Usability**: We aim to simplify the use of the Reveal SDK client libraries, making it more accessible for developers of all skill levels. Our web components encapsulate complex functionalities into easy-to-use elements, reducing the learning curve and speeding up development.
+1. **操作性の向上**: Reveal SDK クライアント ライブラリの使用を簡素化し、すべてのスキル レベルの開発者にとってアクセスしやすくすることを目指しています。当社の Web コンポーネントは、複雑な機能を使いやすい要素にカプセル化し、学習曲線を改善し、開発をスピードアップします。
 
-2. **Seamless Integration**: Integrating the Reveal SDK with popular JavaScript frameworks like Angular and React has never been easier. Our components are designed to work out-of-the-box with these frameworks, enabling you to leverage their full potential without compatibility issues or extensive configuration.
+2. **シームレスな統合**: Angular や React などの人気の JavaScript フレームワークと Reveal SDK を統合するのがこれまでになく簡単になりました。当社のコンポーネントは、これらのフレームワークと互換性の問題や広範な設定なしにすぐに動作するように設計されています。
 
-3. **Continuous Improvement**: We are committed to refining the Reveal APIs based on direct customer feedback. By experimenting with new features and enhancements, we strive to provide an ever-improving toolkit that meets the evolving needs of our users.
+3. **継続的な改善**: 当社は、お客様からの直接のフィードバックに基づいて Reveal API を改良することに尽力しています。新機能や強化の実験を通じて、ユーザーの進化するニーズに応えるために、絶えず改善されるツールキットを提供することを目指しています。
 
-By leveraging the Reveal SDK Web Components, you can create more powerful, responsive, and user-friendly data visualizations. Start exploring today and see how easy it is to bring your data to life!
+Reveal SDK Web Components を活用することで、より強力でレスポンシブ、かつユーザーフレンドリーなデータ表示形式を作成できます。今すぐ探索を始め、データを生き生きと見せることがいかに簡単か実感してください!

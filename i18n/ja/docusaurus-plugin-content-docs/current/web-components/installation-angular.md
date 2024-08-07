@@ -1,18 +1,18 @@
-# Installing Reveal SDK Web Components in Angular
+# Angular に Reveal SDK Web Components をインストールする
 
-Integrating Reveal SDK Web Components into your Angular application is straightforward and seamless. Follow these steps to get started:
+Reveal SDK Web Components を Angular アプリケーションに統合するのは簡単でシームレスです。開始するには以下の手順に従ってください:
 
-## Installation
+## インストール
 
-To add the Reveal SDK Web Components to your Angular app, install the required package from npm:
+Reveal SDK Web Components を Angular アプリに追加するには、npm から必要なパッケージをインストールします:
 
 ```bash npm2yarn
 npm install @revealbi/ui
 ```
 
-## Configuration
+## 構成
 
-Set the `RevealSdkSettings.serverUrl` property to point to your Reveal API server. A common place for this configuration is in the `main.ts` file:
+`RevealSdkSettings.serverUrl` プロパティを Reveal API サーバーを指すように設定します。この構成の一般的な場所は `main.ts` ファイルです。
 
 ```ts
 import { RevealSdkSettings } from '@revealbi/ui';
@@ -20,9 +20,9 @@ import { RevealSdkSettings } from '@revealbi/ui';
 RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
 ```
 
-## Styling
+## スタイル設定
 
-Import the Reveal SDK theme in your application's main stylesheet. This ensures that your web components have the appropriate styling:
+アプリケーションのメイン スタイルシートに Reveal SDK テーマをインポートします。これにより、Web コンポーネントに適切なスタイルが設定されます。
 
 ```css
 @import "@revealbi/ui/themes/light.css";
@@ -36,9 +36,9 @@ html, body, #root {
 }
 ```
 
-## Module Setup
+## モジュールのセットアップ
 
-Angular requires the `CUSTOM_ELEMENTS_SCHEMA` to recognize custom elements. Add this schema to your application's module:
+Angular では、カスタム要素を認識するために `CUSTOM_ELEMENTS_SCHEMA` が必要です。以下のスキーマをアプリケーションのモジュールに追加します:
 
 ```ts
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -55,13 +55,13 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 
-## Using Reveal SDK Web Components
+## Reveal SDK Web Components の使用
 
-Now you're ready to use Reveal SDK Web Components in your Angular application. Here's an example of how to integrate a dialog component:
+これで、Angular アプリケーションで Reveal SDK Web Components を使用する準備が整いました。以下は、ダイアログ コンポーネントを統合する方法の例です。
 
 ### HTML
 
-Add the Reveal SDK web component to your template:
+Reveal SDK Web コンポーネントをテンプレートに追加します:
 
 ```html
 <rv-dialog title="Example Dialog" [open]="isOpen">
@@ -71,7 +71,7 @@ Add the Reveal SDK web component to your template:
 
 ### TypeScript
 
-Control the dialog's state from your component class:
+ダイアログの状態をコンポーネント クラスから制御します:
 
 ```ts
 import { Component } from '@angular/core';
@@ -86,4 +86,4 @@ export class AppComponent {
 }
 ```
 
-With these steps, you've successfully integrated Reveal SDK Web Components into your Angular application. You can now take full advantage of Reveal's powerful data visualization capabilities in your projects. Explore more components and features to create a rich and interactive user experience.
+これらの手順により、Reveal SDK Web Components が Angular アプリケーションに正常に統合されました。プロジェクトで Reveal の強力なデータ表示形式機能を最大限に活用できるようになりました。その他のコンポーネントと機能を調べて、豊かでインタラクティブなユーザー エクスペリエンスを作成します。
