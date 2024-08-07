@@ -1,8 +1,8 @@
 import CodePreview from '@site/src/components/CodePreview'
 
-# Loading Dashboards
+# ダッシュボードの読み込み
 
-## Load with Dashboard Name
+## ダッシュボード名で読み込む
 
 <CodePreview previewHeight="600" sourceOpen="true">
 
@@ -22,7 +22,7 @@ const App = () => {
 
 </CodePreview>
 
-## Load with RVDashboard
+## RVDashboard で読み込む
 
 <CodePreview previewHeight="600" sourceOpen="true">
 

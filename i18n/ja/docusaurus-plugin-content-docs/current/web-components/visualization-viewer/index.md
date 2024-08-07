@@ -1,7 +1,7 @@
 import CodePreview from '@site/src/components/CodePreview'
 import ApiDocs from "../_api-docs.md";
 
-# Visualization Viewer
+# Visualization Viewer (表示形式ビューアー)
 
 <CodePreview previewHeight="600" sourceOpen="true">
 

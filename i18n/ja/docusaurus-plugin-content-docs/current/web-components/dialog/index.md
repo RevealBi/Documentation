@@ -1,9 +1,9 @@
 import CodePreview from '@site/src/components/CodePreview'
 import ApiDocs from "../_api-docs.md";
 
-# Dialog
+# Dialog (ダイアログ)
 
-Dialogs appear above the page and require the user's immediate attention. They inform users about critical information, require users to make decisions, or involve multiple tasks.
+ダイアログはページの上に表示され、ユーザーの即時の対応が必要です。重要な情報についてユーザーに通知したり、ユーザーに意思決定を要求したり、複数のタスクに関与したりします。
 
 <CodePreview previewHeight="450" sourceOpen="true">
 
