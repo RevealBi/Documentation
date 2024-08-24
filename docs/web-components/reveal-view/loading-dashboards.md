@@ -1,10 +1,12 @@
 import CodePreview from '@site/src/components/CodePreview'
 
+<style type="text/css">{`.container {max-width: unset}`}</style>
+
 # Loading Dashboards
 
 ## Load with Dashboard Name
 
-<CodePreview previewHeight="600" sourceOpen="true">
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view dashboard="Sales"></rv-reveal-view>
@@ -24,7 +26,7 @@ const App = () => {
 
 ## Load with RVDashboard
 
-<CodePreview previewHeight="600" sourceOpen="true">
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view id="viewer"></rv-reveal-view>

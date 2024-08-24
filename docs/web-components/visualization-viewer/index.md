@@ -1,6 +1,8 @@
 import CodePreview from '@site/src/components/CodePreview'
 import ApiDocs from "../_api-docs.md";
 
+<style type="text/css">{`.container {max-width: unset}`}</style>
+
 # Visualization Viewer
 
 <CodePreview previewHeight="600" sourceOpen="true">

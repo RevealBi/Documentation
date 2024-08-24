@@ -1,12 +1,14 @@
 import CodePreview from '@site/src/components/CodePreview'
 
+<style type="text/css">{`.container {max-width: unset}`}</style>
+
 # Options
 
 The `RvRevealView` web component wraps around the existing jQuery component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
 
 # Reveal View
 
-<CodePreview previewHeight="600" sourceOpen="true">
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view id="viewer" dashboard="Sales"></rv-reveal-view>

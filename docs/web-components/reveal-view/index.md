@@ -1,9 +1,11 @@
 import CodePreview from '@site/src/components/CodePreview'
 import ApiDocs from "../_api-docs.md";
 
+<style type="text/css">{`.container {max-width: unset}`}</style>
+
 # Reveal View
 
-<CodePreview previewHeight="600" sourceOpen="true">
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view dashboard="Sales"></rv-reveal-view>
