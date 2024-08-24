@@ -1,5 +1,4 @@
 import CodePreview from '@site/src/components/CodePreview'
-import ApiDocs from "../_api-docs.md";
 
 # Visualization Viewer (表示形式ビューアー)
 
@@ -21,4 +20,4 @@ const App = () => {
 
 </CodePreview>
 
-<ApiDocs path="visualization-viewer/visualization-viewer.component.ts" />
+::github-api-docs(path=visualization-viewer/visualization-viewer.component.ts)
