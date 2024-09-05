@@ -15,12 +15,12 @@ More information about how to get started with Visual Studio Code and Java can b
 
 ![](images/getting-started-spring-boot-jersey-project.jpg)
 
-2 - Select the Spring Boot version **2.7.6**.
+2 - Select the Spring Boot version **3.3.2**.
 
 ![](images/getting-started-spring-boot-jersey-version.jpg)
 
 :::caution
-Version 3.0.0 is currently not supported
+Version 2.x is not supported since Reveal 1.7.x
 :::
 
 3 - Select **Java**  as the language.
@@ -39,7 +39,7 @@ Version 3.0.0 is currently not supported
 
 ![](images/getting-started-spring-boot-jersey-package-type.jpg)
 
-7 - Select the Java version. In this example we are using version **17**.
+7 - Select the Java version. For Spring Boot 3.x, we need to use at least **17**.
 
 ![](images/getting-started-spring-boot-jersey-java-version.jpg)
 
@@ -165,12 +165,12 @@ While developing and debugging your application, it is common to host the server
 ```java title="CorsFilter.java"
 import java.io.IOException;
 
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.ContainerResponseContext;
-import javax.ws.rs.container.ContainerResponseFilter;
-import javax.ws.rs.container.PreMatching;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.container.ContainerRequestFilter;
+import jakarta.ws.rs.container.ContainerResponseContext;
+import jakarta.ws.rs.container.ContainerResponseFilter;
+import jakarta.ws.rs.container.PreMatching;
+import jakarta.ws.rs.core.Response;
 
 @PreMatching
 public class CorsFilter implements ContainerRequestFilter, ContainerResponseFilter {
