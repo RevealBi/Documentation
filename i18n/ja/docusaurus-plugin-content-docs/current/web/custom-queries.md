@@ -8,15 +8,15 @@ import TabItem from '@theme/TabItem';
 
 カスタム クエリは、次のデータ ソースでサポートされています。
 
-- [Amazon Athena](adding-data-sources/amazon-athena)
+- [Amazon Athena](adding-data-sources/amazon-athena.md)
 - Amazon Redshift
 - Microsoft Azure SQL Database
 - Microsoft Azure Synapse Analytics
-- [Microsoft SQL Server](adding-data-sources/ms-sql-server)
-- [MySQL](adding-data-sources/mysql)
-- [Oracle](adding-data-sources/oracle)
-- [PostgreSQL](adding-data-sources/postgres)
-- [Snowflake](adding-data-sources/snowflake)
+- [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
+- [MySQL](adding-data-sources/mysql.md)
+- [Oracle](adding-data-sources/oracle.md)
+- [PostgreSQL](adding-data-sources/postgres.md)
+- [Snowflake](adding-data-sources/snowflake.md)
 
 **手順 1** - クライアント上のデータ ソース項目を定義します。
 

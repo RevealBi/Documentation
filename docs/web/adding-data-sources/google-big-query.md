@@ -39,7 +39,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 :::note
 
-The `RVBigQueryDataSource` loads tables based on the authentication provider registered with the Reveal SDK. Google Big Query authenticates using a `RVBearerTokenDataSourceCredential`. See the [Authentication](../authentication#bearer-token-authentication) topic for more information.
+The `RVBigQueryDataSource` loads tables based on the authentication provider registered with the Reveal SDK. Google Big Query authenticates using a `RVBearerTokenDataSourceCredential`. See the [Authentication](../authentication.md#bearer-token-authentication) topic for more information.
 
 :::
 

@@ -42,7 +42,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::note
 
-`RVS3DataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてフォルダーとファイルを読み込みます。Amazon S3 は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication#amazon-web-services)トピックを参照してください。
+`RVS3DataSource` は、Reveal SDK に登録された認証プロバイダーに基づいてフォルダーとファイルを読み込みます。Amazon S3 は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication.md#amazon-web-services)トピックを参照してください。
 
 :::
 

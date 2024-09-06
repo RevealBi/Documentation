@@ -24,7 +24,7 @@ iframe {
   border-radius: 0 !important;
 }
 
-.tabs-container {
+.code-tabs-container {
   display: flex;
   border-top: 1px solid #ddd;  
 }

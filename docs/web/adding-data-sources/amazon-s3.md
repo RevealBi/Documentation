@@ -42,7 +42,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 :::note
 
-The `RVS3DataSource` loads folders and files based on the authentication provider registered with the Reveal SDK. Amazon S3 authenticates using a `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
+The `RVS3DataSource` loads folders and files based on the authentication provider registered with the Reveal SDK. Amazon S3 authenticates using a `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication.md#amazon-web-services) topic for more information.
 
 :::
 

@@ -1,9 +1,11 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
-import './code-preview.css';
 import CodeBlock from '@theme/CodeBlock';
+import './code-preview.css';
 
 interface CodeSnippetProps {
     children: ReactNode;
+    previewHeight?: number;
+    sourceOpen?: boolean;
 }
 
 const LANGUAGES = {
@@ -43,22 +45,41 @@ const extractCodeBlocks = (children: ReactNode) => {
 const htmlTemplate = (body: string, script: string) => `
     <!DOCTYPE html>
     <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/@revealbi/ui@0.2.0/themes/light.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <script src="https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js"></script>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
     <body>
-    ${body}
-    <script>${script}</script>
+        ${body}
+        <script type="module">
+            import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";
+            RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
+            ${script}
+        </script>
     </body>
     </html>
 `;
 
-const Iframe = ({ srcDoc }: { srcDoc: string }) => {
+const Iframe = ({ srcDoc, height }: { srcDoc: string, height: number }) => {
     const iframeRef = useRef<HTMLIFrameElement>(null);
-
+    
     useEffect(() => {
-        if (iframeRef.current) {
+        if (iframeRef.current && height === 0) {
             const iframe = iframeRef.current;
             iframe.onload = () => {
-                iframe.style.height = iframe.contentWindow?.document.body.scrollHeight + 16 + 'px';
+                const { contentWindow } = iframe;
+                if (contentWindow && contentWindow.document && contentWindow.document.body) {
+                    iframe.style.height = contentWindow.document.body.scrollHeight + 16 + 'px';
+                }
             };
         }
     }, [srcDoc]);
@@ -67,7 +88,7 @@ const Iframe = ({ srcDoc }: { srcDoc: string }) => {
         <iframe
             ref={iframeRef}
             srcDoc={srcDoc}
-            style={{ width: '100%', border: 'none' }}
+            style={{ width: '100%', height: `${height}px`, border: 'none' }}
         ></iframe>
     );
 };
@@ -78,9 +99,9 @@ const CodeSnippet = ({ language, code }: { language: string, code: string }) => 
     </CodeBlock>
 );
 
-const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
+const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150, sourceOpen = false }) => {
     const [currentTab, setCurrentTab] = useState(LANGUAGES.HTML);
-    const [showSource, setShowSource] = useState(true);
+    const [showSource, setShowSource] = useState(sourceOpen);
 
     const codeBlocks = extractCodeBlocks(children);
     const srcDoc = htmlTemplate(codeBlocks[LANGUAGES.HTML] as string, codeBlocks[LANGUAGES.JS] as string);
@@ -91,23 +112,32 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
     };
 
     const openCodePen = () => {
-        const reactVersion = '18.2.0';
+        const reactVersion = '18.3.1';
         let htmlTemplate = codeBlocks[LANGUAGES.HTML] || '';
-        let cssTemplate = '';
+        let cssTemplate = 'html, body, #root { height: 100%; }';
         let jsTemplate = codeBlocks[LANGUAGES.JS] || '';
         let jsPreProcessor = 'none';
         let editors = '101'; // default editors (HTML, CSS, JS)
+        let jsExternal = [
+            `https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js`,
+            `https://unpkg.com/dayjs@1.8.21/dayjs.min.js`,
+            `https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js`,
+        ];
+        const revealSdkSettings = `import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";\n` +
+                                  `RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";\n\n`;
 
         if (currentTab === LANGUAGES.REACT) {
-            jsPreProcessor = 'babel';
+            jsPreProcessor = 'typescript';
             editors = '0010'
             htmlTemplate = '<div id="root"></div>';
             jsTemplate =
-            `import React from 'https://esm.sh/react@${reactVersion}';\n` +
+            `import React, { useRef, useState, useEffect } from 'https://esm.sh/react@${reactVersion}';\n` +
             `import ReactDOM from 'https://esm.sh/react-dom@${reactVersion}';\n` +
-            `\n${codeBlocks[LANGUAGES.REACT]}\n` +
+            `${revealSdkSettings}` +
+            `${codeBlocks[LANGUAGES.REACT]}\n` +
             `ReactDOM.render(<App />, document.getElementById('root'));`;
-            
+        } else {
+            jsTemplate = `${revealSdkSettings}${jsTemplate}\n`;
         }
 
         const codepenData: any = {
@@ -116,6 +146,8 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
             js: jsTemplate,
             css: cssTemplate,
             js_pre_processor: jsPreProcessor,
+            js_external: jsExternal,
+            css_external: "https://unpkg.com/@revealbi/ui@0.2.0/themes/light.css",
             editors: editors,
         };
 
@@ -135,8 +167,8 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
 
     return (
         <div className="interactive-code-preview">
-            <div style={{ padding: '24px' }}>
-                <Iframe srcDoc={srcDoc} />
+            <div style={{ padding: '5px' }}>
+                <Iframe srcDoc={srcDoc} height={previewHeight} />
             </div>
 
             {showSource && (
@@ -145,10 +177,10 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children }) => {
                 </div>
             )}
 
-            <div className="tabs-container">
+            <div className="code-tabs-container">
                 <div className="source-toggle">
                     <button onClick={() => setShowSource(!showSource)}>
-                        SOURCE {currentTab ? '↑' : '↓'}
+                        SOURCE {showSource ? '↑' : '↓'}
                     </button>
                 </div>
                 <div className="tabs">

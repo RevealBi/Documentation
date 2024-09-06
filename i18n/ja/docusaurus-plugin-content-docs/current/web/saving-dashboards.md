@@ -15,7 +15,7 @@
 ![](images/saving-saveas-button.jpg)
 
 ## 保存の実装
-サーバーの **Dashboards** フォルダーにダッシュボードを保存するという規約に従う場合、Reveal SDK はデフォルトの**保存**機能を提供します。ただし、ダッシュボードをサーバーの **Dashboards** フォルダーに保存せず、カスタムの `IRVDashboardProvider` を作成している場合は、独自のカスタム保存ロジックを実装する必要があります。[ダッシュボードの読み込み](loading-dashboards.md#load-from-custom-file-path)トピックでは、カスタムの保存場所からダッシュボードを読み込む方法について説明します。
+サーバーの **Dashboards** フォルダーにダッシュボードを保存するという規約に従う場合、Reveal SDK はデフォルトの**保存**機能を提供します。ただし、ダッシュボードをサーバーの **Dashboards** フォルダーに保存せず、カスタムの `IRVDashboardProvider` を作成している場合は、独自のカスタム保存ロジックを実装する必要があります。[ダッシュボードの読み込み](loading-dashboards.md)トピックでは、カスタムの保存場所からダッシュボードを読み込む方法について説明します。
 
 まず、既存の `IRVDashboardProvider` クラスを変更して、`IRVDashboardProvider.SaveDashboardAsync` メソッドを実装します。この例では、ダッシュボード ファイルを **MyDashboards** という名前のフォルダーに保存しています。
 
