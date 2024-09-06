@@ -1,19 +1,15 @@
 # Known Issues
 
-### Cache
-
-- When using data providers that access a web resource; JSON, CSV, Excel, images, etc. These create .tmp files in the OS temp directory. As of the current release these are not removed or handled by our internal download cache. Because of this you may need to implement a scheduled removal to clear disk space usage.
-
 ### Exporting on Linux ARM64 for Node
 
 - [Chromium can't be installed automatically when running on Linux ARM64](https://github.com/puppeteer/puppeteer/issues/7740) when using Node.js, so it must be installed using your package manager or a manual install before attempting to export a dashboard. Reveal searches from the Chromium binary under `/usr/bin/chromium`.
 
-### Grid Row Paging (Beta)
+### Grid Row Paging
 
 - Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. 
 - Providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. 
 - Paging is not available when processing data on server is false, as well as when using blended data.
-- Client sorting is not fully supported and using this functionality will only sort the current page.
+- Client sorting by using the icon on a grid column is not supported and has been disabled.
 
 ### Headless Export
 

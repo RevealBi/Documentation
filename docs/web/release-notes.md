@@ -3,6 +3,61 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.7.0 (Sept 9th, 2024)
+
+### New Features
+
+#### All Platforms
+
+- (Beta) Fixed lines can now be added to category charts. This beta functionality can be accessed by enabling the `enabledBetaFeatures` property on `$.ig.RevealSdkSettings`. The fixed lines section in the editor can use data fields, or one of the highest, lower, average, or fixed value aggregate specialty fields.
+- Added support for dates in visualization filter API. For example, when you have a date-based visualization filter, such as "Last 7 days", you can use the following code to check the date range that the filter evaluated to by checking the `from` and `to` properties of the returning `RVDateRange` object.
+
+```js
+var dateRange = revealView.dashboard.visualizations[0].filters[0].dateRange;
+```
+
+- Server side grid paging is now available without requiring the `enableBetaFeatures` flag in `$.ig.RevealSdkSettings`. Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. The providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. Additionally, paging is not available when processing data on server is false, as well as when using blended data.
+- Added visualization-level descriptions. When editing a visualization, you can now enter a description if desired.
+- Visualizations now automatically support dashboard linking. The default functionality can still be overridden using the instructions from the [Linking Dashboards](https://help.revealbi.io/web/linking-dashboards/) topic.
+- Visualizations can now individually be exported to PDF through their overflow menu when maximized.
+- The filter summary page can now be hidden in exports by setting the `includeFiltersSummaryPage` property on the `ExportOptions` object. The exception to this is NodeJS, on that platform the filters summary page is not included regardless of the setting.
+- The background overlay when clicking overflow menus or filter search boxes is now lighter.
+- Added the ability to define hidden fields in Grid visualization, which can be used to define a URL or dashboard link.
+- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. In this release support was added for funnel, treemap, and gauges. This functionality is currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar, Funnel, Treemap, and Gauges. To enable this functionality, set `highlightedFilteringEnabled` to `true` on the RevealView.
+- Image export is now supported in headless export.
+- Sql Server Analysis Services data sources now support the `EffectiveUserName` property, which makes it possible to impersonate the given user. The property can be leveraged to achieve single sign on, e.g. by setting the property in the `IRVDataSourceProvider` implementation with the value of the current user, as set in the userContext.
+
+#### ASP.NET & Node
+
+- Windows Integrated Authentication is now supported in the Sql Server Analysis Services data source. To enable it, return a new instance of `RVIntegratedAuthenticationCredential` in your 'IRVAuthenticationProvider' implementation.
+
+#### Java
+
+- Added support for Spring Boot v3. With this support comes the news that Spring Boot v2.x isn't supported anymore. To use Spring Boot v3 you'll need to use JDK 17+ and will need a Jakarta EE 9 compliant server to host your application.
+- Added ARM64 support for ExportTool
+
+### Bugs
+
+#### All Platforms
+
+- Cached files were not removing .tmp file after adding an entry to the Reveal cache.
+- Misaligned placeholder on textarea fields after changing font-size.
+- Configured sorting in the value or label field not reflected in Pie visualization.
+- Editing a dashboard that includes only a TextBox may lead to a crash.
+- The date filters for "Today" and "Yesterday" show incorrect values in different time zones.
+- Wrong background color on clickable elements when the mouse is down.
+- Excel export generates wrong chart when there are null values for date fields.
+- Stacked column chart colors disappear when using a category.
+- Choropleth charts show some states green.
+- Changing labels using `onFieldsInitializing` is not reflected in the field selection of the dashboard filter.
+- Field formatting loss when changing visualization types and exporting to Excel.
+- Headless export `InitScript` not working for Visualizations.
+- Map shapes loaded from http not https.
+- Dashboard description is added as child of body tag.
+- Dashboard linking doesn't work for null or empty string values.
+- Changing the title or description of a dashboard when using web components causes those fields to revert to defaults.
+- Snowflake metadata browser showing tables from all schemas.
+
 ## 1.6.7 (June 26th, 2024)
 
 ### New Features
