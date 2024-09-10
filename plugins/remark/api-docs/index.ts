@@ -87,49 +87,71 @@ const generateProperties = (properties) => {
             children: [{ type: "text", value: property.description }]
         });
 
-        // List containing description, type, and example
-        const listItems = [
-            {
-                type: "listItem",
-                children: [
-                    {
-                        type: "paragraph",
-                        children: [
-                            {
-                                type: "strong",
-                                children: [{ type: "text", value: "Type: " }]
-                            },
-                            { type: "inlineCode", value: property.type }
-                        ]
-                    }
-                ]
-            },
-            property.example && {
-                type: "listItem",
-                children: [
-                    {
-                        type: "paragraph",
-                        children: [
-                            {
-                                type: "strong",
-                                children: [{ type: "text", value: "Example:" }]
-                            }
-                        ]
-                    },
-                    {
-                        type: "code",
-                        lang: "typescript",
-                        value: property.example
-                    }
-                ]
-            }
-        ].filter(Boolean); // Remove any null items
-
         nodes.push({
-            type: "list",
-            ordered: false, // Unordered list
-            children: listItems
+            type: "paragraph",
+            children: [{
+                type: "paragraph",
+                children: [
+                    {
+                        type: "strong",
+                        children: [{ type: "text", value: "Type: " }]
+                    },
+                    { type: "inlineCode", value: property.type }
+                ]
+            }]
         });
+
+        if (property.example) {
+            nodes.push({
+                type: "code",
+                lang: "typescript",
+                value: property.example
+            });
+        }
+
+        // List containing description, type, and example
+        // const listItems = [
+        //     {
+        //         type: "listItem",
+        //         children: [
+        //             {
+        //                 type: "paragraph",
+        //                 children: [
+        //                     {
+        //                         type: "strong",
+        //                         children: [{ type: "text", value: "Type: " }]
+        //                     },
+        //                     { type: "inlineCode", value: property.type }
+        //                 ]
+        //             }
+        //         ]
+        //     },
+        //     property.example && {
+        //         type: "listItem",
+        //         children: [
+        //             {
+        //                 type: "paragraph",
+        //                 children: [
+        //                     {
+        //                         type: "strong",
+        //                         children: [{ type: "text", value: "Example:" }]
+        //                     }
+        //                 ]
+        //             },
+        //             {
+        //                 type: "code",
+        //                 lang: "typescript",
+        //                 value: property.example
+        //             }
+        //         ]
+        //     }
+        // ].filter(Boolean); // Remove any null items
+
+        // nodes.push({
+        //     type: "list",
+        //     ordered: false, // Unordered list
+        //     children: listItems
+        // });
     });
 
     return nodes;
