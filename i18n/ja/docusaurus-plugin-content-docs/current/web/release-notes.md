@@ -3,7 +3,13 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.7.0 (Sept 9th, 2024)
+## 1.7.0 (Sept 10th, 2024)
+
+### Breaking Changes
+
+#### Java
+
+- Spring Boot 2.x is no longer supported. You'll need to use Spring Boot 3.x with JDK 17+ and Jakarta EE 9 complaint server to host your application.
 
 ### New Features
 

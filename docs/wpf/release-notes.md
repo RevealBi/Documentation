@@ -1,6 +1,6 @@
 # Release Notes
 
-## 1.7.0 (Sept 9th, 2024)
+## 1.7.0 (Sept 10th, 2024)
 
 ### New Features
 
