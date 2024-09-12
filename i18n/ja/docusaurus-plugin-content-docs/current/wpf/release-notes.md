@@ -1,41 +1,41 @@
 # リリース ノート
 
-## 1.7.0 (Sept 10th, 2024)
+## 1.7.0 (2024 年 9 月 10 日)
 
-### New Features
+### 新機能
 
-- Fixed lines can now be added to category charts. This beta functionality can be accessed by enabling the `EnabledBetaFeatures` property on `RevealSdkSettings`. The fixed lines section in the editor can use data fields, or one of the highest, lower, average, or fixed value aggregate specialty fields.
-- Added support for dates in visualization filter API. For example, when you have a date-based visualization filter, such as "Last 7 days", you can use the following code to check the date range that the filter evaluated to by checking the `From` and `To` properties of the returning `RVDateRange` object.
+- カテゴリ チャートに固定線を追加できるようになりました。このベータ機能にアクセスするには、`RevealSdkSettings` の `EnabledBetaFeatures` プロパティを有効にします。エディターの固定行セクションでは、データ フィールド、または最高値、最低値、平均値、または固定値の集計特殊フィールドのいずれかを使用できます。
+- 表示形式フィルター API に日付のサポートが追加されました。たとえば、「過去 7 日間」などの日付ベースの表示形式フィルターがある場合、次のコードを使用して、返される `RVDateRange` オブジェクトの `From` プロパティと `To` プロパティをチェックすることで、フィルターが評価した日付範囲を確認できます。
 
 ```cs
 var dateRange = revealView.Dashboard.Visualizations[0].Filters[0].DateRange;
 ```
 
-- Server side grid paging is now available without requiring the `EnableBetaFeatures` flag in `RevealSdkSettings`. Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. The providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. Additionally, paging is not available when processing data on server is false, as well as when using blended data.
-- Added visualization-level descriptions. When editing a visualization, you can now enter a description if desired.
-- Visualizations now automatically support dashboard linking. The default functionality can still be overridden using the instructions from the [Linking Dashboards](https://help.revealbi.io/web/linking-dashboards/) topic.
-- Visualizations can now individually be exported to PDF through their overflow menu when maximized.
-- The filter summary page can now be hidden in exports by setting the `IncludeFiltersSummaryPage` property on the `ExportOptions` object. 
-- The background overlay when clicking overflow menus or filter search boxes is now lighter.
-- Added the ability to define hidden fields in Grid visualization, which can be used to define a URL or dashboard link.
-- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. In this release support was added for funnel, treemap, and gauges. This functionality is currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar, Funnel, Treemap, and Gauges. To enable this functionality, set `HighlightedFilteringEnabled` to `true` on the RevealView.
-- Windows Integrated Authentication is now supported in the Sql Server Analysis Services data source. To enable it, return a new instance of `RVIntegratedAuthenticationCredential` in your 'IRVAuthenticationProvider' implementation.
-- Sql Server Analysis Services data sources now support the `EffectiveUserName` property, which makes it possible to impersonate the given user. The property can be leveraged to achieve single sign on, e.g. by setting the property in the `IRVDataSourceProvider` implementation with the value of the current user, as set in the userContext.
+- `RevealSdkSettings` の `EnableBetaFeatures` フラグを必要とせずに、サーバー側グリッド ページングが利用できるようになりました。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
+- 表示形式レベルの説明が追加されました。表示形式を編集するときに、必要に応じて説明を入力できるようになりました。
+- 表示形式ではダッシュボードのリンクが自動的にサポートされるようになりました。デフォルトの機能は、[「ダッシュボード リンク」](https://help.revealbi.io/ja/web/linking-dashboards/)トピックの手順を使用して上書きできます。
+- 表示形式を最大化すると、オーバーフロー メニューから個別に PDF にエクスポートできるようになりました。
+- `ExportOptions` オブジェクトの `IncludeFiltersSummaryPage` プロパティを設定することで、エクスポートでフィルター集計ページを非表示にできるようになりました。
+- オーバーフロー メニューまたはフィルター検索ボックスをクリックしたときの背景オーバーレイが明るくなりました。
+- グリッド表示形式で非表示フィールドを定義する機能が追加されました。これを使用して、URL またはダッシュボード リンクを定義できます。
+- (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。シリーズのツールチップには、選択した値でフィルタリングするオプションが含まれます。表示形式の残りの部分には、フィルタリングされた値と元の値を簡単に比較できるように、両方の値が表示されます。このリリースでは、ファンネル、ツリーマップ、ゲージのサポートが追加されました。この機能は現在、次のグラフ タイプでサポートされています: 縦棒、棒、折れ線、時系列、エリア、ステップ エリア、スプライン、積層型縦棒、積層型エリア、積層型棒、ファンネル、ツリーマップ、ゲージ。この機能を有効にするには、RevealView で `HighlightedFilteringEnabled` を `true` に設定します。
+- Windows 統合認証が、SQL Server Analysis Services データ ソースでサポートされます。これを有効にするには、'IRVAuthenticationProvider' 実装で `RVIntegratedAuthenticationCredential` の新しいインスタンスを返します。
+- Sql Server Analysis Services データ ソースは `EffectiveUserName` プロパティをサポートするようになり、これにより特定のユーザーになりすますことが可能になりました。このプロパティは、たとえば、userContext に設定されている現在のユーザーの値を使用して `IRVDataSourceProvider` 実装のプロパティを設定することにより、シングル サインオンを実現するために活用できます。
 
-### Bugs
+### バグ修正
 
-- Cached files were not removing .tmp file after adding an entry to the Reveal cache.
-- Configured sorting in the value or label field not reflected in Pie visualization.
-- Editing a dashboard that includes only a TextBox may lead to a crash.
-- The date filters for "Today" and "Yesterday" show incorrect values in different time zones.
-- Wrong background color on clickable elements when the mouse is down.
-- Excel export generates wrong chart when there are null values for date fields.
-- Stacked column chart colors disappear when using a category.
-- Choropleth charts show some states green.
-- Changing labels using `FieldsInitializing` is not reflected in the field selection of the dashboard filter.
-- Field formatting loss when changing visualization types and exporting to Excel.
-- Dashboard linking doesn't work for null or empty string values.
-- Snowflake metadata browser showing tables from all schemas.
+- キャッシュされたファイルは、Reveal キャッシュにエントリを追加した後、.tmp ファイルを削除していませんでした。
+- 値またはラベル フィールドで構成された並べ替えが円チャートの表示形式に反映されません。
+- TextBox のみを含むダッシュボードを編集するとクラッシュが発生する可能性があります。
+- 「今日」と「昨日」の日付フィルターでは、異なるタイムゾーンで誤った値が表示されます。
+- マウスが押されたときにクリック可能な要素の背景色が間違っています。
+- 日付フィールドに null 値がある場合、Excel エクスポートで間違ったチャートが生成されます。
+- カテゴリを使用すると積層型縦棒チャートの色が消えます。
+- 散布図では、一部の状態が緑色で表示されます。
+- `FieldsInitializing` を使用してラベルを変更しても、ダッシュボード フィルターのフィールド選択には反映されません。
+- 表示形式タイプを変更して Excel にエクスポートすると、フィールドの書式設定が失われます。
+- ダッシュボードのリンクは、null または空の文字列値では機能しません。
+- Snowflake メタデータ ブラウザーはすべてのスキーマのテーブルを表示します。
 
 ## 1.6.7 (2024 年 6 月 26 日)
 
