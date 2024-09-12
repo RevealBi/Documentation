@@ -15,13 +15,13 @@ Visual Studio Code と Java の使用を開始する方法の詳細について�
 
 ![](images/getting-started-spring-boot-jersey-project.jpg)
 
-2 - Spring Boot バージョン **2.7.6** を選択します。
+2 - Spring Boot バージョン **3.3.2** を選択します。
 
 ![](images/getting-started-spring-boot-jersey-version.jpg)
 
 :::caution
 
-バージョン 3.0.0 は現在サポートされていません。
+バージョン 2.x は Reveal 1.7.x 以降、サポートされていません。
 
 :::
 
@@ -41,7 +41,7 @@ Visual Studio Code と Java の使用を開始する方法の詳細について�
 
 ![](images/getting-started-spring-boot-jersey-package-type.jpg)
 
-7 - Java のバージョンを選択します。この例では、バージョン **17** を使用しています。
+7 - Java のバージョンを選択します。Spring Boot 3.x を使用する場合、**17** 以降が必要です。
 
 ![](images/getting-started-spring-boot-jersey-java-version.jpg)
 
@@ -167,12 +167,12 @@ public class RevealJerseyConfig extends ResourceConfig
 ```java title="CorsFilter.java"
 import java.io.IOException;
 
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.ContainerResponseContext;
-import javax.ws.rs.container.ContainerResponseFilter;
-import javax.ws.rs.container.PreMatching;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.container.ContainerRequestFilter;
+import jakarta.ws.rs.container.ContainerResponseContext;
+import jakarta.ws.rs.container.ContainerResponseFilter;
+import jakarta.ws.rs.container.PreMatching;
+import jakarta.ws.rs.core.Response;
 
 @PreMatching
 public class CorsFilter implements ContainerRequestFilter, ContainerResponseFilter {
