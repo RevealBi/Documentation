@@ -5,7 +5,6 @@ Reveal SDK を使用すると、ダッシュボードと表示形式の両方を
 サポートされているダッシュボードのエクスポート形式:
 - Excel
 - 画像
-- JSON
 - PDF
 - PowerPoint
 
