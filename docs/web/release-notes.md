@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 #### All Platforms
 
-- (Beta) Fixed lines can now be added to category charts. This beta functionality can be accessed by enabling the `enabledBetaFeatures` property on `$.ig.RevealSdkSettings`. The fixed lines section in the editor can use data fields, or one of the highest, lower, average, or fixed value aggregate specialty fields.
+- (Beta) Fixed lines can now be added to category charts. This beta functionality can be accessed by enabling the `enableBetaFeatures` property on `$.ig.RevealSdkSettings`. The fixed lines section in the editor can use data fields, or one of the highest, lower, average, or fixed value aggregate specialty fields.
 - Added support for dates in visualization filter API. For example, when you have a date-based visualization filter, such as "Last 7 days", you can use the following code to check the date range that the filter evaluated to by checking the `from` and `to` properties of the returning `RVDateRange` object.
 
 ```js
