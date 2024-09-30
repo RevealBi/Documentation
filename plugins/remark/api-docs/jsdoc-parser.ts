@@ -2,7 +2,7 @@ export interface JsDoc {
     description: string;
     example?: string;
     params?: JsDocParam[];
-    returns?: string;
+    returns?: JsDocReturn;
     cssParts?: JsDocCssPart[];
     cssProperties?: JsDocCssProperty[];
     slots?: JsDocSlot[];
@@ -11,6 +11,7 @@ export interface JsDoc {
 export interface JsDocParam {
     name: string;
     description: string;
+    type: string;
 }
 
 export interface JsDocCssPart {
@@ -26,6 +27,11 @@ export interface JsDocCssProperty {
 export interface JsDocSlot {
     name: string;
     description: string;
+}
+
+export interface JsDocReturn {
+    description: string;
+    type: string;
 }
 
 const removeCommentSyntax = (comment: string): string[] => {
@@ -53,26 +59,33 @@ const parseParams = (lines: string[]): JsDocParam[] => {
     const params: JsDocParam[] = [];
     for (const line of lines) {
         if (line.trim().startsWith('@param')) {
-            const match = line.match(/@param\s+(\w+)\s+-?\s*(.*)/);
+            const match = line.match(/@param\s+\{([^}]+)\}\s+(\w+)\s+-?\s*(.*)/);
             if (match) {
-                const [, name, description] = match;
-                params.push({ name, description });
+                const [, type, name, description] = match;
+                params.push({ name, type: type.trim(), description });
             }
         }
     }
     return params;
 };
 
-const parseReturns = (lines: string[]): string | null => {
+const parseReturns = (lines: string[]): JsDocReturn => {
     for (const line of lines) {
         if (line.trim().startsWith('@returns')) {
-            const match = line.match(/@returns?\s+-?\s*(.*)/);
+            const match = line.match(/@returns?\s+\{([\w\|\[\]\<\> ,]+)\}\s+-?\s*(.*)/);
             if (match) {
-                return match[1].trim();
+                const [, returnType, description] = match;
+                return {
+                    description,
+                    type: returnType.trim()
+                };
             }
         }
     }
-    return null;
+    return {
+        description: '',
+        type: 'void'
+    };
 };
 
 const parseExample = (lines: string[]): string | null => {

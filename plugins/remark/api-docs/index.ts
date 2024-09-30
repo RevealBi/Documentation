@@ -1,5 +1,5 @@
 import { visit } from 'unist-util-visit';
-import { parseComponentFile } from './file-parser';
+import { Method, parseComponentFile, Property } from './file-parser';
 
 const plugin = (options) => {
     const transformer = async (ast) => {
@@ -62,8 +62,8 @@ const generateApiDocs = async (path: string) => {
     return nodes;
 }
 
-const generateProperties = (properties) => {
-    if (!properties) return [];
+const generateProperties = (properties: Property[]) => {
+    if (!properties || properties.length === 0) return [];
 
     const nodes = [];
 
@@ -84,21 +84,15 @@ const generateProperties = (properties) => {
 
         nodes.push({
             type: "paragraph",
-            children: [{ type: "text", value: property.description }]
+            children: [
+                { type: "text", value: "Type: " },
+                { type: "inlineCode", value: property.type }
+            ]
         });
 
         nodes.push({
             type: "paragraph",
-            children: [{
-                type: "paragraph",
-                children: [
-                    {
-                        type: "strong",
-                        children: [{ type: "text", value: "Type: " }]
-                    },
-                    { type: "inlineCode", value: property.type }
-                ]
-            }]
+            children: [{ type: "text", value: property.description }]
         });
 
         if (property.example) {
@@ -108,57 +102,13 @@ const generateProperties = (properties) => {
                 value: property.example
             });
         }
-
-        // List containing description, type, and example
-        // const listItems = [
-        //     {
-        //         type: "listItem",
-        //         children: [
-        //             {
-        //                 type: "paragraph",
-        //                 children: [
-        //                     {
-        //                         type: "strong",
-        //                         children: [{ type: "text", value: "Type: " }]
-        //                     },
-        //                     { type: "inlineCode", value: property.type }
-        //                 ]
-        //             }
-        //         ]
-        //     },
-        //     property.example && {
-        //         type: "listItem",
-        //         children: [
-        //             {
-        //                 type: "paragraph",
-        //                 children: [
-        //                     {
-        //                         type: "strong",
-        //                         children: [{ type: "text", value: "Example:" }]
-        //                     }
-        //                 ]
-        //             },
-        //             {
-        //                 type: "code",
-        //                 lang: "typescript",
-        //                 value: property.example
-        //             }
-        //         ]
-        //     }
-        // ].filter(Boolean); // Remove any null items
-
-        // nodes.push({
-        //     type: "list",
-        //     ordered: false, // Unordered list
-        //     children: listItems
-        // });
     });
 
     return nodes;
 };
 
-const generateMethods = (methods) => {
-    if (!methods) return [];
+const generateMethods = (methods: Method[]) => {
+    if (!methods || methods.length === 0) return [];
 
     const nodes = [];
 
@@ -180,20 +130,60 @@ const generateMethods = (methods) => {
             children: [{ type: "text", value: method.description }]
         });
 
-        if (method.example) {
+        nodes.push({
+            type: "code",
+            value: method.methodDefinition
+        });
+
+        if (method.parameters && method.parameters.length > 0) {
             nodes.push({
-                type: "code",
-                lang: "typescript",
-                value: method.example
+                type: "paragraph",
+                children: [{ type: "text", value: "Parameters:" }]
+            });
+
+            // Table heading
+            nodes.push({
+                type: "table",
+                children: [
+                    {
+                        type: "tableRow",
+                        children: [
+                            { type: "tableCell", children: [{ type: "text", value: "Name" }] },
+                            { type: "tableCell", children: [{ type: "text", value: "Type" }] },
+                            { type: "tableCell", children: [{ type: "text", value: "Description" }] }
+                        ]
+                    },
+                    // Table rows for each argument (assuming `property.arguments` is an array of arguments)
+                    ...method.parameters.map((param) => ({
+                        type: "tableRow",
+                        children: [
+                            { type: "tableCell", children: [{ type: "text", value: param.name }] },
+                            { type: "tableCell", children: [{ type: "text", value: param.type }] },
+                            { type: "tableCell", children: [{ type: "text", value: param.description }] }
+                        ]
+                    }))
+                ]
             });
         }
+
+        nodes.push({
+            type: "paragraph",
+            children: [
+                { type: "text", value: "Returns: " },
+                { type: "inlineCode", value: method.returns.type },
+                ...(method.returns.description ? [
+                    { type: "text", value: " - " },
+                    { type: "text", value: method.returns.description }
+                ] : [])
+            ]
+        });
     });
 
     return nodes;
 }
 
-const generateSlots = (slots) => {
-    if (!slots) return [];
+const generateSlots = (slots: any[]) => {
+    if (!slots || slots.length === 0) return [];
 
     const nodes = [];
 
@@ -219,8 +209,8 @@ const generateSlots = (slots) => {
     return nodes;
 }
 
-const generateCssProperties = (cssProperties) => {
-    if (!cssProperties) return [];
+const generateCssProperties = (cssProperties: any[]) => {
+    if (!cssProperties || cssProperties.length === 0) return [];
 
     const nodes = [];
 
@@ -246,8 +236,8 @@ const generateCssProperties = (cssProperties) => {
     return nodes;
 }
 
-const generateParts = (parts) => {
-    if (!parts) return [];
+const generateParts = (parts: any[]) => {
+    if (!parts || parts.length === 0) return [];
 
     const nodes = [];
 

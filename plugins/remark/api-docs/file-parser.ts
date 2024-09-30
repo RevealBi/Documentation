@@ -1,4 +1,4 @@
-import { parseJsDocs, JsDocParam, JsDoc, JsDocCssPart, JsDocCssProperty, JsDocSlot } from './jsdoc-parser';
+import { parseJsDocs, JsDocParam, JsDoc, JsDocCssPart, JsDocCssProperty, JsDocSlot, JsDocReturn } from './jsdoc-parser';
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
@@ -22,9 +22,10 @@ export interface Property {
 
 export interface Method {
     name: string;
-    arguments: JsDocParam[];
+    methodDefinition: string;
+    parameters: JsDocParam[];
     description: string;
-    returns?: string;
+    returns?: JsDocReturn;
 }
 
 const fetchFileContents = async (path: string) => {
@@ -62,27 +63,104 @@ const isPublicMethod = (node: t.ClassMethod): boolean => {
     return isPublic && !isOverride && !isGetter && !isSetter;
 };
 
-function extractTypeAnnotation(typeAnnotation: t.TypeAnnotation | t.TSTypeAnnotation | t.Noop | null | undefined): string {
+
+function extractTypeAnnotation(
+    typeAnnotation: t.TypeAnnotation | t.TSTypeAnnotation | t.TSType | t.Noop | null | undefined
+): string {
+    if (!typeAnnotation) return 'any'; // Handle missing or undefined types
+
+    // Handle TSTypeAnnotation (standard type annotation)
     if (t.isTSTypeAnnotation(typeAnnotation)) {
         const type = typeAnnotation.typeAnnotation;
-        if (t.isTSTypeReference(type) && t.isIdentifier(type.typeName)) {
-            return type.typeName.name;
-        } else if (t.isTSStringKeyword(type)) {
-            return 'string';
-        } else if (t.isTSNumberKeyword(type)) {
-            return 'number';
-        } else if (t.isTSBooleanKeyword(type)) {
-            return 'boolean';
-        } else if (t.isTSAnyKeyword(type)) {
-            return 'any';
-        } else if (t.isTSFunctionType(type)) {
+
+        // Handle TSTypeReference with generics (e.g., Promise<T>, Array<T>)
+        if (t.isTSTypeReference(type)) {
+            const typeName = t.isIdentifier(type.typeName) ? type.typeName.name : 'unknown';
+
+            // Handle generic types (e.g., Promise<any>, Array<T>)
+            if (type.typeParameters && t.isTSTypeParameterInstantiation(type.typeParameters)) {
+                const genericTypes = type.typeParameters.params.map(param => {
+                    if (t.isTSAnyKeyword(param)) {
+                        return 'any'; // Ensure any is explicitly returned
+                    }
+                    return extractTypeAnnotation(param);
+                });
+                return `${typeName}<${genericTypes.join(', ')}>`;
+            }
+
+            return typeName;
+        }
+
+        // Handle basic types
+        if (t.isTSStringKeyword(type)) return 'string';
+        if (t.isTSNumberKeyword(type)) return 'number';
+        if (t.isTSBooleanKeyword(type)) return 'boolean';
+        if (t.isTSAnyKeyword(type)) return 'any'; // Ensure "any" is handled correctly
+        if (t.isTSVoidKeyword(type)) return 'void';
+        if (t.isTSNullKeyword(type)) return 'null'; // Handle 'null' in union types
+
+        // Handle literal types (e.g., string literal "close-button", numeric literal)
+        if (t.isTSLiteralType(type)) {
+            if (t.isStringLiteral(type.literal)) {
+                return `"${type.literal.value}"`; // Handle string literal type
+            } else if (t.isNumericLiteral(type.literal)) {
+                return `${type.literal.value}`; // Handle number literal type
+            }
+        }
+
+        // Handle function types
+        if (t.isTSFunctionType(type)) {
             return generate(type).code; // Generate the function type signature
-        } else if (t.isTSUnionType(type)) {
-            return type.types.map(subType => generate(subType).code).join(' | '); // Handle union types
+        }
+
+        // Handle union types (e.g., string | number | any)
+        if (t.isTSUnionType(type)) {
+            return type.types.map(subType => {
+                if (t.isTSAnyKeyword(subType)) {
+                    return 'any'; // Ensure any is explicitly returned
+                }
+                return extractTypeAnnotation(subType);
+            }).join(' | ');
+        }
+
+        // Handle array types (e.g., string[], Array<T>)
+        if (t.isTSArrayType(type)) {
+            return `${extractTypeAnnotation(type.elementType)}[]`;
         }
     }
-    return '';
+
+    // Handle when the input is directly TSType (not wrapped in TypeAnnotation or TSTypeAnnotation)
+    if (t.isTSType(typeAnnotation)) {
+        if (t.isTSTypeReference(typeAnnotation) && t.isIdentifier(typeAnnotation.typeName)) {
+            return typeAnnotation.typeName.name;
+        }
+
+        // Handle union types at the root level (like string | number | any)
+        if (t.isTSUnionType(typeAnnotation)) {
+            return typeAnnotation.types.map(subType => {
+                if (t.isTSAnyKeyword(subType)) {
+                    return 'any';
+                }
+                return extractTypeAnnotation(subType);
+            }).join(' | ');
+        }
+
+        // Handle root literal types (e.g., string literals at the root level)
+        if (t.isTSLiteralType(typeAnnotation)) {
+            if (t.isStringLiteral(typeAnnotation.literal)) {
+                return `"${typeAnnotation.literal.value}"`;
+            }
+            if (t.isNumericLiteral(typeAnnotation.literal)) {
+                return `${typeAnnotation.literal.value}`;
+            }
+        }
+    }
+
+    return 'unknown'; // Fallback case
 }
+
+
+
 
 const parsePropertyDetails = (node: t.ClassProperty | t.ClassMethod, type: string): Property | null => {
     const name = t.isIdentifier(node.key) ? node.key.name : 'Not Found';   
@@ -141,11 +219,33 @@ const parseMethod = (node: t.ClassMethod): Method | null => {
     let jsDoc: JsDoc | null = null;
     if (jsDocComments.length > 0) {
         jsDoc = parseJsDocs(jsDocComments[0].value);
-    }    
+    }
+
+    // Extract parameter definitions
+    const parameters = node.params.map((param: t.Node) => {
+        if (t.isIdentifier(param)) {
+            // Check if the parameter is optional
+            const paramName = param.optional ? `${param.name}?` : param.name;
+            return `${paramName}: ${param.typeAnnotation ? extractTypeAnnotation(param.typeAnnotation) : 'any'}`;
+        } else if (t.isAssignmentPattern(param) && t.isIdentifier(param.left)) {
+            // Handle default values
+            const paramName = param.left.optional ? `${param.left.name}?` : param.left.name;
+            return `${paramName}: ${param.left.typeAnnotation ? extractTypeAnnotation(param.left.typeAnnotation) : 'any'} = ${generate(param.right).code}`;
+        } else {
+            return 'unknown';
+        }
+    });
+
+    // Extract return type from AST
+    const returnType = node.returnType ? extractTypeAnnotation(node.returnType) : 'void';
+
+    // Construct the method definition
+    const methodDefinition = `${name}(${parameters.join(', ')}): ${returnType}`;
 
     return {
         name: name,
-        arguments: jsDoc?.params,
+        methodDefinition: methodDefinition,
+        parameters: jsDoc?.params,
         description: jsDoc?.description || 'Description missing',
         returns: jsDoc?.returns,
     };
