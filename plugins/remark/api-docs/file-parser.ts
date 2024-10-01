@@ -30,6 +30,7 @@ export interface Method {
 
 const fetchFileContents = async (path: string) => {
     try {
+        //todo: need to change the path to support different repos.
         const response = await fetch(`https://api.github.com/repos/RevealBi/revealbi-ui/contents/packages/ui/src/components/${path}`);
         const data = await response.json();
         if (data && data.content) {
