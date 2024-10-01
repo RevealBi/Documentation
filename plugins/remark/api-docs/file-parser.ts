@@ -1,4 +1,4 @@
-import { parseJsDocs, JsDocParam, JsDoc, JsDocCssPart, JsDocCssProperty, JsDocSlot } from './jsdoc-parser';
+import { parseJsDocs, JsDocParam, JsDoc, JsDocCssPart, JsDocCssProperty, JsDocSlot, JsDocReturn } from './jsdoc-parser';
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
@@ -22,13 +22,15 @@ export interface Property {
 
 export interface Method {
     name: string;
-    arguments: JsDocParam[];
+    methodDefinition: string;
+    parameters: JsDocParam[];
     description: string;
-    returns?: string;
+    returns?: JsDocReturn;
 }
 
 const fetchFileContents = async (path: string) => {
     try {
+        //todo: need to change the path to support different repos.
         const response = await fetch(`https://api.github.com/repos/RevealBi/revealbi-ui/contents/packages/ui/src/components/${path}`);
         const data = await response.json();
         if (data && data.content) {
@@ -141,11 +143,30 @@ const parseMethod = (node: t.ClassMethod): Method | null => {
     let jsDoc: JsDoc | null = null;
     if (jsDocComments.length > 0) {
         jsDoc = parseJsDocs(jsDocComments[0].value);
-    }    
+    }
+
+    // Extract parameter definitions
+    const parameters = node.params.map((param: t.Node) => {
+        if (t.isIdentifier(param)) {
+            // Check if the parameter is optional
+            const paramName = param.optional ? `${param.name}?` : param.name;
+            return `${paramName}: ${param.typeAnnotation ? extractTypeAnnotation(param.typeAnnotation) : 'any'}`;
+        } else if (t.isAssignmentPattern(param) && t.isIdentifier(param.left)) {
+            // Handle default values
+            const paramName = param.left.optional ? `${param.left.name}?` : param.left.name;
+            return `${paramName}: ${param.left.typeAnnotation ? extractTypeAnnotation(param.left.typeAnnotation) : 'any'} = ${generate(param.right).code}`;
+        } else {
+            return 'unknown';
+        }
+    });
+
+    // Construct the method definition
+    const methodDefinition = `${name}(${parameters.join(', ')})`;
 
     return {
         name: name,
-        arguments: jsDoc?.params,
+        methodDefinition: methodDefinition,
+        parameters: jsDoc?.params,
         description: jsDoc?.description || 'Description missing',
         returns: jsDoc?.returns,
     };

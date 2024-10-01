@@ -1,7 +1,6 @@
 import CodePreview from '@site/src/components/CodePreview'
-import ApiDocs from "../_api-docs.md";
 
-<style type="text/css">{`.container {max-width: unset}`}</style>
+<style type="text/css">{`.container {max-width: 2000px}`}</style>
 
 # Reveal View
 
@@ -23,4 +22,4 @@ const App = () => {
 
 </CodePreview>
 
-<ApiDocs path="reveal-view/reveal-view.component.ts" />
+::github-api-docs(path=reveal-view/reveal-view.component.ts)

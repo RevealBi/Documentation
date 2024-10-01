@@ -1,7 +1,4 @@
 import CodePreview from '@site/src/components/CodePreview'
-import ApiDocs from "../_api-docs.md";
-
-<style type="text/css">{`.container {max-width: unset}`}</style>
 
 # Visualization Viewer
 
@@ -23,4 +20,4 @@ const App = () => {
 
 </CodePreview>
 
-<ApiDocs path="visualization-viewer/visualization-viewer.component.ts" />
+::github-api-docs(path=visualization-viewer/visualization-viewer.component.ts)

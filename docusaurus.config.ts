@@ -3,6 +3,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
+import apiDocs from './plugins/remark/api-docs';
 const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
@@ -50,13 +51,16 @@ const config: Config = {
           breadcrumbs: false,
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
+          beforeDefaultRemarkPlugins: [
+            [ apiDocs, {}]
+          ],
           remarkPlugins: [
             [ npm2yarn, { sync: true } ],
             [ replace, {
               variables: [
                 { name: "sdkVersion", value: "1.7.0" }
               ]
-            }]
+            }],
           ],
         },
         blog: false,

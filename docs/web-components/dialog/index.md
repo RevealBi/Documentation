@@ -1,7 +1,4 @@
 import CodePreview from '@site/src/components/CodePreview'
-import ApiDocs from "../_api-docs.md";
-
-<style type="text/css">{`.container {max-width: unset}`}</style>
 
 # Dialog
 
@@ -40,4 +37,4 @@ const App = () => {
 
 </CodePreview>
 
-<ApiDocs path="dialog/dialog.component.ts" />
+::github-api-docs(path=dialog/dialog.component.ts)
