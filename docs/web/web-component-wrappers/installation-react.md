@@ -12,21 +12,16 @@ npm install @revealbi/ui @revealbi/ui-react
 
 ## Configuration
 
-Set the `RevealSdkSettings.serverUrl` property to point to your Reveal API server. A common place for this configuration is in the `index.tsx` file:
+Before using the components, configure the Reveal SDK by setting the base URL to your Reveal API server:
 
-```tsx
-import { RevealSdkSettings } from '@revealbi/ui';
-
-RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
+```ts
+// Change to your Reveal SDK server URL
+$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 ```
 
 ## Using Reveal SDK Web Components
 
-Now you're ready to use Reveal SDK Web Components in your React application. Here's an example of how to integrate a dialog component:
-
-### Importing and Using Components
-
-Every Reveal SDK Web Component is available as a React component. Here's an example of using the `RvRevealView` component:
+Once everything is set up, you're ready to use Reveal SDK Web Components within your React application. Here's an example of integrating the RvRevealView component:
 
 ```tsx
 import React from 'react';

@@ -10,14 +10,19 @@ To add the Reveal SDK Web Components to your Angular app, install the required p
 npm install @revealbi/ui
 ```
 
+After installation, import the components into your project:
+```js
+import "@revealbi/ui";
+```
+
 ## Configuration
 
-Set the `RevealSdkSettings.serverUrl` property to point to your Reveal API server. A common place for this configuration is in the `main.ts` file:
+Call the `RevealSdkSettings.setBaseUrl` function and provide your Reveal API server.
 
 ```ts
-import { RevealSdkSettings } from '@revealbi/ui';
-
-RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
+import "@revealbi/ui";
+// Change to your Reveal SDK server URL
+$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 ```
 
 ## Module Setup
@@ -41,21 +46,19 @@ export class AppModule {}
 
 ## Using Reveal SDK Web Components
 
-Now you're ready to use Reveal SDK Web Components in your Angular application. Here's an example of how to integrate a dialog component:
+Now you're ready to use Reveal SDK Web Components in your Angular application.
 
 ### HTML
 
 Add the Reveal SDK web component to your template:
 
 ```html
-<rv-dialog title="Example Dialog" [open]="isOpen">
-  <h1>Dialog Content</h1>
-</rv-dialog>
+<rv-reveal-view [dashboard]="dashboard"></<rv-reveal-view>
 ```
 
 ### TypeScript
 
-Control the dialog's state from your component class:
+Control the dashboard to load from your component class:
 
 ```ts
 import { Component } from '@angular/core';
@@ -66,7 +69,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isOpen: boolean = true;
+  dashboard: string = "Sales";
 }
 ```
 
