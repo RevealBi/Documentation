@@ -20,40 +20,22 @@ import { RevealSdkSettings } from '@revealbi/ui';
 RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
 ```
 
-## Styling
-
-Import the Reveal SDK theme in your application's main stylesheet. This ensures that your web components have the appropriate styling:
-
-```css
-@import "@revealbi/ui/themes/light.css";
-
-html, body, #root {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-```
-
 ## Using Reveal SDK Web Components
 
 Now you're ready to use Reveal SDK Web Components in your React application. Here's an example of how to integrate a dialog component:
 
 ### Importing and Using Components
 
-Every Reveal SDK Web Component is available as a React component. Here's an example of using the `RvDialog` component:
+Every Reveal SDK Web Component is available as a React component. Here's an example of using the `RvRevealView` component:
 
 ```tsx
 import React from 'react';
-import { RvDialog } from '@revealbi/ui-react';
+import { RvRevealView } from '@revealbi/ui-react';
 
 function App() {
   return (
     <div>
-      <RvDialog title="My Dialog" open={true}>
-        <p>Hello!</p>
-      </RvDialog>
+      <RvRevealView dashboard="Sales"></RvRevealView>
     </div>
   );
 }

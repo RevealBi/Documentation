@@ -20,22 +20,6 @@ import { RevealSdkSettings } from '@revealbi/ui';
 RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
 ```
 
-## Styling
-
-Import the Reveal SDK theme in your application's main stylesheet. This ensures that your web components have the appropriate styling:
-
-```css
-@import "@revealbi/ui/themes/light.css";
-
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-```
-
 ## Module Setup
 
 Angular requires the `CUSTOM_ELEMENTS_SCHEMA` to recognize custom elements. Add this schema to your application's module:
