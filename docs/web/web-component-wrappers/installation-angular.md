@@ -1,6 +1,6 @@
-# Installing Reveal SDK Web Components in Angular
+# Installing Reveal SDK Web Component Wrappers in Angular
 
-Integrating Reveal SDK Web Components into your Angular application is straightforward and seamless. Follow these steps to get started:
+Integrating the Reveal SDK Web Component Wrappers into your Angular application is straightforward and seamless. Follow these steps to get started:
 
 ## Installation
 
@@ -46,7 +46,7 @@ export class AppModule {}
 
 ## Using Reveal SDK Web Components
 
-Now you're ready to use Reveal SDK Web Components in your Angular application.
+Now you're ready to use the Reveal SDK Web Component Wrappers in your Angular application.
 
 ### HTML
 
@@ -73,4 +73,4 @@ export class AppComponent {
 }
 ```
 
-With these steps, you've successfully integrated Reveal SDK Web Components into your Angular application. You can now take full advantage of Reveal's powerful data visualization capabilities in your projects. Explore more components and features to create a rich and interactive user experience.
+With these steps, you've successfully integrated the Reveal SDK Web Component Wrappers into your Angular application. You can now take full advantage of Reveal's powerful data visualization capabilities in your projects. Explore more components and features to create a rich and interactive user experience.

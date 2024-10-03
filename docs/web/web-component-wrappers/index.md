@@ -1,15 +1,21 @@
-# Reveal SDK Web Components Overview
+# Reveal SDK Web Component Wrappers Overview
 
-Welcome to the Reveal SDK Web Components documentation! This project is a [community-driven](https://github.com/RevealBi/revealbi-ui) initiative aimed at modernizing and enhancing the Reveal SDK. Our goal is to provide a robust and user-friendly web component wrapper around the existing jQuery-based RevealView component, alongside additional web components to streamline application development with the Reveal SDK.
+Welcome to the Reveal SDK Web Components documentation! This project is a [community-driven](https://github.com/RevealBi/revealbi-ui) initiative focused on modernizing and enhancing the Reveal SDK. At its core, the Reveal SDK Web Components provide a streamlined web component wrapper around the existing jQuery-based `RevealView` component, simplifying the integration and use of the Reveal SDK in modern web applications. 
 
-### Why Reveal SDK Web Components?
+## What Are Reveal SDK Web Component Wrappers?
 
-In the ever-evolving landscape of web development, ease of use, seamless integration, and continuous improvement are paramount. The Reveal SDK Web Components project focuses on these key aspects to help developers create sophisticated data visualizations with minimal effort. Here’s how:
+The Reveal SDK Web Component Wrappers are essentially web components that wrap the existing `RevealView`, a jQuery-based component that powers the core data visualization features of the Reveal SDK. By encapsulating the complex functionalities of `RevealView` into modern web components, we provide a more intuitive and developer-friendly way to integrate Reveal's powerful capabilities into your projects. These web components abstract away the underlying jQuery implementation, allowing you to work with Reveal in a more modern and efficient way.
 
-1. **Enhanced Usability**: We aim to simplify the use of the Reveal SDK client libraries, making it more accessible for developers of all skill levels. Our web components encapsulate complex functionalities into easy-to-use elements, reducing the learning curve and speeding up development.
+## Why Use Reveal SDK Web Components?
 
-2. **Seamless Integration**: Integrating the Reveal SDK with popular JavaScript frameworks like Angular and React has never been easier. Our components are designed to work out-of-the-box with these frameworks, enabling you to leverage their full potential without compatibility issues or extensive configuration.
+In today's fast-paced web development environment, simplicity, ease of integration, and adaptability are crucial. The Reveal SDK Web Components project addresses these needs by wrapping the existing jQuery-based functionality in modern web components, offering several key benefits:
 
-3. **Continuous Improvement**: We are committed to refining the Reveal APIs based on direct customer feedback. By experimenting with new features and enhancements, we strive to provide an ever-improving toolkit that meets the evolving needs of our users.
+1. **Enhanced Usability**: With Reveal SDK Web Components, we simplify how you interact with the Reveal SDK. Rather than working directly with the jQuery-based `RevealView`, these web components offer a more accessible API. You can now integrate complex data visualization elements using straightforward HTML tags, reducing both the learning curve and development time.
 
-By leveraging the Reveal SDK Web Components, you can create more powerful, responsive, and user-friendly data visualizations. Start exploring today and see how easy it is to bring your data to life!
+2. **Seamless Integration with Frameworks**: Reveal SDK Web Components are designed to work effortlessly with popular JavaScript frameworks like Angular, React, and Vue. The web component wrappers ensure that the underlying `RevealView` can be integrated into these frameworks without compatibility issues, allowing you to fully leverage Reveal’s features within your preferred development environment.
+
+3. **Continuous Improvement**: As part of our commitment to continuous improvement, we actively refine these web components and the underlying Reveal APIs based on community and customer feedback. This ensures that you always have access to the latest features and enhancements, helping you stay ahead in delivering powerful and responsive data visualizations.
+
+## Conclusion
+
+By using the Reveal SDK Web Component Wrappers, you benefit from the powerful capabilities of the jQuery-based `RevealView` component, but in a more modern, efficient, and developer-friendly package. These web component wrappers allow you to focus on building sophisticated data visualizations without needing to manage the complexity of the underlying framework. Start exploring today and see how easy it is to bring your data to life!

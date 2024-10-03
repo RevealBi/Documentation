@@ -7,7 +7,7 @@ Integrating Reveal SDK Web Component Wrappers into your project is quick and eas
 
 ## Prerequisites
 
-To ensure Reveal SDK Web Components function properly, you’ll need to include a few dependencies. These dependencies are essential as Reveal SDK Web Components are built around the jQuery-based RevealView:
+To ensure Reveal SDK Web Component Wrappers function properly, you’ll need to include a few dependencies. These dependencies are essential as Reveal SDK Web Component Wrappers are built around the existing jQuery-based RevealView:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -19,7 +19,7 @@ For more details on setting up the Reveal SDK, see our [installation documentati
 
 ## CDN Installation
 
-If you're looking for the simplest way to integrate, using a CDN is a great option. Follow these examples to include Reveal SDK Web Components directly in your HTML or JavaScript.
+If you're looking for the simplest way to integrate, using a CDN is a great option. Follow these examples to include the Reveal SDK Web Component Wrappers directly in your HTML.
 
 <Tabs>
 <TabItem value="html" label="HTML" default>
@@ -43,7 +43,7 @@ If you're looking for the simplest way to integrate, using a CDN is a great opti
 
 ## NPM Installation
 
-For those who prefer local installation and version control, Reveal SDK Web Components can be installed via npm.
+For those who prefer local installation and version control, Reveal SDK Web Component Wrappers can be installed via npm.
 ```bash npm2yarn
 npm install @revealbi/ui
 ```
@@ -100,4 +100,4 @@ To start using the `rv-reveal-view` component, include it in your HTML:
 <rv-reveal-view></<rv-reveal-view>
 ```
 
-By following these simple steps, you’ll have Reveal SDK Web Component Wrappers fully integrated into your project, ready to unlock powerful data visualizations and interactive dashboarding features. Continue exploring the SDK’s rich components and customization options to create a seamless and engaging user experience for your applications.
+By following these simple steps, you’ll have the Reveal SDK Web Component Wrappers fully integrated into your project, ready to unlock powerful data visualizations and interactive dashboarding features. Continue exploring the SDK’s rich components and customization options to create a seamless and engaging user experience for your applications.
