@@ -1,6 +1,9 @@
 import CodePreview from '@site/src/components/CodePreview'
+import BetaWarning from '../_beta-message.md'
 
 # Options
+
+<BetaWarning />
 
 The `RvRevealView` web component wraps around the existing jQuery component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
 
@@ -27,8 +30,8 @@ viewer.options = options;
 ```
 
 ```tsx
-import { VisualizationViewerOptions } from "https://esm.sh/@revealbi/ui";
-import { RvVisualizationViewer } from "https://esm.sh/@revealbi/ui-react";
+import { VisualizationViewerOptions } from "https://esm.sh/reveal-sdk-wc-wrappers";
+import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wc-wrappers-react";
 
 const App = () => {
     const options: VisualizationViewerOptions = {

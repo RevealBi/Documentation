@@ -1,6 +1,9 @@
 import CodePreview from '@site/src/components/CodePreview'
+import BetaWarning from '../_beta-message.md'
 
 # Visualization Viewer
+
+<BetaWarning />
 
 <CodePreview previewHeight="600" sourceOpen="true">
 
@@ -9,7 +12,7 @@ import CodePreview from '@site/src/components/CodePreview'
 ```
 
 ```tsx
-import { RvVisualizationViewer } from "https://esm.sh/@revealbi/ui-react";
+import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wc-wrappers-react";
 
 const App = () => {
     return (

@@ -1,4 +1,8 @@
+import BetaWarning from './_beta-message.md'
+
 # Installing Reveal SDK Web Component Wrappers in Angular
+
+<BetaWarning />
 
 Integrating the Reveal SDK Web Component Wrappers into your Angular application is straightforward and seamless. Follow these steps to get started:
 
@@ -7,22 +11,13 @@ Integrating the Reveal SDK Web Component Wrappers into your Angular application 
 To add the Reveal SDK Web Components to your Angular app, install the required package from npm:
 
 ```bash npm2yarn
-npm install @revealbi/ui
+npm install reveal-sdk-wc-wrappers
 ```
 
-After installation, import the components into your project:
+Once installed, you'll need to register the web components in your application. By default, all Reveal SDK Web Component Wrappers will be globally registered, enabling their usage without individual imports.
 ```js
-import "@revealbi/ui";
-```
-
-## Configuration
-
-Call the `RevealSdkSettings.setBaseUrl` function and provide your Reveal API server.
-
-```ts
-import "@revealbi/ui";
-// Change to your Reveal SDK server URL
-$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+import { defineRevealSdkWrappers } from "reveal-sdk-wc-wrappers";
+defineRevealSdkWrappers();
 ```
 
 ## Module Setup

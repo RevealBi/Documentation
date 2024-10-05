@@ -1,4 +1,8 @@
+import BetaWarning from './_beta-message.md'
+
 # Installing Reveal SDK Web Component Wrappers in React
+
+<BetaWarning />
 
 The Reveal SDK Web Component Wrappers provides a React-friendly version of each component, ensuring an idiomatic experience for React developers. You can easily switch between HTML and React examples throughout the documentation.
 
@@ -7,16 +11,7 @@ The Reveal SDK Web Component Wrappers provides a React-friendly version of each 
 To add the Reveal SDK Web Component Wrappers to your React app, install the necessary packages from npm:
 
 ```bash npm2yarn
-npm install @revealbi/ui @revealbi/ui-react
-```
-
-## Configuration
-
-Before using the components, configure the Reveal SDK by setting the base URL to your Reveal API server:
-
-```ts
-// Change to your Reveal SDK server URL
-$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+npm install reveal-sdk-wc-wrappers reveal-sdk-wc-wrappers-react
 ```
 
 ## Using Reveal SDK Web Components
@@ -25,7 +20,7 @@ Once everything is set up, you're ready to use the Reveal SDK Web Component Wrap
 
 ```tsx
 import React from 'react';
-import { RvRevealView } from '@revealbi/ui-react';
+import { RvRevealView } from 'reveal-sdk-wc-wrappers-react';
 
 function App() {
   return (

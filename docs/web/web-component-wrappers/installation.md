@@ -1,97 +1,60 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BetaWarning from './_beta-message.md'
 
 # Installation
+
+<BetaWarning />
 
 Integrating Reveal SDK Web Component Wrappers into your project is quick and easy. Whether you prefer using a CDN for a simple setup or installing locally via npm, we’ve got you covered. If you are working with specific frameworks like React, Vue, or Angular, be sure to check out our dedicated guides for seamless integration.
 
 ## Prerequisites
 
-To ensure Reveal SDK Web Component Wrappers function properly, you’ll need to include a few dependencies. These dependencies are essential as Reveal SDK Web Component Wrappers are built around the existing jQuery-based RevealView:
+To ensure Reveal SDK Web Component Wrappers function properly, you’ll need to install the Reveal SDK client library. These dependencies are essential as the Reveal SDK Web Component Wrappers are built around the existing jQuery-based RevealView.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.8.21/dayjs.min.js"></script>
 <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-```
-
-For more details on setting up the Reveal SDK, see our [installation documentation.](../install-client-sdk.md).
-
-## CDN Installation
-
-If you're looking for the simplest way to integrate, using a CDN is a great option. Follow these examples to include the Reveal SDK Web Component Wrappers directly in your HTML.
-
-<Tabs>
-<TabItem value="html" label="HTML" default>
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@revealbi/ui"></script>
-```
-
-</TabItem>
-
-<TabItem value="js" label="JavaScript">
-
-```html
-<script type="module">
-    import "https://cdn.jsdelivr.net/npm/@revealbi/ui";
-</script>
-```
-
-</TabItem>
-</Tabs>
-
-## NPM Installation
-
-For those who prefer local installation and version control, Reveal SDK Web Component Wrappers can be installed via npm.
-```bash npm2yarn
-npm install @revealbi/ui
-```
-
-After installation, import the components into your project:
-```js
-import "@revealbi/ui";
-```
-
-## Configure Reveal SDK
-
-Once you’ve included the Reveal SDK Web Component Wrappers, you need to configure the Reveal SDK by setting the base URL to your Reveal SDK server. This step ensures that the components know where to retrieve and send data.
-
-<Tabs>
-<TabItem value="html" label="CDN-HTML" default>
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@revealbi/ui"></script>
 <script>
     // Change to your Reveal SDK server URL
     $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 </script>
 ```
 
-</TabItem>
+For more details on setting up the Reveal SDK, see our [installation documentation.](../install-client-sdk.md).
 
-<TabItem value="js" label="CDN-JavaScript" default>
+## CDN Installation
+
+If you're looking for the simplest way to integrate, using a CDN is a great option. Include the Reveal SDK Web Component Wrappers directly in your HTML.
 
 ```html
-<script type="module">
-    import "https://cdn.jsdelivr.net/npm/@revealbi/ui";
-    // Change to your Reveal SDK server URL
-    $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
-</script>
+<script src="https://cdn.jsdelivr.net/npm/reveal-sdk-wc-wrappers/index.umd.min.js"></script>
 ```
 
-</TabItem>
+## NPM Installation
 
-<TabItem value="npm" label="NPM">
+For those who prefer local installation and version control, Reveal SDK Web Component Wrappers can be installed via npm.
 
+### Step 1: Install the Package
+Run the following command in your project directory to install the Web Component Wrappers:
+```bash npm2yarn
+npm install reveal-sdk-wc-wrappers
+```
+
+### Step 2: Register the Components
+Once installed, you'll need to register the web components in your application. By default, all Reveal SDK Web Component Wrappers will be globally registered, enabling their usage without individual imports.
 ```js
-import "@revealbi/ui";
-// Change to your Reveal SDK server URL
-$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+import { defineRevealSdkWrappers } from "reveal-sdk-wc-wrappers";
+defineRevealSdkWrappers();
 ```
 
-</TabItem>
-</Tabs>
+### Step 3: Optimize Bundle Size (Optional)
+If you prefer to optimize your bundle size by importing only specific components, you can register individual components as needed:
+```js
+import { defineRevealSdkWrappers, RvRevealView } from "reveal-sdk-wc-wrappers";
+defineRevealSdkWrappers(RvRevealView);
+```
 
 ## Adding the Component
 

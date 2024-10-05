@@ -1,6 +1,10 @@
+import BetaWarning from './_beta-message.md'
+
 # Reveal SDK Web Component Wrappers Overview
 
-Welcome to the Reveal SDK Web Components documentation! This project is a [community-driven](https://github.com/RevealBi/revealbi-ui) initiative focused on modernizing and enhancing the Reveal SDK. At its core, the Reveal SDK Web Components provide a streamlined web component wrapper around the existing jQuery-based `RevealView` component, simplifying the integration and use of the Reveal SDK in modern web applications. 
+<BetaWarning />
+
+Welcome to the Reveal SDK Web Components documentation! This project is a [community-driven](https://github.com/RevealBi/reveal-sdk-wc-wrappers) initiative focused on modernizing and enhancing the Reveal SDK. At its core, the Reveal SDK Web Components provide a streamlined web component wrapper around the existing jQuery-based `RevealView` component, simplifying the integration and use of the Reveal SDK in modern web applications. 
 
 ## What Are Reveal SDK Web Component Wrappers?
 

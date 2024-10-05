@@ -46,7 +46,6 @@ const htmlTemplate = (body: string, script: string) => `
     <!DOCTYPE html>
     <html>
     <head>
-        <link rel="stylesheet" href="https://unpkg.com/@revealbi/ui@0.2.0/themes/light.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
         <script src="https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js"></script>
@@ -61,8 +60,9 @@ const htmlTemplate = (body: string, script: string) => `
     <body>
         ${body}
         <script type="module">
-            import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";
-            RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";
+            import { defineRevealSdkWrappers } from "https://esm.sh/reveal-sdk-wc-wrappers";
+            defineRevealSdkWrappers();
+            $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
             ${script}
         </script>
     </body>
@@ -123,8 +123,9 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
             `https://unpkg.com/dayjs@1.8.21/dayjs.min.js`,
             `https://dl.revealbi.io/reveal/libs/1.6.7/infragistics.reveal.js`,
         ];
-        const revealSdkSettings = `import { RevealSdkSettings } from "https://esm.sh/@revealbi/ui";\n` +
-                                  `RevealSdkSettings.serverUrl = "https://samples.revealbi.io/upmedia-backend/reveal-api/";\n\n`;
+        const revealSdkSettings = `import { defineRevealSdkWrappers } from "https://esm.sh/reveal-sdk-wc-wrappers";\n` +
+                                  `defineRevealSdkWrappers();\n` +
+                                  `$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");\n\n`;
 
         if (currentTab === LANGUAGES.REACT) {
             jsPreProcessor = 'typescript';
@@ -133,7 +134,7 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
             jsTemplate =
             `import React, { useRef, useState, useEffect } from 'https://esm.sh/react@${reactVersion}';\n` +
             `import ReactDOM from 'https://esm.sh/react-dom@${reactVersion}';\n` +
-            `${revealSdkSettings}` +
+            `$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");\n` +
             `${codeBlocks[LANGUAGES.REACT]}\n` +
             `ReactDOM.render(<App />, document.getElementById('root'));`;
         } else {
@@ -147,7 +148,7 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
             css: cssTemplate,
             js_pre_processor: jsPreProcessor,
             js_external: jsExternal,
-            css_external: "https://unpkg.com/@revealbi/ui@0.2.0/themes/light.css",
+            css_external: "",
             editors: editors,
         };
 
