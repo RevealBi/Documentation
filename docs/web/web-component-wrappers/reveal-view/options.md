@@ -41,8 +41,8 @@ revealView.options = options;
 ```
 
 ```tsx
-import { RevealViewOptions } from "https://esm.sh/reveal-sdk-wc-wrappers";
-import { RvRevealView } from "https://esm.sh/reveal-sdk-wc-wrappers-react";
+import { RevealViewOptions } from "https://esm.sh/reveal-sdk-wrappers";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
     const options: RevealViewOptions = {

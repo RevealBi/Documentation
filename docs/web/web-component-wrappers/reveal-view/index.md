@@ -14,7 +14,7 @@ import BetaWarning from '../_beta-message.md'
 ```
 
 ```tsx
-import { RvRevealView } from "https://esm.sh/reveal-sdk-wc-wrappers-react";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
     return (

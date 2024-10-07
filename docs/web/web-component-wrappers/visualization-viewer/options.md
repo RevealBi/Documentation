@@ -30,8 +30,8 @@ viewer.options = options;
 ```
 
 ```tsx
-import { VisualizationViewerOptions } from "https://esm.sh/reveal-sdk-wc-wrappers";
-import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wc-wrappers-react";
+import { VisualizationViewerOptions } from "https://esm.sh/reveal-sdk-wrappers";
+import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
     const options: VisualizationViewerOptions = {

@@ -12,7 +12,7 @@ import BetaWarning from '../_beta-message.md'
 ```
 
 ```tsx
-import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wc-wrappers-react";
+import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
     return (

@@ -29,7 +29,7 @@ For more details on setting up the Reveal SDK, see our [installation documentati
 If you're looking for the simplest way to integrate, using a CDN is a great option. Include the Reveal SDK Web Component Wrappers directly in your HTML.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/reveal-sdk-wc-wrappers/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal-sdk-wrappers/index.umd.min.js"></script>
 ```
 
 ## NPM Installation
@@ -39,20 +39,20 @@ For those who prefer local installation and version control, Reveal SDK Web Comp
 ### Step 1: Install the Package
 Run the following command in your project directory to install the Web Component Wrappers:
 ```bash npm2yarn
-npm install reveal-sdk-wc-wrappers
+npm install reveal-sdk-wrappers
 ```
 
 ### Step 2: Register the Components
 Once installed, you'll need to register the web components in your application. By default, all Reveal SDK Web Component Wrappers will be globally registered, enabling their usage without individual imports.
 ```js
-import { defineRevealSdkWrappers } from "reveal-sdk-wc-wrappers";
+import { defineRevealSdkWrappers } from "reveal-sdk-wrappers";
 defineRevealSdkWrappers();
 ```
 
 ### Step 3: Optimize Bundle Size (Optional)
 If you prefer to optimize your bundle size by importing only specific components, you can register individual components as needed:
 ```js
-import { defineRevealSdkWrappers, RvRevealView } from "reveal-sdk-wc-wrappers";
+import { defineRevealSdkWrappers, RvRevealView } from "reveal-sdk-wrappers";
 defineRevealSdkWrappers(RvRevealView);
 ```
 

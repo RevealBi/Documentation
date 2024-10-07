@@ -11,12 +11,12 @@ Integrating the Reveal SDK Web Component Wrappers into your Angular application 
 To add the Reveal SDK Web Components to your Angular app, install the required package from npm:
 
 ```bash npm2yarn
-npm install reveal-sdk-wc-wrappers
+npm install reveal-sdk-wrappers
 ```
 
 Once installed, you'll need to register the web components in your application. By default, all Reveal SDK Web Component Wrappers will be globally registered, enabling their usage without individual imports.
 ```js
-import { defineRevealSdkWrappers } from "reveal-sdk-wc-wrappers";
+import { defineRevealSdkWrappers } from "reveal-sdk-wrappers";
 defineRevealSdkWrappers();
 ```
 
