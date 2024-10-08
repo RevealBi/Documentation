@@ -43,13 +43,6 @@ Reveal SDK が正しく機能するには、次の依存関係が必要です。
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 ```
 
-**Spectrum v 1.8.0 またはそれ以降 (オプション)** - これは、エンドユーザーが特定の表示形式の背景色を設定できるように UI を有効にする場合にのみ必要です。
-
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
-```
-
 `index.html` ファイルを変更し、ページの下部に (`infragistics.reveal.js` スクリプトの直前) すべての依存関係スクリプトを含めます。
 
 最終の `index.html` ファイルは以下のようになります。

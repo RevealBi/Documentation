@@ -1,12 +1,17 @@
 import CodePreview from '@site/src/components/CodePreview'
+import BetaWarning from '../_beta-message.md'
 
-# オプション
+<style type="text/css">{`.container {max-width: unset}`}</style>
 
-`RvRevealView` Web コンポーネントは、既存の jQuery コンポーネントをラップして、その使用を簡素化します。これを容易にするために、UI のさまざまな部分を Web に適した方法で制御できる `options` の概念を導入しました。
+# Options
 
-# Reveal View (Reveal ビュー)
+<BetaWarning />
 
-<CodePreview previewHeight="600" sourceOpen="true">
+The `RvRevealView` web component wraps around the existing jQuery component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
+
+# Reveal View
+
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view id="viewer" dashboard="Sales"></rv-reveal-view>
@@ -36,10 +41,11 @@ revealView.options = options;
 ```
 
 ```tsx
-import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
+import { RevealViewOptions } from "https://esm.sh/reveal-sdk-wrappers";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
-    const options = {
+    const options: RevealViewOptions = {
         canEdit: false,
         filters: {
             showFilters: false,
@@ -65,9 +71,9 @@ const App = () => {
 
 </CodePreview>
 
-## RevealView オプション
+## RevealView Options
 
-`RvRevealView` には以下のオプションを設定できます:
+The following options can be configured for `RvRevealView`:
 
 ```ts
 export interface RevealViewOptions {
@@ -107,9 +113,9 @@ export interface RevealViewOptions {
 }
 ```
 
-## DataSourceDialog オプション
+## DataSourceDialog Options
 
-以下のオプションを使用して、データ ソース ダイアログの動作を構成します:
+Configure the behavior of the data source dialog with the following options:
 
 ```ts
 export interface DataSourceDialogOptions {
@@ -124,9 +130,9 @@ export interface DataSourceDialogOptions {
 }
 ```
 
-## エディター オプション
+## Editor Options
 
-以下のオプションを使用してチャート エディターの動作を変更します:
+Modify the chart editor behavior using these options:
 
 ```ts
 export interface EditorOptions {
@@ -171,9 +177,9 @@ export interface EditorOptions {
 }
 ```
 
-## フィルター オプション
+## Filter Options
 
-以下の設定を使用して、ダッシュボードのフィルター オプションを構成します:
+Configure the filter options for the dashboard with these settings:
 
 ```ts
 export interface FilterOptions {
@@ -196,9 +202,9 @@ export interface FilterOptions {
 }
 ```
 
-## ヘッダー オプション
+## Header Options
 
-以下のオプションを使用してダッシュボードのヘッダー セクションを構成します:
+Configure the header section of the dashboard with these options:
 
 ```ts
 export interface HeaderOptions {
@@ -243,9 +249,9 @@ export interface HeaderOptions {
 }
 ```
 
-## 表示形式オプション
+## Visualization Options
 
-以下のオプションを使用して表示形式の設定を調整します:
+Adjust the visualization settings with these options:
 
 ```ts
 export interface VisualizationOptions {
@@ -290,4 +296,4 @@ export interface VisualizationOptions {
 }
 ```
 
-これらのオプションを構成することで、`RvRevealView` コンポーネントの動作と外観を特定のニーズに合わせて調整し、よりカスタマイズされたユーザーフレンドリーなエクスペリエンスを提供できます。
+By configuring these options, you can tailor the behavior and appearance of the `RvRevealView` component to suit your specific needs, providing a more customized and user-friendly experience.

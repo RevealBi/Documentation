@@ -1,8 +1,11 @@
 import CodePreview from '@site/src/components/CodePreview'
+import BetaWarning from '../_beta-message.md'
 
 <style type="text/css">{`.container {max-width: unset}`}</style>
 
 # Loading Dashboards
+
+<BetaWarning />
 
 ## Load with Dashboard Name
 
@@ -13,7 +16,7 @@ import CodePreview from '@site/src/components/CodePreview'
 ```
 
 ```tsx
-import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
     return (
@@ -40,7 +43,7 @@ $.ig.RVDashboard.loadDashboard("Campaigns", (dashboard) => {
 ```
 
 ```tsx
-import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 declare const $: any;
 

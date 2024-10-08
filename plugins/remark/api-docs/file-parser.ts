@@ -4,6 +4,12 @@ import traverse from '@babel/traverse';
 import * as t from '@babel/types';
 import generate from '@babel/generator';
 
+export interface GitHubApiOptions {
+    owner: string;
+    repo: string;
+    path: string;
+}
+
 export interface Component {
     name: string;
     properties: Property[];
@@ -28,13 +34,15 @@ export interface Method {
     returns?: JsDocReturn;
 }
 
-const fetchFileContents = async (path: string) => {
+const fetchFileContents = async (options: GitHubApiOptions) => {
     try {
-        //todo: need to change the path to support different repos.
-        const response = await fetch(`https://api.github.com/repos/RevealBi/revealbi-ui/contents/packages/ui/src/components/${path}`);
+        const response = await fetch(`https://api.github.com/repos/${options.owner}/${options.repo}/contents/${options.path}`);
         const data = await response.json();
         if (data && data.content) {
             return atob(data.content);
+        } else {
+            console.error('Error fetching file contents');
+            return null;
         }
     } catch (error) {
         console.error(error);
@@ -172,8 +180,8 @@ const parseMethod = (node: t.ClassMethod): Method | null => {
     };
 }
 
-export const parseComponentFile = async (path: string) => {
-    const contents = await fetchFileContents(path);
+export const parseComponentFile = async (options: GitHubApiOptions) => {
+    const contents = await fetchFileContents(options);
     if (!contents) {
         return null;
     }

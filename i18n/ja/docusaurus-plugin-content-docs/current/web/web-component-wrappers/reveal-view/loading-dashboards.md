@@ -1,17 +1,22 @@
 import CodePreview from '@site/src/components/CodePreview'
+import BetaWarning from '../_beta-message.md'
 
-# ダッシュボードの読み込み
+<style type="text/css">{`.container {max-width: unset}`}</style>
 
-## ダッシュボード名で読み込む
+# Loading Dashboards
 
-<CodePreview previewHeight="600" sourceOpen="true">
+<BetaWarning />
+
+## Load with Dashboard Name
+
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view dashboard="Sales"></rv-reveal-view>
 ```
 
 ```tsx
-import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
     return (
@@ -22,9 +27,9 @@ const App = () => {
 
 </CodePreview>
 
-## RVDashboard で読み込む
+## Load with RVDashboard
 
-<CodePreview previewHeight="600" sourceOpen="true">
+<CodePreview previewHeight="800" sourceOpen="true">
 
 ```html
 <rv-reveal-view id="viewer"></rv-reveal-view>
@@ -38,7 +43,7 @@ $.ig.RVDashboard.loadDashboard("Campaigns", (dashboard) => {
 ```
 
 ```tsx
-import { RvRevealView } from "https://esm.sh/@revealbi/ui-react";
+import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 declare const $: any;
 

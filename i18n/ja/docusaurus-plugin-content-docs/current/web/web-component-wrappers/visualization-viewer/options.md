@@ -1,10 +1,13 @@
 import CodePreview from '@site/src/components/CodePreview'
+import BetaWarning from '../_beta-message.md'
 
-# オプション
+# Options
 
-`RvRevealView` Web コンポーネントは、既存の jQuery コンポーネントをラップして、その使用を簡素化します。これを容易にするために、UI のさまざまな部分を Web に適した方法で制御できる `options` の概念を導入しました。
+<BetaWarning />
 
-# Reveal View (Reveal ビュー)
+The `RvRevealView` web component wraps around the existing jQuery component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
+
+# Reveal View
 
 <CodePreview previewHeight="600" sourceOpen="true">
 
@@ -27,10 +30,11 @@ viewer.options = options;
 ```
 
 ```tsx
-import { RvVisualizationViewer } from "https://esm.sh/@revealbi/ui-react";
+import { VisualizationViewerOptions } from "https://esm.sh/reveal-sdk-wrappers";
+import { RvVisualizationViewer } from "https://esm.sh/reveal-sdk-wrappers-react";
 
 const App = () => {
-    const options = {
+    const options: VisualizationViewerOptions = {
         crosshairs: true,
         menu: {
             showMenu: true,
@@ -47,9 +51,9 @@ const App = () => {
 
 </CodePreview>
 
-## 表示形式ビューアー オプション
+## Visualization Viewer Options
 
-`RvVisualizationViewer` には以下のオプションを設定できます:
+The following options can be configured for `RvVisualizationViewer`:
 
 ```ts
 export interface VisualizationViewerOptions {
@@ -71,4 +75,4 @@ export interface VisualizationViewerOptions {
 }
 ```
 
-これらのオプションを構成することで、`RvVisualizationViewer` コンポーネントの動作と外観を特定のニーズに合わせて調整し、よりカスタマイズされたユーザーフレンドリーなエクスペリエンスを提供できます。
+By configuring these options, you can tailor the behavior and appearance of the `RvVisualizationViewer` component to suit your specific needs, providing a more customized and user-friendly experience.

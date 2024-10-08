@@ -1,16 +1,15 @@
 import { visit } from 'unist-util-visit';
-import { Method, parseComponentFile, Property } from './file-parser';
+import { GitHubApiOptions, Method, parseComponentFile, Property } from './file-parser';
 
 const plugin = (options) => {
     const transformer = async (ast) => {
         const promises = [];
 
         visit(ast, "text", (node, index, parent) => {
-            const match = node.value.match(/::github-api-docs\((.+?)\)/);
+            const match = node.value.match(/::github-api-docs\(([\s\S]+?)\)/);
             if (match) {
-                const options: any = parseOptions(match[1]);
-
-                promises.push(generateApiDocs(options.path).then((nodes) => {
+                const options: GitHubApiOptions = parseOptions(match[1]);
+                promises.push(generateApiDocs(options).then((nodes) => {
                     if (parent.type === 'paragraph') {
                         parent.type = 'root';
                         parent.children = nodes;
@@ -27,22 +26,22 @@ const plugin = (options) => {
     return transformer;
 };
 
-const parseOptions = (configString) => {
-    const options = {};
+const parseOptions = (configString): GitHubApiOptions => {
+    const options: GitHubApiOptions = { owner: '', repo: '', path: '' };
 
     configString.split(',').forEach((pair) => {
-        const [key, value] = pair.split('=').map((str) => str.trim());
+        const [key, value] = pair.split(':').map((str) => str.trim());
         if (key && value) {
-            options[key] = value;
+            options[key] = value.replace(/['"]/g, '');
         }
     });
 
     return options;
 }
 
-const generateApiDocs = async (path: string) => {
+const generateApiDocs = async (options: GitHubApiOptions) => {
     const nodes = [];
-    const component = await parseComponentFile(path);
+    const component = await parseComponentFile(options);
 
     const properties = generateProperties(component?.properties);
     nodes.push(...properties);
@@ -166,17 +165,19 @@ const generateMethods = (methods: Method[]) => {
             });
         }
 
-        nodes.push({
-            type: "paragraph",
-            children: [
-                { type: "text", value: "Returns: " },
-                { type: "inlineCode", value: method.returns.type },
-                ...(method.returns.description ? [
-                    { type: "text", value: " - " },
-                    { type: "text", value: method.returns.description }
-                ] : [])
-            ]
-        });
+        if (method.returns) {
+            nodes.push({
+                type: "paragraph",
+                children: [
+                    { type: "text", value: "Returns: " },
+                    { type: "inlineCode", value: method.returns.type },
+                    ...(method.returns.description ? [
+                        { type: "text", value: " - " },
+                        { type: "text", value: method.returns.description }
+                    ] : [])
+                ]
+            });
+        }
     });
 
     return nodes;
