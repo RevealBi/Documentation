@@ -25,4 +25,8 @@ const App = () => {
 
 </CodePreview>
 
-::github-api-docs(path=reveal-view/reveal-view.component.ts)
+::github-api-docs(
+    owner: revealbi,
+    repo: reveal-sdk-wrappers,
+    path: packages/wrappers/src/components/reveal-view/reveal-view.component.ts
+)
