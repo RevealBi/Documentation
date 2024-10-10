@@ -11,7 +11,7 @@ the Desktop SDK.
 
 Let’s assume that you have a dashboard with three visualizations, where
 each visualization is showing data for a different division of your
-company, i.e., “Marketing”, “Sales” and “HR”.
+company, i.e., “Marketing”, “Sales” and “Healthcare”.
 
 ![](images/maximize-three_divisions_dashboard.png)
 
@@ -75,9 +75,9 @@ shown below:
 ``` csharp
 private void MaximizeVisualization(string title)
         {
-            revealView.MaximizeVisualization(revealView.Dashboard.Visualizations.GetTitle(title));
+            revealView.MaximizeVisualization(revealView.Dashboard.Visualizations.GetByTitle(title));
             //or set the property
-            revealView.MaximizedVisualization = revealView.Dashboard.Visualizations.GetTitle(title);
+            revealView.MaximizedVisualization = revealView.Dashboard.Visualizations.GetByTitle(title);
         }
 ```
 

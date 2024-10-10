@@ -12,7 +12,7 @@ Next, in the code behind of your xaml file set the `RevealView.Dashboard` proper
 _revealView.Dashboard = new RVDashboard();
 ```
 
-Run the application and you will be prompted with a new, empty, dashboard.
+Run the application and you will be prompted with a new, empty dashboard.
 
 ![](images/getting-started-running-app.jpg)
 
