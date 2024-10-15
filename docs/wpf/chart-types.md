@@ -71,6 +71,3 @@ _revealView.DefaultCustomChartType = "Custom Viz";
 You can find a sample demonstrating Chart Types on [GitHub](https://github.com/RevealBi/sdk-samples-wpf/tree/master/ChartTypes).
 
 :::
-
-
-# May need to tell about the Text box
