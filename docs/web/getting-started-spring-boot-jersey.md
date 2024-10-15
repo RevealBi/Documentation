@@ -15,7 +15,7 @@ More information about how to get started with Visual Studio Code and Java can b
 
 ![](images/getting-started-spring-boot-jersey-project.jpg)
 
-2 - Select the Spring Boot version **3.3.2**.
+2 - Select the Spring Boot version **3.3.4**.
 
 ![](images/getting-started-spring-boot-jersey-version.jpg)
 
