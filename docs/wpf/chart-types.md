@@ -36,6 +36,12 @@ Remove a chart type by finding the chart type item you want remove, and remove i
 _revealView.ChartTypes.Remove(_revealView.ChartTypes.FirstOrDefault(x => x.ChartType == RVChartType.Grid));
 ```
 
+:::info
+
+The TextBox chart type is not shown in the Chart Types drop-down menu. You can add it by clicking / tapping the *arrow* of the *+ Visualization* split button and choose **Text Box** in the Dashboard.
+
+:::
+
 ### Add Custom Chart Type
 Besides updating and removing existing chart type items, you can also add your Custom Visualizations as a new chart type in the Chart Types drop down.
 
