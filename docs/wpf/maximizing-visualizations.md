@@ -11,7 +11,7 @@ the Desktop SDK.
 
 Let’s assume that you have a dashboard with three visualizations, where
 each visualization is showing data for a different division of your
-company, i.e., “Marketing”, “Sales” and “Healthcare”.
+company, i.e., “Marketing”, “Sales” and “HR”.
 
 ![](images/maximize-three_divisions_dashboard.png)
 
