@@ -6,15 +6,15 @@ The steps below describe how to create a new ASP.NET Core Web API project. If yo
 
 1 - Start Visual Studio and click **Create a new project** on the start page, select the **ASP.NET Core Web API** template, and click **Next**.
 
-![](images/getting-started-angular-project.jpg)
+![](images/getting-started-aspnet-project.jpg)
 
 2 - Provide a project name and set the location to the **server** directory we created earlier, and click **Next**.
 
-![](images/getting-started-angular-name.jpg)
+![](images/getting-started-aspnet-name.jpg)
 
 3 - Choose your framework, authentication type, and Docker options, and then click **Create**.
 
-![](images/getting-started-angular-info.jpg)
+![](images/getting-started-aspnet-info.jpg)
 
 ## Step 2 - Add Reveal SDK
 
