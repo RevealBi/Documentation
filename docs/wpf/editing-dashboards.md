@@ -241,7 +241,7 @@ private void Dashboard_PropertyChanged(object sender, System.ComponentModel.Prop
 }
 ```
 
-:::info
+:::info:
 
 When using the `RVDashboard.PropertyChanged` event, be sure to unsubscribe from the event before you load a new dashboard or discard the existing dashboard. Otherwise you could introduce memory leaks into your application.
 

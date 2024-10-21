@@ -7,12 +7,12 @@ Start by defining a `RevealView` control in XAML and give it an `x:Name` so you 
 <rv:RevealView x:Name="_revealView"/>
 ```
 
-Next, in the code behind of your xaml file, set the `RevealView.Dashboard` property to a new instance of a `RVDashboard` object:
+Next, in the code behind of your xaml file set the `RevealView.Dashboard` property to a new instance of a `RVDashboard` object:
 ```cs
 _revealView.Dashboard = new RVDashboard();
 ```
 
-Run the application and you will be prompted with a new, empty dashboard.
+Run the application and you will be prompted with a new, empty, dashboard.
 
 ![](images/getting-started-running-app.jpg)
 

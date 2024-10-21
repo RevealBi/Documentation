@@ -75,9 +75,9 @@ shown below:
 ``` csharp
 private void MaximizeVisualization(string title)
         {
-            revealView.MaximizeVisualization(revealView.Dashboard.Visualizations.GetByTitle(title));
+            revealView.MaximizeVisualization(revealView.Dashboard.Visualizations.GetTitle(title));
             //or set the property
-            revealView.MaximizedVisualization = revealView.Dashboard.Visualizations.GetByTitle(title);
+            revealView.MaximizedVisualization = revealView.Dashboard.Visualizations.GetTitle(title);
         }
 ```
 
