@@ -33,7 +33,8 @@ The *Include Visualization* setting gives you the following options:
   - **Don't Include** - include only the visualizations' data in the
     Excel sheets.
 
->[!NOTE]
-> **Supported visualizations**. The following chart visualizations can be **directly included** in the Excel sheets: Column, Line, Bar, Area, StackedColumn, StackedArea, StackedBar, Pie, Doughnut, Funnel, Composite, Scatter, Bubble, Sparklines. 
+:::note
+**Supported visualizations**. The following chart visualizations can be **directly included** in the Excel sheets: Column, Line, Bar, Area, StackedColumn, StackedArea, StackedBar, Pie, Doughnut, Funnel, Composite, Scatter, Bubble, Sparklines. 
 
-> The following visualizations are **converted** to similar types before being included in the Excel sheet: Spline and StepLine ⇒ Line; SplineArea and StepArea ⇒ Area.
+The following visualizations are **converted** to similar types before being included in the Excel sheet: Spline and StepLine ⇒ Line; SplineArea and StepArea ⇒ Area.
+:::

@@ -100,6 +100,7 @@ Hovering over a shape on the map will highlight it, and a tooltip will appear (s
 
 <img src="images/drill-down-option-choropleth-map.png" alt="Drill down to tooltip shown for a state" class="responsive-img" width="85%"/>  
 
->[!NOTE] 
->**Available Maps.** 
->You can drill down into maps only if the map for the subordinate level is available. Find the available maps under *Map* in the *Choropleth Data* section.
+:::note
+**Available Maps.** 
+You can drill down into maps only if the map for the subordinate level is available. Find the available maps under *Map* in the *Choropleth Data* section.
+:::

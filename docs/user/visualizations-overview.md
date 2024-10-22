@@ -1,6 +1,6 @@
 ---
-title: Data Visualizations in Slingshot – All You Need to Know  
-_description: An overview of how data visualizations work in Slingshot Analytics and how to customize them.
+title: Data Visualizations in Reveal – All You Need to Know  
+_description: An overview of how data visualizations work in Reveal Analytics and how to customize them.
 ---
 
 # Data Visualizations
