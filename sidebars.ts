@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Getting Started - Server", items: [
             { type: "doc", label: "ASP.NET Web API", id: "web/getting-started-server" },
+            { type: "doc", label: "NestJS", id: "web/getting-started-server-nest" },
             { type: "doc", label: "Node.js", id: "web/getting-started-server-node" },
             { type: "doc", label: "Node.js - TypeScript", id: "web/getting-started-server-node-typescript" },
             { type: "doc", label: "Spring Boot - Jersey", id: "web/getting-started-spring-boot-jersey" },
