@@ -60,7 +60,7 @@ defineRevealSdkWrappers(RvRevealView);
 
 To start using the `rv-reveal-view` component, include it in your HTML:
 ```html
-<rv-reveal-view></<rv-reveal-view>
+<rv-reveal-view></rv-reveal-view>
 ```
 
 By following these simple steps, you’ll have the Reveal SDK Web Component Wrappers fully integrated into your project, ready to unlock powerful data visualizations and interactive dashboarding features. Continue exploring the SDK’s rich components and customization options to create a seamless and engaging user experience for your applications.
