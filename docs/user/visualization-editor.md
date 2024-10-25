@@ -19,7 +19,7 @@ After that, you will be prompted to add a new or select an existing data source.
 
 ![Dialog with a list of data sources](images/new-visualization-screen.png)
 
-With the data source selected and configured, you will be navigated to the [Visualization Editor](visualizations-editor), where you can start creating your visualization.
+With the data source selected and configured, you will be navigated to the [Visualization Editor](/docs/user/visualization-editor.md), where you can start creating your visualization.
 
 The *Visualization editor* will help you get the most desired view using your data.
 
