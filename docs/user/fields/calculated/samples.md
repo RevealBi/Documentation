@@ -7,11 +7,10 @@ _description: Check out some useful tips and samples, as well as useful cases yo
 
 This topic includes the following information:
 
+- [Samples, Tips, and Useful Cases](#samples-tips-and-useful-cases)
   - [Basic Sample Expressions](#basic-sample-expressions)
-
-  - [Converting Unix TimeStamps to Usable Dates](#converting-unix-timestamps)
-
-  - [YoY Analysis: Comparing Revenue Figures for a 2 Year Period](#yoy-analysis-revenue)
+  - [Converting Unix TimeStamps to Usable Dates](#converting-unix-timestamps-to-usable-dates)
+  - [YoY Analysis: Comparing Revenue Figures for a 2-Year Period](#yoy-analysis-comparing-revenue-figures-for-a-2-year-period)
 
 <a name='basic-sample-expressions'></a>
 ## Basic Sample Expressions
@@ -72,6 +71,6 @@ The "-1" is used to subtract the total difference for the year.
 
 `([Revenue 2017]/[Revenue 2016])-1`
 
-You can then either keep the number, or [format it as a percentage](~/docs/analytics/data-visualizations/fields/field-settings.html#numeric-fields).
+You can then either keep the number, or [format it as a percentage](/docs/user/fields/field-settings.md#numeric-fields).
 
 ![Comparing Revenue Figures in yoy analysis while using percentage](images/yoy-analysis-percentage-all.png)
