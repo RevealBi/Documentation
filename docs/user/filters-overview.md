@@ -29,13 +29,13 @@ The following sections will cover:
 
   - [Dashboard Filter configurable properties](filters-dashboard-properties.md), including:
 
-      - [Displayed Field](filters-dashboard-properties.html#displayed-field)
+      - [Displayed Field](filters-dashboard-properties.md#displayed-field)
 
-      - [Multiple Selection](filters-dashboard-properties.html#multiple-selection)
+      - [Multiple Selection](filters-dashboard-properties.md#multiple-selection)
 
-      - [Required Selection](filters-dashboard-properties.html#required-selection)
+      - [Required Selection](filters-dashboard-properties.md#required-selection)
 
-      - [Data Filters](filters-dashboard-properties.html#data-filters)
+      - [Data Filters](filters-dashboard-properties.md#data-filters)
 
   - [Dashboard Filters and their connections to visualizations](filters-connecting.md), also
     referred to as visualization binding
