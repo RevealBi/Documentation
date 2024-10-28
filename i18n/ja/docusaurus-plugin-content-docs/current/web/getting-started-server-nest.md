@@ -1,45 +1,45 @@
-# Setting up the Reveal SDK Server with NestJS
+# NestJS を使用した Reveal SDK サーバーの設定
 
 
-# Setting up Reveal SDK with NestJS
+# NestJS を使用した Reveal SDK の設定
 
-This guide will walk you through integrating the Reveal SDK into a [**NestJS**](https://nestjs.com/) project. Follow the steps below to add powerful data analytics capabilities to your NestJS server.
+このガイドでは、Reveal SDK を [**NestJS**](https://nestjs.com/) プロジェクトに統合する手順を説明します。以下の手順に従って、NestJS サーバーに強力なデータ分析機能を追加します。
 
-## Step 1 - Create a NestJS Project
+## 手順 1 - NestJS  プロジェクトの作成
 
-1. First, install the NestJS CLI globally if you haven't already:
+1. まず、まだインストールしていない場合は、NestJS CLI をグローバルにインストールします。
 
 ```bash
 npm install -g @nestjs/cli
 ```
 
-2. Create a new project by running the following command:
+2. 以下のコマンドを実行して、新しいプロジェクトを作成します。
 
 ```bash
 nest new reveal-nest-server
 ```
 
-3. Change the command line path to the newly created project directory:
+3. コマンドライン パスを新しく作成したプロジェクト ディレクトリに変更します。
 
 ```bash
 cd reveal-nest-server
 ```
 
-## Step 2 - Install the Reveal SDK
+## 手順 2 - Reveal SDK のインストール
 
-1. Inside the NestJS project directory, install the Reveal SDK for Node.js:
+1. NestJS プロジェクト ディレクトリ内に、Node.js 用の Reveal SDK をインストールします。
 
 ```bash npm2yarn
 npm install reveal-sdk-node
 ```
 
-## Step 3 - Modify the `main.ts` File
+## 手順 3 - `main.ts` ファイルの変更
 
-To integrate the Reveal SDK, we will modify the `main.ts` file directly, where we will enable CORS and add the Reveal SDK routes.
+Reveal SDK を統合するには、`main.ts` ファイルを直接変更し、CORS を有効にして Reveal SDK ルートを追加します。
 
-1. Open the `src/main.ts` file.
+1. `src/main.ts` ファイルを開きます。
 
-2. Update the `bootstrap` function to configure the Reveal SDK:
+2. `bootstrap` 関数を更新して、Reveal SDK を構成します。
 
 ```ts title="src/main.ts"
 import { NestFactory } from '@nestjs/core';
@@ -63,44 +63,44 @@ async function bootstrap() {
 bootstrap();
 ```
 
-This setup will configure the Reveal SDK to handle routes under `/`. The CORS policy is also enabled globally to allow requests from other origins.
+この設定により、Reveal SDK が `/` の下のルートを処理するように構成されます。CORS ポリシーもグローバルに有効化され、他のオリジンからのリクエストを許可します。
 
 :::note
 
-You may need to set `"esModuleInterop": true,` in the tsconfig.json file.
+tsconfig.json ファイルで `"esModuleInterop": true,` を設定する必要がある場合があります。
 
 :::
 
-## Step 4 - Create the Dashboards Folder
+## 手順 4 - ダッシュボード フォルダーの作成
 
-Reveal SDK expects dashboard files to be stored in a folder named **dashboards** in your working directory.
+Reveal SDK では、ダッシュボード ファイルが作業ディレクトリ内の **dashboards** という名前のフォルダーに保存されることを想定しています。
 
-1. In your project’s root directory, create a folder named `dashboards`.
+1. プロジェクトのルート ディレクトリに、`dashboards` という名前のフォルダーを作成します。
 
 ```bash
 mkdir dashboards
 ```
 
-You can store any Reveal dashboards in this folder, and they will be accessible through the server. If you need to change this behavior, you can create a custom `IRVDashboardProvider`.
+このフォルダーに任意の Reveal ダッシュボードを保存でき、サーバー経由でアクセスできるようになります。この動作を変更する必要がある場合は、カスタム `IRVDashboardProvider` を作成できます。
 
-## Step 5 - Run the NestJS Server
+## 手順 5 - NestJS サーバーの起動
 
-1. Start the NestJS server by running the following command:
+1. 以下のコマンドを実行して NestJS サーバーを起動します。
 
 ```bash
 npm run start
 ```
 
-Alternatively, if you're in development mode, run the server with live-reload enabled:
+あるいは、開発モードの場合は、ライブリロードを有効にしてサーバーを実行します。
 
 ```bash
 npm run start:dev
 ```
 
-Now, your NestJS server is running, and the Reveal SDK is ready to handle requests at `http://localhost:5111/`.
+これで、NestJS サーバーが実行され、Reveal SDK は `http://localhost:5111/` でリクエストを処理する準備が整いました。
 
 :::info Get The Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/nest).
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/nest) にあります。
 
 :::

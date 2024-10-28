@@ -412,15 +412,15 @@
     "description": "The label for the doc item Custom Visualizations in sidebar webSidebar, linking to the doc web/custom-visualizations"
   },
   "sidebar.webSidebar.category.Web Component Wrappers": {
-    "message": "Web Component Wrappers",
+    "message": "Web コンポーネント ラッパー",
     "description": "The label for category Web Component Wrappers in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Reveal View": {
-    "message": "Reveal View",
+    "message": "Reveal ビュー",
     "description": "The label for category Reveal View in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Vizualization Viewer": {
-    "message": "Vizualization Viewer",
+    "message": "表示形式ビューアー",
     "description": "The label for category Vizualization Viewer in sidebar webSidebar"
   },
   "sidebar.webSidebar.doc.NestJS": {
@@ -428,11 +428,11 @@
     "description": "The label for the doc item NestJS in sidebar webSidebar, linking to the doc web/getting-started-server-nest"
   },
   "sidebar.webSidebar.doc.Options": {
-    "message": "Options",
+    "message": "オプション",
     "description": "The label for the doc item Options in sidebar webSidebar, linking to the doc web/web-component-wrappers/visualization-viewer/options"
   },
   "sidebar.webSidebar.doc.Loading Dashboards": {
-    "message": "Loading Dashboards",
+    "message": "ダッシュボードの読み込み",
     "description": "The label for the doc item Loading Dashboards in sidebar webSidebar, linking to the doc web/web-component-wrappers/reveal-view/loading-dashboards"
   }
 }
