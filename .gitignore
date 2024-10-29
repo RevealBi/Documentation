@@ -18,3 +18,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.idea/.gitignore
+/docs/1.js
+/.idea/Documentation.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/yarn.lock
