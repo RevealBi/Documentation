@@ -4,9 +4,9 @@ Analytics allows you to export the data used for your dashboards to the
 **Excel format**. Data for every visualization in your dashboard will be
 on a separate sheet in the Excel file.
 
->[!NOTE]
-> **Export to Excel limitations**. You can export to Excel only **dashboards using table data**, i.e. data sources organizing information into rows and columns (spreadsheets, CSV files, databases). If your dashboard uses images, HTML, etc. to visualize data, Analytics will not be able to export the information to the Excel format.
-
+:::note
+**Export to Excel limitations**. You can export to Excel only **dashboards using table data**, i.e. data sources organizing information into rows and columns (spreadsheets, CSV files, databases). If your dashboard uses images, HTML, etc. to visualize data, Analytics will not be able to export the information to the Excel format.
+:::
 1.  Go to the overflow menu in the upper right-hand corner of the
     dashboard and select **Export**.
 
