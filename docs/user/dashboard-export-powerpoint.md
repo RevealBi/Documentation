@@ -9,14 +9,14 @@ it to your needs.
 
 To export a dashboard as a PowerPoint presentation, you need to:
 
-1. Go to the dashboard *View mode* and click/tap on the overflow menu. 
+1. Go to the dashboard *View mode* and click/tap on the overflow menu.
 
-2. Choose **Export** and then click/tap on **PowerPoint**. 
+2. Choose **Export** and then click/tap on **PowerPoint**.
 
- ![Powerpoint option in the list of export formats](images/export-as-powerpoint-option.png)
+![Powerpoint option in the list of export formats](images/export-as-powerpoint-option.png)
 
 3. The *Export Dashboard* dialog will open, allowing you to set up your
-presentation and annotate specific slides.
+   presentation and annotate specific slides.
 
 ## Export Settings
 
@@ -39,22 +39,22 @@ In the *Export Dashboard* dialog you can manage the following settings:
         color of the PowerPoint presentation) - here you can choose one
         of the following options:
 
-          - **Analytics**
+        - **Analytics**
 
-          - **User's organization/workspace** - your organization and all of
-            your workspaces having their branding (logo and color) set up are
-            displayed as options.
+        - **User's organization/workspace** - your organization and all of
+          your workspaces having their branding (logo and color) set up are
+          displayed as options.
 
-          - **Custom** - select a color and upload a *logo* image of
-            your choice.
+        - **Custom** - select a color and upload a *logo* image of
+          your choice.
 
-            >[!NOTE]**Requirements for logo images**. The image you upload for a logo must be no bigger than **5
-            MB** and one of the following formats: JPG, JPEG, PNG, GIF.
-
+:::note
+**Requirements for logo images**. The image you upload for a logo must be no bigger than **5MB** and one of the following formats: JPG, JPEG, PNG, GIF.
+:::
 4.  You can **manage your PowerPoint slides** by selecting a slide from
     the list to modify its title, annotate or delete it (by removing the
     tick icon in the upper right corner).
 
 5.  **Annotate** the selected slide by clicking/tapping the *pencil*
     icon. For more information about **annotation settings**, please
-    refer to [Annotating images](dashboard-export-image.md#annotating) in the *Exporting Dashboards as Images* topic.
+    refer to [Annotating images](dashboard-export-image.html#annotating) in the *Exporting Dashboards as Images* topic.
