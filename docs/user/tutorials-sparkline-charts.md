@@ -62,7 +62,7 @@ in the [Slingshot Visualization Tutorials](https://download.infragistics.com/sli
 
 1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)  
+   ![Tutorials-Create-New-Dashboard](images/add-visualization-button.png)  
 
 2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
 
