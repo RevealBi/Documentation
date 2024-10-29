@@ -1,6 +1,6 @@
 ---
-title: Data Visualizations in Slingshot – All You Need to Know  
-_description: An overview of how data visualizations work in Slingshot Analytics and how to customize them.
+title: Data Visualizations in Reveal – All You Need to Know  
+_description: An overview of how data visualizations work in Reveal Analytics and how to customize them.
 ---
 
 # Data Visualizations
@@ -29,6 +29,6 @@ If you need more information about how to use each of these visualizations, use 
 
 ## Visualization Tutorials
 
-Within this section, you will find basic, step-by-step tutorials for the Analytics visualizations. All sections use the Data Visualizations data source, which you can download using [this link](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+Within this section, you will find basic, step-by-step tutorials for the Analytics visualizations. All sections use the Data Visualizations data source, which you can download using [this link](/data/Reveal_Visualization_Tutorials.xlsx).
 
 TODO - ADD TABLE
