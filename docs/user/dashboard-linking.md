@@ -1,6 +1,6 @@
 # Linking Dashboards
 
-Slingshot supports dashboard linking which allows you to connect the visualizations in a dashboard with other dashboards or URLs. Imagine you want to provide more details on the information displayed in a visualization - you can use a whole new dashboard to do so. This can be very useful in Company dashboards, for example, where you will be able to establish top-down analysis paths, where you go from a high level overview of the reality of a business to more detailed views with the specifics. 
+Reveal supports dashboard linking which allows you to connect the visualizations in a dashboard with other dashboards or URLs. Imagine you want to provide more details on the information displayed in a visualization - you can use a whole new dashboard to do so. This can be very useful in Company dashboards, for example, where you will be able to establish top-down analysis paths, where you go from a high level overview of the reality of a business to more detailed views with the specifics. 
 
 Let's take a Company dashboard (see below) which provides key performance indicators for each area of interest in the company. Once you've opened the dashboard, you will notice the **link symbol** on one or more visualizations. 
 

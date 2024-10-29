@@ -38,9 +38,9 @@ In the *Export Dashboard* dialog you can manage the following settings:
             displayed as options.
 
         - **Custom** - select a color and upload a *logo* image of your choice.
-
-            >[!NOTE] **Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: JPG, JPEG, PNG, GIF.
-
+:::note
+**Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: JPG, JPEG, PNG, GIF.
+:::
 4.  Choose between *Landscape* and *Portrait* **document orientation**.
 
 5.  You can **manage your document pages** by selecting a page from the list to modify its title, annotate or delete it (by removing the tick icon in the upper right corner).
