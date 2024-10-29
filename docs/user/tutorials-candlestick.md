@@ -1,5 +1,5 @@
 ---
-title: How to Create Candlestick Visualizations in Slingshot
+title: How to Create Candlestick Visualizations in Reveal
 _description: Get familiar the specifics of creating a Candlestick chart visualization for your data.
 ---
 
@@ -51,7 +51,7 @@ chart:
 
 ## Sample Data Source
 
-For this tutorial, you will use the *OHLC and Candlestick* sheet in the [Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> .
 
 <a name='creating-candlestick-chart'></a>
 ## Creating a Candlestick Chart
