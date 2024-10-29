@@ -11,15 +11,15 @@ The *Visualization Editor* is where you create and edit your visualizations in A
 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization, you can choose between two alternative starting points:
 
-* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, go to **My Analytics** or a workspace and click/tap on the **+Dashboard** blue button.
+* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, click/tap on the **+Visualization** blue button.
 
-* Start by **adding a new visualization** to an already existing dashboard. To do this, open a dashboard in **Dashboard Edit** mode and click/tap on the *dashboard* blue split button (the **+** blue button on mobile devices). 
+* Start by **adding a new visualization** to an already existing dashboard. To do this, select the overflow button in the top right-hand corner, click/tap on the *Edit* and click/tap on the **+Visualization** blue button.
 
 After that, you will be prompted to add a new or select an existing data source.
 
 ![Dialog with a list of data sources](images/new-visualization-screen.png)
 
-With the data source selected and configured, you will be navigated to the [Visualization Editor](/docs/user/visualization-editor.md), where you can start creating your visualization.
+With the data source selected and configured, you will be navigated to the [Visualization Editor](visualizations-editor), where you can start creating your visualization.
 
 The *Visualization editor* will help you get the most desired view using your data.
 
@@ -43,14 +43,14 @@ Below, you will find a list of all sections of the *Editor* with their capabilit
 
 1. **Data Section** - this section contains two panels:
 
-  a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten. 
-       The *plus* icon in this panel allows you to either blend data sources or calculate a field. The *brain* icon allows you to use fields from a BigQuery or Azure *machine learning model* for your visualization. Keep in mind that the BigQuery machine learning model can work only with BigQuery data sources.
+a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
+The *plus* icon in this panel allows you to either blend data sources or calculate a field. The *brain* icon allows you to use fields from a BigQuery or Azure *machine learning model* for your visualization. Keep in mind that the BigQuery machine learning model can work only with BigQuery data sources.
 
-  b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
+b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
 
 2. **Settings Section** - This section allows you to customize what you want to show. Each visualization comes with its own settings.
 
-  At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking) topic.
+At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking) topic.
 
 3. **Visualization Picker** - Here you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown menu, you will notice the visualization fields section change. The fields for each visualization are different, but they change automatically so you only need to fill them in.
 
@@ -60,11 +60,11 @@ Below, you will find a list of all sections of the *Editor* with their capabilit
 
 Among other things, you will be able to:
 
-  - **Sort** & **filter** data.
+- **Sort** & **filter** data.
 
-  - **Aggregate data** in the data editor.
+- **Aggregate data** in the data editor.
 
-  - **Search**, **Visualize** & **format** data.
+- **Search**, **Visualize** & **format** data.
 
 After you're done building the visualization, select the *check* icon to return to the
 *Dashboard Editor*. In the Dashboard Editor, you can control the layout,
