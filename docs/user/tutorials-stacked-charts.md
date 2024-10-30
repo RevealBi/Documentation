@@ -14,8 +14,6 @@ Access the links below for the Stacked Chart view walkthroughs:
 
   - [How to create a Stacked Column chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#creating-a-stacked-chart)
 
-  - [How to change your Stacked chart type](#change-chart-type)
-
   - [How to change your axis configuration](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#changing-your-axis-configuration)
 
   - [How to set your axis configuration to logarithmic](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#setting-your-axis-configuration-as-logarithmic)
@@ -25,8 +23,8 @@ Access the links below for the Stacked Chart view walkthroughs:
 ## Key Concepts
 
 There are three different layouts to choose from when using stacked
-charts: [Area](#create-stacked-chart),
-[Column](#create-stacked-chart) and [Bar](#create-stacked-chart).
+charts: [Area](#creating-a-stacked-chart),
+[Column](#creating-a-stacked-chart) and [Bar](#creating-a-stacked-chart).
 
 You can also configure the following settings:
 

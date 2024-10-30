@@ -20,9 +20,10 @@ The *Sort by field* option is part of the fields settings, but is hidden by defa
 For more practical information, take a look at the following examples
 that showcase this functionality:
 
-  - [Ordering Support Cases by Priority](#by-priority)
-
-  - [Ordering String Dates in Chronological Order](#string-date-chr-order)
+- [Sort by Field](#sort-by-field)
+  - [Enabling Sort by Field](#enabling-sort-by-field)
+  - [Ordering Support Cases by Priority](#ordering-support-cases-by-priority)
+  - [Ordering String Dates in Chronological Order](#ordering-string-dates-in-chronological-order)
 
 <a name='by-priority'></a>
 ## Ordering Support Cases by Priority
@@ -43,7 +44,7 @@ dragging and dropping *Priority Level* field into the data editor by using the
 ## Ordering String Dates in Chronological Order
 
 Let's take a look at the following visualization, where we have plotted
-the cash and accounts receivable influxes for a company in a [stacked column chart](~/docs/analytics/visualization-tutorials/stacked-charts.html#create-stacked-chart).
+the cash and accounts receivable influxes for a company in a [stacked column chart](/docs/user/tutorials-stacked-charts.md#creating-a-stacked-chart).
 
 ![Sales Info visualization while using stacked column chart](images/sort-by-field-sales-information-sample.png)
 The values have been ordered by **Month Name** (a string field).

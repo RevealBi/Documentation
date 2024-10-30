@@ -8,23 +8,22 @@ _description: A quick tutorial on creating an a KPI gauge visualization using a 
 In this tutorial, you will learn how to a KPI gauge visualization using
 a sample spreadsheet.
 
-| ![KPIGaugeSimple All](images/KPIGaugeSimple_All.png) [KPI Gauge](#creating-kpi-gauge) | ![TutorialMultipleKPIGauges All](images/TutorialMultipleKPIGauges_All.png) [Multiple KPI Gauges](#adding-category-kpi) |
+| ![KPIGaugeSimple All](images/KPIGaugeSimple_All.png) [KPI Gauge](#creating-a-kpi-gauge) | ![TutorialMultipleKPIGauges All](images/TutorialMultipleKPIGauges_All.png) [Multiple KPI Gauges](#creating-multiple-kpi-gauges-in-one-visualization) |
 |---|---|
-| ![KPIGaugePreviousMonth All](images/KPIGaugePreviousMonth_All.png) [Month-over-Month KPI Gauge](#changing-date-comparison-type) | ![KPIGaugeValuePercentage All](images/KPIGaugeValuePercentage_All.png) [KPI Gauge with Value and Percentage differences](#changing-difference-label-kpi) |
-| ![KPIGaugeDifferenceColor All](images/KPIGaugeDifferenceColor_All.png) [KPI Gauge with a green marker when the value decreased](#changing-color-difference-marker) | |
+| ![KPIGaugePreviousMonth All](images/KPIGaugePreviousMonth_All.png) [Month-over-Month KPI Gauge](#changing-the-date-comparison-type) | ![KPIGaugeValuePercentage All](images/KPIGaugeValuePercentage_All.png) [KPI Gauge with Value and Percentage differences](#changing-the-difference-labels-for-the-kpi-gauge) |
+| ![KPIGaugeDifferenceColor All](images/KPIGaugeDifferenceColor_All.png) [KPI Gauge with a green marker when the value decreased](#changing-the-color-of-the-difference-marker) | |
 
 
 Access the links below for the KPI gauge view walkthroughs:
 
-  - [How to create a KPI Gauge](#creating-kpi-gauge)
-
-  - [How to create multiple KPI Gauges in one visualization](#adding-category-kpi)
-
-  - [How to change the date type for the KPI](#changing-date-comparison-type)
-
-  - [How to change the difference labels for the KPI](#changing-difference-label-kpi)
-
-  - [How to change the color for the difference marker in the KPI](#changing-color-difference-marker)
+- [Creating KPI Gauges](#creating-kpi-gauges)
+  - [Key Concepts](#key-concepts)
+  - [Sample Data Source](#sample-data-source)
+  - [Creating a KPI Gauge](#creating-a-kpi-gauge)
+  - [Creating Multiple KPI Gauges in one Visualization](#creating-multiple-kpi-gauges-in-one-visualization)
+  - [Changing the Date Comparison Type](#changing-the-date-comparison-type)
+  - [Changing the Difference Labels for the KPI Gauge](#changing-the-difference-labels-for-the-kpi-gauge)
+  - [Changing the Color of the Difference Marker](#changing-the-color-of-the-difference-marker)
 
 ## Key Concepts
 

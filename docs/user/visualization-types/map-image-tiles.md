@@ -52,7 +52,7 @@ To use image tiles:
     
         ![Yellow banner message prompting users to set up a tile provider](images/not-specified-all-levels-yellow-banner.png)
     
-    The _Not Specified_ option, however, makes Analytics ignore this level when determining which tile provider to use. For further details, check [How does Analytics determine which tile source provider to use?](#resolution-process).  
+    The _Not Specified_ option, however, makes Analytics ignore this level when determining which tile provider to use. For further details, check [How does Analytics determine which tile source provider to use?](#how-does-analytics-determine-which-file-provider-to-use).  
  
 5. Add the _Authentication Token_ for the selected provider. The token can be found in your map service account. Once you add it, it will be stored in Analytics for future use. You can use it without adding it again no matter how many times you disable the tile provider in your settings.  
 
@@ -61,7 +61,7 @@ To use image tiles:
 <a name='resolution-process'></a>
 ## How does Analytics determine which file provider to use?
 
-When you open a scatter map where *Use Image Tiles* is enabled, Analytics resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles) above). 
+When you open a scatter map where *Use Image Tiles* is enabled, Analytics resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles-to-your-maps) above). 
 
 What if a tile provider is **specified on more than one level**? You will notice that one of the tile providers is being used for the scatter map you opened. How did Analytics choose it? 
 
