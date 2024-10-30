@@ -57,6 +57,3 @@ options to customize the text, such as background colors, font weight,
 font size, and font color.
 
 ![Adding text in image annotation](images/text-option-in-export-image.png)
-
-For exporting images in **Android and iOS** devices, please refer to the
-[Exporting Dashboards](/docs/user/dashboard-export.md#exporting-images-and-dashboards-in-mobile-devices) topic.

@@ -16,11 +16,11 @@ specific field you want to modify in the corresponding placeholder
 types of fields, each of which has their own formatting and filter
 options:
 
+- [Field Settings](#field-settings)
   - [Date Fields](#date-fields)
-
+    - [Date Fields Hierarchies](#date-fields-hierarchies)
   - [Numeric Fields](#numeric-fields)
-
-  - [String Fields](#abc-fields)
+  - [String Fields](#string-fields)
 
 
 >[!NOTE] All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.

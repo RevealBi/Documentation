@@ -10,15 +10,15 @@ fields. These fields are created by using expressions (formulas). An
 expression can be a combination of existing field(s), constant values
 and:
 
-  - [predefined functions](#predefined-functions) and/or
+  - [predefined functions](#using-the-predefined-analytics-functions) and/or
 
-  - [simple math calculations and other functions that are not predefined](#without-predefined-functions).
+  - [simple math calculations and other functions that are not predefined](#creating-calculated-fields-without-using-the-predefined-functions).
 
 There are two types of calculated fields:
 
-  - [pre-calculated](#precalculated-fields) (also called "calculated")
+  - [pre-calculated](#pre-calculated-fields) (also called "calculated")
 
-  - [post-calculated](#postcalculated-fields)
+  - [post-calculated](#post-calculated-fields)
 
 <a name='precalculated-fields'></a>
 ## Pre-Calculated Fields

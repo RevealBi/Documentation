@@ -16,7 +16,7 @@ The functions included in the aggregation category are:
 
 | **Function Name** | **Syntax and Sample** |
 |-------------------|-----------------------|
-| [**previous**](#calc-fields-previous): `previous` allows you to get a result with the value of the field you choose as your `expression`. | **Syntax**: `previous({expression},{first value})`**Sample**: `previous([Wage],1)` |
+| [**previous**](#previous): `previous` allows you to get a result with the value of the field you choose as your `expression`. | **Syntax**: `previous({expression},{first value})`**Sample**: `previous([Wage],1)` |
 | **row**: `row` returns the number of the current row for every row in your data source. | **Syntax**: `row()`**Sample**: `row()` |
 
 
