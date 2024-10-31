@@ -5,15 +5,15 @@ _description: Find out how to create and edit your visualizations and use a grea
 
 # Visualization Editor
 
-The *Visualization Editor* is where you create and edit your visualizations in Analytics. Here you will find the data from your dataset aggregated and prepared for use as well as great variety of visualizations to build with it.
+The *Visualization Editor* is where you create and edit your visualizations in Reveal. Here you will find the data from your dataset aggregated and prepared for use as well as great variety of visualizations to build with it.
 
 ## How Do You Create a Visualization?
 
 Visualizations are the building blocks of your dashboard. So, when you start creating a visualization, you can choose between two alternative starting points:
 
-* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, click/tap on the **+Visualization** blue button.
+* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, click/tap on the **+ Visualization** blue button.
 
-* Start by **adding a new visualization** to an already existing dashboard. To do this, select the overflow button in the top right-hand corner, click/tap on the *Edit* and click/tap on the **+Visualization** blue button.
+* Start by **adding a new visualization** to an already existing dashboard. To do this, select the overflow button in the top right-hand corner, click/tap on the *Edit* and click/tap on the **+ Visualization** blue button.
 
 After that, you will be prompted to add a new or select an existing data source.
 
