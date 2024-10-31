@@ -1,19 +1,19 @@
 ---
-title: Data Visualizations in Slingshot – All You Need to Know  
-_description: An overview of how data visualizations work in Slingshot Analytics and how to customize them.
+title: Data Visualizations in Reveal – All You Need to Know  
+_description: An overview of how data visualizations work in Reveal and how to customize them.
 ---
 
 # Data Visualizations
 
-Analytics helps you get the most insight possible out of business data by providing a variety of visualizations.
+Reveal helps you get the most insight possible out of business data by providing a variety of visualizations.
 
 ## What is a Visualization?
 
-For users to get the most insight possible out of business data, Analytics provides several options to customize the way information is visualized. These are called "visualizations". Any dashboard is composed of one or more visualizations.
+For users to get the most insight possible out of business data, Reveal provides several options to customize the way information is visualized. These are called "visualizations". Any dashboard is composed of one or more visualizations.
 
-The dashboard shown below contains a wide variety of visualizations, all of which analyze different aspects of Manufacturing.
+The dashboard shown below contains a wide variety of visualizations, all of which analyze different aspects of Sales.
 
-![Analytics's log in screen](images/example-data-visualizations.png)
+![Reveal's log in screen](images/example-data-visualizations.png)
 
 ## Choosing the Right Chart Type
 
@@ -29,6 +29,6 @@ If you need more information about how to use each of these visualizations, use 
 
 ## Visualization Tutorials
 
-Within this section, you will find basic, step-by-step tutorials for the Analytics visualizations. All sections use the Data Visualizations data source, which you can download using [this link](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+Within this section, you will find basic, step-by-step tutorials for the Reveal visualizations. All sections use the Data Visualizations data source, which you can download using [this link](/data/Reveal_Visualization_Tutorials.xlsx).
 
 TODO - ADD TABLE
