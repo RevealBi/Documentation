@@ -7,7 +7,7 @@ Sending data from a web client to a server application is a necessity when build
 
 In Reveal, The User Context is an object that can include the identity of the authenticated user of the application, as well as other key information you might need to execute server requests in the context of a specific user. The User Context can be used by Reveal SDK providers such as the `IRVDashboardProvider`, `IRVAuthenticationProvider`, `IRVDataSourceProvider` and others to restrict, or define, what permissions the user has.
 
-The user context within the Reveal SDK is represented by the `IRVUserContextProvider` interface and the `RVUserContext` object. The `RVUserContext` is a default implementation of `IRVUserContext`, which provides the ability to store the user id of the current user, as well as the ability to retrieve and store additional properties related to a request that can be used in other areas of the Reveal SDK like the aformentioned `IRVObjectFilter`, the `IRVDashboardProvider` and the `IRVDataSourceProvider`.
+User context in the Reveal SDK is represented by the `IRVUserContextProvider` interface and the `RVUserContext` object. The `RVUserContext` is a default implementation of `IRVUserContext`, which provides the ability to store the user id of the current user, as well as the ability to retrieve and store additional properties related to a request that can be used in other areas of the Reveal SDK like the aformentioned `IRVObjectFilter`, the `IRVDashboardProvider` and the `IRVDataSourceProvider`.
 
 Follow these steps to implement the `UserContextProvider`.
 
@@ -130,9 +130,9 @@ Follow these steps to implement the `UserContextProvider`.
 Your server is now set up to retrieve and store context-specific information passed via HTTP headers.  Once you've added your server implementation, you use the client-side callback `setAdditionalHeadersProvider`.
 
 
-#### Passing Client-Side Headers
+#### Passing Headers from the Client
 
-To pass values to the `UserContextProvider`, you use the `setAdditionalHeadersProvider` client-side callback function. The   `setAdditionalHeadersProvider` callback is optionally invoked before a request is made to the Reveal server so you can return additional headers with your server request.
+To pass values to the `UserContextProvider`, you use the `setAdditionalHeadersProvider` client-side callback function. The  `setAdditionalHeadersProvider` callback is optionally invoked before a request is made to the Reveal server so you can return additional headers with your server request.
 
 The `setAdditionalHeadersProvider` callback function is expected to return an object array with the headers, like: `{ 'SessionId': sessionId }`, `{ 'UserId': userId }`, or parameters to execute custom queries, stored procedures or functions. Any value required on the server can be sent using the `setAdditionalHeadersProvider` in conjunction with the `UserContextProvider`.
 
@@ -162,17 +162,19 @@ RevealSdkSettings.setAdditionalHeadersProvider((url: string) => {
   </TabItem>
 </Tabs>
 
-## Example: Implementing User Context 
+## Example: Implementing User Context for Row-Level Security
 
-The `IRVUserContextProvider` interface in Reveal BI allows you to pass client-side information to the server. This information can be used in custom queries, as parameters for stored procedures and functions, and more. This document will guide you on how to use the `IRVUserContextProvider` and how to pass parameters from the client to the server.
+The `IRVUserContextProvider` interface in Reveal BI allows you to pass client-side information to the server. This information can be used in custom queries, as parameters for stored procedures and functions, for your logged-in user information, tenant information, and more. When variables are passed from This document will guide you on how to use the `IRVUserContextProvider` and `IRVUserContextProvider` to pass parameters from the client to the server.
 
 You can watch and end-to-end webinar explaining this step-by-step here:
 
 https://youtu.be/q9mbN2kIXFs
 
-### Client-Side Example
+### Creating the HTML Client
 
-Here is an example of how to pass several property values from the client to the server.  In this case, there are three HTML selects that have orderId, employeeId, and customerId values.  These values are passed to the server in the  `setAdditionalHeadersProvider` callback.
+The client HTML demonstrates passing two property values from the client to the server.  In this sample, there are two HTML selects that have `orderId` and `customerId` values.  Selected values from these HTML Selects are passed to the server in the `setAdditionalHeadersProvider` callback when the `onDataSourcesRequested` callback is invoked.
+
+The implemenation of the `setAdditionalHeadersProvider` callback looks like this:
 
 ```` js 
 $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
@@ -180,7 +182,7 @@ $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
 });
 ````
 
-When the request is made to the `onDataSourcesRequested`, the selected values of each HTML select is set in the `headers` array.
+When `onDataSourcesRequested` in invoked, the selected values of each HTML select is set in the `headers` array.
 
 ```` js 
 var selectedCustomerId = $('#customerId').val();
@@ -188,12 +190,9 @@ headers["x-header-customerId"] = selectedCustomerId;
 
 var selectedOrderId = $('#orderId').val();
 headers["x-header-orderId"] = selectedOrderId;
-
-var selectedEmployeeId = $('#employeeId').val();
-headers["x-header-employeeId"] = selectedEmployeeId;
 ````
 
-This is the full HTML for the client.
+This is the full HTML for the client, which includes an Azure SQL data source, and two data source items that will use the information passed in the `setAdditionalHeadersProvider` for querying data on the server.
 
 ```html
 <!DOCTYPE html>
@@ -202,7 +201,7 @@ This is the full HTML for the client.
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal - Parameters and Stored Procs</title>
+    <title>Reveal - UserContext & Parameters in Stored Procs</title>
 </head>
 
 <body>
@@ -211,24 +210,19 @@ This is the full HTML for the client.
         <option value="10249">10249</option>
     </select>
 
-      <select name="employee" id="employeeId">
-        <option value="1">Nancy Davolio</option>
-        <option value="2">Andrew Fuller</option>
-      </select>
-
     <select name="customers" id="customerId">
         <option value="ALFKI">ALFKI</option>
         <option value="ANATR">ANATR</option>
       </select>
       
-    <div id="revealView" style="height: calc(100vh - 25px); width: 100%;></div>
+    <div id="revealView" style="height: calc(100vh - 25px); width: 100%;"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://dl.revealbi.io/reveal/libs/1.6.4/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
-        $.ig.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
+        $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5082/");
 
         $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
             return headers;
@@ -237,7 +231,6 @@ This is the full HTML for the client.
         const headers = {};
 
         var revealView = new $.ig.RevealView("#revealView");
-        revealView.interactiveFilteringEnabled = true;
         revealView.startInEditMode = true;  
 
         revealView.onDataSourcesRequested = (callback) => {    
@@ -248,24 +241,31 @@ This is the full HTML for the client.
             var selectedOrderId = $('#orderId').val();
             headers["x-header-orderId"] = selectedOrderId;
 
-            var selectedEmployeeId = $('#employeeId').val();
-            headers["x-header-employeeId"] = selectedEmployeeId;
+            console.log(headers);
 
             var ds = new $.ig.RVAzureSqlDataSource();
             ds.id="sqlServer";
             ds.title = "SQL Server Data Source";
             ds.subtitle = "Full Northwind Database";
 
-            callback(new $.ig.RevealDataSources([ds], [ ], false));        
+            var dsi1 = new $.ig.RVAzureSqlDataSourceItem(ds);
+            dsi1.id="CustomerOrders";
+            dsi1.title = "Customer Orders";
+
+            var dsi2 = new $.ig.RVAzureSqlDataSourceItem(ds);
+            dsi2.id="CustOrderHist";
+            dsi2.title = "Customer Orders History";
+
+            callback(new $.ig.RevealDataSources([ds], [ dsi1, dsi2], false));        
         };     
     </script>
 </body>
 </html>
 ```
 
-### Server-Side Example
+### Setting Up the UserContextProvider on the Server
 
-On the server side, these values are picked up and stored as key-value pair properties that can be used in other functions as described earlier in this topic.  Note that each requested header is added to either the default `UserId` property, or as a key-value pair in a Dictionary object.
+On the server side, the `customerId` and `orderId` values are picked up and stored as key-value pair properties that can be used in other functions as described earlier in this topic.  Note that each requested header is added to either the default `UserId` property, or as a key-value pair in a Dictionary object. 
 
 ```csharp
 public class UserContextProvider : IRVUserContextProvider
@@ -274,19 +274,10 @@ public class UserContextProvider : IRVUserContextProvider
     {
         var userId = aspnetContext.Request.Headers["x-header-customerId"];
         var orderId = aspnetContext.Request.Headers["x-header-orderId"];
-        var employeeId = aspnetContext.Request.Headers["x-header-employeeId"];
-
-
-        string role = "User";
-        if (userId == "AROUT" || userId == "BLONP")
-        {
-            role = "Admin";
-        }
 
         var props = new Dictionary<string, object>() {
-                { "OrderId", orderId },
-                { "EmployeeId", employeeId },
-                { "Role", role } };
+                { "OrderId", orderId }, 
+			};
 
         Console.WriteLine("UserContextProvider: " + userId + " " + orderId + " " + employeeId);
 
@@ -295,154 +286,43 @@ public class UserContextProvider : IRVUserContextProvider
 }
 ```
 
-In this example, the `UserContextProvider` class implements the `IRVUserContextProvider` interface. The `GetUserContext` method retrieves the headers sent from the client and stores them in a dictionary. This dictionary can then be used in other functions.
-
-## Using the User Context in the ObjectFilterProvider
-
-The user context can be used in the `ObjectFilterProvider` to filter data based on the user's role property that was set as `role` in the `UserContext` props.
-
-```csharp
-public class ObjectFilterProvider : IRVObjectFilter
-{
-    public Task<bool> Filter(IRVUserContext userContext, RVDashboardDataSource dataSource)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<bool> Filter(IRVUserContext userContext, RVDataSourceItem dataSourceItem)
-    {
-        if (userContext?.Properties != null && dataSourceItem is RVSqlServerDataSourceItem dataSQLItem)
-        {
-            if (userContext.Properties.TryGetValue("Role", out var roleObj) &&
-                roleObj?.ToString()?.ToLower() == "user")
-            {
-                var allowedItems = new HashSet<string> { "Customers", "Orders", "Order Details" };
-
-                if ((dataSQLItem.Table != null && !allowedItems.Contains(dataSQLItem.Table)) ||
-                    (dataSQLItem.Procedure != null && !allowedItems.Contains(dataSQLItem.Procedure)))
-                {
-                    return Task.FromResult(false);
-                }
-            }
-        }
-        return Task.FromResult(true);
-    }
-
-}
-```
-
-In this example, the `Filter` method checks if the user's role is "user". If it is, it only allows access to certain items.
+In this example, the `UserContextProvider` class implements the `IRVUserContextProvider` interface. The `GetUserContext` method retrieves the headers sent from the client and stores them in a dictionary.  
 
 ## Using the User Context in the DataSourceProvider
 
-The user context can also be used in the `DataSourceProvider` to in either the `ChangeDataSourceAsync` or `ChangeDataSourceItemAsync`. 
+The `UserContext` property values can also be used in various Reveal functions, including the  `DataSourceProvider` , in either the `ChangeDataSourceAsync` or `ChangeDataSourceItemAsync`. When used in the `ChangeDataSourceAsync`, you might be checking user permissions to access a data source or database tenant, or as a server or host property passed from a token.
 
-When used in the `ChangeDataSourceAsync`, you might be checking user permissions to access a data source or tenant, or as a server or host property passed from a token.
-
-When used in the  `ChangeDataSourceItemAsync`,  UserContext properties are commonly used as parameters in custom queries, stored procedures or function calls.  
-
-The following example demonstrates that approach.
+When used in the  `ChangeDataSourceItemAsync`, `UserContext` property values are commonly used as parameters in custom queries, stored procedures or function calls.   The following example demonstrates how to use values passed from the client that are then picked up by the `UserContextProvider` and used as parameters in queries to the server.
 
 ```csharp
-using Reveal.Sdk;
-using Reveal.Sdk.Data;
-using Reveal.Sdk.Data.Microsoft.SqlServer;
-
-namespace RevealSdk.Server.Reveal
-
+public Task<RVDataSourceItem>? ChangeDataSourceItemAsync(IRVUserContext userContext, 
+        string dashboardId, RVDataSourceItem dataSourceItem)
 {
-    internal class DataSourceProvider : IRVDataSourceProvider
+    if (dataSourceItem is RVSqlServerDataSourceItem sqlDsi)
     {
-        public Task<RVDataSourceItem> ChangeDataSourceItemAsync
-                (IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
+        ChangeDataSourceAsync(userContext, sqlDsi.DataSource);
+
+        // userId passed to a Stored Proc parameter
+        if (sqlDsi.Id == "CustOrderHist")
         {
-            if (dataSourceItem is RVSqlServerDataSourceItem sqlDsi)
-            {
-                ChangeDataSourceAsync(userContext, sqlDsi.DataSource);
-
-
-                string idPrefix = dataSourceItem.Id.Substring(0, 2).ToLower();
-                string storedProcName = dataSourceItem.Id.Substring(2);
-
-                if (idPrefix == "sp")
-                {
-                    switch (storedProcName)
-                    {
-                        case "OrdersByCustomer":
-                            sqlDsi.Procedure = "OrdersByCustomer";
-                            sqlDsi.ProcedureParameters = new Dictionary<string, object>
-                                 {
-                                     { "@CustomerID", userContext.UserId }
-                                 };
-                            break;
-
-                        case "OrderDetails":
-                            int orderID;
-                            if (int.TryParse(userContext.Properties["OrderId"].ToString(), out orderID))
-                            {
-                                sqlDsi.Procedure = "OrderDetails";
-                                sqlDsi.ProcedureParameters = new Dictionary<string, object>
-                                     {
-                                         { "@OrderID", orderID }
-                                     };
-                            }
-                            break;
-
-                        case "OrdersByEmployee":
-                            int employeeID;
-                            if (int.TryParse(userContext.Properties["EmployeeId"].ToString(), out employeeID))
-                            {
-                                sqlDsi.Procedure = "OrdersByEmployee";
-                                sqlDsi.ProcedureParameters = new Dictionary<string, object>
-                                     {
-                                         { "@EmployeeID", employeeID }
-                                     };
-                            }
-                            break;
-
-                        default:
-                            // Handle unknown stored procedure
-                            break;
-                    }
-
-                }
-                else if (idPrefix == "cq")
-                {
-                    int employeeID;
-                    if (int.TryParse(userContext.Properties["EmployeeId"].ToString(), out employeeID))
-                    {
-                        sqlDsi.CustomQuery = "Select * from OrderAnalysis where EmployeeID = " + employeeID;
-                    }                    
-                }
-                else if (idPrefix == "tb")
-                {
-                    // Handle Tables or Views
-                }
-                else
-                {
-                    return null;
-                }
-
-
-
-            }
-            return Task.FromResult(dataSourceItem);
+            sqlDsi.Procedure = "CustOrderHist";
+            sqlDsi.ProcedureParameters = 
+                new Dictionary<string, object> 
+                { { "@CustomerID", userContext.UserId } };
         }
 
-        public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+        // orderId passed to a Custom Query
+        else if (sqlDsi.Id == "CustomerOrders")
         {
-            if (dataSource is RVAzureSqlDataSource sqlDs)
-            {
-                sqlDs.Host = "server";
-                sqlDs.Database = "database";
-            }
-            return Task.FromResult(dataSource);
+            sqlDsi.CustomQuery = $"Select * from Orders Where OrderId = " +
+                $"{userContext.Properties[@"OrderId"]}";
         }
     }
+    return Task.FromResult(dataSourceItem);
 }
 ```
 
-In this example, the `ChangeDataSourceItemAsync` method changes the data source item based on the user's properties. It uses the user's properties to set the parameters for stored procedures and custom queries.
+In this example, `ChangeDataSourceItemAsync` uses values passed from the client using `setAdditionalHeadersProvider` as parameters for stored procedures and custom queries. 
 
 ## Security Considerations
 
