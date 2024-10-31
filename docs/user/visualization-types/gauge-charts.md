@@ -1,13 +1,13 @@
 ---
 title: How to Create and Use Gauge Charts
-_description: Find out how to use Gauge Charts for your visualizations in Slingshot Analytics.
+_description: Find out how to use Gauge Charts for your visualizations in Reveal.
 ---
 
 # Gauge Charts
 
 The Gauge chart displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
-formatting of the different ranges. In Slingshot, you can use the following gauge charts: [Linear](#linear-gauge), [Circular](#circular-gauge), [Text](#text-gauge), [KPI](kpi-gauge) and [Bullet Graph](#bullet-graph) gauges.
+formatting of the different ranges. In Reveal, you can use the following gauge charts: [Linear](#linear-gauge), [Circular](#circular-gauge), [Text](#text-gauge), [KPI](kpi-gauge) and [Bullet Graph](#bullet-graph) gauges.
 
 <a name='linear-gauge'></a>
 ## Linear Gauge
@@ -60,13 +60,10 @@ target value (vertical mark).
 <a name='bands-configuration'></a>
 ## Bands Configuration
 
-All gauge types have a common band range configuration, which you can find in the **Settings** section of the *Visualizations Editor*. The configuration dialog allows you to:
-
-1. Set **Limits**. These values are automatically set as the lowest and
+All gauge types have a common band range configuration, which you can find in the **Settings** section of the *Visualizations Editor*. The configuration dialog allows you to set **Limits**. These values are automatically set as the lowest and
     highest values in the dataset for the specified value column, but
     can also be overridden manually with constant values.
 
-2. Configure **[Conditional Formatting](https://slingshotapp.io/en/help/docs/analytics/data-visualizations/fields/conditional-formatting)**. 
 
 While setting the band configuration, you need to establish two
     thresholds to split the range in three spaces. The thresholds can be
@@ -78,7 +75,7 @@ While setting the band configuration, you need to establish two
 ![Gauge band configurations in the Settings section](images/gauge-band-settings.png)
 
 **Band Configurations are based on your original data**, *not on the
-formatting applied through Analytics*. In the circular gauge above, the
+formatting applied through Reveal*. In the circular gauge above, the
 original data is expressed in percentages, even though the visualization
 was formatted to display a number. Therefore, the selected **Value Comparison Type** is **Percentage**, and the ranges are defined as
 percentages and not numbers.
