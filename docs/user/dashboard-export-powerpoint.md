@@ -1,6 +1,6 @@
 # Exporting Dashboards as PowerPoint Presentations
 
-Analytics allows you to export your dashboard as a PowerPoint presentation.
+Reveal allows you to export your dashboard as a PowerPoint presentation.
 Every visualization that is part of this dashboard will be displayed on
 a separate slide of the presentation.
 
@@ -39,7 +39,7 @@ In the *Export Dashboard* dialog you can manage the following settings:
         color of the PowerPoint presentation) - here you can choose one
         of the following options:
 
-          - **Analytics**
+          - **Reveal**
 
           - **User's organization/workspace** - your organization and all of
             your workspaces having their branding (logo and color) set up are
@@ -48,8 +48,10 @@ In the *Export Dashboard* dialog you can manage the following settings:
           - **Custom** - select a color and upload a *logo* image of
             your choice.
 
-            >[!NOTE]**Requirements for logo images**. The image you upload for a logo must be no bigger than **5
+:::note
+**Requirements for logo images**. The image you upload for a logo must be no bigger than **5
             MB** and one of the following formats: JPG, JPEG, PNG, GIF.
+:::
 
 4.  You can **manage your PowerPoint slides** by selecting a slide from
     the list to modify its title, annotate or delete it (by removing the
