@@ -1,6 +1,6 @@
 # Exporting Dashboards as Images
 
-Analytics allows you to export a screen capture of your entire dashboard or
+Reveal allows you to export a screen capture of your entire dashboard or
 individual visualizations from your dashboard. The files delivered to
 your local space / mobile device are in the **PNG format**.
 

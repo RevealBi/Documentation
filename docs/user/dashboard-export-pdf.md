@@ -1,6 +1,6 @@
 # Exporting Dashboards as PDF Documents
 
-Analytics allows you to export your dashboard as a PDF document. Every
+Reveal allows you to export your dashboard as a PDF document. Every
 visualization that is part of this dashboard will be displayed on a
 separate page of the document.
 
@@ -31,7 +31,7 @@ In the *Export Dashboard* dialog you can manage the following settings:
         color of the PDF document) - here you can choose one of the
         following options:
 
-        - **Analytics**
+        - **Reveal**
 
         - **User's organization/workspace** - your organization and all of
             your workspaces having their branding (logo and color) set up are
