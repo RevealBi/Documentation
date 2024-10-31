@@ -1,5 +1,5 @@
 ---
-title: How to Create Candlestick Visualizations in Slingshot
+title: How to Create Candlestick Visualizations in Reveal
 _description: Get familiar the specifics of creating a Candlestick chart visualization for your data.
 ---
 
@@ -11,11 +11,11 @@ In this tutorial, you will learn how to create a *Candlestick chart* visualizati
 
 Access the links below for the Candlestick chart view walkthroughs:
 
-  - [How to create a Candlestick chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/candlestick-chart#creating-a-candlestick-chart)
+  - [How to create a Candlestick chart](/docs/user/tutorials-candlestick.md#creating-a-candlestick-chart)
 
-  - [How to change your axis configuration](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/candlestick-chart#changing-your-axis-configuration)
+  - [How to change your axis configuration](/docs/user/tutorials-candlestick.md#changing-your-axis-configuration)
 
-  - [How to set your axis configuration to logarithmic](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/candlestick-chart#setting-your-axis-configuration-as-logarithmic)
+  - [How to set your axis configuration to logarithmic](/docs/user/tutorials-candlestick.md#setting-your-axis-configuration-as-logarithmic)
 
 ## Key Concepts
 
@@ -51,28 +51,32 @@ chart:
 
 ## Sample Data Source
 
-For this tutorial, you will use the *OHLC and Candlestick* sheet in the [Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> .
 
 <a name='creating-candlestick-chart'></a>
 ## Creating a Candlestick Chart
 
-1. Select the **+ Dashboard** button in the top right-hand corner in the **My Analytics** section.
+1. Choose **Edit** in overflow menu.
 
-   ![Dashboard button for creating a new dashboard](images/dashboard-button-my-analytics.png)                                      
+   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+2. Select the **+ Visualization** button in the top right-hand corner.
+
+   ![Add new visualization button](images/add-visualization-button.png)                                      
+
+3. Select your data source from the list of data sources.
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
 
-3. Choose the **OHLC and Candlestick** sheet. 
+4. Choose the **OHLC and Candlestick** sheet. 
   
    ![Selecting the OHLC and Candlesticks spreadsheet](images/ohlc-candlestick-spreadsheet.png)
          
-4. Open the *Visualization Picker* and select the **Candlestick** visualization. By default, the visualization type will be set to *Column*. 
+5. Open the *Visualization Picker* and select the **Candlestick** visualization. By default, the visualization type will be set to *Column*. 
 
    ![List of chart types](images/candlestick-chart-types.png)                                                             
-5.  Drag and drop the *Date* field into *Label* and the *Open*, *High*, *Low* and *Close* fields in their corresponding placeholder.
-  <img src="images/candlestick-organizing-data.png" alt="Organizing data fields" width="35%"/>                                                      
+6.  Drag and drop the *Date* field into *Label* and the *Open*, *High*, *Low* and *Close* fields in their corresponding placeholder.                
+  ![Organizing data fields](images/candlestick-organizing-data.png)
 
 <a name='changing-axis-configuration'></a>
 ## Changing your Axis Configuration
@@ -85,8 +89,8 @@ In order to access the axis configuration menu:
 
 |                                             |                                                                                               |                                                             |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**            | <img src="images/tutorials-settings.png" alt="Navigating to Settings" width="300"/>  | Go to the **Settings** section in the Visualization Editor. |
-| 2\. **Navigate to the Axis Bounds section** | <img src="images/axis-bounds-candlestick.png" alt="Navigating to Axis Bounds" width="300"/> | The settings you will change will be the **Axis Bounds**.   |
+| 1\. **Access the Settings Menu**            | <img src={require("./images/tutorials-settings.png").default} alt="Navigating to Settings" width="300"/> | Go to the **Settings** section in the Visualization Editor. |
+| 2\. **Navigate to the Axis Bounds section** | <img src={require("./images/axis-bounds-candlestick.png").default} alt="Navigating to Axis Bounds" width="300"/> | The settings you will change will be the **Axis Bounds**.   |
 
 Depending on whether you want to set the minimum or maximum value (or
 both), you will need to access one of the following options:
@@ -106,5 +110,5 @@ the value you want for the chart's top limit.
 
 |                                        |                                                                                                              |                                                             |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**       | <img src="images/tutorials-settings.png" alt="Navigating to Settings" width="300"/>                 | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Change the Axis to Logarithmic** | <img src="images/axis-logarithmic-candlestick.png" alt="Accessing Axis configuration" width="300"/> | Open the **Axis** dropdown and select **Logarithmic**.      |
+| 1\. **Access the Settings Menu**       | <img src={require("./images/tutorials-settings.png").default} alt="Navigating to Settings" width="300"/>                 | Go to the **Settings** section of the Visualization Editor. |
+| 2\. **Change the Axis to Logarithmic** | <img src={require("./images/axis-logarithmic-candlestick.png").default} alt="Accessing Axis configuration" width="300"/> | Open the **Axis** dropdown and select **Logarithmic**.      |
