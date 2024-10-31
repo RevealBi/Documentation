@@ -66,7 +66,4 @@ Among other things, you will be able to:
 
 - **Search**, **Visualize** & **format** data.
 
-After you're done building the visualization, select the *check* icon to return to the
-*Dashboard Editor*. In the Dashboard Editor, you can control the layout,
-size, and location of the visualizations in a dashboard by simply dragging
-visualizations and their borders. When you are ready formatting and styling your dashboard, click/tap on the *check* icon again to save your dashboard.  
+After you're done building the visualization, select the *check* icon to return to the *Dashboard Editor*. In the Dashboard Editor, you can control the layout, size, and location of the visualizations in a dashboard by simply dragging visualizations and their borders. When you are ready formatting and styling your dashboard, click/tap on the *check* icon again to save your dashboard.  
