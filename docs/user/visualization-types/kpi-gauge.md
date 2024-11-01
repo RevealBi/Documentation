@@ -1,6 +1,6 @@
 ---
 title: How to Create KPI Gauge in Visualizations Editor
-_description: Find out how to use KPI Gauge for your visualizations in Slingshot Analytics.
+_description: Find out how to use KPI Gauge for your visualizations in Reveal.
 ---
 
 # KPI Gauge
