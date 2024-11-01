@@ -1,5 +1,5 @@
 ---
-title: How to Create OHLC Visualizations in Slingshot 
+title: How to Create OHLC Visualizations in Reveal 
 _description: A quick tutorial on creating OHLC visualizations using a sample spreadsheet.
 ---
 
@@ -13,11 +13,14 @@ a sample spreadsheet.
 
 Access the links below for the OHLC chart view walkthroughs:
 
-  - [How to create an OHLC chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/ohlc-chart#creating-a-ohlc-chart)
-
-  - [How to change your axis configuration](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/ohlc-chart#changing-your-axis-configuration)
-
-  - [How to set your axis configuration to logarithmic](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/ohlc-chart#setting-your-axis-configuration-as-logarithmic)
+- [Creating OHLC Visualizations](#creating-ohlc-visualizations)
+  - [Key Concepts](#key-concepts)
+  - [Sample Data Source](#sample-data-source)
+  - [Creating a OHLC Chart](#creating-a-ohlc-chart)
+  - [Changing your Axis Configuration](#changing-your-axis-configuration)
+    - [Changing the Minimum Bound](#changing-the-minimum-bound)
+    - [Changing the Maximum Bound](#changing-the-maximum-bound)
+  - [Setting your Axis Configuration as Logarithmic](#setting-your-axis-configuration-as-logarithmic)
 
 ## Key Concepts
 
@@ -53,28 +56,32 @@ chart:
 
 ## Sample Data Source
 
-For this tutorial, you will use the *OHLC and Candlestick* sheet in the [Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
 <a name='creating-ohlc-chart'></a>
 ## Creating a OHLC Chart
 
-1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
+1. Choose **Edit** in overflow menu.
+   
+    ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)
+ 2. Select the **+ Visualization** button in the top right-hand corner.
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+    ![Add new visualization button](images/add-visualization-button.png) 
 
-   ![Tutorials-Select-Data-Source](images/visualization-tutorials-sample.png)                                         
+ 3. Select your data source from the list of data sources.
+   
+    ![Tutorials-Select-Data-Source](images/visualization-tutorials-sample.png)                     
 
-3. Choose the **OHLC and Candlestick** sheet. 
+ 4. Once the data source is configured, select the **OHLC and Candlestick** sheet.  
 
-    ![Tutorials-Select-OHLC-tutorials-candlesticks-Spreadsheet](images/ohlc-candlestick-spreadsheet.png)                       
+    ![Tutorials-Select-OHLC-tutorials-candlesticks-Spreadsheet](images/ohlc-candlestick-spreadsheet.png)  
 
- 4. Open the *Visualization Picker* and select **OHLC**. By default, the visualization type will be set to **Column**.  
+ 5. Open the *Visualization Picker* and select **OHLC**. By default, the visualization type will be set to **Column**.  
 
     ![Tutorials-Select-Change-Visualization](images/ohlc-chart-types.png)                                
 
- 5. Drag and drop the *Date* field into **Label** and the *Open*, *High*, *Low* and *Close* fields in their corresponding placeholder.
+ 6. Drag and drop the *Day* field into **Label** and the *Open*, *High*, *Low* and *Close* fields in their corresponding placeholder.
 
     ![Organizing the data from the data source](images/ohlc-organizing-data.png)                              
 
@@ -103,7 +110,7 @@ enter the value you want the chart to start with.
 ### Changing the Maximum Bound
 
 For Maximum bounds, the default will be set to *Automatic* so that
-Slingshot uses your original data. In order to set a different one, enter
+Reveal uses your original data. In order to set a different one, enter
 the value you want for the chart's top limit.
 
 <a name='setting-logarithmic-axis'></a>
