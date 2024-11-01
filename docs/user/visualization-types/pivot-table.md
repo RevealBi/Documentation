@@ -1,6 +1,6 @@
 ---
 title: How to Create Pivot Table Visualization
-_description: Find out how to create and use Pivot Table visualization in Slingshot Analytics.
+_description: Find out how to create and use Pivot Table visualization in Reveal.
 ---
 
 # Pivot Table
