@@ -14,20 +14,6 @@ visualizations using a sample spreadsheet.
 
 ![Another set of visualizations made with different chart](images/simple-series-charts-example3.png)
 
-Access the links below for the Simple chart view walkthroughs:
-
-  - [How to create an Area chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/simple-charts#creating-your-chart)
-
-  - [How to add a trendline to your chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/simple-charts#adding-a-trendline-to-your-chart)
-
-  - [How to change your axis configuration](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/simple-charts#changing-your-axis-configuration)
-
-  - [How to set your axis configuration to logarithmic](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/simple-charts#setting-your-axis-configuration-as-logarithmic)
-
-  - [How to change the start position for Doughnut and Pie charts](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/simple-charts#changing-the-start-position-for-doughnut-and-pie-charts)
-
-  - [How to change the slice labels for Funnel, Pie and Doughnut charts](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/simple-charts#changing-the-slice-labels-for-doughnut-funnel-and-pie-charts)
-
 ## Key Concepts
 
 When working with charts, you can add extra information on top of the
@@ -60,28 +46,32 @@ data you want to display. This comes in the form of:
 
 ## Sample Data Source
 
-For this tutorial, you will use the *Simple Series Charts* sheet in the [Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+For this tutorial, you will use the *Simple Series Charts* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
 <a name='create-basic-chart'></a>
 ## Creating your Chart
 
-1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
+11. Choose **Edit** in overflow menu.
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)                                      
+   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-   ![Selecting a data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Choose the **Simple Series Charts** sheet.     
+3. Select your data source from the list of data sources.
+
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+
+4. Choose the **Simple Series Charts** sheet. 
 
    ![Selecting Simple Series Chart sheet](images/simple-series-charts-spreadsheet.png)
 
-4. Open the *Visualization Picker* and select any of the **chart** visualizations. By default, the visualization type will be set to *Column*. 
+5. Open the *Visualization Picker* and select any of the **chart** visualizations. By default, the visualization type will be set to *Column*. 
 
    ![List of chart types](images/chart-types-simple-series-charts.png) 
  
-5. The charts in the table above, for example, display the population for a select list of countries. Drag and drop the *Country Name* field to **Label** and the *Population* field into **Values**.                                                        
+6. The charts in the table above, for example, display the population for a select list of countries. Drag and drop the *Country Name* field to **Label** and the *Population* field into **Values**.                                                        
    ![Organizing the data from the Simple Series Charts sheet](images/simple-series-charts-organizing-data.png)                                   
 
 <a name='add-trendline-chart'></a>
