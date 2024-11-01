@@ -1,5 +1,5 @@
 ---
-title: How to Create Gauge Visualizations in Slingshot 
+title: How to Create Gauge Visualizations in Reveal 
 _description: A quick tutorial on creating all types of Gauge visualizations using a sample spreadsheet.
 ---
 
@@ -12,17 +12,15 @@ using a sample spreadsheet.
 
 Access the links below for the gauge view walkthroughs:
 
-  - [How to create a Linear Gauge](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#creating-a-linear-gauge)
-
-  - [How to create a Circular Gauge](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#creating-a-circular-gauge)
-
-  - [How to create a Text Gauge](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#creating-a-text-gauge)
-
-  - [How to create a Bullet Graph](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#creating-a-bullet-graph)
-
-  - [How to add bounds to your gauge visualizations](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#adding-bounds-to-your-gauge)
-
-  - [How to change band colors](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#changing-band-colors)
+- [Creating Gauge Visualizations](#creating-gauge-visualizations)
+  - [Key Concepts](#key-concepts)
+  - [Sample Data Source](#sample-data-source)
+  - [Creating a Linear Gauge](#creating-a-linear-gauge)
+  - [Creating a Circular Gauge](#creating-a-circular-gauge)
+  - [Creating a Text Gauge](#creating-a-text-gauge)
+  - [Creating a Bullet Graph](#creating-a-bullet-graph)
+  - [Adding Bounds to your Gauge](#adding-bounds-to-your-gauge)
+  - [Changing Band Colors](#changing-band-colors)
 
 <a name='key-concepts'></a>
 ## Key Concepts
@@ -41,54 +39,61 @@ There are two different layouts to choose from when using gauge charts:
 
 ## Sample Data Source
 
-For this tutorial, you will use the *Gauge Views* sheet in the [Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+For this tutorial, you will use the *Gauge Views* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
 <a name='create-linear-gauge'></a>
 ## Creating a Linear Gauge
 
+1. Choose **Edit** in overflow menu.
+   
+   ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-1. Select the **+ Dashboard** button in the top right-hand corner in the **My Analytics** section.
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)                                      
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+3. Select your data source from the list of data sources.
 
-   ![Selecting a data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
-
-3. Choose the **Gauge Views** sheet.
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)
+         
+4. Choose the **Gauge Views** sheet.
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-4. Open the *Visualization Picker* and select any of the **Gauges** visualizations. By default, the visualization type will be set to *Column*. 
+5. Open the *Visualization Picker* and select the **Linear** visualization. By default, the visualization type will be set to *Column*. 
 
-   ![List of chart types](images/gauges-chart-types.png)
+   ![List of chart types](images/gauges-linear-chart-types.png)
 
-5. This linear gauge, for example, will display *Life expectancy* per *Country*. Drag and drop the *Country Name* field to **Label** and one of the *Year* fields into **Values**.
+6. This linear gauge, for example, will display *Life expectancy* per *Country*. Drag and drop the *Country Name* field to **Label** and one of the *Year* fields into **Value**.
   
    ![Tutorials-LinearGauge-Data](images/organizing-data-gauge-visualization.png)                         
 
 <a name='create-circular-gauge'></a>
 ## Creating a Circular Gauge
 
-1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
+1. Choose **Edit** in overflow menu.
+   
+   ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)                                      
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-   ![Selecting a data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+3. Select your data source from the list of data sources.
 
-3. Choose the **Gauge Views** sheet.
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                       
+
+4. Choose the **Gauge Views** sheet.
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-4. Open the *Visualization Picker* and select any of the **Gauges** visualizations. By default, the visualization type will be set to *Column*. 
+5. Open the *Visualization Picker* and select the **Circular** visualization. By default, the visualization type will be set to *Column*. 
 
-   ![List of chart types](images/gauges-chart-types.png)
+   ![List of chart types](images/gauges-circular-chart-types.png)
 
-5. This linear gauge, for example, will display *Life expectancy* per *Country*. Drag and drop the *Country Name* field to **Label** and one of the *Year* fields into **Values**.
+6. This linear gauge, for example, will display *Life expectancy* per *Country*. Drag and drop the *Country Name* field to **Label** and one of the *Year* fields into **Value**.
   
-   ![Tutorials-LinearGauge-Data](images/organizing-data-gauge-visualization.png) 
+   ![Tutorials-LinearGauge-Data](images/organizing-data-circular-gauge-visualization.png) 
 
 <a name='aggregation-instructions'></a>
 
@@ -105,23 +110,27 @@ displayed in Values:
 <a name='create-text-gauge'></a>
 ## Creating a Text Gauge
 
-1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
+1. Choose **Edit** in overflow menu.
+   
+   ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)                                      
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-   ![Selecting a data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+3. Select your data source from the list of data sources.
 
-3. Choose the **Gauge Views** sheet.
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                       
+
+4. Choose the **Gauge Views** sheet.
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-4. Open the *Visualization Picker* and select the *Text Gauge*. By default, the visualization type will be set to *Column*. 
+5. Open the *Visualization Picker* and select the **Text** visualization. By default, the visualization type will be set to *Column*. 
 
-   ![List of chart types](images/gauges-chart-types.png)
+   ![List of chart types](images/gauges-text-chart-types.png)
 
-5. This text gauge, for example, will display life expectancy per Country. Drag and drop one of the year fields into **Values**, and then the *Country Name* field into **Data Filters**. Then, select the specific country you want by selecting the field. 
+6. This text gauge, for example, will display life expectancy per Country. Drag and drop one of the year fields into **Values**, and then the *Country Name* field into **Data Filters**. Then, select the specific country you want by selecting the field. 
 
    ![Organizing the data while using text gauge visualizaiton](images/text-gauge-organizing-data.png)
 
@@ -130,23 +139,27 @@ The text gauge sample above utilizes the average aggregation.
 <a name='create-bullet-graph-gauge'></a>
 ## Creating a Bullet Graph
 
-1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
+1. Choose **Edit** in overflow menu.
+   
+   ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)                                      
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-   ![Selecting a data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+3. Select your data source from the list of data sources.
 
-3. Choose the **Gauge Views** sheet.
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                       
+
+4. Choose the **Gauge Views** sheet.
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-4. Open the *Visualization Picker* and select any of the *Bullet Graph* visualizations. By default, the visualization type will be set to *Column*. 
+5. Open the *Visualization Picker* and select the **Bullet Graph** visualization. By default, the visualization type will be set to *Column*. 
 
-   ![List of chart types](images/gauges-chart-types.png)
+   ![List of chart types](images/gauges-bullet-graph-chart-types.png)
 
-5. This bullet graph, for example, will display life expectancy per Country. Drag and drop the *Country Name* field to **Label**, one of the years into **Values** and another *Year* into **Target**.
+6. This bullet graph, for example, will display life expectancy per Country. Drag and drop the *Country Name* field to **Label**, one of the years into **Values** and another *Year* into **Target**.
 
    ![Organizing data while using a bullet graph](images/bullet-graph-organizing-data.png)
 
@@ -154,7 +167,7 @@ The text gauge sample above utilizes the average aggregation.
 ## Adding Bounds to your Gauge
 
 Bounds allow you to set the lowest and highest values in your gauges. As
-mentioned in [Key Concepts](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/gauge-charts#key-concepts), you can change it to exclude
+mentioned in [Key Concepts](#key-concepts), you can change it to exclude
 specific data. In order to do this:
 
 |                                                |                                                                        |                                                                                                                                       |
@@ -172,5 +185,5 @@ so:
 |                                    |                                                                        |                                                                          |
 | ---------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 1\. **Change Settings**            | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | Go to the **Settings** section of the Visualization Editor.              |
-| 2\. **Access the Colors dropdown** | ![Tutorials-Colors-Dropdown](images/band-color-options.png)     | Expand the dropdown of the range for which you want to change the color. Select one of Slingshot's three predefined colors for your band color.|
+| 2\. **Access the Colors dropdown** | ![Tutorials-Colors-Dropdown](images/band-color-options.png)     | Expand the dropdown of the range for which you want to change the color. Select one of Reveal's three predefined colors for your band color.|
 
