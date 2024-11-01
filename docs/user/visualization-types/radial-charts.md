@@ -1,11 +1,11 @@
 ---
 title: How to Create Radial Charts Visualization
-_description: Find out how to create and use Radial Charts visualization in Slingshot Analytics.
+_description: Find out how to create and use Radial Charts visualization in Reveal.
 ---
 
 # Radial Charts
 
-Like [Category](https://www.slingshotapp.io/en/help/docs/analytics/data-visualizations/visualization-types/category-charts) charts, Radial charts are simply representations of
+Like [Category](../visualization-types/category-charts) charts, Radial charts are simply representations of
 information in a coordinate system.
 
 ![Using a radial chart to create a visualization](images/radial-chart-visualization-editor.png)
