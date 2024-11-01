@@ -1,6 +1,6 @@
 ---
 title: How to Create Scatter and Bubble Charts Visualization 
-_description: Find out how to create and use Scatter and Bubble Charts visualization in Slingshot Analytics.
+_description: Find out how to create and use Scatter and Bubble Charts visualization in Reveal.
 ---
 
 # Scatter and Bubble Charts
