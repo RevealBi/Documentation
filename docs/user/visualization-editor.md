@@ -54,9 +54,9 @@ Below, you will find a list of all sections of the *Editor* with their capabilit
 
 5. **Data Source** - The data source that you are currently working with will be displayed here. With a click, you can change between the different sheets, tables or views within your source or change your connection to a new source entirely without having to leave the editor.
 
-    Among other things, you will be able to:
-   - **Sort** & **filter** data.
-   - **Aggregate data** in the data editor.
-   - **Search**, **Visualize** & **format** data.
+Among other things, you will be able to:
+- **Sort** & **filter** data.
+- **Aggregate data** in the data editor.
+- **Search**, **Visualize** & **format** data.
 
 After you're done building the visualization, select the *check* icon to return to the *Dashboard Editor*. In the Dashboard Editor, you can control the layout, size, and location of the visualizations in a dashboard by simply dragging visualizations and their borders. When you are ready formatting and styling your dashboard, click/tap on the *check* icon again to save your dashboard.  
