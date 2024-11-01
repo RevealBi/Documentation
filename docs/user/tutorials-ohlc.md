@@ -11,17 +11,6 @@ a sample spreadsheet.
 ![Tutorials-Select-OHLC-tutorials-candlesticks-Spreadsheet](images/ohlc-charts-example.png)
 
 
-Access the links below for the OHLC chart view walkthroughs:
-
-- [Creating OHLC Visualizations](#creating-ohlc-visualizations)
-  - [Key Concepts](#key-concepts)
-  - [Sample Data Source](#sample-data-source)
-  - [Creating a OHLC Chart](#creating-a-ohlc-chart)
-  - [Changing your Axis Configuration](#changing-your-axis-configuration)
-    - [Changing the Minimum Bound](#changing-the-minimum-bound)
-    - [Changing the Maximum Bound](#changing-the-maximum-bound)
-  - [Setting your Axis Configuration as Logarithmic](#setting-your-axis-configuration-as-logarithmic)
-
 ## Key Concepts
 
 Like Candlestick Charts, OHLC charts are meant to show the opening,
