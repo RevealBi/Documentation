@@ -14,18 +14,6 @@ visualizations using a sample spreadsheet.
 
 ![Another set of visualizations made with different chart](images/simple-series-charts-example3.png)
 
-Access the links below for the Simple chart view walkthroughs:
-
-- [Creating Simple-Series Charts](#creating-simple-series-charts)
-  - [Key Concepts](#key-concepts)
-  - [Sample Data Source](#sample-data-source)
-  - [Creating your Chart](#creating-your-chart)
-  - [Adding a Trendline to your Chart](#adding-a-trendline-to-your-chart)
-  - [Changing your Axis Configuration](#changing-your-axis-configuration)
-  - [Setting your Axis Configuration as Logarithmic](#setting-your-axis-configuration-as-logarithmic)
-  - [Changing the Start Position for Doughnut and Pie Charts](#changing-the-start-position-for-doughnut-and-pie-charts)
-  - [Changing the Slice Labels for Doughnut, Funnel and Pie Charts](#changing-the-slice-labels-for-doughnut-funnel-and-pie-charts)
-
 ## Key Concepts
 
 When working with charts, you can add extra information on top of the
