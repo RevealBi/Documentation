@@ -43,14 +43,12 @@ Below, you will find a list of all sections of the *Editor* with their capabilit
 
 1. **Data Section** - this section contains two panels:
 
-a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
-The *plus* icon in this panel allows you to either blend data sources or calculate a field. The *brain* icon allows you to use fields from a BigQuery or Azure *machine learning model* for your visualization. Keep in mind that the BigQuery machine learning model can work only with BigQuery data sources.
+    a. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
+    The *plus* icon in this panel allows you to either blend data sources or calculate a field. The *brain* icon allows you to use fields from a BigQuery or Azure *machine learning model* for your visualization. Keep in mind that the BigQuery machine learning model can work only with BigQuery data sources.
+    
+    b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
 
-b. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
-
-2. **Settings Section** - This section allows you to customize what you want to show. Each visualization comes with its own settings.
-
-At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking) topic.
+2. **Settings Section** - This section allows you to customize what you want to show. Each visualization comes with its own settings. At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking) topic.
 
 3. **Visualization Picker** - Here you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown menu, you will notice the visualization fields section change. The fields for each visualization are different, but they change automatically so you only need to fill them in.
 
@@ -58,12 +56,12 @@ At the bottom of the *Settings* section you will see the option for links. This 
 
 5. **Data Source** - The data source that you are currently working with will be displayed here. With a click, you can change between the different sheets, tables or views within your source or change your connection to a new source entirely without having to leave the editor.
 
-Among other things, you will be able to:
+    Among other things, you will be able to:
 
-- **Sort** & **filter** data.
+   - **Sort** & **filter** data.
 
-- **Aggregate data** in the data editor.
+   - **Aggregate data** in the data editor.
 
-- **Search**, **Visualize** & **format** data.
+   - **Search**, **Visualize** & **format** data.
 
 After you're done building the visualization, select the *check* icon to return to the *Dashboard Editor*. In the Dashboard Editor, you can control the layout, size, and location of the visualizations in a dashboard by simply dragging visualizations and their borders. When you are ready formatting and styling your dashboard, click/tap on the *check* icon again to save your dashboard.  
