@@ -1,5 +1,5 @@
 ---
-title: How to Create Stacked Chart Visualization in Slingshot
+title: How to Create Stacked Chart Visualization in Reveal
 _description: A quick tutorial on creating Stacked Chart visualization using a sample spreadsheet.
 ---
 
@@ -12,13 +12,13 @@ visualizations using a sample spreadsheet.
 
 Access the links below for the Stacked Chart view walkthroughs:
 
-  - [How to create a Stacked Column chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#creating-a-stacked-chart)
-
-  - [How to change your axis configuration](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#changing-your-axis-configuration)
-
-  - [How to set your axis configuration to logarithmic](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#setting-your-axis-configuration-as-logarithmic)
-
-  - [How to enable percentage distribution](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/stacked-charts#enabling-percentage-distribution)
+- [Creating Stacked Chart Visualizations](#creating-stacked-chart-visualizations)
+  - [Key Concepts](#key-concepts)
+  - [Sample Data Source](#sample-data-source)
+  - [Creating a Stacked Chart](#creating-a-stacked-chart)
+  - [Changing your Axis Configuration](#changing-your-axis-configuration)
+  - [Setting your Axis Configuration as Logarithmic](#setting-your-axis-configuration-as-logarithmic)
+  - [Enabling Percentage Distribution](#enabling-percentage-distribution)
 
 ## Key Concepts
 
@@ -41,30 +41,35 @@ You can also configure the following settings:
 ## Sample Data Source
 
 For this tutorial, you will use the *Stacked Charts* sheet in the
-[Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
 
 <a name='create-stacked-chart'></a>
 ## Creating a Stacked Chart
 
-1. Select the **+ Dashboard** button in *My Analytics*.  
+1. Choose **Edit** in overflow menu.
 
-     ![Dashboard button in the My Analytics section](images/myanalytics-dashboard-button.png) 
-                                                      
-2. Select your data source (**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.     
+   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
-      ![Tutorials Data Source in the list of already added data sources](images/visualization-tutorials-sample.png)
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-3. Choose the **Stacked Charts** sheet.               
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-     ![Stacked Charts Spreadsheet in the tutorial data source](images/stacked-chart-spreadsheet-data-source-details-dialog.png)
-  
-4. Select the **Grid icon** in the top bar of the Visualizations Editor. By default, the visualization type will be set to *Column*. You can always change it by selecting any of the **stack** visualizations.     
+3. Select your data source from the list of data sources.
+
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+
+4. Choose the **Stacked Charts** sheet. 
+
+   ![Stacked Charts Spreadsheet in the tutorial data source](images/stacked-chart-spreadsheet-data-source-details-dialog.png)
+
+5. Open the *Visualization Picker* and select any of the **stacked** visualizations. By default, the visualization type will be set to *Column*. 
+
+   ![List of stacked chart types](images/stacked-chart-types.png) 
  
-     ![List of all the chart types used for a visualization](images/stacked-chart-types.png)                                                                                                    
-5. Stacked charts require two or more fields to be dragged and dropped into the **Values** placeholder of the data editor. In this case, the *1960*, *2003*, *2008* and *2010* fields have been dropped into **Values** and *Country Name* in **Label**. 
-
-    ![Organizing the data from the stacked charts spreadsheet](images/stacked-charts-organizing-data.png)
+6. Stacked charts require two or more fields to be dragged and dropped into the **Values** placeholder of the data editor. In this case, the *1960*, *2003*, *2008* and *2010* fields have been dropped into **Values** and *Country Name* in **Label**.
+                                        
+   ![Organizing the data from the stacked charts spreadsheet](images/stacked-charts-organizing-data.png)                           
 
 <a name='change-axis-configuration'></a>
 ## Changing your Axis Configuration
