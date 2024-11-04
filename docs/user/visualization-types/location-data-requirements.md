@@ -9,7 +9,7 @@ _description: In using Choropleth maps for Visualization, learn how to follow lo
 
 <a name='location-formats'></a>
 ## Location Formats
-To have your location column recognized by Analytics, provide one of the following formats:
+To have your location column recognized by Reveal, provide one of the following formats:
 
  - *Names* of countries and their subdivisions (provinces, states, departments, regions, etc.) - comply with the official spelling in English or another supported language. Find more information about supported languages in [My Data Source Is Not in English](#my-data-source-is-not-in-english) below.
 
@@ -21,7 +21,7 @@ To have your location column recognized by Analytics, provide one of the followi
 
  - *[County name, state abbreviation] format* e.g., *Seneca, NY*. This is another format recognized for USA maps, which include counties.
 
-Be consistent with the format you provide. Do not mix full names and codes in the same column. However, there is an exception for some ***very commonly used country abbreviations***. Below, you will find a list of abbreviated country names that you can mix with countries' full names in your location column and still have them recognized by Analytics.
+Be consistent with the format you provide. Do not mix full names and codes in the same column. However, there is an exception for some ***very commonly used country abbreviations***. Below, you will find a list of abbreviated country names that you can mix with countries' full names in your location column and still have them recognized by Reveal.
 
 | Country Full Name        | Accepted Abbreviation |
 |--------------------------|-----------------------|
@@ -50,7 +50,7 @@ Be consistent with the format you provide. Do not mix full names and codes in th
 ## Troubleshooting Errors
 
 The Choropleth map was designed to find any match that is available. This way, you'll see a map with partial results doesn't look right, but it will be working regardless.
-For example, when using the US States map, Analytics will show the states that match the map and the other states will be greyed out.
+For example, when using the US States map, Reveal will show the states that match the map and the other states will be greyed out.
 
 ### Troubleshooting the Choropleth Map
 
@@ -79,15 +79,16 @@ If you are getting an outcome, but it's not exactly what you were expecting, ple
 <a name='data-not-in-english'></a>
 ## My Data Source Is Not In English
 
-Analytics doesn't recognize the language of your data source automatically.
+Reveal doesn't recognize the language of your data source automatically.
 If your data source information is written in another language, you need to specify it by:
 
 1. Opening the *Settings* and clicking/tapping on **Data is written in**.
 2. Selecting a language from the dropdown menu.
 
->[!NOTE] Currently, the Choropleth Map in Analytics supports English and Japanese.
-
-If location information in your data source is written in a different language, you have to translate it outside of Analytics.
+:::note
+Currently, the Choropleth Map in Reveal supports English and Japanese.
+:::
+If location information in your data source is written in a different language, you have to translate it outside of Reveal.
 
 ### Using a Japanese Data Source with the Japan Map
 
