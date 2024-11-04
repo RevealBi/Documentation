@@ -14,7 +14,7 @@ using a sample spreadsheet.
 
 Text views display information in a key-value pattern, but **they only
 display the first row of data paired with a column's label**. You can,
-however, add filters to make sure Slingshot displays the row you need.
+however, add filters to make sure Reveal displays the row you need.
 
 ## Sample Data Source
 
