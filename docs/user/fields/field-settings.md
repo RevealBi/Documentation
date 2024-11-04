@@ -1,5 +1,5 @@
 ---
-title: How to Use Field Settings in Slingshot 
+title: How to Use Field Settings in Reveal 
 _description: Learn how to apply field settings for sorting, filtering, and aggregating data.
 ---
 
@@ -16,15 +16,16 @@ specific field you want to modify in the corresponding placeholder
 types of fields, each of which has their own formatting and filter
 options:
 
-- [Field Settings](#field-settings)
+- [Field Settings](#)
   - [Date Fields](#date-fields)
     - [Date Fields Hierarchies](#date-fields-hierarchies)
   - [Numeric Fields](#numeric-fields)
   - [String Fields](#string-fields)
 
 
->[!NOTE] All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
-
+:::note 
+All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
+:::
 <a name='date-fields'></a>
 ## Date Fields
 
@@ -50,10 +51,10 @@ Date Fields aggregation is displayed as a hierarchical list in the Fields sectio
 
 When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed (see below).
 
-![Showing the date field hierarchy functionality in Analytics](images/date-fields-hierarchy.png)
+![Showing the date field hierarchy functionality in Reveal](images/date-fields-hierarchy.png)
 In addition, dragging a specific hierarchy level will show data for that level only, as shown below.
 
-![Dragging part of the hierarchy of a date field in Analytics](images/date-field-hierarchy-level-example.png)
+![Dragging part of the hierarchy of a date field in Reveal](images/date-field-hierarchy-level-example.png)
 <a name='numeric-fields'></a>
 ## Numeric Fields
 
@@ -64,7 +65,7 @@ In addition, dragging a specific hierarchy level will show data for that level o
     back to the original value.
 
   - **Aggregation**: configure how you want your numbers to be processed
-    by Analytics (sum, count, average, etc.).
+    by Reveal (sum, count, average, etc.).
 
   - **Sorting**: sort your numbers in either ascending or descending
     order.
