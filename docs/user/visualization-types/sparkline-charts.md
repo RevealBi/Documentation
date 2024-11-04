@@ -1,6 +1,6 @@
 ---
 title: How to Create Sparkline Charts Visualization 
-_description: Find out how to create and use Sparkline Charts visualization in Slingshot Analytics.
+_description: Find out how to create and use Sparkline Charts visualization in Reveal.
 ---
 
 # Sparkline Charts
