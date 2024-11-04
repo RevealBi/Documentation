@@ -5,7 +5,7 @@ _description: Learn how to use Calculated fields and all their types to create a
 
 # Calculated Fields
 
-Analytics allows you to define new fields in the data set, named calculated
+Reveal allows you to define new fields in the data set, named calculated
 fields. These fields are created by using expressions (formulas). An
 expression can be a combination of existing field(s), constant values
 and:
@@ -24,7 +24,7 @@ There are two types of calculated fields:
 ## Pre-Calculated Fields
 
 Pre-calculated fields are evaluated before executing data editor
-aggregations. This means in order to apply a certain formula, Analytics will go through every record in your field's dataset once or several times. Because of this, pre-calculation is likely to be underperforming in terms of speed when working with large datasets.
+aggregations. This means in order to apply a certain formula, Reveal will go through every record in your field's dataset once or several times. Because of this, pre-calculation is likely to be underperforming in terms of speed when working with large datasets.
 
 To add a new pre-calculated field, click/tap the **+ button** in the
 *Fields* panel and choose **Calculated Field**:
@@ -92,10 +92,10 @@ Post-calculation tends to perform better than pre-calculation when
 working with large datasets.
 
 <a name='predefined-functions'></a>
-## Using the Predefined Analytics Functions
+## Using the Predefined Reveal Functions
 
 For both pre-calculated and post-calculated fields, you can use one of
-the available functions within Analytics:
+the available functions within Reveal:
 
   - [**Aggregation**](aggregation):
     [average](aggregation.md#average),
@@ -173,9 +173,9 @@ the available functions within Analytics:
     [trim](string.md#trim),
     [upper](string.md#upper).
 
->[!NOTE] **Limitations to IF Conditions**.
->IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
-
+:::note
+**Limitations to IF Conditions**. IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
+:::
 <a name='without-predefined-functions'></a>
 ## Creating Calculated Fields without using the predefined functions
 
@@ -184,7 +184,7 @@ predefined functions; for instance, for simple math calculations like
 subtractions, divisions, additions or multiplications. In [this table](samples), you will find some examples that do
 not use the predefined functions.
 
-## What to consider when using the Analytics functions
+## What to consider when using the Reveal functions
 
   - **Text strings should be included between quotation marks**.
     Examples include locale ("en") and date formats ("dd/mm/yyyy").
