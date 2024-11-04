@@ -16,9 +16,9 @@ To add a Text Box to an existing dashboard, you need to:
 
 ![Adding a text box in dashboard edit mode](images/add-text-box-to-dashboard.png)
 
->[!NOTE] When adding a Text box visualization to an existing dashboard, it
-appears **at the bottom of your dashboard**. You can move it by dragging it.
-
+:::note
+When adding a Text box visualization to an existing dashboard, it appears **at the bottom of your dashboard**. You can move it by dragging it.
+:::
 ## Creating a Text Box as a First Visualization in a Dashboard
 
 Sometimes you may want to start your dashboard by creating a Text Box
