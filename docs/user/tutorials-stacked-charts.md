@@ -10,16 +10,6 @@ visualizations using a sample spreadsheet.
 
 ![Tutorials-Create-New-Dashboard](images/different-stacked-charts-example.png)  
 
-Access the links below for the Stacked Chart view walkthroughs:
-
-- [Creating Stacked Chart Visualizations](#creating-stacked-chart-visualizations)
-  - [Key Concepts](#key-concepts)
-  - [Sample Data Source](#sample-data-source)
-  - [Creating a Stacked Chart](#creating-a-stacked-chart)
-  - [Changing your Axis Configuration](#changing-your-axis-configuration)
-  - [Setting your Axis Configuration as Logarithmic](#setting-your-axis-configuration-as-logarithmic)
-  - [Enabling Percentage Distribution](#enabling-percentage-distribution)
-
 ## Key Concepts
 
 There are three different layouts to choose from when using stacked
