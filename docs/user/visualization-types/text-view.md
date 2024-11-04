@@ -1,6 +1,6 @@
 ---
 title: How to Create Text View Visualization
-_description: Find out how to create and use Text View visualization in Slingshot Analytics.
+_description: Find out how to create and use Text View visualization in Reveal.
 ---
 
 # Text View
