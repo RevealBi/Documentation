@@ -1,9 +1,9 @@
 ---
 title: How to Create Treemap Visualization
-_description: Learn how to create and use Treemap Visualization in Slingshot Analytics.
+_description: Learn how to create and use Treemap Visualization in Reveal.
 ---
 
-# Treemaps in Analytics
+# Treemaps in Reveal
 
 The Treemap visualization is used to display hierarchical data as a set of nested rectangles. Rectangles of each level are of different sizes and colors.
 
@@ -22,7 +22,7 @@ You can create a **visualization without hierarchical data** like the one shown 
 
 You can use treemaps with no hierarchies to show patterns and part-to-whole relations in an attractive and clear way.
 
-The visualization above displays *New Sales* by *Territory*. To build this visualization, you need to do the following:
+The visualization above displays *New Seats* by *Product*. To build this visualization, you need to do the following:
 
 1. In the *New Visualization* dialog, choose *Sample Data*.
 
@@ -32,11 +32,11 @@ The visualization above displays *New Sales* by *Territory*. To build this visua
 
     ![Tree Map visualization in the Change Visualization dialog](images/treemap-chart-types.png)
 
-3. In the *Tree Map Data section* drop *Territory* in **Label**, and *New Sales* in **Value**.
+3. In the *Tree Map Data section* drop *Prodcut* in **Label**, and *New Seats* in **Value**.
 
 Note that the *data dropped in Label* (*Product*) determines the **color** and tiles the visualization in five different rectangles.
 
-The biggest tile indicates the largest *New Sales* value. Rectangles are *arranged in size from top left (biggest) to right bottom.*
+The biggest tile indicates the largest *New Seats* value. Rectangles are *arranged in size from top left (biggest) to right bottom.*
 
 *The label at the left bottom* of each rectangle shows rounded approximate value for each product. To see exact values, click/tap on a tile to show tooltips (see the screenshot below).
 
@@ -81,5 +81,5 @@ In the *Settings* section of the Treemap visualization, you can configure the fo
 
 - **Show Title** - choose whether to show the visualization's title
 - **Show Values** - choose whether to show **labels**, displaying information about categories and values for rectangles at different levels
-- **Start Color** - choose a start color from a 10-color palette. Analytics will use your choice to adjust a color scheme.
+- **Start Color** - choose a start color from a 10-color palette. Reveal will use your choice to adjust a color scheme.
 - **Links** - connect the visualization to a dashboard or URL. For more information, please refer to the [Linking Dashboards](../dashboard-linking) topic.
