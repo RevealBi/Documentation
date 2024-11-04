@@ -6,6 +6,7 @@ _description: Master the Choropleth map with the tips and tricks provided on thi
 # Working With the Choropleth Map Settings
 
 ![Settings in the Visualization editor of the choropleth map](images/choropleth-map-visualization-settings.png)
+
 In the *Settings* section of the Choropleth map visualization you can configure the following:
 
   - *Show Title* - choose whether to show the visualization’s title
@@ -19,14 +20,14 @@ In the *Settings* section of the Choropleth map visualization you can configure 
       * *Range of Values* - use a range of seven colors as a color scheme and fill the regions depending on the data value;
       * *Single Color* - use one color to display all regions that contain data. Regions, where information is missing, are grey.
 
-    >[!NOTE]
-    >If you have added a field in the *Map Color* placeholder, then the *Color as* in the *Settings* will change to *Color based on*. Find more about using the Map Color to create choropleth maps [here](choropleth-map#using-the-map-color-to-create-a-multi-color-choropleth-map).
-
+:::note
+If you have added a field in the *Map Color* placeholder, then the *Color as* in the *Settings* will change to *Color based on*. Find more about using the Map Color to create choropleth maps [here](choropleth-map#using-the-map-color-to-create-a-multi-color-choropleth-map).
+:::
   - *Show labels* - IF the selected map supports labels, you can choose whether to put them on *all* regions, only on regions that contain information (*Only when has value*), or turn them off (*None*).
 
   - *Labels are* - You can use labels to indicate the geographical names (abbreviated) of the regions by selecting *Location Abbreviation*. Alternatively, your labels can show *Values* for each area. Value labels can be displayed on the map as numbers, percent, or currency, depending on what formatting you chose for your *Value* field.
 
-  - *[Connect this visualization to another dashboard or a URL](https://www.slingshotapp.io/en/help/docs/analytics/dashboards/dashboard-linking)* - If you want to provide more details on the information displayed in the visualization, you can connect the visualization in the dashboard with other dashboards or URLs. 
+  - *[Connect this visualization to another dashboard or a URL](../dashboard-linking.md)* - If you want to provide more details on the information displayed in the visualization, you can connect the visualization in the dashboard with other dashboards or URLs. 
   
 ## Localization Settings
 
