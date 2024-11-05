@@ -1,5 +1,64 @@
 # Release Notes
 
+## 1.7.1 (Nov 5th, 2024)
+
+### New Features
+
+- Chart visualizations will automatically hide 0 value data labels.
+- Custom menu items can now be added to visualization tooltips.
+
+```csharp
+//Point to this handler: revealView.TooltipShowing += RevealView_TooltipShowing;
+private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
+{
+    Action<RVTooltipItem, TooltipItemClickEventArgs> clickHandler = (tooltipItem, args) =>
+    {
+        Console.WriteLine($"Critical action clicked by sender: {tooltipItem}, with event args: {args}");
+    };
+
+    if (e.Cell.FormattedValue == "Digital Security Center")
+    {
+        e.CustomItems.Add(new RVTooltipItem("Critical", "Escalate Incident", null, clickHandler));
+        e.CustomItems.Add(new RVTooltipItem("Critical", "Open Incident Report", null, clickHandler));
+
+        e.CustomItems.Add(new RVTooltipItem("High", "Send Reminder", null, clickHandler));
+        e.CustomItems.Add(new RVTooltipItem("High", "Assign Lead Investigator", null, clickHandler));
+    }
+}
+```
+
+- The dependency Npgsql v6.0.9 was updated to v7.0.7.
+- The dependency Microsoft.Data.SqlClient v5.1.2 was updated to v5.1.3.
+- For the Sybase connector, the dependency System.Data.SqlClient v4.7.0 was updated to v4.8.6.
+- Positioning improvements made for tooltips showing actions on hover.
+- Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
+- Performance improvements for request execution and credential resolution under high load.
+
+### Bugs
+
+- Treemap tooltip showing incorrect information.
+- Custom visualization bridge name incorrect.
+- InMemory data source opens editor directly when there is more than one data source available.
+- Date range calendar is not responsive.
+- Assigning a calculated field as a data filter doesn't work correctly for Postgres.
+- Unable to do 'sort by' with calculated fields.
+- Error sorting by a calculated field on sql based providers with "Process Data on Server" setting.
+- `trunc` function is not working fine inside concatenate.
+- Large number formatting wasn't being applied when configured to a field using the Grid visualization.
+- Wrong date formatting shown in UI when setting selected value for date visualization filter.
+- Date values reporting incorrectly on click/hover events.
+- Combo visualization doesn't calculate lowest axis minimum per axis.
+- Stacked Bar visualization displays duplicate y-axis markers when the decimal is set to 0.
+- Analysis Services dimension structure is not updated from server with Refresh.
+- When using Serilog as logger, message parameters are not properly replaced.
+- Interactive filtering is not working for Label Gauge.
+- Switching to raw data and then to another visualization causes crash.
+- Scrolling a paged row grid into view produces a crash.
+- Text visualization shows "There is no data to display".
+- Large numbers in Donut Chart are overflowing rather than shrinking.
+- The `ShowFilters` property on the RevealView, when set to `false`, does not function as intended.
+- Dragging field from hierarchy to Category crashes application.
+
 ## 1.7.0 (Sept 10th, 2024)
 
 ### New Features

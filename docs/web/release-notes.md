@@ -3,6 +3,91 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.7.1 (Nov 5th, 2024)
+
+### Breaking Changes
+
+#### All Platforms
+
+- `ChartInteractionEventArgs` has been renamed to `TooltipShowingEventArgs`.
+
+### New Features
+
+#### All Platforms
+
+- Chart visualizations will automatically hide 0 value data labels.
+- Custom menu items can now be added to visualization tooltips by adding an `RVTooltipItem` to the `customItems` property on the args pass to the `onTooltipShowing` function.
+
+```js
+revealView.onTooltipShowing = function (args) {
+    //A string pointing to the image may be used or an RVImage, such as:
+    //var caseIcon = new $.ig.RVImage("https://svgsilh.com/png-512/306879.png", "Case Icon"); 
+    var caseIcon = "https://svgsilh.com/png-512/306879.png";
+    var openIcon = "https://svgsilh.com/png-512/41335.png";
+
+    if (args.cell.formattedValue == "Digital Security Center")
+    {
+        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Escalate Incident", caseIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Open Incident Report", openIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+
+        args.customItems.push(new $.ig.RVTooltipItem("High", "Send Reminder", null, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new $.ig.RVTooltipItem("High", "Assign Lead Investigator", null, (sender, clickArgs) => { console.log("Clicked"); }));
+    }
+}
+```
+
+- Positioning improvements made for tooltips showing actions on hover.
+- URL linking now works out of the box without needing to implement `onDashboardSelectorRequested`.
+- Target setting added to the linking dialog for URLs. The target may be specified through `onUrlLinkRequested` by using the `target` property off of the args parameter.
+
+```js
+revealView.onUrlLinkRequested = (args) => {
+        args.target = "_blank";
+        return "https://www.google.com/";
+};
+```
+
+- Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
+- Improvements made to mouse wheel events to better support web component frameworks that make use of the Shadow DOM.
+- Performance improvements for request execution and credential resolution under high load.
+
+#### ASP.NET
+
+- Added support for .NET 8.0.
+- The dependency Npgsql v6.0.9 was updated to v7.0.7.
+- The dependency Snowflake.Data v1.1.4 was updated to v2.0.18.
+- For the Sybase connector, the dependency System.Data.SqlClient v4.7.0 was updated to v4.8.6.
+
+### Bugs
+
+#### All Platforms
+
+- Treemap tooltip showing incorrect information.
+- The message "There's no data to display" is displayed while data is being loaded for a preview.
+- InMemory data source opens editor directly when there is more than one data source available.
+- Date range calendar is not responsive.
+- Assigning a calculated field as a data filter doesn't work correctly for Postgres.
+- Unable to do 'sort by' with calculated fields.
+- Error sorting by a calculated field on sql based providers with "Process Data on Server" setting.
+- `trunc` function is not working fine inside concatenate.
+- Large number formatting wasn't being applied when configured to a field using the Grid visualization.
+- Wrong date formatting shown in UI when setting selected value for date visualization filter.
+- Date values reporting incorrectly on click/hover events.
+- Combo visualization doesn't calculate lowest axis minimum per axis.
+- Stacked Bar visualization displays duplicate y-axis markers when the decimal is set to 0.
+- Analysis Services dimension structure is not updated from server with Refresh.
+- Interactive filtering is not working for Label Gauge.
+- Switching to raw data and then to another visualization causes crash.
+- Scrolling a paged row grid into view produces a crash.
+- Text visualization shows "There is no data to display".
+- Large numbers in Donut Chart are overflowing rather than shrinking.
+- The `showFilters` property on the RevealView, when set to `false`, does not function as intended.
+- Dragging field from hierarchy to Category crashes application.
+
+#### ASP.NET
+
+- When using Serilog as logger, message parameters are not properly replaced
+
 ## 1.7.0 (Sept 10th, 2024)
 
 ### Breaking Changes
