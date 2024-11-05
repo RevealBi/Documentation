@@ -19,14 +19,14 @@ spreadsheet.*
 
 The functions included in the logic category are:
 
-| **Function Name** | **Syntax and Sample** |
-|-------------------|-----------------------|
-| [**and**](https://www.revealbi.io/help/logic.html#calc-fields-and-or): `and` runs two logical tests. If the logical test is true, it returns 1. If one or both are false, it returns 0. | **Syntax**: `and({logical1},{logical2})`**Sample**: `and([BirthDate]>date(1983, 07, 15, 04, 06, 55),[Department]="CPA")` |
-| [**false**](https://www.revealbi.io/help/logic.html#true-false): `false` returns 0, the logical value of false. | **Syntax**: `false()`**Sample**: `false()` |
-| [**if**](https://www.revealbi.io/help/logic.html#calc-fields-if): `if` runs a logical test. If the logical test is true, it returns 1. If the logical test is false, it returns 0. | **Syntax**: `if({logical test},{value if true},{value if false})`**Sample**: `if([BirthDate]<(1971,04,15,4,06,55),1,0)` |
-| [**not**](https://www.revealbi.io/help/logic.html#calc-fields-not): `not` runs a logical test. If the logical test is false, it returns 1. If the logical test is true, it returns 0. | **Syntax**: `not({logical})`**Sample**: `not([OfficeId]>=3)` |
-| [**or**](https://www.revealbi.io/help/logic.html#calc-fields-and-or): `or` runs two logical tests (if statements). If either one of the logical tests is true, it returns 1. If both are false, it returns 0. | **Syntax**: `or({logical1},{logical2})`**Sample**: `or(if([Office]="London,UK",1,0),if([BirthDate]<date(1992,09,15,4,06,55),1,0))` |
-| [**true**](https://www.revealbi.io/help/logic.html#true-false): `true` returns 1, the logical value of true. | **Syntax**: `true()`**Sample**: `true()` |
+| **Function Name**                                                                                                                                              | **Syntax and Sample** |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
+| [**and**](#and-and-or): `and` runs two logical tests. If the logical test is true, it returns 1. If one or both are false, it returns 0.                       | **Syntax**: `and({logical1},{logical2})`<br />**Sample**: `and([BirthDate]>date(1983, 07, 15, 04, 06, 55),[Department]="CPA")` |
+| [**false**](#true-and-false): `false` returns 0, the logical value of false.                                                                                                 | **Syntax**: `false()`<br />**Sample**: `false()` |
+| [**if**](#if): `if` runs a logical test. If the logical test is true, it returns 1. If the logical test is false, it returns 0.                                | **Syntax**: `if({logical test},{value if true},{value if false})`<br />**Sample**: `if([BirthDate]<(1971,04,15,4,06,55),1,0)` |
+| [**not**](#not): `not` runs a logical test. If the logical test is false, it returns 1. If the logical test is true, it returns 0.                             | **Syntax**: `not({logical})`<br />**Sample**: `not([OfficeId]>=3)` |
+| [**or**](#and-and-or): `or` runs two logical tests (if statements). If either one of the logical tests is true, it returns 1. If both are false, it returns 0. | **Syntax**: `or({logical1},{logical2})`<br />**Sample**: `or(if([Office]="London,UK",1,0),if([BirthDate]<date(1992,09,15,4,06,55),1,0))` |
+| [**true**](#true-and-false): `true` returns 1, the logical value of true.                                                                                      | **Syntax**: `true()`<br />**Sample**: `true()` |
 
 
 <a name='calc-fields-if'></a>
