@@ -7,10 +7,9 @@ _description: Check out some useful tips and samples, as well as useful cases yo
 
 This topic includes the following information:
 
-- [Samples, Tips, and Useful Cases](#)
-  - [Basic Sample Expressions](#basic-sample-expressions)
-  - [Converting Unix TimeStamps to Usable Dates](#converting-unix-timestamps-to-usable-dates)
-  - [YoY Analysis: Comparing Revenue Figures for a 2-Year Period](#yoy-analysis-comparing-revenue-figures-for-a-2-year-period)
+- [Basic Sample Expressions](#basic-sample-expressions)
+- [Converting Unix TimeStamps to Usable Dates](#converting-unix-timestamps-to-usable-dates)
+- [YoY Analysis: Comparing Revenue Figures for a 2-Year Period](#yoy-analysis-comparing-revenue-figures-for-a-2-year-period)
 
 <a name='basic-sample-expressions'></a>
 ## Basic Sample Expressions
@@ -19,13 +18,13 @@ The following are a set of calculated field sample expressions.
 
 
 | Function Name              | Sample Dataset to Test Function                                                               | Expression                                                        | Sample Output                          |
-| -------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------- |
-| **Opposite Value**         | [HR Dataset](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) | \-[Wage]                                                          | \-36,542.00 (for Joan Baez)            |
-| **Age**                    | [HR Dataset](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) | (today()-[BirthDate])/365                                         | 50.13 (for Joan Baez)                  |
-| **Name & Department**      | [HR Dataset](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) | [Fullname]& ", " &[Department]                                    | Joan Baez, Development (for Joan Baez) |
-|**Sales Percentage** | [Sample Data](http://dl.infragistics.com/reportplus/reveal/samples/Samples.xlsx)    | [New Sales]*100/sum([New Sales]) | 9,26% (for Japan)                    |
-| **Name starts with J**     | [HR Dataset](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) | if(find("j",lower([Fullname]),1)=1,"Starts with J",0)             | Starts with J, 0                       |
-| **Deviation from Avg**     | [HR Dataset](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
+| -------------------------- |-----------------------------------------------------------------------------------------------| ----------------------------------------------------------------- | -------------------------------------- |
+| **Opposite Value**         | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx)                                                        | \-[Wage]                                                          | \-36,542.00 (for Joan Baez)            |
+| **Age**                    | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | (today()-[BirthDate])/365                                         | 50.13 (for Joan Baez)                  |
+| **Name & Department**      | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Fullname]& ", " &[Department]                                    | Joan Baez, Development (for Joan Baez) |
+|**Sales Percentage** | [Sample Data](http://dl.infragistics.com/reportplus/reveal/samples/Samples.xlsx)              | [New Sales]*100/sum([New Sales]) | 9,26% (for Japan)                    |
+| **Name starts with J**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | if(find("j",lower([Fullname]),1)=1,"Starts with J",0)             | Starts with J, 0                       |
+| **Deviation from Avg**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
 
 <a name='converting-unix-timestamps'></a>
 ## Converting Unix TimeStamps to Usable Dates
