@@ -8,11 +8,10 @@ _description: A quick tutorial on creating an a KPI gauge visualization using a 
 In this tutorial, you will learn how to a KPI gauge visualization using
 a sample spreadsheet.
 
-|   |   |
+| ![KPIGaugeSimple All](images/KPIGaugeSimple_All.png) <br/> [KPI Gauge](#creating-a-kpi-gauge) | ![TutorialMultipleKPIGauges All](images/TutorialMultipleKPIGauges_All.png) <br/> [Multiple KPI Gauges](#creating-multiple-kpi-gauges-in-one-visualization) |
 |:-:|:-:|
-| ![KPIGaugeSimple All](images/KPIGaugeSimple_All.png) <br></br> [KPI Gauge](#creating-a-kpi-gauge) | ![TutorialMultipleKPIGauges All](images/TutorialMultipleKPIGauges_All.png) <br></br> [Multiple KPI Gauges](#creating-multiple-kpi-gauges-in-one-visualization) |
-| ![KPIGaugePreviousMonth All](images/KPIGaugePreviousMonth_All.png) <br></br> [Month-over-Month KPI Gauge](#changing-the-date-comparison-type) | ![KPIGaugeValuePercentage All](images/KPIGaugeValuePercentage_All.png) <br></br> [KPI Gauge with Value and Percentage differences](#changing-the-difference-labels-for-the-kpi-gauge) |
-| ![KPIGaugeDifferenceColor All](images/KPIGaugeDifferenceColor_All.png) <br></br> [KPI Gauge with a green marker when the value decreased](#changing-the-color-of-the-difference-marker) | |
+| ![KPIGaugePreviousMonth All](images/KPIGaugePreviousMonth_All.png) <br/> [Month-over-Month KPI Gauge](#changing-the-date-comparison-type) | ![KPIGaugeValuePercentage All](images/KPIGaugeValuePercentage_All.png) <br/> [KPI Gauge with Value and Percentage differences](#changing-the-difference-labels-for-the-kpi-gauge) |
+| ![KPIGaugeDifferenceColor All](images/KPIGaugeDifferenceColor_All.png) <br/> [KPI Gauge with a green marker when the value decreased](#changing-the-color-of-the-difference-marker) | |
 
 ## Key Concepts
 
