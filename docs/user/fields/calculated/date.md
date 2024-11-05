@@ -1,5 +1,5 @@
 ---
-title: How to Use Date Calculated Fields in Slingshot
+title: How to Use Date Calculated Fields in Reveal
 _description: Learn how to use Date Calculated Fields to output different date and time information.
 ---
 
@@ -46,7 +46,7 @@ The functions included in the date category are:
 <a name='date-date'></a>
 ## Date
 
-When you use `date`, Analytics will return a date set to the values you
+When you use `date`, Reveal will return a date set to the values you
 include in your formula.
 
 ### Syntax
@@ -77,7 +77,7 @@ sure you respect the order of the elements in the formula:
 <a name='date-time'></a>
 ## Time
 
-When you use time, Analytics will return a time set to the values you
+When you use time, Reveal will return a time set to the values you
 include in your formula.
 
 ### Syntax
