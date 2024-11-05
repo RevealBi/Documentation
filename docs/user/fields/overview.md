@@ -1,5 +1,5 @@
 ---
-title: How to use Fields in Slingshot 
+title: How to use Fields in Reveal 
 _description: Learn to options to easily apply transformations to the fields in your dataset.
 ---
 
