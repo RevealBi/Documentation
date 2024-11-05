@@ -20,9 +20,11 @@ In Reveal, aggregation calculated fields include:
 - **Standard functions with if conditions**: [this section](#aggregation-if-condition) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#nested-if-conditions)) and how you need to structure
   it.
 
-**Note:** *All samples included in the table below were created with the
+:::note
+*All samples included in the table below were created with the
 [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)
 spreadsheet.*
+:::
 
 The functions included in the aggregation category are:
 
