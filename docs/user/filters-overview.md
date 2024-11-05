@@ -1,6 +1,6 @@
 ---
-title: Filters in Slingshot Analytics – All You Need to Know
-_description: Learn all about dashboard filters, add datasets and make each visualization unique in Slingshot Analytics.
+title: Filters in Reveal – All You Need to Know
+_description: Learn all about dashboard filters, add datasets and make each visualization unique in Reveal.
 ---
 
 # Filters
@@ -18,7 +18,7 @@ by the user browsing the information in that dashboard.
 
 ![Dashboard filter by location added in the Dashboard editor](images/sample-dashboard-filters.png)
 
-Analytics also supports activating a Date Range as a Dashboard Filter,
+Reveal also supports activating a Date Range as a Dashboard Filter,
 which enables the filtering of all visualizations by a specific period
 of time.
 
