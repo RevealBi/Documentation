@@ -13,9 +13,11 @@ In Reveal, logic calculated fields include:
   - **Complex functions with logical tests**. For detailed information
     on each function, click the corresponding link in the table below.
 
-**Note:** *All samples included in the table below were created with the
+:::note
+*All samples included in the table below were created with the
 [HR Dataset 2016](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx)
 spreadsheet.*
+:::
 
 The functions included in the logic category are:
 
