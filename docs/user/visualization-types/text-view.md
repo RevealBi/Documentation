@@ -1,6 +1,6 @@
 ---
 title: How to Create Text View Visualization
-_description: Find out how to create and use Text View visualization in Slingshot Analytics.
+_description: Find out how to create and use Text View visualization in Reveal.
 ---
 
 # Text View
@@ -15,6 +15,6 @@ specifications, a person's contact information, etc.
 
 ![Text View in the Visualization editor](images/visualization-editor-text-view.png)
 
-The *Text View* supports *conditional formatting*, as explained in [this section](text-view).
+The *Text View* supports *conditional formatting*.
 
 ![Using conditional formatting for a text view visualization](images/text-view-conditional-formatting.png)
