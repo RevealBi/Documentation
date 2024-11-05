@@ -9,14 +9,6 @@ In this tutorial, you will learn how to create a *Candlestick chart* visualizati
 
 ![A sample with different candlestick charts](images/different-candlestick-charts.png)
 
-Access the links below for the Candlestick chart view walkthroughs:
-
-  - [How to create a Candlestick chart](/docs/user/tutorials-candlestick.md#creating-a-candlestick-chart)
-
-  - [How to change your axis configuration](/docs/user/tutorials-candlestick.md#changing-your-axis-configuration)
-
-  - [How to set your axis configuration to logarithmic](/docs/user/tutorials-candlestick.md#setting-your-axis-configuration-as-logarithmic)
-
 ## Key Concepts
 
 Like [OHLC](tutorials-ohlc) Charts, Candlestick charts are meant to
