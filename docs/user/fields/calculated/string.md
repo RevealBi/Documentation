@@ -12,17 +12,17 @@ texts to get different results.
 
 The functions included in the String category are:
 
-| **Function Name** | **Syntax and Sample** |
-|-------------------|-----------------------|
-| **concatenate**: `concatenate` allows you to join multiple strings of `text` to form a phrase. Spaces are not automatically included, so make sure you include them in your text arguments if necessary. | **Syntax**: `concatenate()`**Sample**: `concatenate("Getting started", " with", " the", " Analytics", " application")` |
-| **find**: `find` returns the starting position (`number`) of a first string of `text` in a second string if `text` as specified in your arguments. | **Syntax**: `find({find text},{within text},{start number})`**Sample**: `find("with","Getting Started with Analytics visualizations",3)` |
-| **len**: `len` returns the number of characters in the string of `text` you enter. | **Syntax**: `len({text})`**Sample**: `len("Getting Started with Analytics")` |
-| **lower**: `lower` converts all upper case characters in a given `text` string to lower case. | **Syntax**: `lower({text})`**Sample**: `lower("Getting Started with Analytics")` |
-| **mid**: `mid` returns a substring (`length`) of the specified string of `text` according to what you configure in your arguments. | **Syntax**: `mid({text},{start},{length})`**Sample**: `mid("Getting Started with Analytics",9,12)` |
-| **replace**: `replace` replaces a given string of `text` with a different `text` as specified in your arguments. | **Syntax**: `replace({text},{old text},{new text})`**Sample**: `replace("Getting Started with Analytics","Getting Started","Creating Visualizations with")` |
+| **Function Name** | **Syntax and Sample**                                                                                                                                                     |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **concatenate**: `concatenate` allows you to join multiple strings of `text` to form a phrase. Spaces are not automatically included, so make sure you include them in your text arguments if necessary. | **Syntax**: `concatenate()`**Sample**: `concatenate("Getting started", " with", " the", " Reveal", " application")`                                                       |
+| **find**: `find` returns the starting position (`number`) of a first string of `text` in a second string if `text` as specified in your arguments. | **Syntax**: `find({find text},{within text},{start number})`**Sample**: `find("with","Getting Started with Reveal visualizations",3)`                                     |
+| **len**: `len` returns the number of characters in the string of `text` you enter. | **Syntax**: `len({text})`**Sample**: `len("Getting Started with Reveal")`                                                                                                 |
+| **lower**: `lower` converts all upper case characters in a given `text` string to lower case. | **Syntax**: `lower({text})`**Sample**: `lower("Getting Started with Reveal")`                                                                                             |
+| **mid**: `mid` returns a substring (`length`) of the specified string of `text` according to what you configure in your arguments. | **Syntax**: `mid({text},{start},{length})`**Sample**: `mid("Getting Started with Reveal",9,12)`                                                                           |
+| **replace**: `replace` replaces a given string of `text` with a different `text` as specified in your arguments. | **Syntax**: `replace({text},{old text},{new text})`**Sample**: `replace("Getting Started with Reveal","Getting Started","Creating Visualizations with")`               |
 | **sortinterval**: `sortinterval` returns a value in a(n) interval(s) according to what is configured in the arguments. The string is returned with format `NN [from,to]` | **Syntax**: `sortinterval()`**Sample 1**: `sortinterval(33,140)`**Sample 2**: `sortinterval([Wage],150000)`**Sample 3**: `sortinterval([Wage],50000,80000,110000,140000)` |
-| **trim**: `trim` returns the same string of `text` you enter; however, it will remove any leading or trailing whitespaces, and will only keep the spaces between words. | **Syntax**: `trim({text})`**Sample**: `trim(" Getting Started with Analytics ")` |
-| **upper**: `upper` converts all lower case characters in a given `text` string to upper case. | **Syntax**: `upper({text})`**Sample**: `upper("Caution: Hot. Do not touch")` |
+| **trim**: `trim` returns the same string of `text` you enter; however, it will remove any leading or trailing whitespaces, and will only keep the spaces between words. | **Syntax**: `trim({text})`**Sample**: `trim(" Getting Started with Reveal ")`                                                                                          |
+| **upper**: `upper` converts all lower case characters in a given `text` string to upper case. | **Syntax**: `upper({text})`**Sample**: `upper("Caution: Hot. Do not touch")`                                                                                              |
 
 
 <a name='calc-fields-find'></a>
@@ -47,7 +47,7 @@ Let's take a look at the sample included in the table above:
 
 | Function Name | Find Text | Within Text                                    | Start Number | Output |
 | ------------- | --------- | ---------------------------------------------- | ------------ | ------ |
-| find(…​)      | `"with"`  | `"Getting Started with Analytics visualizations"` | `3`          | 15     |
+| find(…​)      | `"with"`  | `"Getting Started with Reveal visualizations"` | `3`          | 15     |
 
 The search will start in the first `t` of `Getting`. The resulting 15 is
 the character number where the `w` in `with` is located.
@@ -81,7 +81,7 @@ Let's take a look at the sample included in the table above:
 
 | Function Name | Text                            | Start | Length | Output       |
 | ------------- | ------------------------------- | ----- | ------ | ------------ |
-| mid(…​)       | `"Getting Started with Analytics"` | `9`   | `12`   | Started with |
+| mid(…​)       | `"Getting Started with Reveal"` | `9`   | `12`   | Started with |
 
 The output is `Started with` because of what is in the text string
 starting at character 9 and lasting 12 characters:
@@ -112,7 +112,7 @@ Let's look at the following sample:
 
 | Function Name | Text                                                                                                                         | Old Text   | New Text        | Output                                                                                                                                      |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| replace(…​)   | `"Using Analytics for iOS can be fast and easy. First, open the AppStore and look for Analytics. Then, install it. You're ready!"`  | `"Analytics"` | `"our BI tool"` | Using **our BI tool** for iOS can be fast and easy. First, open the AppStore and look for **our BI tool**. Then, install it. You're ready\! |
+| replace(…​)   | `"Using Reveal for iOS can be fast and easy. First, open the AppStore and look for Reveal. Then, install it. You're ready!"`  | `"Reveal"` | `"our BI tool"` | Using **our BI tool** for iOS can be fast and easy. First, open the AppStore and look for **our BI tool**. Then, install it. You're ready\! |
 
 Note that the old text got replaced both times; **make sure you consider
 that the term will be changed every time it appears before you change
