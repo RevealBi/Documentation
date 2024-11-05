@@ -3,9 +3,9 @@ title: How to Use Statistical Functions
 _description: Learn how to use the Statistical function to receive more insights from your visualizations.
 ---
 
-# Statistical Functions in Analytics
+# Statistical Functions in Reveal
 
-Analytics's Statistical functions allow you to receive more insight from
+Reveal's Statistical functions allow you to receive more insight from
 your visualizations. They provide you with three types of advanced
 predictive analysis. You can use the [*Time series forecast*](#time-series-forecast), [*Linear regression*](#linear-regression) and [*Detect outliers*](#detect-outliers)
 to make predictions, recognize and evaluate trends, or discover outliers
@@ -26,8 +26,9 @@ you need to:
 
 ![Statistical functions icon](images/statistical-functions-enable-icon.png)
 
->[!NOTE] **Enabling/Disabling Functions**.You can have only one of the three functions enabled for a visualization at the same time. Click the enabled function again to turn it off or select another function from the list to switch to.
-
+:::note
+**Enabling/Disabling Functions**: You can have only one of the three functions enabled for a visualization at the same time. Click the enabled function again to turn it off or select another function from the list to switch to.
+:::
 ## Statistical Functions Types
 
 The table below explains what every function is used for, the algorithm
@@ -67,7 +68,7 @@ To achieve the forecast shown above, perform the following steps:
         field is measured in days, month or years.
 
         In time series data, **a season is a specific regular interval at which variations occur**. The Exponential smoothing algorithm
-        in Analytics computes an evolving trend and uses a seasonal
+        in Reveal computes an evolving trend and uses a seasonal
         adjustment to equate it.
 
         For example, the sales of ski accessories varies within a year -
@@ -77,7 +78,9 @@ To achieve the forecast shown above, perform the following steps:
 
     * **Periods to Forecast** - select **the number of days, months or years**, for which you want your data predicted. The time unit for the periods is determined based on whether your *Date* field is measured in days, month or years.
 
->[!NOTE] **Minimum data available for the Time series function**. Your visualization must contain a minimum of two seasons of data, otherwise you won't be able to use the Time series function. This means that if your season length is 12 months, you should have data for at least 24 months, if it is 6 months - data for at least 12, etc.
+:::note
+**Minimum data available for the Time series function**: Your visualization must contain a minimum of two seasons of data, otherwise you won't be able to use the Time series function. This means that if your season length is 12 months, you should have data for at least 24 months, if it is 6 months - data for at least 12, etc.
+:::
 
 The forecast is visualized by a line and a shaded area around it. The
 line displays the prediction and the **shaded area** shows the range in
@@ -89,7 +92,9 @@ values are highlighted in yellow (see below).
 
 ![Underlying data in table format with highlighted forecasted data](images/underlying-data-time-series.png)
 
->[!NOTE] **The Time series function is available only for charts over time**. If your visualization does not contain a *Date* field, you will receive an error when you try using the Time series function.
+:::note
+**The Time series function is available only for charts over time**: If your visualization does not contain a *Date* field, you will receive an error when you try using the Time series function.
+:::
 
 <a name='linear-regression'></a>
 ### Linear regression
