@@ -1,5 +1,5 @@
 ---
-title: How to Create Sparkline Charts Visualization in Slingshot
+title: How to Create Sparkline Charts Visualization in Reveal
 _description: A quick tutorial on creating Sparkline Charts visualization using a sample spreadsheet.
 ---
 
@@ -12,16 +12,6 @@ using a sample spreadsheet.
 ![Sparkline Area Chart example](images/sparkline-area-chart.png)
 ![Sparkline with Day Aggregation example](images/sparkline-with-day-aggregation.png)
 ![Sparkline with less columns and area chart example](images/sparkline-with-less-columns-and-area-chart.png)
-
-Access the links below for the Sparkline chart view walkthroughs:
-
-  - [How to create a Sparkline chart](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/sparkline-charts#creating-a-sparkline-chart)
-
-  - [How to change the chart type for the Sparkline](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/sparkline-charts#changing-the-chart-type-for-the-sparkline)
-
-  - [How to change the date aggregation](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/sparkline-charts#changing-the-date-aggregation)
-
-  - [How to modify the amount of columns in the Sparkline](https://www.slingshotapp.io/en/help/docs/analytics/visualization-tutorials/sparkline-charts#modifying-the-amount-of-columns-in-the-sparkline)
 
 ## Key Concepts
 
@@ -55,27 +45,31 @@ form of:
 ## Sample Data Source
 
 For this tutorial, you will use the *Sparkline Charts* sheet
-in the [Slingshot Visualization Tutorials](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
 ## Creating a Sparkline Chart
 
 
-1. Select the **+ Dashboard** button in the top right-hand corner of **My Analytics**.
+1. Choose **Edit** in overflow menu.
 
-   ![Tutorials-Create-New-Dashboard](images/dashboard-button-my-analytics.png)  
+   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
-2. Select your data source(**Slingshot Tutorials Spreadsheet**) from the list of data sources. If the data source is new, you will need to first add it from the **+ Data Source** button in the top-right corner.
+2. Select the **+ Visualization** button in the top right-hand corner.
 
-   ![Tutorials-Select-Data-Source](images/visualization-tutorials-sample.png)                                         
+   ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select the **Sparkline Charts** sheet.
+3. Select your data source from the list of data sources.
 
-   ![Tutorials-Select-Sparkline-Charts-Spreadsheet.png](images/sparkline-charts-spreadsheet.png)                         
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
 
-4. Open the *Visualization Picker* and select the **Sparkline Chart**. By default, the visualization type will be set to **Column**.                                                                             
+4. Select the **Sparkline Charts** sheet.
+
+   ![Tutorials-Select-Sparkline-Charts-Spreadsheet.png](images/sparkline-charts-spreadsheet.png)   
+   
+5. Open the *Visualization Picker* and select the **Sparkline Chart**. By default, the visualization type will be set to **Column**.                                                                             
   ![Tutorials-Charts-Select-Sparkline-Chart](images/chart-types-sparkline.png)                                                     
   
-5. Drag and drop the *Date* field into **Date**, *Offer* into **Value** and *Stocks* into **Category**.
+6. Drag and drop the *Date* field into **Date**, *Offer* into **Value** and *Stocks* into **Category**.
 
    ![Tutorials-SparklineChart-Organizing-Data](images/sparkline-charts-organizing-data.png)                                                                      
 
@@ -105,7 +99,7 @@ next to the date's aggregation.
 
 ## Modifying the amount of columns in the Sparkline
 
-In Slingshot, the amount of columns in the visualization is defined by
+In Reveal, the amount of columns in the visualization is defined by
 whether or not you want to display the last two months and the
 difference between them. By default, these will be enabled. In order to
 remove them:
