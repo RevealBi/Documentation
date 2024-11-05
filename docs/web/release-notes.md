@@ -58,6 +58,10 @@ revealView.onUrlLinkRequested = (args) => {
 - The dependency Snowflake.Data v1.1.4 was updated to v2.0.18.
 - For the Sybase connector, the dependency System.Data.SqlClient v4.7.0 was updated to v4.8.6.
 
+#### Java
+
+- A new method `public InitializeParameterBuilder setCachePath(String path)` was added to `InitializeParameterBuilder` to allow customization of the cache files location.
+
 ### Bugs
 
 #### All Platforms
