@@ -1,5 +1,5 @@
 ---
-title: How to Use Aggregation Calculated Fields in Slingshot
+title: How to Use Aggregation Calculated Fields in Reveal
 _description: Learn how to use Aggregation formulas with different variants and tricks.
 ---
 
@@ -13,7 +13,7 @@ calculate different values you are focused on (`average`, for example),
 find top and bottom values (`max` and `min`), etc. **All formulas are**,
 therefore, **meant to be used with numerical fields only**.
 
-In Analytics, aggregation calculated fields include:
+In Reveal, aggregation calculated fields include:
 
   - **Standard functions**: for information on each one, click the corresponding hyperlink under "Function Name."
 
@@ -21,7 +21,7 @@ In Analytics, aggregation calculated fields include:
     it.
 
 **Note:** *All samples included in the table below were created with the
-[HR Dataset 2016](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx)
+[HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)
 spreadsheet.*
 
 The functions included in the aggregation category are:
