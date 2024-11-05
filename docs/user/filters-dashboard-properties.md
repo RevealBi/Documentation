@@ -36,11 +36,13 @@ You will be able to change the following settings for the filter:
 
 - <a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#">field filters and rules</a> to the data source used for the dashboard filter.
 
-- <a href="filters-connecting.md">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.
+- <a href="filters-connecting">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.
 
 ## Displayed Field
 
->[!NOTE] For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **Displayed Element**.
+:::note
+For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **Displayed Element**.
+:::
 
 The *Displayed Field/Element* setting specifies the dataset field that will be used to display
 the values in the *Dashboard Filters*. Listed values will not be repeated
@@ -52,7 +54,7 @@ You can change the displayed column in *Edit mode* by selecting the *Edit* butto
 
 ## Multiple Selection
 
-Analytics supports the selection of multiple dashboard filter values
+Reveal supports the selection of multiple dashboard filter values
 simultaneously. This is meant to enable side by side comparison between different elements in a collection. For instance, in the *HR Dashboard* dashboard you can compare the hires and absences over time of different
 offices by enabling multiple selection.
 
