@@ -10,19 +10,6 @@ using a sample spreadsheet.
 
 ![Different Gauge Visualizations](images/different-gauge-visualizations.png)
 
-Access the links below for the gauge view walkthroughs:
-
-- [Creating Gauge Visualizations](#creating-gauge-visualizations)
-  - [Key Concepts](#key-concepts)
-  - [Sample Data Source](#sample-data-source)
-  - [Creating a Linear Gauge](#creating-a-linear-gauge)
-  - [Creating a Circular Gauge](#creating-a-circular-gauge)
-  - [Creating a Text Gauge](#creating-a-text-gauge)
-  - [Creating a Bullet Graph](#creating-a-bullet-graph)
-  - [Adding Bounds to your Gauge](#adding-bounds-to-your-gauge)
-  - [Changing Band Colors](#changing-band-colors)
-
-<a name='key-concepts'></a>
 ## Key Concepts
 
 There are two different layouts to choose from when using gauge charts:
