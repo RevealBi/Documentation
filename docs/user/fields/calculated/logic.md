@@ -5,7 +5,7 @@ Logic calculated fields can be used to compare two or more values in
 your data source. They always return "0" or "1", depending on the
 logical test you submit your values to.
 
-In Analytics, logic calculated fields include:
+In Reveal, logic calculated fields include:
 
   - **Functions with no arguments**: `true()` and `false()`, which
     return 1 and 0 respectively.
