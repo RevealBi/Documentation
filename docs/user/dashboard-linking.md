@@ -66,12 +66,12 @@ visualization link:
 
 ![Linking to  URL in a new link dialog](images/linking-to-url.png)
 
-The URL has been set to `http://www.en.wikipedia.org/wiki`, and in this case we selected the *variable* **EmployeeName**. Therefore, users who select
+The URL has been set to `http://www.en.wikipedia.org/wiki`, and in this case we selected the *variable* **CampaignID**. Therefore, users who select
 the **Navigate to Wiki** link in the visualization will be redirected to:
 
-`http://www.en.wikipedia.org/wiki/[EmployeeName].htm`
+`http://www.en.wikipedia.org/wiki/[CampaignID].htm`
 
-Where `[EmployeeName]` will vary depending on the values in the **EmployeeName** field.
+Where `[CampaignID]` will vary depending on the values.
 
 :::info **Testing the Example.**
 To test how adding variables work, use the **Marketing Dashboard**. Choose a *Conversions by Campaign* visualization in it which contains the *CampaignID* data field and add the URL as shown in the screenshot. Save the visualization and in *Dashboard Edit* mode click on different parts of the funnel visualization to see how the URL you are redirected to changes. 
