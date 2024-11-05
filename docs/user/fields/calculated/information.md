@@ -10,10 +10,10 @@ a selected field. They are particularly useful with large spreadsheets because y
 
 The functions included in the information category are:
 
-| **Function Name** | **Syntax and Sample** |
-|-------------------|-----------------------|
-| **empty**: `empty` can be used to insert a column with empty cells. There are no arguments to configure. | **Syntax**: `empty()`**Sample**: `empty()` |
-| [**isempty**](https://www.revealbi.io/help/information-calculated-fields#calculated-isempty): `isempty` evaluates the specified `expression`, and checks if any row in your data source has empty values. | **Syntax**: `isempty({value})`**Sample**: `isempty([ResignedDate])` |
+| **Function Name**                                                                                                                    | **Syntax and Sample**                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **empty**: `empty` can be used to insert a column with empty cells. There are no arguments to configure.                             | **Syntax**: `empty()`<br/>**Sample**: `empty()`                     |
+| [**isempty**](#isempty): `isempty` evaluates the specified `expression`, and checks if any row in your data source has empty values. | **Syntax**: `isempty({value})`<br/>**Sample**:`isempty([ResignedDate])` |
 
 
 
