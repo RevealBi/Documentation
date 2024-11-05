@@ -21,7 +21,7 @@ In Reveal, aggregation calculated fields include:
     it.
 
 :::note
-*All samples included in the table below were created with the [HR Dataset 2016](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) spreadsheet.*
+*All samples included in the table below were created with the [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx) spreadsheet.*
 :::
 
 The functions included in the aggregation category are:
