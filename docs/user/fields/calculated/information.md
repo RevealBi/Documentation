@@ -1,5 +1,5 @@
 ---
-title: How to Use Information Calculated Fields in Slingshot 
+title: How to Use Information Calculated Fields in Reveal 
 _description: Learn how to utilize and test the value of a selected field through Information Calculated Fields.
 ---
 
@@ -30,7 +30,7 @@ be 1; if there are values, you will see 0.
 | ------------- | ------------------ | ------------------------- |
 | isempty       | `isempty({value})` | `isempty([ResignedDate])` |
 
-Let's look at four lines in the `HR Dataset 2016.xlsx` spreadsheet.
+Let's look at four lines in the [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx) spreadsheet.
 
 | EmployeeID | FullName          | …​ | Resigned Date   | …​ | Calculated Field |
 | ---------- | ----------------- | -- | --------------- | -- | ---------------- |
