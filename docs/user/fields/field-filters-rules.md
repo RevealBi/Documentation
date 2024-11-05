@@ -1,6 +1,6 @@
 ---
 title: How to apply Field Filters and Rules to Dataset 
-_description: Learn how to apply filters or rules to your dataset in Slingshot while creating visualizations.
+_description: Learn how to apply filters or rules to your dataset in Reveal while creating visualizations.
 ---
 
 # Field Filters and Rules
@@ -14,7 +14,7 @@ from the dropdown menu to access the *Data Filter* window.
 <a name='empty-values'></a>
 ## Filter Empty Values
 
-Analytics provides the ability to filter rows in the dataset that have null
+Reveal provides the ability to filter rows in the dataset that have null
 or empty values on a specific column by enabling the filter empty values
 configuration setting on a specific column.
 
@@ -118,6 +118,6 @@ entered in a text box in the same position.
 
 ## Filtering Fields in Values
 
-You can filter your *Values* by [aggreggation](https://www.slingshotapp.io/en/help/docs/analytics/data-visualizations/fields/calculated-fields/aggregation). Then this value will appear with the same aggregation in the list of fields in the **Data Filters** placeholder.
+You can filter your *Values* by [aggreggation](./calculated/aggregation.md). Then this value will appear with the same aggregation in the list of fields in the **Data Filters** placeholder.
 
 ![Data Filters Filtering in the Data Editor](images/data-filters-values-list.png)

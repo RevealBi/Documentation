@@ -244,6 +244,7 @@ const sidebars: SidebarsConfig = {
           { type: "doc", label: "Sort by Field", id: "user/fields/sort-by-field" },
           { type: "doc", label: "Ad-Hoc Hierarchies", id: "user/fields/adhoc-hierarchies" },
           { type: "doc", label: "Conditional Formatting", id: "user/fields/conditional-formatting" },
+          { type: "doc", label: "Field Filters and Rules", id: "user/fields/field-filters-rules" },
           { type: "category", label: "Calculated Fields ", link: { type: "doc", id: "user/fields/calculated/overview" }, items: [
             { type: "doc", label: "Aggregation", id: "user/fields/calculated/aggregation" },
             { type: "doc", label: "Date", id: "user/fields/calculated/date" },
