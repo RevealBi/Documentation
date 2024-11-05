@@ -20,10 +20,9 @@ The *Sort by field* option is part of the fields settings, but is hidden by defa
 For more practical information, take a look at the following examples
 that showcase this functionality:
 
-- [Sort by Field](#)
-  - [Enabling Sort by Field](#enabling-sort-by-field)
-  - [Ordering Support Cases by Priority](#ordering-support-cases-by-priority)
-  - [Ordering String Dates in Chronological Order](#ordering-string-dates-in-chronological-order)
+- [Enabling Sort by Field](#enabling-sort-by-field)
+- [Ordering Support Cases by Priority](#ordering-support-cases-by-priority)
+- [Ordering String Dates in Chronological Order](#ordering-string-dates-in-chronological-order)
 
 <a name='by-priority'></a>
 ## Ordering Support Cases by Priority
@@ -59,6 +58,7 @@ prevail. Select the **Month Name** field in the label placeholder of the
 data editor, and select your desired sorting.
 
 ![Sort by option with a list of different fields in the field settings dialog](images/field-settings-sort-by.png)
+
 Once done, select **Update Field**. Your information will now be ordered
 in chronological order.
 
