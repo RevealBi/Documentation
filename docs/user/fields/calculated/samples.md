@@ -17,12 +17,12 @@ This topic includes the following information:
 The following are a set of calculated field sample expressions.
 
 
-| Function Name              | Sample Dataset to Test Function                                                               | Expression                                                        | Sample Output                          |
-| -------------------------- |-----------------------------------------------------------------------------------------------| ----------------------------------------------------------------- | -------------------------------------- |
-| **Opposite Value**         | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx)                                                        | \-[Wage]                                                          | \-36,542.00 (for Joan Baez)            |
+| Function Name              | Sample Dataset to Test Function        | Expression                                                        | Sample Output                          |
+| -------------------------- |----------------------------------------| ----------------------------------------------------------------- | -------------------------------------- |
+| **Opposite Value**         | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | \-[Wage]                                                          | \-36,542.00 (for Joan Baez)            |
 | **Age**                    | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | (today()-[BirthDate])/365                                         | 50.13 (for Joan Baez)                  |
 | **Name & Department**      | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Fullname]& ", " &[Department]                                    | Joan Baez, Development (for Joan Baez) |
-|**Sales Percentage** | [Sample Data](http://dl.infragistics.com/reportplus/reveal/samples/Samples.xlsx)              | [New Sales]*100/sum([New Sales]) | 9,26% (for Japan)                    |
+|**Sales Percentage** | [Samples](../../../../static/data/Samples.xlsx)                                       | [New Sales]*100/sum([New Sales]) | 9,26% (for Japan)                    |
 | **Name starts with J**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | if(find("j",lower([Fullname]),1)=1,"Starts with J",0)             | Starts with J, 0                       |
 | **Deviation from Avg**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
 
