@@ -1,5 +1,5 @@
 ---
-title: How to Use Aggregation Calculated Fields in Slingshot
+title: How to Use Aggregation Calculated Fields in Reveal
 _description: Learn how to use Aggregation formulas with different variants and tricks.
 ---
 
@@ -13,15 +13,15 @@ calculate different values you are focused on (`average`, for example),
 find top and bottom values (`max` and `min`), etc. **All formulas are**,
 therefore, **meant to be used with numerical fields only**.
 
-In Analytics, aggregation calculated fields include:
+In Reveal, aggregation calculated fields include:
 
-  - **Standard functions**: for information on each one, click the corresponding hyperlink under "Function Name."
+- **Standard functions**: for information on each one, click the corresponding hyperlink under "Function Name."
 
-  - **Standard functions with if conditions**: [this section](#aggregation-if-condition) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#nested-if-conditions)) and how you need to structure
-    it.
+- **Standard functions with if conditions**: [this section](#aggregation-if-condition) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#nested-if-conditions)) and how you need to structure
+  it.
 
 **Note:** *All samples included in the table below were created with the
-[HR Dataset 2016](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx)
+[HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)
 spreadsheet.*
 
 The functions included in the aggregation category are:
@@ -55,12 +55,12 @@ the functions with the "IF" suffix.
 
 There are two arguments that you will need to configure:
 
-  - `expression`: choose one of the fields in your data source.
+- `expression`: choose one of the fields in your data source.
 
-  - `if-condition`: the if condition will require that you perform a
-    logical test. The `if-condition` requires a `logical test`, which is
-    the condition your expression needs to meet for the aggregation to
-    be calculated.
+- `if-condition`: the if condition will require that you perform a
+  logical test. The `if-condition` requires a `logical test`, which is
+  the condition your expression needs to meet for the aggregation to
+  be calculated.
 
 ### Basic Samples
 
