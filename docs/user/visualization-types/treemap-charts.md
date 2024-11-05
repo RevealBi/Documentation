@@ -28,11 +28,11 @@ The visualization above displays *New Seats* by *Product*. To build this visuali
 
     ![Sample Data in the list of data sources](images/sample-data-new-visualization-dialog.png)
 
-2. In the *Visualization Editor* choose the **Tree Map visualization**.
+2. In the *Visualization Editor* choose the **Treemap visualization**.
 
-    ![Tree Map visualization in the Change Visualization dialog](images/treemap-chart-types.png)
+    ![Treemap visualization in the Change Visualization dialog](images/treemap-chart-types.png)
 
-3. In the *Tree Map Data section* drop *Prodcut* in **Label**, and *New Seats* in **Value**.
+3. In the *Treemap Data section* drop *Product* in **Label**, and *New Seats* in **Value**.
 
 Note that the *data dropped in Label* (*Product*) determines the **color** and tiles the visualization in five different rectangles.
 
