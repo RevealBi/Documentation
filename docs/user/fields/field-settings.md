@@ -16,12 +16,9 @@ specific field you want to modify in the corresponding placeholder
 types of fields, each of which has their own formatting and filter
 options:
 
-- [Field Settings](#)
-  - [Date Fields](#date-fields)
-    - [Date Fields Hierarchies](#date-fields-hierarchies)
-  - [Numeric Fields](#numeric-fields)
-  - [String Fields](#string-fields)
-
+- [Date Fields](#date-fields)
+- [Numeric Fields](#numeric-fields) 
+- [String Fields](#string-fields)
 
 :::note 
 All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
@@ -52,6 +49,7 @@ Date Fields aggregation is displayed as a hierarchical list in the Fields sectio
 When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed (see below).
 
 ![Showing the date field hierarchy functionality in Reveal](images/date-fields-hierarchy.png)
+
 In addition, dragging a specific hierarchy level will show data for that level only, as shown below.
 
 ![Dragging part of the hierarchy of a date field in Reveal](images/date-field-hierarchy-level-example.png)
