@@ -23,6 +23,8 @@ Average, Cumulative Average, Weighted Average.
 
 ![Chart trendline options in Reveal](images/time-series-charts-chart-trendlines.png)
 
+![Chart trendline options result in Reveal](images/time-series-charts-chart-trendlines-result.png)
+
 ## Settings for Time Series Charts
 
 In *Settings* you can:
