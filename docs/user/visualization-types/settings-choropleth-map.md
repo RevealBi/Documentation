@@ -41,6 +41,6 @@ If you use a Japanese dataset in Analytics, and your Language and Regional setti
 
 ### Language of Labels
 
-The language of labels on the choropleth map is defined by the language and regional settings configured in your OS and/or browser. So if you are running Analytics on a machine with its locale/language set to <a href="https://www.slingshotapp.io/en/help/docs/getting-started-slingshot#contact-us" target="_blank">a language Analytics supports</a>, the app will attempt to localize the labels to that language. This has nothing to do with the *Data is written in* setting.
+The language of labels on the choropleth map is defined by the language and regional settings configured in your OS and/or browser. So if you are running Analytics on a machine with its locale/language set to <a href="https://www.revealbi.io/about-us?#request-demo" target="_blank">a language Analytics supports</a>, the app will attempt to localize the labels to that language. This has nothing to do with the *Data is written in* setting.
 
 If a Japanese employee's machine, for example, is set to use their native language (Japanese), but the data given to them is in English, Analytics will still display the labels in Japanese. Then, if they share the dashboard with a German contractor, the German will see the labels in the language their machine is set to use (the German language is supported in Analytics).
