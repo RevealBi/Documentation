@@ -1,5 +1,5 @@
 ---
-title: How to Reuse Visualizations in Slingshot 
+title: How to Reuse Visualizations in Reveal 
 _description: See how easy and quick you can reuse visualization and speed up dashboard creation.
 ---
 
