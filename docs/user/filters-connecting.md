@@ -1,6 +1,6 @@
 ---
 title: How to Connect Dashboard Filters to a Visualization 
-_description: Learn how bring the data in your visualization to a dashboard filter in Slingshot Analytics.
+_description: Learn how bring the data in your visualization to a dashboard filter in Reveal.
 ---
 
 # Connecting Dashboard Filters to a Visualization
@@ -76,5 +76,6 @@ parameters at the bottom of the *Vizualization*'s drop-down list in the
 
 ![Parameters binding list](images/data-source-parameters-dashboard-filter.png)
 
->[!NOTE] **Date Filters**
->You can bind only dashboard filters to parameters. Date filter binding to parameters is not supported.
+:::note
+**Date Filters**: You can bind only dashboard filters to parameters. Date filter binding to parameters is not supported.
+:::
