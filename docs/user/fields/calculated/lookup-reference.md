@@ -10,14 +10,15 @@ Lookup and reference fields will allow you to work with your current
 spreadsheet and dashboard, returning text references to cells, rows and
 dashboard variables.
 
->[!NOTE] All samples included in the table below were created with the **HR Dataset 2016.xlsx** spreadsheet.
-
+:::note
+All samples included in the table below were created with the **[HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)** spreadsheet.
+:::
 The functions included in the aggregation category are:
 
-| **Function Name** | **Syntax and Sample** |
-|-------------------|-----------------------|
-| [**previous**](#previous): `previous` allows you to get a result with the value of the field you choose as your `expression`. | **Syntax**: `previous({expression},{first value})`**Sample**: `previous([Wage],1)` |
-| **row**: `row` returns the number of the current row for every row in your data source. | **Syntax**: `row()`**Sample**: `row()` |
+| **Function Name** | **Syntax and Sample**                                                                   |
+|-------------------|-----------------------------------------------------------------------------------------|
+| [**previous**](#previous): `previous` allows you to get a result with the value of the field you choose as your `expression`. | **Syntax**: `previous({expression},{first value})`<br/>**Sample**: `previous([Wage],1)` |
+| **row**: `row` returns the number of the current row for every row in your data source. | **Syntax**: `row()`<br/>**Sample**: `row()`                                                  |
 
 
 <a name='calc-fields-previous'></a>
@@ -34,7 +35,7 @@ for you to configure:
 
 ### Sample
 
-The following is an extract of the HR Dataset 2016.xlsx "Employees"
+The following is an extract of the [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx) "Employees"
 sheet.
 
 | EMPLOYEEID | FULLNAME          | DEPARTMENT  | OFFICE                    | WAGE     |
