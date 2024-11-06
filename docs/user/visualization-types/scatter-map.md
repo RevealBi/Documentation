@@ -1,6 +1,6 @@
 ---
 title: How to Create Scatter Maps Visualization
-_description: Find out how to create and use Scatter Maps visualization in Slingshot Analytics.
+_description: Find out how to create and use Scatter Maps visualization in Reveal.
 ---
 
 # Scatter Maps
@@ -17,11 +17,11 @@ The information below will help you choose the best scatter map configuration de
 
 ### What are Basic Dot Maps Used for?
 
-The most basic scatter maps in Analytics consist of uniform color dots plotted over a chosen area.
+The most basic scatter maps in Reveal consist of uniform color dots plotted over a chosen area.
 
 Dot maps are a great way to visualize the geographical distribution of an entity and can reveal patterns when the dots cluster on the map. One dot represents one entity so every single object is depicted on the map using the geo-location in the data set.
 
-One-to-many dot maps are not supported in Analytics. This means, one dot cannot represent more than one object (e.g. 1 dot = 1000 people), so you cannot use the scatter dot maps to create population density maps, for example.  
+One-to-many dot maps are not supported in Reveal. This means, one dot cannot represent more than one object (e.g. 1 dot = 1000 people), so you cannot use the scatter dot maps to create population density maps, for example.  
 
 ### What are Bubble Maps Used for?
 
@@ -36,8 +36,9 @@ Unless you aim to identify and focus on **outliers** (like in the screenshot abo
 
 Bubbles are not bound to the exact location defined by the latitude and longitude data. Their location is approximate, but the bubbles must appear in the area, for which they carry information. For example, if you want to make a report about the most dangerous neighborhoods across all the US, you will most probably not need the exact location of each crime reported. You will just need to plot the bubbles, sized according to the aggregated crime data, in the correct neighborhoods.
 
-> [!NOTE]
-> A potential issue you need to take into account is that overly large bubbles can spread over more than one area. In this case, adding location data to the [bubble tooltip](#bubble-maps) text can help your audience identify the area where the oversize bubble belongs.
+:::note
+A potential issue you need to take into account is that overly large bubbles can spread over more than one area. In this case, adding location data to the [bubble tooltip](#bubble-maps) text can help your audience identify the area where the oversize bubble belongs.
+:::
 
 ### What are Colored Scatter Maps Used for?
 
@@ -65,7 +66,7 @@ When maximized, the scatter map displays a zoom control that allows you to bette
 
 As shown above, there are a couple of buttons displayed at the bottom right of the map. The _Reset Zoom_ button will reset the map zoom to the zoom-level the map was saved the last time.
 
-Zooming also allows you to change the clear shapes Analytics uses as a map background. At a chosen zoom level, you can replace the grey areas with detailed real maps, called *image tiles* provided by one of the following map services:
+Zooming also allows you to change the clear shapes Reveal uses as a map background. At a chosen zoom level, you can replace the grey areas with detailed real maps, called *image tiles* provided by one of the following map services:
 
 * *Bing*
 * *Esri*
@@ -73,22 +74,23 @@ Zooming also allows you to change the clear shapes Analytics uses as a map backg
 
 ![A scatter map showing the average age of Population in East Asia zoomed in and using image tiles](images/scatter-map-image-tiles-enabled.png)
 
-For more information on how to use your map service *authentication token* in Analytics or how to view shared maps using image tiles, read the [Using Map Image Tiles](map-image-tiles) topic.
+For more information on how to use your map service *authentication token* in Reveal or how to view shared maps using image tiles, read the [Using Map Image Tiles](map-image-tiles) topic.
 
 ## Creating a Scatter Map
 
-The Scatter Map in Analytics provides you with a variety of opportunities for your geographical analysis based on the data you choose to display.
+The Scatter Map in Reveal provides you with a variety of opportunities for your geographical analysis based on the data you choose to display.
 
 <a name='location-data-format'></a>
 ### Location Data Requirements
 
-The ScatterMap visualization plots the data using geo-coordinates. Each data point requires a latitude and longitude value to be displayed. The accepted format by Analytics is:
+The ScatterMap visualization plots the data using geo-coordinates. Each data point requires a latitude and longitude value to be displayed. The accepted format by Reveal is:
 
 * **Two different columns** for latitude and longitude respectively.
 * **Latitude/Longitude** in Decimal Degrees format, for example: -46.896388, 168.126111
 
-    >[!NOTE] **Unaccepted formats**.
-    > Latitude/Longitude formats, containing minutes and seconds symbols, such as *46° 53.783333'*, and formats containing suffixes *- 46° 53' 47'' South, 168° 7' 34'' E*, are not accepted.
+:::note
+**Unaccepted formats**: Latitude/Longitude formats, containing minutes and seconds symbols, such as *46° 53.783333'*, and formats containing suffixes *- 46° 53' 47'' South, 168° 7' 34'' E*, are not accepted.
+:::
 
 The ***"There is no data to display."*** message may appear in the Visualization Editor, even if your latitude and longitude data is correct and is in the accepted format. This can happen if the geographic coordinates are plotted outside the bounds of the selected map.
 
@@ -128,7 +130,7 @@ The scatter map allows you to visualize a third variable indicated by color. Add
 
 Color on the map can be determined by:
 
-* *Value* - it's best to use a numeric data field. If you drop a text field, your data will be automatically aggregated and Analytics will take _Count of Rows_ to determine the color.    
+* *Value* - it's best to use a numeric data field. If you drop a text field, your data will be automatically aggregated and Reveal will take _Count of Rows_ to determine the color.    
 
 * *Category* - a text field is expected. However, if you provide a numeric field, the values in it will be processed as text, i.e. no aggregation will be applied, and a separate color will be created for each individual value.  
 
@@ -140,7 +142,7 @@ Color settings depend on the scatter map type.
 
 For **basic dot and bubble maps** using uniform colored markers, you can select a color from the 10-color palette in _Start Color_.
 
-For **scatter maps colored by category** you can choose to _Use different markers_. If you enable this function, Analytics will automatically create a unique marker for each category by using combinations between colors and symbols such as squares, triangles, dots, stars, octagons, etc.
+For **scatter maps colored by category** you can choose to _Use different markers_. If you enable this function, Reveal will automatically create a unique marker for each category by using combinations between colors and symbols such as squares, triangles, dots, stars, octagons, etc.
 
 For **scatter maps colored by value** you can configure the coloring scheme. You will see three options in the _Color as_ dropdown:
 
