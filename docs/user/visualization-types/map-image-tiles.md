@@ -5,7 +5,7 @@ _description: Learn all about the image tile feature that will allow you to swit
 
 # Using Image Tiles with Scatter Maps
 
-The *image tiles* feature allows you to switch from the clear grey background of Analytics to a different map layer upon zooming. The additional detail coming from the map service provider will provide more context to your analysis.
+The *image tiles* feature allows you to switch from the clear grey background of Reveal to a different map layer upon zooming. The additional detail coming from the map service provider will provide more context to your analysis.
 
 ![Scatter map in Dashboard View mode using zoom](images/scatter-map-zoomed-tile-providers.png)
 
@@ -44,7 +44,7 @@ To use image tiles:
     * *Esri*
     * *Bing*
     * *MapBox*
-    * If you choose the *None* option you will disable the tile provider at this level, but Analytics will let others know about this (shown in the screenshot below).
+    * If you choose the *None* option you will disable the tile provider at this level, but Reveal will let others know about this (shown in the screenshot below).
 
         ![A Message stating the following: This map is not displayed as intended. You could turn on image tiles by setting up a tile provider.](images/provider-disabled-note.png)
      
@@ -52,24 +52,24 @@ To use image tiles:
     
         ![Yellow banner message prompting users to set up a tile provider](images/not-specified-all-levels-yellow-banner.png)
     
-    The _Not Specified_ option, however, makes Analytics ignore this level when determining which tile provider to use. For further details, check [How does Analytics determine which tile source provider to use?](#how-does-analytics-determine-which-file-provider-to-use).  
+    The _Not Specified_ option, however, makes Reveal ignore this level when determining which tile provider to use. For further details, check [How does Reveal determine which tile source provider to use?](#how-does-analytics-determine-which-file-provider-to-use).  
  
-5. Add the _Authentication Token_ for the selected provider. The token can be found in your map service account. Once you add it, it will be stored in Analytics for future use. You can use it without adding it again no matter how many times you disable the tile provider in your settings.  
+5. Add the _Authentication Token_ for the selected provider. The token can be found in your map service account. Once you add it, it will be stored in Reveal for future use. You can use it without adding it again no matter how many times you disable the tile provider in your settings.  
 
 6. For *Personal settings*, just close the dialog and your changes will be automatically updated. For *Organization/Workspace settings*, click/tap *Update* and close the dialog.
 
 <a name='resolution-process'></a>
-## How does Analytics determine which file provider to use?
+## How does Reveal determine which file provider to use?
 
-When you open a scatter map where *Use Image Tiles* is enabled, Analytics resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles-to-your-maps) above). 
+When you open a scatter map where *Use Image Tiles* is enabled, Reveal resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles-to-your-maps) above). 
 
-What if a tile provider is **specified on more than one level**? You will notice that one of the tile providers is being used for the scatter map you opened. How did Analytics choose it? 
+What if a tile provider is **specified on more than one level**? You will notice that one of the tile providers is being used for the scatter map you opened. How did Reveal choose it? 
 
 The most important factor in determining which level settings take precedence over the others is who owns the dashboard. A dashboard can be owned by a user, the Organization, or a workspace. 
 
 ### When the dashboard is owned by a user or by the Organization
 
-When the dashboard is owned by a user (it's created in the _My Stuff_ space), or by the Organization (it's created in the Organization dashboards' space), Analytics checks for a tile provider, as follows: 
+When the dashboard is owned by a user (it's created in the _My Stuff_ space), or by the Organization (it's created in the Organization dashboards' space), Reveal checks for a tile provider, as follows: 
 
 1. In the *Organization* workspace settings, if the user is part of an Organization.
 2. In *Personal* settings of the user opening the dashboard. 
@@ -83,5 +83,5 @@ When the dashboard is owned by a workspace, i.e. it's created in a workspace das
 3. In *Personal* settings of the user opening the dashboard.
 
 >[!NOTE] **Always use my tile provider**. 
-> Marking this checkbox in your personal settings makes Analytics always choose your tile provider when tile providers on multiple levels are configured. This goes for all the scenarios above. 
+> Marking this checkbox in your personal settings makes Reveal always choose your tile provider when tile providers on multiple levels are configured. This goes for all the scenarios above. 
 

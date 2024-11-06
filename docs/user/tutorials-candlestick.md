@@ -94,7 +94,7 @@ The default value is set to *Auto*. In order to set a different bound, enter the
 ### Changing the Maximum Bound
 
 For Maximum bounds, the default will be set to *Automatic* so that
-Analytics uses your original data. In order to set a different one, enter
+Reveal uses your original data. In order to set a different one, enter
 the value you want for the chart's top limit.
 
 <a name='setting-logarithmic-axis'></a>

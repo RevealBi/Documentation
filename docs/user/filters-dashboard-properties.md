@@ -28,15 +28,15 @@ You will be able to change the following settings for the filter:
 
 ![Dashboard Filter settings menu](images/dashboard-filter-dialog.png)
 
-- Title. The title for the dashboard filter, which will be displayed right under the dashboard title. By default, this is the name of the field that will be used as a filter.
+- **Title:** The title for the dashboard filter, which will be displayed right under the dashboard title. By default, this is the name of the field that will be used as a filter.
 
-- <a href="#displayed-field">Displayed Field/Element</a>. The field in your dataset, which will be used as a dashboard filter.
+- **<a href="#displayed-field">Displayed Field/Element</a>:** The field in your dataset, which will be used as a dashboard filter.
 
-- Selection. This setting allows you to configure: <a href="#multiple-selection">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="#required-selection">Required Selection</a> (at least one value must always be selected).
+- **Selection:** This setting allows you to configure: <a href="#multiple-selection">Multiple Selection</a> (more than one value can be selected at a time) and/or <a href="#required-selection">Required Selection</a> (at least one value must always be selected).
 
-- <a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#">field filters and rules</a> to the data source used for the dashboard filter.
+- **<a href="#data-filters">Data Filters</a>:** This setting allows you to apply any <a href="#">field filters and rules</a> to the data source used for the dashboard filter.
 
-- <a href="filters-connecting">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.
+- **<a href="filters-connecting">Connected Visualizations</a>:** Whether your dashboard will be connected to any visualization or not.
 
 ## Displayed Field
 
