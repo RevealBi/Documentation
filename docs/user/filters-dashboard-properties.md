@@ -36,11 +36,13 @@ You will be able to change the following settings for the filter:
 
 - <a href="#data-filters">Data Filters</a>. This setting allows you to apply any <a href="#">field filters and rules</a> to the data source used for the dashboard filter.
 
-- <a href="filters-connecting.md">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.
+- <a href="filters-connecting">Connected Visualizations</a>. Whether your dashboard will be connected to any visualization or not.
 
 ## Displayed Field
 
->[!NOTE] For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **Displayed Element**.
+:::note
+For dashboard filters using data from *Microsoft Analysis Services* and *Google Analytics*, this setting is named **Displayed Element**.
+:::
 
 The *Displayed Field/Element* setting specifies the dataset field that will be used to display
 the values in the *Dashboard Filters*. Listed values will not be repeated
@@ -52,7 +54,7 @@ You can change the displayed column in *Edit mode* by selecting the *Edit* butto
 
 ## Multiple Selection
 
-Analytics supports the selection of multiple dashboard filter values
+Reveal supports the selection of multiple dashboard filter values
 simultaneously. This is meant to enable side by side comparison between different elements in a collection. For instance, in the *HR Dashboard* dashboard you can compare the hires and absences over time of different
 offices by enabling multiple selection.
 
@@ -118,20 +120,6 @@ filter and have the dashboard filter show only the employees in the
 
 5.  Choose *London, UK* from the list and click/tap on the *Create Filter*
     button.
-
-## Dashboard Filters Using Microsoft Analysis Data
-
-There are some specifics when configuring an MS Analysis dashboard filter.
-
-![Dashboard Filter dialog when configuring an SSRS filter](images/microsoft-analysis-services-dashboard-filter.png)
-
- 1. **Displayed Element** - you can select a *Dimension*, *Hierarchy* or *Level* data field to display dashboard filter values, but not a *Measure* data field. 
-
- 2. (*Optional*) **Show only when Measure has data** - select a *Measure* to limit the dashboard filter list to values that contain data for a certain Measure.
-
-Look at the screenshot above. In this example, the *Product* Dimension is selected as a *Displayed element*, so the dashboard filter will show a list of products (e.g. bikes, clothes, etc.). 
-By additionally selecting the *Internet orders* Measure for *Show only when Measure has data* field, you will exclude dashboard filter values, which do not contain information about the *Internet orders* Measure. So, if there are no internet orders of the product bike, *bike* will not show up as a possible selection in the *Dashboard Filters* list.
-
 ## Next Steps 
 
 Now that you have already created your dashboard filter, you will need
