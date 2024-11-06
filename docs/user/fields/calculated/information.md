@@ -1,5 +1,5 @@
 ---
-title: How to Use Information Calculated Fields in Slingshot 
+title: How to Use Information Calculated Fields in Reveal 
 _description: Learn how to utilize and test the value of a selected field through Information Calculated Fields.
 ---
 
@@ -10,10 +10,10 @@ a selected field. They are particularly useful with large spreadsheets because y
 
 The functions included in the information category are:
 
-| **Function Name** | **Syntax and Sample** |
-|-------------------|-----------------------|
-| **empty**: `empty` can be used to insert a column with empty cells. There are no arguments to configure. | **Syntax**: `empty()`**Sample**: `empty()` |
-| [**isempty**](https://www.revealbi.io/help/information-calculated-fields#calculated-isempty): `isempty` evaluates the specified `expression`, and checks if any row in your data source has empty values. | **Syntax**: `isempty({value})`**Sample**: `isempty([ResignedDate])` |
+| **Function Name**                                                                                                                    | **Syntax and Sample**                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **empty**: `empty` can be used to insert a column with empty cells. There are no arguments to configure.                             | **Syntax**: `empty()`<br/>**Sample**: `empty()`                     |
+| [**isempty**](#isempty): `isempty` evaluates the specified `expression`, and checks if any row in your data source has empty values. | **Syntax**: `isempty({value})`<br/>**Sample**:`isempty([ResignedDate])` |
 
 
 
@@ -30,7 +30,7 @@ be 1; if there are values, you will see 0.
 | ------------- | ------------------ | ------------------------- |
 | isempty       | `isempty({value})` | `isempty([ResignedDate])` |
 
-Let's look at four lines in the `HR Dataset 2016.xlsx` spreadsheet.
+Let's look at four lines in the [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx) spreadsheet.
 
 | EmployeeID | FullName          | …​ | Resigned Date   | …​ | Calculated Field |
 | ---------- | ----------------- | -- | --------------- | -- | ---------------- |
