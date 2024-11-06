@@ -6,12 +6,12 @@ It illustrates the following tasks:
 
 -	Creating an HTML file and adding the necessary script references.
 
--	Adding JavaScript code in order to handle the visualization data sent to Analytics (the host application) and also signal events.
+-	Adding JavaScript code in order to handle the visualization data sent to Reveal (the host application) and also signal events.
 
 -	Reading incoming data and creating a custom representation of it.
 
 ## Create the HTML file
-Create an empty html file with references to jQuery and Analytics bridge utils.
+Create an empty html file with references to jQuery and Reveal bridge utils.
 
 ``` js
 <html>
@@ -25,7 +25,7 @@ Create an empty html file with references to jQuery and Analytics bridge utils.
 </html>
 ```
 
--	The first reference (reveal_bridge_utils.js) helps Analytics to manipulate the DOM.
+-	The first reference (reveal_bridge_utils.js) helps Reveal to manipulate the DOM.
 
 -	jquery-1.11.0.min.js connects the visualization with the host.
 

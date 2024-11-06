@@ -1,8 +1,8 @@
 # Visualization Tutorials
 
 Within this section, you will find basic, step-by-step tutorials for the
-Analytics visualizations. All sections use the Data Visualizations data
-source, which you can download using [this link](https://download.infragistics.com/slingshot/samples/Slingshot_Visualization_Tutorials.xlsx).
+Reveal visualizations. All sections use the Data Visualizations data
+source, which you can download using [this link](../../static/data/Reveal_Visualization_Tutorials.xlsx).
 
 | ![Area Chart](images/area-chart-icon.png)<br/>[Area](tutorials-simple-charts) | ![Bar Chart](images/bar-chart-icon.png)<br/>[Bar](tutorials-simple-charts) | ![Bullet Graph Gauge](images/bullet-graph-icon.png)<br/>[Bullet Graph](tutorials-gauge#creating-a-bullet-graph) | ![Candlestick Chart](images/candlestick-chart-icon.png)<br/>[Candlestick](tutorials-candlestick) | ![Circular Gauge](images/circular-gauge-icon.png)<br/>[Circular](tutorials-gauge#creating-a-circular-gauge) |
 |:-:|:-:|:-:|:-:|:-:|

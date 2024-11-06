@@ -1,5 +1,5 @@
 ---
-title: How to Create Simple-Series Charts Visualization in Slingshot
+title: How to Create Simple-Series Charts Visualization in Reveal
 _description: A quick tutorial on creating a Simple-Series visualization using a sample spreadsheet.
 ---
 
@@ -84,7 +84,7 @@ information. In order to do this:
 |                                     |                                                                        |                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | 1\. **Change Settings**             | ![Tutorials-Navigate-Settings](images/settings-tutorials.png) | Go to the **Settings** section of the Visualization Editor.      |
-| 2\. **Access the Chart Trendlines** | ![Chart Trendlines option in the settings](images/chart-trendline-simple-series-charts.png) | Expand the Chart Trendline dropdown by selecting the down arrow to select one of Slingshot's predefined trendlines. |
+| 2\. **Access the Chart Trendlines** | ![Chart Trendlines option in the settings](images/chart-trendline-simple-series-charts.png) | Expand the Chart Trendline dropdown by selecting the down arrow to select one of Reveal's predefined trendlines. |
 
 <a name='change-axis-configuration'></a>
 ## Changing your Axis Configuration
@@ -114,7 +114,7 @@ data.
 |                                                   |                                                                                |                                                                                           |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | 1\. **Change Settings**                           | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)         | Go to the **Settings** section of the Visualization Editor.                               |
-| 2\. **Access the Start Position section**         | ![Start position settings](images/start-position-settings.png)               | Expand the *Start Position* dropdown by selecting the down arrow. Select one of Slingshot's predefined start positions for your chart (0°, 90°, 180° or 270°).                          |
+| 2\. **Access the Start Position section**         | ![Start position settings](images/start-position-settings.png)               | Expand the *Start Position* dropdown by selecting the down arrow. Select one of Reveal's predefined start positions for your chart (0°, 90°, 180° or 270°).                          |
 
 <a name='change-slice-labels'></a>
 ## Changing the Slice Labels for Doughnut, Funnel and Pie Charts
@@ -122,4 +122,4 @@ data.
 |                                                |                                                                          |                                                                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | 1\. **Change Settings**                        | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | Go to the **Settings** section of the Visualization Editor.                                            |
-| 2\. **Access the Slice Label section**         | ![Tutorials-Slice-Label](images/slice-label-settings.png)               | Expand the Slice Labels dropdown by selecting the down arrow. Select one of Slingshot's predefined labeling options (*Percentage*, *Value* or *Value and Percentage*).                                       |
+| 2\. **Access the Slice Label section**         | ![Tutorials-Slice-Label](images/slice-label-settings.png)               | Expand the Slice Labels dropdown by selecting the down arrow. Select one of Reveal's predefined labeling options (*Percentage*, *Value* or *Value and Percentage*).                                       |

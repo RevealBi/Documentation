@@ -1,6 +1,6 @@
 ---
 title: How to Create and Use Financial Charts
-_description: Find out how to use Financial Charts for your visualizations in Slingshot Analytics.
+_description: Find out how to use Financial Charts for your visualizations in Reveal.
 ---
 
 # Financial Charts
