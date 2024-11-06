@@ -46,28 +46,28 @@ Date fields include rules designed to support time-based scenarios,
 changing the data range and filtering the information displayed in the
 visualization.
 
-  - Custom Date Range
+- **Custom Date Range**
 
-  - Last Week, Month, or Year
+- **Last Week, Month, or Year**
 
-  - Month to Date
+- **Month to Date**
 
-  - Next Month, Quarter, or Year
+- **Next Month, Quarter, or Year**
 
-  - Previous Month, Quarter, or Year
+- **Previous Month, Quarter, or Year**
 
-  - Quarter to Date
+- **Quarter to Date**
 
-  - This Month, Quarter, or Year
+- **This Month, Quarter, or Year**
 
-  - Today
+- **Today**
 
-  - Year to Date
+- **Year to Date**
 
-  - Yesterday
+- **Yesterday**
 
 By default, when Filter by Rule is enabled on a numeric field, it is set
-to "None".
+to **"None"**.
 
 ### Rules for Numeric Fields
 
