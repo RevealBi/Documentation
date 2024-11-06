@@ -47,6 +47,9 @@ For this tutorial, you will use the *Simple Series Charts* sheet in the <a href=
 
      ![Organizing data in the data filter for text view](images/organizing-data-text-view.png) 
 
+   And you will get the result:
+     ![Text View Visualization](images/text-view-visualization.png) 
+
 <a name='changing-selected-row'></a>
 ## Changing the Selected Row
 
@@ -63,3 +66,7 @@ text view display row 9 (Bosnia and Herzegovina).
 3. By default, all values will be selected. Uncheck the *All* box and select only **Bosnia and Herzegovina**. Then, select **Create Filter**. 
 
     ![Choosing country from the list of selected values](images/data-filter-select-value-example.png) 
+
+   And you will see the data updated:
+    ![Text View Filtered](images/filtered-text-view-visualization.png) 
+   
