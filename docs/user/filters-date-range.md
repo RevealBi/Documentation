@@ -1,6 +1,6 @@
 # Date Range Dashboard Filter
 
-Analytics supports enabling a range of dates as dashboard filters to bind
+Reveal supports enabling a range of dates as dashboard filters to bind
 your data to. This enables time-based analysis scenarios, changing one
 date range and filtering the whole dashboard. In order to enable the
 date range in the dashboard filters section, you will need to select the
@@ -16,7 +16,7 @@ expressions.
 
 ## Using Custom Date Ranges
 
-Analytics offers a variety of pre-set date ranges (including Last 30, 7, or
+Reveal offers a variety of pre-set date ranges (including Last 30, 7, or
 365 days, among others) but you might want to define your range to see
 data within a specific date range. Selecting the
 **Custom Date Range** in the *Date Filter* dropdown to see a calendar with
