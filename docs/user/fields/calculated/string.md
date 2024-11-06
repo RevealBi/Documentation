@@ -8,21 +8,22 @@ _description: Learn how to use String Calculated Fields to create a more precise
 String calculated fields, except for `sortinterval`, allow you to edit
 texts to get different results.
 
+:::note
 **Remember to always include strings between quotation marks (" ").**
-
+:::
 The functions included in the String category are:
 
 | **Function Name** | **Syntax and Sample**                                                                                                                                                     |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **concatenate**: `concatenate` allows you to join multiple strings of `text` to form a phrase. Spaces are not automatically included, so make sure you include them in your text arguments if necessary. | **Syntax**: `concatenate()`**Sample**: `concatenate("Getting started", " with", " the", " Reveal", " application")`                                                       |
-| **find**: `find` returns the starting position (`number`) of a first string of `text` in a second string if `text` as specified in your arguments. | **Syntax**: `find({find text},{within text},{start number})`**Sample**: `find("with","Getting Started with Reveal visualizations",3)`                                     |
-| **len**: `len` returns the number of characters in the string of `text` you enter. | **Syntax**: `len({text})`**Sample**: `len("Getting Started with Reveal")`                                                                                                 |
-| **lower**: `lower` converts all upper case characters in a given `text` string to lower case. | **Syntax**: `lower({text})`**Sample**: `lower("Getting Started with Reveal")`                                                                                             |
-| **mid**: `mid` returns a substring (`length`) of the specified string of `text` according to what you configure in your arguments. | **Syntax**: `mid({text},{start},{length})`**Sample**: `mid("Getting Started with Reveal",9,12)`                                                                           |
-| **replace**: `replace` replaces a given string of `text` with a different `text` as specified in your arguments. | **Syntax**: `replace({text},{old text},{new text})`**Sample**: `replace("Getting Started with Reveal","Getting Started","Creating Visualizations with")`               |
-| **sortinterval**: `sortinterval` returns a value in a(n) interval(s) according to what is configured in the arguments. The string is returned with format `NN [from,to]` | **Syntax**: `sortinterval()`**Sample 1**: `sortinterval(33,140)`**Sample 2**: `sortinterval([Wage],150000)`**Sample 3**: `sortinterval([Wage],50000,80000,110000,140000)` |
-| **trim**: `trim` returns the same string of `text` you enter; however, it will remove any leading or trailing whitespaces, and will only keep the spaces between words. | **Syntax**: `trim({text})`**Sample**: `trim(" Getting Started with Reveal ")`                                                                                          |
-| **upper**: `upper` converts all lower case characters in a given `text` string to upper case. | **Syntax**: `upper({text})`**Sample**: `upper("Caution: Hot. Do not touch")`                                                                                              |
+| **concatenate**: `concatenate` allows you to join multiple strings of `text` to form a phrase. Spaces are not automatically included, so make sure you include them in your text arguments if necessary. | **Syntax**: `concatenate()`<br/>**Sample**: `concatenate("Getting started", " with", " the", " Reveal", " application")`                                                  |
+| **find**: `find` returns the starting position (`number`) of a first string of `text` in a second string if `text` as specified in your arguments. | **Syntax**: `find({find text},{within text},{start number})`<br/>**Sample**: `find("with","Getting Started with Reveal visualizations",3)`                                     |
+| **len**: `len` returns the number of characters in the string of `text` you enter. | **Syntax**: `len({text})`<br/>**Sample**: `len("Getting Started with Reveal")`                                                                                                 |
+| **lower**: `lower` converts all upper case characters in a given `text` string to lower case. | **Syntax**: `lower({text})`<br/>**Sample**: `lower("Getting Started with Reveal")`                                                                                             |
+| **mid**: `mid` returns a substring (`length`) of the specified string of `text` according to what you configure in your arguments. | **Syntax**: `mid({text},{start},{length})`<br/>**Sample**: `mid("Getting Started with Reveal",9,12)`                                                                           |
+| **replace**: `replace` replaces a given string of `text` with a different `text` as specified in your arguments. | **Syntax**: `replace({text},{old text},{new text})`<br/>**Sample**: `replace("Getting Started with Reveal","Getting Started","Creating Visualizations with")`                  |
+| **sortinterval**: `sortinterval` returns a value in a(n) interval(s) according to what is configured in the arguments. The string is returned with format `NN [from,to]` | **Syntax**: `sortinterval()`<br/>**Sample 1**: `sortinterval(33,140)`**Sample 2**: `sortinterval([Wage],150000)`**Sample 3**: `sortinterval([Wage],50000,80000,110000,140000)` |
+| **trim**: `trim` returns the same string of `text` you enter; however, it will remove any leading or trailing whitespaces, and will only keep the spaces between words. | **Syntax**: `trim({text})`<br/>**Sample**: `trim(" Getting Started with Reveal ")`                                                                                             |
+| **upper**: `upper` converts all lower case characters in a given `text` string to upper case. | **Syntax**: `upper({text})`<br/>**Sample**: `upper("Caution: Hot. Do not touch")`                                                                                              |
 
 
 <a name='calc-fields-find'></a>
@@ -110,9 +111,23 @@ There are three arguments for you to configure:
 
 Let's look at the following sample:
 
-| Function Name | Text                                                                                                                         | Old Text   | New Text        | Output                                                                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| replace(…​)   | `"Using Reveal for iOS can be fast and easy. First, open the AppStore and look for Reveal. Then, install it. You're ready!"`  | `"Reveal"` | `"our BI tool"` | Using **our BI tool** for iOS can be fast and easy. First, open the AppStore and look for **our BI tool**. Then, install it. You're ready\! |
+<table style={{ width: '100%' }}>
+    <tr>
+        <th style={{ width: '15%' }}>Function Name</th>
+        <th style={{ width: '32%' }}>Text</th>
+        <th style={{ width: '10%' }}>Old Text</th>
+        <th style={{ width: '13%' }}>New Text</th>
+        <th style={{ width: '30%' }}>Output</th>
+    </tr>
+    <tr>
+        <td><code>replace(…​)</code></td>
+        <td><code>"Using Reveal for iOS can be fast and easy. First, open the AppStore and look for Reveal. Then, install it. You're ready!"</code></td>
+        <td><code>"Reveal"</code></td>
+        <td><code>"our BI tool"</code></td>
+        <td>Using <strong><code>our BI tool</code></strong> for iOS can be fast and easy. First, open the AppStore and look for <strong><code>our BI tool</code></strong>. Then, install it. You're ready!</td>
+    </tr>
+</table>
+
 
 Note that the old text got replaced both times; **make sure you consider
 that the term will be changed every time it appears before you change
