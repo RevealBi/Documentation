@@ -11,8 +11,7 @@ spreadsheet and dashboard, returning text references to cells, rows and
 dashboard variables.
 
 :::note
-All samples included in the table below were created with the **[HR Dataset 2016](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx)
-** spreadsheet.
+All samples included in the table below were created with the **[HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)** spreadsheet.
 :::
 The functions included in the aggregation category are:
 
@@ -36,7 +35,7 @@ for you to configure:
 
 ### Sample
 
-The following is an extract of the [HR Dataset 2016](http://download.infragistics.com/reportplus/help/samples/HR%20Dataset_2016.xlsx) "Employees"
+The following is an extract of the [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx) "Employees"
 sheet.
 
 | EMPLOYEEID | FULLNAME          | DEPARTMENT  | OFFICE                    | WAGE     |
