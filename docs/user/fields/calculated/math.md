@@ -13,7 +13,7 @@ of the rows in your data source.
 
 The functions in this category are:
 
-   | **Function Name** | **Syntax and Sample**                                                         |
+| **Function Name** | **Syntax and Sample**                                                         |
 |-------------------|-------------------------------------------------------------------------------|
 | **abs**: `abs` returns the absolute value (the number without the sign) for a number you enter. | **Syntax**: `abs({number})`<br/>**Sample**: `abs(-3)`                         |
 | **exp**: `exp` returns e (Euler's Number) raised to a value you enter. | **Syntax**: `exp({number})`<br/>**Sample**: `exp(8)`                               |
