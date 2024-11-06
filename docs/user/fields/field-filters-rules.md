@@ -1,6 +1,6 @@
 ---
 title: How to apply Field Filters and Rules to Dataset 
-_description: Learn how to apply filters or rules to your dataset in Slingshot while creating visualizations.
+_description: Learn how to apply filters or rules to your dataset in Reveal while creating visualizations.
 ---
 
 # Field Filters and Rules
@@ -14,7 +14,7 @@ from the dropdown menu to access the *Data Filter* window.
 <a name='empty-values'></a>
 ## Filter Empty Values
 
-Analytics provides the ability to filter rows in the dataset that have null
+Reveal provides the ability to filter rows in the dataset that have null
 or empty values on a specific column by enabling the filter empty values
 configuration setting on a specific column.
 
@@ -27,6 +27,7 @@ display for a specific field. To enable it, drag and drop a field to the
 **Data Filters** placeholder.
 
 ![Select Values option in the list of filter types](images/data-filter-select-values.png)
+
 In the *Field Settings* dialog, you will see the option to **Select
 Values**. This displays the list of possible values for a column, and
 allows you to select only the items you want to remain in the dataset.
@@ -45,79 +46,79 @@ Date fields include rules designed to support time-based scenarios,
 changing the data range and filtering the information displayed in the
 visualization.
 
-  - Custom Date Range
+- **Custom Date Range**
 
-  - Last Week, Month, or Year
+- **Last Week, Month, or Year**
 
-  - Month to Date
+- **Month to Date**
 
-  - Next Month, Quarter, or Year
+- **Next Month, Quarter, or Year**
 
-  - Previous Month, Quarter, or Year
+- **Previous Month, Quarter, or Year**
 
-  - Quarter to Date
+- **Quarter to Date**
 
-  - This Month, Quarter, or Year
+- **This Month, Quarter, or Year**
 
-  - Today
+- **Today**
 
-  - Year to Date
+- **Year to Date**
 
-  - Yesterday
+- **Yesterday**
 
 By default, when Filter by Rule is enabled on a numeric field, it is set
-to "None".
+to **"None"**.
 
 ### Rules for Numeric Fields
 
 Numeric fields (such as integers, decimals, and currencies) support the
 following rules:
 
-  - Above Average
+- **Above Average**
 
-  - Above Equals Value
+- **Above Equals Value**
 
-  - Above Value
+- **Above Value**
 
-  - Below Average
+- **Below Average**
 
-  - Below Equals Value
+- **Below Equals Value**
 
-  - Below Value
+- **Below Value**
 
-  - Bottom Items
+- **Bottom Items**
 
-  - Bottom Percent
+- **Bottom Percent**
 
-  - Top Items
+- **Top Items**
 
-  - Top Percent
+- **Top Percent**
 
 By default, when Filter by Rule is enabled on a numeric field, it is set
-to "None".
+to **"None"**.
 
 ### Rules for String Fields
 
 Text columns support the following type of rules:
 
-  - Contains
+- **Contains**
 
-  - Ends With
+- **Ends With**
 
-  - Is Equal
+- **Is Equal**
 
-  - Not Contains
+- **Not Contains**
 
-  - Not Equals
+- **Not Equals**
 
-  - Starts With
+- **Starts With**
 
-Similarly, these rules also take one parameter: the value of the 'starts
-with', or 'equals' that the rule is going to use to evaluate, and is
+Similarly, these rules also take one parameter: the value of the **'starts
+with'**, or **'equals'** that the rule is going to use to evaluate, and is
 entered in a text box in the same position.
 
 ## Filtering Fields in Values
 
-You can filter your *Values* by [aggreggation](https://www.slingshotapp.io/en/help/docs/analytics/data-visualizations/fields/calculated-fields/aggregation). Then this value will appear with the same aggregation in the list of fields in the **Data Filters** placeholder.
+You can filter your *Values* by [aggreggation](./calculated/aggregation.md). Then this value will appear with the same aggregation in the list of fields in the **Data Filters** placeholder.
 
 ![Data Filters Filtering in the Data Editor](images/data-filters-values-list.png)
