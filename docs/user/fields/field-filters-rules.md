@@ -27,6 +27,7 @@ display for a specific field. To enable it, drag and drop a field to the
 **Data Filters** placeholder.
 
 ![Select Values option in the list of filter types](images/data-filter-select-values.png)
+
 In the *Field Settings* dialog, you will see the option to **Select
 Values**. This displays the list of possible values for a column, and
 allows you to select only the items you want to remain in the dataset.
@@ -73,47 +74,47 @@ to "None".
 Numeric fields (such as integers, decimals, and currencies) support the
 following rules:
 
-  - Above Average
+- **Above Average**
 
-  - Above Equals Value
+- **Above Equals Value**
 
-  - Above Value
+- **Above Value**
 
-  - Below Average
+- **Below Average**
 
-  - Below Equals Value
+- **Below Equals Value**
 
-  - Below Value
+- **Below Value**
 
-  - Bottom Items
+- **Bottom Items**
 
-  - Bottom Percent
+- **Bottom Percent**
 
-  - Top Items
+- **Top Items**
 
-  - Top Percent
+- **Top Percent**
 
 By default, when Filter by Rule is enabled on a numeric field, it is set
-to "None".
+to **"None"**.
 
 ### Rules for String Fields
 
 Text columns support the following type of rules:
 
-  - Contains
+- **Contains**
 
-  - Ends With
+- **Ends With**
 
-  - Is Equal
+- **Is Equal**
 
-  - Not Contains
+- **Not Contains**
 
-  - Not Equals
+- **Not Equals**
 
-  - Starts With
+- **Starts With**
 
-Similarly, these rules also take one parameter: the value of the 'starts
-with', or 'equals' that the rule is going to use to evaluate, and is
+Similarly, these rules also take one parameter: the value of the **'starts
+with'**, or **'equals'** that the rule is going to use to evaluate, and is
 entered in a text box in the same position.
 
 ## Filtering Fields in Values
