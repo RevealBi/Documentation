@@ -4,14 +4,6 @@ _description: Check out some useful tips and samples, as well as useful cases yo
 ---
 
 # Samples, Tips, and Useful Cases
-
-This topic includes the following information:
-
-- [Basic Sample Expressions](#basic-sample-expressions)
-- [Converting Unix TimeStamps to Usable Dates](#converting-unix-timestamps-to-usable-dates)
-- [YoY Analysis: Comparing Revenue Figures for a 2-Year Period](#yoy-analysis-comparing-revenue-figures-for-a-2-year-period)
-
-<a name='basic-sample-expressions'></a>
 ## Basic Sample Expressions
 
 The following are a set of calculated field sample expressions.

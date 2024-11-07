@@ -38,14 +38,14 @@ will be filtered based on previous Quick Filter selections. Fields on
 the left take precedence and determine the list of possible values on
 filters to the right.
 
-For instance, in the example below, the *State* filter was created
-first, and the *County* filter was created after that one. After
-selecting **Colorado** as a *State*, the *County*
+For instance, in the example below, the *Office* filter was created
+first, and the *Fullname* filter was created after that one. After
+selecting all Office, the *County*
 list was the following:
 
 ![Cascading Filter for the State Population Dashboard showing counties in Colorado](images/cascading-filter.png)
 
-However, if you select **Arkansas** instead, the list of
+However, if you select Office at **Cranbury, New Jersey, USA** and **Montevideo, Uruguay** instead, the list of
 *County* will be a different one.
 
 ![Cascading Filter for the State Population Dashboard showing counties in Arkansas](images/cascading-filter-second-filter.png)
