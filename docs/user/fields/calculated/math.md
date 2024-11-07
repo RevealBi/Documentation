@@ -11,7 +11,7 @@ calculations on the fly. Certain functions, like the `rand` and the
 `randbetween` functions, are particularly useful to randomize the order
 of the rows in your data source.
 
-The functions in this category are:
+## Math functions
 
 | **Function Name** | **Syntax and Sample**                                                         |
 |-------------------|-------------------------------------------------------------------------------|

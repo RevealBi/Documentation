@@ -13,7 +13,8 @@ dashboard variables.
 :::note
 All samples included in the table below were created with the **[HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)** spreadsheet.
 :::
-The functions included in the aggregation category are:
+
+## Lookup and Reference functions
 
 | **Function Name** | **Syntax and Sample**                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------|

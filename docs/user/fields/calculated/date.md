@@ -14,7 +14,7 @@ in the formula, overwriting of the formatting you have set for Date and
 Time.*
 :::
 
-The functions included in the date category are:
+## Date functions:
 
 | Function Name | Syntax and Sample |
 |---------------|-------------------|

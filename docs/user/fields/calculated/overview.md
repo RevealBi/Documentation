@@ -10,7 +10,7 @@ fields. These fields are created by using expressions (formulas). An
 expression can be a combination of existing field(s), constant values
 and:
 
-  - [predefined functions](#using-the-predefined-analytics-functions) and/or
+  - [predefined functions](#using-the-predefined-reveal-functions) and/or
 
   - [simple math calculations and other functions that are not predefined](#creating-calculated-fields-without-using-the-predefined-functions).
 
@@ -98,80 +98,80 @@ For both pre-calculated and post-calculated fields, you can use one of
 the available functions within Reveal:
 
   - [**Aggregation**](aggregation):
-    [average](aggregation.md#average),
-    [averageif](aggregation.md#averageif),
-    [count](aggregation.md#count),
-    [countif](aggregation.md#countif),
-    [max](aggregation.md#max),
-    [maxif](aggregation.md#maxif),
-    [min](aggregation.md#min),
-    [minif](aggregation.md#minif).
+    [average](aggregation.md#aggregation-functions),
+    [averageif](aggregation.md#aggregation-functions),
+    [count](aggregation.md#aggregation-functions),
+    [countif](aggregation.md#aggregation-functions),
+    [max](aggregation.md#aggregation-functions),
+    [maxif](aggregation.md#aggregation-functions),
+    [min](aggregation.md#aggregation-functions),
+    [minif](aggregation.md#aggregation-functions).
 
   - [**Date**](date):
-    [date](date.md#date),
-    [datevalue](date.md#datevalue),
-    [day](date.md#day),
-    [formatdate](date.md#formatdate),
-    [fquarter](date.md#fquarter),
-    [semester](date.md#semester),
-    [fsemester](date.md#fsemester),
-    [fyear](date.md#fyear),
-    [hour](date.md#hour),
-    [millisecond](date.md#millisecond),
-    [minute](date.md#minute),
-    [month](date.md#month),
-    [monthname](date.md#monthname),
-    [monthshortname](date.md#monthshortname),
-    [applytimezone](date.md#applytimezone),
-    [currenttimezone](date.md#currenttimezone),
-    [datetimefromunixts](date.md#datetimefromunixts),
-    [now](date.md#now),
-    [quarter](date.md#quarter),
-    [second](date.md#second),
-    [time](date.md#date-time),
-    [today](date.md#today),
-    [weekday](date.md#weekday),
-    [weeknum](date.md#weeknum),
-    [year](date.md#year).
+    [date](date.md#date-functions),
+    [datevalue](date.md#date-functions),
+    [day](date.md#date-functions),
+    [formatdate](date.md#date-functions),
+    [fquarter](date.md#date-functions),
+    [semester](date.md#date-functions),
+    [fsemester](date.md#date-functions),
+    [fyear](date.md#date-functions),
+    [hour](date.md#date-functions),
+    [millisecond](date.md#date-functions),
+    [minute](date.md#date-functions),
+    [month](date.md#date-functions),
+    [monthname](date.md#date-functions),
+    [monthshortname](date.md#date-functions),
+    [applytimezone](date.md#date-functions),
+    [currenttimezone](date.md#date-functions),
+    [datetimefromunixts](date.md#date-functions),
+    [now](date.md#date-functions),
+    [quarter](date.md#date-functions),
+    [second](date.md#date-functions),
+    [time](date.md#date-functions),
+    [today](date.md#date-functions),
+    [weekday](date.md#date-functions),
+    [weeknum](date.md#date-functions),
+    [year](date.md#date-functions).
 
   - [**Information**](information):
-    [empty](information.md#empty),
-    [isempty](information.md#isempty).
+    [empty](information.md#information-functions),
+    [isempty](information.md#information-functions).
 
   - [**Logic**](logic):
-    [and](logic.md#and),
-    [false](logic.md#false),
-    [if](logic.md#if),
-    [not](logic.md#not),
-    [or](logic.md#or),
-    [true](logic.md#true).
+    [and](logic.md#logic-functions),
+    [false](logic.md#logic-functions),
+    [if](logic.md#logic-functions),
+    [not](logic.md#logic-functions),
+    [or](logic.md#logic-functions),
+    [true](logic.md#logic-functions).
 
   - [**Lookup & Reference**](lookup-reference):
-    [previous](lookup-reference.md#previous),
-    [row](lookup-reference.md#row).
+    [previous](lookup-reference.md#lookup-and-reference-functions),
+    [row](lookup-reference.md#lookup-and-reference-functions).
 
   - [**Math**](math):
-    [abs](math.md#abs),
-    [exp](math.md#exp),
-    [log](math.md#log),
-    [log10](math.md#log10),
-    [mod](math.md#mod),
-    [rand](math.md#rand),
-    [randbetween](math.md#randbetween),
-    [sign](math.md#sign),
-    [sqrt](math.md#sqrt),
-    [trunc](math.md#trunc).
+    [abs](math.md#math-functions),
+    [exp](math.md#math-functions),
+    [log](math.md#math-functions),
+    [log10](math.md#math-functions),
+    [mod](math.md#math-functions),
+    [rand](math.md#math-functions),
+    [randbetween](math.md#math-functions),
+    [sign](math.md#math-functions),
+    [sqrt](math.md#math-functions),
+    [trunc](math.md#math-functions).
 
   - [**String**](string):
-    [concatenate](string.md#concatenate),
-    [find](string.md#find),
-    [len](string.md#len),
-    [lower](string.md#lower),
-    [mid](string.md#mid),
-    [replace](string.md#replace),
-    [sortinterval](string.md#sortinterval),
-    [trim](string.md#trim),
-    [upper](string.md#upper).
+    [concatenate](string.md#string-functions),
+    [find](string.md#string-functions),
+    [len](string.md#string-functions),
+    [lower](string.md#string-functions),
+    [mid](string.md#string-functions),
+    [replace](string.md#string-functions),
+    [sortinterval](string.md#string-functions),
+    [trim](string.md#string-functions),
+    [upper](string.md#string-functions).
 
 :::note
 **Limitations to IF Conditions**. IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.

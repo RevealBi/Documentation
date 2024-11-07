@@ -8,7 +8,7 @@ _description: Learn how to utilize and test the value of a selected field throug
 Information calculated fields are meant to be used to test the value of
 a selected field. They are particularly useful with large spreadsheets because you can check what type of information you are working with before performing a second calculation.
 
-The functions included in the information category are:
+## Information functions:
 
 | **Function Name**                                                                                                                    | **Syntax and Sample**                                               |
 |--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
