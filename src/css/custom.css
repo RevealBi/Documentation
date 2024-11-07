@@ -118,7 +118,11 @@ thead, tbody{
   border: 1px inset;
 }
 
-table th, table td 
-{
-  border: none !important;
+th:empty{
+  display: none; 
+}
+
+table {
+  display: table;
+  width: 100%;
 }
