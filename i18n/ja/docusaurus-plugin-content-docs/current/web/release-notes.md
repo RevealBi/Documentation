@@ -3,20 +3,20 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.7.1 (Nov 5th, 2024)
+## 1.7.1 (2024 年 11 月 5 日)
 
-### Breaking Changes
+### 重大な変更
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- `ChartInteractionEventArgs` has been renamed to `TooltipShowingEventArgs`.
+- `ChartInteractionEventArgs` は `TooltipShowingEventArgs` に名前が変更されました。
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Chart visualizations will automatically hide 0 value data labels.
-- Custom menu items can now be added to visualization tooltips by adding an `RVTooltipItem` to the `customItems` property on the args pass to the `onTooltipShowing` function.
+- チャートの表示形式では、値 0 のデータ ラベルは自動的に非表示になります。
+- カスタム メニュー項目は、`onTooltipShowing` 関数に渡される引数の `customItems` プロパティに `RVTooltipItem` を追加することで、表示形式ツールチップに追加できるようになりました。
 
 ```js
 revealView.onTooltipShowing = function (args) {
@@ -36,9 +36,9 @@ revealView.onTooltipShowing = function (args) {
 }
 ```
 
-- Positioning improvements made for tooltips showing actions on hover.
-- URL linking now works out of the box without needing to implement `onDashboardSelectorRequested`.
-- Target setting added to the linking dialog for URLs. The target may be specified through `onUrlLinkRequested` by using the `target` property off of the args parameter.
+- ホバー時にアクションを表示するツールチップの配置が改善されました。
+- URL リンクは、`onDashboardSelectorRequested` を実装する必要なく、すぐに使用できるようになりました。
+- URL のリンク ダイアログにターゲット設定が追加されました。ターゲットは、引数パラメーターの `target` プロパティを使用して `onUrlLinkRequested` を通じて指定できます。
 
 ```js
 revealView.onUrlLinkRequested = (args) => {
@@ -47,50 +47,50 @@ revealView.onUrlLinkRequested = (args) => {
 };
 ```
 
-- Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
-- Improvements made to mouse wheel events to better support web component frameworks that make use of the Shadow DOM.
-- Performance improvements for request execution and credential resolution under high load.
+- 新しい表示形式を作成するか、既存の表示形式を編集してグリッドに切り替えると、サポートされているデータ ソースでデフォルトでグリッドのページングが有効になっています。
+- Shadow DOM を利用する Web コンポーネント フレームワークをより適切にサポートするために、マウスホイールイベントの改善が行われました。
+- 高負荷時のリクエスト実行と資格情報解決のパフォーマンスが向上しました。
 
 #### ASP.NET
 
-- Added support for .NET 8.0.
-- The dependency Npgsql v6.0.9 was updated to v7.0.7.
-- The dependency Snowflake.Data v1.1.4 was updated to v2.0.18.
-- For the Sybase connector, the dependency System.Data.SqlClient v4.7.0 was updated to v4.8.6.
+- .NET 8.0 のサポートが追加されました。
+- 依存関係 Npgsql v6.0.9 が v7.0.7 に更新されました。
+- 依存関係 Snowflake.Data v1.1.4 が v2.0.18 に更新されました。
+- Sybase コネクターの場合、依存関係 System.Data.SqlClient v4.7.0 が v4.8.6 に更新されました。
 
 #### Java
 
-- A new method `public InitializeParameterBuilder setCachePath(String path)` was added to `InitializeParameterBuilder` to allow customization of the cache files location.
+- キャッシュ ファイルの場所をカスタマイズできるように、新しい `public InitializeParameterBuilder setCachePath(String path)` メソッドが `InitializeParameterBuilder` に追加されました。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Treemap tooltip showing incorrect information.
-- The message "There's no data to display" is displayed while data is being loaded for a preview.
-- InMemory data source opens editor directly when there is more than one data source available.
-- Date range calendar is not responsive.
-- Assigning a calculated field as a data filter doesn't work correctly for Postgres.
-- Unable to do 'sort by' with calculated fields.
-- Error sorting by a calculated field on sql based providers with "Process Data on Server" setting.
-- `trunc` function is not working fine inside concatenate.
-- Large number formatting wasn't being applied when configured to a field using the Grid visualization.
-- Wrong date formatting shown in UI when setting selected value for date visualization filter.
-- Date values reporting incorrectly on click/hover events.
-- Combo visualization doesn't calculate lowest axis minimum per axis.
-- Stacked Bar visualization displays duplicate y-axis markers when the decimal is set to 0.
-- Analysis Services dimension structure is not updated from server with Refresh.
-- Interactive filtering is not working for Label Gauge.
-- Switching to raw data and then to another visualization causes crash.
-- Scrolling a paged row grid into view produces a crash.
-- Text visualization shows "There is no data to display".
-- Large numbers in Donut Chart are overflowing rather than shrinking.
-- The `showFilters` property on the RevealView, when set to `false`, does not function as intended.
-- Dragging field from hierarchy to Category crashes application.
+- ツリーマップのツールチップに誤った情報が表示されています。
+- プレビュー用にデータが読み込まれている間、「表示するデータがありません」というメッセージが表示されます。
+- 複数のデータ ソースが利用可能な場合、InMemory データ ソースではエディターが直接開きます。
+- 日付範囲カレンダーが動作しません。
+- 計算フィールドをデータ フィルターとして割り当てることは、Postgres では正しく機能しません。
+- 計算フィールドでは「並べ替え」を行うことができません。
+- 「サーバーでデータを処理」設定で、SQL ベースのプロバイダーの計算フィールドによる並べ替えでエラーが発生します。
+- `trunc` 関数は連結内で正しく動作しません。
+- グリッドの表示形式を使用してフィールドに構成した場合、大きな数値の書式設定が適用されませんでした。
+- 日付表示形式フィルターの選択値を設定するときに、UI に間違った日付書式が表示されます。
+- クリック/ホバー イベントで日付の値が正しく報告されません。
+- コンボの表示形式では、軸ごとの最低軸の最小値は計算されません。
+- 積層型棒の表示形式では、小数を 0 に設定すると、Y軸のマーカーが重複して表示されます。
+- Analysis Services ディメンション構造は、更新によってサーバーから更新されません。
+- インタラクティブ フィルタリングはラベル ゲージでは機能しません。
+- 生データに切り替えてから別の表示形式に切り替えるとクラッシュが発生します。
+- ページングされた行グリッドをスクロールして表示するとクラッシュが発生します。
+- テキストの表示形式には、「表示するデータはありません」 と表示されます。
+- ドーナツ チャートで大きな数値が縮小されずにオーバーフローしています。
+- RevealView の `showFilters` プロパティを `false` に設定すると、意図したとおりに機能しません。
+- 階層からカテゴリにフィールドをドラッグすると、アプリケーションがクラッシュします。
 
 #### ASP.NET
 
-- When using Serilog as logger, message parameters are not properly replaced
+- Serilog をロガーとして使用すると、メッセージ パラメーターが適切に置き換えられません。
 
 ## 1.7.0 (2024 年 9 月 10 日)
 
