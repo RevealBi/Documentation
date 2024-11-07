@@ -33,6 +33,7 @@ private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
 - Positioning improvements made for tooltips showing actions on hover.
 - Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
 - Performance improvements for request execution and credential resolution under high load.
+- Simplified the MongoDb match stage to improve the performance of query execution.
 
 ### Bugs
 

@@ -50,6 +50,7 @@ revealView.onUrlLinkRequested = (args) => {
 - Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
 - Improvements made to mouse wheel events to better support web component frameworks that make use of the Shadow DOM.
 - Performance improvements for request execution and credential resolution under high load.
+- Simplified the MongoDb match stage to improve the performance of query execution.
 
 #### ASP.NET
 
