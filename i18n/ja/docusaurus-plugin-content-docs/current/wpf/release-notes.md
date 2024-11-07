@@ -1,11 +1,11 @@
 # リリース ノート
 
-## 1.7.1 (Nov 5th, 2024)
+## 1.7.1 (2024 年 11 月 5 日)
 
-### New Features
+### 新機能
 
-- Chart visualizations will automatically hide 0 value data labels.
-- Custom menu items can now be added to visualization tooltips.
+- チャートの表示形式では、値 0 のデータ ラベルは自動的に非表示になります。
+- 表示形式ツールチップにカスタム メニュー項目を追加できるようになりました。
 
 ```csharp
 //Point to this handler: revealView.TooltipShowing += RevealView_TooltipShowing;
@@ -27,37 +27,37 @@ private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
 }
 ```
 
-- The dependency Npgsql v6.0.9 was updated to v7.0.7.
-- The dependency Microsoft.Data.SqlClient v5.1.2 was updated to v5.1.3.
-- For the Sybase connector, the dependency System.Data.SqlClient v4.7.0 was updated to v4.8.6.
-- Positioning improvements made for tooltips showing actions on hover.
-- Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
-- Performance improvements for request execution and credential resolution under high load.
+- 依存関係 Npgsql v6.0.9 が v7.0.7 に更新されました。
+- 依存関係 Microsoft.Data.SqlClient v5.1.2 が v5.1.3 に更新されました。
+- Sybase コネクターの場合、依存関係 System.Data.SqlClient v4.7.0 が v4.8.6 に更新されました。
+- ホバー時にアクションを表示するツールチップの配置が改善されました。
+- 新しい表示形式を作成するか、既存の表示形式を編集してグリッドに切り替えると、サポートされているデータ ソースでデフォルトでグリッドのページングが有効になっています。
+- 高負荷時のリクエスト実行と資格情報解決のパフォーマンスが向上しました。
 
-### Bugs
+### バグ修正
 
-- Treemap tooltip showing incorrect information.
-- Custom visualization bridge name incorrect.
-- InMemory data source opens editor directly when there is more than one data source available.
-- Date range calendar is not responsive.
-- Assigning a calculated field as a data filter doesn't work correctly for Postgres.
-- Unable to do 'sort by' with calculated fields.
-- Error sorting by a calculated field on sql based providers with "Process Data on Server" setting.
-- `trunc` function is not working fine inside concatenate.
-- Large number formatting wasn't being applied when configured to a field using the Grid visualization.
-- Wrong date formatting shown in UI when setting selected value for date visualization filter.
-- Date values reporting incorrectly on click/hover events.
-- Combo visualization doesn't calculate lowest axis minimum per axis.
-- Stacked Bar visualization displays duplicate y-axis markers when the decimal is set to 0.
-- Analysis Services dimension structure is not updated from server with Refresh.
-- When using Serilog as logger, message parameters are not properly replaced.
-- Interactive filtering is not working for Label Gauge.
-- Switching to raw data and then to another visualization causes crash.
-- Scrolling a paged row grid into view produces a crash.
-- Text visualization shows "There is no data to display".
-- Large numbers in Donut Chart are overflowing rather than shrinking.
-- The `ShowFilters` property on the RevealView, when set to `false`, does not function as intended.
-- Dragging field from hierarchy to Category crashes application.
+- ツリーマップのツールチップに誤った情報が表示されています。
+- カスタム表示形式のブリッジ名が正しくありません。
+- 複数のデータ ソースが利用可能な場合、InMemory データ ソースではエディターが直接開きます。
+- 日付範囲カレンダーが動作しません。
+- 計算フィールドをデータ フィルターとして割り当てることは、Postgres では正しく機能しません。
+- 計算フィールドでは「並べ替え」を行うことができません。
+- 「サーバーでデータを処理」設定で、SQL ベースのプロバイダーの計算フィールドによる並べ替えでエラーが発生します。
+- `trunc` 関数は連結内で正しく動作しません。
+- グリッドの表示形式を使用してフィールドに構成した場合、大きな数値の書式設定が適用されませんでした。
+- 日付表示形式フィルターの選択値を設定するときに、UI に間違った日付書式が表示されます。
+- クリック/ホバー イベントで日付の値が正しく報告されません。
+- コンボの表示形式では、軸ごとの最低軸の最小値は計算されません。
+- 積層型棒の表示形式では、小数を 0 に設定すると、Y軸のマーカーが重複して表示されます。
+- Analysis Services ディメンション構造は、更新によってサーバーから更新されません。
+- Serilog をロガーとして使用すると、メッセージ パラメーターが適切に置き換えられません。
+- インタラクティブ フィルタリングはラベル ゲージでは機能しません。
+- 生データに切り替えてから別の表示形式に切り替えるとクラッシュが発生します。
+- ページングされた行グリッドをスクロールして表示するとクラッシュが発生します。
+- テキストの表示形式には、「表示するデータはありません」 と表示されます。
+- ドーナツ チャートで大きな数値が縮小されずにオーバーフローしています。
+- RevealView の `ShowFilters` プロパティを `false` に設定すると、意図したとおりに機能しません。
+- 階層からカテゴリにフィールドをドラッグすると、アプリケーションがクラッシュします。
 
 ## 1.7.0 (2024 年 9 月 10 日)
 
