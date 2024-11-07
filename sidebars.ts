@@ -213,7 +213,7 @@ const sidebars: SidebarsConfig = {
       type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", id: "user/visualizations-overview" },
         { type: "doc", label: "Visualization Editor", id: "user/visualization-editor" },
-        { type: "category", label: "Chart Types", items: [
+        { type: "category", label: "Visualization Types", items: [
           { type: "doc", label: "Category", id: "user/visualization-types/category-charts" },
           { type: "category", label: "Choropleth ", link: { type: "doc", id: "user/visualization-types/choropleth-map" }, items: [
             { type: "doc", label: "Location Data", id: "user/visualization-types/location-data-requirements" },

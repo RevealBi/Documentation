@@ -10,17 +10,6 @@ information.
 
 ![Category charts variations](images/category-charts-list.png)
 
-You can select any of the chart icons displayed in the Visualizations
-options menu as long as it is suitable for your data. Reveal will select
-the first numeric columns in the dataset and attempts to match the
-selected chart type data series requirements.
-
-![Various charts visualizations in a dashboard](../images/various-charts-example.png)
-
-For instance, in a Column Chart, all numeric columns are added to the
-chart. The automatic selection of columns done by Reveal can be modified
-in the Chart Settings configuration.
-
 ## Chart Trendlines
 
 Chart settings enable the display of trend lines, which are lines that
