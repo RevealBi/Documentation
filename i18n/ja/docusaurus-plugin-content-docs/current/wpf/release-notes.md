@@ -33,6 +33,7 @@ private void RevealView_TooltipShowing(object sender, TooltipShowingEventArgs e)
 - ホバー時にアクションを表示するツールチップの配置が改善されました。
 - 新しい表示形式を作成するか、既存の表示形式を編集してグリッドに切り替えると、サポートされているデータ ソースでデフォルトでグリッドのページングが有効になっています。
 - 高負荷時のリクエスト実行と資格情報解決のパフォーマンスが向上しました。
+- Simplified the MongoDb match stage to improve the performance of query execution.
 
 ### バグ修正
 

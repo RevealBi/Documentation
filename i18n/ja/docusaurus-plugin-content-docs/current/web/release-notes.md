@@ -50,6 +50,7 @@ revealView.onUrlLinkRequested = (args) => {
 - 新しい表示形式を作成するか、既存の表示形式を編集してグリッドに切り替えると、サポートされているデータ ソースでデフォルトでグリッドのページングが有効になっています。
 - Shadow DOM を利用する Web コンポーネント フレームワークをより適切にサポートするために、マウスホイールイベントの改善が行われました。
 - 高負荷時のリクエスト実行と資格情報解決のパフォーマンスが向上しました。
+- Simplified the MongoDb match stage to improve the performance of query execution.
 
 #### ASP.NET
 
