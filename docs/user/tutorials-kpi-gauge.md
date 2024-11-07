@@ -37,7 +37,7 @@ For this tutorial, you will use the "KPI View" sheet in the <a href="/data/Revea
 | 3\. **Configure your Data Source**       | ![Tutorials-Select-Data-Source](images/visualization-tutorials-sample.png) | Select your data source from the list of data sources.                                       |
 | 4\. **Select the Tutorials Spreadsheet** |![Selecting a KPI Gauge](images/Tutorials-Select-KPI-Gauge-Spreadsheet.png) | Once the data source is configured, then, choose the "KPI View" sheet.                                 |
 | 5\. **Select KPI Gauge chart type**      | ![Select Change Visualization option](images/gauge-kpi-chart-type.png) | By default, the visualization type will be set to Column. Select the **KPI vs Time** option.                                                                                |
-| 6\. **Organize your Data**               | ![Select KPI Gauge](images/Tutorials-KPIGauge-Organizing-Data.png) | Drag and drop the "Date" field into "Date" and the "Revenue" field into "Value".                                                                       |
+| 6\. **Organize your Data**               | ![Select KPI Gauge](images/Tutorials-KPIGauge-Organizing-Data.png) | Drag and drop the "Date" field into "Date" and the "Sales" field into "Value".                                                                       |
 
 <a name='adding-category-kpi'></a>
 ## Creating Multiple KPI Gauges in one Visualization

@@ -42,6 +42,10 @@ form of:
     grid, including whether or not you want to include the **last two
     months in your data and the difference between them**.
 
+:::note
+Sparkline chart displays trends and their progression in the last 12 months by default. You can ajust the date range by using the [Sparkline Chart date range settings](#changing-the-date-aggregation).
+:::
+
 ## Sample Data Source
 
 For this tutorial, you will use the *Sparkline Charts* sheet
