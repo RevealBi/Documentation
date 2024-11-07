@@ -52,7 +52,7 @@ To use image tiles:
     
         ![Yellow banner message prompting users to set up a tile provider](images/not-specified-all-levels-yellow-banner.png)
     
-    The _Not Specified_ option, however, makes Reveal ignore this level when determining which tile provider to use. For further details, check [How does Reveal determine which tile source provider to use?](#how-does-analytics-determine-which-file-provider-to-use).  
+    The _Not Specified_ option, however, makes Reveal ignore this level when determining which tile provider to use. For further details, check [How does Reveal determine which tile source provider to use?](#how-does-reveal-determine-which-file-provider-to-use).  
  
 5. Add the _Authentication Token_ for the selected provider. The token can be found in your map service account. Once you add it, it will be stored in Reveal for future use. You can use it without adding it again no matter how many times you disable the tile provider in your settings.  
 

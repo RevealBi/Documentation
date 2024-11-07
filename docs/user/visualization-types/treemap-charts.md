@@ -55,7 +55,7 @@ You may notice *two kinds of labels* in the example above:
 - For the big rectangles, top left - show information about total new sales of each product.
 - For the smaller rectangles, bottom left - show how much of each product is sold in a particular country.
 
-Information about the color and size characteristics of the tiles is similar to what was said about the [Treemaps without hierarchies](#flat-treemap).
+Information about the color and size characteristics of the tiles is similar to what was said about the [Treemaps without hierarchies](#treemap-visualizations-without-hierarchical-data).
 
 ### Drilling Up and Down Hierarchy Levels
 

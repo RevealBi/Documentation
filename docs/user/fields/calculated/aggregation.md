@@ -17,7 +17,7 @@ In Reveal, aggregation calculated fields include:
 
 - **Standard functions**: for information on each one, click the corresponding hyperlink under "Function Name."
 
-- **Standard functions with if conditions**: [this section](#aggregation-if-condition) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#nested-if-conditions)) and how you need to structure
+- **Standard functions with if conditions**: [this section](#calculated-fields-with-if-conditions) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#sample-with-nested-if-conditions)) and how you need to structure
   it.
 
 :::note
@@ -26,7 +26,7 @@ In Reveal, aggregation calculated fields include:
 spreadsheet.*
 :::
 
-The functions included in the aggregation category are:
+## Aggregation functions
 
 | Function Name and Description | Function Syntax | Sample |
 |-------------------------------|-----------------|--------|

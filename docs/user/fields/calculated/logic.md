@@ -19,7 +19,7 @@ In Reveal, logic calculated fields include:
 spreadsheet.*
 :::
 
-The functions included in the logic category are:
+## Logic functions:
 
 | **Function Name**                                                                                                                                              | **Syntax and Sample** |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|

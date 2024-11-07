@@ -11,7 +11,8 @@ texts to get different results.
 :::note
 **Remember to always include strings between quotation marks (" ").**
 :::
-The functions included in the String category are:
+
+## String functions
 
 | **Function Name** | **Syntax and Sample**                                                                                                                                                     |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
