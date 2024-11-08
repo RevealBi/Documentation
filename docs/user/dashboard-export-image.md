@@ -37,7 +37,6 @@ To export an image of a particular visualization:
 
 3.  Select the **Export Image** blue button.
 
-<a name='annotating'></a>
 ## Annotating Images
 
 In the *Export Image* menu you can add annotations to your dashboards in

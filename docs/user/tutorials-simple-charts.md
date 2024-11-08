@@ -48,7 +48,6 @@ data you want to display. This comes in the form of:
 
 For this tutorial, you will use the *Simple Series Charts* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
-<a name='create-basic-chart'></a>
 ## Creating your Chart
 
 11. Choose **Edit** in overflow menu.
@@ -74,7 +73,6 @@ For this tutorial, you will use the *Simple Series Charts* sheet in the <a href=
 6. The charts in the table above, for example, display the population for a select list of countries. Drag and drop the *Country Name* field to **Label** and the *Population* field into **Values**.                                                        
    ![Organizing the data from the Simple Series Charts sheet](images/simple-series-charts-organizing-data.png)                                   
 
-<a name='add-trendline-chart'></a>
 ## Adding a Trendline to your Chart
 
 You can add a chart trendline to display the relationship between your
@@ -86,7 +84,6 @@ information. In order to do this:
 | 1\. **Change Settings**             | ![Tutorials-Navigate-Settings](images/settings-tutorials.png) | Go to the **Settings** section of the Visualization Editor.      |
 | 2\. **Access the Chart Trendlines** | ![Chart Trendlines option in the settings](images/chart-trendline-simple-series-charts.png) | Expand the Chart Trendline dropdown by selecting the down arrow to select one of Reveal's predefined trendlines. |
 
-<a name='change-axis-configuration'></a>
 ## Changing your Axis Configuration
 
 Similarly to the [Gauge bounds](tutorials-gauge#adding-bounds-to-your-gauge), the
@@ -100,7 +97,6 @@ data.
 | 2\. **Access the Axis Bounds section** | ![Axis bounds in the settings options](images/axis-bounds-section.png)                           | Navigate to *Axis Bounds*. Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
 
-<a name='set-logarithmic-axis'></a>
 ## Setting your Axis Configuration as Logarithmic
 
 |                                           |                                                                          |                                                             |
@@ -108,7 +104,6 @@ data.
 | 1\. **Change Settings**                   | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | Go to the **Settings** section of the Visualization Editor. |
 | 2\. **Access the Axis option**            | ![Tutorials-Axis-Bounds](images/axis-logarithmic.png)               | Expand the Axis dropdown by selecting the down arrow and select *Logarithmic*.      |       
 
-<a name='change-start-position'></a>
 ## Changing the Start Position for Doughnut and Pie Charts
 
 |                                                   |                                                                                |                                                                                           |
@@ -116,7 +111,6 @@ data.
 | 1\. **Change Settings**                           | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)         | Go to the **Settings** section of the Visualization Editor.                               |
 | 2\. **Access the Start Position section**         | ![Start position settings](images/start-position-settings.png)               | Expand the *Start Position* dropdown by selecting the down arrow. Select one of Reveal's predefined start positions for your chart (0°, 90°, 180° or 270°).                          |
 
-<a name='change-slice-labels'></a>
 ## Changing the Slice Labels for Doughnut, Funnel and Pie Charts
 
 |                                                |                                                                          |                                                                                                        |

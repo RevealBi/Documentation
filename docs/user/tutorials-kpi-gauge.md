@@ -27,7 +27,6 @@ a given time period. To create them, you will need:
 
 For this tutorial, you will use the "KPI View" sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
-<a name='creating-kpi-gauge'></a>
 ## Creating a KPI Gauge
 
 |                                          |                                                                                              |                                                                                                                                                      |
@@ -39,7 +38,6 @@ For this tutorial, you will use the "KPI View" sheet in the <a href="/data/Revea
 | 5\. **Select KPI Gauge chart type**      | ![Select Change Visualization option](images/gauge-kpi-chart-type.png) | By default, the visualization type will be set to Column. Select the **KPI vs Time** option.                                                                                |
 | 6\. **Organize your Data**               | ![Select KPI Gauge](images/Tutorials-KPIGauge-Organizing-Data.png) | Drag and drop the "Date" field into "Date" and the "Sales" field into "Value".                                                                       |
 
-<a name='adding-category-kpi'></a>
 ## Creating Multiple KPI Gauges in one Visualization
 
 In order to create more than one KPI in one visualization, you will need
@@ -54,7 +52,6 @@ to add a field to the **category** placeholder of the data editor.
 | 5\. **Select KPI Gauge chart type**      | ![Select Change Visualization option](images/gauge-kpi-chart-type.png) | By default, the visualization type will be set to Column. Select the **KPI vs Time** option.                                                                                |
 | 6\. **Organize your Data**               | ![Tutorials-MultipleKPIGauge-Organizing-Data](images/Tutorials-MultipleKPIGauge-Organizing-Data.png) | Drag and drop the "Date" field into "Date", the "Sales" field into "Value" and the "State" field into "Category".                                    |
 
-<a name='changing-date-comparison-type'></a>
 ## Changing the Date Comparison Type
 
 By default, the date type for your KPI Gauge will be Year-over-Year. You
@@ -65,7 +62,6 @@ can change this by modifying the "Type" field. In order to do so:
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                                    |
 | 2\. **Change the Type**          | ![Tutorial-Change-Date-Type](images/tutorial-Change-Date-Type.png)     | By default, the date type will be set to **Year vs previous Year**. Select the dropdown next to **Type**, and change the selection to **Month vs previous Month**. |
 
-<a name='changing-difference-label-kpi'></a>
 ## Changing the Difference Labels for the KPI Gauge
 
 |                                  |                                                                                            |                                                                                                                                                                         |
@@ -73,7 +69,6 @@ can change this by modifying the "Type" field. In order to do so:
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                     | Go to the **Settings** section of the Visualization Editor.                                                                                                             |
 | 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Label](images/tutorial-Change-Date-Difference-Label.png) | By default, the difference label will be set to **Percentage**. Select the dropdown next to **Show difference as**, and change the selection to **Value and Percentage**. |
 
-<a name='changing-color-difference-marker'></a>
 ## Changing the Color of the Difference Marker
 
 The color for the marker in the KPI gauge will be set to green for

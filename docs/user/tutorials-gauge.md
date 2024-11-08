@@ -28,7 +28,6 @@ There are two different layouts to choose from when using gauge charts:
 
 For this tutorial, you will use the *Gauge Views* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
-<a name='create-linear-gauge'></a>
 ## Creating a Linear Gauge
 
 1. Choose **Edit** in overflow menu.
@@ -55,7 +54,6 @@ For this tutorial, you will use the *Gauge Views* sheet in the <a href="/data/Re
   
    ![Tutorials-LinearGauge-Data](images/organizing-data-gauge-visualization.png)                         
 
-<a name='create-circular-gauge'></a>
 ## Creating a Circular Gauge
 
 1. Choose **Edit** in overflow menu.
@@ -82,7 +80,6 @@ For this tutorial, you will use the *Gauge Views* sheet in the <a href="/data/Re
   
    ![Tutorials-LinearGauge-Data](images/organizing-data-circular-gauge-visualization.png) 
 
-<a name='aggregation-instructions'></a>
 
 Circular Gauges are particularly useful to show average values as well
 as sum of values. In order to change the aggregation for the field
@@ -94,7 +91,6 @@ displayed in Values:
 | 2\. **Choose a different Aggregation**       | ![CircularGauge-Aggregation](images/field-settings-aggregation-options.png)         | Expand the **Aggregation** dropdown and select a different option (for example, Average). |
 
 
-<a name='create-text-gauge'></a>
 ## Creating a Text Gauge
 
 1. Choose **Edit** in overflow menu.
@@ -123,7 +119,6 @@ displayed in Values:
 
 The text gauge sample above utilizes the average aggregation.
 
-<a name='create-bullet-graph-gauge'></a>
 ## Creating a Bullet Graph
 
 1. Choose **Edit** in overflow menu.
@@ -150,7 +145,6 @@ The text gauge sample above utilizes the average aggregation.
 
    ![Organizing data while using a bullet graph](images/bullet-graph-organizing-data.png)
 
-<a name='adding-bounds-gauge'></a>
 ## Adding Bounds to your Gauge
 
 Bounds allow you to set the lowest and highest values in your gauges. As
@@ -162,7 +156,6 @@ specific data. In order to do this:
 | 1\. **Change Settings**                        | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                           |
 | 2\. **Change the Default selection in Limits** | ![Tutorials-Limits-Bounds](images/limit-options.png)         | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
 
-<a name='modify-bands'></a>
 ## Changing Band Colors
 
 The colors for the three different ranges (Higher than, Lower than and

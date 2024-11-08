@@ -34,7 +34,6 @@ For this tutorial, you will use the *Stacked Charts* sheet in the
 <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
 
-<a name='create-stacked-chart'></a>
 ## Creating a Stacked Chart
 
 1. Choose **Edit** in overflow menu.
@@ -61,7 +60,6 @@ For this tutorial, you will use the *Stacked Charts* sheet in the
                                         
    ![Organizing the data from the stacked charts spreadsheet](images/stacked-charts-organizing-data.png)                           
 
-<a name='change-axis-configuration'></a>
 ## Changing your Axis Configuration
 
 Similarly to the [Gauge bounds](tutorials-gauge#adding-bounds-to-your-gauge), the
@@ -74,7 +72,6 @@ data.
 | 1\. **Change Settings**                | ![Settings section](images/tutorials-settings.png)               | Go to the **Settings** section of the Visualization Editor.                                                                           |
 | 2\. **Access the Axis Bounds section** | ![Tutorials-Axis-Bounds](images/axis-bounds.png)                           | Navigate to Axis Bounds. Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with.  |                                                                                                          
 
-<a name='set-logarithmic-axis'></a>
 ## Setting your Axis Configuration as Logarithmic
 
 |                                           |                                                                          |                                                             |
@@ -82,7 +79,6 @@ data.
 | 1\. **Change Settings**                   | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)   | Go to the **Settings** section of the Visualization Editor. |
 | 2\. **Access the Axis option**            | ![Tutorials-Axis-Bounds](images/axis-bounds-logarithmic.png)               | Expand the Axis dropdown by selecting the down arrow. Then select *Logarithmic*.|      
 
-<a name='enable-percentage-distribution'></a>
 ## Enabling Percentage Distribution
 
 For stacked charts, you can configure the Percentage Distribution. It

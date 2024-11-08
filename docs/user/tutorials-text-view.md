@@ -20,7 +20,6 @@ however, add filters to make sure Reveal displays the row you need.
 
 For this tutorial, you will use the *Simple Series Charts* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
-<a name='creating-text-view'></a>
 ## Creating a Text View
 
  1. Choose **Edit** in overflow menu.
@@ -50,7 +49,6 @@ For this tutorial, you will use the *Simple Series Charts* sheet in the <a href=
    And you will get the result:
      ![Text View Visualization](images/text-view-visualization.png) 
 
-<a name='changing-selected-row'></a>
 ## Changing the Selected Row
 
 Text View displays the first row of the sheet by default. You can add a

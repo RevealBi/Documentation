@@ -41,7 +41,6 @@ enabled.
 | Linear regression       | Linear regression        | To evaluate a trend by finding the linear relationship between two variables. The algorithm calculates a line, close to most of the points in the chart to show the on-going trend. | Category charts: Area, Bar, Column, Line, Spline, Spline Area, Step Area, Step Line |
 | Detect outliers         | Interquartile range rule | To detect data that stands out from the rest because of random factors.                                                                                                             | Category charts: Area, Column, Line, Spline, Spline Area, Step Area, Step Line; Scatter chart                 |
 
-<a name='time-series-forecast'></a>
 ### Time series forecast
 
 The *Time series forecast* function is used to provide prediction of the
@@ -96,7 +95,6 @@ values are highlighted in yellow (see below).
 **The Time series function is available only for charts over time**: If your visualization does not contain a *Date* field, you will receive an error when you try using the Time series function.
 :::
 
-<a name='linear-regression'></a>
 ### Linear regression
 
 The Linear regression is a statistical model, attempting to show the
@@ -135,7 +133,6 @@ application of the Linear regression, you will notice the forecasted
 values are highlighted in yellow (as shown in the last screenshot of the
 [Time series forecast](#time-series-forecast)).
 
-<a name='detect-outliers'></a>
 ### Detect outliers
 
 Outliers are extreme values that deviate from other observations on

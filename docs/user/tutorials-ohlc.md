@@ -47,7 +47,6 @@ chart:
 
 For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
 
-<a name='creating-ohlc-chart'></a>
 ## Creating a OHLC Chart
 
 1. Choose **Edit** in overflow menu.
@@ -74,7 +73,6 @@ For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href=
 
     ![Organizing the data from the data source](images/ohlc-organizing-data.png)                              
 
-<a name='changing-axis-configuration'></a>
 ## Changing your Axis Configuration
 
 Like [Gauge bounds](tutorials-gauge#adding-bounds-to-your-gauge), chart axis
@@ -102,7 +100,6 @@ For Maximum bounds, the default will be set to *Automatic* so that
 Reveal uses your original data. In order to set a different one, enter
 the value you want for the chart's top limit.
 
-<a name='setting-logarithmic-axis'></a>
 ## Setting your Axis Configuration as Logarithmic
 
 |                                        |                                                                                                       |                                                             |

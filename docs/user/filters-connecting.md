@@ -28,7 +28,6 @@ Visualization Editor or the Dashboard Filter menu.
 
 ![Option to disconnect dashboard filters from a visualization](images/disconnect-option-dashboard-filter.png)
 
-<a name='field-binding'></a>
 ## Field Binding
 
 Field binding allows you to configure a join relationship between the
