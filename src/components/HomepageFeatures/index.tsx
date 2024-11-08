@@ -44,7 +44,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: (
       <>
-        <Translate id="homepage.feature.user.title" description="The title of the Training Videos feature on the homepage">User Documentation</Translate>
+        <Translate id="homepage.feature.user.title" description="The title of the User Docs feature on the homepage">User Documentation</Translate>
       </>
     ),
     Svg: require('@site/static/img/empty-states.svg').default,
@@ -52,7 +52,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <Translate id="homepage.feature.user"
-          description="The words used to describe the user section on the homepage">TBD</Translate>
+          description="The words used to describe the user section on the homepage">Explore user-friendly guides and resources tailored for end-users to make the most of data analytics.</Translate>
       </>
     ),
   },
