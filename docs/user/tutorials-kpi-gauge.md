@@ -29,28 +29,56 @@ For this tutorial, you will use the "KPI View" sheet in the <a href="/data/Revea
 
 ## Creating a KPI Gauge
 
-|                                          |                                                                                              |                                                                                                                                                      |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Enter Edit Mode**               | ![Edit button in overflow menu](images/overflow-edit-option.png) | Choose **Edit** in overflow menu. |
-| 2\. **Create new Visualization**      | ![Add new visualization button](images/add-visualization-button.png) | Select the **+ Visualization** button in the top right-hand corner. |
-| 3\. **Configure your Data Source**       | ![Tutorials-Select-Data-Source](images/visualization-tutorials-sample.png) | Select your data source from the list of data sources.                                       |
-| 4\. **Select the Tutorials Spreadsheet** |![Selecting a KPI Gauge](images/Tutorials-Select-KPI-Gauge-Spreadsheet.png) | Once the data source is configured, then, choose the "KPI View" sheet.                                 |
-| 5\. **Select KPI Gauge chart type**      | ![Select Change Visualization option](images/gauge-kpi-chart-type.png) | By default, the visualization type will be set to Column. Select the **KPI vs Time** option.                                                                                |
-| 6\. **Organize your Data**               | ![Select KPI Gauge](images/Tutorials-KPIGauge-Organizing-Data.png) | Drag and drop the "Date" field into "Date" and the "Sales" field into "Value".                                                                       |
+1. Choose **Edit** in overflow menu.
+
+   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
+
+2. Select the **+ Visualization** button in the top right-hand corner.
+
+   ![Add new visualization button](images/add-visualization-button.png)                                      
+
+3. Select your data source from the list of data sources.
+
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+
+4. Choose the **KPI View** sheet. 
+  
+   ![Selecting a KPI Gauge](images/Tutorials-Select-KPI-Gauge-Spreadsheet.png)
+         
+5. Open the *Visualization Picker* and select the **KPI vs Time** visualization. By default, the visualization type will be set to *Column*. 
+
+   ![Select Change Visualization option](images/gauge-kpi-chart-type.png)
+
+6.  Drag and drop the *Date* field into *Date* and the *Sales* field into *Value*.                
+  ![Select KPI Gauge](images/Tutorials-KPIGauge-Organizing-Data.png)
 
 ## Creating Multiple KPI Gauges in one Visualization
 
 In order to create more than one KPI in one visualization, you will need
 to add a field to the **category** placeholder of the data editor.
 
-|                                          |                                                                                                      |                                                                                                                                                      |
-| ---------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Enter Edit Mode**               | ![Edit button in overflow menu](images/overflow-edit-option.png) | Choose **Edit** in overflow menu. |
-| 2\. **Create new Visualization**      | ![Add new visualization button](images/add-visualization-button.png) | Select the **+ Visualization** button in the top right-hand corner. |
-| 3\. **Configure your Data Source**       | ![Tutorials-Select-Data-Source](images/visualization-tutorials-sample.png) | Select your data source from the list of data sources.                                       |
-| 4\. **Select the Tutorials Spreadsheet** |![Selecting a KPI Gauge](images/Tutorials-Select-KPI-Gauge-Spreadsheet.png) | Once the data source is configured, then, choose the "KPI View" sheet.                                 |
-| 5\. **Select KPI Gauge chart type**      | ![Select Change Visualization option](images/gauge-kpi-chart-type.png) | By default, the visualization type will be set to Column. Select the **KPI vs Time** option.                                                                                |
-| 6\. **Organize your Data**               | ![Tutorials-MultipleKPIGauge-Organizing-Data](images/Tutorials-MultipleKPIGauge-Organizing-Data.png) | Drag and drop the "Date" field into "Date", the "Sales" field into "Value" and the "State" field into "Category".                                    |
+1. Choose **Edit** in overflow menu.
+
+   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
+
+2. Select the **+ Visualization** button in the top right-hand corner.
+
+   ![Add new visualization button](images/add-visualization-button.png)                                      
+
+3. Select your data source from the list of data sources.
+
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+
+4. Choose the **KPI View** sheet. 
+  
+   ![Selecting a KPI Gauge](images/Tutorials-Select-KPI-Gauge-Spreadsheet.png)
+         
+5. Open the *Visualization Picker* and select the **KPI vs Time** visualization. By default, the visualization type will be set to *Column*. 
+
+   ![Select Change Visualization option](images/gauge-kpi-chart-type.png)
+
+6.  Drag and drop the *Date* field into *Date*, the *Sales* field into *Value* and the *State* field into *Category*.          
+  ![Tutorials-MultipleKPIGauge-Organizing-Data](images/Tutorials-MultipleKPIGauge-Organizing-Data.png)
 
 ## Changing the Date Comparison Type
 
