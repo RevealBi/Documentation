@@ -229,7 +229,6 @@ const sidebars: SidebarsConfig = {
           { type: "doc", label: "Radial", id: "user/visualization-types/radial-charts" },
           { type: "doc", label: "Scatter and Bubble", id: "user/visualization-types/scatter-bubble-charts" },
           { type: "category", label: "Scatter Map", link: { type: "doc", id: "user/visualization-types/scatter-map" }, items: [
-            { type: "doc", label: "Using Image Tiles", id: "user/visualization-types/map-image-tiles" },
           ]},
           { type: "doc", label: "Sparkline", id: "user/visualization-types/sparkline-charts" },
           { type: "doc", label: "Text Box", id: "user/visualization-types/text-box" },
