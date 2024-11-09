@@ -79,7 +79,7 @@ Zooming also allows you to change the clear shapes Reveal uses as a map backgrou
 
 The Scatter Map in Reveal provides you with a variety of opportunities for your geographical analysis based on the data you choose to display.
 
-<a name='location-data-format'></a>
+
 ### Location Data Requirements
 
 The ScatterMap visualization plots the data using geo-coordinates. Each data point requires a latitude and longitude value to be displayed. The accepted format by Reveal is:
@@ -105,7 +105,7 @@ Additionally, the optional Label placeholder can be populated to replace the def
 
 Because of the conceptual simplicity of this map, you can only choose whether to show *title* and set the *color* of the dots in the _Settings_ section.
 
-<a name='bubble-maps'></a>
+
 ### Bubble Maps
 
 You can also create a scatter map with variable-sized markers or bubbles.

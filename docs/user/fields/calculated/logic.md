@@ -31,7 +31,7 @@ spreadsheet.*
 | [**true**](#true-and-false): `true` returns 1, the logical value of true.                                                                                      | **Syntax**: `true()`<br />**Sample**: `true()` |
 
 
-<a name='calc-fields-if'></a>
+
 ## If
 
 With the if function, you can find results that meet certain criteria
@@ -109,7 +109,7 @@ And the `if-condition` statements are:
 Because the logical operator is `and`, both conditions need to be true
 for the `maxif` aggregation to be carried out.
 
-<a name='calc-fields-and-or'></a>
+
 ## And and Or
 
 The `and` and `or` functions allow you to build nested if conditions by
@@ -214,7 +214,7 @@ If we combine these new statements in a new calculated field:
 `and([Employees Born after 1981],[CPA Employees],[JP, UY and BG
 Employees],[Current Employees])`
 
-<a name='calc-fields-not'></a>
+
 ## Not
 
 Using the not function, you can verify whether a logical test is true or
@@ -257,7 +257,7 @@ results:
 All rows that previously returned "0" will now do "1", and all "1" will
 be "0".
 
-<a name='true-false'></a>
+
 ## True and False
 
 The `true` and false functions are used without arguments, which means

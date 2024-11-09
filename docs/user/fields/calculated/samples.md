@@ -18,7 +18,7 @@ The following are a set of calculated field sample expressions.
 | **Name starts with J**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | if(find("j",lower([Fullname]),1)=1,"Starts with J",0)             | Starts with J, 0                       |
 | **Deviation from Avg**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
 
-<a name='converting-unix-timestamps'></a>
+
 ## Converting Unix TimeStamps to Usable Dates
 
 Unix times, defined in the seconds elapsed since January 1st, 1970
@@ -46,7 +46,7 @@ Where:
 The timezone can be entered as a number, or you can use one of your
 fields with a number. In either case, it must be GMT time.
 
-<a name='yoy-analysis-revenue'></a>
+
 ## YoY Analysis: Comparing Revenue Figures for a 2-Year Period
 
 You can create calculated fields, for example, to carry out a simple YOY

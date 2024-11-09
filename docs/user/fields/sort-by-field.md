@@ -24,7 +24,7 @@ that showcase this functionality:
 - [Ordering Support Cases by Priority](#ordering-support-cases-by-priority)
 - [Ordering String Dates in Chronological Order](#ordering-string-dates-in-chronological-order)
 
-<a name='by-priority'></a>
+
 ## Ordering Support Cases by Priority
 
 There are scenarios where you would like to order a field by using business logic instead of ordering it alphabetically. 
@@ -39,7 +39,7 @@ dragging and dropping *Priority Level* field into the data editor by using the
 *Sort By* field option.
 
 ![Sorting the information by priority in the sort by field option](images/sorting-by-priority-sample.png)
-<a name='string-date-chr-order'></a>
+
 ## Ordering String Dates in Chronological Order
 
 Let's take a look at the following visualization, where we have plotted

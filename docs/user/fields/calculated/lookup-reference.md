@@ -22,7 +22,7 @@ All samples included in the table below were created with the **[HR Dataset 2016
 | **row**: `row` returns the number of the current row for every row in your data source. | **Syntax**: `row()`<br/>**Sample**: `row()`                                                  |
 
 
-<a name='calc-fields-previous'></a>
+
 ## Previous
 
 The previous calculated field allows you to get a result with the value

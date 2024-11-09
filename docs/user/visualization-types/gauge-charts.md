@@ -9,7 +9,7 @@ The Gauge chart displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
 formatting of the different ranges. In Reveal, you can use the following gauge charts: [Linear](#linear-gauge), [Circular](#circular-gauge), [Text](#text-gauge), [KPI](kpi-gauge) and [Bullet Graph](#bullet-graph) gauges.
 
-<a name='linear-gauge'></a>
+
 ## Linear Gauge
 
 The Linear gauge displays a label, the value of which is taken from the
@@ -19,7 +19,7 @@ is also displayed in a numeric format within its bounds or next to it. This gaug
 
 ![Linear gauge chart example in the Visualization editor](images/linear-gauge-example.png)
 
-<a name='circular-gauge'></a>
+
 ## Circular Gauge
 
 The Circular Gauge displays the band's minimum and maximum thresholds, and
@@ -28,7 +28,7 @@ current range.
 
 ![Circular gauge chart example in the Visualization editor](images/circular-gauge-view-example.png)
 
-<a name='text-gauge'></a>
+
 ## Text Gauge
 
 The Text Gauge displays the Value column data in a large font. This
@@ -38,7 +38,7 @@ unless any filters are applied so that the chosen data row is different.
 
 ![Text gauge chart example in the Visualization editor](images/text-view-gauge.png)
 
-<a name='bullet-graph'></a>
+
 ## Bullet Graph
 
 The Bullet is very similar to a Linear gauge. It displays a label from
@@ -57,7 +57,7 @@ The Bullet is useful for comparing values side by side, while also
 evaluating the performance from the value (horizontal line) against the
 target value (vertical mark).
 
-<a name='bands-configuration'></a>
+
 ## Bands Configuration
 
 All gauge types have a common band range configuration, which you can find in the **Settings** section of the *Visualizations Editor*. The configuration dialog allows you to set **Limits**. These values are automatically set as the lowest and

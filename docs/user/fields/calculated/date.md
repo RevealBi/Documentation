@@ -45,7 +45,7 @@ Time.*
 | datetimefromunixts | **Syntax**: `datetimefromunixts ({miliseconds})`<br />**Sample**: `datetimefromunixts(0.001)` |
 
 
-<a name='date-date'></a>
+
 ## Date
 
 When you use `date`, Reveal will return a date set to the values you
@@ -76,7 +76,7 @@ sure you respect the order of the elements in the formula:
 | ------------- | ---- | ----- | --- | ------ | ------ | ------ |
 | date (…​)      | 1971 | 11    | 08  | **27** | 59     | 08     |
 
-<a name='date-time'></a>
+
 ## Time
 
 When you use time, Reveal will return a time set to the values you

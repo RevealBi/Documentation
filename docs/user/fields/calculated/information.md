@@ -17,7 +17,7 @@ a selected field. They are particularly useful with large spreadsheets because y
 
 
 
-<a name='isempty'></a>
+
 ## isempty
 
 Unlike empty, isempty will check the field you select and check every

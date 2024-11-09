@@ -37,7 +37,7 @@ Below, you can see a map, showing traffic deaths per 100 000 population in Easte
 
 Your choice of data for the choropleth map visualization highly depends on the insight you want to provide. If you aim to present the spread of a contagious disease through a region, then the use of raw counts may be more appropriate.
 
-<a name='location-data'></a>
+
 ## Data Requirements for Location Data
 
 Reveal has a great variety of predefined maps available for your choropleth visualizations. The minimum information required to provide in your data set is:
@@ -75,7 +75,7 @@ To follow this walkthrough, download the [2016 November General Election](../../
 As a result, you can see the USA map, divided into states. The larger the percent of voters in a state, the more intensive the blue color of the state is.
 
 ![Choropleth map visualization](images/choropleth-visualization-example.png)
-<a name='map-color'></a>
+
 ## Using the Map Color to Create a Multi-Color Choropleth Map
 
 You can alternatively set the *Map Color* property to control the color of each area on the map. This is useful to reflect things like which candidate or party had the most/least votes in an area.
@@ -87,7 +87,7 @@ To change the coloring condition, go to:
 
 *Settings* ⇒ *Color based on* ⇒ *Lowest Value*.
 
-<a name='drill-down'></a>
+
 ## Drilling Up and Down Hierarchy Levels
 
 You can drill up and down your choropleth map areas to dynamically uncover hierarchy levels of your location data.

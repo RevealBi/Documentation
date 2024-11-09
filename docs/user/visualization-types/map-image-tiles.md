@@ -14,7 +14,7 @@ You can use the *slider* provided in the *Visualization Editor Settings* to spec
 ![Zoom level slider in the Visualization Editor Settings](images/tile-source-zoom-slider.png)
 
 
-<a name='adding-image-tiles'></a>
+
 ## Adding Image Tiles to Your Maps
 
 To use image tiles:  
@@ -58,7 +58,7 @@ To use image tiles:
 
 6. For *Personal settings*, just close the dialog and your changes will be automatically updated. For *Organization/Workspace settings*, click/tap *Update* and close the dialog.
 
-<a name='resolution-process'></a>
+
 ## How does Reveal determine which file provider to use?
 
 When you open a scatter map where *Use Image Tiles* is enabled, Reveal resolves which tile provider to be used. The tile provider (and its authorization token) can be specified on any of three levels of user settings: Personal, Workspace, Organization (see more in [Adding Image Tiles](#adding-image-tiles-to-your-maps) above). 
