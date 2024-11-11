@@ -20,7 +20,7 @@ defined on the server side, and Reveal supports the *expand* and *drill*
 operations.
 
 :::note
-Ad-hoc hierarchies are **not supported** in *Text*, *Circular* *Image*, *Grid* and *Text View* charts.
+Ad-hoc hierarchies are **not supported** in *Text*, *Circular*, *Image*, *Grid* and *Text View* charts.
 :::
 ## Enabling Ad-Hoc Hierarchies
 
