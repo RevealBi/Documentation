@@ -37,7 +37,7 @@ second string as specified in your arguments.
 
 There are three arguments you need to configure:
 
-  - `text`: the text you want to find.
+  - `find text`: the text you want to find.
 
   - `within text`: the text in which you want to carry out the search.
 

@@ -101,8 +101,8 @@ include as many as necessary:
 Where:
 
 | Function Name | Expression | Logical Operator |
-| ------------- | ---------- | ---------------- |
-| maxif (…​)     | [Wage]     | and              |
+|------------| ---------- | ---------------- |
+| maxif (…​) | [Wage]     | and              |
 
 And the `if-condition` statements are:
 
