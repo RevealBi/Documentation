@@ -11,7 +11,7 @@ placeholder in the lower section of the data editor. Then, select a field
 from the dropdown menu to access the *Data Filter* window.
 
 ![Adding data filter fields list](images/data-filter-visualization-editor.png)
-<a name='empty-values'></a>
+
 ## Filter Empty Values
 
 Reveal provides the ability to filter rows in the dataset that have null
@@ -19,7 +19,7 @@ or empty values on a specific column by enabling the filter empty values
 configuration setting on a specific column.
 
 ![Filter Empty Values in the list of filter types](images/data-filter-filter-empty-values-option.png)
-<a name='select-values'></a>
+
 ## Select Values
 
 This type of filter supports the definition of the set of values to
@@ -39,7 +39,7 @@ visualization.
 The **Filter by Rule** option enables the definition of more complex
 rules. The available rule options change depending on the field type.
 
-<a name='rules'></a>
+
 ### Rules for Date Fields
 
 Date fields include rules designed to support time-based scenarios,

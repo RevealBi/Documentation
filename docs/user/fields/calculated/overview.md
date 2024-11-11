@@ -20,7 +20,7 @@ There are two types of calculated fields:
 
   - [post-calculated](#post-calculated-fields)
 
-<a name='precalculated-fields'></a>
+
 ## Pre-Calculated Fields
 
 Pre-calculated fields are evaluated before executing data editor
@@ -54,7 +54,7 @@ Pre-calculated fields can also be used with *Pivot Grids*. In this case,
 aggregation (e.g. summarization) will be applied to the already
 calculated records in the pre-calculated field.
 
-<a name='postcalculated-fields'></a>
+
 ## Post-Calculated Fields
 
 Post-calculated fields can be created when working with *Pivot tables*
@@ -91,7 +91,7 @@ use only post-calculated fields in your visualization.
 Post-calculation tends to perform better than pre-calculation when
 working with large datasets.
 
-<a name='predefined-functions'></a>
+
 ## Using the Predefined Reveal Functions
 
 For both pre-calculated and post-calculated fields, you can use one of
@@ -176,7 +176,7 @@ the available functions within Reveal:
 :::note
 **Limitations to IF Conditions**. IF conditions have known limitations when included in aggregation functions in pre-calculated fields. The need to go through every record that many times, trying to check an IF condition within an aggregation formula causes underperformance issues, hence it's not supported.
 :::
-<a name='without-predefined-functions'></a>
+
 ## Creating Calculated Fields without using the predefined functions
 
 You can also create Calculated Fields without using any of the

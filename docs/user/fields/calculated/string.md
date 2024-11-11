@@ -27,7 +27,7 @@ texts to get different results.
 | **upper**: `upper` converts all lower case characters in a given `text` string to upper case. | **Syntax**: `upper({text})`<br/>**Sample**: `upper("Caution: Hot. Do not touch")`                                                                                              |
 
 
-<a name='calc-fields-find'></a>
+
 ## Find
 
 The find function returns the starting position of a first string in a
@@ -61,7 +61,7 @@ the character number where the `w` in `with` is located.
 If `with` were repeated more than once in the phrase, the calculated
 field will return the character of the **first occurrence of the word**.
 
-<a name='calc-fields-mid'></a>
+
 ## Mid
 
 The mid calculated field returns a substring of the specified string
@@ -92,7 +92,7 @@ starting at character 9 and lasting 12 characters:
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | **S** | **t** | **a** | **r** | **t** | **e** | **d** |       | **w** | **i** | **t** | **h** |
 
-<a name='calc-fields-replace'></a>
+
 ## Replace
 
 The replace function replaces a given string with a different one as
@@ -134,7 +134,7 @@ Note that the old text got replaced both times; **make sure you consider
 that the term will be changed every time it appears before you change
 it**.
 
-<a name='calc-fields-sortinterval'></a>
+
 ## Sortinterval
 
 The sortinterval function returns a value in a(n) interval(s) according

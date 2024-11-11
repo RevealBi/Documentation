@@ -41,7 +41,7 @@ spreadsheet.*
 | **sum**: The `sum` aggregation will return a number, which is calculated as the sum of all rows in your selected `expression`. |  `sum({expression})` | `sum([Wage])` |
 | **sumif**: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition. |  `sumif({expression},{if-condition})` | `sumif([Wage],[OfficeId]=1)` |
 
-<a name='aggregation-if-condition'></a>
+
 ## Calculated Fields with IF Conditions
 
 Using a regular function (which needs an `expression`) with an
@@ -87,7 +87,7 @@ Where:
 | ------------- | ---------- | -------------------------- |
 | sumif (…​)    | [Wage]      | [Department]="Development" |
 
-<a name='nested-if-conditions'></a>
+
 ### Sample with Nested IF conditions
 
 You can use nested if conditions by preceding them with a logical

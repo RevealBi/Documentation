@@ -7,7 +7,7 @@ _description: In using Choropleth maps for Visualization, learn how to follow lo
 
 *Location names* column in your data set has to match the actual geographic units on the selected map. If for example, the column contains name of countries, but you want to use the USA states map, you will see the "*There is no data to display*" error on the screen. Find more about this error in [Troubleshooting Errors](#troubleshooting-the-choropleth-map) below.
 
-<a name='location-formats'></a>
+
 ## Location Formats
 To have your location column recognized by Reveal, provide one of the following formats:
 
@@ -46,7 +46,7 @@ Be consistent with the format you provide. Do not mix full names and codes in th
 | Fr. S. Antarctic Lands   | Fr. S. Antarctic      |
 | Equatorial Guinea        | Eq. Guinea            |
 
-<a name='troubleshooting-choropleth-map'></a>
+
 ## Troubleshooting Errors
 
 The Choropleth map was designed to find any match that is available. This way, you'll see a map with partial results doesn't look right, but it will be working regardless.
@@ -76,7 +76,7 @@ If you are getting an outcome, but it's not exactly what you were expecting, ple
 
 - *Remember/write down the steps you made.* Once you start troubleshooting, it is really helpful to remember what you have already done. When asking for support, things get much easier if you know exactly which steps you made in the past.
 
-<a name='data-not-in-english'></a>
+
 ## My Data Source Is Not In English
 
 Reveal doesn't recognize the language of your data source automatically.

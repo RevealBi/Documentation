@@ -23,7 +23,7 @@ options:
 :::note 
 All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
 :::
-<a name='date-fields'></a>
+
 ## Date Fields
 
 ![Date-Field-Formatting](images/formatting-date-field.png)
@@ -53,7 +53,7 @@ When you drag and drop a Date field in the Pivot Editor, all the hierarchy is au
 In addition, dragging a specific hierarchy level will show data for that level only, as shown below.
 
 ![Dragging part of the hierarchy of a date field in Reveal](images/date-field-hierarchy-level-example.png)
-<a name='numeric-fields'></a>
+
 ## Numeric Fields
 
 ![Numeric-Field-Formatting\_All.png](images/numeric-field-settings.png)
@@ -97,7 +97,7 @@ In addition, dragging a specific hierarchy level will show data for that level o
     customize your limits, type of comparison, colors, and indicator
     symbols. 
 
-<a name='abc-fields'></a>
+
 ## String Fields
 
 ![String-Field-Formatting](images/string-field-formatting-field-settings-dialog.png)

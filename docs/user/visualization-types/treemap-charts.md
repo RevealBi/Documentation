@@ -13,7 +13,7 @@ Each characteristic of the building tiles (rectangles) has a role in the data an
   * **Size** - shows the value for each category. Fields data, used to determine size, can only be numerical (*123*).
   * **Label** - shows the category and value for each rectangle in the visualization (i.e. [without hierarchical data](#treemap-visualizations-without-hierarchical-data)). When you have a [treemap visualization with hierarchical data](#treemap-visualizations-with-hierarchical-data), there is an additional label showing the category and value for the current level.
 
-<a name='flat-treemap'></a>
+
 ## Treemap Visualizations Without Hierarchical Data
 
 You can create a **visualization without hierarchical data** like the one shown below:
