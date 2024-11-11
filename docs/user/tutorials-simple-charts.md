@@ -50,7 +50,7 @@ For this tutorial, you will use the *Simple Series Charts* sheet in the <a href=
 
 ## Creating your Chart
 
-11. Choose **Edit** in overflow menu.
+1. Choose **Edit** in overflow menu.
 
    ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
