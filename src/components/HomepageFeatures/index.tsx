@@ -48,7 +48,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
     Svg: require('@site/static/img/empty-states.svg').default,
-    link: "user/dashboard-linking",
+    link: "user",
     description: (
       <>
         <Translate id="homepage.feature.user"

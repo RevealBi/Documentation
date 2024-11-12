@@ -74,7 +74,7 @@ const config: Config = {
           items: [
             { label: "Web", to: "web" },
             { label: "WPF", to: "wpf" },
-            { label: "User", to: "user/dashboard-linking" },
+            { label: "User", to: "user" },
           ]
         },
         {
