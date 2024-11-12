@@ -228,8 +228,7 @@ const sidebars: SidebarsConfig = {
           { type: "doc", label: "Pivot", id: "user/chart-types/pivot-table" },
           { type: "doc", label: "Radial", id: "user/chart-types/radial-charts" },
           { type: "doc", label: "Scatter and Bubble", id: "user/chart-types/scatter-bubble-charts" },
-          { type: "category", label: "Scatter Map", link: { type: "doc", id: "user/chart-types/scatter-map" }, items: [
-          ]},
+          { type: "doc", label: "Scatter Map", id: "user/chart-types/scatter-map" },
           { type: "doc", label: "Sparkline", id: "user/chart-types/sparkline-charts" },
           { type: "doc", label: "Text Box", id: "user/chart-types/text-box" },
           { type: "doc", label: "Text View", id: "user/chart-types/text-view" },
