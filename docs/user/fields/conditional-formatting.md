@@ -6,7 +6,7 @@ _description: Learn how to use Conditional Formatting in Reveal to achieve more 
 # Conditional Formatting
 
 Conditional formatting allows you to provide different formatting of a
-cell (or rows for [Text Views](../visualization-types/text-view)) depending on the values found
+cell (or rows for [Text Views](../chart-types/text-view)) depending on the values found
 in a numeric column. For instance, values in the lower 50% range of a
 grid can be colored with a red adorner to signal very low values.
 
@@ -51,12 +51,12 @@ disabled by default.
 
 Conditional formatting can be applied to the following visualizations:
 
-  - [Grid Chart](../visualization-types/grid-chart)
+  - [Grid Chart](../chart-types/grid-chart)
 
-  - [Pivot Chart](../visualization-types/pivot-table)
+  - [Pivot Chart](../chart-types/pivot-table)
 
-  - [Text View](../visualization-types/text-view)
+  - [Text View](../chart-types/text-view)
 
 :::note
-[KPI](../visualization-types/kpi-gauge), [Linear](/docs/user/visualization-types/gauge-charts.md#linear-gauge), [Circular](/docs/user/visualization-types/gauge-charts.md#circular-gauge), [Text](/docs/user/visualization-types/gauge-charts.md#text-gauge), and [Bullet Graph](/docs/user/visualization-types/gauge-charts.md#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](/docs/user/visualization-types/gauge-charts.md#bands-configuration).
+[KPI](../chart-types/kpi-gauge), [Linear](/docs/user/chart-types/gauge-charts.md#linear-gauge), [Circular](/docs/user/chart-types/gauge-charts.md#circular-gauge), [Text](/docs/user/chart-types/gauge-charts.md#text-gauge), and [Bullet Graph](/docs/user/chart-types/gauge-charts.md#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](/docs/user/chart-types/gauge-charts.md#bands-configuration).
 :::

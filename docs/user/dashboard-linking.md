@@ -11,6 +11,8 @@ By clicking/tapping the link symbol, you can open:
 
 ![](images/sample-linked-dashboards.png)
 
+![](images/sample-linked-dashboards-2.png)
+
 ## Adding a Link 
 
 To configure a link, go to the **Settings** section of the *Visualizations Editor* and click/tap the *+* in **Links**. Alternatively, you can choose **Connect this visualization to another dashboard or a URL**.

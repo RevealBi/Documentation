@@ -213,28 +213,27 @@ const sidebars: SidebarsConfig = {
       type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", id: "user/visualizations-overview" },
         { type: "doc", label: "Visualization Editor", id: "user/visualization-editor" },
-        { type: "category", label: "Visualization Types", items: [
-          { type: "doc", label: "Category", id: "user/visualization-types/category-charts" },
-          { type: "category", label: "Choropleth ", link: { type: "doc", id: "user/visualization-types/choropleth-map" }, items: [
-            { type: "doc", label: "Location Data", id: "user/visualization-types/location-data-requirements" },
-            { type: "doc", label: "Settings", id: "user/visualization-types/settings-choropleth-map" },
+        { type: "category", label: "Chart Types", items: [
+          { type: "doc", label: "Category", id: "user/chart-types/category-charts" },
+          { type: "category", label: "Choropleth ", link: { type: "doc", id: "user/chart-types/choropleth-map" }, items: [
+            { type: "doc", label: "Location Data", id: "user/chart-types/location-data-requirements" },
+            { type: "doc", label: "Settings", id: "user/chart-types/settings-choropleth-map" },
           ]},
-          { type: "doc", label: "Combo", id: "user/visualization-types/combo-charts" },
-          { type: "doc", label: "Financial", id: "user/visualization-types/financial-charts" },
-          { type: "doc", label: "Gauges", id: "user/visualization-types/gauge-charts" },
-          { type: "doc", label: "Grid", id: "user/visualization-types/grid-chart" },
-          { type: "doc", label: "Image", id: "user/visualization-types/image-chart" },
-          { type: "doc", label: "KPI", id: "user/visualization-types/kpi-gauge" },
-          { type: "doc", label: "Pivot", id: "user/visualization-types/pivot-table" },
-          { type: "doc", label: "Radial", id: "user/visualization-types/radial-charts" },
-          { type: "doc", label: "Scatter and Bubble", id: "user/visualization-types/scatter-bubble-charts" },
-          { type: "category", label: "Scatter Map", link: { type: "doc", id: "user/visualization-types/scatter-map" }, items: [
-          ]},
-          { type: "doc", label: "Sparkline", id: "user/visualization-types/sparkline-charts" },
-          { type: "doc", label: "Text Box", id: "user/visualization-types/text-box" },
-          { type: "doc", label: "Text View", id: "user/visualization-types/text-view" },
-          { type: "doc", label: "Time Series", id: "user/visualization-types/time-series-charts" },
-          { type: "doc", label: "Tree Map", id: "user/visualization-types/treemap-charts" },
+          { type: "doc", label: "Combo", id: "user/chart-types/combo-charts" },
+          { type: "doc", label: "Financial", id: "user/chart-types/financial-charts" },
+          { type: "doc", label: "Gauges", id: "user/chart-types/gauge-charts" },
+          { type: "doc", label: "Grid", id: "user/chart-types/grid-chart" },
+          { type: "doc", label: "Image", id: "user/chart-types/image-chart" },
+          { type: "doc", label: "KPI", id: "user/chart-types/kpi-gauge" },
+          { type: "doc", label: "Pivot", id: "user/chart-types/pivot-table" },
+          { type: "doc", label: "Radial", id: "user/chart-types/radial-charts" },
+          { type: "doc", label: "Scatter and Bubble", id: "user/chart-types/scatter-bubble-charts" },
+          { type: "doc", label: "Scatter Map", id: "user/chart-types/scatter-map" },
+          { type: "doc", label: "Sparkline", id: "user/chart-types/sparkline-charts" },
+          { type: "doc", label: "Text Box", id: "user/chart-types/text-box" },
+          { type: "doc", label: "Text View", id: "user/chart-types/text-view" },
+          { type: "doc", label: "Time Series", id: "user/chart-types/time-series-charts" },
+          { type: "doc", label: "Tree Map", id: "user/chart-types/treemap-charts" },
         ]},
 
 
