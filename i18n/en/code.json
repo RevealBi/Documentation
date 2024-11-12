@@ -15,10 +15,6 @@
     "message": "Easily integrate data analytics into your WPF or WinForms applications.",
     "description": "The words used to describe the wpf sdk on the homepage"
   },
-  "homepage.feature.video": {
-    "message": "Follow walkthrough videos and start using our sample visualizations and sample data to help you get up and running.",
-    "description": "The words used to describe the video section on the homepage"
-  },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -119,10 +115,6 @@
     "message": "light mode",
     "description": "The name for the light color mode"
   },
-  "theme.docs.DocCard.categoryDescription": {
-    "message": "{count} items",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
   "theme.docs.breadcrumbs.home": {
     "message": "Home page",
     "description": "The ARIA label for the home page in the breadcrumbs"
@@ -222,10 +214,6 @@
     "message": "Toggle word wrap",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
-  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
-    "message": "Toggle the collapsible sidebar category '{label}'",
-    "description": "The ARIA label to toggle the collapsible sidebar category"
-  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Languages",
     "description": "The label for the mobile language switcher dropdown"
@@ -289,10 +277,6 @@
   "homepage.feature.wpf.title": {
     "message": "WPF SDK Documentation",
     "description": "The title of the WPF feature on the homepage"
-  },
-  "homepage.feature.video.title": {
-    "message": "Training Videos",
-    "description": "The title of the Training Videos feature on the homepage"
   },
   "playground.runButton": {
     "message": "Run"
@@ -379,5 +363,37 @@
   "theme.docs.sidebar.navAriaLabel": {
     "message": "Docs sidebar",
     "description": "The ARIA label for the sidebar navigation"
+  },
+  "homepage.feature.user.title": {
+    "message": "User Documentation",
+    "description": "The title of the User Docs feature on the homepage"
+  },
+  "homepage.feature.user": {
+    "message": "Explore user-friendly guides and resources tailored for end-users to make the most of data analytics.",
+    "description": "The words used to describe the user section on the homepage"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 item|{count} items",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.admonition.warning": {
+    "message": "warning",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Expand sidebar category '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Collapse sidebar category '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "Unlisted page",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "description": "The unlisted content banner message"
   }
 }

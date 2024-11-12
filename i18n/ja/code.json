@@ -15,10 +15,6 @@
     "message": "データ分析を WPF または WinForms アプリケーションに簡単に統合します。",
     "description": "The words used to describe the wpf sdk on the homepage"
   },
-  "homepage.feature.video": {
-    "message": "サンプル ビジュアライゼーションとサンプル データを使用し、チュートリアルビデオに沿って Reveal を始めましょう。",
-    "description": "The words used to describe the video section on the homepage"
-  },
   "theme.ErrorPageContent.title": {
     "message": "エラーが発生しました",
     "description": "The title of the fallback page when the page crashed"
@@ -127,10 +123,6 @@
     "message": "パンくずリストのナビゲーション",
     "description": "The ARIA label for the breadcrumbs"
   },
-  "theme.docs.DocCard.categoryDescription": {
-    "message": "{count}項目",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
   "theme.docs.paginator.navAriaLabel": {
     "message": "ドキュメントのナビゲーション",
     "description": "The ARIA label for the docs pagination"
@@ -222,10 +214,6 @@
     "message": "折り返し",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
-  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
-    "message": "サイドバーのカテゴリー「{label}」を開く・閉じる",
-    "description": "The ARIA label to toggle the collapsible sidebar category"
-  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "他の言語",
     "description": "The label for the mobile language switcher dropdown"
@@ -289,10 +277,6 @@
   "homepage.feature.wpf.title": {
     "message": "WPF SDK ドキュメント",
     "description": "The title of the WPF feature on the homepage"
-  },
-  "homepage.feature.video.title": {
-    "message": "トレーニング ビデオ",
-    "description": "The title of the Training Videos feature on the homepage"
   },
   "playground.runButton": {
     "message": "実行"
@@ -379,5 +363,37 @@
   "theme.docs.sidebar.navAriaLabel": {
     "message": "ドキュメント サイドバー",
     "description": "The ARIA label for the sidebar navigation"
+  },
+  "homepage.feature.user.title": {
+    "message": "User Documentation",
+    "description": "The title of the User Docs feature on the homepage"
+  },
+  "homepage.feature.user": {
+    "message": "Explore user-friendly guides and resources tailored for end-users to make the most of data analytics.",
+    "description": "The words used to describe the user section on the homepage"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count}項目",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.admonition.warning": {
+    "message": "警告",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "'{label}'の目次を開く",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "'{label}'の目次を隠す",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "非公開のページ",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "このページは非公開です。 検索対象外となり、このページのリンクに直接アクセスできるユーザーのみに公開されます。",
+    "description": "The unlisted content banner message"
   }
 }

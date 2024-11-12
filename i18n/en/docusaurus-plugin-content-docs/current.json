@@ -410,5 +410,253 @@
   "sidebar.webSidebar.doc.Custom Visualizations": {
     "message": "Custom Visualizations",
     "description": "The label for the doc item Custom Visualizations in sidebar webSidebar, linking to the doc web/custom-visualizations"
+  },
+  "sidebar.userSideBar.category.Dashboards": {
+    "message": "Dashboards",
+    "description": "The label for category Dashboards in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Exporting": {
+    "message": "Exporting",
+    "description": "The label for category Exporting in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Visualizations": {
+    "message": "Visualizations",
+    "description": "The label for category Visualizations in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Chart Types": {
+    "message": "Chart Types",
+    "description": "The label for category Chart Types in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Choropleth ": {
+    "message": "Choropleth ",
+    "description": "The label for category Choropleth  in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Fields ": {
+    "message": "Fields ",
+    "description": "The label for category Fields  in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Calculated Fields ": {
+    "message": "Calculated Fields ",
+    "description": "The label for category Calculated Fields  in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Filters": {
+    "message": "Filters",
+    "description": "The label for category Filters in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar userSideBar"
+  },
+  "sidebar.userSideBar.doc.Exporting to PDF": {
+    "message": "Exporting to PDF",
+    "description": "The label for the doc item Exporting to PDF in sidebar userSideBar, linking to the doc user/dashboard-export-pdf"
+  },
+  "sidebar.userSideBar.doc.Exporting to Excel": {
+    "message": "Exporting to Excel",
+    "description": "The label for the doc item Exporting to Excel in sidebar userSideBar, linking to the doc user/dashboard-export-excel"
+  },
+  "sidebar.userSideBar.doc.Exporting to Image": {
+    "message": "Exporting to Image",
+    "description": "The label for the doc item Exporting to Image in sidebar userSideBar, linking to the doc user/dashboard-export-image"
+  },
+  "sidebar.userSideBar.doc.Exporting to PowerPoint": {
+    "message": "Exporting to PowerPoint",
+    "description": "The label for the doc item Exporting to PowerPoint in sidebar userSideBar, linking to the doc user/dashboard-export-powerpoint"
+  },
+  "sidebar.userSideBar.doc.Linking": {
+    "message": "Linking",
+    "description": "The label for the doc item Linking in sidebar userSideBar, linking to the doc user/dashboard-linking"
+  },
+  "sidebar.userSideBar.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item Overview in sidebar userSideBar, linking to the doc user/tutorials-overview"
+  },
+  "sidebar.userSideBar.doc.Visualization Editor": {
+    "message": "Visualization Editor",
+    "description": "The label for the doc item Visualization Editor in sidebar userSideBar, linking to the doc user/visualization-editor"
+  },
+  "sidebar.userSideBar.doc.Category": {
+    "message": "Category",
+    "description": "The label for the doc item Category in sidebar userSideBar, linking to the doc user/chart-types/category-charts"
+  },
+  "sidebar.userSideBar.doc.Location Data": {
+    "message": "Location Data",
+    "description": "The label for the doc item Location Data in sidebar userSideBar, linking to the doc user/chart-types/location-data-requirements"
+  },
+  "sidebar.userSideBar.doc.Settings": {
+    "message": "Settings",
+    "description": "The label for the doc item Settings in sidebar userSideBar, linking to the doc user/chart-types/settings-choropleth-map"
+  },
+  "sidebar.userSideBar.doc.Combo": {
+    "message": "Combo",
+    "description": "The label for the doc item Combo in sidebar userSideBar, linking to the doc user/chart-types/combo-charts"
+  },
+  "sidebar.userSideBar.doc.Financial": {
+    "message": "Financial",
+    "description": "The label for the doc item Financial in sidebar userSideBar, linking to the doc user/chart-types/financial-charts"
+  },
+  "sidebar.userSideBar.doc.Gauges": {
+    "message": "Gauges",
+    "description": "The label for the doc item Gauges in sidebar userSideBar, linking to the doc user/chart-types/gauge-charts"
+  },
+  "sidebar.userSideBar.doc.Grid": {
+    "message": "Grid",
+    "description": "The label for the doc item Grid in sidebar userSideBar, linking to the doc user/chart-types/grid-chart"
+  },
+  "sidebar.userSideBar.doc.Image": {
+    "message": "Image",
+    "description": "The label for the doc item Image in sidebar userSideBar, linking to the doc user/chart-types/image-chart"
+  },
+  "sidebar.userSideBar.doc.KPI": {
+    "message": "KPI",
+    "description": "The label for the doc item KPI in sidebar userSideBar, linking to the doc user/chart-types/kpi-gauge"
+  },
+  "sidebar.userSideBar.doc.Pivot": {
+    "message": "Pivot",
+    "description": "The label for the doc item Pivot in sidebar userSideBar, linking to the doc user/chart-types/pivot-table"
+  },
+  "sidebar.userSideBar.doc.Radial": {
+    "message": "Radial",
+    "description": "The label for the doc item Radial in sidebar userSideBar, linking to the doc user/chart-types/radial-charts"
+  },
+  "sidebar.userSideBar.doc.Scatter and Bubble": {
+    "message": "Scatter and Bubble",
+    "description": "The label for the doc item Scatter and Bubble in sidebar userSideBar, linking to the doc user/chart-types/scatter-bubble-charts"
+  },
+  "sidebar.userSideBar.doc.Scatter Map": {
+    "message": "Scatter Map",
+    "description": "The label for the doc item Scatter Map in sidebar userSideBar, linking to the doc user/chart-types/scatter-map"
+  },
+  "sidebar.userSideBar.doc.Sparkline": {
+    "message": "Sparkline",
+    "description": "The label for the doc item Sparkline in sidebar userSideBar, linking to the doc user/chart-types/sparkline-charts"
+  },
+  "sidebar.userSideBar.doc.Text Box": {
+    "message": "Text Box",
+    "description": "The label for the doc item Text Box in sidebar userSideBar, linking to the doc user/chart-types/text-box"
+  },
+  "sidebar.userSideBar.doc.Text View": {
+    "message": "Text View",
+    "description": "The label for the doc item Text View in sidebar userSideBar, linking to the doc user/tutorials-text-view"
+  },
+  "sidebar.userSideBar.doc.Time Series": {
+    "message": "Time Series",
+    "description": "The label for the doc item Time Series in sidebar userSideBar, linking to the doc user/chart-types/time-series-charts"
+  },
+  "sidebar.userSideBar.doc.Tree Map": {
+    "message": "Tree Map",
+    "description": "The label for the doc item Tree Map in sidebar userSideBar, linking to the doc user/chart-types/treemap-charts"
+  },
+  "sidebar.userSideBar.doc.Field Settings": {
+    "message": "Field Settings",
+    "description": "The label for the doc item Field Settings in sidebar userSideBar, linking to the doc user/fields/field-settings"
+  },
+  "sidebar.userSideBar.doc.Sort by Field": {
+    "message": "Sort by Field",
+    "description": "The label for the doc item Sort by Field in sidebar userSideBar, linking to the doc user/fields/sort-by-field"
+  },
+  "sidebar.userSideBar.doc.Ad-Hoc Hierarchies": {
+    "message": "Ad-Hoc Hierarchies",
+    "description": "The label for the doc item Ad-Hoc Hierarchies in sidebar userSideBar, linking to the doc user/fields/adhoc-hierarchies"
+  },
+  "sidebar.userSideBar.doc.Conditional Formatting": {
+    "message": "Conditional Formatting",
+    "description": "The label for the doc item Conditional Formatting in sidebar userSideBar, linking to the doc user/fields/conditional-formatting"
+  },
+  "sidebar.userSideBar.doc.Field Filters and Rules": {
+    "message": "Field Filters and Rules",
+    "description": "The label for the doc item Field Filters and Rules in sidebar userSideBar, linking to the doc user/fields/field-filters-rules"
+  },
+  "sidebar.userSideBar.doc.Aggregation": {
+    "message": "Aggregation",
+    "description": "The label for the doc item Aggregation in sidebar userSideBar, linking to the doc user/fields/calculated/aggregation"
+  },
+  "sidebar.userSideBar.doc.Date": {
+    "message": "Date",
+    "description": "The label for the doc item Date in sidebar userSideBar, linking to the doc user/fields/calculated/date"
+  },
+  "sidebar.userSideBar.doc.Information": {
+    "message": "Information",
+    "description": "The label for the doc item Information in sidebar userSideBar, linking to the doc user/fields/calculated/information"
+  },
+  "sidebar.userSideBar.doc.Logic": {
+    "message": "Logic",
+    "description": "The label for the doc item Logic in sidebar userSideBar, linking to the doc user/fields/calculated/logic"
+  },
+  "sidebar.userSideBar.doc.Lookup & Reference": {
+    "message": "Lookup & Reference",
+    "description": "The label for the doc item Lookup & Reference in sidebar userSideBar, linking to the doc user/fields/calculated/lookup-reference"
+  },
+  "sidebar.userSideBar.doc.Math": {
+    "message": "Math",
+    "description": "The label for the doc item Math in sidebar userSideBar, linking to the doc user/fields/calculated/math"
+  },
+  "sidebar.userSideBar.doc.String": {
+    "message": "String",
+    "description": "The label for the doc item String in sidebar userSideBar, linking to the doc user/fields/calculated/string"
+  },
+  "sidebar.userSideBar.doc.Samples and Tips": {
+    "message": "Samples and Tips",
+    "description": "The label for the doc item Samples and Tips in sidebar userSideBar, linking to the doc user/fields/calculated/samples"
+  },
+  "sidebar.userSideBar.doc.Reusing Visualizations": {
+    "message": "Reusing Visualizations",
+    "description": "The label for the doc item Reusing Visualizations in sidebar userSideBar, linking to the doc user/reusing-visualizations"
+  },
+  "sidebar.userSideBar.doc.Statistical Functions": {
+    "message": "Statistical Functions",
+    "description": "The label for the doc item Statistical Functions in sidebar userSideBar, linking to the doc user/statistical-functions"
+  },
+  "sidebar.userSideBar.doc.Dashboard Filters": {
+    "message": "Dashboard Filters",
+    "description": "The label for the doc item Dashboard Filters in sidebar userSideBar, linking to the doc user/filters-dashboard"
+  },
+  "sidebar.userSideBar.doc.Dashboard Filter Properties": {
+    "message": "Dashboard Filter Properties",
+    "description": "The label for the doc item Dashboard Filter Properties in sidebar userSideBar, linking to the doc user/filters-dashboard-properties"
+  },
+  "sidebar.userSideBar.doc.Connecting Filters": {
+    "message": "Connecting Filters",
+    "description": "The label for the doc item Connecting Filters in sidebar userSideBar, linking to the doc user/filters-connecting"
+  },
+  "sidebar.userSideBar.doc.Date Range Filter": {
+    "message": "Date Range Filter",
+    "description": "The label for the doc item Date Range Filter in sidebar userSideBar, linking to the doc user/filters-date-range"
+  },
+  "sidebar.userSideBar.doc.Visualization Filters": {
+    "message": "Visualization Filters",
+    "description": "The label for the doc item Visualization Filters in sidebar userSideBar, linking to the doc user/filters-visualization"
+  },
+  "sidebar.userSideBar.doc.Candlestick Charts": {
+    "message": "Candlestick Charts",
+    "description": "The label for the doc item Candlestick Charts in sidebar userSideBar, linking to the doc user/tutorials-candlestick"
+  },
+  "sidebar.userSideBar.doc.Gauge Charts": {
+    "message": "Gauge Charts",
+    "description": "The label for the doc item Gauge Charts in sidebar userSideBar, linking to the doc user/tutorials-gauge"
+  },
+  "sidebar.userSideBar.doc.Image Charts": {
+    "message": "Image Charts",
+    "description": "The label for the doc item Image Charts in sidebar userSideBar, linking to the doc user/tutorials-image"
+  },
+  "sidebar.userSideBar.doc.KPI Gauges": {
+    "message": "KPI Gauges",
+    "description": "The label for the doc item KPI Gauges in sidebar userSideBar, linking to the doc user/tutorials-kpi-gauge"
+  },
+  "sidebar.userSideBar.doc.OHLC Charts": {
+    "message": "OHLC Charts",
+    "description": "The label for the doc item OHLC Charts in sidebar userSideBar, linking to the doc user/tutorials-ohlc"
+  },
+  "sidebar.userSideBar.doc.Simple-Series Charts": {
+    "message": "Simple-Series Charts",
+    "description": "The label for the doc item Simple-Series Charts in sidebar userSideBar, linking to the doc user/tutorials-simple-charts"
+  },
+  "sidebar.userSideBar.doc.Sparkline Charts": {
+    "message": "Sparkline Charts",
+    "description": "The label for the doc item Sparkline Charts in sidebar userSideBar, linking to the doc user/tutorials-sparkline-charts"
+  },
+  "sidebar.userSideBar.doc.Stacked Charts": {
+    "message": "Stacked Charts",
+    "description": "The label for the doc item Stacked Charts in sidebar userSideBar, linking to the doc user/tutorials-stacked-charts"
   }
 }
