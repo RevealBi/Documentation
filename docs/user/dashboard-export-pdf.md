@@ -45,4 +45,4 @@ In the *Export Dashboard* dialog you can manage the following settings:
 
 5.  You can **manage your document pages** by selecting a page from the list to modify its title, annotate or delete it (by removing the tick icon in the upper right corner).
 
-6.  **Annotate** the selected page by clicking/tapping the *pencil* icon. For more information about **annotation settings**, please refer to [Annotating images](/docs/user/dashboard-export-image.md#annotating-images) in the *Exporting Dashboards as Images* topic.
+6.  **Annotate** the selected page by clicking/tapping the *pencil* icon. For more information about **annotation settings**, please refer to [Annotating images](dashboard-export-image.md#annotating-images) in the *Exporting Dashboards as Images* topic.

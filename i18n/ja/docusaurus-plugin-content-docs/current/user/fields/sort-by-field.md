@@ -43,7 +43,7 @@ dragging and dropping *Priority Level* field into the data editor by using the
 ## Ordering String Dates in Chronological Order
 
 Let's take a look at the following visualization, where we have plotted
-the cash and accounts receivable influxes for a company in a [stacked column chart](/docs/user/tutorials-stacked-charts.md#creating-a-stacked-chart).
+the cash and accounts receivable influxes for a company in a [stacked column chart](../tutorials-stacked-charts.md#creating-a-stacked-chart).
 
 ![Sales Info visualization while using stacked column chart](images/sort-by-field-sales-information-sample.png)
 The values have been ordered by **Month Name** (a string field).

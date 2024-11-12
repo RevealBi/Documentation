@@ -146,7 +146,7 @@ The `and` calculated field returns only four "TRUE" rows:
 
   - Row 96 (employee "Jorge Stanatto").
 
-You can look at these two rows only if you apply [filter by rule](/docs/user/fields/field-filters-rules.md#filter-by-rule) or [select value](/docs/user/fields/field-filters-rules.md#select-values) "1.00".
+You can look at these two rows only if you apply [filter by rule](../field-filters-rules.md#filter-by-rule) or [select value](../field-filters-rules.md#select-values) "1.00".
 
 If you want to refine your and condition so you only find "Zolleis
 Walker", you can introduce any one of the following third logical tests:
@@ -157,7 +157,7 @@ Walker", you can introduce any one of the following third logical tests:
 |               |                                                          |                            | [Office]="Tokyo,Japan"      |
 
 You can also combine the and/or functions with the
-[isempty](/docs/user/fields/calculated/information.md#isempty)
+[isempty](../calculated/information.md#isempty)
 calculated fields to get the same results:
 
 | Function Name | Logical Test 1 | Logical Test 2 | Logical Test 3  | Logical Test 4            |

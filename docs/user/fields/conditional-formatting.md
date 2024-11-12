@@ -58,5 +58,5 @@ Conditional formatting can be applied to the following visualizations:
   - [Text View](../chart-types/text-view)
 
 :::note
-[KPI](../chart-types/kpi-gauge), [Linear](/docs/user/chart-types/gauge-charts.md#linear-gauge), [Circular](/docs/user/chart-types/gauge-charts.md#circular-gauge), [Text](/docs/user/chart-types/gauge-charts.md#text-gauge), and [Bullet Graph](/docs/user/chart-types/gauge-charts.md#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](/docs/user/chart-types/gauge-charts.md#bands-configuration).
+[KPI](../chart-types/kpi-gauge), [Linear](../chart-types/gauge-charts.md#linear-gauge), [Circular](../chart-types/gauge-charts.md#circular-gauge), [Text](../chart-types/gauge-charts.md#text-gauge), and [Bullet Graph](../chart-types/gauge-charts.md#bullet-graph) gauges support conditional formatting in the form of [**visualization band range configurations**](../chart-types/gauge-charts.md#bands-configuration).
 :::

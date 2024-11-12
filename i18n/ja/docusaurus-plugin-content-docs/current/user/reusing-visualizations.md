@@ -30,7 +30,7 @@ visualizations from other dashboards.
 Your new visualization will have **the same title** as the original
 visualization.
 
-You can select *Rename* from the overflow menu of a visualization in Dashboard Edit mode. You can also change the title in the [Visualization Editor](/docs/user/visualization-editor.md) using the
+You can select *Rename* from the overflow menu of a visualization in Dashboard Edit mode. You can also change the title in the [Visualization Editor](visualization-editor.md) using the
 *pencil icon*.
 
 Also, if your original visualization had any **data in the Data Editor**,
