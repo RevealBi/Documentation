@@ -98,7 +98,7 @@ dataReady: function (tabularData) {
       <script type="text/javascript" src="reveal_bridge_utils.js"></script>
       <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript">
-         var helpLink = "https://help.revealbi.io/en/data-visualizations/visualization-types/diy-visualizations.html";
+         var helpLink = "https://help.revealbi.io/en/data-visualizations/chart-types/diy-visualizations.html";
          function getColumnTypeName(type) {
          	switch (type) {
          	case 0:
