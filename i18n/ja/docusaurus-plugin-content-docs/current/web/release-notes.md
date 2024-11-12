@@ -3,6 +3,293 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.7.1 (2024 年 11 月 5 日)
+
+### 重大な変更
+
+#### すべてのプラットフォーム
+
+- `ChartInteractionEventArgs` は `TooltipShowingEventArgs` に名前が変更されました。
+
+### 新機能
+
+#### すべてのプラットフォーム
+
+- チャートの表示形式では、値 0 のデータ ラベルは自動的に非表示になります。
+- カスタム メニュー項目は、`onTooltipShowing` 関数に渡される引数の `customItems` プロパティに `RVTooltipItem` を追加することで、表示形式ツールチップに追加できるようになりました。
+
+```js
+revealView.onTooltipShowing = function (args) {
+    //A string pointing to the image may be used or an RVImage, such as:
+    //var caseIcon = new $.ig.RVImage("https://svgsilh.com/png-512/306879.png", "Case Icon"); 
+    var caseIcon = "https://svgsilh.com/png-512/306879.png";
+    var openIcon = "https://svgsilh.com/png-512/41335.png";
+
+    if (args.cell.formattedValue == "Digital Security Center")
+    {
+        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Escalate Incident", caseIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Open Incident Report", openIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+
+        args.customItems.push(new $.ig.RVTooltipItem("High", "Send Reminder", null, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new $.ig.RVTooltipItem("High", "Assign Lead Investigator", null, (sender, clickArgs) => { console.log("Clicked"); }));
+    }
+}
+```
+
+- ホバー時にアクションを表示するツールチップの配置が改善されました。
+- URL リンクは、`onDashboardSelectorRequested` を実装する必要なく、すぐに使用できるようになりました。
+- URL のリンク ダイアログにターゲット設定が追加されました。ターゲットは、引数パラメーターの `target` プロパティを使用して `onUrlLinkRequested` を通じて指定できます。
+
+```js
+revealView.onUrlLinkRequested = (args) => {
+        args.target = "_blank";
+        return "https://www.google.com/";
+};
+```
+
+- 新しい表示形式を作成するか、既存の表示形式を編集してグリッドに切り替えると、サポートされているデータ ソースでデフォルトでグリッドのページングが有効になっています。
+- Shadow DOM を利用する Web コンポーネント フレームワークをより適切にサポートするために、マウスホイールイベントの改善が行われました。
+- 高負荷時のリクエスト実行と資格情報解決のパフォーマンスが向上しました。
+- クエリ実行のパフォーマンスを向上させるために、MongoDb の match ステージを簡素化しました。
+
+#### ASP.NET
+
+- .NET 8.0 のサポートが追加されました。
+- 依存関係 Npgsql v6.0.9 が v7.0.7 に更新されました。
+- 依存関係 Snowflake.Data v1.1.4 が v2.0.18 に更新されました。
+- Sybase コネクターの場合、依存関係 System.Data.SqlClient v4.7.0 が v4.8.6 に更新されました。
+
+#### Java
+
+- キャッシュ ファイルの場所をカスタマイズできるように、新しい `public InitializeParameterBuilder setCachePath(String path)` メソッドが `InitializeParameterBuilder` に追加されました。
+
+### バグ修正
+
+#### すべてのプラットフォーム
+
+- ツリーマップのツールチップに誤った情報が表示されています。
+- プレビュー用にデータが読み込まれている間、「表示するデータがありません」というメッセージが表示されます。
+- 複数のデータ ソースが利用可能な場合、InMemory データ ソースではエディターが直接開きます。
+- 日付範囲カレンダーが動作しません。
+- 計算フィールドをデータ フィルターとして割り当てることは、Postgres では正しく機能しません。
+- 計算フィールドでは「並べ替え」を行うことができません。
+- 「サーバーでデータを処理」設定で、SQL ベースのプロバイダーの計算フィールドによる並べ替えでエラーが発生します。
+- `trunc` 関数は連結内で正しく動作しません。
+- グリッドの表示形式を使用してフィールドに構成した場合、大きな数値の書式設定が適用されませんでした。
+- 日付表示形式フィルターの選択値を設定するときに、UI に間違った日付書式が表示されます。
+- クリック/ホバー イベントで日付の値が正しく報告されません。
+- コンボの表示形式では、軸ごとの最低軸の最小値は計算されません。
+- 積層型棒の表示形式では、小数を 0 に設定すると、Y軸のマーカーが重複して表示されます。
+- Analysis Services ディメンション構造は、更新によってサーバーから更新されません。
+- インタラクティブ フィルタリングはラベル ゲージでは機能しません。
+- 生データに切り替えてから別の表示形式に切り替えるとクラッシュが発生します。
+- ページングされた行グリッドをスクロールして表示するとクラッシュが発生します。
+- テキストの表示形式には、「表示するデータはありません」 と表示されます。
+- ドーナツ チャートで大きな数値が縮小されずにオーバーフローしています。
+- RevealView の `showFilters` プロパティを `false` に設定すると、意図したとおりに機能しません。
+- 階層からカテゴリにフィールドをドラッグすると、アプリケーションがクラッシュします。
+
+#### ASP.NET
+
+- Serilog をロガーとして使用すると、メッセージ パラメーターが適切に置き換えられません。
+
+## 1.7.0 (2024 年 9 月 10 日)
+
+### 重大な変更
+
+#### Java
+
+- Spring Boot 2.x はサポートされなくなりました。アプリケーションをホストするには、JDK 17 以降 と Jakarta EE 9 準拠サーバーを備えた Spring Boot 3.x を使用する必要があります。
+
+### 新機能
+
+#### すべてのプラットフォーム
+
+- (ベータ版) カテゴリ チャートに固定線を追加できるようになりました。このベータ機能にアクセスするには、`$.ig.RevealSdkSettings` の `enableBetaFeatures` プロパティを有効にします。エディターの固定行セクションでは、データ フィールド、または最高値、最低値、平均値、または固定値の集計特殊フィールドのいずれかを使用できます。
+- 表示形式フィルター API に日付のサポートが追加されました。たとえば、「過去 7 日間」などの日付ベースの表示形式フィルターがある場合、次のコードを使用して、返される `RVDateRange` オブジェクトの `from` プロパティと `to` プロパティをチェックすることで、フィルターが評価した日付範囲を確認できます。
+
+```js
+var dateRange = revealView.dashboard.visualizations[0].filters[0].dateRange;
+```
+
+- `$.ig.RevealSdkSettings` の `enableBetaFeatures` フラグを必要とせずに、サーバー側グリッド ページングが利用できるようになりました。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
+- 表示形式レベルの説明が追加されました。表示形式を編集するときに、必要に応じて説明を入力できるようになりました。
+- 表示形式ではダッシュボードのリンクが自動的にサポートされるようになりました。デフォルトの機能は、[「ダッシュボードのリンク」](https://help.revealbi.io/ja/web/linking-dashboards/)トピックの手順を使用して上書きできます。
+- 表示形式を最大化すると、オーバーフロー メニューから個別に PDF にエクスポートできるようになりました。
+- `ExportOptions` オブジェクトの `includeFiltersSummaryPage` プロパティを設定することで、エクスポートでフィルター集計ページを非表示にできるようになりました。例外は NodeJS です。このプラットフォームでは、設定に関係なくフィルターの集計ページは含まれません。
+- オーバーフロー メニューまたはフィルター検索ボックスをクリックしたときの背景オーバーレイが明るくなりました。
+- グリッド表示形式で非表示フィールドを定義する機能が追加されました。これを使用して、URL またはダッシュボード リンクを定義できます。
+- (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。シリーズのツールチップには、選択した値でフィルタリングするオプションが含まれます。表示形式の残りの部分には、フィルタリングされた値と元の値を簡単に比較できるように、両方の値が表示されます。このリリースでは、ファンネル、ツリーマップ、ゲージのサポートが追加されました。この機能は現在、次のグラフ タイプでサポートされています: 縦棒、棒、折れ線、時系列、エリア、ステップ エリア、スプライン、積層型縦棒、積層型エリア、積層型棒、ファンネル、ツリーマップ、ゲージ。この機能を有効にするには、RevealView で `interactiveFilteringEnabled` を `true` に設定します。
+- ヘッドレス エクスポートで画像のエクスポートがサポートされます。
+- Sql Server Analysis Services データ ソースは `EffectiveUserName` プロパティをサポートするようになり、これにより特定のユーザーになりすますことが可能になりました。このプロパティは、たとえば、userContext に設定されている現在のユーザーの値を使用して `IRVDataSourceProvider` 実装のプロパティを設定することにより、シングル サインオンを実現するために活用できます。
+
+#### ASP.NET & Node
+
+- Windows 統合認証が、SQL Server Analysis Services データ ソースでサポートされます。これを有効にするには、'IRVAuthenticationProvider' 実装で `RVIntegratedAuthenticationCredential` の新しいインスタンスを返します。
+
+#### Java
+
+- Spring Boot v3 のサポートが追加されました。Spring Boot v2.x はサポートされなくなりました。Spring Boot v3 を使用するには、JDK 17 以上を使用し、アプリケーションをホストするための Jakarta EE 9 準拠のサーバーが必要になります。
+- ExportTool に ARM64 サポートが追加されました。
+
+### バグ修正
+
+#### すべてのプラットフォーム
+
+- キャッシュされたファイルは、Reveal キャッシュにエントリを追加した後、.tmp ファイルを削除していませんでした。
+- フォント サイズを変更した後、テキストエリアフィールドのプレースホルダーの位置がずれます。
+- 値またはラベル フィールドで構成された並べ替えが円チャートの表示形式に反映されません。
+- TextBox のみを含むダッシュボードを編集するとクラッシュが発生する可能性があります。
+- 「今日」と「昨日」の日付フィルターでは、異なるタイムゾーンで誤った値が表示されます。
+- マウスが押されたときにクリック可能な要素の背景色が間違っています。
+- 日付フィールドに null 値がある場合、Excel エクスポートで間違ったチャートが生成されます。
+- カテゴリを使用すると積層型縦棒チャートの色が消えます。
+- 散布図では、一部の状態が緑色で表示されます。
+- `onFieldsInitializing` を使用してラベルを変更しても、ダッシュボード フィルターのフィールド選択には反映されません。
+- 表示形式タイプを変更して Excel にエクスポートすると、フィールドの書式設定が失われます。
+- ヘッドレス エクスポート `InitScript` が表示形式で機能しません。
+- マップ の形状は https ではなく http から読み込まれます。
+- ダッシュボードの説明が body タグの子として追加されます。
+- ダッシュボードのリンクは、null または空の文字列値では機能しません。
+- Web コンポーネントを使用しているときにダッシュボードのタイトルまたは説明を変更すると、それらのフィールドはデフォルトに戻ります。
+- Snowflake メタデータ ブラウザーはすべてのスキーマのテーブルを表示します。
+
+## 1.6.7 (2024 年 6 月 26 日)
+
+### 新機能
+
+#### すべてのプラットフォーム
+
+- 表示形式フィルター (クイック フィルターとも呼ばれます) にプログラムでアクセスし、選択した値を変更するための API が追加されました。
+
+```js
+//Add a selected value, specified by index from the list of available values, to a field given its name.
+function addSelValueToFilter(fieldName, valueIdx) {
+	var flt = revealView.dashboard.visualizations[0].filters.getByFieldName(fieldName);
+	var valuesPromise = flt.getFilterValues(); //Retrieve the selectable values for the filter
+	valuesPromise.then(function (values) {              
+		var selValues = flt.selectedValues;
+		selValues.push(values[valueIdx]); //Add the specified value to the selection
+		flt.selectedValues = selValues;
+	});
+}
+```
+- (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。シリーズのツールチップには、選択した値でフィルタリングするオプションが含まれます。表示形式の残りの部分には、フィルタリングされた値と元の値を簡単に比較できるように、両方の値が表示されます。現在、次のチャート タイプがサポートされています: 縦棒、棒、折れ線、時系列、エリア、ステップ エリア、スプライン、積層型縦棒、積層型エリア、積層型棒。この機能を有効にするには、RevealView で `highlightedFilteringEnabled` を `true` に設定します。
+- (ベータ版) トレンドライン、ラベル、ズームなどにすばやくアクセスするための表示形式ツールバーが追加されました。この機能を有効にするには、`$.ig.RevealSdkSettings` で `enableNewToolbar` を `true` に設定します。
+- SQL ベースのデータ ソースに対しクライアント側でカスタム クエリを提供できる機能を削除しました。
+- RVGoogleAnalyticsDataSource と RVGoogleAnalyticsDataSourceItem は、Google がこのコネクタの API を 2024 年 7 月 1 日に廃止する予定であるため、削除されました。
+- RevealView に `onDashboardChanged` イベントを追加しました。
+
+```js
+revealView.onDashboardChanged = function (args: DashboardChangedEventArgs) {
+  console.log('Dashboard has changed.');
+  console.log('Old Dashboard:', args.oldValue);
+  console.log('New Dashboard:', args.newValue);
+
+  // Accessing filters for the old and new dashboard
+  if(args.oldValue) {
+    console.log('Old Dashboard Filters:', args.oldValue.filters);
+  }
+  if(args.newValue) {
+    console.log('New Dashboard Filters:', args.newValue.filters);
+  }
+};
+```
+- データ ソース ダイアログ内のテーブルがアルファベット順に並べ替えられるようになりました。この変更は次のコネクタに適用されます: SQL Server、MySql、Postgres、Redshift、Oracle、Snowflake。
+- ヘッドレス エクスポートにグリッド データが含まれるようになりました。
+- RVGoogleAnalytics4DataSource に `accountId` および `propertyId` プロパティが含まれるようになり、RVGoogleAnalytics4DataSourceItem の該当するプロパティは非推奨になりました。
+
+#### Java
+
+- プロバイダーを実装しなくてもダッシュボードをサーバーに保存できるように、デフォルトの RVDashboardProvider を追加しました。
+
+### バグ修正
+
+#### すべてのプラットフォーム
+
+- ラベル セクションにフィールドが設定されていない XMLA ベースの表示形式をエクスポートすると、Excel エクスポートがクラッシュする問題。
+- ChangeDataSourceItemAsync の DataSource ID が正しくない問題。
+- ダッシュボードに Sparkline 表示形式が読み込まれたときに例外が発生する問題。
+- 無効なキャストによって、グリッド表示形式で例外が発生する問題。
+- ブレンディング UI で、ストアド プロシージャーが有効な追加データ ソースとして表示される問題。
+- データベースから DateTime.MaxValue を読み取るときにエラーが発生する問題。
+- タイトルのないウィジェットを含む Excel ファイルをエクスポートするとクラッシュする問題。
+- ピボット表示形式の Excel エクスポートで、展開された行を含む場合に列が混在する問題。
+- 折れ線チャートの表示形式をエクスポートするときに、行ヘッダーが null になる問題。
+- Excel にエクスポートするときに、予約文字が正しくフィルタリングされない問題。
+- Excel エクスポートで、日付の書式設定が適用されない問題。
+- フィルター エディターのフィールド リストが、式エディターのフィールド リストに影響する問題。
+- SharePoint O365 データ ソースが正しく機能しない問題。
+- `datediff` 計算式が、一重引用符ではなく二重引用符で機能する問題。
+- BigQuery の日付精密ハンドリングが間違っている問題。
+- エディターの検索バーが複数回レンダリングされる問題。
+- 計算フィールドを追加した後、フィルターされたフィールド リストが正しくない問題。
+
+#### ASP.NET & Java
+
+- RDASH プロパティが、サーバー上で設定されたものよりも優先される問題。
+
+#### Java
+
+- ExportTool が間違ったパスに作成される問題。
+
+## 1.6.6 (2024 年 4 月 19 日)
+
+### 新機能
+
+#### すべてのプラットフォーム
+
+- `showDescription` プロパティによって制御されるオプションの説明テキスト ボックスを RevealView に追加しました。
+- グリッドまたはピボットを PDF にエクスポートすると、ページの幅に収まらない列を含むオーバーフロー テーブルが生成されるようになりました。
+- PDF エクスポート時にグリッド列の幅が優先されるようになりました。
+- Excel へのエクスポートにおけるピボット グリッドの表示形式の外観が改善されました。
+- (ベータ版) グリッド表示形式にサーバー側のページング サポートが追加されました。この機能を有効にして、表示形式エディターの設定ペインに表示するには、`$.ig.RevealSdkSettings.enableBetaFeatures` を `true` に設定します。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
+- `SkiaSharp`、`SkiaSharp.HarfBuzz`、および `SkiaSharp.NativeAssets.Linux` v2.88.3 依存関係が v2.88.7 に更新されました。
+表示形式エディターでデータ ツールチップをプレビューするかどうかを制御するフラグが RevealView に追加されました。クエリが最初の 5 行を取得するのを防ぐため、これらはデフォルトでオフになっています。このツールチップを有効にするには、`isPreviewDataInVisualizationEditorEnabled` を `true` に設定します。
+- サーバー上でプロセス データを使用する場合、MySql でブレンディングがサポートされるようになりました。
+- ラジアル チャートの新しいルック & フィール。以前のルック & フィールは非推奨ですが、必要に応じて `RevealSdkSettings.EnableNewCharts = false` を実行することで復元できます。
+- 棒チャートと柱状チャートには、表示形式エディターの設定ペインに重複とギャップの設定が含まれるようになりました。これにより、バー間の重なりの量とグループ間のスペースの量を制御できます。
+- ツリーマップの表示形式では、マウスをホバーするとツールヒントが表示され、ノードが強調表示されるようになりました。
+- `Playwright` v1.27.2 の依存関係が v1.42.0 に更新されました。
+
+#### Node
+- データ ソース ダイアログでデータ ソース項目をフィルター処理できるようにする `dataSourceItemFilter` プロパティが RevealOptions に追加されました。
+```ts
+dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => Promise<boolean>
+```
+
+### バグ修正
+
+#### すべてのプラットフォーム
+
+- UI からエクスポートする場合、円チャートとドーナツ型チャートが表示されない問題。
+- 計算フィールドが依存しているデータ ブレンドを削除しても、計算フィールドが削除されない問題。
+- Redshift で関数を呼び出すとエラーが発生する問題。
+- Postgres 関数が正しく動作しない問題。
+- コンテナーまたは任意の祖先要素で transform:scale スタイルを使用する場合の RevealView の配置とサイズ設定で発生する問題。
+- `canAddDateFilter` を設定すると例外が発生する問題。
+- ダッシュボード プロパティが null または undefined に設定されている場合、保存イベント `args.isNew` は `false` になる問題。
+- ストアド プロシージャー パラメーター画面では、以前のデータが取得されたり、まったく取得されなかったりする場合があります。
+- 検索バーを使用すると、ポップアップ要素でスクロールが機能しなくなる問題。
+- 散布マップ インジケーターのホバー領域がズームに応じて移動する問題。
+- 分数の数字は、階級区分図のツールチップには表示されない問題。
+- 3000 を超えるフィルター値は保持されない問題。
+- 事後計算フィールドの UI で名前が変更されたピボット フィールドに関するエラーが発生する問題。
+- プレビュー データ セルが再利用されないため、複数回レンダリングされる問題。
+- MacOS ARM64 でグリッドがクラッシュする問題。
+- 円チャートの凡例が、表示するのに十分なスペースがある場合に表示されなくなる問題。
+- サーバー上のプロセス データをオフにした状態で MySql をブレンドするとエラーが発生する問題。
+- スライス チャートでホバー イベントが意図したとおりに動作しない問題。
+- ピボット グリッドの表示形式に総計が表示されない問題。
+- Analysis Services データ プロバイダーを使用すると、誤った総計値が表示される問題。
+- Analysis Services データ プロバイダーを使用すると、ダッシュボードと視覚化フィルターに誤った総計が表示される問題。
+- ピボット グリッドで値を並べ替えた後、フィールド名の変更が失われる問題。
+- 「...hierarchy already appears in the Axis1 axis.」 エラーが Analysis Services で発生する問題。
+- Analysis Services で 「上の N」 フィルターを適用すると、誤った結果が返される問題。
+- リソースベースの表示形式では誤ったキャッシュ エントリが取得される問題。
+- ブレンディングを使用すると、誤ったキャッシュ エントリがヒットされる問題。
+- ブラウザーがバックグラウンドに移動した後、検索ボックスにフォーカスを設定できない問題。
+
 ## 1.6.4 (2024 年 2 月 14 日)
 
 ### 重大な変更
@@ -388,7 +675,7 @@ options.getFilters().add(new RVDashboardFilter("incident_severity", new ArrayLis
 * SDK は Quill.js に依存しなくなりました。
 
 #### ASP.NET
-* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。データ ソース パッケージは[登録](/web/datasources#データ-ソースのインストール)することが**必須**です。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](/web/datasources#サポートされているデータ-ソース)にあります。
+* ほとんどのデータ ソースはコア パッケージから削除されました。これらは個別のパッケージとして利用できるようになりました。データ ソース パッケージは[登録](/web/datasources.md#データ-ソースのインストール)することが**必須**です。サポートされているデータ ソースと対応するアドイン nuget パッケージに関する情報は、[こちら](/web/datasources.md#サポートされるデータ-ソース)にあります。
 * Reveal には .net 6.0 以降が必要になりました。
 * データ関連のオブジェクトは `Reveal.Sdk.Data` 名前空間に移動されました。
 * データ ソース オブジェクト (例: RVSqlServerDataSource) は、それぞれの名前空間 (例: `Reveal.Sdk.Data.Microsoft.SqlServer`) に移動されました。
@@ -472,7 +759,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ### 重大な変更
 * 一部のシナリオでは、IRVDataSourceProvider で設定された情報がクライアントに表示され、ダッシュボード ファイルにも格納されていました。これは望ましい動作ではありませんでした。またダッシュボードの編集時に再現が困難な問題の発生原因でもありました。1.5.0 以降、IRVDataSourceProvider で設定されたデータ ソース情報はクライアントに送信されません。IRVDataSourceProvider の特定の実装によっては、これが大きな影響を与える可能性があります。一般的に言えば、実装が正しいことを確認するには、ChangeDataSource の重要な実装がある場合は、ChangeDataSourceItem も実装し、この ChangeDataSourceItem が dataSourceItem.dataSource オブジェクトで ChangeDataSource を呼び出すようにします。さらに、S3、Rest などのデータ ソースからの CSV、Json、Excel ファイルを操作する場合は、csv/json/excel データ ソース項目で ChangeDataSourceItem への呼び出しを受け取る可能性があることを考慮してください。その場合、dataSourceItem.resourceItem が適切に変更されていることを確認する必要があります。これは、dataSourceItem.resourceItem.dataSource に対して ChangeDataSource を呼び出すことも意味します。
 * IRVDataSourceProvider には、ChangeDataSourceAsync の実装が必要になりました。
-* ASP.NET SDK のインストーラーはリリースされなくなりました。開始するには、https://help.revealbi.io/web/getting-started-server でドキュメントを確認してください。
+* ASP.NET SDK のインストーラーはリリースされなくなりました。開始するには、https://help.revealbi.io/web/getting-started-server/ でドキュメントを確認してください。
 
 ### バグ修正
 

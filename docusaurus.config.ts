@@ -3,20 +3,28 @@ import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
+import apiDocs from './plugins/remark/api-docs';
+const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
   title: 'Reveal',
   tagline: 'Embedded Analytics & Business Intelligence Tools',
   url: 'https://help.revealbi.io',
   baseUrl: '/',
+  onBrokenAnchors: 'warn',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
+  trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'RevealBi', // Usually your GitHub org/user name.
   projectName: 'Documentation', // Usually your repo name.
+
+  plugins: [
+    ["docusaurus-node-polyfills", { onlyAliases: ["process"] }]
+  ],
 
   i18n: {
     defaultLocale: 'en',
@@ -43,13 +51,16 @@ const config: Config = {
           breadcrumbs: false,
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
+          beforeDefaultRemarkPlugins: [
+            [ apiDocs, {}]
+          ],
           remarkPlugins: [
             [ npm2yarn, { sync: true } ],
             [ replace, {
               variables: [
-                { name: "sdkVersion", value: "1.6.4" }
+                { name: "sdkVersion", value: "1.7.1" }
               ]
-            }]
+            }],
           ],
         },
         blog: false,
@@ -61,6 +72,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: 'QBVJ183IXZ',
+      apiKey: 'be244eaae98ce29feeb1882558494e62',
+      indexName: 'help-revealbi',
+    },
     navbar: {
       title: 'Reveal',
       logo: {
@@ -192,7 +208,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,
-      additionalLanguages: ["csharp", "java", "bash"],
+      additionalLanguages: ["csharp", "java", "bash", "typescript"],
     },
   } satisfies Preset.ThemeConfig,
   markdown: {

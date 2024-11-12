@@ -15,7 +15,7 @@ The **Save As** operation is invoked when the end-user opens the **Kebab Menu** 
 ![](images/saving-saveas-button.jpg)
 
 ## Implementing Save
-By default, the Reveal SDK provides a **Save** functionality if you are following the convention of placing your dashboards in the **Dashboards** folder on the server. However, if you are not storing your dashboards in a **Dashboards** folder on the server, and have created a custom `IRVDashboardProvider`, then you will need to implement your own custom save logic as well. We cover how to load dashboards from custom locations in the [Loading Dashboards](loading-dashboards.md#load-from-custom-file-path) topic.
+By default, the Reveal SDK provides a **Save** functionality if you are following the convention of placing your dashboards in the **Dashboards** folder on the server. However, if you are not storing your dashboards in a **Dashboards** folder on the server, and have created a custom `IRVDashboardProvider`, then you will need to implement your own custom save logic as well. We cover how to load dashboards from custom locations in the [Loading Dashboards](loading-dashboards.md#example-load-from-file-path) topic.
 
 Start by modifying the existing `IRVDashboardProvider` class to implement the `IRVDashboardProvider.SaveDashboardAsync` method. In this example, we are saving the dashboard files into a folder named **MyDashboards**.
 

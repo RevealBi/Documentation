@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 :::danger 重大な変更
 
-現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース)] トピックを参照してください。
+現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース) トピックを参照してください。
 
 :::
 
@@ -25,13 +25,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVMongoDBDataSource` オブジェクトの新しいインスタンスを作成します。`connectionString`、`database`、および `Title` プロパティを、MongoDB Server に対応する値に設定します。`RVMongoDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVMongoDBDataSource` オブジェクトの新しいインスタンスを作成します。`Title` プロパティを、MongoDB Server に対応する値に設定します。`RVMongoDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var mongoDataSource = new $.ig.RVMongoDataSource();
-    mongoDataSource.connectionString = "your-db-connectionString";
-    mongoDataSource.database = "your-db-name";
     mongoDataSource.title = "My MongoDB";
 
     callback(new $.ig.RevealDataSources([mongoDataSource], [], false));
@@ -42,19 +40,16 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/mongodb-data-source.jpg)
 
-**手順 3** - `RVMongoDBDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `id`、`title`、および `collection` プロパティを設定します。`RVMongoDBDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 3** - `RVMongoDBDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース コレクションに対応する `id` および `title` プロパティを設定します。`RVMongoDBDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var mongoDataSource = new $.ig.RVMongoDBDataSource();
-    mongoDataSource.connectionString = "your-db-connectionString";
-    mongoDataSource.database = "your-db-name";
     mongoDataSource.title = "My MongoDB";
 
     var mongoDsi = new $.ig.RVMongoDBDataSourceItem(mongoDataSource);
     mongoDsi.id = "MyMongoDatasourceItem";
     mongoDsi.title = "My MongoDB Item";
-    mongoDsi.collection = "CollectionName";    
 
     callback(new $.ig.RevealDataSources([mongoDataSource], [mongoDsi], false));
 };

@@ -5,7 +5,7 @@
   },
   "sidebar.webSidebar.doc.Overview": {
     "message": "Overview",
-    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/overview"
+    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/web-component-wrappers/index"
   },
   "sidebar.webSidebar.doc.ASP.NET Web API": {
     "message": "ASP.NET Web API",
@@ -25,7 +25,7 @@
   },
   "sidebar.webSidebar.doc.Angular": {
     "message": "Angular",
-    "description": "The label for the doc item Angular in sidebar webSidebar, linking to the doc web/getting-started-angular"
+    "description": "The label for the doc item Angular in sidebar webSidebar, linking to the doc web/web-component-wrappers/installation-angular"
   },
   "sidebar.webSidebar.doc.ASP.NET Core Web App": {
     "message": "ASP.NET Core Web App",
@@ -37,7 +37,7 @@
   },
   "sidebar.webSidebar.doc.React": {
     "message": "React",
-    "description": "The label for the doc item React in sidebar webSidebar, linking to the doc web/getting-started-react"
+    "description": "The label for the doc item React in sidebar webSidebar, linking to the doc web/web-component-wrappers/installation-react"
   },
   "sidebar.webSidebar.doc.Creating": {
     "message": "Creating",
@@ -658,5 +658,29 @@
   "sidebar.userSideBar.doc.Stacked Charts": {
     "message": "Stacked Charts",
     "description": "The label for the doc item Stacked Charts in sidebar userSideBar, linking to the doc user/tutorials-stacked-charts"
+  },
+  "sidebar.webSidebar.category.Web Component Wrappers": {
+    "message": "Web Component Wrappers",
+    "description": "The label for category Web Component Wrappers in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Reveal View": {
+    "message": "Reveal View",
+    "description": "The label for category Reveal View in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Vizualization Viewer": {
+    "message": "Vizualization Viewer",
+    "description": "The label for category Vizualization Viewer in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.NestJS": {
+    "message": "NestJS",
+    "description": "The label for the doc item NestJS in sidebar webSidebar, linking to the doc web/getting-started-server-nest"
+  },
+  "sidebar.webSidebar.doc.Options": {
+    "message": "Options",
+    "description": "The label for the doc item Options in sidebar webSidebar, linking to the doc web/web-component-wrappers/visualization-viewer/options"
+  },
+  "sidebar.webSidebar.doc.Loading Dashboards": {
+    "message": "Loading Dashboards",
+    "description": "The label for the doc item Loading Dashboards in sidebar webSidebar, linking to the doc web/web-component-wrappers/reveal-view/loading-dashboards"
   }
 }

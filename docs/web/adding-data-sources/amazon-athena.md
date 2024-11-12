@@ -23,15 +23,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVAthenaDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasource.html) object. Set the `Title`, `Subtitle`, `Region`, and `Database` properties. After you have created the `RVAthenaDataSource` object, add it to the data sources collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVAthenaDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasource.html) object. Set the `Title` and `Subtitle` properties. After you have created the `RVAthenaDataSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var athenaDS = new $.ig.RVAthenaDataSource();
     athenaDS.title = "My Athena Data Source";
     athenaDS.subtitle = "Amazon Athena";
-    athenaDS.region = "region";
-    athenaDS.database = "database";
 
     callback(new $.ig.RevealDataSources([athenaDS], [], false));
 };
@@ -41,20 +39,18 @@ When the application runs, create a new Visualization and you will see the newly
 
 ![](images/amazon-athena-data-source.jpg)
 
-**Step 3** - Create a new Amazon Athena Data Source Item by creating a new instance of the [RVAthenaDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasourceitem.html) object. Specify the values for the `Title`, `Subtitle`, and `Table` properties. After you have created the `RVAthenaDataSourceItem` object, add it to the data source items collection.
+**Step 3** - Create a new Amazon Athena Data Source Item by creating a new instance of the [RVAthenaDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasourceitem.html) object. Specify the values for the `Id`, `Title` and `Subtitle` properties. After you have created the `RVAthenaDataSourceItem` object, add it to the data source items collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var athenaDS = new $.ig.RVAthenaDataSource();
     athenaDS.title = "My Athena Data Source";
     athenaDS.subtitle = "Amazon Athena";
-    athenaDS.region = "region";
-    athenaDS.database = "database";
 
     var athenaDSI = new $.ig.RVAthenaDataSourceItem(athenaDS);
+    athenaDSI.id = "dataSourceItemId";
     athenaDSI.title = "My Athena Data Source Item";
-    athenaDS.subtitle = "Amazon Athena";
-    athenaDSI.table = "table";
+    athenaDSI.subtitle = "Amazon Athena";
 
     callback(new $.ig.RevealDataSources([athenaDS], [athenaDSI], false));
 };
@@ -66,7 +62,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 :::note
 
-Amazon Athena authenticates uses the `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication#amazon-web-services) topic for more information.
+Amazon Athena authenticates uses the `RVAmazonWebServicesCredentials`. See the [Authentication](../authentication.md#amazon-web-services) topic for more information.
 
 :::
 

@@ -41,7 +41,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 :::note
 
-The `RVGoogleDriveDataSource` loads folders and files based on the authentication provider registered with the Reveal SDK. Google Drive authenticates using a `RVBearerTokenDataSourceCredential`. See the [Authentication](../authentication#bearer-token-authentication) topic for more information.
+The `RVGoogleDriveDataSource` loads folders and files based on the authentication provider registered with the Reveal SDK. Google Drive authenticates using a `RVBearerTokenDataSourceCredential`. See the [Authentication](../authentication.md#bearer-token-authentication) topic for more information.
 
 :::
 

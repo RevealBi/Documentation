@@ -25,14 +25,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVSqlServerDataSource` object. Set the `Host`, `Database`, `Port`, and `Title` properties to values that correspond to your MS SQL Server. After you have created the `RVSqlServerDataSource` object, add it to the data sources collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVSqlServerDataSource` object. Set the `Title` property that corresponds to your MS SQL Server. After you have created the `RVSqlServerDataSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var sqlDataSource = new $.ig.RVSqlServerDataSource();
-    sqlDataSource.host = "your-db-host";
-    sqlDataSource.database = "your-db-name";
-    sqlDataSource.port = 1234;
     sqlDataSource.title = "My SQL Server";
 
     callback(new $.ig.RevealDataSources([sqlDataSource], [], false));
@@ -43,20 +40,16 @@ When the application runs, create a new Visualization and you will see the newly
 
 ![](images/ms-sql-server-data-source.jpg)
 
-**Step 3** - Add a new Data Source Item by creating a new instance of the `RVSqlServerDataSourceItem` object. Set the `Id`,`Title`, and `Table` properties that correspond to your database table. After you have created the `RVSqlServerDataSourceItem` object, add it to the data source items collection.
+**Step 3** - Add a new Data Source Item by creating a new instance of the `RVSqlServerDataSourceItem` object. Set the `Id` and `Title` properties that correspond to your database table. After you have created the `RVSqlServerDataSourceItem` object, add it to the data source items collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var sqlDataSource = new $.ig.RVSqlServerDataSource();
-    sqlDataSource.host = "your-db-host";
-    sqlDataSource.database = "your-db-name";
-    sqlDataSource.port = 1234;
     sqlDataSource.title = "My SQL Server";
 
     var sqlServerDsi = new $.ig.RVSqlServerDataSourceItem(sqlDataSource);
     sqlServerDsi.id = "MySqlServerDatasourceItem";
-    sqlServerDsi.title = "My SQL Server Item";
-    sqlServerDsi.table = "TableName";    
+    sqlServerDsi.title = "My SQL Server Item";  
 
     callback(new $.ig.RevealDataSources([sqlDataSource], [sqlServerDsi], false));
 };

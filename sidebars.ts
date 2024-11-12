@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Getting Started - Server", items: [
             { type: "doc", label: "ASP.NET Web API", id: "web/getting-started-server" },
+            { type: "doc", label: "NestJS", id: "web/getting-started-server-nest" },
             { type: "doc", label: "Node.js", id: "web/getting-started-server-node" },
             { type: "doc", label: "Node.js - TypeScript", id: "web/getting-started-server-node-typescript" },
             { type: "doc", label: "Spring Boot - Jersey", id: "web/getting-started-spring-boot-jersey" },
@@ -100,6 +101,30 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Custom Queries", id: "web/custom-queries" },
         { type: "doc", label: "Obfuscate Connection Data", id: "web/obfuscate-connection-data" },
         { type: "doc", label: "User Context", id: "web/user-context" },
+      ]
+    },
+
+    /* -------------------- Web Component Wrappers  -------------------- */
+    {
+      type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", id: "web/web-component-wrappers/index" },
+        {
+          type: "category", label: "Installation", link: { type: "doc", id: "web/web-component-wrappers/installation" }, items: [
+            { type: "doc", label: "Angular", id: "web/web-component-wrappers/installation-angular" },
+            { type: "doc", label: "React", id: "web/web-component-wrappers/installation-react" },
+          ]
+        },
+        {
+          type: "category", label: "Reveal View", link: { type: "doc", id: "web/web-component-wrappers/reveal-view/index" }, items: [
+            { type: "doc", label: "Options", id: "web/web-component-wrappers/reveal-view/options" },
+            { type: "doc", label: "Loading Dashboards", id: "web/web-component-wrappers/reveal-view/loading-dashboards" },
+          ]
+        },
+        {
+          type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web/web-component-wrappers/visualization-viewer/index" }, items: [
+            { type: "doc", label: "Options", id: "web/web-component-wrappers/visualization-viewer/options" },
+          ]
+        },
       ]
     },
 
@@ -193,8 +218,8 @@ const sidebars: SidebarsConfig = {
       ]
     },
   ],
-
-  userSideBar: [
+  
+    userSideBar: [
     {
       type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         {
@@ -289,3 +314,4 @@ const sidebars: SidebarsConfig = {
 };
 
 export default sidebars;
+

@@ -3,6 +3,293 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.7.1 (Nov 5th, 2024)
+
+### Breaking Changes
+
+#### All Platforms
+
+- `ChartInteractionEventArgs` has been renamed to `TooltipShowingEventArgs`.
+
+### New Features
+
+#### All Platforms
+
+- Chart visualizations will automatically hide 0 value data labels.
+- Custom menu items can now be added to visualization tooltips by adding an `RVTooltipItem` to the `customItems` property on the args pass to the `onTooltipShowing` function.
+
+```js
+revealView.onTooltipShowing = function (args) {
+    //A string pointing to the image may be used or an RVImage, such as:
+    //var caseIcon = new $.ig.RVImage("https://svgsilh.com/png-512/306879.png", "Case Icon"); 
+    var caseIcon = "https://svgsilh.com/png-512/306879.png";
+    var openIcon = "https://svgsilh.com/png-512/41335.png";
+
+    if (args.cell.formattedValue == "Digital Security Center")
+    {
+        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Escalate Incident", caseIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Open Incident Report", openIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+
+        args.customItems.push(new $.ig.RVTooltipItem("High", "Send Reminder", null, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new $.ig.RVTooltipItem("High", "Assign Lead Investigator", null, (sender, clickArgs) => { console.log("Clicked"); }));
+    }
+}
+```
+
+- Positioning improvements made for tooltips showing actions on hover.
+- URL linking now works out of the box without needing to implement `onDashboardSelectorRequested`.
+- Target setting added to the linking dialog for URLs. The target may be specified through `onUrlLinkRequested` by using the `target` property off of the args parameter.
+
+```js
+revealView.onUrlLinkRequested = (args) => {
+        args.target = "_blank";
+        return "https://www.google.com/";
+};
+```
+
+- Grid paging is now enabled by default for supported data sources when a new visualization is created or an existing visualization is edited and switched to grid.
+- Improvements made to mouse wheel events to better support web component frameworks that make use of the Shadow DOM.
+- Performance improvements for request execution and credential resolution under high load.
+- Simplified the MongoDb match stage to improve the performance of query execution.
+
+#### ASP.NET
+
+- Added support for .NET 8.0.
+- The dependency Npgsql v6.0.9 was updated to v7.0.7.
+- The dependency Snowflake.Data v1.1.4 was updated to v2.0.18.
+- For the Sybase connector, the dependency System.Data.SqlClient v4.7.0 was updated to v4.8.6.
+
+#### Java
+
+- A new method `public InitializeParameterBuilder setCachePath(String path)` was added to `InitializeParameterBuilder` to allow customization of the cache files location.
+
+### Bugs
+
+#### All Platforms
+
+- Treemap tooltip showing incorrect information.
+- The message "There's no data to display" is displayed while data is being loaded for a preview.
+- InMemory data source opens editor directly when there is more than one data source available.
+- Date range calendar is not responsive.
+- Assigning a calculated field as a data filter doesn't work correctly for Postgres.
+- Unable to do 'sort by' with calculated fields.
+- Error sorting by a calculated field on sql based providers with "Process Data on Server" setting.
+- `trunc` function is not working fine inside concatenate.
+- Large number formatting wasn't being applied when configured to a field using the Grid visualization.
+- Wrong date formatting shown in UI when setting selected value for date visualization filter.
+- Date values reporting incorrectly on click/hover events.
+- Combo visualization doesn't calculate lowest axis minimum per axis.
+- Stacked Bar visualization displays duplicate y-axis markers when the decimal is set to 0.
+- Analysis Services dimension structure is not updated from server with Refresh.
+- Interactive filtering is not working for Label Gauge.
+- Switching to raw data and then to another visualization causes crash.
+- Scrolling a paged row grid into view produces a crash.
+- Text visualization shows "There is no data to display".
+- Large numbers in Donut Chart are overflowing rather than shrinking.
+- The `showFilters` property on the RevealView, when set to `false`, does not function as intended.
+- Dragging field from hierarchy to Category crashes application.
+
+#### ASP.NET
+
+- When using Serilog as logger, message parameters are not properly replaced
+
+## 1.7.0 (Sept 10th, 2024)
+
+### Breaking Changes
+
+#### Java
+
+- Spring Boot 2.x is no longer supported. You'll need to use Spring Boot 3.x with JDK 17+ and Jakarta EE 9 complaint server to host your application.
+
+### New Features
+
+#### All Platforms
+
+- (Beta) Fixed lines can now be added to category charts. This beta functionality can be accessed by enabling the `enableBetaFeatures` property on `$.ig.RevealSdkSettings`. The fixed lines section in the editor can use data fields, or one of the highest, lower, average, or fixed value aggregate specialty fields.
+- Added support for dates in visualization filter API. For example, when you have a date-based visualization filter, such as "Last 7 days", you can use the following code to check the date range that the filter evaluated to by checking the `from` and `to` properties of the returning `RVDateRange` object.
+
+```js
+var dateRange = revealView.dashboard.visualizations[0].filters[0].dateRange;
+```
+
+- Server side grid paging is now available without requiring the `enableBetaFeatures` flag in `$.ig.RevealSdkSettings`. Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. The providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. Additionally, paging is not available when processing data on server is false, as well as when using blended data.
+- Added visualization-level descriptions. When editing a visualization, you can now enter a description if desired.
+- Visualizations now automatically support dashboard linking. The default functionality can still be overridden using the instructions from the [Linking Dashboards](https://help.revealbi.io/web/linking-dashboards/) topic.
+- Visualizations can now individually be exported to PDF through their overflow menu when maximized.
+- The filter summary page can now be hidden in exports by setting the `includeFiltersSummaryPage` property on the `ExportOptions` object. The exception to this is NodeJS, on that platform the filters summary page is not included regardless of the setting.
+- The background overlay when clicking overflow menus or filter search boxes is now lighter.
+- Added the ability to define hidden fields in Grid visualization, which can be used to define a URL or dashboard link.
+- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. In this release support was added for funnel, treemap, and gauges. This functionality is currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar, Funnel, Treemap, and Gauges. To enable this functionality, set `interactiveFilteringEnabled` to `true` on the RevealView.
+- Image export is now supported in headless export.
+- Sql Server Analysis Services data sources now support the `EffectiveUserName` property, which makes it possible to impersonate the given user. The property can be leveraged to achieve single sign on, e.g. by setting the property in the `IRVDataSourceProvider` implementation with the value of the current user, as set in the userContext.
+
+#### ASP.NET & Node
+
+- Windows Integrated Authentication is now supported in the Sql Server Analysis Services data source. To enable it, return a new instance of `RVIntegratedAuthenticationCredential` in your 'IRVAuthenticationProvider' implementation.
+
+#### Java
+
+- Added support for Spring Boot v3. With this support comes the news that Spring Boot v2.x isn't supported anymore. To use Spring Boot v3 you'll need to use JDK 17+ and will need a Jakarta EE 9 compliant server to host your application.
+- Added ARM64 support for ExportTool
+
+### Bugs
+
+#### All Platforms
+
+- Cached files were not removing .tmp file after adding an entry to the Reveal cache.
+- Misaligned placeholder on textarea fields after changing font-size.
+- Configured sorting in the value or label field not reflected in Pie visualization.
+- Editing a dashboard that includes only a TextBox may lead to a crash.
+- The date filters for "Today" and "Yesterday" show incorrect values in different time zones.
+- Wrong background color on clickable elements when the mouse is down.
+- Excel export generates wrong chart when there are null values for date fields.
+- Stacked column chart colors disappear when using a category.
+- Choropleth charts show some states green.
+- Changing labels using `onFieldsInitializing` is not reflected in the field selection of the dashboard filter.
+- Field formatting loss when changing visualization types and exporting to Excel.
+- Headless export `InitScript` not working for Visualizations.
+- Map shapes loaded from http not https.
+- Dashboard description is added as child of body tag.
+- Dashboard linking doesn't work for null or empty string values.
+- Changing the title or description of a dashboard when using web components causes those fields to revert to defaults.
+- Snowflake metadata browser showing tables from all schemas.
+
+## 1.6.7 (June 26th, 2024)
+
+### New Features
+
+#### All Platforms
+
+- Added API to programmatically access visualization filters (aka Quick Filters) and modify their selected values.
+
+```js
+//Add a selected value, specified by index from the list of available values, to a field given its name.
+function addSelValueToFilter(fieldName, valueIdx) {
+	var flt = revealView.dashboard.visualizations[0].filters.getByFieldName(fieldName);
+	var valuesPromise = flt.getFilterValues(); //Retrieve the selectable values for the filter
+	valuesPromise.then(function (values) {              
+		var selValues = flt.selectedValues;
+		selValues.push(values[valueIdx]); //Add the specified value to the selection
+		flt.selectedValues = selValues;
+	});
+}
+```
+- (Beta) Compare filtered data within the same visualization. The series tooltip includes an option to filter by the selected value. The rest of the visualization will display both the filtered values and the original ones for easy comparison. Currently supported in the following chart types: Column, Bar, Line, Time Series, Area, Step Area, Spline, Stacked Column, Stacked Area, Stacked Bar. To enable this functionality, set `highlightedFilteringEnabled` to `true` on the RevealView.
+- (Beta) Visualization toolbar was added to quickly access trend-lines, labels, zooming, etc. To enable this functionality, set `enableNewToolbar` to `true` on `$.ig.RevealSdkSettings`.
+- Removed the ability to provide a custom query client-side on SQL-based data sources.
+- Removed RVGoogleAnalyticsDataSource and RVGoogleAnalyticsDataSourceItem as Google will sunset the API for that connector on July 1st, 2024.
+- Added `onDashboardChanged` event to RevealView.
+
+```js
+revealView.onDashboardChanged = function (args: DashboardChangedEventArgs) {
+  console.log('Dashboard has changed.');
+  console.log('Old Dashboard:', args.oldValue);
+  console.log('New Dashboard:', args.newValue);
+
+  // Accessing filters for the old and new dashboard
+  if(args.oldValue) {
+    console.log('Old Dashboard Filters:', args.oldValue.filters);
+  }
+  if(args.newValue) {
+    console.log('New Dashboard Filters:', args.newValue.filters);
+  }
+};
+```
+- Tables in the data source dialog are now sorted alphabetically. This change applies to connectors for: SQL Server, MySql, Postgres, Redshift, Oracle, and Snowflake.
+- Headless export now includes grid data.
+- RVGoogleAnalytics4DataSource now includes `accountId` & `propertyId` properties, and deprecating the corresponding properties in RVGoogleAnalytics4DataSourceItem.
+
+#### Java
+
+- Added a default RVDashboardProvider to enable the saving of dashboards to the server without needing to implement a provider.
+
+### Bug Fixes
+
+#### All Platforms
+
+- Excel export crash when exporting a XMLA-based visualization that has no field set in the Label section.
+- Incorrect DataSource ID in ChangeDataSourceItemAsync.
+- Exception caused when a Sparkline visualization was loaded with the dashboard.
+- Exception caused by invalid cast in the Grid visualization.
+- Stored procedures are shown as a valid additional data source in the blending UI.
+- Error reading DateTime.MaxValue from database.
+- Exporting an Excel file with a widget with no title crashes.
+- Excel export containing expanded rows in the Pivot visualization mixes up columns.
+- Null row header when exporting Line chart visualization.
+- Reserved characters aren't filtered correctly when exporting to Excel.
+- Date formatting is not applied on Excel export.
+- Filter editor fields list affects the expression editor fields list.
+- SharePoint O365 datasource doesn't work.
+- Calculated expression `datediff` works with double quotes not single quotes.
+- Wrong BigQuery date precision handling.
+- Editor search bar rendered multiple times.
+- Filtered field list is incorrect after adding a calculated field.
+
+#### ASP.NET & Java
+
+- RDASH properties take precedence over what is set on the server.
+
+#### Java
+
+- ExportTool is created in wrong path.
+
+## 1.6.6 (April 19th, 2024)
+
+### New Features
+
+#### All Platforms
+
+- Added an optional description text box, controlled by the property `showDescription`, to the RevealView.
+- Exporting a grid or pivot to PDF will now generate "overflow" tables containing the columns that would otherwise not fit the width of the page.
+- Grid column width is now respected on PDF export.
+- Improved pivot grid visualization appearance in exports to Excel.
+- (Beta) Added server side paging support to the grid visualization. To enable this functionality and have it appear in the visualization editor Settings pane, set `$.ig.RevealSdkSettings.enableBetaFeatures` to `true`. Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Athena, and Oracle. The providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. Additionally, paging is not available when processing data on server is false, as well as when using blended data.
+- `SkiaSharp`, `SkiaSharp.HarfBuzz`, and `SkiaSharp.NativeAssets.Linux` v2.88.3 dependency updated to v2.88.7. 
+- A flag was added to the RevealView to control whether or not data tooltip previews in the visualization editor. They are turned off by default to prevent a query getting the first 5 rows. To enable this tooltip, set `isPreviewDataInVisualizationEditorEnabled` to `true`.
+- Blending is now supported in MySql when using process data on server.
+- Radial charts have a new look & feel. The old L&F are deprecated but if needed, they can be restored by setting `RevealSdkSettings.EnableNewCharts = false`.
+- Bar and column charts now include an overlap and gap setting in the visualization editor Settings pane. This allows you to control the amount of overlap between the bars and the amount of space between the groups.
+- The Treemap visualization now shows a tooltip on hover and highlights the node.
+- `Playwright` v1.27.2 dependency updated to v1.42.0.
+
+#### Node
+- Added `dataSourceItemFilter` property to the RevealOptions that allows the filtering of data sources items in the data source dialog
+```ts
+dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => Promise<boolean>
+```
+
+### Bug Fixes
+
+#### All Platforms
+
+- Pie & Doughnut charts are not displayed when exporting from UI.
+- Deleting a data blend while a calculated field depends on it won't delete the calculated field.
+- Calling a function in Redshift produces an error.
+- Postgres functions not working.
+- RevealView positioning and sizing when using transform:scale style on the container or any ancestor element.
+- Setting `canAddDateFilter` causes exception.
+- Save event `args.isNew` is `false` if dashboard property is set to null or undefined.
+- Stored procedures parameter screen will sometimes pull previous data or nothing at all.
+- Scroll stops working on pop-up element when using search bar.
+- Scatter Map indicators hover region shifts with zoom.
+- Fraction digits are not shown in Choropleth Map tooltip.
+- Filter value above 3000+ is not preserved.
+- Errors with renamed pivot fields in post-calculated field UI.
+- Preview data cell is not being reused causing it to be rendered multiple times.
+- Grids crash on MacOS ARM64.
+- Pie chart legend disappears when there is enough space to show it.
+- MySql blending with Process Data on Server off produces error.
+- Hover event not behaving as intended on slice charts.
+- Grand Totals are not shown in the Pivot Grid visualizations.
+- Incorrect grand totals values shown when using Analysis Services data provider.
+- Dashboard and visualization filters with wrong grand totals when using Analysis Services data provider.
+- Field name modifications lost after reordering values on Pivot Grid.
+- Error "...hierarchy already appears in the Axis1 axis." in Analysis Services.
+- Wrong results when applying 'Top N' filter in Analysis Services.
+- Resource based visualization fetches wrong cache entry.
+- Wrong cache entry is hit when using blending.
+- Can't set focus to search box after the browser goes to background.
+
 ## 1.6.4 (February 14th, 2024)
 
 ### Breaking Changes
@@ -473,7 +760,7 @@ revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ### Breaking Changes
 * In some scenarios, the information set in IRVDataSourceProvider was visible to the client and also stored in the dashboard file. That was not a desirable behavior, but it also produced some hard to reproduce issues when editing dashboards. Starting on 1.5.0, the datasource information set in IRVDataSourceProvider does not leave the server. Depending on the specific implementation of IRVDataSourceProvider, this might have a big impact. To make sure your implementation is right, generally speaking, make sure that if you have a non-trivial implementation of ChangeDataSource, then you also implement ChangeDataSourceItem, and that this ChangeDataSourceItem invokes ChangeDataSource on the dataSourceItem.dataSource object. In addition, when working with CSV, Json, Excel files coming from datasources like S3, Rest, etc., please take into account that you might receive a call to ChangeDataSourceItem with the csv/json/excel datasource item, and in that case you must make sure that the dataSourceItem.resourceItem is properly 'changed', which also means invoking ChangeDataSource for dataSourceItem.resourceItem.dataSource.
 * IRVDataSourceProvider now requires the implementation of ChangeDataSourceAsync.
-* We're no longer releasing an installer for the asp.net SDK. To get started, check the documentation at https://help.revealbi.io/web/getting-started-server
+* We're no longer releasing an installer for the asp.net SDK. To get started, check the documentation at https://help.revealbi.io/web/getting-started-server/
 
 ### Bug Fixes
 

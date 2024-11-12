@@ -5,7 +5,6 @@ The Reveal SDK allows you to export both dashboards and visualizations to genera
 Supported dashboard export formats:
 - Excel
 - Image
-- JSON
 - PDF
 - Powerpoint
 

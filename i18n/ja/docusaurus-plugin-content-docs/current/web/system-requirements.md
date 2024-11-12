@@ -4,11 +4,12 @@
 - ASP.NET 6.0 またはそれ以降
 
 ## Java
-- Java SDK 11.0.10 およびそれ以降
+- Java SDK 11.0.10 およびそれ以降 (Spring Boot 3.x では Java SDK 17 以降)
+- Jakarta EE 9 準拠サーバー
 - Maven 3.6.3 およびそれ以降
 
 ## Node
-- Nodejs 16.3 およびそれ以降
+- NodeJS 16.3 およびそれ以降
 
 :::info
 

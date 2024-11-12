@@ -23,15 +23,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVAthenaDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasource.html) オブジェクトの新しいインスタンスを作成します。`Title`、`Subtitle`、`Region`、および `Database` のプロパティを設定します。`RVAthenaDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、[RVAthenaDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasource.html) オブジェクトの新しいインスタンスを作成します。`Title` および`Subtitle` プロパティを設定します。`RVAthenaDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var athenaDS = new $.ig.RVAthenaDataSource();
     athenaDS.title = "My Athena Data Source";
     athenaDS.subtitle = "Amazon Athena";
-    athenaDS.region = "region";
-    athenaDS.database = "database";
 
     callback(new $.ig.RevealDataSources([athenaDS], [], false));
 };
@@ -41,20 +39,18 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/amazon-athena-data-source.jpg)
 
-**手順 3** - [RVAthenaDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Amazon Athena データ ソース項目を作成します。`Title`、`Subtitle`、`Table` の各プロパティの値を指定します。`RVAthenaDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
+**手順 3** - [RVAthenaDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvathenadatasourceitem.html) オブジェクトの新しいインスタンスを作成して、新しい Amazon Athena データ ソース項目を作成します。`Id`、`Title`、および `Subtitle` の各プロパティの値を指定します。`RVAthenaDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     var athenaDS = new $.ig.RVAthenaDataSource();
     athenaDS.title = "My Athena Data Source";
     athenaDS.subtitle = "Amazon Athena";
-    athenaDS.region = "region";
-    athenaDS.database = "database";
 
     var athenaDSI = new $.ig.RVAthenaDataSourceItem(athenaDS);
+    athenaDSI.id = "dataSourceItemId";
     athenaDSI.title = "My Athena Data Source Item";
-    athenaDS.subtitle = "Amazon Athena";
-    athenaDSI.table = "table";
+    athenaDSI.subtitle = "Amazon Athena";
 
     callback(new $.ig.RevealDataSources([athenaDS], [athenaDSI], false));
 };
@@ -66,7 +62,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::note
 
-Amazon Athena は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication#amazon-web-services)トピックを参照してください。
+Amazon Athena は `RVAmazonWebServicesCredentials` を使用して認証します。詳細については、[認証](../authentication.md#amazon-web-services)トピックを参照してください。
 
 :::
 

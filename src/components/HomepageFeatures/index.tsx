@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
     Svg: require('@site/static/img/video-girl.svg').default,
-    link: "web",
+    link: "web/",
     description: (
       <>
         <Translate id="homepage.feature.web"
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
     Svg: require('@site/static/img/developer.svg').default,
-    link: "wpf",
+    link: "wpf/",
     description: (
       <>
         <Translate id="homepage.feature.wpf"
