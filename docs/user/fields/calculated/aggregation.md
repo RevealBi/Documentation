@@ -22,7 +22,7 @@ In Reveal, aggregation calculated fields include:
 
 :::note
 *All samples included in the table below were created with the
-[HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx)
+<a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a>
 spreadsheet.*
 :::
 
