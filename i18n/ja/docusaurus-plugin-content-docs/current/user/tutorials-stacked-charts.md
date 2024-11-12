@@ -62,7 +62,7 @@ For this tutorial, you will use the *Stacked Charts* sheet in the
 
 ## Changing your Axis Configuration
 
-Similarly to the [Gauge bounds](tutorials-gauge#adding-bounds-to-your-gauge), the
+Similarly to the [Gauge bounds](tutorials-gauge.md#adding-bounds-to-your-gauge), the
 chart axis configuration allows you to set the lowest and highest values
 in your chart. You can use this feature to include or exclude specific
 data.

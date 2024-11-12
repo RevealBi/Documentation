@@ -157,7 +157,7 @@ Walker", you can introduce any one of the following third logical tests:
 |               |                                                          |                            | [Office]="Tokyo,Japan"      |
 
 You can also combine the and/or functions with the
-[isempty](../calculated/information.md#isempty)
+[isempty](information.md#isempty)
 calculated fields to get the same results:
 
 | Function Name | Logical Test 1 | Logical Test 2 | Logical Test 3  | Logical Test 4            |

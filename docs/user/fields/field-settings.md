@@ -88,7 +88,7 @@ In addition, dragging a specific hierarchy level will show data for that level o
   - **1000 Separator**: configure whether or not to display the
     thousands separator.
 
-  - [**Conditional Formatting**](conditional-formatting): when enabled,
+  - [**Conditional Formatting**](conditional-formatting.md): when enabled,
     this allows you to provide different formats to each of your cells
     depending on their values. For instance, values in the lower 50%
     range of a field can be colored with a red adorner to signal a

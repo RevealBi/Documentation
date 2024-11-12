@@ -99,7 +99,7 @@ working with large datasets.
 For both pre-calculated and post-calculated fields, you can use one of
 the available functions within Reveal:
 
-  - [**Aggregation**](aggregation):
+  - [**Aggregation**](aggregation.md):
     [average](aggregation.md#aggregation-functions),
     [averageif](aggregation.md#aggregation-functions),
     [count](aggregation.md#aggregation-functions),
@@ -109,7 +109,7 @@ the available functions within Reveal:
     [min](aggregation.md#aggregation-functions),
     [minif](aggregation.md#aggregation-functions).
 
-  - [**Date**](date):
+  - [**Date**](date.md):
     [date](date.md#date-functions),
     [datevalue](date.md#date-functions),
     [day](date.md#date-functions),
@@ -136,11 +136,11 @@ the available functions within Reveal:
     [weeknum](date.md#date-functions),
     [year](date.md#date-functions).
 
-  - [**Information**](information):
+  - [**Information**](information.md):
     [empty](information.md#information-functions),
     [isempty](information.md#information-functions).
 
-  - [**Logic**](logic):
+  - [**Logic**](logic.md):
     [and](logic.md#logic-functions),
     [false](logic.md#logic-functions),
     [if](logic.md#logic-functions),
@@ -148,11 +148,11 @@ the available functions within Reveal:
     [or](logic.md#logic-functions),
     [true](logic.md#logic-functions).
 
-  - [**Lookup & Reference**](lookup-reference):
+  - [**Lookup & Reference**](lookup-reference.md):
     [previous](lookup-reference.md#lookup-and-reference-functions),
     [row](lookup-reference.md#lookup-and-reference-functions).
 
-  - [**Math**](math):
+  - [**Math**](math.md):
     [abs](math.md#math-functions),
     [exp](math.md#math-functions),
     [log](math.md#math-functions),
@@ -164,7 +164,7 @@ the available functions within Reveal:
     [sqrt](math.md#math-functions),
     [trunc](math.md#math-functions).
 
-  - [**String**](string):
+  - [**String**](string.md):
     [concatenate](string.md#string-functions),
     [find](string.md#string-functions),
     [len](string.md#string-functions),
@@ -183,7 +183,7 @@ the available functions within Reveal:
 
 You can also create Calculated Fields without using any of the
 predefined functions; for instance, for simple math calculations like
-subtractions, divisions, additions or multiplications. In [this table](samples), you will find some examples that do
+subtractions, divisions, additions or multiplications. In [this table](samples.md), you will find some examples that do
 not use the predefined functions.
 
 ## What to consider when using the Reveal functions

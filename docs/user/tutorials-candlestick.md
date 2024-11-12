@@ -11,7 +11,7 @@ In this tutorial, you will learn how to create a *Candlestick chart* visualizati
 
 ## Key Concepts
 
-Like [OHLC](tutorials-ohlc) Charts, Candlestick charts are meant to
+Like [OHLC](tutorials-ohlc.md) Charts, Candlestick charts are meant to
 show the opening, high, low and closing prices for any financial data.
 They are particularly useful for financial scenarios and stock movement
 analysis. This chart displays numerical values in vertical axes, with
@@ -71,7 +71,7 @@ For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href=
 
 ## Changing your Axis Configuration
 
-Like [gauge bounds](tutorials-gauge#adding-bounds-to-your-gauge), chart axis
+Like [gauge bounds](tutorials-gauge.md#adding-bounds-to-your-gauge), chart axis
 configuration allows you to set the lowest and highest values in your
 chart. You can use this feature to include or exclude specific data.
 

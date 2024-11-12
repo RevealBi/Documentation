@@ -5,7 +5,7 @@ _description: Find out how to create and use Radial Charts visualization in Reve
 
 # Radial Charts
 
-Like [Category](../chart-types/category-charts) charts, Radial charts are simply representations of
+Like [Category](../chart-types/category-charts.md) charts, Radial charts are simply representations of
 information in a coordinate system.
 
 ![Using a radial chart to create a visualization](images/radial-chart-visualization-editor.png)

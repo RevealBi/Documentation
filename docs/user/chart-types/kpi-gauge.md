@@ -9,7 +9,7 @@ Key Performance Indicators (KPIs) is a measurable value that demonstrates how ef
 information over metrics important for the organization, such as the
 progress towards goals and over-time trends.
 
-Similarly to the [Text Gauge](gauge-charts#text-gauge), the KPI Gauge
+Similarly to the [Text Gauge](gauge-charts.md#text-gauge), the KPI Gauge
 displays the Value column in a large font. However, the value in the KPI
 is also evaluated against the same value for a previous time period.
 
@@ -22,7 +22,7 @@ Category.
 
 ## Indicator Settings
 
-The KPI gauge has similar settings to the [sparkline](sparkline-charts)
+The KPI gauge has similar settings to the [sparkline](sparkline-charts.md)
 visualization, through which you can configure:
 
   - **Time Period**: the time period you will use to compare both values.

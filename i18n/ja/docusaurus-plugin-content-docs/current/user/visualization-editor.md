@@ -19,7 +19,7 @@ After that, you will be prompted to add a new or select an existing data source.
 
 ![Dialog with a list of data sources](images/new-visualization-screen.png)
 
-With the data source selected and configured, you will be navigated to the [Visualization Editor](visualization-editor), where you can start creating your visualization.
+With the data source selected and configured, you will be navigated to the [Visualization Editor](visualization-editor.md), where you can start creating your visualization.
 
 The *Visualization editor* will help you get the most desired view using your data.
 
@@ -46,7 +46,7 @@ Below, you will find a list of all sections of the *Editor* with their capabilit
     The *plus* icon in this panel allows you to either blend data sources or calculate a field. The *brain* icon allows you to use fields from a BigQuery or Azure *machine learning model* for your visualization. Keep in mind that the BigQuery machine learning model can work only with BigQuery data sources.    
     2. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
 
-2. **Settings Section** - This section allows you to customize what you want to show. Each visualization comes with its own settings. At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking) topic.
+2. **Settings Section** - This section allows you to customize what you want to show. Each visualization comes with its own settings. At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking.md) topic.
 
 3. **Visualization Picker** - Here you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown menu, you will notice the visualization fields section change. The fields for each visualization are different, but they change automatically so you only need to fill them in.
 

@@ -51,7 +51,7 @@ In *Settings* you can:
 - **Choose Compact Labels**.
   With this setting you avoid redundant label information when you zoom your chart.
 
-- [Connect this visualization to another dashboard or a URL](../dashboard-linking).
+- [Connect this visualization to another dashboard or a URL](../dashboard-linking.md).
 
 ## Zooming and Panning
 
@@ -60,5 +60,5 @@ When the Time Series chart is maximized, you can zoom in and out. This allows yo
 ## Statistical Functions
 
 Reveal provides you with three types of advanced
-predictive analysis. These are *[Time series forecast](../statistical-functions#time-series-forecast)*, *[Linear regression](../statistical-functions#linear-regression)* and *[Detect outliers](../statistical-functions#detect-outliers)*. You can use them to make predictions, recognize and evaluate trends, or discover outliers
+predictive analysis. These are *[Time series forecast](../statistical-functions.md#time-series-forecast)*, *[Linear regression](../statistical-functions.md#linear-regression)* and *[Detect outliers](../statistical-functions.md#detect-outliers)*. You can use them to make predictions, recognize and evaluate trends, or discover outliers
 in your data series.

@@ -19,7 +19,7 @@ The map supports the three different coloring schemes listed below.
 
   * The *Map Color* scheme assigns a theme color to each unique identifier in the *Map Color* field. With this scheme, the shape ends up being styled based on the identifier with the highest/lowest value for that shape - see [this example](#using-the-map-color-to-create-a-multi-color-choropleth-map).
 
-Find how to set the color of your map in the [Choropleth Map Settings](settings-choropleth-map) topic.
+Find how to set the color of your map in the [Choropleth Map Settings](settings-choropleth-map.md) topic.
 
 The choropleth map in Reveal also allows you to [drill down](#drilling-up-and-down-hierarchy-levels) through your hierarchical data.
 
@@ -50,7 +50,7 @@ Reveal has a great variety of predefined maps available for your choropleth visu
 
 To have your location column recognized by Reveal, provide the locations' full names or official 2- or 3-letter abbreviations. Be consistent with the format you provide and don't mix full names and abbreviations.
 
-Find more specific information about the Location format and requirements in [How to prepare Your Data for a Choropleth Map](location-data-requirements).
+Find more specific information about the Location format and requirements in [How to prepare Your Data for a Choropleth Map](location-data-requirements.md).
 
 ## Creating a Choropleth Map
 

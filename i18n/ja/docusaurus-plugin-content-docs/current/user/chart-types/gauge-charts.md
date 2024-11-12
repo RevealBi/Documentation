@@ -7,7 +7,7 @@ _description: Find out how to use Gauge Charts for your visualizations in Reveal
 
 The Gauge chart displays a single value, or a list of values, comparing
 them with range thresholds. The gauge also allows for conditional
-formatting of the different ranges. In Reveal, you can use the following gauge charts: [Linear](#linear-gauge), [Circular](#circular-gauge), [Text](#text-gauge), [KPI](kpi-gauge) and [Bullet Graph](#bullet-graph) gauges.
+formatting of the different ranges. In Reveal, you can use the following gauge charts: [Linear](#linear-gauge), [Circular](#circular-gauge), [Text](#text-gauge), [KPI](kpi-gauge.md) and [Bullet Graph](#bullet-graph) gauges.
 
 
 ## Linear Gauge

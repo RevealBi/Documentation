@@ -60,7 +60,7 @@ If you are getting the *"There is no data to display"* error, this means the pre
    
     - You might have assigned the wrong fields in the *Location* placeholder. Check if the *Location* field contains geographic units - continents, countries, states, etc.  
   
-    - Your field in the *Value* placeholder may not contain information for the selected locations. If you have added an additional category in the *Map Color* placeholder (see [this example](choropleth-map#using-the-map-color-to-create-a-multi-color-choropleth-map)), then your *Value* field must contain information for this category. For example, there must be information about votes for each candidate, if you compare candidate votes by state.
+    - Your field in the *Value* placeholder may not contain information for the selected locations. If you have added an additional category in the *Map Color* placeholder (see [this example](choropleth-map.md#using-the-map-color-to-create-a-multi-color-choropleth-map)), then your *Value* field must contain information for this category. For example, there must be information about votes for each candidate, if you compare candidate votes by state.
   
     - Also, please confirm that you selected the right *MAP* in the map selector.
   
@@ -68,7 +68,7 @@ If you are getting the *"There is no data to display"* error, this means the pre
 
 2. *Check your Data Source*. Your data source might be empty or with no location data at all. If not empty, try searching for misspellings or odd punctuation. Check whether you are using the right [location format](#location-formats). If your data source contents are not written in the English language, please go to the [My data source is not in English](#my-data-source-is-not-in-english) section.
 
-If you are getting an outcome, but it's not exactly what you were expecting, please go through the entire Choropleth map documentation, including this topic, the [Choropleth Maps](choropleth-map), and [Working with the Choropleth Map Settings](settings-choropleth-map) topic.
+If you are getting an outcome, but it's not exactly what you were expecting, please go through the entire Choropleth map documentation, including this topic, the [Choropleth Maps](choropleth-map.md), and [Working with the Choropleth Map Settings](settings-choropleth-map.md) topic.
 
 ### General Troubleshooting Tips
 

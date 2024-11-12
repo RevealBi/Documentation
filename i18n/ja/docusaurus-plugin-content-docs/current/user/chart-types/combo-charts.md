@@ -63,4 +63,4 @@ In *Settings* you can:
     Reveal applies opacity to the chart displayed behind, to make it
     visually more transparent.
 
-- **[Connect this visualization to another dashboard or a URL](../dashboard-linking)**
+- **[Connect this visualization to another dashboard or a URL](../dashboard-linking.md)**

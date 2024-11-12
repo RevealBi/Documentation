@@ -15,7 +15,7 @@ There are several field settings and filtering options:
   - Settings for [date](field-settings.md#date-fields),
     [numeric](field-settings.md#numeric-fields), and
     [string](field-settings.md#string-fields) fields, including label
-    renaming, aggregation, sorting, formatting, and [conditional formatting](conditional-formatting).
+    renaming, aggregation, sorting, formatting, and [conditional formatting](conditional-formatting.md).
 
   - Filters for [empty values](field-filters-rules.md#filter-empty-values).
 

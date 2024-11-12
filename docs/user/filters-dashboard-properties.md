@@ -36,7 +36,7 @@ You will be able to change the following settings for the filter:
 
 - [**Data Filters:**](#data-filters) This setting allows you to apply any field filters and rules to the data source used for the dashboard filter.
 
-- [**Connected Visualizations:**](filters-connecting) Whether your dashboard will be connected to any visualization or not.
+- [**Connected Visualizations:**](filters-connecting.md) Whether your dashboard will be connected to any visualization or not.
 
 ## Displayed Field
 
