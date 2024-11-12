@@ -83,10 +83,9 @@ A non-numerical example could be the following:
 
 Where:
 
-| Function Name | Expression | IF Condition               |
-| :-----------: | :--------: | :------------------------: |
-| sumif (…​)    | [Wage]      | [Department]="Development" |
-
+| Function Name  | Expression | IF Condition  |
+| :------------: | :--------: | :-----------: |
+| sumif (…​)      | [Wage]     | [OfficeId]=1 |
 
 ### Sample with Nested IF conditions
 
