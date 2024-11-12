@@ -65,7 +65,7 @@ values.
 A formula with the following structure will return "08-Nov-1971 12:59":
 
 | Function Name | Year | Month | Day | Hour | Minute | Second |
-| ------------- | ---- | ----- | --- | ---- | ------ | ------ |
+| :-----------: | :--: | :---: | :-: | :--: | :----: | :----: |
 | date (…​)      | 1971 | 11    | 08  | 12   | 59     | 08     |
 
 A formula with the following structure, however, will return
@@ -73,7 +73,7 @@ A formula with the following structure, however, will return
 sure you respect the order of the elements in the formula:
 
 | Function Name | Year | Month | Day | Hour   | Minute | Second |
-| ------------- | ---- | ----- | --- | ------ | ------ | ------ |
+| :-----------: | :--: | :---: | :-: | :----: | :----: | :----: |
 | date (…​)      | 1971 | 11    | 08  | **27** | 59     | 08     |
 
 
@@ -93,7 +93,7 @@ By default, you will see the following structure when you select time:
 A formula with the following structure will return "11:08:08":
 
 | Function Name | Hour | Minute | Second | Millisecond |
-| ------------- | ---- | ------ | ------ | ----------- |
+| :-----------: | :--: | :----: | :----: | :---------: |
 | time (…​)      | 11   | 08     | 08     | 11          |
 
 The millisecond parameter will not be included in your calculated field.

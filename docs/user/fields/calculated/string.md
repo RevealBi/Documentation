@@ -48,14 +48,14 @@ There are three arguments you need to configure:
 Let's take a look at the sample included in the table above:
 
 | Function Name | Find Text | Within Text                                    | Start Number | Output |
-| ------------- | --------- | ---------------------------------------------- | ------------ | ------ |
+| :-----------: | :-------: | :--------------------------------------------: | :----------: | :----: |
 | find(…​)      | `"with"`  | `"Getting Started with Reveal visualizations"` | `3`          | 15     |
 
 The search will start in the first `t` of `Getting`. The resulting 15 is
 the character number where the `w` in `with` is located.
 
 | C. 1  | C. 2 | C. 3 | C. 4 | C. 5 | C. 6 | C. 7 | C. 8 | C. 9 | C. 10 | C. 11 | C. 12 | C. 13 | C. 14 | C. 15 |
-| ----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- | ----- | ----- | ----- | ----- | ----- |
+| :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **t** | t    | i    | n    | g    |      | S    | t    | a    | r     | t     | e     | d     |       | **w** |
 
 If `with` were repeated more than once in the phrase, the calculated
@@ -82,14 +82,14 @@ There are three parameters for you to configure:
 Let's take a look at the sample included in the table above:
 
 | Function Name | Text                            | Start | Length | Output       |
-| ------------- | ------------------------------- | ----- | ------ | ------------ |
+| :-----------: | :-----------------------------: | :---: | :----: | :----------: |
 | mid(…​)       | `"Getting Started with Reveal"` | `9`   | `12`   | Started with |
 
 The output is `Started with` because of what is in the text string
 starting at character 9 and lasting 12 characters:
 
 | C. 9  | C. 10 | C. 11 | C. 12 | C. 13 | C. 14 | C. 15 | C. 16 | C. 17 | C. 18 | C. 19 | C. 20 |
-| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **S** | **t** | **a** | **r** | **t** | **e** | **d** |       | **w** | **i** | **t** | **h** |
 
 
@@ -149,7 +149,7 @@ The format for the returned string will be `NN [from, to]`.
 Let's look at one of the samples in the table above:
 
 | Function Name    | Number   | Interval |
-| ---------------- | -------- | -------- |
+| :--------------: | :------: | :------: |
 | sortinterval(…​)  | `[Wage]` | `150000` |
 
 In this case, the `Wage` is being compared against one value, and
@@ -162,5 +162,5 @@ lower than 50K, between 50K and 80K, between 80K and 110K, between 110K
 and 140K, and higher than 140K.
 
 | Function Name    | Number   | Interval 1 | Interval 2 | Interval 3 | Interval 4 |
-| ---------------- | -------- | ---------- | ---------- | ---------- | ---------- |
+| :--------------: | :------: | :--------: | :--------: | :--------: | :--------: |
 | sortinterval(…​)  | `[Wage]` | `50000`    | `80000`    | `110000`   | `140000`   |

@@ -57,21 +57,21 @@ For clarification purposes, we will separate the function according to
 the terms we defined above:
 
 | Function Name | Logical Test                           | Value if true | Value if false |
-| ------------- | -------------------------------------- | ------------- | -------------- |
+| :-----------: | :------------------------------------: | :-----------: | :------------: |
 | **if** (…​)   | `[BirthDate]<date(1971,04,15,4,06,55)` | `1`           | `0`            |
 
 Where your logical test combines an `expression` in your data source
 with a logical test.
 
 | Expression    | Operator | Criteria Argument          |
-| ------------- | -------- | -------------------------- |
+| :-----------: | :------: | :------------------------: |
 | `[BirthDate]` | `<`      | `date(1971,04,15,4,06,55)` |
 
 Where the date argument follows the syntax described in
 [date](date.md#date).
 
 | Function Name | Year   | Month | Day  | Hour | Minute | Second |
-| ------------- | ------ | ----- | ---- | ---- | ------ | ------ |
+| :-----------: | :----: | :---: | :--: | :--: | :----: | :----: |
 | `date(…​)`    | `1971` | `04`  | `15` | `4`  | `06`   | `55`   |
 
 Let's look at a non-numerical example:
@@ -81,7 +81,7 @@ Let's look at a non-numerical example:
 Where:
 
 | Function Name | Logical Test                 | Value if true | Value if false |
-| ------------- | ---------------------------- | ------------- | -------------- |
+| :-----------: | :--------------------------: | :-----------: | :------------: |
 | **if** (…​)   | `[Department]="Development"` | `1`           | `0`            |
 
 ### Sample with Nested if conditions
@@ -97,7 +97,7 @@ include as many as necessary:
 Where:
 
 | Function Name | Expression | Logical Operator |
-| ------------- | ---------- | ---------------- |
+| :-----------: | :--------: | :--------------: |
 | maxif (…​)    | [Wage]     | and              |
 
 And the `if-condition` statements are:
@@ -117,7 +117,7 @@ declaring two logical tests that must be applied. Both and and or have
 the same syntax:
 
 | Function Name | Logical Test 1 | Logical Test 2 | Output                                                                                                                    |
-| ------------- | -------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| :-----------: | :------------: | :------------: | :-----------------------------------------------------------------------------------------------------------------------: |
 | **and** (…​)  | `logical1`     | `logical2`     | **If both conditions are met, returns 1**. **If only one or none** of the conditions are met, **returns 0**.              |
 | **or** (…​)   | `logical1`     | `logical2`     | If **either both or only one of the conditions is met, returns 1**. **If none** of the conditions are met, **returns 0**. |
 
@@ -132,7 +132,7 @@ Let's take a look at the following *and* and *or* samples:
 The syntax they have is the same:
 
 | Function Name | Logical Test 1                          | Logical Test 2                         | Output                         |
-| ------------- | --------------------------------------- | -------------------------------------- | ------------------------------ |
+| :-----------: | :-------------------------------------: | :------------------------------------: | :----------------------------: |
 | `and (…​)`    | `[BirthDate]>date(1983,07,15,04,06,55)` | `[Department]="CPA"`                   | 1 and 0, depending on the row. |
 | `or (…​)`     | `[Office]="London,UK"`                  | `[BirthDate]<date(1992,09,15,4,06,55)` | 1 and 0, depending on the row. |
 
@@ -152,7 +152,7 @@ If you want to refine your and condition so you only find "Zolleis
 Walker", you can introduce any one of the following third logical tests:
 
 | Function Name | Logical Test 1                                          | Logical Test 2             | Logical Test 3              |
-|---------------|----------------------------------------------------------|----------------------------|-----------------------------|
+| :-----------: | :-----------------------------------------------------: | :------------------------: | :-------------------------: |
 | and (…)       | [BirthDate]>date(1981,07,15,4,06,05)                     | [Department]="CPA"         | [Wage]>150000               |
 |               |                                                          |                            | [Office]="Tokyo,Japan"      |
 
@@ -161,7 +161,7 @@ You can also combine the and/or functions with the
 calculated fields to get the same results:
 
 | Function Name | Logical Test 1 | Logical Test 2 | Logical Test 3  | Logical Test 4            |
-| ------------- | -------------- | -------------- | --------------- | ------------------------- |
+| :-----------: | :------------: | :------------: | :-------------: | :-----------------------: |
 | `and (…​)`    | Same as above  | Same as above  | `[OfficeId]>=3` | `ISEMPTY([ResignedDate])` |
 
 Because the syntax can be hard to follow with additional arguments, you
@@ -203,7 +203,7 @@ We can create a calculated field for each if condition with a clear
 enough name:
 
 | IF Statements  | New Calculated Field Name          | Calculated Formula                     |
-| -------------- | ---------------------------------- | -------------------------------------- |
+| :------------: | :--------------------------------: | :------------------------------------: |
 | IF Statement 1 | Employees Born after July 15, 1981 | `[BirthDate]>date(1981,07,15,4,06,05)` |
 | IF Statement 2 | CPA Employees                      | `[Department]="CPA"`                   |
 | IF Statement 3 | JP, UY and BG Employees            | `[OfficeId]>=3`                        |
@@ -225,13 +225,13 @@ not. By default, you will see the following structure when you tap not:
 ### Samples
 
 | Function Name | Logical Test     |
-| ------------- | ---------------- |
+| :-----------: | :--------------: |
 | `not (…​)`     | `[OfficeId]>=3)` |
 
 Where
 
 | Expression   | Operator 1 | Operator 2 | Criteria Argument |
-| ------------ | ---------- | ---------- | ----------------- |
+| :----------: | :--------: | :--------: | :---------------: |
 | `[OfficeId]` | `>`        | `=`        | `3`               |
 
 ### Combining not with and/or
@@ -244,14 +244,14 @@ The following and calculated field will return "1" only for EmployeeId
 true at the same time. All other rows return "0".
 
 | Function Name | Logical Test 1       | Logical Test 2                         |
-| ------------- | -------------------- | -------------------------------------- |
+| :-----------: | :------------------: | :------------------------------------: |
 | `and (…​)`     | `[Department]="CPA"` | `[BirthDate]>date(1992,09,15,4,06,55)` |
 
 By adding a `not` before the calculated field, you can get the opposite
 results:
 
 | not        | and        | Logical Test 1       | Logical Test 2                         |
-| ---------- | ---------- | -------------------- | -------------------------------------- |
+| :--------: | :--------: | :------------------: | :------------------------------------: |
 | `not (…​)`  | `and (…​)`  | `[Department]="CPA"` | `[BirthDate]>date(1992,09,15,4,06,55)` |
 
 All rows that previously returned "0" will now do "1", and all "1" will
@@ -269,7 +269,7 @@ logical calculated fields; for example, if. Let's take a look at the
 general if syntax:
 
 | Function Name | Argument 1     | Argument 2      | Argument 3       |
-| ------------- | -------------- | --------------- | ---------------- |
+| :-----------: | :------------: | :-------------: | :--------------: |
 | **if** (…​)    | `logical test` | `value if true` | `value if false` |
 
 Let's replace this formula with if example at the start of this section
@@ -277,7 +277,7 @@ Let's replace this formula with if example at the start of this section
 values of the "Value if true" and "value if false" arguments to 3 and 4.
 
 | Function Name | Logical Test                           | Value if true | Value if false |
-| ------------- | -------------------------------------- | ------------- | -------------- |
+| :-----------: | :------------------------------------: | :-----------: | :------------: |
 | if (…​)        | `[BirthDate]<date(1971,04,15,4,06,55)` | `3`           | `4`            |
 
 The output of this if statement will be 3 if the logical test is true,
@@ -285,7 +285,7 @@ and 4 if the logical test is false. If you want to use the standard 1,0
 boolean results, you can include `true()` and `false()` in their place.
 
 | Function Name | Logical Test                           | Value if true | Value if false |
-| ------------- | -------------------------------------- | ------------- | -------------- |
+| :-----------: | :------------------------------------: | :-----------: | :------------: |
 | if (…​)        | `[BirthDate]<date(1971,04,15,4,06,55)` | `true()`      | `false()`      |
 
 This will force your if formula to output 1 and 0 depending on your
