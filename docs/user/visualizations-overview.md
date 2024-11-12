@@ -39,7 +39,7 @@ If you need more information about how to use each of these visualizations, use 
 
 ## Visualization Tutorials
 
-Within this section, you will find basic, step-by-step tutorials for the Reveal visualizations. All sections use the Data Visualizations data source, which you can download using [this link](/data/Reveal_Visualization_Tutorials.xlsx).
+Within this section, you will find basic, step-by-step tutorials for the Reveal visualizations. All sections use the Data Visualizations data source, which you can download using <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>this link</a>.
 
 | | | | | |
 |:-:|:-:|:-:|:-:|:-:|

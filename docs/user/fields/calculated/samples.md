@@ -11,12 +11,12 @@ The following are a set of calculated field sample expressions.
 
 | Function Name              | Sample Dataset to Test Function        | Expression                                                        | Sample Output                          |
 | -------------------------- |----------------------------------------| ----------------------------------------------------------------- | -------------------------------------- |
-| **Opposite Value**         | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | \-[Wage]                                                          | \-36,542.00 (for Joan Baez)            |
-| **Age**                    | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | (today()-[BirthDate])/365                                         | 50.13 (for Joan Baez)                  |
-| **Name & Department**      | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Fullname]& ", " &[Department]                                    | Joan Baez, Development (for Joan Baez) |
-|**Sales Percentage** | [Samples](../../../../static/data/Samples.xlsx)                                       | [New Sales]*100/sum([New Sales]) | 9,26% (for Japan)                    |
-| **Name starts with J**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | if(find("j",lower([Fullname]),1)=1,"Starts with J",0)             | Starts with J, 0                       |
-| **Deviation from Avg**     | [HR Dataset](../../../../static/data/HR%20Dataset_2016.xlsx) | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
+| **Opposite Value**         | <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset</a> | \-[Wage]                                                          | \-36,542.00 (for Joan Baez)            |
+| **Age**                    | <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset</a> | (today()-[BirthDate])/365                                         | 50.13 (for Joan Baez)                  |
+| **Name & Department**      | <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset</a> | [Fullname]& ", " &[Department]                                    | Joan Baez, Development (for Joan Baez) |
+|**Sales Percentage** | <a href="/data/Samples.xlsx" download>Samples</a>                                       | [New Sales]*100/sum([New Sales]) | 9,26% (for Japan)                    |
+| **Name starts with J**     | <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset</a> | if(find("j",lower([Fullname]),1)=1,"Starts with J",0)             | Starts with J, 0                       |
+| **Deviation from Avg**     | <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset</a> | [Wage]-average([Wage])                                            | \-50476.71 (for Joan Baez)             |
 
 
 ## Converting Unix TimeStamps to Usable Dates
