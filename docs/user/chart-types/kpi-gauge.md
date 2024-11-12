@@ -25,8 +25,8 @@ Category.
 The KPI gauge has similar settings to the [sparkline](sparkline-charts)
 visualization, through which you can configure:
 
-  - **Type**: the time period you will use to compare both values.
+  - **Time Period**: the time period you will use to compare both values.
   - **Show difference as**: whether you will display the difference as a value, percentage, or both value and percentage.
-  - **When difference is positive**: the color for the difference indicator.
+  - **When value increases**: the color for the difference indicator.
 
 ![Advanced Settings KPI Gauge](images/advanced-settings-kpi-gauge.png)

@@ -27,13 +27,13 @@ be 1; if there are values, you will see 0.
 ### Sample
 
 | Function Name | Syntax             | Sample                    |
-| ------------- | ------------------ | ------------------------- |
+| :-----------: | :----------------: | :-----------------------: |
 | isempty       | `isempty({value})` | `isempty([ResignedDate])` |
 
-Let's look at four lines in the [HR Dataset 2016](../../../../static/data/HR%20Dataset_2016.xlsx) spreadsheet.
+Let's look at four lines in the <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a> spreadsheet.
 
 | EmployeeID | FullName          | …​ | Resigned Date   | …​ | Calculated Field |
-| ---------- | ----------------- | -- | --------------- | -- | ---------------- |
+| :--------: | :---------------: | :--: | :-------------: | :--: | :--------------: |
 | 1.00       | Joan Baez         | …​ |                 | …​ | 1.00             |
 | 4.00       | Zurcher Reid      | …​ | **28-Dec-2016** | …​ | 0.00             |
 | 22.00      | Zornes Hall       | …​ |                 | …​ | 1.00             |

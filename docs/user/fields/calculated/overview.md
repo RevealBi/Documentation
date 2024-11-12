@@ -30,9 +30,11 @@ To add a new pre-calculated field, click/tap the **+ button** in the
 *Fields* panel and choose **Calculated Field**:
 
 ![Pre-calculated field option](images/calculated-field-option.png)
+
 The *New Calculated Field* screen will open:
 
 ![New calculated field dialog](images/new-calculated-field-dialog.png)
+
 Here you will need to:
 
 1.  Assign a name to your new pre-calculated field.

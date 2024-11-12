@@ -74,7 +74,7 @@ For clarification purposes, we will separate the function according to
 the terms we defined above:
 
 | Function Name  | Expression | IF Condition  |
-| -------------- | ---------- | ------------- |
+| :------------: | :--------: | :-----------: |
 | averageif (…​)  | [Wage]     | [OfficeId]=1 |
 
 A non-numerical example could be the following:
@@ -83,10 +83,9 @@ A non-numerical example could be the following:
 
 Where:
 
-| Function Name | Expression | IF Condition               |
-| ------------- | ---------- | -------------------------- |
-| sumif (…​)    | [Wage]      | [Department]="Development" |
-
+| Function Name  | Expression | IF Condition  |
+| :------------: | :--------: | :-----------: |
+| sumif (…​)      | [Wage]     | [OfficeId]=1 |
 
 ### Sample with Nested IF conditions
 
@@ -101,17 +100,17 @@ include as many as necessary:
 Where:
 
 | Function Name | Expression | Logical Operator |
-|------------| ---------- | ---------------- |
+|:----------:| :--------: | :--------------: |
 | maxif (…​) | [Wage]     | and              |
 
 And the `if-condition` statements are:
 
 | First Logical Test | Value if true | Value if false |
-| ------------------ | ------------- | -------------- |
+| :----------------: | :-----------: | :------------: |
 | [OfficeId]=1       | 1             | 0              |
 
 | Second Logical Test        | Value if true | Value if false |
-| -------------------------- | ------------- | -------------- |
+| :------------------------: | :-----------: | :------------: |
 | [Department]="Development" | 1             | 0              |
 
 Because the logical operator is `and`, both conditions need to be true
