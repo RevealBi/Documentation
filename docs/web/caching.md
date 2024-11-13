@@ -126,5 +126,6 @@ To bypass caching, set the data source refresh data frequency to `Always`.
 
 **A:** If the `RVBearerTokenDataSourceCredential.UserId` is set, it will be used when creating the cache entry key, and it is recommended to do so to improve performance. Note that the UserId in `RVBearerTokenDataSourceCredential` may differ from the one in `IRVUserContext`; it corresponds to the UserId linked with the `RVBearerTokenDataSourceCredential' access token.
 
-Q: In my deployment, there will be several instances of the Reveal server. How can they share the cache? 
-A: Currently, caches cannot be shared among multiple Reveal server instances. We recommend the following approach: configure your load balancer to direct the same group of users to the same Reveal server instance. This will ensure that cache entries are created within a specific instance, and subsequent requests from those users will hit the same instance, utilizing the cached data efficiently.
+**Q: In my deployment, there will be several instances of the Reveal server. How can they share the cache?**
+
+**A:** Currently, caches cannot be shared among multiple Reveal server instances. We recommend the following approach: configure your load balancer to direct the same group of users to the same Reveal server instance. This will ensure that cache entries are created within a specific instance, and subsequent requests from those users will hit the same instance, utilizing the cached data efficiently.
