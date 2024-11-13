@@ -218,6 +218,100 @@ const sidebars: SidebarsConfig = {
       ]
     },
   ],
+  
+    userSideBar: [
+    {
+      type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        {
+          type: "category", label: "Exporting", link: { type: "doc", id: "user/dashboard-export" }, items: [
+            { type: "doc", label: "Exporting to PDF", id: "user/dashboard-export-pdf" },
+            { type: "doc", label: "Exporting to Excel", id: "user/dashboard-export-excel" },
+            { type: "doc", label: "Exporting to Image", id: "user/dashboard-export-image" },
+            { type: "doc", label: "Exporting to PowerPoint", id: "user/dashboard-export-powerpoint" },
+          ],
+        },
+        { type: "doc", label: "Linking", id: "user/dashboard-linking" }
+      ]
+    },
+
+    {
+      type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", id: "user/visualizations-overview" },
+        { type: "doc", label: "Visualization Editor", id: "user/visualization-editor" },
+        { type: "category", label: "Chart Types", items: [
+          { type: "doc", label: "Category", id: "user/chart-types/category-charts" },
+          { type: "category", label: "Choropleth ", link: { type: "doc", id: "user/chart-types/choropleth-map" }, items: [
+            { type: "doc", label: "Location Data", id: "user/chart-types/location-data-requirements" },
+            { type: "doc", label: "Settings", id: "user/chart-types/settings-choropleth-map" },
+          ]},
+          { type: "doc", label: "Combo", id: "user/chart-types/combo-charts" },
+          { type: "doc", label: "Financial", id: "user/chart-types/financial-charts" },
+          { type: "doc", label: "Gauges", id: "user/chart-types/gauge-charts" },
+          { type: "doc", label: "Grid", id: "user/chart-types/grid-chart" },
+          { type: "doc", label: "Image", id: "user/chart-types/image-chart" },
+          { type: "doc", label: "KPI", id: "user/chart-types/kpi-gauge" },
+          { type: "doc", label: "Pivot", id: "user/chart-types/pivot-table" },
+          { type: "doc", label: "Radial", id: "user/chart-types/radial-charts" },
+          { type: "doc", label: "Scatter and Bubble", id: "user/chart-types/scatter-bubble-charts" },
+          { type: "doc", label: "Scatter Map", id: "user/chart-types/scatter-map" },
+          { type: "doc", label: "Sparkline", id: "user/chart-types/sparkline-charts" },
+          { type: "doc", label: "Text Box", id: "user/chart-types/text-box" },
+          { type: "doc", label: "Text View", id: "user/chart-types/text-view" },
+          { type: "doc", label: "Time Series", id: "user/chart-types/time-series-charts" },
+          { type: "doc", label: "Tree Map", id: "user/chart-types/treemap-charts" },
+        ]},
+
+
+        { type: "category", label: "Fields ", link: { type: "doc", id: "user/fields/overview" }, items: [
+          { type: "doc", label: "Field Settings", id: "user/fields/field-settings" },
+          { type: "doc", label: "Sort by Field", id: "user/fields/sort-by-field" },
+          { type: "doc", label: "Ad-Hoc Hierarchies", id: "user/fields/adhoc-hierarchies" },
+          { type: "doc", label: "Conditional Formatting", id: "user/fields/conditional-formatting" },
+          { type: "doc", label: "Field Filters and Rules", id: "user/fields/field-filters-rules" },
+          { type: "category", label: "Calculated Fields ", link: { type: "doc", id: "user/fields/calculated/overview" }, items: [
+            { type: "doc", label: "Aggregation", id: "user/fields/calculated/aggregation" },
+            { type: "doc", label: "Date", id: "user/fields/calculated/date" },
+            { type: "doc", label: "Information", id: "user/fields/calculated/information" },
+            { type: "doc", label: "Logic", id: "user/fields/calculated/logic" },
+            { type: "doc", label: "Lookup & Reference", id: "user/fields/calculated/lookup-reference" },
+            { type: "doc", label: "Math", id: "user/fields/calculated/math" },
+            { type: "doc", label: "String", id: "user/fields/calculated/string" },
+            { type: "doc", label: "Samples and Tips", id: "user/fields/calculated/samples" },
+          ]},
+        ]},
+
+        { type: "doc", label: "Reusing Visualizations", id: "user/reusing-visualizations" },
+        { type: "doc", label: "Statistical Functions", id: "user/statistical-functions" },
+      ]
+    },
+
+    {
+      type: "category", label: "Filters", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", id: "user/filters-overview" },
+        { type: "doc", label: "Dashboard Filters", id: "user/filters-dashboard" },
+        { type: "doc", label: "Dashboard Filter Properties", id: "user/filters-dashboard-properties" },
+        { type: "doc", label: "Connecting Filters", id: "user/filters-connecting" },
+        { type: "doc", label: "Date Range Filter", id: "user/filters-date-range" },
+        { type: "doc", label: "Visualization Filters", id: "user/filters-visualization" },
+      ]
+    },
+
+    {
+      type: "category", label: "Tutorials", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", id: "user/tutorials-overview" },
+        { type: "doc", label: "Candlestick Charts", id: "user/tutorials-candlestick" },
+        { type: "doc", label: "Gauge Charts", id: "user/tutorials-gauge" },
+        { type: "doc", label: "Image Charts", id: "user/tutorials-image" },
+        { type: "doc", label: "KPI Gauges", id: "user/tutorials-kpi-gauge" },
+        { type: "doc", label: "OHLC Charts", id: "user/tutorials-ohlc" },
+        { type: "doc", label: "Simple-Series Charts", id: "user/tutorials-simple-charts" },
+        { type: "doc", label: "Sparkline Charts", id: "user/tutorials-sparkline-charts" },
+        { type: "doc", label: "Stacked Charts", id: "user/tutorials-stacked-charts" },
+        { type: "doc", label: "Text View", id: "user/tutorials-text-view" },
+      ]
+    },
+  ],
 };
 
 export default sidebars;
+

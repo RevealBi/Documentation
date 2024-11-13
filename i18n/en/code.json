@@ -15,10 +15,6 @@
     "message": "Easily integrate data analytics into your WPF or WinForms applications.",
     "description": "The words used to describe the wpf sdk on the homepage"
   },
-  "homepage.feature.video": {
-    "message": "Follow walkthrough videos and start using our sample visualizations and sample data to help you get up and running.",
-    "description": "The words used to describe the video section on the homepage"
-  },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -282,10 +278,6 @@
     "message": "WPF SDK Documentation",
     "description": "The title of the WPF feature on the homepage"
   },
-  "homepage.feature.video.title": {
-    "message": "Training Videos",
-    "description": "The title of the Training Videos feature on the homepage"
-  },
   "playground.runButton": {
     "message": "Run"
   },
@@ -371,6 +363,14 @@
   "theme.docs.sidebar.navAriaLabel": {
     "message": "Docs sidebar",
     "description": "The ARIA label for the sidebar navigation"
+  },
+  "homepage.feature.user.title": {
+    "message": "User Documentation",
+    "description": "The title of the User Docs feature on the homepage"
+  },
+  "homepage.feature.user": {
+    "message": "Explore user-friendly guides and resources tailored for end-users to make the most of data analytics.",
+    "description": "The words used to describe the user section on the homepage"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "1 item|{count} items",
@@ -519,12 +519,36 @@
     "message": "Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
-  "theme.unlistedContent.title": {
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Authors",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "View all authors",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "This author has not written any posts yet.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
     "message": "Unlisted page",
     "description": "The unlisted content banner title"
   },
-  "theme.unlistedContent.message": {
+  "theme.contentVisibility.unlistedBanner.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Draft page",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "description": "The draft content banner message"
   }
 }

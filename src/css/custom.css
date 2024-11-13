@@ -125,3 +125,16 @@ div[class^='announcementBar_'] {
   font-size: x-large;
   font-weight: bold;
 }
+
+thead, tbody{
+  border: 1px inset;
+}
+
+th:empty{
+  display: none; 
+}
+
+table {
+  display: table;
+  width: 100%;
+}

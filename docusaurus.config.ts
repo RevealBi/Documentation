@@ -90,7 +90,7 @@ const config: Config = {
           items: [
             { label: "Web", to: "web" },
             { label: "WPF", to: "wpf" },
-            { label: "DOM", to: "https://github.com/RevealBi/Reveal.Sdk.Dom" },
+            { label: "User", to: "user" },
           ]
         },
         {
@@ -133,10 +133,7 @@ const config: Config = {
               label: 'WPF SDK',
               to: 'wpf',
             },
-            {
-              label: 'DOM',
-              href: 'https://github.com/RevealBi/Reveal.Sdk.Dom',
-            },
+            { label: "User", to: "user" },
           ],
         },
         {

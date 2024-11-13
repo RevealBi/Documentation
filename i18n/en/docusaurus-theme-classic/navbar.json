@@ -23,10 +23,6 @@
     "message": "WPF",
     "description": "Navbar item with label WPF"
   },
-  "item.label.DOM": {
-    "message": "DOM",
-    "description": "Navbar item with label DOM"
-  },
   "item.label.ASP.NET": {
     "message": "ASP.NET",
     "description": "Navbar item with label ASP.NET"
@@ -58,5 +54,9 @@
   "logo.alt": {
     "message": "Reveal",
     "description": "The alt text of navbar logo"
+  },
+  "item.label.User": {
+    "message": "User",
+    "description": "Navbar item with label User"
   }
 }

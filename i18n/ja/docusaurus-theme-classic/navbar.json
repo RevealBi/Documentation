@@ -35,10 +35,6 @@
     "message": "学習する",
     "description": "Navbar item with label Learn"
   },
-  "item.label.DOM": {
-    "message": "DOM",
-    "description": "Navbar item with label DOM"
-  },
   "item.label.Blogs": {
     "message": "ブログ",
     "description": "Navbar item with label Blogs"
@@ -58,5 +54,9 @@
   "logo.alt": {
     "message": "Reveal",
     "description": "The alt text of navbar logo"
+  },
+  "item.label.User": {
+    "message": "User",
+    "description": "Navbar item with label User"
   }
 }
