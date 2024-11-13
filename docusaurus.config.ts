@@ -133,10 +133,7 @@ const config: Config = {
               label: 'WPF SDK',
               to: 'wpf',
             },
-            {
-              label: 'DOM',
-              href: 'https://github.com/RevealBi/Reveal.Sdk.Dom',
-            },
+            { label: "User", to: "user" },
           ],
         },
         {
