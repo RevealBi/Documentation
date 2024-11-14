@@ -11,30 +11,29 @@ Integrating the Reveal SDK Web Component Wrappers into your Angular application 
 To add the Reveal SDK Web Components to your Angular app, install the required package from npm:
 
 ```bash npm2yarn
-npm install reveal-sdk-wrappers
-```
-
-Once installed, you'll need to register the web components in your application. By default, all Reveal SDK Web Component Wrappers will be globally registered, enabling their usage without individual imports.
-```js
-import { defineRevealSdkWrappers } from "reveal-sdk-wrappers";
-defineRevealSdkWrappers();
+npm install reveal-sdk-wrappers reveal-sdk-wrappers-angular
 ```
 
 ## Module Setup
 
-Angular requires the `CUSTOM_ELEMENTS_SCHEMA` to recognize custom elements. Add this schema to your application's module:
+Import the `RevealViewComponent` to use it as a standalone component in your application. Add this import to your application's module:
 
 ```ts
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+//highlight-next-line
+import { RevealViewComponent } from 'reveal-sdk-wrappers-angular';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    //highlight-next-line
+    RevealViewComponent
+  ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
 ```
@@ -43,12 +42,16 @@ export class AppModule {}
 
 Now you're ready to use the Reveal SDK Web Component Wrappers in your Angular application.
 
+:::note
+All components in the Reveal SDK Angular web component wrappers use the `rva` prefix. Ensure you use this prefix when adding components to your templates.
+:::
+
 ### HTML
 
 Add the Reveal SDK web component to your template:
 
 ```html
-<rv-reveal-view [dashboard]="dashboard"></<rv-reveal-view>
+<rva-reveal-view [dashboard]="dashboard"></<rva-reveal-view>
 ```
 
 ### TypeScript
