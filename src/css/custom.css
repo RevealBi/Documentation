@@ -133,8 +133,3 @@ thead, tbody{
 th:empty{
   display: none; 
 }
-
-table {
-  display: table;
-  width: 100%;
-}
