@@ -11,7 +11,7 @@ The Reveal SDK Web Component Wrappers provides a React-friendly version of each 
 To add the Reveal SDK Web Component Wrappers to your React app, install the necessary packages from npm:
 
 ```bash npm2yarn
-npm install reveal-sdk-wrappers reveal-sdk-wrappers-react
+npm install reveal-sdk-wrappers-react
 ```
 
 ## Using Reveal SDK Web Components
