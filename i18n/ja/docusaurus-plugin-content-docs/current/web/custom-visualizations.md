@@ -29,8 +29,8 @@ window.revealBridge = {
     }
 
     try {
-      if (window.top && window.top.location) {
-        window.top.postMessage(data, "*");
+      if (window.parent && window.parent.location) {
+        window.parent.postMessage(data, "*");
       }
     } catch (e) {
       // window.top.postMessage couldn't be executed.
