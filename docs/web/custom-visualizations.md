@@ -47,6 +47,10 @@ window.revealBridge = {
     }
   },
 
+  notifyVisualizationIsReady: function () {
+    this.sendMessageToHost({ message: "visualizationIsReady" });
+  },
+
   runAction: function (actionName, data) {
     this.sendMessageToHost({ message: "runAction", action: actionName, rowData: data });
   },
@@ -94,6 +98,7 @@ export class TableComponent implements OnInit {
                 this.data = this.dataToJson(incomingData);
                 this.createTableHeaders(this.data);
                 this.ref.detectChanges();
+                window.revealBridge.notifyVisualizationIsReady();
             }
         };
         window.revealBridge.notifyExtensionIsReady();
