@@ -47,8 +47,8 @@ window.revealBridge = {
     }
   },
   
-  notifyVisualizationIsReady: function () {
-    this.sendMessageToHost({ message: "visualizationIsReady" });
+  notifyRenderingFinished: function () {
+    this.sendMessageToHost({ message: "renderingFinished" });
   },
 
   runAction: function (actionName, data) {
@@ -98,7 +98,7 @@ export class TableComponent implements OnInit {
                 this.data = this.dataToJson(incomingData);
                 this.createTableHeaders(this.data);
                 this.ref.detectChanges();
-                window.revealBridge.notifyVisualizationIsReady();
+                window.revealBridge.notifyRenderingFinished();
             }
         };
         window.revealBridge.notifyExtensionIsReady();
