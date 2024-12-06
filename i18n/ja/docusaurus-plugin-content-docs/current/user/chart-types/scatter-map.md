@@ -1,72 +1,72 @@
 ---
-title: How to Create Scatter Maps Visualization
-_description: Find out how to create and use Scatter Maps visualization in Reveal.
+title: 散布マップの表示形式を作成する方法
+_description: Reveal で散布マップの表示形式を作成して使用する方法を説明します。
+_language: ja
 ---
 
-# Scatter Maps
+# 散布マップ
 
-This map displays scattered markers in a geographic area by using geo-coordinates. The visual distribution of markers can help in identifying density and spatial patterns within your data. By adding size and/or color you can reveal more information about your data relative to other points.
+このマップは、地理座標を使用して地理領域に散布マーカーを表示します。マーカーの視覚的な分布は、データ内の密度および空間パターンを識別するのに役立ちます。サイズや色を追加すると、他のポイントと比較してデータに関する詳細情報を表示できます。
 
-Scatter maps give you the possibility to connect to a number of map services, which will not only create a more realistic background for your maps, but will also allow you to delve into details. In some scenarios, like when presenting a real estate market analysis, the ability to show neighborhoods and streets on your map will add more value to your work.
+散布マップを使用すると、複数のマップ サービスに接続して、マップの背景をよりリアルにするだけでなく、詳細を調べることもできます。不動産市場分析を表示する場合など、一部のシナリオでは、マップに近所や通りを表示する機能が追加されます。
 
 ![Different scatter maps visualizations in a dashboard](images/scatter-maps-dashboard.png)
 
-## Using Scatter Maps
+## 散布マップの使用
 
-The information below will help you choose the best scatter map configuration depending on your needs.
+以下の情報は、必要に応じて最適な散布マップの構成を選択する際に役立ちます。
 
-### What are Basic Dot Maps Used for?
+### 基本ドット マップとは?
 
-The most basic scatter maps in Reveal consist of uniform color dots plotted over a chosen area.
+Reveal の最も基本的な散布マップは、選択した領域に均一な色のドットをプロットしたものです。
 
-Dot maps are a great way to visualize the geographical distribution of an entity and can reveal patterns when the dots cluster on the map. One dot represents one entity so every single object is depicted on the map using the geo-location in the data set.
+ドット マップは、エンティティの地理的分布を表示する優れた方法で、ドットがマップ上でクラスター化するときにパターンを明らかにできます。1 つのドットは 1 つのエンティティを表すため、各オブジェクトはデータセットの地理位置情報を使用してマップに表示されます。
 
-One-to-many dot maps are not supported in Reveal. This means, one dot cannot represent more than one object (e.g. 1 dot = 1000 people), so you cannot use the scatter dot maps to create population density maps, for example.  
+1 対多のドット マップは Reveal ではサポートされません。つまり、1 つのドットが複数のオブジェクトを表すことはできないため (1 ドット = 1000 人)、散布ドット マップを使用して人口密度マップなどを作成することはできません。
 
-### What are Bubble Maps Used for?
+### バブル マップとは?
 
-Adding the size category to your basic scatter map is how bubble maps are created. They are great for
-comparing quantitative data in different locations.
+基本散布マップにサイズ カテゴリを追加すると、バブル マップが作成されます。異なる場所の定量データの比較に最適です。
 
-Bubbles size indicates the value of a particular variable being compared. To achieve the comparison effect, it would be best if your data set contains a large variety of values for the compared variable. Otherwise, bubbles on the map will appear similar by size (see example below).
+バブルのサイズは、比較される特定の変数の値を示します。比較効果を得るには、データセットに比較変数のさまざまな値が含まれていることが最適です。それ以外の場合、マップのバブルはサイズが同じように表示されます (以下の例を参照)。
 
 ![Bubble map showing similar density of population in European countries except for Monaco](images/bubble-map-density-population-europe-bad-example.png)
 
-Unless you aim to identify and focus on **outliers** (like in the screenshot above), you may need to reconsider your choice of visualization.
+上記のスクリーンショットのように**外れ値**を特定してフォーカスしない限り、表示形式の選択を再検討する必要があります。
 
-Bubbles are not bound to the exact location defined by the latitude and longitude data. Their location is approximate, but the bubbles must appear in the area, for which they carry information. For example, if you want to make a report about the most dangerous neighborhoods across all the US, you will most probably not need the exact location of each crime reported. You will just need to plot the bubbles, sized according to the aggregated crime data, in the correct neighborhoods.
+バブルは、緯度と経度のデータで定義された正確な場所にバインドされていません。それらの場所は概算ですが、バブルは情報を伝達する領域に表示される必要があります。たとえば、米国全土で最も危険な領域に関するレポートを作成する場合、ほとんどの場合、報告された各犯罪の正確な場所は必要ありません。集計された犯罪データに基づいてサイズ設定されたバブルを正しい領域にプロットする必要があります。
 
 :::note
-A potential issue you need to take into account is that overly large bubbles can spread over more than one area. In this case, adding location data to the [bubble tooltip](#bubble-maps) text can help your audience identify the area where the oversize bubble belongs.
+考慮する必要がある潜在的な問題は、過度に大きいバブルが複数の領域に広がる可能性があることです。この場合、[バブル ツールチップ](#バブル-マップ)のテキストに場所データを追加すると、オーバーサイズのバブルが属する領域をユーザーが識別しやすくなります。
 :::
 
-### What are Colored Scatter Maps Used for?
+### 色付き散布マップとは?
 
-Color makes maps easier to perceive and gives you the opportunity to add one more variable to your analysis.
+色を使用すると、マップがわかりやすくなり、分析に変数を追加できます。
 
-Simple dot maps colored by category are good for drawing attention to clusters and areas where the distribution of an object is really high. For example, you can quickly identify the states with the most airports if the airports in different states are colored differently (see below).
+カテゴリ別に色分けされたシンプルなドット マップは、オブジェクトの分布が多いクラスターや領域に注意を引くのに適しています。たとえば、異なる州の空港の色が異なる場合、最も多くの空港がある州をすばやく識別できます (以下を参照)。
 
 ![A scatter map showing the distribution of US airports with dots colored by state](images/scatter-dot-different-colors.png)
 
-Dot maps colored by value will help you provide insight while avoiding the risk of overlapping large bubbles. If, for example, you aim to make the tendency of the aging population in Europe evident with one look, create a dot map colored by the medium population age and style the color to show low, medium and high average age:
+値で色分けされたドット マップは、大きなバブルが重なり合うリスクを回避しながらインサイトを提供します。たとえば、ヨーロッパの高齢人口の傾向を一目で確認したい場合は、人口の中年の色でドット マップを作成し、低、中、高の平均年齢を示す色を設定します。
 
 ![A scatter map showing the average age of Euro Population with dots colored by using conditional formatting for medium age](images/scatter-dot-map-colored-by-value.png)
 
-However, if you aim to show the correlation between two  values for individual locations, your purpose will be served by presenting one value with size and the other - with color. Taking the previous example, you can color the dots by population age and size them by GDP of the country to show the correlation between prosperity and higher life expectancy.
+ただし、個々の場所の 2 つの値の相関関係を表示する場合は、一方の値をサイズで、もう一方の値を色で表示します。前の例を使用すると、人口の年齢別にドットに色を付け、国の国内総生産に基づいてサイズを設定して、国の豊かさと平均余命の相関関係を示すことができます。
 
-## Scatter Maps Zoom
+## 散布マップのズーム
 
-Scatter maps allow you to zoom in and focus on an area, where the markers are more densely plotted, or such that is not part of the _Map_ dropdown (e.g. the Balkan Peninsula). You can even save the zoomed area and keep this view in the dashboard.
+散布マップを使用すると、マーカーがより密にプロットされている領域、または [マップ] ドロップダウンの一部ではない領域 (バルカン半島など) にズームインしてフォーカスできます。ズーム領域を保存し、このビューをダッシュボードに保持することもできます。
 
-When the map is maximized, you can zoom in and out in *Dashboard View mode* or in the *Visualization Editor* too.
+マップが最大化される場合、**ダッシュボード ビュー モード**または**表示形式エディター**でもズームインおよびズームアウトできます。
 
-When maximized, the scatter map displays a zoom control that allows you to better adjust the zoom level and reset it when needed.
+散布マップを最大化すると、ズーム コントロールが表示され、ズーム レベルをより適切に調整し、必要に応じてリセットできます。
 
 ![A scatter map displaying the zoom control](images/scatter-map-zoom-control.png)
 
-As shown above, there are a couple of buttons displayed at the bottom right of the map. The _Reset Zoom_ button will reset the map zoom to the zoom-level the map was saved the last time.
+上記のように、マップの右下にいくつかのボタンが表示されます。[ズームのリセット] ボタンをクリックすると、マップのズームが最後に保存されたときのズーム レベルにリセットされます。
 
-Zooming also allows you to change the clear shapes Reveal uses as a map background. At a chosen zoom level, you can replace the grey areas with detailed real maps, called *image tiles* provided by one of the following map services:
+ズームを使用すると、Reveal がマップの背景として使用するクリアな図形を変更することもできます。選択したズーム レベルで、グレーの領域を、以下のいずれかのマップ サービスで提供される**画像タイル**と呼ばれる詳細な実際のマップで置き換えることができます。
 
 * *Bing*
 * *Esri*
@@ -75,78 +75,77 @@ Zooming also allows you to change the clear shapes Reveal uses as a map backgrou
 ![A scatter map showing the average age of Population in East Asia zoomed in and using image tiles](images/scatter-map-image-tiles-enabled.png)
 
 
-## Creating a Scatter Map
+## 散布マップの作成
 
-The Scatter Map in Reveal provides you with a variety of opportunities for your geographical analysis based on the data you choose to display.
+Reveal の散布マップは、表示するデータに基づいて地理分析のさまざまな機会を提供します。
 
+### 場所のデータ要件
 
-### Location Data Requirements
+散布マップの表示形式は、地理座標を使用してデータをプロットします。各データ ポイントには、緯度と経度の値を表示する必要があります。Reveal で受け入れられる形式は次のとおりです:
 
-The ScatterMap visualization plots the data using geo-coordinates. Each data point requires a latitude and longitude value to be displayed. The accepted format by Reveal is:
-
-* **Two different columns** for latitude and longitude respectively.
-* **Latitude/Longitude** in Decimal Degrees format, for example: -46.896388, 168.126111
+* 緯度と経度にそれぞれ **2 つの異なる列**。
+* **緯度/経度** (10 進角形式)、例: -46.896388、168.126111
 
 :::note
-**Unaccepted formats**: Latitude/Longitude formats, containing minutes and seconds symbols, such as *46° 53.783333'*, and formats containing suffixes *- 46° 53' 47'' South, 168° 7' 34'' E*, are not accepted.
+**受け入れられない形式**: *46° 53.783333'* などの分と秒の記号を含む緯度/経度形式、およびサフィックスを含む形式 (*- 46° 53' 47'' South, 168° 7' 34'' E*) は受け入れられません。
 :::
 
-The ***"There is no data to display."*** message may appear in the Visualization Editor, even if your latitude and longitude data is correct and is in the accepted format. This can happen if the geographic coordinates are plotted outside the bounds of the selected map.
+**[表示するデータはありません。]** メッセージは、緯度と経度のデータが正しく、受け入れられた形式であっても、表示形式エディターに表示される場合があります。これは、地理座標が選択したマップの境界の外側にプロットされている場合に発生する可能性があります。
 
-### Basic Dot Maps  
+### 基本的なドット マップ  
 
 ![A dot map showing the distribution of airports across the US](images/scatter-dot-map-airports.png)
 
-You can create dot maps by using only the *Latitude* and *Longitude* data from your data set. If your data source does not contain these fields, you can add them from another data source.
+データセットの**緯度**と**経度**のデータのみを使用して、ドット マップを作成できます。データ ソースにこれらのフィールドが含まれていない場合は、別のデータ ソースから追加できます。
 
-You also need to choose one of the predefined maps from the *Map* dropdown in the _Scatter Map Data_ section.  
+また、[散布マップデータ] セクションの [マップ] ドロップダウンから事前定義されたマップの 1 つを選択する必要があります。
 
-Additionally, the optional Label placeholder can be populated to replace the default tooltip text of latitude and longitude with the associated Label-field value in the data. In the screenshot above, the dots are located on the map based on the airports' addresses, but you can also use the airports' names for the tooltip text.
+さらに、オプションのラベル プレースホルダーにデータを入力して、緯度と経度のデフォルトのツールチップ テキストをデータ内の関連するラベル フィールド値に置き換えることができます。上のスクリーンショットでは、ドットは空港の住所に基づいて地図上に配置されていますが、ツールチップ テキストに空港の名前を使用することもできます。
 
-Because of the conceptual simplicity of this map, you can only choose whether to show *title* and set the *color* of the dots in the _Settings_ section.
+このマップの概念は単純であるため、タイトルを表示するかどうかを選択し、[設定] セクションでドットの色を設定することしかできません。
 
 
-### Bubble Maps
+### バブル マップ
 
-You can also create a scatter map with variable-sized markers or bubbles.
+可変サイズのマーカーまたはバブルを使用して散布マップを作成することもできます。
 
 ![A bubble map showing the electoral college votes distribution across US states](images/scatter-bubble-map-electoral-college.png)
 
-Bubble maps are created by using the same data as simple dot maps. Plus, you need to drop a numeric field in the _Bubble Radius_ placeholder.
+バブル マップは、基本的なドット マップと同じデータを使用して作成されます。さらに、[バブル半径] プレースホルダーに数値フィールドをドロップする必要があります。
 
-The tooltip of a bubble includes two parts:
+バブルのツールチップには、次の 2 つの部分があります: 
 
-* A bolded title - uses data coming from the field in *Label*.
-* Content - consists of the name and value of the field in *Bubble Radius*.
+* 太字のタイトル - [ラベル] のフィールドからのデータを使用します。
+* コンテンツ - [バブル半径] のフィールドの名前と値で構成されます。
 
-The **bubble tooltips** are used to help your audience read the map. It gives a better idea of what their size stands for and provides the exact value. It can help avoiding the misinterpretation that the bubble is an actual area on the map.
+**バブル ツールチップ**は、対象ユーザーが地図を読むのに役立ちます。これにより、バブル サイズが何を表しているのかがわかり、正確な値が得られます。バブルがマップ上の実際の領域であるという誤解を避けるのに役立ちます。
 
-### Adding Color to Scatter Maps
+### 散布マップに色を追加 
 
-The scatter map allows you to visualize a third variable indicated by color. Adding color is an option for both dot and bubble maps.
+散布マップを使用すると、色で示される追加の 3 番目の変数を表示できます。色の追加は、ドット マップとバブル マップの両方のオプションです。
 
 ![A scatter map showing the average age of Euro Population sized by number and colored using conditional formatting for medium age](images/scatter-color-average-age-euro-population.png)
 
-Color on the map can be determined by:
+マップ上の色は、次の方法で決定できます:
 
-* *Value* - it's best to use a numeric data field. If you drop a text field, your data will be automatically aggregated and Reveal will take _Count of Rows_ to determine the color.    
+* **値** - 数値データ フィールドを使用するのが最適です。テキスト フィールドをドロップすると、データが自動的に集計され、Reveal は**行数**を使用して色を決定します。  
 
-* *Category* - a text field is expected. However, if you provide a numeric field, the values in it will be processed as text, i.e. no aggregation will be applied, and a separate color will be created for each individual value.  
+* **カテゴリ** - テキスト フィールドが必要です。ただし、数値フィールドを指定すると、その値はテキストとして処理されます。つまり、集計は適用されず、個々の値ごとに個別の色が作成されます。
 
-### Configuring Style Settings
+### スタイル設定の構成
 
-Style settings for _Scatter Maps_ include showing/hiding visualizations' *Title* and *Legend* as well as configuring color and type of the markers on the map.
+**散布マップ**のスタイル設定には、表示形式の**タイトル**と**凡例**の表示/非表示、およびマップ上のマーカーの色とタイプの構成が含まれます。
 
-Color settings depend on the scatter map type.
+色の設定は、散布マップの種類によって異なります。
 
-For **basic dot and bubble maps** using uniform colored markers, you can select a color from the 10-color palette in _Start Color_.
+均一な色のマーカーを使用する**基本的なドットおよびバブル マップ**の場合、**[開始色]** の 10 色パレットから色を選択できます。
 
-For **scatter maps colored by category** you can choose to _Use different markers_. If you enable this function, Reveal will automatically create a unique marker for each category by using combinations between colors and symbols such as squares, triangles, dots, stars, octagons, etc.
+**カテゴリ別の色の散布マップ**の場合、**[別のマーカーの使用]** を選択できます。この機能を有効にすると、Reveal は、正方形、三角形、ドット、星、八角形などの色と記号の組み合わせを使用して、カテゴリごとに一意のマーカーを自動的に作成します。
 
-For **scatter maps colored by value** you can configure the coloring scheme. You will see three options in the _Color as_ dropdown:
+**値別の色の散布マップ**の場合、カラー スキームを構成できます。**[カラー バリエーション]** ドロップダウンに 3 つのオプションが表示されます。
 
 ![Color as options in the Style Settings section](images/color-as-scheme-options.png)
 
-* _Single Color_ - styles all markers on the map with the same color.
-* _Range of Values_ - styles the marker using one of seven colors, where colors progressing light to dark represent data values from low to high. You can also choose the _Start Color_, which will determine the color in the middle of the seven shades.
-* _Conditional Formatting_ - this scheme allows you to establish styling rules per ranges of data - upper, middle, and lower. Depending on the nature of the information, low values might be a good or bad signal, so you have the flexibility to configure the styling in a way that makes the most sense in your situation.
+* **[単色]** - マップ上のすべてのマーカーを同じ色でスタイルを設定します。
+* **[値範囲]** - 7 色のいずれかを使用してマーカーのスタイルを設定します。明るい色から暗い色に進む色は、データ値を低いものから高いものへと表します。**[開始色]** を選択することもできます。これにより、7 つの色合いの中央の色が決まります。
+* **[条件付き書式]** - このスキームを使用すると、最大 3 つの範囲 (上、中、下) までのデータ範囲ごとにスタイリング ルールを確立できます。低い値が適しているかどうかは情報の性質によります。Reveal には状況に応じて最も理にかなった方法でスタイルを設定できる柔軟性があります。

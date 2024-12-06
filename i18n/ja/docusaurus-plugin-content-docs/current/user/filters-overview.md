@@ -1,43 +1,33 @@
 ---
-title: Filters in Reveal – All You Need to Know
-_description: Learn all about dashboard filters, add datasets and make each visualization unique in Reveal.
+title: Reveal のフィルター – 必要な情報
+_description: ダッシュボード フィルターのすべてを学び、データセットを追加して、各表示形式を Reveal で一意にします。
+_language: ja
 ---
 
-# Filters
+# フィルター
 
-Dashboard filters allow you to slice the contents of visualizations in a
-dashboard all at once. When you add datasets to the dashboard filters
-collection, they will remain in context for all dashboard visualization
-to be bound to. Dynamic filtering applies to all connected
-visualizations, as the filter selection changes.
+ダッシュボード フィルターを使用すると、ダッシュボードの全ての表示形式のコンテンツを一度にフィルター適用できます。データセットをダッシュボード フィルター コレクションに追加すると、すべてのダッシュボード表示形式にバインドされるフィルター設定が維持されます。動的なフィルターは、フィルターの選択が変更されると、接続されているすべての表示形式に適用されます。
 
-For instance, a dataset with the list of locations around the world can
-be added to enable binding all visualizations of a dashboard. In this
-scenario, the contents of each visualization can be filtered by location
-by the user browsing the information in that dashboard.
+たとえば、世界中の場所のリストを含むデータセットを追加して、ダッシュボードのすべての表示形式をバインドできます。このシナリオでは、各ダッシュボードの情報を参照するユーザーが場所ごとに各表示形式のコンテンツをフィルタリングできます。
 
 ![Dashboard filter by location added in the Dashboard editor](images/sample-dashboard-filters.png)
 
-Reveal also supports activating a Date Range as a Dashboard Filter,
-which enables the filtering of all visualizations by a specific period
-of time.
+Reveal は、日付範囲をダッシュボード フィルターとして有効にすることもサポートします。これにより、特定の期間ですべての表示形式をフィルタリングできます。
 
-The following sections will cover:
+このセクションは以下のトピックを説明します:
 
-  - [Dashboard Filters](filters-dashboard.md) in both the *Dashboard* and
-    the *Visualization editor*
+  - **ダッシュボード**と**表示形式エディター**の両方の[ダッシュボード フィルター](filters-dashboard.md)
 
-  - [Dashboard Filter configurable properties](filters-dashboard-properties.md), including:
+  - [ダッシュボード フィルターの構成可能なプロパティ](filters-dashboard-properties.md):
 
-      - [Displayed Field](filters-dashboard-properties.md#displayed-field)
+      - [表示フィールド](filters-dashboard-properties.md#di表示フィールド)
 
-      - [Multiple Selection](filters-dashboard-properties.md#multiple-selection)
+      - [複数選択](filters-dashboard-properties.md#複数選択)
 
-      - [Required Selection](filters-dashboard-properties.md#required-selection)
+      - [必須選択](filters-dashboard-properties.md#必須選択)
 
-      - [Data Filters](filters-dashboard-properties.md#data-filters)
+      - [データ フィルター](filters-dashboard-properties.md#データ-フィルター)
 
-  - [Dashboard Filters and their connections to visualizations](filters-connecting.md), also
-    referred to as visualization binding
+  - [ダッシュボード フィルターと表示形式への接続](filters-connecting.md) (表示形式バインディングとも呼ばれます)
 
-  - [Visualization Quick Filters](filters-visualization.md)
+  - [表示形式のクイック フィルター](filters-visualization.md)

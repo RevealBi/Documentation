@@ -1,41 +1,33 @@
 ---
-title: How to Add and Use Dashboard Filters  
-_description: Learn how to use Dashboard edit mode to add new dashboard filters in Reveal.
+title: ダッシュボード フィルターを追加して使用する方法  
+_description: ダッシュボード編集モードを使用して Reveal に新しいダッシュボード フィルターを追加する方法について説明します。
+_language: ja
 ---
 
-# Dashboard Filters
+# ダッシュボード フィルター
 
-The dashboard filters dataset is defined by entering *Dashboard edit*
-mode. To add a new dataset, just select the *Add Filter* button.
+ダッシュボード フィルター データセットは、**ダッシュボード編集**モードを開始することによって定義されます。新しいデータセットを追加するには、**[フィルターの追加]** のボタン を選択します。
 
 ![List of different filter options for dashboards](images/filter-options-dashboard.png)
 
-This will result in the display of a list with the possible dashboard
-filters to be applied. You can choose between:
+これにより、適用される可能性のあるダッシュボード フィルターのリストが表示されます。以下から選択できます:
 
-  - **Adding a Dashboard Filter**. This option will allow you to choose
-    information from a data source, after which you can bind your filter
-    to each of the visualizations in the dashboard.
+  - **ダッシュボード フィルターの追加**このオプションを使用すると、データ ソースから情報を選択できます。その後、ダッシュボードの各表示形式にフィルターをバインドできます。
 
-  - **Adding a Date Filter**. This option will allow you to choose a
-    fixed range or customize it to show only a specific date range.
+  - **日付フィルターの追加**このオプションは、固定範囲の選択や指定した日付範囲のみ表示するようカスタマイズできます。
 
-To remove a dataset from the dashboard filters list, just select the
-overflow button next to the dashboard filter and select **Delete**.
+ダッシュボード フィルター リストからデータセットを削除するには、ダッシュボード フィルターの横にあるオーバーフロー ボタンを選択し、**[削除]** を選択します。
 
 ![Removing a dashboard filter with the delete option](images/delete-filter-option.png)
 
-## Dashboard Filters and the Visualization Editor
+## ダッシュボード フィルターと表示形式エディター
 
-Once there is at least one Dashboard Filter or Date filter defined in the Dashboard
-Editor, you will be able to bind the data in that Dashboard Filter or the Date filter to a
-visualization by selecting **Connect** under the filter's name. 
+ダッシュボード エディターに 1 つ以上のダッシュボード フィルターまたは日付フィルターが定義されている場合、フィルター名の下部にある **[接続]** をクリックするとダッシュボード フィルターまたは日付フィルターのデータを表示形式にバインドします。 
 
 ![Connecting to a dashboard filter in the visualization editor](images/dashboard-filter-connection-option-visualization-editor.png)
 
-Alternatively, you can connect the data in the *Date filter* dialog or in the *Dashboard filter* dialog.
+日付フィルター ダイアログまたはダッシュボード フィルター ダイアログでデータを接続することもできます。
 
 ![A dashboard filter dialog](images/dashboard-filter-dialog-connect-option.png)
 
-For more information on the binding functionality, please refer to
-[Connecting Dashboard Filters to a Visualization](filters-connecting.md).
+バインド機能の詳細については、[「ダッシュボード フィルターを表示形式に接続」](filters-connecting.md)トピックを参照してください。

@@ -1,27 +1,25 @@
 ---
-title: How to use Fields in Reveal 
-_description: Learn to options to easily apply transformations to the fields in your dataset.
+title: Reveal でフィールドを使用する方法 
+_description: データセットのフィールドに変換を簡単に適用するオプションについて説明します。
+_language: ja
 ---
 
-# Fields
+# フィールド
 
-This section describes the different options for applying transformations to the fields in your dataset. By applying filters, you can optimize the information in your fields for your business analysis. Remove any unnecessary noise, highlight the most valuable aspects and summarize information in many useful ways.
+このセクションでは、データセットのフィールドに変換を適用するためのさまざまなオプションについて説明します。フィルターを適用することにより、フィールドの情報をビジネス分析用に最適化できます。必要のないノイズを削除し、最も重要なアスペクトを強調表示して、さまざまな方法で情報を要約します。
 
 ![Visualization sample that uses different fields.png](images/visualization-example-fields.png)
-## Topics Overview
 
-There are several field settings and filtering options:
+## トピックの概要
 
-  - Settings for [date](field-settings.md#date-fields),
-    [numeric](field-settings.md#numeric-fields), and
-    [string](field-settings.md#string-fields) fields, including label
-    renaming, aggregation, sorting, formatting, and [conditional formatting](conditional-formatting.md).
+いくつかのフィールド設定とフィルタリング オプションがあります。
 
-  - Filters for [empty values](field-filters-rules.md#filter-empty-values).
+  - ラベルの名前変更、集計、並べ替え、書式、[条件付き書式](conditional-formatting.md)を含む[日付](field-settings.md#日付フィールド)、[数値](field-settings.md#数値フィールド)および[文字列](field-settings.md#文字列フィールド)フィールドの設定。
 
-  - Filters to [select specific values](field-filters-rules.md#select-values).
+  - [空値](field-filters-rules.md#空値をフィルター)のフィルター。
 
-  - Filters by [Rule](field-filters-rules.md#filter-by-rule).
+  - [特定の値を選択する](field-filters-rules.md#値の選択)ためのフィルター。
 
-Field settings and rules are accessible through the [visualizations editor](../visualization-editor.md), which is displayed automatically when a
-dataset is added to the dashboard canvas.
+  - [ルール](field-filters-rules.md#ルールでフィルタリング)でフィルター。
+
+データセットがダッシュボード キャンバスに追加されると自動的に表示される[表示形式エディター](../visualization-editor.md)を介して、フィールド設定とルールにアクセスできます。

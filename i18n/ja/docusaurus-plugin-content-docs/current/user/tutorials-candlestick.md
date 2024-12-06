@@ -1,103 +1,87 @@
 ---
-title: How to Create Candlestick Visualizations in Reveal
-_description: Get familiar the specifics of creating a Candlestick chart visualization for your data.
+title: Reveal でローソク足の表示形式を作成する方法
+_description: データのローソク足チャートの表示形式を作成する方法を説明します。
+_language: ja
 ---
 
-## Creating Candlestick Visualizations
+## ローソク足表示形式を作成
 
-In this tutorial, you will learn how to create a *Candlestick chart* visualization using a sample spreadsheet.
+このチュートリアルは、サンプル スプレッドシートを使用して**ローソク足**の表示形式を作成する方法を説明します。
 
 ![A sample with different candlestick charts](images/different-candlestick-charts.png)
 
-## Key Concepts
+## 重要なコンセプト
 
-Like [OHLC](tutorials-ohlc.md) Charts, Candlestick charts are meant to
-show the opening, high, low and closing prices for any financial data.
-They are particularly useful for financial scenarios and stock movement
-analysis. This chart displays numerical values in vertical axes, with
-the two horizontal lines in each vertical axis representing the *Open*
-and *Close* values.
+[OHLC](tutorials-ohlc.md) チャートとローソク足チャートは各財務データの始値、高値、安値、終値を表します。財務シナリオと株の変動の分析のために役立ちます。このチャートは各垂直軸に**始値**および**終値**を表す 2 つの水平線で数値を垂直軸に表します。
 
-Candlestick charts, therefore, require:
+そのため、ローソク足チャートには以下の項目が必要になります。
 
-  - **One field to be dropped into the *Label*** placeholder of the data
-    editor, generally related to dates.
+  - **通常日付に関連する日付エディターの **[ラベル]** プレースホルダーにドロップする 1 つのフィールド。
 
-  - **Four different fields** in the *Open*, *High*, *Low* and *Close*
-    categories of the data editor.
+  - *Open*、*High*、*Low* および *Close* の **4 つの異なるフィールド** データ エディターのカテゴリ。
 
 ![Candlestick chart visualization settings](images/candlestick-visualization-editor-example.png)
 
-There are also different options to add further information to your
-chart:
+チャートに追加情報を表示するためのオプションが複数あります。
 
-  - **Axis Configuration**: the axis configuration lets you configure
-    the minimum and maximum values for your charts. The minimum value is
-    set to 0 by default and the maximum calculated automatically
-    depending on your values.
+  - **軸の構成**: 軸の構成でチャートの最大値と最小値を構成できます。デフォルトで最小値は 0 に設定され、最大値は使用されるデータによって設定されます。
 
-  - **Logarithmic Axis Configuration**: if you check the "Logarithmic"
-    checkbox, the scale for your values will be calculated with a
-    non-linear scale which takes magnitude into account instead of the
-    usual linear scale.
+  - **対数軸構成**: [対数] ボックスをチェックする場合、値のスケールは通常のリニア スケールを使用する代わりに大きさを使用するリニア スケール以外で計算されます。
 
-## Sample Data Source
+## サンプル データ ソース
 
-For this tutorial, you will use the *OHLC and Candlestick* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> .
+このチュートリアルでは、<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> の「OHLC and Candlestick」シートを使用します。
 
-## Creating a Candlestick Chart
+## ローソク足チャートを作成する方法
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
 
    ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
    ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
 
-4. Choose the **OHLC and Candlestick** sheet. 
-  
+4. **OHLC and Candlestick** シートを選択します。 
+
    ![Selecting the OHLC and Candlesticks spreadsheet](images/ohlc-candlestick-spreadsheet.png)
-         
-5. Open the *Visualization Picker* and select the **Candlestick** visualization. By default, the visualization type will be set to *Column*. 
 
-   ![List of chart types](images/candlestick-chart-types.png)                                                             
-6.  Drag and drop the *Date* field into *Label* and the *Open*, *High*, *Low* and *Close* fields in their corresponding placeholder.                
-  ![Organizing data fields](images/candlestick-organizing-data.png)
+5. **表示形式ピッカー**を開き、**ローソク足**の表示形式を選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。
 
-## Changing your Axis Configuration
+   ![List of chart types](images/candlestick-chart-types.png)
 
-Like [gauge bounds](tutorials-gauge.md#adding-bounds-to-your-gauge), chart axis
-configuration allows you to set the lowest and highest values in your
-chart. You can use this feature to include or exclude specific data.
+6.  *Date* フィールドを **[ラベル]** にドラッグアンドドロップし、*Open*、*High*、*Low* および *Close* フィールドを対応するプレースホルダーにドラッグアンドドロップします。
 
-In order to access the axis configuration menu:
+   ![Organizing data fields](images/candlestick-organizing-data.png)
+
+## 軸の構成の変更
+
+[ゲージの範囲](tutorials-gauge.md#ゲージの化でしきい値を追加する方法)と同様に、チャート軸構成でチャート (範囲) の最小値と最大値を設定できます。この機能を使用して、特定のデータ含有や除外ができます。
+
+以下は軸構成のメニューへアクセスするための手順です。
 
 |                                             |                                                                                               |                                                             |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**            | <img src={require("./images/tutorials-settings.png").default} alt="Navigating to Settings" width="300"/> | Go to the **Settings** section in the Visualization Editor. |
-| 2\. **Navigate to the Axis Bounds section** | <img src={require("./images/axis-bounds-candlestick.png").default} alt="Navigating to Axis Bounds" width="300"/> | The settings you will change will be the **Axis Bounds**.   |
+| 1\. **設定メニューにアクセスする**            | <img src={require("./images/tutorials-settings.png").default} alt="Navigating to Settings" width="300"/> | 表示形式エディターの **[設定]** セクションに移動します。 |
+| 2\. **軸範囲セクションに移動する** | <img src={require("./images/axis-bounds-candlestick.png").default} alt="Navigating to Axis Bounds" width="300"/> | 変更する設定は **[軸範囲]** です。   |
 
-Depending on whether you want to set the minimum or maximum value (or
-both), you will need to access one of the following options:
+最大値または最小値 (または両方) のどれを設定するかに基づいて、以下のオプションの 1 つへアクセスする必要があります。
 
-### Changing the Minimum Bound
+### 最小境界値を変更します。
 
-The default value is set to *Auto*. In order to set a different bound, enter the value you want the chart to start with.
+デフォルト値は「自動」に設定されています。境界値を変更する場合は、チャートの開始値を入力してください。
 
-### Changing the Maximum Bound
+### 最大境界値を変更します。
 
-For Maximum bounds, the default will be set to *Automatic* so that
-Reveal uses your original data. In order to set a different one, enter
-the value you want for the chart's top limit.
+最大境界値の場合、Reveal が元のデータを使用するためにデフォルトの値は **[自動]** に設定されます。別の値を設定するには、チャートの上限値を入力します。
 
-## Setting your Axis Configuration as Logarithmic
+## 軸を対数軸として設定
 
 |                                        |                                                                                                              |                                                             |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Access the Settings Menu**       | <img src={require("./images/tutorials-settings.png").default} alt="Navigating to Settings" width="300"/>                 | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Change the Axis to Logarithmic** | <img src={require("./images/axis-logarithmic-candlestick.png").default} alt="Accessing Axis configuration" width="300"/> | Open the **Axis** dropdown and select **Logarithmic**.      |
+| 1\. **設定メニューにアクセスする**       | <img src={require("./images/tutorials-settings.png").default} alt="Navigating to Settings" width="300"/>                 | 表示形式エディターの **[設定]** セクションに移動します。 |
+| 2\. **軸を対数に変更する** | <img src={require("./images/axis-logarithmic-candlestick.png").default} alt="Accessing Axis configuration" width="300"/> | **[軸]** ドロップダウンを開き、**[対数]** を選択します。      |

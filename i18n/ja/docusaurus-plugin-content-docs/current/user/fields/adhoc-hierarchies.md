@@ -1,48 +1,39 @@
 ---
-title: Reveal Ad-hoc Hierarchies – Add, Create and Analyze Faster
-_description: Create new hierarchies in Reveal and analyze your data in charts, gauges, and grid views.
+title: Reveal アドホック階層 – 追加、作成、分析の高速化
+_description: Reveal で新しい階層を作成し、チャート、ゲージ、グリッド ビューでデータを分析します。
+_language: ja
 ---
 
-# Ad-Hoc Hierarchies
+# アドホック階層
 
 
-While Reveal creates hierarchies for Year-Month-Date date fields
-automatically, this does not happen for other types of fields. Ad-hoc
-hierarchies allow users to analyze the data in charts, gauges, and grid
-views, allowing users to create new hierarchies with the fields located
-in the **Rows** placeholder of the data editor.
+Reveal は年月日の日付フィールドの階層を自動的に作成しますが、他のタイプのフィールドでは発生しません。アドホック階層により、ユーザーはチャート、ゲージ、およびグリッドビューでデータを分析でき、データエディターの **[行]** プレースホルダーにあるフィールドを使用して新しい階層を作成できます。
 
 ![Ad Hoc Hierarchies example in the Visualization editor](images/ad-hoc-hierarchies-example.png)
-This feature applies to plain data sources (for example, SQL tables,
-Excel spreadsheets or CSV files) and not to multidimensional data
-sources like Analysis Services. For those cases, the hierarchies are
-defined on the server side, and Reveal supports the *expand* and *drill*
-operations.
+
+この機能は、Analysis Services などの多次元データ ソースではなく、プレーン データ ソース (SQLテーブル、Excelスプレッドシート、CSVファイルなど) に適用されます。これらの場合、階層はサーバー側で定義され、Reveal は**展開**および**ドリル**操作をサポートします。
 
 :::note
-Ad-hoc hierarchies are **not supported** in *Text*, *Circular*, *Image*, *Grid* and *Text View* charts.
+アドホック階層は、テキスト、円形、画像、グリッド、テキスト ビュー チャートでは**サポートされていません**。
 :::
-## Enabling Ad-Hoc Hierarchies
+## アドホック階層の有効化
 
-To enable ad-hoc hierarchies, just drag and drop a field in the **Add Hierarchy** section of the *Rows* placeholder in the data editor. When you do this, the structure and behavior of the data table will change.
+アドホック階層を有効にするには、データ エディターの **[行]** プレースホルダーの *[階層の追加]* にフィールドをドラッグアンドドロップします。これを設定するとデータ テーブルの構成および動作が変わります。
 
 ![Reveal Ad-hoc Hierarchies table](images/ad-hoc-hierarchy-pivot-chart.png)
-As seen in the screenshot above, a single column will replace multiple
-columns. In the example presented in the screenshot, you not only can
-drill up and down, but you can also expand each *Department* to show the
-*Office*.
 
-## Supported Visualizations
+上記のスクリーンショットのように、単一の列が複数の列を置き換えます。スクリーンショットに示されている例では、ドリルアップおよびドリルダウンできるだけでなく、各部署を展開してオフィサーを表示することもできます。
 
-Ad-hoc hierarchies can be added to all visualizations ***except*** for
-the following ones:
+## サポートされている可視化
 
-  - Circular Gauges
+アドホック階層は、**以下のものを除く**すべての表示形式に追加できます。
 
-  - Grid Charts
+  - 円形ゲージ
 
-  - Text Gauges
+  - グリッド チャート
 
-  - Text Views
+  - テキスト ゲージ
 
-  - Image Charts
+  - テキスト ビュー
+
+  - 画像チャート

@@ -1,49 +1,37 @@
 ---
-title: How to Create and Use Grid Charts in Visualizations Editor
-_description: Find out how to use Grid Charts for your visualizations in Reveal.
+title: 表示形式エディターでグリッド  チャートを作成して使用する方法
+_description: Reveal で表示形式にグリッド チャートを使用する方法を説明します。
+_language: ja
 ---
 
-# Grid Chart
+# グリッド チャート
 
-## Working With the Grid Chart in the Visualization Editor
+## 表示形式エディターでグリッド チャートを操作する
 
-The grid chart is a visualization option for displaying data, which presents the information in a matrix. You can **resize a column's width** by selecting the grid header, which will highlight the whole column. Drag the side left or right to modify the column's width.
+グリッド チャートは、データを表示するための １つの表示形式オプションであり、情報を行列で表示します。グリッド ヘッダーを選択すると列全体が強調表示され、**列の幅を変更できます**。列幅を変更するには右または左へスライドさせます。
 
 ![Resizing a column's width in a grid chart](images/grid-chart-example.png)
 
-You can adjust the size of your font by going to the **Settings**
-section and choosing a different size. The default one is *Small*. The
-*Medium* size will increase the size by 2px, whereas *Large* will
-increase it by 4px.
+**[設定]** で [フォント サイズ] を変更できます。デフォルト サイズは **[小]** です。**[中]** サイズでは 2px 大きくなり、**[大]** サイズは 4px 大きくなります。
 
 ![Different options for the font size](images/grid-chart-font-sizes.png)
 
-You can also set the first column to be in a fixed position by checking
-the *Fix First Column* option under **Settings**. This is particularly
-useful when working with many columns.
+先頭列を固定配置に設定するには、**[設定]** の下の **[最初の固定列]** オプションをチェックします。これは、特に多くの列を処理する場合に便利です。
 
 :::note
-The grid chart is suitable in a dashboard when the number of rows and columns is less than 10. When you're dealing with small amounts of data, the preferred approach may be to "just show the numbers".
+行数および列が 10 より小さい場合、グリッド チャートはダッシュボードに適しています。少量のデータを扱っている場合、数字だけを表示するのが適切な方法となる場合があります。
 :::
 
-## Column Sorting in Dashboard View Mode
+## ダッシュボード ビュー モードで列を並べ替える
 
-The grid chart allows you to change the sorting of your columns
-(ascending or descending) in *Dashboard View mode*. You can do so by selecting the
-arrows icon next to the column name.
+**ダッシュボード ビュー モード**でグリッド チャートの列の並べ替え (昇順や降順) を変更できます。列名の横にある矢印ボタンを選択して変更できます。
 
 ![Grid Chart Sorting Columns Options](images/grid-chart-sorting.png)
 
-You can apply more than one sorting criteria. Then, you will see small number
-icons appearing next to the existing column headers. The direction of the
-arrow will help you determine whether you applied ascending or
-descending sorting.
+複数の並べ替え条件を適用できます。次に、既存の列ヘッダーの横に小さな番号が表示されます。矢印の方向は、昇順または降順のどちらの並べ替えを適用したかを判断するのに役立ちます。
 
 ![Sorting View All Numbers](images/grid-chart-sorting-number-options.png)
 
-You can also choose to remove any existing sorting options you have
-entered with the *None* or *Clear All* options. If any other sorting
-options remain, the order in which they will be applied will be
-determined by the number next to the column header.
+並べ替えオプションは、**[すべてクリア]** または **[なし]** で削除できます。他に削除されていない並べ替えオプションがある場合、順序は列ヘッダーの横の番号によって決定されます。
 
 ![Sorting View Mode Remove](images/grid-chart-none-sorting-option.png)

@@ -1,115 +1,89 @@
 ---
-title: How to Create Scatter and Bubble Charts Visualization 
-_description: Find out how to create and use Scatter and Bubble Charts visualization in Reveal.
+title: 散布図・バブル チャートの表示形式を作成する方法
+_description: Reveal で散布図・バブル チャートの表示形式を作成して使用する方法を説明します。
+_language: ja
 ---
 
-# Scatter and Bubble Charts
+# 散布図・バブル チャート
 
-## What are Scatter Charts Used for?
+## 散布図とは?
 
-Scatter charts are used to represent the relationship between two quantitative measures by plotting data points along the X (horizontal) and Y (vertical) axes. They are particularly useful for demonstrating patterns in large datasets.
+散布図は、X (水平) 軸と Y (垂直) 軸に沿ってデータ ポイントをプロットすることにより、2 つの定量的計測間の関係を表すために使用されます。データに大量の値のセットが含まれている場合に、パターンを示すのに特に役立ちます。
 
-## What are Bubble Charts Used for?
+## バブル チャートとは?
 
-A bubble chart is a variation of a scatter chart in which the data points are replaced with bubbles. Like scatter charts, bubble charts represent the relationship between two quantitative measures as well as a third quantitative measure represented by the size of the bubble. 
+バブル チャートは散布図のバリエーションで、データ ポイントがバブルに置き換えられます。散布図と同様に、バブル チャートは、2 つの定量的計測と、バブルのサイズで表される 3 番目の定量的計測間の関係を表します。
 
-## Creating a Scatter Chart
+## 散布図チャートを作成する方法
 
 ![Example for a scatter chart visualization](images/scatter-chart-visualization-editor.png)
 
-In the example above, the scatter chart visualization shows the
-relationship between the quantity of *New Sales* and the *Revenue* made
-by each particular *Employee*.
+上記の例では、散布図の表示形式は、特定の各**従業員**によって産み出された**新規販売**の数量と**収益**の関係を示しています。
 
-To create a scatter chart:
+散布図を作成するには:
 
-1.  Select the *Scatter* visualization in the *Change Visualization*
-    menu:
+1.  **[チャート タイプ]** メニューで **[散布図]** の表示形式を選択します。
 
 ![Location of the scatter visualization in the change visualization menu](images/chart-types-scatter.png)
 
-2.  Choose numerical fields for the *X axis* and *Y axis*, which will
-    determine the location of the data points.
+2.  **[X 軸]** と **[Y 軸]** の数値フィールドを選択して、データ ポイントの位置を決定します。
 
-3.  Select a categorical value for your *Label*.
+3.  **[ラベル]** のカテゴリ値を選択します。
 
-Every data point has its own **tooltip**, which shows up when you click
-on it:
+すべてのデータ ポイントには独自の**ツールチップ**があり、クリックすると表示されます。
 
 ![Tooltip shown for a particular data point in the scatter chart](images/tooltips-scatter-chart.png)
 
-In this example, the tooltip gives information about a particular
-employee the data point represents, as well as quantitative data for
-them included in the chart.
+この例では、ツールチップは、データ ポイントが表す特定の従業員に関する情報と、チャートに含まれるそれらの量的なデータを提供します。
 
-## Creating a Bubble Chart
+## バブル チャートを作成する方法
 
 ![An Example of a bubble chart using one color](images/bubble-chart-visualization-editor.png)
 
-To create a basic bubble chart, using only one color, you will need to:
+1 つの色だけを使用して基本的なバブル チャートを作成するには、次の操作が必要です。
 
-1.  Select *Bubble* chart from the list of *Chart Types*.
+1.  **[チャート タイプ]** のリストから **[バブル]** チャートを選択します。
 
-2.  Choose numerical fields for your *X axis* and *Y axis*.
+2.  **[X 軸]** と **[Y 軸]** の数値フィールドを選択します。
 
-    In the example above the location of the bubbles is determined by
-    the correlation between the *Number of Inpatients* field and their
-    *Length of Stay* in the hospital.
+    上記の例では、バブルの位置は、*Number of Inpatients* と *Length of Stay* の長さとの相関関係によって決定されます。
 
-3.  Select a categorical value for *Label*.
+3.  **[ラベル]** のカテゴリ値を選択します。
 
-    Each bubble in the shown chart represents a *Division*, such as
-    Neurology, Cardiology, Surgery, etc.
+    示されているチャートの各バブルは、神経科、心臓科、外科などの**部門**を表しています。
 
-4.  Choose a numerical field for *Bubble Radius*.
+4.  **バブル半径**の数値フィールドを選択します。
 
-    You can see from the example that the size of each bubble depends on
-    the sum of *Treatment Costs* in each *Division*. A legend on top of
-    the chart shows the minimum and maximum value of the *Bubble Radius*
-    field in the chart.
+    例から、各バブルのサイズは各 *Division* の *Treatment Costs* の合計に依存することがわかります。チャート上部の凡例は、チャートの**バブル半径**フィールドの最小値と最大値を示しています。
 
-Clicking on the bubbles will also provide you with *tooltips* showing
-specific data for every particular bubble. If you have overlapping
-elements in your chart, click/tap on the smaller bubble to show its tooltip.
+バブルをクリックすると、各バブルの特定のデータを示す**ツールチップ**も表示されます。チャートで要素が重複している場合は、小さいバブルをクリックまたはタップしてツールチップを表示します。
 
-## Adding the Color Category to Scatter and Bubble Charts
+## 散布図とバブル チャートへの色分類の追加
 
-You can add a categorical field to the scatter or bubble chart. It will
-color the bubbles or scatter points in different colors depending on the
-values in this field.
+[カテゴリ] フィールドを散布図またはバブル チャートに追加できます。このフィールドの値に応じて、バブルまたは散布ポイントに異なる色が付けられます。
 
 ![Example of adding colors to the basic bubble chart](images/bubble-chart-with-colors.png)
 
-In the example above, the *Date* field is applied to the *Color* box.
-Adding the color category assigns different colors to the bubbles,
-depending on whether the numerical information for a division refers to
-*2017*, *2018* or *2019*.
+上記の例では、*Date* フィールドがカラーボックスに適用されています。色分類を追加すると、部門の数値情報が *2017*、*2018*、*2019* のいずれを参照しているかに応じて、バブルに異なる色が割り当てられます。
 
-This has also resulted in displaying more bubbles in the bubble chart
-visualization.
+これにより、バブル チャートの表示形式でより多くのバブルが表示されるようになりました。
 
-## Settings for Scatter and Bubble Charts
+## 散布図とバブル チャートの設定
 
 ![Settings for scatter and bubble charts](images/settings-scatter-bubble-chart.png)
 
-In *Settings* you can:
+**[設定]**:
 
-  - **Change the Style of your visualization.**
+  - **表示形式のスタイルを変更する**。
 
-    You can select whether you want to show a *Title* or *Legend* for
-    your visualization. Choosing a *Start Color* will define the color of the data points/bubbles. When more than one color is needed due to the use of the *Color Category*, colors are applied sequentially starting at the *Start Color*.
+    表示形式の **[タイトル]** または **[凡例]** を表示するかどうかを選択できます。**[開始色]** を選択すると、データ ポイント/バブルの色が定義されます。色分類を使用するために複数の色が必要な場合、**[開始色]** から順番に適用されます。
 
-  - **Choose between *Linear* and *Logarithmic* scale for the X and Y axis**.
+  - **[X 軸] と [Y 軸] の [リニア] スケールまたは [対数] スケールのいずれかを選択する**。
 
-    With Logarithmic, the scale for your values will be calculated with
-    a non-linear scale which takes magnitude into account instead of the
-    usual linear scale.
+    対数の場合、値のスケールは通常のリニア スケールを使用する代わりに大きさを使用するリニア スケール以外で計算されます。
 
-    As a general rule, scatter charts are a better choice than line
-    charts, when you want to use a logarithmic scale on the X-axis,
-    since the horizontal axis of a scatter chart is always a value axis.
+    X 軸に対数スケールを使用する場合、散布図の水平軸は常に値軸であるため、一般的に、散布図は折れ線チャートよりも適切な選択です。
 
-  - **Set up the minimum and maximum values for your charts.**
+  - **チャートの [最小値] および [最大値] を設定できる**。
 
-    Minimum is set to 0 by default and maximum is calculated
-    automatically depending on your values.
+    デフォルトで [最小値] は 0 に設定され、[最大値] は使用されるデータによって設定されます。

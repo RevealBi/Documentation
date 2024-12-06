@@ -1,62 +1,62 @@
 ---
-title: How to Use the Visualizations Editor
-_description: Find out how to create and edit your visualizations and use a great variety of options.
+title: 表示形式エディターの使用方法
+_description: 表示形式を作成および編集し、さまざまなオプションを使用する方法をご覧ください。
+_language: ja
 ---
 
-# Visualization Editor
+# 表示形式エディター
 
-The *Visualization Editor* is where you create and edit your visualizations in Reveal. Here you will find the data from your dataset aggregated and prepared for use as well as great variety of visualizations to build with it.
+**表示形式エディター**は、Reveal で表示形式を作成および編集する場所です。ここでは、データセットからのデータが集約されて使用できるように準備されているほか、それを使用して構築するためのさまざまな表示形式が表示されます。
 
-## How Do You Create a Visualization?
+## 表示形式の作成方法
 
-Visualizations are the building blocks of your dashboard. So, when you start creating a visualization, you can choose between two alternative starting points:
+表示形式は、ダッシュボードの基本要素です。したがって、表示形式の作成を開始するときに、開始点には ２ つの選択肢があります。
 
-* Start with **creating a new dashboard** where the new visualization will be your first and/or only visualization. To do this, click/tap on the **+ Visualization** blue button.
+* **新しいダッシュボードを作成する**ことから始めます。このダッシュボードでは、新しい表示形式が最初または唯一の表示形式になります。これを行うには、青い **[+ 表示形式]** ボタンをクリックまたはタップします。
 
-* Start by **adding a new visualization** to an already existing dashboard. To do this, select the overflow button in the top right-hand corner, click/tap on the *Edit* and click/tap on the **+ Visualization** blue button.
+* 既存のダッシュボードに**新しい表示形式を追加する**ことから始めます。これを行うには、右上隅のオーバーフロー ボタンを選択し、**[編集]** をクリックまたはタップして、**[+ 表示形式]** の青いボタンをクリックまたはタップします。
 
-After that, you will be prompted to add a new or select an existing data source.
+その後、新しいデータ ソースを追加するか、既存のデータ ソースを選択するように求められます。
 
 ![Dialog with a list of data sources](images/new-visualization-screen.png)
 
-With the data source selected and configured, you will be navigated to the [Visualization Editor](visualization-editor.md), where you can start creating your visualization.
+データ ソースを選択して構成すると、[表示形式エディター](visualization-editor.md)に移動し、表示形式の作成を開始できます。
 
-The *Visualization editor* will help you get the most desired view using your data.
+表示形式エディターは、データを使用して最も望ましいビューを作成するのに役立ちます。
 
-## Accessing the Visualization Editor
+## 表示形式エディターにアクセスする
 
-You can access the Visualization editor in two ways:
+表示形式エディターには、次の 2 つの方法でアクセスできます。
 
-***1. In the visualization creation process***
+**1. 表示形式作成プロセス**
 
-Once you have selected and configured your data source, the *Visualization editor* will open automatically.
+データ ソースを選択して設定すると、**表示形式エディター**が自動的に開きます。
 
-***2. In the dashboard editing process***
+**2. ダッシュボード編集プロセス**
 
-After opening a chosen dashboard and entering *Dashboard Edit mode*, you will be able to **access the Visualization editor** by selecting **Edit** from a visualization's overflow button. Alternatively, you can click/tap on the pencil icon, next to the overflow menu.
+選択したダッシュボードを開き、**ダッシュボード編集**モードに入ると、表示形式のオーバーフロー ボタンから **[編集]** を選択して、**表示形式エディターにアクセス**できます。または、オーバーフロー メニューの横にある鉛筆アイコンをクリックまたはタップすることもできます。
 
-## Visualization Editor Overview
+## 表示形式エディターの概要
 
-Below, you will find a list of all sections of the *Editor* with their capabilities.
+以下は、**エディター**のすべてのセクションとその機能のリストです。
 
 ![Sections of the Visualization editor](images/visualizations-editor-sections.png)
 
-1. **Data Section** - this section contains two panels:
-    1. **Fields** - All of the available fields within your data source will appear on the left panel. Each field has an indicator that informs the users what field type each field is: *Date*, *Value*, *Text*. A search bar appears when the available fields are more than ten.
-    The *plus* icon in this panel allows you to either blend data sources or calculate a field. The *brain* icon allows you to use fields from a BigQuery or Azure *machine learning model* for your visualization. Keep in mind that the BigQuery machine learning model can work only with BigQuery data sources.    
-    2. **Visualization Fields** - Here is where you will drag and drop, or click the *+* mark to see the available fields and select those you want to use for the visualization you are creating.
+1. **[データ] セクション** - このセクションには 2 つのパネルがあります。
+    1. **[フィールド]** - データ ソース内で使用可能なすべてのフィールドが左側のパネルに表示されます。各フィールドには、フィールド タイプ (**日付**、**値**、**テキスト**) をユーザーに通知するインジケーターがあります。使用可能なフィールドが 10 を超えると、検索バーが表示されます。このパネルの **[+]** アイコンを使用すると、データ ソースをブレンドするか、フィールドを計算することができます。**脳**アイコンを使用すると、BigQuery または Azure の**機械学習モデル**のフィールドを表示形式に使用できます。BigQuery 機械学習モデルは、BigQuery データ ソースでのみ機能することにご注意ください。
+    2. **表示形式フィールド** - ここでフィールドをドラッグアンドドロップするか、**[+]** マークをクリックして使用可能なフィールドから作成する表示形式に使用するフィールドを選択します。
 
-2. **Settings Section** - This section allows you to customize what you want to show. Each visualization comes with its own settings. At the bottom of the *Settings* section you will see the option for links. This is a powerful feature, that takes drill down to a whole new level. Read more in the [Dashboard Linking](dashboard-linking.md) topic.
+2. **[設定] セクション** - このセクションでは、表示する内容をカスタマイズできます。各表示形式には独自の設定があります。 **[設定]** セクションの下部に、リンクのオプションが表示されます。これは、ドリル ダウンを全く新しいレベルに到達させる強力な機能です。詳細については、[ダッシュボード リンク](dashboard-linking.md) トピックをご覧ください。
 
-3. **Visualization Picker** - Here you can choose your desired visualization and preview the final result. As you switch between the different chart types in the dropdown menu, you will notice the visualization fields section change. The fields for each visualization are different, but they change automatically so you only need to fill them in.
+3. **表示形式ピッカー** - ここで目的の表示形式を選択して、最終結果をプレビューできます。ドロップダウン メニューでさまざまなチャート タイプを切り替えると、表示形式フィールドのセクションが変更されます。各表示形式のフィールドは異なりますが、入力するだけで自動的に変更されます。
 
-4. **Visualization Workspace** - Here is where you will be able to see the visualization you are creating or editing as you drag and drop fields. The visualization won't populate until you have all the necessary fields needed to create that chart type.
+4. **表示形式のワークスペース** - フィールドをドラッグアンドドロップしながら作成または編集している表示形式を確認できます。そのチャート タイプを作成するために必要なすべてのフィールドが揃うまで、表示形式は入力されません。
 
-5. **Data Source** - The data source that you are currently working with will be displayed here. With a click, you can change between the different sheets, tables or views within your source or change your connection to a new source entirely without having to leave the editor.
+5. **データ ソース** - 現在使用しているデータ ソースがここに表示されます。クリックによってデータ ソース内のシート、テーブル、またはビューを変更し、またエディターを離れることなく、接続を新しいデータ ソースへ完全に変更できます。
 
-Among other things, you will be able to:
-- **Sort** & **filter** data.
-- **Aggregate data** in the data editor.
-- **Search**, **Visualize** & **format** data.
+特に、次のことが可能になります。
+- データの**並べ替え**と**フィルター**
+- データ エディターの**集計データ**。
+- データの**検索**、**視覚化**、および**書式設定**。
 
-After you're done building the visualization, select the *check* icon to return to the *Dashboard Editor*. In the Dashboard Editor, you can control the layout, size, and location of the visualizations in a dashboard by simply dragging visualizations and their borders. When you are ready formatting and styling your dashboard, click/tap on the *check* icon again to save your dashboard.  
+表示形式の作成を完了したら、**チェック** アイコンを選択して**ダッシュボード エディター**に戻ります。ダッシュボード エディターでは、表示形式をドラッグしてレイアウト、サイズ、配置を操作できます。ダッシュボードの書式設定とスタイル設定の準備ができたら、**チェック** アイコンをもう一度クリックまたはタップしてダッシュボードを保存します。

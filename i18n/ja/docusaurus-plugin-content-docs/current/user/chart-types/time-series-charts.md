@@ -1,64 +1,56 @@
 ---
-title: How to Create Time Series Chart Visualization
-_description: Find out how to create and use Time Series Chart visualization in Reveal.
+title: 時系列チャートの表示形式を作成する方法
+_description: Reveal で時系列チャートの表示形式を作成して使用する方法を説明します。
+_language: ja
 ---
 
-# Time Series Charts
+# 時系列チャート
 
-A Time Series chart is used to display data points indexed in time order. It is commonly used to detect trends at a glance, allowing an easy observation of development over time.
+時系列チャートは、時系列でインデックス付けされたデータ ポイントを表示するために使用されます。傾向を一目で検出するために一般的に使用され、時間の経過に伴う開発を簡単に観察できます。
 
 ![Time Series chart within Reveal](images/time-series-chart-dashboard-example.png)
 
-Very similar to a conventional line chart, the Time Series chart always has a time-based horizontal axis (x-axis).
+従来の折れ線チャートと非常によく似ていますが、時系列チャートには常に時間ベースの水平軸 (x 軸) があります。
 
-## Chart Trendlines
+## チャートの近似曲線
 
-Chart settings enable the display of trend lines, which are lines that
-are painted across a chart, based on an algorithm. Trendlines are a very
-simple, yet powerful tool to help you determine trends in datasets, and
-define thresholds for taking action. The supported algorithms are Linear
-Fit, Quadratic Fit, Cubic Fit, Quartic Fit, Logarithmic Fit, Exponential
-Fit, Power Law Fit, Simple Average, Exponential Average, Modified
-Average, Cumulative Average, Weighted Average.
+チャートの設定で近似曲線の表示を有効にできます。このラインはアルゴリズムに基づいてチャートにラインを表示します。近似曲線でデータセットの傾向を把握し、意思決定のためのしきい値を定義できます。サポートされるトレンド ラインは、二次フィット、キュービック フィット、四次フィット、対数フィット、指数フィト、べき乗フィット、単純平均、指数平均、修正平均、累加平均、加重平均です。
 
 ![Chart trendline options in Reveal](images/time-series-charts-chart-trendlines.png)
 
 ![Chart trendline options result in Reveal](images/time-series-charts-chart-trendlines-result.png)
 
-## Settings for Time Series Charts
+## 時系列チャートの設定
 
-In *Settings* you can:
+[設定] では:
 
-- **Hide elements displayed by default**.
-  You can choose to hide the title, legend, and tooltip totals (only available when you have categories). You can also choose the starting color and to show or hide different *Axis*.
+- **デフォルトで表示される要素を非表示にすることができます**。
+  タイトル、凡例、およびツールチップの合計を非表示にすることを選択できます (カテゴリがある場合にのみ使用可能)。また、開始色を選択して、異なる**軸**を表示または非表示にすることもできます。
 
-- **Display Trendlines**.
-  Chart settings enable you to display trendlines, choosing among different supported algorithms as described in the previous section.
+- **近似曲線を表示できます**。
+  チャート設定を使用すると、前のセクションで説明したように、サポートされているさまざまなアルゴリズムから選択して、近似曲線を表示できます。
 
-- **Sync Axis to the Visible Range**.
+- **軸を表示範囲に同期できます**。
 
-- **Show the Automatic Label Rotation**.
+- **自動的なラベル回転を表示できます**。
 
-- **Adjust the Zoom Level**.
+- **ズーム レベルを調整できます**。
 
-- **Choose between Linear scale or Logarithmic**.
-  With Logarithmic, the scale for your values will be calculated with a non-linear scale which takes magnitude into account instead of the usual linear scale.
+- **リニア スケールまたは対数を選択できます。**
+  対数の場合、値のスケールは通常のリニア スケールを使用する代わりに大きさを使用するリニア スケール以外で計算されます。
 
-- **Setup the minimum and maximum values for your charts**.
-  Minimum is set to 0 by default and maximum is calculated
-  automatically depending on your values.
+- **チャートの最小値および最大値を設定できます。**
+  デフォルトで最小は 0 に設定され、最大値は使用されるデータによって設定されます。
 
-- **Choose Compact Labels**.
-  With this setting you avoid redundant label information when you zoom your chart.
+- **コンパクトなラベルを選択できます**。
+  この設定を使用すると、チャートをズームするときに冗長なラベル情報を回避できます。
 
-- [Connect this visualization to another dashboard or a URL](../dashboard-linking.md).
+- [この表示形式を別のダッシュボードまたは URL に接続します](../dashboard-linking.md)
 
-## Zooming and Panning
+## ズームとパンニング
 
-When the Time Series chart is maximized, you can zoom in and out. This allows you to focus on a specific time interval and is a clear scenario where using the Compact Labels setting makes sense.
+時系列チャートが最大化されると、ズームインおよびズームアウトできます。これにより特定の時間間隔に焦点を合わせることができ、コンパクトなラベル設定を使用することが理にかなっている明確なシナリオです。
 
-## Statistical Functions
+## 統計関数
 
-Reveal provides you with three types of advanced
-predictive analysis. These are *[Time series forecast](../statistical-functions.md#time-series-forecast)*, *[Linear regression](../statistical-functions.md#linear-regression)* and *[Detect outliers](../statistical-functions.md#detect-outliers)*. You can use them to make predictions, recognize and evaluate trends, or discover outliers
-in your data series.
+Reveal は 3 種類の高度な予測分析を提供します。これらは、[時系列予測](../statistical-functions.md#時系列予測)、[線形回帰](../statistical-functions.md#線形回帰)、および[外れ値の検出](../statistical-functions.md#外れ値の検出)です。それらを使用して、データ シリーズで予測を行い、傾向を認識して評価し、外れ値を検出できます。

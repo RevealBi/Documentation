@@ -1,101 +1,98 @@
-# Linking Dashboards
+# ダッシュボード リンク
 
-Reveal supports dashboard linking which allows you to connect the visualizations in a dashboard with other dashboards or URLs. Imagine you want to provide more details on the information displayed in a visualization - you can use a whole new dashboard to do so. This can be very useful in Company dashboards, for example, where you will be able to establish top-down analysis paths, where you go from a high level overview of the reality of a business to more detailed views with the specifics. 
+Reveal はダッシュボード リンクをサポートしており、ダッシュボード内の表示形式を他のダッシュボードまたは URL に接続できます。表示形式により詳細な情報を表示したい場合、新しいダッシュボードを使用して目的を達成できます。この機能はトップダウン分析パスでとても役立ちます。ビジネスのハイレベルな概要から特定の詳細情報まで簡単にナビゲーションができます。 
 
-Let's take a Company dashboard (see below) which provides key performance indicators for each area of interest in the company. Once you've opened the dashboard, you will notice the **link symbol** on one or more visualizations. 
+Company ダッシュボード (以下を参照) を見てみましょう。このダッシュボードは、各エリアの KPI (キー パフォーマンス インジケーター) を提供します。ダッシュボードを開くと、1 つ以上の表示形式に**リンク記号**が表示されます。 
 
-By clicking/tapping the link symbol, you can open: 
+リンク記号をクリックまたはタップすると、以下を開くことができます: 
 
-* **Another dashboard** (shown in the screenshot below), which gives more specific information related to the visualization or a value in it.
-* **A URL**, which will enable extensibility scenarios such as interacting with third-party web applications as part of the dashboard navigation. 
+* **別のダッシュボード** (以下のスクリーンショットを参照)。表示形式またはその中の値に関連するより具体的な情報を提供します。
+* ダッシュボード ナビゲーションの一部としてサードパーティ ウェブ アプリケーションとのインタラクションなど拡張性を有効にする **URL**。
 
 ![](images/sample-linked-dashboards.png)
 
 ![](images/sample-linked-dashboards-2.png)
 
-## Adding a Link 
+## リンクを追加 
 
-To configure a link, go to the **Settings** section of the *Visualizations Editor* and click/tap the *+* in **Links**. Alternatively, you can choose **Connect this visualization to another dashboard or a URL**.
+リンクを構成するには、表示形式エディターの **[設定]** セクションに移動し、**[リンク]** の **[+]** をクリックまたはタップします。または、**[表示形式を他のダッシュボードまたは URL に接続]** を選択することもできます。
 
 ![Adding a link in Settings](images/settings-linking-option.png)
 
-The added link will appear as a symbol on the visualization it is configured for when the dashboard is in *View Mode*.  
+追加されたリンクは、ダッシュボードが**ビュー モード**の場合、構成されている表示形式にリンク記号として表示されます。
 
-### Linking to Another Dashboard
+### 別のダッシュボードへのリンク
 
-Linking to another dashboard gives you the ability to jump from a specific point in one dashboard to another dashboard. This point can be a visualization or a specific value in a visualization, depending on the link trigger you chose (see more [below](#choosing-a-trigger)).
+別のダッシュボードにリンクすると、あるダッシュボードの特定のポイントから別のダッシュボードに移動することができます。このポイントは、選択したリンク トリガーに応じて、表示形式または表示形式の特定の値になります (以下を参照)。
 
-To link your dashboard to another dashboard you need to perform the steps below.  
+ダッシュボードを別のダッシュボードにリンクするには、以下の手順を実行する必要があります。
 
-1. **Prepare** the dashboard you are linking to. Carefully consider the relation between the two dashboards. 
+1. リンク先のダッシュボードを**準備します**。2 つのダッシュボードの関係を注意深く検討してください。
 
-  **Adding filters** in advance to the dashboard you are linking to as well as the main dashboard will allow you to connect the two dashboards by a common field. This field will play a role as a filter in the second dashboard and a measured category in the first dashboard. 
+  メイン ダッシュボードと同じように、リンク先のダッシュボードに予め**フィルターの追加**をしておくと、共通のフィールドでこの 2 つのダッシュボードを接続できます。このフィールドは、2 番目のダッシュボードではフィルターとして、最初のダッシュボードでは測定されたカテゴリとしてのロールを果たします。
 
-2. After preparing the dashboard you are linking to, open the main dashboard where you want to add the link. Select the visualization on which you want the link symbol to appear and open it in the *Visualization Editor*. 
+2. リンク先のダッシュボードを準備してから、リンクを追加するダッシュボードを開きます。リンク記号を表示する表示形式を選択し、**表示形式エディター**で開きます。
 
-3. Go to **Settings** and select the **+** in *Links* to open the **New Link** dialog: 
+3. **[設定]** に移動し、**[リンク]** の **[+]** を選択して、**[新しいリンク]** ダイアログが開きます。
 
   ![Dashboard linking sample](images/connecting-to-another-dashboard-option.png)
 
-  Here you will need to configure two parameters:
+  ここでは、2 つのパラメーターを構成する必要があります:
 
-  * The **Dashboard** that will be opened when the link symbol is clicked.
+  * リンク記号をクリックすると開く**ダッシュボード**。
 
-  * The **Link Name** which is the title the users will see if they select the grid row or chart element.
+  * グリッド行またはチャート要素を選択した場合にユーザーに表示されるタイトルである**リンク名**。
 
-  If you have added **dashboard filters** to the target dashboard, then you will also need to connect the dashboard filters to their corresponding fields in the dataset of the visualization you are adding a link to (see below). Click **Done** and go back. 
+  ターゲット ダッシュボードにダッシュボード フィルターを追加した場合は、リンクを追加する表示形式のデータセット内の対応するフィールドにダッシュボード フィルターを接続する必要もあります (以下を参照)。**[完了]** をクリックして戻ります。
 
   ![Edit connection dialog where a filter's value can be selected](images/edit-connection-dialog.png)
 
-4. Select the **Create Link** blue button. 
+4. **[リンクの作成]** 青いボタンを選択します。
 
-The link to the dashboard will appear under *Links* in the *Visualization Editor*. You will notice that the *Trigger* setting has also appeared. See below for more information on [choosing your trigger](#choosing-a-trigger).  
+ダッシュボードへのリンクは、**表示形式エディター**の **[リンク]** の下に表示されます。別の設定も表示されます - [トリガー]。[トリガーの選択](#トリガーの選択)の詳細については、以下を参照してください。
 
-### Adding a URL 
+### URL の追加
 
-Adding a URL is another option in the *New Link* dialog. It enables you to open the configured URL in your device’s browser. 
+URL の追加は、[新しいリンク] ダイアログのもう 1 つのオプションです。設定した URL をデバイスのブラウザで開くことができます。
 
-There are two parameters that you need to define:
+2 つのパラメーターを定義する必要があります:
 
-  - The **URL** the visualization will point to. You will be redirected to it once the link symbol is selected.
+  - 表示形式が指す **[URL]**。リンク記号が選択されると、そこにリダイレクトされます。
   
-  - The **Link Name**, which is the title the users will see if they select the grid row or chart element.
+  - グリッド行またはチャート要素を選択した場合にユーザーに表示されるタイトルである **[リンク名]**。
 
-For URLs, you can also include **Variables** which will dynamically
-construct the URL the user will be linked to based on the values in your
-visualization fields. For example, let’s take a look at the following
-visualization link:
+URL の場合は、**変数**を含めることもできます。これにより、表示形式フィールドの値に基づいて、ユーザーにリンクされる URL が動的に作成されます。たとえば、以下の表示形式リンクを見てみましょう。
 
 ![Linking to  URL in a new link dialog](images/linking-to-url.png)
 
-The URL has been set to `http://www.en.wikipedia.org/wiki`, and in this case we selected the *variable* **CampaignID**. Therefore, users who select
-the **Navigate to Wiki** link in the visualization will be redirected to:
+URL は `http://www.en.wikipedia.org/wiki` に設定されており、この場合は **CampaignID** 変数を選択しました。したがって、表示形式で **Navigate to Wiki** (Wiki へ移動) リンクを選択したユーザーは次のように表示されます:
+
 
 `http://www.en.wikipedia.org/wiki/[CampaignID].htm`
 
-Where `[CampaignID]` will vary depending on the values.
+`[CampaignID]` は値によって異なります。
 
-:::info **Testing the Example.**
-To test how adding variables work, use the **Marketing Dashboard**. Choose a *Conversions by Campaign* visualization in it which contains the *CampaignID* data field and add the URL as shown in the screenshot. Save the visualization and in *Dashboard Edit* mode click on different parts of the funnel visualization to see how the URL you are redirected to changes. 
+:::info **例のテスト**
+変数の追加がどのように機能するかをテストするには、**Marketing Dashboard** を使用します。*CampaignID* データ フィールドを含む *Conversions by Campaign* 表示形式を選択し、スクリーンショットに示すように URL を追加します。表示形式を保存し、ダッシュボード編集モードで、ファネル表示形式のさまざまな部分をクリックして、リダイレクト先の URL がどのように変更されるかを確認します。 
 :::
 
-## Choosing a Trigger
+## トリガーの選択
 
-After adding your first link to the visualization, the *Trigger* appears under *Links* in *Settings*. Here you can choose between *Value is Selected* and *Visualization is Maximized* as trigger options. 
-You can add as many links to a visualization as you want, but they will all have the same trigger enabled. 
+表示形式に最初のリンクを追加すると、[設定] の [リンク] の下に [トリガー] が表示されます。ここでは、トリガー オプションとして [値は選択されました] と [表示形式が最大化されました] のどちらかを選択できます。
+表示形式には必要な数のリンクを追加できますが、それらはすべて同じトリガーが有効になります。
 
-### Value is Selected Trigger
+### [値は選択されました] トリガー
 
-If you choose this option a tooltip with the link symbol appears whenever a data item of a chart, such as columns, bar, pie slices, etc. is clicked/tapped. In the grid chart the link symbol appears in the last column on the right (see below).
+このオプションを選択すると、柱状、棒、円スライスなどのチャートのデータ項目がクリックまたはタップされるたびに、リンク記号の付いたツールチップが表示されます。グリッド チャートでは、リンク記号が右側の最後の列に表示されます (以下を参照)。
 
 ![Selected value trigger example](images/selected-value-trigger.png)
 
-If you have added a dashboard filter with the *EmployeeName* to the target dashboard, then clicking the link symbol in the grid, as shown in the screenshot above, will open another dashboard filtered by the *EmployeeName* field with the *Joan Baez* value pre-selected. This way, in the target dashboard, you will see only the analysis for the value you selected.
+*EmployeeName* を使用してダッシュボード フィルターをターゲット ダッシュボードに追加した場合、上のスクリーンショットに示すように、グリッド内のリンク記号をクリックすると、*Joan Baez* 値が事前に選択された *EmployeeName* フィールドでフィルターされた別のダッシュボードが開きます。このように、ターゲット ダッシュボードには、選択した値の分析のみが表示されます。
 
-If a URL is linked to the selected value, then clicking/tapping the link symbol will open the URL you have added. To take the best advantage of this feature, you can also add the field to the URL as a [variable](#adding-a-url). 
+選択した値に URL がリンクされている場合は、リンク記号をクリックまたはタップすると、追加した URL が開きます。この機能を最大限に活用するために、フィールドを[変数](#url-の追加)として URL に追加することもできます。
 
-### Visualization is Maximized Trigger 
+### [表示形式が最大化されました] トリガー 
 
-If you choose this option a link symbol will appear in the upper right corner of the visualization in *Dashboard View* mode. So instead of maximizing the visualization, selecting the link symbol in the upper right corner will open another dashboard or the URL you have linked to.
+このオプションを選択すると、**ダッシュボード編集**モードで表示形式の右上隅にリンク記号が表示されます。したがって、表示形式を最大化する代わりに、右上隅のリンク記号を選択すると、別のダッシュボードまたはリンク先の URL が開きます。
 
 ![Linking icon in a dashboard in a dashboard view](images/maximized-visualization-trigger.png)

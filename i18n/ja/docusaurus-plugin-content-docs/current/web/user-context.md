@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 Reveal では、ユーザー コンテキストは、アプリケーションの認証されたユーザーの ID と、特定のユーザーのコンテキストでサーバー リクエストを実行するために必要なその他の重要な情報を含めることができるオブジェクトです。ユーザー コンテキストは、`IRVDashboardProvider`、`IRVAuthenticationProvider`、`IRVDataSourceProvider` などの Reveal SDK プロバイダーで使用して、ユーザーが持つアクセス許可を制限または定義できます。
 
-Reveal SDK 内のユーザー コンテキストは、`IRVUserContextProvider` インターフェイスと `RVUserContext` オブジェクトによって表されます。`RVUserContext` は `IRVUserContext` のデフォルト実装であり、現在のユーザーのユーザー ID を保存する機能と、 Reveal SDK の他の領域 (前述の `IRVObjectFilter`、`IRVDashboardProvider`、`IRVDataSourceProvider` など) で使用できるリクエストに関連する追加のプロパティを取得して保存する機能を提供します。
+Reveal SDK 内のユーザー コンテキストは、`IRVUserContextProvider` インターフェイスと `RVUserContext` オブジェクトによって表されます。`RVUserContext` は `IRVUserContext` のデフォルト実装であり、現在のユーザーのユーザー ID を保存する機能と、Reveal SDK の他の領域 (前述の `IRVObjectFilter`、`IRVDashboardProvider`、`IRVDataSourceProvider` など) で使用できるリクエストに関連する追加のプロパティを取得して保存する機能を提供します。
 
 `UserContextProvider` を実装するには、次の手順に従います:
 

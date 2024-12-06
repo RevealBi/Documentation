@@ -1,36 +1,36 @@
 ---
-title: How to Use Information Calculated Fields in Reveal 
-_description: Learn how to utilize and test the value of a selected field through Information Calculated Fields.
+title: Reveal で情報計算フィールドを使用する方法 
+_description: 情報計算フィールドで選択したフィールドの値を使用してテストする方法を説明します。
+_language: ja
 ---
 
-# Information Calculated Fields
+# 情報計算フィールド
 
-Information calculated fields are meant to be used to test the value of
-a selected field. They are particularly useful with large spreadsheets because you can check what type of information you are working with before performing a second calculation.
+情報計算フィールドは、指定したフィールドの値のテストに使用します。サイズの大きいスプレッドシートの場合、2 回目の計算を実行する前に作業する情報のタイプを確認できるため、大変便利です。
 
-## Information functions:
+## 情報関数:
 
-| **Function Name**                                                                                                                    | **Syntax and Sample**                                               |
+| **関数名**                                                                                                                    | **構文とサンプル**                                               |
 |--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| **empty**: `empty` can be used to insert a column with empty cells. There are no arguments to configure.                             | **Syntax**: `empty()`<br/>**Sample**: `empty()`                     |
-| [**isempty**](#isempty): `isempty` evaluates the specified `expression`, and checks if any row in your data source has empty values. | **Syntax**: `isempty({value})`<br/>**Sample**:`isempty([ResignedDate])` |
+| **empty**: `empty` は、空のセルを含む列を挿入するために使用できます。構成する引数はありません。                             | **構文**: `empty()`<br/>**サンプル**: `empty()`                     |
+| [**isempty**](#isempty): `isempty` は指定した `expression` を評価してデータ ソースの各行の値が空かどうかをチェックします。 | **構文**: `isempty({value})`<br/>**サンプル**:`isempty([ResignedDate])` |
 
 
 
 
-## isempty
+## isempty 
 
-Unlike empty, isempty will check the field you select and check every
-row in your datasheet. If there are no values in a row, the output will
-be 1; if there are values, you will see 0.
+empty とは異なり、isempty は選択したフィールドおよびデータシートの各行を確認します。
 
-### Sample
+行に値がない場合、出力は 1 です。値がある場合、0 が出力されます。
 
-| Function Name | Syntax             | Sample                    |
+### サンプル
+
+| 関数名 | 構文             | サンプル                    |
 | :-----------: | :----------------: | :-----------------------: |
 | isempty       | `isempty({value})` | `isempty([ResignedDate])` |
 
-Let's look at four lines in the <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a> spreadsheet.
+<a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a> スプレッドシートの 4 行について確認します。
 
 | EmployeeID | FullName          | …​ | Resigned Date   | …​ | Calculated Field |
 | :--------: | :---------------: | :--: | :-------------: | :--: | :--------------: |

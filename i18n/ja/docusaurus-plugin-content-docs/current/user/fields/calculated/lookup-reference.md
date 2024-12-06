@@ -1,43 +1,38 @@
 ---
-title: How to use Lookup & Reference Calculated Fields
-_description: Learn how to use Lookup & Reference Calculated Fields to get more details for your dashboards.
+title: 検索/行列計算フィールドを使用する方法
+_description: 検索/行列計算フィールドを使用してダッシュボードの詳細情報を取得する方法を説明します。
+_language: ja
 ---
 
-# Lookup & Reference Calculated Fields
+# 検索/行列計算フィールド
 
 
-Lookup and reference fields will allow you to work with your current
-spreadsheet and dashboard, returning text references to cells, rows and
-dashboard variables.
+検索/行列フィールドは、現在のスプレッドシートとダッシュボードで動作し、セル、行、ダッシュボード変数へのテキスト参照を返します。
 
 :::note
-All samples included in the table below were created with the **<a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a>** spreadsheet.
+以下の表のすべてのサンプルは **<a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016 スプレッドシート</a>で作成されました。**
 :::
 
-## Lookup and Reference functions
+## 検索/行列関数
 
-| **Function Name** | **Syntax and Sample**                                                                   |
+| **関数名** | **構文とサンプル**                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------|
-| [**previous**](#previous): `previous` allows you to get a result with the value of the field you choose as your `expression`. | **Syntax**: `previous({expression},{first value})`<br/>**Sample**: `previous([Wage],1)` |
-| **row**: `row` returns the number of the current row for every row in your data source. | **Syntax**: `row()`<br/>**Sample**: `row()`                                                  |
+| [**previous**](#previous): `previous` は、`expression` として選択したフィールドの値で結果を取得できます。 | **構文**: `previous({expression},{first value})`<br/>**サンプル**: `previous([Wage],1)` |
+| **row**: `row` は、データ ソース内のすべての行の現在の行の番号を返します。 | **構文**: `row()`<br/>**サンプル**: `row()`                                                  |
 
 
 
 ## Previous
 
-The previous calculated field allows you to get a result with the value
-of the field you choose as your `expression`. There are two arguments
-for you to configure:
+前の計算フィールドでは、`expression` で選択したフィールドの値で結果を取得できます。引数を 2 つ設定します。
 
-  - `expression`: one of the fields in your data source.
+  - `expression`:  データ ソースのフィールドの 1 つ。
 
-  - `first value`: the value for your first row, which will be empty by
-    default.
+  - `first value`:  デフォルトで空の最初の行の値。
 
-### Sample
+### サンプル
 
-The following is an extract of the <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a> "Employees"
-sheet.
+以下は、<a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a> の「Employees」シートを抽出したものです。
 
 | EMPLOYEEID | FULLNAME          | DEPARTMENT  | OFFICE                    | WAGE     |
 | ---------- | ----------------- | ----------- | ------------------------- | -------- |
@@ -46,11 +41,11 @@ sheet.
 | 3.00       | Zimmermann Miller | Development | Cranbury, New Jersey, USA | 73768.00 |
 | 4.00       | Zurcher Reid      | Development | Sofia, Bulgaria           | 36018.00 |
 
-Let's add the following calculated field:
+以下の計算フィールドを追加します。
 
 `previous([Wage],1)`
 
-The results of the calculated field will be:
+以下は計算フィールドの結果です。
 
 | EMPLOYEEID | FULLNAME          | DEPARTMENT  | OFFICE                    | WAGE         | previous Field |
 | ---------- | ----------------- | ----------- | ------------------------- | ------------ | -------------- |
@@ -59,6 +54,4 @@ The results of the calculated field will be:
 | 3.00       | Zimmermann Miller | Development | Cranbury, New Jersey, USA | **73768.00** | **76865.00**   |
 | 4.00       | Zurcher Reid      | Development | Sofia, Bulgaria           | 36018.00     | **73768.00**   |
 
-As seen in the table, the second row returns the `[WAGE]` value for the
-second row, and fills the first cell of the column with `1`, as set in
-your formula.
+表に示すように、2 つ目の行は 2 つ目の行に `[WAGE]` 値を返します。関数で設定したとおり列の最初のセルを `1` で埋めます。

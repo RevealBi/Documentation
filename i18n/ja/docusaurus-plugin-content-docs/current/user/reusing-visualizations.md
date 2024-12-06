@@ -1,38 +1,29 @@
 ---
-title: How to Reuse Visualizations in Reveal 
-_description: See how easy and quick you can reuse visualization and speed up dashboard creation.
+title: Reveal で表示形式を再利用する方法 
+_description: 表示形式を再利用し、ダッシュボードの作成を高速化できます。
+_language: ja
 ---
 
-# Reusing Visualizations
+# 表示形式の再利用
 
-Speed up the creation of dashboards by reusing visualizations. To do that, you just
-need to *copy & paste* any visualization you want.
+表示形式を再利用してダッシュボードの作成をスピード アップできます。それを行うには、必要な表示形式を**コピーし貼り付ける**だけです。
 
 ![Overflow menu of a visualization in a dashboard displayed](images/reusing-visualization-example.png)
 
-## Duplicating Visualizations
+## 表示形式の複製
 
-Create an exact copy of the original visualization within one dashboard.
-Sometimes, you need to duplicate an already customized visualization and
-then tweak the duplicate's data set. For example, the charts below show
-*Hires Over Time* for all offices and a specific one separately.
+ダッシュボード内で元の表示形式と同じものを作成します。既にカスタマイズした表示形式を複製して、複製したデータ セットを調整します。たとえば、以下のチャートはすべてのオフィスの**雇用**を示し、特定のものを別に表示します。
 
 ![Duplicated visualizations](images/duplicate-visualization-example.png)
 
-## Copying and Pasting a Visualization
+## 表示形式のコピーと貼り付け
 
-You can copy & paste any visualization within a dashboard or even across
-dashboards. Note that you can create new dashboards by mashing up
-visualizations from other dashboards.
+ダッシュボード内、またはダッシュボード間の任意の表示形式をコピーし貼り付けることができます。注: 他のダッシュボードの表示形式を使用して新しいダッシュボードを作成できます。
 
-## What to Consider
+## 考慮点
 
-Your new visualization will have **the same title** as the original
-visualization.
+新しい表示形式は元の表示形式と**同じ名前**になります。
 
-You can select *Rename* from the overflow menu of a visualization in Dashboard Edit mode. You can also change the title in the [Visualization Editor](visualization-editor.md) using the
-*pencil icon*.
+ダッシュボード編集モードの表示形式のオーバーフロー メニューから **[名前の変更]** を選択できます。鉛筆アイコンを使用して、[表示形式エディター](visualization-editor.md)でタイトルを変更することもできます。
 
-Also, if your original visualization had any **data in the Data Editor**,
-the new visualization will also have it. You will need to remove the
-fields from the Data Editor, if necessary.
+元の表示形式に**データ エディターのデータ**がある場合、新しい表示形式にもこのデータが使用されます。必要に応じて、データ エディターからフィールドを削除します。

@@ -1,151 +1,101 @@
 ---
-title: How to Use Statistical Functions 
-_description: Learn how to use the Statistical function to receive more insights from your visualizations.
+title: 統計関数を使用する方法
+_description: 統計関数を使用して表示形式からより多くの洞察を得る方法を説明します。
+_language: ja
 ---
 
-# Statistical Functions in Reveal
+# Reveal の統計関数
 
-Reveal's Statistical functions allow you to receive more insight from
-your visualizations. They provide you with three types of advanced
-predictive analysis. You can use the [*Time series forecast*](#time-series-forecast), [*Linear regression*](#linear-regression) and [*Detect outliers*](#detect-outliers)
-to make predictions, recognize and evaluate trends, or discover outliers
-in your data series.
+Reveal の統計関数を使用すると、表示形式からより多くの気付きを得ることができます。3 種類の高度な予測分析を提供します。[**時系列予測**](#時系列予測)、[**線形回帰**](#線形回帰)、および[**外れ値の検出**](#外れ値の検出)を使用して、データ シリーズで予測を行い、傾向を認識して評価し、外れ値を検出できます。
 
-## Accessing Statistical Functions
+## 統計関数へのアクセス
 
-To apply one of the three *statistical functions* to your visualization
-you need to:
+3 つの**統計関数**の 1 つを表示形式に適用するには、以下を行う必要があります。
 
-1.  Open your dashboard in *Dashboard view mode*.
+1.  **ダッシュボードのビュー モード**でダッシュボードを開きます。
 
-2.  **Maximize** a visualization (by clicking the *arrow* icon in its
-    top right corner).
+2.  表示形式を**最大化します** (右上隅の**矢印**アイコンをクリックします)。
 
-3.  Click/tap the icon, which appears in the top right section of the
-    screen (see below).
+3.  画面の右上に表示されるアイコンをクリックまたはタップします (以下を参照)。
 
 ![Statistical functions icon](images/statistical-functions-enable-icon.png)
 
 :::note
-**Enabling/Disabling Functions**: You can have only one of the three functions enabled for a visualization at the same time. Click the enabled function again to turn it off or select another function from the list to switch to.
+**関数の有効/無効**: 表示形式に 3 つの関数のうち有効にできるのは 1 つのみです。有効な関数を再度クリックして無効にするか、あるいはリストから別の関数を選択して切り替えます。
 :::
-## Statistical Functions Types
 
-The table below explains what every function is used for, the algorithm
-the function uses, and for which visualizations the function can be
-enabled.
+## 統計関数タイプ
 
-| **Function**            | **Algorithm**            | **What is it used for?**                                                                                                                                                            | **Which visualizations support it?**                                                                                                                      |
+以下の表は、すべての関数の用途、関数が使用するアルゴリズム、および関数を有効にできる表示形式について説明します。
+
+| **関数**            | **アルゴリズム**            | **使用方法**                                                                                                                                                            | **それをサポートする表示形式 it?**                                                                                                                      |
 | ----------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time series forecasting | Exponential smoothing    | To make a forecast of the data, for a given data series. Users can select a time range in the future.                                                                               | Category charts: Area, Bar, Column, Line, Spline, Spline Area, Step Area, Step Line                                                  |
-| Linear regression       | Linear regression        | To evaluate a trend by finding the linear relationship between two variables. The algorithm calculates a line, close to most of the points in the chart to show the on-going trend. | Category charts: Area, Bar, Column, Line, Spline, Spline Area, Step Area, Step Line |
-| Detect outliers         | Interquartile range rule | To detect data that stands out from the rest because of random factors.                                                                                                             | Category charts: Area, Column, Line, Spline, Spline Area, Step Area, Step Line; Scatter chart                 |
+| 時系列予測 | 指数平滑法    | 特定のデータ系列について、データの予測を行うこと。ーザーは将来の時間範囲を選択できます。                                                                               | カテゴリ チャート: エリア、棒、柱状、折れ線、スプライン、スプライン エリア、ステップ エリア、ステップ折れ線                                                  |
+| 線形回帰       | 線形回帰        | 2 つの変数間の線形関係を見つけることによって傾向を評価すること。アルゴリズムは、チャートのほとんどのポイントに近い線を計算して、進行中の傾向を示します。 | カテゴリ チャート: エリア、棒、柱状、折れ線、スプライン、スプライン エリア、ステップ エリア、ステップ折れ線 |
+| 外れ値の検出         | 四分位範囲ルール | ランダム要因のために他のデータから際立っているデータを検出するため。                                                                                                             | カテゴリ チャート: エリア、柱状、折れ線、スプライン、スプライン エリア、ステップ エリア、ステップ折れ線; 散布図                 |
 
-### Time series forecast
+### 時系列予測
 
-The *Time series forecast* function is used to provide prediction of the
-data for a given data series. In the example below, the function is used
-to provide a forecast of the sales of two products for the next 12
-months.
+**時系列予測**関数は、特定のデータ シリーズのデータを予測するために使用します。以下の例では、関数が次の 12 か月間の 2 つの製品の売上予測を提供するために使用されています。
 
 ![Time series sales forecast for next 12 month](images/time-series-forecast-visualization-example.png)
 
-To achieve the forecast shown above, perform the following steps:
+上記の予測を実現するには、以下の手順を実行します。
 
-1.  Select *Time series forecast* from the *Statistical Functions* menu.
+1.  **[統計関数]** メニューから **[時系列予測]** を選択します。
 
-2.  The following settings dialog opens:
+2.  以下の設定ダイアログが開きます。
 
     ![Time series forecast settings](images/time-series-forecast-dialog.png)
 
-    Here you need to configure *Season length* and *Periods to
-    Forecast*.
+    ここで、**季節の長さ**と**期間予測**を構成する必要があります。
 
-    *  ***Season Length*** - select **the number of days, months or
-        years** in a season for your visualization. The time unit for
-        the season length is determined based on whether your *Date*
-        field is measured in days, month or years.
+    *  **季節の長さ** - 表示形式のために季節の**日数、月数、年数**を選択します。季節の長さの時間単位は、**[日付]** フィールドが日、月、または年のいずれで測定されるかに基づいて決定されます。
 
-        In time series data, **a season is a specific regular interval at which variations occur**. The Exponential smoothing algorithm
-        in Reveal computes an evolving trend and uses a seasonal
-        adjustment to equate it.
+        時系列データでは、**季節が変動が発生する特定の定期的な間隔です**。Reveal の指数平滑法アルゴリズムは、進化トレンドを計算し、季節調整を使用してそれを等しくします。
 
-        For example, the sales of ski accessories varies within a year -
-        they may reach their peak in November and December and decrease
-        significantly in April. This tendency will repeat the next year.
-        That means the season length for this example is 12 months.
+        たとえば、スキー用品の販売は 1 年以内に変動します - 11 月と 12 月にピークに達し、4月に大幅に減少する場合があります。この傾向は来年も繰り返されます。つまり、この例の季節の長さは 12 か月です。
 
-    * **Periods to Forecast** - select **the number of days, months or years**, for which you want your data predicted. The time unit for the periods is determined based on whether your *Date* field is measured in days, month or years.
+    * **予測期間** - データを予測する**日、月、または年**を選択します。期間の長さの時間単位は、[日付] フィールドが日、月、または年のいずれで測定されるかに基づいて決定されます。
 
 :::note
-**Minimum data available for the Time series function**: Your visualization must contain a minimum of two seasons of data, otherwise you won't be able to use the Time series function. This means that if your season length is 12 months, you should have data for at least 24 months, if it is 6 months - data for at least 12, etc.
+**時系列関数で使用可能な最小データ**: 表示形式には 2 つの季節以上のデータが含まれている必要があります。含まれていない場合、時系列関数を使用できません。つまり、季節の期間が 12 か月の場合は少なくとも 24 か月、6 か月の場合は 12 か月以上のデータが必要です。
 :::
 
-The forecast is visualized by a line and a shaded area around it. The
-line displays the prediction and the **shaded area** shows the range in
-which the future dataset is expected to fall in.
+予測は線とその周りの網掛け領域で可視化されます。線は予測を表示し、**網掛け領域**は将来のデータセットが入ると予想される範囲を示します。
 
-If you check the **visualization's underlying data** after the
-application of the Time series function, you will notice the forecasted
-values are highlighted in yellow (see below).
+時系列関数を適用した後に**表示形式の基になるデータ**を確認すると、予測値が黄色で強調表示されます (以下を参照)。
 
 ![Underlying data in table format with highlighted forecasted data](images/underlying-data-time-series.png)
 
 :::note
-**The Time series function is available only for charts over time**: If your visualization does not contain a *Date* field, you will receive an error when you try using the Time series function.
+**時系列関数は時系列のチャートでのみ使用できます。**: 表示形式に日付フィールドが含まれていない場合、時系列関数を使用しようとするとエラーが表示されます。
 :::
 
-### Linear regression
+### 線形回帰
 
-The Linear regression is a statistical model, attempting to show the
-relationship between two variables with a linear equation. The
-regression analysis results in graphing a line over your visualization,
-which **aims to evaluate an on-going tendency**. The line is calculated
-to go close to most of the points in the dataset, fitting the overall
-shape of the data.
+線形回帰は、2 つの変数間の関係を線形方程式で示すための統計モデルです。回帰分析の結果、表示形式の上に折れ線グラフが作成され、**進行中の傾向を評価します**。線はデータセット内のほとんどのポイントに近づくように計算され、データの全体形状に適合します。
 
-The *Linear regression* function also allows you to include a **linear
-forecast of the data for a selected period of time**. After selecting
-the *Linear regression* function from the *Statistical functions* menu,
-you will see the following dialog:
+**線形回帰**関数では、**選択した期間のデータの線形予測**を含めることもできます。**[統計関数]** メニューから **[線形回帰]** 関数を選択すると、以下のダイアログが表示されます。
 
 ![Forecast settings dialog for the Linear regression function](images/linear-regression-dialog.png)
 
-For *Periods to forecast* select **the number of days, months or
-years**, for which you want your data predicted. The time unit for the
-periods is determined based on whether your *Date* field is measured in
-days, month or years.
+**予測期間**には、データを予測する**日、月、または年**を選択します。期間の長さの時間単位は、**日付**フィールドが日、月、または年のいずれで測定されるかに基づいて決定されます。
 
-Below you can see the *Linear regression* function applied to a
-visualization, where the line is extended for 6 months to show a
-prediction based on the observed tendency:
+以下は、**線形回帰**関数を表示形式に適用します。この場合、観測された傾向に基づいた予測を示すために線が 6 か月間延長されます。
 
 ![Linear regression with a forecast for 6 months](images/linear-regression-example.png)
 
-The line rendered across the visualization above shows the extent to
-which changes in the sales (variable placed on the y-axis), can be
-attributed to time (or other variable, placed on the x-axis). The linear
-relationship between sales and time data determines the line, which
-makes the tendency of sales slowly going down more visible.
+上記の表示形式で描画される線は、売上 (Y 軸に配置された変数) の変化が時間 (または X 軸に配置された他の変数) に起因する範囲を示します。売上データと時間データの間の線形関係が折れ線を決定します。これにより、売上が徐々に低下する傾向がより明確になります。
 
-If you check the **visualization's underlying data** after the
-application of the Linear regression, you will notice the forecasted
-values are highlighted in yellow (as shown in the last screenshot of the
-[Time series forecast](#time-series-forecast)).
+線形回帰を適用した後に**表示形式の基本データ**を確認すると、[時系列予測](#時系列予測)の最後のスクリーンショットに示すように、予測値が黄色で強調表示されます。
 
-### Detect outliers
+### 外れ値の検出
 
-Outliers are extreme values that deviate from other observations on
-data. The *Detect outliers* function shows points that deviate
-considerably from the average values of the rest of the points in the
-data series.
+外れ値は、データの他の観測値から逸脱する極値です。**外れ値の検出**関数は、データ シリーズの残りのポイントの平均値から大幅に逸脱されたポイントを表示します。
 
 ![Outlier detection applied](images/outlier-detection-example.png)
 
-In the example above, the detected data points lay far from the rest of
-the distribution and show a sudden rise in sales in a particular moment,
-which diverges significantly from the overall pattern of sales.
+上記の例では、検出されたデータ ポイントは分配の残りの部分から離れて位置し、特定の瞬間に売上の急上昇を示します。これは、売上の全体的なパターンとは大幅に異なります。
 
-If you check the **visualization's underlying data** after the
-application of the Detect outliers function, you will notice the data
-detected as outlier is highlighted in yellow.
+外れ値の検出関数を適用した後に**表示形式の基になるデータ**を確認すると、外れ値として検出されたデータが黄色で強調表示されます。

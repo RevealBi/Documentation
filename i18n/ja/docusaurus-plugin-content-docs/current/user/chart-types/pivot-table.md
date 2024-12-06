@@ -1,35 +1,25 @@
 ---
-title: How to Create Pivot Table Visualization
-_description: Find out how to create and use Pivot Table visualization in Reveal.
+title: ピボット テーブルの表示形式を作成する方法
+_description: Reveal でピボット テーブルの表示形式を作成して使用する方法を説明します。
+_language: ja
 ---
 
-# Pivot Table
+# ピボット テーブル
 
 
-The Pivot Table visualization allows users to aggregate information by
-dropping fields in the corresponding placeholders of the *Data*
-sections.
+ピボット テーブルの表示形式により、ユーザーは、**データ** セクションの対応するプレースホルダーにフィールドをドロップすることで情報を集約できます。
 
 ![Pivot Table Visualization](images/pivot-table.png)
 
-When a field is added to the rows, columns, or values data editor
-placeholders, selecting the field displays the summarized settings of
-that field:
+行、列、または値のデータ エディターのプレースホルダーにフィールドが追加されているときに、フィールドを選択すると、そのフィールドの要約された設定が表示されます。
 
-  - For the fields in the **Values** placeholder, this means the ability
-    to configure the summarization function used (average, count, sum,
-    etc.).
+  - **[値]** プレースホルダー内のフィールドでは、使用される要約関数 (average、count、sum など) を構成できます。
 
-  - For date fields dropped in the **Rows** placeholder, it means the
-    ability to choose the level of detail in the summarization (day,
-    month, year).
+  - **[行]** のプレースホルダーに日付フィールドをドロップすると、要約の詳細レベル (年、月、日) を選択できます。
 
-## What is a Pivot Table?
+## ピボット テーブルの概要
 
-A Pivot Table is a data summarization tool, which among other functions
-allows you to automatically count, average and total the data stored in
-a table like format, typically grouped by values. For instance if you
-have the following table:
+ピボット テーブルは、データ集計ツールです。このツールは、通常値によってグループ化された、表のような形式で保存されたデータを自動的に集計し、平均し、合計することを可能にします。たとえば、以下のテーブルがあるとします。
 
 
 | Salesman | Region    | Product  | OrderID | OrderTotal |
@@ -40,7 +30,7 @@ have the following table:
 | DAVID D. | China     | ProductZ | 1004    | 10         |
 | JORGE E. | Australia | ProductY | 1005    | 5          |
 
-And you need to do the following type of analysis:
+以下の解析のタイプを実行します。
 
 |          | Americas | EMEA | China | Australia | Total |
 | -------- | -------- | ---- | ----- | --------- | ----- |
@@ -48,11 +38,8 @@ And you need to do the following type of analysis:
 | PRODUCTY | 20       |      |       | 5         | 25    |
 | PRODUCTZ |          |      | 10    |           | 10    |
 
-You can achieve it by using a Pivot Table where:
+ピボット テーブルを使用して実行できます。
 
-  - The *Product* field is dragged and dropped in the **Rows**
-    placeholder so that all products are listed as rows.
+  - *Product* フィールドを **[行]** プレースホルダーにドラッグアンドドロップし、すべての製品を行として表示します。
 
-  - The *Region* field is dragged and dropped in the **Columns**
-    placeholder so that columns are created in a dynamic table for every
-    value in the *Region* field.
+  - *Region* フィールドを **[列]** プレースホルダーにドラッグアンドドロップし、*Region* フィールドの各値に動的なテーブルの列を作成します。
