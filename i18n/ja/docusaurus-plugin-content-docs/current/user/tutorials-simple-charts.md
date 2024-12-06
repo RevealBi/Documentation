@@ -1,12 +1,12 @@
 ---
-title: How to Create Simple-Series Charts Visualization in Reveal
-_description: A quick tutorial on creating a Simple-Series visualization using a sample spreadsheet.
+title: Reveal でシンプル シリーズのチャートの表示形式を作成する方法
+_description: サンプルス プレッドシートを使用してシンプル シリーズの表示形式を作成する方法を説明します。
+_language: ja
 ---
 
-# Creating Simple-Series Charts
+# シンプル シリーズのチャートを作成する方法
 
-In this tutorial, you will learn how to create *Simple-Series* charts
-visualizations using a sample spreadsheet.
+このチュートリアルは、サンプル スプレッドシートを使用して**シンプル シリーズ** チャートの表示形式を作成する方法を説明します。
 
 ![Visualizations made by using simple series charts](images/simple-series-charts-example.png)
 
@@ -14,106 +14,86 @@ visualizations using a sample spreadsheet.
 
 ![Another set of visualizations made with different chart](images/simple-series-charts-example3.png)
 
-## Key Concepts
+## 重要なコンセプト
 
-When working with charts, you can add extra information on top of the
-data you want to display. This comes in the form of:
+チャートを使用する時、表示される情報とともに追加の情報も追加できます。これは以下の機能で追加できます。
 
-  - **Chart Trendlines**, which will display as lines across your chart.
-    These are particularly useful when you want to display the
-    relationship between your variables or the overall direction your
-    information is taking. There are several algorithms, also known as
-    regressions, which you can apply to your charts; you can select them
-    within the *Chart Trendline* dropdown.
+  - チャートに折れ線で表示する**チャート近似曲線**。変数間の関係や情報全体の方向性を表す場合に役立ちます。チャートに回帰と呼ばれるいくつかのアルゴリズムを適用できます。回帰は **[チャートの近似曲線]** から選択できます。
 
-  - **Axis Configuration**: the axis configuration lets you configure
-    the minimum and maximum values for your charts. The minimum value is
-    set to 0 by default and the maximum calculated automatically
-    depending on your values.
+  - **軸の構成**: 軸の構成でチャートの最大値と最小値を構成できます。デフォルトで最小値は 0 に設定され、最大値は使用されるデータによって設定されます。
 
-      - *Logarithmic Axis Configuration*: if you check the *Logarithmic*
-        checkbox, the scale for your values will be calculated with a
-        non-linear scale which takes magnitude into account instead of
-        the usual linear scale.
+      - **対数軸構成**: [対数] ボックスをチェックする場合、値のスケールは通常のリニア スケールを使用する代わりに大きさを使用するリニア スケール以外で計算されます。
 
-  - **Start Position**: for Doughnut and Pie charts, you can configure
-    the start position for the chart to rotate the slices and change the
-    order in which your data is presented.
+  - **開始位置**: 円チャートおよびドーナツ型チャートでチャートのスライスを回転する開始位置を構成し、データの表示順序を変更できます。
 
-  - **Slice Labels**: for Doughnut, Funnel and Pie Charts, you can
-    change the slice labels to display values, percentages or both at
-    the same time.
+  - **スライス ラベル**: ドーナツ型、ファンネル、および円チャートでは、値やパーセンテージ、またはその両方を同時に表示するスライス ラベルを構成できます。
 
-## Sample Data Source
+## サンプル データ ソース
 
-For this tutorial, you will use the *Simple Series Charts* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
+このチュートリアルでは、<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> の「Simple Series Charts」シートを使用します。
 
-## Creating your Chart
+## チャートの作成
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
 
-   ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
+   ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
-   ![Add new visualization button](images/add-visualization-button.png)                                      
+   ![Add new visualization button](images/add-visualization-button.png)
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
-   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
+   ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)
 
-4. Choose the **Simple Series Charts** sheet. 
+4. **Simple Series Charts** シートを選択します。 
 
    ![Selecting Simple Series Chart sheet](images/simple-series-charts-spreadsheet.png)
 
-5. Open the *Visualization Picker* and select any of the **chart** visualizations. By default, the visualization type will be set to *Column*. 
+5. **表示形式ピッカー**を開き、**カテゴリ**の下にある**チャート**表示形式のいずれかを選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。
 
    ![List of chart types](images/chart-types-simple-series-charts.png) 
  
-6. The charts in the table above, for example, display the population for a select list of countries. Drag and drop the *Country Name* field to **Label** and the *Population* field into **Values**.                                                        
+6. たとえば、上の表のチャートには、選択した国のリストの人口が表示されます。*Country Name* フィールドを **[ラベル]** へ、*Population* フィールドを **[値]** へドラッグアンドドロップします。
+
    ![Organizing the data from the Simple Series Charts sheet](images/simple-series-charts-organizing-data.png)                                   
 
-## Adding a Trendline to your Chart
+## チャートに近似曲線を追加する
 
-You can add a chart trendline to display the relationship between your
-chart variables or to display the overall direction of your
-information. In order to do this:
+情報全体の方向性またチャートの変数の関係を表すためにチャート 近似曲線を追加できます。以下は作業手順です。
 
 |                                     |                                                                        |                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 1\. **Change Settings**             | ![Tutorials-Navigate-Settings](images/settings-tutorials.png) | Go to the **Settings** section of the Visualization Editor.      |
-| 2\. **Access the Chart Trendlines** | ![Chart Trendlines option in the settings](images/chart-trendline-simple-series-charts.png) | Expand the Chart Trendline dropdown by selecting the down arrow to select one of Reveal's predefined trendlines. |
+| 1\. **設定を変更する**             | ![Tutorials-Navigate-Settings](images/settings-tutorials.png) | 表示形式エディターの **[設定]** セクションに移動します。      |
+| 2\. **チャートの近似曲線にアクセスする** | ![Chart Trendlines option in the settings](images/chart-trendline-simple-series-charts.png) | 下向き矢印を選択して [チャートの近似曲線] ドロップダウンを展開し、Reveal の定義済み近似曲線のいずれかを選択します。 |
 
-## Changing your Axis Configuration
+## 軸の構成の変更
 
-Similarly to the [Gauge bounds](tutorials-gauge.md#adding-bounds-to-your-gauge), the
-chart axis configuration allows you to set the lowest and highest values
-in your chart. You can use this feature to include or exclude specific
-data.
+[ゲージの範囲](tutorials-gauge.md#ゲージ表示形式に範囲を追加する方法)と同様に、チャート軸構成でチャートの最小と最大値を設定できます。この機能を使用して、特定のデータ含有や除外ができます。
 
 |                                        |                                                                                      |                                                                                                                                       |
 | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)               | Go to the **Settings** section of the Visualization Editor.                                                                           |
-| 2\. **Access the Axis Bounds section** | ![Axis bounds in the settings options](images/axis-bounds-section.png)                           | Navigate to *Axis Bounds*. Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
+| 1\. **設定を変更する**                | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)               | 表示形式エディターの **[設定]** セクションに移動します。                                                                           |
+| 2\. **範囲の設定にアクセスする** | ![Axis bounds in the settings options](images/axis-bounds-section.png)                           | [軸範囲] に移動します。最大値または最小値 (または両方) 値を設定するかどうかに基づいて、チャートの開始値または終了値を入力します。 |
 
 
-## Setting your Axis Configuration as Logarithmic
+## 軸を対数軸として設定
 
 |                                           |                                                                          |                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Change Settings**                   | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Access the Axis option**            | ![Tutorials-Axis-Bounds](images/axis-logarithmic.png)               | Expand the Axis dropdown by selecting the down arrow and select *Logarithmic*.      |       
+| 1\. **設定を変更する**                   | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | 表示形式エディターの **[設定]** セクションに移動します。 |
+| 2\. **軸オプションにアクセスする**            | ![Tutorials-Axis-Bounds](images/axis-logarithmic.png)               | 下矢印を選択して [軸] ドロップダウンを展開し、[対数] を選択します。      |       
 
-## Changing the Start Position for Doughnut and Pie Charts
+## ドーナツ型と円チャートの開始位置の変更
 
 |                                                   |                                                                                |                                                                                           |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                           | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)         | Go to the **Settings** section of the Visualization Editor.                               |
-| 2\. **Access the Start Position section**         | ![Start position settings](images/start-position-settings.png)               | Expand the *Start Position* dropdown by selecting the down arrow. Select one of Reveal's predefined start positions for your chart (0°, 90°, 180° or 270°).                          |
+| 1\. **設定を変更する**                           | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)         | 表示形式エディターの **[設定]** セクションに移動します。                               |
+| 2\. **開始位置セクションにアクセスする**         | ![Start position settings](images/start-position-settings.png)               | 下矢印を選択して、[開始位置] ドロップダウンを展開します。チャートに対して、Reveal の事前定義された開始位置 (0°、90°、180°、または 270°) のいずれかを選択します。                          |
 
-## Changing the Slice Labels for Doughnut, Funnel and Pie Charts
+## ドーナツ型、ファンネルと円チャートのスライスのラベルの変更
 
 |                                                |                                                                          |                                                                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| 1\. **Change Settings**                        | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | Go to the **Settings** section of the Visualization Editor.                                            |
-| 2\. **Access the Slice Label section**         | ![Tutorials-Slice-Label](images/slice-label-settings.png)               | Expand the Slice Labels dropdown by selecting the down arrow. Select one of Reveal's predefined labeling options (*Percentage*, *Value* or *Value and Percentage*).                                       |
+| 1\. **設定を変更する**                        | ![Tutorials-Navigate-Settings](images/settings-tutorials.png)   | 表示形式エディターの **[設定]** セクションに移動します。                                            |
+| 2\. **スライス ラベルのセクションにアクセスする**         | ![Tutorials-Slice-Label](images/slice-label-settings.png)               | 下矢印を選択して、スライス ラベル ドロップダウンを展開します。Reveal の事前定義されたラベル付けオプション (パーセント、値、または値とパーセント) のいずれかを選択します。                                       |

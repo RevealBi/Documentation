@@ -1,28 +1,26 @@
 ---
-title: How to use Math Calculated Fields
-_description: Learn how to use Math Calculated Fields to perfection your dashboards.
+title: 数学計算フィールドを使用する方法
+_description: 数学計算フィールドを使用してダッシュボードを完成させる方法を説明します。
+_language: ja
 ---
 
-# Math Calculated Fields
+# 数学計算フィールド
 
 
-All functions in the Math category will be useful for you to perform
-calculations on the fly. Certain functions, like the `rand` and the
-`randbetween` functions, are particularly useful to randomize the order
-of the rows in your data source.
+Math カテゴリのすべての関数はオンザフライで計算を実行する際に大変便利です。`rand` や `randbetween` 関数などの特定の関数は、データ ソースの行の順序をランダム化する場合に便利です。
 
-## Math functions
+## 数学関数
 
-| **Function Name** | **Syntax and Sample**                                                         |
+| **関数名** | **構文とサンプル**                                                         |
 |-------------------|-------------------------------------------------------------------------------|
-| **abs**: `abs` returns the absolute value (the number without the sign) for a number you enter. | **Syntax**: `abs({number})`<br/>**Sample**: `abs(-3)`                         |
-| **exp**: `exp` returns e (Euler's Number) raised to a value you enter. | **Syntax**: `exp({number})`<br/>**Sample**: `exp(8)`                               |
-| **log**: `log` returns the logarithm of a number to the base that you specify in the arguments. If no base is entered, the base is assumed to be "10". | **Syntax**: `log({number},{logbase})`<br/>**Sample**: `log(10,4)`                  |
-| **log10**: `log10` returns the logarithm of a number to the base 10. | **Syntax**: `log10({number})`<br/>**Sample**: `log10(1500)`                        |
-| **mod**: `mod` returns the remainder, or fractional part, of a division between two numbers. | **Syntax**: `mod({number},{divisor})`<br/>**Sample**: `mod(5,3)`                   |
-| **rand**: `rand` returns Real numbers larger than 0 and smaller than 1. The function takes no arguments but can be used with mathematical operators for further modifications. | **Syntax**: `rand()`<br/>**Sample**: `rand()`                                      |
-| **randbetween**: `randbetween` returns integer numbers within a specified range. | **Syntax**: `randbetween({bottom},{top})`<br/>**Sample**: `randbetween(0,9878654)` |
-| **sign**: `sign` determines and returns the sign of a number. | **Syntax**: `sign({number})`<br/>**Sample**: `sign(-1564)`                         |
-| **sqrt**: `sqrt` returns the square root of a specified number. | **Syntax**: `sqrt({number})`<br/>**Sample**: `sqrt(427716)`                        |
-| **trunc**: `trunc` returns the integer part of a number, excluding any decimals. | **Syntax**: `trunc({number})`<br/>**Sample**: `trunc(65787.24657)`                 |
+| **abs**: `abs` 関数は入力した数値の絶対値 (記号なしの数値) を返します。 | **構文**: `abs({number})`<br/>**サンプル**: `abs(-3)`                         |
+| **exp**: `exp` 関数は e (Euler の数値) を入力した値で乗した値を返します。 | **構文**: `exp({number})`<br/>**サンプル**: `exp(8)`                               |
+| **log**: `log` 関数は関数で指定された数を底とする数値の対数を返します。底が入力されていない場合、分析は対数の底が 10 であると仮定します。 | **構文**: `log({number},{logbase})`<br/>**サンプル**: `log(10,4)`                  |
+| **log10**: `log10` 関数は数値の対数を返します。ただし、底は常に 10 に設定されます。 | **構文**: `log10({number})`<br/>**サンプル**: `log10(1500)`                        |
+| **mod**: `mod` 関数は 2 つの数値を除算した場合の剰余または少数部を返します。 | **構文**: `mod({number},{divisor})`<br/>**サンプル**: `mod(5,3)`                   |
+| **rand**: `rand` 関数は 0 より大きく 1 未満の 実数を返します。関数に引数は必要ありません。引数を設定する必要はありませんが、乱数をさらに変更するための数学演算子を含むことができます。 | **構文**: `rand()`<br/>**サンプル**: `rand()`                                      |
+| **randbetween**: `randbetween` 関数は指定した範囲内の整数を返します。 | **構文**: `randbetween({bottom},{top})`<br/>**サンプル**: `randbetween(0,9878654)` |
+| **sign**: `sign` 関数は数値の符号を決定して返します。 | **構文**: `sign({number})`<br/>**サンプル**: `sign(-1564)`                         |
+| **sqrt**: `sqrt` 関数は指定した数値の平方根を返します。 | **構文**: `sqrt({number})`<br/>**サンプル**: `sqrt(427716)`                        |
+| **trunc**: `trunc` 関数は数値の整数部分 (小数以外) を返します。 | **構文**: `trunc({number})`<br/>**サンプル**: `trunc(65787.24657)`                 |
                                                                                                                                                                                                

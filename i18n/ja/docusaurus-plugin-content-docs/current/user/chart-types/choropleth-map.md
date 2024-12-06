@@ -1,102 +1,104 @@
 ---
-title: How to Use Choropleth maps for Visualization
-_description: Find out how to use Choropleth maps to depict statistical data in geographical areas.
+title: 表示形式に階級区分図を使用する方法
+_description: 階級区分図を使用して地理的データを表示する方法を説明します。
+_language: ja
 ---
 
-# Choropleth Maps
+# 階級区分図
 
-Choropleth maps are widespread thematic maps meant to depict statistical data in divided geographical areas or regions. Each area on the map is filled with a uniform color in relation to a data variable.
-Further in this topic, areas on the map are also called *regions* or *shapes*.
+階級区分図は、分割された地理的領域または地域の統計データを表すことを目的とした広範なテーマ別のマップです。マップの各領域は、データ変数に関連して均一な色で塗りつぶされます。
+このトピックでは、マップの領域を「図形」とも呼びます。
 
 ![A choropleth map showing 2016 general elections in the US](images/presidential-election-2016-map-example.png)
-In Reveal, the map type displayed for the choropleth is a standard political map, i.e. the individual shapes in the map can be continents, countries, states, counties, political unions, etc.
+Reveal では、階級区分図に表示されるマップ タイプは一般的な政治マップです。つまり、マップ内の個々の図形は大陸、国、州、郡、政治組合などです。
 
-The map supports the three different coloring schemes listed below.
+マップは以下の 3 つの異なる配色をサポートします。
 
-  * The *Single color* scheme styles all shapes containing data with the same color. Shapes with no data are greyed out.
+  * **単色**は、データを含むすべての図形を同じ色でスタイル設定します。データのない図形はグレーアウトされます。
 
-  * The *Range of values* scheme styles the shapes using one of seven colors, where colors progressing light to dark represent data values from low to high.
+  * **値範囲**は、7 色のいずれかを使用して図形をスタイル設定します。明るい色から暗い色は、低から高へのデータ値を表します。
 
-  * The *Map Color* scheme assigns a theme color to each unique identifier in the *Map Color* field. With this scheme, the shape ends up being styled based on the identifier with the highest/lowest value for that shape - see [this example](#using-the-map-color-to-create-a-multi-color-choropleth-map).
+  * **マップ カラー**は、[マップ カラー] フィールドの一意の識別子にテーマの色を割り当てます。この配色では、図形はその図形の最高値/最低値を持つ識別子に基づいてスタイル設定されます。[この例](#マップ-カラーを使用したマルチカラー階級区分図の作成)を参照してください。
 
-Find how to set the color of your map in the [Choropleth Map Settings](settings-choropleth-map.md) topic.
+マップ カラーを設定する方法については、[階級区分図の設定](settings-choropleth-map.md)トピックを参照してください。
 
-The choropleth map in Reveal also allows you to [drill down](#drilling-up-and-down-hierarchy-levels) through your hierarchical data.
+Reveal の階級区分図では、階層データを[ドリル ダウン](#階層レベルのドリル-アップとドリル-ダウン)することもできます。
 
-## Using the Choropleth Map Visualization
+## 階級区分図の表示形式の使用
 
-Typically, choropleth maps are used to present in a digestible manner public reporting, statistical analysis, and any other information, for which boundaries are important. The choropleths are great for displaying densities (ratios) of quantities, making comparisons of regions, examining trends, discovering patterns and anomalies. For example, you can use the choropleth to find regions on the US map with higher obesity rates, or show how homicide percentage vary across Europe.
+通常、階級区分図は、公開レポート、統計分析、および境界が重要なその他の情報をわかりやすく表示するために使用されます。階級区分図は、数量の密度 (比率) の表示、領域の比較、トレンドの確認、パターンおよび異常の検出に最適です。たとえば、階級区分図を使用して米国のマップで肥満率の高い地域を検索したり、ヨーロッパ全体での殺人率を表示したりできます。
 
-Be careful how you use your data with a choropleth map. Sometimes you will want to compare regions that are too different in terms of magnitude. Then, it's best to present your data as *rates/ratio* (percentage) and not in raw counts (numbers) to make the insight realistic.
+階級区分図でのデータの使用方法に注意してください。大きさであまりにも異なる領域を比較したい場合があります。データをデータ点数 (数値) ではなく、**レート/比率** (パーセンテージ) で表示することをお勧めします。
 
-If, for example, you compare traffic deaths in different countries only by raw counts, you will receive misleading results due to the population factor. More densely populated countries like China would always be colored in darker colors because of bigger raw counts.
+たとえば、異なる国の交通死を生の数のみで比較した場合、人口により誤解を与える結果が得られます。データ点数が大きいため、中国など人口密度の高い国は常に暗い色で表示されます。
 
-Below, you can see a map, showing traffic deaths per 100 000 population in Eastern Asia. Here, you can make realistic conclusions about the driving culture of Asian countries, avoiding the chance to be deluded by the population of bigger countries.
+以下は、東アジアの人口 10 万人あたりの交通死を示すマップです。ここでは、大国の人口に惑わされることなく、アジア諸国の運転文化について現実的な結論を出すことができます。
 
 ![A choropleth map of Eastern Asia showing traffic deaths per 100 000](images/road-traffic-deaths-eastern-asia-example.png)
 
-Your choice of data for the choropleth map visualization highly depends on the insight you want to provide. If you aim to present the spread of a contagious disease through a region, then the use of raw counts may be more appropriate.
+階級区分図の表示形式のためのデータ選択は、提供したい情報に依存します。地域全体で伝染病の広がりを示したい場合、データ点数を使用することが適切です。
 
 
-## Data Requirements for Location Data
+## 場所データのデータ要件
 
-Reveal has a great variety of predefined maps available for your choropleth visualizations. The minimum information required to provide in your data set is:
+Reveal には、階級区分図の表示形式に使用できるさまざまな定義済みマップがあります。データセットで提供するために必要な最低限の情報は以下のとおりです。
 
-  - Quantitative data (values) for a given location.
+  - 特定の場所の定量データ (値)。
 
-  - Location names.
+  - 場所名。
 
-*Location names* column in your data set has to match the actual geographic units on the selected map. For example, if you choose the USA map, you need to provide a column in your data set containing state names.
+データセットの**場所名**列は、選択したマップの実際の地理単位と一致する必要があります。たとえば、米国マップを選択した場合、データセットに州の名前を含む列を提供する必要があります。
 
-To have your location column recognized by Reveal, provide the locations' full names or official 2- or 3-letter abbreviations. Be consistent with the format you provide and don't mix full names and abbreviations.
+Reveal に場所の列を認識させるには、場所の完全名または公式の 2 文字または 3 文字の略語を入力します。完全名と略語を混在させないでください。
 
-Find more specific information about the Location format and requirements in [How to prepare Your Data for a Choropleth Map](location-data-requirements.md).
+場所の形式および要件の詳細については、[階級区分図のデータを準備する方。法場所のデータ要件](location-data-requirements.md)を参照してください。
 
-## Creating a Choropleth Map
+## 階級区分図の作成
 
-In the example below, we will use a choropleth map to analyse the results of the last presidential elections (2016) in the United States.
+以下の例では、階級区分図を使用して、米国での最後の大統領選挙 (2016 年) の結果を分析します。
 
-To follow this walkthrough, download the <a href="/data/2016_November_General_Election.xlsx" download>2016 November General Election</a> spreadsheet, upload it to a cloud provider and follow the steps below.
+このチュートリアルを実行するには、<a href="/data/2016_November_General_Election.xlsx" download>2016 November General Election</a> スプレッドシートをダウンロードし、クラウド プロバイダーにアップロードして以下の手順を実行します。
 
-1. Connect to the cloud provider where you uploaded the spreadsheet.
+1. スプレッドシートをアップロードしたクラウド プロバイダーに接続します。
 
-2. In the visualization editor, select the *Choropleth Map* visualization:
+2. 表示形式エディターで、**階級区分図**の表示形式を選択します。
 ![Select choropleth map visualization from the list of chart types](images/chart-types-choropleth.png)
-3. In the *Choropleth Data* section, select the US States map from the *Map* dropdown menu. An outline of the United States map will be displayed on the screen.
+3. **[階級区分図データ]** セクションで、**[マップ]** ドロップダウン メニューから [アメリカ合衆国の州] マップを選択します。米国のマップのアウトラインが画面に表示されます。
 ![List of available maps](images/list-available-maps.png)
-4. In the *Location* placeholder, drop the *State* or *State Abv* filed. Both of them contain a list of the US states' names.
+4. **[場所]** プレースホルダーに **State** または **State Abv** フィールドをドロップします。両方とも米国の州のリストを含みます。
 
-5. For *Values*, select the field containing the quantitative data you want to map. For this example, we will use the *Total Votes (%)*, containing the voting rates in every state.
+5. **[値]** で、マップする定量データを含むフィールドを選択します。この例では、すべての州の投票率を含む **Total Votes (%)** を使用します。
 
-6. Format the *Value* field to show percentage. Select the *Total Votes (%)* under *Value* ⇒ *Formatting* ⇒ *Type* ⇒ *Percent*.
+6. **[値]** フィールドを書式設定してパーセンテージを表示します。**[値]** ⇒ **[書式設定]** ⇒ **[タイプ]** ⇒ **[パーセント]** で **Total Votes (%)** を選択します。
 
-7. You can add a filter when you choose a field in the *Data Filters* placeholder. *(Optional)*
+7. **[データ フィルタ]ー** プレースホルダーでフィールドを選択すると、フィルターを追加できます **(オプション)**。 
 
-As a result, you can see the USA map, divided into states. The larger the percent of voters in a state, the more intensive the blue color of the state is.
+その結果、州ごとに分割された USA マップが表示されます。州の有権者の割合が大きいほど、その州の青色が強くなります。
 
 ![Choropleth map visualization](images/choropleth-visualization-example.png)
 
-## Using the Map Color to Create a Multi-Color Choropleth Map
+## マップ カラーを使用したマルチカラー階級区分図の作成
 
-You can alternatively set the *Map Color* property to control the color of each area on the map. This is useful to reflect things like which candidate or party had the most/least votes in an area.
+代わりに、**[マップ カラー]** プロパティを設定して、マップの各領域の色を制御できます。これは、領域内でどの候補者または政党が上位/下位票を獲得したかなどを反映するのに役立ちます。
 
 ![A choropleth map using the color category](images/color-choropleth-map-example.png)
-In the example above, Donald Trump, Hilary Clinton, and "Other" are compared by votes in the 2016 elections. States are colored differently, depending on who won the most votes in the elections.
 
-To change the coloring condition, go to:
+上記の例では、Donald Trump、Hillary Clinton、および Other が 2016 年の投票で比較されています。州の色は、選挙で誰が最も多く投票されたかによって異なります。
 
-*Settings* ⇒ *Color based on* ⇒ *Lowest Value*.
+色付け条件を変更するには:
+
+**[設定]** ⇒ **[カラーの基準値]** ⇒ **[最高値]**。
 
 
-## Drilling Up and Down Hierarchy Levels
+## 階層レベルのドリル アップとドリル ダウン
 
-You can drill up and down your choropleth map areas to dynamically uncover hierarchy levels of your location data.
+階級区分図領域をドリル アップおよびドリル ダウンして、場所データの階層レベルを動的に検出できます。
 
-To enable the drill down option, you need to add more than one data field in the *Location* placeholder to create subordinate levels. Adding counties under the US states as a new hierarchy level, for example, will allow you to see the big picture at state level and also explore finer details at county level.
+ドリル ダウン オプションを有効にするには、**[場所]** プレースホルダーで複数のデータ フィールドを追加して下位レベルを作成する必要があります。たとえば、新しい階層レベルとして米国の州の下に郡を追加すると、州レベルで全体像を表示し、郡レベルで詳細を調査することもできます。
 
-Hovering over a shape on the map will highlight it, and a tooltip will appear (see below). Click on the *Drill down* option to reveal the map for the next location hierarchy level.  
+マップ上の図形をホバーすると強調表示され、ツールチップが表示されます (以下を参照)。[ドリル ダウン] オプションをクリックして、次の場所階層レベルのマップを表示します。
 ![Drill down to tooltip shown for a state](images/drill-down-option-choropleth-map.png)
 
 :::note
-**Available Maps:** You can drill down into maps only if the map for the subordinate level is available. Find the available maps under *Map* in the *Choropleth Data* section.
+**利用可能なマップ:** 下位レベルのマップが使用可能な場合のみ、マップにドリル ダウンできます。**[階級区分図データ]** セクションの **[マップ]** で使用可能なマップを検索します。
 :::

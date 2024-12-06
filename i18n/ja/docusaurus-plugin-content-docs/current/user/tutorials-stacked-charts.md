@@ -1,91 +1,77 @@
 ---
-title: How to Create Stacked Chart Visualization in Reveal
-_description: A quick tutorial on creating Stacked Chart visualization using a sample spreadsheet.
+title: Reveal で積層型チャートの表示形式を作成する方法
+_description: サンプルス プレッドシートを使用して積層型チャートの表示形式を作成する方法を説明します。
+_language: ja
 ---
 
-# Creating Stacked Chart Visualizations
+# 積層型チャートを作成する方法
 
-In this tutorial, you will learn how to create *Stacked* chart
-visualizations using a sample spreadsheet.
+このチュートリアルはサンプル スプレッドシートを使用し**積層型**チャートを作成する方法を説明します。
 
 ![Tutorials-Create-New-Dashboard](images/different-stacked-charts-example.png)  
 
-## Key Concepts
+## 重要なコンセプト
 
-There are three different layouts to choose from when using stacked
-charts: [Area](#creating-a-stacked-chart),
-[Column](#creating-a-stacked-chart) and [Bar](#creating-a-stacked-chart).
+積層型チャートは、3 つのレイアウトから選択できます - [エリア](#積層型チャートの作成)、[柱状](#積層型チャートの作成)および[棒](#積層型チャートの作成)。
 
-You can also configure the following settings:
+以下の項目も設定できます。
 
-  - **Axis Configuration**: the axis configuration lets you configure
-    the minimum and maximum values for your charts. The minimum value is
-    set to 0 by default and the maximum calculated automatically
-    depending on your values.
+  - **軸の構成**: 軸の構成でチャートの最大値と最小値を構成できます。デフォルトで最小値は 0 に設定され、最大値は使用されるデータによって設定されます。
 
-   - **Logarithmic Axis Configuration**: if you check the
-        *Logarithmic* checkbox, the scale for your values will be
-        calculated with a non-linear scale which takes magnitude into
-        account instead of the usual linear scale.
+      - **対数軸構成**: [対数] ボックスをチェックする場合、値のスケールは通常のリニア スケールを使用する代わりに大きさを使用するリニア スケール以外で計算されます。
 
-## Sample Data Source
+## サンプル データ ソース
 
-For this tutorial, you will use the *Stacked Charts* sheet in the
-<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
+このチュートリアルでは、<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> の *Stacked Charts* シートを使用します。
 
 
-## Creating a Stacked Chart
+## 積層型チャートの作成
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
 
    ![Edit button in overflow menu](images/overflow-edit-option.png)                                      
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
    ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                          
 
-4. Choose the **Stacked Charts** sheet. 
+4. **Stacked Charts** シートを選択します。 
 
    ![Stacked Charts Spreadsheet in the tutorial data source](images/stacked-chart-spreadsheet-data-source-details-dialog.png)
 
-5. Open the *Visualization Picker* and select any of the **stacked** visualizations. By default, the visualization type will be set to *Column*. 
+5. **表示形式ピッカー**を開き、**積層型**表示形式のいずれかを選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。 
 
    ![List of stacked chart types](images/stacked-chart-types.png) 
  
-6. Stacked charts require two or more fields to be dragged and dropped into the **Values** placeholder of the data editor. In this case, the *1960*, *2003*, *2008* and *2010* fields have been dropped into **Values** and *Country Name* in **Label**.
-                                        
+6. 積層型チャートでは、データ エディターの **[値]** プレースホルダーに 2 つ以上のフィールドをドラッグ アンド ドロップする必要があります。今の例で、*1960*、*2003*、*2008* と *2010* を **[値]** へ、*Country Name* を **[ラベル]** へドラッグアンドドロップします。
+
    ![Organizing the data from the stacked charts spreadsheet](images/stacked-charts-organizing-data.png)                           
 
-## Changing your Axis Configuration
+## 軸の構成の変更
 
-Similarly to the [Gauge bounds](tutorials-gauge.md#adding-bounds-to-your-gauge), the
-chart axis configuration allows you to set the lowest and highest values
-in your chart. You can use this feature to include or exclude specific
-data.
+[ゲージの範囲](tutorials-gauge.md#ゲージ表示形式に範囲を追加する方法)と同様に、チャート軸構成でチャートの最小と最大値を設定できます。この機能を使用して、特定のデータ含有や除外ができます。
 
 |                                        |                                                                                      |                                                                                                                                       |
 | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                | ![Settings section](images/tutorials-settings.png)               | Go to the **Settings** section of the Visualization Editor.                                                                           |
-| 2\. **Access the Axis Bounds section** | ![Tutorials-Axis-Bounds](images/axis-bounds.png)                           | Navigate to Axis Bounds. Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with.  |                                                                                                          
+| 1\. **設定を変更する**                | ![Settings section](images/tutorials-settings.png)               | 表示形式エディターの **[設定]** セクションに移動します。                                                                           |
+| 2\. **範囲の設定にアクセスする** | ![Tutorials-Axis-Bounds](images/axis-bounds.png)                           | [軸範囲] に移動します。最大値または最小値 (または両方) 値を設定するかどうかに基づいて、チャートの開始値または終了値を入力します。  |                                                                                                          
 
-## Setting your Axis Configuration as Logarithmic
+## 軸を対数軸として設定
 
 |                                           |                                                                          |                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| 1\. **Change Settings**                   | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)   | Go to the **Settings** section of the Visualization Editor. |
-| 2\. **Access the Axis option**            | ![Tutorials-Axis-Bounds](images/axis-bounds-logarithmic.png)               | Expand the Axis dropdown by selecting the down arrow. Then select *Logarithmic*.|      
+| 1\. **設定を変更する**                   | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)   | 表示形式エディターの **[設定]** セクションに移動します。 |
+| 2\. **軸のオプションにアクセスする**            | ![Tutorials-Axis-Bounds](images/axis-bounds-logarithmic.png)               | 下矢印を選択して、軸ドロップダウンを展開します。次に、[対数] を選択します。|      
 
-## Enabling Percentage Distribution
+## パーセンテージの配分を有効します。
 
-For stacked charts, you can configure the Percentage Distribution. It
-allows you to switch between values and percentage distribution scales
-for those types of charts. In order to do this:
+積層型チャートにパーセンテージの配分も構成できます。このタイプのチャートに値とパーセンテージの配分スケールを切り替えます。以下は作業手順です。
 
 |                                        |                                                                                    |                                                                                           |
 | -------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)             | Go to the **Settings** section of the Visualization Editor.                               |
-| 2\. **Enable Percentage Distribution** | ![Tutorials-Percentage-Distribution](images/percentage-distribution.png) | Enable the percentage distribution setting by checking the *Percentage Distribution* box. |
+| 1\. **設定を変更する**                | ![Tutorials-Navigate-Settings](images/tutorials-settings.png)             | 表示形式エディターの **[設定]** セクションに移動します。                               |
+| 2\. **パーセンテージの配分を有効にする** | ![Tutorials-Percentage-Distribution](images/percentage-distribution.png) | [パーセンテージの配分] ボックスをチェックして、パーセンテージの配分設定を有効にします。 |

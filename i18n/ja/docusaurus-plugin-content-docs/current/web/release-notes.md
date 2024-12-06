@@ -175,7 +175,7 @@ function addSelValueToFilter(fieldName, valueIdx) {
 }
 ```
 - (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。シリーズのツールチップには、選択した値でフィルタリングするオプションが含まれます。表示形式の残りの部分には、フィルタリングされた値と元の値を簡単に比較できるように、両方の値が表示されます。現在、次のチャート タイプがサポートされています: 縦棒、棒、折れ線、時系列、エリア、ステップ エリア、スプライン、積層型縦棒、積層型エリア、積層型棒。この機能を有効にするには、RevealView で `highlightedFilteringEnabled` を `true` に設定します。
-- (ベータ版) トレンドライン、ラベル、ズームなどにすばやくアクセスするための表示形式ツールバーが追加されました。この機能を有効にするには、`$.ig.RevealSdkSettings` で `enableNewToolbar` を `true` に設定します。
+- (ベータ版) 近似曲線、ラベル、ズームなどにすばやくアクセスするための表示形式ツールバーが追加されました。この機能を有効にするには、`$.ig.RevealSdkSettings` で `enableNewToolbar` を `true` に設定します。
 - SQL ベースのデータ ソースに対しクライアント側でカスタム クエリを提供できる機能を削除しました。
 - RVGoogleAnalyticsDataSource と RVGoogleAnalyticsDataSourceItem は、Google がこのコネクタの API を 2024 年 7 月 1 日に廃止する予定であるため、削除されました。
 - RevealView に `onDashboardChanged` イベントを追加しました。

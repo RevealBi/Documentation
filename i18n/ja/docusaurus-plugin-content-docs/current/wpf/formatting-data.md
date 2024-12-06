@@ -76,7 +76,7 @@ public class UpMediaFormattingService : RVBaseFormattingService
 
 ![](images/formatting-numeric-data-percentage-result.png)
 
-ダッシュボードの他のビジュアライゼーションを見ると、数値データの書式が変更されていないことがわかります。書式設定はチャートによって制御されるため、フィールドの書式設定を変更するには、フィールドの書式設定を変更する必要があります。[ローカライズ サービス](localizing-dashboards.md)を使用することで、これを実行できます。
+ダッシュボードの他の表示形式を見ると、数値データの書式が変更されていないことがわかります。書式設定はチャートによって制御されるため、フィールドの書式設定を変更するには、フィールドの書式設定を変更する必要があります。[ローカライズ サービス](localizing-dashboards.md)を使用することで、これを実行できます。
 
 ![The Marketing sample dashboard after formatting changes](images/formatting-service-marketing-sample-result.png)
 

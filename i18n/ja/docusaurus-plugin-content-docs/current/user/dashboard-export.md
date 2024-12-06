@@ -1,29 +1,21 @@
-# Export Dashboards
+# ダッシュボードのエクスポート
 
-The information displayed in dashboards will change over time as the
-data changes in the data source, but there will be scenarios where you
-can benefit from sharing a snapshot of the data at that specific moment
-in time. For instance, to highlight an unexpected value that may provide
-some business insight and requires attention right away.
+ダッシュボードに表示される情報は、データ ソースの変更に伴って更新されますが、ある時点のデータのスナップショットを共有することもできます。たとえば、予期しない値を強調表示したビジネス インサイトを提供し、注意を促します。
 
-In order to **access the export feature**, select the overflow button in
-the top right-hand corner and click/tap *Export*.
+**エクスポート機能にアクセスする**には、右上隅にあるオーバーフロー ボタンを選択し、**[エクスポート]** をクリックまたはタップします。
 
 ![Export option in the overflow menu](images/export-option.png)
 
-## Export Format
+## エクスポート形式
 
-You can easily export dashboards by using the available Export options.
+ダッシュボードは、以下のオプションを使用して簡単にエクスポートできます。
 
 ![Export formats available](images/format-options.png)
 
-  - [**Export Image**](dashboard-export-image.md) - export a screen capture of the entire
-    dashboard or individual visualizations.
+  - [**画像のエクスポート**](dashboard-export-image.md) - ダッシュボード全体または個別の表示形式のスクリーン キャプチャをエクスポートします。
 
-  - [**Export PowerPoint**](dashboard-export-powerpoint.md) - export your
-    dashboard as a PowerPoint presentation.
+  - [**PowerPoint のエクスポート**](dashboard-export-powerpoint.md) - ダッシュボードを PowerPoint プレゼンテーションとしてエクスポートします。
 
-  - [**Export PDF**](dashboard-export-pdf.md) - export your dashboard as a PDF
-    document.
+  - [**PDF のエクスポート**](dashboard-export-pdf.md) - ダッシュボードを PDF ドキュメントとしてエクスポートします。
 
-  - [**Export Excel**](dashboard-export-excel.md) - you can export the data used for your dashboards to the **Excel format** and choose if you want to also export the visualization to your spreadsheet.
+  - [**Excel のエクスポート**](dashboard-export-excel.md) - ダッシュボードに使用されているデータを **Excel 形式**でエクスポートし、表示形式もスプレッドシートにエクスポートするかどうかを選択できます。

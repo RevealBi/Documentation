@@ -1,169 +1,157 @@
 ---
-title: How to Create Gauge Visualizations in Reveal 
-_description: A quick tutorial on creating all types of Gauge visualizations using a sample spreadsheet.
+title: Reveal でゲージで表示形式を作成する方法 
+_description: ンプルス プレッドシートを使用してゲージ チャートの表示形式を作成する方法を説明します。
+_language: ja
 ---
 
-# Creating Gauge Visualizations
+# ゲージで表示形式を作成する方法
 
-In this tutorial, you will learn how to create *Gauge* visualizations
-using a sample spreadsheet.
+このチュートリアルは、サンプル スプレッドシートを使用して**ゲージ**の表示形式を作成する方法を説明します。
 
 ![Different Gauge Visualizations](images/different-gauge-visualizations.png)
 
-## Key Concepts
+## 重要なコンセプト
 
-There are two different layouts to choose from when using gauge charts:
+ゲージ チャートは、2 つのレイアウトから選択できます。
 
-  - **Bounds Configuration**. The bounds configuration for gauges covers
-    the lowest and highest possible values in your gauges. It is usually
-    set to the lowest value in your data source by default, but you can
-    change it to exclude specific data.
+  - **しきい値の構成**。ゲージのしきい値の構成ではゲージの最大値と最小値を設定できます。デフォルトで最小値に設定されますが、特定のデータを除外するために変更できます。
 
-  - **Bands Configuration**. The bands configuration allows you to
-    establish three different ranges for your information (Higher than,
-    between, and Less than). You can override the default values with
-    ranges tailored to your data source.
+  - **バンド構成**。バンドの構成は 3 つの範囲を設定できます (より大きい、中間、より小さい) です。データ ソースに基づく範囲でデフォルトの値を上書きします。
 
-## Sample Data Source
+## サンプル データ ソース
 
-For this tutorial, you will use the *Gauge Views* sheet in the <a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a>.
+このチュートリアルでは、<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>Reveal Visualization Tutorials</a> の「Gauge Views」シートを使用します。
 
-## Creating a Linear Gauge
+## リニア ゲージを作成する方法
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
    
    ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
    ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)
          
-4. Choose the **Gauge Views** sheet.
+4. **Gauge Views** シートを選択します。
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-5. Open the *Visualization Picker* and select the **Linear** visualization. By default, the visualization type will be set to *Column*. 
+5. **表示形式ピッカー**を開き、**リニア**表示形式を選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。 
 
    ![List of chart types](images/gauges-linear-chart-types.png)
 
-6. This linear gauge, for example, will display *Life expectancy* per *Country*. Drag and drop the *Country Name* field to **Label** and one of the *Year* fields into **Value**.
+6. たとえば、このリニア ゲージは国別で平均寿命を表します。*Country Name* フィールドを **[ラベル]** へ、年フィールドの 1 つを **[値]** へドラッグアンドドロップします。
   
    ![Tutorials-LinearGauge-Data](images/organizing-data-gauge-visualization.png)                         
 
-## Creating a Circular Gauge
+## 円形ゲージを作成する方法
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
    
    ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
    ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                       
 
-4. Choose the **Gauge Views** sheet.
+4. **Gauge Views** シートを選択します。
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-5. Open the *Visualization Picker* and select the **Circular** visualization. By default, the visualization type will be set to *Column*. 
+5. **表示形式ピッカー**を開き、**円型**表示形式を選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。 
 
    ![List of chart types](images/gauges-circular-chart-types.png)
 
-6. This linear gauge, for example, will display *Life expectancy* per *Country*. Drag and drop the *Country Name* field to **Label** and one of the *Year* fields into **Value**.
+6. たとえば、このリニア ゲージは国別で平均寿命を表します。*Country Name* フィールドを **[ラベル]** へ、年フィールドの 1 つを **[値]** へドラッグアンドドロップします。
   
    ![Tutorials-LinearGauge-Data](images/organizing-data-circular-gauge-visualization.png) 
 
 
-Circular Gauges are particularly useful to show average values as well
-as sum of values. In order to change the aggregation for the field
-displayed in Values:
+円形ゲージは、特に平均値と値の合計の表示に適しています。[値] に表示されるフィールドの集計を変更する手順:
 
 |                                              |                                                                            |                                                                                           |
 | -------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 1\. **Access Field Settings for your Value** | ![Add-Data-Filter-CircularGauge](images/value-circular-gauge.png) | Select the field in **Value** to access                                                  |
-| 2\. **Choose a different Aggregation**       | ![CircularGauge-Aggregation](images/field-settings-aggregation-options.png)         | Expand the **Aggregation** dropdown and select a different option (for example, Average). |
+| 1\. **[値] のフィールド設定にアクセスする** | ![Add-Data-Filter-CircularGauge](images/value-circular-gauge.png) | **[値]** のフィールドを選択してアクセスします。                                                  |
+| 2\. **別の集計を選択する**       | ![CircularGauge-Aggregation](images/field-settings-aggregation-options.png)         | **[集計]** のドロップダウンを展開し、別のオプションを選択します (平均値など)。 |
 
 
-## Creating a Text Gauge
+## テキスト ゲージを作成する方法
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
    
    ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
    ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                       
 
-4. Choose the **Gauge Views** sheet.
+4. **Gauge Views** シートを選択します。
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-5. Open the *Visualization Picker* and select the **Text** visualization. By default, the visualization type will be set to *Column*. 
+5. **表示形式ピッカー**を開き、**テキスト**の表示形式を選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。 
 
    ![List of chart types](images/gauges-text-chart-types.png)
 
-6. This text gauge, for example, will display life expectancy per Country. Drag and drop one of the year fields into **Values**, and then the *Country Name* field into **Data Filters**. Then, select the specific country you want by selecting the field. 
+6. 例えば、このテキスト ゲージは国別平均寿命を表します。年フィールドの 1 つを **[値]** にドラッグアンドドロップし、*Country Name* フィールドを **[データ フィルター]** にドラッグアンドドロップします。次に、フィールドを選択して、必要な特定の国を選択します。
 
    ![Organizing the data while using text gauge visualizaiton](images/text-gauge-organizing-data.png)
 
-The text gauge sample above utilizes the average aggregation.
+上記の [テキスト ゲージのサンプル] は平均値の集計を使用します。
 
-## Creating a Bullet Graph
+## ブレット グラフを作成する方法
 
-1. Choose **Edit** in overflow menu.
+1. オーバーフロー メニューで **[編集]** を選択します。
    
    ![Edit button in overflow menu](images/overflow-edit-option.png)
 
-2. Select the **+ Visualization** button in the top right-hand corner.
+2. 右上隅にある **[+ 表示形式]** ボタンを選択します。
 
    ![Add new visualization button](images/add-visualization-button.png)                                      
 
-3. Select your data source from the list of data sources.
+3. データ ソースのリストからデータ ソースを選択します。
 
    ![Selecting the data source from the list of data sources](images/visualization-tutorials-sample.png)                                       
 
-4. Choose the **Gauge Views** sheet.
+4. **Gauge Views** シートを選択します。
   
    ![Selecting Gauge Views spreadsheet](images/gauge-views.png)
          
-5. Open the *Visualization Picker* and select the **Bullet Graph** visualization. By default, the visualization type will be set to *Column*. 
+5. **表示形式ピッカー**を開き、**ブレット グラフ**を選択します。デフォルトで、表示形式のタイプは**柱状**に設定されています。 
 
    ![List of chart types](images/gauges-bullet-graph-chart-types.png)
 
-6. This bullet graph, for example, will display life expectancy per Country. Drag and drop the *Country Name* field to **Label**, one of the years into **Values** and another *Year* into **Target**.
+6. 例えば、このブレット グラフ は国別平均寿命を表します。*Country Name* フィールドを **[ラベル]** へ、年フィールドの 1 つを **[値]** へ、別の年フィールドを **[ターゲット]** へドラッグアンドドロップします。
 
    ![Organizing data while using a bullet graph](images/bullet-graph-organizing-data.png)
 
-## Adding Bounds to your Gauge
+## ゲージの化でしきい値を追加する方法
 
-Bounds allow you to set the lowest and highest values in your gauges. As
-mentioned in [Key Concepts](#key-concepts), you can change it to exclude
-specific data. In order to do this:
+しきい値を使用すると、ゲージの最小値と最大値を設定できます。[重要なコンセプト](#重要なコンセプト)で述べたように、特定のデータを除外するように変更できます。以下は作業手順です。
 
 |                                                |                                                                        |                                                                                                                                       |
 | ---------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1\. **Change Settings**                        | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                           |
-| 2\. **Change the Default selection in Limits** | ![Tutorials-Limits-Bounds](images/limit-options.png)         | Depending on whether you want to set the minimum or maximum value (or both), enter the value you want the chart to start or end with. |
+| 1\. **設定を変更する**                        | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | 表示形式エディターの **[設定]** セクションに移動します。                                                                           |
+| 2\. **制限のデフォルトの選択を変更する** | ![Tutorials-Limits-Bounds](images/limit-options.png)         | 最大値または最小値 (または両方) 値を設定するかどうかに基づいて、チャートの開始値または終了値を入力します。 |
 
-## Changing Band Colors
+## バンドの色の変更
 
-The colors for the three different ranges (Higher than, Lower than and
-Between) can be changed between the predefined colors. In order to do
-so:
+以下は、バンド ([より大きい]、[中間] および [より小さい]) の色を変更するための手順です。
 
 |                                    |                                                                        |                                                                          |
 | ---------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 1\. **Change Settings**            | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | Go to the **Settings** section of the Visualization Editor.              |
-| 2\. **Access the Colors dropdown** | ![Tutorials-Colors-Dropdown](images/band-color-options.png)     | Expand the dropdown of the range for which you want to change the color. Select one of Reveal's three predefined colors for your band color.|
+| 1\. **設定を変更する**            | ![Tutorials-Navigate-Settings](images/tutorials-settings.png) | 表示形式エディターの **[設定]** セクションに移動します。              |
+| 2\. **色のドロップダウンを表示する** | ![Tutorials-Colors-Dropdown](images/band-color-options.png)     | 色を変更する範囲のドロップダウンを展開します。バンドの色として、Reveal の 3 つの事前定義された色のいずれかを選択します。|
 

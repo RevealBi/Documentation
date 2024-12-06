@@ -1,65 +1,55 @@
 ---
-title: How to Sort by Field in Reveal 
-_description: Learn how to change the display of data in a visualization to further precise how it looks.
+title: Reveal のフィールドで並べ替える方法 
+_description: 表示形式のデータの表示を変更して外観を変更する方法を説明します。
+_language: ja
 ---
 
-# Sort by Field
+# 並べ替えフィールド
 
-Reveal allows you to change how the data in a visualization is displayed by sorting the data in ascending or descending order. In addition, it is
-also possible to further control how a visualization looks with sorting by selected fields in your original data source. 
+Reveal では、データを昇順または降順に並べ替えることで、 表示形式のデータの表示方法を変更できます。さらに、元のデータ ソースで選択したフィールドで並べ替えることで、表示形式の外観をさらに制御することもできます。 
 
 ![Sorting options in the field settings dialog](images/field-settings-dialog.png)
-## Enabling Sort by Field 
+## 並べ替えフィールドを有効にする 
 
-The *Sort by field* option is part of the fields settings, but is hidden by default. To enable it: 
+**[並べ替えフィールド]** オプションはフィールド設定の一部ですが、デフォルトでは非表示になっています。有効にする方法: 
 
-1. Select a field under the *Label* placeholder. 
-2. In *Field Settings*, choose *Ascending* or *Descending* for *Sorting*. 
-3. *Sort by field* shows under the *Sorting* setting. You can choose a field from the dropdown on the right (as shown above).
+1. **[ラベル]** プレースホルダーからフィールドを選択します。
+2. **[フィールド設定]**で、**[並べ替え]** に **[昇順]** または **[降順]** を選択します。
+3. **[並べ替え条件]** は、**[並べ替え]** 設定の下に表示されます。右側のドロップダウンからフィールドを選択できます (上記を参照)。
  
-For more practical information, take a look at the following examples
-that showcase this functionality:
+より実用的な情報については、この機能を示す次の例をご覧ください。
 
-- [Enabling Sort by Field](#enabling-sort-by-field)
-- [Ordering Support Cases by Priority](#ordering-support-cases-by-priority)
-- [Ordering String Dates in Chronological Order](#ordering-string-dates-in-chronological-order)
+- [並べ替えフィールドを有効にする](#並べ替えフィールドを有効にする )
+- [サポート ケースを優先順位で順序](#サポート-ケースを優先順位で順序)
+- [文字列日付を時系列で並べ替え](#文字列日付を時系列で順序)
 
 
-## Ordering Support Cases by Priority
+## サポート ケースを優先順位で順序
 
-There are scenarios where you would like to order a field by using business logic instead of ordering it alphabetically. 
-For example, the following is a visualization, which displays new support cases an ascending order.
+フィールドをアルファベット順に並べ替えるのではなく、ビジネス ロジックを使用して並べ替えたいシナリオがあります。たとえば、以下は、新しいサポート ケースを昇順で表示する表示形式です。
 
 ![Visualization displaying data in an ascending order](images/support-cases-sample.png)
-The *Priority* field is a text field, so it's ordered A-Z by default. However, if we use business logic, *Priority* values should be ordered as follows: *Low* - *Normal* - *High*. To achieve this, you should have a *Priority Level* column in your data set showing the numeric representation of the priority status (see below). 
+
+*Priority* フィールドはテキスト フィールドであるため、デフォルトでは A-Z の順序になっています。ただし、ビジネス ロジックを使用する場合、*Priority*値は次のように並べ替える必要があります: *Low* - *Normal* - *High*。これを実現するには、データセットに優先度ステータスの数値表現を示す *Priority Level* 列が必要です (以下を参照)。 
 
 ![Visualization showing weekly cases ordered by Priority level](images/weekly-cases-priority.png)
-Organize the information in your chart by priority level without actually
-dragging and dropping *Priority Level* field into the data editor by using the
-*Sort By* field option.
+
+[並べ替え条件] フィールド オプションを使用して、*Priority Level* フィールドをデータ エディタに実際にドラッグアンドドロップせずに、チャート内の情報を優先度レベル別に整理します。
 
 ![Sorting the information by priority in the sort by field option](images/sorting-by-priority-sample.png)
 
-## Ordering String Dates in Chronological Order
+## 文字列日付を時系列で順序
 
-Let's take a look at the following visualization, where we have plotted
-the cash and accounts receivable influxes for a company in a [stacked column chart](../tutorials-stacked-charts.md#creating-a-stacked-chart).
+次の表示形式を見てみましょう。ここでは、[積層型柱状チャート](../tutorials-stacked-charts.md#積層型チャートの作成)で企業の現金と売掛金の増加をプロットしています。
 
 ![Sales Info visualization while using stacked column chart](images/sort-by-field-sales-information-sample.png)
-The values have been ordered by **Month Name** (a string field).
-However, the months have been sorted in alphabetical order by default,
-so the resulting visualization is not particularly useful for analysis.
 
-You can, however, change how the **Month Name** is displayed by changing
-its formatting and choosing to order the information by **Month of
-Year**. You might not necessarily want to display the 1-12 numbers in
-the Y axis (**Month of Year**), but you still want that order to
-prevail. Select the **Month Name** field in the label placeholder of the
-data editor, and select your desired sorting.
+値は、**Month Name** (文字列フィールド) で並べ替えされています。ただし、月はデフォルトでアルファベット順に並べ替えされているため、結果の表示形式は分析には適しません。
+
+ただし、書式を変更し、**Month of Year** の順に情報を並べ替えることで、**Month Name** の表示方法を変更できます。Y 軸 (**Month of Year**) に 1-12 の数値を表示する必要はないかもしれませんが、それでもその順序を優先する必要があります。データ エディターのラベル プレースホルダーで **Month Name** フィールドを選択し、目的の並べ替えを選択します。
 
 ![Sort by option with a list of different fields in the field settings dialog](images/field-settings-sort-by.png)
 
-Once done, select **Update Field**. Your information will now be ordered
-in chronological order.
+この後、**[フィールドの更新]** を選択します。情報は時系列順に並べ替えられます。
 
 ![Visualization of data sorted by chronological order](images/financial-metrics-sample.png)
