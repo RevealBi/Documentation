@@ -40,7 +40,7 @@ Reveal は、さまざまな表示形式を提供することにより、ビジ�
 
 ## 表示形式チュートリアル
 
-このセクションでは、Reveal の表示形式の作成手順を説明します。すべてのセクションで、このリンク<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>を使用してダウンロードできる Data Visualizations データ ソースを使用しています。</a>.
+このセクションでは、Reveal の表示形式の作成手順を説明します。すべてのセクションで、<a href="/data/Reveal_Visualization_Tutorials.xlsx" download>このリンク</a>を使用してダウンロードできる Data Visualizations データ ソースを使用しています。
 
 | | | | | |
 |:-:|:-:|:-:|:-:|:-:|
