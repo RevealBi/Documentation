@@ -365,11 +365,11 @@
     "description": "The ARIA label for the sidebar navigation"
   },
   "homepage.feature.user.title": {
-    "message": "User Documentation",
+    "message": "ユーザー ドキュメント",
     "description": "The title of the User Docs feature on the homepage"
   },
   "homepage.feature.user": {
-    "message": "Explore user-friendly guides and resources tailored for end-users to make the most of data analytics.",
+    "message": "データ分析を最大限に活用できるように、エンドユーザー向けにカスタマイズされたユーザーフレンドリーなガイドとリソース。",
     "description": "The words used to describe the user section on the homepage"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {

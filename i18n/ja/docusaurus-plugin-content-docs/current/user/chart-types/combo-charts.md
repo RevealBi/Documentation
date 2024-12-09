@@ -1,66 +1,55 @@
 ---
-title: How to Create and Use Combo Charts 
-_description: Find out how to use Combo Charts for your visualizations in Reveal.
+title: 複合チャートを作成して使用する方法
+_description: Reveal で表示形式に複合チャートを使用する方法を説明します。
+_language: ja
 ---
 
-# Combo Charts
+# 複合チャート
 
-This type of chart combines two or more chart types in one single chart.
+1 つのチャートに複数の種類のチャートを組み合わせたチャートです。
 
-Regular charts usually have one X-axis and one Y-axis. Combo charts can
-have two Y-axis, allowing you to display two different types of data
-points in the same chart.
+通常のチャートには、X 軸と Y 軸が 1 つづつ必要です。複合チャートには 2 つの Y 軸があり、同じチャートに 2 種類のデータ ポイントを表示できます。
 
 ![Combo chart sample within Reveal](images/combo-chart-example.png)
 
-E.g., as shown above, a combo chart can display countries' total
-population as well as the young population to show the relationship
-between them.
+たとえば、上記のように、複合チャートは国の総人口および若い人口を表示して、それらの間の関係を示すことができます。
 
 ![Selecting the Combo Chart visualization in Reveal](images/combo-chart-selection.png)
 
-After selecting your data source and the *Combo* visualization, by
-default you start with a column chart and a line chart combined. As
-shown in the first image, you need to configure the label and values for
-both charts.
+データ ソースと**複合**の表示形式を選択した後、デフォルトでは、柱状チャートと折れ線チャートを組み合わせて開始します。最初の画像のように、両方のチャートの [ラベル] と [値] を構成する必要があります。
 
-## Settings for Combo Charts
+## 複合チャートの設定
 
 ![Combo Charts configuration settings in Reveal](images/combo-chart-settings.png)
 
-In *Settings* you can:
+[設定] では:
 
-  - **Choose the Style**.
+  - **スタイルを選択できます。**
 
-    You can enable the Title, Legend or choose the Start Color.
+    タイトルまたは凡例を有効にするか、開始色を選択できます。
 
-  - **Enable the Automatic Label Rotation**
+  - **自動的なラベル回転を有効にできます。**
 
-  - **Adjust the Zoom Level**
+  - **ズーム レベルを調整できます。**
 
-  - **Change the visualization type for one or both charts**.
+  - **一方または両方のチャートの表示形式タイプを変更できます**。
 
-    You can choose between seven available types (Column, Stacked
-    Column, Area, Line, Step Area, Step Line, and Spline Area).
+    7 つの使用可能なタイプ (柱状、積層型柱状、エリア、折れ線、ステップ エリア、ステップ折れ線、スプライン エリア) から選択できます。
 
-  - **Choose between Linear scale or Logarithmic**.
+  - **リニア スケールまたは対数を選択できます**。
 
-    With Logarithmic, the scale for your values will be calculated with
-    a non-linear scale which takes magnitude into account instead of the
-    usual linear scale.
+    対数の場合、値のスケールは通常のリニア スケールを使用する代わりに大きさを使用するリニア スケール以外で計算されます。
 
-  - **Set up the minimum and maximum values for your charts**.
+  - **チャートの最小値および最大値を設定できます。**
 
-    Minimum is set to 0 by default and maximum is calculated
-    automatically depending on your values.
+    デフォルトで最小は 0 に設定され、最大値は使用されるデータによって設定されます。
 
-  - **Choose to share the left axis for both charts**.
+  - **両方のチャートの左軸を共有することを選択できます**。
 
-    A left and right axis are used by default.
+    デフォルトでは、左軸と右軸が使用されます。
 
-  - **Switch the chart on top**.
+  - **上のチャートを切り替えることができます**。
 
-    Reveal applies opacity to the chart displayed behind, to make it
-    visually more transparent.
+    Reveal は、背面に表示されるチャートに不透明度を適用し、より透明にします。
 
-- **[Connect this visualization to another dashboard or a URL](../dashboard-linking.md)**
+- **[この表示形式を別のダッシュボードまたは URL に接続できます](../dashboard-linking.md)。**

@@ -1,124 +1,106 @@
 ---
-title: How to apply Field Filters and Rules to Dataset 
-_description: Learn how to apply filters or rules to your dataset in Reveal while creating visualizations.
+title: フィールド フィルターとルールをデータセットに適用する方法 
+_description: 表示形式の作成中に Reveal のデータセットにフィルターまたはルールを適用する方法を説明します。
+_language: ja
 ---
 
-# Field Filters and Rules
+# フィールド フィルターとルール
 
-You can also apply filters or rules to the fields in your dataset. In
-order to do so, you will need to add a field to the **Data Filters**
-placeholder in the lower section of the data editor. Then, select a field
-from the dropdown menu to access the *Data Filter* window.
+データセットのフィールドにもフィルターとルールを適用できます。そのためには、データ エディターの下部にある**データ フィルター** プレースホルダーにフィールドを追加する必要があります。次に、ドロップダウン メニューからフィールドを選択して、**データ フィルター** ウィンドウにアクセスします。
 
 ![Adding data filter fields list](images/data-filter-visualization-editor.png)
 
-## Filter Empty Values
+## 空値をフィルター
 
-Reveal provides the ability to filter rows in the dataset that have null
-or empty values on a specific column by enabling the filter empty values
-configuration setting on a specific column.
+Reveal は特定の列で空値のフィルター構成の設定を有効にすることによって、特定の列に null、または空の値を持つデータ セット内の行をフィルタリングする機能を提供します。
 
 ![Filter Empty Values in the list of filter types](images/data-filter-filter-empty-values-option.png)
 
-## Select Values
+## 値の選択
 
-This type of filter supports the definition of the set of values to
-display for a specific field. To enable it, drag and drop a field to the
-**Data Filters** placeholder.
+このタイプのフィルターは、特定のフィールドに表示する値セットの定義をサポートします。これを有効にするには、フィールドを **[データ フィルター]** プレースホルダーにドラッグアンドドロップします。
 
 ![Select Values option in the list of filter types](images/data-filter-select-values.png)
 
-In the *Field Settings* dialog, you will see the option to **Select
-Values**. This displays the list of possible values for a column, and
-allows you to select only the items you want to remain in the dataset.
-Rows with values excluded by the filter aren't displayed in the
-visualization.
+**[フィールド設定]** ダイアログに、**[値の選択]** オプションが表示されます。列に使用可能な値のリストを表示し、データセット内に残したい項目のみを選択できます。フィルターによって除外された値を持つ行は表示形式に表示されません。
 
-## Filter by Rule
+## ルールでフィルタリング
 
-The **Filter by Rule** option enables the definition of more complex
-rules. The available rule options change depending on the field type.
+**[ルールでフィルタリング]** オプションを使用すると、より複雑なルールを定義できます。使用可能なルール オプションは、フィールド タイプによって異なります。
 
 
-### Rules for Date Fields
+### 日付フィールドのルール
 
-Date fields include rules designed to support time-based scenarios,
-changing the data range and filtering the information displayed in the
-visualization.
+日付フィールドには、時間ベースのシナリオ、日付範囲の変更、表示形式に表示される情報のフィルタリングをサポートするように設計されたルールが含まれています。
 
-- **Custom Date Range**
+- **カスタム日付範囲**
 
-- **Last Week, Month, or Year**
+- **先週、先月、または去年**
 
-- **Month to Date**
+- **過去 1 か月**
 
-- **Next Month, Quarter, or Year**
+- **来月、来四半期、または来年**
 
-- **Previous Month, Quarter, or Year**
+- **先月、先四半期、または去年**
 
-- **Quarter to Date**
+- **日付までの四半期**
 
-- **This Month, Quarter, or Year**
+- **今月、今四半期、または今年**
 
-- **Today**
+- **今日**
 
-- **Year to Date**
+- **過去 1 年間**
 
-- **Yesterday**
+- **昨日**
 
-By default, when Filter by Rule is enabled on a numeric field, it is set
-to **"None"**.
+デフォルトでは、ルールによるフィルターが数値フィールドで有効になっている場合、**[なし]** に設定されます。
 
-### Rules for Numeric Fields
+### 数値フィールドのルール
 
-Numeric fields (such as integers, decimals, and currencies) support the
-following rules:
+整数、小数、通貨などの数値型のフィールドは、次のルール タイプをサポートしています。
 
-- **Above Average**
+- **平均より上**
 
-- **Above Equals Value**
+- **以上**
 
-- **Above Value**
+- **値より大きい**
 
-- **Below Average**
+- **平均より下**
 
-- **Below Equals Value**
+- **以下**
 
-- **Below Value**
+- **値より小さい**
 
-- **Bottom Items**
+- **下位の項目**
 
-- **Bottom Percent**
+- **下位の割合**
 
-- **Top Items**
+- **上位の項目**
 
-- **Top Percent**
+- **上位の割合**
 
-By default, when Filter by Rule is enabled on a numeric field, it is set
-to **"None"**.
+デフォルトでは、ルールによるフィルターが数値フィールドで有効になっている場合、**[なし]** に設定されます。
 
-### Rules for String Fields
+### 文字列フィールドのルール
 
-Text columns support the following type of rules:
+テキスト列は、次のルール タイプをサポートしています。
 
-- **Contains**
+- **含む**
 
-- **Ends With**
+- **で終わる**
 
-- **Is Equal**
+- **等しい**
 
-- **Not Contains**
+- **含まない**
 
-- **Not Equals**
+- **等しくない**
 
-- **Starts With**
+- **～で始まる**
 
-Similarly, these rules also take one parameter: the value of the **'starts
-with'**, or **'equals'** that the rule is going to use to evaluate, and is
-entered in a text box in the same position.
+同様に、これらのルールは 1 つのパラメーターである、ルールが評価で使用する**開始値**または**等しい値**を取得し、同じ位置にあるテキストボックスに入力されます。
 
-## Filtering Fields in Values
+## 値のフィールドのフィルタリング
 
-You can filter your *Values* by [aggreggation](./calculated/aggregation.md). Then this value will appear with the same aggregation in the list of fields in the **Data Filters** placeholder.
+[集計](./calculated/aggregation.md)で**値**をフィルタリングできます。次に、この値は **[データ フィルター]** プレースホルダーのフィールドのリストに同じ集計で表示されます。
 
 ![Data Filters Filtering in the Data Editor](images/data-filters-values-list.png)

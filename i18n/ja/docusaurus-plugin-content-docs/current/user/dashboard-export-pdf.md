@@ -1,48 +1,37 @@
-# Exporting Dashboards as PDF Documents
+# ダッシュボードを PDF 文書としてエクスポート
 
-Reveal allows you to export your dashboard as a PDF document. Every
-visualization that is part of this dashboard will be displayed on a
-separate page of the document.
+Reveal では、ダッシュボードを PDF 文書としてエクスポートできます。各表示形式は、ドキュメントの個別のページに表示されます。
 
-To export a dashboard as a PDF document, go to dashboard *View mode* and
-select: the overflow menu ⇒ *Export* ⇒ *PDF*. The *Export Dashboard*
-dialog will open, allowing you to edit your document and annotate
-specific pages, so that you can tailor it to your needs.
+ダッシュボードを PDF 文書としてエクスポートするには、ダッシュボード **ビュー モード**に移動して、オーバーフロー メニューから **[エクスポート]** ⇒ **PDF** を選択します。**[ダッシュボード エクスポート]** ダイアログが開き、PDF 文書をニーズに合わせるため、編集して特定のページに注釈を付けることができます。
 
-## Export Settings
+## エクスポート設定
 
 ![Settings for PDF document in the Export Dashboard menu](images/export-pdf-options.png)
 
-In the *Export Dashboard* dialog you can manage the following settings:
+**[ダッシュボード エクスポート]** ダイアログでは、次の設定を管理できます:
 
-1.  Change the **main title** of your PDF document. The default title is
-    your dashboard's title.
+1.  PDF 文書の**主タイトル**を変更します。デフォルトのタイトルは、ダッシュボードのタイトルです。
 
-2.  Change the **page's title** and add a subtitle in the *Enter Title*
-    text box (the second box). The default slide's title is the title of
-    the visualization displayed on the page.
+2.  **ページのタイトル**を変更し、**[タイトルの入力]** テキスト ボックス (2 番目のボックス) にサブタイトルを追加します。デフォルトのスライドのタイトルは、ページに表示される表示形式のタイトルです。
 
-3.  Manage **Branding** settings options allows you to choose:
+3.  **[ブランディング]** 設定オプションの管理では、以下を選択できます。
 
-    1.  *Author*'s and their *Company*'s name - displayed in the header
-        panel of the document's pages;
+    1.  **[作成者]** とその **[会社名]** - PDF 文書のページのヘッダー パネルに表示されます。
 
-    2.  company's *logo* displayed in the footer and *color* (the main
-        color of the PDF document) - here you can choose one of the
-        following options:
+    2.  **[カラー]** (PDF 文書のメイン カラー) とフッターで表示される会社の **[ロゴ]** - ここでは、次のオプションのいずれかを選択できます:
 
         - **Reveal**
 
-        - **User's organization/workspace** - your organization and all of
-            your workspaces having their branding (logo and color) set up are
-            displayed as options.
+        - **ユーザーの組織/ワークスペース** - 組織とすべてのワークスペースのブランディング (ロゴと色) が設定しているオプションとして表示されます。
 
-        - **Custom** - select a color and upload a *logo* image of your choice.
+        - **カスタム** - 色を選択し、選択した**ロゴ**画像をアップロードします。
+
 :::note
-**Requirements for logo images**. The image you upload for a logo must be no bigger than **5 MB** and one of the following formats: JPG, JPEG, PNG, GIF.
+**ロゴ画像の要件**。ロゴとしてアップロードする画像は、**5 MB** 以下で、JPG、JPEG、PNG、GIF のいずれかの形式である必要があります。
 :::
-4.  Choose between *Landscape* and *Portrait* **document orientation**.
 
-5.  You can **manage your document pages** by selecting a page from the list to modify its title, annotate or delete it (by removing the tick icon in the upper right corner).
+4.  **横方向**または**縦方向**の**ドキュメントの向き**を選択します。
 
-6.  **Annotate** the selected page by clicking/tapping the *pencil* icon. For more information about **annotation settings**, please refer to [Annotating images](dashboard-export-image.md#annotating-images) in the *Exporting Dashboards as Images* topic.
+5.  リストからページを選択してタイトルを変更し、注釈を付け、あるいは右上角のチェック アイコンを除いてドキュメントを削除することで、**ドキュメント ページを管理できます**。
+
+6.  **鉛筆アイコン**をクリックまたはタップして、選択したページに**注釈**を付けます。**注釈設定**の詳細については、「ダッシュボードを画像としてエクスポート」 トピックの[注釈画像](dashboard-export-image.md#注釈画像)セクションを参照してください。

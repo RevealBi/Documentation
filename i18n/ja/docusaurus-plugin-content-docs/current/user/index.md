@@ -3,26 +3,26 @@ displayed_sidebar: userSideBar
 hide_table_of_contents: true
 ---
 
-# Welcome to the Reveal User Documentation!
+# Reveal ユーザー ドキュメントへようこそ!
 
-Explore the comprehensive user guide for Reveal, a modern business intelligence (BI) solution that empowers users to create, analyze, and share interactive data visualizations with ease. Whether you're getting started with building your first dashboard, customizing complex visualizations, or applying advanced data filters, this guide will help you make the most of Reveal's capabilities.
+Reveal は、インタラクティブな表示形式を簡単に作成、分析、共有できるモダンなビジネス インテリジェンス (BI) ソリューションです。この包括的なユーザーガイドでは、最初のダッシュボードの作成から複雑な表示形式のカスタマイズ、高度なデータ フィルターの適用に至るまで、Reveal の機能を最大限に活用するための情報を提供します。
 
-## What You Will Find in This Documentation
+## このドキュメントの内容
 
-### [Dashboards](dashboard-export.md)
-Gain insights into creating and managing your dashboards. Learn how to link dashboards, export them to various formats (PDF, Excel, Image, PowerPoint), and maximize their potential for your business needs.
+### [ダッシュボード](dashboard-export.md)
+ダッシュボードの作成と管理に関する洞察を得ます。ダッシュボードをリンクする方法や、PDF、Excel、画像、PowerPoint などの形式でエクスポートする方法を理解し、ビジネスニーズに合わせてその可能性を最大限に引き出しましょう。
 
-### [Visualizations](visualizations-overview.md)
-Dive into the world of data visualizations. From understanding the visualization editor to exploring specific chart types like choropleth maps, combo charts, and scatter maps, Reveal offers versatile options to represent your data.
+### [表示形式](visualizations-overview.md)
+データ表示形式の世界に飛び込んでみましょう。表示形式エディターの理解から、階級区分図、複合チャート、散布マップなどの特定のチャート タイプの探索まで、Reveal はデータを表現するための多彩なオプションを提供します。
 
-### [Fields and Data Manipulation](fields/overview.md)
-Learn how to work with field settings, create ad-hoc hierarchies, apply conditional formatting, and manage field filters and rules. Get detailed information on calculated fields for more advanced data handling.
+### [フィールドとデータ操作](fields/overview.md)
+フィールド設定の操作方法、アドホック階層の作成、条件付き書式の適用、フィールド フィルターやルールの管理方法について説明します。高度なデータ処理のための計算フィールドについての詳細情報も得られます。
 
-### [Filters](filters-overview.md)
-Understand how to apply and customize filters to refine your data. This includes connecting filters across dashboards, managing filter properties, and using specialized filters like date range and visualization filters.
+### [フィルター](filters-overview.md)
+フィルターを適用およびカスタマイズしてデータを絞り込む方法を理解します。ダッシュボード間でのフィルター接続、フィルターのプロパティ管理、日付範囲フィルターや表示形式フィルターなどの特殊なフィルターの使用方法が含まれます。
 
-### [Tutorials](tutorials-overview.md)
-Step-by-step tutorials to help you create and master specific chart types and advanced features. Whether you're building candlestick charts, KPI gauges, or sparkline charts, these guides provide practical instructions.
+### [チュートリアル](tutorials-overview.md)
+特定のチャート タイプと高度な機能を作成し、習得するためのステップバイステップのチュートリアルです。ローソク足チャート、KPI ゲージ、スパークライン チャートを作成する方法など、実用的な手順を提供します。
 
-Reveal is here to transform your data into actionable insights. Use this documentation as your roadmap to master data visualization and business intelligence with Reveal.
+Reveal は、データを実用的な洞察に変えるお手伝いをします。このドキュメントを活用して、Reveal を使ったデータ表示形式とビジネス インテリジェンスをマスターしましょう。
 

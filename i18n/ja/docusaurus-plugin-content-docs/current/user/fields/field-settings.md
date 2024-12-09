@@ -1,110 +1,78 @@
 ---
-title: How to Use Field Settings in Reveal 
-_description: Learn how to apply field settings for sorting, filtering, and aggregating data.
+title: Reveal でフィールド設定を使用する方法 
+_description: データの並べ替え、フィルタリング、集計にフィールド設定を適用する方法を説明します。
+_language: ja
 ---
 
-# Field Settings
+# フィールド設定
 
-This section describes the different options for applying
-transformations to datasets, such as sorting, filtering, and aggregating
-data.
+このセクションでは、並べ替え、フィルター処理、データの集計などデータセットへの変換を適用するためのさまざまなオプションについて説明します。
 
 ![data-filters-currency](images/data-filters-currency-sample.png)
-In order to apply formatting or filter to your data, you must select the
-specific field you want to modify in the corresponding placeholder
-(*Category*, *Columns*, *Label*, *Rows* and *Values*). There are three
-types of fields, each of which has their own formatting and filter
-options:
 
-- [Date Fields](#date-fields)
-- [Numeric Fields](#numeric-fields) 
-- [String Fields](#string-fields)
+データにフォーマットまたはフィルターを適用するには、対応するプレースホルダー (**カテゴリ**、**列**、**ラベル**、**行**、および**値**) で変更する特定のフィールドを選択する必要があります。フィールドには 3 つのタイプがあり、それぞれに独自のフォーマットおよびフィルター オプションがあります:
+
+- [日付フィールド](#日付フィールド)
+- [数値フィールド](#数値フィールド) 
+- [文字列フィールド](#文字列フィールド)
 
 :::note 
-All fields dropped in the **Values** placeholder of the data editor will be formatted as numbers.
+データ エディターの**値**プレースホルダーにドロップされたすべてのフィールドは、数値としてフォーマットされます。
 :::
 
-## Date Fields
+## 日付フィールド
 
 ![Date-Field-Formatting](images/formatting-date-field.png)
-  - **Label renaming**: rename your fields for display purposes only.
-    Fields are always referenced by their original name in calculated
-    field expressions. Once renamed, erase the label completely to go
-    back to the original value.
 
-  - **Fiscal year initial month**: if your 12-month period is not the
-    same as a calendar year, you can use Fiscal Years and select the
-    initial month for your period.
+  - **ラベル名の変更**: 表示のみを目的としてフィールド名を変更します。フィールドは常に計算フィールド式で元の名前によって参照されます。名前を変更すると、ラベルを完全に消去し元の値に戻ります。
 
-  - **Sorting**: sort your dates in either ascending or descending
-    order.
+  - **年度の最初の月**: 12 か月の期間が暦年と同じでない場合は、会計年度を使用して、期間の最初の月を選択できます。
 
-  - **Date Format**: select from a predefined list of date and time
-    formats to display your date/time values.
+  - **並べ替え**: 日付を昇順または降順で並べ替えます。
 
-### Date Fields Hierarchies
+  - **日付書式**: 日付と時刻書式の定義済みリストから選択して、日付/時刻の値を表示します。
 
-Date Fields aggregation is displayed as a hierarchical list in the Fields section. You can find Year, Quarter, Month, Day, and Minutes, depending on the level of granularity of your Date field.
+### 日付フィールド階層
 
-When you drag and drop a Date field in the Pivot Editor, all the hierarchy is automatically displayed (see below).
+日付フィールドの集計は、[フィールド] セクションに階層リストとして表示されます。日付フィールドの精度に応じて、[年]、[四半期]、[月]、[日]、および [分] を見つけることができます。
+
+ピボット エディターに日付フィールドをドラッグアンドドロップすると、すべての階層が自動的に表示されます  (以下を参照)。
 
 ![Showing the date field hierarchy functionality in Reveal](images/date-fields-hierarchy.png)
 
-In addition, dragging a specific hierarchy level will show data for that level only, as shown below.
+さらに、特定の階層レベルをドラッグすると、以下に示すように、そのレベルのデータのみが表示されます。
 
 ![Dragging part of the hierarchy of a date field in Reveal](images/date-field-hierarchy-level-example.png)
 
-## Numeric Fields
+## 数値フィールド
 
 ![Numeric-Field-Formatting\_All.png](images/numeric-field-settings.png)
-  - **Label renaming**: rename your fields for display purposes only.
-    Fields are always referenced by their original name in calculated
-    field expressions. Once renamed, erase the label completely to go
-    back to the original value.
 
-  - **Aggregation**: configure how you want your numbers to be processed
-    by Reveal (sum, count, average, etc.).
+  - **ラベル名の変更**: 表示のみを目的としてフィールド名を変更します。フィールドは常に計算フィールド式で元の名前によって参照されます。名前を変更すると、ラベルを完全に消去し元の値に戻ります。
 
-  - **Sorting**: sort your numbers in either ascending or descending
-    order.
+  - **集計**: 数値を Reveal で処理する方法 (合計、カウント、平均) を構成します。
 
-  - **Is Visible**: choose whether the data in this field will be used
-    in the current visualization.
+  - **並べ替え**: 数値を昇順または降順で並べ替えます。
 
-  - **Type**: define whether your number should be formatted as
-    percentage, currency, or a simple number. If you select
-    **Currency**, you will have the option to choose the type of
-    currency (dollar, euro, pounds, and yens).
+  - **表示状態**: このフィールドのデータを現在の表示形式で使用するかどうかを選択します。
 
-  - **Fraction digits**: select the number of decimal places you want to
-    display.
+  - **タイプ**: 数値の形式をパーセンテージ、通貨、または単純な数値のいずれにするかを定義します。**[通貨]** を選択すると、通貨の種類 (ドル、ユーロ、ポンド、円) を選択するオプションが表示されます。
 
-  - **Negative Numbers**: select between enclosing negative numbers in
-    parentheses or prefixing with the minus (-) sign.
+  - **分数桁**: 表示する小数点以下の桁数を選択します。
 
-  - **Large Numbers Formatting**: display M for millions and K for
-    thousands within the visualization preview in the central pane.
+  - **負の数**: 括弧内に負の数を囲む、またはマイナス (-) を頭に付けるかどうかを選択します。
 
-  - **1000 Separator**: configure whether or not to display the
-    thousands separator.
+  - **大きな数値の書式設定**: 中央のペインの表示形式プレビューに 100 万 を M、千を K で表示します。
 
-  - [**Conditional Formatting**](conditional-formatting.md): when enabled,
-    this allows you to provide different formats to each of your cells
-    depending on their values. For instance, values in the lower 50%
-    range of a field can be colored with a red adorner to signal a
-    problem. You can establish styling rules up to three ranges
-    (typically used for upper, middle, and lower ranges), but you can
-    customize your limits, type of comparison, colors, and indicator
-    symbols. 
+  - **桁区切り**: 桁区切り記号を表示するかどうかを選択します。
+
+  - [**条件付き書式**](conditional-formatting.md): これを有効にすると、値に基づいて各セルに異なるフォーマットを提供できます。たとえば、フィールドの下位 50% 範囲内の値は、問題を通知する赤色のアドナーで色を付けることができます。3 つまでの範囲に (一般的には、上部、中央、そして下部の範囲に使用) スタイル規則を設定することができますが制限、比較のタイプ、色、およびインジケーター シンボルをカスタマイズできます。 
 
 
-## String Fields
+## 文字列フィールド
 
 ![String-Field-Formatting](images/string-field-formatting-field-settings-dialog.png)
-  - **Label renaming**: rename your fields for display purposes only.
-    Fields are always referenced by their original name in calculated
-    field expressions. Once renamed, erase the label completely to go
-    back to the original value.
 
-  - **Sorting**: sort your dates in either ascending or descending
-    order.
+  - **ラベル名の変更**: 表示のみを目的としてフィールド名を変更します。フィールドは常に計算フィールド式で元の名前によって参照されます。名前を変更すると、ラベルを完全に消去し元の値に戻ります。
+
+  - **並べ替え**: 日付を昇順または降順で並べ替えます。

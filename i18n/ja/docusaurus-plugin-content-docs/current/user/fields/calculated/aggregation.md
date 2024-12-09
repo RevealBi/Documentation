@@ -1,117 +1,100 @@
 ---
-title: How to Use Aggregation Calculated Fields in Reveal
-_description: Learn how to use Aggregation formulas with different variants and tricks.
+title: Reveal で集計計算フィールドを使用する方法
+_description: 集計数式を使用するさまざまなヒントとコツを説明します。
+_language: ja
 ---
 
-# Aggregation Calculated Fields
+# 集計計算フィールド
 
 
-Aggregation formulas are useful for you to work with your original data
-source in order to dissect its values, often re-organizing, or simply
-summarizing the information contained in it. You can also use them to
-calculate different values you are focused on (`average`, for example),
-find top and bottom values (`max` and `min`), etc. **All formulas are**,
-therefore, **meant to be used with numerical fields only**.
+集計式は、値の分析、再編成、含まれる情報の要約など、元のデータ ソースを使用して作業する場合に便利です。異なる値 (`average` など) の計算や最大 (`max`) / 最小 (`min`) の検索に使用することも可能です。そのため、**すべての数式**は**数値フィールドのみで使用します**。
 
-In Reveal, aggregation calculated fields include:
+Reveal では、集計計算フィールドに以下が含まれます。
 
-- **Standard functions**: for information on each one, click the corresponding hyperlink under "Function Name."
+- **標準関数**: 各情報は、「関数名」の下の対応するハイパーリンクをクリックします。
 
-- **Standard functions with if conditions**: [this section](#calculated-fields-with-if-conditions) contains a detailed explanation of what an *if condition* is (including [nested if conditions](#sample-with-nested-if-conditions)) and how you need to structure
-  it.
+- **if 文を含む標準関数**: [このセクション](#if-文のある計算フィールド)は、if 文 ([ネスト if 文](#ネスト-if-文のサンプル)を含む) の詳細および構成方法について説明します。
 
 :::note
-*All samples included in the table below were created with the
-<a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a>
-spreadsheet.*
+以下の表のすべてのサンプルは <a href="/data/HR%20Dataset_2016.xlsx" download>HR Dataset 2016</a> スプレッドシートで作成されました。
 :::
 
-## Aggregation functions
+## 集計関数
 
-| Function Name and Description | Function Syntax | Sample |
+| 関数名と説明 | 関数の構文 | サンプル |
 |-------------------------------|-----------------|--------|
-| **average**: The `average` aggregation will return a number, which will be calculated from the average value of all rows in your selected `expression`. |  `average({expression})` | `average([Wage])` |
-| **averageif**: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition. |  `averageif({expression},{if-condition})` | `averageif([Wage],[OfficeId]=1)` |
-| **count**: The `count` aggregation will return a number, which is the number of rows in your data source. There are no additional arguments required. |  `count()` | `count()` |
-| **countif**: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition. |  `countif({if-condition})` | `countif([OfficeId]=1)` |
-| **max**: The `max` aggregation will return a number, which is the highest number in your selected `expression`. |  `max({expression})` | `max([Wage])` |
-| **maxif**: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition. |  `maxif({expression},{if-condition})` | `maxif([Wage],[OfficeId]=1)` |
-| **min**: The `min` aggregation will return a number, which is the lowest number in your selected `expression`. |  `min({expression})` | `min([Wage])` |
-| **minif**: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition. |  `minif({expression},{if-condition})` | `minif([Wage],[OfficeId]=1)` |
-| **sum**: The `sum` aggregation will return a number, which is calculated as the sum of all rows in your selected `expression`. |  `sum({expression})` | `sum([Wage])` |
-| **sumif**: Using a regular function with an if-condition means that the results you get need to meet certain criteria, which will be defined within your condition. |  `sumif({expression},{if-condition})` | `sumif([Wage],[OfficeId]=1)` |
+| **average**: `average` 集計は、選択した `expression` のすべての行の平均値で計算される数値を返します。 |  `average({expression})` | `average([Wage])` |
+| **averageif**: if-condition のある正則関数を使用する場合、結果が条件内で定義される特定の条件を満たす必要があります。 |  `averageif({expression},{if-condition})` | `averageif([Wage],[OfficeId]=1)` |
+| **count**: `count` 集計は、データ ソースの行数である数値を返します。 |  `count()` | `count()` |
+| **countif**: if-condition のある正則関数を使用する場合、結果が条件内で定義される特定の条件を満たす必要があります。 |  `countif({if-condition})` | `countif([OfficeId]=1)` |
+| **max**: `max` 集計は、選択した `expression` の最大値となる数値を返します。 |  `max({expression})` | `max([Wage])` |
+| **maxif**: if-condition のある正則関数を使用する場合、結果が条件内で定義される特定の条件を満たす必要があります。 |  `maxif({expression},{if-condition})` | `maxif([Wage],[OfficeId]=1)` |
+| **min**: `min` 集計は、選択した `expression` の最小値となる数値を返します。 |  `min({expression})` | `min([Wage])` |
+| **minif**: if-condition のある正則関数を使用する場合、結果が条件内で定義される特定の条件を満たす必要があります。 |  `minif({expression},{if-condition})` | `minif([Wage],[OfficeId]=1)` |
+| **sum**: `sum` 集計は、選択した `expression` のすべての行の合計として算出された数値を返します。 |  `sum({expression})` | `sum([Wage])` |
+| **sumif**: if-condition のある正則関数を使用する場合、結果が条件内で定義される特定の条件を満たす必要があります。 |  `sumif({expression},{if-condition})` | `sumif([Wage],[OfficeId]=1)` |
 
 
-## Calculated Fields with IF Conditions
+## IF 文のある計算フィールド
 
-Using a regular function (which needs an `expression`) with an
-`if-condition` means that the results you get need to meet  certain
-criteria, which will be defined within your condition.
+`if-condition` のある正則関数 (`expression` が必要) を使用する場合、結果が条件内で定義される特定の条件を満たす必要があります。
 
-### Syntax
+### 構文
 
-By default, you will see the following structure when you select any of
-the functions with the "IF" suffix.
+デフォルトでは、IF サフィックスのある関数を選択した際に以下の構成が表示されます。
 
 `XXXXXXIF({expression},{if-condition})`
 
-There are two arguments that you will need to configure:
+2 つの引数を定義する必要があります。
 
-- `expression`: choose one of the fields in your data source.
+- `expression`:  データ ソースのフィールドの 1 つを選択します。
 
-- `if-condition`: the if condition will require that you perform a
-  logical test. The `if-condition` requires a `logical test`, which is
-  the condition your expression needs to meet for the aggregation to
-  be calculated.
+- `if-condition`: if 条件は論理テストの実行が必要です。`if-condition` の `logical test` は、集計を計算するための式に必要な条件です。
 
-### Basic Samples
+### 基本サンプル
 
-For example, let's take a look at the example in the table above:
+たとえば、上記の表の例です。
 
 `averageif([Wage],[OfficeId]=1)`
 
-For clarification purposes, we will separate the function according to
-the terms we defined above:
+より明確にするために関数を上記で定義した用語に基づいて区別します。
 
-| Function Name  | Expression | IF Condition  |
+| 関数名  | 式 | IF 文  |
 | :------------: | :--------: | :-----------: |
 | averageif (…​)  | [Wage]     | [OfficeId]=1 |
 
-A non-numerical example could be the following:
+以下は数値以外の場合の例です。
 
 `sumif([Wage],[Department]="Development")`
 
-Where:
+説明:
 
-| Function Name  | Expression | IF Condition  |
+| 関数名  | 式 | IF 文  |
 | :------------: | :--------: | :-----------: |
 | sumif (…​)      | [Wage]     | [OfficeId]=1 |
 
-### Sample with Nested IF conditions
+### ネスト IF 文のサンプル
 
-You can use nested if conditions by preceding them with a logical
-operator (AND, OR).
+論理演算子 (AND、OR) を前に使用してネスト IF 文を使用できます。
 
-The following is one example with only two if conditions, but you can
-include as many as necessary:
+以下は if 文が 2 つある例ですが、if 文を使用する際の上限はありません。
 
 `maxif([Wage], and([OfficeId]=1, [Department]="Development"))`
 
-Where:
+説明:
 
-| Function Name | Expression | Logical Operator |
+| 関数名 | 式 | 論理演算子 |
 |:----------:| :--------: | :--------------: |
 | maxif (…​) | [Wage]     | and              |
 
-And the `if-condition` statements are:
+`if-condition` のステートメント:
 
-| First Logical Test | Value if true | Value if false |
+| 最初の論理テスト | true の場合の値 | false の場合の値 |
 | :----------------: | :-----------: | :------------: |
 | [OfficeId]=1       | 1             | 0              |
 
-| Second Logical Test        | Value if true | Value if false |
+| 2 番目の論理テスト        | true の場合の値 | false の場合の値 |
 | :------------------------: | :-----------: | :------------: |
 | [Department]="Development" | 1             | 0              |
 
-Because the logical operator is `and`, both conditions need to be true
-for the `maxif` aggregation to be carried out.
+論理演算子が `and` であるため、実行する `maxif` 集計の両方の条件が true である必要があります。
