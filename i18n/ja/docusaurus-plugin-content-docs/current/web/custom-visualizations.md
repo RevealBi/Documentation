@@ -15,20 +15,6 @@ var host;
 window.revealBridge = {
   sendMessageToHost: function (data) {
     try {
-      var iframe = document.createElement("IFRAME");
-      var message = encodeURIComponent(JSON.stringify(data));
-      iframe.setAttribute("src", "js-frame:" + message);
-      document.documentElement.appendChild(iframe);
-      iframe.parentNode.removeChild(iframe);
-      iframe = null;
-    }
-    catch (e) {
-      // The frame couldn't be created. 
-      // This could happen in web environments when the host is not in the same domain than the custom view webpage.
-      // Is not a problem as we are using window.postMessage for the communication in this case.
-    }
-
-    try {
       if (window.top && window.top.location) {
         window.top.postMessage(data, "*");
       }
@@ -47,10 +33,6 @@ window.revealBridge = {
     }
   },
   
-  notifyRenderingFinished: function () {
-    this.sendMessageToHost({ message: "renderingFinished" });
-  },
-
   runAction: function (actionName, data) {
     this.sendMessageToHost({ message: "runAction", action: actionName, rowData: data });
   },
@@ -98,7 +80,6 @@ export class TableComponent implements OnInit {
                 this.data = this.dataToJson(incomingData);
                 this.createTableHeaders(this.data);
                 this.ref.detectChanges();
-                window.revealBridge.notifyRenderingFinished();
             }
         };
         window.revealBridge.notifyExtensionIsReady();
