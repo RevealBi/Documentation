@@ -15,11 +15,11 @@ var host;
 window.revealBridge = {
   sendMessageToHost: function (data) {
     try {
-      if (window.top && window.top.location) {
-        window.top.postMessage(data, "*");
+      if (window.parent && window.parent.location) {
+        window.parent.postMessage(data, "*");
       }
     } catch (e) {
-      // window.top.postMessage couldn't be executed.
+      // window.parent.postMessage couldn't be executed.
       // This sould never happen but...
     }
   },
@@ -31,14 +31,6 @@ window.revealBridge = {
     } else {
       this.sendMessageToHost({ message: "ready" });
     }
-  },
-
-  runAction: function (actionName, data) {
-    this.sendMessageToHost({ message: "runAction", action: actionName, rowData: data });
-  },
-
-  openUrl: function (url) {
-    this.sendMessageToHost({ message: "openURL", URL: url });
   },
 }
 
