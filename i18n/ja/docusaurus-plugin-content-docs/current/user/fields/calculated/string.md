@@ -1,92 +1,87 @@
 ---
-title: How to use String Calculated Fields
-_description: Learn how to use String Calculated Fields to create a more precise data visualization.
+title: 文字列計算フィールドを使用する方法
+_description: 文字列計算フィールドを使用して、より正確なデータ可視化を作成する方法を説明します。
+_language: ja
 ---
 
-# String Calculated Fields
+# 文字列計算フィールド
 
-String calculated fields, except for `sortinterval`, allow you to edit
-texts to get different results.
+文字列計算フィールド (`sortinterval` 以外) はテキストを編集でき、さまざまな結果を取得することができます。
 
 :::note
-**Remember to always include strings between quotation marks (" ").**
+**文字列の間に引用符 (" ") を常に含めてください。**
 :::
 
-## String functions
+## 文字列関数
 
-| **Function Name** | **Syntax and Sample**                                                                                                                                                     |
+| **関数名** | **構文とサンプル**                                                                                                                                                     |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **concatenate**: `concatenate` allows you to join multiple strings of `text` to form a phrase. Spaces are not automatically included, so make sure you include them in your text arguments if necessary. | **Syntax**: `concatenate()`<br/>**Sample**: `concatenate("Getting started", " with", " the", " Reveal", " application")`                                                  |
-| **find**: `find` returns the starting position (`number`) of a first string of `text` in a second string if `text` as specified in your arguments. | **Syntax**: `find({find text},{within text},{start number})`<br/>**Sample**: `find("with","Getting Started with Reveal visualizations",3)`                                     |
-| **len**: `len` returns the number of characters in the string of `text` you enter. | **Syntax**: `len({text})`<br/>**Sample**: `len("Getting Started with Reveal")`                                                                                                 |
-| **lower**: `lower` converts all upper case characters in a given `text` string to lower case. | **Syntax**: `lower({text})`<br/>**Sample**: `lower("Getting Started with Reveal")`                                                                                             |
-| **mid**: `mid` returns a substring (`length`) of the specified string of `text` according to what you configure in your arguments. | **Syntax**: `mid({text},{start},{length})`<br/>**Sample**: `mid("Getting Started with Reveal",9,12)`                                                                           |
-| **replace**: `replace` replaces a given string of `text` with a different `text` as specified in your arguments. | **Syntax**: `replace({text},{old text},{new text})`<br/>**Sample**: `replace("Getting Started with Reveal","Getting Started","Creating Visualizations with")`                  |
-| **sortinterval**: `sortinterval` returns a value in a(n) interval(s) according to what is configured in the arguments. The string is returned with format `NN [from,to]` | **Syntax**: `sortinterval()`<br/>**Sample 1**: `sortinterval(33,140)`**Sample 2**: `sortinterval([Wage],150000)`**Sample 3**: `sortinterval([Wage],50000,80000,110000,140000)` |
-| **trim**: `trim` returns the same string of `text` you enter; however, it will remove any leading or trailing whitespaces, and will only keep the spaces between words. | **Syntax**: `trim({text})`<br/>**Sample**: `trim(" Getting Started with Reveal ")`                                                                                             |
-| **upper**: `upper` converts all lower case characters in a given `text` string to upper case. | **Syntax**: `upper({text})`<br/>**Sample**: `upper("Caution: Hot. Do not touch")`                                                                                              |
+| **concatenate**: `concatenate` は、複数の文字列 `text` を結合して句を構成できます。スペースは自動的には含まれません。必要な場合は、テキスト引数に含む必要があります。 | **構文**: `concatenate()`<br/>**サンプル**: `concatenate("Getting started", " with", " the", " Reveal", " application")`                                                  |
+| **find**: `find` は、引数で指定した `text` の場合、2 つ目の文字列内の `text` の 1 つ目 の文字列の開始位置 (`number`) を返します。 | **構文**: `find({find text},{within text},{start number})`<br/>**サンプル**: `find("with","Getting Started with Reveal visualizations",3)`                                     |
+| **len**: `len` は入力した `text` 文字列のすべて大文字を小文字へ変換します。 | **構文**: `len({text})`<br/>**サンプル**: `len("Getting Started with Reveal")`                                                                                                 |
+| **lower**: `lower` は指定した `text` 文字列のすべて大文字を小文字へ変換します。 | **構文**: `lower({text})`<br/>**サンプル**: `lower("Getting Started with Reveal")`                                                                                             |
+| **mid**: `mid` は引数で指定したことに基づいて指定した文字列 `text` の部分文字列 `length` を返します。 | **構文**: `mid({text},{start},{length})`<br/>**サンプル**: `mid("Getting Started with Reveal",9,12)`                                                                           |
+| **replace**: `replace` は、指定した文字列 `text` を、引数で指定した別の `text` に置き換えます。 | **構文**: `replace({text},{old text},{new text})`<br/>**サンプル**: `replace("Getting Started with Reveal","Getting Started","Creating Visualizations with")`                  |
+| **sortinterval**: `sortinterval` は、関数で設定された間隔で値を返します。`NN [from,to]` の書式として文字列が返されます。| **構文**: `sortinterval()`<br/>**サンプル 1**: `sortinterval(33,140)`**サンプル 2**: `sortinterval([Wage],150000)`**サンプル 3**: `sortinterval([Wage],50000,80000,110000,140000)` |
+| **trim**: `trim` は、入力した `text` と同じ文字列を返しますが、先行または後続の空白を削除し、単語間の空白のみ保持します。 | **構文**: `trim({text})`<br/>**サンプル**: `trim(" Getting Started with Reveal ")`                                                                                             |
+| **upper**: `upper` は指定した `text` 文字列のすべて大文字を小文字へ変換します。 | **構文**: `upper({text})`<br/>**サンプル**: `upper("Caution: Hot. Do not touch")`                                                                                              |
 
 
 
 ## Find
 
-The find function returns the starting position of a first string in a
-second string as specified in your arguments.
+find 関数は、引数で指定した 1 つ目と 2 つ目の文字列の開始位置を返します。
 
-### Syntax
+### 構文
 
-There are three arguments you need to configure:
+引数を 3 つ設定する必要があります。
 
-  - `find text`: the text you want to find.
+  - `find text`: 検索するテキスト。
 
-  - `within text`: the text in which you want to carry out the search.
+  - `within text`: 検索を実行するテキスト。
 
-  - `start number`: the character from which you want to start looking.
+  - `start number`: 検索を開始する文字。
 
-### Sample
+### サンプル
 
-Let's take a look at the sample included in the table above:
+以下は上記の表のサンプルです。
 
-| Function Name | Find Text | Within Text                                    | Start Number | Output |
+| 関数名 | Find Text | Within Text                                    | Start Number | 出力 |
 | :-----------: | :-------: | :--------------------------------------------: | :----------: | :----: |
 | find(…​)      | `"with"`  | `"Getting Started with Reveal visualizations"` | `3`          | 15     |
 
-The search will start in the first `t` of `Getting`. The resulting 15 is
-the character number where the `w` in `with` is located.
+検索は `Getting` の 最初の `t` で開始します。結果の 15 は `with` の `w` が位置する文字番号です。
 
 | C. 1  | C. 2 | C. 3 | C. 4 | C. 5 | C. 6 | C. 7 | C. 8 | C. 9 | C. 10 | C. 11 | C. 12 | C. 13 | C. 14 | C. 15 |
 | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **t** | t    | i    | n    | g    |      | S    | t    | a    | r     | t     | e     | d     |       | **w** |
 
-If `with` were repeated more than once in the phrase, the calculated
-field will return the character of the **first occurrence of the word**.
+`with` が句で複数回繰り返される場合、計算フィールドは**単語の最初の発生**の文字を返します。
 
 
 ## Mid
 
-The mid calculated field returns a substring of the specified string
-according to what you configure in your arguments.
+mid 計算フィールドは関数の構成に基づいて指定した文字列の一部を返します。
 
-### Syntax
+### 構文
 
-There are three parameters for you to configure:
+3 つのパラメーターを構成します。
 
-  - `text`: the text you want to select the string from.
+  - `text`: 文字列を選択するテキスト。
 
-  - `start`: the character where you want to start your new substring.
+  - `start`: 新しい部分文字列を開始する文字。
 
-  - `length`: the length of your substring.
+  - `length`: 部分文字列の長さ。
 
-### Sample
+### サンプル
 
-Let's take a look at the sample included in the table above:
+以下は上記の表のサンプルです。
 
-| Function Name | Text                            | Start | Length | Output       |
+| 関数名 | Text                            | Start | Length | 出力       |
 | :-----------: | :-----------------------------: | :---: | :----: | :----------: |
 | mid(…​)       | `"Getting Started with Reveal"` | `9`   | `12`   | Started with |
 
-The output is `Started with` because of what is in the text string
-starting at character 9 and lasting 12 characters:
+テキスト文字列の開始が文字 9 で始まり、12 文字であるため、出力は `Started with` です。
 
 | C. 9  | C. 10 | C. 11 | C. 12 | C. 13 | C. 14 | C. 15 | C. 16 | C. 17 | C. 18 | C. 19 | C. 20 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -95,30 +90,29 @@ starting at character 9 and lasting 12 characters:
 
 ## Replace
 
-The replace function replaces a given string with a different one as
-specified in your arguments.
+Replace 関数は文字列を関数で指定した他の文字列と置き換えます。
 
-### Syntax
+### 構文
 
-There are three arguments for you to configure:
+3 つの引数で構文されます。
 
-  - `text`: the original, complete, string of text.
+  - `text`: 元の完全な文字列テキスト。
 
-  - `old text`: the string you want to replace.
+  - `old text`: 置き換えられるテキスト。
 
-  - `new text`: the text you want to replace your old string with.
+  - `new text`: 古いテキストを置き換えるテキスト。
 
-### Sample
+### サンプル
 
-Let's look at the following sample:
+以下はサンプルです。
 
 <table style={{ width: '100%' }}>
     <tr>
-        <th style={{ width: '15%' }}>Function Name</th>
+        <th style={{ width: '15%' }}>関数名</th>
         <th style={{ width: '32%' }}>Text</th>
         <th style={{ width: '10%' }}>Old Text</th>
         <th style={{ width: '13%' }}>New Text</th>
-        <th style={{ width: '30%' }}>Output</th>
+        <th style={{ width: '30%' }}>出力</th>
     </tr>
     <tr>
         <td><code>replace(…​)</code></td>
@@ -130,37 +124,30 @@ Let's look at the following sample:
 </table>
 
 
-Note that the old text got replaced both times; **make sure you consider
-that the term will be changed every time it appears before you change
-it**.
+古いテキストはいずれの場合も置き換えられます。**変更する前に用語が表示されるたびに変更されることを考慮してください**。
 
 
 ## Sortinterval
 
-The sortinterval function returns a value in a(n) interval(s) according
-to what is configured in the arguments.
+sortinterval 関数は、関数で設定された間隔で値を返します。
 
-### Syntax
+### 構文
 
-The format for the returned string will be `NN [from, to]`.
+返却文字列の書式は `NN [from, to]` です。
 
-### Samples
+### サンプル
 
-Let's look at one of the samples in the table above:
+以下は上記の表のサンプルです。
 
-| Function Name    | Number   | Interval |
+| 関数名    | 数値   | 間隔 |
 | :--------------: | :------: | :------: |
 | sortinterval(…​)  | `[Wage]` | `150000` |
 
-In this case, the `Wage` is being compared against one value, and
-classified in two different categories: higher than 150K and lower than
+この場合、`Wage` を 1 つの値に対して比較し、2 つのカテゴリ (150K より大きい、150K 未満) に分類します。
 150K.
 
-In the following example, however, `Wage` is compared against four
-different values, and is classified into five different categories:
-lower than 50K, between 50K and 80K, between 80K and 110K, between 110K
-and 140K, and higher than 140K.
+以下の例は、`Wage` が 4 つの異なる値に対して比較し、5 つのカテゴリ (50000 未満、50000 から 80000、80000 から 110000、110000 から 140000、140000 より大きい) に分類します。
 
-| Function Name    | Number   | Interval 1 | Interval 2 | Interval 3 | Interval 4 |
+| 関数名    | 数値   | 間隔 1 | 間隔 2 | 間隔 3 | 間隔 4 |
 | :--------------: | :------: | :--------: | :--------: | :--------: | :--------: |
 | sortinterval(…​)  | `[Wage]` | `50000`    | `80000`    | `110000`   | `140000`   |

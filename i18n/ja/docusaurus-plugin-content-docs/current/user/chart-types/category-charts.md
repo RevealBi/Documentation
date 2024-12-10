@@ -1,66 +1,48 @@
 ---
-title: How to Use Category Charts for Visualization
-_description: Find out how to use category charts for making your visualizations truly remarkable.
+title: 表示形式にカテゴリ チャートを使用する方法
+_description: カテゴリ チャートを使用して表示形式を向上させる方法を説明します。
+_language: ja
 ---
 
-# Category Charts
+# カテゴリ チャート
 
-These charts are used to associate categories with quantitative
-information.
+これらのチャートを使用して、カテゴリを定量的情報に関連付けます。
 
 ![Category charts variations](images/category-charts-list.png)
 
-You can select any of the chart icons displayed in the Visualizations
-options menu as long as it is suitable for your data. Reveal will select
-the first numeric columns in the dataset and attempts to match the
-selected chart type data series requirements.
+データに適している限り、表示形式オプション メニューに表示されたチャート アイコンをどれでも選択できます。Reveal はデータセットの最初の数字の列を選択し、選択したチャート タイプのデータ系列の要件と一致させようと試みます。
+
 ![Various charts visualizations in a dashboard](../images/various-charts-example.png)
-For instance, in a Column Chart, all numeric columns are added to the
-chart. The automatic selection of columns done by Reveal can be modified
-in the Chart Settings configuration.
 
-## Chart Trendlines
+たとえば、柱状チャートでは、すべての数値列がチャートに追加されます。Reveal の列の自動選択は、チャートの設定の構成で変更できます。
 
-Chart settings enable the display of trend lines, which are lines that
-are painted across a chart, based on an algorithm. Trendlines are a very
-simple, yet powerful tool to help you determine trends in datasets, and
-define thresholds for taking action. The supported algorithms are Linear
-Fit, Quadratic Fit, Cubic Fit, Quartic Fit, Logarithmic Fit, Exponential
-Fit, Power Law Fit, Simple Average, Exponential Average, Modified
-Average, Cumulative Average, Weighted Average.
+## チャートの近似曲線
+
+チャートの設定で近似曲線の表示を有効にできます。このラインはアルゴリズムに基づいてチャートにラインを表示します。近似曲線でデータセットの傾向を把握し、意思決定のためのしきい値を定義できます。サポートされるトレンド ラインは、二次フィット、キュービック フィット、四次フィット、対数フィット、指数フィト、べき乗フィット、単純平均、指数平均、修正平均、累加平均、加重平均です。
 
 ![Chart trendline options](images/chart-trendline-option.png)
 
-## Percentage Distribution
+## パーセンテージの配分
 
-You can also configure this feature for the *stacked series charts*. It
-will override the 0-100 default scale and allow you to visualize the
-percentage distribution of the values in the chart.
+積層型シリーズ チャートにもこの機能を構成できます。0-100 のデフォルト スケールを上書きして、チャートで値のパーセンテージ配分を表示形式できます。
 
 ![Pivot editor view stacked percentage distribution setting](images/percentage-distribution-option-stacked-series-charts.png)
 
-## Start Position and Slice Labels
+## 開始位置とスライス ラベル
 
-For *Pie* and *Doughnut* charts, you can configure the start position
-for the chart to rotate the slices and change the order in which your
-data is presented.
+**円チャート**および**ドーナツ型チャート**でチャートのスライスを回転する開始位置を構成し、データの表示順序を変更できます。
 
 ![Start position setting while using a doughnut chart](images/start-position-setting-doughnut-chart-example.png)
 
-For *Funnel*, *Pie*, and *Doughnut* charts, you can configure slice
-labels in order for the visualization to display values, percentages, or
-both at the same time.
+**ファンネル**、**円チャート**、および**ドーナツ型**チャート、値やパーセンテージ、またはその両方を同時に表示するスライス ラベルを構成できます。
 
 ![Pivot editor slice labels setting](images/slice-label-setting-doughnut-chart-example.png)
 
-## Enabling Pie and Doughnut Charts Legends to Show Elements with Value 0
+## 値 0 の要素を表示するために円チャートおよびドーナツ チャートの凡例を有効化
 
-The pie and doughnut visualization legends give you the option to see
-all the data in the field selected for *Label*, including elements with
-value zero.
+円およびドーナツ チャートの表示形式の凡例には、**[ラベル]** に選択されたフィールドのすべてのデータ (値 0 の要素を含む) を表示するオプションがあります。
 
-To enable this setting, go to *Settings* in the Visualization editor and
-select *Show Values of 0 in Legend*, as shown in the screenshot below:
+この設定を有効にするには、以下の画像のように、表示形式エディターの **[設定]** に移動し、**[0 (ゼロ) 値を凡例に表示]** を選択します。
 
 ![Enabling the legend setting in the visualization editor](images/pie-chart-example-legends-value-zero-setting.png)
 

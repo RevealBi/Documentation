@@ -1,23 +1,17 @@
 ---
-title: How to Create Radial Charts Visualization
-_description: Find out how to create and use Radial Charts visualization in Reveal.
+title: ラジアル チャートの表示形式を作成する方法
+_description: Reveal でラジアル チャートの表示形式を作成して使用する方法を説明します。
+_language: ja
 ---
 
-# Radial Charts
+# ラジアル チャート
 
-Like [Category](../chart-types/category-charts.md) charts, Radial charts are simply representations of
-information in a coordinate system.
+[カテゴリ](../chart-types/category-charts.md) チャートと同様に、ラジアル チャートは情報を座標上に表現したものです。
 
 ![Using a radial chart to create a visualization](images/radial-chart-visualization-editor.png)
 
-## Chart Trendlines for Radial Charts
+## ラジアル チャートのチャート 近似曲線
 
-Chart settings enable the display of trend lines which are lines that
-are painted across a chart, based on an algorithm. Trendlines are a very
-simple, yet, powerful tool to help you determine trends in datasets and
-define thresholds for taking action. The supported algorithms are Linear
-Fit, Quadratic Fit, Cubic Fit, Quartic Fit, Logarithmic Fit, Exponential
-Fit, Power Law Fit, Simple Average, Exponential Average, Modified
-Average, Cumulative Average, Weighted Average.
+チャートの [設定] で [チャートの近似曲線] の表示を有効にできます。これは、アルゴリズムに基づいてチャートに表示されるラインです。近似曲線でデータセットの傾向を把握し、意思決定のためのしきい値を定義できます。サポートされる近似曲線は、[線形]、[二次多項式]、[三次多項式]、[四次多項式]、[対数]、[指数]、[べき乗]、[単純平均]、[指数平均]、[修正平均]、[累加平均]、[加重平均] です。
 
 ![A list consistng of all the chart trendlines available for the radial chart](images/radial-chart-trendline-settings.png)

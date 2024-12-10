@@ -1,40 +1,33 @@
 ---
-title: How to Create Sparkline Charts Visualization 
-_description: Find out how to create and use Sparkline Charts visualization in Reveal.
+title: スパークライン チャートの表示形式を作成する方法
+_description: Reveal でスパークライン チャートの表示形式を作成して使用する方法を説明します。
+_language: ja
 ---
 
-# Sparkline Charts
+# スパークライン チャート
 
-Sparkline charts are small charts plotted within a grid chart, without
-any axes, labels or other chart elements. They are meant to represent
-trends and their progression in a given date range.
+スパークライン チャートは、軸、ラベル、またはその他のチャート要素なしでグリッド チャート内にプロットされる小さなチャートで、指定された日付範囲のトレンドとその進行を表します。
 
 ![Sparkline Chart sample](images/sparkline-chart-example.png)
 
-The first column remains fixed in the Visualization Editor, allowing
-you to scroll through the different columns in your information.
+最初の列は表示形式エディターで固定されたままで、情報内の別の列をスクロールできます。
 
 ![Using the sparkline chart in the visualization editor](images/sparkline-chart-visualization-editor.png)
 
-## Advanced Sparkline Settings
+## スパークラインの詳細設定
 
-If you access the **Settings** section of the visualizations editor, you
-will be able to modify several settings, including:
+表示形式エディターの **[設定]** セクションにアクセスすると、以下のいくつかの設定を変更できます。
 
 ![Settings for the sparkline chart](images/sparkline-chart-settings.png)
 
-  - **Alignment** for texts, numbers, and dates.
+  - テキスト、数値、および日付の**配置**。
 
-  - **Font sizes** for your grid elements.
+  - グリッド要素の**フォント サイズ**。
 
-  - The **type of chart** for your sparkline: line or area charts.
+  - スパークラインの**チャート タイプ**: 折れ線チャートまたはエリア チャート。
 
-  - The **Aggregation** for your dates.
+  - 日付の**集計**。
 
-  - The **number of values** you want to include in the sparkline chart
-    within the grid.
+  - グリッド内のスパークライン チャートに含める**値の数**。
 
-  - The **information you want to include in your sparkline columns**,
-    including the last two values and the difference between them. In
-    addition, you can also choose whether you want to **represent a
-    positive difference in green or red**.
+  - **スパークライン列に含める情報** (最後の 2 つの値やその差など)。さらに、**正の差異を緑または赤で表す**かどうかも選択できます。
