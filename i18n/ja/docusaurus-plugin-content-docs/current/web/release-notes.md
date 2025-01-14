@@ -3,6 +3,110 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.7.2 (Jan 15th, 2025)
+
+### New Features
+
+#### All Platforms
+
+- (Beta) Added support for custom menu items in toolbar using `onMenuOpening`.
+- (Beta) Compare filtered data within the same visualization. Interactive filtering was enhanced to support XMLA data sources. Now, the showing "Filter By" option appears when there are multiple visualizations. Additionally, the choropleth map will highlight the selected country. When a filter is added, it is now read-only to prevent changes. Filtering is also now allowed by date, with the restriction that only one date value can be selected.
+- (Beta) Axis titles can now be controlled in the visualization editor settings pane, with the following options; none, x-axis, y-axis, or both. To enable this functionality set `$.ig.RevealSdkSettings.enableBetaFeatures` to `true`.
+- The PostgreSQL data provider now supports materialized views.
+- The BigQuery data provider now supports data blending.
+- The donut chart visualization now support different center label modes; none, label only, value only, or both label and value.
+- The Snowflake data source dependency Snowflake.Data was updated to v2.0.18.
+- The date filter presets dropdown now supports editing the available date filters and including your own filters through the `onDateFilterMenuOpening` event. Support was also added for semester-based date rules.
+
+```js
+revealView.onDateFilterMenuOpening = customizeDateFilterMenu;
+//revealView.ShowDateFilterDropdown = false; //Hides the button that shows the dropdown altogether
+
+function customizeDateFilterMenu(args)
+{
+  //if(![my_access_check]) { //Perform access check to the filter menu
+  //  args.Cancel = true; //Cancel opening of filter items list
+  //  return;
+  //}
+
+    var list = args.Items; //List of RVDateFilterMenuItem objects
+    var pos;
+
+    //Add "Last 2 months" to the "months" section
+    pos = list.getItemIndex("Month to date"); //Obtain the beginning of the "years" section
+    var lastTwoMonthsRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Month);
+    list.insert(pos + 1, lastTwoMonthsRule); //Insert using helper
+
+    //Add "Last 2 weeks" to a new section after the "days" section
+    pos = list.getItemIndex("Last 7 days");
+    list.insertSeparator(pos + 3);
+    var lastTwoWeeksOpt = new $.ig.RVDateFilterMenuOption(new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Week));  //Instantiate RVDateFilterMenuOption directly
+    list.insert(pos + 4, lastTwoWeeksOpt);
+
+    //Remove "Today" option
+    var todayItem = list.getByTitle("Today");
+    list.remove(todayItem);
+
+    //Add "First week of 2024" to a new section at the end of the menu
+    list.addSeparator();
+    var firstWeekOf2024Range = new $.ig.RVDateRange(new Date("2024-01-01"), new Date("2024-01-07")); //Customized description
+    list.add(firstWeekOf2024Range, "First week of 2024");
+}
+```
+
+- Dashboard filters now try to automatically connect to the visualization, in cases where not possible, the manual connection can be used as before.
+- The `RevealView` now has a `showTitle` property that toggles the visibility of the dashboard title independently of the dashboard header. The default value is `true`.
+- The property `ShowSave` has been added to the `RevealView`. This property determines whether or not the save button is shown. The default value is `true`.
+- Axis grid lines can now be controlled in the visualization editor settings pane, with the following options; none, horizontal, vertical, or both.
+- The `RevealView` now has a `showVisualizationFilters` property that toggles the visibility of the visualization filters when maximized. The default value is `true`.
+
+#### ASP.NET & Node
+
+- Added support for Microsoft’s SQLite implementation on Web, introducing optional encryption. To enable encryption, developers must call `RevealEmbedSettings.EnableEncryption("yourpassword")` with a secure, non-empty password. By default, the legacy SQLite implementation without encryption remains enabled (`RevealEmbedSettings.IsLegacyCacheEnabled = true`). Switching to Microsoft’s implementation without encryption is possible by setting this flag to `false`. Note: `EnableEncryption` automatically disables the legacy implementation. This change marks the start of a transition to deprecate the original SQLite library; feedback during this period is encouraged.
+
+ASP.NET:
+```csharp
+builder.Services.AddControllers().AddReveal(revealSetupBuilder =>
+{
+    revealSetupBuilder.AddSettings(
+    settings => 
+    {
+        settings.IsLegacyCacheEnabled = true;  
+        //settings.EnableEncryption("optional-password"); //this method isn't called by default
+    });
+});
+```
+
+Node:
+```js
+const revealOptions = {
+    //...
+    isLegacyCacheEnabled: true,
+    //enableCacheEncryption: true,
+    //cacheEncryptionPassword: "optional-password",
+}
+app.use('/', reveal(revealOptions));
+```
+
+### Bugs
+
+#### All Platforms
+
+- `onVisualizationDataPointClicked` not invoked on slice-based (pie, donut, and funnel) and scatter map visualizations.
+- Data may be wrong when using `TODAY`/`NOW` calculated field functions.
+- Error setting maximum axis value.
+- Error in highlighting a widget from an XMLA data source when other widgets are from different XMLA data sources.
+- Filters from XMLA data sources allow auto-connection to widgets using other data sources, which then breaks the visualization.
+- XMLA global filters are not working at all.
+- In some loading scenarios the dashboard's identifier was being set to null.
+- Google Analytics 4 error loading filters and global filter values.
+- The last fixed chart line field can't be removed.
+- SSAS 'FillTotalsInRow' error for a visualization with grand totals.
+- SSAS no data displayed while using some of the chart types.
+- Uncaught TypeError: String.isNullOrEmpty is not a function when adding a filter.
+- Labels sometimes don't hide when there's not enough space.
+- Exception occurs after switching to another chart type after viewing raw data.
+
 ## 1.7.1 (2024 年 11 月 5 日)
 
 ### 重大な変更
