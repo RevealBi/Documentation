@@ -52,6 +52,9 @@ function customizeDateFilterMenu(args)
     var firstWeekOf2024Range = new $.ig.RVDateRange(new Date("2024-01-01"), new Date("2024-01-07")); //Customized description
     list.add(firstWeekOf2024Range, "First week of 2024");
 }
+
+//The new rules also integrate with the existing filters API
+revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter(new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 3, $.ig.RVPeriodType.Day));
 ```
 
 - Dashboard filters now try to automatically connect to the visualization, in cases where not possible, the manual connection can be used as before.
