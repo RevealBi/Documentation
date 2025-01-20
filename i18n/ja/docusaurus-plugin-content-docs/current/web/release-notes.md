@@ -3,20 +3,20 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.7.2 (Jan 20th, 2025)
+## 1.7.2 (2025 年 1 月 20 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- (Beta) Added support for custom menu items in toolbar using `onMenuOpening`.
-- (Beta) Compare filtered data within the same visualization. Interactive filtering was enhanced to support XMLA data sources. Now, the showing "Filter By" option appears when there are multiple visualizations. Additionally, the choropleth map will highlight the selected country. When a filter is added, it is now read-only to prevent changes. Filtering is also now allowed by date, with the restriction that only one date value can be selected.
-- (Beta) Axis titles can now be controlled in the visualization editor settings pane, with the following options; none, x-axis, y-axis, or both. To enable this functionality set `$.ig.RevealSdkSettings.enableBetaFeatures` to `true`.
-- The PostgreSQL data provider now supports materialized views.
-- The BigQuery data provider now supports data blending.
-- The donut chart visualization now support different center label modes; none, label only, value only, or both label and value.
-- The Snowflake data source dependency Snowflake.Data was updated to v2.0.18.
-- The date filter presets dropdown now supports editing the available date filters and including your own filters through the `onDateFilterMenuOpening` event. Support was also added for semester-based date rules.
+- (ベータ版) `onMenuOpening` を使用してツールバーのカスタム メニュー項目のサポートが追加されました。
+- (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。インタラクティブ フィルタリングが強化され、XMLA データ ソースがサポートされるようになりました。複数の表示形式がある場合に、「フィルター条件」オプションが表示されるようになりました。さらに、階級区分図では選択した国が強調表示されます。フィルターが追加されると、変更を防ぐために読み取り専用になります。日付によるフィルタリングも可能になりましたが、選択できる日付値は 1 つに制限されています。
+- (ベータ版) 表示形式エディターの設定ペインで、軸タイトルを「なし」、「X 軸」、「Y 軸」、または「両方」のオプションで制御できるようになりました。この機能を有効にするには、`$.ig.RevealSdkSettings.enableBetaFeatures` を `true` に設定します。
+- PostgreSQL データ プロバイダーは、マテリアライズド ビューをサポートするようになりました。
+- BigQuery データ プロバイダーはデータ ブレンディングをサポートするようになりました。
+- ドーナツ型チャートの表示形式では、ラベルなし、ラベルのみ、値のみ、ラベルと値の両方、といった中央ラベル モードがサポートされるようになりました。
+- Snowflake データ ソースの依存関係 Snowflake.Data が v2.0.18 に更新されました。
+- 日付フィルター プリセット ドロップダウンでは、使用可能な日付フィルターの編集、および `onDateFilterMenuOpening` イベントによる独自のフィルターの追加がサポートされるようになりました。半期ベースの日付ルールのサポートも追加されました。
 
 ```js
 revealView.onDateFilterMenuOpening = customizeDateFilterMenu;
@@ -57,15 +57,15 @@ function customizeDateFilterMenu(args)
 revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter(new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 3, $.ig.RVPeriodType.Day));
 ```
 
-- Dashboard filters now try to automatically connect to the visualization, in cases where not possible, the manual connection can be used as before.
-- The `RevealView` now has a `showTitle` property that toggles the visibility of the dashboard title independently of the dashboard header. The default value is `true`.
-- The property `ShowSave` has been added to the `RevealView`. This property determines whether or not the save button is shown. The default value is `true`.
-- Axis grid lines can now be controlled in the visualization editor settings pane, with the following options; none, horizontal, vertical, or both.
-- The `RevealView` now has a `showVisualizationFilters` property that toggles the visibility of the visualization filters when maximized. The default value is `true`.
+- ダッシュボード フィルターは表示形式に自動的に接続を試行するようになりました。接続できない場合は、以前と同じように手動接続を使用できます。
+- ダッシュボード ヘッダーとは独立してダッシュボード タイトルの表示・非表示を切り替える `showTitle` プロパティが `RevealView` に追加されました。デフォルト値は `true` です。
+- `RevealView` に `ShowSave` プロパティが追加されました。このプロパティは、保存ボタンが表示されるかどうかを決定します。デフォルト値は `true` です。
+- 軸グリッド線は、表示形式エディターの設定ペインで、なし、水平、垂直、または両方のオプションを使用して制御できるようになりました。
+- `RevealView` に、最大化時に表示形式フィルターの表示を切り替える `showVisualizationFilters` プロパティが追加されました。デフォルト値は `true` です。
 
 #### ASP.NET & Node
 
-- Added support for Microsoft’s SQLite implementation on Web, introducing optional encryption. To enable encryption, developers must call `RevealEmbedSettings.EnableEncryption("yourpassword")` with a secure, non-empty password. By default, the legacy SQLite implementation without encryption remains enabled (`RevealEmbedSettings.IsLegacyCacheEnabled = true`). Switching to Microsoft’s implementation without encryption is possible by setting this flag to `false`. Note: `EnableEncryption` automatically disables the legacy implementation. This change marks the start of a transition to deprecate the original SQLite library; feedback during this period is encouraged.
+- Microsoft の SQLite 実装に対応し、Web 上でのオプションとして暗号化のサポートが追加されました。暗号化を有効にするには、安全且つ空でないパスワードを使用して `RevealEmbedSettings.EnableEncryption("yourpassword")` を呼び出す必要があります。デフォルトでは、暗号化なしのレガシー SQLite 実装が引き続き有効になっています (`RevealEmbedSettings.IsLegacyCacheEnabled = true`)。このフラグを `false` に設定することで、暗号化なしの Microsoft 実装に切り替えることができます。注: `EnableEncryption` は、レガシー実装を自動的に無効にします。この変更は、元の SQLite ライブラリを廃止するための移行の開始を示しています。この期間中のフィードバックを歓迎します。
 
 ASP.NET:
 ```csharp
@@ -91,24 +91,24 @@ const revealOptions = {
 app.use('/', reveal(revealOptions));
 ```
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- `onVisualizationDataPointClicked` not invoked on slice-based (pie, donut, and funnel) and scatter map visualizations.
-- Data may be wrong when using `TODAY`/`NOW` calculated field functions.
-- Error setting maximum axis value.
-- Error in highlighting a widget from an XMLA data source when other widgets are from different XMLA data sources.
-- Filters from XMLA data sources allow auto-connection to widgets using other data sources, which then breaks the visualization.
-- XMLA global filters are not working at all.
-- In some loading scenarios the dashboard's identifier was being set to null.
-- Google Analytics 4 error loading filters and global filter values.
-- The last fixed chart line field can't be removed.
-- SSAS 'FillTotalsInRow' error for a visualization with grand totals.
-- SSAS no data displayed while using some of the chart types.
-- Uncaught TypeError: String.isNullOrEmpty is not a function when adding a filter.
-- Labels sometimes don't hide when there's not enough space.
-- Exception occurs after switching to another chart type after viewing raw data.
+- スライスベース (円チャート、ドーナツ型チャート、ファンネル チャート) および散布マップの表示形式では、`onVisualizationDataPointClicked` が呼び出されませんでした。
+- `TODAY`/`NOW` 計算フィールド関数を使用すると、データが間違っている可能性があります。
+- 最大軸値の設定時にエラーが発生します。
+- 他のウィジェットが異なる XMLA データ ソースからのものである場合、XMLA データ ソースからのウィジェットを強調表示する際にエラーが発生します。
+- XMLA データ ソースからのフィルターにより、他のデータ ソースを使用するウィジェットへの自動接続が可能になり、表示形式が壊れます。
+- XMLA グローバル フィルターが機能しません。
+- 一部の読み込みシナリオでは、ダッシュボードの識別子が null に設定されていました。
+- Google アナリティクス 4 のフィルターとグローバル フィルター値の読み込みエラーが発生します。
+- 最後の固定チャート線フィールドが削除できません。
+- 総計を含む表示形式で SSAS 'FillTotalsInRow' エラーが発生します。
+- SSAS では、一部のチャート タイプを使用しているときにデータが表示されません。
+- フィルターを追加するときに「Uncaught TypeError: String.isNullOrEmpty は関数ではありません」というエラーが発生します。
+- 十分なスペースがない場合、ラベルが非表示にならないことがあります。
+- 生データを表示した後に別のチャート タイプに切り替えると例外が発生します。
 
 ## 1.7.1 (2024 年 11 月 5 日)
 
