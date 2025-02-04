@@ -148,7 +148,6 @@ RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
 });
 ```
   </TabItem>
-  
   <TabItem value="typescript" label="TypeScript" default>
 
 ```ts
@@ -162,7 +161,7 @@ RevealSdkSettings.setAdditionalHeadersProvider((url: string) => {
   </TabItem>
 </Tabs>
 
-## 例: ユーザー コンテキストの実装 
+## 例: 行レベル セキュリティのためのユーザー コンテキストの実装 
 
 Reveal BI の `IRVUserContextProvider` インターフェイスを使用すると、クライアント側の情報をサーバーに渡すことができます。この情報は、カスタム クエリで、ストアド プロシージャーや関数のパラメーターなどとして使用できます。このドキュメントでは、`IRVUserContextProvider` の使用方法と、クライアントからサーバーにパラメーターを渡す方法について説明します。
 
@@ -170,7 +169,7 @@ Reveal BI の `IRVUserContextProvider` インターフェイスを使用する�
 
 https://youtu.be/q9mbN2kIXFs
 
-### クライアント側の例
+### HTML クライアントの作成
 
 以下は、クライアントからサーバーにいくつかのプロパティ値を渡す方法の例です。この場合、orderId、employeeId、customerId の値を持つ 3 つの HTML 選択があります。これらの値は、`setAdditionalHeadersProvider` コールバックでサーバーに渡されます。
 
@@ -263,7 +262,7 @@ headers["x-header-employeeId"] = selectedEmployeeId;
 </html>
 ```
 
-### サーバー側の例
+### サーバー上での UserContextProvider の設定
 
 サーバー側では、これらの値がキーと値のペアのプロパティとして取得され、このトピックで前述したように他の関数で使用できるように保存されます。要求された各ヘッダーは、デフォルトの `UserId` プロパティに追加されるか、Dictionary オブジェクトのキーと値のペアとして追加されることに注意してください。
 
@@ -451,3 +450,5 @@ namespace RevealSdk.Server.Reveal
 - 入力を検証してサニタイズします。入力が有効で安全に使用できることを確認します。
 - 安全な転送には HTTPS を使用します。これにより、送信中にデータが暗号化され、傍受されなくなります。
 - サーバー側の承認では、ユーザー コンテキストの信頼性と承認を検証する必要があります。これにより、ユーザーが本人であること、および必要な権限を持っていることが保証されます。
+
+詳細については、[Reveal BI SDK ドキュメント](https://help.revealbi.io/api/javascript/latest/)を参照してください。
