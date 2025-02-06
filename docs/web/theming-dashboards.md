@@ -65,6 +65,7 @@ The `RevealTheme` has the following properties:
 | **mediumFont**                                    | Sets the medium font style.                                                                                    |
 | **fontColor**                                     | Sets the color of the font.                                                                                    |
 | **highlightColor**                                | Sets the highlighting color in specific dashboard scenarios (forecast and outliers statistical functions).     |
+| **visualizationMargin**                                | Sets the margin size in pixels between visualizations.     |
 | **useRoundedCorners**                             | Rounded corners in buttons, tooltips, containers, visualizations, etc. If set to false, squared corners will be shown.                                                                                                                                                                        |
 
 :::info
