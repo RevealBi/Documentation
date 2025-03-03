@@ -3,6 +3,83 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.7.3 (Mar 4th, 2025)
+
+### New Features
+
+#### All Platforms
+
+- Axis titles are now generally available and can be customized through a dedicated text box by clicking on the visualization field in the editor.
+- Fixed lines are now generally available.
+- Chart visualizations containing a numeric axis have been enhanced to reduce any potential label repetition.
+- A chart's legend can now be positioned at the top or bottom of the visualization, and the alignment can be customized to left, right, or center. These options exist in the Settings tab in the visualization editor.
+- Grid paging now supports sorting through the sort icon found on the column header.
+- Column visualizations will now favor their labels to appear above the column, and bar visualizations will favor their labels to appear to the right of the bar.
+- Further enhancements were made to the hiding and showing of labels on visualizations.
+- The `args.items` property on the `revealView.onDateFilterMenuOpening` is now using and array of `IRVDateFilterMenuItem` objects.
+
+```js
+revealView.onDateFilterMenuOpening = function(args)
+{
+    var list = args.items; //List of IRVDateFilterMenuItem objects
+    var pos, newItem;
+
+    //Add "Last 2 months" to the months section
+    pos = list.findIndex(obj => obj.title === "Month to date"); //Last item in the months section
+    var lastTwoMonthsRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Month);
+    newItem = new $.ig.RVDateFilterMenuOption(lastTwoMonthsRule);
+    list.splice(pos + 1, 0, newItem);
+
+    //Remove the "Today" option
+    pos = list.findIndex(obj => obj.title === "Today");
+    list.splice(pos, 1);
+
+    //Add "First week of 2024" to a new section at the end of the menu
+    list.push(new $.ig.RVDateFilterMenuSeparator()); //Add section separator
+    var firstWeek24Range = new $.ig.RVDateRange(new Date("2024-01-01"), new Date("2024-01-31"));
+    newItem = new $.ig.RVDateFilterMenuOption(firstWeek24Range, "First week of 2024")
+    list.push(newItem);
+};
+```
+
+#### Node
+
+- The `puppeteer-core` dependency was updated from `14.1.2` to `24.1.1`.
+
+### Bugs
+
+#### All Platforms
+
+- The property `serialize` on the `RevealView` actually returns a byte array.
+- Blank space above chart in single visualization mode when hiding header, title, and filters.
+- Using `RVIntegratedAuthenticationCredential` results in an error.
+- Visualization filters are hidden after maximizing when `showHeaders` is set to `false`.
+- Analysis Services returns wrong values with some locales/cultures.
+- Crash when selecting "Select values" for a dashboard filter.
+- Conditional formatting with percentage and columns is not working.
+- Incorrect data source ID in `ChangeDataSourceItemAsync`.
+- Japanese characters are garbled in a PDF file created via headless export.
+- Japanese date format is not correct in an exported PDF file.
+- Unwanted numbering "(1)" appears in a dashboard title in a PDF file created via headless export.
+- Date format of the dashboard/visualization filters are not correct in Japanese.
+- Dashboard filters appear on all visualizations when maximized, even if they are not connected.
+- Filters disappears after maximizing visualization.
+- Category labels are in reverse order for stacked bar chart.
+- Error when setting a `DateRule` to a dashboard date filter via API.
+- Error when setting a `DateRule` to a visualization filter via menu in a XMLA visualization.
+- Crash when creating or loading a combo visualization.
+- Dashboard linking from grid to dashboard date filter not working.
+- Missing content-type response header for export-related endpoints.
+- Exceptions in interactive export are not being notified to the user.
+- Data truncation indicator alignment is wrong.
+- Export to Excel fails for Analysis Services with dashboard filter.
+- (Beta) Toolbar icons are misaligned.
+- (Beta) Toolbar buttons require double click to perform an action.
+
+#### Java
+
+- When querying a Date field from a REST datasource during PM hours, the time component will show noon.
+
 ## 1.7.2 (Jan 20th, 2025)
 
 ### New Features
