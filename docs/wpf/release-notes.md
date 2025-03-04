@@ -1,5 +1,35 @@
 # Release Notes
 
+## 1.7.3 (Mar 4th, 2025)
+
+### New Features
+
+- Axis titles are now generally available and can be customized through a dedicated text box by clicking on the visualization field in the editor.
+- Fixed lines are now generally available.
+- Chart visualizations containing a numeric axis have been enhanced to reduce any potential label repetition.
+- A chart's legend can now be positioned at the top or bottom of the visualization, and the alignment can be customized to left, right, or center. These options exist in the Settings tab in the visualization editor.
+- Grid paging now supports sorting through the sort icon found on the column header.
+- Column visualizations will now favor their labels to appear above the column, and bar visualizations will favor their labels to appear to the right of the bar.
+- Further enhancements were made to the hiding and showing of labels on visualizations.
+
+### Bugs
+
+- Blank space above chart in single visualization mode when hiding header, title, and filters.
+- Using `RVIntegratedAuthenticationCredential` results in an error.
+- Visualization filters are hidden after maximizing when `ShowHeaders` is set to `false`.
+- Analysis Services returns wrong values with some locales/cultures.
+- Crash when selecting "Select values" for a dashboard filter.
+- Conditional formatting with percentage and columns is not working.
+- Incorrect data source ID in `ChangeVisualizationDataSourceItemAsync`.
+- Date format of the dashboard/visualization filters are not correct in Japanese.
+- Dashboard filters appear on all visualizations when maximized, even if they are not connected.
+- Filters disappears after maximizing visualization.
+- Crash when creating or loading a combo visualization.
+- Dashboard linking from grid to dashboard date filter not working.
+- Exceptions in interactive export are not being notified to the user.
+- Data truncation indicator alignment is wrong.
+- Export to Excel fails for Analysis Services with dashboard filter.
+
 ## 1.7.2 (Jan 20th, 2025)
 
 ### New Features
