@@ -3,20 +3,20 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.7.3 (Mar 4th, 2025)
+## 1.7.3 (2025 年 3 月 4 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Axis titles are now generally available and can be customized through a dedicated text box by clicking on the visualization field in the editor.
-- Fixed lines are now generally available.
-- Chart visualizations containing a numeric axis have been enhanced to reduce any potential label repetition.
-- A chart's legend can now be positioned at the top or bottom of the visualization, and the alignment can be customized to left, right, or center. These options exist in the Settings tab in the visualization editor.
-- Grid paging now supports sorting through the sort icon found on the column header.
-- Column visualizations will now favor their labels to appear above the column, and bar visualizations will favor their labels to appear to the right of the bar.
-- Further enhancements were made to the hiding and showing of labels on visualizations.
-- The `args.items` property on the `revealView.onDateFilterMenuOpening` is now using and array of `IRVDateFilterMenuItem` objects.
+- 軸タイトルは現在一般提供されており、エディターの表示形式フィールドをクリックして専用のテキスト ボックスからカスタマイズできます。
+- 固定線が一般利用可能になりました。
+- 数値軸を含むチャートの表示形式が強化され、ラベルの重複の可能性が減りました。
+- チャートの凡例を表示形式の上部または下部に配置できるようになり、さらに左、右、または中央にカスタマイズできるようになりました。これらのオプションは、表示形式エディターの [設定] タブにあります。
+- グリッド ページングでは、列ヘッダーにある並べ替えアイコンを使用した並べ替えがサポートされるようになりました。
+- 列の表示形式ではラベルが列の上に表示されるようになり、棒の表示形式ではラベルが棒の右側に表示されるようになります。
+- 表示形式におけるラベルの非表示と表示がさらに強化されました。
+- `revealView.onDateFilterMenuOpening` の `args.items` プロパティは、`IRVDateFilterMenuItem` オブジェクトの配列を使用するようになりました。
 
 ```js
 revealView.onDateFilterMenuOpening = function(args)
@@ -44,41 +44,41 @@ revealView.onDateFilterMenuOpening = function(args)
 
 #### Node
 
-- The `puppeteer-core` dependency was updated from `14.1.2` to `24.1.1`.
+- 依存関係 `puppeteer-core` が `14.1.2` から `24.1.1` に更新されました。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- The property `serialize` on the `RevealView` actually returns a byte array.
-- Blank space above chart in single visualization mode when hiding header, title, and filters.
-- Using `RVIntegratedAuthenticationCredential` results in an error.
-- Visualization filters are hidden after maximizing when `showHeaders` is set to `false`.
-- Analysis Services returns wrong values with some locales/cultures.
-- Crash when selecting "Select values" for a dashboard filter.
-- Conditional formatting with percentage and columns is not working.
-- Incorrect data source ID in `ChangeDataSourceItemAsync`.
-- Japanese characters are garbled in a PDF file created via headless export.
-- Japanese date format is not correct in an exported PDF file.
-- Unwanted numbering "(1)" appears in a dashboard title in a PDF file created via headless export.
-- Date format of the dashboard/visualization filters are not correct in Japanese.
-- Dashboard filters appear on all visualizations when maximized, even if they are not connected.
-- Filters disappears after maximizing visualization.
-- Category labels are in reverse order for stacked bar chart.
-- Error when setting a `DateRule` to a dashboard date filter via API.
-- Error when setting a `DateRule` to a visualization filter via menu in a XMLA visualization.
-- Crash when creating or loading a combo visualization.
-- Dashboard linking from grid to dashboard date filter not working.
-- Missing content-type response header for export-related endpoints.
-- Exceptions in interactive export are not being notified to the user.
-- Data truncation indicator alignment is wrong.
-- Export to Excel fails for Analysis Services with dashboard filter.
-- (Beta) Toolbar icons are misaligned.
-- (Beta) Toolbar buttons require double click to perform an action.
+- `RevealView` の `serialize` プロパティは、実際にはバイト配列を返す問題。
+- ヘッダー、タイトル、フィルターを非表示にした場合、単一の表示形式モードでチャートの上部に空白スペースが表示される問題。
+- `RVIntegratedAuthenticationCredential` を使用するとエラーが発生する問題。
+- `showHeaders` が `false` に設定されている場合、最大化後に表示形式フィルターが非表示になる問題。
+- Analysis Services は、一部のロケール/カルチャでは間違った値を返す問題。
+- ダッシュボード フィルターの 「値の選択」 を選択するとクラッシュする問題。
+- パーセンテージと列を使用した条件付き書式が機能しない問題。
+- `ChangeDataSourceItemAsync` のデータ ソース ID が正しくない問題。
+- ヘッドレス エクスポートで作成された PDF ファイルで日本語が文字化けする問題。
+- エクスポートされた PDF ファイルでは日本語の日付形式が正しくない問題。
+- ヘッドレス エクスポートで作成された PDF ファイルのダッシュボードタイトルに、不要な番号 「(1)」 が表示される問題。
+- ダッシュボード/表示形式フィルターの日付形式が日本語では正しくない問題。
+- ダッシュボード フィルターは、接続されていない場合でも、最大化されるとすべての表示形式に表示される問題。
+- 表示形式を最大化するとフィルターは消える問題。
+- 積層型棒チャートではカテゴリ ラベルが逆の順序で表示される問題。
+- API 経由でダッシュボードの日付フィルターに `DateRule` を設定するときにエラーが発生する問題。
+- XMLA 表示形式のメニューから表示形式フィルターに `DateRule` を設定するときにエラーが発生する問題。
+- 複合の表示形式を作成または読み込むときにクラッシュします。
+- グリッドからダッシュボードの日付フィルターへのダッシュボードのリンクが機能しない問題。
+- エクスポート関連のエンドポイントのコンテンツ タイプ応答ヘッダーがない問題。
+- インタラクティブ エクスポートの例外がユーザーに通知されない問題。
+- データ切り捨てインジケーターの配置が間違っている問題。
+- ダッシュボード フィルターを使用した Analysis Services では、Excel へのエクスポートが失敗する問題。
+- (ベータ版) ツールバーのアイコンの位置がずれている問題。
+- (ベータ版) ツールバーのボタンでは、アクションを実行するためにダブルクリックする必要がある問題。
 
 #### Java
 
-- When querying a Date field from a REST datasource during PM hours, the time component will show noon.
+- 午後の時間帯に REST データ ソースから日付フィールドをクエリすると、時間コンポーネントには正午が表示される問題。
 
 ## 1.7.2 (2025 年 1 月 20 日)
 
