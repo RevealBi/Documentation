@@ -1,34 +1,34 @@
 # リリース ノート
 
-## 1.7.3 (Mar 4th, 2025)
+## 1.7.3 (2025 年 3 月 4 日)
 
-### New Features
+### 新機能
 
-- Axis titles are now generally available and can be customized through a dedicated text box by clicking on the visualization field in the editor.
-- Fixed lines are now generally available.
-- Chart visualizations containing a numeric axis have been enhanced to reduce any potential label repetition.
-- A chart's legend can now be positioned at the top or bottom of the visualization, and the alignment can be customized to left, right, or center. These options exist in the Settings tab in the visualization editor.
-- Grid paging now supports sorting through the sort icon found on the column header.
-- Column visualizations will now favor their labels to appear above the column, and bar visualizations will favor their labels to appear to the right of the bar.
-- Further enhancements were made to the hiding and showing of labels on visualizations.
+- 軸タイトルは現在一般提供されており、エディターの表示形式フィールドをクリックして専用のテキスト ボックスからカスタマイズできます。
+- 固定線が一般利用可能になりました。
+- 数値軸を含むチャートの表示形式が強化され、ラベルの重複の可能性が減りました。
+- チャートの凡例を表示形式の上部または下部に配置できるようになり、さらに左、右、または中央にカスタマイズできるようになりました。これらのオプションは、表示形式エディターの [設定] タブにあります。
+- グリッド ページングでは、列ヘッダーにある並べ替えアイコンを使用した並べ替えがサポートされるようになりました。
+- 列の表示形式ではラベルが列の上に表示されるようになり、棒の表示形式ではラベルが棒の右側に表示されるようになります。
+- 表示形式におけるラベルの非表示と表示がさらに強化されました。
 
-### Bugs
+### バグ修正
 
-- Blank space above chart in single visualization mode when hiding header, title, and filters.
-- Using `RVIntegratedAuthenticationCredential` results in an error.
-- Visualization filters are hidden after maximizing when `ShowHeaders` is set to `false`.
-- Analysis Services returns wrong values with some locales/cultures.
-- Crash when selecting "Select values" for a dashboard filter.
-- Conditional formatting with percentage and columns is not working.
-- Incorrect data source ID in `ChangeVisualizationDataSourceItemAsync`.
-- Date format of the dashboard/visualization filters are not correct in Japanese.
-- Dashboard filters appear on all visualizations when maximized, even if they are not connected.
-- Filters disappears after maximizing visualization.
-- Crash when creating or loading a combo visualization.
-- Dashboard linking from grid to dashboard date filter not working.
-- Exceptions in interactive export are not being notified to the user.
-- Data truncation indicator alignment is wrong.
-- Export to Excel fails for Analysis Services with dashboard filter.
+- ヘッダー、タイトル、フィルターを非表示にした場合、単一の表示形式モードでチャートの上部に空白スペースが表示される問題。
+- `RVIntegratedAuthenticationCredential` を使用するとエラーが発生する問題。
+- `ShowHeaders` が `false` に設定されている場合、最大化後に表示形式フィルターが非表示になる問題。
+- Analysis Services は、一部のロケール/カルチャでは間違った値を返す問題。
+- ダッシュボード フィルターの 「値の選択」 を選択するとクラッシュする問題。
+- パーセンテージと列を使用した条件付き書式が機能しない問題。
+- `ChangeVisualizationDataSourceItemAsync` のデータ ソース ID が正しくない問題。
+- ダッシュボード/表示形式フィルターの日付形式が日本語では正しくない問題。
+- ダッシュボード フィルターは、接続されていない場合でも、最大化されるとすべての表示形式に表示される問題。
+- 表示形式を最大化するとフィルターは消える問題。
+- 複合の表示形式を作成または読み込むときにクラッシュします。
+- グリッドからダッシュボードの日付フィルターへのダッシュボードのリンクが機能しない問題。
+- インタラクティブ エクスポートの例外がユーザーに通知されない問題。
+- データ切り捨てインジケーターの配置が間違っている問題。
+- ダッシュボード フィルターを使用した Analysis Services では、Excel へのエクスポートが失敗する問題。
 
 ## 1.7.2 (2025 年 1 月 20 日)
 
