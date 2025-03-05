@@ -21,6 +21,7 @@
     "@docusaurus/preset-classic": "^3.4.0",
     "@docusaurus/remark-plugin-npm2yarn": "^3.4.0",
     "@docusaurus/theme-mermaid": "^3.4.0",
+    "@inkeep/docusaurus": "^2.0.16",
     "@mdx-js/react": "^3.0.0",
     "@monaco-editor/react": "^4.4.6",
     "clsx": "^2.1.0",
