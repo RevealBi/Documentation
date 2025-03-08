@@ -1,9 +1,10 @@
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
+import { chatButtonSettings, searchBarSettings } from './inkeep.config';
 const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
@@ -23,7 +24,8 @@ const config: Config = {
   projectName: 'Documentation', // Usually your repo name.
 
   plugins: [
-    ["docusaurus-node-polyfills", { onlyAliases: ["process"] }]
+    ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
+    ["@inkeep/cxkit-docusaurus", { ChatButton: chatButtonSettings, SearchBar: searchBarSettings }],
   ],
 
   i18n: {
@@ -52,11 +54,11 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
           beforeDefaultRemarkPlugins: [
-            [ apiDocs, {}]
+            [apiDocs, {}]
           ],
           remarkPlugins: [
-            [ npm2yarn, { sync: true } ],
-            [ replace, {
+            [npm2yarn, { sync: true }],
+            [replace, {
               variables: [
                 { name: "sdkVersion", value: "1.7.3" }
               ]
@@ -207,9 +209,39 @@ const config: Config = {
       darkTheme: prismThemes.vsDark,
       additionalLanguages: ["csharp", "java", "bash", "typescript"],
     },
+
+    inkeepConfig: {
+      baseSettings: {
+        apiKey: 'd3c8d5f69fbc363dfb78a55ff2b3a6b2e09a92a012d41396',
+        integrationId: 'cm73lg93200mjs6016t6s689b',
+        organizationId: 'org_DJ2ynA7OmhuamUOn',
+        primaryBrandColor: '#ec417a',
+        organizationDisplayName: "Reveal",
+      },
+      modalSettings: {
+        askAILabel: 'Ask Reveal AI',
+        isModeSwitchingEnabled: false,
+        forceInitialDefaultView: true,
+      },
+      searchSettings: {
+        placeholder: 'Search',
+      },
+      aiChatSettings: {
+        placeholder: 'Type your question...',
+        chatSubjectName: 'Reveal',
+        chatButtonText: "Chat with Reveal AI", //not working
+        botName: 'Reveal AI',
+        botAvatarSrcUrl: 'https://help.revealbi.io/img/logo.png',
+        quickQuestions: [
+          'How to choose a visualization type?',
+          'What are dot maps?',
+          'How to use dashboard filters?'
+        ],
+      },
+    }
   } satisfies Preset.ThemeConfig,
   markdown: {
-      mermaid: true
+    mermaid: true
   },
   themes: ['@docusaurus/theme-mermaid']
 };
