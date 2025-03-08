@@ -4,6 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
+import { chatButtonSettings, searchBarSettings } from './inkeep.config';
 const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
@@ -23,7 +24,8 @@ const config: Config = {
   projectName: 'Documentation', // Usually your repo name.
 
   plugins: [
-    ["docusaurus-node-polyfills", { onlyAliases: ["process"] }]
+    ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
+    ["@inkeep/cxkit-docusaurus", { ChatButton: chatButtonSettings, SearchBar: searchBarSettings }],
   ],
 
   i18n: {
@@ -227,6 +229,7 @@ const config: Config = {
       aiChatSettings: {
         placeholder: 'Type your question...',
         chatSubjectName: 'Reveal',
+        chatButtonText: "Chat with Reveal AI", //not working
         botName: 'Reveal AI',
         botAvatarSrcUrl: 'https://help.revealbi.io/img/logo.png',
         quickQuestions: [
@@ -240,7 +243,7 @@ const config: Config = {
   markdown: {
     mermaid: true
   },
-  themes: ['@docusaurus/theme-mermaid', '@inkeep/docusaurus/chatButton', '@inkeep/docusaurus/searchBar']
+  themes: ['@docusaurus/theme-mermaid']
 };
 
 export default config;
