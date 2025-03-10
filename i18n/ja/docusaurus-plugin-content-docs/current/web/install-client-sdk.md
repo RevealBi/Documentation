@@ -12,7 +12,7 @@
 ### JavaScript ファイルを使用してインストールする
 Reveal CDN を使用できない場合は、独自のドメインで Reveal SDK JavaScript ファイルをホストすることもできます。Reveal SDK 配布ファイルは、次のリンクからダウンロードできます:
 
-https://download.infragistics.com/reveal/libs/[var:sdkVersion]/reveal-sdk-distribution-js.zip
+https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/reveal-sdk-distribution-js.zip
 
 1 - クライアント アプリケーションで `assets` と呼ばれる新しいフォルダーを作成し、`assets` フォルダー内に `reveal` と呼ばれる別のフォルダーを作成します。
 
