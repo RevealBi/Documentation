@@ -15,7 +15,7 @@ The "Home" directory differs depending on the OS you are using.
 - Mac: `/Users/your-user-name/`
 - Linux: `/home/your-user-name/`
 
-When you receive your license key, create a text file named `license.key` within a directory named `.reveabi-sdk` located in your "Home" directory. Populate this file with your license key as its content.
+When you receive your license key, create a text file named `license.key` within a directory named `.revealbi-sdk` located in your "Home" directory. Populate this file with your license key as its content.
 
 For example; if using Windows the license file location should be located at `C:/Users/your-user-name/.revealbi-sdk/license.key`.
 
