@@ -67,7 +67,7 @@ The `DashboardSaveEventArgs` object provides the following properties and method
 - **saveAs** - determines if this is a **Save As** operation
 - **serialize(bytes => { })** - serializes the current dashboard to a `byte[]` that can be used in custom save logic. Used with **Save** operations.
 - **serializeWithNewName(name, bytes => { })** - changes the `name` and `dashboardId` and serializes the dashboard to a `byte[]` that can be used in custom save logic. Does not change the currently loaded dashboard's `name` or `dashboardId`. You must do this manually during the save operation. USed with **Save As** operations.
-- **savedFinished() - REQUIRED** - This method places the `RevealView` out of edit mode and into view mode indicating saving is complete.
+- **saveFinished() - REQUIRED** - This method places the `RevealView` out of edit mode and into view mode indicating saving is complete.
 
 ## Disabled Saving
 You can prevent the end-user from invoking either the **Save** or **Save As** operations by either disabling editing or hiding the **Save As** UI elements.
