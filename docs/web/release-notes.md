@@ -3,6 +3,63 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.7.4 (May 6th, 2025)
+
+### New Features
+
+#### All Platforms
+
+- New data source: Databricks.
+- The field editor has been improved and contains tabs for different option categories.
+- Added a beta features API.
+
+```js
+// Enable beta feature
+$.ig.RevealSdkSettings.betaFeatures.enable("newGauges", "newPieChart");
+
+// Disable beta feature
+$.ig.RevealSdkSettings.betaFeatures.disable("newGauges", "newPieChart");
+```
+
+- The chart toolbar is now generally available. It can be enabled or disabled through the `showToolbar` property on the RevealView. The default value of this property `false`.
+- Interactive filtering is now generally available. To enable this feature set `interactiveFilteringEnabled` to `true` on the RevealView. By clicking "Filter By" in the tooltip, this feature will highlight the data in the rest of the charts.
+- A new property was added in the visualization editor for slice charts to configure fraction digits of the shown percentages.
+- In data sources that contain a `database` property, data source items derived from it no longer have the `database` property set by default. While this makes setting the RVDataSourceItem's `database` property not a requirement, it is strongly recommended to do so even to set it to null, for security reasons.
+- Support for an optional `sessionToken` parameter was added to the RVAmazonWebServicesCredentials.
+
+#### Node
+
+- The `dashboardProvider` & `dashboardStorageProvider` now use a `Readable` type definition for the stream. This allows for support for more locations than files.
+
+### Bugs
+
+#### All Platforms
+
+- Using single visualization mode showed misaligned UI elements.
+- Visualization filters are not working when changed in the editor.
+- Some number conversions resulted in crash.
+- Setting `PREVIOUS_YEAR` filter is not working with headless export.
+- Excel export fails when dashboard has visualization with error.
+- Wrong date range calculated in dashboard linking for year and quarter hierarchy.
+- Wrong data when expanding or drilling down and a filter on a date field with fiscal year is applied.
+- KPI vs Time % increase incorrect sign when previous number is negative.
+- Headless export missing global & visualization filters on each visualization when targeting PDF.
+- SSAS performance degraded for some visualizations.
+- `NotEquals` and `NotContains` filters do not work in SSAS.
+- The date filter is showing as "Unnamed" in headless export.
+- Interface `IRVDateFilterMenuItem` isn't part of the RevealApi namespace in the "infragistics.reveal.d.ts" file.
+- PowerPoint Exports Showing Token and Luis' Name.
+- Highlighting not working for Dates using Google Analytics and similar data sources.
+- Show totals on tooltip flag ignored.
+- Google Analytics datasource selection crashes if required props are not set.
+- "value.toFixed is not a function" error when placing a calculated field where some result is "Infinity" as a value in a Bar visualization or any of the slice chart visualizations.
+- Visualization description is overlapped by the title.
+- Excel exports with cells with a numeric value of 0 show as empty.
+
+#### Java
+
+- Yellow "configure" banner showing when exporting a visualization using a map visualization.
+
 ## 1.7.3 (Mar 4th, 2025)
 
 ### New Features
