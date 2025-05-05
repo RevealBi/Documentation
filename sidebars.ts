@@ -38,6 +38,7 @@ const sidebars: SidebarsConfig = {
     /* -------------------- General -------------------- */
     {
       type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Beta Features", id: "web/beta-features" },
         { type: "doc", label: "Caching", id: "web/caching" },
         { type: "doc", label: "Logging", id: "web/logging" },
         {
