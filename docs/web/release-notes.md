@@ -15,10 +15,10 @@ import TabItem from '@theme/TabItem';
 
 ```js
 // Enable beta feature
-$.ig.RevealSdkSettings.betaFeatures.enable("newGauges", "newPieChart");
+$.ig.RevealSdkSettings.betaFeatures.enable("newDonutChart", "newPieChart");
 
 // Disable beta feature
-$.ig.RevealSdkSettings.betaFeatures.disable("newGauges", "newPieChart");
+$.ig.RevealSdkSettings.betaFeatures.disable("newDonutChart", "newPieChart");
 ```
 
 - The chart toolbar is now generally available. It can be enabled or disabled through the `showToolbar` property on the RevealView. The default value of this property `false`.

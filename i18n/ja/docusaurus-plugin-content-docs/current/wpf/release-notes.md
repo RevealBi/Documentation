@@ -10,10 +10,10 @@
 
 ```csharp
 // Enable beta feature
-RevealSdkSettings.BetaFeatures.Enable("newGauges", "newPieChart");
+RevealSdkSettings.BetaFeatures.Enable("newDonutChart", "newPieChart");
 
 // Disable beta feature
-RevealSdkSettings.BetaFeatures.Disable("newGauges", "newPieChart");
+RevealSdkSettings.BetaFeatures.Disable("newDonutChart", "newPieChart");
 ```
 
 - The chart toolbar is now generally available. It can be enabled or disabled through the `ShowToolbar` property on the RevealView. The default value of this property `false`.
