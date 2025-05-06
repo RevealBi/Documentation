@@ -1,5 +1,44 @@
 # Release Notes
 
+## 1.7.4 (May 6th, 2025)
+
+### New Features
+
+- New data source: Databricks.
+- The field editor has been improved and contains tabs for different option categories.
+- Added a beta features API.
+
+```csharp
+// Enable beta feature
+RevealSdkSettings.BetaFeatures.Enable("newDonutChart", "newPieChart");
+
+// Disable beta feature
+RevealSdkSettings.BetaFeatures.Disable("newDonutChart", "newPieChart");
+```
+
+- The chart toolbar is now generally available. It can be enabled or disabled through the `ShowToolbar` property on the RevealView. The default value of this property `false`.
+- Interactive filtering is now generally available. To enable this feature set `InteractiveFilteringEnabled` to `true` on the RevealView. By clicking "Filter By" in the tooltip, this feature will highlight the data in the rest of the charts.
+- A new property was added in the visualization editor for slice charts to configure fraction digits of the shown percentages.
+- In data sources that contain a `Database` property, data source items derived from it no longer have the `Database` property set by default. While this makes setting the RVDataSourceItem's `Database` property not a requirement, it is strongly recommended to do so even to set it to null, for security reasons.
+- Support for an optional `sessionToken` parameter was added to the RVAmazonWebServicesCredentials.
+
+### Bugs
+
+- Using single visualization mode showed misaligned UI elements.
+- Visualization filters are not working when changed in the editor.
+- Excel export fails when dashboard has visualization with error.
+- Wrong date range calculated in dashboard linking for year and quarter hierarchy.
+- Wrong data when expanding or drilling down and a filter on a date field with fiscal year is applied.
+- KPI vs Time % increase incorrect sign when previous number is negative.
+- SSAS performance degraded for some visualizations.
+- `NotEquals` and `NotContains` filters do not work in SSAS.
+- PowerPoint Exports Showing Token and Luis' Name.
+- Highlighting not working for Dates using Google Analytics and similar data sources.
+- Show totals on tooltip flag ignored.
+- Google Analytics datasource selection crashes if required props are not set.
+- Visualization description is overlapped by the title.
+- Excel exports with cells with a numeric value of 0 show as empty.
+
 ## 1.7.3 (Mar 4th, 2025)
 
 ### New Features
