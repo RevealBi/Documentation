@@ -19,10 +19,6 @@
     "message": "WPF SDK",
     "description": "The label of footer link with label=WPF SDK linking to wpf"
   },
-  "link.item.label.DOM": {
-    "message": "DOM",
-    "description": "The label of footer link with label=DOM linking to https://github.com/RevealBi/Reveal.Sdk.Dom"
-  },
   "link.item.label.Who are We": {
     "message": "Who are We",
     "description": "The label of footer link with label=Who are We linking to https://www.revealbi.io/about-us"
@@ -70,5 +66,9 @@
   "link.item.label.Terms of Use": {
     "message": "Terms of Use",
     "description": "The label of footer link with label=Terms of Use linking to https://www.infragistics.com/legal/terms-of-use"
+  },
+  "link.item.label.User": {
+    "message": "User",
+    "description": "The label of footer link with label=User linking to user"
   }
 }
