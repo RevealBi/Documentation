@@ -48,7 +48,7 @@ const htmlTemplate = (body: string, script: string) => `
     <head>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-        <script src="https://dl.revealbi.io/reveal/libs/1.7.0/infragistics.reveal.js"></script>
+        <script src="https://dl.revealbi.io/reveal/libs/1.7.4/infragistics.reveal.js"></script>
         <style>
             html, body {
                 height: 100%;
@@ -121,7 +121,7 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
         let jsExternal = [
             `https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js`,
             `https://unpkg.com/dayjs@1.8.21/dayjs.min.js`,
-            `https://dl.revealbi.io/reveal/libs/1.7.0/infragistics.reveal.js`,
+            `https://dl.revealbi.io/reveal/libs/1.7.4/infragistics.reveal.js`,
         ];
         const revealSdkSettings = `import { defineRevealSdkWrappers } from "https://esm.sh/reveal-sdk-wrappers";\n` +
                                   `defineRevealSdkWrappers();\n` +

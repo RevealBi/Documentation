@@ -42,7 +42,7 @@ export default function Playground(): JSX.Element {
         
             <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
             <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js" ></script>    
-            <script src="https://dl.revealbi.io/reveal/libs/1.7.0/infragistics.reveal.js"></script>
+            <script src="https://dl.revealbi.io/reveal/libs/1.7.4/infragistics.reveal.js"></script>
         
             <script type="text/javascript">      
                 $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/"); 
