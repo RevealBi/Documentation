@@ -15,7 +15,7 @@ Databricks is a unified analytics platform that helps data engineering and data 
 Before configuring the Databricks data source in Reveal, you must install the appropriate database driver:
 - For Windows/.NET: [Databricks ODBC Driver](https://www.databricks.com/spark/odbc-drivers-download)
 - For Node.js: [Databricks ODBC Driver](https://www.databricks.com/spark/odbc-drivers-download)
-- For Java: [Databricks JDBC Driver](https://www.databricks.com/spark/jdbc-drivers-download)
+- For Java: The JDBC driver is installed automatically via Maven.
 
 These drivers are essential for establishing connections to your Databricks data source. After installation, ensure the drivers are properly configured according to Databricks documentation.
 :::
