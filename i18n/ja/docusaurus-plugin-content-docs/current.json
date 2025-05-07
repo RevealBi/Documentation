@@ -686,5 +686,9 @@
   "sidebar.webSidebar.doc.Beta Features": {
     "message": "Beta Features",
     "description": "The label for the doc item Beta Features in sidebar webSidebar, linking to the doc web/beta-features"
+  },
+  "sidebar.webSidebar.doc.Databricks": {
+    "message": "Databricks",
+    "description": "The label for the doc item Databricks in sidebar webSidebar, linking to the doc web/adding-data-sources/databricks"
   }
 }
