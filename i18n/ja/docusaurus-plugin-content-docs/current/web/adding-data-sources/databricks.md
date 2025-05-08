@@ -40,7 +40,7 @@ dotnet add package Reveal.Sdk.Data.Databricks
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
 {
-    builder.RegisterDatabricks();
+    builder.DataSources.RegisterDatabricks();
 });
 ```
 

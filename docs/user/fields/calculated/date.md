@@ -19,6 +19,7 @@ Time.*
 | Function Name | Syntax and Sample |
 |---------------|-------------------|
 | date | **Syntax**: `date({year},{month},{day},{hour},{minute},{second})`<br />**Sample**: `date(1971,11,08,12,59,08)` |
+| datediff | **Syntax**: `datediff({date1}, {date2}, {lapse})`<br />**Sample**: `datediff("23/05/2015", "23/05/2016", "d")` |
 | datevalue | **Syntax**: `datevalue({date},{format},{locale})`<br />**Sample**: `datevalue("23/05/2015","dd/mm/yyyy","en")` |
 | day | **Syntax**: `day({date})`<br />**Sample**: `day(date(1971,11,08,01,22,44))` |
 | formatdate | **Syntax**: `formatdate({date},{format},{locale})`<br />**Sample**: `formatdate(date(1971,11,08,01,22,44),"dd/mm/yyyy","en")` |

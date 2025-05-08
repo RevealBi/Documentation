@@ -17,6 +17,7 @@ _language: ja
 | 関数名 | 構文とサンプル |
 |---------------|-------------------|
 | date | **構文**: `date({year},{month},{day},{hour},{minute},{second})`<br />**サンプル**: `date(1971,11,08,12,59,08)` |
+| datediff | **構文**: `datediff({date1}, {date2}, {lapse})`<br />**サンプル**: `datediff("23/05/2015", "23/05/2016", "d")` |
 | datevalue | **構文**: `datevalue({date},{format},{locale})`<br />**サンプル**: `datevalue("23/05/2015","dd/mm/yyyy","en")` |
 | day | **構文**: `day({date})`<br />**サンプル**: `day(date(1971,11,08,01,22,44))` |
 | formatdate | **構文**: `formatdate({date},{format},{locale})`<br />**サンプル**: `formatdate(date(1971,11,08,01,22,44),"dd/mm/yyyy","en")` |
