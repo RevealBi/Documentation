@@ -86,7 +86,6 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "Databricks", id: "web/adding-data-sources/databricks" },
             { type: "doc", label: "Excel File", id: "web/adding-data-sources/excel-file" },
             { type: "doc", label: "Google Big Query", id: "web/adding-data-sources/google-big-query" },
-            { type: "doc", label: "Google Drive", id: "web/adding-data-sources/google-drive" },
             { type: "doc", label: "Google Sheets", id: "web/adding-data-sources/google-sheets" },
             { type: "doc", label: "In Memory Data", id: "web/adding-data-sources/in-memory-data" },
             { type: "doc", label: "JSON", id: "web/adding-data-sources/json" },
