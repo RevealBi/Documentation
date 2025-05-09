@@ -303,10 +303,6 @@
     "message": "ライセンス キーの追加",
     "description": "The label for the doc item Adding a License Key in sidebar wpfSidebar, linking to the doc wpf/adding-license-key"
   },
-  "sidebar.webSidebar.doc.Google Drive": {
-    "message": "Google ドライブ",
-    "description": "The label for the doc item Google Drive in sidebar webSidebar, linking to the doc web/adding-data-sources/google-drive"
-  },
   "sidebar.webSidebar.doc.Google Sheets": {
     "message": "Google スプレッドシート",
     "description": "The label for the doc item Google Sheets in sidebar webSidebar, linking to the doc web/adding-data-sources/google-sheets"
