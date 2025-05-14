@@ -95,7 +95,7 @@ can change this by modifying the "Type" field. In order to do so:
 |                                  |                                                                                            |                                                                                                                                                                         |
 | -------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png)                     | Go to the **Settings** section of the Visualization Editor.                                                                                                             |
-| 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Label](images/tutorial-Change-Date-Difference-Label.png) | By default, the difference label will be set to **Percentage**. Select the dropdown next to **Show difference as**, and change the selection to **Value and Percentage**. |
+| 2\. **Change the Type**          | ![Tutorial-Change-Date-Difference-Label](images/Tutorial-Change-Date-Difference-Label.png) | By default, the difference label will be set to **Percentage**. Select the dropdown next to **Show difference as**, and change the selection to **Value and Percentage**. |
 
 ## Changing the Color of the Difference Marker
 
