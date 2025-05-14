@@ -88,7 +88,7 @@ can change this by modifying the "Type" field. In order to do so:
 |                                  |                                                                        |                                                                                                                                                |
 | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1\. **Access the Settings Menu** | ![Tutorials-Navigate-Settings](images/Tutorials-Navigate-Settings.png) | Go to the **Settings** section of the Visualization Editor.                                                                                    |
-| 2\. **Change the Type**          | ![Tutorial-Change-Date-Type](images/tutorial-Change-Date-Type.png)     | By default, the date type will be set to **Year vs previous Year**. Select the dropdown next to **Time Period**, and change the selection to **Month vs previous Month**. |
+| 2\. **Change the Type**          | ![Tutorial-Change-Date-Type](images/Tutorial-Change-Date-Type.png)     | By default, the date type will be set to **Year vs previous Year**. Select the dropdown next to **Time Period**, and change the selection to **Month vs previous Month**. |
 
 ## Changing the Difference Labels for the KPI Gauge
 
