@@ -3,15 +3,15 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.7.4 (May 6th, 2025)
+## 1.7.4 (2025 年 5 月 6 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- New data source: Databricks.
-- The field editor has been improved and contains tabs for different option categories.
-- Added a beta features API.
+- 新しいデータ ソース: Databricks。
+- フィールド エディターが改善され、オプション カテゴリごとのタブが追加されました。
+- ベータ機能 API が追加されました。
 
 ```js
 // Enable beta feature
@@ -21,44 +21,44 @@ $.ig.RevealSdkSettings.betaFeatures.enable("newDonutChart", "newPieChart");
 $.ig.RevealSdkSettings.betaFeatures.disable("newDonutChart", "newPieChart");
 ```
 
-- The chart toolbar is now generally available. It can be enabled or disabled through the `showToolbar` property on the RevealView. The default value of this property `false`.
-- Interactive filtering is now generally available. To enable this feature set `interactiveFilteringEnabled` to `true` on the RevealView. By clicking "Filter By" in the tooltip, this feature will highlight the data in the rest of the charts.
-- A new property was added in the visualization editor for slice charts to configure fraction digits of the shown percentages.
-- In data sources that contain a `database` property, data source items derived from it no longer have the `database` property set by default. While this makes setting the RVDataSourceItem's `database` property not a requirement, it is strongly recommended to do so even to set it to null, for security reasons.
-- Support for an optional `sessionToken` parameter was added to the RVAmazonWebServicesCredentials.
+- チャート ツールバーが正式リリースされました。RevealView の `showToolbar` プロパティを通じて有効または無効にできます。このプロパティのデフォルト値は `false` です。
+- インタラクティブなフィルタリングが正式リリースされました。この機能を有効にするには、RevealView で `interactiveFilteringEnabled` を `true` に設定します。ツールチップの 「Filter By」 をクリックすると、この機能によって他のチャートのデータが強調表示されます。
+- 表示されるパーセンテージの小数桁を構成するための新しいプロパティがスライス チャートの表示形式エディターに追加されました。
+- `database` プロパティを含むデータ ソースでは、そこから派生したデータ ソース項目には、デフォルトで `database` プロパティが設定されなくなりました。これにより、RVDataSourceItem の `database` プロパティを設定することが必須ではなくなりますが、セキュリティ上の理由から、null に設定する場合でも明示的に設定することを強くお勧めします。
+- RVAmazonWebServicesCredentials にオプションの `sessionToken` パラメーターのサポートが追加されました。
 
 #### Node
 
-- The `dashboardProvider` & `dashboardStorageProvider` now use a `Readable` type definition for the stream. This allows for support for more locations than files.
+- `dashboardProvider` と `dashboardStorageProvider` は、ストリームに `Readable` 型定義のストリームを使用するようになりました。これにより、ファイルよりも多くの場所をサポートできるようになります。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Using single visualization mode showed misaligned UI elements.
-- Visualization filters are not working when changed in the editor.
-- Some number conversions resulted in crash.
-- Setting `PREVIOUS_YEAR` filter is not working with headless export.
-- Excel export fails when dashboard has visualization with error.
-- Wrong date range calculated in dashboard linking for year and quarter hierarchy.
-- Wrong data when expanding or drilling down and a filter on a date field with fiscal year is applied.
-- KPI vs Time % increase incorrect sign when previous number is negative.
-- Headless export missing global & visualization filters on each visualization when targeting PDF.
-- SSAS performance degraded for some visualizations.
-- `NotEquals` and `NotContains` filters do not work in SSAS.
-- The date filter is showing as "Unnamed" in headless export.
-- Interface `IRVDateFilterMenuItem` isn't part of the RevealApi namespace in the "infragistics.reveal.d.ts" file.
-- PowerPoint Exports Showing Token and Luis' Name.
-- Highlighting not working for Dates using Google Analytics and similar data sources.
-- Show totals on tooltip flag ignored.
-- Google Analytics datasource selection crashes if required props are not set.
-- "value.toFixed is not a function" error when placing a calculated field where some result is "Infinity" as a value in a Bar visualization or any of the slice chart visualizations.
-- Visualization description is overlapped by the title.
-- Excel exports with cells with a numeric value of 0 show as empty.
+- 単一の表示形式モードを使用すると、UI 要素の位置がずれて表示されます。
+- エディターで可視化フィルターを変更しても反映されません。
+- いくつかの数値変換によりクラッシュが発生します。
+- ヘッドレス エクスポートでは、`PREVIOUS_YEAR` フィルターの設定は機能しません。
+- ダッシュボードにエラーのある表示形式がある場合、Excel エクスポートは失敗します。
+- 年と四半期の階層のダッシュボード リンクで計算された日付範囲が間違っています。
+- 展開またはドリルダウンし、会計年度の日付フィールドにフィルターを適用すると、誤ったデータが表示されます。
+- 前の数値が負の場合、KPI vs Time の % の増加の符号が正しくありません。
+- ヘッドレス エクスポートでは、PDF をターゲットにする場合、各表示形式のグローバル フィルターと表示形式フィルターが欠落します。
+- 一部の表示形式では SSAS のパフォーマンスが低下します。
+- `NotEquals` および `NotContains` フィルターは SSAS では機能しません。
+- ヘッドレス エクスポートでは日付フィルターが「 Unnamed 」として表示されます。
+- インターフェイス `IRVDateFilterMenuItem` は、「infragistics.reveal.d.ts」 ファイルの RevealApi 名前空間の一部ではありません。
+- PowerPoint エクスポートではトークンと Luis の名前が表示されています。
+- Google Analytics や同様のデータ ソースを使用した日付の強調表示が機能しません。
+- ツールチップに合計を表示するフラグは無視されます。
+- 必要なプロパティが設定されていない場合、Google Analytics のデータ ソース選択がクラッシュします。
+- 棒チャート またはスライス チャートの表示形式で、計算フィールドの値に Infinity が含まれると 「value.toFixed is not a function (value.toFixed は関数ではありません)」 というエラーが発生します。
+- 表示形式の説明がタイトルと重複しています。
+- 数値 0 のセルを含む Excel エクスポートは空として表示されます。
 
 #### Java
 
-- Yellow "configure" banner showing when exporting a visualization using a map visualization.
+- マップビ表示形式を使用して表示形式をエクスポートするときに、黄色の 「configure」 バナーが表示されます。
 
 ## 1.7.3 (2025 年 3 月 4 日)
 

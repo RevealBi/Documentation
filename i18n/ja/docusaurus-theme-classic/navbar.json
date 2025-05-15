@@ -56,7 +56,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.User": {
-    "message": "User",
+    "message": "ユーザー",
     "description": "Navbar item with label User"
   }
 }

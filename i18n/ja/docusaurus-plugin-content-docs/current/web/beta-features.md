@@ -1,9 +1,9 @@
-# Beta Features API
+# ベータ機能 API
 
-The Reveal SDK provides a centralized way to enable and manage **beta features**. This allows you to test new or experimental functionality before it's officially released.
+Reveal SDK は、**ベータ機能**を有効にして管理するための集中的な方法を提供します。これにより、正式にリリースされる前に新しい機能や実験的な機能をテストできます。
 
-## Enabling a Beta Feature
-You can enable a beta feature using:
+## ベータ機能の有効化
+ベータ機能は以下を使用して有効にできます。
 
 ```javascript
 //enable one feature
@@ -19,74 +19,74 @@ $.ig.RevealSdkSettings.betaFeatures.enable(...[
 ]);
 ```
 
-## Disabling a Beta Feature
-To disable a previously enabled beta feature:
+## ベータ機能の無効化
+以前に有効にしたベータ機能を無効にするには:
 
 ```javascript
 $.ig.RevealSdkSettings.betaFeatures.disable("newPieChart");
 ```
 
-## Getting All Enabled Beta Features
+## 有効化されたすべてのベータ機能を取得する
 
 ```javascript
 const betafeatures = $.ig.RevealSdkSettings.betaFeatures.getEnabledFeatures();
 ```
 
-## Available Beta Flags
-The following beta feature flags are available:
+## 利用可能なベータ フラグ
+次のベータ機能フラグを使用できます:
 
 ### `newBulletGraph`
-Enables the experimental bullet graph visualization.
+実験的なブレット グラフの表示形式を有効にします。
 
-> 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
+> 🚫 現時点では一般的な使用には**推奨されません**。このコンポーネントはまだ**開発中**であり、**実稼働環境に対応していません**。機能の制限、不完全なスタイリング、および予期しない問題が発生する可能性がありますので、ご注意ください。
 
 ### `newCircularGauge`
-Enables the experimental radial (circular) gauge visualization.
+実験的なラジアル (円形) ゲージの表示形式を有効にします。
 
-> 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
+> 🚫 現時点では一般的な使用には**推奨されません**。このコンポーネントはまだ**開発中**であり、**実稼働環境に対応していません**。機能の制限、不完全なスタイリング、および予期しない問題が発生する可能性がありますので、ご注意ください。
 
 ### `newDonutChart`
-Enables the redesigned donut chart visualization in the Reveal SDK.
+Reveal SDK で再設計されたドーナツ型チャートの表示形式を有効にします。
 
-The new donut chart offers:
-- Improved rendering performance
-- Enhanced responsiveness and accessibility
-- Smoother animations and transitions
-- Support for interactive filtering
+新しいドーナツ型チャートには次の機能があります:
+- レンダリング パフォーマンスの向上
+- 応答性とアクセシビリティの向上
+- よりスムーズなアニメーションとトランジション
+- インタラクティブ フィルタリングのサポート
 
-This feature replaces the legacy donut chart with a more polished and user-friendly version. It is ideal for users looking for a modern, cleaner look and improved data visualization experience.
+この機能により、従来のドーナツ型チャートが、改善されたユーザー フレンドリーなバージョンに置き換えられます。モダンでクリーンな外観と改善されたデータ視覚化エクスペリエンスを求めるユーザーに最適です。
 
-> ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using donut charts.
+> ✅ ドーナツ型チャートを使用したダッシュボードの、更新された視覚品質とレイアウト動作をテストする場合に**推奨されます**。
 
 ### `newLinearGauge`
-Enables the experimental linear gauge visualization.
+実験的なリニア ゲージの表示形式を有効にします。
 
-> 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
+> 🚫 現時点では一般的な使用には**推奨されません**。このコンポーネントはまだ**開発中**であり、**実稼働環境に対応していません**。機能の制限、不完全なスタイリング、および予期しない問題が発生する可能性がありますので、ご注意ください。
 
 ### `newPieChart`
-Enables the redesigned pie chart visualization in the Reveal SDK.
+Reveal SDK で再設計された円チャートの表示形式を有効にします。
 
-The new pie chart offers:
-- Improved rendering performance
-- Better support for small slices with automatic label placement
-- Enhanced responsiveness and accessibility
-- Smoother animations and transitions
-- Support for interactive filtering
+新しい円チャートには次の機能があります:
+- レンダリング パフォーマンスの向上
+- 自動ラベル配置による小さなスライスのサポートが向上
+- 応答性とアクセシビリティの向上
+- よりスムーズなアニメーションとトランジション
+- インタラクティブ フィルタリングのサポート
 
-This feature replaces the legacy pie chart with a more polished and user-friendly version. It is ideal for users looking for a modern, cleaner look and improved data visualization experience.
+この機能により、従来の円チャートが、改善されたユーザー フレンドリーなバージョンに置き換えられます。モダンでクリーンな外観と改善されたデータ視覚化エクスペリエンスを求めるユーザーに最適です。
 
-> ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using pie charts.
+> ✅ 円チャートを使用したダッシュボードの、更新された視覚品質とレイアウト動作をテストする場合に**推奨されます**。
 
 ### `newTooltip`
-Enables the new hover-based tooltip experience in the Reveal SDK.
+Reveal SDK で新しいホバーベースのツールチップ エクスペリエンスを有効にします。
 
-With this feature enabled:
+この機能を有効にすると、次のようになります。
 
-- Tooltips appear **on hover** rather than on click.
-- **Tooltip actions** (such as drilldown, filtering, etc.) are readily available without requiring a click.
-- Improves discoverability and usability of interactive options within visualizations.
-- Offers a more modern and intuitive experience aligned with common data visualization practices.
+- ツールチップはクリック時ではなく**ホバー時**に表示されます。
+- **ツールチップ アクション** (ドリルダウン、フィルタリングなど) は、クリックしなくてもすぐに利用できます。
+- 表示形式内のインタラクティブ オプションの発見可能性と使いやすさが向上します。
+- 一般的なデータ視覚化の実践に合わせた、よりモダンで直感的なエクスペリエンスを提供します。
 
-This behavior is a significant change from the default tooltip, which only appears after the user **clicks** a data point. The `newTooltip` flag simplifies the interaction flow, allowing users to explore data faster and with fewer steps.
+この動作は、ユーザーがデータ ポイントを**クリックした**後にのみ表示されるデフォルトのツールチップからの大きな変更です。`newTooltip` フラグにより、インタラクションの流れが簡素化され、ホバー ツールチップによる高速かつ手間の少ないデータ探索が可能になります。
 
-> ✅ **Recommended** for testing faster, more interactive data exploration via hover tooltips.
+> ✅ より高速でインタラクティブなデータ探索をテストする場合に**推奨されます**。
