@@ -68,7 +68,7 @@
     "description": "The label of footer link with label=Terms of Use linking to https://www.infragistics.com/legal/terms-of-use"
   },
   "link.item.label.User": {
-    "message": "User",
+    "message": "ユーザー",
     "description": "The label of footer link with label=User linking to user"
   }
 }

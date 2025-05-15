@@ -5,37 +5,37 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Databricks Data Source
+# Databricks データ ソース
 
-## Introduction
+## 概要
 
-Databricks is a unified analytics platform that helps data engineering and data science teams collaborate on data processing, machine learning, and analytics at massive scale. This topic explains how to connect to Databricks data sources in your Reveal application to visualize and analyze your data.
+Databricks は、データ エンジニアリング チームとデータ サイエンス チームが大規模なデータ処理、機械学習、分析を共同で行うことができる統合分析プラットフォームです。このトピックでは、Reveal アプリケーションで Databricks データ ソースに接続して、データを視覚化および分析する方法について説明します。
 
 :::important Prerequisites
-Before configuring the Databricks data source in Reveal, you must install the appropriate database driver:
-- For Windows/.NET: [Databricks ODBC Driver](https://www.databricks.com/spark/odbc-drivers-download)
-- For Node.js: [Databricks ODBC Driver](https://www.databricks.com/spark/odbc-drivers-download)
-- For Java: The JDBC driver is installed automatically via Maven.
+Reveal で Databricks データ ソースを構成する前に、適切なデータベース ドライバーをインストールする必要があります。
+- Windows/.NET の場合: [Databricks ODBC ドライバー](https://www.databricks.com/spark/odbc-drivers-download)
+- Node.js の場合: [Databricks ODBC ドライバー](https://www.databricks.com/spark/odbc-drivers-download)
+- Java の場合: JDBC ドライバーは Maven 経由で自動的にインストールされます。
 
-These drivers are essential for establishing connections to your Databricks data source. After installation, ensure the drivers are properly configured according to Databricks documentation.
+これらのドライバーは、Databricks データ ソースへの接続を確立するために不可欠です。インストール後、Databricks のドキュメントに従ってドライバーが適切に構成されていることを確認します。
 :::
 
-## Server Configuration
+## サーバーの構成
 
-### Installation
+### インストール
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-**Step 1** - Install the Reveal Databricks connector package
+**手順 1** - Reveal Databricks コネクタ パッケージをインストールします。
 
-For ASP.NET applications, you need to install a separate NuGet package to enable Databricks support:
+ASP.NET アプリケーションの場合、Databricks サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
 
 ```bash
 dotnet add package Reveal.Sdk.Data.Databricks
 ```
 
-**Step 2** - Register the Databricks data source in your application:
+**手順 2** - アプリケーションに Databricks データ ソースを登録します。
 
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
@@ -47,17 +47,17 @@ builder.Services.AddControllers().AddReveal( builder =>
   </TabItem>
   <TabItem value="node" label="Node.js">
 
-For Node.js applications, the Databricks data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js アプリケーションの場合、Databricks データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
   <TabItem value="java" label="Java">
 
-For Java applications, the Databricks data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Java アプリケーションの場合、Databricks データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
 </Tabs>
 
-### Connection Configuration
+### 接続の構成
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -206,12 +206,12 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 </Tabs>
 
 :::danger Important
-Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えられた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。どちらの方法でも、データ ソース プロパティを**更新する必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で `ChangeDataSourceAsync` メソッドを呼び出し、データ ソース項目の基になるデータ ソースをパラメーターとして渡すことをお勧めします。
 :::
 
-### Authentication
+### 認証
 
-Authentication for Databricks is handled on the server side using a personal access tokens. For detailed information on authentication options, see the [Authentication](../authentication.md) topic.
+Databricks の認証は、個人アクセス トークンを使用してサーバー側で処理されます。認証オプションの詳細については、「[認証](../authentication.md)」トピックを参照してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -277,13 +277,13 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   </TabItem>
 </Tabs>
 
-## Client-Side Implementation
+## クライアント側の実装
 
-On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
+クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本プロパティを指定するだけです。実際の接続構成はサーバー上で行われます。
 
-### Creating Data Sources
+### データ ソースの作成
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -293,7 +293,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVDatabricksDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVDatabricksDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVDatabricksDataSource` オブジェクトの新しいインスタンスを作成します。`title` と `subtitle` プロパティを設定します。`RVDatabricksDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -305,13 +305,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Databricks data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Databricks データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/databricks-data-source.jpg)
 
-### Creating Data Source Items
+### データ ソース項目の作成
 
-Data source items represent specific datasets within your Databricks data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+データ ソース項目は、ユーザーが表示形式のために選択できる Databricks データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルを指定するだけです。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -330,30 +330,30 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Databricks data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Databricks データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/databricks-data-source-item.jpg)
 
-## Additional Resources
+## その他のリソース
 
-- [Databricks SQL Documentation](https://docs.databricks.com/sql/index.html)
-- [Databricks ODBC Drivers](https://www.databricks.com/spark/odbc-drivers-download)
-- [Databricks JDBC Drivers](https://www.databricks.com/spark/jdbc-drivers-download)
-- [Sample Source Code on GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Databricks)
+- [Databricks SQL ドキュメント](https://docs.databricks.com/sql/index.html)
+- [Databricks ODBC ドライバー](https://www.databricks.com/spark/odbc-drivers-download)
+- [Databricks JDBC ドライバー](https://www.databricks.com/spark/jdbc-drivers-download)
+- [GitHub のサンプル ソース コード](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Databricks)
 
-## API Reference
+## API リファレンス
 
 <Tabs groupId="code" queryString>
 <TabItem value="aspnet" label="ASP.NET" default>
 
-* [RVDatabricksDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Databricks.RVDatabricksDataSource.html) - Represents a Databricks data source
-* [RVDatabricksDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Databricks.RVDatabricksDataSourceItem.html) - Represents a Databricks data source item
+* [RVDatabricksDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Databricks.RVDatabricksDataSource.html) - Databricks データ ソースを表します
+* [RVDatabricksDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Databricks.RVDatabricksDataSourceItem.html) - Databricks データ ソース項目を表します
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
-* [RVDatabricksDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvdatabricksdatasource.html) - Represents a Databricks data source
-* [RVDatabricksDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvdatabricksdatasourceitem.html) - Represents a Databricks data source item
+* [RVDatabricksDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvdatabricksdatasource.html) - Databricks データ ソースを表します
+* [RVDatabricksDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvdatabricksdatasourceitem.html) - Databricks データ ソース項目を表します
 
 </TabItem>
 </Tabs>
