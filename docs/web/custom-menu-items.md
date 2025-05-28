@@ -59,6 +59,8 @@ revealView.onMenuOpening = function (visualization, args) {
 
 **Step 2** - Create a new instance of the class `RVMenuItem` and push it to the `args.menuItems` array. The callback specified in the `RVMenuItem` will be called when clicked.
 
+You can add separators to the menu by adding a RVMenuSeparatorItem to the menuItems collection.
+
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 
