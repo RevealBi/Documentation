@@ -198,7 +198,7 @@ export interface FilterOptions {
     /**
      * Allows the user to add a dashboard filter.
      */
-    addDashboardFiter?: boolean;
+    addDashboardFilter?: boolean;
 }
 ```
 
