@@ -1,8 +1,8 @@
 # Custom Menu Items
 
-The Reveal SDK supports adding Custom Menu Items, enabling users to modify the behavior of the contextual menu in dashboards and visualizations. By adding custom menu items, users can incorporate their own functionality into the menu.
+The Reveal SDK supports adding Custom Menu Items, enabling users to modify the behavior of the contextual menu in dashboards and visualizations. The menu customization allows users to incorporate their own functionality into the menu by adding custom menu items and create sections by defining separators.
 
-To manipulate the menu, you should add an event handler for the `revealView.onMenuOpening` event on the client.
+To manipulate the menu, you should first add an event handler for the `revealView.onMenuOpening` event on the client.
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -76,6 +76,38 @@ $.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
                 })
                 args.menuItems.push(menuItem);
             }
+        }
+    }; 
+});
+```
+
+## Example: Creating a new section in the menu
+
+**Step 1** - Add an event handler for the `revealView.onMenuOpening` event on the client.
+
+**Step 2** - Add a separator in the menu by instantiating `RVMenuSeparatorItem`.
+
+**Step 3** - Create instances of `RVMenuItem` for the menu items to add to our new section.
+
+```js
+$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+
+$.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
+    const revealView = new $.ig.RevealView("#revealView");
+    revealView.dashboard = dashboard;
+
+    revealView.onMenuOpening = function (visualization, args) {
+        // to modify menu behavior on visualizations
+        if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
+            args.menuItems.push(new $.ig.RVMenuSeparatorItem());
+            const menuItem1 = new $.ig.RVMenuItem("New section item 1", new $.ig.RVImage("https://i.pinimg.com/736x/03/c8/a2/03c8a2aff8be6bee9064eef9b5d72d66.jpg", "Icon"), () => {
+                alert('action 1');
+            })
+            args.menuItems.push(menuItem1);
+            const menuItem2 = new $.ig.RVMenuItem("New section item 2", new $.ig.RVImage("https://i.pinimg.com/736x/03/c8/a2/03c8a2aff8be6bee9064eef9b5d72d66.jpg", "Icon"), () => {
+                alert('action 2');
+            })
+            args.menuItems.push(menuItem2);
         }
     }; 
 });
