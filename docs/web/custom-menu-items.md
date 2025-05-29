@@ -99,7 +99,7 @@ $.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
     revealView.onMenuOpening = function (visualization, args) {
         // to modify menu behavior on visualizations
         if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
-            args.menuItems.push(new $.ig.RVMenuSeparatorItem);
+            args.menuItems.push(new $.ig.RVMenuSeparatorItem());
             const menuItem1 = new $.ig.RVMenuItem("New section item 1", new $.ig.RVImage("https://i.pinimg.com/736x/03/c8/a2/03c8a2aff8be6bee9064eef9b5d72d66.jpg", "Icon"), () => {
                 alert('action 1');
             })
