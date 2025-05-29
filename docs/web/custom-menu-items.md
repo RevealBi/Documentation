@@ -85,7 +85,7 @@ $.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
 
 **Step 1** - Add an event handler for the `revealView.onMenuOpening` event on the client.
 
-**Step 2** - Add an separator in the menu.
+**Step 2** - Add a separator in the menu by instantiating `RVMenuSeparatorItem`.
 
 **Step 3** - Create instances of `RVMenuItem` for the menu items to add to our new section.
 
