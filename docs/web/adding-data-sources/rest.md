@@ -23,18 +23,32 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVRESTDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvrestdatasource.html) object. Set the `URL` property to the url of the REST endpoint, and set the `useAnonymousAuthentication` property to false if there is no authentication required to access the REST endpoint. After you have created the `RVRESTDataSource` object, add it to the data sources collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the [RVRESTDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvrestdatasource.html) object.  After you have created the `RVRESTDataSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     const restDataSource = new $.ig.RVRESTDataSource();
+    restDataSource.id = "restDataSource1";
     restDataSource.title = "Sales by Category";
-    restDataSource.subtitle = "Excel2Json";
-    restDataSource.url = "https://excel2json.io/api/share/6e0f06b3-72d3-4fec-7984-08da43f56bb9";
-    restDataSource.useAnonymousAuthentication = true;
 
     callback(new $.ig.RevealDataSources([restDataSource], [], true));
 };
+```
+
+**Step 3** - In the DataSourceProvider's `ChangeDataSourceAsync` method, load up the rest of the data source's properties.
+Set the `URL` property to the URL of the REST endpoint, and set the `useAnonymousAuthentication` property to false if there is no authentication required to access the REST endpoint.
+
+```csharp
+if(dataSource is RVRESTDataSource)
+{
+    var restNoAuthWebDS = new RVRESTDataSource()
+    {
+        Subtitle = "Excel2Json",
+        Url = "http://EM-MACBUILD2.infragistics.local:8081/RPTestServices/rest/mysql/loadtable/employees/employees100?from={$dateFilterFrom}&to={$dateFilterTo}",
+        UseAnonymousAuthentication = true
+    };
+}
+return Task.FromResult(dataSource);
 ```
 
 When the application runs, create a new Visualization and you will see the newly created REST data source listed in the "Select a Data Source" dialog.
