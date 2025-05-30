@@ -1,6 +1,6 @@
 # カスタム メニュー項目
 
-Reveal SDK はカスタム メニュー項目の追加をサポートしており、ユーザーはダッシュボードや可視化のコンテキスト メニューの動作を変更できます。メニューのカスタマイズにより、カスタムメニュー項目を追加したり、区切り線を定義してセクションを作成したりすることで、独自の機能をメニューに組み込むことができます。
+Reveal SDK はカスタム メニュー項目の追加をサポートしており、ユーザーはダッシュボードや可視化のコンテキスト メニューの動作を変更できます。メニューのカスタマイズにより、カスタム メニュー項目を追加したり、セパレーターを定義してセクションを作成したりすることで、独自の機能をメニューに組み込むことができます。
 
 メニューを操作するには、まずクライアント上で `revealView.onMenuOpening` イベントのイベント ハンドラーを追加する必要があります。
 
@@ -81,13 +81,13 @@ $.ig.RVDashboard.loadDashboard("Project Management").then(dashboard => {
 });
 ```
 
-## Example: Creating a new section in the menu
+## 例: メニューに新しいセクションを作成する
 
-**Step 1** - Add an event handler for the `revealView.onMenuOpening` event on the client.
+**手順 1** - クライアントに `revealView.onMenuOpening` イベントのイベント ハンドラーを追加します。
 
-**Step 2** - Add a separator in the menu by instantiating `RVMenuSeparatorItem`.
+**手順 2** - `RVMenuSeparatorItem` をインスタンス化して、メニューにセパレーターを追加します。
 
-**Step 3** - Create instances of `RVMenuItem` for the menu items to add to our new section.
+**手順 3** - 新しいセクションに追加するメニュー項目の `RVMenuItem` のインスタンスを作成します。
 
 ```js
 $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
