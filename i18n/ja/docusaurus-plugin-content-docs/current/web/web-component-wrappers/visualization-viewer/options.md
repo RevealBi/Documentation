@@ -1,4 +1,4 @@
-'@site/src/components/CodePreview' から CodePreview をインポートします。
+import CodePreview from '@site/src/components/CodePreview'
 import BetaWarning from '../_beta-message.md'
 
 # オプション
