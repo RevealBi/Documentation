@@ -656,7 +656,7 @@
     "description": "The label for the doc item Stacked Charts in sidebar userSideBar, linking to the doc user/tutorials-stacked-charts"
   },
   "sidebar.webSidebar.category.Web Component Wrappers": {
-    "message": "Web コンポーネント ラッパー",
+    "message": "Web Component ラッパー",
     "description": "The label for category Web Component Wrappers in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Reveal View": {

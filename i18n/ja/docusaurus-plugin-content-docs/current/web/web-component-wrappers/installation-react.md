@@ -1,22 +1,22 @@
 import BetaWarning from './_beta-message.md'
 
-# Installing Reveal SDK Web Component Wrappers in React
+# React に Reveal SDK Web Component ラッパーをインストールする
 
 <BetaWarning />
 
-The Reveal SDK Web Component Wrappers provides a React-friendly version of each component, ensuring an idiomatic experience for React developers. You can easily switch between HTML and React examples throughout the documentation.
+Reveal SDK Web Component ラッパーは、React 開発者にとって自然な体験を保証するため、各コンポーネントの React 対応バージョンを提供しています。ドキュメント全体を通して HTML と React の例を簡単に切り替えることができます。
 
-## Installation
+## インストール
 
-To add the Reveal SDK Web Component Wrappers to your React app, install the necessary packages from npm:
+React アプリに Reveal SDK Web Component ラッパーを追加するには、npm から必要なパッケージをインストールします:
 
 ```bash npm2yarn
-npm install reveal-sdk-wrappers reveal-sdk-wrappers-react
+npm install reveal-sdk-wrappers-react
 ```
 
-## Using Reveal SDK Web Components
+## Reveal SDK Web Components の使用
 
-Once everything is set up, you're ready to use the Reveal SDK Web Component Wrappers within your React application. Here's an example of integrating the RvRevealView component:
+すべてのセットアップが完了したら、React アプリケーション内で Reveal SDK Web Component ラッパーを使用できるようになります。以下は、RvRevealView コンポーネントを統合する例です。
 
 ```tsx
 import React from 'react';
@@ -33,4 +33,4 @@ function App() {
 export default App;
 ```
 
-With these steps, you've successfully integrated the Reveal SDK Web Component Wrappers into your React application. You can now leverage Reveal's powerful data visualization capabilities to enhance your projects. Explore more components and features to create a rich and interactive user experience.
+これらの手順により、Reveal SDK Web Component ラッパーを React アプリケーションに正常に統合できました。これで、Reveal の強力なデータ表示形式機能を活用してプロジェクトを強化できるようになりました。その他のコンポーネントと機能を調べて、豊かでインタラクティブなユーザー エクスペリエンスを作成します。

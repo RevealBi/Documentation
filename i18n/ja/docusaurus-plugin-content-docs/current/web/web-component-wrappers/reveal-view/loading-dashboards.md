@@ -3,11 +3,11 @@ import BetaWarning from '../_beta-message.md'
 
 <style type="text/css">{`.container {max-width: unset}`}</style>
 
-# Loading Dashboards
+# ダッシュボードの読み込み
 
 <BetaWarning />
 
-## Load with Dashboard Name
+## ダッシュボード名で読み込む
 
 <CodePreview previewHeight="800" sourceOpen="true">
 
@@ -27,7 +27,7 @@ const App = () => {
 
 </CodePreview>
 
-## Load with RVDashboard
+## RVDashboard で読み込む
 
 <CodePreview previewHeight="800" sourceOpen="true">
 

@@ -1,59 +1,62 @@
 import BetaWarning from './_beta-message.md'
 
-# Installing Reveal SDK Web Component Wrappers in Angular
+# Angular に Reveal SDK Web Component ラッパーをインストールする
 
 <BetaWarning />
 
-Integrating the Reveal SDK Web Component Wrappers into your Angular application is straightforward and seamless. Follow these steps to get started:
+Reveal SDK Web Web Component ラッパーを Angular アプリケーションに統合するのは簡単でシームレスです。開始するには以下の手順に従ってください:
 
-## Installation
+## インストール
 
-To add the Reveal SDK Web Components to your Angular app, install the required package from npm:
+Reveal SDK Web Components を Angular アプリに追加するには、npm から必要なパッケージをインストールします:
 
 ```bash npm2yarn
-npm install reveal-sdk-wrappers
+npm install reveal-sdk-wrappers-angular
 ```
 
-Once installed, you'll need to register the web components in your application. By default, all Reveal SDK Web Component Wrappers will be globally registered, enabling their usage without individual imports.
-```js
-import { defineRevealSdkWrappers } from "reveal-sdk-wrappers";
-defineRevealSdkWrappers();
-```
+## モジュールのセットアップ
 
-## Module Setup
-
-Angular requires the `CUSTOM_ELEMENTS_SCHEMA` to recognize custom elements. Add this schema to your application's module:
+`RevealViewComponent` をインポートして、アプリケーション内のスタンドアロン コンポーネントとして使用します。以下のインポートをアプリケーションのモジュールに追加します:
 
 ```ts
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+//highlight-next-line
+import { RevealViewComponent } from 'reveal-sdk-wrappers-angular';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    //highlight-next-line
+    RevealViewComponent
+  ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
 ```
 
-## Using Reveal SDK Web Components
+## Reveal SDK Web Components の使用
 
-Now you're ready to use the Reveal SDK Web Component Wrappers in your Angular application.
+これで、Angular アプリケーションで Reveal SDK Web Component ラッパーを使用する準備が整いました。
+
+:::note
+Reveal SDK Angular Web Component ラッパー内のすべてのコンポーネントは、`rva` プレフィックスを使用します。テンプレートにコンポーネントを追加するときは、必ずこのプレフィックスを使用してください。
+:::
 
 ### HTML
 
-Add the Reveal SDK web component to your template:
+Reveal SDK Web コンポーネントをテンプレートに追加します:
 
 ```html
-<rv-reveal-view [dashboard]="dashboard"></<rv-reveal-view>
+<rva-reveal-view [dashboard]="dashboard"></<rva-reveal-view>
 ```
 
 ### TypeScript
 
-Control the dashboard to load from your component class:
+コンポーネント クラスから読み込むダッシュボードを制御します。
 
 ```ts
 import { Component } from '@angular/core';
@@ -68,4 +71,4 @@ export class AppComponent {
 }
 ```
 
-With these steps, you've successfully integrated the Reveal SDK Web Component Wrappers into your Angular application. You can now take full advantage of Reveal's powerful data visualization capabilities in your projects. Explore more components and features to create a rich and interactive user experience.
+これらの手順により、Reveal SDK Web Component ラッパーが Angular アプリケーションに正常に統合されました。プロジェクトで Reveal の強力なデータ表示形式機能を最大限に活用できるようになりました。その他のコンポーネントと機能を調べて、豊かでインタラクティブなユーザー エクスペリエンスを作成します。

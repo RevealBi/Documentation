@@ -3,7 +3,7 @@ import BetaWarning from '../_beta-message.md'
 
 <style type="text/css">{`.container {max-width: 2000px}`}</style>
 
-# Reveal View
+# Reveal View (Reveal ビュー)
 
 <BetaWarning />
 
