@@ -1,7 +1,7 @@
 import CodePreview from '@site/src/components/CodePreview'
 import BetaWarning from '../_beta-message.md'
 
-# Visualization Viewer
+# Visualization Viewer (表示形式ビューアー)
 
 <BetaWarning />
 
