@@ -80,5 +80,3 @@ Dependency|License|
 |----------|-------|
 |[jquery](https://jquery.com/)|[MIT](https://opensource.org/licenses/mit-license.html)|
 |[day.js](https://github.com/iamkun/dayjs)|[MIT](https://opensource.org/licenses/mit-license.html)|
-|[quill.js](https://github.com/quilljs/quill)|[BSD 3-Clause](https://opensource.org/license/bsd-3-clause/)|
-|[spectrum](https://bgrins.github.io/spectrum/)|[MIT](https://opensource.org/licenses/mit-license.html)|
