@@ -61,6 +61,7 @@ private void RevealView_FieldsInitializing(FieldsInitializingEventArgs args)
 - Refresh needed to update the visualization after changing date filter.
 - Excel datasource detecting date column as numeric.
 - Export of raw data image results in crash.
+- UI doesn't update when using API to modify date global filter that has just been created.
 
 ## 1.7.4 (2025 年 5 月 6 日)
 
