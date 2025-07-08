@@ -25,6 +25,14 @@ revealView.onFieldsInitializing = function (args) {
 - Highlighting filters are now removed when entering edit mode.
 - The ANTLR dependency was updated to v4.13.1.
 - Redshift connector now supports cross database blending for databases contained in the same AWS cluster.
+- Rule and range properties can now be set via API for existing date dashboard filters.
+
+```js
+revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Day);
+//-or-
+revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
+```
+- `RVDashboard.dateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 
 #### Java
 
@@ -34,6 +42,13 @@ revealView.onFieldsInitializing = function (args) {
 #### Node
 
 - Filters and date filters are now support for headless Excel export.
+- Puppeteer extracts Chrome to a different location, users making use of nodemon should update the configuration ignore the directory.
+
+```json
+"nodemonConfig": {
+  "ignore": ["chrome-headless*/*"]
+}
+```
 
 ### Bugs
 
