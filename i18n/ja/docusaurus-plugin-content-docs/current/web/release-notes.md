@@ -3,6 +3,79 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.7.5 (July 8th, 2025)
+
+### New Features
+
+#### All Platforms
+
+- Databricks now supports the following authentication types; personal access token, OAuth token pass-through, OAuth client credentials, and Microsoft Entra ID client credentials.
+- Reveal no longer extends native JS prototypes (e.g. Array).
+- Added support for multiple dashboard date filters.
+- An opt-in week date aggregation added to fields through `onFieldsInitializing` by setting the `weekLevelEnabled` to `true`.
+
+```js
+revealView.onFieldsInitializing = function (args) {
+  var editedFields = args.fields;
+  var fieldToChange = editedFields.find(f => f.name == "Date");
+  if(fieldToChange)
+   fieldToChange.weekLevelEnabled = true;
+};
+```
+- Highlighting filters are now removed when entering edit mode.
+- The ANTLR dependency was updated to v4.13.1.
+- Redshift connector now supports cross database blending for databases contained in the same AWS cluster.
+
+#### Java
+
+- The ANTLR dependency was updated to v4.13.2.
+- The okhttp dependency was updated to v4.12.0.
+
+#### Node
+
+- Filters and date filters are now support for headless Excel export.
+
+### Bugs
+
+#### All Platforms
+
+- Headless export console error from missing JS.
+- Description in duplicated Text Box disappears.
+- Headless export fails if a dashboard contains a Text Box visualization.
+- Highlighting lost after drill-down removal, despite filter still applied.
+- Highlighting adds an extra day to other charts due to filter settings.
+- Highlighting export is not displayed correctly for visualization.
+- Highlighting filters are being shown in the visualization editor.
+- DateRules with a "Next" period relation did not display the correct number of days when the amount was greater than one.
+- Bar and column visualizations don't make appropriate use of the plot area on first load.
+- Duplicate menu item shown if AllTime is added as a custom item in a date filter's menu.
+- Scatter map visualization shifted the centering of the map.
+- Duplicate dialogs during Excel export with multiple grid visualizations.
+- Choropleth handles states wrong when using the "USA States" map.
+- Unhandled null reference exception after applying Tooltip filter in a pivot visualization.
+- Switching visualization type on a grid visualization results in the visualization disappearing and producing an error in the console.
+- Dashboard link parameters broken for category field.
+- Null reference error opening dashboard with CustomRange filter with range not set.
+- Drill down is available even when there is a single date field with no hierarchy defined.
+- Date format lost on drill up/down.
+- Tooltip field items not using field labels.
+- Japanese characters in filter labels are garbled in a pdf file created via headless export.
+- New pie is not being exporting correctly to PDF.
+- Grid paging loads data twice.
+- Long graph legends are not correctly shown.
+- Wrong data shown when expanding a pivot using '... to Date' filter.
+- Date Range filter "Trailing 12 months" is including current month data.
+- Filter opacity is darker on mobile than regular screen sizes.
+- Expansion not working when another pivot row is present.
+- Ad-hoc pivot expansion misbehaves when items are duplicated.
+- Drill down on empty element causes crash.
+- Drill down on a expanded pivot row doesn't work well.
+- UI not refreshing when Range is set for date global filter when using API.
+- Refresh needed to update the visualization after changing date filter.
+- Excel datasource detecting date column as numeric.
+- Export of raw data image results in crash.
+- UI doesn't update when using API to modify date global filter that has just been created.
+
 ## 1.7.4 (2025 年 5 月 6 日)
 
 ### 新機能
