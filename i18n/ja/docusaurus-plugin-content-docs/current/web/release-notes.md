@@ -3,16 +3,16 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.7.5 (July 8th, 2025)
+## 1.7.5 (2025 年 7 月 8 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Databricks now supports the following authentication types; personal access token, OAuth token pass-through, OAuth client credentials, and Microsoft Entra ID client credentials.
-- Reveal no longer extends native JS prototypes (e.g. Array).
-- Added support for multiple dashboard date filters.
-- An opt-in week date aggregation added to fields through `onFieldsInitializing` by setting the `weekLevelEnabled` to `true`.
+- Databricks は現在、個人アクセス トークン、OAuth トークン パススルー、OAuth クライアント資格情報、Microsoft Entra ID クライアント資格情報などの認証タイプをサポートするようになりました。
+- Reveal はネイティブ JS プロトタイプ (Array など) を拡張しなくなりました。
+- ダッシュボード内で複数の日時フィルターのサポートが追加されました。
+- `weekLevelEnabled` を `true` に設定することにより、`onFieldsInitializing` を通じてフィールドにオプトインの週の日付集計が追加されました。
 
 ```js
 revealView.onFieldsInitializing = function (args) {
@@ -22,59 +22,59 @@ revealView.onFieldsInitializing = function (args) {
    fieldToChange.weekLevelEnabled = true;
 };
 ```
-- Highlighting filters are now removed when entering edit mode.
-- The ANTLR dependency was updated to v4.13.1.
-- Redshift connector now supports cross database blending for databases contained in the same AWS cluster.
+- 編集モードに入ると、強調表示フィルターが削除されるようになりました。
+- 依存関係 ANTLR が v4.13.1 に更新されました。
+- Redshift コネクターは、同じ AWS クラスターに含まれるデータベースのクロス データベース ブレンディングをサポートするようになりました。
 
 #### Java
 
-- The ANTLR dependency was updated to v4.13.2.
-- The okhttp dependency was updated to v4.12.0.
+- 依存関係 ANTLR が v4.13.2 に更新されました。
+- 依存関係 okhttp が v4.12.0 に更新されました。
 
 #### Node
 
-- Filters and date filters are now support for headless Excel export.
+- ヘッドレス Excel エクスポートでフィルターと日付フィルターがサポートされるようになりました。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Headless export console error from missing JS.
-- Description in duplicated Text Box disappears.
-- Headless export fails if a dashboard contains a Text Box visualization.
-- Highlighting lost after drill-down removal, despite filter still applied.
-- Highlighting adds an extra day to other charts due to filter settings.
-- Highlighting export is not displayed correctly for visualization.
-- Highlighting filters are being shown in the visualization editor.
-- DateRules with a "Next" period relation did not display the correct number of days when the amount was greater than one.
-- Bar and column visualizations don't make appropriate use of the plot area on first load.
-- Duplicate menu item shown if AllTime is added as a custom item in a date filter's menu.
-- Scatter map visualization shifted the centering of the map.
-- Duplicate dialogs during Excel export with multiple grid visualizations.
-- Choropleth handles states wrong when using the "USA States" map.
-- Unhandled null reference exception after applying Tooltip filter in a pivot visualization.
-- Switching visualization type on a grid visualization results in the visualization disappearing and producing an error in the console.
-- Dashboard link parameters broken for category field.
-- Null reference error opening dashboard with CustomRange filter with range not set.
-- Drill down is available even when there is a single date field with no hierarchy defined.
-- Date format lost on drill up/down.
-- Tooltip field items not using field labels.
-- Japanese characters in filter labels are garbled in a pdf file created via headless export.
-- New pie is not being exporting correctly to PDF.
-- Grid paging loads data twice.
-- Long graph legends are not correctly shown.
-- Wrong data shown when expanding a pivot using '... to Date' filter.
-- Date Range filter "Trailing 12 months" is including current month data.
-- Filter opacity is darker on mobile than regular screen sizes.
-- Expansion not working when another pivot row is present.
-- Ad-hoc pivot expansion misbehaves when items are duplicated.
-- Drill down on empty element causes crash.
-- Drill down on a expanded pivot row doesn't work well.
-- UI not refreshing when Range is set for date global filter when using API.
-- Refresh needed to update the visualization after changing date filter.
-- Excel datasource detecting date column as numeric.
-- Export of raw data image results in crash.
-- UI doesn't update when using API to modify date global filter that has just been created.
+- ヘッドレス エクスポート時に JS ファイルが不足していることによるコンソール エラー。
+- 複製されたテキスト ボックスで説明文が消えます。
+- ダッシュボードにテキスト ボックスの表示形式が含まれていると、ヘッドレス エクスポートが失敗します。
+- ドリルダウンを解除すると強調表示が失われる問題 (フィルターは維持されている)。
+- 強調表示のフィルター設定により、他のチャートに 1 日余分に表示される問題。
+- 強調表示がエクスポート時に正しく表示されない問題。
+- 表示形式エディターに強調表示フィルターが表示される問題。
+- 「次の」期間関係を持つ DateRules では、2日以上の場合に正しい日数を表示しない問題。
+- 棒と柱状チャートの表示形式では、最初の読み込み時にプロット領域が適切に使用されない問題。
+- 日時フィルターのメニューに AllTime をカスタム項目として追加すると、メニュー項目が重複して表示される問題。
+- 散布図の表示形式を使用すると、マップの中心が移動する問題。
+- 複数のグリッドの表示形式を含む Excel エクスポート時にダイアログが重複表示される問題。
+- 階級区分図では、「アメリカ合衆国の州」マップを使用する時、州の扱いが正しくない問題。
+- ピボット表示形式にてツールチップ フィルターを適用後に null 参照例外が発生する問題。
+- グリッド表示形式で表示形式タイプを変更すると、表示形式が消えコンソール エラーが発生する問題。
+- カテゴリー フィールドでのダッシュボード リンク パラメーターが機能しない問題。
+- 範囲が設定されていない CustomRange フィルターを含むダッシュボードを開くと null 参照エラーが発生する問題。
+- 階層が定義されていない単一の日付フィールドでもドリルダウンが可能になる問題。
+- ドリルアップ/ドリルダウン時に日付形式が失われる問題。
+- ツールチップのフィールド項目がフィールド ラベルを使用しない問題。
+- フィルター ラベルに含まれる日本語がヘッドレス エクスポートによる PDF ファイルで文字化けする問題。
+- 新規作成した円チャートが PDF に正しくエクスポートされない問題。
+- グリッド ページングではデータが 2 回読み込まれる問題。
+- 長い凡例が正しく表示されない問題。
+- 「現在までの …」フィルターを使用してピボットを展開すると、間違ったデータが表示される問題。
+- 日付範囲フィルター「過去 12 か月」には現在の月のデータが含まれる問題。
+- モバイル表示でフィルターの不透明度が通常サイズよりも濃く表示される問題。
+- 他のピボット行が存在する場合、展開機能が正常に動作しない問題。
+- 項目が重複している場合、アドホック ピボット展開機能が正しく動作しない問題。
+- 空の要素でドリルダウンを実行するとクラッシュが発生する問題。
+- 展開済みのピボット行に対するドリルダウンが正しく動作しない問題。
+- API を使用して日付グローバル フィルターの範囲を設定しても、UI が更新されない問題。
+- 日付フィルターを変更した後、視覚化を更新するには更新が必要です。
+- Excel データ ソースで日付列が数値として検出される問題。
+- 生データ画像のエクスポート時にクラッシュが発生する問題。
+- API を使用して作成直後の日付グローバル フィルターを変更しても UI が更新されない問題。
 
 ## 1.7.4 (2025 年 5 月 6 日)
 
