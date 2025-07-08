@@ -25,6 +25,14 @@ revealView.onFieldsInitializing = function (args) {
 - 編集モードに入ると、強調表示フィルターが削除されるようになりました。
 - 依存関係 ANTLR が v4.13.1 に更新されました。
 - Redshift コネクターは、同じ AWS クラスターに含まれるデータベースのクロス データベース ブレンディングをサポートするようになりました。
+- Rule and range properties can now be set via API for existing date dashboard filters.
+
+```js
+revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Day);
+//-or-
+revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
+```
+- `RVDashboard.dateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 
 #### Java
 
@@ -34,6 +42,13 @@ revealView.onFieldsInitializing = function (args) {
 #### Node
 
 - ヘッドレス Excel エクスポートでフィルターと日付フィルターがサポートされるようになりました。
+- Puppeteer extracts Chrome to a different location, users making use of nodemon should update the configuration ignore the directory.
+
+```json
+"nodemonConfig": {
+  "ignore": ["chrome-headless*/*"]
+}
+```
 
 ### バグ修正
 

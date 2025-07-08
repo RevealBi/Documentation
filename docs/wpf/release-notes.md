@@ -25,6 +25,14 @@ private void RevealView_FieldsInitializing(FieldsInitializingEventArgs args)
 - Highlighting filters are now removed when entering edit mode.
 - The ANTLR dependency was updated to v4.13.1.
 - Redshift connector now supports cross database blending for databases contained in the same AWS cluster.
+- Rule and range properties can now be set via API for existing date dashboard filters.
+
+```csharp
+revealView.Dashboard.Filters[0].Rule = new RVDateRule(RVPeriodRelation.Last, 2, RVPeriodType.Day);
+//-or-
+revealView.Dashboard.Filters[0].Range = new RVDateRange(new DateTime(2023, 1, 1), new DateTime(2023, 12, 31));
+```
+- `RVDashboard.DateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 
 ### Bugs
 

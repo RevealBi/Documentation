@@ -25,6 +25,14 @@ private void RevealView_FieldsInitializing(FieldsInitializingEventArgs args)
 - 編集モードに入ると、強調表示フィルターが削除されるようになりました。
 - 依存関係 ANTLR が v4.13.1 に更新されました。
 - Redshift コネクターは、同じ AWS クラスターに含まれるデータベースのクロス データベース ブレンディングをサポートするようになりました。
+- Rule and range properties can now be set via API for existing date dashboard filters.
+
+```csharp
+revealView.Dashboard.Filters[0].Rule = new RVDateRule(RVPeriodRelation.Last, 2, RVPeriodType.Day);
+//-or-
+revealView.Dashboard.Filters[0].Range = new RVDateRange(new DateTime(2023, 1, 1), new DateTime(2023, 12, 31));
+```
+- `RVDashboard.DateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 
 ### バグ修正
 
