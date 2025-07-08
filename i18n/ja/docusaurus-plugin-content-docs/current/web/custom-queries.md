@@ -10,6 +10,7 @@ import TabItem from '@theme/TabItem';
 
 - [Amazon Athena](adding-data-sources/amazon-athena.md)
 - Amazon Redshift
+- [Google BigQuery](adding-data-sources/google-big-query.md)
 - Microsoft Azure SQL Database
 - Microsoft Azure Synapse Analytics
 - [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
