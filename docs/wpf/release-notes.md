@@ -14,12 +14,13 @@ revealView.FieldsInitializing += RevealView_FieldsInitializing;
 
 private void RevealView_FieldsInitializing(FieldsInitializingEventArgs args)
 {
-    var editedFields = args.Fields;
-    var fieldToChange = editedFields.FirstOrDefault(f => f.Name == "Date");
-    if (fieldToChange != null)
+    args.Fields.ForEach(f =>
     {
-        fieldToChange.WeekLevelEnabled = true;
-    }
+        if (f.Type == RVDashboardDataType.Date || f.Type == RVDashboardDataType.DateTime)
+        {
+            f.WeekLevelEnabled = true;
+        }
+    });
 }
 ```
 - Highlighting filters are now removed when entering edit mode.
