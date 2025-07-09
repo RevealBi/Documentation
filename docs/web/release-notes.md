@@ -16,10 +16,10 @@ import TabItem from '@theme/TabItem';
 
 ```js
 revealView.onFieldsInitializing = function (args) {
-  var editedFields = args.fields;
-  var fieldToChange = editedFields.find(f => f.name == "Date");
-  if(fieldToChange)
-   fieldToChange.weekLevelEnabled = true;
+    args.fields.forEach(f => {
+    if (f.type == $.ig.RVDashboardDataType.Date || f.type == $.ig.RVDashboardDataType.DateTime) {
+        f.weekLevelEnabled = true;
+    }});
 };
 ```
 - Highlighting filters are now removed when entering edit mode.
