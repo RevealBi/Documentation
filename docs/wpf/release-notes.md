@@ -5,7 +5,7 @@
 ### New Features
 
 - Databricks now supports the following authentication types; personal access token, OAuth token pass-through, OAuth client credentials, and Microsoft Entra ID client credentials.
-- Added support for multiple dashboard date filters.
+- Date filters are now included in the dashboard's `Filters` collection. Note that if you have code referencing the `SelectedValues` property on an element of `RVDashboard.Filters`, you'll get an error that will require that you cast the filter's reference to `RVDateDashboardFilter`.
 - An opt-in week date aggregation added to fields through `FieldsInitializing` by setting the `WeekLevelEnabled` to `true`.
 
 ```csharp

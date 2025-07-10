@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 - Databricks now supports the following authentication types; personal access token, OAuth token pass-through, OAuth client credentials, and Microsoft Entra ID client credentials.
 - Reveal no longer extends native JS prototypes (e.g. Array).
-- Added support for multiple dashboard date filters.
+- Date filters are now included in the dashboard's `filters` collection.
 - An opt-in week date aggregation added to fields through `onFieldsInitializing` by setting the `weekLevelEnabled` to `true`.
 
 ```js
