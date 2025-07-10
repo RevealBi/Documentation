@@ -16,23 +16,23 @@ import TabItem from '@theme/TabItem';
 
 ```js
 revealView.onFieldsInitializing = function (args) {
-  var editedFields = args.fields;
-  var fieldToChange = editedFields.find(f => f.name == "Date");
-  if(fieldToChange)
-   fieldToChange.weekLevelEnabled = true;
+    args.fields.forEach(f => {
+    if (f.type == $.ig.RVDashboardDataType.Date || f.type == $.ig.RVDashboardDataType.DateTime) {
+        f.weekLevelEnabled = true;
+    }});
 };
 ```
 - 編集モードに入ると、強調表示フィルターが削除されるようになりました。
 - 依存関係 ANTLR が v4.13.1 に更新されました。
 - Redshift コネクターは、同じ AWS クラスターに含まれるデータベースのクロス データベース ブレンディングをサポートするようになりました。
-- Rule and range properties can now be set via API for existing date dashboard filters.
+- 既存の日付ダッシュボード フィルターのルールと範囲のプロパティを API 経由で設定できるようになりました。
 
 ```js
 revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Day);
 //-or-
 revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
 ```
-- `RVDashboard.dateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
+- `RVDashboard.dateFilter` は非推奨です。互換性のため当面は残されていますが、存在する場合は最初の `DateDashboardFilter` を参照します。
 
 #### Java
 
@@ -42,7 +42,7 @@ revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1
 #### Node
 
 - ヘッドレス Excel エクスポートでフィルターと日付フィルターがサポートされるようになりました。
-- Puppeteer extracts Chrome to a different location, users making use of nodemon should update the configuration ignore the directory.
+- Puppeteer が Chrome を別の場所に展開するようになったため、nodemon を使用している場合は該当ディレクトリを除外するよう設定を更新してください。
 
 ```json
 "nodemonConfig": {

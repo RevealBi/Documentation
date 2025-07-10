@@ -1,3 +1,5 @@
 # 既知の問題
 
-現時点で報告する問題はありません。
+### ダッシュボード フィルタリング
+
+- `RVDashboard.Filters[0].SelectedValues` は WPF 環境でエラーを引き起こします。`RVDashboardFilter` にキャストする必要があります。
