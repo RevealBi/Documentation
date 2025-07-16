@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 - Databricks は現在、個人アクセス トークン、OAuth トークン パススルー、OAuth クライアント資格情報、Microsoft Entra ID クライアント資格情報などの認証タイプをサポートするようになりました。
 - Reveal はネイティブ JS プロトタイプ (Array など) を拡張しなくなりました。
-- ダッシュボード内で複数の日時フィルターのサポートが追加されました。
+- 日付フィルターがダッシュボードの `filters` コレクションに含まれるようになりました。
 - `weekLevelEnabled` を `true` に設定することにより、`onFieldsInitializing` を通じてフィールドにオプトインの週の日付集計が追加されました。
 
 ```js

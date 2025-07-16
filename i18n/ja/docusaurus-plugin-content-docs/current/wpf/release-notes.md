@@ -5,7 +5,7 @@
 ### 新機能
 
 - Databricks は現在、個人アクセス トークン、OAuth トークン パススルー、OAuth クライアント資格情報、Microsoft Entra ID クライアント資格情報などの認証タイプをサポートするようになりました。
-- ダッシュボード内で複数の日時フィルターのサポートが追加されました。
+- 日付フィルターがダッシュボードの `Filters` コレクションに含まれるようになりました。`RVDashboard.Filters` の要素の `SelectedValues` プロパティを参照するコードがある場合は、フィルターの参照を `RVDateDashboardFilter` にキャストする必要があるというエラーが発生することに注意してください。
 - `WeekLevelEnabled` を `true` に設定することにより、`FieldsInitializing` を通じてフィールドにオプトインの週の日付集計が追加されました。
 
 ```csharp
