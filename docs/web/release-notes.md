@@ -3,6 +3,14 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.7.6 (July 22nd, 2025)
+
+Emergency patch release with critical bug fixes.
+
+### Bugs
+- Selecting a field to "sort by" a label when there is no data to display causes a "Index was outside the bounds of the array."
+- Thumbnails broken with `ERROR TypeError: $.ig.SdkDashboardDocument.fromJson is not a function`
+
 ## 1.7.5 (July 8th, 2025)
 
 ### New Features
