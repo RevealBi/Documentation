@@ -26,6 +26,7 @@ const config: Config = {
   plugins: [
     ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
     ["@inkeep/cxkit-docusaurus", { ChatButton: chatButtonSettings, SearchBar: searchBarSettings }],
+    ["@docusaurus/plugin-google-tag-manager", { containerId: "GTM-WXWCMQZ" }],
   ],
 
   i18n: {
