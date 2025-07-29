@@ -5,11 +5,11 @@ import TabItem from '@theme/TabItem';
 
 ## 1.7.6 (2025 年 7 月 22 日)
 
-重大なバグ修正を含む緊急パッチリリース。
+重大なバグを修正した緊急パッチ リリース。
 
 ### バグ修正
-- 表示するデータが存在しない状態で、ラベルで「並べ替え」用のフィールドを選択すると、「配列のインデックスが範囲外です。」というエラーが発生する問題を修正。
-- サムネイルが次のエラーで表示されない問題を修正： `ERROR TypeError: $.ig.SdkDashboardDocument.fromJson is not a function`
+- データが存在しない状態で「並べ替え条件」ラベルでフィールドを選択すると、「Index was outside the bounds of the array. (インデックスが配列の範囲外です。)」というエラーが発生する問題を修正しました。
+- `ERROR TypeError: $.ig.SdkDashboardDocument.fromJson is not a function` というエラーにより サムネイルが正しく表示されない不具合を修正しました。
 
 ## 1.7.5 (2025 年 7 月 8 日)
 
