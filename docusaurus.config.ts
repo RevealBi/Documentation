@@ -204,36 +204,6 @@ const config: Config = {
       darkTheme: prismThemes.vsDark,
       additionalLanguages: ["csharp", "java", "bash", "typescript"],
     },
-
-    inkeepConfig: {
-      baseSettings: {
-        apiKey: 'd3c8d5f69fbc363dfb78a55ff2b3a6b2e09a92a012d41396',
-        integrationId: 'cm73lg93200mjs6016t6s689b',
-        organizationId: 'org_DJ2ynA7OmhuamUOn',
-        primaryBrandColor: '#ec417a',
-        organizationDisplayName: "Reveal",
-      },
-      modalSettings: {
-        askAILabel: 'Ask Reveal AI',
-        isModeSwitchingEnabled: false,
-        forceInitialDefaultView: true,
-      },
-      searchSettings: {
-        placeholder: 'Search',
-      },
-      aiChatSettings: {
-        placeholder: 'Type your question...',
-        chatSubjectName: 'Reveal',
-        chatButtonText: "Chat with Reveal AI", //not working
-        botName: 'Reveal AI',
-        botAvatarSrcUrl: 'https://help.revealbi.io/img/logo.png',
-        // quickQuestions: [
-        //   'How to choose a visualization type?',
-        //   'What are dot maps?',
-        //   'How to use dashboard filters?'
-        // ],
-      },
-    }
   } satisfies Preset.ThemeConfig,
   markdown: {
     mermaid: true

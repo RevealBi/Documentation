@@ -12,9 +12,9 @@ import { InkeepAIChatSettings, InkeepBaseSettings, InkeepChatButtonProps, Inkeep
     aiAssistantName: "Reveal AI",
     aiAssistantAvatar: "https://help.revealbi.io/img/logo.png",
     exampleQuestions: [
-      "How to choose a visualization type?",
-      "What are dot maps?",
-      "How to use dashboard filters?",
+      "What data sources are supported?",
+      "How do I create a bar chart?",
+      "How to add the Microsoft SQL Server data source?",
     ],
   }
 
