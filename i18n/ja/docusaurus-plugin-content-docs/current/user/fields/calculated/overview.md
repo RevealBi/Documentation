@@ -74,80 +74,80 @@ Reveal では、計算フィールドというフィールドをデータセッ�
 事前計算フィールドと事後計算フィールドの両方で、Reveal で使用可能な機能のいずれかを使用できます。
 
   - [**集計**](aggregation.md):
-    [average](aggregation.md#aggregation-functions)、
-    [averageif](aggregation.md#aggregation-functions)、
-    [count](aggregation.md#aggregation-functions)、
-    [countif](aggregation.md#aggregation-functions)、
-    [max](aggregation.md#aggregation-functions)、
-    [maxif](aggregation.md#aggregation-functions)、
-    [min](aggregation.md#aggregation-functions)、
-    [minif](aggregation.md#aggregation-functions)。
+    [average](aggregation.md#集計関数)、
+    [averageif](aggregation.md#集計関数)、
+    [count](aggregation.md#集計関数)、
+    [countif](aggregation.md#集計関数)、
+    [max](aggregation.md#集計関数)、
+    [maxif](aggregation.md#集計関数)、
+    [min](aggregation.md#集計関数)、
+    [minif](aggregation.md#集計関数)。
 
   - [**日付**](date.md):
-    [date](date.md#date-functions)、
-    [datevalue](date.md#date-functions)、
-    [day](date.md#date-functions)、
-    [formatdate](date.md#date-functions)、
-    [fquarter](date.md#date-functions)、
-    [semester](date.md#date-functions)、
-    [fsemester](date.md#date-functions)、
-    [fyear](date.md#date-functions)、
-    [hour](date.md#date-functions)、
-    [millisecond](date.md#date-functions)、
-    [minute](date.md#date-functions)、
-    [month](date.md#date-functions)、
-    [monthname](date.md#date-functions)、
-    [monthshortname](date.md#date-functions)、
-    [applytimezone](date.md#date-functions)、
-    [currenttimezone](date.md#date-functions)、
-    [datetimefromunixts](date.md#date-functions)、
-    [now](date.md#date-functions)、
-    [quarter](date.md#date-functions)、
-    [second](date.md#date-functions)、
-    [time](date.md#date-functions)、
-    [today](date.md#date-functions)、
-    [weekday](date.md#date-functions)、
-    [weeknum](date.md#date-functions)、
-    [year](date.md#date-functions)。
+    [date](date.md#日付関数)、
+    [datevalue](date.md#日付関数)、
+    [day](date.md#日付関数)、
+    [formatdate](date.md#日付関数)、
+    [fquarter](date.md#日付関数)、
+    [semester](date.md#日付関数)、
+    [fsemester](date.md#日付関数)、
+    [fyear](date.md#日付関数)、
+    [hour](date.md#日付関数)、
+    [millisecond](date.md#日付関数)、
+    [minute](date.md#日付関数)、
+    [month](date.md#日付関数)、
+    [monthname](date.md#日付関数)、
+    [monthshortname](date.md#日付関数)、
+    [applytimezone](date.md#日付関数)、
+    [currenttimezone](date.md#日付関数)、
+    [datetimefromunixts](date.md#日付関数)、
+    [now](date.md#日付関数)、
+    [quarter](date.md#日付関数)、
+    [second](date.md#日付関数)、
+    [time](date.md#日付関数)、
+    [today](date.md#日付関数)、
+    [weekday](date.md#日付関数)、
+    [weeknum](date.md#日付関数)、
+    [year](date.md#日付関数)。
 
   - [**情報**](information.md):
-    [empty](information.md#information-functions)、
-    [isempty](information.md#information-functions).
+    [empty](information.md#情報関数)、
+    [isempty](information.md#情報関数).
 
   - [**論理**](logic.md):
-    [and](logic.md#logic-functions)、
-    [false](logic.md#logic-functions)、
-    [if](logic.md#logic-functions)、
-    [not](logic.md#logic-functions)、
-    [or](logic.md#logic-functions)、
-    [true](logic.md#logic-functions)。
+    [and](logic.md#論理関数)、
+    [false](logic.md#論理関数)、
+    [if](logic.md#論理関数)、
+    [not](logic.md#論理関数)、
+    [or](logic.md#論理関数)、
+    [true](logic.md#論理関数)。
 
   - [**検索/行列**](lookup-reference.md):
-    [previous](lookup-reference.md#lookup-and-reference-functions)、
-    [row](lookup-reference.md#lookup-and-reference-functions).
+    [previous](lookup-reference.md#検索行列関数)、
+    [row](lookup-reference.md#検索行列関数).
 
   - [**数学**](math.md):
-    [abs](math.md#math-functions)、
-    [exp](math.md#math-functions)、
-    [log](math.md#math-functions)、
-    [log10](math.md#math-functions)、
-    [mod](math.md#math-functions)、
-    [rand](math.md#math-functions)、
-    [randbetween](math.md#math-functions)、
-    [sign](math.md#math-functions)、
-    [sqrt](math.md#math-functions)、
-    [trunc](math.md#math-functions)。
+    [abs](math.md#数学関数)、
+    [exp](math.md#数学関数)、
+    [log](math.md#数学関数)、
+    [log10](math.md#数学関数)、
+    [mod](math.md#数学関数)、
+    [rand](math.md#数学関数)、
+    [randbetween](math.md#数学関数)、
+    [sign](math.md#数学関数)、
+    [sqrt](math.md#数学関数)、
+    [trunc](math.md#数学関数)。
 
   - [**文字列**](string.md):
-    [concatenate](string.md#string-functions)、
-    [find](string.md#string-functions)、
-    [len](string.md#string-functions)、
-    [lower](string.md#string-functions)、
-    [mid](string.md#string-functions)、
-    [replace](string.md#string-functions)、
-    [sortinterval](string.md#string-functions)、
-    [trim](string.md#string-functions)、
-    [upper](string.md#string-functions)。
+    [concatenate](string.md#文字列関数)、
+    [find](string.md#文字列関数)、
+    [len](string.md#文字列関数)、
+    [lower](string.md#文字列関数)、
+    [mid](string.md#文字列関数)、
+    [replace](string.md#文字列関数)、
+    [sortinterval](string.md#文字列関数)、
+    [trim](string.md#文字列関数)、
+    [upper](string.md#文字列関数)。
 
 :::note
 **IF 条件の制限**。事前計算のフィールドの集計関数に含まれる場合、IF 条件には既知の制限があります。計算式内の IF 条件を確認するためにすべてのレコードを複数回調べる必要があり、パフォーマンスが低下する問題が発生するため、サポートされていません。:::

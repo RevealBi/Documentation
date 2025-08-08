@@ -5,7 +5,6 @@ import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
 import { chatButtonSettings, searchBarSettings } from './inkeep.config';
-const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
   title: 'Reveal',
@@ -92,7 +91,6 @@ const config: Config = {
           position: "left",
           items: [
             { label: "Web", to: "web" },
-            { label: "WPF", to: "wpf" },
             { label: "User", to: "user" },
           ]
         },
@@ -103,7 +101,6 @@ const config: Config = {
             { label: "ASP.NET", to: "https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.html", target: "blank" },
             { label: "JAVA", to: "https://help.revealbi.io/api/java/latest/", target: "blank" },
             { label: "JavaScript", to: "https://help.revealbi.io/api/javascript/latest/", target: "blank" },
-            { label: "WPF", to: "https://help.revealbi.io/api/wpf/latest/Reveal.Sdk.html", target: "blank" }
           ]
         },
         {
@@ -113,7 +110,7 @@ const config: Config = {
             { label: "Blogs", to: "https://www.revealbi.io/blog" },
             { label: "Developer Playground", to: "playground" },
             { label: "Samples", to: "https://github.com/RevealBi/sdk-samples-javascript" },
-            { label: "Videos", to: "https://www.youtube.com/playlist?list=PLZ4rRHIJepBt-USWdh-9BimHh-GjPAGUH" }
+            { label: "Videos", to: "https://www.youtube.com/@RevealBI" }
           ]
         },
         {
@@ -131,10 +128,6 @@ const config: Config = {
             {
               label: 'Web SDK',
               to: 'web',
-            },
-            {
-              label: 'WPF SDK',
-              to: 'wpf',
             },
             { label: "User", to: "user" },
           ],
@@ -210,36 +203,6 @@ const config: Config = {
       darkTheme: prismThemes.vsDark,
       additionalLanguages: ["csharp", "java", "bash", "typescript"],
     },
-
-    inkeepConfig: {
-      baseSettings: {
-        apiKey: 'd3c8d5f69fbc363dfb78a55ff2b3a6b2e09a92a012d41396',
-        integrationId: 'cm73lg93200mjs6016t6s689b',
-        organizationId: 'org_DJ2ynA7OmhuamUOn',
-        primaryBrandColor: '#ec417a',
-        organizationDisplayName: "Reveal",
-      },
-      modalSettings: {
-        askAILabel: 'Ask Reveal AI',
-        isModeSwitchingEnabled: false,
-        forceInitialDefaultView: true,
-      },
-      searchSettings: {
-        placeholder: 'Search',
-      },
-      aiChatSettings: {
-        placeholder: 'Type your question...',
-        chatSubjectName: 'Reveal',
-        chatButtonText: "Chat with Reveal AI", //not working
-        botName: 'Reveal AI',
-        botAvatarSrcUrl: 'https://help.revealbi.io/img/logo.png',
-        quickQuestions: [
-          'How to choose a visualization type?',
-          'What are dot maps?',
-          'How to use dashboard filters?'
-        ],
-      },
-    }
   } satisfies Preset.ThemeConfig,
   markdown: {
     mermaid: true

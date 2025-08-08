@@ -11,10 +11,6 @@
     "message": "Embed data analytics into your HTML/JavaScript, Angular, React, or ASP.NET web applications.",
     "description": "The words used to describe the web sdk on the homepage"
   },
-  "homepage.feature.wpf": {
-    "message": "Easily integrate data analytics into your WPF or WinForms applications.",
-    "description": "The words used to describe the wpf sdk on the homepage"
-  },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -273,10 +269,6 @@
   "homepage.feature.web.title": {
     "message": "Web SDK Documentation",
     "description": "The title of the Web feature on the homepage"
-  },
-  "homepage.feature.wpf.title": {
-    "message": "WPF SDK Documentation",
-    "description": "The title of the WPF feature on the homepage"
   },
   "playground.runButton": {
     "message": "Run"
@@ -550,5 +542,13 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
     "description": "The draft content banner message"
+  },
+  "homepage.feature.video.title": {
+    "message": "Videos",
+    "description": "The title of the Video feature on the homepage"
+  },
+  "homepage.feature.video": {
+    "message": "Dive into Reveal SDK with step‑by‑step YouTube videos. Hit play and ship your first dashboard today.",
+    "description": "The words used to describe the video section on the homepage"
   }
 }
