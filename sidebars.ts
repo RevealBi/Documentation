@@ -144,83 +144,8 @@ const sidebars: SidebarsConfig = {
     },
 
   ],
-
-  wpfSidebar: [
-    /* -------------------- General -------------------- */
-    {
-      type: "category", label: "General", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        {
-          type: "category", label: "Installation", items: [
-            { type: "doc", label: "System Requirements", id: "wpf/system-requirements" },
-            { type: "doc", label: "Install the Reveal SDK", id: "wpf/installation" },
-            { type: "doc", label: "Adding a License Key", id: "wpf/adding-license-key" }
-          ]
-        },
-        { type: "doc", label: "Getting Started", id: "wpf/getting-started" },
-      ]
-    },
-
-    /* -------------------- Working with Dashboards -------------------- */
-    {
-      type: "category", label: "Working with Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Creating", id: "wpf/creating-dashboards" },
-        { type: "doc", label: "Loading", id: "wpf/loading-dashboards" },
-        { type: "doc", label: "Filtering", id: "wpf/filtering-dashboards" },
-        { type: "doc", label: "Editing", id: "wpf/editing-dashboards" },
-        { type: "doc", label: "Saving", id: "wpf/saving-dashboards" },
-        { type: "doc", label: "Linking", id: "wpf/linking-dashboards" },
-        { type: "doc", label: "Formatting Data", id: "wpf/formatting-data" },
-        { type: "doc", label: "Localizing", id: "wpf/localizing-dashboards" },
-        { type: "doc", label: "Exporting", id: "wpf/exporting-dashboards" },
-        { type: "doc", label: "Theming", id: "wpf/theming-dashboards" },
-      ]
-    },
-
-    /* -------------------- Working with Data Sources -------------------- */
-    {
-      type: "category", label: "Working with Data Sources", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        {
-          type: "category", label: "Data Sources", link: { type: "doc", id: "wpf/datasources" }, items: [
-            { type: "doc", label: "Excel File", id: "wpf/adding-data-sources/excel-file" },
-            { type: "doc", label: "In Memory Data", id: "wpf/adding-data-sources/in-memory-data" },
-            { type: "doc", label: "MS SQL Server", id: "wpf/adding-data-sources/ms-sql-server" },
-          ]
-        },
-        {
-          type: "category", label: "Replacing Data Sources", items: [
-            { type: "doc", label: "Excel File", id: "wpf/replacing-data-sources/excel-file" },
-            { type: "doc", label: "MS SQL Server", id: "wpf/replacing-data-sources/ms-sql-server" },
-          ]
-        },
-        { type: "doc", label: "Authentication", id: "wpf/authentication" },
-      ]
-    },
-
-    /* -------------------- Working with Visualizations -------------------- */
-    {
-      type: "category", label: "Working with Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Chart Types", id: "wpf/chart-types" },
-        { type: "doc", label: "Maximizing Visualizations", id: "wpf/maximizing-visualizations" },
-        { type: "doc", label: "Responding to Click Events", id: "wpf/click-events" },
-        { type: "doc", label: "Tooltips", id: "wpf/tooltips" },
-      ]
-    },
-
-    /* -------------------- Release Information -------------------- */
-    {
-      type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        {
-          type: "category", label: "Release Notes", link: { type: "doc", id: "wpf/release-notes" }, items: [
-            { type: "doc", label: "1.6.0 Upgrade Guide", id: "wpf/upgrade-guide-v1.6.0" },
-          ]
-        },
-        { type: "doc", label: "Known Issues", id: "wpf/known-issues" },
-        { type: "doc", label: "Third-Party Software", id: "wpf/third-party-software" },
-      ]
-    },
-  ],
   
-    userSideBar: [
+  userSideBar: [
     {
       type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         {

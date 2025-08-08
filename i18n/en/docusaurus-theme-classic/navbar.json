@@ -19,10 +19,6 @@
     "message": "Web",
     "description": "Navbar item with label Web"
   },
-  "item.label.WPF": {
-    "message": "WPF",
-    "description": "Navbar item with label WPF"
-  },
   "item.label.ASP.NET": {
     "message": "ASP.NET",
     "description": "Navbar item with label ASP.NET"

@@ -119,90 +119,6 @@
     "message": "Data Limits",
     "description": "The label for the doc item Data Limits in sidebar webSidebar, linking to the doc web/data-size-limits"
   },
-  "sidebar.wpfSidebar.category.Replacing Data Sources": {
-    "message": "Replacing Data Sources",
-    "description": "The label for category Replacing Data Sources in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.doc.Getting Started": {
-    "message": "Getting Started",
-    "description": "The label for the doc item Getting Started in sidebar wpfSidebar, linking to the doc wpf/getting-started"
-  },
-  "sidebar.wpfSidebar.doc.Creating": {
-    "message": "Creating",
-    "description": "The label for the doc item Creating in sidebar wpfSidebar, linking to the doc wpf/creating-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Loading": {
-    "message": "Loading",
-    "description": "The label for the doc item Loading in sidebar wpfSidebar, linking to the doc wpf/loading-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Filtering": {
-    "message": "Filtering",
-    "description": "The label for the doc item Filtering in sidebar wpfSidebar, linking to the doc wpf/filtering-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Editing": {
-    "message": "Editing",
-    "description": "The label for the doc item Editing in sidebar wpfSidebar, linking to the doc wpf/editing-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Saving": {
-    "message": "Saving",
-    "description": "The label for the doc item Saving in sidebar wpfSidebar, linking to the doc wpf/saving-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Linking": {
-    "message": "Linking",
-    "description": "The label for the doc item Linking in sidebar wpfSidebar, linking to the doc wpf/linking-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Formatting Data": {
-    "message": "Formatting Data",
-    "description": "The label for the doc item Formatting Data in sidebar wpfSidebar, linking to the doc wpf/formatting-data"
-  },
-  "sidebar.wpfSidebar.doc.Localizing": {
-    "message": "Localizing",
-    "description": "The label for the doc item Localizing in sidebar wpfSidebar, linking to the doc wpf/localizing-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Exporting": {
-    "message": "Exporting",
-    "description": "The label for the doc item Exporting in sidebar wpfSidebar, linking to the doc wpf/exporting-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Theming": {
-    "message": "Theming",
-    "description": "The label for the doc item Theming in sidebar wpfSidebar, linking to the doc wpf/theming-dashboards"
-  },
-  "sidebar.wpfSidebar.doc.Excel File": {
-    "message": "Excel File",
-    "description": "The label for the doc item Excel File in sidebar wpfSidebar, linking to the doc wpf/replacing-data-sources/excel-file"
-  },
-  "sidebar.wpfSidebar.doc.In Memory Data": {
-    "message": "In Memory Data",
-    "description": "The label for the doc item In Memory Data in sidebar wpfSidebar, linking to the doc wpf/adding-data-sources/in-memory-data"
-  },
-  "sidebar.wpfSidebar.doc.MS SQL Server": {
-    "message": "MS SQL Server",
-    "description": "The label for the doc item MS SQL Server in sidebar wpfSidebar, linking to the doc wpf/replacing-data-sources/ms-sql-server"
-  },
-  "sidebar.wpfSidebar.doc.Authentication": {
-    "message": "Authentication",
-    "description": "The label for the doc item Authentication in sidebar wpfSidebar, linking to the doc wpf/authentication"
-  },
-  "sidebar.wpfSidebar.doc.Maximizing Visualizations": {
-    "message": "Maximizing Visualizations",
-    "description": "The label for the doc item Maximizing Visualizations in sidebar wpfSidebar, linking to the doc wpf/maximizing-visualizations"
-  },
-  "sidebar.wpfSidebar.doc.Responding to Click Events": {
-    "message": "Responding to Click Events",
-    "description": "The label for the doc item Responding to Click Events in sidebar wpfSidebar, linking to the doc wpf/click-events"
-  },
-  "sidebar.wpfSidebar.doc.Tooltips": {
-    "message": "Tooltips",
-    "description": "The label for the doc item Tooltips in sidebar wpfSidebar, linking to the doc wpf/tooltips"
-  },
-  "sidebar.wpfSidebar.doc.Known Issues": {
-    "message": "Known Issues",
-    "description": "The label for the doc item Known Issues in sidebar wpfSidebar, linking to the doc wpf/known-issues"
-  },
-  "sidebar.wpfSidebar.doc.Third-Party Software": {
-    "message": "Third-Party Software",
-    "description": "The label for the doc item Third-Party Software in sidebar wpfSidebar, linking to the doc wpf/third-party-software"
-  },
   "sidebar.webSidebar.category.General": {
     "message": "General",
     "description": "The label for category General in sidebar webSidebar"
@@ -214,26 +130,6 @@
   "sidebar.webSidebar.category.Release Information": {
     "message": "Release Information",
     "description": "The label for category Release Information in sidebar webSidebar"
-  },
-  "sidebar.wpfSidebar.category.General": {
-    "message": "General",
-    "description": "The label for category General in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.category.Working with Dashboards": {
-    "message": "Working with Dashboards",
-    "description": "The label for category Working with Dashboards in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.category.Working with Data Sources": {
-    "message": "Working with Data Sources",
-    "description": "The label for category Working with Data Sources in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.category.Working with Visualizations": {
-    "message": "Working with Visualizations",
-    "description": "The label for category Working with Visualizations in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.category.Release Information": {
-    "message": "Release Information",
-    "description": "The label for category Release Information in sidebar wpfSidebar"
   },
   "sidebar.webSidebar.category.Getting Started - Server": {
     "message": "Getting Started - Server",
@@ -291,18 +187,6 @@
     "message": "Configure Export",
     "description": "The label for the doc item Configure Export in sidebar webSidebar, linking to the doc web/configure-export"
   },
-  "sidebar.wpfSidebar.category.Installation": {
-    "message": "Installation",
-    "description": "The label for category Installation in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.doc.System Requirements": {
-    "message": "System Requirements",
-    "description": "The label for the doc item System Requirements in sidebar wpfSidebar, linking to the doc wpf/system-requirements"
-  },
-  "sidebar.wpfSidebar.doc.Adding a License Key": {
-    "message": "Adding a License Key",
-    "description": "The label for the doc item Adding a License Key in sidebar wpfSidebar, linking to the doc wpf/adding-license-key"
-  },
   "sidebar.webSidebar.doc.Google Sheets": {
     "message": "Google Sheets",
     "description": "The label for the doc item Google Sheets in sidebar webSidebar, linking to the doc web/adding-data-sources/google-sheets"
@@ -331,14 +215,6 @@
     "message": "Amazon Athena",
     "description": "The label for the doc item Amazon Athena in sidebar webSidebar, linking to the doc web/adding-data-sources/amazon-athena"
   },
-  "sidebar.wpfSidebar.category.Data Sources": {
-    "message": "Data Sources",
-    "description": "The label for category Data Sources in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.doc.Install the Reveal SDK": {
-    "message": "Install the Reveal SDK",
-    "description": "The label for the doc item Install the Reveal SDK in sidebar wpfSidebar, linking to the doc wpf/installation"
-  },
   "sidebar.webSidebar.doc.Chart Types": {
     "message": "Chart Types",
     "description": "The label for the doc item Chart Types in sidebar webSidebar, linking to the doc web/chart-types"
@@ -350,18 +226,6 @@
   "sidebar.webSidebar.doc.1.6.0 Upgrade Guide": {
     "message": "1.6.0 Upgrade Guide",
     "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar webSidebar, linking to the doc web/upgrade-guide-v1.6.0"
-  },
-  "sidebar.wpfSidebar.doc.Chart Types": {
-    "message": "Chart Types",
-    "description": "The label for the doc item Chart Types in sidebar wpfSidebar, linking to the doc wpf/chart-types"
-  },
-  "sidebar.wpfSidebar.category.Release Notes": {
-    "message": "Release Notes",
-    "description": "The label for category Release Notes in sidebar wpfSidebar"
-  },
-  "sidebar.wpfSidebar.doc.1.6.0 Upgrade Guide": {
-    "message": "1.6.0 Upgrade Guide",
-    "description": "The label for the doc item 1.6.0 Upgrade Guide in sidebar wpfSidebar, linking to the doc wpf/upgrade-guide-v1.6.0"
   },
   "sidebar.webSidebar.doc.PostgreSQL": {
     "message": "PostgreSQL",

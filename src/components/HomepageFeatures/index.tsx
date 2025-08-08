@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
         <Translate id="homepage.feature.web.title" description="The title of the Web feature on the homepage">Web SDK Documentation</Translate>
       </>
     ),
-    Svg: require('@site/static/img/video-girl.svg').default,
+    Svg: require('@site/static/img/developer.svg').default,
     link: "web/",
     description: (
       <>
@@ -29,26 +29,11 @@ const FeatureList: FeatureItem[] = [
   {
     title: (
       <>
-        <Translate id="homepage.feature.wpf.title" description="The title of the WPF feature on the homepage">WPF SDK Documentation</Translate>
-      </>
-    ),
-    Svg: require('@site/static/img/developer.svg').default,
-    link: "wpf/",
-    description: (
-      <>
-        <Translate id="homepage.feature.wpf"
-          description="The words used to describe the wpf sdk on the homepage">Easily integrate data analytics into your WPF or WinForms applications.</Translate>
-      </>
-    ),
-  },
-  {
-    title: (
-      <>
         <Translate id="homepage.feature.user.title" description="The title of the User Docs feature on the homepage">User Documentation</Translate>
       </>
     ),
     Svg: require('@site/static/img/empty-states.svg').default,
-    link: "user",
+    link: "user/",
     description: (
       <>
         <Translate id="homepage.feature.user"
@@ -56,9 +41,24 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: (
+      <>
+        <Translate id="homepage.feature.video.title" description="The title of the Video feature on the homepage">Videos</Translate>
+      </>
+    ),
+    Svg: require('@site/static/img/video-girl.svg').default,
+    link: "https://www.youtube.com/@RevealBI/videos/",
+    description: (
+      <>
+        <Translate id="homepage.feature.video"
+          description="The words used to describe the video section on the homepage">Dive into Reveal SDK with step‑by‑step YouTube videos. Hit play and ship your first dashboard today.</Translate>
+      </>
+    ),
+  },
 ];
 
-function Feature({link, title, Svg, description}: FeatureItem) {
+function Feature({ link, title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

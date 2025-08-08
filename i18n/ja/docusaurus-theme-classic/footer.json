@@ -15,10 +15,6 @@
     "message": "Web SDK",
     "description": "The label of footer link with label=Web SDK linking to web"
   },
-  "link.item.label.WPF SDK": {
-    "message": "WPF SDK",
-    "description": "The label of footer link with label=WPF SDK linking to wpf"
-  },
   "link.item.label.Who are We": {
     "message": "会社概要",
     "description": "The label of footer link with label=Who are We linking to https://www.revealbi.io/about-us"

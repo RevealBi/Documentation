@@ -92,7 +92,6 @@ const config: Config = {
           position: "left",
           items: [
             { label: "Web", to: "web" },
-            { label: "WPF", to: "wpf" },
             { label: "User", to: "user" },
           ]
         },
@@ -103,7 +102,6 @@ const config: Config = {
             { label: "ASP.NET", to: "https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.html", target: "blank" },
             { label: "JAVA", to: "https://help.revealbi.io/api/java/latest/", target: "blank" },
             { label: "JavaScript", to: "https://help.revealbi.io/api/javascript/latest/", target: "blank" },
-            { label: "WPF", to: "https://help.revealbi.io/api/wpf/latest/Reveal.Sdk.html", target: "blank" }
           ]
         },
         {
@@ -113,7 +111,7 @@ const config: Config = {
             { label: "Blogs", to: "https://www.revealbi.io/blog" },
             { label: "Developer Playground", to: "playground" },
             { label: "Samples", to: "https://github.com/RevealBi/sdk-samples-javascript" },
-            { label: "Videos", to: "https://www.youtube.com/playlist?list=PLZ4rRHIJepBt-USWdh-9BimHh-GjPAGUH" }
+            { label: "Videos", to: "https://www.youtube.com/@RevealBI" }
           ]
         },
         {
@@ -131,10 +129,6 @@ const config: Config = {
             {
               label: 'Web SDK',
               to: 'web',
-            },
-            {
-              label: 'WPF SDK',
-              to: 'wpf',
             },
             { label: "User", to: "user" },
           ],
@@ -233,11 +227,11 @@ const config: Config = {
         chatButtonText: "Chat with Reveal AI", //not working
         botName: 'Reveal AI',
         botAvatarSrcUrl: 'https://help.revealbi.io/img/logo.png',
-        quickQuestions: [
-          'How to choose a visualization type?',
-          'What are dot maps?',
-          'How to use dashboard filters?'
-        ],
+        // quickQuestions: [
+        //   'How to choose a visualization type?',
+        //   'What are dot maps?',
+        //   'How to use dashboard filters?'
+        // ],
       },
     }
   } satisfies Preset.ThemeConfig,
