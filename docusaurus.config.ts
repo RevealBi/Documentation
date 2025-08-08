@@ -5,7 +5,6 @@ import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
 import { chatButtonSettings, searchBarSettings } from './inkeep.config';
-const { ProvidePlugin } = require("webpack");
 
 const config: Config = {
   title: 'Reveal',
