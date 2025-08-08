@@ -20,7 +20,7 @@ Reveal は、日付範囲をダッシュボード フィルターとして有効
 
   - [ダッシュボード フィルターの構成可能なプロパティ](filters-dashboard-properties.md):
 
-      - [表示フィールド](filters-dashboard-properties.md#di表示フィールド)
+      - [表示フィールド](filters-dashboard-properties.md#表示フィールド)
 
       - [複数選択](filters-dashboard-properties.md#複数選択)
 

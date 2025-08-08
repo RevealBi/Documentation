@@ -16,7 +16,7 @@ _language: ja
 
 ![dashboard filters in the visualization editor](images/visualization-editor-dashboard-filter.png)
 
-いずれの場合もダッシュボード フィルター データセットのフィールドへリンクするルールを追加してバインドが定義されます。 ([**フィールドのバインド**](#field-binding))表示形式エディターまたは [ダッシュボード フィルター] メニューで **[切断]** を選択すると、表示形式のバインドをいつでも削除できます。
+いずれの場合もダッシュボード フィルター データセットのフィールドへリンクするルールを追加してバインドが定義されます。 ([**フィールドのバインド**](#フィールドのバインド))表示形式エディターまたは [ダッシュボード フィルター] メニューで **[切断]** を選択すると、表示形式のバインドをいつでも削除できます。
 
 ![Option to disconnect dashboard filters from a visualization](images/disconnect-option-dashboard-filter.png)
 
