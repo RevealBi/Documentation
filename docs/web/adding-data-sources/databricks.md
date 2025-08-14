@@ -54,6 +54,10 @@ For Node.js applications, the Databricks data source is already included in the 
 
 For Java applications, the Databricks data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
 
+:::danger Important
+The Databricks JDBC Driver supports Apache Arrow. When using a Java JVM version 11 or higher, add the line --add-opens java.base/java.nio=ALL-UNNAMED to the JVM arguments. Without this JVM argument, the driver will not work.
+:::
+
   </TabItem>
 </Tabs>
 
