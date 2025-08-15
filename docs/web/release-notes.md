@@ -40,8 +40,8 @@ revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation
 //-or-
 revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
 ```
-- `RVDashboard.dateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 - Support for multiple date dashboard filters included as a beta feature.
+- `RVDashboard.dateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 
 #### Java
 
