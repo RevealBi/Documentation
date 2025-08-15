@@ -40,6 +40,7 @@ revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation
 //-or-
 revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
 ```
+- Support for multiple date dashboard filters included as a beta feature.
 - `RVDashboard.dateFilter` is deprecated. It's being kept for compatibility for the time being, and is a reference to the first `DateDashboardFilter`, if there is one.
 
 #### Java
@@ -1298,3 +1299,4 @@ revealView.dashboard = dashboard;
 #### Java
 - sdk-ext: updated commons-text library.
 - Fix for very slow response times when processing some Excel files.
+
