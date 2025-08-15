@@ -58,6 +58,20 @@ Java アプリケーションの場合、Databricks データ ソースはメイ
 The Databricks JDBC Driver supports Apache Arrow. When using a Java JVM version 11 or higher, add the line --add-opens java.base/java.nio=ALL-UNNAMED to the JVM arguments. Without this JVM argument, the driver will not work.
 :::
 
+To set the JVM argument, add the following to your `pom.xml` file:
+
+```xml
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <configuration>
+        <jvmArguments>--add-opens java.base/java.nio=ALL-UNNAMED</jvmArguments>
+    </configuration>
+</plugin>
+```
+
+*There are many ways to set this argument. This is just one example — for more, please see the relevant documentation.*
+
   </TabItem>
 </Tabs>
 
