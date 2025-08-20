@@ -40,6 +40,8 @@ revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation
 //-or-
 revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
 ```
+
+- 複数の日付ダッシュボード フィルターのサポートがベータ機能として追加されました。
 - `RVDashboard.dateFilter` は非推奨です。互換性のため当面は残されていますが、存在する場合は最初の `DateDashboardFilter` を参照します。
 
 #### Java

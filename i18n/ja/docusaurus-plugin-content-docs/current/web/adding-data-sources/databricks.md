@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 Databricks は、データ エンジニアリング チームとデータ サイエンス チームが大規模なデータ処理、機械学習、分析を共同で行うことができる統合分析プラットフォームです。このトピックでは、Reveal アプリケーションで Databricks データ ソースに接続して、データを視覚化および分析する方法について説明します。
 
-:::important Prerequisites
+:::important 前提条件
 Reveal で Databricks データ ソースを構成する前に、適切なデータベース ドライバーをインストールする必要があります。
 - Windows/.NET の場合: [Databricks ODBC ドライバー](https://www.databricks.com/spark/odbc-drivers-download)
 - Node.js の場合: [Databricks ODBC ドライバー](https://www.databricks.com/spark/odbc-drivers-download)
@@ -54,11 +54,11 @@ Node.js アプリケーションの場合、Databricks データ ソースはメ
 
 Java アプリケーションの場合、Databricks データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
-:::danger Important
-The Databricks JDBC Driver supports Apache Arrow. When using a Java JVM version 11 or higher, add the line --add-opens java.base/java.nio=ALL-UNNAMED to the JVM arguments. Without this JVM argument, the driver will not work.
+:::danger 重要
+Databricks JDBC ドライバーは Apache Arrow をサポートしています。Java JVM バージョン 11 以降を使用する場合は、JVM 引数に --add-opens java.base/java.nio=ALL-UNNAMED という行を追加してください。この JVM 引数がない場合、ドライバーは動作しません。
 :::
 
-To set the JVM argument, add the following to your `pom.xml` file:
+JVM 引数を設定するには、`pom.xml` ファイルに以下を追加してください:
 
 ```xml
 <plugin>
@@ -70,7 +70,7 @@ To set the JVM argument, add the following to your `pom.xml` file:
 </plugin>
 ```
 
-*There are many ways to set this argument. This is just one example — for more, please see the relevant documentation.*
+この方法は一例です。他にも設定方法は多数ありますので、詳細は関連ドキュメントをご確認ください。
 
   </TabItem>
 </Tabs>
