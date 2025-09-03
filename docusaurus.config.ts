@@ -60,7 +60,7 @@ const config: Config = {
             [npm2yarn, { sync: true }],
             [replace, {
               variables: [
-                { name: "sdkVersion", value: "1.7.6" }
+                { name: "sdkVersion", value: "1.8.0" }
               ]
             }],
           ],
