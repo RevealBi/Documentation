@@ -5,6 +5,10 @@ import TabItem from '@theme/TabItem';
 
 ## 1.8.0 (Sept 3rd, 2025)
 
+### Breaking Changes
+
+- Support for .NET 6 has been removed.
+
 ### New Features
 
 #### All Platforms
@@ -14,7 +18,6 @@ import TabItem from '@theme/TabItem';
 - The `Snowflake.Data` dependency was updated to v4.8.0.
 - SQL Server is now using command parameters instead of manual statement construction when calling stored procedures.
 - The native binary used with Node has been updated to use .NET 8.
-- Support for .NET 6 has been removed.
 - Redshift now supports grid row paging.
 
 ### Bugs
