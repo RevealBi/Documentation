@@ -3,54 +3,54 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.8.0 (Sept 3rd, 2025)
+## 1.8.0 (2025 年 9 月 3 日)
 
-### Breaking Changes
+### 重大な変更
 
-- Support for .NET 6 has been removed.
+- .NET 6 のサポートは削除されました。
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Snowflake now supports key-pair authentication.
-- Snowflake now supports stored procedures.
-- The `Snowflake.Data` dependency was updated to v4.8.0.
-- SQL Server is now using command parameters instead of manual statement construction when calling stored procedures.
-- The native binary used with Node has been updated to use .NET 8.
-- Redshift now supports grid row paging.
+- Snowflake のキーペア認証に対応しました。
+- Snowflake のストアド プロシージャに対応しました。
+- 依存関係 `Snowflake.Data` が v4.8.0 に更新されました。
+- SQL Server のストアド プロシージャ呼び出し時に、手動のステートメント構築ではなくコマンド パラメーターを使用するようになりました。
+- Node で使用されるネイティブ バイナリが .NET 8 に更新されました。
+- Redshift がグリッド行のページングに対応しました。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Selecting a field to "sort by" a label when there is no data to display causes a "Index was outside the bounds of the array" error.
-- The export button doesn't display a loading spinner after the first click and can be clicked multiple times.
-- Scrolling causes RevealView to become unresponsive when using the Chrome device toolbar.
-- Pivot expansion while sorting by values with multiple fields, is broken.
-- Issue with `VisualizationOptions.ShowFilters`, from headless export.
-- Visualization descriptions don’t appear if there are new lines or breaks in the content.
-- Grid paging is not working for Amazon Athena.
-- Dashboard filters do not cascade when using a REST datasource.
-- MongoDB calculated fields using subtracting/adding numbers to dates give wrong results.
-- Line chart does not display data after filter selection.
-- MySQL duplicates stored procedures and their parameters.
-- Headless export displays a console error if a dashboard includes a visualization date filter.
-- Exporting a dashboard to Excel may generate a partially invalid .xslx file that can be opened but needs to be repaired first.
-- Setting "Multiple" & "Required" on global filters with "All" only selects the first option.
-- Stacked column has ghosting effect when zooming in and out.
-- Headless export doesn't use the configured export language.
-- Inconsistency in the drill down or drill up navigation path label when working with fiscal years and semesters or quarters.
-- Dashboard descriptions don’t appear if there are new lines or breaks in the content.
+- データが存在しない状態で「並べ替え条件」ラベルでフィールドを選択すると、「Index was outside the bounds of the array. (インデックスが配列の範囲外です)」というエラーが発生する問題を修正しました。
+- エクスポート ボタンをクリックした後にローディング スピナーが表示されず、複数回クリックできてしまう問題。
+- Chrome のデバイス ツールバー使用時にスクロールすると RevealView が応答しなくなる問題。
+- 複数フィールドで値による並べ替える際にピボット展開が壊れる問題。
+- ヘッドレス エクスポート時の `VisualizationOptions.ShowFilters` に関連する問題。
+- コンテンツに改行が含まれる場合、表示形式の説明が表示されない問題。
+- Amazon Athena でグリッドのページングが動作しない問題。
+- REST データ ソース使用時にダッシュボード フィルターがカスケードしない問題。
+- MongoDB の計算フィールドで日付に数値を加算・減算すると誤った結果になる問題。
+- フィルター選択後に折れ線チャートがデータを表示しない問題。
+- MySQL がストアド プロシージャおよびそのパラメーターを重複して生成する問題。
+- ダッシュボードに日付の表示形式フィルターが含まれると、ヘッドレス エクスポートでコンソール エラーが表示される問題。
+- ダッシュボードを Excel にエクスポートした際、部分的に不正な .xslx ファイルが生成され、開く前に修復が必要となる場合がある問題。
+- グローバル フィルターで「複数」かつ「必須」を設定し「すべて」を選択した場合に、最初のオプションのみが選択される問題。
+- 積層型縦棒でズームイン・ズームアウト時にゴースト効果が発生する問題。
+- ヘッドレス エクスポートが設定されたエクスポート言語を使用しない問題。
+- 会計年度・学期・四半期を扱う場合に、ドリルダウン/ドリルアップのナビゲーション パス ラベルに不整合が発生する問題。
+- コンテンツに改行が含まれる場合、ダッシュボードの説明が表示されない問題。
 
 #### ASP.NET
 
-- `ImageExportOptions` constructor does not include `InitScript`.
-- `ExportOptions` constructor does not include `IncludeFiltersSummaryPage`.
+- `ImageExportOptions` コンストラクターに `InitScript` が含まれていない問題。
+- `ExportOptions` コンストラクターに `IncludeFiltersSummaryPage` が含まれていない問題。
 
 #### Node
 
-- Package installation downloads the x64 native binary on MacOS ARM64.
+- MacOS ARM64 でパッケージ インストール時に x64 ネイティブ バイナリがダウンロードされる問題。
 
 ## 1.7.6 (2025 年 7 月 22 日)
 
@@ -58,7 +58,7 @@ import TabItem from '@theme/TabItem';
 
 ### バグ修正
 - データが存在しない状態で「並べ替え条件」ラベルでフィールドを選択すると、「Index was outside the bounds of the array. (インデックスが配列の範囲外です。)」というエラーが発生する問題を修正しました。
-- `ERROR TypeError: $.ig.SdkDashboardDocument.fromJson is not a function` というエラーにより サムネイルが正しく表示されない不具合を修正しました。
+- `ERROR TypeError: $.ig.SdkDashboardDocument.fromJson is not a function` というエラーによりサムネイルが正しく表示されない不具合を修正しました。
 
 ## 1.7.5 (2025 年 7 月 8 日)
 
