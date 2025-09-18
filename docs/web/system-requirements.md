@@ -13,7 +13,7 @@
 
 :::info
 
-If developing on a Mac M1/M2, Rosetta must be installed.
+If developing on a Mac M1/M2/M3/M4, Rosetta must be installed.
 
 To manually install Rosetta run the following command in the terminal:
 ```bash
