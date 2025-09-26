@@ -17,6 +17,12 @@ The "Home" directory differs depending on the OS you are using.
 
 When you receive your license key, create a text file named `license.key` within a directory named `.revealbi-sdk` located in your "Home" directory. Populate this file with your license key as its content.
 
+:::note [Contents of Lisense Key File]
+
+Make sure the file contains only the raw license string. Do not include any additional code, comments, quotes, or formatting. Otherwise, the application may throw a runtime exception indicating that the file does not contain a valid Base64 string.
+
+:::
+
 For example; if using Windows the license file location should be located at `C:/Users/your-user-name/.revealbi-sdk/license.key`.
 
 ## Set In Code
