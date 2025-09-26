@@ -19,7 +19,8 @@ When you receive your license key, create a text file named `license.key` within
 
 :::note [Contents of Lisense Key File]
 
-Ensure the file contains only the raw license string, without extra code, comments, quotes or formatting. Otherwise, a runtime error on may give a system exception that the file is not a valid Base-64 string.
+Make sure the file contains only the raw license string. Do not include any additional code, comments, quotes, or formatting. Otherwise, the application may throw a runtime exception indicating that the file does not contain a valid Base64 string.
+
 :::
 
 For example; if using Windows the license file location should be located at `C:/Users/your-user-name/.revealbi-sdk/license.key`.
