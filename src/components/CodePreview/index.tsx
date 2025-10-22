@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import CodeBlock from '@theme/CodeBlock';
 import './code-preview.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 interface CodeSnippetProps {
     children: ReactNode;
@@ -42,13 +43,13 @@ const extractCodeBlocks = (children: ReactNode) => {
     return codeBlocks;
 };
 
-const htmlTemplate = (body: string, script: string) => `
+const htmlTemplate = (sdkVersion: unknown, body: string, script: string) => `
     <!DOCTYPE html>
     <html>
     <head>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-        <script src="https://dl.revealbi.io/reveal/libs/1.8.0/infragistics.reveal.js"></script>
+        <script src="https://dl.revealbi.io/reveal/libs/${sdkVersion}/infragistics.reveal.js"></script>
         <style>
             html, body {
                 height: 100%;
@@ -71,7 +72,7 @@ const htmlTemplate = (body: string, script: string) => `
 
 const Iframe = ({ srcDoc, height }: { srcDoc: string, height: number }) => {
     const iframeRef = useRef<HTMLIFrameElement>(null);
-    
+
     useEffect(() => {
         if (iframeRef.current && height === 0) {
             const iframe = iframeRef.current;
@@ -100,11 +101,14 @@ const CodeSnippet = ({ language, code }: { language: string, code: string }) => 
 );
 
 const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150, sourceOpen = false }) => {
+    const { siteConfig } = useDocusaurusContext();
+    const sdkVersion = siteConfig.customFields.sdkVersion;
+
     const [currentTab, setCurrentTab] = useState(LANGUAGES.HTML);
     const [showSource, setShowSource] = useState(sourceOpen);
 
     const codeBlocks = extractCodeBlocks(children);
-    const srcDoc = htmlTemplate(codeBlocks[LANGUAGES.HTML] as string, codeBlocks[LANGUAGES.JS] as string);
+    const srcDoc = htmlTemplate(sdkVersion, codeBlocks[LANGUAGES.HTML] as string, codeBlocks[LANGUAGES.JS] as string);
 
     const renderCodeSnippet = () => {
         const code = codeBlocks[currentTab];
@@ -112,7 +116,6 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
     };
 
     const openCodePen = () => {
-        const reactVersion = '18.3.1';
         let htmlTemplate = codeBlocks[LANGUAGES.HTML] || '';
         let cssTemplate = 'html, body, #root { height: 100%; }';
         let jsTemplate = codeBlocks[LANGUAGES.JS] || '';
@@ -121,22 +124,22 @@ const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150
         let jsExternal = [
             `https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js`,
             `https://unpkg.com/dayjs@1.8.21/dayjs.min.js`,
-            `https://dl.revealbi.io/reveal/libs/1.8.0/infragistics.reveal.js`,
+            `https://dl.revealbi.io/reveal/libs/${sdkVersion}/infragistics.reveal.js`,
         ];
         const revealSdkSettings = `import { defineRevealSdkWrappers } from "https://esm.sh/reveal-sdk-wrappers";\n` +
-                                  `defineRevealSdkWrappers();\n` +
-                                  `$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");\n\n`;
+            `defineRevealSdkWrappers();\n` +
+            `$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");\n\n`;
 
         if (currentTab === LANGUAGES.REACT) {
             jsPreProcessor = 'typescript';
             editors = '0010'
             htmlTemplate = '<div id="root"></div>';
             jsTemplate =
-            `import React, { useRef, useState, useEffect } from 'https://esm.sh/react';\n` +
-            `import { createRoot } from 'https://esm.sh/react-dom/client';\n` +
-            `$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");\n` +
-            `${codeBlocks[LANGUAGES.REACT]}\n` +
-            `createRoot(document.getElementById('root')).render(<App />);`;
+                `import React, { useRef, useState, useEffect } from 'https://esm.sh/react';\n` +
+                `import { createRoot } from 'https://esm.sh/react-dom/client';\n` +
+                `$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");\n` +
+                `${codeBlocks[LANGUAGES.REACT]}\n` +
+                `createRoot(document.getElementById('root')).render(<App />);`;
         } else {
             jsTemplate = `${revealSdkSettings}${jsTemplate}\n`;
         }
