@@ -1,35 +1,66 @@
 # 既知の問題
 
-### Linux ARM64 Node でのエクスポート
+## Export Not Supported on Windows Azure App Service
+
+### Issue
+
+When hosting on **Azure App Service (Windows)**, exporting is **not supported**. This is because **Playwright**, required for browser-based exporting, is **not supported on Windows distributions** within Azure App Service.
+
+### Workarounds
+
+There are two options to resolve this:
+
+1. **Use a Linux App Service Plan**
+   Host your app on **Azure App Service (Linux)** instead of Windows.
+   In your ASP.NET Core startup, call the Playwright installer during application startup—typically in `Program.cs`, **before** running the web application:
+
+   ```csharp
+   var builder = WebApplication.CreateBuilder(args);
+   //...
+   
+   Microsoft.Playwright.Program.Main(new string[] { "install", "chromium", "--with-deps" });
+
+   app.UseAuthorization();
+   app.MapControllers();
+   app.Run();
+   ```
+
+   This ensures Chromium and all required dependencies are available at runtime.
+
+2. **Use a Windows Container**
+   If you must remain on Windows, host the application inside a **Windows Container**.
+   This allows installing and configuring Playwright within the container image, bypassing the Windows App Service limitation.
+
+## Linux ARM64 Node でのエクスポート
 
 - Node.js を使用していて、[Linux ARM64 上で実行する場合、Chromium は自動的にインストールできません](https://github.com/puppeteer/puppeteer/issues/7740)。そのため、ダッシュボードをエクスポートする前に、パッケージ マネージャーを使用して、または手動で、Chromium をインストールする必要があります。Reveal は Chromium バイナリを `/usr/bin/chromium` の下で探します。
 
-### グリッド行ページング
+## グリッド行ページング
 
 - ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Redshift、Databricks、Cube.dev、Athena、および Oracle。
 - ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。
 - サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
 - 通常の表示モードでページングを有効にしてグリッドを並べ替えると、列の並べ替えは左から右に適用されます。つまり、最後の列を並べ替えてから最初の列を並べ替えると、その順序ではなく、左から右に適用されます。
 
-### ヘッドレス エクスポート
+## ヘッドレス エクスポート
 
 - Node.js SDK のヘッドレス エクスポートは Linux/MacOSX では使用できません。
 - ```DocumentExportOptions``` が使用されている場合、ヘッドレス エクスポートは失敗します。代わりにフォーマット固有のクラス (例: ```PdfExportOptions```) を使用してください。
 
-### ヘッドレス エクスポート - グローバル フィルター
+## ヘッドレス エクスポート - グローバル フィルター
 
 - XMLA フィルターは現在 ASP.NET ではサポートされません。
 - Node.js のグローバル フィルターは現在サポートされません。
 
-### ライセンス
+## ライセンス
 
 - NuGet パッケージを使用する際に、Reveal SDK のライセンス (SDK インストーラーに有効なキーを入力) 後もウォーターマークが表示されてしまうます。回避策: プロジェクトから NuGet パッケージをアンインストールし、NuGet のキャッシュをクリアして、パッケージを再度インストールしてください。NuGet のすべてのキャッシュをクリアしたくない場合、キャッシュした場所を検索し、Infragistics Reveal 項目のみをクリアできます。場所は NuGet のバージョンと、packages.config または PackageReferece のどちらが使用されているかによって異なります。
 
-### MacOS ARM64 のサポート (ベータ版)
+## MacOS ARM64 のサポート (ベータ版)
 
 - マシンの構成によってはロケールの問題 (例: 9,5 と 9.5) が発生する可能性があります。
 
-### MongoDB コネクター
+## MongoDB コネクター
 
 - `currentTimeZone` 関数を使用した計算フィールドによる結合が失敗する問題。
 - `_id` 列を参照する計算フィールドによる結合が失敗する問題。
