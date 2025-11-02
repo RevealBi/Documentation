@@ -5,135 +5,64 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding an Oracle Data Source
+# Oracle Data Source
 
-:::danger breaking changes
+## Introduction
 
-Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
+Oracle Database is a multi-model database management system produced and marketed by Oracle Corporation. This topic explains how to connect to Oracle data sources in your Reveal application to visualize and analyze your data.
 
-:::
+## Server Configuration
 
-## On the Client
-
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
-
-```js
-var revealView = new $.ig.RevealView("#revealView");
-revealView.onDataSourcesRequested = (callback) => {
-    //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
-};
-```
-
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVOracleSIDDataSource` or `RVOracleServiceDataSource` object (depending on your setup). Set the `Host`, `Database`, `Port`, `Title` and `SID` or `Service` (depending on if you are using SID or Service Name) properties to values that correspond to your Oracle server. After you have created the `RVOracleXXXXDataSource` object, add it to the data sources collection.
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    //if you are using SID
-    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
-    oracleSIDDataSource.id = "MyOracleSIDDataSource";
-    oracleSIDDataSource.title = "My Oracle SID";
-    oracleSIDDataSource.host = "your-host";
-    oracleSIDDataSource.port = "your-port";
-    oracleSIDDataSource.database = "your-database";
-
-    //if you are using Service Name
-    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
-    oracleServiceDataSource.id = "MyOracleServiceDataSource";
-    oracleServiceDataSource.title = "My Oracle Service";
-    oracleServiceDataSource.host = "your-host";
-    oracleServiceDataSource.port = "your-port";
-    oracleServiceDataSource.database = "your-database";
-
-    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [], true));
-};
-```
-
-When the application runs, create a new Visualization and you will see the newly created Oracle data source listed in the "Select a Data Source" dialog.
-
-![](images/oracle-data-source.jpg)
-
-**Step 3** - Add a new Data Source Item by creating a new instance of the `RVOracleDataSourceItem` object. Set the `Id`,`Title`, and `Table` properties that correspond to your database table. After you have created the `RVOracleDataSourceItem` object, add it to the data source items collection.
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    //if you are using SID
-    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
-    oracleSIDDataSource.id = "MyOracleSIDDataSource";
-    oracleSIDDataSource.title = "My Oracle SID";
-    oracleSIDDataSource.host = "your-host";
-    oracleSIDDataSource.port = "your-port";
-    oracleSIDDataSource.database = "your-database";
-
-    //if you are using Service Name
-    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
-    oracleServiceDataSource.id = "MyOracleServiceDataSource";
-    oracleServiceDataSource.title = "My Oracle Service";
-    oracleServiceDataSource.host = "your-host";
-    oracleServiceDataSource.port = "your-port";
-    oracleServiceDataSource.database = "your-database";
-
-    const oracleSIDDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleSIDDataSource);
-    oracleSIDDataSourceItem.id = "MyOracleSIDDataSourceItem";
-    oracleSIDDataSourceItem.title = "My Oracle SID Item";
-
-    const oracleServiceDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleServiceDataSource);
-    oracleServiceDataSourceItem.id = "MyOracleServiceDataSourceItem";
-    oracleServiceDataSourceItem.title = "My Oracle Service Item";
-
-    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
-};
-```
- 
-When the application runs, create a new Visualization and you will see the newly created Oracle data source item listed in the "Select a Data Source" dialog.
-
-![](images/oracle-data-source-item.jpg)
-
-## On the Server
-
-**Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provie an `id`, `title`, and/or `subtitle`.
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    //if you are using SID
-    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
-    oracleSIDDataSource.id = "MyOracleSIDDataSource";
-    oracleSIDDataSource.title = "My Oracle SID";
-
-    //if you are using Service Name
-    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
-    oracleServiceDataSource.id = "MyOracleServiceDataSource";
-    oracleServiceDataSource.title = "My Oracle Service";
-
-    const oracleSIDDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleSIDDataSource);
-    oracleSIDDataSourceItem.id = "MyOracleSIDDataSourceItem";
-    oracleSIDDataSourceItem.title = "My Oracle SID Item";
-
-    const oracleServiceDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleServiceDataSource);
-    oracleServiceDataSourceItem.id = "MyOracleServiceDataSourceItem";
-    oracleServiceDataSourceItem.title = "My Oracle Service Item";
-
-    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
-};
-``` 
-
-**Step 2** - Create the data source provider. In this example, we are providing connection information to connect to our **Oracle** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and set the available properties on the object.
+### Installation
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-```cs
+For ASP.NET applications, you need to install a separate NuGet package to enable Oracle support:
+
+```bash
+dotnet add package Reveal.Sdk.Data.Oracle
+```
+
+Then register the Oracle provider in your application:
+
+```csharp
+builder.Services.AddControllers().AddReveal( builder =>
+{
+    builder.DataSources.RegisterOracle();
+});
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+For Node.js applications, the Oracle data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+For Java applications, the Oracle data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+</Tabs>
+
+### Connection Configuration
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+// Create a data source provider
 public class DataSourceProvider : IRVDataSourceProvider
 {
-    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId,
-        RVDataSourceItem dataSourceItem)
+    public async Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
     {
-        if (dataSourceItem is RVOracleDataSourceItem oracleDataSourceItem)
-        {
-            //update underlying data source
-            ChangeDataSourceAsync(userContext, oracleDataSourceItem.DataSource);
+        // Required: Update the underlying data source
+        await ChangeDataSourceAsync(userContext, dataSourceItem.DataSource);
 
-            //only change the table if we have selected our custom data source item
+        if (dataSourceItem is RVOracleDataSourceItem oracleDataSourceItem)
+        {            
+            // Configure specific item properties as needed
             if (oracleDataSourceItem.Id == "MyOracleSIDDataSourceItem")
             {
                 oracleDataSourceItem.Table = "your-table";
@@ -144,167 +73,336 @@ public class DataSourceProvider : IRVDataSourceProvider
                 oracleDataSourceItem.Table = "your-table";
             }
         }
-
-        return Task.FromResult(dataSourceItem);
+        
+        return dataSourceItem;
     }
 
-    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext,
-        RVDashboardDataSource dataSource)
+    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
-        //using SID
+        // Using SID
         if (dataSource is RVOracleSIDDataSource oracleSidDataSource)
         {
+            // Configure connection properties
             oracleSidDataSource.Host = "your-host";
             oracleSidDataSource.Database = "your-database";
-            oracleSidDataSource.SID = "your-service-sid";
+            oracleSidDataSource.SID = "your-sid";
         }
 
-        //using service name
+        // Using Service Name
         if (dataSource is RVOracleServiceDataSource oracleServiceDataSource)
         {
+            // Configure connection properties
             oracleServiceDataSource.Host = "your-host";
             oracleServiceDataSource.Database = "your-database";
             oracleServiceDataSource.Service = "your-service-name";
         }
-
+        
         return Task.FromResult(dataSource);
     }
 }
 ```
 
   </TabItem>
+  <TabItem value="node" label="Node.js">
 
+```javascript
+// Create data source providers
+const dataSourceItemProvider = async (userContext, dataSourceItem) => {
+    // Required: Update the underlying data source
+    await dataSourceProvider(userContext, dataSourceItem.dataSource);
+
+    if (dataSourceItem instanceof reveal.RVOracleDataSourceItem) {        
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "MyOracleSIDDataSourceItem") {
+            dataSourceItem.table = "your-table";
+        }
+
+        if (dataSourceItem.id === "MyOracleServiceDataSourceItem") {
+            dataSourceItem.table = "your-table";
+        }
+    }
+    
+    return dataSourceItem;
+}
+
+const dataSourceProvider = async (userContext, dataSource) => {
+    // Using SID
+    if (dataSource instanceof reveal.RVOracleSIDDataSource) {
+        // Configure connection properties
+        dataSource.host = "your-host";
+        dataSource.database = "your-database";
+        dataSource.sID = "your-sid";
+    }
+
+    // Using Service Name
+    if (dataSource instanceof reveal.RVOracleServiceDataSource) {
+        // Configure connection properties
+        dataSource.host = "your-host";
+        dataSource.database = "your-database";
+        dataSource.service = "your-service-name";
+    }
+    
+    return dataSource;
+}
+```
+
+  </TabItem>
+  <TabItem value="node-ts" label="Node.js - TS">
+
+```typescript
+// Create data source providers
+const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+    // Required: Update the underlying data source
+    await dataSourceProvider(userContext, dataSourceItem.dataSource);
+
+    if (dataSourceItem instanceof RVOracleDataSourceItem) {        
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "MyOracleSIDDataSourceItem") {
+            dataSourceItem.table = "your-table";
+        }
+
+        if (dataSourceItem.id === "MyOracleServiceDataSourceItem") {
+            dataSourceItem.table = "your-table";
+        }
+    }
+    
+    return dataSourceItem;
+}
+
+const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    // Using SID
+    if (dataSource instanceof RVOracleSIDDataSource) {
+        // Configure connection properties
+        dataSource.host = "your-host";
+        dataSource.database = "your-database";
+        dataSource.sID = "your-sid";
+    }
+
+    // Using Service Name
+    if (dataSource instanceof RVOracleServiceDataSource) {
+        // Configure connection properties
+        dataSource.host = "your-host";
+        dataSource.database = "your-database";
+        dataSource.service = "your-service-name";
+    }
+    
+    return dataSource;
+}
+```
+
+  </TabItem>
   <TabItem value="java" label="Java">
 
 ```java
+// Create a data source provider
 public class DataSourceProvider implements IRVDataSourceProvider {
-    public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardsID, RVDataSourceItem dataSourceItem) {
 
-        if (dataSourceItem instanceof RVOracleDataSourceItem oracleDataSourceItem) {
+    public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardId, RVDataSourceItem dataSourceItem) {
+        // Required: Update the underlying data source
+        changeDataSource(userContext, dataSourceItem.getDataSource());
 
-            //update underlying data source
-            changeDataSource(userContext, dataSourceItem.getDataSource());
-
-            //only change the table if we have selected our custom data source item
-            if (Objects.equals(dataSourceItem.getId(), "MyOracleSIDDataSourceItem")) {
+        if (dataSourceItem instanceof RVOracleDataSourceItem oracleDataSourceItem) {            
+            // Configure specific item properties if needed
+            if ("MyOracleSIDDataSourceItem".equals(dataSourceItem.getId())) {
                 oracleDataSourceItem.setTable("your-table");
             }
 
-            if (Objects.equals(dataSourceItem.getId(), "MyOracleServiceDataSourceItem")) {
+            if ("MyOracleServiceDataSourceItem".equals(dataSourceItem.getId())) {
                 oracleDataSourceItem.setTable("your-table");
             }
         }
+        
         return dataSourceItem;
     }
 
     public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-        //using SID
+        // Using SID
         if (dataSource instanceof RVOracleSIDDataSource oracleSIDDataSource) {
+            // Configure connection properties
             oracleSIDDataSource.setHost("your-host");
             oracleSIDDataSource.setDatabase("your-database");
             oracleSIDDataSource.setSID("your-sid");
         }
 
-        //using service name
+        // Using Service Name
         if (dataSource instanceof RVOracleServiceDataSource oracleServiceDataSource) {
+            // Configure connection properties
             oracleServiceDataSource.setHost("your-host");
             oracleServiceDataSource.setDatabase("your-database");
             oracleServiceDataSource.setService("your-service-name");
         }
-
+        
         return dataSource;
     }
 }
 ```
 
   </TabItem>
-
-  <TabItem value="node" label="Node.js">
-
-```js
-const dataSourceItemProvider = async (userContext, dataSourceItem) => {
-    if (dataSourceItem instanceof reveal.RVOracleDataSourceItem) {
-
-        //update underlying data source
-        dataSourceProvider(userContext, dataSourceItem.dataSource);
-
-        //only change the table if we have selected our data source item
-        if (dataSourceItem.id === "MyOracleSIDDataSourceItem") {
-            dataSourceItem.table = "your-table";
-        }
-
-        if (dataSourceItem.id === "MyOracleServiceDataSourceItem") {
-            dataSourceItem.table = "your-table";
-        }
-    }
-    return dataSourceItem;
-}
-
-const dataSourceProvider = async (userContext, dataSource) => {
-    //using SID
-    if (dataSource instanceof reveal.RVOracleSIDDataSource) {
-        dataSource.host = "your-host";
-        dataSource.database = "your-database";
-        dataSource.sID = "your-sid";
-    }
-
-    //using service name
-    if (dataSource instanceof reveal.RVOracleServiceDataSource) {
-        dataSource.host = "your-host";
-        dataSource.database = "your-database";
-        dataSource.service = "your-service-name";
-    }
-    return dataSource;
-}
-```
-
-  </TabItem>
-
-  <TabItem value="node-ts" label="Node.js - TS">
-
-```ts
-const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
-    if (dataSourceItem instanceof RVOracleDataSourceItem) {
-
-        //update underlying data source
-        dataSourceProvider(userContext, dataSourceItem.dataSource);
-
-        //only change the table if we have selected our data source item
-        if (dataSourceItem.id === "MyOracleSIDDataSourceItem") {
-            dataSourceItem.table = "your-table";
-        }
-
-        if (dataSourceItem.id === "MyOracleServiceDataSourceItem") {
-            dataSourceItem.table = "your-table";
-        }
-    }
-    return dataSourceItem;
-}
-
-const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-    //using SID
-    if (dataSource instanceof RVOracleSIDDataSource) {
-        dataSource.host = "your-host";
-        dataSource.database = "your-database";
-        dataSource.sID = "your-sid";
-    }
-
-    //using service name
-    if (dataSource instanceof RVOracleServiceDataSource) {
-        dataSource.host = "your-host";
-        dataSource.database = "your-database";
-        dataSource.service = "your-service-name";
-    }
-    return dataSource;
-}
-```
-
-  </TabItem>
-
 </Tabs>
 
-:::info Get the Code
-
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Oracle)
-
+:::danger Important
+Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
 :::
+
+### Authentication
+
+Authentication for Oracle is handled on the server side. For detailed information on authentication options, see the [Authentication](../authentication.md) topic.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+public class AuthenticationProvider: IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVOracleSIDDataSource || dataSource is RVOracleServiceDataSource)
+        {
+            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVOracleSIDDataSource || dataSource instanceof reveal.RVOracleServiceDataSource) {
+        return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+  <TabItem value="node-ts" label="Node.js - TS">
+
+```typescript
+const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVOracleSIDDataSource || dataSource instanceof RVOracleServiceDataSource) {
+        return new RVUsernamePasswordDataSourceCredential("username", "password");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```java
+public class AuthenticationProvider implements IRVAuthenticationProvider {
+    @Override
+    public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVOracleSIDDataSource || dataSource instanceof RVOracleServiceDataSource) {
+            return new RVUsernamePasswordDataSourceCredential("username", "password");
+        }
+        return null;
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Client-Side Implementation
+
+On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
+
+### Creating Data Sources
+
+**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+
+```js
+const revealView = new $.ig.RevealView("#revealView");
+revealView.onDataSourcesRequested = (callback) => {
+    // Add data source here
+    callback(new $.ig.RevealDataSources([], [], false));
+};
+```
+
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVOracleSIDDataSource` or `RVOracleServiceDataSource` object. Set the `title` and `subtitle` properties. After you have created the Oracle data source object, add it to the data sources collection.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    // Using SID
+    const oracleSIDDS = new $.ig.RVOracleSIDDataSource();
+    oracleSIDDS.id = "MyOracleSIDDataSource";
+    oracleSIDDS.title = "My Oracle SID";
+    oracleSIDDS.subtitle = "Oracle";
+
+    // Using Service Name
+    const oracleServiceDS = new $.ig.RVOracleServiceDataSource();
+    oracleServiceDS.id = "MyOracleServiceDataSource";
+    oracleServiceDS.title = "My Oracle Service";
+    oracleServiceDS.subtitle = "Oracle";
+    
+    callback(new $.ig.RevealDataSources([oracleSIDDS, oracleServiceDS], [], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created Oracle data source listed in the "Select a Data Source" dialog.
+
+![](images/oracle-data-source.jpg)
+
+### Creating Data Source Items
+
+Data source items represent specific datasets within your Oracle data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    // Create the data sources
+    const oracleSIDDS = new $.ig.RVOracleSIDDataSource();
+    oracleSIDDS.id = "MyOracleSIDDataSource";
+    oracleSIDDS.title = "My Oracle SID";
+    oracleSIDDS.subtitle = "Oracle";
+
+    const oracleServiceDS = new $.ig.RVOracleServiceDataSource();
+    oracleServiceDS.id = "MyOracleServiceDataSource";
+    oracleServiceDS.title = "My Oracle Service";
+    oracleServiceDS.subtitle = "Oracle";
+    
+    // Create data source items
+    const oracleSIDDSI = new $.ig.RVOracleDataSourceItem(oracleSIDDS);
+    oracleSIDDSI.id = "MyOracleSIDDataSourceItem";
+    oracleSIDDSI.title = "My Oracle SID Item";
+    oracleSIDDSI.subtitle = "Oracle";
+
+    const oracleServiceDSI = new $.ig.RVOracleDataSourceItem(oracleServiceDS);
+    oracleServiceDSI.id = "MyOracleServiceDataSourceItem";
+    oracleServiceDSI.title = "My Oracle Service Item";
+    oracleServiceDSI.subtitle = "Oracle";
+
+    callback(new $.ig.RevealDataSources([oracleSIDDS, oracleServiceDS], [oracleSIDDSI, oracleServiceDSI], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created Oracle data source item listed in the "Select a Data Source" dialog.
+
+![](images/oracle-data-source-item.jpg)
+
+## Additional Resources
+
+- [Sample Source Code on GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Oracle)
+
+## API Reference
+
+<Tabs groupId="code" queryString>
+<TabItem value="aspnet" label="ASP.NET" default>
+
+* [RVOracleSIDDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.RVOracleSIDDataSource.html) - Represents an Oracle SID data source
+* [RVOracleServiceDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.RVOracleServiceDataSource.html) - Represents an Oracle Service data source
+* [RVOracleDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.RVOracleDataSourceItem.html) - Represents an Oracle data source item
+
+</TabItem>
+<TabItem value="node" label="Node.js">
+
+* [RVOracleSIDDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvoraclesiddatasource.html) - Represents an Oracle SID data source
+* [RVOracleServiceDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvoracleservicedatasource.html) - Represents an Oracle Service data source
+* [RVOracleDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvoracledatasourceitem.html) - Represents an Oracle data source item
+
+</TabItem>
+</Tabs>
