@@ -86,55 +86,6 @@ const revealOptions = {
 
 - Headless export using OS locale instead of the browser client locale.
 
-## 1.8.0 (Sept 3rd, 2025)
-
-### Breaking Changes
-
-- Support for .NET 6 has been removed.
-
-### New Features
-
-#### All Platforms
-
-- Snowflake now supports key-pair authentication.
-- Snowflake now supports stored procedures.
-- The `Snowflake.Data` dependency was updated to v4.8.0.
-- SQL Server is now using command parameters instead of manual statement construction when calling stored procedures.
-- The native binary used with Node has been updated to use .NET 8.
-- Redshift now supports grid row paging.
-
-### Bugs
-
-#### All Platforms
-
-- Selecting a field to "sort by" a label when there is no data to display causes a "Index was outside the bounds of the array" error.
-- The export button doesn't display a loading spinner after the first click and can be clicked multiple times.
-- Scrolling causes RevealView to become unresponsive when using the Chrome device toolbar.
-- Pivot expansion while sorting by values with multiple fields, is broken.
-- Issue with `VisualizationOptions.ShowFilters`, from headless export.
-- Visualization descriptions don’t appear if there are new lines or breaks in the content.
-- Grid paging is not working for Amazon Athena.
-- Dashboard filters do not cascade when using a REST datasource.
-- MongoDB calculated fields using subtracting/adding numbers to dates give wrong results.
-- Line chart does not display data after filter selection.
-- MySQL duplicates stored procedures and their parameters.
-- Headless export displays a console error if a dashboard includes a visualization date filter.
-- Exporting a dashboard to Excel may generate a partially invalid .xslx file that can be opened but needs to be repaired first.
-- Setting "Multiple" & "Required" on global filters with "All" only selects the first option.
-- Stacked column has ghosting effect when zooming in and out.
-- Headless export doesn't use the configured export language.
-- Inconsistency in the drill down or drill up navigation path label when working with fiscal years and semesters or quarters.
-- Dashboard descriptions don’t appear if there are new lines or breaks in the content.
-
-#### ASP.NET
-
-- `ImageExportOptions` constructor does not include `InitScript`.
-- `ExportOptions` constructor does not include `IncludeFiltersSummaryPage`.
-
-#### Node
-
-- Package installation downloads the x64 native binary on MacOS ARM64.
-
 ## 1.8.0 (2025 年 9 月 3 日)
 
 ### 重大な変更
