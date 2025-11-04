@@ -6,9 +6,9 @@
 
 ### Grid Row Paging
 
-- Paging is supported in the following providers: SQL Server, MySQL, BigQuery, PostgreSQL, SyBase, Redshift, Databricks, Cube.dev, Athena, and Oracle. 
+- Paging is supported in the following providers: SQL Server, MySQL, BigQuery, MongoDB, PostgreSQL, Snowflake, SyBase, Redshift, Databricks, Cube.dev, Athena, and Oracle. 
 - Providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. 
-- Paging is not available when processing data on server is false, as well as when using blended data.
+- Paging is not available when processing data on server is false
 - When sorting a grid with paging enabled in regular view mode the column sorts will be applied from left to right. This means if you sort the last column and then sort the first column, they won't be applied in that order, but rather from left to right.
 
 ### Headless Export
