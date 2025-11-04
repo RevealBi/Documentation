@@ -1,18 +1,18 @@
 # 既知の問題
 
-## Export Not Supported on Windows Azure App Service
+## Windows Azure App Service でのエクスポート非対応
 
-### Issue
+### 問題
 
-When hosting on **Azure App Service (Windows)**, exporting is **not supported**. This is because **Playwright**, required for browser-based exporting, is **not supported on Windows distributions** within Azure App Service.
+**Azure App Service (Windows)** 上でホストしている場合、エクスポート機能は**サポートされていません**。これは、ブラウザー ベースのエクスポートに必要な **Playwright** が、Azure App Service 内の **Windows ディストリビューションではサポートされていない**ためです。
 
-### Workarounds
+### 回避策
 
-There are two options to resolve this:
+次の 2 つの方法で解決できます。
 
-1. **Use a Linux App Service Plan**
-   Host your app on **Azure App Service (Linux)** instead of Windows.
-   In your ASP.NET Core startup, call the Playwright installer during application startup—typically in `Program.cs`, **before** running the web application:
+1. **Linux App Service プランを使用する**
+   アプリを Windows ではなく **Azure App Service (Linux)** 上でホストします。
+   ASP.NET Core の起動時に、`Program.cs` 内で Web アプリケーションを実行する**前**に Playwright インストーラーを呼び出します。
 
    ```csharp
    var builder = WebApplication.CreateBuilder(args);
@@ -25,11 +25,11 @@ There are two options to resolve this:
    app.Run();
    ```
 
-   This ensures Chromium and all required dependencies are available at runtime.
+   これにより、Chromium および必要な依存関係がランタイムで利用可能になります。
 
-2. **Use a Windows Container**
-   If you must remain on Windows, host the application inside a **Windows Container**.
-   This allows installing and configuring Playwright within the container image, bypassing the Windows App Service limitation.
+2. **Windows コンテナーを使用する**
+   Windows 環境を維持する必要がある場合は、アプリケーションを **Windows コンテナー**内でホストします。
+   これにより、コンテナー イメージ内で Playwright をインストールおよび構成でき、Windows App Service の制限を回避できます。
 
 ## Linux ARM64 Node でのエクスポート
 
