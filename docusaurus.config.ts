@@ -6,6 +6,8 @@ import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
 import { chatButtonSettings, searchBarSettings } from './inkeep.config';
 
+const sdkVersion = "1.8.0";
+
 const config: Config = {
   title: 'Reveal',
   tagline: 'Embedded Analytics & Business Intelligence Tools',
@@ -16,6 +18,11 @@ const config: Config = {
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   trailingSlash: true,
+
+  // this is used in places like the CodePreview component to load the correct SDK version
+  customFields: {
+    sdkVersion: sdkVersion,
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -60,7 +67,7 @@ const config: Config = {
             [npm2yarn, { sync: true }],
             [replace, {
               variables: [
-                { name: "sdkVersion", value: "1.8.0" }
+                { name: "sdkVersion", value: sdkVersion }
               ]
             }],
           ],
