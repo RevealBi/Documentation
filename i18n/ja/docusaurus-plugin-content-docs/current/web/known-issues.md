@@ -37,8 +37,8 @@
 
 ## グリッド行ページング
 
-- ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Redshift、Databricks、Cube.dev、Athena、および Oracle。
-- ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。
+- Paging is supported in the following providers: SQL Server, MySQL, BigQuery, MongoDB, PostgreSQL, Snowflake, SyBase, Redshift, Databricks, Cube.dev, Athena, and Oracle. 
+- Providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. 
 - サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
 - 通常の表示モードでページングを有効にしてグリッドを並べ替えると、列の並べ替えは左から右に適用されます。つまり、最後の列を並べ替えてから最初の列を並べ替えると、その順序ではなく、左から右に適用されます。
 

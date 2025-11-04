@@ -3,6 +3,89 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.8.1 (Nov 5th, 2025)
+
+### New Features
+
+#### All Platforms
+
+- Conditional formatting has been enhanced to allow for configurable rules and styling. These visualizations are currently supported; Grid, Pivot, Text View, Bar & Column chart.
+- New data source: Elasticsearch.
+- New cache provider: Redis.
+
+Java:
+
+```java
+initializeParameterBuilder.enableRedisCache((options) -> {
+    options.setConnectionString("localhost:6379");
+});
+```
+
+ASP.NET:
+```csharp
+builder.AddRedisCache((options) => {
+    options.ConnectionString = "localhost:6379";
+});
+```
+
+Node:
+
+```ts
+const revealOptions = {
+        ...
+	redisOptions: { connectionString: "localhost:6379" }
+}
+```
+
+- Multiple data filters are now generally available.
+- The cancel button can be programmatically hidden when editing a dashboard by setting the `showCancel` property on the RevealView.
+- The RevealView will now automatically refresh its appearance when the `theme` property has been set on RevealSdkSettings.
+- MongoDB provider now supports grid paging.
+- Snowflake provider now supports grid paging.
+- The `exitEditMode` on the RevealView will now return a boolean indicating whether or not we exited edit mode.
+- Added support for the EMPTY function in SQL Server.
+- Added support for grid paging when using data blending on data sources that support paging.
+- Added support for exporting to CSV.
+- Added support for read-only filters.
+- Added support to hide a dashboard filter.
+- Added support to customize the radial line axis range through the Settings tab in the visualization editor.
+- "Select a Field" popup on the filter dialog now has the stored procedures listed above the fields.
+
+
+#### Java
+
+- JTDS driver has been replaced with mssql-jdbc (v12.10.1.jre11).
+- RVJDBCPropertiesCredentials is no longer used and has been removed.
+
+### Bugs
+
+#### All Platforms
+
+- Sorting a pivot table numeric field causes crash.
+- Issue with column headers containing dashes in their title when exporting to Excel.
+- When editing a dashboard, there is a `PRE` element added directly to the HTML body.
+- Duplicate axis labels appearing in bar and column charts.
+- The `onDateFilterChanged` event on RVDashboard always reports the first date filter.
+- Adding a blended column causes grid paging to disable.
+- Data truncation indicator is missing from visualization editor.
+- Chart visualizations can disappear when browser is in the background.
+- Unable to scroll through dashboard with custom visualization.
+- "Invalid DateTime: {$dateFilterFrom}" error expanding data filter with REST data source.
+- The `onVisualizationEditorClosing` event of RevealView throws exception if the event is cancelled.
+- The `onUrlLinkRequested` event on RevealView is not called for dashboard linking trigger "Visualization Maximized".
+- When filters have over 3000+ values, filtering then unselecting a filter value does not work.
+- Time series axis label not following configured date formatting.
+- Linking a visualization to another dashboard and connecting with a date filter does not open the linked dashboard.
+- Refreshed data doesn't update filter values.
+- Analysis Server provider not showing date as a date type dimension.
+- Currency symbol dropdown is not displayed when the formatting type of a field is changed to currency.
+- Zoom for the Scatter Map visualization is lost when saved or refreshed.
+- Setting dashboard date filter rule to All Time via API produces no data.
+
+#### Java
+
+- Headless export using OS locale instead of the browser client locale.
+
 ## 1.8.0 (Sept 3rd, 2025)
 
 ### Breaking Changes
