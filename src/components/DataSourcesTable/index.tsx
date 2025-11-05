@@ -79,7 +79,7 @@ function createNpmLink({ title, npm }: DataSourceItem) {
     );
 }
 
-export default function DataSourcesTable({ isWpf = false }: { isWpf?: boolean }): JSX.Element {
+export default function DataSourcesTable({ isWpf = false }: { isWpf?: boolean }): React.JSX.Element {
     return (
         <table>
             <thead>
