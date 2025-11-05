@@ -84,6 +84,7 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "Amazon S3", id: "web/adding-data-sources/amazon-s3" },
             { type: "doc", label: "CSV", id: "web/adding-data-sources/csv" },
             { type: "doc", label: "Databricks", id: "web/adding-data-sources/databricks" },
+            { type: "doc", label: "Elasticsearch", id: "web/adding-data-sources/elasticsearch" },
             { type: "doc", label: "Excel File", id: "web/adding-data-sources/excel-file" },
             { type: "doc", label: "Google Big Query", id: "web/adding-data-sources/google-big-query" },
             { type: "doc", label: "Google Sheets", id: "web/adding-data-sources/google-sheets" },
