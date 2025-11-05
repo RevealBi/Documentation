@@ -95,9 +95,26 @@ The available options are the following:
 
 ![](images/cache-frequency.jpg)
 
+## Disabling caching
+Disabling caching is not an available option; however, you can achieve a similar result by setting the data source refresh data frequency to `Always`. This configuration ensures that the application consistently retrieves fresh data, bypassing the cache. It's essential to note that even if the cache is not consulted during queries, the processed data will still be saved. While this approach guarantees access to the most up-to-date information, it's important to be mindful of potential performance impacts due to the increased load on the data source when utilizing real-time access. Developers may opt for this configuration temporarily for debugging purposes or when working with dynamic data that frequently changes.
+
+To bypass caching, set the data source refresh data frequency to `Always`.
+
+![](images/cache-disable.jpg)
+
 ## Redis Cache
 
 The Reveal SDK supports using Redis as a distributed cache provider, enabling cache sharing across multiple server instances. This is particularly useful in load-balanced environments where multiple instances of your application need to access the same cached data.
+
+:::note
+
+The Redis cache feature replaces the in-memory cache used for tabular data. Local processing operations still use the SQLite cache. Local processing occurs when data from sources that cannot be directly queried must be retrieved and processed locally. This includes:
+- Stored procedures
+- REST APIs
+- Data source items with cross data source joins
+- Other sources requiring data to be pulled from the original source and stored temporarily for query execution
+
+:::
 
 ### Installation
 
@@ -257,13 +274,6 @@ initializeParameterBuilder.enableRedisCache((options) -> {
 
   </TabItem>
 </Tabs>
-
-## Disabling caching
-Disabling caching is not an available option; however, you can achieve a similar result by setting the data source refresh data frequency to `Always`. This configuration ensures that the application consistently retrieves fresh data, bypassing the cache. It's essential to note that even if the cache is not consulted during queries, the processed data will still be saved. While this approach guarantees access to the most up-to-date information, it's important to be mindful of potential performance impacts due to the increased load on the data source when utilizing real-time access. Developers may opt for this configuration temporarily for debugging purposes or when working with dynamic data that frequently changes.
-
-To bypass caching, set the data source refresh data frequency to `Always`.
-
-![](images/cache-disable.jpg)
 
 ## FAQ
 
