@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Caching
 
 In Reveal SDK, caching is a default mechanism designed to optimize performance by storing all queried data in a faster and embedded database, referred to as a cache. This process ensures that frequently accessed data is readily available, and upon initiating a query, the SDK automatically checks if the requested data is already present in the cache. In the event of a cache hit, the SDK swiftly retrieves the information without the need for an additional request to the original source.
@@ -99,6 +102,179 @@ To bypass caching, set the data source refresh data frequency to `Always`.
 
 ![](images/cache-disable.jpg)
 
+## Redis Cache
+
+The Reveal SDK supports using Redis as a distributed cache provider, enabling cache sharing across multiple server instances. This is particularly useful in load-balanced environments where multiple instances of your application need to access the same cached data.
+
+:::note
+
+The Redis cache feature replaces the in-memory cache used for tabular data. Local processing operations still use the SQLite cache. Local processing occurs when data from sources that cannot be directly queried must be retrieved and processed locally. This includes:
+- Stored procedures
+- REST APIs
+- Data source items with cross data source joins
+- Other sources requiring data to be pulled from the original source and stored temporarily for query execution
+
+:::
+
+### Installation
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+For ASP.NET applications, you need to install a separate NuGet package to enable Redis cache support:
+
+```bash
+dotnet add package Reveal.Sdk.Cache.Redis
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+For Node.js applications, the Redis cache is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+For Java applications, the Redis cache is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+</Tabs>
+
+### Configuration
+
+To enable Redis cache, configure the connection in your application initialization:
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+builder.AddRedisCache((options) => {
+    options.ConnectionString = "localhost:6379";
+});
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+    ...
+    redisOptions: { connectionString: "localhost:6379" }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
+const revealOptions: RevealOptions = {
+    ...
+    redisOptions: { connectionString: "localhost:6379" }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+initializeParameterBuilder.enableRedisCache((options) -> {
+    options.setConnectionString("localhost:6379");
+});
+```
+
+  </TabItem>
+</Tabs>
+
+### Redis Configuration Options
+
+The Redis cache provider supports various configuration options to customize the connection and behavior:
+
+- **ConnectionString** - The Redis server connection string or endpoint (e.g., "localhost:6379"). Default: empty string.
+- **EndPoints** - A list of endpoint URLs used for connecting to Redis cluster or multiple Redis instances. Default: null.
+- **User** - The username for Redis authentication. Default: null.
+- **Password** - The password for Redis authentication. Default: null.
+- **UseSsl** - Indicates whether SSL/TLS encryption is enabled. Default: false.
+- **DefaultDatabase** - The default database number to use. Default: 0.
+- **ClientName** - The client name for identification. Default: null.
+- **ConnectTimeoutMs** - The connection timeout in milliseconds. Default: 5000.
+- **SyncTimeoutMs** - The synchronous operation timeout in milliseconds. Default: 5000.
+- **AsyncTimeoutMs** - The asynchronous operation timeout in milliseconds. Default: 5000.
+- **ConnectRetry** - The number of connection retry attempts. Default: 3.
+- **KeepAliveSeconds** - The keep-alive interval in seconds (-1 to disable). Default: 60.
+- **AbortOnConnectFail** - Indicates whether to abort on connection failure. Default: false.
+- **AllowAdmin** - Indicates whether admin commands (FLUSHDB, CONFIG, etc.) are allowed. Default: false.
+- **ReconnectRetryPolicy** - The reconnection retry policy: "Linear" or "Exponential". Default: "Linear".
+- **RetryDelayMs** - The base delay in milliseconds for the retry policy. Default: 1000.
+
+Example with additional configuration options:
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+builder.AddRedisCache((options) => {
+    options.ConnectionString = "localhost:6379";
+    options.Password = "your-password";
+    options.UseSsl = true;
+    options.DefaultDatabase = 1;
+    options.ConnectTimeoutMs = 10000;
+});
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+    ...
+    redisOptions: { 
+        connectionString: "localhost:6379",
+        password: "your-password",
+        useSsl: true,
+        defaultDatabase: 1,
+        connectTimeoutMs: 10000
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
+const revealOptions: RevealOptions = {
+    ...
+    redisOptions: { 
+        connectionString: "localhost:6379",
+        password: "your-password",
+        useSsl: true,
+        defaultDatabase: 1,
+        connectTimeoutMs: 10000
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+initializeParameterBuilder.enableRedisCache((options) -> {
+    options.setConnectionString("localhost:6379");
+    options.setPassword("your-password");
+    options.setUseSsl(true);
+    options.setDefaultDatabase(1);
+    options.setConnectTimeoutMs(10000);
+});
+```
+
+  </TabItem>
+</Tabs>
+
 ## FAQ
 
 **Q: Does the cache consume a lot of disk space?**
@@ -128,4 +304,6 @@ To bypass caching, set the data source refresh data frequency to `Always`.
 
 **Q: In my deployment, there will be several instances of the Reveal server. How can they share the cache?**
 
-**A:** Currently, caches cannot be shared among multiple Reveal server instances. We recommend the following approach: configure your load balancer to direct the same group of users to the same Reveal server instance. This will ensure that cache entries are created within a specific instance, and subsequent requests from those users will hit the same instance, utilizing the cached data efficiently.
+**A:** The Reveal SDK now supports Redis cache, which enables cache sharing across multiple server instances. By configuring Redis cache as described in the [Redis Cache](#redis-cache) section, all your server instances can access the same distributed cache. This is the recommended approach for load-balanced deployments.
+
+Alternatively, if Redis is not available, you can configure your load balancer to direct the same group of users to the same Reveal server instance. This will ensure that cache entries are created within a specific instance, and subsequent requests from those users will hit the same instance, utilizing the cached data efficiently.
