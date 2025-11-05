@@ -3,6 +3,7 @@
 The Reveal SDK allows you to export both dashboards and visualizations to generate new document types or images.
 
 Supported dashboard export formats:
+- CSV
 - Excel
 - Image
 - PDF
@@ -17,6 +18,21 @@ All export options can be found under the **Export** menu item in the `RevealVie
 ![](images/export-menu-item.jpg)
 
 When the user clicks the **Export** button, they can choose one of the enabled export options.
+
+## Export to CSV
+A CSV export is performed when the end-user clicks the **CSV** menu item from the **Export** overflow menu.
+
+![](images/export-csv.jpg)
+
+The **CSV** menu item can be shown/hidden by setting the `RevealView.showExportToCSV` property.
+
+```js
+revealView.showExportToCSV = false;
+```
+
+When the **CSV** menu item is clicked, the end-user is prompted with various options which allow them to change the name of the export, choose which visualization's data to include in the export, and whether to use formatted values or raw values.
+
+![](images/export-csv-options.jpg)
 
 ## Export to Excel
 An Excel export is performed when the end-user clicks the **Excel** menu item from the **Export** overflow menu.
