@@ -16,6 +16,7 @@ const DataSources: DataSourceItem[] = [
     { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
     // { title: "Dropbox", topic: "", nuget: "Reveal.Sdk.Data.Dropbox" }, do not advertise
     { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
+    { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch" },
     // { title: "Google Analytics 4", topic: "", nuget: "Reveal.Sdk.Data.Google.Analytics4" }, do not advertise
     { title: "Google BigQuery", topic: "../adding-data-sources/google-big-query", nuget: "Reveal.Sdk.Data.Google.BigQuery" },
     // { title: "Google Drive", topic: "../adding-data-sources/google-drive", nuget: "Reveal.Sdk.Data.Google.Drive" }, do not advertise

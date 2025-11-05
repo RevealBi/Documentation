@@ -308,35 +308,11 @@ When the application runs, create a new Visualization and you will see the newly
 * [RVElasticsearchDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Elasticsearch.RVElasticsearchDataSource.html) - Represents an Elasticsearch data source
 * [RVElasticsearchDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Elasticsearch.RVElasticsearchDataSourceItem.html) - Represents an Elasticsearch data source item
 
-**Key Properties:**
-
-**RVElasticsearchDataSource:**
-- `Nodes` (required) - List of Elasticsearch node endpoints to connect to in the cluster (e.g., `["http://localhost:9200"]`)
-- `CertificateFingerprint` (optional) - The hex-encoded SHA-256 fingerprint of the Elasticsearch CA certificate used to establish trust for SSL/TLS connections to clusters with self-signed certificates
-- `FieldMultiValueLeniency` (optional) - Controls behavior when SQL queries encounter fields with multiple values. If false, an error is returned for fields containing array values. If true, returns the first value from the array. Defaults to false.
-
-**RVElasticsearchDataSourceItem:**
-- `Index` - The name of the Elasticsearch index to query
-- `CustomQuery` (optional, server-side only) - Custom Elasticsearch SQL query to execute instead of using the default index query. This property is only available in server-side code and is not available in client-side JavaScript implementations.
-- `FieldMultiValueLeniency` (optional) - Same as data source level, but applies to this specific item. Item-level settings override data source-level settings.
-
 </TabItem>
 <TabItem value="node" label="Node.js">
 
 * [RVElasticsearchDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvelasticsearchdatasource.html) - Represents an Elasticsearch data source
 * [RVElasticsearchDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvelasticsearchdatasourceitem.html) - Represents an Elasticsearch data source item
-
-**Key Properties:**
-
-**RVElasticsearchDataSource:**
-- `nodes` (required) - List of Elasticsearch node endpoints to connect to in the cluster (e.g., `["http://localhost:9200"]`)
-- `certificateFingerprint` (optional) - The hex-encoded SHA-256 fingerprint of the Elasticsearch CA certificate used to establish trust for SSL/TLS connections to clusters with self-signed certificates
-- `fieldMultiValueLeniency` (optional) - Controls behavior when SQL queries encounter fields with multiple values. If false, an error is returned for fields containing array values. If true, returns the first value from the array. Defaults to false.
-
-**RVElasticsearchDataSourceItem:**
-- `index` - The name of the Elasticsearch index to query
-- `customQuery` (optional, server-side only) - Custom Elasticsearch SQL query to execute instead of using the default index query. This property is only available in server-side code and is not available in client-side JavaScript implementations.
-- `fieldMultiValueLeniency` (optional) - Same as data source level, but applies to this specific item. Item-level settings override data source-level settings.
 
 </TabItem>
 </Tabs>
