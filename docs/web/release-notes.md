@@ -70,7 +70,7 @@ const revealOptions = {
 - Data truncation indicator is missing from visualization editor.
 - Chart visualizations can disappear when browser is in the background.
 - Unable to scroll through dashboard with custom visualization.
-- "Invalid DateTime: {$dateFilterFrom}" error expanding data filter with REST data source.
+- "Invalid DateTime" error expanding data filter with REST data source.
 - The `onVisualizationEditorClosing` event of RevealView throws exception if the event is cancelled.
 - The `onUrlLinkRequested` event on RevealView is not called for dashboard linking trigger "Visualization Maximized".
 - When filters have over 3000+ values, filtering then unselecting a filter value does not work.
