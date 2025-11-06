@@ -77,6 +77,21 @@ This feature replaces the legacy pie chart with a more polished and user-friendl
 
 > ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using pie charts.
 
+### `newGrid`
+Enables the new data grid visualization in the Reveal SDK.
+
+The new data grid offers:
+- Improved rendering performance
+- Enhanced sorting and filtering capabilities
+- Column summaries support
+- Column pinning functionality
+- Responsive layout for better mobile and tablet experiences
+- And more improvements for a modern grid experience
+
+This feature introduces a significant upgrade to the grid visualization, providing users with a more powerful and flexible data grid component. It is ideal for users who need advanced grid functionality and better performance when working with tabular data.
+
+> ✅ **Recommended** for testing improved grid performance and new grid capabilities in your dashboards.
+
 ### `newTooltip`
 Enables the new hover-based tooltip experience in the Reveal SDK.
 
