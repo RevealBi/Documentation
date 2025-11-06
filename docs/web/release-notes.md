@@ -37,7 +37,7 @@ const revealOptions = {
 }
 ```
 
-- Multiple data filters are now generally available.
+- Multiple date dashboard filters are now generally available.
 - The cancel button can be programmatically hidden when editing a dashboard by setting the `showCancel` property on the RevealView.
 - The RevealView will now automatically refresh its appearance when the `theme` property has been set on RevealSdkSettings.
 - MongoDB provider now supports grid paging.
@@ -1431,4 +1431,6 @@ revealView.dashboard = dashboard;
 #### Java
 - sdk-ext: updated commons-text library.
 - Fix for very slow response times when processing some Excel files.
+
+
 
