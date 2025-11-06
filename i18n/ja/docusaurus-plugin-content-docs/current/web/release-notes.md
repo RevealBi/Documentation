@@ -3,15 +3,15 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.8.1 (Nov 5th, 2025)
+## 1.8.1 (2025 年 11 月 5 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Conditional formatting has been enhanced to allow for configurable rules and styling. These visualizations are currently supported; Grid, Pivot, Text View, Bar & Column chart.
-- New data source: Elasticsearch.
-- New cache provider: Redis.
+- 条件付き書式が強化され、ルールとスタイルを構成できるようになりました。現在サポートされている表示形式は、グリッド、ピボット、テキスト ビュー、棒チャートと柱状チャートです。
+- 新しいデータ ソース: Elasticsearch。
+- 新しいキャッシュ プロバイダー: Redis。
 
 Java:
 
@@ -37,54 +37,54 @@ const revealOptions = {
 }
 ```
 
-- Multiple data filters are now generally available.
-- The cancel button can be programmatically hidden when editing a dashboard by setting the `showCancel` property on the RevealView.
-- The RevealView will now automatically refresh its appearance when the `theme` property has been set on RevealSdkSettings.
-- MongoDB provider now supports grid paging.
-- Snowflake provider now supports grid paging.
-- The `exitEditMode` on the RevealView will now return a boolean indicating whether or not we exited edit mode.
-- Added support for the EMPTY function in SQL Server.
-- Added support for grid paging when using data blending on data sources that support paging.
-- Added support for exporting to CSV.
-- Added support for read-only filters.
-- Added support to hide a dashboard filter.
-- Added support to customize the radial line axis range through the Settings tab in the visualization editor.
-- "Select a Field" popup on the filter dialog now has the stored procedures listed above the fields.
+- 複数のデータ フィルターが一般利用可能になりました。
+- RevealView の `showCancel` プロパティを設定すると、ダッシュボードの編集時にキャンセル ボタンをプログラムで非表示にすることができます。
+- RevealSdkSettings で `theme` プロパティが設定されると、RevealView の外観が自動的に更新されるようになりました。
+- MongoDB プロバイダーはグリッド ページングをサポートするようになりました。
+- Snowflake プロバイダーはグリッド ページングをサポートするようになりました。
+- RevealView の `exitEditMode` は、編集モードを終了したかどうかを示すブール値を返すようになりました。
+- SQL Server の EMPTY 関数のサポートが追加されました。
+- ページングをサポートするデータ ソースでデータ ブレンドを使用する際のグリッド ページングのサポートが追加されました。
+- CSV のエクスポートのサポートが追加されました。
+- 読み取り専用フィルターのサポートが追加されました。
+- ダッシュボード フィルターを非表示にするサポートが追加されました。
+- 表示形式エディターの [設定] タブからラジアル線軸の範囲をカスタマイズするためのサポートが追加されました。
+- フィルター ダイアログの [フィールドの選択] ポップアップに、フィールドの上にストアド プロシージャがリストされるようになりました。
 
 
 #### Java
 
-- JTDS driver has been replaced with mssql-jdbc (v12.10.1.jre11).
-- RVJDBCPropertiesCredentials is no longer used and has been removed.
+- JTDS ドライバーは mssql-jdbc (v12.10.1.jre11) に置き換えられました。
+- RVJDBCPropertiesCredentials は使用されなくなり、削除されました。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォー
 
-- Sorting a pivot table numeric field causes crash.
-- Issue with column headers containing dashes in their title when exporting to Excel.
-- When editing a dashboard, there is a `PRE` element added directly to the HTML body.
-- Duplicate axis labels appearing in bar and column charts.
-- The `onDateFilterChanged` event on RVDashboard always reports the first date filter.
-- Adding a blended column causes grid paging to disable.
-- Data truncation indicator is missing from visualization editor.
-- Chart visualizations can disappear when browser is in the background.
-- Unable to scroll through dashboard with custom visualization.
-- "Invalid DateTime" error expanding data filter with REST data source.
-- The `onVisualizationEditorClosing` event of RevealView throws exception if the event is cancelled.
-- The `onUrlLinkRequested` event on RevealView is not called for dashboard linking trigger "Visualization Maximized".
-- When filters have over 3000+ values, filtering then unselecting a filter value does not work.
-- Time series axis label not following configured date formatting.
-- Linking a visualization to another dashboard and connecting with a date filter does not open the linked dashboard.
-- Refreshed data doesn't update filter values.
-- Analysis Server provider not showing date as a date type dimension.
-- Currency symbol dropdown is not displayed when the formatting type of a field is changed to currency.
-- Zoom for the Scatter Map visualization is lost when saved or refreshed.
-- Setting dashboard date filter rule to All Time via API produces no data.
+- Pivot テーブルで数値フィールドを並べ替えるとクラッシュする問題。
+- Excel エクスポート時、タイトルにダッシュを含む列ヘッダーの問題。
+- ダッシュボード編集中、`PRE` 要素が HTML body に直接追加される問題。
+- 棒と柱状チャートで軸ラベルが重複表示される問題。
+- RVDashboard の `onDateFilterChanged` が常に最初の日付フィルターを報告する問題。
+- ブレンディング列追加時にグリッド ページングが無効になる問題。
+- 表示形式エディターにデータ切り捨てインジケーターが表示されない問題。
+- ブラウザーがバックグラウンド時にチャートが消える場合がある問題。
+- カスタム表示形式使用時にダッシュボードをスクロールできない問題。
+- REST データ ソースでデータ フィルター展開時 "Invalid DateTime" エラーが発生する問題。
+- RevealView の `onVisualizationEditorClosing` イベントでイベント キャンセル時に例外が発生する問題。
+- `onUrlLinkRequested` イベントが 「Visualization Maximized」 のダッシュボード リンク  トリガーで呼ばれない問題。
+- フィルターに 3000 を超える項目がある場合、フィルタリング後に値の選択解除が機能しない問題。
+- 時系列軸ラベルが設定した日付表示形式に従わない問題。
+- 日付フィルターを接続した表示形式のダッシュボード リンクが開かない問題。
+- データ更新後にフィルター値が更新されない問題。
+- Analysis Server プロバイダーが日付を日付ディメンションとして表示しない問題。
+- フィールドの書式設定タイプを通貨に変更した際、通貨記号ドロップダウンが表示されない問題。
+- 散布図の表示形式保存または更新時にズームがリセットされる問題。
+- API でダッシュボード日付フィルター ルールを 「すべての期間」 に設定した場合にデータが表示されない問題。
 
 #### Java
 
-- Headless export using OS locale instead of the browser client locale.
+- ヘッドレス エクスポートがブラウザー クライアントのロケールではなく OS ロケールを使用する問題。
 
 ## 1.8.0 (2025 年 9 月 3 日)
 
