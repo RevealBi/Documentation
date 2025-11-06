@@ -77,6 +77,21 @@ This feature replaces the legacy pie chart with a more polished and user-friendl
 
 > ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using pie charts.
 
+### `newDataGrid`
+Enables the new data grid visualization in the Reveal SDK.
+
+The new data grid offers:
+- Improved rendering performance
+- Enhanced sorting and filtering capabilities
+- Column summaries support
+- Column pinning functionality
+- Responsive layout for better mobile and tablet experiences
+- And more improvements for a modern grid experience
+
+This feature introduces a significant upgrade to the grid visualization, providing users with a more powerful and flexible data grid component. It is ideal for users who need advanced grid functionality and better performance when working with tabular data.
+
+> ✅ **Recommended** for testing improved grid performance and new grid capabilities in your dashboards.
+
 ### `newTooltip`
 Enables the new hover-based tooltip experience in the Reveal SDK.
 
@@ -90,16 +105,3 @@ With this feature enabled:
 This behavior is a significant change from the default tooltip, which only appears after the user **clicks** a data point. The `newTooltip` flag simplifies the interaction flow, allowing users to explore data faster and with fewer steps.
 
 > ✅ **Recommended** for testing faster, more interactive data exploration via hover tooltips.
-
-### `multipleDateFilters`
-Enables the creation of multiple date dashboard filters.
-
-These additional filters can be used in all the same scenarios where dashboard filters:
-- Dashboard linking
-- URL linking
-- Stored procedure parameter binding
-- REST parameter binding
-- Filters API
-- etc.
-
-> ✅ **NOTE** When multiple date filters are defined, RVDashboard.dateFilter will reference the first date dashboard filter. Likewise, RevealView.setDateFilter() will also override the first date filter in the dashboard.
