@@ -77,7 +77,7 @@ This feature replaces the legacy pie chart with a more polished and user-friendl
 
 > ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using pie charts.
 
-### `newGrid`
+### `newDataGrid`
 Enables the new data grid visualization in the Reveal SDK.
 
 The new data grid offers:
