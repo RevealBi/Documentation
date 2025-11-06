@@ -105,16 +105,3 @@ With this feature enabled:
 This behavior is a significant change from the default tooltip, which only appears after the user **clicks** a data point. The `newTooltip` flag simplifies the interaction flow, allowing users to explore data faster and with fewer steps.
 
 > ✅ **Recommended** for testing faster, more interactive data exploration via hover tooltips.
-
-### `multipleDateFilters`
-Enables the creation of multiple date dashboard filters.
-
-These additional filters can be used in all the same scenarios where dashboard filters:
-- Dashboard linking
-- URL linking
-- Stored procedure parameter binding
-- REST parameter binding
-- Filters API
-- etc.
-
-> ✅ **NOTE** When multiple date filters are defined, RVDashboard.dateFilter will reference the first date dashboard filter. Likewise, RevealView.setDateFilter() will also override the first date filter in the dashboard.
