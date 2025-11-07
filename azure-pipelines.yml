@@ -3,7 +3,8 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: none
+#trigger:
+#- master
 
 pool:
   name: "BusinessTools On-Prem Documentation"
