@@ -3,10 +3,10 @@ name: Build and Deploy Documentation
 on:
   pull_request:
     branches:
-      - main
+      - master
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
         run: npm run build
 
       - name: Upload build artifacts
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-artifact@v4
         with:
           name: docusaurus-build
@@ -42,7 +42,7 @@ jobs:
   deploy:
     name: Deploy to Staging Servers
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     # Must use Windows runner for deployment because:
     # 1. Target servers are Windows machines on an internal network
     # 2. Requires native Windows authentication (PSDrive with credentials)
