@@ -188,12 +188,12 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 </Tabs>
 
 :::danger 重要
-`ChangeDataSourceAsync` メソッドでデータ ソースに加えられた変更は、`ChangeDataSourceItemAsync` メソッドに引き継がれません。両方のメソッドでデータ ソース プロパティを更新する**必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で `ChangeDataSourceAsync` メソッドを呼び出し、データ ソース アイテムの基になるデータ ソースをパラメーターとして渡すことをお勧めします。
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えられた変更は、`ChangeDataSourceItemAsync` メソッドに引き継がれません。両方のメソッドでデータ ソース プロパティを更新する**必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で `ChangeDataSourceAsync` メソッドを呼び出し、データ ソース項目の基になるデータ ソースをパラメーターとして渡すことをお勧めします。
 :::
 
 ### 認証
 
-Elasticsearch の認証は、ユーザー名とパスワードの資格情報を使用してサーバー側で処理されます。認証オプションの詳細については、[認証](../authentication.md#usernamepassword-authentication)トピックを参照してください。
+Elasticsearch の認証は、個人アクセス トークンを使用してサーバー側で処理されます。認証オプションの詳細については、「[認証](../authentication.md#ユーザー名パスワード認証)」トピックを参照してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -244,7 +244,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 
 ## クライアント側の実装
 
-クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本的なプロパティを指定するだけです。実際の接続構成はサーバー上で行われます。
+クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本プロパティを指定するだけです。実際の接続構成はサーバー上で行われます。
 
 ### データ ソースの作成
 
@@ -270,11 +270,11 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-アプリケーションを実行すると、新しい視覚化を作成すると、新しく作成された Elasticsearch データ ソースが [データ ソースの選択] ダイアログに表示されます。
+アプリケーションを実行すると、新しい表示形式を作成すると、新しく作成された Elasticsearch データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
-### データ ソース アイテムの作成
+### データ ソース項目の作成
 
-データ ソース アイテムは、ユーザーが視覚化のために選択できる Elasticsearch データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルを指定するだけです。
+データ ソース項目は、ユーザーが表示形式のために選択できる Elasticsearch データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルを指定するだけです。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -293,7 +293,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-アプリケーションを実行すると、新しい視覚化を作成すると、新しく作成された Elasticsearch データ ソース アイテムが [データ ソースの選択] ダイアログに表示されます。
+アプリケーションを実行すると、新しい表示形式を作成すると、新しく作成された Elasticsearch データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ## その他のリソース
 
@@ -306,13 +306,13 @@ revealView.onDataSourcesRequested = (callback) => {
 <TabItem value="aspnet" label="ASP.NET" default>
 
 * [RVElasticsearchDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Elasticsearch.RVElasticsearchDataSource.html) - Elasticsearch データ ソースを表します
-* [RVElasticsearchDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Elasticsearch.RVElasticsearchDataSourceItem.html) - Elasticsearch データ ソース アイテムを表します
+* [RVElasticsearchDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Elasticsearch.RVElasticsearchDataSourceItem.html) - Elasticsearch データ ソース項目を表します
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
 * [RVElasticsearchDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvelasticsearchdatasource.html) - Elasticsearch データ ソースを表します
-* [RVElasticsearchDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvelasticsearchdatasourceitem.html) - Elasticsearch データ ソース アイテムを表します
+* [RVElasticsearchDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvelasticsearchdatasourceitem.html) - Elasticsearch データ ソース項目を表します
 
 </TabItem>
 </Tabs>

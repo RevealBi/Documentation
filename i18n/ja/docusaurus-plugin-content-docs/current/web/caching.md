@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # キャッシュ
 
 Reveal SDK のキャッシュは、クエリされたすべてのデータを、キャッシュと呼ばれる高速な組み込みデータベースに保存することでパフォーマンスを最適化するように設計されたデフォルトの仕組みです。このプロセスにより、頻繁にアクセスされるデータがすぐに利用できるようになり、クエリの開始時に、要求されたデータがすでにキャッシュに存在するかどうかが SDK によって自動的にチェックされます。キャッシュ ヒットの場合、SDK は元のソースへの追加リクエストを必要とせずに、情報を迅速に取得します。
@@ -99,6 +102,179 @@ Sqlite ファイルは `[RevealCache]/dataset` に保存され、メタデータ
 
 ![](images/cache-disable.jpg)
 
+## Redis Cache
+
+Reveal SDK は、分散キャッシュ プロバイダーとして Redis を使用することをサポートしており、複数のサーバー インスタンス間でのキャッシュ共有を可能にします。これは、アプリケーションの複数のインスタンスが同じキャッシュされたデータにアクセスする必要がある負荷分散環境で特に役立ちます。
+
+:::note
+
+Redis Cache 機能は、表形式のデータに使用されるメモリ内キャッシュを置き換えます。ローカル処理操作では引き続き SQLite キャッシュが使用されます。ローカル処理は、直接クエリできないソースからのデータを取得してローカルで処理する必要がある場合に発生します。これには以下の設定が含まれます。
+- ストアド プロシージャ
+- REST API
+- クロス データ ソース結合を含むデータ ソース項目
+- クエリ実行のために元のソースからデータを取得して一時的に保存する必要があるその他のソース
+
+:::
+
+### インストール
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+ASP.NET アプリケーションの場合、Redis Cache のサポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
+
+```bash
+dotnet add package Reveal.Sdk.Cache.Redis
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+Node.js アプリケーションの場合、Redis Cache はメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+Java アプリケーションの場合、Redis Cache はメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+
+  </TabItem>
+</Tabs>
+
+### 構成
+
+Redis Cache を有効にするには、アプリケーションの初期化時に接続を構成します。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+builder.AddRedisCache((options) => {
+    options.ConnectionString = "localhost:6379";
+});
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+    ...
+    redisOptions: { connectionString: "localhost:6379" }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
+const revealOptions: RevealOptions = {
+    ...
+    redisOptions: { connectionString: "localhost:6379" }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+initializeParameterBuilder.enableRedisCache((options) -> {
+    options.setConnectionString("localhost:6379");
+});
+```
+
+  </TabItem>
+</Tabs>
+
+### Redis 構成オプション
+
+Redis Cache プロバイダーは、接続と動作をカスタマイズするためのさまざまな構成オプションをサポートしています。
+
+- **ConnectionString** - Redis サーバー接続文字列またはエンドポイント (例: "localhost:6379")。デフォルトは空の文字列です。
+- **EndPoints** - Redis クラスターまたは複数の Redis インスタンスに接続するために使用されるエンドポイント URL のリスト。デフォルトは null です。
+- **User** - Redis 認証のユーザー名。デフォルトは null です。
+- **Password** - Redis 認証のパスワード。デフォルトは null です。
+- **UseSsl** - SSL/TLS 暗号化が有効かどうかを示します。デフォルトは false です。
+- **DefaultDatabase** - 使用するデフォルトのデータベース番号。デフォルトは 0 です。
+- **ClientName** - 識別用のクライアント名。デフォルトは null です。
+- **ConnectTimeoutMs** - 接続タイムアウト (ミリ秒単位)。デフォルトは 5000 です。
+- **SyncTimeoutMs** - 同期操作のタイムアウト (ミリ秒単位)。デフォルトは 5000 です。
+- **AsyncTimeoutMs** - 非同期操作のタイムアウト (ミリ秒単位)。デフォルトは 5000 です。
+- **ConnectRetry** - 接続再試行回数。デフォルトは 3 です。
+- **KeepAliveSeconds** - キープアライブ間隔 (秒単位)、無効にするには -1。デフォルトは 60 です。
+- **AbortOnConnectFail** - 接続失敗時に中止するかどうかを示します。デフォルトは false です。
+- **AllowAdmin** - 管理コマンド (FLUSHDB、CONFIG など) が許可されるかどうかを示します。デフォルトは false です。
+- **ReconnectRetryPolicy** - 再接続再試行ポリシー: Linear または Exponential。デフォルトは Linear です。
+- **RetryDelayMs** - 再試行ポリシーの基本遅延 (ミリ秒単位)。デフォルトは 1000 です。
+
+追加の構成オプションの例:
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+builder.AddRedisCache((options) => {
+    options.ConnectionString = "localhost:6379";
+    options.Password = "your-password";
+    options.UseSsl = true;
+    options.DefaultDatabase = 1;
+    options.ConnectTimeoutMs = 10000;
+});
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```js
+const revealOptions = {
+    ...
+    redisOptions: { 
+        connectionString: "localhost:6379",
+        password: "your-password",
+        useSsl: true,
+        defaultDatabase: 1,
+        connectTimeoutMs: 10000
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
+const revealOptions: RevealOptions = {
+    ...
+    redisOptions: { 
+        connectionString: "localhost:6379",
+        password: "your-password",
+        useSsl: true,
+        defaultDatabase: 1,
+        connectTimeoutMs: 10000
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+initializeParameterBuilder.enableRedisCache((options) -> {
+    options.setConnectionString("localhost:6379");
+    options.setPassword("your-password");
+    options.setUseSsl(true);
+    options.setDefaultDatabase(1);
+    options.setConnectTimeoutMs(10000);
+});
+```
+
+  </TabItem>
+</Tabs>
+
 ## よくある質問
 
 **質問: キャッシュは多くのディスク領域を消費しますか?**
@@ -128,4 +304,6 @@ Sqlite ファイルは `[RevealCache]/dataset` に保存され、メタデータ
 
 **質問: 導入では、Reveal サーバーのインスタンスが複数存在します。どうすればキャッシュを共有できるのでしょうか?**
 
-**答え:** 現在、キャッシュは複数の Reveal サーバー インスタンス間で共有できません。同じユーザー グループを同じ Reveal サーバー インスタンスに誘導するようにロード バランサーを構成するという次のアプローチをお勧めします。これにより、キャッシュ エントリが特定のインスタンス内に作成され、それらのユーザーからの後続のリクエストは同じインスタンスにヒットし、キャッシュされたデータを効率的に利用できるようになります。
+**答え:** Reveal SDK は、複数のサーバー インスタンス間でキャッシュを共有できる Redis Cache をサポートするようになりました。[Redis Cache](#redis-cache) セクションで説明されているように Redis Cacheを構成すると、すべてのサーバー インスタンスが同じ分散キャッシュにアクセスできるようになります。これは、負荷分散された展開に推奨される方法です。
+
+代替手段として、Redis が利用できない場合、ロード バランサーを設定し、同一グループのユーザーを同じ Reveal サーバー インスタンスにルーティングすることができます。これにより、キャッシュ エントリが特定のインスタンス内に作成され、それらのユーザーからの後続のリクエストは同じインスタンスにヒットし、キャッシュされたデータを効率的に利用できるようになります。
