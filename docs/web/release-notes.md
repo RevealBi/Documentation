@@ -3,6 +3,20 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.8.2 (Nov 11th, 2025)
+
+This is a critical patch release that fixes a major issue with Redis cache support and adds TypeScript support for Node.js. **If you are using Redis cache (introduced in 1.8.1), you must upgrade to this version.**
+
+### Bug Fixes
+
+#### All Platforms
+
+- Fixed a critical bug preventing Redis cache from functioning correctly when configured.
+
+#### Node
+
+- Added TypeScript type definitions for improved development experience and type safety.
+
 ## 1.8.1 (Nov 5th, 2025)
 
 ### New Features

@@ -31,9 +31,18 @@ There are two options to resolve this:
    If you must remain on Windows, host the application inside a **Windows Container**.
    This allows installing and configuring Playwright within the container image, bypassing the Windows App Service limitation.
 
-## Exporting on Linux ARM64 for Node
+## `<Pre>` Tag Appended to `<body>`
 
-- [Chromium can't be installed automatically when running on Linux ARM64](https://github.com/puppeteer/puppeteer/issues/7740) when using Node.js, so it must be installed using your package manager or a manual install before attempting to export a dashboard. Reveal searches from the Chromium binary under `/usr/bin/chromium`.
+### Issue
+The RevealView component appends a hidden `<pre>` tag to the end of the `<body>` element. This tag is used internally by the viewer to measure font sizes for layout calculations. If the your application includes CSS rules targeting `<pre>` elements (e.g., global typography or spacing styles), these rules may inadvertently apply to the RevealView measurement element. This can lead to unexpected visual artifacts or layout shifts in the UI.
+
+### Workarounds
+To prevent these unwanted styles from affecting the measurement element, add the following CSS rule to your global stylesheet:
+```css
+body > pre.rv-multiline-editor {
+    height: 0px !important;
+}
+```
 
 ## Grid Row Paging
 
@@ -41,6 +50,10 @@ There are two options to resolve this:
 - Providers that support stored procedures will have grid paging disabled when a stored procedure is selected as these can't be queried like tables to return a range of rows. 
 - Paging is not available when processing data on server is false
 - When sorting a grid with paging enabled in regular view mode the column sorts will be applied from left to right. This means if you sort the last column and then sort the first column, they won't be applied in that order, but rather from left to right.
+
+## Exporting on Linux ARM64 for Node
+
+- [Chromium can't be installed automatically when running on Linux ARM64](https://github.com/puppeteer/puppeteer/issues/7740) when using Node.js, so it must be installed using your package manager or a manual install before attempting to export a dashboard. Reveal searches from the Chromium binary under `/usr/bin/chromium`.
 
 ## Headless Export
 
