@@ -83,7 +83,7 @@ The instructions below are required only in the following scenarios:
 - You're having issues with the automatic download mechanism
 - You want to have everything pre-installed in advance.
 
-Step 1 -Download the required binaries for your platform: [Windows](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/win-x64.zip?gasource=(direct)&gamedium=(none)&gacampaign=(not%20set)&gaterm=&gagclid=&_ga=2.151744764.435154113.1670459953-590137784.1670459953), [Linux](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/linux-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953), or [macOS](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/osx-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953).
+Step 1 -Download the required binaries for your platform: [Windows](https://download.infragistics.com/reveal/Builds/sdk/java/ExportTool/[var:sdkVersion]/win-x64.zip), [Linux](https://download.infragistics.com/reveal/Builds/sdk/java/ExportTool/[var:sdkVersion]/linux-x64.zip), or [macOS](https://download.infragistics.com/reveal/Builds/sdk/java/ExportTool/[var:sdkVersion]/osx-x64.zip).
 
 Step 2 - Unzip the file to a directory in your server, where your Web Application is running (your user should be able to access that directory).
 
