@@ -83,7 +83,7 @@ sudo apt-get install -y --allow-unauthenticated libx11-dev
 - 自動ダウンロードの仕組みに問題がある場合。
 - 事前にすべてをインストールしておきたい場合。
 
-ステップ 1 - お使いのプラットフォームに必要なバイナリをダウンロードします: [Windows](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/win-x64.zip?gasource=(direct)&gamedium=(none)&gacampaign=(not%20set)&gaterm=&gagclid=&_ga=2.151744764.435154113.1670459953-590137784.1670459953)、[Linux](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/linux-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953)、[macOS](https://download.infragistics.com/reveal/builds/sdk/java/ExportTool/1.0.0/osx-x64.zip?_ga=2.151744764.435154113.1670459953-590137784.1670459953)
+ステップ 1 - お使いのプラットフォームに必要なバイナリをダウンロードします: [Windows](https://download.infragistics.com/reveal/Builds/sdk/java/ExportTool/[var:sdkVersion]/win-x64.zip)、[Linux](https://download.infragistics.com/reveal/Builds/sdk/java/ExportTool/[var:sdkVersion]/linux-x64.zip)、[macOS](https://download.infragistics.com/reveal/Builds/sdk/java/ExportTool/[var:sdkVersion]/osx-x64.zip)
 
 ステップ 2 - Web アプリケーションが動作しているサーバーのディレクトリにファイルを解凍します (ユーザーはそのディレクトリにアクセスできる必要があります)。
 
