@@ -3,6 +3,128 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.8.3 (Jan 8th, 2026)
+
+### New Features
+
+#### All Platforms
+
+- Conditional formatting shape selection popup has been improved, and now includes a clear option.
+- The new pie and donut chart is now generally available. This updated pie and donut replaces the previous pie and donut visualization.
+- Headless export has been optimized by removing unnecessary waits to ensure deferred rendering completion.
+- SQL Server now supports `ISEMPTY` function when creating a calculated field.
+- The event onUrlLinkRequested now cancels navigation when null is returned.
+- Large number formats are now localized.
+- Dashboard filters now support using a separate field for its label.
+- Elasticsearch now has several improvements: added support for the `FORMATDATE` function, fixed issues with the `LOG` function (single parameter calls), fixed issue with the `FYEAR` (fiscal year) function, and made improvements to prevent SQL injection attacks.
+- Data source icons can now be hidden or changed.
+
+```js
+revealView.Assets.onDataSourceImageRequested = (args) => {
+    // Use default
+    return null;
+    
+    // Hide icon
+    return { visible: false };
+    
+    // Custom icon
+    return { imageUrl: "./images/custom.jpg" };
+
+    // Conditional
+    if (args.dataSource instanceof RVSqlServerDataSource) {
+        return { imageUrl: "./images/sqlserver.jpg" };
+    }
+};
+```
+
+- Added support for predefined calculated fields.
+
+```csharp
+//Registration
+mvcBuilder.AddReveal(builder =>
+{
+    builder.AddDataModelProvider<MyDataModelProvider>();
+});
+
+//Implementation example
+
+internal class MyDataModelProvider : IRVDataModelProvider
+{
+    private static readonly List<RVDataModelCalculatedField> calculatedFields;
+
+    static MyDataModelProvider()
+    {
+        calculatedFields = new List<RVDataModelCalculatedField> {
+            new RVDataModelCalculatedField("Example Calc", null, RVDashboardDataType.String, "\" Calculated \" & [OrderId]"),
+            new RVDataModelCalculatedField("Example Calc 2", null, RVDashboardDataType.String, "1000 + [OrderID]")
+        };
+    }
+
+    public Task<List<RVDataModelCalculatedField>> GetCalculatedFieldsAsync(RVDataSourceItem dsItem, IRequestContext userContext)
+    {
+        if (dsItem.Title == "Order Details")
+            return Task.FromResult(calculatedFields);
+        else
+            return Task.FromResult<List<RVDataModelCalculatedField>>(null);
+    }
+
+    public Task<List<RVDataModelMeasure>> GetMeasuresAsync(RVDataSourceItem dsItem, IRequestContext userContext)
+    {
+        if (dsItem.Title == "Order Details")
+            return Task.FromResult(new List<RVDataModelMeasure> {
+                new RVDataModelMeasure("Cycle A", "SUM([Cycle B])", "A"),
+                new RVDataModelMeasure("Cycle B", "SUM([Cycle A])", "B")
+            });
+        else
+            return Task.FromResult<List<RVDataModelMeasure>>(null);
+    }
+
+    public Task<List<RVDataModelField>> EditSchemaAsync(RVDataSourceItem dsItem, List<RVDataModelField> baseSchema, IRequestContext requestContext)
+    {
+        if (dsItem.Title == "Order Details")
+        {
+            baseSchema.FirstOrDefault(f => f.Name == "Discount").DefaultAggregation = RVDashboardAggregationType.CountDistinct;
+            return Task.FromResult(baseSchema);
+        }
+        else
+        {
+            return Task.FromResult<List<RVDataModelField>>(null);
+        }
+    }
+}
+```
+
+- Overflow errors on field aggregations are now handled.
+- MongoDB now supports the `ENDOFMONTH` function.
+
+### Bugs
+
+#### All Platforms
+
+- RedisCacheOptions missing for TypeScript.
+- Redis cache key is always the same.
+- Large number formatting applied incorrectly to percentage-based charts.
+- Elasticsearch error on index preview.
+- MySQL stored procedure parameters not being shown as filter binding options.
+- The onFiltersChanged event is fired for interactive filtering, but the selectedValues property is not updated.
+- KPI visualizations can overlap its labels in minimized mode.
+- Google Analytics summarization of non-aggregateable metrics incorrect.
+- Google Analytics shows wrong metric values when using a date hierarchy.
+- Unchecking "Show Data Labels" doesn't hide the labels.
+- Headless export that includes a map visualization fails.
+- Large number formatting does not work properly if `RevealSdkSettings.FormattingProvider` is defined.
+- Custom date range not working for Analysis Services.
+- Pie and donut chart disappears when legend is set to bottom.
+- Analysis Services crashes when accessed on MacOS ARM.
+- Custom font from theme not being used.
+- Custom theme is getting replaced with Reveal's default.
+- MySQL error when a null date is read from the query result.
+- Custom visualization doesn't include field's label.
+
+#### Java
+
+- Numeric filter sends decimal instead of integer.
+
 ## 1.8.2 (2025 年 11 月 11 日)
 
 これは、Redis Cache サポートの重大な問題を修正し、Node.js の TypeScript サポートを追加する重要なパッチリリースです。**Redis Cache (1.8.1 で導入) を使用している場合は、このバージョンにアップグレードする必要があります。**
