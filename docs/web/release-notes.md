@@ -55,8 +55,9 @@ internal class MyDataModelProvider : IRVDataModelProvider
     static MyDataModelProvider()
     {
         calculatedFields = new List<RVDataModelCalculatedField> {
-            new RVDataModelCalculatedField("Example Calc", null, RVDashboardDataType.String, "\" Calculated \" & [OrderId]"),
-            new RVDataModelCalculatedField("Example Calc 2", null, RVDashboardDataType.String, "1000 + [OrderID]")
+            new RVDataModelCalculatedField("GrossAmount", "Gross Amount", RVDashboardDataType.Numeric, "[UnitPrice] * [Quantity]"),
+            new RVDataModelCalculatedField("DiscountAmount", "Discount Amount", RVDashboardDataType.Numeric, "[GrossAmount] * [Discount]"),
+            new RVDataModelCalculatedField("NetAmount", "Net Amount", RVDashboardDataType.Numeric, "[GrossAmount] * [Discount]")
         };
     }
 
@@ -72,8 +73,8 @@ internal class MyDataModelProvider : IRVDataModelProvider
     {
         if (dsItem.Title == "Order Details")
             return Task.FromResult(new List<RVDataModelMeasure> {
-                new RVDataModelMeasure("Cycle A", "SUM([Cycle B])", "A"),
-                new RVDataModelMeasure("Cycle B", "SUM([Cycle A])", "B")
+                new RVDataModelMeasure("Total Revenue", "sum([NetAmount])", "Total Revenue (net)"),
+                new RVDataModelMeasure("ASP", "sum([NetAmount]) / SUM([Quantity])", "Revenue-weighted price per unit")
             });
         else
             return Task.FromResult<List<RVDataModelMeasure>>(null);
@@ -94,7 +95,6 @@ internal class MyDataModelProvider : IRVDataModelProvider
 }
 ```
 
-- Overflow errors on field aggregations are now handled.
 - MongoDB now supports the `ENDOFMONTH` function.
 
 ### Bugs
