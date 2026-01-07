@@ -11,11 +11,11 @@ import TabItem from '@theme/TabItem';
 
 - Conditional formatting shape selection popup has been improved, and now includes a clear option.
 - The new pie and donut chart is now generally available. This updated pie and donut replaces the previous pie and donut visualization.
-- Headless export has been optimized by removing unnecessary waits to ensure deferred rendering completion.
+- Headless export has been optimized to be more reliable and slightly faster.
 - SQL Server now supports `ISEMPTY` function when creating a calculated field.
 - The event onUrlLinkRequested now cancels navigation when null is returned.
 - Large number formats are now localized.
-- Dashboard filters now support using a separate field for its label.
+- Improved UX to use a field for dashboard filter's label that is different than the field for the dashboard field filter value.
 - Elasticsearch now has several improvements: added support for the `FORMATDATE` function, fixed issues with the `LOG` function (single parameter calls), fixed issue with the `FYEAR` (fiscal year) function, and made improvements to prevent SQL injection attacks.
 - Data source icons can now be hidden or changed.
 
@@ -102,13 +102,12 @@ internal class MyDataModelProvider : IRVDataModelProvider
 #### All Platforms
 
 - RedisCacheOptions missing for TypeScript.
-- Redis cache key is always the same.
 - Large number formatting applied incorrectly to percentage-based charts.
 - Elasticsearch error on index preview.
 - MySQL stored procedure parameters not being shown as filter binding options.
 - The onFiltersChanged event is fired for interactive filtering, but the selectedValues property is not updated.
 - KPI visualizations can overlap its labels in minimized mode.
-- Google Analytics summarization of non-aggregateable metrics incorrect.
+- Google Analytics summarization of some measures incorrect.
 - Google Analytics shows wrong metric values when using a date hierarchy.
 - Unchecking "Show Data Labels" doesn't hide the labels.
 - Headless export that includes a map visualization fails.
