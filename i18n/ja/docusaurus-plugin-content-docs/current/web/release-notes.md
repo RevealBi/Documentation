@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 - Data source icons can now be hidden or changed.
 
 ```js
-revealView.Assets.onDataSourceImageRequested = (args) => {
+revealView.onAssetRequested = (args) => {
     // Use default
     return null;
     
