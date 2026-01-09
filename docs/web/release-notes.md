@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
-## 1.8.3 (Jan 8th, 2026)
+## 1.8.3 (Jan 9th, 2026)
 
 ### New Features
 
@@ -119,6 +119,7 @@ internal class MyDataModelProvider : IRVDataModelProvider
 - Custom theme is getting replaced with Reveal's default.
 - MySQL error when a null date is read from the query result.
 - Custom visualization doesn't include field's label.
+- Scatter map visualization showing incorrect text in tooltip for interactive filtering.
 
 #### Java
 
