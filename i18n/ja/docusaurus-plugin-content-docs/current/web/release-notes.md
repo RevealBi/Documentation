@@ -3,21 +3,21 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.8.3 (Jan 9th, 2026)
+## 1.8.3 (2026 年 1 月 9 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- Conditional formatting shape selection popup has been improved, and now includes a clear option.
-- The new pie and donut chart is now generally available. This updated pie and donut replaces the previous pie and donut visualization.
-- Headless export has been optimized to be more reliable and slightly faster.
-- SQL Server now supports `ISEMPTY` function when creating a calculated field.
-- The event onUrlLinkRequested now cancels navigation when null is returned.
-- Large number formats are now localized.
-- Improved UX to use a field for dashboard filter's label that is different than the field for the dashboard field filter value.
-- Elasticsearch now has several improvements: added support for the `FORMATDATE` function, fixed issues with the `LOG` function (single parameter calls), fixed issue with the `FYEAR` (fiscal year) function, and made improvements to prevent SQL injection attacks.
-- Data source icons can now be hidden or changed.
+- 条件付き書式の形状選択ポップアップが改善され、クリア オプションが含まれるようになりました。
+- 新しい円チャートとドーナツ チャートが一般利用可能になりました。この更新された円チャートとドーナツ チャートは、以前の円チャートとドーナツ チャートの表示形式を置き換えます。
+- ヘッドレス エクスポートが最適化され、より信頼性が高く、わずかに高速になりました。
+- SQL Server では、計算フィールドを作成するときに `ISEMPTY` 関数がサポートされるようになりました。
+- onUrlLinkRequested イベントで null が返されると、ナビゲーションがキャンセルされるようになりました。
+- 大きい数値の形式がローカライズされるようになりました。
+- ダッシュボード フィールド フィルター値のフィールドとは異なるフィールドをダッシュボード フィルターのラベルに使用できるように UX が改善されました。
+- Elasticsearch にいくつかの改善が加えられました: `FORMATDATE` 関数のサポートの追加、`LOG` 関数 (単一パラメーター呼び出し) の問題の修正、`FYEAR` (会計年度) 関数の問題の修正、SQL インジェクション攻撃を防ぐための改善。
+- データ ソース アイコンを非表示にしたり変更したりできるようになりました。
 
 ```js
 revealView.onAssetRequested = (args) => {
@@ -37,7 +37,7 @@ revealView.onAssetRequested = (args) => {
 };
 ```
 
-- Added support for predefined calculated fields.
+- 定義済みの計算フィールドのサポートが追加されました。
 
 ```csharp
 //Registration
@@ -95,35 +95,35 @@ internal class MyDataModelProvider : IRVDataModelProvider
 }
 ```
 
-- MongoDB now supports the `ENDOFMONTH` function.
+- MongoDB で `ENDOFMONTH` 関数がサポートされるようになりました。
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- RedisCacheOptions missing for TypeScript.
-- Large number formatting applied incorrectly to percentage-based charts.
-- Elasticsearch error on index preview.
-- MySQL stored procedure parameters not being shown as filter binding options.
-- The onFiltersChanged event is fired for interactive filtering, but the selectedValues property is not updated.
-- KPI visualizations can overlap its labels in minimized mode.
-- Google Analytics summarization of some measures incorrect.
-- Google Analytics shows wrong metric values when using a date hierarchy.
-- Unchecking "Show Data Labels" doesn't hide the labels.
-- Headless export that includes a map visualization fails.
-- Large number formatting does not work properly if `RevealSdkSettings.FormattingProvider` is defined.
-- Custom date range not working for Analysis Services.
-- Pie and donut chart disappears when legend is set to bottom.
-- Analysis Services crashes when accessed on MacOS ARM.
-- Custom font from theme not being used.
-- Custom theme is getting replaced with Reveal's default.
-- MySQL error when a null date is read from the query result.
-- Custom visualization doesn't include field's label.
-- Scatter map visualization showing incorrect text in tooltip for interactive filtering.
+- TypeScript で RedisCacheOptions の型定義が不足している問題。
+- パーセンテージベースのチャートに大きい数値の書式設定が正しく適用されない問題。
+- Elasticsearch でインデックス プレビュー時にエラーが発生する問題。
+- MySQL ストアド プロシージャ パラメーターがフィルター バインディング オプションとして表示されない問題。
+- onFiltersChanged イベントがインタラクティブ フィルタリングに対して発生するが、selectedValues プロパティが更新されない問題。
+- KPI 表示形式が最小化モードでラベルと重なる場合がある問題。
+- Google Analytics で一部のメジャーの集計が正しくない問題。
+- Google Analytics で日付階層を使用すると、誤ったメトリック値が表示される問題。
+- [データ ラベルを表示] をオフにしてもラベルが非表示にならない問題。
+- マップ表示形式を含むヘッドレス エクスポートが失敗する問題。
+- `RevealSdkSettings.FormattingProvider` が定義されている場合、大きい数値の書式設定が正しく機能しない問題。
+- Analysis Services でカスタム日付範囲が機能しない問題。
+- 凡例を下部に設定すると円チャートとドーナツ チャートが消える問題。
+- ARM アーキテクチャの macOS でアクセスすると Analysis Services がクラッシュする問題。
+- テーマのカスタム フォントが使用されない問題。
+- カスタム テーマが Reveal のデフォルトに置き換えられる問題。
+- クエリ結果から null 日付を読み取ると MySQL エラーが発生する問題。
+- カスタム表示形式にフィールドのラベルが含まれない問題。
+- 散布図の表示形式で、インタラクティブ フィルタリングのツールチップに誤ったテキストが表示される問題。
 
 #### Java
 
-- Numeric filter sends decimal instead of integer.
+- 数値フィルターが整数ではなく小数を送信する問題。
 
 ## 1.8.2 (2025 年 11 月 11 日)
 
