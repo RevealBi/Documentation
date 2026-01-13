@@ -9,6 +9,16 @@ Modify the `index.html` file to include the `infragistics.reveal.js` script at t
 <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 ```
 
+:::caution Not for Production
+
+The Reveal SDK CDN is intended **only** for prototyping, onboarding, demos, and trial scenarios.
+
+For production applications, you **must self-host** the Reveal SDK libraries. Relying on the CDN in production is not recommended, as it does not provide the guarantees required for production workloads such as availability guarantees, version control, performance optimization, and long-term stability.
+
+To ensure predictable behavior and full control over updates, download the SDK assets and serve them from your own infrastructure when deploying to production environments.
+
+:::
+
 ### Using JavaScript Files
 If using the Reveal CDN is not an option, you can also host the Reveal SDK JavaScript files on your own domain. The Reveal SDK Distribution files can be downloaded from the following link:
 
@@ -50,7 +60,7 @@ The Reveal SDK requires the following dependencies in order to properly function
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 ```
 
-Modify the `index.html` file to include all depedency scripts at the bottom of the page just before the `infragistics.reveal.js` script.
+Modify the `index.html` file to include all dependency scripts at the bottom of the page just before the `infragistics.reveal.js` script.
 
 The final `index.html` files should look similar to this:
 
