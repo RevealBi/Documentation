@@ -35,7 +35,7 @@ const DataSources: DataSourceItem[] = [
     // { title: "Microsoft Reporting Services (SSRS)", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.ReportingServices" }, do not advertise
     // { title: "Microsoft SharePoint", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SharePoint" }, do not advertise
     { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
-    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb"},
+    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: ""},
     { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
     { title: "OData Feed", topic: "" },
     { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
@@ -62,6 +62,7 @@ function createNugetLink({ title, nuget }: DataSourceItem) {
 }
 
 function createMavenLink({ title, maven }: DataSourceItem) {
+    if (maven === "") return (<span>Not Supported</span>);
     if (!maven) return (<span>Included in SDK</span>);
     return (
         <a href={"https://www.nuget.org/packages/" + maven} target="_blank" rel="noopener noreferrer">
