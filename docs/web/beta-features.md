@@ -45,37 +45,10 @@ Enables the experimental radial (circular) gauge visualization.
 
 > 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
 
-### `newDonutChart`
-Enables the redesigned donut chart visualization in the Reveal SDK.
-
-The new donut chart offers:
-- Improved rendering performance
-- Enhanced responsiveness and accessibility
-- Smoother animations and transitions
-- Support for interactive filtering
-
-This feature replaces the legacy donut chart with a more polished and user-friendly version. It is ideal for users looking for a modern, cleaner look and improved data visualization experience.
-
-> ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using donut charts.
-
 ### `newLinearGauge`
 Enables the experimental linear gauge visualization.
 
 > 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
-
-### `newPieChart`
-Enables the redesigned pie chart visualization in the Reveal SDK.
-
-The new pie chart offers:
-- Improved rendering performance
-- Better support for small slices with automatic label placement
-- Enhanced responsiveness and accessibility
-- Smoother animations and transitions
-- Support for interactive filtering
-
-This feature replaces the legacy pie chart with a more polished and user-friendly version. It is ideal for users looking for a modern, cleaner look and improved data visualization experience.
-
-> ✅ **Recommended** for testing updated visual quality and layout behavior in dashboards using pie charts.
 
 ### `newDataGrid`
 Enables the new data grid visualization in the Reveal SDK.

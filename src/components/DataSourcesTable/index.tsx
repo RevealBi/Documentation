@@ -16,7 +16,7 @@ const DataSources: DataSourceItem[] = [
     { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
     // { title: "Dropbox", topic: "", nuget: "Reveal.Sdk.Data.Dropbox" }, do not advertise
     { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
-    { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch" },
+    { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch", maven: "" },
     // { title: "Google Analytics 4", topic: "", nuget: "Reveal.Sdk.Data.Google.Analytics4" }, do not advertise
     { title: "Google BigQuery", topic: "../adding-data-sources/google-big-query", nuget: "Reveal.Sdk.Data.Google.BigQuery" },
     // { title: "Google Drive", topic: "../adding-data-sources/google-drive", nuget: "Reveal.Sdk.Data.Google.Drive" }, do not advertise
@@ -35,7 +35,7 @@ const DataSources: DataSourceItem[] = [
     // { title: "Microsoft Reporting Services (SSRS)", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.ReportingServices" }, do not advertise
     // { title: "Microsoft SharePoint", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SharePoint" }, do not advertise
     { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
-    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: ""},
+    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: "" },
     { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
     { title: "OData Feed", topic: "" },
     { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
