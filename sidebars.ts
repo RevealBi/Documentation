@@ -146,6 +146,11 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "HTML/JavaScript", id: "web/ai/getting-started-html" },
           ]
         },
+        {
+          type: "category", label: "Features", collapsed: false, items: [
+            { type: "doc", label: "Insights", id: "web/ai/insights" },
+          ]
+        },
       ]
     },
 
