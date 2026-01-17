@@ -130,6 +130,30 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
+    /* -------------------- Reveal SDK AI -------------------- */
+    {
+      type: "category", label: "Reveal SDK AI", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", id: "web/ai/overview" },
+        {
+          type: "category", label: "Installation", items: [
+            { type: "doc", label: "System Requirements", id: "web/ai/system-requirements" },
+            { type: "doc", label: "Install Server SDK", id: "web/ai/install-server-sdk" },
+            { type: "doc", label: "Install Client SDK", id: "web/ai/install-client-sdk" },
+          ]
+        },
+        {
+          type: "category", label: "Getting Started", items: [
+            { type: "doc", label: "HTML/JavaScript", id: "web/ai/getting-started-html" },
+          ]
+        },
+        {
+          type: "category", label: "Features", items: [
+            { type: "doc", label: "Insights", id: "web/ai/insights" },
+          ]
+        },
+      ]
+    },
+
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [

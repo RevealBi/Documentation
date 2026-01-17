@@ -89,7 +89,7 @@
   },
   "theme.colorToggle.ariaLabel": {
     "message": "ダークモードを切り替える(現在は{mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "ダークモード",
@@ -550,5 +550,17 @@
   "homepage.feature.video": {
     "message": "ステップバイステップのYouTube動画でReveal SDKを学びましょう。再生ボタンを押して、今日からあなたの最初のダッシュボードを公開しましょう",
     "description": "The words used to describe the video section on the homepage"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "システムモード",
+    "description": "The name for the system color mode"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }
