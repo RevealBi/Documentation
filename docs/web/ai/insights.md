@@ -8,28 +8,19 @@ import BetaWarning from './_beta-message.md'
 
 # AI Insights
 
-AI Insights automatically analyze your dashboards and visualizations to generate natural language explanations, identify trends and patterns, and forecast future values. Insights help users understand their data without requiring deep analytics expertise.
+AI Insights automatically analyze your dashboards and visualizations to generate natural language explanations, identify trends and patterns, and forecast future values. The Reveal SDK AI generates three types of insights to help users understand their data without requiring deep analytics expertise.
 
-## What are Insights?
+**Summary** - A concise overview highlighting key metrics, top performers, and overall trends.
 
-Insights are AI-generated text explanations that describe what your data shows. The Reveal SDK AI can generate three types of insights:
+> *"Sales revenue reached $2.4M in Q4 2024, up 18% from Q3. The Technology category led growth with $890K in sales, while the West region showed the strongest performance at $1.1M."*
 
-### Summary
-A concise overview of what the data shows. Summaries highlight key metrics, top performers, and overall trends.
+**Analysis** - Detailed interpretation identifying patterns, anomalies, trends, and correlations in the data.
 
-**Example:** "Sales revenue reached $2.4M in Q4 2024, up 18% from Q3. The Technology category led growth with $890K in sales, while the West region showed the strongest performance at $1.1M."
+> *"Analysis reveals a strong seasonal pattern with peaks in Q4 driven by holiday shopping. The Technology category shows consistent month-over-month growth averaging 12%, while Office Supplies demonstrate more volatility. A notable spike in October coincides with the new product launch campaign."*
 
-### Analysis
-A detailed interpretation that identifies patterns, anomalies, trends, and correlations in the data.
+**Forecast** - Predictions of future values based on historical data trends. You can specify how many periods ahead to forecast.
 
-**Example:** "Analysis reveals a strong seasonal pattern with peaks in Q4 driven by holiday shopping. The Technology category shows consistent month-over-month growth averaging 12%, while Office Supplies demonstrate more volatility. A notable spike in October coincides with the new product launch campaign."
-
-### Forecast
-Predictions of future values based on historical data trends. You can specify how many periods ahead to forecast.
-
-**Example:** "Based on historical trends, Q1 2025 sales are forecasted at $2.1M, with continued growth expected through mid-year. The model predicts Technology category sales will reach $950K by March 2025, representing 15% growth from the current period."
-
-## Insight Scope
+> *"Based on historical trends, Q1 2025 sales are forecasted at $2.1M, with continued growth expected through mid-year. The model predicts Technology category sales will reach $950K by March 2025, representing 15% growth from the current period."*
 
 Insights can be generated at two levels:
 
