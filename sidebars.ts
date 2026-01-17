@@ -138,7 +138,12 @@ const sidebars: SidebarsConfig = {
           type: "category", label: "Installation", collapsed: false, items: [
             { type: "doc", label: "System Requirements", id: "web/ai/system-requirements" },
             { type: "doc", label: "Install Server SDK", id: "web/ai/install-server-sdk" },
-            { type: "doc", label: "Install Client SDK", id: "web/ai/install-client-sdk" },            
+            { type: "doc", label: "Install Client SDK", id: "web/ai/install-client-sdk" },
+          ]
+        },
+        {
+          type: "category", label: "Getting Started", collapsed: false, items: [
+            { type: "doc", label: "HTML/JavaScript", id: "web/ai/getting-started-html" },
           ]
         },
       ]
