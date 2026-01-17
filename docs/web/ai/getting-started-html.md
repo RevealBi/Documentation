@@ -158,7 +158,7 @@ public class DataSourceProvider : IRVDataSourceProvider
 
 Update `Program.cs` to register the provider:
 
-```csharp title="Program.cs" {13-16}
+```csharp title="Program.cs" {16-19}
 using Reveal.Sdk;
 using Reveal.Sdk.AI;
 using RevealAiServer.Reveal;
