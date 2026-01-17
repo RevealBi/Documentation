@@ -5,7 +5,7 @@
   },
   "sidebar.webSidebar.doc.Overview": {
     "message": "概要",
-    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/web-component-wrappers/index"
+    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/ai/overview"
   },
   "sidebar.webSidebar.doc.ASP.NET Web API": {
     "message": "ASP.NET Web API",
@@ -33,7 +33,7 @@
   },
   "sidebar.webSidebar.doc.HTML/JavaScript": {
     "message": "HTML/JavaScript",
-    "description": "The label for the doc item HTML/JavaScript in sidebar webSidebar, linking to the doc web/getting-started-javascript"
+    "description": "The label for the doc item HTML/JavaScript in sidebar webSidebar, linking to the doc web/ai/getting-started-html"
   },
   "sidebar.webSidebar.doc.React": {
     "message": "React",
@@ -157,7 +157,7 @@
   },
   "sidebar.webSidebar.doc.System Requirements": {
     "message": "システム要件",
-    "description": "The label for the doc item System Requirements in sidebar webSidebar, linking to the doc web/system-requirements"
+    "description": "The label for the doc item System Requirements in sidebar webSidebar, linking to the doc web/ai/system-requirements"
   },
   "sidebar.webSidebar.doc.Adding a License Key": {
     "message": "ライセンス キーの追加",
@@ -165,11 +165,11 @@
   },
   "sidebar.webSidebar.doc.Install Server SDK": {
     "message": "Server SDK のインストール",
-    "description": "The label for the doc item Install Server SDK in sidebar webSidebar, linking to the doc web/install-server-sdk"
+    "description": "The label for the doc item Install Server SDK in sidebar webSidebar, linking to the doc web/ai/install-server-sdk"
   },
   "sidebar.webSidebar.doc.Install Client SDK": {
     "message": "Client SDK のインストール",
-    "description": "The label for the doc item Install Client SDK in sidebar webSidebar, linking to the doc web/install-client-sdk"
+    "description": "The label for the doc item Install Client SDK in sidebar webSidebar, linking to the doc web/ai/install-client-sdk"
   },
   "sidebar.webSidebar.category.Getting Started": {
     "message": "作業の開始",
@@ -550,5 +550,21 @@
   "sidebar.webSidebar.doc.Databricks": {
     "message": "Databricks",
     "description": "The label for the doc item Databricks in sidebar webSidebar, linking to the doc web/adding-data-sources/databricks"
+  },
+  "sidebar.webSidebar.category.Reveal SDK AI": {
+    "message": "Reveal SDK AI",
+    "description": "The label for category Reveal SDK AI in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.category.Features": {
+    "message": "Features",
+    "description": "The label for category Features in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.Elasticsearch": {
+    "message": "Elasticsearch",
+    "description": "The label for the doc item Elasticsearch in sidebar webSidebar, linking to the doc web/adding-data-sources/elasticsearch"
+  },
+  "sidebar.webSidebar.doc.Insights": {
+    "message": "Insights",
+    "description": "The label for the doc item Insights in sidebar webSidebar, linking to the doc web/ai/insights"
   }
 }
