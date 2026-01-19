@@ -149,6 +149,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Features", items: [
             { type: "doc", label: "Insights", id: "web/ai/insights" },
+            { type: "doc", label: "Chat", id: "web/ai/chat" },
           ]
         },
       ]
