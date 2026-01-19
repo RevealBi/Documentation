@@ -566,5 +566,9 @@
   "sidebar.webSidebar.doc.Insights": {
     "message": "Insights",
     "description": "The label for the doc item Insights in sidebar webSidebar, linking to the doc web/ai/insights"
+  },
+  "sidebar.webSidebar.doc.Chat": {
+    "message": "Chat",
+    "description": "The label for the doc item Chat in sidebar webSidebar, linking to the doc web/ai/chat"
   }
 }
