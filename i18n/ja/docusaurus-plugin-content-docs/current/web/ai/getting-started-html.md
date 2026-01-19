@@ -504,7 +504,7 @@ Open `index.html` in your web browser. You can:
 
 1. Wait for the dashboard to load
 2. Click on the RevealView's dashboard, or a visualization's, overflow menu
-3. CLick on the "Summary", "Analysis", or "Forecast" menu item
+3. Click on the "Summary", "Analysis", or "Forecast" menu item
 4. Watch the AI-generated insight appear in the right panel
 5. Try right-clicking on individual visualizations for widget-level insights
 
