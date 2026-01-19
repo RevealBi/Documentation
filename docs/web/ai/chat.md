@@ -8,7 +8,7 @@ import BetaWarning from './_beta-message.md'
 
 # AI Chat
 
-AI Chat transforms data analytics into a conversation. Instead of manually building dashboards or writing queries, users simply describe what they want to see or understand. The AI interprets the request, processes the data, and responds with insights, explanations, or generates/modifies dashboards automatically.
+AI Chat transforms data analytics into a conversation. Instead of manually building dashboards or writing queries, users simply describe what they want to see or understand. The AI interprets the request, processes the data, and responds with insights, explanations, or generates/modifies dashboards automatically (based both on the current user message and the conversation history).
 
 ### Key Capabilities
 
@@ -51,7 +51,6 @@ DELETE /api/reveal/ai/chat
 
   // Message (one required)
   question?: string,              // Natural language question/request
-  intent?: string,                // Advanced: Pre-classified intent
 
   // Optional context
   dashboard?: string,             // Dashboard JSON for editing/analysis
@@ -59,7 +58,6 @@ DELETE /api/reveal/ai/chat
 
   // Optional configuration
   clientName?: string,            // LLM provider override
-  updateChatState?: boolean,      // Persist conversation state (default: false)
   streamExplanation?: boolean     // Stream response text chunks (default: false)
 }
 ```
@@ -70,11 +68,9 @@ DELETE /api/reveal/ai/chat
 |-----------|------|----------|-------------|
 | `datasourceId` | string | Yes | Identifier of the datasource to query |
 | `question` | string | Conditional* | User's natural language question or request |
-| `intent` | string | Conditional* | Pre-classified intent for advanced routing |
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `widgetId` | string | No | Widget identifier for widget-specific operations |
 | `clientName` | string | No | Name of specific LLM provider to use for this request |
-| `updateChatState` | boolean | No | Whether to persist this message in conversation history (default: false) |
 | `streamExplanation` | boolean | No | Enable real-time streaming of explanation text (default: false) |
 
 \* Either `question` or `intent` must be provided
@@ -82,9 +78,7 @@ DELETE /api/reveal/ai/chat
 **Parameter Details:**
 
 - **`datasourceId`**: Required for all requests. Provides context about available data structures.
-- **`question` vs `intent`**: Most requests use `question` for natural language input. The `intent` parameter is for advanced scenarios where intent classification has already occurred externally.
 - **`dashboard`**: Provide when editing existing dashboards or analyzing dashboard content.
-- **`updateChatState`**: Set to `true` to maintain conversation history across requests. When `false`, the message is processed but not added to history.
 
 ### Response Format
 
@@ -159,9 +153,7 @@ Chat maintains server-side conversation history per user and datasource. This en
 
 **Managing History:**
 
-- **Add to history**: Set `updateChatState: true` in request
 - **Clear history**: Send `DELETE /api/reveal/ai/chat` to reset the session
-- **One-off queries**: Set `updateChatState: false` to process without affecting history
 
 ### Server-Side Implementation
 
@@ -228,20 +220,22 @@ Chat requires metadata configuration to understand your datasource structure. Co
 |----------|------|-------------|
 | `Datasources` | array | List of datasource definitions available to the AI |
 | `Datasources[].Id` | string | Unique identifier for the datasource (used in `datasourceId` parameter) |
-| `Datasources[].Provider` | string | Provider type: `WebService`, `SqlServer`, `PostgreSQL`, `MySQL`, etc. |
+| `Datasources[].Provider` | string | Provider type: `WebService`, `SQLServer`, `PostgreSQL`, `MySQL`, etc. |
 
 **Provider Types:**
 
 Common provider values:
-- `AnalysisServices`
-- `Athena`
+- `AmazonAthena`
 - `CSV`
 - `Excel`
 - `MySQL`
 - `Oracle`
-- `Postgres`
+- `OracleSID`
+- `PostgreSQL`
+- `SSAS`
+- `SSASHTTP`
 - `Snowflake`
-- `SqlServer`
+- `SQLServer`
 - `WebService`
 
 The AI uses this metadata to understand what data is available and generate appropriate queries or visualizations.
@@ -339,7 +333,6 @@ Use this when:
 - Starting a new topic
 - Switching datasources
 - User explicitly requests to "start over"
-- Cleaning up after an error
 
 ### Dashboard Context
 
@@ -382,8 +375,6 @@ interface ChatMessageRequest {
   datasourceId?: string;         // Datasource identifier
   dashboard?: string;            // Dashboard JSON or RVDashboard object
   clientName?: string;           // LLM provider override
-  intent?: string;               // Pre-classified intent (advanced)
-  updateChatState?: boolean;     // Persist in history (default: false)
   streamExplanation?: boolean;   // Enable streaming (default: false)
 }
 ```
@@ -394,8 +385,6 @@ interface ChatMessageRequest {
 | `datasourceId` | `string` | No | Datasource identifier for context |
 | `dashboard` | `string` | No | Dashboard JSON or RVDashboard object for editing/analysis |
 | `clientName` | `string` | No | Name of specific LLM provider to use |
-| `intent` | `string` | No | Pre-classified intent for advanced scenarios |
-| `updateChatState` | `boolean` | No | Whether to add to conversation history (default: false) |
 | `streamExplanation` | `boolean` | No | Enable real-time text streaming (default: false) |
 
 ### Event Handlers
@@ -504,94 +493,6 @@ async function resetConversation() {
   messages.length = 0;
   renderMessages();
 }
-```
-
-### Dashboard Generation Workflow
-
-Generate a dashboard and handle the complete workflow:
-
-```typescript
-async function generateDashboard(prompt: string) {
-  showLoadingSpinner();
-
-  try {
-    const response = await client.ai.chat.sendMessage(
-      {
-        question: prompt,
-        datasourceId: 'my-datasource',
-        streamExplanation: true
-      },
-      {
-        onProgress: (message) => {
-          updateStatus(message);
-          // "Creating a new dashboard"
-          // "Adding visualizations"
-        },
-        onTextChunk: (chunk) => {
-          appendExplanation(chunk);
-        },
-        onComplete: (message, result) => {
-          if (result?.dashboard) {
-            // Load generated dashboard into RevealView
-            const dashboardJson = JSON.parse(result.dashboard);
-            const dashboard = await RevealUtility.createDashboardFromJsonObject(
-              dashboardJson
-            );
-            revealView.dashboard = dashboard;
-
-            showSuccess('Dashboard created successfully!');
-          }
-        },
-        onError: (error) => {
-          showError(`Failed to generate dashboard: ${error}`);
-        }
-      }
-    );
-  } finally {
-    hideLoadingSpinner();
-  }
-}
-
-// Usage
-generateDashboard('Show me top 10 customers by revenue with a trend line');
-```
-
-### Dashboard Editing
-
-Modify an existing dashboard conversationally:
-
-```typescript
-async function editDashboard(instruction: string) {
-  const currentDashboard = revealView.dashboard;
-
-  const response = await client.ai.chat.sendMessage(
-    {
-      question: instruction,
-      datasourceId: 'my-datasource',
-      dashboard: currentDashboard,  // Provide current state
-    },
-    {
-      onComplete: (message, result) => {
-        if (result?.dashboard) {
-          // Load modified dashboard
-          const dashboardJson = JSON.parse(result.dashboard);
-          const updatedDashboard = await RevealUtility.createDashboardFromJsonObject(
-            dashboardJson
-          );
-          revealView.dashboard = updatedDashboard;
-
-          showNotification('Dashboard updated: ' + result.explanation);
-        }
-      }
-    }
-  );
-}
-
-// Examples of edit instructions:
-// editDashboard('Add a date range filter');
-// editDashboard('Change the bar chart to a line chart');
-// editDashboard('Sort the table by revenue descending');
-// editDashboard('Remove the pie chart');
 ```
 
 ### Error Handling
