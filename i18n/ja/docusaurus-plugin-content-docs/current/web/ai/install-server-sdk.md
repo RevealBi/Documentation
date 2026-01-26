@@ -1,55 +1,55 @@
 ---
-sidebar_label: Install Server SDK
+sidebar_label: サーバー SDK のインストール
 ---
 
 import BetaWarning from './_beta-message.md'
 
 <BetaWarning />
 
-# Installing the AI Server SDK
+# AI サーバー SDK のインストール
 
-The Reveal SDK AI Server provides the backend services needed to power AI features in your applications. It integrates with LLM providers and manages AI operations like insight generation, dashboard creation, and conversational analytics.
+Reveal SDK AI サーバーは、アプリケーションで AI 機能を強化するために必要なバックエンド サービスを提供します。LLM プロバイダーと統合し、インサイト生成、ダッシュボード作成、会話型分析などの AI 操作を管理します。
 
-## Prerequisites
+## 前提条件
 
-Before installing the AI Server SDK, ensure you have:
+AI サーバー SDK をインストールする前に、以下を確認してください:
 
-1. The base [Reveal SDK Server](../install-server-sdk.md) installed and configured
-2. .NET 8.0 or higher
-3. Access to at least one LLM provider (OpenAI, Anthropic, Google, etc.)
-4. LLM provider API keys configured
+1. 基本の [Reveal SDK サーバー](../install-server-sdk.md)がインストールされ、設定されていること
+2. .NET 8.0 以上であること
+3. 少なくとも 1 つの LLM プロバイダー (OpenAI、Anthropic、Google など) へのアクセス権があること
+4. LLM プロバイダーの API キーが設定されていること
 
-## Installation Methods
+## インストール方法
 
 ### ASP.NET Core
 
-The AI Server SDK for ASP.NET Core is distributed as a NuGet package.
+ASP.NET Core 用 AI サーバー SDK は NuGet パッケージとして配布されています。
 
-#### Step 1: Install the NuGet Package
+#### 手順 1: NuGet パッケージのインストール
 
-Right-click your Solution or Project and select **Manage NuGet Packages** for Solution.
+ソリューションまたはプロジェクトを右クリックし、ソリューションの **[NuGet パッケージの管理]** を選択します。
 
 ![](../images/getting-started-nuget-packages-manage.jpg)
 
-In the package manager dialog, open the **Browse** tab and install the **Reveal.Sdk.AI.AspNetCore** NuGet package into your project.
+パッケージ マネージャー ダイアログで **[参照]** タブを開き、**Reveal.Sdk.AI.AspNetCore** NuGet パッケージをプロジェクトにインストールします。
 
-**Package Name:** `Reveal.Sdk.AI.AspNetCore`
+**パッケージ名:** `Reveal.Sdk.AI.AspNetCore`
 
-Or using the Package Manager Console:
+または、パッケージ マネージャー コンソールを使用する場合:
 
 ```bash
 Install-Package Reveal.Sdk.AI.AspNetCore
 ```
 
-Or using the .NET CLI:
+または、.NET CLI を使用する場合:
 
 ```bash
 dotnet add package Reveal.Sdk.AI.AspNetCore
 ```
 
-#### Step 2: Configure Services
+#### 手順 2: サービスの構成
 
-Open and modify the `Program.cs` file to add the AI services. The AI SDK extends the base Reveal SDK, so you need both configured:
+`Program.cs` ファイルを開いて変更し、AI サービスを追加します。AI SDK は基本の Reveal SDK を拡張するため、両方を設定する必要があります:
 
 ```csharp
 using Reveal.Sdk;
@@ -67,11 +67,11 @@ var app = builder.Build();
 app.Run();
 ```
 
-#### Step 3: Configure LLM Provider
+#### 手順 3: LLM プロバイダーの設定
 
-Configure at least one LLM provider. Add this configuration after `AddRevealAI()`:
+少なくとも 1 つの LLM プロバイダーを設定します。`AddRevealAI()` の後にこの構成を追加します:
 
-**For OpenAI:**
+**OpenAI の場合:**
 
 ```csharp
 builder.Services.AddRevealAI()
@@ -82,7 +82,7 @@ builder.Services.AddRevealAI()
     });
 ```
 
-**For Anthropic Claude:**
+**Anthropic Claude の場合:**
 
 ```csharp
 builder.Services.AddRevealAI()
@@ -93,9 +93,9 @@ builder.Services.AddRevealAI()
     });
 ```
 
-#### Step 4: Store API Keys Securely
+#### 手順 4: API キーを安全に保存
 
-Store your LLM provider API keys in `appsettings.json` or User Secrets:
+LLM プロバイダーの API キーを `appsettings.json` またはユーザー シークレットに保存します:
 
 ```json title="appsettings.json"
 {
@@ -108,15 +108,15 @@ Store your LLM provider API keys in `appsettings.json` or User Secrets:
 }
 ```
 
-:::danger Never Commit API Keys
+:::danger API キーをコミットしないでください
 
-Never commit API keys to source control. Always use environment variables, User Secrets, or a secure key management service.
+API キーをソース管理にコミットしないでください。常にユーザー シークレット、環境変数、または安全なキー管理サービスを使用してください。
 
 :::
 
-#### Complete Example
+#### 完全な例
 
-Here's a complete `Program.cs` with AI features configured:
+AI 機能が設定された完全な `Program.cs` を次に示します:
 
 ```csharp title="Program.cs"
 using Reveal.Sdk;
@@ -160,39 +160,39 @@ app.MapControllers();
 app.Run();
 ```
 
-### Node.js (Coming Soon)
+### Node.js (近日公開)
 
-Node.js support for the AI Server SDK is under development and will be available in a future release.
+AI サーバー SDK の Node.js サポートは開発中であり、今後のリリースで利用可能になる予定です。
 
-For now, ASP.NET Core is the recommended server platform for AI features.
+現時点では、AI 機能には ASP.NET Core が推奨されるサーバー プラットフォームです。
 
-### Java (Coming Soon)
+### Java (近日公開)
 
-Java support for the AI Server SDK is under development and will be available in a future release.
+AI サーバー SDK の Java サポートは開発中であり、今後のリリースで利用可能になる予定です。
 
-For now, ASP.NET Core is the recommended server platform for AI features.
+現時点では、AI 機能には ASP.NET Core が推奨されるサーバー プラットフォームです。
 
-## Verify Installation
+## インストールの確認
 
-After installation, verify the AI SDK is properly configured:
+インストール後、AI SDK が正しく設定されていることを確認します:
 
-### Step 1: Run Your Application
+### 手順 1: アプリケーションの実行
 
 ```bash
 dotnet run
 ```
 
-### Step 2: Check AI Endpoints
+### 手順 2: AI エンドポイントの確認
 
-The AI SDK adds several endpoints under `/api/reveal/ai/`:
+AI SDK は `/api/reveal/ai/` の下にいくつかのエンドポイントを追加します:
 
-Test the providers endpoint:
+プロバイダー エンドポイントをテストします:
 
 ```bash
 curl http://localhost:5000/api/reveal/ai/providers
 ```
 
-Expected response:
+期待されるレスポンス:
 ```json
 {
   "providers": ["openai", "anthropic"]

@@ -1,97 +1,97 @@
 ---
-sidebar_label: Insights
+sidebar_label: インサイト
 ---
 
 import BetaWarning from './_beta-message.md'
 
 <BetaWarning />
 
-# AI Insights
+# AI インサイト
 
-AI Insights automatically analyze your dashboards and visualizations to generate natural language explanations, identify trends and patterns, and forecast future values. The Reveal SDK AI generates three types of insights to help users understand their data without requiring deep analytics expertise.
+AI インサイトは、ダッシュボードと表示形式を自動的に分析して、自然言語による説明を生成し、トレンドとパターンを特定し、将来の値を予測します。Reveal SDK AI は、ユーザーが深い分析の専門知識を必要とせずにデータを理解するのに役立つ 3 つのタイプのインサイトを生成します。
 
-**Summary** - A concise overview highlighting key metrics, top performers, and overall trends.
+**Summary (要約)** - 主要なメトリック、トップ パフォーマー、全体的なトレンドを強調する簡潔な概要。
 
-> *"Sales revenue reached $2.4M in Q4 2024, up 18% from Q3. The Technology category led growth with $890K in sales, while the West region showed the strongest performance at $1.1M."*
+> *2024 年第 4 四半期の売上収益は 240 万ドルに達し、第 3 四半期から 18% 増加しました。テクノロジー カテゴリが 89 万ドルの売上で成長をリードし、西部地域が 110 万ドルで最も強いパフォーマンスを示しました。*
 
-**Analysis** - Detailed interpretation identifying patterns, anomalies, trends, and correlations in the data.
+**Analysis (分析)** - データのパターン、異常、トレンド、相関関係を特定する詳細な解釈。
 
-> *"Analysis reveals a strong seasonal pattern with peaks in Q4 driven by holiday shopping. The Technology category shows consistent month-over-month growth averaging 12%, while Office Supplies demonstrate more volatility. A notable spike in October coincides with the new product launch campaign."*
+> *分析により、ホリデー ショッピングによって第 4 四半期にピークを迎える強い季節パターンが明らかになりました。テクノロジー カテゴリは平均 12% の一貫した月次成長を示し、オフィス用品はより多くのボラティリティを示しています。10 月の顕著なスパイクは、新製品発売キャンペーンと一致しています。*
 
-**Forecast** - Predictions of future values based on historical data trends. You can specify how many periods ahead to forecast.
+**Forecast (予測)** - 履歴データのトレンドに基づく将来の値の予測。何期間先まで予測するかを指定できます。
 
-> *"Based on historical trends, Q1 2025 sales are forecasted at $2.1M, with continued growth expected through mid-year. The model predicts Technology category sales will reach $950K by March 2025, representing 15% growth from the current period."*
+> *履歴トレンドに基づくと、2025 年第 1 四半期の売上は 210 万ドルと予測され、年半ばまで継続的な成長が期待されます。モデルは、テクノロジー カテゴリの売上が 2025 年 3 月までに 95 万ドルに達し、現在の期間から 15% の成長を表すと予測しています。*
 
-Insights can be generated at two levels:
+インサイトは 2 つのレベルで生成できます:
 
-- **Dashboard-level**: Analyzes the entire dashboard, considering all visualizations together to provide holistic insights
-- **Visualization-level**: Focuses on a single widget, providing detailed analysis specific to that visualization's data
+- **ダッシュボード レベル**: ダッシュボード全体を分析し、すべての表示形式を一緒に考慮して総合的なインサイトを提供します。
+- **表示形式レベル**: 単一のウィジェットに焦点を当て、その表示形式のデータに固有の詳細な分析を提供します。
 
 ---
 
-## Server API
+## サーバー API
 
-The Insights endpoint generates AI insights for dashboards or individual visualizations.
+Insights エンドポイントは、ダッシュボードまたは個々の表示形式の AI インサイトを生成します。
 
-### Endpoint
+### エンドポイント
 
 ```
 POST /api/reveal/ai/insights
 ```
 
-### Request Format
+### リクエスト形式
 
 ```typescript
 {
-  // Dashboard source (use ONE of these)
-  dashboardJson?: string,      // Dashboard as JSON string (RDash format)
-  dashboardId?: string,         // Dashboard ID (when using IRVDashboardProvider)
+  // ダッシュボード ソース (以下のいずれか 1 つを使用)
+  dashboardJson?: string,      // JSON 文字列としてのダッシュボード (RDash 形式)
+  dashboardId?: string,         // ダッシュボード ID (IRVDashboardProvider を使用する場合)
 
-  // Optional parameters
-  visualizationId?: string,     // Widget ID for visualization-level insights
-  insightType?: string,         // "Summary" | "Analysis" | "Forecast" (default: "Summary")
-  forecastPeriods?: number,     // Number of periods to forecast (default: 6, only for Forecast type)
-  streamExplanation?: boolean,  // Stream the explanation as text chunks (default: false)
-  llmClientName?: string        // Optional LLM provider override
+  // オプションのパラメーター
+  visualizationId?: string,     // 表示形式レベルのインサイト用のウィジェット ID
+  insightType?: string,         // "Summary" | "Analysis" | "Forecast" (デフォルト: "Summary")
+  forecastPeriods?: number,     // 予測する期間の数 (デフォルト: 6、Forecast タイプの場合のみ)
+  streamExplanation?: boolean,  // 説明をテキスト チャンクとしてストリーミングするかどうか (デフォルト: false)
+  llmClientName?: string        // オプションの LLM プロバイダー オーバーライド
 }
 ```
 
-#### Request Parameters
+#### リクエスト パラメータ
 
-| Parameter | Type | Required | Description |
+| パラメータ | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `dashboardJson` | string | * | Dashboard as JSON string. Use this OR `dashboardId` |
-| `dashboardId` | string | * | Dashboard identifier. Use this OR `dashboardJson` |
-| `visualizationId` | string | No | Widget ID to analyze. If omitted, analyzes entire dashboard |
-| `insightType` | string | No | Type of insight: `"Summary"`, `"Analysis"`, or `"Forecast"` (default: `"Summary"`) |
-| `forecastPeriods` | number | No | Number of periods to forecast (default: 6). Only used when `insightType` is `"Forecast"` |
-| `streamExplanation` | boolean | No | Whether to stream explanation as text chunks for real-time display (default: false) |
-| `llmClientName` | string | No | Name of specific LLM provider to use for this request |
+| `dashboardJson` | string | * | JSON 文字列としてのダッシュボード。こちらまたは `dashboardId` を使用します。 |
+| `dashboardId` | string | * | ダッシュボード識別子。こちらまたは `dashboardJson` を使用します。 |
+| `visualizationId` | string | いいえ | 分析するウィジェット ID。省略するとダッシュボード全体を分析します。 |
+| `insightType` | string | いいえ | インサイトのタイプ: `"Summary"`、`"Analysis"`、または `"Forecast"` (デフォルト: `"Summary"`)。 |
+| `forecastPeriods` | number | いいえ | 予測する期間の数 (デフォルト: 6)。`insightType` が `"Forecast"` の場合のみ使用されます。 |
+| `streamExplanation` | boolean | いいえ | リアルタイム表示のために説明をテキスト チャンクとしてストリーミングするかどうか (デフォルト: false)。 |
+| `llmClientName` | string | いいえ | このリクエストに使用する特定の LLM プロバイダーの名前。 |
 
-\* Either `dashboardJson` or `dashboardId` must be provided
+\* `dashboardJson` または `dashboardId` のいずれかを指定する必要があります
 
-### Response Format
+### レスポンス形式
 
-The endpoint returns Server-Sent Events (SSE) with the following event types:
+エンドポイントは、次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
 
-#### progress Event
-Sent during insight generation to indicate current status.
+#### progress イベント
+インサイト生成中に現在のステータスを示すために送信されます。
 
 ```json
 event: progress
 data: {"message": "Analyzing dashboard data..."}
 ```
 
-#### textchunk Event
-Sent when `streamExplanation: true`. Contains fragments of the explanation text as it's generated.
+#### textchunk イベント
+`streamExplanation: true` の場合に送信されます。生成される説明テキストのフラグメントを含みます。
 
 ```json
 event: textchunk
 data: {"content": "Sales revenue reached $2.4M in Q4 2024"}
 ```
 
-#### complete Event
-Sent when insight generation finishes successfully. Always contains the full explanation regardless of streaming.
+#### complete イベント
+インサイト生成が正常に完了したときに送信されます。ストリーミングに関係なく、常に完全な説明を含みます。
 
 ```json
 event: complete
@@ -103,32 +103,32 @@ data: {
 }
 ```
 
-#### error Event
-Sent if insight generation fails.
+#### error イベント
+インサイト生成が失敗した場合に送信されます。
 
 ```json
 event: error
 data: {"error": "Error message"}
 ```
 
-## Client API
+## クライアント API
 
-The Reveal SDK AI Client provides a simple TypeScript API for requesting insights from your web application.
+Reveal SDK AI クライアントは、Web アプリケーションからインサイトをリクエストするためのシンプルな TypeScript API を提供します。
 
-### Getting Insights
+### インサイトの取得
 
-Use the `client.ai.insights.get()` method to request insights. The method supports both **await** and **streaming** patterns using the same API call.
+`client.ai.insights.get()` メソッドを使用してインサイトをリクエストします。このメソッドは、同じ API 呼び出しを使用して **await** と **streaming** の両方のパターンをサポートします。
 
-### Basic Usage (Await Pattern)
+### 基本的な使用方法 (Await パターン)
 
-Wait for the complete result before displaying:
+表示する前に完全な結果を待ちます:
 
 ```typescript
 import { RevealSdkClient, InsightType } from '@revealbi/api';
 
 const client = RevealSdkClient.getInstance();
 
-// Get summary for entire dashboard
+// ダッシュボード全体の要約を取得
 const result = await client.ai.insights.get({
   dashboardId: 'sales-dashboard',
   insightType: InsightType.Summary
@@ -138,9 +138,9 @@ console.log(result.explanation);
 // "Sales revenue reached $2.4M in Q4 2024..."
 ```
 
-### Streaming Pattern
+### Streaming パターン
 
-Stream the explanation text in real-time for a ChatGPT-like experience:
+ChatGPT のような体験を実現するために、説明テキストをリアルタイムでストリーミングします:
 
 ```typescript
 const result = await client.ai.insights.get(
@@ -153,7 +153,7 @@ const result = await client.ai.insights.get(
       console.log('Status:', message);
     },
     onTextChunk: (text) => {
-      // Display text as it arrives
+      // 到着したテキストを表示
       process.stdout.write(text);
     },
     onComplete: (message, result) => {
@@ -164,74 +164,74 @@ const result = await client.ai.insights.get(
     }
   },
   {
-    streamExplanation: true  // Enable streaming
+    streamExplanation: true  // ストリーミングを有効にするかどうか
   }
 );
 ```
 
-### Using Dashboard Objects
+### ダッシュボード オブジェクトの使用
 
-You can pass a dashboard object directly instead of a dashboard ID:
+ダッシュボード ID の代わりに、ダッシュボード オブジェクトを直接渡すことができます:
 
 ```typescript
-// Using RVDashboard object from RevealView
+// RevealView の RVDashboard オブジェクトを使用
 const result = await client.ai.insights.get({
-  dashboard: revealView.dashboard,  // RVDashboard object
+  dashboard: revealView.dashboard,  // RVDashboard オブジェクト
   insightType: InsightType.Analysis
 });
 ```
 
-### Visualization-Level Insights
+### 表示形式レベルのインサイト
 
-Analyze a specific widget by providing its ID:
+ウィジェット ID を指定して特定のウィジェットを分析します:
 
 ```typescript
 const result = await client.ai.insights.get({
   dashboardId: 'sales-dashboard',
-  visualizationId: 'sales-by-region-chart',  // Specific widget
+  visualizationId: 'sales-by-region-chart',  // 特定のウィジェット
   insightType: InsightType.Summary
 });
 ```
 
-### Forecast Insights
+### 予測インサイト
 
-Generate forecasts with custom periods:
+カスタム期間で予測を生成します:
 
 ```typescript
 const result = await client.ai.insights.get({
   dashboardId: 'sales-dashboard',
   visualizationId: 'sales-trend',
   insightType: InsightType.Forecast,
-  forecastPeriods: 12  // Forecast 12 periods ahead
+  forecastPeriods: 12  // 12 期間先を予測
 });
 ```
 
-### Request Parameters
+### リクエスト パラメーター
 
 ```typescript
 interface InsightRequest {
-  // Dashboard source (use ONE of these)
-  dashboard?: string | RVDashboard;  // Dashboard object or JSON string
-  dashboardId?: string;               // Dashboard ID
+  // ダッシュボード ソース (以下のいずれか 1 つを使用)
+  dashboard?: string | RVDashboard;  // ダッシュボード オブジェクトまたは JSON 文字列
+  dashboardId?: string;               // ダッシュボード ID
 
-  // Optional parameters
-  visualizationId?: string;           // Widget ID for visualization-level insights
+  // オプションのパラメーター
+  visualizationId?: string;           // 表示形式レベルのインサイト用のウィジェット ID
   insightType?: InsightType;          // Summary | Analysis | Forecast
-  forecastPeriods?: number;           // Forecast periods (default: 6)
+  forecastPeriods?: number;           // 予測期間 (デフォルト: 6)
 }
 ```
 
-| Parameter | Type | Required | Description |
+| パラメータ | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `dashboard` | `string \| RVDashboard` | * | Dashboard object from RevealView or JSON string |
-| `dashboardId` | `string` | * | Dashboard identifier |
-| `visualizationId` | `string` | No | Widget ID to analyze |
-| `insightType` | `InsightType` | No | Type: `Summary`, `Analysis`, `Forecast` (default: `Summary`) |
-| `forecastPeriods` | `number` | No | Periods to forecast (default: 6) |
+| `dashboard` | `string \| RVDashboard` | * | RevealView からのダッシュボード オブジェクトまたは JSON 文字列。 |
+| `dashboardId` | `string` | * | ダッシュボード識別子。 |
+| `visualizationId` | `string` | いいえ | 分析するウィジェット ID。 |
+| `insightType` | `InsightType` | いいえ | タイプ: `Summary`、`Analysis`、`Forecast` (デフォルト: `Summary`)。 |
+| `forecastPeriods` | `number` | いいえ | 予測する期間 (デフォルト: 6)。 |
 
-\* Either `dashboard` or `dashboardId` must be provided
+\* `dashboard` または `dashboardId` のいずれかを指定する必要があります。
 
-### Event Handlers
+### イベント ハンドラー
 
 ```typescript
 interface InsightEventHandlers {
@@ -243,51 +243,51 @@ interface InsightEventHandlers {
 }
 ```
 
-| Handler | Description |
+| ハンドラー | 説明 |
 |---------|-------------|
-| `onProgress` | Called with status messages during generation |
-| `onTextChunk` | Called with text fragments when streaming is enabled |
-| `onResult` | Called when intermediate results are available |
-| `onError` | Called if an error occurs |
-| `onComplete` | Called when generation finishes, includes full result |
+| `onProgress` | 生成中にステータス メッセージで呼び出されます。 |
+| `onTextChunk` | ストリーミングが有効な場合にテキスト フラグメントで呼び出されます。 |
+| `onResult` | 中間結果が利用可能な場合に呼び出されます。 |
+| `onError` | エラーが発生した場合に呼び出されます。 |
+| `onComplete` | 生成が完了したときに呼び出され、完全な結果を含みます。 |
 
-### Options
+### オプション
 
 ```typescript
 interface InsightOptions {
-  signal?: AbortSignal;           // For request cancellation
-  llmClientName?: string;         // Override LLM provider
-  streamExplanation?: boolean;    // Enable streaming (default: false)
+  signal?: AbortSignal;           // リクエストのキャンセル用
+  llmClientName?: string;         // LLM プロバイダーのオーバーライド
+  streamExplanation?: boolean;    // ストリーミングを有効にするかどうか (デフォルト: false)
 }
 ```
 
-| Option | Type | Description |
+| オプション | タイプ | 説明 |
 |--------|------|-------------|
-| `signal` | `AbortSignal` | AbortSignal for cancelling the request |
-| `llmClientName` | `string` | Name of specific LLM provider to use |
-| `streamExplanation` | `boolean` | Enable real-time streaming (default: false) |
+| `signal` | `AbortSignal` | リクエストをキャンセルするための AbortSignal。 |
+| `llmClientName` | `string` | 使用する特定の LLM プロバイダーの名前。 |
+| `streamExplanation` | `boolean` | リアルタイム ストリーミングを有効にする (デフォルト: false)。 |
 
-### Result
+### 結果
 
 ```typescript
 interface InsightResult {
-  explanation: string;  // Complete AI-generated explanation
+  explanation: string;  // AI によって生成された説明を完了
 }
 ```
 
-The `explanation` field contains the full insight text, whether you use await or streaming patterns.
+`explanation` フィールドには、await パターンまたは streaming パターンのどちらを使用するかに関係なく、完全なインサイト テキストが含まれます。
 
 ---
 
-## Common Patterns
+## 一般的なパターン
 
-### Context Menu Integration
+### コンテキスト メニューの統合
 
-Add insights to your dashboard's context menu:
+ダッシュボードのコンテキスト メニューにインサイトを追加します:
 
 ```typescript
 revealView.onMenuOpening = function (visualization, args) {
-  // Dashboard-level insights
+  // ダッシュボードレベルのインサイト
   if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
     args.menuItems.push(new $.ig.RVMenuItem("Summary", null, async () => {
       const result = await client.ai.insights.get({
@@ -298,7 +298,7 @@ revealView.onMenuOpening = function (visualization, args) {
     }));
   }
 
-  // Visualization-level insights
+  // 表示形式レベルのインサイト
   if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
     args.menuItems.push(new $.ig.RVMenuItem("Analyze This", null, async () => {
       const result = await client.ai.insights.get({
@@ -312,9 +312,9 @@ revealView.onMenuOpening = function (visualization, args) {
 };
 ```
 
-### Streaming Display
+### ストリーミング表示
 
-Display streaming text with markdown rendering:
+マークダウン レンダリングでストリーミング テキストを表示します:
 
 ```typescript
 let buffer = '';
@@ -327,7 +327,7 @@ const result = await client.ai.insights.get(
   {
     onTextChunk: (text) => {
       buffer += text;
-      // Render markdown as text arrives
+      // Markdown を、テキストが到着するたびにレンダリングする
       document.getElementById('output').innerHTML = marked.parse(buffer);
     },
     onComplete: () => {
@@ -338,9 +338,9 @@ const result = await client.ai.insights.get(
 );
 ```
 
-### Error Handling
+### エラー処理
 
-Handle errors gracefully:
+エラーを適切に処理します:
 
 ```typescript
 const result = await client.ai.insights.get(

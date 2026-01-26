@@ -1,5 +1,5 @@
-:::danger Product in Beta
-The Reveal SDK AI features are currently in beta, and we welcome your feedback to help us improve for the final release.
+:::danger ベータ版の製品
+Reveal SDK AI 機能は現在ベータ版であり、最終リリースに向けて改善するためのフィードバックをお待ちしております。
 
-Please report any issues or suggestions through our support channels.
+問題や提案がありましたら、サポート チャネルを通じてご報告ください。
 :::
