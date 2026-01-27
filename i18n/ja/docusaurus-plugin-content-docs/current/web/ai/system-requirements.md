@@ -1,63 +1,63 @@
 ---
-sidebar_label: System Requirements
+sidebar_label: システム要件
 ---
 
 import BetaWarning from './_beta-message.md'
 
 <BetaWarning />
 
-# System Requirements
+# システム要件
 
-To use the Reveal SDK AI features, you'll need the following prerequisites:
+Reveal SDK AI 機能を使用するには、次の前提条件が必要です:
 
-## Client SDK Requirements
+## クライアント SDK の要件
 
-### Web Browsers
+### Web ブラウザー
 
-The Reveal SDK AI Client runs in modern web browsers that support:
+Reveal SDK AI クライアントは、以下をサポートする最新の Web ブラウザーで動作します:
 
-- ES2020 JavaScript features
+- ES2020 JavaScript 機能
 - Async/Await
 - Fetch API
 - Server-Sent Events (SSE)
 
-**Supported Browsers:**
+**サポートされているブラウザー:**
 - Chrome/Edge 90+
 - Firefox 88+
 - Safari 14+
 
-### JavaScript Frameworks (Optional)
+### JavaScript フレームワーク (オプション)
 
-While the client SDK works with vanilla JavaScript, it integrates seamlessly with:
+クライアント SDK は素の JavaScript で動作しますが、以下とシームレスに統合されます:
 
 - Angular 15+
 - React 18+
 - Vue 3+
-- Or any modern JavaScript framework
+- または任意の最新の JavaScript フレームワーク
 
-## Server SDK Requirements
+## サーバー SDK の要件
 
 ### ASP.NET Core
 
-- ASP.NET 8.0 or higher
+- ASP.NET 8.0 またはそれ以降
 
-## Reveal SDK Base Requirements
+## Reveal SDK 基本の要件
 
-Reveal SDK AI extends the base Reveal SDK, so you must also meet the standard Reveal SDK requirements:
+Reveal SDK AI は基本の Reveal SDK を拡張するため、標準の Reveal SDK 要件も満たす必要があります:
 
-- Valid Reveal SDK license
-- Reveal SDK Web (JavaScript) package
-- Reveal.Sdk.AspNetCore package (compatible version)
+- 有効な Reveal SDK ライセンス
+- Reveal SDK Web (JavaScript) パッケージ
+- Reveal.Sdk.AspNetCore パッケージ (互換性のあるバージョン)
 
-### TypeScript Support
+### TypeScript サポート
 
-- TypeScript 5.0+ (for full type safety)
-- The SDK is written in TypeScript and provides complete type definitions
+- TypeScript 5.0+ (完全な型安全性のため)
+- SDK は TypeScript で記述されており、完全な型定義を提供します
 
-## Next Steps
+## 次の手順
 
-Once you've verified your environment meets these requirements:
+環境がこれらの要件を満たしていることを確認したら:
 
-1. [Install the Server SDK](install-server-sdk.md) - Set up the backend components
-2. [Install the Client SDK](install-client-sdk.md) - Add the JavaScript package to your application
+1. [サーバー SDK のインストール](install-server-sdk.md) - バックエンド コンポーネントをセットアップします
+2. [クライアント SDK のインストール](install-client-sdk.md) - アプリケーションに JavaScript パッケージを追加します
 

@@ -1,121 +1,115 @@
 ---
-sidebar_label: Chat
+sidebar_label: チャット
 ---
 
 import BetaWarning from './_beta-message.md'
 
 <BetaWarning />
 
-# AI Chat
+# AI チャット
 
-AI Chat transforms data analytics into a conversation. Instead of manually building dashboards or writing queries, users simply describe what they want to see or understand. The AI interprets the request, processes the data, and responds with insights, explanations, or generates/modifies dashboards automatically.
+AI チャットは、データ分析を会話に変換します。ダッシュボードを手動で構築したり、クエリを記述したりする代わりに、ユーザーは見たいものや理解したいものを簡単に説明するだけです。AI はリクエストを解釈し、データを処理し、インサイト、説明で応答するか、ダッシュボードを自動的に生成/変更します (現在のユーザー メッセージと会話履歴の両方に基づいて)。
 
-### Key Capabilities
+### 主要機能
 
-**Natural Language Dashboard Generation**
-Create dashboards by describing what you want: "Show me sales by region for Q4" or "Create a chart comparing product categories by revenue."
+**自然言語によるダッシュボードの生成**
+必要なものを説明してダッシュボードを作成します: 「第 4 四半期の地域別売上を表示して」または「収益別に製品カテゴリを比較するチャートを作成して」
 
-**Dashboard Editing**
-Modify existing dashboards conversationally: "Add a filter for date range" or "Change the pie chart to a bar chart."
+**ダッシュボードの編集**
+既存のダッシュボードを会話で変更します: 「日付範囲のフィルターを追加して」または「円チャートを棒チャートに変更して」
 
-**Data Analysis**
-Ask questions about your data: "What are the top 5 customers by revenue?" or "Show me trends in customer satisfaction scores."
+**データ分析**
+データに関する質問をします: 「収益別のトップ 5 顧客は誰ですか?」または「顧客満足度スコアのトレンドを表示して」
 
-**Conversational Context**
-The AI maintains conversation history, allowing follow-up questions and refinements: "Now break that down by month" or "Filter to just the Technology category."
+**会話コンテキスト**
+AI は会話履歴を維持し、追加の質問と改善を可能にします: 「それを月ごとに分類して」または「テクノロジー カテゴリのみにフィルターして」
 
 ---
 
-## Server API
+## サーバー API
 
-The Chat API provides endpoints for sending messages and managing conversation sessions.
+Chat API は、メッセージを送信し、会話セッションを管理するためのエンドポイントを提供します。
 
-### Endpoints
+### エンドポイント
 
-**Send Message**
+**メッセージの送信**
 ```
 POST /api/reveal/ai/chat
 ```
 
-**Clear Session**
+**セッションのクリア**
 ```
 DELETE /api/reveal/ai/chat
 ```
 
-### Request Format
+### リクエスト形式
 
 ```typescript
 {
-  // Required
-  datasourceId: string,          // Datasource identifier for context
+  // 必須
+  datasourceId: string,          // コンテキスト用のデータ ソース識別子
 
-  // Message (one required)
-  question?: string,              // Natural language question/request
-  intent?: string,                // Advanced: Pre-classified intent
+  // メッセージ (1 つ必須)
+  question?: string,              // 自然言語の質問/リクエスト
 
-  // Optional context
-  dashboard?: string,             // Dashboard JSON for editing/analysis
-  widgetId?: string,              // Widget ID for widget-specific operations
+  // オプションのコンテキスト
+  dashboard?: string,             // 編集/分析用のダッシュボード JSON
+  widgetId?: string,              // ウィジェット固有の操作用のウィジェット ID
 
-  // Optional configuration
-  clientName?: string,            // LLM provider override
-  updateChatState?: boolean,      // Persist conversation state (default: false)
-  streamExplanation?: boolean     // Stream response text chunks (default: false)
+  // オプションの構成
+  clientName?: string,            // LLM プロバイダーのオーバーライド
+  streamExplanation?: boolean     // レスポンス テキスト チャンクをストリーミング (デフォルト: false)
 }
 ```
 
-#### Request Parameters
+#### リクエスト パラメーター
 
-| Parameter | Type | Required | Description |
+| パラメーター | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `datasourceId` | string | Yes | Identifier of the datasource to query |
-| `question` | string | Conditional* | User's natural language question or request |
-| `intent` | string | Conditional* | Pre-classified intent for advanced routing |
-| `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
-| `widgetId` | string | No | Widget identifier for widget-specific operations |
-| `clientName` | string | No | Name of specific LLM provider to use for this request |
-| `updateChatState` | boolean | No | Whether to persist this message in conversation history (default: false) |
-| `streamExplanation` | boolean | No | Enable real-time streaming of explanation text (default: false) |
+| `datasourceId` | string | はい | クエリするデータ ソースの識別子。 |
+| `question` | string | 条件付き* | ユーザーの自然言語の質問またはリクエスト。 |
+| `dashboard` | string | いいえ | 編集または分析コンテキスト用のダッシュボード JSON (RDash 形式)。 |
+| `widgetId` | string | いいえ | ウィジェット固有の操作用のウィジェット識別子。 |
+| `clientName` | string | いいえ | このリクエストに使用する特定の LLM プロバイダーの名前。 |
+| `streamExplanation` | boolean | いいえ | 説明テキストのリアルタイム ストリーミングを有効にするかどうか (デフォルト: false)。 |
 
-\* Either `question` or `intent` must be provided
+\* `question` または `intent` のいずれかを指定する必要があります。
 
-**Parameter Details:**
+**パラメーターの詳細:**
 
-- **`datasourceId`**: Required for all requests. Provides context about available data structures.
-- **`question` vs `intent`**: Most requests use `question` for natural language input. The `intent` parameter is for advanced scenarios where intent classification has already occurred externally.
-- **`dashboard`**: Provide when editing existing dashboards or analyzing dashboard content.
-- **`updateChatState`**: Set to `true` to maintain conversation history across requests. When `false`, the message is processed but not added to history.
+- **`datasourceId`**: すべてのリクエストに必須。使用可能なデータ構造に関するコンテキストを提供します。
+- **`dashboard`**: 既存のダッシュボードを編集する場合、またはダッシュボード コンテンツを分析する場合に指定します。
 
-### Response Format
+### レスポンス形式
 
-The endpoint returns Server-Sent Events (SSE) with the following event types:
+エンドポイントは、次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
 
-#### progress Event
-Sent during processing to indicate current status.
+#### progress イベント
+処理中に送信され、現在のステータスを示します。
 
 ```json
 event: progress
 data: {"message": "Creating a new dashboard"}
 ```
 
-Common progress messages:
-- "Creating a new dashboard"
-- "Analyzing the current dashboard"
-- "Adding filters to widgets"
-- "Modifying visualization"
+一般的な進行状況メッセージ:
+- 「新しいダッシュボードを作成しています」
+- 「現在のダッシュボードを分析しています」
+- 「ウィジェットにフィルターを追加しています」
+- 「表示形式を変更しています」
 
-#### textchunk Event
-Sent when `streamExplanation: true`. Contains fragments of the explanation text as it's generated.
+#### textchunk イベント
+`streamExplanation: true` の場合に送信されます。生成される説明テキストのフラグメントを含みます。
 
 ```json
 event: textchunk
 data: {"content": "Based on your data, I've created"}
 ```
 
-Text chunks are delivered in ~8 word segments with 20ms delays for natural, ChatGPT-like streaming.
+テキスト チャンクは、自然な ChatGPT のようなストリーミングのため、約 8 単語のセグメントで 20ms の遅延で配信されます。
 
-#### complete Event
-Sent when processing finishes successfully. Always contains the full result.
+#### complete イベント
+処理が正常に終了したときに送信されます。常に完全な結果が含まれます。
 
 ```json
 event: complete
@@ -128,44 +122,43 @@ data: {
 }
 ```
 
-**Result Structure:**
-- `explanation`: Natural language explanation of what was done
-- `dashboard`: Generated or modified dashboard JSON (when applicable)
+**結果の構造:**
+- `explanation`: 実行された内容の自然言語による説明。
+- `dashboard`: 生成または変更されたダッシュボード JSON (該当する場合)。
 
-#### error Event
-Sent if processing fails.
+#### error イベント
+処理が失敗した場合に送信されます。
 
 ```json
 event: error
 data: {"error": "Datasource not found"}
 ```
 
-### Conversation History
+### 会話履歴
 
-Chat maintains server-side conversation history per user and datasource. This enables contextual follow-up questions and iterative refinements.
+チャットは、ユーザーとデータ ソースごとにサーバー側の会話履歴を維持します。これにより、コンテキストに基づく追加の質問と反復的な改善が可能になります。
 
-**How History Works:**
+**履歴の仕組み:**
 
-1. **Per-User Sessions**: Each user gets a separate conversation session per datasource
-2. **Automatic Context**: Previous questions and answers are automatically included in context for new requests
-3. **Persistent State**: History persists across multiple requests until explicitly cleared
-4. **Context in Prompts**: Full conversation history is provided to the LLM:
+1. **ユーザーごとのセッション:**: 各ユーザーは、データ ソースごとに個別の会話セッションを取得します。
+2. **自動コンテキスト:**: 以前の質問と回答は、新しいリクエストのコンテキストに自動的に含まれます。
+3. **永続的な状態:**: 履歴は、明示的にクリアされるまで複数のリクエストにわたって保持されます。
+4. **プロンプトのコンテキスト:**: 完全な会話履歴が LLM に提供されます:
+
    ```
-   Conversation history:
-   - User: Show me sales by region
-   - Agent: I've created a dashboard with a map visualization...
-   - User: Now filter to Q4 only
+   会話履歴:
+   - ユーザー: 地域別の売上を表示して
+   - エージェント: マップの表示形式を含むダッシュボードを作成しました…
+   - ユーザー: 第 4 四半期 (Q4) のみに絞り込んで
    ```
 
-**Managing History:**
+**履歴の管理:**
 
-- **Add to history**: Set `updateChatState: true` in request
-- **Clear history**: Send `DELETE /api/reveal/ai/chat` to reset the session
-- **One-off queries**: Set `updateChatState: false` to process without affecting history
+- **履歴のクリア**: `DELETE /api/reveal/ai/chat` を送信してセッションをリセットします。
 
-### Server-Side Implementation
+### サーバー側の実装
 
-The Chat endpoint is automatically registered when you configure Reveal AI in your ASP.NET Core application:
+Chat エンドポイントは、ASP.NET Core アプリケーションで Reveal AI を構成すると自動的に登録されます:
 
 ```csharp title="Program.cs"
 using Reveal.Sdk;
@@ -173,14 +166,14 @@ using Reveal.Sdk.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Reveal SDK
+// Reveal SDK を追加
 builder.Services.AddControllers().AddReveal(revealBuilder =>
 {
-    // Configure datasource provider
+    // データ ソース プロバイダーを構成
     revealBuilder.AddDataSourceProvider<DataSourceProvider>();
 });
 
-// Add Reveal AI - automatically registers /api/reveal/ai/chat endpoint
+// Reveal AI を追加 - /api/reveal/ai/chat エンドポイントを自動的に登録
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options =>
     {
@@ -194,11 +187,11 @@ app.MapControllers();
 app.Run();
 ```
 
-No additional controller or routing configuration is needed. Both POST and DELETE endpoints are ready to use once you call `AddRevealAI()`.
+追加のコントローラーまたはルーティング構成は必要ありません。`AddRevealAI()` を呼び出すと、POST と DELETE の両方のエンドポイントがすぐに使用できます。
 
-### Metadata Configuration
+### メタデータの構成
 
-Chat requires metadata configuration to understand your datasource structure. Configure datasources in `appsettings.json`:
+チャットは、データ ソース構造を理解するためにメタデータ構成が必要です。`appsettings.json` でデータ ソースを構成します:
 
 ```json title="appsettings.json"
 {
@@ -222,58 +215,60 @@ Chat requires metadata configuration to understand your datasource structure. Co
 }
 ```
 
-**MetadataManager Configuration:**
+**MetadataManager 構成:**
 
-| Property | Type | Description |
+| プロパティ | タイプ | 説明 |
 |----------|------|-------------|
-| `Datasources` | array | List of datasource definitions available to the AI |
-| `Datasources[].Id` | string | Unique identifier for the datasource (used in `datasourceId` parameter) |
-| `Datasources[].Provider` | string | Provider type: `WebService`, `SqlServer`, `PostgreSQL`, `MySQL`, etc. |
+| `Datasources` | array | AI が使用可能なデータ ソース定義のリスト。 |
+| `Datasources[].Id` | string | データ ソースの一意の識別子 (`datasourceId` パラメーターで使用)。 |
+| `Datasources[].Provider` | string | プロバイダー タイプ: `WebService`、`SQLServer`、`PostgreSQL`、`MySQL` など。 |
 
-**Provider Types:**
+**プロバイダー タイプ:**
 
-Common provider values:
-- `AnalysisServices`
-- `Athena`
+一般的なプロバイダー値:
+- `AmazonAthena`
 - `CSV`
 - `Excel`
 - `MySQL`
 - `Oracle`
-- `Postgres`
+- `OracleSID`
+- `PostgreSQL`
+- `SSAS`
+- `SSASHTTP`
 - `Snowflake`
-- `SqlServer`
+- `SQLServer`
 - `WebService`
 
-The AI uses this metadata to understand what data is available and generate appropriate queries or visualizations.
+AI は、このメタデータを使用して、使用可能なデータを理解し、適切なクエリまたは表示形式を生成します。
 
-**Clearing Session Example:**
+**セッションのクリアの例:**
 
 ```csharp
-// Client makes DELETE request to clear conversation
+// クライアントは会話をクリアするために DELETE リクエストを実行
 // DELETE /api/reveal/ai/chat
 // Response: 200 OK
 ```
 
 ---
 
-## Client API
+## クライアント API
 
-The Reveal SDK AI Client provides a simple TypeScript API for conversational interactions from your web application.
+Reveal SDK AI クライアントは、Web アプリケーションでの会話型インタラクション用のシンプルな TypeScript API を提供します。
 
-### Getting Started
+### 作業の開始
 
-Use the `client.ai.chat.sendMessage()` method to send messages. The method supports both **await** and **streaming** patterns.
+メッセージを送信するには、`client.ai.chat.sendMessage()` メソッドを使用します。このメソッドは、**await** と **streaming** の両方のパターンをサポートします。
 
-#### Basic Usage (Await Pattern)
+#### 基本的な使用方法 (Await パターン)
 
-Wait for the complete result before displaying:
+表示する前に完全な結果を待ちます:
 
 ```typescript
 import { RevealSdkClient } from '@revealbi/api';
 
 const client = RevealSdkClient.getInstance();
 
-// Ask a question and get the complete response
+// 質問して完全なレスポンスを取得
 const response = await client.ai.chat.sendMessage({
   question: 'Show me sales trends for the last quarter',
   datasourceId: 'my-datasource'
@@ -283,14 +278,14 @@ console.log(response.explanation);
 // "I've analyzed your sales data for Q4 2024..."
 
 if (response.dashboard) {
-  // Load the generated dashboard
+  // 生成されたダッシュボードを読み込む
   loadDashboard(response.dashboard);
 }
 ```
 
-### Streaming Responses
+### レスポンスのストリーミング
 
-Stream the explanation text in real-time for a ChatGPT-like experience:
+ChatGPT のような体験を実現するために、説明テキストをリアルタイムでストリーミングします:
 
 ```typescript
 let explanation = '';
@@ -304,11 +299,11 @@ const response = await client.ai.chat.sendMessage(
   {
     onProgress: (message) => {
       console.log('Status:', message);
-      // "Creating a new dashboard"
+      // 「新しいダッシュボードを作成しています」
     },
     onTextChunk: (chunk) => {
       explanation += chunk;
-      // Display text as it arrives
+      // 到着したテキストを表示
       document.getElementById('chat-message').textContent = explanation;
     },
     onComplete: (message, result) => {
@@ -324,81 +319,76 @@ const response = await client.ai.chat.sendMessage(
 );
 ```
 
-### Managing Conversation
+### 会話の管理
 
-Clear the conversation history to start fresh:
+会話履歴をクリアして新しく開始:
 
 ```typescript
-// Reset the conversation context
+// 会話コンテキストをリセット
 await client.ai.chat.resetContext();
 
 console.log('Conversation history cleared');
 ```
 
-Use this when:
-- Starting a new topic
-- Switching datasources
-- User explicitly requests to "start over"
-- Cleaning up after an error
+次の場合に使用:
+- 新しいトピックを開始する場合
+- データ ソースを切り替える場合
+- ユーザーが明示的に「やり直し」をリクエストした場合
 
-### Dashboard Context
+### ダッシュボード コンテキスト
 
-Provide an existing dashboard for editing or analysis:
+編集または分析のために既存のダッシュボードを提供します:
 
 ```typescript
-// Edit an existing dashboard
+// 既存のダッシュボードを編集
 const response = await client.ai.chat.sendMessage({
   question: 'Add a date filter to this dashboard',
   datasourceId: 'my-datasource',
-  dashboard: existingDashboardJson  // Provide current dashboard JSON
+  dashboard: existingDashboardJson  // 現在のダッシュボード JSON を提供
 });
 
 if (response.dashboard) {
-  // Load the modified dashboard
+  // 変更されたダッシュボードを読み込む
   loadDashboard(response.dashboard);
 }
 ```
 
-**Using RVDashboard Objects:**
+**RVDashboard オブジェクトの使用:**
 
 ```typescript
-// From RevealView
+// RevealView から
 const currentDashboard = revealView.dashboard;
 
 const response = await client.ai.chat.sendMessage({
   question: 'Explain what this dashboard shows',
   datasourceId: 'my-datasource',
-  dashboard: currentDashboard  // Accepts RVDashboard object
+  dashboard: currentDashboard  // RVDashboard オブジェクトを受け入れる
 });
 
 console.log(response.explanation);
 ```
 
-### Request Parameters
+### リクエスト パラメーター
 
 ```typescript
 interface ChatMessageRequest {
-  question: string;              // User's natural language input (required)
-  datasourceId?: string;         // Datasource identifier
-  dashboard?: string;            // Dashboard JSON or RVDashboard object
-  clientName?: string;           // LLM provider override
-  intent?: string;               // Pre-classified intent (advanced)
-  updateChatState?: boolean;     // Persist in history (default: false)
-  streamExplanation?: boolean;   // Enable streaming (default: false)
+  question: string;              // ユーザーの自然言語入力 (必須)
+  datasourceId?: string;         // データ ソース識別子
+  dashboard?: string;            // ダッシュボード JSON または RVDashboard オブジェクト
+  clientName?: string;           // LLM プロバイダーのオーバーライド
+  streamExplanation?: boolean;   // ストリーミングを有効にするかどうか (デフォルト: false)
 }
 ```
 
-| Parameter | Type | Required | Description |
+| パラメーター | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `question` | `string` | Yes | User's natural language question or request |
-| `datasourceId` | `string` | No | Datasource identifier for context |
-| `dashboard` | `string` | No | Dashboard JSON or RVDashboard object for editing/analysis |
-| `clientName` | `string` | No | Name of specific LLM provider to use |
-| `intent` | `string` | No | Pre-classified intent for advanced scenarios |
-| `updateChatState` | `boolean` | No | Whether to add to conversation history (default: false) |
-| `streamExplanation` | `boolean` | No | Enable real-time text streaming (default: false) |
+| `question` | `string` | はい | ユーザーの自然言語の質問またはリクエスト。 |
+| `datasourceId` | `string` | いいえ | コンテキスト用のデータ ソース識別子。 |
+| `dashboard` | `string` | いいえ | 編集/分析用のダッシュボード JSON または RVDashboard オブジェクト。 |
+| `clientName` | `string` | いいえ | 使用する特定の LLM プロバイダーの名前。 |
+| `streamExplanation` | `boolean` | いいえ | リアルタイム テキスト ストリーミングを有効化 (デフォルト: false)。 |
 
-### Event Handlers
+### イベント ハンドラー
 
 ```typescript
 interface ChatEventHandlers {
@@ -410,55 +400,55 @@ interface ChatEventHandlers {
 }
 ```
 
-| Handler | Description |
+| ハンドラー | 説明 |
 |---------|-------------|
-| `onProgress` | Called with status messages during processing (e.g., "Creating a new dashboard") |
-| `onTextChunk` | Called with text fragments when streaming is enabled |
-| `onResult` | Called when intermediate results are available |
-| `onError` | Called if an error occurs during processing |
-| `onComplete` | Called when processing finishes, includes full result |
+| `onProgress` | 処理中にステータス メッセージで呼び出されます (例: 「新しいダッシュボードを作成しています」)。 |
+| `onTextChunk` | ストリーミングが有効な場合にテキスト フラグメントで呼び出されます。 |
+| `onResult` | 中間結果が利用可能な場合に呼び出されます。 |
+| `onError` | 処理中にエラーが発生した場合に呼び出されます。 |
+| `onComplete` | 処理が完了したときに呼び出され、完全な結果を含みます。 |
 
-### Options
+### オプション
 
 ```typescript
 interface ChatOptions {
-  signal?: AbortSignal;  // For request cancellation
+  signal?: AbortSignal;  // リクエストをキャンセルするための AbortSignal
 }
 ```
 
-| Option | Type | Description |
+| オプション | タイプ | 説明 |
 |--------|------|-------------|
-| `signal` | `AbortSignal` | AbortSignal for cancelling the request |
+| `signal` | `AbortSignal` | リクエストをキャンセルするための AbortSignal。 |
 
-### Result
+### 結果
 
 ```typescript
 interface ChatMessageResponse {
-  explanation?: string;   // AI-generated explanation
-  detail?: string;        // Additional details
-  debugInfo?: string;     // Debug information
-  rawResponse?: string;   // Raw LLM response
-  dashboard?: string;     // Generated/modified dashboard JSON
-  error?: string;         // Error message if request failed
+  explanation?: string;   // AI 生成の説明
+  detail?: string;        // 追加の詳細
+  debugInfo?: string;     // デバッグ情報
+  rawResponse?: string;   // 生の LLM レスポンス
+  dashboard?: string;     // 生成/変更されたダッシュボード JSON
+  error?: string;         // リクエストが失敗した場合のエラー メッセージ
 }
 ```
 
-The response always contains an `explanation` field with the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified.
+レスポンスには常に、AI の自然言語レスポンスを含む `explanation` フィールドが含まれます。`dashboard` フィールドは、ダッシュボードが生成または変更されたときに設定されます。
 
 ---
 
-## Common Patterns
+## 一般的なパターン
 
-### Building a Chat Interface
+### チャット インターフェイスの構築
 
-Create a complete chat UI with message history:
+メッセージ履歴を含む完全なチャット UI を作成:
 
 ```typescript
 const messages: Array<{role: 'user' | 'assistant', content: string}> = [];
 let currentMessage = '';
 
 async function sendChatMessage(userInput: string) {
-  // Add user message to UI
+  // ユーザー メッセージを UI に追加
   messages.push({ role: 'user', content: userInput });
   renderMessages();
 
@@ -476,12 +466,12 @@ async function sendChatMessage(userInput: string) {
       },
       onTextChunk: (chunk) => {
         currentMessage += chunk;
-        // Update streaming message in UI
+        // UI でストリーミング メッセージを更新
         updateStreamingMessage(currentMessage);
         scrollToBottom();
       },
       onComplete: (message, result) => {
-        // Finalize message
+        // メッセージを確定
         messages.push({ role: 'assistant', content: currentMessage });
         renderMessages();
 
@@ -498,7 +488,7 @@ async function sendChatMessage(userInput: string) {
   );
 }
 
-// Clear conversation
+// 会話をクリア
 async function resetConversation() {
   await client.ai.chat.resetContext();
   messages.length = 0;
@@ -506,97 +496,9 @@ async function resetConversation() {
 }
 ```
 
-### Dashboard Generation Workflow
+### エラー処理
 
-Generate a dashboard and handle the complete workflow:
-
-```typescript
-async function generateDashboard(prompt: string) {
-  showLoadingSpinner();
-
-  try {
-    const response = await client.ai.chat.sendMessage(
-      {
-        question: prompt,
-        datasourceId: 'my-datasource',
-        streamExplanation: true
-      },
-      {
-        onProgress: (message) => {
-          updateStatus(message);
-          // "Creating a new dashboard"
-          // "Adding visualizations"
-        },
-        onTextChunk: (chunk) => {
-          appendExplanation(chunk);
-        },
-        onComplete: (message, result) => {
-          if (result?.dashboard) {
-            // Load generated dashboard into RevealView
-            const dashboardJson = JSON.parse(result.dashboard);
-            const dashboard = await RevealUtility.createDashboardFromJsonObject(
-              dashboardJson
-            );
-            revealView.dashboard = dashboard;
-
-            showSuccess('Dashboard created successfully!');
-          }
-        },
-        onError: (error) => {
-          showError(`Failed to generate dashboard: ${error}`);
-        }
-      }
-    );
-  } finally {
-    hideLoadingSpinner();
-  }
-}
-
-// Usage
-generateDashboard('Show me top 10 customers by revenue with a trend line');
-```
-
-### Dashboard Editing
-
-Modify an existing dashboard conversationally:
-
-```typescript
-async function editDashboard(instruction: string) {
-  const currentDashboard = revealView.dashboard;
-
-  const response = await client.ai.chat.sendMessage(
-    {
-      question: instruction,
-      datasourceId: 'my-datasource',
-      dashboard: currentDashboard,  // Provide current state
-    },
-    {
-      onComplete: (message, result) => {
-        if (result?.dashboard) {
-          // Load modified dashboard
-          const dashboardJson = JSON.parse(result.dashboard);
-          const updatedDashboard = await RevealUtility.createDashboardFromJsonObject(
-            dashboardJson
-          );
-          revealView.dashboard = updatedDashboard;
-
-          showNotification('Dashboard updated: ' + result.explanation);
-        }
-      }
-    }
-  );
-}
-
-// Examples of edit instructions:
-// editDashboard('Add a date range filter');
-// editDashboard('Change the bar chart to a line chart');
-// editDashboard('Sort the table by revenue descending');
-// editDashboard('Remove the pie chart');
-```
-
-### Error Handling
-
-Handle errors gracefully with proper user feedback:
+適切なユーザー フィードバックでエラーを適切に処理:
 
 ```typescript
 async function safeChat(question: string) {
@@ -608,19 +510,19 @@ async function safeChat(question: string) {
       },
       {
         onError: (error, details) => {
-          // Handle streaming errors
+          // ストリーミング エラーを処理
           console.error('Streaming error:', error);
           console.error('Details:', details);
 
-          // Show user-friendly message
+          // ユーザー フレンドリーなメッセージを表示
           showNotification('An error occurred. Please try again.', 'error');
         },
         onComplete: (message, result) => {
           if (result?.error) {
-            // Handle completion with error
+            // エラーで完了を処理
             showNotification(result.error, 'error');
           } else if (result) {
-            // Success
+            // 成功
             displayResponse(result.explanation);
 
             if (result.dashboard) {
@@ -631,7 +533,7 @@ async function safeChat(question: string) {
       }
     );
   } catch (error) {
-    // Handle request-level errors
+    // リクエスト レベルのエラーを処理
     console.error('Request failed:', error);
 
     if (error.message.includes('datasource')) {

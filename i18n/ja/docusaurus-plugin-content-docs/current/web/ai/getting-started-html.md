@@ -1,55 +1,55 @@
 ---
-sidebar_label: Getting Started - HTML/JavaScript
+sidebar_label: 作業の開始 - HTML/JavaScript
 ---
 
 import BetaWarning from './_beta-message.md'
 
 <BetaWarning />
 
-# Getting Started with Reveal SDK AI - HTML/JavaScript
+# Reveal SDK AI で作業を開始 - HTML/JavaScript
 
-This guide will walk you through creating your first AI-powered analytics application using vanilla HTML and JavaScript. You'll build a simple application that generates AI insights from dashboard data.
+このガイドでは、素の HTML と JavaScript を使用して最初の AI を活用した分析アプリケーションを作成する手順を説明します。ダッシュボード データから AI インサイトを生成するシンプルなアプリケーションを構築します。
 
-**Time to complete**: 15-20 minutes
+**完了までの時間**: 15～20 分
 
-## What You'll Build
+## 構築するもの
 
-A web application that:
-- Displays a Reveal dashboard
-- Adds AI-powered context menu items to the dashboard
-- Generates three types of insights: Summary, Analysis, and Forecast
-- Shows AI responses with optional streaming (ChatGPT-like experience)
+以下を行う Web アプリケーション:
+- Reveal ダッシュボードを表示します
+- ダッシュボードに AI を活用したコンテキスト メニュー項目を追加します
+- 要約、分析、予測の 3 つのタイプのインサイトを生成します
+- オプションのストリーミング (ChatGPT のようなエクスペリエンス) で AI レスポンスを表示します
 
-## Prerequisites
+## 前提条件
 
-Before you begin, ensure you meet the [System Requirements](system-requirements.md) and have:
+開始する前に、[システム要件](system-requirements.md)を満たし、以下を用意してください:
 
-1. [Reveal SDK Server](../install-server-sdk.md) installed and configured
-2. [Reveal SDK AI Server](install-server-sdk.md) installed
-3. **LLM Provider API Key** from [OpenAI](https://platform.openai.com/api-keys), [Anthropic](https://platform.anthropic.com/account/keys), or [Google Cloud](https://cloud.google.com/vertex-ai)
+1. [Reveal SDK サーバー](../install-server-sdk.md)がインストールされ、設定されていること
+2. [Reveal SDK AI サーバー](install-server-sdk.md)がインストールされていること
+3. **LLM プロバイダーの API キー** ([OpenAI](https://platform.openai.com/api-keys)、[Anthropic](https://platform.anthropic.com/account/keys)、または [Google Cloud](https://cloud.google.com/vertex-ai) から)
 
-## Step 1: Create the ASP.NET Core Server
+## 手順 1: ASP.NET Core サーバーの作成
 
-### 1.1 Create a New ASP.NET Core Web API Project
+### 1.1 新しい ASP.NET Core Web API プロジェクトの作成
 
-Open a terminal and run:
+ターミナルを開いて以下を実行します:
 
 ```bash
 dotnet new webapi -n RevealAiServer
 cd RevealAiServer
 ```
 
-### 1.2 Install the AI NuGet Package
+### 1.2 AI NuGet パッケージのインストール
 
-Install the Reveal AI package (this automatically includes Reveal.Sdk.AspNetCore):
+Reveal AI パッケージをインストールします (これには Reveal.Sdk.AspNetCore が自動的に含まれます):
 
 ```bash
 dotnet add package Reveal.Sdk.AI.AspNetCore
 ```
 
-### 1.3 Configure the Server
+### 1.3 サーバーの構成
 
-Open `Program.cs` and replace its contents with:
+`Program.cs` を開いて、その内容を次のように置き換えます:
 
 ```csharp title="Program.cs"
 using Reveal.Sdk;
@@ -57,7 +57,7 @@ using Reveal.Sdk.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS for local development
+// ローカル開発用に CORS を追加
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -66,10 +66,10 @@ builder.Services.AddCors(options =>
                        .AllowAnyMethod());
 });
 
-// Add Reveal SDK
+// Reveal SDK を追加
 builder.Services.AddControllers().AddReveal();
 
-// Add Reveal AI with OpenAI provider
+// OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options =>
     {
@@ -85,16 +85,16 @@ app.MapControllers();
 app.Run();
 ```
 
-That's it! Just three main steps:
-1. Add CORS for local development
-2. Add Reveal SDK with `AddReveal()`
-3. Add AI services with `AddRevealAI()` and configure your LLM provider
+これで完了しました。主な 3 つの手順:
+1. ローカル開発用に CORS を追加します。
+2. `AddReveal()` で Reveal SDK を追加します。
+3. `AddRevealAI()` で AI サービスを追加し、LLM プロバイダーを構成します。
 
-### 1.4 Configure Your API Key
+### 1.4 API キーの構成
 
-**Option A: Using appsettings.json** (not recommended for production)
+**方法 A: appsettings.json の使用** (本番環境には推奨されません)
 
-Create or modify `appsettings.json`:
+`appsettings.json` を作成または変更します:
 
 ```json title="appsettings.json"
 {
@@ -113,24 +113,24 @@ Create or modify `appsettings.json`:
 }
 ```
 
-**Option B: Using User Secrets** (recommended for development)
+**方法 B: ユーザー シークレットの使用** (開発時に推奨)
 
 ```bash
 dotnet user-secrets init
 dotnet user-secrets set "RevealAI:OpenAI:ApiKey" "sk-your-openai-api-key-here"
 ```
 
-:::danger Never Commit API Keys
+:::danger API キーをコミットしないでください
 
-Never commit API keys to source control. Always use User Secrets, environment variables, or a secure key management service.
+API キーをソース管理にコミットしないでください。常にユーザー シークレット、環境変数、または安全なキー管理サービスを使用してください。
 
 :::
 
-### 1.5 Create a DataSource Provider
+### 1.5 データ ソース プロバイダーの作成
 
-The Reveal SDK requires a data source provider. For this sample, we'll create a minimal one that simply returns data sources unchanged.
+Reveal SDK にはデータ ソース プロバイダーが必要です。このサンプルでは、データ ソースを変更せずに返すだけの最小限のものを作成します。
 
-Create a new folder `Reveal` and add `DataSourceProvider.cs`:
+新しいフォルダー `Reveal` を作成し、`DataSourceProvider.cs` を追加します:
 
 ```csharp title="Reveal/DataSourceProvider.cs"
 using Reveal.Sdk.Data;
@@ -156,7 +156,7 @@ public class DataSourceProvider : IRVDataSourceProvider
 }
 ```
 
-Update `Program.cs` to register the provider:
+`Program.cs` を更新してプロバイダーを登録します:
 
 ```csharp title="Program.cs" {16-19}
 using Reveal.Sdk;
@@ -173,13 +173,13 @@ builder.Services.AddCors(options =>
                        .AllowAnyMethod());
 });
 
-// Add Reveal SDK with data source provider
+// データ ソース プロバイダーで Reveal SDK を追加
 builder.Services.AddControllers().AddReveal(builder =>
 {
     builder.AddDataSourceProvider<DataSourceProvider>();
 });
 
-// Add Reveal AI with OpenAI provider
+// OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options =>
     {
@@ -197,30 +197,31 @@ app.Run();
 
 :::info
 
-While AI insights don't directly require datasource configuration, the Reveal SDK itself needs a data source provider registered. In a real application, you'd already have this configured for your dashboards.
+AI インサイトはデータ ソース構成を直接必要としませんが、Reveal SDK 自体にはデータ ソース プロバイダーの登録が必要です。実際のアプリケーションでは、ダッシュボード用にこれが既に構成されています。
 
 :::
 
-### 1.6 Add the Sample Dashboard and Data
+### 1.6 サンプル ダッシュボードとデータの追加
 
-Create the necessary folders in your project root:
+プロジェクト ルートに必要なフォルダーを作成します:
 
 ```bash
 mkdir Dashboards
 mkdir Data
 ```
 
-Download the required files and place them in the correct folders:
+必要なファイルをダウンロードして、正しいフォルダーに配置します:
 
-**1. Dashboard file** → Save to `Dashboards/` folder:
-- Download: [Accounts.rdash](https://github.com/RevealBi/sdk-samples-ai/raw/ad93b8eae04f32778e4eaf2b0168cf26dda10888/insights/server/aspnet/RevealSdkServer/Dashboards/Accounts.rdash)
-- Location: `Dashboards/Accounts.rdash`
+**1. ダッシュボード ファイル** → `Dashboards/` フォルダーに保存:
+- ダウンロード: [Accounts.rdash](https://github.com/RevealBi/sdk-samples-ai/raw/ad93b8eae04f32778e4eaf2b0168cf26dda10888/insights/server/aspnet/RevealSdkServer/Dashboards/Accounts.rdash)
+- 場所: `Dashboards/Accounts.rdash`
 
-**2. Data file** → Save to `Data/` folder:
-- Download: [NorthwindInvoices.xlsx](https://github.com/RevealBi/sdk-samples-ai/raw/refs/heads/main/insights/server/aspnet/RevealSdkServer/Data/NorthwindInvoices.xlsx)
-- Location: `Data/NorthwindInvoices.xlsx`
+**2. データ ファイル** → `Data/` フォルダーに保存:
+- ダウンロード: [NorthwindInvoices.xlsx](https://github.com/RevealBi/sdk-samples-ai/raw/refs/heads/main/insights/server/aspnet/RevealSdkServer/Data/NorthwindInvoices.xlsx)
+- 場所: `Data/NorthwindInvoices.xlsx`
 
-Your project structure should look like:
+プロジェクト構造は以下のようになります:
+
 ```
 RevealAiServer/
 ├── Dashboards/
@@ -232,19 +233,19 @@ RevealAiServer/
 └── Program.cs
 ```
 
-### 1.7 Run the Server
+### 1.7 サーバーの実行
 
 ```bash
 dotnet run
 ```
 
-Your server should start at `https://localhost:5111` (or similar). Note the URL - you'll need it for the client.
+サーバーは `https://localhost:5111` (またはこれに似た URL) で起動します。URL をメモしてください、クライアントに必要です。
 
-## Step 2: Create the HTML Client
+## 手順 2: HTML クライアントの作成
 
-### 2.1 Create index.html
+### 2.1 index.html の作成
 
-Create a new file `index.html` in your project root (or a separate `client` folder):
+プロジェクト ルート (または別の `client` フォルダー) に新しいファイル `index.html` を作成します:
 
 ```html title="index.html"
 <!DOCTYPE html>
@@ -356,13 +357,13 @@ Create a new file `index.html` in your project root (or a separate `client` fold
     <script src="https://cdn.jsdelivr.net/npm/@revealbi/api@0.0.1-preview.2/dist/index.umd.min.js"></script>
 
     <script type="text/javascript">
-        // Configure your server URL
+        // サーバー URL を設定
         const SERVER_URL = 'https://localhost:5111/';
 
-        // Initialize Reveal SDK
+        // Reveal SDK を初期化
         $.ig.RevealSdkSettings.setBaseUrl(SERVER_URL);
 
-        // Initialize Reveal AI Client
+        // Reveal AI クライアントを初期化
         rv.RevealSdkClient.initialize({
             hostUrl: SERVER_URL
         });
@@ -371,36 +372,36 @@ Create a new file `index.html` in your project root (or a separate `client` fold
         let revealView;
         let streamingBuffer = '';
 
-        // Display insights in the panel
+        // インサイトをパネルに表示
         function displayInsight(markdownText, isStreaming = false) {
             const output = document.getElementById('insightsOutput');
 
             if (isStreaming) {
-                // Accumulate streaming text
+                // ストリーミング テキストを蓄積
                 streamingBuffer += markdownText;
                 output.innerHTML = marked.parse(streamingBuffer);
             } else {
-                // Display complete response
+                // 完全なレスポンスを表示
                 output.innerHTML = marked.parse(markdownText);
             }
 
-            // Auto-scroll to bottom
+            // 最下部へ自動スクロール
             output.scrollTop = output.scrollHeight;
         }
 
-        // Clear insights panel
+        // インサイト パネルをクリア
         function clearInsights() {
             document.getElementById('insightsOutput').innerHTML = '';
             streamingBuffer = '';
         }
 
-        // Create insight menu item
+        // インサイト用メニュー項目を作成
         function createInsightMenuItem(label, dashboard, insightType, visualizationId = null) {
             return new $.ig.RVMenuItem(label, null, async () => {
                 clearInsights();
                 const streamingEnabled = document.getElementById('streamingToggle').checked;
 
-                // Build request options
+                // リクエスト オプションを構築
                 const options = {
                     dashboard: dashboard,
                     insightType: insightType
@@ -412,7 +413,7 @@ Create a new file `index.html` in your project root (or a separate `client` fold
 
                 try {
                     if (streamingEnabled) {
-                        // Streaming mode - responses arrive in real-time
+                        // Streaming モード - レスポンスがリアルタイムで到着
                         const result = await client.ai.insights.get(
                             options,
                             {
@@ -437,7 +438,7 @@ Create a new file `index.html` in your project root (or a separate `client` fold
                             }
                         );
                     } else {
-                        // Await mode - wait for complete response
+                        // Await モード - 完全なレスポンスを待機
                         const result = await client.ai.insights.get(options);
                         displayInsight(result.explanation);
                     }
@@ -448,16 +449,16 @@ Create a new file `index.html` in your project root (or a separate `client` fold
             });
         }
 
-        // Load dashboard and configure menu items
+        // ダッシュボードを読み込み、メニュー項目を設定
         $.ig.RVDashboard.loadDashboard("Accounts", (dashboard) => {
             revealView = new $.ig.RevealView("#revealView");
             revealView.canEdit = false;
             revealView.canSaveAs = false;
             revealView.dashboard = dashboard;
 
-            // Add AI insights to context menus
+            // コンテキスト メニューに AI インサイトを追加
             revealView.onMenuOpening = function (visualization, args) {
-                // Dashboard-level insights
+                // ダッシュボード レベルのインサイト
                 if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
                     args.menuItems.push(createInsightMenuItem(
                         "Dashboard Summary", dashboard, rv.InsightType.Summary));
@@ -467,7 +468,7 @@ Create a new file `index.html` in your project root (or a separate `client` fold
                         "Dashboard Forecast", dashboard, rv.InsightType.Forecast));
                 }
 
-                // Visualization-level insights
+                // 表示形式レベルのインサイト
                 if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
                     args.menuItems.push(createInsightMenuItem(
                         "Visualization Summary", dashboard, rv.InsightType.Summary, visualization.id));
@@ -483,38 +484,38 @@ Create a new file `index.html` in your project root (or a separate `client` fold
 </html>
 ```
 
-## Step 3: Run the Application
+## 手順 3: アプリケーションの実行
 
-### 3.1 Start the Server
+### 3.1 サーバーの起動
 
-If not already running:
+まだ実行していない場合:
 
 ```bash
 dotnet run
 ```
 
-### 3.2 Open the Client
+### 3.2 クライアントを開く
 
-Open `index.html` in your web browser. You can:
+Web ブラウザーで `index.html` を開きます。例えば以下の方法で開けます:
 
-- Use VS Code Live Server extension
-- Simply double-click the file
+- VS Code Live Server 拡張機能を使用
+- ファイルをダブルクリック
 
-### 3.3 Test the AI Insights
+### 3.3 AI インサイトのテスト
 
-1. Wait for the dashboard to load
-2. Click on the RevealView's dashboard, or a visualization's, overflow menu
-3. Click on the "Summary", "Analysis", or "Forecast" menu item
-4. Watch the AI-generated insight appear in the right panel
-5. Try right-clicking on individual visualizations for widget-level insights
+1. ダッシュボードが読み込まれるのを待ちます
+2. RevealView のダッシュボード、または表示形式のオーバーフロー メニューをクリックします
+3. [Summary]、[Analysis]、または [Forecast] メニュー項目をクリックします
+4. 右側のパネルに表示される AI 生成のインサイトを確認します
+5. 個々の表示形式を右クリックして、ウィジェット レベルのインサイトを試します
 
-## Understanding the Code
+## コードの理解
 
-### Server-Side: How AI Works
+### サーバー側: AI の仕組み
 
-The server setup has three key parts:
+サーバーのセットアップには 3 つの重要な部分があります:
 
-**1. Data Source Provider** (required by Reveal SDK):
+**1. データ ソース プロバイダー** (Reveal SDK で必要):
 ```csharp
 builder.Services.AddControllers().AddReveal(builder =>
 {
@@ -522,7 +523,7 @@ builder.Services.AddControllers().AddReveal(builder =>
 });
 ```
 
-**2. AI Configuration** (the magic):
+**2. AI 構成**:
 ```csharp
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options => {
@@ -530,14 +531,14 @@ builder.Services.AddRevealAI()
     });
 ```
 
-This:
-- Registers all AI services
-- Configures OpenAI as the LLM provider
-- Automatically creates API endpoints at `/api/reveal/ai/insights`
+これにより:
+- すべての AI サービスを登録します
+- OpenAI を LLM プロバイダーとして構成します
+- `/api/reveal/ai/insights` に API エンドポイントを自動的に作成します
 
-### Client-Side: Two Ways to Call the API
+### クライアント側: API を呼び出す 2 つの方法
 
-**Await Mode** - Simple and straightforward:
+**Await モード** - シンプルで分かりやすい:
 
 ```javascript
 const result = await client.ai.insights.get({
@@ -547,7 +548,7 @@ const result = await client.ai.insights.get({
 console.log(result.explanation);
 ```
 
-**Streaming Mode** - Real-time, ChatGPT-like experience:
+**ストリーミング モード** - リアルタイム、ChatGPT のようなエクスペリエンス:
 
 ```javascript
 const result = await client.ai.insights.get(
@@ -557,7 +558,7 @@ const result = await client.ai.insights.get(
     },
     {
         onTextChunk: (text) => {
-            // Append each chunk as it arrives
+            // 到着したチャンクごとに追加
             displayInsight(text, true);
         },
         onComplete: () => {
@@ -568,11 +569,11 @@ const result = await client.ai.insights.get(
 );
 ```
 
-**Key difference**: Same API call, different handling. Streaming provides callbacks for progressive updates, while await waits for the complete response.
+**重要な違い**: 同じ API 呼び出しですが、処理が異なります。ストリーミングはプログレッシブ更新のためのコールバックを提供し、await は完全なレスポンスを待ちます。
 
-### Dashboard vs Visualization Insights
+### ダッシュボード vs 表示形式のインサイト
 
-- **Dashboard-level**: Analyzes the entire dashboard
-- **Visualization-level**: Focuses on a single widget by passing `visualizationId`
+- **ダッシュボード レベル**: ダッシュボード全体を分析します
+- **表示形式レベル**: `visualizationId` を渡して単一のウィジェットに焦点を当てます
 
-The complete working example is available in the [sdk-samples-ai repository](https://github.com/RevealBi/sdk-samples-ai/tree/main/insights).
+完全な動作例は [sdk-samples-ai リポジトリ](https://github.com/RevealBi/sdk-samples-ai/tree/main/insights)で入手できます。
