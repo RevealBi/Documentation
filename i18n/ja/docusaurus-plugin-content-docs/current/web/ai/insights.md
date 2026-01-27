@@ -287,7 +287,7 @@ interface InsightResult {
 
 ```typescript
 revealView.onMenuOpening = function (visualization, args) {
-  // ダッシュボードレベルのインサイト
+  // ダッシュボード レベルのインサイト
   if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
     args.menuItems.push(new $.ig.RVMenuItem("Summary", null, async () => {
       const result = await client.ai.insights.get({

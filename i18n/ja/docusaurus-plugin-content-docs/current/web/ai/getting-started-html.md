@@ -57,7 +57,7 @@ using Reveal.Sdk.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS for local development
+// ローカル開発用に CORS を追加
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -66,10 +66,10 @@ builder.Services.AddCors(options =>
                        .AllowAnyMethod());
 });
 
-// Add Reveal SDK
+// Reveal SDK を追加
 builder.Services.AddControllers().AddReveal();
 
-// Add Reveal AI with OpenAI provider
+// OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options =>
     {
@@ -173,13 +173,13 @@ builder.Services.AddCors(options =>
                        .AllowAnyMethod());
 });
 
-// Add Reveal SDK with data source provider
+// データ ソース プロバイダーで Reveal SDK を追加
 builder.Services.AddControllers().AddReveal(builder =>
 {
     builder.AddDataSourceProvider<DataSourceProvider>();
 });
 
-// Add Reveal AI with OpenAI provider
+// OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options =>
     {
@@ -221,6 +221,7 @@ mkdir Data
 - 場所: `Data/NorthwindInvoices.xlsx`
 
 プロジェクト構造は以下のようになります:
+
 ```
 RevealAiServer/
 ├── Dashboards/
@@ -356,13 +357,13 @@ dotnet run
     <script src="https://cdn.jsdelivr.net/npm/@revealbi/api@0.0.1-preview.2/dist/index.umd.min.js"></script>
 
     <script type="text/javascript">
-        // Configure your server URL
+        // サーバー URL を設定
         const SERVER_URL = 'https://localhost:5111/';
 
-        // Initialize Reveal SDK
+        // Reveal SDK を初期化
         $.ig.RevealSdkSettings.setBaseUrl(SERVER_URL);
 
-        // Initialize Reveal AI Client
+        // Reveal AI クライアントを初期化
         rv.RevealSdkClient.initialize({
             hostUrl: SERVER_URL
         });
@@ -371,36 +372,36 @@ dotnet run
         let revealView;
         let streamingBuffer = '';
 
-        // Display insights in the panel
+        // インサイトをパネルに表示
         function displayInsight(markdownText, isStreaming = false) {
             const output = document.getElementById('insightsOutput');
 
             if (isStreaming) {
-                // Accumulate streaming text
+                // ストリーミング テキストを蓄積
                 streamingBuffer += markdownText;
                 output.innerHTML = marked.parse(streamingBuffer);
             } else {
-                // Display complete response
+                // 完全なレスポンスを表示
                 output.innerHTML = marked.parse(markdownText);
             }
 
-            // Auto-scroll to bottom
+            // 最下部へ自動スクロール
             output.scrollTop = output.scrollHeight;
         }
 
-        // Clear insights panel
+        // インサイト パネルをクリア
         function clearInsights() {
             document.getElementById('insightsOutput').innerHTML = '';
             streamingBuffer = '';
         }
 
-        // Create insight menu item
+        // インサイト用メニュー項目を作成
         function createInsightMenuItem(label, dashboard, insightType, visualizationId = null) {
             return new $.ig.RVMenuItem(label, null, async () => {
                 clearInsights();
                 const streamingEnabled = document.getElementById('streamingToggle').checked;
 
-                // Build request options
+                // リクエスト オプションを構築
                 const options = {
                     dashboard: dashboard,
                     insightType: insightType
@@ -412,7 +413,7 @@ dotnet run
 
                 try {
                     if (streamingEnabled) {
-                        // Streaming mode - responses arrive in real-time
+                        // Streaming モード - レスポンスがリアルタイムで到着
                         const result = await client.ai.insights.get(
                             options,
                             {
@@ -437,7 +438,7 @@ dotnet run
                             }
                         );
                     } else {
-                        // Await mode - wait for complete response
+                        // Await モード - 完全なレスポンスを待機
                         const result = await client.ai.insights.get(options);
                         displayInsight(result.explanation);
                     }
@@ -448,16 +449,16 @@ dotnet run
             });
         }
 
-        // Load dashboard and configure menu items
+        // ダッシュボードを読み込み、メニュー項目を設定
         $.ig.RVDashboard.loadDashboard("Accounts", (dashboard) => {
             revealView = new $.ig.RevealView("#revealView");
             revealView.canEdit = false;
             revealView.canSaveAs = false;
             revealView.dashboard = dashboard;
 
-            // Add AI insights to context menus
+            // コンテキスト メニューに AI インサイトを追加
             revealView.onMenuOpening = function (visualization, args) {
-                // Dashboard-level insights
+                // ダッシュボード レベルのインサイト
                 if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
                     args.menuItems.push(createInsightMenuItem(
                         "Dashboard Summary", dashboard, rv.InsightType.Summary));
@@ -467,7 +468,7 @@ dotnet run
                         "Dashboard Forecast", dashboard, rv.InsightType.Forecast));
                 }
 
-                // Visualization-level insights
+                // 表示形式レベルのインサイト
                 if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
                     args.menuItems.push(createInsightMenuItem(
                         "Visualization Summary", dashboard, rv.InsightType.Summary, visualization.id));
@@ -557,7 +558,7 @@ const result = await client.ai.insights.get(
     },
     {
         onTextChunk: (text) => {
-            // Append each chunk as it arrives
+            // 到着したチャンクごとに追加
             displayInsight(text, true);
         },
         onComplete: () => {

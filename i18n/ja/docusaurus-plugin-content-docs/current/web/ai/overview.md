@@ -83,7 +83,7 @@ const result = await client.ai.insights.get(
   },
   {
     onTextChunk: (chunk) => {
-      // Display text as it arrives
+      // 到着したテキストを表示
       console.log(chunk);
     },
     onComplete: (message, result) => {

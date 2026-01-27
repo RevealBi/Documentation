@@ -57,10 +57,10 @@ using Reveal.Sdk.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Reveal SDK (required)
+// Reveal SDK を追加 (必須)
 builder.Services.AddControllers().AddReveal();
 
-// Add Reveal AI services
+// Reveal AI サービスを追加
 builder.Services.AddRevealAI();
 
 var app = builder.Build();
@@ -124,7 +124,7 @@ using Reveal.Sdk.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS for cross-origin requests
+// クロスオリジン リクエスト用の CORS を追加
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -135,7 +135,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add base Reveal SDK
+// ベース Reveal SDK を追加
 builder.Services.AddControllers().AddReveal(revealBuilder =>
 {
     revealBuilder.AddSettings(settings =>
@@ -144,7 +144,7 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
     });
 });
 
-// Add Reveal AI with OpenAI provider
+// OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
     .ConfigureOpenAI(options =>
     {
