@@ -31,6 +31,21 @@
    Windows 環境を維持する必要がある場合は、アプリケーションを **Windows コンテナー**内でホストします。
    これにより、コンテナー イメージ内で Playwright をインストールおよび構成でき、Windows App Service の制限を回避できます。
 
+## Custom Visualizations Not Supported on Export
+
+### Issue
+
+**Custom visualizations** (user-defined visualizations that extend the standard Reveal chart types) appear blank when exporting dashboards in any format (PDF, Excel, PowerPoint, or Image). This is a known limitation across all platforms.
+
+### Root Cause
+
+The Reveal SDK doesn't fully control the rendering of custom visualizations. Due to render timing issues during the export process, custom visualizations may not be fully displayed or rendered in time before the export operation captures the visualization content, resulting in blank placeholders in the exported file.
+
+### Workarounds
+
+Unfortunately, there is **no programmatic workaround** for this limitation. However, you can:
+- **Capture screenshots manually** and place them in your desired format (Word document, PDF, PowerPoint presentation, etc.) as an alternative to using the export feature.
+
 ## `<Pre>` タグが `<body>` に追加される
 
 ### 問題
