@@ -31,6 +31,21 @@ There are two options to resolve this:
    If you must remain on Windows, host the application inside a **Windows Container**.
    This allows installing and configuring Playwright within the container image, bypassing the Windows App Service limitation.
 
+## Custom Visualizations Not Supported on Export
+
+### Issue
+
+**Custom visualizations** (user-defined visualizations that extend the standard Reveal chart types) appear blank when exporting dashboards in any format (PDF, Excel, PowerPoint, or Image). This is a known limitation across all platforms.
+
+### Root Cause
+
+The Reveal SDK doesn't fully control the rendering of custom visualizations. Due to render timing issues during the export process, custom visualizations may not be fully displayed or rendered in time before the export operation captures the visualization content, resulting in blank placeholders in the exported file.
+
+### Workarounds
+
+Unfortunately, there is **no programmatic workaround** for this limitation. However, you can:
+- **Capture screenshots manually** and place them in your desired format (Word document, PDF, PowerPoint presentation, etc.) as an alternative to using the export feature.
+
 ## `<Pre>` Tag Appended to `<body>`
 
 ### Issue
