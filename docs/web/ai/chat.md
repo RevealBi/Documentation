@@ -226,8 +226,6 @@ Chat requires metadata configuration to understand your datasource structure. Co
 
 Common provider values:
 - `AmazonAthena`
-- `CSV`
-- `Excel`
 - `MySQL`
 - `Oracle`
 - `OracleSID`

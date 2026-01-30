@@ -227,8 +227,6 @@ app.Run();
 
 一般的なプロバイダー値:
 - `AmazonAthena`
-- `CSV`
-- `Excel`
 - `MySQL`
 - `Oracle`
 - `OracleSID`
