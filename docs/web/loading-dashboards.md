@@ -341,11 +341,25 @@ This feature is currently not supported by Java
 
   <TabItem value="node" label="Node.js">    
 
-:::danger Unsupported
+Although not directly supported by Node.js, it is possible to emulate the .rdash behaviour from JSON strings.
 
-This feature is currently not supported by Node.js
+```cs
+import JSZip from 'jszip';
+import { Readable } from 'stream';
 
-:::
+export const dashboardProvider = async (userContext, dashboardId) => {
+  // Your JSON string will come from a file, database, etc.
+  const dashboardJson = '{...}';
+
+  // Emulate a .rdash file's contents using JSZip
+  const zip = new JSZip();
+  zip.file('Dashboard.json', dashboardJson);
+  const zipContent = await zip.generateAsync({type: 'nodebuffer'});
+
+  // Return the zip content as a stream
+  return Readable.from(zipContent);
+}
+```
 
   </TabItem>
 </Tabs>
