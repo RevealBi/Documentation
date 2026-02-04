@@ -100,7 +100,7 @@
     "description": "The name for the light color mode"
   },
   "theme.blog.post.plurals": {
-    "message": "{count}件",
+    "message": "{count} 件",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
@@ -132,11 +132,11 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "{count}記事",
+    "message": "{count} 記事",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "「{tagName}」タグのついた{nDocsTagged}",
+    "message": "「{tagName}」タグのついた {nDocsTagged}",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
@@ -171,11 +171,11 @@
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": "{user}が",
+    "message": "{user} が",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "{atDate}{byUser}最終更新",
+    "message": "{atDate}{byUser} 最終更新",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
@@ -223,11 +223,11 @@
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "{title}についてもっと見る",
+    "message": "{title} についてもっと見る",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "約{readingTime}分",
+    "message": "約 {readingTime} 分",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
@@ -365,7 +365,7 @@
     "description": "The words used to describe the user section on the homepage"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count}項目",
+    "message": "{count} 項目",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.admonition.warning": {
@@ -480,7 +480,7 @@
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "{count}件のドキュメントが見つかりました",
+    "message": "{count} 件のドキュメントが見つかりました",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
@@ -532,7 +532,7 @@
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "このページは非公開です。 検索対象外となり、このページのリンクに直接アクセスできるユーザーのみに公開されます。",
+    "message": "このページは非公開です。検索対象外となり、このページのリンクに直接アクセスできるユーザーのみに公開されます。",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
@@ -548,19 +548,19 @@
     "description": "The title of the Video feature on the homepage"
   },
   "homepage.feature.video": {
-    "message": "ステップバイステップのYouTube動画でReveal SDKを学びましょう。再生ボタンを押して、今日からあなたの最初のダッシュボードを公開しましょう",
+    "message": "ステップバイステップの YouTube 動画で Reveal SDK を学びましょう。再生ボタンを押して、今日からあなたの最初のダッシュボードを公開しましょう",
     "description": "The words used to describe the video section on the homepage"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "システムモード",
+    "message": "システム モード",
     "description": "The name for the system color mode"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "ドロップダウンを展開",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "ドロップダウンを折りたたむ",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }

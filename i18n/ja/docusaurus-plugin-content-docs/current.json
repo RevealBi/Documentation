@@ -556,7 +556,7 @@
     "description": "The label for category Reveal SDK AI in sidebar webSidebar"
   },
   "sidebar.webSidebar.category.Features": {
-    "message": "Features",
+    "message": "機能",
     "description": "The label for category Features in sidebar webSidebar"
   },
   "sidebar.webSidebar.doc.Elasticsearch": {
@@ -564,11 +564,11 @@
     "description": "The label for the doc item Elasticsearch in sidebar webSidebar, linking to the doc web/adding-data-sources/elasticsearch"
   },
   "sidebar.webSidebar.doc.Insights": {
-    "message": "Insights",
+    "message": "インサイト",
     "description": "The label for the doc item Insights in sidebar webSidebar, linking to the doc web/ai/insights"
   },
   "sidebar.webSidebar.doc.Chat": {
-    "message": "Chat",
+    "message": "チャート",
     "description": "The label for the doc item Chat in sidebar webSidebar, linking to the doc web/ai/chat"
   }
 }
