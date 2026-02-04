@@ -82,6 +82,18 @@ builder.Services.AddRevealAI()
     });
 ```
 
+**Azure OpenAI の場合:**
+
+```csharp
+builder.Services.AddRevealAI()
+    .ConfigureAzureOpenAI(options =>
+    {
+        options.ApiKey = builder.Configuration["AzureOpenAI:ApiKey"];
+        options.Endpoint = "https://yoururl.openai.azure.com/";
+        options.DeploymentName = "gpt-4o";
+    });
+```
+
 **Anthropic Claude の場合:**
 
 ```csharp
@@ -104,6 +116,9 @@ LLM プロバイダーの API キーを `appsettings.json` またはユーザー
   },
   "Anthropic": {
     "ApiKey": "sk-ant-your-api-key-here"
+  },
+  "AzureOpenAI": {
+    "ApiKey": "your-azure-api-key-here"
   }
 }
 ```

@@ -82,6 +82,18 @@ builder.Services.AddRevealAI()
     });
 ```
 
+**For Azure OpenAI:**
+
+```csharp
+builder.Services.AddRevealAI()
+    .ConfigureAzureOpenAI(options =>
+    {
+        options.ApiKey = builder.Configuration["AzureOpenAI:ApiKey"];
+        options.Endpoint = "https://yoururl.openai.azure.com/";
+        options.DeploymentName = "gpt-4o";
+    });
+```
+
 **For Anthropic Claude:**
 
 ```csharp
@@ -104,6 +116,9 @@ Store your LLM provider API keys in `appsettings.json` or User Secrets:
   },
   "Anthropic": {
     "ApiKey": "sk-ant-your-api-key-here"
+  },
+  "AzureOpenAI": {
+    "ApiKey": "your-azure-api-key-here"
   }
 }
 ```
