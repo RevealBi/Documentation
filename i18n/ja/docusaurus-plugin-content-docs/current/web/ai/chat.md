@@ -28,7 +28,7 @@ AI は会話履歴を維持し、追加の質問と改善を可能にします: 
 
 ## サーバー API
 
-Chat API は、メッセージを送信し、会話セッションを管理するためのエンドポイントを提供します。
+Chat API は、メッセージを送信し、会話セッションを管理するためのエンドポイントを提供します。シンプルなリクエスト/レスポンス ワークフロー用のプレーン JSON レスポンスと、リアルタイムの進行状況とテキスト更新用のストリーミング SSE レスポンスの 2 つのレスポンス モードをサポートします。
 
 ### エンドポイント
 
@@ -50,15 +50,15 @@ DELETE /api/reveal/ai/chat
   datasourceId: string,          // コンテキスト用のデータ ソース識別子
 
   // メッセージ (1 つ必須)
-  question?: string,              // 自然言語の質問/リクエスト
+  message?: string,               // 自然言語のメッセージ/リクエスト
 
   // オプションのコンテキスト
   dashboard?: string,             // 編集/分析用のダッシュボード JSON
-  widgetId?: string,              // ウィジェット固有の操作用のウィジェット ID
+  visualizationId?: string,       // 表示形式固有の操作用の表示形式 ID
 
   // オプションの構成
   clientName?: string,            // LLM プロバイダーのオーバーライド
-  streamExplanation?: boolean     // レスポンス テキスト チャンクをストリーミング (デフォルト: false)
+  stream?: boolean                // JSON の代わりに SSE ストリームを返す (デフォルト: false)
 }
 ```
 
@@ -67,13 +67,13 @@ DELETE /api/reveal/ai/chat
 | パラメーター | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
 | `datasourceId` | string | はい | クエリするデータ ソースの識別子。 |
-| `question` | string | 条件付き* | ユーザーの自然言語の質問またはリクエスト。 |
+| `message` | string | 条件付き* | ユーザーの自然言語のメッセージまたはリクエスト。 |
 | `dashboard` | string | いいえ | 編集または分析コンテキスト用のダッシュボード JSON (RDash 形式)。 |
-| `widgetId` | string | いいえ | ウィジェット固有の操作用のウィジェット識別子。 |
+| `visualizationId` | string | いいえ | 表示形式固有の操作用の表示形式識別子。 |
 | `clientName` | string | いいえ | このリクエストに使用する特定の LLM プロバイダーの名前。 |
-| `streamExplanation` | boolean | いいえ | 説明テキストのリアルタイム ストリーミングを有効にするかどうか (デフォルト: false)。 |
+| `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、および最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
 
-\* `question` または `intent` のいずれかを指定する必要があります。
+\* `message` または `intent` のいずれかを指定する必要があります。
 
 **パラメーターの詳細:**
 
@@ -82,9 +82,30 @@ DELETE /api/reveal/ai/chat
 
 ### レスポンス形式
 
-エンドポイントは、次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
+#### 非ストリーミング (デフォルト)
 
-#### progress イベント
+`stream` が `false` または省略された場合、エンドポイントはプレーン JSON レスポンスを返します:
+
+```json
+{
+  "explanation": "Based on your data, I've created a dashboard showing sales by region...",
+  "dashboard": "{...rdash JSON...}"
+}
+```
+
+エラーの場合、レスポンスには適切な HTTP ステータス コード (400 または 500) とエラー メッセージが含まれます:
+
+```json
+{
+  "error": "Error message"
+}
+```
+
+#### ストリーミング
+
+`stream` が `true` の場合、エンドポイントは次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
+
+##### progress イベント
 処理中に送信され、現在のステータスを示します。
 
 ```json
@@ -98,8 +119,8 @@ data: {"message": "Creating a new dashboard"}
 - 「ウィジェットにフィルターを追加しています」
 - 「表示形式を変更しています」
 
-#### textchunk イベント
-`streamExplanation: true` の場合に送信されます。生成される説明テキストのフラグメントを含みます。
+##### textchunk イベント
+生成される説明テキストのフラグメントを含みます。
 
 ```json
 event: textchunk
@@ -108,7 +129,7 @@ data: {"content": "Based on your data, I've created"}
 
 テキスト チャンクは、自然な ChatGPT のようなストリーミングのため、約 8 単語のセグメントで 20ms の遅延で配信されます。
 
-#### complete イベント
+##### complete イベント
 処理が正常に終了したときに送信されます。常に完全な結果が含まれます。
 
 ```json
@@ -126,7 +147,7 @@ data: {
 - `explanation`: 実行された内容の自然言語による説明。
 - `dashboard`: 生成または変更されたダッシュボード JSON (該当する場合)。
 
-#### error イベント
+##### error イベント
 処理が失敗した場合に送信されます。
 
 ```json
@@ -244,32 +265,28 @@ AI は、このメタデータを使用して、使用可能なデータを理�
 ```csharp
 // クライアントは会話をクリアするために DELETE リクエストを実行
 // DELETE /api/reveal/ai/chat
-// Response: 200 OK
+// Response: 204 No Content
 ```
 
 ---
 
 ## クライアント API
 
-Reveal SDK AI クライアントは、Web アプリケーションでの会話型インタラクション用のシンプルな TypeScript API を提供します。
+Reveal SDK AI クライアントは、Web アプリケーションでの会話型インタラクション用の TypeScript API を提供します。`client.ai.chat.sendMessage()` メソッドは、すべてのパラメーターに単一のリクエスト オブジェクトを使用し、非ストリーミングとストリーミングの両方のモードをサポートします。
 
-### 作業の開始
+### 非ストリーミング (デフォルト)
 
-メッセージを送信するには、`client.ai.chat.sendMessage()` メソッドを使用します。このメソッドは、**await** と **streaming** の両方のパターンをサポートします。
-
-#### 基本的な使用方法 (Await パターン)
-
-表示する前に完全な結果を待ちます:
+表示する前に完全な結果を待ちます。`Promise<ChatResponse>` を返します。
 
 ```typescript
 import { RevealSdkClient } from '@revealbi/api';
 
 const client = RevealSdkClient.getInstance();
 
-// 質問して完全なレスポンスを取得
+// メッセージを送信して完全なレスポンスを取得
 const response = await client.ai.chat.sendMessage({
-  question: 'Show me sales trends for the last quarter',
-  datasourceId: 'my-datasource'
+  message: 'Show me sales trends for the last quarter',
+  datasourceId: 'my-datasource',
 });
 
 console.log(response.explanation);
@@ -281,40 +298,67 @@ if (response.dashboard) {
 }
 ```
 
-### レスポンスのストリーミング
+### ストリーミング
 
-ChatGPT のような体験を実現するために、説明テキストをリアルタイムでストリーミングします:
+リクエストに `stream: true` を追加すると、イベントが到着するたびにイベントを生成する `AIStream` を取得します。ストリームは 3 つの消費パターンをサポートします。
+
+#### パターン 1: for-await (フル コントロール)
 
 ```typescript
-let explanation = '';
+const stream = await client.ai.chat.sendMessage({
+  message: 'Create a dashboard showing customer distribution by region',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
 
-const response = await client.ai.chat.sendMessage(
-  {
-    question: 'Create a dashboard showing customer distribution by region',
-    datasourceId: 'my-datasource',
-    streamExplanation: true
-  },
-  {
-    onProgress: (message) => {
-      console.log('Status:', message);
-      // 「新しいダッシュボードを作成しています」
-    },
-    onTextChunk: (chunk) => {
-      explanation += chunk;
-      // 到着したテキストを表示
-      document.getElementById('chat-message').textContent = explanation;
-    },
-    onComplete: (message, result) => {
-      console.log('Complete:', message);
-      if (result?.dashboard) {
-        loadDashboard(result.dashboard);
-      }
-    },
-    onError: (error, details) => {
-      console.error('Error:', error, details);
-    }
+for await (const event of stream) {
+  switch (event.type) {
+    case 'progress': console.log('Status:', event.message); break;
+    case 'text':     document.getElementById('chat-message').textContent += event.content; break;
+    case 'error':    console.error('Error:', event.error); break;
   }
-);
+}
+```
+
+#### パターン 2: イベント リスナー (シンプルな UI 接続)
+
+```typescript
+const stream = await client.ai.chat.sendMessage({
+  message: 'Create a dashboard showing customer distribution by region',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
+
+stream.on('progress', (message) => console.log('Status:', message));
+stream.on('text', (content) => {
+  document.getElementById('chat-message').textContent += content;
+});
+stream.on('error', (error) => console.error('Error:', error));
+
+const result = await stream.finalResponse();
+console.log('Complete:', result.explanation);
+
+if (result.dashboard) {
+  loadDashboard(result.dashboard);
+}
+```
+
+#### パターン 3: ストリームからの集約結果
+
+```typescript
+const stream = await client.ai.chat.sendMessage({
+  message: 'Create a dashboard showing customer distribution by region',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
+
+// 完了を待機し、ChatResponse を返す
+const result = await stream.finalResponse();
+console.log(result.explanation);
+
+if (result.dashboard) {
+  loadDashboard(result.dashboard);
+}
 ```
 
 ### 会話の管理
@@ -340,9 +384,9 @@ console.log('Conversation history cleared');
 ```typescript
 // 既存のダッシュボードを編集
 const response = await client.ai.chat.sendMessage({
-  question: 'Add a date filter to this dashboard',
+  message: 'Add a date filter to this dashboard',
   datasourceId: 'my-datasource',
-  dashboard: existingDashboardJson  // 現在のダッシュボード JSON を提供
+  dashboard: existingDashboardJson,  // 現在のダッシュボード JSON を提供
 });
 
 if (response.dashboard) {
@@ -358,9 +402,9 @@ if (response.dashboard) {
 const currentDashboard = revealView.dashboard;
 
 const response = await client.ai.chat.sendMessage({
-  question: 'Explain what this dashboard shows',
+  message: 'Explain what this dashboard shows',
   datasourceId: 'my-datasource',
-  dashboard: currentDashboard  // RVDashboard オブジェクトを受け入れる
+  dashboard: currentDashboard,  // RVDashboard オブジェクトを受け入れる
 });
 
 console.log(response.explanation);
@@ -368,70 +412,80 @@ console.log(response.explanation);
 
 ### リクエスト パラメーター
 
+すべてのパラメーターは単一のリクエスト オブジェクトで渡されます:
+
 ```typescript
-interface ChatMessageRequest {
-  question: string;              // ユーザーの自然言語入力 (必須)
-  datasourceId?: string;         // データ ソース識別子
-  dashboard?: string;            // ダッシュボード JSON または RVDashboard オブジェクト
-  clientName?: string;           // LLM プロバイダーのオーバーライド
-  streamExplanation?: boolean;   // ストリーミングを有効にするかどうか (デフォルト: false)
+// 非ストリーミング リクエスト
+interface ChatRequest {
+  message: string;                    // ユーザーの自然言語入力 (必須)
+  datasourceId?: string;              // データ ソース識別子
+  dashboard?: string | RVDashboard;   // ダッシュボード JSON または RVDashboard オブジェクト
+  visualizationId?: string;           // ウィジェット固有のコンテキスト用のウィジェット ID
+  intent?: string;                    // フリーフォーム LLM クエリ用のインテント
+  updateChatState?: boolean;          // チャット状態を更新するかどうか
+  clientName?: string;                 // LLM プロバイダーのオーバーライド
+  signal?: AbortSignal;               // リクエストのキャンセル用
+  stream?: false;                      // 非ストリーミング (デフォルト)
+}
+
+// ストリーミング リクエスト
+interface ChatStreamRequest {
+  // ...上記と同じフィールド、さらに:
+  stream: true;                        // ストリーミングを有効化
 }
 ```
 
 | パラメーター | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `question` | `string` | はい | ユーザーの自然言語の質問またはリクエスト。 |
+| `message` | `string` | はい | ユーザーの自然言語のメッセージまたはリクエスト。 |
 | `datasourceId` | `string` | いいえ | コンテキスト用のデータ ソース識別子。 |
-| `dashboard` | `string` | いいえ | 編集/分析用のダッシュボード JSON または RVDashboard オブジェクト。 |
+| `dashboard` | `string \| RVDashboard` | いいえ | 編集/分析用のダッシュボード JSON または RVDashboard オブジェクト。 |
+| `visualizationId` | `string` | いいえ | ウィジェット固有のコンテキスト用のウィジェット ID。 |
+| `intent` | `string` | いいえ | フリーフォーム LLM クエリ用のインテント。 |
+| `updateChatState` | `boolean` | いいえ | このクエリ後にチャット状態を更新するかどうか。 |
 | `clientName` | `string` | いいえ | 使用する特定の LLM プロバイダーの名前。 |
-| `streamExplanation` | `boolean` | いいえ | リアルタイム テキスト ストリーミングを有効化 (デフォルト: false)。 |
+| `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal。 |
+| `stream` | `boolean` | いいえ | ストリーミング モードを有効化 (デフォルト: `false`)。 |
 
-### イベント ハンドラー
+### レスポンス タイプ
 
-```typescript
-interface ChatEventHandlers {
-  onProgress?: (message: string) => void;
-  onTextChunk?: (content: string) => void;
-  onResult?: (result: unknown) => void;
-  onError?: (error: string, details?: unknown) => void;
-  onComplete?: (message: string, result?: ChatMessageResponse) => void;
-}
-```
-
-| ハンドラー | 説明 |
-|---------|-------------|
-| `onProgress` | 処理中にステータス メッセージで呼び出されます (例: 「新しいダッシュボードを作成しています」)。 |
-| `onTextChunk` | ストリーミングが有効な場合にテキスト フラグメントで呼び出されます。 |
-| `onResult` | 中間結果が利用可能な場合に呼び出されます。 |
-| `onError` | 処理中にエラーが発生した場合に呼び出されます。 |
-| `onComplete` | 処理が完了したときに呼び出され、完全な結果を含みます。 |
-
-### オプション
+#### ChatResponse
 
 ```typescript
-interface ChatOptions {
-  signal?: AbortSignal;  // リクエストをキャンセルするための AbortSignal
-}
-```
-
-| オプション | タイプ | 説明 |
-|--------|------|-------------|
-| `signal` | `AbortSignal` | リクエストをキャンセルするための AbortSignal。 |
-
-### 結果
-
-```typescript
-interface ChatMessageResponse {
+interface ChatResponse {
   explanation?: string;   // AI 生成の説明
-  detail?: string;        // 追加の詳細
-  debugInfo?: string;     // デバッグ情報
-  rawResponse?: string;   // 生の LLM レスポンス
   dashboard?: string;     // 生成/変更されたダッシュボード JSON
   error?: string;         // リクエストが失敗した場合のエラー メッセージ
 }
 ```
 
-レスポンスには常に、AI の自然言語レスポンスを含む `explanation` フィールドが含まれます。`dashboard` フィールドは、ダッシュボードが生成または変更されたときに設定されます。
+レスポンスには、AI の自然言語レスポンスを含む `explanation` フィールドが含まれます。`dashboard` フィールドは、ダッシュボードが生成または変更されたときに設定されます。
+
+#### AIStream (ストリーミング)
+
+`stream: true` の場合、戻り値の型は `AIStream<ChatResponse>` で、以下を提供します:
+
+| メソッド / パターン | 説明 |
+|---------|-------------|
+| `for await (const event of stream)` | イベントが到着するたびに反復処理 |
+| `.on(event, handler)` | イベント固有のリスナーを登録 |
+| `.finalResponse()` | 完全な `ChatResponse` で解決する Promise を返す |
+| `.abort()` | ストリームをキャンセル |
+
+#### ストリーム イベント
+
+```typescript
+type AIStreamEvent =
+  | { type: 'progress'; message: string }
+  | { type: 'text'; content: string }
+  | { type: 'error'; error: string; details?: unknown };
+```
+
+| イベント タイプ | 説明 |
+|------------|-------------|
+| `progress` | 処理中のステータス メッセージ (例: 「新しいダッシュボードを作成しています」) |
+| `text` | 生成される説明テキストのフラグメント |
+| `error` | 処理が失敗した場合のエラー情報 |
 
 ---
 
@@ -439,51 +493,50 @@ interface ChatMessageResponse {
 
 ### チャット インターフェイスの構築
 
-メッセージ履歴を含む完全なチャット UI を作成:
+メッセージ履歴とストリーミングを含む完全なチャット UI を作成:
 
 ```typescript
 const messages: Array<{role: 'user' | 'assistant', content: string}> = [];
-let currentMessage = '';
 
 async function sendChatMessage(userInput: string) {
   // ユーザー メッセージを UI に追加
   messages.push({ role: 'user', content: userInput });
   renderMessages();
 
-  currentMessage = '';
+  let currentMessage = '';
 
-  const response = await client.ai.chat.sendMessage(
-    {
-      question: userInput,
-      datasourceId: 'my-datasource',
-      streamExplanation: true
-    },
-    {
-      onProgress: (message) => {
-        showProgressIndicator(message);
-      },
-      onTextChunk: (chunk) => {
-        currentMessage += chunk;
-        // UI でストリーミング メッセージを更新
-        updateStreamingMessage(currentMessage);
-        scrollToBottom();
-      },
-      onComplete: (message, result) => {
-        // メッセージを確定
-        messages.push({ role: 'assistant', content: currentMessage });
-        renderMessages();
+  const stream = await client.ai.chat.sendMessage({
+    message: userInput,
+    datasourceId: 'my-datasource',
+    stream: true,
+  });
 
-        if (result?.dashboard) {
-          loadDashboard(result.dashboard);
-        }
+  stream.on('progress', (message) => {
+    showProgressIndicator(message);
+  });
 
-        hideProgressIndicator();
-      },
-      onError: (error) => {
-        showError(error);
-      }
-    }
-  );
+  stream.on('text', (content) => {
+    currentMessage += content;
+    // UI でストリーミング メッセージを更新
+    updateStreamingMessage(currentMessage);
+    scrollToBottom();
+  });
+
+  stream.on('error', (error) => {
+    showError(error);
+  });
+
+  const result = await stream.finalResponse();
+
+  // メッセージを確定
+  messages.push({ role: 'assistant', content: currentMessage });
+  renderMessages();
+
+  if (result.dashboard) {
+    loadDashboard(result.dashboard);
+  }
+
+  hideProgressIndicator();
 }
 
 // 会話をクリア
@@ -496,51 +549,70 @@ async function resetConversation() {
 
 ### エラー処理
 
-適切なユーザー フィードバックでエラーを適切に処理:
+非ストリーミングとストリーミングの両方のモードでエラーを適切に処理:
 
 ```typescript
-async function safeChat(question: string) {
-  try {
-    const response = await client.ai.chat.sendMessage(
-      {
-        question,
-        datasourceId: 'my-datasource'
-      },
-      {
-        onError: (error, details) => {
-          // ストリーミング エラーを処理
-          console.error('Streaming error:', error);
-          console.error('Details:', details);
+// 非ストリーミング エラー処理
+try {
+  const response = await client.ai.chat.sendMessage({
+    message: 'Show me sales trends',
+    datasourceId: 'my-datasource',
+  });
+  displayResponse(response.explanation);
 
-          // ユーザー フレンドリーなメッセージを表示
-          showNotification('An error occurred. Please try again.', 'error');
-        },
-        onComplete: (message, result) => {
-          if (result?.error) {
-            // エラーで完了を処理
-            showNotification(result.error, 'error');
-          } else if (result) {
-            // 成功
-            displayResponse(result.explanation);
-
-            if (result.dashboard) {
-              loadDashboard(result.dashboard);
-            }
-          }
-        }
-      }
-    );
-  } catch (error) {
-    // リクエスト レベルのエラーを処理
-    console.error('Request failed:', error);
-
-    if (error.message.includes('datasource')) {
-      showNotification('Datasource not found. Please check your configuration.', 'error');
-    } else if (error.message.includes('network')) {
-      showNotification('Network error. Please check your connection.', 'error');
-    } else {
-      showNotification('An unexpected error occurred.', 'error');
-    }
+  if (response.dashboard) {
+    loadDashboard(response.dashboard);
   }
+} catch (error) {
+  console.error('Chat request failed:', error);
+  showErrorMessage(error.message);
 }
+
+// ストリーミング エラー処理
+const stream = await client.ai.chat.sendMessage({
+  message: 'Show me sales trends',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
+
+stream.on('text', (content) => appendToUI(content));
+stream.on('error', (error, details) => {
+  console.error('Chat error:', error);
+  showErrorMessage(error);
+});
+
+const result = await stream.finalResponse();
+
+if (result.dashboard) {
+  loadDashboard(result.dashboard);
+}
+```
+
+### リクエストのキャンセル
+
+`AbortSignal` を使用して進行中のリクエストをキャンセル:
+
+```typescript
+const controller = new AbortController();
+
+// 非ストリーミング
+const promise = client.ai.chat.sendMessage({
+  message: 'Analyze my data',
+  datasourceId: 'my-datasource',
+  signal: controller.signal,
+});
+
+// 5 秒後にキャンセル
+setTimeout(() => controller.abort(), 5000);
+
+// ストリーミング
+const stream = await client.ai.chat.sendMessage({
+  message: 'Analyze my data',
+  datasourceId: 'my-datasource',
+  stream: true,
+  signal: controller.signal,
+});
+
+// またはストリームを直接中止
+stream.abort();
 ```
