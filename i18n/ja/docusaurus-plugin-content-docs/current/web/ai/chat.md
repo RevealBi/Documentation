@@ -423,7 +423,7 @@ interface ChatRequest {
   visualizationId?: string;           // ウィジェット固有のコンテキスト用のウィジェット ID
   intent?: string;                    // フリーフォーム LLM クエリ用のインテント
   updateChatState?: boolean;          // チャット状態を更新するかどうか
-  llmClient?: string;                 // LLM プロバイダーのオーバーライド
+  clientName?: string;                 // LLM プロバイダーのオーバーライド
   signal?: AbortSignal;               // リクエストのキャンセル用
   stream?: false;                      // 非ストリーミング (デフォルト)
 }
@@ -443,7 +443,7 @@ interface ChatStreamRequest {
 | `visualizationId` | `string` | いいえ | ウィジェット固有のコンテキスト用のウィジェット ID。 |
 | `intent` | `string` | いいえ | フリーフォーム LLM クエリ用のインテント。 |
 | `updateChatState` | `boolean` | いいえ | このクエリ後にチャット状態を更新するかどうか。 |
-| `llmClient` | `string` | いいえ | 使用する特定の LLM プロバイダーの名前。 |
+| `clientName` | `string` | いいえ | 使用する特定の LLM プロバイダーの名前。 |
 | `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal。 |
 | `stream` | `boolean` | いいえ | ストリーミング モードを有効化 (デフォルト: `false`)。 |
 

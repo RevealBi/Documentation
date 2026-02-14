@@ -422,7 +422,7 @@ interface ChatRequest {
   visualizationId?: string;           // Visualization ID for visualization-specific context
   intent?: string;                    // Intent for freeform LLM queries
   updateChatState?: boolean;          // Whether to update chat state
-  llmClient?: string;                 // Override LLM provider
+  clientName?: string;                 // Override LLM provider
   signal?: AbortSignal;               // For request cancellation
   stream?: false;                      // Non-streaming (default)
 }
@@ -442,7 +442,7 @@ interface ChatStreamRequest {
 | `visualizationId` | `string` | No | Visualization ID for visualization-specific context |
 | `intent` | `string` | No | Intent for freeform LLM queries |
 | `updateChatState` | `boolean` | No | Whether to update the chat state after this query |
-| `llmClient` | `string` | No | Name of specific LLM provider to use |
+| `clientName` | `string` | No | Name of specific LLM provider to use |
 | `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
 | `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
 
