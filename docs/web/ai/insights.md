@@ -25,7 +25,7 @@ AI Insights automatically analyze your dashboards and visualizations to generate
 Insights can be generated at two levels:
 
 - **Dashboard-level**: Analyzes the entire dashboard, considering all visualizations together to provide holistic insights
-- **Visualization-level**: Focuses on a single widget, providing detailed analysis specific to that visualization's data
+- **Visualization-level**: Focuses on a single visualization, providing detailed analysis specific to that visualization's data
 
 ---
 
@@ -48,7 +48,7 @@ POST /api/reveal/ai/insights
   dashboardId?: string,         // Dashboard ID (when using IRVDashboardProvider)
 
   // Optional parameters
-  visualizationId?: string,     // Widget ID for visualization-level insights
+  visualizationId?: string,     // Visualization ID for visualization-level insights
   insightType?: string,         // "Summary" | "Analysis" | "Forecast" (default: "Summary")
   forecastPeriods?: number,     // Number of periods to forecast (default: 6, only for Forecast type)
   stream?: boolean,             // Return SSE stream instead of JSON (default: false)
@@ -62,7 +62,7 @@ POST /api/reveal/ai/insights
 |-----------|------|----------|-------------|
 | `dashboardJson` | string | * | Dashboard as JSON string. Use this OR `dashboardId` |
 | `dashboardId` | string | * | Dashboard identifier. Use this OR `dashboardJson` |
-| `visualizationId` | string | No | Widget ID to analyze. If omitted, analyzes entire dashboard |
+| `visualizationId` | string | No | Visualization ID to analyze. If omitted, analyzes entire dashboard |
 | `insightType` | string | No | Type of insight: `"Summary"`, `"Analysis"`, or `"Forecast"` (default: `"Summary"`) |
 | `forecastPeriods` | number | No | Number of periods to forecast (default: 6). Only used when `insightType` is `"Forecast"` |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
@@ -221,12 +221,12 @@ const insight = await client.ai.insights.get({
 
 ### Visualization-Level Insights
 
-Analyze a specific widget by providing its ID:
+Analyze a specific visualization by providing its ID:
 
 ```typescript
 const insight = await client.ai.insights.get({
   dashboardId: 'sales-dashboard',
-  visualizationId: 'sales-by-region-chart',  // Specific widget
+  visualizationId: 'sales-by-region-chart',  // Specific visualization
   type: 'summary',
 });
 ```
@@ -253,7 +253,7 @@ All parameters are passed in a single request object:
 interface InsightRequest {
   dashboard?: string | RVDashboard;  // Dashboard object or JSON string
   dashboardId?: string;               // Dashboard ID
-  visualizationId?: string;           // Widget ID for visualization-level insights
+  visualizationId?: string;           // Visualization ID for visualization-level insights
   type: InsightType;                   // 'summary' | 'analysis' | 'forecast'
   forecastPeriods?: number;           // Forecast periods (default: 6)
   llmClient?: string;                 // Override LLM provider
@@ -272,7 +272,7 @@ interface InsightStreamRequest {
 |-----------|------|----------|-------------|
 | `dashboard` | `string \| RVDashboard` | * | Dashboard object from RevealView or JSON string |
 | `dashboardId` | `string` | * | Dashboard identifier |
-| `visualizationId` | `string` | No | Widget ID to analyze |
+| `visualizationId` | `string` | No | Visualization ID to analyze |
 | `type` | `InsightType` | Yes | Type: `'summary'`, `'analysis'`, `'forecast'` |
 | `forecastPeriods` | `number` | No | Periods to forecast (default: 6) |
 | `llmClient` | `string` | No | Name of specific LLM provider to use |

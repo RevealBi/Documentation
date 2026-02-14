@@ -506,7 +506,7 @@ Open `index.html` in your web browser. You can:
 2. Click on the RevealView's dashboard, or a visualization's, overflow menu
 3. CLick on the "Summary", "Analysis", or "Forecast" menu item
 4. Watch the AI-generated insight appear in the right panel
-5. Try right-clicking on individual visualizations for widget-level insights
+5. Try right-clicking on individual visualizations for visualization-level insights
 
 ## Understanding the Code
 
@@ -573,6 +573,6 @@ const result = await client.ai.insights.get(
 ### Dashboard vs Visualization Insights
 
 - **Dashboard-level**: Analyzes the entire dashboard
-- **Visualization-level**: Focuses on a single widget by passing `visualizationId`
+- **Visualization-level**: Focuses on a single visualization by passing `visualizationId`
 
 The complete working example is available in the [sdk-samples-ai repository](https://github.com/RevealBi/sdk-samples-ai/tree/main/insights).

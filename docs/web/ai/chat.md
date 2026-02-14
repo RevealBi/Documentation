@@ -28,7 +28,7 @@ The AI maintains conversation history, allowing follow-up questions and refineme
 
 ## Server API
 
-The Chat API provides endpoints for sending messages and managing conversation sessions.
+The Chat API provides endpoints for sending messages and managing conversation sessions. It supports two response modes: a plain JSON response for simple request/response workflows, and a streaming SSE response for real-time progress and text updates.
 
 ### Endpoints
 
@@ -54,11 +54,11 @@ DELETE /api/reveal/ai/chat
 
   // Optional context
   dashboard?: string,             // Dashboard JSON for editing/analysis
-  widgetId?: string,              // Widget ID for widget-specific operations
+  visualizationId?: string,       // Visualization ID for visualization-specific operations
 
   // Optional configuration
   clientName?: string,            // LLM provider override
-  streamExplanation?: boolean     // Stream response text chunks (default: false)
+  stream?: boolean                // Return SSE stream instead of JSON (default: false)
 }
 ```
 
@@ -69,9 +69,9 @@ DELETE /api/reveal/ai/chat
 | `datasourceId` | string | Yes | Identifier of the datasource to query |
 | `question` | string | Conditional* | User's natural language question or request |
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
-| `widgetId` | string | No | Widget identifier for widget-specific operations |
+| `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
 | `clientName` | string | No | Name of specific LLM provider to use for this request |
-| `streamExplanation` | boolean | No | Enable real-time streaming of explanation text (default: false) |
+| `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
 
 \* Either `question` or `intent` must be provided
 
@@ -82,9 +82,30 @@ DELETE /api/reveal/ai/chat
 
 ### Response Format
 
-The endpoint returns Server-Sent Events (SSE) with the following event types:
+#### Non-Streaming (default)
 
-#### progress Event
+When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
+
+```json
+{
+  "explanation": "Based on your data, I've created a dashboard showing sales by region...",
+  "dashboard": "{...rdash JSON...}"
+}
+```
+
+On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
+
+```json
+{
+  "error": "Error message"
+}
+```
+
+#### Streaming
+
+When `stream` is `true`, the endpoint returns Server-Sent Events (SSE) with the following event types:
+
+##### progress Event
 Sent during processing to indicate current status.
 
 ```json
@@ -95,11 +116,11 @@ data: {"message": "Creating a new dashboard"}
 Common progress messages:
 - "Creating a new dashboard"
 - "Analyzing the current dashboard"
-- "Adding filters to widgets"
+- "Adding filters to visualizations"
 - "Modifying visualization"
 
-#### textchunk Event
-Sent when `streamExplanation: true`. Contains fragments of the explanation text as it's generated.
+##### textchunk Event
+Contains fragments of the explanation text as it's generated.
 
 ```json
 event: textchunk
@@ -108,7 +129,7 @@ data: {"content": "Based on your data, I've created"}
 
 Text chunks are delivered in ~8 word segments with 20ms delays for natural, ChatGPT-like streaming.
 
-#### complete Event
+##### complete Event
 Sent when processing finishes successfully. Always contains the full result.
 
 ```json
@@ -126,7 +147,7 @@ data: {
 - `explanation`: Natural language explanation of what was done
 - `dashboard`: Generated or modified dashboard JSON (when applicable)
 
-#### error Event
+##### error Event
 Sent if processing fails.
 
 ```json
@@ -243,22 +264,18 @@ The AI uses this metadata to understand what data is available and generate appr
 ```csharp
 // Client makes DELETE request to clear conversation
 // DELETE /api/reveal/ai/chat
-// Response: 200 OK
+// Response: 204 No Content
 ```
 
 ---
 
 ## Client API
 
-The Reveal SDK AI Client provides a simple TypeScript API for conversational interactions from your web application.
+The Reveal SDK AI Client provides a TypeScript API for conversational interactions from your web application. The `client.ai.chat.sendMessage()` method uses a single request object for all parameters and supports both non-streaming and streaming modes.
 
-### Getting Started
+### Non-Streaming (Default)
 
-Use the `client.ai.chat.sendMessage()` method to send messages. The method supports both **await** and **streaming** patterns.
-
-#### Basic Usage (Await Pattern)
-
-Wait for the complete result before displaying:
+Wait for the complete result before displaying. Returns `Promise<ChatResponse>`.
 
 ```typescript
 import { RevealSdkClient } from '@revealbi/api';
@@ -268,7 +285,7 @@ const client = RevealSdkClient.getInstance();
 // Ask a question and get the complete response
 const response = await client.ai.chat.sendMessage({
   question: 'Show me sales trends for the last quarter',
-  datasourceId: 'my-datasource'
+  datasourceId: 'my-datasource',
 });
 
 console.log(response.explanation);
@@ -280,40 +297,67 @@ if (response.dashboard) {
 }
 ```
 
-### Streaming Responses
+### Streaming
 
-Stream the explanation text in real-time for a ChatGPT-like experience:
+Add `stream: true` to the request to get an `AIStream` that yields events as they arrive. The stream supports three consumption patterns.
+
+#### Pattern 1: for-await (Full Control)
 
 ```typescript
-let explanation = '';
+const stream = await client.ai.chat.sendMessage({
+  question: 'Create a dashboard showing customer distribution by region',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
 
-const response = await client.ai.chat.sendMessage(
-  {
-    question: 'Create a dashboard showing customer distribution by region',
-    datasourceId: 'my-datasource',
-    streamExplanation: true
-  },
-  {
-    onProgress: (message) => {
-      console.log('Status:', message);
-      // "Creating a new dashboard"
-    },
-    onTextChunk: (chunk) => {
-      explanation += chunk;
-      // Display text as it arrives
-      document.getElementById('chat-message').textContent = explanation;
-    },
-    onComplete: (message, result) => {
-      console.log('Complete:', message);
-      if (result?.dashboard) {
-        loadDashboard(result.dashboard);
-      }
-    },
-    onError: (error, details) => {
-      console.error('Error:', error, details);
-    }
+for await (const event of stream) {
+  switch (event.type) {
+    case 'progress': console.log('Status:', event.message); break;
+    case 'text':     document.getElementById('chat-message').textContent += event.content; break;
+    case 'error':    console.error('Error:', event.error); break;
   }
-);
+}
+```
+
+#### Pattern 2: Event Listeners (Simple UI Wiring)
+
+```typescript
+const stream = await client.ai.chat.sendMessage({
+  question: 'Create a dashboard showing customer distribution by region',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
+
+stream.on('progress', (message) => console.log('Status:', message));
+stream.on('text', (content) => {
+  document.getElementById('chat-message').textContent += content;
+});
+stream.on('error', (error) => console.error('Error:', error));
+
+const result = await stream.finalResponse();
+console.log('Complete:', result.explanation);
+
+if (result.dashboard) {
+  loadDashboard(result.dashboard);
+}
+```
+
+#### Pattern 3: Aggregated Result from Stream
+
+```typescript
+const stream = await client.ai.chat.sendMessage({
+  question: 'Create a dashboard showing customer distribution by region',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
+
+// Wait for completion, returns ChatResponse
+const result = await stream.finalResponse();
+console.log(result.explanation);
+
+if (result.dashboard) {
+  loadDashboard(result.dashboard);
+}
 ```
 
 ### Managing Conversation
@@ -341,7 +385,7 @@ Provide an existing dashboard for editing or analysis:
 const response = await client.ai.chat.sendMessage({
   question: 'Add a date filter to this dashboard',
   datasourceId: 'my-datasource',
-  dashboard: existingDashboardJson  // Provide current dashboard JSON
+  dashboard: existingDashboardJson,  // Provide current dashboard JSON
 });
 
 if (response.dashboard) {
@@ -359,7 +403,7 @@ const currentDashboard = revealView.dashboard;
 const response = await client.ai.chat.sendMessage({
   question: 'Explain what this dashboard shows',
   datasourceId: 'my-datasource',
-  dashboard: currentDashboard  // Accepts RVDashboard object
+  dashboard: currentDashboard,  // Accepts RVDashboard object
 });
 
 console.log(response.explanation);
@@ -367,13 +411,26 @@ console.log(response.explanation);
 
 ### Request Parameters
 
+All parameters are passed in a single request object:
+
 ```typescript
-interface ChatMessageRequest {
-  question: string;              // User's natural language input (required)
-  datasourceId?: string;         // Datasource identifier
-  dashboard?: string;            // Dashboard JSON or RVDashboard object
-  clientName?: string;           // LLM provider override
-  streamExplanation?: boolean;   // Enable streaming (default: false)
+// Non-streaming request
+interface ChatRequest {
+  question: string;                   // User's natural language input (required)
+  datasourceId?: string;              // Datasource identifier
+  dashboard?: string | RVDashboard;   // Dashboard JSON or RVDashboard object
+  visualizationId?: string;           // Visualization ID for visualization-specific context
+  intent?: string;                    // Intent for freeform LLM queries
+  updateChatState?: boolean;          // Whether to update chat state
+  llmClient?: string;                 // Override LLM provider
+  signal?: AbortSignal;               // For request cancellation
+  stream?: false;                      // Non-streaming (default)
+}
+
+// Streaming request
+interface ChatStreamRequest {
+  // ...same fields as above, plus:
+  stream: true;                        // Enable streaming
 }
 ```
 
@@ -381,56 +438,53 @@ interface ChatMessageRequest {
 |-----------|------|----------|-------------|
 | `question` | `string` | Yes | User's natural language question or request |
 | `datasourceId` | `string` | No | Datasource identifier for context |
-| `dashboard` | `string` | No | Dashboard JSON or RVDashboard object for editing/analysis |
-| `clientName` | `string` | No | Name of specific LLM provider to use |
-| `streamExplanation` | `boolean` | No | Enable real-time text streaming (default: false) |
+| `dashboard` | `string \| RVDashboard` | No | Dashboard JSON or RVDashboard object for editing/analysis |
+| `visualizationId` | `string` | No | Visualization ID for visualization-specific context |
+| `intent` | `string` | No | Intent for freeform LLM queries |
+| `updateChatState` | `boolean` | No | Whether to update the chat state after this query |
+| `llmClient` | `string` | No | Name of specific LLM provider to use |
+| `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
+| `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
 
-### Event Handlers
+### Response Types
 
-```typescript
-interface ChatEventHandlers {
-  onProgress?: (message: string) => void;
-  onTextChunk?: (content: string) => void;
-  onResult?: (result: unknown) => void;
-  onError?: (error: string, details?: unknown) => void;
-  onComplete?: (message: string, result?: ChatMessageResponse) => void;
-}
-```
-
-| Handler | Description |
-|---------|-------------|
-| `onProgress` | Called with status messages during processing (e.g., "Creating a new dashboard") |
-| `onTextChunk` | Called with text fragments when streaming is enabled |
-| `onResult` | Called when intermediate results are available |
-| `onError` | Called if an error occurs during processing |
-| `onComplete` | Called when processing finishes, includes full result |
-
-### Options
+#### ChatResponse
 
 ```typescript
-interface ChatOptions {
-  signal?: AbortSignal;  // For request cancellation
-}
-```
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `signal` | `AbortSignal` | AbortSignal for cancelling the request |
-
-### Result
-
-```typescript
-interface ChatMessageResponse {
+interface ChatResponse {
   explanation?: string;   // AI-generated explanation
-  detail?: string;        // Additional details
-  debugInfo?: string;     // Debug information
-  rawResponse?: string;   // Raw LLM response
   dashboard?: string;     // Generated/modified dashboard JSON
   error?: string;         // Error message if request failed
 }
 ```
 
-The response always contains an `explanation` field with the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified.
+The response contains an `explanation` field with the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified.
+
+#### AIStream (Streaming)
+
+When `stream: true`, the return type is `AIStream<ChatResponse>`, which provides:
+
+| Method / Pattern | Description |
+|---------|-------------|
+| `for await (const event of stream)` | Iterate over events as they arrive |
+| `.on(event, handler)` | Register event-specific listeners |
+| `.finalResponse()` | Returns a promise that resolves with the complete `ChatResponse` |
+| `.abort()` | Cancel the stream |
+
+#### Stream Events
+
+```typescript
+type AIStreamEvent =
+  | { type: 'progress'; message: string }
+  | { type: 'text'; content: string }
+  | { type: 'error'; error: string; details?: unknown };
+```
+
+| Event Type | Description |
+|------------|-------------|
+| `progress` | Status messages during processing (e.g., "Creating a new dashboard") |
+| `text` | Text fragments of the explanation as they are generated |
+| `error` | Error information if processing fails |
 
 ---
 
@@ -438,51 +492,50 @@ The response always contains an `explanation` field with the AI's natural langua
 
 ### Building a Chat Interface
 
-Create a complete chat UI with message history:
+Create a complete chat UI with message history and streaming:
 
 ```typescript
 const messages: Array<{role: 'user' | 'assistant', content: string}> = [];
-let currentMessage = '';
 
 async function sendChatMessage(userInput: string) {
   // Add user message to UI
   messages.push({ role: 'user', content: userInput });
   renderMessages();
 
-  currentMessage = '';
+  let currentMessage = '';
 
-  const response = await client.ai.chat.sendMessage(
-    {
-      question: userInput,
-      datasourceId: 'my-datasource',
-      streamExplanation: true
-    },
-    {
-      onProgress: (message) => {
-        showProgressIndicator(message);
-      },
-      onTextChunk: (chunk) => {
-        currentMessage += chunk;
-        // Update streaming message in UI
-        updateStreamingMessage(currentMessage);
-        scrollToBottom();
-      },
-      onComplete: (message, result) => {
-        // Finalize message
-        messages.push({ role: 'assistant', content: currentMessage });
-        renderMessages();
+  const stream = await client.ai.chat.sendMessage({
+    question: userInput,
+    datasourceId: 'my-datasource',
+    stream: true,
+  });
 
-        if (result?.dashboard) {
-          loadDashboard(result.dashboard);
-        }
+  stream.on('progress', (message) => {
+    showProgressIndicator(message);
+  });
 
-        hideProgressIndicator();
-      },
-      onError: (error) => {
-        showError(error);
-      }
-    }
-  );
+  stream.on('text', (content) => {
+    currentMessage += content;
+    // Update streaming message in UI
+    updateStreamingMessage(currentMessage);
+    scrollToBottom();
+  });
+
+  stream.on('error', (error) => {
+    showError(error);
+  });
+
+  const result = await stream.finalResponse();
+
+  // Finalize message
+  messages.push({ role: 'assistant', content: currentMessage });
+  renderMessages();
+
+  if (result.dashboard) {
+    loadDashboard(result.dashboard);
+  }
+
+  hideProgressIndicator();
 }
 
 // Clear conversation
@@ -495,51 +548,70 @@ async function resetConversation() {
 
 ### Error Handling
 
-Handle errors gracefully with proper user feedback:
+Handle errors gracefully in both non-streaming and streaming modes:
 
 ```typescript
-async function safeChat(question: string) {
-  try {
-    const response = await client.ai.chat.sendMessage(
-      {
-        question,
-        datasourceId: 'my-datasource'
-      },
-      {
-        onError: (error, details) => {
-          // Handle streaming errors
-          console.error('Streaming error:', error);
-          console.error('Details:', details);
+// Non-streaming error handling
+try {
+  const response = await client.ai.chat.sendMessage({
+    question: 'Show me sales trends',
+    datasourceId: 'my-datasource',
+  });
+  displayResponse(response.explanation);
 
-          // Show user-friendly message
-          showNotification('An error occurred. Please try again.', 'error');
-        },
-        onComplete: (message, result) => {
-          if (result?.error) {
-            // Handle completion with error
-            showNotification(result.error, 'error');
-          } else if (result) {
-            // Success
-            displayResponse(result.explanation);
-
-            if (result.dashboard) {
-              loadDashboard(result.dashboard);
-            }
-          }
-        }
-      }
-    );
-  } catch (error) {
-    // Handle request-level errors
-    console.error('Request failed:', error);
-
-    if (error.message.includes('datasource')) {
-      showNotification('Datasource not found. Please check your configuration.', 'error');
-    } else if (error.message.includes('network')) {
-      showNotification('Network error. Please check your connection.', 'error');
-    } else {
-      showNotification('An unexpected error occurred.', 'error');
-    }
+  if (response.dashboard) {
+    loadDashboard(response.dashboard);
   }
+} catch (error) {
+  console.error('Chat request failed:', error);
+  showErrorMessage(error.message);
 }
+
+// Streaming error handling
+const stream = await client.ai.chat.sendMessage({
+  question: 'Show me sales trends',
+  datasourceId: 'my-datasource',
+  stream: true,
+});
+
+stream.on('text', (content) => appendToUI(content));
+stream.on('error', (error, details) => {
+  console.error('Chat error:', error);
+  showErrorMessage(error);
+});
+
+const result = await stream.finalResponse();
+
+if (result.dashboard) {
+  loadDashboard(result.dashboard);
+}
+```
+
+### Request Cancellation
+
+Cancel an in-progress request using `AbortSignal`:
+
+```typescript
+const controller = new AbortController();
+
+// Non-streaming
+const promise = client.ai.chat.sendMessage({
+  question: 'Analyze my data',
+  datasourceId: 'my-datasource',
+  signal: controller.signal,
+});
+
+// Cancel after 5 seconds
+setTimeout(() => controller.abort(), 5000);
+
+// Streaming
+const stream = await client.ai.chat.sendMessage({
+  question: 'Analyze my data',
+  datasourceId: 'my-datasource',
+  stream: true,
+  signal: controller.signal,
+});
+
+// Or abort the stream directly
+stream.abort();
 ```
