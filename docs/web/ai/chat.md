@@ -50,7 +50,7 @@ DELETE /api/reveal/ai/chat
   datasourceId: string,          // Datasource identifier for context
 
   // Message (one required)
-  question?: string,              // Natural language question/request
+  message?: string,               // Natural language message/request
 
   // Optional context
   dashboard?: string,             // Dashboard JSON for editing/analysis
@@ -67,13 +67,13 @@ DELETE /api/reveal/ai/chat
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `datasourceId` | string | Yes | Identifier of the datasource to query |
-| `question` | string | Conditional* | User's natural language question or request |
+| `message` | string | Conditional* | User's natural language message or request |
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
 | `clientName` | string | No | Name of specific LLM provider to use for this request |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
 
-\* Either `question` or `intent` must be provided
+\* Either `message` or `intent` must be provided
 
 **Parameter Details:**
 
@@ -282,9 +282,9 @@ import { RevealSdkClient } from '@revealbi/api';
 
 const client = RevealSdkClient.getInstance();
 
-// Ask a question and get the complete response
+// Send a message and get the complete response
 const response = await client.ai.chat.sendMessage({
-  question: 'Show me sales trends for the last quarter',
+  message: 'Show me sales trends for the last quarter',
   datasourceId: 'my-datasource',
 });
 
@@ -305,7 +305,7 @@ Add `stream: true` to the request to get an `AIStream` that yields events as the
 
 ```typescript
 const stream = await client.ai.chat.sendMessage({
-  question: 'Create a dashboard showing customer distribution by region',
+  message: 'Create a dashboard showing customer distribution by region',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -323,7 +323,7 @@ for await (const event of stream) {
 
 ```typescript
 const stream = await client.ai.chat.sendMessage({
-  question: 'Create a dashboard showing customer distribution by region',
+  message: 'Create a dashboard showing customer distribution by region',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -346,7 +346,7 @@ if (result.dashboard) {
 
 ```typescript
 const stream = await client.ai.chat.sendMessage({
-  question: 'Create a dashboard showing customer distribution by region',
+  message: 'Create a dashboard showing customer distribution by region',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -383,7 +383,7 @@ Provide an existing dashboard for editing or analysis:
 ```typescript
 // Edit an existing dashboard
 const response = await client.ai.chat.sendMessage({
-  question: 'Add a date filter to this dashboard',
+  message: 'Add a date filter to this dashboard',
   datasourceId: 'my-datasource',
   dashboard: existingDashboardJson,  // Provide current dashboard JSON
 });
@@ -401,7 +401,7 @@ if (response.dashboard) {
 const currentDashboard = revealView.dashboard;
 
 const response = await client.ai.chat.sendMessage({
-  question: 'Explain what this dashboard shows',
+  message: 'Explain what this dashboard shows',
   datasourceId: 'my-datasource',
   dashboard: currentDashboard,  // Accepts RVDashboard object
 });
@@ -416,7 +416,7 @@ All parameters are passed in a single request object:
 ```typescript
 // Non-streaming request
 interface ChatRequest {
-  question: string;                   // User's natural language input (required)
+  message: string;                    // User's natural language input (required)
   datasourceId?: string;              // Datasource identifier
   dashboard?: string | RVDashboard;   // Dashboard JSON or RVDashboard object
   visualizationId?: string;           // Visualization ID for visualization-specific context
@@ -436,7 +436,7 @@ interface ChatStreamRequest {
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `question` | `string` | Yes | User's natural language question or request |
+| `message` | `string` | Yes | User's natural language message or request |
 | `datasourceId` | `string` | No | Datasource identifier for context |
 | `dashboard` | `string \| RVDashboard` | No | Dashboard JSON or RVDashboard object for editing/analysis |
 | `visualizationId` | `string` | No | Visualization ID for visualization-specific context |
@@ -505,7 +505,7 @@ async function sendChatMessage(userInput: string) {
   let currentMessage = '';
 
   const stream = await client.ai.chat.sendMessage({
-    question: userInput,
+    message: userInput,
     datasourceId: 'my-datasource',
     stream: true,
   });
@@ -554,7 +554,7 @@ Handle errors gracefully in both non-streaming and streaming modes:
 // Non-streaming error handling
 try {
   const response = await client.ai.chat.sendMessage({
-    question: 'Show me sales trends',
+    message: 'Show me sales trends',
     datasourceId: 'my-datasource',
   });
   displayResponse(response.explanation);
@@ -569,7 +569,7 @@ try {
 
 // Streaming error handling
 const stream = await client.ai.chat.sendMessage({
-  question: 'Show me sales trends',
+  message: 'Show me sales trends',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -596,7 +596,7 @@ const controller = new AbortController();
 
 // Non-streaming
 const promise = client.ai.chat.sendMessage({
-  question: 'Analyze my data',
+  message: 'Analyze my data',
   datasourceId: 'my-datasource',
   signal: controller.signal,
 });
@@ -606,7 +606,7 @@ setTimeout(() => controller.abort(), 5000);
 
 // Streaming
 const stream = await client.ai.chat.sendMessage({
-  question: 'Analyze my data',
+  message: 'Analyze my data',
   datasourceId: 'my-datasource',
   stream: true,
   signal: controller.signal,

@@ -50,7 +50,7 @@ DELETE /api/reveal/ai/chat
   datasourceId: string,          // コンテキスト用のデータ ソース識別子
 
   // メッセージ (1 つ必須)
-  question?: string,              // 自然言語の質問/リクエスト
+  message?: string,               // 自然言語のメッセージ/リクエスト
 
   // オプションのコンテキスト
   dashboard?: string,             // 編集/分析用のダッシュボード JSON
@@ -67,13 +67,13 @@ DELETE /api/reveal/ai/chat
 | パラメーター | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
 | `datasourceId` | string | はい | クエリするデータ ソースの識別子。 |
-| `question` | string | 条件付き* | ユーザーの自然言語の質問またはリクエスト。 |
+| `message` | string | 条件付き* | ユーザーの自然言語のメッセージまたはリクエスト。 |
 | `dashboard` | string | いいえ | 編集または分析コンテキスト用のダッシュボード JSON (RDash 形式)。 |
 | `visualizationId` | string | いいえ | 表示形式固有の操作用の表示形式識別子。 |
 | `clientName` | string | いいえ | このリクエストに使用する特定の LLM プロバイダーの名前。 |
 | `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、および最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
 
-\* `question` または `intent` のいずれかを指定する必要があります。
+\* `message` または `intent` のいずれかを指定する必要があります。
 
 **パラメーターの詳細:**
 
@@ -283,9 +283,9 @@ import { RevealSdkClient } from '@revealbi/api';
 
 const client = RevealSdkClient.getInstance();
 
-// 質問して完全なレスポンスを取得
+// メッセージを送信して完全なレスポンスを取得
 const response = await client.ai.chat.sendMessage({
-  question: 'Show me sales trends for the last quarter',
+  message: 'Show me sales trends for the last quarter',
   datasourceId: 'my-datasource',
 });
 
@@ -306,7 +306,7 @@ if (response.dashboard) {
 
 ```typescript
 const stream = await client.ai.chat.sendMessage({
-  question: 'Create a dashboard showing customer distribution by region',
+  message: 'Create a dashboard showing customer distribution by region',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -324,7 +324,7 @@ for await (const event of stream) {
 
 ```typescript
 const stream = await client.ai.chat.sendMessage({
-  question: 'Create a dashboard showing customer distribution by region',
+  message: 'Create a dashboard showing customer distribution by region',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -347,7 +347,7 @@ if (result.dashboard) {
 
 ```typescript
 const stream = await client.ai.chat.sendMessage({
-  question: 'Create a dashboard showing customer distribution by region',
+  message: 'Create a dashboard showing customer distribution by region',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -384,7 +384,7 @@ console.log('Conversation history cleared');
 ```typescript
 // 既存のダッシュボードを編集
 const response = await client.ai.chat.sendMessage({
-  question: 'Add a date filter to this dashboard',
+  message: 'Add a date filter to this dashboard',
   datasourceId: 'my-datasource',
   dashboard: existingDashboardJson,  // 現在のダッシュボード JSON を提供
 });
@@ -402,7 +402,7 @@ if (response.dashboard) {
 const currentDashboard = revealView.dashboard;
 
 const response = await client.ai.chat.sendMessage({
-  question: 'Explain what this dashboard shows',
+  message: 'Explain what this dashboard shows',
   datasourceId: 'my-datasource',
   dashboard: currentDashboard,  // RVDashboard オブジェクトを受け入れる
 });
@@ -417,7 +417,7 @@ console.log(response.explanation);
 ```typescript
 // 非ストリーミング リクエスト
 interface ChatRequest {
-  question: string;                   // ユーザーの自然言語入力 (必須)
+  message: string;                    // ユーザーの自然言語入力 (必須)
   datasourceId?: string;              // データ ソース識別子
   dashboard?: string | RVDashboard;   // ダッシュボード JSON または RVDashboard オブジェクト
   visualizationId?: string;           // ウィジェット固有のコンテキスト用のウィジェット ID
@@ -437,7 +437,7 @@ interface ChatStreamRequest {
 
 | パラメーター | タイプ | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `question` | `string` | はい | ユーザーの自然言語の質問またはリクエスト。 |
+| `message` | `string` | はい | ユーザーの自然言語のメッセージまたはリクエスト。 |
 | `datasourceId` | `string` | いいえ | コンテキスト用のデータ ソース識別子。 |
 | `dashboard` | `string \| RVDashboard` | いいえ | 編集/分析用のダッシュボード JSON または RVDashboard オブジェクト。 |
 | `visualizationId` | `string` | いいえ | ウィジェット固有のコンテキスト用のウィジェット ID。 |
@@ -506,7 +506,7 @@ async function sendChatMessage(userInput: string) {
   let currentMessage = '';
 
   const stream = await client.ai.chat.sendMessage({
-    question: userInput,
+    message: userInput,
     datasourceId: 'my-datasource',
     stream: true,
   });
@@ -555,7 +555,7 @@ async function resetConversation() {
 // 非ストリーミング エラー処理
 try {
   const response = await client.ai.chat.sendMessage({
-    question: 'Show me sales trends',
+    message: 'Show me sales trends',
     datasourceId: 'my-datasource',
   });
   displayResponse(response.explanation);
@@ -570,7 +570,7 @@ try {
 
 // ストリーミング エラー処理
 const stream = await client.ai.chat.sendMessage({
-  question: 'Show me sales trends',
+  message: 'Show me sales trends',
   datasourceId: 'my-datasource',
   stream: true,
 });
@@ -597,7 +597,7 @@ const controller = new AbortController();
 
 // 非ストリーミング
 const promise = client.ai.chat.sendMessage({
-  question: 'Analyze my data',
+  message: 'Analyze my data',
   datasourceId: 'my-datasource',
   signal: controller.signal,
 });
@@ -607,7 +607,7 @@ setTimeout(() => controller.abort(), 5000);
 
 // ストリーミング
 const stream = await client.ai.chat.sendMessage({
-  question: 'Analyze my data',
+  message: 'Analyze my data',
   datasourceId: 'my-datasource',
   stream: true,
   signal: controller.signal,
