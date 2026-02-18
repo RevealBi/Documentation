@@ -57,7 +57,7 @@ DELETE /api/reveal/ai/chat
   visualizationId?: string,       // Visualization ID for visualization-specific operations
 
   // Optional configuration
-  clientName?: string,            // LLM provider override
+  model?: string,                 // LLM model override
   stream?: boolean                // Return SSE stream instead of JSON (default: false)
 }
 ```
@@ -70,7 +70,7 @@ DELETE /api/reveal/ai/chat
 | `message` | string | Conditional* | User's natural language message or request |
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
-| `clientName` | string | No | Name of specific LLM provider to use for this request |
+| `model` | string | No | Name of specific LLM model to use for this request |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
 
 \* Either `message` or `intent` must be provided
@@ -422,7 +422,7 @@ interface ChatRequest {
   visualizationId?: string;           // Visualization ID for visualization-specific context
   intent?: string;                    // Intent for freeform LLM queries
   updateChatState?: boolean;          // Whether to update chat state
-  clientName?: string;                 // Override LLM provider
+  model?: string;                      // Override LLM model
   signal?: AbortSignal;               // For request cancellation
   stream?: false;                      // Non-streaming (default)
 }
@@ -442,7 +442,7 @@ interface ChatStreamRequest {
 | `visualizationId` | `string` | No | Visualization ID for visualization-specific context |
 | `intent` | `string` | No | Intent for freeform LLM queries |
 | `updateChatState` | `boolean` | No | Whether to update the chat state after this query |
-| `clientName` | `string` | No | Name of specific LLM provider to use |
+| `model` | `string` | No | Name of specific LLM model to use |
 | `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
 | `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
 

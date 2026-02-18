@@ -57,7 +57,7 @@ DELETE /api/reveal/ai/chat
   visualizationId?: string,       // 表示形式固有の操作用の表示形式 ID
 
   // オプションの構成
-  clientName?: string,            // LLM プロバイダーのオーバーライド
+  model?: string,                 // LLM モデルのオーバーライド
   stream?: boolean                // JSON の代わりに SSE ストリームを返す (デフォルト: false)
 }
 ```
@@ -70,7 +70,7 @@ DELETE /api/reveal/ai/chat
 | `message` | string | 条件付き* | ユーザーの自然言語のメッセージまたはリクエスト。 |
 | `dashboard` | string | いいえ | 編集または分析コンテキスト用のダッシュボード JSON (RDash 形式)。 |
 | `visualizationId` | string | いいえ | 表示形式固有の操作用の表示形式識別子。 |
-| `clientName` | string | いいえ | このリクエストに使用する特定の LLM プロバイダーの名前。 |
+| `model` | string | いいえ | このリクエストに使用する特定の LLM モデルの名前。 |
 | `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、および最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
 
 \* `message` または `intent` のいずれかを指定する必要があります。
@@ -423,7 +423,7 @@ interface ChatRequest {
   visualizationId?: string;           // ウィジェット固有のコンテキスト用のウィジェット ID
   intent?: string;                    // フリーフォーム LLM クエリ用のインテント
   updateChatState?: boolean;          // チャット状態を更新するかどうか
-  clientName?: string;                 // LLM プロバイダーのオーバーライド
+  model?: string;                      // LLM モデルのオーバーライド
   signal?: AbortSignal;               // リクエストのキャンセル用
   stream?: false;                      // 非ストリーミング (デフォルト)
 }
@@ -443,7 +443,7 @@ interface ChatStreamRequest {
 | `visualizationId` | `string` | いいえ | ウィジェット固有のコンテキスト用のウィジェット ID。 |
 | `intent` | `string` | いいえ | フリーフォーム LLM クエリ用のインテント。 |
 | `updateChatState` | `boolean` | いいえ | このクエリ後にチャット状態を更新するかどうか。 |
-| `clientName` | `string` | いいえ | 使用する特定の LLM プロバイダーの名前。 |
+| `model` | `string` | いいえ | 使用する特定の LLM モデルの名前。 |
 | `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal。 |
 | `stream` | `boolean` | いいえ | ストリーミング モードを有効化 (デフォルト: `false`)。 |
 

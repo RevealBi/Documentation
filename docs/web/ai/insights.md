@@ -52,7 +52,7 @@ POST /api/reveal/ai/insights
   insightType?: string,         // "Summary" | "Analysis" | "Forecast" (default: "Summary")
   forecastPeriods?: number,     // Number of periods to forecast (default: 6, only for Forecast type)
   stream?: boolean,             // Return SSE stream instead of JSON (default: false)
-  clientName?: string             // Optional LLM provider override
+  model?: string                  // Optional LLM model override
 }
 ```
 
@@ -66,7 +66,7 @@ POST /api/reveal/ai/insights
 | `insightType` | string | No | Type of insight: `"Summary"`, `"Analysis"`, or `"Forecast"` (default: `"Summary"`) |
 | `forecastPeriods` | number | No | Number of periods to forecast (default: 6). Only used when `insightType` is `"Forecast"` |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
-| `clientName` | string | No | Name of specific LLM provider to use for this request |
+| `model` | string | No | Name of specific LLM model to use for this request |
 
 \* Either `dashboardJson` or `dashboardId` must be provided
 
@@ -256,7 +256,7 @@ interface InsightRequest {
   visualizationId?: string;           // Visualization ID for visualization-level insights
   type: InsightType;                   // 'summary' | 'analysis' | 'forecast'
   forecastPeriods?: number;           // Forecast periods (default: 6)
-  clientName?: string;                 // Override LLM provider
+  model?: string;                      // Override LLM model
   signal?: AbortSignal;               // For request cancellation
   stream?: false;                      // Non-streaming (default)
 }
@@ -275,7 +275,7 @@ interface InsightStreamRequest {
 | `visualizationId` | `string` | No | Visualization ID to analyze |
 | `type` | `InsightType` | Yes | Type: `'summary'`, `'analysis'`, `'forecast'` |
 | `forecastPeriods` | `number` | No | Periods to forecast (default: 6) |
-| `clientName` | `string` | No | Name of specific LLM provider to use |
+| `model` | `string` | No | Name of specific LLM model to use |
 | `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
 | `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
 

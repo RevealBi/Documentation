@@ -52,7 +52,7 @@ POST /api/reveal/ai/insights
   insightType?: string,         // "Summary" | "Analysis" | "Forecast" (デフォルト: "Summary")
   forecastPeriods?: number,     // 予測する期間の数 (デフォルト: 6、Forecast タイプの場合のみ)
   stream?: boolean,             // JSON の代わりに SSE ストリームを返す (デフォルト: false)
-  clientName?: string             // オプションの LLM プロバイダー オーバーライド
+  model?: string                  // オプションの LLM モデル オーバーライド
 }
 ```
 
@@ -66,7 +66,7 @@ POST /api/reveal/ai/insights
 | `insightType` | string | いいえ | インサイトのタイプ: `"Summary"`、`"Analysis"`、または `"Forecast"` (デフォルト: `"Summary"`)。 |
 | `forecastPeriods` | number | いいえ | 予測する期間の数 (デフォルト: 6)。`insightType` が `"Forecast"` の場合のみ使用されます。 |
 | `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
-| `clientName` | string | いいえ | このリクエストに使用する特定の LLM プロバイダーの名前。 |
+| `model` | string | いいえ | このリクエストに使用する特定の LLM モデルの名前。 |
 
 \* `dashboardJson` または `dashboardId` のいずれかを指定する必要があります
 
@@ -256,7 +256,7 @@ interface InsightRequest {
   visualizationId?: string;           // 表示形式レベルのインサイト用のウィジェット ID
   type: InsightType;                   // 'summary' | 'analysis' | 'forecast'
   forecastPeriods?: number;           // 予測期間 (デフォルト: 6)
-  clientName?: string;                 // LLM プロバイダーのオーバーライド
+  model?: string;                      // LLM モデルのオーバーライド
   signal?: AbortSignal;               // リクエストのキャンセル用
   stream?: false;                      // 非ストリーミング (デフォルト)
 }
@@ -275,7 +275,7 @@ interface InsightStreamRequest {
 | `visualizationId` | `string` | いいえ | 分析するウィジェット ID。 |
 | `type` | `InsightType` | はい | タイプ: `'summary'`、`'analysis'`、`'forecast'`。 |
 | `forecastPeriods` | `number` | いいえ | 予測する期間 (デフォルト: 6)。 |
-| `clientName` | `string` | いいえ | 使用する特定の LLM プロバイダーの名前。 |
+| `model` | `string` | いいえ | 使用する特定の LLM モデルの名前。 |
 | `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal。 |
 | `stream` | `boolean` | いいえ | ストリーミング モードを有効にする (デフォルト: `false`)。 |
 
