@@ -71,7 +71,7 @@ builder.Services.AddControllers().AddReveal();
 
 // OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options =>
+    .AddOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
         options.ModelId = "gpt-4.1";
@@ -181,7 +181,7 @@ builder.Services.AddControllers().AddReveal(builder =>
 
 // OpenAI プロバイダーで Reveal AI を追加
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options =>
+    .AddOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
         options.ModelId = "gpt-4.1";
@@ -526,7 +526,7 @@ builder.Services.AddControllers().AddReveal(builder =>
 **2. AI 構成**:
 ```csharp
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options => {
+    .AddOpenAI(options => {
         options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
     });
 ```

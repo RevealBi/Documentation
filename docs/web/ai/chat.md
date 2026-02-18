@@ -195,7 +195,7 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
 
 // Add Reveal AI - automatically registers /api/reveal/ai/chat endpoint
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options =>
+    .AddOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
         options.ModelId = "gpt-4.1";

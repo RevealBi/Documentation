@@ -196,7 +196,7 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
 
 // Reveal AI を追加 - /api/reveal/ai/chat エンドポイントを自動的に登録
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options =>
+    .AddOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
         options.ModelId = "gpt-4.1";

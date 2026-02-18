@@ -75,10 +75,10 @@ Configure at least one LLM provider. Add this configuration after `AddRevealAI()
 
 ```csharp
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options =>
+    .AddOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
-        options.ModelId = "gpt-4-.1";
+        options.ModelId = "gpt-4.1";
     });
 ```
 
@@ -86,7 +86,7 @@ builder.Services.AddRevealAI()
 
 ```csharp
 builder.Services.AddRevealAI()
-    .ConfigureAzureOpenAI(options =>
+    .AddAzureOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["AzureOpenAI:ApiKey"];
         options.Endpoint = "https://yoururl.openai.azure.com/";
@@ -98,7 +98,7 @@ builder.Services.AddRevealAI()
 
 ```csharp
 builder.Services.AddRevealAI()
-    .ConfigureAnthropic(options =>
+    .AddAnthropic(options =>
     {
         options.ApiKey = builder.Configuration["Anthropic:ApiKey"];
         options.ModelId = "claude-sonnet-4-5";
@@ -161,7 +161,7 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
 
 // Add Reveal AI with OpenAI provider
 builder.Services.AddRevealAI()
-    .ConfigureOpenAI(options =>
+    .AddOpenAI(options =>
     {
         options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
         options.ModelId = "gpt-4.1";
