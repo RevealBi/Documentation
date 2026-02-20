@@ -93,7 +93,7 @@ DELETE /api/reveal/ai/chat
 }
 ```
 
-エラーの場合、レスポンスには適切な HTTP ステータス コード (400 または 500) とエラー メッセージが含まれます:
+エラーの場合、レスポンスには適切な HTTP 状態コード (400 または 500) とエラー メッセージが含まれます:
 
 ```json
 {
@@ -106,7 +106,7 @@ DELETE /api/reveal/ai/chat
 `stream` が `true` の場合、エンドポイントは次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
 
 ##### progress イベント
-処理中に送信され、現在のステータスを示します。
+処理中に送信され、現在の状態を示します。
 
 ```json
 event: progress
@@ -116,7 +116,7 @@ data: {"message": "Creating a new dashboard"}
 一般的な進行状況メッセージ:
 - 「新しいダッシュボードを作成しています」
 - 「現在のダッシュボードを分析しています」
-- 「ウィジェットにフィルターを追加しています」
+- 「表示形式にフィルターを追加しています」
 - 「表示形式を変更しています」
 
 ##### textchunk イベント
@@ -420,7 +420,7 @@ interface ChatRequest {
   message: string;                    // ユーザーの自然言語入力 (必須)
   datasourceId?: string;              // データ ソース識別子
   dashboard?: string | RVDashboard;   // ダッシュボード JSON または RVDashboard オブジェクト
-  visualizationId?: string;           // ウィジェット固有のコンテキスト用のウィジェット ID
+  visualizationId?: string;           // 表示形式固有のコンテキスト用の表示形式 ID
   intent?: string;                    // フリーフォーム LLM クエリ用のインテント
   updateChatState?: boolean;          // チャット状態を更新するかどうか
   model?: string;                      // LLM モデルのオーバーライド
@@ -431,7 +431,7 @@ interface ChatRequest {
 // ストリーミング リクエスト
 interface ChatStreamRequest {
   // ...上記と同じフィールド、さらに:
-  stream: true;                        // ストリーミングを有効化
+  stream: true;                        // ストリーミングを有効にする
 }
 ```
 
@@ -440,7 +440,7 @@ interface ChatStreamRequest {
 | `message` | `string` | はい | ユーザーの自然言語のメッセージまたはリクエスト。 |
 | `datasourceId` | `string` | いいえ | コンテキスト用のデータ ソース識別子。 |
 | `dashboard` | `string \| RVDashboard` | いいえ | 編集/分析用のダッシュボード JSON または RVDashboard オブジェクト。 |
-| `visualizationId` | `string` | いいえ | ウィジェット固有のコンテキスト用のウィジェット ID。 |
+| `visualizationId` | `string` | いいえ | 表示形式固有のコンテキスト用の表示形式 ID。 |
 | `intent` | `string` | いいえ | フリーフォーム LLM クエリ用のインテント。 |
 | `updateChatState` | `boolean` | いいえ | このクエリ後にチャット状態を更新するかどうか。 |
 | `model` | `string` | いいえ | 使用する特定の LLM モデルの名前。 |
@@ -463,14 +463,14 @@ interface ChatResponse {
 
 #### AIStream (ストリーミング)
 
-`stream: true` の場合、戻り値の型は `AIStream<ChatResponse>` で、以下を提供します:
+`stream: true` の場合、戻り値のタイプは `AIStream<ChatResponse>` で、以下を提供します:
 
 | メソッド / パターン | 説明 |
 |---------|-------------|
-| `for await (const event of stream)` | イベントが到着するたびに反復処理 |
-| `.on(event, handler)` | イベント固有のリスナーを登録 |
-| `.finalResponse()` | 完全な `ChatResponse` で解決する Promise を返す |
-| `.abort()` | ストリームをキャンセル |
+| `for await (const event of stream)` | イベントが到着するたびに反復処理します。 |
+| `.on(event, handler)` | イベント固有のリスナーを登録します。 |
+| `.finalResponse()` | 完全な `ChatResponse` で解決する Promise を返します。 |
+| `.abort()` | ストリームをキャンセルします。 |
 
 #### ストリーム イベント
 
@@ -483,9 +483,9 @@ type AIStreamEvent =
 
 | イベント タイプ | 説明 |
 |------------|-------------|
-| `progress` | 処理中のステータス メッセージ (例: 「新しいダッシュボードを作成しています」) |
-| `text` | 生成される説明テキストのフラグメント |
-| `error` | 処理が失敗した場合のエラー情報 |
+| `progress` | 処理中の状態メッセージ (例: 「新しいダッシュボードを作成しています」)。 |
+| `text` | 生成される説明テキストのフラグメント。 |
+| `error` | 処理が失敗した場合のエラー情報。 |
 
 ---
 

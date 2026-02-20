@@ -507,7 +507,7 @@ Web ブラウザーで `index.html` を開きます。例えば以下の方法�
 2. RevealView のダッシュボード、または表示形式のオーバーフロー メニューをクリックします
 3. [Summary]、[Analysis]、または [Forecast] メニュー項目をクリックします
 4. 右側のパネルに表示される AI 生成のインサイトを確認します
-5. 個々の表示形式を右クリックして、ウィジェット レベルのインサイトを試します
+5. 個々の表示形式を右クリックして、表示形式レベルのインサイトを試します
 
 ## コードの理解
 
@@ -574,6 +574,6 @@ const result = await client.ai.insights.get(
 ### ダッシュボード vs 表示形式のインサイト
 
 - **ダッシュボード レベル**: ダッシュボード全体を分析します
-- **表示形式レベル**: `visualizationId` を渡して単一のウィジェットに焦点を当てます
+- **表示形式レベル**: `visualizationId` を渡して単一の表示形式に焦点を当てます
 
 完全な動作例は [sdk-samples-ai リポジトリ](https://github.com/RevealBi/sdk-samples-ai/tree/main/insights)で入手できます。
