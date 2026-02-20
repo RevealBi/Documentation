@@ -25,13 +25,13 @@ AI インサイトは、ダッシュボードと表示形式を自動的に分�
 インサイトは 2 つのレベルで生成できます:
 
 - **ダッシュボード レベル**: ダッシュボード全体を分析し、すべての表示形式を一緒に考慮して総合的なインサイトを提供します。
-- **表示形式レベル**: 単一のウィジェットに焦点を当て、その表示形式のデータに固有の詳細な分析を提供します。
+- **表示形式レベル**: 単一の表示形式に焦点を当て、その表示形式のデータに固有の詳細な分析を提供します。
 
 ---
 
 ## サーバー API
 
-Insights エンドポイントは、ダッシュボードまたは個々の表示形式の AI インサイトを生成します。シンプルなリクエスト/レスポンス ワークフロー向けのプレーン JSON レスポンスと、リアルタイムの進行状況およびテキスト更新のためのストリーミング SSE レスポンスの 2 つのレスポンス モードをサポートしています。
+Insights エンドポイントは、ダッシュボードまたは個々の表示形式の AI インサイトを生成します。シンプルなリクエスト/レスポンス ワークフロー用のプレーン JSON レスポンスと、リアルタイムの進行状況とテキスト更新用のストリーミング SSE レスポンスの 2 つのレスポンス モードをサポートします。
 
 ### エンドポイント
 
@@ -48,7 +48,7 @@ POST /api/reveal/ai/insights
   dashboardId?: string,         // ダッシュボード ID (IRVDashboardProvider を使用する場合)
 
   // オプションのパラメーター
-  visualizationId?: string,     // 表示形式レベルのインサイト用のウィジェット ID
+  visualizationId?: string,     // 表示形式レベルのインサイト用の表示形式 ID
   insightType?: string,         // "Summary" | "Analysis" | "Forecast" (デフォルト: "Summary")
   forecastPeriods?: number,     // 予測する期間の数 (デフォルト: 6、Forecast タイプの場合のみ)
   stream?: boolean,             // JSON の代わりに SSE ストリームを返す (デフォルト: false)
@@ -62,10 +62,10 @@ POST /api/reveal/ai/insights
 |-----------|------|----------|-------------|
 | `dashboardJson` | string | * | JSON 文字列としてのダッシュボード。こちらまたは `dashboardId` を使用します。 |
 | `dashboardId` | string | * | ダッシュボード識別子。こちらまたは `dashboardJson` を使用します。 |
-| `visualizationId` | string | いいえ | 分析するウィジェット ID。省略するとダッシュボード全体を分析します。 |
+| `visualizationId` | string | いいえ | 分析する表示形式 ID。省略するとダッシュボード全体を分析します。 |
 | `insightType` | string | いいえ | インサイトのタイプ: `"Summary"`、`"Analysis"`、または `"Forecast"` (デフォルト: `"Summary"`)。 |
 | `forecastPeriods` | number | いいえ | 予測する期間の数 (デフォルト: 6)。`insightType` が `"Forecast"` の場合のみ使用されます。 |
-| `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
+| `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、および最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
 | `model` | string | いいえ | このリクエストに使用する特定の LLM モデルの名前。 |
 
 \* `dashboardJson` または `dashboardId` のいずれかを指定する必要があります
@@ -82,7 +82,7 @@ POST /api/reveal/ai/insights
 }
 ```
 
-エラーの場合、レスポンスには適切な HTTP ステータス コード (400 または 500) とともにエラー メッセージが含まれます:
+エラーの場合、レスポンスには適切な HTTP 状態コード (400 または 500) とともにエラー メッセージが含まれます:
 
 ```json
 {
@@ -95,7 +95,7 @@ POST /api/reveal/ai/insights
 `stream` が `true` の場合、エンドポイントは次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
 
 ##### progress イベント
-インサイト生成中に現在のステータスを示すために送信されます。
+インサイト生成中に現在の状態を示すために送信されます。
 
 ```json
 event: progress
@@ -156,7 +156,7 @@ console.log(insight.explanation);
 
 ### ストリーミング
 
-リクエストに `stream: true` を追加すると、イベントが到着するたびにイベントを返す `AIStream` を取得します。ストリームは 3 つの消費パターンをサポートしています。
+リクエストに `stream: true` を追加すると、イベントが到着するたびにイベントを生成する `AIStream` を取得します。ストリームは 3 つの消費パターンをサポートしています。
 
 #### パターン 1: for-await (フル コントロール)
 
@@ -221,12 +221,12 @@ const insight = await client.ai.insights.get({
 
 ### 表示形式レベルのインサイト
 
-ウィジェット ID を指定して特定のウィジェットを分析します:
+Visualization ID を指定して特定の表示形式を分析します:
 
 ```typescript
 const insight = await client.ai.insights.get({
   dashboardId: 'sales-dashboard',
-  visualizationId: 'sales-by-region-chart',  // 特定のウィジェット
+  visualizationId: 'sales-by-region-chart',  // 特定の表示形式
   type: 'summary',
 });
 ```
@@ -253,7 +253,7 @@ const insight = await client.ai.insights.get({
 interface InsightRequest {
   dashboard?: string | RVDashboard;  // ダッシュボード オブジェクトまたは JSON 文字列
   dashboardId?: string;               // ダッシュボード ID
-  visualizationId?: string;           // 表示形式レベルのインサイト用のウィジェット ID
+  visualizationId?: string;           // 表示形式レベルのインサイト用の表示形式 ID
   type: InsightType;                   // 'summary' | 'analysis' | 'forecast'
   forecastPeriods?: number;           // 予測期間 (デフォルト: 6)
   model?: string;                      // LLM モデルのオーバーライド
@@ -295,7 +295,7 @@ interface InsightResponse {
 
 #### AIStream (ストリーミング)
 
-`stream: true` の場合、戻り値の型は `AIStream<InsightResponse>` で、以下を提供します:
+`stream: true` の場合、戻り値のタイプは `AIStream<InsightResponse>` で、以下を提供します:
 
 | メソッド / パターン | 説明 |
 |---------|-------------|
@@ -315,9 +315,9 @@ type AIStreamEvent =
 
 | イベント タイプ | 説明 |
 |------------|-------------|
-| `progress` | 生成中のステータス メッセージ (例: "Analyzing dashboard data...") |
-| `text` | 生成される説明のテキスト フラグメント |
-| `error` | 生成が失敗した場合のエラー情報 |
+| `progress` | 生成中の状態メッセージ (例: 「ダッシュボードデータを分析しています...」)。 |
+| `text` | 生成される説明のテキスト フラグメント。 |
+| `error` | 生成が失敗した場合のエラー情報。 |
 
 ---
 
@@ -379,7 +379,7 @@ console.log('Streaming complete:', result.explanation);
 
 ### エラー処理
 
-非ストリーミングとストリーミングの両方のモードでエラーを適切に処理します:
+非ストリーミングとストリーミングの両方のモードでエラーを適切に処理:
 
 ```typescript
 // 非ストリーミングのエラー処理

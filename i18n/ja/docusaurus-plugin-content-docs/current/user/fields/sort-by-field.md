@@ -30,7 +30,7 @@ Reveal では、データを昇順または降順に並べ替えることで、�
 
 ![Visualization displaying data in an ascending order](images/support-cases-sample.png)
 
-*Priority* フィールドはテキスト フィールドであるため、デフォルトでは A-Z の順序になっています。ただし、ビジネス ロジックを使用する場合、*Priority*値は次のように並べ替える必要があります: *Low* - *Normal* - *High*。これを実現するには、データセットに優先度ステータスの数値表現を示す *Priority Level* 列が必要です (以下を参照)。 
+*Priority* フィールドはテキスト フィールドであるため、デフォルトでは A-Z の順序になっています。ただし、ビジネス ロジックを使用する場合、*Priority*値は次のように並べ替える必要があります: *Low* - *Normal* - *High*。これを実現するには、データセットに優先度状態の数値表現を示す *Priority Level* 列が必要です (以下を参照)。 
 
 ![Visualization showing weekly cases ordered by Priority level](images/weekly-cases-priority.png)
 
