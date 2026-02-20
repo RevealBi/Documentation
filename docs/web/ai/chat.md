@@ -211,7 +211,9 @@ No additional controller or routing configuration is needed. Both POST and DELET
 
 ### Metadata Configuration
 
-Chat requires metadata configuration to understand your datasource structure. Configure datasources in `appsettings.json`:
+Chat requires a **metadata catalog** to understand your datasource structure. The catalog defines which datasources are available to the AI and how they are configured.
+
+The simplest approach is to define datasources in `appsettings.json`:
 
 ```json title="appsettings.json"
 {
@@ -219,7 +221,7 @@ Chat requires metadata configuration to understand your datasource structure. Co
     "OpenAI": {
       "ApiKey": "sk-your-api-key-here"
     },
-    "MetadataManager": {
+    "MetadataCatalog": {
       "Datasources": [
         {
           "Id": "SampleExcel",
@@ -227,7 +229,7 @@ Chat requires metadata configuration to understand your datasource structure. Co
         },
         {
           "Id": "SqlServerData",
-          "Provider": "SqlServer"
+          "Provider": "SQLServer"
         }
       ]
     }
@@ -235,29 +237,13 @@ Chat requires metadata configuration to understand your datasource structure. Co
 }
 ```
 
-**MetadataManager Configuration:**
+The `datasourceId` parameter in chat requests must match an `Id` defined in your catalog.
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `Datasources` | array | List of datasource definitions available to the AI |
-| `Datasources[].Id` | string | Unique identifier for the datasource (used in `datasourceId` parameter) |
-| `Datasources[].Provider` | string | Provider type: `WebService`, `SQLServer`, `PostgreSQL`, `MySQL`, etc. |
+:::info
 
-**Provider Types:**
+The metadata catalog supports multiple sources beyond `appsettings.json`, including external JSON files and custom providers (e.g., database-backed). See the [Metadata Catalog](metadata-catalog.md) topic for the full catalog schema, advanced configuration options, and examples.
 
-Common provider values:
-- `AmazonAthena`
-- `MySQL`
-- `Oracle`
-- `OracleSID`
-- `PostgreSQL`
-- `SSAS`
-- `SSASHTTP`
-- `Snowflake`
-- `SQLServer`
-- `WebService`
-
-The AI uses this metadata to understand what data is available and generate appropriate queries or visualizations.
+:::
 
 **Clearing Session Example:**
 
