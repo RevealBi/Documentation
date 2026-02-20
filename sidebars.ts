@@ -109,17 +109,17 @@ const sidebars: SidebarsConfig = {
     /* -------------------- Reveal SDK AI -------------------- */
     {
       type: "category", label: "Reveal SDK AI", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "web/ai/overview" },
+        { type: "doc", label: "Overview", key: "reveal-sdk-ai-overview", id: "web/ai/overview" },
         {
-          type: "category", label: "Installation", items: [
-            { type: "doc", label: "System Requirements", id: "web/ai/system-requirements" },
-            { type: "doc", label: "Install Server SDK", id: "web/ai/install-server-sdk" },
-            { type: "doc", label: "Install Client SDK", id: "web/ai/install-client-sdk" },
+          type: "category", label: "Installation", key: "reveal-sdk-ai-installation", items: [
+            { type: "doc", label: "System Requirements", key: "reveal-sdk-ai-system-requirements", id: "web/ai/system-requirements" },
+            { type: "doc", label: "Install Server SDK", key: "reveal-sdk-ai-install-server-sdk", id: "web/ai/install-server-sdk" },
+            { type: "doc", label: "Install Client SDK", key: "reveal-sdk-ai-install-client-sdk", id: "web/ai/install-client-sdk" },
           ]
         },
         {
-          type: "category", label: "Getting Started", items: [
-            { type: "doc", label: "HTML/JavaScript", id: "web/ai/getting-started-html" },
+          type: "category", label: "Getting Started", key: "reveal-sdk-ai-getting-started", items: [
+            { type: "doc", label: "HTML/JavaScript", key: "reveal-sdk-ai-getting-started-html", id: "web/ai/getting-started-html" },
           ]
         },
         {
@@ -153,22 +153,22 @@ const sidebars: SidebarsConfig = {
     /* -------------------- Web Component Wrappers  -------------------- */
     {
       type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "web/web-component-wrappers/index" },
+        { type: "doc", label: "Overview", key: "web-component-wrappers-overview", id: "web/web-component-wrappers/index" },
         {
-          type: "category", label: "Installation", link: { type: "doc", id: "web/web-component-wrappers/installation" }, items: [
-            { type: "doc", label: "Angular", id: "web/web-component-wrappers/installation-angular" },
-            { type: "doc", label: "React", id: "web/web-component-wrappers/installation-react" },
+          type: "category", label: "Installation", key: "web-component-wrappers-installation", link: { type: "doc", id: "web/web-component-wrappers/installation" }, items: [
+            { type: "doc", label: "Angular", key: "web-component-wrappers-installation-angular", id: "web/web-component-wrappers/installation-angular" },
+            { type: "doc", label: "React", key: "web-component-wrappers-installation-react", id: "web/web-component-wrappers/installation-react" },
           ]
         },
         {
           type: "category", label: "Reveal View", link: { type: "doc", id: "web/web-component-wrappers/reveal-view/index" }, items: [
-            { type: "doc", label: "Options", id: "web/web-component-wrappers/reveal-view/options" },
+            { type: "doc", label: "Options", key: "web-component-wrappers-reveal-view-options", id: "web/web-component-wrappers/reveal-view/options" },
             { type: "doc", label: "Loading Dashboards", id: "web/web-component-wrappers/reveal-view/loading-dashboards" },
           ]
         },
         {
           type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web/web-component-wrappers/visualization-viewer/index" }, items: [
-            { type: "doc", label: "Options", id: "web/web-component-wrappers/visualization-viewer/options" },
+            { type: "doc", label: "Options", key: "web-component-wrappers-visualization-viewer-options", id: "web/web-component-wrappers/visualization-viewer/options" },
           ]
         },
       ]
@@ -193,7 +193,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "user/visualizations-overview" },
+        { type: "doc", label: "Overview", key: "user-visualizations-overview", id: "user/visualizations-overview" },
         { type: "doc", label: "Visualization Editor", id: "user/visualization-editor" },
         { type: "category", label: "Chart Types", items: [
           { type: "doc", label: "Category", id: "user/chart-types/category-charts" },
@@ -244,7 +244,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category", label: "Filters", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "user/filters-overview" },
+        { type: "doc", label: "Overview", key: "user-filters-overview", id: "user/filters-overview" },
         { type: "doc", label: "Dashboard Filters", id: "user/filters-dashboard" },
         { type: "doc", label: "Dashboard Filter Properties", id: "user/filters-dashboard-properties" },
         { type: "doc", label: "Connecting Filters", id: "user/filters-connecting" },
@@ -255,7 +255,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category", label: "Tutorials", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "user/tutorials-overview" },
+        { type: "doc", label: "Overview", key: "user-tutorials-overview", id: "user/tutorials-overview" },
         { type: "doc", label: "Candlestick Charts", id: "user/tutorials-candlestick" },
         { type: "doc", label: "Gauge Charts", id: "user/tutorials-gauge" },
         { type: "doc", label: "Image Charts", id: "user/tutorials-image" },
@@ -264,7 +264,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Simple-Series Charts", id: "user/tutorials-simple-charts" },
         { type: "doc", label: "Sparkline Charts", id: "user/tutorials-sparkline-charts" },
         { type: "doc", label: "Stacked Charts", id: "user/tutorials-stacked-charts" },
-        { type: "doc", label: "Text View", id: "user/tutorials-text-view" },
+        { type: "doc", label: "Text View", key: "user-tutorials-text-view", id: "user/tutorials-text-view" },
       ]
     },
   ],

@@ -15,7 +15,6 @@ const config: Config = {
   baseUrl: '/',
   onBrokenAnchors: 'warn',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   trailingSlash: true,
 
@@ -211,9 +210,15 @@ const config: Config = {
       additionalLanguages: ["csharp", "java", "bash", "typescript"],
     },
   } satisfies Preset.ThemeConfig,
+
   markdown: {
-    mermaid: true
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+      onBrokenMarkdownImages: 'throw',
+    }
   },
+
   themes: ['@docusaurus/theme-mermaid']
 };
 
