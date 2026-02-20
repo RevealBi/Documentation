@@ -106,30 +106,6 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Web Component Wrappers  -------------------- */
-    {
-      type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", id: "web/web-component-wrappers/index" },
-        {
-          type: "category", label: "Installation", link: { type: "doc", id: "web/web-component-wrappers/installation" }, items: [
-            { type: "doc", label: "Angular", id: "web/web-component-wrappers/installation-angular" },
-            { type: "doc", label: "React", id: "web/web-component-wrappers/installation-react" },
-          ]
-        },
-        {
-          type: "category", label: "Reveal View", link: { type: "doc", id: "web/web-component-wrappers/reveal-view/index" }, items: [
-            { type: "doc", label: "Options", id: "web/web-component-wrappers/reveal-view/options" },
-            { type: "doc", label: "Loading Dashboards", id: "web/web-component-wrappers/reveal-view/loading-dashboards" },
-          ]
-        },
-        {
-          type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web/web-component-wrappers/visualization-viewer/index" }, items: [
-            { type: "doc", label: "Options", id: "web/web-component-wrappers/visualization-viewer/options" },
-          ]
-        },
-      ]
-    },
-
     /* -------------------- Reveal SDK AI -------------------- */
     {
       type: "category", label: "Reveal SDK AI", collapsed: false, collapsible: false, className: "sidebar__header", items: [
@@ -144,6 +120,11 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Getting Started", items: [
             { type: "doc", label: "HTML/JavaScript", id: "web/ai/getting-started-html" },
+          ]
+        },
+        {
+          type: "category", label: "Configuration", items: [
+            { type: "doc", label: "Metadata Catalog", id: "web/ai/metadata-catalog" },
           ]
         },
         {
@@ -166,6 +147,30 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
         { type: "doc", label: "Data Limits", id: "web/data-size-limits" },
         { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },
+      ]
+    },
+
+    /* -------------------- Web Component Wrappers  -------------------- */
+    {
+      type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", id: "web/web-component-wrappers/index" },
+        {
+          type: "category", label: "Installation", link: { type: "doc", id: "web/web-component-wrappers/installation" }, items: [
+            { type: "doc", label: "Angular", id: "web/web-component-wrappers/installation-angular" },
+            { type: "doc", label: "React", id: "web/web-component-wrappers/installation-react" },
+          ]
+        },
+        {
+          type: "category", label: "Reveal View", link: { type: "doc", id: "web/web-component-wrappers/reveal-view/index" }, items: [
+            { type: "doc", label: "Options", id: "web/web-component-wrappers/reveal-view/options" },
+            { type: "doc", label: "Loading Dashboards", id: "web/web-component-wrappers/reveal-view/loading-dashboards" },
+          ]
+        },
+        {
+          type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web/web-component-wrappers/visualization-viewer/index" }, items: [
+            { type: "doc", label: "Options", id: "web/web-component-wrappers/visualization-viewer/options" },
+          ]
+        },
       ]
     },
 

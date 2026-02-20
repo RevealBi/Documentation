@@ -5,7 +5,7 @@
   },
   "sidebar.webSidebar.doc.Overview": {
     "message": "概要",
-    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/ai/overview"
+    "description": "The label for the doc item Overview in sidebar webSidebar, linking to the doc web/web-component-wrappers/index"
   },
   "sidebar.webSidebar.doc.ASP.NET Web API": {
     "message": "ASP.NET Web API",
@@ -570,5 +570,13 @@
   "sidebar.webSidebar.doc.Chat": {
     "message": "チャート",
     "description": "The label for the doc item Chat in sidebar webSidebar, linking to the doc web/ai/chat"
+  },
+  "sidebar.webSidebar.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar webSidebar"
+  },
+  "sidebar.webSidebar.doc.Metadata Catalog": {
+    "message": "Metadata Catalog",
+    "description": "The label for the doc item Metadata Catalog in sidebar webSidebar, linking to the doc web/ai/metadata-catalog"
   }
 }

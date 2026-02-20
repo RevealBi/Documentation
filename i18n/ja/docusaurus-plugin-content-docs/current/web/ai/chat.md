@@ -212,7 +212,9 @@ app.Run();
 
 ### メタデータの構成
 
-チャットは、データ ソース構造を理解するためにメタデータ構成が必要です。`appsettings.json` でデータ ソースを構成します:
+チャットは、データ ソース構造を理解するために**メタデータ カタログ**が必要です。カタログは、AI が使用可能なデータ ソースとその構成を定義します。
+
+最も簡単な方法は、`appsettings.json` でデータ ソースを定義することです:
 
 ```json title="appsettings.json"
 {
@@ -220,7 +222,7 @@ app.Run();
     "OpenAI": {
       "ApiKey": "sk-your-api-key-here"
     },
-    "MetadataManager": {
+    "MetadataCatalog": {
       "Datasources": [
         {
           "Id": "SampleExcel",
@@ -228,7 +230,7 @@ app.Run();
         },
         {
           "Id": "SqlServerData",
-          "Provider": "SqlServer"
+          "Provider": "SQLServer"
         }
       ]
     }
@@ -236,29 +238,13 @@ app.Run();
 }
 ```
 
-**MetadataManager 構成:**
+チャット リクエストの `datasourceId` パラメーターは、カタログで定義された `Id` と一致する必要があります。
 
-| プロパティ | タイプ | 説明 |
-|----------|------|-------------|
-| `Datasources` | array | AI が使用可能なデータ ソース定義のリスト。 |
-| `Datasources[].Id` | string | データ ソースの一意の識別子 (`datasourceId` パラメーターで使用)。 |
-| `Datasources[].Provider` | string | プロバイダー タイプ: `WebService`、`SQLServer`、`PostgreSQL`、`MySQL` など。 |
+:::info
 
-**プロバイダー タイプ:**
+メタデータ カタログは、`appsettings.json` 以外にも、外部 JSON ファイルやカスタム プロバイダー (データベースなど) など、複数のソースをサポートしています。完全なカタログ スキーマ、高度な構成オプション、およびサンプルについては、[メタデータ カタログ](metadata-catalog.md) トピックを参照してください。
 
-一般的なプロバイダー値:
-- `AmazonAthena`
-- `MySQL`
-- `Oracle`
-- `OracleSID`
-- `PostgreSQL`
-- `SSAS`
-- `SSASHTTP`
-- `Snowflake`
-- `SQLServer`
-- `WebService`
-
-AI は、このメタデータを使用して、使用可能なデータを理解し、適切なクエリまたは表示形式を生成します。
+:::
 
 **セッションのクリアの例:**
 
