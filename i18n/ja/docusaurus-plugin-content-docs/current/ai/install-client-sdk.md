@@ -1,56 +1,56 @@
 ---
-sidebar_label: Install Client SDK
+sidebar_label: クライアント SDK のインストール
 ---
 
 import BetaWarning from './_beta-message.md'
 
 <BetaWarning />
 
-# Installing the AI Client SDK
+# AI クライアント SDK のインストール
 
-The Reveal SDK AI Client is a TypeScript/JavaScript library that provides AI capabilities for your web applications. It works alongside the base Reveal SDK to add intelligent features like insights, dashboard generation, and conversational AI.
+Reveal SDK AI クライアントは、Web アプリケーションに AI 機能を提供する TypeScript/JavaScript ライブラリです。基本の Reveal SDK と連携して、インサイト、ダッシュボード生成、会話型 AI などのインテリジェントな機能を追加します。
 
-## Prerequisites
+## 前提条件
 
-Before installing the AI Client SDK, ensure you have:
+AI クライアント SDK をインストールする前に、以下を確認してください:
 
-1. The base [Reveal SDK Server](../install-server-sdk.md) installed and configured
-2. The [Reveal SDK AI Server](install-server-sdk.md) installed and configured
-3. Node.js 18+ and npm 9+ installed (for package-based installation)
+1. 基本の [Reveal SDK サーバー](/web/install-server-sdk)がインストールされ、設定されていること
+2. [Reveal SDK AI サーバー](install-server-sdk.md)がインストールされ、設定されていること
+3. Node.js 18+ および npm 9+ がインストールされていること (パッケージベースのインストールの場合)
 
-## Installation Methods
+## インストール方法
 
-### Install Using npm (Recommended)
+### npm を使用してインストール (推奨)
 
-The recommended way to install the AI Client SDK is through npm:
+AI クライアント SDK をインストールする推奨方法は npm を使用することです:
 
 ```bash npm2yarn
 npm install @revealbi/api
 ```
 
-### Install Using CDN
+### CDN を使用してインストール
 
-For quick prototyping and demos, you can use the unpkg CDN:
+迅速なプロトタイピングとデモのために、unpkg CDN を使用できます:
 
 ```html
 <script src="https://unpkg.com/@revealbi/api/dist/index.umd.js"></script>
 ```
 
-Or using jsDelivr:
+または jsDelivr を使用:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@revealbi/api/dist/index.umd.js"></script>
 ```
 
-## TypeScript Support
+## TypeScript サポート
 
-The AI Client SDK is written in TypeScript and includes complete type definitions. No additional `@types` packages are needed.
+AI クライアント SDK は TypeScript で記述されており、完全な型定義が含まれています。追加の `@types` パッケージは必要ありません。
 
-## Framework-Specific Setup
+## フレームワーク固有のセットアップ
 
-### Vanilla JavaScript
+### 素の JavaScript
 
-#### Using ES Modules
+#### ES モジュールの使用
 
 ```html
 <!DOCTYPE html>
@@ -72,7 +72,7 @@ The AI Client SDK is written in TypeScript and includes complete type definition
 </html>
 ```
 
-#### Using UMD Bundle
+#### UMD バンドルの使用
 
 ```html
 <!DOCTYPE html>
@@ -95,7 +95,7 @@ The AI Client SDK is written in TypeScript and includes complete type definition
 
 ### Angular
 
-In your `main.ts` file, initialize before bootstrapping the application:
+`main.ts` ファイルで、アプリケーションをブートストラップする前に初期化します:
 
 ```typescript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -113,7 +113,7 @@ platformBrowserDynamic()
 
 ### React
 
-In your `index.tsx` or `main.tsx` file, initialize before rendering:
+`index.tsx` または `main.tsx` ファイルで、レンダリングする前に初期化します:
 
 ```typescript
 import React from 'react';
@@ -134,7 +134,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 ### Vue
 
-In your `main.ts` file, initialize before mounting the application:
+`main.ts` ファイルで、アプリケーションをマウントする前に初期化します:
 
 ```typescript
 import { createApp } from 'vue';

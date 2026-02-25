@@ -14,7 +14,7 @@ Reveal SDK AI サーバーは、アプリケーションで AI 機能を強化�
 
 AI サーバー SDK をインストールする前に、以下を確認してください:
 
-1. 基本の [Reveal SDK サーバー](../install-server-sdk.md)がインストールされ、設定されていること
+1. 基本の [Reveal SDK サーバー](/web/install-server-sdk)がインストールされ、設定されていること
 2. .NET 8.0 以上であること
 3. 少なくとも 1 つの LLM プロバイダー (OpenAI、Anthropic、Google など) へのアクセス権があること
 4. LLM プロバイダーの API キーが設定されていること
@@ -29,7 +29,7 @@ ASP.NET Core 用 AI サーバー SDK は NuGet パッケージとして配布さ
 
 ソリューションまたはプロジェクトを右クリックし、ソリューションの **[NuGet パッケージの管理]** を選択します。
 
-![](../images/getting-started-nuget-packages-manage.jpg)
+![](../web/images/getting-started-nuget-packages-manage.jpg)
 
 パッケージ マネージャー ダイアログで **[参照]** タブを開き、**Reveal.Sdk.AI.AspNetCore** NuGet パッケージをプロジェクトにインストールします。
 

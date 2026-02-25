@@ -97,6 +97,7 @@ const config: Config = {
           position: "left",
           items: [
             { label: "Web", to: "web" },
+            { label: "AI", to: "ai/overview" },
             { label: "User", to: "user" },
           ]
         },
@@ -134,6 +135,10 @@ const config: Config = {
             {
               label: 'Web SDK',
               to: 'web',
+            },
+            {
+              label: 'AI SDK',
+              to: 'ai/overview',
             },
             { label: "User", to: "user" },
           ],

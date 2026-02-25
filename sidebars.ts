@@ -106,36 +106,6 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Reveal SDK AI -------------------- */
-    {
-      type: "category", label: "Reveal SDK AI", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", key: "reveal-sdk-ai-overview", id: "web/ai/overview" },
-        {
-          type: "category", label: "Installation", key: "reveal-sdk-ai-installation", items: [
-            { type: "doc", label: "System Requirements", key: "reveal-sdk-ai-system-requirements", id: "web/ai/system-requirements" },
-            { type: "doc", label: "Install Server SDK", key: "reveal-sdk-ai-install-server-sdk", id: "web/ai/install-server-sdk" },
-            { type: "doc", label: "Install Client SDK", key: "reveal-sdk-ai-install-client-sdk", id: "web/ai/install-client-sdk" },
-          ]
-        },
-        {
-          type: "category", label: "Getting Started", key: "reveal-sdk-ai-getting-started", items: [
-            { type: "doc", label: "HTML/JavaScript", key: "reveal-sdk-ai-getting-started-html", id: "web/ai/getting-started-html" },
-          ]
-        },
-        {
-          type: "category", label: "Configuration", items: [
-            { type: "doc", label: "Metadata Catalog", id: "web/ai/metadata-catalog" },
-          ]
-        },
-        {
-          type: "category", label: "Features", items: [
-            { type: "doc", label: "Insights", id: "web/ai/insights" },
-            { type: "doc", label: "Chat", id: "web/ai/chat" },
-          ]
-        },
-      ]
-    },
-
     /* -------------------- Release Information -------------------- */
     {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
@@ -267,6 +237,88 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Text View", key: "user-tutorials-text-view", id: "user/tutorials-text-view" },
       ]
     },
+  ],
+
+  aiSidebar: [
+
+    /* -------------------- Getting Started -------------------- */
+    {
+      type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", key: "ai-getting-started-header", items: [
+        { type: "doc", label: "Overview", id: "ai/overview" },
+        {
+          type: "category", label: "Installation", items: [
+            { type: "doc", label: "System Requirements", id: "ai/system-requirements" },
+            { type: "doc", label: "Install Server SDK", id: "ai/install-server-sdk" },
+            { type: "doc", label: "Install Client SDK", id: "ai/install-client-sdk" },
+          ]
+        },
+        {
+          type: "category", label: "Getting Started", key: "ai-getting-started-tutorials", items: [
+            { type: "doc", label: "HTML/JavaScript", id: "ai/getting-started-html" },
+          ]
+        },
+      ]
+    },
+
+    /* -------------------- Providers -------------------- */
+    // Uncomment when provider docs are added:
+    // {
+    //   type: "category", label: "Providers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+    //     { type: "doc", label: "Overview", id: "ai/providers-overview" },
+    //     { type: "doc", label: "OpenAI", id: "ai/providers-openai" },
+    //     { type: "doc", label: "Anthropic", id: "ai/providers-anthropic" },
+    //     { type: "doc", label: "Google Gemini", id: "ai/providers-google-gemini" },
+    //     { type: "doc", label: "Using Custom Endpoints", id: "ai/providers-custom-endpoints" },
+    //     { type: "doc", label: "Building a Custom Provider", id: "ai/providers-building-custom" },
+    //     { type: "doc", label: "Multi-Intent Routing", id: "ai/providers-multi-intent-routing" },
+    //   ]
+    // },
+
+    /* -------------------- Metadata -------------------- */
+    {
+      type: "category", label: "Metadata", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Metadata Catalog", id: "ai/metadata-catalog" },
+        // { type: "doc", label: "Metadata Service", id: "ai/metadata-service" },
+        // { type: "doc", label: "Custom Context Providers", id: "ai/metadata-custom-context-providers" },
+      ]
+    },
+
+    /* -------------------- Features -------------------- */
+    {
+      type: "category", label: "Features", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Insights", id: "ai/insights" },
+        { type: "doc", label: "Chat", id: "ai/chat" },
+      ]
+    },
+
+    /* -------------------- Using the Client SDK -------------------- */
+    // Uncomment when Client SDK docs are added:
+    // {
+    //   type: "category", label: "Using the Client SDK", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+    //     { type: "doc", label: "Overview", id: "ai/client-sdk-overview" },
+    //     { type: "doc", label: "Streaming Responses", id: "ai/client-sdk-streaming" },
+    //     { type: "doc", label: "Error Handling & Cancellation", id: "ai/client-sdk-error-handling" },
+    //   ]
+    // },
+
+    /* -------------------- Using the REST API -------------------- */
+    // Uncomment when REST API docs are added:
+    // {
+    //   type: "category", label: "Using the REST API", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+    //     { type: "doc", label: "API Endpoints", id: "ai/rest-api-endpoints" },
+    //     { type: "doc", label: "Server-Sent Events", id: "ai/rest-api-sse" },
+    //   ]
+    // },
+
+    /* -------------------- Release Information -------------------- */
+    // Uncomment when release docs are added:
+    // {
+    //   type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+    //     { type: "doc", label: "Release Notes", id: "ai/release-notes" },
+    //     { type: "doc", label: "Known Issues", id: "ai/known-issues" },
+    //   ]
+    // },
+
   ],
 };
 
