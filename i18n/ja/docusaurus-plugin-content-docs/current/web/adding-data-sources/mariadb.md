@@ -5,120 +5,87 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# MariaDB データ ソースの追加
+# MariaDB Data Source
 
-:::danger 重大な変更
+## Introduction
 
-現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース) トピックを参照してください。
+MariaDB is a community-developed, commercially supported open-source relational database that is a drop-in replacement for MySQL. This topic explains how to connect to MariaDB data sources in your Reveal application to visualize and analyze your data.
 
+:::important Prerequisites
+Before configuring the MariaDB data source in Reveal, you must have access to a MariaDB server and the appropriate database driver for your platform:
+- For Windows/.NET: [MySqlConnector](https://mysqlconnector.net/) or the MySQL .NET connector.
+- For Node.js: A MySQL-compatible driver (e.g. `mysql2`).
+
+These drivers are essential for establishing connections to your MariaDB data source. After installation, ensure the drivers are properly configured according to the connector documentation.
 :::
 
-## クライアント側
+## Server Configuration
 
-**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
-
-```js
-var revealView = new $.ig.RevealView("#revealView");
-revealView.onDataSourcesRequested = (callback) => {
-    //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
-};
-```
-
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVMariaDBDataSource` オブジェクトの新しいインスタンスを作成します。`Host`、`Database`、`Port`、および `Title` プロパティを、MariaDB サーバーに対応する値に設定します。`RVMariaDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var mariadbDataSource = new $.ig.RVMariaDBDataSource();
-    mariadbDataSource.host = "your-db-host";
-    mariadbDataSource.database = "your-db-name";
-    mariadbDataSource.port = 1234;
-    mariadbDataSource.title = "My MariaDB";
-
-    callback(new $.ig.RevealDataSources([mariadbDataSource], [], false));
-};
-```
-
-アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された MariaDB データ ソースが [データ ソースの選択] ダイアログに表示されます。
-
-![](images/mysql-data-source.jpg)
-
-**手順 3** - `RVMariaDBDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id`、`Title`、および `Table` プロパティを設定します。`RVMariaDBDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var mariadbDataSource = new $.ig.RVMariaDBDataSource();
-    mariadbDataSource.host = "your-db-host";
-    mariadbDataSource.database = "your-db-name";
-    mariadbDataSource.port = 1234;
-    mariadbDataSource.title = "My MariaDB";
-
-    var mariadbDsi = new $.ig.RVMariaDBDataSourceItem(mariadbDataSource);
-    mariadbDsi.id = "MyMariaDBDataSourceItem";
-    mariadbDsi.title = "My MariaDB Item";
-    mariadbDsi.table = "TableName";    
-
-    callback(new $.ig.RevealDataSources([mariadbDataSource], [mariadbDsi], false));
-};
-```
-
-アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された MariaDB データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
-
-![](images/mysql-data-source-item.jpg)
-
-## サーバー側
-
-**手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを入力してください。
-
-```js
-var revealView = new $.ig.RevealView("#revealView");
-revealView.onDataSourcesRequested = (callback) => {
-
-    var mariadbDataSource = new $.ig.RVMariaDBDataSource();
-    mariadbDataSource.id = "MyMariaDBDataSource";
-    mariadbDataSource.title = "My MariaDB";
-
-    var mariadbDataSourceItem = new $.ig.RVMariaDBDataSourceItem(mariadbDataSource);
-    mariadbDataSourceItem.id = "MyMariaDBDataSourceItem";
-    mariadbDataSourceItem.title = "My MariaDB Item";
-
-    callback(new $.ig.RevealDataSources([mariadbDataSource], [mariadbDataSourceItem], true));
-};
-```
-
-**手順 2** - データ ソース プロバイダーを作成します。この例では、クライアントで定義された **MariaDB** データベースに接続するための接続情報を提供しています。これを実現するために、使用しているデータ ソース/項目のタイプを決定し、オブジェクトで使用可能なプロパティを設定します。
+### Installation
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-```cs
+**Step 1** - Install the Reveal MariaDB connector package
+
+For ASP.NET applications, you need to install a separate NuGet package to enable MariaDB support:
+
+```bash
+dotnet add package Reveal.Sdk.Data.MariaDB
+```
+
+**Step 2** - Register the MariaDB data source in your application:
+
+```csharp
+builder.Services.AddControllers().AddReveal(builder =>
+{
+    builder.DataSources.RegisterMariaDB();
+});
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+For Node.js applications, the MariaDB data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+ 
+</Tabs>
+
+### Connection Configuration
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+// Create a data source provider
 public class DataSourceProvider : IRVDataSourceProvider
 {
-    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId,
-        RVDataSourceItem dataSourceItem)
+    public async Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
     {
-        if (dataSourceItem is RVMariaDBDataSourceItem mariadbDataSourceItem)
-        {
-            //update underlying data source
-            ChangeDataSourceAsync(userContext, mariadbDataSourceItem.DataSource);
+        // Required: Update the underlying data source
+        await ChangeDataSourceAsync(userContext, dataSourceItem.DataSource);
 
-            //only change the table if we have selected our custom data source item
-            if (mariadbDataSourceItem.Id == "MyMariaDBDataSourceItem")
+        if (dataSourceItem is RVMariaDBDataSourceItem mariadbItem)
+        {
+            // Configure specific item properties as needed
+            if (mariadbItem.Id == "mariadb_sales_data")
             {
-                mariadbDataSourceItem.Table = "orders";
+                mariadbItem.Table = "orders";
             }
         }
 
-        return Task.FromResult(dataSourceItem);
+        return dataSourceItem;
     }
 
-    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext,
-        RVDashboardDataSource dataSource)
+    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
-        if (dataSource is RVMariaDBDataSource mariadbDataSource)
+        if (dataSource is RVMariaDBDataSource mariadbDS)
         {
-            mariadbDataSource.Host = "localhost";
-            mariadbDataSource.Database = "database";
+            // Configure connection properties
+            mariadbDS.Host = "localhost";
+            mariadbDS.Port = 3306;
+            mariadbDS.Database = "your-db-name";
         }
 
         return Task.FromResult(dataSource);
@@ -127,89 +94,63 @@ public class DataSourceProvider : IRVDataSourceProvider
 ```
 
   </TabItem>
-
-  <TabItem value="java" label="Java">
-
-```java
-public class DataSourceProvider implements IRVDataSourceProvider {
-    public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardsID, RVDataSourceItem dataSourceItem) {
-
-        if (dataSourceItem instanceof RVMariaDBDataSourceItem mariadbDataSourceItem) {
-
-            //update underlying data source
-            changeDataSource(userContext, dataSourceItem.getDataSource());
-
-            //only change the table if we have selected our custom data source item
-            if (Objects.equals(dataSourceItem.getId(), "MyMariaDBDataSourceItem")) {
-                mariadbDataSourceItem.setTable("orders");
-            }
-        }
-        return dataSourceItem;
-    }
-
-    public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-
-        if (dataSource instanceof RVMariaDBDataSource mariadbDataSource) {
-            mariadbDataSource.setHost("localhost");
-            mariadbDataSource.setDatabase("database");
-        }
-        return dataSource;
-    }
-}
-```
-
-  </TabItem>
-
   <TabItem value="node" label="Node.js">
 
-```js
+```javascript
+// Create data source providers
 const dataSourceItemProvider = async (userContext, dataSourceItem) => {
+    // Required: Update the underlying data source
+    await dataSourceProvider(userContext, dataSourceItem.dataSource);
+
     if (dataSourceItem instanceof reveal.RVMariaDBDataSourceItem) {
-
-        //update underlying data source
-        dataSourceProvider(userContext, dataSourceItem.dataSource);
-
-        //only change the table if we have selected our data source item
-        if (dataSourceItem.id === "MyMariaDBDataSourceItem") {
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "mariadb_sales_data") {
             dataSourceItem.table = "orders";
         }
     }
+
     return dataSourceItem;
 }
 
 const dataSourceProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVMariaDBDataSource) {
+        // Configure connection properties
         dataSource.host = "localhost";
-        dataSource.database = "database";
+        dataSource.port = 3306;
+        dataSource.database = "your-db-name";
     }
+
     return dataSource;
 }
 ```
 
   </TabItem>
+  <TabItem value="node-ts" label="Node.js - TS">
 
-  <TabItem value="node-ts" label="Node.js - TS">    
-
-```ts
+```typescript
+// Create data source providers
 const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+    // Required: Update the underlying data source
+    await dataSourceProvider(userContext, dataSourceItem.dataSource);
+
     if (dataSourceItem instanceof RVMariaDBDataSourceItem) {
-
-        //update underlying data source
-        dataSourceProvider(userContext, dataSourceItem.dataSource);
-
-        //only change the table if we have selected our data source item
-        if (dataSourceItem.id === "MyMariaDBDataSourceItem") {
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "mariadb_sales_data") {
             dataSourceItem.table = "orders";
         }
     }
+
     return dataSourceItem;
 }
 
 const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVMariaDBDataSource) {
+        // Configure connection properties
         dataSource.host = "localhost";
-        dataSource.database = "database";
+        dataSource.port = 3306;
+        dataSource.database = "your-db-name";
     }
+
     return dataSource;
 }
 ```
@@ -218,8 +159,139 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
-:::info コードの取得
-
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MariaDB) にあります。
-
+:::danger Important
+Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
 :::
+
+### Authentication
+
+Authentication for MariaDB is typically handled with username and password. For detailed information on authentication options, see the [Authentication](web/authentication.md) topic.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+public class AuthenticationProvider : IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVMariaDBDataSource)
+        {
+            userCredential = new RVUsernamePasswordDataSourceCredential("your_username", "your_password");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVMariaDBDataSource) {
+        return new reveal.RVUsernamePasswordDataSourceCredential("your_username", "your_password");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+  <TabItem value="node-ts" label="Node.js - TS">
+
+```ts
+const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVMariaDBDataSource) {
+        return new RVUsernamePasswordDataSourceCredential("your_username", "your_password");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+
+</Tabs>
+
+## Client-Side Implementation
+
+On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
+
+### Creating Data Sources
+
+**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+
+```js
+const revealView = new $.ig.RevealView("#revealView");
+revealView.onDataSourcesRequested = (callback) => {
+    // Add data source here
+    callback(new $.ig.RevealDataSources([], [], false));
+};
+```
+
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVMariaDBDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVMariaDBDataSource` object, add it to the data sources collection.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    const mariadbDS = new $.ig.RVMariaDBDataSource();
+    mariadbDS.title = "MariaDB";
+    mariadbDS.subtitle = "Data Source";
+
+    callback(new $.ig.RevealDataSources([mariadbDS], [], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created MariaDB data source listed in the "Select a Data Source" dialog.
+
+![](images/mariadb-data-source.jpg)
+
+### Creating Data Source Items
+
+Data source items represent specific tables or datasets within your MariaDB data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    // Create the data source
+    const mariadbDS = new $.ig.RVMariaDBDataSource();
+    mariadbDS.title = "My MariaDB Datasource";
+    mariadbDS.subtitle = "MariaDB";
+
+    // Create a data source item
+    const mariadbDSI = new $.ig.RVMariaDBDataSourceItem(mariadbDS);
+    mariadbDSI.id = "mariadb_sales_data";
+    mariadbDSI.title = "My MariaDB Datasource Item";
+    mariadbDSI.subtitle = "MariaDB";
+
+    callback(new $.ig.RevealDataSources([mariadbDS], [mariadbDSI], true));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created MariaDB data source item listed in the "Select a Data Source" dialog.
+
+![](images/mariadb-data-source-item.jpg)
+
+:::warning Error Messages
+MariaDB is MySQL-compatible, and it is common for drivers and error messages to reference MySQL even when connected to MariaDB.
+:::
+
+## Additional Resources
+
+- [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
+- [Sample Source Code on GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MariaDB)
+
+## API Reference
+
+<Tabs groupId="code" queryString>
+<TabItem value="aspnet" label="ASP.NET" default>
+
+* [RVMariaDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.MariaDB.RVMariaDBDataSource.html) - Represents a MariaDB data source
+* [RVMariaDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.MariaDB.RVMariaDBDataSourceItem.html) - Represents a MariaDB data source item
+
+</TabItem>
+<TabItem value="node" label="Node.js">
+
+* [RVMariaDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvmariadbdatasource.html) - Represents a MariaDB data source
+* [RVMariaDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvmariadbdatasourceitem.html) - Represents a MariaDB data source item
+
+</TabItem>
+</Tabs>

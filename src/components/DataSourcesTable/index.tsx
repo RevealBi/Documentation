@@ -25,6 +25,7 @@ const DataSources: DataSourceItem[] = [
     { title: "In-Memory Data", topic: "../adding-data-sources/in-memory-data" },
     { title: "JSON", topic: "../adding-data-sources/json" },
     // { title: "Marketo", topic: "", nuget: "Reveal.Sdk.Data.Marketo" }, do not advertise
+    { title: "MariaDB", topic: "../adding-data-sources/mariadb", nuget: "Reveal.Sdk.Data.MariaDB" },
     { title: "Microsoft Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
     { title: "Microsoft Azure Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
     { title: "Microsoft Azure SQL Database", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
@@ -37,7 +38,6 @@ const DataSources: DataSourceItem[] = [
     { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
     { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: "" },
     { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
-    { title: "MariaDB", topic: "../adding-data-sources/mariadb", nuget: "Reveal.Sdk.Data.MariaDB" },
     { title: "OData Feed", topic: "" },
     { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
     { title: "PostgreSQL", topic: "../adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },

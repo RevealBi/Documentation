@@ -118,7 +118,6 @@ Common provider values:
 | `SQLServer` | Microsoft SQL Server |
 | `PostgreSQL` | PostgreSQL |
 | `MySQL` | MySQL |
-| `MariaDB` | MariaDB |
 | `Oracle` | Oracle (Service Name) |
 | `OracleSID` | Oracle (SID) |
 | `SSAS` | SQL Server Analysis Services |

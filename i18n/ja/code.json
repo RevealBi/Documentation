@@ -1,11 +1,9 @@
 {
   "homepage.hero.title": {
-    "message": "Reveal は初めてですか? 私たちにお任せください!",
-    "description": "The title of the hero section on the homepage"
+    "message": "Reveal は初めてですか? 私たちにお任せください!"
   },
   "homepage.hero.subtitle": {
-    "message": "統合、データ可視化のデザイン、ダッシュボードの作成などに関するヘルプを入手してください。",
-    "description": "The subtitle of the hero section on the homepage"
+    "message": "統合、データ可視化のデザイン、ダッシュボードの作成などに関するヘルプを入手してください。"
   },
   "theme.ErrorPageContent.title": {
     "message": "エラーが発生しました",
@@ -642,5 +640,98 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "検索に戻る",
     "description": "The back to search text for footer"
+  },
+  "homepage.hero.cta.getStarted": {
+    "message": "Get Started"
+  },
+  "homepage.hero.cta.exploreAi": {
+    "message": "Explore AI SDK"
+  },
+  "homepage.ai.badge": {
+    "message": "NEW"
+  },
+  "homepage.ai.title": {
+    "message": "AI-Powered Analytics"
+  },
+  "homepage.ai.description": {
+    "message": "Generate dashboards from natural language, get AI insights from your data, and build conversational analytics — all with a few lines of code."
+  },
+  "homepage.ai.capability1": {
+    "message": "Natural Language Dashboards"
+  },
+  "homepage.ai.capability2": {
+    "message": "AI Insights & Forecasts"
+  },
+  "homepage.ai.capability3": {
+    "message": "Conversational Chat"
+  },
+  "homepage.ai.cta": {
+    "message": "Start building with AI"
+  },
+  "homepage.frameworks.html": {
+    "message": "HTML / JavaScript"
+  },
+  "homepage.frameworks.react": {
+    "message": "React"
+  },
+  "homepage.frameworks.angular": {
+    "message": "Angular"
+  },
+  "homepage.frameworks.aspnet": {
+    "message": "ASP.NET"
+  },
+  "homepage.frameworks.node": {
+    "message": "Node.js"
+  },
+  "homepage.frameworks.springboot": {
+    "message": "Spring Boot"
+  },
+  "homepage.frameworks.title": {
+    "message": "Choose Your Stack"
+  },
+  "homepage.frameworks.subtitle": {
+    "message": "Step-by-step getting started guides for your preferred framework."
+  },
+  "homepage.sdk.web.link.getStarted": {
+    "message": "Getting Started"
+  },
+  "homepage.sdk.web.link.dataSources": {
+    "message": "Data Sources"
+  },
+  "homepage.sdk.web.link.apiRef": {
+    "message": "API Reference"
+  },
+  "homepage.sdk.web.link.playground": {
+    "message": "Developer Playground"
+  },
+  "homepage.sdk.ai.link.overview": {
+    "message": "Overview"
+  },
+  "homepage.sdk.ai.link.getStarted": {
+    "message": "Getting Started"
+  },
+  "homepage.sdk.ai.link.insights": {
+    "message": "Insights API"
+  },
+  "homepage.sdk.ai.link.chat": {
+    "message": "Chat API"
+  },
+  "homepage.sdk.web.title": {
+    "message": "Web SDK"
+  },
+  "homepage.sdk.web.subtitle": {
+    "message": "Embedded Analytics"
+  },
+  "homepage.sdk.web.description": {
+    "message": "Embed interactive dashboards and data visualizations into any web application. Supports 30+ data sources with full customization."
+  },
+  "homepage.sdk.ai.title": {
+    "message": "AI SDK"
+  },
+  "homepage.sdk.ai.subtitle": {
+    "message": "Intelligent Analytics"
+  },
+  "homepage.sdk.ai.description": {
+    "message": "Add AI-powered insights, natural language dashboards, and conversational analytics using LLMs like OpenAI, Anthropic, and Google."
   }
 }
