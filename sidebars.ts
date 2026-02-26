@@ -252,11 +252,7 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "Install Client SDK", id: "ai/install-client-sdk" },
           ]
         },
-        {
-          type: "category", label: "Getting Started", key: "ai-getting-started-tutorials", items: [
-            { type: "doc", label: "HTML/JavaScript", id: "ai/getting-started-html" },
-          ]
-        },
+        { type: "doc", label: "Getting Started - HTML/JS", id: "ai/getting-started-html" },
       ]
     },
 
@@ -266,11 +262,11 @@ const sidebars: SidebarsConfig = {
     //   type: "category", label: "Providers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
     //     { type: "doc", label: "Overview", id: "ai/providers-overview" },
     //     { type: "doc", label: "OpenAI", id: "ai/providers-openai" },
+    //     { type: "doc", label: "Azure OpenAI", id: "ai/providers-azure-openai" },
     //     { type: "doc", label: "Anthropic", id: "ai/providers-anthropic" },
     //     { type: "doc", label: "Google Gemini", id: "ai/providers-google-gemini" },
-    //     { type: "doc", label: "Using Custom Endpoints", id: "ai/providers-custom-endpoints" },
+    //     { type: "doc", label: "Custom Endpoints", id: "ai/providers-custom-endpoints" },
     //     { type: "doc", label: "Building a Custom Provider", id: "ai/providers-building-custom" },
-    //     { type: "doc", label: "Multi-Intent Routing", id: "ai/providers-multi-intent-routing" },
     //   ]
     // },
 
@@ -283,32 +279,33 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Features -------------------- */
+    /* -------------------- Using the SDK -------------------- */
     {
-      type: "category", label: "Features", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Insights", id: "ai/insights" },
-        { type: "doc", label: "Chat", id: "ai/chat" },
+      type: "category", label: "Using the SDK", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", key: "ai-sdk-overview", id: "ai/sdk-overview" },
+        { type: "doc", label: "Insights", id: "ai/sdk-insights" },
+        { type: "doc", label: "Chat", id: "ai/sdk-chat" },
+        { type: "doc", label: "Streaming Responses", id: "ai/sdk-streaming" },
+        { type: "doc", label: "Error Handling", id: "ai/sdk-error-handling" },
       ]
     },
 
-    /* -------------------- Using the Client SDK -------------------- */
-    // Uncomment when Client SDK docs are added:
-    // {
-    //   type: "category", label: "Using the Client SDK", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-    //     { type: "doc", label: "Overview", id: "ai/client-sdk-overview" },
-    //     { type: "doc", label: "Streaming Responses", id: "ai/client-sdk-streaming" },
-    //     { type: "doc", label: "Error Handling & Cancellation", id: "ai/client-sdk-error-handling" },
-    //   ]
-    // },
+    /* -------------------- API Reference -------------------- */
+    {
+      type: "category", label: "API Reference", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Insights Endpoint", id: "ai/insights" },
+        { type: "doc", label: "Chat Endpoint", id: "ai/chat" },
+      ]
+    },
 
-    /* -------------------- Using the REST API -------------------- */
-    // Uncomment when REST API docs are added:
-    // {
-    //   type: "category", label: "Using the REST API", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-    //     { type: "doc", label: "API Endpoints", id: "ai/rest-api-endpoints" },
-    //     { type: "doc", label: "Server-Sent Events", id: "ai/rest-api-sse" },
-    //   ]
-    // },
+    /* -------------------- Guides -------------------- */
+    {
+      type: "category", label: "Guides", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Insights with Context Menus", id: "ai/guide-insights-context-menus" },
+        { type: "doc", label: "Building a Chat Interface", id: "ai/guide-chat-interface" },
+        { type: "doc", label: "Streaming Markdown Display", id: "ai/guide-streaming-display" },
+      ]
+    },
 
     /* -------------------- Release Information -------------------- */
     // Uncomment when release docs are added:

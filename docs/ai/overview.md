@@ -2,9 +2,6 @@
 sidebar_label: Overview
 ---
 
-import BetaWarning from './_beta-message.md'
-
-<BetaWarning />
 
 # Reveal SDK AI Overview
 

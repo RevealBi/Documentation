@@ -2,9 +2,6 @@
 sidebar_label: Install Server SDK
 ---
 
-import BetaWarning from './_beta-message.md'
-
-<BetaWarning />
 
 # Installing the AI Server SDK
 

@@ -2,9 +2,6 @@
 sidebar_label: Metadata Catalog
 ---
 
-import BetaWarning from './_beta-message.md'
-
-<BetaWarning />
 
 # Metadata Catalog
 

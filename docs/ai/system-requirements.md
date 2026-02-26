@@ -2,9 +2,6 @@
 sidebar_label: System Requirements
 ---
 
-import BetaWarning from './_beta-message.md'
-
-<BetaWarning />
 
 # System Requirements
 
