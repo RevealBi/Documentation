@@ -96,7 +96,6 @@ export default function HomepageFeatures(): JSX.Element {
               <div className={styles.cardTitleGroup}>
                 <h3 className={styles.cardTitle}>
                   <Translate id="homepage.sdk.ai.title">AI SDK</Translate>
-                  <span className={styles.betaBadge}>BETA</span>
                 </h3>
                 <p className={styles.cardSubtitle}>
                   <Translate id="homepage.sdk.ai.subtitle">Intelligent Analytics</Translate>
