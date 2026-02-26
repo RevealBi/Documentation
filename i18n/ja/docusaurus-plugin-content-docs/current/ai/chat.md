@@ -32,7 +32,7 @@ POST /api/reveal/ai/chat
 
 **セッションクリア**
 ```
-DELETE /api/reveal/ai/chat
+DELETE /api/reveal/ai/chat/session
 ```
 
 ## リクエスト形式
@@ -167,7 +167,7 @@ data: {"error": "Datasource not found"}
 
 **履歴の管理:**
 
-- **履歴のクリア**: `DELETE /api/reveal/ai/chat` を送信してセッションをリセットします
+- **履歴のクリア**: `DELETE /api/reveal/ai/chat/session` を送信してセッションをリセットします
 
 ## サーバー側の実装
 
@@ -186,7 +186,7 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
     revealBuilder.AddDataSourceProvider<DataSourceProvider>();
 });
 
-// Add Reveal AI - automatically registers /api/reveal/ai/chat endpoint
+// Add Reveal AI - automatically registers chat endpoints
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {

@@ -32,7 +32,7 @@ POST /api/reveal/ai/chat
 
 **Clear Session**
 ```
-DELETE /api/reveal/ai/chat
+DELETE /api/reveal/ai/chat/session
 ```
 
 ## Request Format
@@ -167,7 +167,7 @@ Chat maintains server-side conversation history per user and datasource. This en
 
 **Managing History:**
 
-- **Clear history**: Send `DELETE /api/reveal/ai/chat` to reset the session
+- **Clear history**: Send `DELETE /api/reveal/ai/chat/session` to reset the session
 
 ## Server-Side Implementation
 
@@ -186,7 +186,7 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
     revealBuilder.AddDataSourceProvider<DataSourceProvider>();
 });
 
-// Add Reveal AI - automatically registers /api/reveal/ai/chat endpoint
+// Add Reveal AI - automatically registers chat endpoints
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
