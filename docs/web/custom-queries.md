@@ -16,6 +16,7 @@ Custom Queries are supported for the following data sources:
 - Microsoft Azure Synapse Analytics
 - [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
 - [MySQL](adding-data-sources/mysql.md)
+- [MariaDB](adding-data-sources/mariadb.md)
 - [Oracle](adding-data-sources/oracle.md)
 - [PostgreSQL](adding-data-sources/postgres.md)
 - [Snowflake](adding-data-sources/snowflake.md)

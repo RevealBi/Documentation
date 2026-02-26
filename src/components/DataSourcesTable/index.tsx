@@ -37,6 +37,7 @@ const DataSources: DataSourceItem[] = [
     { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
     { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: "" },
     { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
+    { title: "MariaDB", topic: "../adding-data-sources/mariadb", nuget: "Reveal.Sdk.Data.MariaDB" },
     { title: "OData Feed", topic: "" },
     { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
     { title: "PostgreSQL", topic: "../adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },
