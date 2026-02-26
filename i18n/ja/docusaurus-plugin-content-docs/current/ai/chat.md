@@ -119,11 +119,11 @@ data: {"message": "Creating a new dashboard"}
 - 「表示形式にフィルターを追加しています」
 - 「表示形式を変更しています」
 
-##### textchunk イベント
+##### text イベント
 生成される説明テキストのフラグメントを含みます。
 
 ```json
-event: textchunk
+event: text
 data: {"content": "Based on your data, I've created"}
 ```
 
@@ -214,35 +214,34 @@ app.Run();
 
 チャットは、データ ソース構造を理解するために**メタデータ カタログ**が必要です。カタログは、AI が使用可能なデータ ソースとその構成を定義します。
 
-最も簡単な方法は、`appsettings.json` でデータ ソースを定義することです:
+最も簡単な方法は、カタログ JSON ファイルを作成し、ビルダーでファイルを指定することです:
 
-```json title="appsettings.json"
+```json title="config/catalog.json"
 {
-  "RevealAI": {
-    "OpenAI": {
-      "ApiKey": "sk-your-api-key-here"
+  "Datasources": [
+    {
+      "Id": "SampleExcel",
+      "Provider": "WebService"
     },
-    "MetadataCatalog": {
-      "Datasources": [
-        {
-          "Id": "SampleExcel",
-          "Provider": "WebService"
-        },
-        {
-          "Id": "SqlServerData",
-          "Provider": "SQLServer"
-        }
-      ]
+    {
+      "Id": "SqlServerData",
+      "Provider": "SQLServer"
     }
-  }
+  ]
 }
+```
+
+```csharp title="Program.cs"
+builder.Services.AddRevealAI()
+    .UseMetadataCatalogFile("config/catalog.json")
+    .AddOpenAI();
 ```
 
 チャット リクエストの `datasourceId` パラメーターは、カタログで定義された `Id` と一致する必要があります。
 
 :::info
 
-メタデータ カタログは、`appsettings.json` 以外にも、外部 JSON ファイルやカスタム プロバイダー (データベースなど) など、複数のソースをサポートしています。完全なカタログ スキーマ、高度な構成オプション、およびサンプルについては、[メタデータ カタログ](metadata-catalog.md) トピックを参照してください。
+メタデータ カタログは、`IMetadataCatalogProvider` インターフェイスを使用したカスタム プロバイダー (データベースなど) もサポートしています。完全なカタログ スキーマ、高度な構成オプション、およびサンプルについては、[メタデータ カタログ](metadata-catalog.md) トピックを参照してください。
 
 :::
 

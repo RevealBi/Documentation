@@ -102,11 +102,11 @@ event: progress
 data: {"message": "Analyzing dashboard data..."}
 ```
 
-##### textchunk イベント
+##### text イベント
 生成される説明テキストのフラグメントを含みます。
 
 ```json
-event: textchunk
+event: text
 data: {"content": "Sales revenue reached $2.4M in Q4 2024"}
 ```
 

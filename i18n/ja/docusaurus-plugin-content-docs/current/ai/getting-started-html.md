@@ -414,29 +414,25 @@ dotnet run
                 try {
                     if (streamingEnabled) {
                         // Streaming モード - レスポンスがリアルタイムで到着
-                        const result = await client.ai.insights.get(
-                            options,
-                            {
-                                onProgress: (message) => {
-                                    console.log('Progress:', message);
-                                    displayInsight(`*${message}*\n\n`, true);
-                                },
-                                onTextChunk: (text) => {
-                                    console.log('Text chunk:', text);
-                                    displayInsight(text, true);
-                                },
-                                onComplete: () => {
-                                    console.log('Insight complete');
-                                },
-                                onError: (error, details) => {
-                                    console.error('Error:', error, details);
-                                    displayInsight(`**Error:** ${error}`);
-                                }
-                            },
-                            {
-                                streamExplanation: true
-                            }
-                        );
+                        options.stream = true;
+                        const stream = await client.ai.insights.get(options);
+
+                        stream.on('progress', (message) => {
+                            console.log('Progress:', message);
+                            displayInsight(`*${message}*\n\n`, true);
+                        });
+
+                        stream.on('text', (content) => {
+                            console.log('Text:', content);
+                            displayInsight(content, true);
+                        });
+
+                        stream.on('error', (error) => {
+                            console.error('Error:', error);
+                            displayInsight(`**Error:** ${error}`);
+                        });
+
+                        await stream.finalResponse();
                     } else {
                         // Await モード - 完全なレスポンスを待機
                         const result = await client.ai.insights.get(options);
@@ -551,25 +547,22 @@ console.log(result.explanation);
 **ストリーミング モード** - リアルタイム、ChatGPT のようなエクスペリエンス:
 
 ```javascript
-const result = await client.ai.insights.get(
-    {
-        dashboard: dashboard,
-        insightType: rv.InsightType.Summary
-    },
-    {
-        onTextChunk: (text) => {
-            // 到着したチャンクごとに追加
-            displayInsight(text, true);
-        },
-        onComplete: () => {
-            console.log('Done!');
-        }
-    },
-    { streamExplanation: true }
-);
+const stream = await client.ai.insights.get({
+    dashboard: dashboard,
+    insightType: rv.InsightType.Summary,
+    stream: true
+});
+
+stream.on('text', (content) => {
+    // 到着したチャンクごとに追加
+    displayInsight(content, true);
+});
+
+const result = await stream.finalResponse();
+console.log('Done!');
 ```
 
-**重要な違い**: 同じ API 呼び出しですが、処理が異なります。ストリーミングはプログレッシブ更新のためのコールバックを提供し、await は完全なレスポンスを待ちます。
+**重要な違い**: `stream: true` を追加すると、直接の結果ではなく、イベント リスナーを持つ `AIStream` オブジェクトが返されます。リアルタイム更新には `.on()` を使用し、完全なレスポンスを取得するには `.finalResponse()` を使用します。
 
 ### ダッシュボード vs 表示形式のインサイト
 

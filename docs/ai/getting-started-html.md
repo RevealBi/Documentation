@@ -413,29 +413,25 @@ Create a new file `index.html` in your project root (or a separate `client` fold
                 try {
                     if (streamingEnabled) {
                         // Streaming mode - responses arrive in real-time
-                        const result = await client.ai.insights.get(
-                            options,
-                            {
-                                onProgress: (message) => {
-                                    console.log('Progress:', message);
-                                    displayInsight(`*${message}*\n\n`, true);
-                                },
-                                onTextChunk: (text) => {
-                                    console.log('Text chunk:', text);
-                                    displayInsight(text, true);
-                                },
-                                onComplete: () => {
-                                    console.log('Insight complete');
-                                },
-                                onError: (error, details) => {
-                                    console.error('Error:', error, details);
-                                    displayInsight(`**Error:** ${error}`);
-                                }
-                            },
-                            {
-                                streamExplanation: true
-                            }
-                        );
+                        options.stream = true;
+                        const stream = await client.ai.insights.get(options);
+
+                        stream.on('progress', (message) => {
+                            console.log('Progress:', message);
+                            displayInsight(`*${message}*\n\n`, true);
+                        });
+
+                        stream.on('text', (content) => {
+                            console.log('Text:', content);
+                            displayInsight(content, true);
+                        });
+
+                        stream.on('error', (error) => {
+                            console.error('Error:', error);
+                            displayInsight(`**Error:** ${error}`);
+                        });
+
+                        await stream.finalResponse();
                     } else {
                         // Await mode - wait for complete response
                         const result = await client.ai.insights.get(options);
@@ -550,25 +546,22 @@ console.log(result.explanation);
 **Streaming Mode** - Real-time, ChatGPT-like experience:
 
 ```javascript
-const result = await client.ai.insights.get(
-    {
-        dashboard: dashboard,
-        insightType: rv.InsightType.Summary
-    },
-    {
-        onTextChunk: (text) => {
-            // Append each chunk as it arrives
-            displayInsight(text, true);
-        },
-        onComplete: () => {
-            console.log('Done!');
-        }
-    },
-    { streamExplanation: true }
-);
+const stream = await client.ai.insights.get({
+    dashboard: dashboard,
+    insightType: rv.InsightType.Summary,
+    stream: true
+});
+
+stream.on('text', (content) => {
+    // Append each chunk as it arrives
+    displayInsight(content, true);
+});
+
+const result = await stream.finalResponse();
+console.log('Done!');
 ```
 
-**Key difference**: Same API call, different handling. Streaming provides callbacks for progressive updates, while await waits for the complete response.
+**Key difference**: Adding `stream: true` returns an `AIStream` object with event listeners instead of a direct result. Use `.on()` for real-time updates and `.finalResponse()` to get the complete response.
 
 ### Dashboard vs Visualization Insights
 

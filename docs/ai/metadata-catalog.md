@@ -14,11 +14,11 @@ The **metadata catalog** is the central definition of datasources available to R
 
 The metadata system has three distinct responsibilities:
 
-| Concern | Config Section | Purpose |
-|---------|---------------|---------|
-| **Metadata Catalog** | `RevealAI:MetadataCatalog` | *What* datasources exist and how they are structured |
-| **Metadata Manager** | `RevealAI:MetadataManager` | *Where* generated metadata files are written on disk |
-| **Metadata Service** | `RevealAI:MetadataService` | *When* metadata generation runs (startup, schedule) |
+| Concern | Purpose |
+|---------|---------|
+| **Metadata Catalog** | *What* datasources exist and how they are structured |
+| **Metadata Manager** | *Where* generated metadata files are written on disk |
+| **Metadata Service** | *When* metadata generation runs (startup, schedule) |
 
 The **catalog** is the only piece you must configure. The manager and service have sensible defaults and are optional.
 
@@ -133,43 +133,11 @@ Common provider values:
 
 ## Catalog Sources
 
-By default, the catalog is loaded from `appsettings.json`. You can change the source to a JSON file on disk or a completely custom provider (e.g., database-backed).
+The catalog can be loaded from a JSON file on disk or from a completely custom provider (e.g., database-backed).
 
-### Option 1: appsettings.json (Default)
+### Option 1: JSON File on Disk
 
-Define datasources directly in `appsettings.json` under the `RevealAI:MetadataCatalog` section. This is the simplest option and requires no additional configuration.
-
-```json title="appsettings.json"
-{
-  "RevealAI": {
-    "OpenAI": {
-      "ApiKey": "sk-your-api-key-here"
-    },
-    "MetadataCatalog": {
-      "Datasources": [
-        {
-          "Id": "NorthwindDB",
-          "Provider": "SQLServer"
-        },
-        {
-          "Id": "AnalyticsExcel",
-          "Provider": "WebService"
-        }
-      ]
-    }
-  }
-}
-```
-
-```csharp title="Program.cs"
-// No additional configuration needed — appsettings is the default source
-builder.Services.AddRevealAI()
-    .AddOpenAI();
-```
-
-### Option 2: JSON File on Disk
-
-Store the catalog in a standalone JSON file. This is useful when you want to manage datasource definitions separately from application settings, share them across environments, or generate them from a CI/CD pipeline.
+Store the catalog in a standalone JSON file. This is the simplest approach and is useful when you want to manage datasource definitions separately from application settings, share them across environments, or generate them from a CI/CD pipeline.
 
 **1. Create a catalog file:**
 
@@ -205,7 +173,7 @@ builder.Services.AddRevealAI()
 
 Both absolute and relative paths are supported. Relative paths are resolved against the application's current working directory.
 
-### Option 3: Custom Provider
+### Option 2: Custom Provider
 
 Implement `IMetadataCatalogProvider` to load datasource definitions from any source — a database, an API, a key vault, or anything else.
 
@@ -295,45 +263,48 @@ The **Metadata Service** controls *when* metadata is generated. You can trigger 
 
 ## Complete Configuration Example
 
-Here is a full `appsettings.json` showing all three sections together:
+Here is a complete example showing a catalog file, `appsettings.json` for the manager and service options, and the `Program.cs` setup:
+
+```json title="config/catalog.json"
+{
+  "Datasources": [
+    {
+      "Id": "NorthwindDB",
+      "Provider": "SQLServer",
+      "Databases": [
+        {
+          "Name": "Northwind",
+          "DiscoveryMode": "Restricted",
+          "Tables": [
+            {
+              "Name": "dbo.Orders",
+              "Description": "Customer purchase orders",
+              "Fields": [
+                { "Name": "OrderDate", "Alias": "Order Date", "Description": "Date the order was placed" },
+                { "Name": "ShipCountry", "Alias": "Ship Country" }
+              ]
+            },
+            {
+              "Name": "dbo.Customers",
+              "Description": "Customer contact information"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "SalesExcel",
+      "Provider": "WebService"
+    }
+  ]
+}
+```
 
 ```json title="appsettings.json"
 {
   "RevealAI": {
     "OpenAI": {
       "ApiKey": "sk-your-api-key-here"
-    },
-    "MetadataCatalog": {
-      "Datasources": [
-        {
-          "Id": "NorthwindDB",
-          "Provider": "SQLServer",
-          "Databases": [
-            {
-              "Name": "Northwind",
-              "DiscoveryMode": "Restricted",
-              "Tables": [
-                {
-                  "Name": "dbo.Orders",
-                  "Description": "Customer purchase orders",
-                  "Fields": [
-                    { "Name": "OrderDate", "Alias": "Order Date", "Description": "Date the order was placed" },
-                    { "Name": "ShipCountry", "Alias": "Ship Country" }
-                  ]
-                },
-                {
-                  "Name": "dbo.Customers",
-                  "Description": "Customer contact information"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "Id": "SalesExcel",
-          "Provider": "WebService"
-        }
-      ]
     },
     "MetadataManager": {
       "OutputPath": "D:\\metadata\\output"
@@ -348,7 +319,6 @@ Here is a full `appsettings.json` showing all three sections together:
 
 ```csharp title="Program.cs"
 builder.Services.AddRevealAI()
+    .UseMetadataCatalogFile("config/catalog.json")
     .AddOpenAI();
 ```
-
-No additional code is needed — the catalog, manager, and service are all configured from `appsettings.json` automatically.

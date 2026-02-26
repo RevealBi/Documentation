@@ -119,11 +119,11 @@ Common progress messages:
 - "Adding filters to visualizations"
 - "Modifying visualization"
 
-##### textchunk Event
+##### text Event
 Contains fragments of the explanation text as it's generated.
 
 ```json
-event: textchunk
+event: text
 data: {"content": "Based on your data, I've created"}
 ```
 
@@ -213,35 +213,34 @@ No additional controller or routing configuration is needed. Both POST and DELET
 
 Chat requires a **metadata catalog** to understand your datasource structure. The catalog defines which datasources are available to the AI and how they are configured.
 
-The simplest approach is to define datasources in `appsettings.json`:
+The simplest approach is to create a catalog JSON file and point the builder at it:
 
-```json title="appsettings.json"
+```json title="config/catalog.json"
 {
-  "RevealAI": {
-    "OpenAI": {
-      "ApiKey": "sk-your-api-key-here"
+  "Datasources": [
+    {
+      "Id": "SampleExcel",
+      "Provider": "WebService"
     },
-    "MetadataCatalog": {
-      "Datasources": [
-        {
-          "Id": "SampleExcel",
-          "Provider": "WebService"
-        },
-        {
-          "Id": "SqlServerData",
-          "Provider": "SQLServer"
-        }
-      ]
+    {
+      "Id": "SqlServerData",
+      "Provider": "SQLServer"
     }
-  }
+  ]
 }
+```
+
+```csharp title="Program.cs"
+builder.Services.AddRevealAI()
+    .UseMetadataCatalogFile("config/catalog.json")
+    .AddOpenAI();
 ```
 
 The `datasourceId` parameter in chat requests must match an `Id` defined in your catalog.
 
 :::info
 
-The metadata catalog supports multiple sources beyond `appsettings.json`, including external JSON files and custom providers (e.g., database-backed). See the [Metadata Catalog](metadata-catalog.md) topic for the full catalog schema, advanced configuration options, and examples.
+The metadata catalog also supports custom providers (e.g., database-backed) via the `IMetadataCatalogProvider` interface. See the [Metadata Catalog](metadata-catalog.md) topic for the full catalog schema, advanced configuration options, and examples.
 
 :::
 

@@ -8,16 +8,14 @@ import BetaWarning from './_beta-message.md'
 
 # Reveal SDK AI Overview
 
-The Reveal SDK AI adds powerful artificial intelligence capabilities to your Reveal BI applications, enabling users to gain insights, generate dashboards, and interact with data through natural language.
+The Reveal SDK AI adds powerful artificial intelligence capabilities to your Reveal BI applications, enabling users to gain insights and interact with data through natural language.
 
 ## What is Reveal SDK AI?
 
 Reveal SDK AI is an extension of the Reveal SDK that integrates large language models (LLMs) to provide:
 
 - **AI-Generated Insights**: Automatically generate summaries, analyses, and forecasts for your dashboards and visualizations
-- **Natural Language Dashboard Generation**: Create dashboards by describing what you want in plain language
 - **Conversational Analytics**: Chat with your data to explore, analyze, and visualize information
-- **Smart Data Discovery**: AI-powered datasource exploration and metadata understanding
 
 ## Key Features
 
@@ -31,33 +29,12 @@ Generate intelligent insights from your data with three types of analysis:
 
 All insights can be streamed in real-time for a ChatGPT-like user experience.
 
-### Dashboard Generation
-
-Users can generate complete dashboards by simply describing what they want to see:
-
-```typescript
-const response = await client.ai.dashboards.generate({
-  userPrompt: 'Show me sales by region with a trend over time',
-  datasourceId: 'my-datasource'
-});
-```
-
-The AI analyzes your datasource schema and creates appropriate visualizations automatically.
-
-### Dashboard Editing
-
-Modify existing dashboards using natural language:
-
-- **Edit Content**: Add, remove, or modify visualizations
-- **Edit Filters**: Adjust visualization-level or global filters
-- **Describe Dashboards**: Get AI-generated descriptions of dashboard content
-
 ### Conversational AI Chat
 
 Build chat interfaces where users can:
 
 - Ask questions about their data in natural language
-- Get instant dashboard and visualization results
+- Generate and modify dashboards conversationally
 - Maintain conversation context for follow-up questions
 - Stream responses in real-time
 
@@ -76,22 +53,19 @@ console.log(result.explanation);
 
 **Streaming Pattern** - Real-time updates:
 ```typescript
-const result = await client.ai.insights.get(
-  {
-    dashboardId: 'sales-dashboard',
-    insightType: InsightType.Summary
-  },
-  {
-    onTextChunk: (chunk) => {
-      // Display text as it arrives
-      console.log(chunk);
-    },
-    onComplete: (message, result) => {
-      console.log('Complete!');
-    }
-  },
-  { streamExplanation: true }
-);
+const stream = await client.ai.insights.get({
+  dashboardId: 'sales-dashboard',
+  insightType: InsightType.Summary,
+  stream: true,
+});
+
+stream.on('text', (content) => {
+  // Display text as it arrives
+  console.log(content);
+});
+
+const result = await stream.finalResponse();
+console.log('Complete!');
 ```
 
 ## Architecture

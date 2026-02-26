@@ -102,11 +102,11 @@ event: progress
 data: {"message": "Analyzing dashboard data..."}
 ```
 
-##### textchunk Event
+##### text Event
 Contains fragments of the explanation text as it's generated.
 
 ```json
-event: textchunk
+event: text
 data: {"content": "Sales revenue reached $2.4M in Q4 2024"}
 ```
 
