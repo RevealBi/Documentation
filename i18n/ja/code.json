@@ -7,10 +7,6 @@
     "message": "統合、データ可視化のデザイン、ダッシュボードの作成などに関するヘルプを入手してください。",
     "description": "The subtitle of the hero section on the homepage"
   },
-  "homepage.feature.web": {
-    "message": "HTML/JavaScript、Angular、React、または ASP.NET Web アプリケーションにデータ分析を組み込みます。",
-    "description": "The words used to describe the web sdk on the homepage"
-  },
   "theme.ErrorPageContent.title": {
     "message": "エラーが発生しました",
     "description": "The title of the fallback page when the page crashed"
@@ -266,10 +262,6 @@
     "message": "タグ",
     "description": "The title of the tag list page"
   },
-  "homepage.feature.web.title": {
-    "message": "Web SDK ドキュメント",
-    "description": "The title of the Web feature on the homepage"
-  },
   "playground.runButton": {
     "message": "実行"
   },
@@ -355,14 +347,6 @@
   "theme.docs.sidebar.navAriaLabel": {
     "message": "ドキュメント サイドバー",
     "description": "The ARIA label for the sidebar navigation"
-  },
-  "homepage.feature.user.title": {
-    "message": "ユーザー ドキュメント",
-    "description": "The title of the User Docs feature on the homepage"
-  },
-  "homepage.feature.user": {
-    "message": "データ分析を最大限に活用できるように、エンドユーザー向けにカスタマイズされたユーザーフレンドリーなガイドとリソース。",
-    "description": "The words used to describe the user section on the homepage"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "{count} 項目",
@@ -542,14 +526,6 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "このページは下書きです。これは開発環境でのみ表示され、実稼働ビルドには含まれません。",
     "description": "The draft content banner message"
-  },
-  "homepage.feature.video.title": {
-    "message": "ビデオ",
-    "description": "The title of the Video feature on the homepage"
-  },
-  "homepage.feature.video": {
-    "message": "ステップバイステップの YouTube 動画で Reveal SDK を学びましょう。再生ボタンを押して、今日からあなたの最初のダッシュボードを公開しましょう",
-    "description": "The words used to describe the video section on the homepage"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "システム モード",

@@ -66,5 +66,9 @@
   "link.item.label.User": {
     "message": "ユーザー",
     "description": "The label of footer link with label=User linking to user"
+  },
+  "link.item.label.AI SDK": {
+    "message": "AI SDK",
+    "description": "The label of footer link with label=AI SDK linking to ai/overview"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__directory_tree",
+      "Bash(npx docusaurus build)",
+      "mcp__filesystem__read_text_file",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_click",
+      "Bash(where npx.cmd)",
+      "Bash(where npx)",
+      "Bash(node -e \"console.log\\(process.platform\\)\")",
+      "Bash(npx kill-port 3333)",
+      "Bash(lsof -ti:3333)",
+      "Bash(xargs kill -9)",
+      "Bash(netstat -ano)",
+      "Bash(node node_modules/@docusaurus/core/bin/docusaurus.mjs build)",
+      "mcp__playwright__browser_snapshot",
+      "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''D:/Repos/Reveal/Documentation/i18n/en/code.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\)\")",
+      "mcp__playwright__browser_wait_for",
+      "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''D:/Repos/Reveal/Documentation/i18n/ja/code.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\)\")"
+    ]
+  }
+}

@@ -14,7 +14,7 @@ The Reveal SDK AI Server provides the backend services needed to power AI featur
 
 Before installing the AI Server SDK, ensure you have:
 
-1. The base [Reveal SDK Server](../install-server-sdk.md) installed and configured
+1. The base [Reveal SDK Server](/web/install-server-sdk) installed and configured
 2. .NET 8.0 or higher
 3. Access to at least one LLM provider (OpenAI, Anthropic, Google, etc.)
 4. LLM provider API keys configured
@@ -29,7 +29,7 @@ The AI Server SDK for ASP.NET Core is distributed as a NuGet package.
 
 Right-click your Solution or Project and select **Manage NuGet Packages** for Solution.
 
-![](../images/getting-started-nuget-packages-manage.jpg)
+![](../web/images/getting-started-nuget-packages-manage.jpg)
 
 In the package manager dialog, open the **Browse** tab and install the **Reveal.Sdk.AI.AspNetCore** NuGet package into your project.
 

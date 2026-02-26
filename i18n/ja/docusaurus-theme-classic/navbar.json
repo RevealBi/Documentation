@@ -54,5 +54,9 @@
   "item.label.User": {
     "message": "ユーザー",
     "description": "Navbar item with label User"
+  },
+  "item.label.AI": {
+    "message": "AI",
+    "description": "Navbar item with label AI"
   }
 }

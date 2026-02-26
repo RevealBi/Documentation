@@ -1,20 +1,35 @@
 import React from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Translate from '@docusaurus/Translate';
-
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import AiSpotlight from '@site/src/components/AiSpotlight';
+import FrameworkPicker from '@site/src/components/FrameworkPicker';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title" style={{fontSize: "55px"}}><Translate id="homepage.hero.title" description="The title of the hero section on the homepage">New to Reveal? We've got you covered!</Translate></h1>
-        <p className="hero__subtitle"><Translate id="homepage.hero.subtitle" description="The subtitle of the hero section on the homepage">Get help with integration, data visualization design, dashboard creation, and more.</Translate></p>
+        <h1 className="hero__title">
+          <Translate id="homepage.hero.title">
+            Build Intelligent Analytics Into Your Apps
+          </Translate>
+        </h1>
+        <p className="hero__subtitle">
+          <Translate id="homepage.hero.subtitle">
+            Embed interactive dashboards, AI-powered insights, and conversational data exploration into any web application.
+          </Translate>
+        </p>
+        <div className={styles.ctaContainer}>
+          <a href="/web/getting-started-javascript/" className={styles.ctaButton}>
+            <Translate id="homepage.hero.cta.getStarted">Get Started</Translate>
+          </a>
+          <a href="/ai/overview/" className={styles.ctaButtonOutline}>
+            <Translate id="homepage.hero.cta.exploreAi">Explore AI SDK</Translate>
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -28,7 +43,9 @@ export default function Home(): JSX.Element {
       description="The Reveal embedded analytics platform allows you to simplify the way you integrate, manage and pay for data analytics.">
       <HomepageHeader />
       <main>
+        <AiSpotlight />
         <HomepageFeatures />
+        <FrameworkPicker />
       </main>
     </Layout>
   );

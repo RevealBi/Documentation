@@ -543,65 +543,13 @@
     "message": "Databricks",
     "description": "The label for the doc item 'Databricks' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/databricks"
   },
-  "sidebar.webSidebar.category.Reveal SDK AI": {
-    "message": "Reveal SDK AI",
-    "description": "The label for category 'Reveal SDK AI' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Features": {
-    "message": "Features",
-    "description": "The label for category 'Features' in sidebar 'webSidebar'"
-  },
   "sidebar.webSidebar.doc.Elasticsearch": {
     "message": "Elasticsearch",
     "description": "The label for the doc item 'Elasticsearch' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/elasticsearch"
   },
-  "sidebar.webSidebar.doc.Insights": {
-    "message": "Insights",
-    "description": "The label for the doc item 'Insights' in sidebar 'webSidebar', linking to the doc web/ai/insights"
-  },
-  "sidebar.webSidebar.doc.Chat": {
-    "message": "Chat",
-    "description": "The label for the doc item 'Chat' in sidebar 'webSidebar', linking to the doc web/ai/chat"
-  },
-  "sidebar.webSidebar.category.Configuration": {
-    "message": "Configuration",
-    "description": "The label for category 'Configuration' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.Metadata Catalog": {
-    "message": "Metadata Catalog",
-    "description": "The label for the doc item 'Metadata Catalog' in sidebar 'webSidebar', linking to the doc web/ai/metadata-catalog"
-  },
-  "sidebar.webSidebar.category.reveal-sdk-ai-installation": {
-    "message": "Installation",
-    "description": "The label for category 'Installation' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.reveal-sdk-ai-getting-started": {
-    "message": "Getting Started",
-    "description": "The label for category 'Getting Started' in sidebar 'webSidebar'"
-  },
   "sidebar.webSidebar.category.web-component-wrappers-installation": {
     "message": "Installation",
     "description": "The label for category 'Installation' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.reveal-sdk-ai-overview": {
-    "message": "Overview",
-    "description": "The label for the doc item 'Overview' in sidebar 'webSidebar', linking to the doc web/ai/overview"
-  },
-  "sidebar.webSidebar.doc.reveal-sdk-ai-system-requirements": {
-    "message": "System Requirements",
-    "description": "The label for the doc item 'System Requirements' in sidebar 'webSidebar', linking to the doc web/ai/system-requirements"
-  },
-  "sidebar.webSidebar.doc.reveal-sdk-ai-install-server-sdk": {
-    "message": "Install Server SDK",
-    "description": "The label for the doc item 'Install Server SDK' in sidebar 'webSidebar', linking to the doc web/ai/install-server-sdk"
-  },
-  "sidebar.webSidebar.doc.reveal-sdk-ai-install-client-sdk": {
-    "message": "Install Client SDK",
-    "description": "The label for the doc item 'Install Client SDK' in sidebar 'webSidebar', linking to the doc web/ai/install-client-sdk"
-  },
-  "sidebar.webSidebar.doc.reveal-sdk-ai-getting-started-html": {
-    "message": "HTML/JavaScript",
-    "description": "The label for the doc item 'HTML/JavaScript' in sidebar 'webSidebar', linking to the doc web/ai/getting-started-html"
   },
   "sidebar.webSidebar.doc.web-component-wrappers-overview": {
     "message": "Overview",
@@ -638,5 +586,57 @@
   "sidebar.userSideBar.doc.user-tutorials-text-view": {
     "message": "Text View",
     "description": "The label for the doc item 'Text View' in sidebar 'userSideBar', linking to the doc user/tutorials-text-view"
+  },
+  "sidebar.aiSidebar.category.ai-getting-started-header": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category 'Installation' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.ai-getting-started-tutorials": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Metadata": {
+    "message": "Metadata",
+    "description": "The label for category 'Metadata' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Features": {
+    "message": "Features",
+    "description": "The label for category 'Features' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/overview"
+  },
+  "sidebar.aiSidebar.doc.System Requirements": {
+    "message": "System Requirements",
+    "description": "The label for the doc item 'System Requirements' in sidebar 'aiSidebar', linking to the doc ai/system-requirements"
+  },
+  "sidebar.aiSidebar.doc.Install Server SDK": {
+    "message": "Install Server SDK",
+    "description": "The label for the doc item 'Install Server SDK' in sidebar 'aiSidebar', linking to the doc ai/install-server-sdk"
+  },
+  "sidebar.aiSidebar.doc.Install Client SDK": {
+    "message": "Install Client SDK",
+    "description": "The label for the doc item 'Install Client SDK' in sidebar 'aiSidebar', linking to the doc ai/install-client-sdk"
+  },
+  "sidebar.aiSidebar.doc.HTML/JavaScript": {
+    "message": "HTML/JavaScript",
+    "description": "The label for the doc item 'HTML/JavaScript' in sidebar 'aiSidebar', linking to the doc ai/getting-started-html"
+  },
+  "sidebar.aiSidebar.doc.Metadata Catalog": {
+    "message": "Metadata Catalog",
+    "description": "The label for the doc item 'Metadata Catalog' in sidebar 'aiSidebar', linking to the doc ai/metadata-catalog"
+  },
+  "sidebar.aiSidebar.doc.Insights": {
+    "message": "Insights",
+    "description": "The label for the doc item 'Insights' in sidebar 'aiSidebar', linking to the doc ai/insights"
+  },
+  "sidebar.aiSidebar.doc.Chat": {
+    "message": "Chat",
+    "description": "The label for the doc item 'Chat' in sidebar 'aiSidebar', linking to the doc ai/chat"
   }
 }
