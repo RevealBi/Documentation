@@ -1,0 +1,82 @@
+.section {
+  padding: 3rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: var(--ifm-font-color-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(236, 65, 122, 0.15);
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+}
+
+.cardLabel {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.cardBadge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ifm-font-color-secondary);
+  background: var(--ifm-toc-border-color);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+.cardArrow {
+  color: var(--ifm-font-color-secondary);
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.card:hover .cardArrow {
+  color: var(--ifm-color-primary);
+}
+
+@media screen and (max-width: 996px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,95 @@
+.spotlight {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+  border-left: 4px solid transparent;
+}
+
+[data-theme='dark'] .spotlight {
+  background-color: #1e1e1e;
+}
+
+.spotlightInner {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.spotlightContent {
+  flex: 1;
+}
+
+.spotlightCode {
+  flex: 1;
+  min-width: 0;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  background: rgba(236, 65, 122, 0.1);
+  color: var(--ifm-color-primary);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .chip {
+  background: rgba(236, 65, 122, 0.2);
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.ctaLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 996px) {
+  .spotlightInner {
+    flex-direction: column;
+  }
+
+  .spotlightCode {
+    width: 100%;
+  }
+}
