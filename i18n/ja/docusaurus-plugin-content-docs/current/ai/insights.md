@@ -1,80 +1,73 @@
 ---
-sidebar_label: インサイト
+sidebar_label: インサイトエンドポイント
 ---
 
-import BetaWarning from './_beta-message.md'
 
-<BetaWarning />
+# インサイトエンドポイント
 
-# AI インサイト
+AI インサイトは、ダッシュボードやビジュアライゼーションを自動的に分析し、自然言語による説明の生成、トレンドやパターンの特定、将来の値の予測を行います。Reveal SDK AI は、高度なアナリティクスの専門知識がなくてもユーザーがデータを理解できるよう、3 種類のインサイトを生成します。
 
-AI インサイトは、ダッシュボードと表示形式を自動的に分析して、自然言語による説明を生成し、トレンドとパターンを特定し、将来の値を予測します。Reveal SDK AI は、ユーザーが深い分析の専門知識を必要とせずにデータを理解するのに役立つ 3 つのタイプのインサイトを生成します。
+**サマリー** - 主要な指標、トップパフォーマー、全体的なトレンドを強調した簡潔な概要です。
 
-**Summary (要約)** - 主要なメトリック、トップ パフォーマー、全体的なトレンドを強調する簡潔な概要。
+> *"Sales revenue reached $2.4M in Q4 2024, up 18% from Q3. The Technology category led growth with $890K in sales, while the West region showed the strongest performance at $1.1M."*
 
-> *2024 年第 4 四半期の売上収益は 240 万ドルに達し、第 3 四半期から 18% 増加しました。テクノロジー カテゴリが 89 万ドルの売上で成長をリードし、西部地域が 110 万ドルで最も強いパフォーマンスを示しました。*
+**分析** - データ内のパターン、異常値、トレンド、相関関係を特定する詳細な解釈です。
 
-**Analysis (分析)** - データのパターン、異常、トレンド、相関関係を特定する詳細な解釈。
+> *"Analysis reveals a strong seasonal pattern with peaks in Q4 driven by holiday shopping. The Technology category shows consistent month-over-month growth averaging 12%, while Office Supplies demonstrate more volatility. A notable spike in October coincides with the new product launch campaign."*
 
-> *分析により、ホリデー ショッピングによって第 4 四半期にピークを迎える強い季節パターンが明らかになりました。テクノロジー カテゴリは平均 12% の一貫した月次成長を示し、オフィス用品はより多くのボラティリティを示しています。10 月の顕著なスパイクは、新製品発売キャンペーンと一致しています。*
+**予測** - 過去のデータのトレンドに基づく将来の値の予測です。何期間先まで予測するかを指定できます。
 
-**Forecast (予測)** - 履歴データのトレンドに基づく将来の値の予測。何期間先まで予測するかを指定できます。
-
-> *履歴トレンドに基づくと、2025 年第 1 四半期の売上は 210 万ドルと予測され、年半ばまで継続的な成長が期待されます。モデルは、テクノロジー カテゴリの売上が 2025 年 3 月までに 95 万ドルに達し、現在の期間から 15% の成長を表すと予測しています。*
+> *"Based on historical trends, Q1 2025 sales are forecasted at $2.1M, with continued growth expected through mid-year. The model predicts Technology category sales will reach $950K by March 2025, representing 15% growth from the current period."*
 
 インサイトは 2 つのレベルで生成できます:
 
-- **ダッシュボード レベル**: ダッシュボード全体を分析し、すべての表示形式を一緒に考慮して総合的なインサイトを提供します。
-- **表示形式レベル**: 単一の表示形式に焦点を当て、その表示形式のデータに固有の詳細な分析を提供します。
+- **ダッシュボードレベル**: ダッシュボード全体を分析し、すべてのビジュアライゼーションを総合的に考慮して包括的なインサイトを提供します
+- **ビジュアライゼーションレベル**: 単一のビジュアライゼーションに焦点を当て、そのビジュアライゼーションのデータに特化した詳細な分析を提供します
 
 ---
 
-## サーバー API
-
-Insights エンドポイントは、ダッシュボードまたは個々の表示形式の AI インサイトを生成します。シンプルなリクエスト/レスポンス ワークフロー用のプレーン JSON レスポンスと、リアルタイムの進行状況とテキスト更新用のストリーミング SSE レスポンスの 2 つのレスポンス モードをサポートします。
-
-### エンドポイント
+## エンドポイント
 
 ```
 POST /api/reveal/ai/insights
 ```
 
-### リクエスト形式
+## リクエストフォーマット
 
 ```typescript
 {
-  // ダッシュボード ソース (以下のいずれか 1 つを使用)
-  dashboardJson?: string,      // JSON 文字列としてのダッシュボード (RDash 形式)
-  dashboardId?: string,         // ダッシュボード ID (IRVDashboardProvider を使用する場合)
+  // Dashboard source (use ONE of these)
+  dashboardJson?: string,      // Dashboard as JSON string (RDash format)
+  dashboardId?: string,         // Dashboard ID (when using IRVDashboardProvider)
 
-  // オプションのパラメーター
-  visualizationId?: string,     // 表示形式レベルのインサイト用の表示形式 ID
-  insightType?: string,         // "Summary" | "Analysis" | "Forecast" (デフォルト: "Summary")
-  forecastPeriods?: number,     // 予測する期間の数 (デフォルト: 6、Forecast タイプの場合のみ)
-  stream?: boolean,             // JSON の代わりに SSE ストリームを返す (デフォルト: false)
-  model?: string                  // オプションの LLM モデル オーバーライド
+  // Optional parameters
+  visualizationId?: string,     // Visualization ID for visualization-level insights
+  insightType?: string,         // "Summary" | "Analysis" | "Forecast" (default: "Summary")
+  forecastPeriods?: number,     // Number of periods to forecast (default: 6, only for Forecast type)
+  stream?: boolean,             // Return SSE stream instead of JSON (default: false)
+  model?: string                  // Optional LLM model override
 }
 ```
 
-#### リクエスト パラメータ
+### リクエストパラメーター
 
-| パラメータ | タイプ | 必須 | 説明 |
+| パラメーター | 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `dashboardJson` | string | * | JSON 文字列としてのダッシュボード。こちらまたは `dashboardId` を使用します。 |
-| `dashboardId` | string | * | ダッシュボード識別子。こちらまたは `dashboardJson` を使用します。 |
-| `visualizationId` | string | いいえ | 分析する表示形式 ID。省略するとダッシュボード全体を分析します。 |
-| `insightType` | string | いいえ | インサイトのタイプ: `"Summary"`、`"Analysis"`、または `"Forecast"` (デフォルト: `"Summary"`)。 |
-| `forecastPeriods` | number | いいえ | 予測する期間の数 (デフォルト: 6)。`insightType` が `"Forecast"` の場合のみ使用されます。 |
-| `stream` | boolean | いいえ | `true` の場合、進行状況イベント、テキスト チャンク、および最終完了イベントを含む `text/event-stream` (SSE) レスポンスを返します。`false` (デフォルト) の場合、プレーン `application/json` レスポンスを返します。 |
-| `model` | string | いいえ | このリクエストに使用する特定の LLM モデルの名前。 |
+| `dashboardJson` | string | * | ダッシュボードの JSON 文字列。これまたは `dashboardId` を使用します |
+| `dashboardId` | string | * | ダッシュボード識別子。これまたは `dashboardJson` を使用します |
+| `visualizationId` | string | いいえ | 分析するビジュアライゼーション ID。省略した場合、ダッシュボード全体を分析します |
+| `insightType` | string | いいえ | インサイトの種類: `"Summary"`、`"Analysis"`、または `"Forecast"`（デフォルト: `"Summary"`） |
+| `forecastPeriods` | number | いいえ | 予測する期間数（デフォルト: 6）。`insightType` が `"Forecast"` の場合のみ使用されます |
+| `stream` | boolean | いいえ | `true` の場合、プログレスイベント、テキストチャンク、および最終 complete イベントを含む `text/event-stream`（SSE）レスポンスを返します。`false`（デフォルト）の場合、プレーンな `application/json` レスポンスを返します。 |
+| `model` | string | いいえ | このリクエストで使用する特定の LLM モデルの名前 |
 
 \* `dashboardJson` または `dashboardId` のいずれかを指定する必要があります
 
-### レスポンス形式
+## レスポンスフォーマット
 
-#### 非ストリーミング (デフォルト)
+### 非ストリーミング（デフォルト）
 
-`stream` が `false` または省略されている場合、エンドポイントはプレーン JSON レスポンスを返します:
+`stream` が `false` または省略された場合、エンドポイントはプレーンな JSON レスポンスを返します。
 
 ```json
 {
@@ -82,7 +75,7 @@ POST /api/reveal/ai/insights
 }
 ```
 
-エラーの場合、レスポンスには適切な HTTP 状態コード (400 または 500) とともにエラー メッセージが含まれます:
+エラーの場合、レスポンスには適切な HTTP ステータスコード（400 または 500）とともにエラーメッセージが含まれます。
 
 ```json
 {
@@ -90,28 +83,28 @@ POST /api/reveal/ai/insights
 }
 ```
 
-#### ストリーミング
+### ストリーミング
 
-`stream` が `true` の場合、エンドポイントは次のイベント タイプを持つ Server-Sent Events (SSE) を返します:
+`stream` が `true` の場合、エンドポイントは以下のイベントタイプを含む Server-Sent Events（SSE）を返します。
 
-##### progress イベント
-インサイト生成中に現在の状態を示すために送信されます。
+#### progress イベント
+インサイト生成中に現在のステータスを示すために送信されます。
 
 ```json
 event: progress
 data: {"message": "Analyzing dashboard data..."}
 ```
 
-##### text イベント
-生成される説明テキストのフラグメントを含みます。
+#### text イベント
+生成された説明テキストのフラグメントを含みます。
 
 ```json
 event: text
 data: {"content": "Sales revenue reached $2.4M in Q4 2024"}
 ```
 
-##### complete イベント
-インサイト生成が正常に完了したときに送信されます。常に完全な説明を含みます。
+#### complete イベント
+インサイトの生成が正常に完了したときに送信されます。常に完全な説明を含みます。
 
 ```json
 event: complete
@@ -123,318 +116,10 @@ data: {
 }
 ```
 
-##### error イベント
-インサイト生成が失敗した場合に送信されます。
+#### error イベント
+インサイトの生成が失敗した場合に送信されます。
 
 ```json
 event: error
 data: {"error": "Error message"}
-```
-
-## クライアント API
-
-Reveal SDK AI クライアントは、Web アプリケーションからインサイトをリクエストするための TypeScript API を提供します。`client.ai.insights.get()` メソッドは、すべてのパラメーターに単一のリクエスト オブジェクトを使用し、非ストリーミングとストリーミングの両方のモードをサポートします。
-
-### 非ストリーミング (デフォルト)
-
-表示する前に完全な結果を待ちます。`Promise<InsightResponse>` を返します。
-
-```typescript
-import { RevealSdkClient } from '@revealbi/api';
-
-const client = RevealSdkClient.getInstance();
-
-// ダッシュボード全体の要約を取得
-const insight = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-});
-
-console.log(insight.explanation);
-// "Sales revenue reached $2.4M in Q4 2024..."
-```
-
-### ストリーミング
-
-リクエストに `stream: true` を追加すると、イベントが到着するたびにイベントを生成する `AIStream` を取得します。ストリームは 3 つの消費パターンをサポートしています。
-
-#### パターン 1: for-await (フル コントロール)
-
-```typescript
-const stream = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  stream: true,
-});
-
-for await (const event of stream) {
-  switch (event.type) {
-    case 'progress': console.log('Status:', event.message); break;
-    case 'text':     document.getElementById('output').textContent += event.content; break;
-    case 'error':    console.error('Error:', event.error); break;
-  }
-}
-```
-
-#### パターン 2: イベント リスナー (シンプルな UI 連携)
-
-```typescript
-const stream = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  stream: true,
-});
-
-stream.on('progress', (message) => console.log('Status:', message));
-stream.on('text', (content) => document.getElementById('output').textContent += content);
-stream.on('error', (error) => console.error('Error:', error));
-
-const result = await stream.finalResponse();
-console.log('Complete:', result.explanation);
-```
-
-#### パターン 3: ストリームからの集約結果
-
-```typescript
-const stream = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  stream: true,
-});
-
-// 完了を待ち、InsightResponse を返します
-const result = await stream.finalResponse();
-console.log(result.explanation);
-```
-
-### ダッシュボード オブジェクトの使用
-
-ダッシュボード ID の代わりに、ダッシュボード オブジェクトを直接渡すことができます:
-
-```typescript
-// RevealView の RVDashboard オブジェクトを使用
-const insight = await client.ai.insights.get({
-  dashboard: revealView.dashboard,  // RVDashboard オブジェクト
-  type: 'analysis',
-});
-```
-
-### 表示形式レベルのインサイト
-
-Visualization ID を指定して特定の表示形式を分析します:
-
-```typescript
-const insight = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  visualizationId: 'sales-by-region-chart',  // 特定の表示形式
-  type: 'summary',
-});
-```
-
-### 予測インサイト
-
-カスタム期間で予測を生成します:
-
-```typescript
-const insight = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  visualizationId: 'sales-trend',
-  type: 'forecast',
-  forecastPeriods: 12,  // 12 期間先を予測
-});
-```
-
-### リクエスト パラメーター
-
-すべてのパラメーターは単一のリクエスト オブジェクトで渡されます:
-
-```typescript
-// 非ストリーミング リクエスト
-interface InsightRequest {
-  dashboard?: string | RVDashboard;  // ダッシュボード オブジェクトまたは JSON 文字列
-  dashboardId?: string;               // ダッシュボード ID
-  visualizationId?: string;           // 表示形式レベルのインサイト用の表示形式 ID
-  type: InsightType;                   // 'summary' | 'analysis' | 'forecast'
-  forecastPeriods?: number;           // 予測期間 (デフォルト: 6)
-  model?: string;                      // LLM モデルのオーバーライド
-  signal?: AbortSignal;               // リクエストのキャンセル用
-  stream?: false;                      // 非ストリーミング (デフォルト)
-}
-
-// ストリーミング リクエスト
-interface InsightStreamRequest {
-  // ...上記と同じフィールド、さらに:
-  stream: true;                        // ストリーミングを有効にする
-}
-```
-
-| パラメータ | タイプ | 必須 | 説明 |
-|-----------|------|----------|-------------|
-| `dashboard` | `string \| RVDashboard` | * | RevealView からのダッシュボード オブジェクトまたは JSON 文字列。 |
-| `dashboardId` | `string` | * | ダッシュボード識別子。 |
-| `visualizationId` | `string` | いいえ | 分析するウィジェット ID。 |
-| `type` | `InsightType` | はい | タイプ: `'summary'`、`'analysis'`、`'forecast'`。 |
-| `forecastPeriods` | `number` | いいえ | 予測する期間 (デフォルト: 6)。 |
-| `model` | `string` | いいえ | 使用する特定の LLM モデルの名前。 |
-| `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal。 |
-| `stream` | `boolean` | いいえ | ストリーミング モードを有効にする (デフォルト: `false`)。 |
-
-\* `dashboard` または `dashboardId` のいずれかを指定する必要があります。
-
-### レスポンス タイプ
-
-#### InsightResponse
-
-```typescript
-interface InsightResponse {
-  explanation: string;  // AI によって生成された完全な説明
-}
-```
-
-`explanation` フィールドには、非ストリーミングまたはストリーミング モードのどちらを使用するかに関係なく、完全なインサイト テキストが含まれます。
-
-#### AIStream (ストリーミング)
-
-`stream: true` の場合、戻り値のタイプは `AIStream<InsightResponse>` で、以下を提供します:
-
-| メソッド / パターン | 説明 |
-|---------|-------------|
-| `for await (const event of stream)` | イベントが到着するたびにイベントを反復処理します。 |
-| `.on(event, handler)` | イベント固有のリスナーを登録します。 |
-| `.finalResponse()` | 完了した `InsightResponse` で解決される Promise を返します。 |
-| `.abort()` | ストリームをキャンセルします。 |
-
-#### ストリーム イベント
-
-```typescript
-type AIStreamEvent =
-  | { type: 'progress'; message: string }
-  | { type: 'text'; content: string }
-  | { type: 'error'; error: string; details?: unknown };
-```
-
-| イベント タイプ | 説明 |
-|------------|-------------|
-| `progress` | 生成中の状態メッセージ (例: 「ダッシュボードデータを分析しています...」)。 |
-| `text` | 生成される説明のテキスト フラグメント。 |
-| `error` | 生成が失敗した場合のエラー情報。 |
-
----
-
-## 一般的なパターン
-
-### コンテキスト メニューの統合
-
-ダッシュボードのコンテキスト メニューにインサイトを追加します:
-
-```typescript
-revealView.onMenuOpening = function (visualization, args) {
-  // ダッシュボード レベルのインサイト
-  if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
-    args.menuItems.push(new $.ig.RVMenuItem("Summary", null, async () => {
-      const insight = await client.ai.insights.get({
-        dashboard: revealView.dashboard,
-        type: 'summary',
-      });
-      displayInsight(insight.explanation);
-    }));
-  }
-
-  // 表示形式レベルのインサイト
-  if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
-    args.menuItems.push(new $.ig.RVMenuItem("Analyze This", null, async () => {
-      const insight = await client.ai.insights.get({
-        dashboard: revealView.dashboard,
-        visualizationId: visualization.id,
-        type: 'analysis',
-      });
-      displayInsight(insight.explanation);
-    }));
-  }
-};
-```
-
-### ストリーミング表示
-
-マークダウン レンダリングでストリーミング テキストを表示します:
-
-```typescript
-let buffer = '';
-
-const stream = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  stream: true,
-});
-
-stream.on('text', (content) => {
-  buffer += content;
-  // Markdown を、テキストが到着するたびにレンダリングする
-  document.getElementById('output').innerHTML = marked.parse(buffer);
-});
-
-const result = await stream.finalResponse();
-console.log('Streaming complete:', result.explanation);
-```
-
-### エラー処理
-
-非ストリーミングとストリーミングの両方のモードでエラーを適切に処理:
-
-```typescript
-// 非ストリーミングのエラー処理
-try {
-  const insight = await client.ai.insights.get({
-    dashboardId: 'sales-dashboard',
-    type: 'summary',
-  });
-  displayInsight(insight.explanation);
-} catch (error) {
-  console.error('Insight generation failed:', error);
-  showErrorMessage(error.message);
-}
-
-// ストリーミングのエラー処理
-const stream = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  stream: true,
-});
-
-stream.on('text', (content) => appendToUI(content));
-stream.on('error', (error, details) => {
-  console.error('Insight generation failed:', error);
-  showErrorMessage(error);
-});
-
-await stream.finalResponse();
-```
-
-### リクエストのキャンセル
-
-`AbortSignal` を使用して進行中のリクエストをキャンセルします:
-
-```typescript
-const controller = new AbortController();
-
-// 非ストリーミング
-const promise = client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  signal: controller.signal,
-});
-
-// 5 秒後にキャンセル
-setTimeout(() => controller.abort(), 5000);
-
-// ストリーミング
-const stream = await client.ai.insights.get({
-  dashboardId: 'sales-dashboard',
-  type: 'summary',
-  stream: true,
-  signal: controller.signal,
-});
-
-// またはストリームを直接中止
-stream.abort();
 ```

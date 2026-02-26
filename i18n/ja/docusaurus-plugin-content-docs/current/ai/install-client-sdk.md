@@ -2,41 +2,38 @@
 sidebar_label: クライアント SDK のインストール
 ---
 
-import BetaWarning from './_beta-message.md'
-
-<BetaWarning />
 
 # AI クライアント SDK のインストール
 
-Reveal SDK AI クライアントは、Web アプリケーションに AI 機能を提供する TypeScript/JavaScript ライブラリです。基本の Reveal SDK と連携して、インサイト、ダッシュボード生成、会話型 AI などのインテリジェントな機能を追加します。
+Reveal SDK AI クライアントは、ウェブアプリケーションに AI 機能を提供する TypeScript/JavaScript ライブラリです。ベースの Reveal SDK と連携して、インサイト、ダッシュボード生成、会話型 AI などのインテリジェントな機能を追加します。
 
 ## 前提条件
 
-AI クライアント SDK をインストールする前に、以下を確認してください:
+AI クライアント SDK をインストールする前に、以下を確認してください：
 
-1. 基本の [Reveal SDK サーバー](/web/install-server-sdk)がインストールされ、設定されていること
-2. [Reveal SDK AI サーバー](install-server-sdk.md)がインストールされ、設定されていること
-3. Node.js 18+ および npm 9+ がインストールされていること (パッケージベースのインストールの場合)
+1. ベースの [Reveal SDK サーバー](/web/install-server-sdk) がインストールおよび設定済みであること
+2. [Reveal SDK AI サーバー](install-server-sdk.md) がインストールおよび設定済みであること
+3. Node.js 18+ および npm 9+ がインストール済みであること（パッケージベースのインストールの場合）
 
 ## インストール方法
 
-### npm を使用してインストール (推奨)
+### npm を使用したインストール（推奨）
 
-AI クライアント SDK をインストールする推奨方法は npm を使用することです:
+AI クライアント SDK のインストールには npm の使用を推奨します：
 
 ```bash npm2yarn
 npm install @revealbi/api
 ```
 
-### CDN を使用してインストール
+### CDN を使用したインストール
 
-迅速なプロトタイピングとデモのために、unpkg CDN を使用できます:
+クイックプロトタイピングやデモ用には、unpkg CDN を使用できます：
 
 ```html
 <script src="https://unpkg.com/@revealbi/api/dist/index.umd.js"></script>
 ```
 
-または jsDelivr を使用:
+または jsDelivr を使用する場合：
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@revealbi/api/dist/index.umd.js"></script>
@@ -44,13 +41,13 @@ npm install @revealbi/api
 
 ## TypeScript サポート
 
-AI クライアント SDK は TypeScript で記述されており、完全な型定義が含まれています。追加の `@types` パッケージは必要ありません。
+AI クライアント SDK は TypeScript で記述されており、完全な型定義を含んでいます。追加の `@types` パッケージは必要ありません。
 
-## フレームワーク固有のセットアップ
+## フレームワーク別のセットアップ
 
-### 素の JavaScript
+### バニラ JavaScript
 
-#### ES モジュールの使用
+#### ES Modules を使用する場合
 
 ```html
 <!DOCTYPE html>
@@ -72,7 +69,7 @@ AI クライアント SDK は TypeScript で記述されており、完全な型
 </html>
 ```
 
-#### UMD バンドルの使用
+#### UMD バンドルを使用する場合
 
 ```html
 <!DOCTYPE html>
@@ -95,7 +92,7 @@ AI クライアント SDK は TypeScript で記述されており、完全な型
 
 ### Angular
 
-`main.ts` ファイルで、アプリケーションをブートストラップする前に初期化します:
+`main.ts` ファイルで、アプリケーションのブートストラップ前に初期化します：
 
 ```typescript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -113,7 +110,7 @@ platformBrowserDynamic()
 
 ### React
 
-`index.tsx` または `main.tsx` ファイルで、レンダリングする前に初期化します:
+`index.tsx` または `main.tsx` ファイルで、レンダリング前に初期化します：
 
 ```typescript
 import React from 'react';
@@ -134,7 +131,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 ### Vue
 
-`main.ts` ファイルで、アプリケーションをマウントする前に初期化します:
+`main.ts` ファイルで、アプリケーションのマウント前に初期化します：
 
 ```typescript
 import { createApp } from 'vue';

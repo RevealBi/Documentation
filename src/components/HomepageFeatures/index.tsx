@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const DeveloperSvg = require('@site/static/img/developer.svg').default;
@@ -44,7 +45,7 @@ function QuickLinkList({ links }: { links: QuickLink[] }) {
       {links.map((link, idx) => (
         <li key={idx} className={styles.quickLink}>
           <span className={styles.quickLinkArrow}>›</span>
-          <a href={link.href}>{link.label}</a>
+          <Link to={link.href}>{link.label}</Link>
         </li>
       ))}
     </ul>

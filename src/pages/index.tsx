@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Translate from '@docusaurus/Translate';
+import Link from '@docusaurus/Link';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import AiSpotlight from '@site/src/components/AiSpotlight';
 import FrameworkPicker from '@site/src/components/FrameworkPicker';
@@ -23,12 +24,12 @@ function HomepageHeader() {
           </Translate>
         </p>
         <div className={styles.ctaContainer}>
-          <a href="/web/getting-started-javascript/" className={styles.ctaButton}>
+          <Link to="/web/getting-started-javascript/" className={styles.ctaButton}>
             <Translate id="homepage.hero.cta.getStarted">Get Started</Translate>
-          </a>
-          <a href="/ai/overview/" className={styles.ctaButtonOutline}>
+          </Link>
+          <Link to="/ai/overview/" className={styles.ctaButtonOutline}>
             <Translate id="homepage.hero.cta.exploreAi">Explore AI SDK</Translate>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

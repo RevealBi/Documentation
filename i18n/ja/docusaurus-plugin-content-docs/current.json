@@ -588,24 +588,28 @@
     "description": "The label for the doc item 'Text View' in sidebar 'userSideBar', linking to the doc user/tutorials-text-view"
   },
   "sidebar.aiSidebar.category.ai-getting-started-header": {
-    "message": "作業の開始",
+    "message": "はじめに",
     "description": "The label for category 'Getting Started' in sidebar 'aiSidebar'"
   },
   "sidebar.aiSidebar.category.Installation": {
     "message": "インストール",
     "description": "The label for category 'Installation' in sidebar 'aiSidebar'"
   },
-  "sidebar.aiSidebar.category.ai-getting-started-tutorials": {
-    "message": "作業の開始",
-    "description": "The label for category 'Getting Started' in sidebar 'aiSidebar'"
-  },
   "sidebar.aiSidebar.category.Metadata": {
     "message": "メタデータ",
     "description": "The label for category 'Metadata' in sidebar 'aiSidebar'"
   },
-  "sidebar.aiSidebar.category.Features": {
-    "message": "機能",
-    "description": "The label for category 'Features' in sidebar 'aiSidebar'"
+  "sidebar.aiSidebar.category.Using the SDK": {
+    "message": "SDK の使い方",
+    "description": "The label for category 'Using the SDK' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.API Reference": {
+    "message": "API リファレンス",
+    "description": "The label for category 'API Reference' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Guides": {
+    "message": "ガイド",
+    "description": "The label for category 'Guides' in sidebar 'aiSidebar'"
   },
   "sidebar.aiSidebar.doc.Overview": {
     "message": "概要",
@@ -623,20 +627,52 @@
     "message": "クライアント SDK のインストール",
     "description": "The label for the doc item 'Install Client SDK' in sidebar 'aiSidebar', linking to the doc ai/install-client-sdk"
   },
-  "sidebar.aiSidebar.doc.HTML/JavaScript": {
-    "message": "HTML/JavaScript",
-    "description": "The label for the doc item 'HTML/JavaScript' in sidebar 'aiSidebar', linking to the doc ai/getting-started-html"
+  "sidebar.aiSidebar.doc.Getting Started - HTML/JS": {
+    "message": "はじめに - HTML/JS",
+    "description": "The label for the doc item 'Getting Started - HTML/JS' in sidebar 'aiSidebar', linking to the doc ai/getting-started-html"
   },
   "sidebar.aiSidebar.doc.Metadata Catalog": {
-    "message": "メタデータ カタログ",
+    "message": "メタデータカタログ",
     "description": "The label for the doc item 'Metadata Catalog' in sidebar 'aiSidebar', linking to the doc ai/metadata-catalog"
+  },
+  "sidebar.aiSidebar.doc.ai-sdk-overview": {
+    "message": "概要",
+    "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/sdk-overview"
   },
   "sidebar.aiSidebar.doc.Insights": {
     "message": "インサイト",
-    "description": "The label for the doc item 'Insights' in sidebar 'aiSidebar', linking to the doc ai/insights"
+    "description": "The label for the doc item 'Insights' in sidebar 'aiSidebar', linking to the doc ai/sdk-insights"
   },
   "sidebar.aiSidebar.doc.Chat": {
     "message": "チャット",
-    "description": "The label for the doc item 'Chat' in sidebar 'aiSidebar', linking to the doc ai/chat"
+    "description": "The label for the doc item 'Chat' in sidebar 'aiSidebar', linking to the doc ai/sdk-chat"
+  },
+  "sidebar.aiSidebar.doc.Streaming Responses": {
+    "message": "ストリーミングレスポンス",
+    "description": "The label for the doc item 'Streaming Responses' in sidebar 'aiSidebar', linking to the doc ai/sdk-streaming"
+  },
+  "sidebar.aiSidebar.doc.Error Handling": {
+    "message": "エラーハンドリング",
+    "description": "The label for the doc item 'Error Handling' in sidebar 'aiSidebar', linking to the doc ai/sdk-error-handling"
+  },
+  "sidebar.aiSidebar.doc.Insights Endpoint": {
+    "message": "インサイトエンドポイント",
+    "description": "The label for the doc item 'Insights Endpoint' in sidebar 'aiSidebar', linking to the doc ai/insights"
+  },
+  "sidebar.aiSidebar.doc.Chat Endpoint": {
+    "message": "チャットエンドポイント",
+    "description": "The label for the doc item 'Chat Endpoint' in sidebar 'aiSidebar', linking to the doc ai/chat"
+  },
+  "sidebar.aiSidebar.doc.Insights with Context Menus": {
+    "message": "コンテキストメニューによるインサイト",
+    "description": "The label for the doc item 'Insights with Context Menus' in sidebar 'aiSidebar', linking to the doc ai/guide-insights-context-menus"
+  },
+  "sidebar.aiSidebar.doc.Building a Chat Interface": {
+    "message": "チャットインターフェースの構築",
+    "description": "The label for the doc item 'Building a Chat Interface' in sidebar 'aiSidebar', linking to the doc ai/guide-chat-interface"
+  },
+  "sidebar.aiSidebar.doc.Streaming Markdown Display": {
+    "message": "ストリーミング Markdown 表示",
+    "description": "The label for the doc item 'Streaming Markdown Display' in sidebar 'aiSidebar', linking to the doc ai/guide-streaming-display"
   }
 }
