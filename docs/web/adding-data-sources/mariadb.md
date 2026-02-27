@@ -11,13 +11,6 @@ import TabItem from '@theme/TabItem';
 
 MariaDB is a community-developed, commercially supported open-source relational database that is a drop-in replacement for MySQL. This topic explains how to connect to MariaDB data sources in your Reveal application to visualize and analyze your data.
 
-:::important Prerequisites
-Before configuring the MariaDB data source in Reveal, you must have access to a MariaDB server and the appropriate database driver for your platform:
-- For Windows/.NET: [MySqlConnector](https://mysqlconnector.net/) or the MySQL .NET connector.
-- For Node.js: A MySQL-compatible driver (e.g. `mysql2`).
-
-These drivers are essential for establishing connections to your MariaDB data source. After installation, ensure the drivers are properly configured according to the connector documentation.
-:::
 
 ## Server Configuration
 

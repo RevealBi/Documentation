@@ -1,102 +1,135 @@
 {
   "homepage.hero.title": {
-    "message": "Build Intelligent Analytics Into Your Apps"
+    "message": "Build Intelligent Analytics Into Your Apps",
+    "description": "The title of the hero section on the homepage"
   },
   "homepage.hero.subtitle": {
-    "message": "Embed interactive dashboards, AI-powered insights, and conversational data exploration into any web application."
+    "message": "Embed interactive dashboards, AI-powered insights, and conversational data exploration into any web application.",
+    "description": "The subtitle of the hero section on the homepage"
   },
   "homepage.hero.cta.getStarted": {
-    "message": "Get Started"
+    "message": "Get Started",
+    "description": "The primary CTA button on the homepage hero"
   },
   "homepage.hero.cta.exploreAi": {
-    "message": "Explore AI SDK"
+    "message": "Explore AI SDK",
+    "description": "The secondary CTA button on the homepage hero"
   },
   "homepage.ai.badge": {
-    "message": "NEW"
+    "message": "NEW",
+    "description": "The badge label for the AI spotlight section"
   },
   "homepage.ai.title": {
-    "message": "AI-Powered Analytics"
+    "message": "AI-Powered Analytics",
+    "description": "The title of the AI spotlight section"
   },
   "homepage.ai.description": {
-    "message": "Generate dashboards from natural language, get AI insights from your data, and build conversational analytics — all with a few lines of code."
+    "message": "Generate dashboards from natural language, get AI insights from your data, and build conversational analytics — all with a few lines of code.",
+    "description": "The description in the AI spotlight section"
   },
   "homepage.ai.capability1": {
-    "message": "Natural Language Dashboards"
+    "message": "Natural Language Dashboards",
+    "description": "AI capability chip 1"
   },
   "homepage.ai.capability2": {
-    "message": "AI Insights & Forecasts"
+    "message": "AI Insights & Forecasts",
+    "description": "AI capability chip 2"
   },
   "homepage.ai.capability3": {
-    "message": "Conversational Chat"
+    "message": "Conversational Chat",
+    "description": "AI capability chip 3"
   },
   "homepage.ai.cta": {
-    "message": "Start building with AI"
+    "message": "Start building with AI",
+    "description": "The CTA link in the AI spotlight section"
   },
   "homepage.sdk.web.title": {
-    "message": "Web SDK"
+    "message": "Web SDK",
+    "description": "The title of the Web SDK card"
   },
   "homepage.sdk.web.subtitle": {
-    "message": "Embedded Analytics"
+    "message": "Embedded Analytics",
+    "description": "The subtitle of the Web SDK card"
   },
   "homepage.sdk.web.description": {
-    "message": "Embed interactive dashboards and data visualizations into any web application. Supports 30+ data sources with full customization."
+    "message": "Embed interactive dashboards and data visualizations into any web application. Supports 30+ data sources with full customization.",
+    "description": "The description of the Web SDK card"
   },
   "homepage.sdk.web.link.getStarted": {
-    "message": "Getting Started"
+    "message": "Getting Started",
+    "description": "Web SDK quick link"
   },
   "homepage.sdk.web.link.dataSources": {
-    "message": "Data Sources"
+    "message": "Data Sources",
+    "description": "Web SDK quick link"
   },
   "homepage.sdk.web.link.apiRef": {
-    "message": "API Reference"
+    "message": "API Reference",
+    "description": "Web SDK quick link"
   },
   "homepage.sdk.web.link.playground": {
-    "message": "Developer Playground"
+    "message": "Developer Playground",
+    "description": "Web SDK quick link"
   },
   "homepage.sdk.ai.title": {
-    "message": "AI SDK"
+    "message": "AI SDK",
+    "description": "The title of the AI SDK card"
   },
   "homepage.sdk.ai.subtitle": {
-    "message": "Intelligent Analytics"
+    "message": "Intelligent Analytics",
+    "description": "The subtitle of the AI SDK card"
   },
   "homepage.sdk.ai.description": {
-    "message": "Add AI-powered insights, natural language dashboards, and conversational analytics using LLMs like OpenAI, Anthropic, and Google."
+    "message": "Add AI-powered insights, natural language dashboards, and conversational analytics using LLMs like OpenAI, Anthropic, and Google.",
+    "description": "The description of the AI SDK card"
   },
   "homepage.sdk.ai.link.overview": {
-    "message": "Overview"
+    "message": "Overview",
+    "description": "AI SDK quick link"
   },
   "homepage.sdk.ai.link.getStarted": {
-    "message": "Getting Started"
+    "message": "Getting Started",
+    "description": "AI SDK quick link"
   },
   "homepage.sdk.ai.link.insights": {
-    "message": "Insights API"
+    "message": "Insights API",
+    "description": "AI SDK quick link"
   },
   "homepage.sdk.ai.link.chat": {
-    "message": "Chat API"
+    "message": "Chat API",
+    "description": "AI SDK quick link"
   },
   "homepage.frameworks.title": {
-    "message": "Choose Your Stack"
+    "message": "Choose Your Stack",
+    "description": "The title of the framework picker section"
   },
   "homepage.frameworks.subtitle": {
-    "message": "Step-by-step getting started guides for your preferred framework."
+    "message": "Step-by-step getting started guides for your preferred framework.",
+    "description": "The subtitle of the framework picker section"
   },
   "homepage.frameworks.html": {
-    "message": "HTML / JavaScript"
+    "message": "HTML / JavaScript",
+    "description": "Framework picker label"
   },
   "homepage.frameworks.react": {
-    "message": "React"
+    "message": "React",
+    "description": "Framework picker label"
   },
   "homepage.frameworks.angular": {
-    "message": "Angular"
+    "message": "Angular",
+    "description": "Framework picker label"
   },
   "homepage.frameworks.aspnet": {
-    "message": "ASP.NET"
+    "message": "ASP.NET",
+    "description": "Framework picker label"
   },
   "homepage.frameworks.node": {
-    "message": "Node.js"
+    "message": "Node.js",
+    "description": "Framework picker label"
   },
   "homepage.frameworks.springboot": {
-    "message": "Spring Boot"
+    "message": "Spring Boot",
+    "description": "Framework picker label"
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
