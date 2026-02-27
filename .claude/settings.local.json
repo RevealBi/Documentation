@@ -23,7 +23,9 @@
       "mcp__playwright__browser_snapshot",
       "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''D:/Repos/Reveal/Documentation/i18n/en/code.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\)\")",
       "mcp__playwright__browser_wait_for",
-      "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''D:/Repos/Reveal/Documentation/i18n/ja/code.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\)\")"
+      "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''D:/Repos/Reveal/Documentation/i18n/ja/code.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\)\")",
+      "mcp__filesystem__list_directory_with_sizes",
+      "Bash(npx docusaurus clear)"
     ]
   }
 }

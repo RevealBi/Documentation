@@ -1,5 +1,6 @@
 import React from 'react';
 import Translate from '@docusaurus/Translate';
+import Link from '@docusaurus/Link';
 import CodeBlock from '@theme/CodeBlock';
 import styles from './styles.module.css';
 
@@ -39,9 +40,9 @@ export default function AiSpotlight(): JSX.Element {
                 <Translate id="homepage.ai.capability3">Conversational Chat</Translate>
               </span>
             </div>
-            <a href="/ai/getting-started-html/" className={styles.ctaLink}>
+            <Link to="/ai/getting-started-html/" className={styles.ctaLink}>
               <Translate id="homepage.ai.cta">Start building with AI</Translate> →
-            </a>
+            </Link>
           </div>
           <div className={styles.spotlightCode}>
             <CodeBlock language="typescript" title="AI Insights">

@@ -1,36 +1,33 @@
 ---
-sidebar_label: メタデータ カタログ
+sidebar_label: メタデータカタログ
 ---
 
-import BetaWarning from './_beta-message.md'
 
-<BetaWarning />
+# メタデータカタログ
 
-# メタデータ カタログ
-
-**メタデータ カタログ**は、Reveal SDK AI で使用可能なデータ ソースの中央定義です。各データ接続の存在、使用するプロバイダー、およびオプションのデータベース、テーブル、フィールドの説明を AI に伝えます。**チャット**と**メタデータ サービス**の両方の機能が、データの全体像を理解するためにカタログに依存しています。
+**メタデータカタログ**は、Reveal SDK AI で利用可能なデータソースの中心的な定義です。AI に対して、どのようなデータ接続が存在し、各接続がどのプロバイダーを使用し、オプションでそのデータベース、テーブル、フィールドを記述します。**チャット**と**メタデータサービス**の両機能は、データの全体像を理解するためにカタログに依存しています。
 
 ## 仕組み
 
-メタデータ システムには 3 つの異なる責務があります:
+メタデータシステムには、3つの異なる責務があります:
 
-| 対象 | 構成セクション | 目的 |
-|---------|---------------|---------|
-| **メタデータ カタログ** | `RevealAI:MetadataCatalog` | どのデータ ソースが存在し、どのように構成されているか |
-| **メタデータ マネージャー** | `RevealAI:MetadataManager` | 生成されたメタデータ ファイルがディスクに書き込まれる場所 |
-| **メタデータ サービス** | `RevealAI:MetadataService` | メタデータ生成がいつ実行されるか (起動時、スケジュール) |
+| 関心事 | 目的 |
+|---------|---------|
+| **メタデータカタログ** | どのデータソースが存在し、どのような構造になっているか |
+| **メタデータマネージャー** | 生成されたメタデータファイルがディスク上のどこに書き込まれるか |
+| **メタデータサービス** | メタデータ生成がいつ実行されるか（起動時、スケジュール） |
 
-**カタログ**は、構成が必要な唯一の要素です。マネージャーとサービスには適切なデフォルト値があり、オプションです。
+設定が必要なのは**カタログ**のみです。マネージャーとサービスには適切なデフォルト値があり、設定は任意です。
 
 ---
 
-## カタログ スキーマ
+## カタログスキーマ
 
-カタログは、`Datasources` 配列を持つ JSON オブジェクトです。各エントリは、プロバイダーとオプションのスキーマ詳細を含むデータ ソースを定義します。
+カタログは `Datasources` 配列を持つ JSON オブジェクトです。各エントリは、プロバイダーとオプションのスキーマ詳細を含むデータソースを定義します。
 
-### 最小限のサンプル
+### 最小限の例
 
-最低限、各データ ソースには `Id` と `Provider` が必要です:
+最低限、各データソースには `Id` と `Provider` が必要です:
 
 ```json
 {
@@ -75,41 +72,41 @@ import BetaWarning from './_beta-message.md'
 }
 ```
 
-### スキーマ リファレンス
+### スキーマリファレンス
 
-#### データ ソース
+#### データソース
 
-| プロパティ | タイプ | 必須 | 説明 |
+| プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
-| `Id` | string | はい | データ ソースの一意の識別子。API リクエストで `datasourceId` として使用されます。 |
-| `Provider` | string | はい | データ プロバイダー タイプ (下記の[プロバイダー タイプ](#プロバイダー-タイプ)を参照) |
-| `Databases` | array | いいえ | このデータ ソースで使用可能なデータベース スキーマのリスト |
+| `Id` | string | はい | データソースの一意の識別子。API リクエストで `datasourceId` として使用されます。 |
+| `Provider` | string | はい | データプロバイダーの種類（以下の[プロバイダータイプ](#provider-types)を参照） |
+| `Databases` | array | いいえ | このデータソースで利用可能なデータベーススキーマのリスト |
 
 #### データベース
 
-| プロパティ | タイプ | 必須 | 説明 |
+| プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
 | `Name` | string | はい | データベースの名前 |
-| `DiscoveryMode` | string | いいえ | `"Default"` (すべてのテーブルを検出) または `"Restricted"` (一覧表示されたテーブルのみ)。デフォルトは `"Default"`。 |
-| `Tables` | array | いいえ | このデータベースのテーブル スキーマのリスト |
+| `DiscoveryMode` | string | いいえ | `"Default"`（すべてのテーブルを検出）または `"Restricted"`（リストされたテーブルのみ）。デフォルトは `"Default"` です。 |
+| `Tables` | array | いいえ | このデータベース内のテーブルスキーマのリスト |
 
 #### テーブル
 
-| プロパティ | タイプ | 必須 | 説明 |
+| プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
-| `Name` | string | はい | 完全修飾テーブル名 (例: `"dbo.Orders"`) |
-| `Description` | string | いいえ | テーブルの内容を AI が理解するのに役立つ説明。 |
-| `Fields` | array | いいえ | このテーブルのフィールド スキーマのリスト |
+| `Name` | string | はい | 完全修飾テーブル名（例: `"dbo.Orders"`） |
+| `Description` | string | いいえ | 人間が読める説明。テーブルの内容を AI が理解するのに役立ちます。 |
+| `Fields` | array | いいえ | このテーブル内のフィールドスキーマのリスト |
 
 #### フィールド
 
-| プロパティ | タイプ | 必須 | 説明 |
+| プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
-| `Name` | string | はい | データベースの実際の列名 |
-| `Alias` | string | いいえ | フィールドの表示エイリアス (例: `"OrderDate"` に対する `"Order Date"`) |
-| `Description` | string | いいえ | フィールドが何を表すかを AI が理解するのに役立つ説明。 |
+| `Name` | string | はい | データベース内の実際のカラム名 |
+| `Alias` | string | いいえ | フィールドの表示エイリアス（例: `"OrderDate"` に対して `"Order Date"`） |
+| `Description` | string | いいえ | 人間が読める説明。フィールドが何を表しているかを AI が理解するのに役立ちます。 |
 
-### プロバイダー タイプ
+### プロバイダータイプ {#provider-types}
 
 一般的なプロバイダー値:
 
@@ -118,10 +115,10 @@ import BetaWarning from './_beta-message.md'
 | `SQLServer` | Microsoft SQL Server |
 | `PostgreSQL` | PostgreSQL |
 | `MySQL` | MySQL |
-| `Oracle` | Oracle (サービス名) |
-| `OracleSID` | Oracle (SID) |
+| `Oracle` | Oracle（サービス名） |
+| `OracleSID` | Oracle（SID） |
 | `SSAS` | SQL Server Analysis Services |
-| `SSASHTTP` | SQL Server Analysis Services (HTTP) |
+| `SSASHTTP` | SQL Server Analysis Services（HTTP） |
 | `Snowflake` | Snowflake |
 | `BigQuery` | Google BigQuery |
 | `AmazonAthena` | Amazon Athena |
@@ -131,47 +128,15 @@ import BetaWarning from './_beta-message.md'
 
 ---
 
-## カタログ ソース
+## カタログソース
 
-デフォルトでは、カタログは `appsettings.json` から読み込まれます。ソースをディスク上の JSON ファイルや完全なカスタム プロバイダー (データベースなど) に変更できます。
+カタログは、ディスク上の JSON ファイルから読み込むか、完全なカスタムプロバイダー（例: データベースバックエンド）から読み込むことができます。
 
-### オプション 1: appsettings.json (デフォルト)
+### オプション 1: ディスク上の JSON ファイル
 
-`appsettings.json` の `RevealAI:MetadataCatalog` セクションでデータ ソースを直接定義します。最も簡単なオプションで、追加の構成は不要です。
+カタログを独立した JSON ファイルに保存します。これは最もシンプルなアプローチで、データソース定義をアプリケーション設定とは別に管理したい場合、環境間で共有したい場合、または CI/CD パイプラインから生成したい場合に便利です。
 
-```json title="appsettings.json"
-{
-  "RevealAI": {
-    "OpenAI": {
-      "ApiKey": "sk-your-api-key-here"
-    },
-    "MetadataCatalog": {
-      "Datasources": [
-        {
-          "Id": "NorthwindDB",
-          "Provider": "SQLServer"
-        },
-        {
-          "Id": "AnalyticsExcel",
-          "Provider": "WebService"
-        }
-      ]
-    }
-  }
-}
-```
-
-```csharp title="Program.cs"
-// 追加の構成は不要 — appsettings がデフォルトのソースです
-builder.Services.AddRevealAI()
-    .AddOpenAI();
-```
-
-### オプション 2: ディスク上の JSON ファイル
-
-カタログをスタンドアロンの JSON ファイルに保存します。データ ソース定義をアプリケーション設定とは別に管理したい場合、環境間で共有したい場合、または CI/CD パイプラインから生成したい場合に便利です。
-
-**1. カタログ ファイルを作成:**
+**1. カタログファイルの作成:**
 
 ```json title="config/catalog.json"
 {
@@ -203,13 +168,13 @@ builder.Services.AddRevealAI()
     .AddOpenAI();
 ```
 
-絶対パスと相対パスの両方がサポートされています。相対パスは、アプリケーションの現在の作業ディレクトリに対して解決されます。
+絶対パスと相対パスの両方がサポートされています。相対パスはアプリケーションの現在の作業ディレクトリを基準に解決されます。
 
-### オプション 3: カスタム プロバイダー
+### オプション 2: カスタムプロバイダー
 
-`IMetadataCatalogProvider` を実装して、データベース、API、キー ボールト、またはその他のソースからデータ ソース定義を読み込みます。
+`IMetadataCatalogProvider` を実装して、任意のソース（データベース、API、キー保管庫など）からデータソース定義を読み込みます。
 
-**1. インターフェイスを実装:**
+**1. インターフェースの実装:**
 
 ```csharp title="DatabaseCatalogProvider.cs"
 using Reveal.Sdk.AI.Metadata.Catalog;
@@ -239,7 +204,7 @@ public class DatabaseCatalogProvider : IMetadataCatalogProvider
 }
 ```
 
-**2. プロバイダーを登録:**
+**2. プロバイダーの登録:**
 
 ```csharp title="Program.cs"
 builder.Services.AddRevealAI()
@@ -247,13 +212,13 @@ builder.Services.AddRevealAI()
     .AddOpenAI();
 ```
 
-プロバイダー クラスは依存関係の注入 (DI) を通じて解決されるため、コンストラクターで必要なサービスを注入できます。
+プロバイダークラスは依存性注入を通じて解決されるため、コンストラクタで必要なサービスを注入できます。
 
 ---
 
-## メタデータ マネージャー オプション
+## メタデータマネージャーオプション
 
-**メタデータ マネージャー**は、生成されたメタデータ ファイルがディスクに書き込まれる場所を制御します。これらのファイルは一時的なもので、自動的に生成され、いつでも再生成できます。
+**メタデータマネージャー**は、生成されたメタデータファイルがディスク上のどこに書き込まれるかを制御します。これらのファイルは一時的なものであり、自動的に生成され、いつでも再生成できます。
 
 ```json title="appsettings.json"
 {
@@ -265,15 +230,15 @@ builder.Services.AddRevealAI()
 }
 ```
 
-| プロパティ | タイプ | 必須 | 説明 |
+| プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
-| `OutputPath` | string | いいえ | 生成されたメタデータ ファイルが保存されるディレクトリ。デフォルトは `{user-home}/reveal/ai/metadata`。 |
+| `OutputPath` | string | いいえ | 生成されたメタデータファイルが保存されるディレクトリ。デフォルトは `{user-home}/reveal/ai/metadata` です。 |
 
 ---
 
-## メタデータ サービス オプション
+## メタデータサービスオプション
 
-**メタデータ サービス**は、メタデータが生成されるタイミングを制御します。アプリケーションの起動時、定期的なスケジュール、またはその両方で生成をトリガーできます。
+**メタデータサービス**は、メタデータがいつ生成されるかを制御します。アプリケーション起動時、定期的なスケジュール、またはその両方で生成をトリガーできます。
 
 ```json title="appsettings.json"
 {
@@ -286,54 +251,57 @@ builder.Services.AddRevealAI()
 }
 ```
 
-| プロパティ | タイプ | 必須 | 説明 |
+| プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
-| `GenerateOnStartup` | boolean | いいえ | `true` の場合、アプリケーションの起動時にメタデータを生成します。デフォルトは `false`。 |
-| `CronSchedule` | string | いいえ | 定期的なメタデータ生成の Cron 式 (例: `"0 0 * * *"` は毎日深夜)。 |
+| `GenerateOnStartup` | boolean | いいえ | `true` の場合、アプリケーション起動時にメタデータを生成します。デフォルトは `false` です。 |
+| `CronSchedule` | string | いいえ | 定期的なメタデータ生成のための Cron 式（例: 毎日深夜に実行する場合は `"0 0 * * *"`）。 |
 
 ---
 
-## 完全な構成サンプル
+## 完全な設定例
 
-3 つのセクションすべてを含む完全な `appsettings.json` を以下に示します:
+カタログファイル、マネージャーとサービスオプション用の `appsettings.json`、および `Program.cs` のセットアップを示す完全な例を以下に示します:
+
+```json title="config/catalog.json"
+{
+  "Datasources": [
+    {
+      "Id": "NorthwindDB",
+      "Provider": "SQLServer",
+      "Databases": [
+        {
+          "Name": "Northwind",
+          "DiscoveryMode": "Restricted",
+          "Tables": [
+            {
+              "Name": "dbo.Orders",
+              "Description": "Customer purchase orders",
+              "Fields": [
+                { "Name": "OrderDate", "Alias": "Order Date", "Description": "Date the order was placed" },
+                { "Name": "ShipCountry", "Alias": "Ship Country" }
+              ]
+            },
+            {
+              "Name": "dbo.Customers",
+              "Description": "Customer contact information"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "SalesExcel",
+      "Provider": "WebService"
+    }
+  ]
+}
+```
 
 ```json title="appsettings.json"
 {
   "RevealAI": {
     "OpenAI": {
       "ApiKey": "sk-your-api-key-here"
-    },
-    "MetadataCatalog": {
-      "Datasources": [
-        {
-          "Id": "NorthwindDB",
-          "Provider": "SQLServer",
-          "Databases": [
-            {
-              "Name": "Northwind",
-              "DiscoveryMode": "Restricted",
-              "Tables": [
-                {
-                  "Name": "dbo.Orders",
-                  "Description": "Customer purchase orders",
-                  "Fields": [
-                    { "Name": "OrderDate", "Alias": "Order Date", "Description": "Date the order was placed" },
-                    { "Name": "ShipCountry", "Alias": "Ship Country" }
-                  ]
-                },
-                {
-                  "Name": "dbo.Customers",
-                  "Description": "Customer contact information"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "Id": "SalesExcel",
-          "Provider": "WebService"
-        }
-      ]
     },
     "MetadataManager": {
       "OutputPath": "D:\\metadata\\output"
@@ -348,7 +316,6 @@ builder.Services.AddRevealAI()
 
 ```csharp title="Program.cs"
 builder.Services.AddRevealAI()
+    .UseMetadataCatalogFile("config/catalog.json")
     .AddOpenAI();
 ```
-
-追加のコードは不要です。カタログ、マネージャー、サービスはすべて `appsettings.json` から自動的に構成されます。

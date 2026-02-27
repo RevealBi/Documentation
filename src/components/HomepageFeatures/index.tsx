@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const DeveloperSvg = require('@site/static/img/developer.svg').default;
@@ -44,7 +45,7 @@ function QuickLinkList({ links }: { links: QuickLink[] }) {
       {links.map((link, idx) => (
         <li key={idx} className={styles.quickLink}>
           <span className={styles.quickLinkArrow}>›</span>
-          <a href={link.href}>{link.label}</a>
+          <Link to={link.href}>{link.label}</Link>
         </li>
       ))}
     </ul>
@@ -95,7 +96,6 @@ export default function HomepageFeatures(): JSX.Element {
               <div className={styles.cardTitleGroup}>
                 <h3 className={styles.cardTitle}>
                   <Translate id="homepage.sdk.ai.title">AI SDK</Translate>
-                  <span className={styles.betaBadge}>BETA</span>
                 </h3>
                 <p className={styles.cardSubtitle}>
                   <Translate id="homepage.sdk.ai.subtitle">Intelligent Analytics</Translate>
