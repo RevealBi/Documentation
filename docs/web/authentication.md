@@ -236,6 +236,7 @@ The `RVUsernamePasswordDataSourceCredential` is supported for the following data
 - Microsoft Dynamics CRM (On-Premises and Online)
 - Microsoft SQL Server
 - MySQL
+- MariaDB
 - OData Services
 - Oracle
 - PostgreSQL

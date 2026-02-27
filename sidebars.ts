@@ -90,6 +90,7 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "Google Sheets", id: "web/adding-data-sources/google-sheets" },
             { type: "doc", label: "In Memory Data", id: "web/adding-data-sources/in-memory-data" },
             { type: "doc", label: "JSON", id: "web/adding-data-sources/json" },
+            { type: "doc", label: "MariaDB", id: "web/adding-data-sources/mariadb" },
             { type: "doc", label: "MongoDB", id: "web/adding-data-sources/mongodb" },
             { type: "doc", label: "MS SQL Server", id: "web/adding-data-sources/ms-sql-server" },
             { type: "doc", label: "MySQL", id: "web/adding-data-sources/mysql" },
