@@ -65,7 +65,7 @@ This feature introduces a significant upgrade to the grid visualization, providi
 
 > ✅ **Recommended** for testing improved grid performance and new grid capabilities in your dashboards.
 
-### `newTooltip`
+### `newTooltips`
 Enables the new hover-based tooltip experience in the Reveal SDK.
 
 With this feature enabled:
@@ -75,6 +75,6 @@ With this feature enabled:
 - Improves discoverability and usability of interactive options within visualizations.
 - Offers a more modern and intuitive experience aligned with common data visualization practices.
 
-This behavior is a significant change from the default tooltip, which only appears after the user **clicks** a data point. The `newTooltip` flag simplifies the interaction flow, allowing users to explore data faster and with fewer steps.
+This behavior is a significant change from the default tooltip, which only appears after the user **clicks** a data point. The `newTooltips` flag simplifies the interaction flow, allowing users to explore data faster and with fewer steps.
 
 > ✅ **Recommended** for testing faster, more interactive data exploration via hover tooltips.
