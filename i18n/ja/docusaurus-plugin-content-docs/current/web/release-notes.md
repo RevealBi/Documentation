@@ -3,6 +3,68 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 1.8.4 (Mar 5th, 2026)
+
+### New Features
+
+#### All Platforms
+
+- New data source: MariaDB.
+- Redshift now supports stored procedures.
+- KPI visualizations now support conditional formatting.
+- Added "Between" and "Not Between" number comparison operators for conditional formatting.
+- Keyboard accessibility improvements in View Mode for grid and pivot visualizations.
+- Localization now uses the user's language preference instead of the server locale. This affects labels such as "Grand Total" in Excel export, and "Previous" and "Current" in KPI visualizations.
+- Elasticsearch now supports parameterized queries.
+- MySQL now supports timezone conversion.
+- Added a "Remove" button to the visualization editor fields list.
+- Added a search box to the visualization type selection dialog.
+- Added an `onFilterValueChanged` event to the RevealView. The event fires when the user uses the filtering UI or API to modify the selection of a filter.
+
+```javascript
+revealView.onFilterValueChanged = (args) => {
+    console.log("Filter:", args.filter);
+    console.log("Source:", args.source.title);
+    console.log("Old value:", args.oldValue);
+    console.log("New value:", args.newValue);
+};
+```
+
+### Bugs
+
+#### All Platforms
+
+- The "Null or empty" filter option text is now localized.
+- Switching visualizations quickly when using statistical functions could lose the original baseline.
+- MongoDB blending regression.
+- Cache not working in some scenarios for NodeJS and Java SDKs.
+- Pivot Excel export headers missing when grand totals are visible.
+- Dashboard filter refresh rate ignoring the metadata screen expiration setting.
+- Stacked chart y-axis range only using first value field's range.
+- Combination chart: changing the display order alters the y-axis range.
+- Local evaluation of "not equals" operators incorrect.
+- ScatterMap null reference exception when reloading data.
+- Date range generation for quarter-based rules incorrect on web.
+- SSAS hierarchical filters not working correctly.
+- MySQL error when the database name includes a hyphen.
+- Field search box not showing up in the visualization editor.
+- Dashboard filter binding issues.
+- Auto connect filters issues.
+- Headless export inconsistencies with deferred rendering.
+- Maximized visualization sizing and loading incorrect when dashboard has global filters.
+- Multiple visualization editors could appear simultaneously in the dashboard layout.
+- Show data labels setting not applied in Excel export.
+- Data source icon not displaying for some data sources.
+- Maximized visualization state incorrectly reported after minimizing.
+- Headless export null pointer when the server returns 4xx or 5xx errors.
+- Exporting a dashboard containing text widget could fail.
+- Null values not treated as the smallest value when sorting.
+- Azure Analysis Services could cause a null reference when global filters are present.
+
+#### Java
+
+- Headless export crash when exporting a grid visualization.
+
 ## 1.8.3 (2026 年 1 月 9 日)
 
 ### 新機能
