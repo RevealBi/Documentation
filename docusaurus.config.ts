@@ -6,7 +6,7 @@ import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
 import { chatButtonSettings, searchBarSettings } from './inkeep.config';
 
-const sdkVersion = "1.8.3";
+const sdkVersion = "1.8.4";
 
 const config: Config = {
   title: 'Reveal',
