@@ -678,5 +678,37 @@
   "sidebar.aiSidebar.doc.Streaming Markdown Display": {
     "message": "ストリーミング Markdown 表示",
     "description": "The label for the doc item 'Streaming Markdown Display' in sidebar 'aiSidebar', linking to the doc ai/guide-streaming-display"
+  },
+  "sidebar.aiSidebar.category.Providers": {
+    "message": "Providers",
+    "description": "The label for category 'Providers' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.doc.ai-providers-overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/providers-overview"
+  },
+  "sidebar.aiSidebar.doc.OpenAI": {
+    "message": "OpenAI",
+    "description": "The label for the doc item 'OpenAI' in sidebar 'aiSidebar', linking to the doc ai/providers-openai"
+  },
+  "sidebar.aiSidebar.doc.Azure OpenAI": {
+    "message": "Azure OpenAI",
+    "description": "The label for the doc item 'Azure OpenAI' in sidebar 'aiSidebar', linking to the doc ai/providers-azure-openai"
+  },
+  "sidebar.aiSidebar.doc.Anthropic": {
+    "message": "Anthropic",
+    "description": "The label for the doc item 'Anthropic' in sidebar 'aiSidebar', linking to the doc ai/providers-anthropic"
+  },
+  "sidebar.aiSidebar.doc.Google Gemini": {
+    "message": "Google Gemini",
+    "description": "The label for the doc item 'Google Gemini' in sidebar 'aiSidebar', linking to the doc ai/providers-google-gemini"
+  },
+  "sidebar.aiSidebar.doc.Custom Endpoints": {
+    "message": "Custom Endpoints",
+    "description": "The label for the doc item 'Custom Endpoints' in sidebar 'aiSidebar', linking to the doc ai/providers-custom-endpoints"
+  },
+  "sidebar.aiSidebar.doc.Building a Custom Provider": {
+    "message": "Building a Custom Provider",
+    "description": "The label for the doc item 'Building a Custom Provider' in sidebar 'aiSidebar', linking to the doc ai/providers-building-custom"
   }
 }

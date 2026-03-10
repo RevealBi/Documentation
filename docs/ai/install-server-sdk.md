@@ -64,61 +64,32 @@ var app = builder.Build();
 app.Run();
 ```
 
-#### Step 3: Configure LLM Provider
+#### Step 3: Install and Configure an LLM Provider
 
-Configure at least one LLM provider. Add this configuration after `AddRevealAI()`:
+Each LLM provider is distributed as a separate NuGet package. Install the package for your chosen provider and register it after `AddRevealAI()`.
 
-**For OpenAI:**
+For example, to use OpenAI:
+
+```bash
+dotnet add package Reveal.Sdk.AI.OpenAI
+```
 
 ```csharp
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
-        options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
-        options.ModelId = "gpt-4.1";
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
     });
 ```
 
-**For Azure OpenAI:**
+For detailed setup instructions for each provider, see the [Providers](/ai/providers-overview) section:
 
-```csharp
-builder.Services.AddRevealAI()
-    .AddAzureOpenAI(options =>
-    {
-        options.ApiKey = builder.Configuration["AzureOpenAI:ApiKey"];
-        options.Endpoint = "https://yoururl.openai.azure.com/";
-        options.DeploymentName = "gpt-4o";
-    });
-```
-
-**For Anthropic Claude:**
-
-```csharp
-builder.Services.AddRevealAI()
-    .AddAnthropic(options =>
-    {
-        options.ApiKey = builder.Configuration["Anthropic:ApiKey"];
-        options.ModelId = "claude-sonnet-4-5";
-    });
-```
-
-#### Step 4: Store API Keys Securely
-
-Store your LLM provider API keys in `appsettings.json` or User Secrets:
-
-```json title="appsettings.json"
-{
-  "OpenAI": {
-    "ApiKey": "sk-your-api-key-here"
-  },
-  "Anthropic": {
-    "ApiKey": "sk-ant-your-api-key-here"
-  },
-  "AzureOpenAI": {
-    "ApiKey": "your-azure-api-key-here"
-  }
-}
-```
+| Provider | NuGet Package | Guide |
+|----------|--------------|-------|
+| OpenAI | `Reveal.Sdk.AI.OpenAI` | [Setup guide](/ai/providers-openai) |
+| Azure OpenAI | `Reveal.Sdk.AI.AzureOpenAI` | [Setup guide](/ai/providers-azure-openai) |
+| Anthropic | `Reveal.Sdk.AI.Anthropic` | [Setup guide](/ai/providers-anthropic) |
+| Google Gemini | `Reveal.Sdk.AI.Google` | [Setup guide](/ai/providers-google-gemini) |
 
 :::danger Never Commit API Keys
 
@@ -160,8 +131,8 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
-        options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
-        options.ModelId = "gpt-4.1";
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
+        options.Model = "gpt-4.1";
     });
 
 var app = builder.Build();
