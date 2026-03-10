@@ -11,10 +11,10 @@ Reveal SDK AI は、さまざまな大規模言語モデル（LLM）サービス
 
 | プロバイダー | NuGet パッケージ | 拡張メソッド |
 |----------|--------------|-----------------|
-| [OpenAI](providers-openai) | `Reveal.Sdk.AI.OpenAI` | `.AddOpenAI()` |
-| [Azure OpenAI](providers-azure-openai) | `Reveal.Sdk.AI.AzureOpenAI` | `.AddAzureOpenAI()` |
-| [Anthropic](providers-anthropic) | `Reveal.Sdk.AI.Anthropic` | `.AddAnthropic()` |
-| [Google Gemini](providers-google-gemini) | `Reveal.Sdk.AI.Google` | `.AddGoogle()` |
+| [OpenAI](providers-openai.md) | `Reveal.Sdk.AI.OpenAI` | `.AddOpenAI()` |
+| [Azure OpenAI](providers-azure-openai.md) | `Reveal.Sdk.AI.AzureOpenAI` | `.AddAzureOpenAI()` |
+| [Anthropic](providers-anthropic.md) | `Reveal.Sdk.AI.Anthropic` | `.AddAnthropic()` |
+| [Google Gemini](providers-google-gemini.md) | `Reveal.Sdk.AI.Google` | `.AddGoogle()` |
 
 ## プロバイダーの仕組み
 
@@ -86,4 +86,4 @@ builder.Services.AddRevealAI()
 
 ## カスタムプロバイダー
 
-標準でサポートされていない LLM サービスと統合する必要がある場合は、[カスタムプロバイダーを構築](providers-building-custom)できます。
+標準でサポートされていない LLM サービスと統合する必要がある場合は、[カスタムプロバイダーを構築](providers-building-custom.md)できます。

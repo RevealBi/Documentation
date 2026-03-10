@@ -11,10 +11,10 @@ Reveal SDK AI uses a provider-based architecture that lets you integrate with di
 
 | Provider | NuGet Package | Extension Method |
 |----------|--------------|-----------------|
-| [OpenAI](providers-openai) | `Reveal.Sdk.AI.OpenAI` | `.AddOpenAI()` |
-| [Azure OpenAI](providers-azure-openai) | `Reveal.Sdk.AI.AzureOpenAI` | `.AddAzureOpenAI()` |
-| [Anthropic](providers-anthropic) | `Reveal.Sdk.AI.Anthropic` | `.AddAnthropic()` |
-| [Google Gemini](providers-google-gemini) | `Reveal.Sdk.AI.Google` | `.AddGoogle()` |
+| [OpenAI](providers-openai.md) | `Reveal.Sdk.AI.OpenAI` | `.AddOpenAI()` |
+| [Azure OpenAI](providers-azure-openai.md) | `Reveal.Sdk.AI.AzureOpenAI` | `.AddAzureOpenAI()` |
+| [Anthropic](providers-anthropic.md) | `Reveal.Sdk.AI.Anthropic` | `.AddAnthropic()` |
+| [Google Gemini](providers-google-gemini.md) | `Reveal.Sdk.AI.Google` | `.AddGoogle()` |
 
 ## How Providers Work
 
@@ -86,4 +86,4 @@ builder.Services.AddRevealAI()
 
 ## Custom Providers
 
-If you need to integrate with an LLM service that isn't supported out of the box, you can [build a custom provider](providers-building-custom).
+If you need to integrate with an LLM service that isn't supported out of the box, you can [build a custom provider](providers-building-custom.md).

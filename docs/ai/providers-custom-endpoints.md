@@ -77,4 +77,4 @@ When using custom endpoints, be aware of:
 
 ## Custom Providers
 
-If your endpoint doesn't follow the OpenAI-compatible API format, consider [building a custom provider](providers-building-custom) instead.
+If your endpoint doesn't follow the OpenAI-compatible API format, consider [building a custom provider](providers-building-custom.md) instead.
