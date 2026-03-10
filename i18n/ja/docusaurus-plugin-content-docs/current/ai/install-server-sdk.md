@@ -64,61 +64,32 @@ var app = builder.Build();
 app.Run();
 ```
 
-#### ステップ 3: LLM プロバイダーの設定
+#### ステップ 3: LLM プロバイダーのインストールと設定
 
-少なくとも1つの LLM プロバイダーを設定します。`AddRevealAI()` の後にこの設定を追加してください：
+各 LLM プロバイダーは個別の NuGet パッケージとして配布されています。選択したプロバイダーのパッケージをインストールし、`AddRevealAI()` の後に登録します。
 
-**OpenAI の場合：**
+例えば、OpenAI を使用する場合：
+
+```bash
+dotnet add package Reveal.Sdk.AI.OpenAI
+```
 
 ```csharp
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
-        options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
-        options.ModelId = "gpt-4.1";
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
     });
 ```
 
-**Azure OpenAI の場合：**
+各プロバイダーの詳細なセットアップ手順については、[プロバイダー](/ai/providers-overview) セクションを参照してください：
 
-```csharp
-builder.Services.AddRevealAI()
-    .AddAzureOpenAI(options =>
-    {
-        options.ApiKey = builder.Configuration["AzureOpenAI:ApiKey"];
-        options.Endpoint = "https://yoururl.openai.azure.com/";
-        options.DeploymentName = "gpt-4o";
-    });
-```
-
-**Anthropic Claude の場合：**
-
-```csharp
-builder.Services.AddRevealAI()
-    .AddAnthropic(options =>
-    {
-        options.ApiKey = builder.Configuration["Anthropic:ApiKey"];
-        options.ModelId = "claude-sonnet-4-5";
-    });
-```
-
-#### ステップ 4: API キーの安全な保管
-
-LLM プロバイダーの API キーを `appsettings.json` または User Secrets に保存します：
-
-```json title="appsettings.json"
-{
-  "OpenAI": {
-    "ApiKey": "sk-your-api-key-here"
-  },
-  "Anthropic": {
-    "ApiKey": "sk-ant-your-api-key-here"
-  },
-  "AzureOpenAI": {
-    "ApiKey": "your-azure-api-key-here"
-  }
-}
-```
+| プロバイダー | NuGet パッケージ | ガイド |
+|----------|--------------|-------|
+| OpenAI | `Reveal.Sdk.AI.OpenAI` | [セットアップガイド](/ai/providers-openai) |
+| Azure OpenAI | `Reveal.Sdk.AI.AzureOpenAI` | [セットアップガイド](/ai/providers-azure-openai) |
+| Anthropic | `Reveal.Sdk.AI.Anthropic` | [セットアップガイド](/ai/providers-anthropic) |
+| Google Gemini | `Reveal.Sdk.AI.Google` | [セットアップガイド](/ai/providers-google-gemini) |
 
 :::danger API キーをコミットしないでください
 
@@ -160,8 +131,8 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
-        options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
-        options.ModelId = "gpt-4.1";
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
+        options.Model = "gpt-4.1";
     });
 
 var app = builder.Build();

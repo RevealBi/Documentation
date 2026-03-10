@@ -258,18 +258,17 @@ const sidebars: SidebarsConfig = {
     },
 
     /* -------------------- Providers -------------------- */
-    // Uncomment when provider docs are added:
-    // {
-    //   type: "category", label: "Providers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-    //     { type: "doc", label: "Overview", id: "ai/providers-overview" },
-    //     { type: "doc", label: "OpenAI", id: "ai/providers-openai" },
-    //     { type: "doc", label: "Azure OpenAI", id: "ai/providers-azure-openai" },
-    //     { type: "doc", label: "Anthropic", id: "ai/providers-anthropic" },
-    //     { type: "doc", label: "Google Gemini", id: "ai/providers-google-gemini" },
-    //     { type: "doc", label: "Custom Endpoints", id: "ai/providers-custom-endpoints" },
-    //     { type: "doc", label: "Building a Custom Provider", id: "ai/providers-building-custom" },
-    //   ]
-    // },
+    {
+      type: "category", label: "Providers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", key: "ai-providers-overview", id: "ai/providers-overview" },
+        { type: "doc", label: "OpenAI", id: "ai/providers-openai" },
+        { type: "doc", label: "Azure OpenAI", id: "ai/providers-azure-openai" },
+        { type: "doc", label: "Anthropic", id: "ai/providers-anthropic" },
+        { type: "doc", label: "Google Gemini", id: "ai/providers-google-gemini" },
+        { type: "doc", label: "Custom Endpoints", id: "ai/providers-custom-endpoints" },
+        { type: "doc", label: "Building a Custom Provider", id: "ai/providers-building-custom" },
+      ]
+    },
 
     /* -------------------- Metadata -------------------- */
     {
