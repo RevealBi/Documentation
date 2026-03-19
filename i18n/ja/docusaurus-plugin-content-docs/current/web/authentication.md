@@ -312,6 +312,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 
 `RVBearerTokenDataSourceCredential` は、以下のデータ ソースでサポートされます。
 - Box
+- Databricks
 - Dropbox
 - Google アナリティクス
 - Google Big Query
@@ -320,7 +321,78 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 - OneDrive
 - REST サービス
 - SharePoint オンライン
+- Snowflake
 - ウェブ リソース
+
+## キーペア認証
+
+データ ソースがキーペア認証を必要とする場合、`RVKeyPairDataSourceCredential` クラスのインスタンスを返す必要があります。`RVKeyPairDataSourceCredential` クラスは、**ユーザー**と**暗号化されていない RSA 秘密キー**を定義するコンストラクターのオーバーロードを提供します。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+public class AuthenticationProvider: IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVSnowflakeDataSource)
+        {
+            userCredential = new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+public class AuthenticationProvider implements IRVAuthenticationProvider {
+    @Override
+    public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVSnowflakeDataSource) {
+            return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+        }
+        return null;
+    }
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVSnowflakeDataSource) {
+        return new reveal.RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
+const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVSnowflakeDataSource) {
+        return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+</Tabs>
+
+`RVKeyPairDataSourceCredential` は、以下のデータ ソースでサポートされます。
+- Snowflake
 
 ## Amazon Web Services
 

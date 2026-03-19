@@ -218,6 +218,70 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
+### 認証
+
+Snowflake の認証は、ベアラー トークンまたはキーペア認証を使用してサーバー側で処理されます。認証オプションの詳細については、「[認証](../authentication.md)」トピックを参照してください。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+public class AuthenticationProvider: IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVSnowflakeDataSource)
+        {
+            userCredential = new RVBearerTokenDataSourceCredential("your_token", "your_userid");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVSnowflakeDataSource) {
+        return new reveal.RVBearerTokenDataSourceCredential("your_token", "your_userid");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+    <TabItem value="node-ts" label="Node.js - TS">
+
+```ts
+const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVSnowflakeDataSource) {
+        return new RVBearerTokenDataSourceCredential("your_token", "your_userid");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```java
+public class AuthenticationProvider implements IRVAuthenticationProvider {
+    @Override
+    public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVSnowflakeDataSource) {
+            return new RVBearerTokenDataSourceCredential("your_token", "your_userid");
+        }
+        return null;
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
 :::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake) にあります。
