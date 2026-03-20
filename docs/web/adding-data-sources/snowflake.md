@@ -5,85 +5,16 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Adding a Snowflake Data Source
+# Snowflake Data Source
 
-:::danger breaking changes
+## Server Configuration
 
-Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
-
-:::
-
-## On the Client
-
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
-
-```js
-var revealView = new $.ig.RevealView("#revealView");
-revealView.onDataSourcesRequested = (callback) => {
-    //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
-};
-```
-
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVSnowflakeDataSource` object. Set the `Title` property. After you have created the `RVSnowflakeSource` object, add it to the data sources collection.
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var snowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    snowflakeDataSource.title = "My Snowflake";
-
-    callback(new $.ig.RevealDataSources([snowflakeDataSource], [], false));
-};
-```
-
-When the application runs, create a new Visualization and you will see the newly created Snowflake data source listed in the "Select a Data Source" dialog.
-
-![](images/snowflake-data-source.jpg)
-
-**Step 3** - Add a new Data Source Item by creating a new instance of the `RVSnowflakeDataSourceItem` object. Set the `Id` and `Title` properties that correspond to your database table. After you have created the `RVSnowflakeDataSourceItem` object, add it to the data source items collection.
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var mySnowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    mySnowflakeDataSource.id = "MySnowflakeDataSource";
-    mySnowflakeDataSource.title = "My Snowflake";
-
-    var mySnowflakeDataSourceItem = new $.ig.RVSnowflakeDataSourceItem(mySnowflakeDataSource);
-    mySnowflakeDataSourceItem.id = "MySnowflakeDataSourceItem";
-    mySnowflakeDataSourceItem.title = "My Snowflake Item";
-
-    callback(new $.ig.RevealDataSources([mySnowflakeDataSource], [mySnowflakeDataSourceItem], true));
-};
-```
-
-When the application runs, create a new Visualization and you will see the newly created Snowflake data source item listed in the "Select a Data Source" dialog.
-
-![](images/snowflake-data-source-item.jpg)
-
-## On the Server
-
-**Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provie an `id`, `title`, and/or `subtitle`.
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var mySnowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    mySnowflakeDataSource.id = "MySnowflakeDataSource";
-    mySnowflakeDataSource.title = "My Snowflake";
-
-    var mySnowflakeDataSourceItem = new $.ig.RVSnowflakeDataSourceItem(mySnowflakeDataSource);
-    mySnowflakeDataSourceItem.id = "MySnowflakeDataSourceItem";
-    mySnowflakeDataSourceItem.title = "My Snowflake Item";
-
-    callback(new $.ig.RevealDataSources([mySnowflakeDataSource], [mySnowflakeDataSourceItem], true));
-};
-```
-
-**Step 2** - Create the data source provider. In this example, we are providing connection information to connect to our **Snowflake** database that was defined on the client. To achieve this, we determine the type of the data source/item we are working with, and set the available properties on the object.
+### Connection Configuration
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-```cs
+```csharp
 public class DataSourceProvider : IRVDataSourceProvider
 {
     public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId,
@@ -121,7 +52,6 @@ public class DataSourceProvider : IRVDataSourceProvider
 ```
 
   </TabItem>
-
   <TabItem value="java" label="Java">
 
 ```java
@@ -155,10 +85,9 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 ```
 
   </TabItem>
-
   <TabItem value="node" label="Node.js">
 
-```js
+```javascript
 const dataSourceItemProvider = async (userContext, dataSourceItem) => {
     if (dataSourceItem instanceof reveal.RVSnowflakeDataSourceItem) {
 
@@ -185,8 +114,7 @@ const dataSourceProvider = async (userContext, dataSource) => {
 ```
 
   </TabItem>
-
-  <TabItem value="node-ts" label="Node.js - TS">    
+  <TabItem value="node-ts" label="Node.js - TS">
 
 ```ts
 const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
@@ -215,12 +143,15 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 ```
 
   </TabItem>
-
 </Tabs>
+
+:::danger Important
+Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
+:::
 
 ### Authentication
 
-Authentication for Snowflake is handled on the server side using bearer tokens or key-pair authentication. For detailed information on authentication options, see the [Authentication](../authentication.md) topic.
+Authentication for Snowflake is handled on the server side using username and password credentials. For detailed information on all authentication options, see the [Authentication](../authentication.md) topic.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -230,11 +161,12 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 {
     public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
+        IRVDataSourceCredential userCredential = null;
         if (dataSource is RVSnowflakeDataSource)
         {
-            return Task.FromResult<IRVDataSourceCredential>(new RVBearerTokenDataSourceCredential("your_token", "your_userid"));
+            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
         }
-        return Task.FromResult<IRVDataSourceCredential>(null);
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
 }
 ```
@@ -245,19 +177,19 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVSnowflakeDataSource) {
-        return new reveal.RVBearerTokenDataSourceCredential("your_token", "your_userid");
+        return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
     }
     return null;
 }
 ```
 
   </TabItem>
-    <TabItem value="node-ts" label="Node.js - TS">
+  <TabItem value="node-ts" label="Node.js - TS">
 
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVSnowflakeDataSource) {
-        return new RVBearerTokenDataSourceCredential("your_token", "your_userid");
+        return new RVUsernamePasswordDataSourceCredential("username", "password");
     }
     return null;
 }
@@ -271,7 +203,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVSnowflakeDataSource) {
-            return new RVBearerTokenDataSourceCredential("your_token", "your_userid");
+            return new RVUsernamePasswordDataSourceCredential("username", "password");
         }
         return null;
     }
@@ -280,6 +212,61 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
   </TabItem>
 </Tabs>
+
+## Client-Side Implementation
+
+### Creating Data Sources
+
+**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+
+```js
+const revealView = new $.ig.RevealView("#revealView");
+revealView.onDataSourcesRequested = (callback) => {
+    // Add data source here
+    callback(new $.ig.RevealDataSources([], [], false));
+};
+```
+
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVSnowflakeDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVSnowflakeDataSource` object, add it to the data sources collection.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    snowflakeDS.title = "Snowflake";
+    snowflakeDS.subtitle = "Data Source";
+
+    callback(new $.ig.RevealDataSources([snowflakeDS], [], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created Snowflake data source listed in the "Select a Data Source" dialog.
+
+![](images/snowflake-data-source.jpg)
+
+### Creating Data Source Items
+
+Data source items represent specific datasets within your Snowflake data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    // Create the data source
+    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    snowflakeDS.title = "My Snowflake Datasource";
+    snowflakeDS.subtitle = "Snowflake";
+
+    // Create a data source item
+    const snowflakeDSI = new $.ig.RVSnowflakeDataSourceItem(snowflakeDS);
+    snowflakeDSI.id = "MySnowflakeDataSourceItem";
+    snowflakeDSI.title = "My Snowflake Datasource Item";
+    snowflakeDSI.subtitle = "Snowflake";
+
+    callback(new $.ig.RevealDataSources([snowflakeDS], [snowflakeDSI], false));
+};
+```
+
+When the application runs, create a new Visualization and you will see the newly created Snowflake data source item listed in the "Select a Data Source" dialog.
+
+![](images/snowflake-data-source-item.jpg)
 
 :::info Get the Code
 
