@@ -307,12 +307,6 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ![](images/snowflake-data-source-item.jpg)
 
-:::info コードの取得
-
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake) にあります。
-
-:::
-
 ## その他のリソース
 
 - [Snowflake ドキュメント](https://docs.snowflake.com/)
