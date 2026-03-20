@@ -240,6 +240,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 - Oracle
 - PostgreSQL
 - REST サービス
+- Snowflake
 - Sybase
 - ウェブ リソース
 

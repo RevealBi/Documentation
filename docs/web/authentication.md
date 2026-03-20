@@ -241,6 +241,7 @@ The `RVUsernamePasswordDataSourceCredential` is supported for the following data
 - Oracle
 - PostgreSQL
 - REST Services
+- Snowflake
 - Sybase
 - Web Resources
 
