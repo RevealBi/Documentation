@@ -7,6 +7,10 @@ import TabItem from '@theme/TabItem';
 
 # Snowflake Data Source
 
+## Introduction
+
+Snowflake is a cloud-based data warehousing platform that provides scalable storage and compute resources for data analytics, data sharing, and business intelligence workloads. This topic explains how to connect to Snowflake data sources in your Reveal application to visualize and analyze your data.
+
 ## Server Configuration
 
 ### Connection Configuration
