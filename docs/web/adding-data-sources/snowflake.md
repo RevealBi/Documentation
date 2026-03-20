@@ -311,3 +311,20 @@ When the application runs, create a new Visualization and you will see the newly
 
 - [Snowflake Documentation](https://docs.snowflake.com/)
 - [Sample Source Code on GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake)
+
+## API Reference
+
+<Tabs groupId="code" queryString>
+<TabItem value="aspnet" label="ASP.NET" default>
+
+* [RVSnowflakeDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Snowflake.RVSnowflakeDataSource.html) - Represents a Snowflake data source
+* [RVSnowflakeDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Snowflake.RVSnowflakeDataSourceItem.html) - Represents a Snowflake data source item
+
+</TabItem>
+<TabItem value="node" label="Node.js">
+
+* [RVSnowflakeDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvsnowflakedatasource.html) - Represents a Snowflake data source
+* [RVSnowflakeDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvsnowflakedatasourceitem.html) - Represents a Snowflake data source item
+
+</TabItem>
+</Tabs>

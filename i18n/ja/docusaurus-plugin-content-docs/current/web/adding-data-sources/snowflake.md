@@ -311,3 +311,20 @@ revealView.onDataSourcesRequested = (callback) => {
 
 - [Snowflake ドキュメント](https://docs.snowflake.com/)
 - [GitHub のサンプル ソース コード](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake)
+
+## API リファレンス
+
+<Tabs groupId="code" queryString>
+<TabItem value="aspnet" label="ASP.NET" default>
+
+* [RVSnowflakeDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Snowflake.RVSnowflakeDataSource.html) - Snowflake データ ソースを表します
+* [RVSnowflakeDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Snowflake.RVSnowflakeDataSourceItem.html) - Snowflake データ ソース項目を表します
+
+</TabItem>
+<TabItem value="node" label="Node.js">
+
+* [RVSnowflakeDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvsnowflakedatasource.html) - Snowflake データ ソースを表します
+* [RVSnowflakeDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvsnowflakedatasourceitem.html) - Snowflake データ ソース項目を表します
+
+</TabItem>
+</Tabs>
