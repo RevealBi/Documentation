@@ -230,12 +230,11 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 {
     public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
-        IRVDataSourceCredential userCredential = null;
         if (dataSource is RVSnowflakeDataSource)
         {
-            userCredential = new RVBearerTokenDataSourceCredential("your_token", "your_userid");
+            return Task.FromResult<IRVDataSourceCredential>(new RVBearerTokenDataSourceCredential("your_token", "your_userid"));
         }
-        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+        return Task.FromResult<IRVDataSourceCredential>(null);
     }
 }
 ```
