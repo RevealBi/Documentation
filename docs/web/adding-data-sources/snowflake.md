@@ -13,6 +13,41 @@ Snowflake is a cloud-based data warehousing platform that provides scalable stor
 
 ## Server Configuration
 
+### Installation
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+**Step 1** - Install the Reveal Snowflake connector package
+
+For ASP.NET applications, you need to install a separate NuGet package to enable Snowflake support:
+
+```bash
+dotnet add package Reveal.Sdk.Data.Snowflake
+```
+
+**Step 2** - Register the Snowflake data source in your application:
+
+```csharp
+builder.Services.AddControllers().AddReveal( builder =>
+{
+    builder.DataSources.RegisterSnowflake();
+});
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+For Node.js applications, the Snowflake data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+For Java applications, the Snowflake data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+
+  </TabItem>
+</Tabs>
+
 ### Connection Configuration
 
 <Tabs groupId="code" queryString>
@@ -277,3 +312,8 @@ When the application runs, create a new Visualization and you will see the newly
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake)
 
 :::
+
+## Additional Resources
+
+- [Snowflake Documentation](https://docs.snowflake.com/)
+- [Sample Source Code on GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake)

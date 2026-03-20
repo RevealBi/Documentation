@@ -13,6 +13,41 @@ Snowflake は、データ分析、データ共有、ビジネス インテリジ
 
 ## サーバー構成
 
+### インストール
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+**手順 1** - Reveal Snowflake コネクタ パッケージをインストールします。
+
+ASP.NET アプリケーションの場合、Snowflake サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
+
+```bash
+dotnet add package Reveal.Sdk.Data.Snowflake
+```
+
+**手順 2** - アプリケーションに Snowflake データ ソースを登録します。
+
+```csharp
+builder.Services.AddControllers().AddReveal( builder =>
+{
+    builder.DataSources.RegisterSnowflake();
+});
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+Node.js アプリケーションの場合、Snowflake データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+Java アプリケーションの場合、Snowflake データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+
+  </TabItem>
+</Tabs>
+
 ### 接続構成
 
 <Tabs groupId="code" queryString>
@@ -277,3 +312,8 @@ revealView.onDataSourcesRequested = (callback) => {
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake) にあります。
 
 :::
+
+## その他のリソース
+
+- [Snowflake ドキュメント](https://docs.snowflake.com/)
+- [GitHub のサンプル ソース コード](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake)
