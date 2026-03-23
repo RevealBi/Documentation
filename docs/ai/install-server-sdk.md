@@ -97,6 +97,32 @@ Never commit API keys to source control. Always use environment variables, User 
 
 :::
 
+#### Step 4: Install and Configure a Metadata Provider
+
+The metadata catalog can be loaded from a JSON file on disk or from a completely custom provider (e.g., database-backed). For the built-in file provider, you can simply set it up like so (minimal example):
+
+**1. Create a catalog file:**
+
+```json title="config/catalog.json"
+{
+  "Datasources": [
+    {
+      "Id": "NorthwindDB",
+      "Provider": "SQLServer",
+    }
+  ]
+}
+```
+
+**2. Point the builder at the file:**
+
+```csharp title="Program.cs"
+builder.Services.AddRevealAI()
+    .UseMetadataCatalogFile("config/catalog.json");
+```
+
+Both absolute and relative paths are supported. Relative paths are resolved against the application's current working directory.
+
 #### Complete Example
 
 Here's a complete `Program.cs` with AI features configured:
@@ -133,7 +159,8 @@ builder.Services.AddRevealAI()
     {
         options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
         options.Model = "gpt-4.1";
-    });
+    })
+    .UseMetadataCatalogFile("config/catalog.json");
 
 var app = builder.Build();
 
