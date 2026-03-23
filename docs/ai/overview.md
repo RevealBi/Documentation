@@ -87,9 +87,3 @@ The server SDK handles:
 - Intent-based LLM routing
 - Context management for conversational AI
 - Security and authentication
-
-## Beta Status
-
-Reveal SDK AI is currently in beta. While the core features are stable and ready for development, the API may evolve based on user feedback. We encourage you to try it out and share your experience with us.
-
-Let's build intelligent analytics experiences together!
