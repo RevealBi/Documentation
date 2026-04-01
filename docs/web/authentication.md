@@ -241,6 +241,7 @@ The `RVUsernamePasswordDataSourceCredential` is supported for the following data
 - Oracle
 - PostgreSQL
 - REST Services
+- Snowflake
 - Sybase
 - Web Resources
 
@@ -313,6 +314,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 
 The `RVBearerTokenDataSourceCredential` is supported for the following data sources:
 - Box
+- Databricks
 - Dropbox
 - Google Analytics
 - Google Big Query
@@ -321,7 +323,78 @@ The `RVBearerTokenDataSourceCredential` is supported for the following data sour
 - OneDrive
 - REST Services
 - SharePoint Online
+- Snowflake
 - Web Resources
+
+## Key-Pair Authentication
+
+If your data source requires key-pair authentication, then you must return an instance of the `RVKeyPairDataSourceCredential` class. The `RVKeyPairDataSourceCredential` class provides constructor overloads to define the **user** and the **unencrypted RSA private key**.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+public class AuthenticationProvider: IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVSnowflakeDataSource)
+        {
+            userCredential = new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+public class AuthenticationProvider implements IRVAuthenticationProvider {
+    @Override
+    public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVSnowflakeDataSource) {
+            return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+        }
+        return null;
+    }
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">    
+
+```js
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVSnowflakeDataSource) {
+        return new reveal.RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">    
+
+```ts
+const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVSnowflakeDataSource) {
+        return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+</Tabs>
+
+The `RVKeyPairDataSourceCredential` is supported for the following data sources:
+- Snowflake
 
 ## Amazon Web Services
 

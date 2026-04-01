@@ -5,85 +5,55 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Snowflake データ ソースの追加
+# Snowflake データ ソース
 
-:::danger 重大な変更
+## はじめに
 
-現在、Reveal SDK は、Reveal SDK core パッケージからデータ ソースを分離する過程にあります。プロジェクトの継続的な機能を確保するために、プロジェクトに追加のパッケージをインストールすることが必要になる場合があります。詳細については、[サポートされるデータ ソース](web/datasources.md#サポートされるデータ-ソース) トピックを参照してください。
+Snowflake は、データ分析、データ共有、ビジネス インテリジェンス ワークロード向けにスケーラブルなストレージとコンピューティング リソースを提供するクラウドベースのデータ ウェアハウス プラットフォームです。このトピックでは、Reveal アプリケーションで Snowflake データ ソースに接続してデータを視覚化および分析する方法について説明します。
 
-:::
+## サーバー構成
 
-## クライアント側
-
-**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
-
-```js
-var revealView = new $.ig.RevealView("#revealView");
-revealView.onDataSourcesRequested = (callback) => {
-    //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
-};
-```
-
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSnowflakeDataSource` オブジェクトの新しいインスタンスを作成します。`Title` プロパティを設定します。`RVSnowflakeSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var snowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    snowflakeDataSource.title = "My Snowflake";
-
-    callback(new $.ig.RevealDataSources([snowflakeDataSource], [], false));
-};
-```
-
-アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Snowflake データ ソースが [データ ソースの選択] ダイアログに表示されます。
-
-![](images/snowflake-data-source.jpg)
-
-**手順 3** - `RVSnowflakeDataSourceItem` オブジェクトの新しいインスタンスを作成して、新しいデータ ソース項目を追加します。データベース テーブルに対応する `Id` および `Title` プロパティを設定します。`RVSnowflakeDataSourceItem` オブジェクトを作成したら、それをデータ ソース項目コレクションに追加します。
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var mySnowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    mySnowflakeDataSource.id = "MySnowflakeDataSource";
-    mySnowflakeDataSource.title = "My Snowflake";
-
-    var mySnowflakeDataSourceItem = new $.ig.RVSnowflakeDataSourceItem(mySnowflakeDataSource);
-    mySnowflakeDataSourceItem.id = "MySnowflakeDataSourceItem";
-    mySnowflakeDataSourceItem.title = "My Snowflake Item";
-
-    callback(new $.ig.RevealDataSources([mySnowflakeDataSource], [mySnowflakeDataSourceItem], true));
-};
-```
-
-アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Snowflake 項目データ ソースが [データ ソースの選択] ダイアログに表示されます。
-
-![](images/snowflake-data-source-item.jpg)
-
-## サーバー側
-
-**手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを入力してください。
-
-```js
-revealView.onDataSourcesRequested = (callback) => {
-    var mySnowflakeDataSource = new $.ig.RVSnowflakeDataSource();
-    mySnowflakeDataSource.id = "MySnowflakeDataSource";
-    mySnowflakeDataSource.title = "My Snowflake";
-
-    var mySnowflakeDataSourceItem = new $.ig.RVSnowflakeDataSourceItem(mySnowflakeDataSource);
-    mySnowflakeDataSourceItem.id = "MySnowflakeDataSourceItem";
-    mySnowflakeDataSourceItem.title = "My Snowflake Item";
-
-    callback(new $.ig.RevealDataSources([mySnowflakeDataSource], [mySnowflakeDataSourceItem], true));
-};
-```
-
-**手順 2** - データ ソース プロバイダーを作成します。この例では、クライアントで定義された **Snowflake** データベースに接続するための接続情報を提供しています。これを実現するために、使用しているデータ ソース/項目のタイプを決定し、オブジェクトで使用可能なプロパティを設定します。
+### インストール
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-```cs
+**手順 1** - Reveal Snowflake コネクタ パッケージをインストールします。
+
+ASP.NET アプリケーションの場合、Snowflake サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
+
+```bash
+dotnet add package Reveal.Sdk.Data.Snowflake
+```
+
+**手順 2** - アプリケーションに Snowflake データ ソースを登録します。
+
+```csharp
+builder.Services.AddControllers().AddReveal( builder =>
+{
+    builder.DataSources.RegisterSnowflake();
+});
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+Node.js アプリケーションの場合、Snowflake データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+Java アプリケーションの場合、Snowflake データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+
+  </TabItem>
+</Tabs>
+
+### 接続構成
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
 public class DataSourceProvider : IRVDataSourceProvider
 {
     public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId,
@@ -121,7 +91,6 @@ public class DataSourceProvider : IRVDataSourceProvider
 ```
 
   </TabItem>
-
   <TabItem value="java" label="Java">
 
 ```java
@@ -155,10 +124,9 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 ```
 
   </TabItem>
-
   <TabItem value="node" label="Node.js">
 
-```js
+```javascript
 const dataSourceItemProvider = async (userContext, dataSourceItem) => {
     if (dataSourceItem instanceof reveal.RVSnowflakeDataSourceItem) {
 
@@ -185,8 +153,7 @@ const dataSourceProvider = async (userContext, dataSource) => {
 ```
 
   </TabItem>
-
-  <TabItem value="node-ts" label="Node.js - TS">    
+  <TabItem value="node-ts" label="Node.js - TS">
 
 ```ts
 const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
@@ -215,11 +182,149 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 ```
 
   </TabItem>
-
 </Tabs>
 
-:::info コードの取得
-
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake) にあります。
-
+:::danger Important
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。両方のメソッドでデータ ソースのプロパティを更新する**必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で、データ ソース項目の基になるデータ ソースをパラメーターとして渡して `ChangeDataSourceAsync` メソッドを呼び出すことをお勧めします。
 :::
+
+### 認証
+
+Snowflake の認証は、ユーザー名とパスワードの資格情報を使用してサーバー側で処理されます。すべての認証オプションの詳細については、「[認証](../authentication.md)」トピックを参照してください。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+public class AuthenticationProvider: IRVAuthenticationProvider
+{
+    public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        IRVDataSourceCredential userCredential = null;
+        if (dataSource is RVSnowflakeDataSource)
+        {
+            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
+        }
+        return Task.FromResult<IRVDataSourceCredential>(userCredential);
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const authenticationProvider = async (userContext, dataSource) => {
+    if (dataSource instanceof reveal.RVSnowflakeDataSource) {
+        return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+  <TabItem value="node-ts" label="Node.js - TS">
+
+```ts
+const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
+    if (dataSource instanceof RVSnowflakeDataSource) {
+        return new RVUsernamePasswordDataSourceCredential("username", "password");
+    }
+    return null;
+}
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```java
+public class AuthenticationProvider implements IRVAuthenticationProvider {
+    @Override
+    public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        if (dataSource instanceof RVSnowflakeDataSource) {
+            return new RVUsernamePasswordDataSourceCredential("username", "password");
+        }
+        return null;
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## クライアント側の実装
+
+### データ ソースの作成
+
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
+
+```js
+const revealView = new $.ig.RevealView("#revealView");
+revealView.onDataSourcesRequested = (callback) => {
+    // Add data source here
+    callback(new $.ig.RevealDataSources([], [], false));
+};
+```
+
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVSnowflakeDataSource` オブジェクトの新しいインスタンスを作成します。`title` と `subtitle` プロパティを設定します。`RVSnowflakeDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    snowflakeDS.title = "Snowflake";
+    snowflakeDS.subtitle = "Data Source";
+
+    callback(new $.ig.RevealDataSources([snowflakeDS], [], false));
+};
+```
+
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Snowflake データ ソースが [データ ソースの選択] ダイアログに表示されます。
+
+![](images/snowflake-data-source.jpg)
+
+### データ ソース項目の作成
+
+データ ソース項目は、ユーザーが視覚化のために選択できる Snowflake データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルのみを指定する必要があります。
+
+```js
+revealView.onDataSourcesRequested = (callback) => {
+    // Create the data source
+    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    snowflakeDS.title = "My Snowflake Datasource";
+    snowflakeDS.subtitle = "Snowflake";
+
+    // Create a data source item
+    const snowflakeDSI = new $.ig.RVSnowflakeDataSourceItem(snowflakeDS);
+    snowflakeDSI.id = "MySnowflakeDataSourceItem";
+    snowflakeDSI.title = "My Snowflake Datasource Item";
+    snowflakeDSI.subtitle = "Snowflake";
+
+    callback(new $.ig.RevealDataSources([snowflakeDS], [snowflakeDSI], false));
+};
+```
+
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Snowflake 項目データ ソースが [データ ソースの選択] ダイアログに表示されます。
+
+![](images/snowflake-data-source-item.jpg)
+
+## その他のリソース
+
+- [Snowflake ドキュメント](https://docs.snowflake.com/)
+- [GitHub のサンプル ソース コード](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/Snowflake)
+
+## API リファレンス
+
+<Tabs groupId="code" queryString>
+<TabItem value="aspnet" label="ASP.NET" default>
+
+* [RVSnowflakeDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Snowflake.RVSnowflakeDataSource.html) - Snowflake データ ソースを表します
+* [RVSnowflakeDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.Snowflake.RVSnowflakeDataSourceItem.html) - Snowflake データ ソース項目を表します
+
+</TabItem>
+<TabItem value="node" label="Node.js">
+
+* [RVSnowflakeDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvsnowflakedatasource.html) - Snowflake データ ソースを表します
+* [RVSnowflakeDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvsnowflakedatasourceitem.html) - Snowflake データ ソース項目を表します
+
+</TabItem>
+</Tabs>
