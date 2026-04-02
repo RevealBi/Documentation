@@ -211,6 +211,12 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
+:::tip Entra ID 認証
+
+Microsoft Entra ID を使用して SQL Server データベースに対して認証を行う場合は、[Microsoft Entra ID 認証](../authentication.md#microsoft-entra-id-認証) セクションで完全な例を参照してください。
+
+:::
+
 :::info コードの取得
 
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer) にあります。

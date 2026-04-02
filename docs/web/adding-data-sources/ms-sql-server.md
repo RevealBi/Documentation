@@ -211,6 +211,12 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
+:::tip Entra ID Authentication
+
+If you are using Microsoft Entra ID to authenticate against your SQL Server database, see the [Microsoft Entra ID Authentication](../authentication.md#microsoft-entra-id-authentication) section for a complete example.
+
+:::
+
 :::info Get the Code
 
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MsSqlServer)

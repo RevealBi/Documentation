@@ -318,12 +318,82 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 - Google アナリティクス
 - Google Big Query
 - Google Drive
+- Microsoft SQL Server
 - OData サービス
 - OneDrive
 - REST サービス
 - SharePoint オンライン
 - Snowflake
 - ウェブ リソース
+
+## Microsoft Entra ID 認証
+
+Microsoft Entra ID (旧 Azure Active Directory) を使用して、Entra ID 認証をサポートするデータ ソース (Microsoft SQL Server など) のベアラー トークンを取得できます。取得したトークンは、`RVBearerTokenDataSourceCredential` を使用して Reveal SDK に渡されます。
+
+:::info
+
+この例では、.NET 用の [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/ja-jp/entra/msal/overview) を使用しています。この方法を使用する前に、[Microsoft Entra ID](https://learn.microsoft.com/ja-jp/entra/identity-platform/quickstart-register-app) でアプリケーションを登録し、適切なデータベース権限を付与する必要があります。
+
+:::
+
+**手順 1** - `Microsoft.Identity.Client` NuGet パッケージをインストールします。
+
+```bash
+dotnet add package Microsoft.Identity.Client
+```
+
+**手順 2** - Entra ID からトークンを取得し、`RVBearerTokenDataSourceCredential` として返す認証プロバイダーを作成します。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+public class AuthenticationProvider : IRVAuthenticationProvider
+{
+    public async Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext,
+        RVDashboardDataSource dataSource)
+    {
+        if (dataSource is RVSqlServerDataSource)
+        {
+            var token = await GetEntraTokenAsync("https://database.windows.net/.default");
+            return new RVBearerTokenDataSourceCredential(token, "myaccount@mydomain.com");
+        }
+
+        return new RVUsernamePasswordDataSourceCredential();
+    }
+
+    private static readonly string ClientId = "your-client-id";
+    private static readonly string ClientSecret = "your-client-secret";
+    private static readonly string TenantId = "your-tenant-id";
+
+    private static async Task<string> GetEntraTokenAsync(string scope)
+    {
+        var app = ConfidentialClientApplicationBuilder
+            .Create(ClientId)
+            .WithClientSecret(ClientSecret)
+            .WithAuthority(AzureCloudInstance.AzurePublic, TenantId)
+            .Build();
+
+        var result = await app
+            .AcquireTokenForClient(new[] { scope })
+            .ExecuteAsync();
+
+        return result.AccessToken;
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+:::note
+
+`your-client-id`、`your-client-secret`、`your-tenant-id` を Entra ID アプリ登録の値に置き換えてください。スコープ値 `https://database.windows.net/.default` は Azure SQL Server に固有です。他のデータ ソースでは異なるスコープが必要になる場合があります。
+
+:::
+
+Microsoft Entra ID 認証は、以下のデータ ソースでサポートされます。
+- Microsoft SQL Server
 
 ## キーペア認証
 
