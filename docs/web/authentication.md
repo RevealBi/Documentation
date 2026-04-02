@@ -319,12 +319,82 @@ The `RVBearerTokenDataSourceCredential` is supported for the following data sour
 - Google Analytics
 - Google Big Query
 - Google Drive
+- Microsoft SQL Server
 - OData Services
 - OneDrive
 - REST Services
 - SharePoint Online
 - Snowflake
 - Web Resources
+
+## Microsoft Entra ID Authentication
+
+Microsoft Entra ID (formerly Azure Active Directory) can be used to obtain bearer tokens for data sources that support Entra ID authentication, such as Microsoft SQL Server. The acquired token is passed to the Reveal SDK using the `RVBearerTokenDataSourceCredential`.
+
+:::info
+
+This example uses the [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/entra/msal/overview) for .NET. You must register an application in [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app) and grant it the appropriate database permissions before using this approach.
+
+:::
+
+**Step 1** - Install the `Microsoft.Identity.Client` NuGet package.
+
+```bash
+dotnet add package Microsoft.Identity.Client
+```
+
+**Step 2** - Create the authentication provider that acquires a token from Entra ID and returns it as a `RVBearerTokenDataSourceCredential`.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+public class AuthenticationProvider : IRVAuthenticationProvider
+{
+    public async Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext,
+        RVDashboardDataSource dataSource)
+    {
+        if (dataSource is RVSqlServerDataSource)
+        {
+            var token = await GetEntraTokenAsync("https://database.windows.net/.default");
+            return new RVBearerTokenDataSourceCredential(token, "myaccount@mydomain.com");
+        }
+
+        return new RVUsernamePasswordDataSourceCredential();
+    }
+
+    private static readonly string ClientId = "your-client-id";
+    private static readonly string ClientSecret = "your-client-secret";
+    private static readonly string TenantId = "your-tenant-id";
+
+    private static async Task<string> GetEntraTokenAsync(string scope)
+    {
+        var app = ConfidentialClientApplicationBuilder
+            .Create(ClientId)
+            .WithClientSecret(ClientSecret)
+            .WithAuthority(AzureCloudInstance.AzurePublic, TenantId)
+            .Build();
+
+        var result = await app
+            .AcquireTokenForClient(new[] { scope })
+            .ExecuteAsync();
+
+        return result.AccessToken;
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+:::note
+
+Replace `your-client-id`, `your-client-secret`, and `your-tenant-id` with the values from your Entra ID app registration. The `scope` value `https://database.windows.net/.default` is specific to Azure SQL Server. Other data sources may require a different scope.
+
+:::
+
+Microsoft Entra ID authentication is supported for the following data sources:
+- Microsoft SQL Server
 
 ## Key-Pair Authentication
 
