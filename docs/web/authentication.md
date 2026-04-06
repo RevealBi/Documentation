@@ -395,6 +395,7 @@ Replace `your-client-id`, `your-client-secret`, and `your-tenant-id` with the va
 
 Microsoft Entra ID authentication is supported for the following data sources:
 - Microsoft SQL Server
+- [Snowflake](https://docs.snowflake.com/en/user-guide/oauth-azure)
 
 ## Key-Pair Authentication
 

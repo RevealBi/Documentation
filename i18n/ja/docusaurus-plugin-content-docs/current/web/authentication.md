@@ -394,6 +394,7 @@ public class AuthenticationProvider : IRVAuthenticationProvider
 
 Microsoft Entra ID 認証は、以下のデータ ソースでサポートされます。
 - Microsoft SQL Server
+- [Snowflake](https://docs.snowflake.com/en/user-guide/oauth-azure)
 
 ## キーペア認証
 
