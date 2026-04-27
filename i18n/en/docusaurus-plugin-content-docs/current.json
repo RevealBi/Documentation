@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Current",
     "description": "The label for version current"
   },
   "sidebar.webSidebar.doc.Overview": {

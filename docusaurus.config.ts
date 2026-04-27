@@ -6,7 +6,14 @@ import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
 import { chatButtonSettings, searchBarSettings } from './inkeep.config';
 
-const sdkVersion = "1.8.4";
+// SDK version: exact build referenced by CodePreview's CDN URL — must match a real release.
+const sdkVersion = "2.0.0";
+const sdkVersion_v1 = "1.8.4";
+
+// Docs version: human-readable label shown in the page version badge ("Version: X").
+// Bump this as the 2.x docs evolve — no need to archive the version.
+const docsVersion = "2.0";
+const docsVersion_v1 = "1.8.4";
 
 const config: Config = {
   title: 'Reveal',
@@ -18,9 +25,18 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   trailingSlash: true,
 
-  // this is used in places like the CodePreview component to load the correct SDK version
+  // Per-version values exposed to client components. Keyed by docs version id ("current" or the snapshot label).
   customFields: {
     sdkVersion: sdkVersion,
+    sdkVersions: {
+      current: sdkVersion,
+      "1.8.4": sdkVersion_v1,
+    },
+    // Used by the swizzled DocVersionBadge to show "Version: <docsVersion>" on each page.
+    docsVersions: {
+      current: docsVersion,
+      "1.8.4": docsVersion_v1,
+    },
   },
 
   // GitHub pages deployment config.
@@ -59,15 +75,31 @@ const config: Config = {
           breadcrumbs: false,
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/RevealBi/documentation/tree/master/',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Current',
+              path: '',
+            },
+            '1.8.4': {
+              label: '1.8.4',
+              path: '1.8.4',
+            },
+          },
           beforeDefaultRemarkPlugins: [
             [apiDocs, {}]
           ],
           remarkPlugins: [
             [npm2yarn, { sync: true }],
             [replace, {
-              variables: [
-                { name: "sdkVersion", value: sdkVersion }
-              ]
+              variablesByVersion: {
+                current: [
+                  { name: "sdkVersion", value: sdkVersion }
+                ],
+                "1.8.4": [
+                  { name: "sdkVersion", value: sdkVersion_v1 }
+                ],
+              },
             }],
           ],
         },
@@ -119,6 +151,10 @@ const config: Config = {
             { label: "Samples", to: "https://github.com/RevealBi/sdk-samples-javascript" },
             { label: "Videos", to: "https://www.youtube.com/@RevealBI" }
           ]
+        },
+        {
+          type: "docsVersionDropdown",
+          position: "right",
         },
         {
           type: "localeDropdown",
