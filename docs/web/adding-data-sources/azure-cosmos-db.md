@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-Azure Cosmos DB is a fully managed database service on Azure that provides low-latency access to globally distributed data. This topic explains how to connect Azure Cosmos DB data sources in your Reveal application so the connection details and credentials stay on the server.
+Azure Cosmos DB is a fully managed database service on Azure that provides low-latency access to globally distributed data. This topic explains how to connect Azure Cosmos DB data sources in your Reveal application to visualize and analyze your data.
 
 ## Server Configuration
 
@@ -54,8 +54,6 @@ For Java applications, the Azure Cosmos DB data source is already included in th
 </Tabs>
 
 ### Connection Configuration
-
-Use `AccountEndpoint`, `Database`, and `Container` to identify the Azure Cosmos DB account, database, and container that Reveal should query. You can also use optional properties such as `ApplicationRegion`, `ConnectionMode`, and `AcceptAnyServerCertificate` when your deployment requires them.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -307,7 +305,6 @@ revealView.onDataSourcesRequested = (callback) => {
 ## Additional Resources
 
 - [Azure Cosmos DB documentation](https://learn.microsoft.com/azure/cosmos-db/)
-- [Reveal SDK Authentication](../authentication.md)
 
 ## API Reference
 
