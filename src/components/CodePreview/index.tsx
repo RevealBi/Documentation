@@ -29,7 +29,7 @@ const extractCodeBlocks = (children: ReactNode) => {
         if (typeof child === 'string') {
             return;
         } else if (React.isValidElement(child)) {
-            const preElement = child.props.children;
+            const preElement = (child.props as { children?: ReactNode }).children;
             const codeElement: any = React.Children.toArray(preElement).find((c: any) => c && c.props && c.props.className);
 
             if (codeElement) {

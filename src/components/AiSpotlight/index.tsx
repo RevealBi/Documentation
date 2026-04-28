@@ -12,7 +12,7 @@ const codeSnippet = `const insight = await client.ai.insights.get({
 console.log(insight.explanation);
 // "Sales revenue reached $2.4M in Q4 2024..."`;
 
-export default function AiSpotlight(): JSX.Element {
+export default function AiSpotlight(): React.JSX.Element {
   return (
     <section className={styles.spotlight}>
       <div className="container">

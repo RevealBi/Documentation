@@ -10,7 +10,7 @@ import PageSideBar from '@site/src/components/PageSideBar';
 
 import CodeEditor from '@site/src/components/CodeEditor';
 
-export default function Playground(): JSX.Element {
+export default function Playground(): React.JSX.Element {
 
     const defaultCode = "//click on feature or type code directy into editor";
     const [srcDoc, setSrcDoc] = useState("");
