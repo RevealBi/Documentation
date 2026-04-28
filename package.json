@@ -51,5 +51,10 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "overrides": {
+    "dompurify": "^3.4.0",
+    "serialize-javascript": "^7.0.5",
+    "picomatch": "^2.3.2"
   }
 }
