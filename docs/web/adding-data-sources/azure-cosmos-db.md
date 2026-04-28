@@ -59,15 +59,18 @@ For Java applications, the Azure Cosmos DB data source is already included in th
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```csharp
+// Create a data source provider
 public class DataSourceProvider : IRVDataSourceProvider
 {
     public async Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId,
         RVDataSourceItem dataSourceItem)
     {
+        // Required: Update the underlying data source
         await ChangeDataSourceAsync(userContext, dataSourceItem.DataSource);
 
         if (dataSourceItem is RVAzureCosmosDBDataSourceItem cosmosItem)
         {
+            // Configure specific item properties if needed
             if (cosmosItem.Id == "azure_cosmos_orders")
             {
                 cosmosItem.Container = "orders";
@@ -82,6 +85,7 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         if (dataSource is RVAzureCosmosDBDataSource cosmosDataSource)
         {
+            // Configure connection properties
             cosmosDataSource.AccountEndpoint = "https://your-account.documents.azure.com:443/";
             cosmosDataSource.Database = "Sales";
             cosmosDataSource.ApplicationRegion = "East US";
@@ -98,10 +102,13 @@ public class DataSourceProvider : IRVDataSourceProvider
   <TabItem value="node" label="Node.js">
 
 ```javascript
+// Create data source providers
 const dataSourceItemProvider = async (userContext, dataSourceItem) => {
+    // Required: Update the underlying data source
     await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
     if (dataSourceItem instanceof reveal.RVAzureCosmosDBDataSourceItem) {
+        // Configure specific item properties if needed
         if (dataSourceItem.id === "azure_cosmos_orders") {
             dataSourceItem.container = "orders";
         }
@@ -112,6 +119,7 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
 
 const dataSourceProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVAzureCosmosDBDataSource) {
+        // Configure connection properties
         dataSource.accountEndpoint = "https://your-account.documents.azure.com:443/";
         dataSource.database = "Sales";
         dataSource.applicationRegion = "East US";
@@ -127,10 +135,13 @@ const dataSourceProvider = async (userContext, dataSource) => {
   <TabItem value="node-ts" label="Node.js - TS">
 
 ```ts
+// Create data source providers
 const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+    // Required: Update the underlying data source
     await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
     if (dataSourceItem instanceof RVAzureCosmosDBDataSourceItem) {
+        // Configure specific item properties if needed
         if (dataSourceItem.id === "azure_cosmos_orders") {
             dataSourceItem.container = "orders";
         }
@@ -141,6 +152,7 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
 
 const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVAzureCosmosDBDataSource) {
+        // Configure connection properties
         dataSource.accountEndpoint = "https://your-account.documents.azure.com:443/";
         dataSource.database = "Sales";
         dataSource.applicationRegion = "East US";
@@ -156,11 +168,14 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
   <TabItem value="java" label="Java">
 
 ```java
+// Create a data source provider
 public class DataSourceProvider implements IRVDataSourceProvider {
     public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardId, RVDataSourceItem dataSourceItem) {
+        // Required: Update the underlying data source
         changeDataSource(userContext, dataSourceItem.getDataSource());
 
         if (dataSourceItem instanceof RVAzureCosmosDBDataSourceItem cosmosItem) {
+            // Configure specific item properties if needed
             if ("azure_cosmos_orders".equals(cosmosItem.getId())) {
                 cosmosItem.setContainer("orders");
             }
@@ -171,6 +186,7 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 
     public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVAzureCosmosDBDataSource cosmosDataSource) {
+            // Configure connection properties
             cosmosDataSource.setAccountEndpoint("https://your-account.documents.azure.com:443/");
             cosmosDataSource.setDatabase("Sales");
             cosmosDataSource.setApplicationRegion("East US");
@@ -205,6 +221,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVAzureCosmosDBDataSource)
         {
+            // Use account key
             userCredential = new RVKeyPairDataSourceCredential(null, "your_account_key");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
@@ -218,6 +235,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVAzureCosmosDBDataSource) {
+        // Use account key
         return new reveal.RVKeyPairDataSourceCredential(null, "your_account_key");
     }
     return null;
@@ -230,6 +248,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVAzureCosmosDBDataSource) {
+        // Use account key
         return new RVKeyPairDataSourceCredential(null, "your_account_key");
     }
     return null;
@@ -244,6 +263,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVAzureCosmosDBDataSource) {
+            // Use account key
             return new RVKeyPairDataSourceCredential(null, "your_account_key");
         }
         return null;
@@ -265,6 +285,7 @@ On the client side, create the data source and data source item with only the `i
 ```js
 const revealView = new $.ig.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
+    // Add data source here
     callback(new $.ig.RevealDataSources([], [], false));
 };
 ```
@@ -273,6 +294,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
+    // Create the data source
     const cosmosDS = new $.ig.RVAzureCosmosDBDataSource();
     cosmosDS.id = "azure_cosmos";
     cosmosDS.title = "Azure Cosmos DB";
@@ -288,11 +310,13 @@ Data source items represent specific datasets within your Azure Cosmos DB data s
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
+    // Create the data source
     const cosmosDS = new $.ig.RVAzureCosmosDBDataSource();
     cosmosDS.id = "azure_cosmos";
     cosmosDS.title = "Azure Cosmos DB";
     cosmosDS.subtitle = "Sales";
 
+    // Create a data source item
     const cosmosDSI = new $.ig.RVAzureCosmosDBDataSourceItem(cosmosDS);
     cosmosDSI.id = "azure_cosmos_orders";
     cosmosDSI.title = "Orders";
