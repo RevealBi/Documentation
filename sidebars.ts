@@ -82,6 +82,7 @@ const sidebars: SidebarsConfig = {
           type: "category", label: "Data Sources", link: { type: "doc", id: "web/datasources" }, items: [
             { type: "doc", label: "Amazon Athena", id: "web/adding-data-sources/amazon-athena" },
             { type: "doc", label: "Amazon S3", id: "web/adding-data-sources/amazon-s3" },
+            { type: "doc", label: "ClickHouse", id: "web/adding-data-sources/clickhouse" },
             { type: "doc", label: "CSV", id: "web/adding-data-sources/csv" },
             { type: "doc", label: "Databricks", id: "web/adding-data-sources/databricks" },
             { type: "doc", label: "Elasticsearch", id: "web/adding-data-sources/elasticsearch" },
