@@ -398,7 +398,7 @@ Microsoft Entra ID 認証は、以下のデータ ソースでサポートされ
 
 ## キーペア認証
 
-データ ソースがキーペア認証を必要とする場合、`RVKeyPairDataSourceCredential` クラスのインスタンスを返す必要があります。`RVKeyPairDataSourceCredential` クラスは、**ユーザー**と**暗号化されていない RSA 秘密キー**を定義するコンストラクターのオーバーロードを提供します。
+データ ソースがキーペア認証を必要とする場合、`RVKeyPairDataSourceCredential` クラスのインスタンスを返す必要があります。`RVKeyPairDataSourceCredential` クラスは、**ユーザー**と**暗号化されていない RSA 秘密キー**を定義するコンストラクターのオーバーロードを提供します。Azure Cosmos DB では、この資格情報の key 値がアカウント キーに対応します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -409,7 +409,11 @@ public class AuthenticationProvider: IRVAuthenticationProvider
     public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
         IRVDataSourceCredential userCredential = null;
-        if (dataSource is RVSnowflakeDataSource)
+        if (dataSource is RVAzureCosmosDBDataSource)
+        {
+            userCredential = new RVKeyPairDataSourceCredential(null, "your_account_key");
+        }
+        else if (dataSource is RVSnowflakeDataSource)
         {
             userCredential = new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
@@ -426,7 +430,10 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-        if (dataSource instanceof RVSnowflakeDataSource) {
+        if (dataSource instanceof RVAzureCosmosDBDataSource) {
+            return new RVKeyPairDataSourceCredential(null, "your_account_key");
+        }
+        else if (dataSource instanceof RVSnowflakeDataSource) {
             return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
         return null;
@@ -440,7 +447,9 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 ```js
 const authenticationProvider = async (userContext, dataSource) => {
-    if (dataSource instanceof reveal.RVSnowflakeDataSource) {
+    if (dataSource instanceof reveal.RVAzureCosmosDBDataSource) {
+        return new reveal.RVKeyPairDataSourceCredential(null, "your_account_key");
+    } else if (dataSource instanceof reveal.RVSnowflakeDataSource) {
         return new reveal.RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
@@ -453,7 +462,9 @@ const authenticationProvider = async (userContext, dataSource) => {
 
 ```ts
 const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-    if (dataSource instanceof RVSnowflakeDataSource) {
+    if (dataSource instanceof RVAzureCosmosDBDataSource) {
+        return new RVKeyPairDataSourceCredential(null, "your_account_key");
+    } else if (dataSource instanceof RVSnowflakeDataSource) {
         return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
@@ -464,6 +475,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 </Tabs>
 
 `RVKeyPairDataSourceCredential` は、以下のデータ ソースでサポートされます。
+- Azure Cosmos DB
 - Snowflake
 
 ## Amazon Web Services
