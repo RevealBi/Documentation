@@ -12,11 +12,11 @@ const DataSources: DataSourceItem[] = [
     { title: "Amazon Athena", topic: "../adding-data-sources/amazon-athena", nuget: "Reveal.Sdk.Data.Amazon.Athena" },
     { title: "Amazon Redshift", topic: "", nuget: "Reveal.Sdk.Data.Amazon.Redshift" },
     { title: "Amazon S3", topic: "../adding-data-sources/amazon-s3", nuget: "Reveal.Sdk.Data.Amazon.S3" },
+    { title: "Azure Cosmos DB", topic: "../adding-data-sources/azure-cosmos-db", nuget: "Reveal.Sdk.Data.AzureCosmosDB" },
     // { title: "Box", topic: "", nuget: "Reveal.Sdk.Data.Box" }, do not advertise
     { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
-    // { title: "Dropbox", topic: "", nuget: "Reveal.Sdk.Data.Dropbox" }, do not advertise
     { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
-    { title: "Azure Cosmos DB", topic: "../adding-data-sources/azure-cosmos-db", nuget: "Reveal.Sdk.Data.AzureCosmosDB" },
+    // { title: "Dropbox", topic: "", nuget: "Reveal.Sdk.Data.Dropbox" }, do not advertise
     { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch", maven: "" },
     // { title: "Google Analytics 4", topic: "", nuget: "Reveal.Sdk.Data.Google.Analytics4" }, do not advertise
     { title: "Google BigQuery", topic: "../adding-data-sources/google-big-query", nuget: "Reveal.Sdk.Data.Google.BigQuery" },

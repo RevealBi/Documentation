@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## はじめに
 
-Azure Cosmos DB は、グローバルに分散されたデータに低遅延でアクセスできる Azure のフル マネージド NoSQL データベース サービスです。このトピックでは、接続の詳細と資格情報をサーバー側に保持したまま、Reveal アプリケーションで Azure Cosmos DB データ ソースに接続する方法について説明します。
+Azure Cosmos DB は、グローバルに分散されたデータに低遅延でアクセスできる Azure のフル マネージド データベース サービスです。このトピックでは、接続の詳細と資格情報をサーバー側に保持したまま、Reveal アプリケーションで Azure Cosmos DB データ ソースに接続する方法について説明します。
 
 ## サーバー構成
 
@@ -307,7 +307,6 @@ revealView.onDataSourcesRequested = (callback) => {
 ## その他のリソース
 
 - [Azure Cosmos DB ドキュメント](https://learn.microsoft.com/azure/cosmos-db/)
-- [Azure Cosmos DB NoSQL ドキュメント](https://learn.microsoft.com/azure/cosmos-db/nosql/)
 - [Reveal SDK 認証](../authentication.md)
 
 ## API リファレンス

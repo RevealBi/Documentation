@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-Azure Cosmos DB is a fully managed NoSQL database service on Azure that provides low-latency access to globally distributed data. This topic explains how to connect Azure Cosmos DB data sources in your Reveal application so the connection details and credentials stay on the server.
+Azure Cosmos DB is a fully managed database service on Azure that provides low-latency access to globally distributed data. This topic explains how to connect Azure Cosmos DB data sources in your Reveal application so the connection details and credentials stay on the server.
 
 ## Server Configuration
 
@@ -307,7 +307,6 @@ revealView.onDataSourcesRequested = (callback) => {
 ## Additional Resources
 
 - [Azure Cosmos DB documentation](https://learn.microsoft.com/azure/cosmos-db/)
-- [Azure Cosmos DB NoSQL documentation](https://learn.microsoft.com/azure/cosmos-db/nosql/)
 - [Reveal SDK Authentication](../authentication.md)
 
 ## API Reference
