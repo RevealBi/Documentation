@@ -109,7 +109,7 @@ app.use('/', reveal(revealOptions));
 
 ## ユーザー名/パスワード認証
 
-データ ソースがユーザー名とパスワードの使用を要求する場合、`RVUsernamePasswordDataSourceCredential` クラスのインスタンスを返す必要があります。`RVUsernamePasswordDataSourceCredential` クラスは、**ユーザー名**、**パスワード**、およびオプションで**ドメイン**を定義するコンストラクターのオーバーロードを提供します。
+データ ソースがユーザー名とパスワードの使用を要求する場合、`RVUsernamePasswordDataSourceCredential` クラスのインスタンスを返す必要があります。`RVUsernamePasswordDataSourceCredential` クラスは、**ユーザー名**、**パスワード**、およびオプションで**ドメイン**を定義するコンストラクターのオーバーロードを提供します。オプションの **ドメイン** パラメーターは、それをサポートするデータ ソースでのみ使用できます。ClickHouse はユーザー名とパスワードの資格情報をサポートしますが、**ドメイン** パラメーターはサポートしません。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -232,6 +232,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 
 `RVUsernamePasswordDataSourceCredential` は、以下のデータ ソースでサポートされます。
 - Amazon Redshift
+- ClickHouse
 - Microsoft Analysis Services サーバー
 - Microsoft Dynamics CRM (オンプレミスおよびオンライン)
 - Microsoft SQL Server
