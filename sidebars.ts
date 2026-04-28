@@ -113,7 +113,6 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
             { type: "doc", label: "2.0.0 Upgrade Guide", id: "web/upgrade-guide-v2.0.0" },
-            { type: "doc", label: "1.6.0 Upgrade Guide", id: "web/upgrade-guide-v1.6.0" },
           ]
         },
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
