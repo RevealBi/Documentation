@@ -1,0 +1,68 @@
+export type DataSourceItem = {
+    title: string;
+    topic?: string;
+    nuget?: string;
+    maven?: string;
+    npm?: string;
+};
+
+// Frozen snapshot for the 1.8.4 docs. Do not edit unless a 1.x patch
+// genuinely changes the supported set of data sources.
+export const dataSourcesV1: DataSourceItem[] = [
+    { title: "Amazon Athena", topic: "../adding-data-sources/amazon-athena", nuget: "Reveal.Sdk.Data.Amazon.Athena" },
+    { title: "Amazon Redshift", topic: "", nuget: "Reveal.Sdk.Data.Amazon.Redshift" },
+    { title: "Amazon S3", topic: "../adding-data-sources/amazon-s3", nuget: "Reveal.Sdk.Data.Amazon.S3" },
+    { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
+    { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
+    { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch", maven: "" },
+    { title: "Google BigQuery", topic: "../adding-data-sources/google-big-query", nuget: "Reveal.Sdk.Data.Google.BigQuery" },
+    { title: "Google Sheets", topic: "../adding-data-sources/google-sheets", nuget: "Reveal.Sdk.Data.Google.Drive" },
+    { title: "In-Memory Data", topic: "../adding-data-sources/in-memory-data" },
+    { title: "JSON", topic: "../adding-data-sources/json" },
+    { title: "MariaDB", topic: "../adding-data-sources/mariadb", nuget: "Reveal.Sdk.Data.MariaDB" },
+    { title: "Microsoft Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
+    { title: "Microsoft Azure Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
+    { title: "Microsoft Azure SQL Database", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
+    { title: "Microsoft Azure Synapse Analytics", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SynapseAnalytics" },
+    { title: "Microsoft Excel", topic: "../adding-data-sources/excel-file" },
+    { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
+    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: "" },
+    { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
+    { title: "OData Feed", topic: "" },
+    { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
+    { title: "PostgreSQL", topic: "../adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },
+    { title: "REST", topic: "../adding-data-sources/rest" },
+    { title: "Snowflake", topic: "../adding-data-sources/snowflake", nuget: "Reveal.Sdk.Data.Snowflake" },
+    { title: "TSV (Tab Separated Values)", topic: "" },
+];
+
+// Active list used by the unreleased / current docs (2.x).
+// Edit this list as the supported data sources for 2.x evolve.
+export const dataSourcesCurrent: DataSourceItem[] = [
+    { title: "Amazon Athena", topic: "../adding-data-sources/amazon-athena", nuget: "Reveal.Sdk.Data.Amazon.Athena" },
+    { title: "Amazon Redshift", topic: "", nuget: "Reveal.Sdk.Data.Amazon.Redshift" },
+    { title: "Amazon S3", topic: "../adding-data-sources/amazon-s3", nuget: "Reveal.Sdk.Data.Amazon.S3" },
+    { title: "Azure Cosmos DB", topic: "../adding-data-sources/azure-cosmos-db", nuget: "Reveal.Sdk.Data.AzureCosmosDB" },
+    { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
+    { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
+    { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch", maven: "" },
+    { title: "Google BigQuery", topic: "../adding-data-sources/google-big-query", nuget: "Reveal.Sdk.Data.Google.BigQuery" },
+    { title: "Google Sheets", topic: "../adding-data-sources/google-sheets", nuget: "Reveal.Sdk.Data.Google.Drive" },
+    { title: "In-Memory Data", topic: "../adding-data-sources/in-memory-data" },
+    { title: "JSON", topic: "../adding-data-sources/json" },
+    { title: "MariaDB", topic: "../adding-data-sources/mariadb", nuget: "Reveal.Sdk.Data.MariaDB" },
+    { title: "Microsoft Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
+    { title: "Microsoft Azure Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
+    { title: "Microsoft Azure SQL Database", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
+    { title: "Microsoft Azure Synapse Analytics", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SynapseAnalytics" },
+    { title: "Microsoft Excel", topic: "../adding-data-sources/excel-file" },
+    { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
+    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: "" },
+    { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
+    { title: "OData Feed", topic: "" },
+    { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
+    { title: "PostgreSQL", topic: "../adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },
+    { title: "REST", topic: "../adding-data-sources/rest" },
+    { title: "Snowflake", topic: "../adding-data-sources/snowflake", nuget: "Reveal.Sdk.Data.Snowflake" },
+    { title: "TSV (Tab Separated Values)", topic: "" },
+];

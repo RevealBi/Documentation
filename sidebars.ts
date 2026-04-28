@@ -113,7 +113,7 @@ const sidebars: SidebarsConfig = {
       type: "category", label: "Release Information", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         {
           type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
-            { type: "doc", label: "1.6.0 Upgrade Guide", id: "web/upgrade-guide-v1.6.0" },
+            { type: "doc", label: "2.0.0 Upgrade Guide", id: "web/upgrade-guide-v2.0.0" },
           ]
         },
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
@@ -122,7 +122,7 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Web Component Wrappers  -------------------- */
+    /* -------------------- Web Component Wrappers  -------------------- 
     {
       type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "web-component-wrappers-overview", id: "web/web-component-wrappers/index" },
@@ -145,6 +145,7 @@ const sidebars: SidebarsConfig = {
         },
       ]
     },
+    */
 
   ],
   

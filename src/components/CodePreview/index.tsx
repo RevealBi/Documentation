@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect, useRef, useState } from "react";
 import CodeBlock from '@theme/CodeBlock';
 import './code-preview.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useDocsVersionFromPath } from '@site/src/utils/useDocsVersionFromPath';
 
 interface CodeSnippetProps {
     children: ReactNode;
@@ -28,7 +29,7 @@ const extractCodeBlocks = (children: ReactNode) => {
         if (typeof child === 'string') {
             return;
         } else if (React.isValidElement(child)) {
-            const preElement = child.props.children;
+            const preElement = (child.props as { children?: ReactNode }).children;
             const codeElement: any = React.Children.toArray(preElement).find((c: any) => c && c.props && c.props.className);
 
             if (codeElement) {
@@ -102,7 +103,9 @@ const CodeSnippet = ({ language, code }: { language: string, code: string }) => 
 
 const CodePreview: React.FC<CodeSnippetProps> = ({ children, previewHeight = 150, sourceOpen = false }) => {
     const { siteConfig } = useDocusaurusContext();
-    const sdkVersion = siteConfig.customFields.sdkVersion;
+    const version = useDocsVersionFromPath();
+    const sdkVersions = siteConfig.customFields.sdkVersions as Record<string, string> | undefined;
+    const sdkVersion = sdkVersions?.[version] ?? siteConfig.customFields.sdkVersion;
 
     const [currentTab, setCurrentTab] = useState(LANGUAGES.HTML);
     const [showSource, setShowSource] = useState(sourceOpen);

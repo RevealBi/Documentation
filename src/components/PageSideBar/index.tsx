@@ -12,7 +12,7 @@ interface PageSidebarProps {
     onItemClick: (item: any) => void;
 }
 
-export default function PageSideBar({ items, onItemClick }: PageSidebarProps): JSX.Element {
+export default function PageSideBar({ items, onItemClick }: PageSidebarProps): React.JSX.Element {
 
     return (
         <aside className={clsx(ThemeClassNames.docs.docSidebarContainer, SidebarStyles.docSidebarContainer)}>

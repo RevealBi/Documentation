@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Current",
     "description": "The label for version current"
   },
   "sidebar.webSidebar.doc.Overview": {
@@ -222,10 +222,6 @@
   "sidebar.webSidebar.category.Release Notes": {
     "message": "Release Notes",
     "description": "The label for category 'Release Notes' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.1.6.0 Upgrade Guide": {
-    "message": "1.6.0 Upgrade Guide",
-    "description": "The label for the doc item '1.6.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v1.6.0"
   },
   "sidebar.webSidebar.doc.PostgreSQL": {
     "message": "PostgreSQL",
