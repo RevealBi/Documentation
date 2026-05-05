@@ -69,12 +69,10 @@ Date and DateTime fields are considered compatible with each other for the purpo
 
 ### How to Set a Field Reference
 
-1. **Open the field settings** for the field you want to format.
-2. **Add or edit a conditional formatting rule** as usual (e.g., "Greater Than", "Equals", "Between").
-3. Next to the value input, click the **field chooser icon** (grid/table icon) that appears.
-4. A popup displays all compatible fields currently in your visualization. Select the field you want to compare against.
-5. The value input is replaced by a **field chip** showing the selected field name.
-6. To remove the field reference and return to manual value entry, click the **✕** button on the chip (appears on hover on desktop, always visible on touch devices).
+1. Field settings are available when a field in the Visualization panel is selected.
+2. The Conditional Formatting tab contains rule and styling options.
+3. Rules can use either a user-entered value or a compatible field selected from the **Field chooser**.
+4. A selected field appears as a chip in place of the value input and can be removed to restore manual entry.
 
 For **Between / Not Between** numeric rules, you can independently set a field reference for both the "from" and "to" bounds. You can also mix static values and field references (e.g., "Between *Min Threshold* field and 1000").
 
@@ -96,6 +94,13 @@ If you modify a visualization and remove a field that was being used as a compar
 - When no field reference is set, standard validation rules still apply (e.g., numeric rules require a value, Between rules require both bounds, and the "from" value must be ≤ the "to" value).
 - Rules referencing fields that contain null or incompatible values in a given row are **skipped** for that row (no formatting is applied).
 - For numeric Between/Not Between rules, the from ≤ to validation is only enforced when both bounds are static values. When one or both bounds reference fields, the evaluation is performed per row without upfront validation.
+
+### Best Practices
+
+- **Stick to two colors**:One highlight color and one neutral tone, such as red and gray, is usually enough. Additional colors can make charts harder to read and clutter the legend.
+- **Add a visible reference**: Color can flag a value, but a reference line, target range, or comparison column such as Budget bars beside Spend makes the rule easier to interpret.
+- **Use conditional formatting on single-series charts**: Column and Bar charts with one measure usually produce the clearest results. Multiple series can conflict with chart colors and make the legend harder to interpret.
+- **Use Grid or Text View for row-by-row comparisons**: Rules that compare columns within the same row, such as Actual versus Budget per order, are most reliable in these visualizations. See **Known Limitations** when using calculated fields.
 
 
 ### Known Limitations
