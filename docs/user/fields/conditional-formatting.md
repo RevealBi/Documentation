@@ -97,15 +97,44 @@ If you modify a visualization and remove a field that was being used as a compar
 - Rules referencing fields that contain null or incompatible values in a given row are **skipped** for that row (no formatting is applied).
 - For numeric Between/Not Between rules, the from ≤ to validation is only enforced when both bounds are static values. When one or both bounds reference fields, the evaluation is performed per row without upfront validation.
 
+
+### Known Limitations
+
+#### Conditional Formatting on Aggregated Calculated Fields
+When applying conditional formatting to a **calculated field that uses an aggregation** (e.g., Average, Sum), be aware that the comparison value is computed over the entire series — not per label or category group shown in the chart.
+
+**Why this matters:** In chart visualizations, each bar or data point represents an aggregate for its specific label/category group. However, the conditional formatting threshold (e.g., "greater than the average") is evaluated against the aggregation across *all* groups in the series. This means some values that visually appear above the chart's average line may not be highlighted, because the per-group aggregate differs from the series-wide aggregate used for comparison.
+
 ## Supported Visualizations
 
 Conditional formatting can be applied to the following visualizations:
 
-  - [Grid Chart](../chart-types/grid-chart.md)
-
-  - [Pivot Chart](../chart-types/pivot-table.md)
-
-  - [Text View](../chart-types/text-view.md)
+- [Grid Chart](../chart-types/grid-chart.md)
+- [Pivot Chart](../chart-types/pivot-table.md)
+- [Text View](../chart-types/text-view.md)
+- [Column Chart](../chart-types/category-charts.md)
+- [Bar Chart](../chart-types/category-charts.md)
+- [Area Chart](../chart-types/category-charts.md)
+- [Line Chart](../chart-types/category-charts.md)
+- [Step Area Chart](../chart-types/category-charts.md)
+- [Step Line Chart](../chart-types/category-charts.md)
+- [Spline Chart](../chart-types/category-charts.md)
+- [Spline Area Chart](../chart-types/category-charts.md)
+- [Combo Chart](../chart-types/combo-charts.md)
+- [Stacked Column Chart](../chart-types/stacked-charts.md)
+- [Stacked Bar Chart](../chart-types/stacked-charts.md)
+- [Stacked Area Chart](../chart-types/stacked-charts.md)
+- [Pie Chart](../chart-types/pie-funnel-charts.md)
+- [Doughnut Chart](../chart-types/pie-funnel-charts.md)
+- [Funnel Chart](../chart-types/pie-funnel-charts.md)
+- [Scatter Chart](../chart-types/scatter-bubble-charts.md)
+- [Bubble Chart](../chart-types/scatter-bubble-charts.md)
+- [Treemap](../chart-types/treemap-charts.md)
+- [OHLC Chart](../chart-types/financial-charts.md)
+- [Candlestick Chart](../chart-types/financial-charts.md)
+- [Radial Chart](../chart-types/radial-charts.md)
+- [Sparkline](../chart-types/sparkline-charts.md)
+- [Time Series](../chart-types/time-series-charts.md)
 
 :::note
 [KPI](../chart-types/kpi-gauge.md), [Linear](../chart-types/gauge-charts.md#linear-gauge), [Circular](../chart-types/gauge-charts.md#circular-gauge), [Text](../chart-types/gauge-charts.md#text-gauge), and [Bullet Graph](../chart-types/gauge-charts.md#bullet-graph) gauges also support conditional formatting natively as part of their band configuration.
