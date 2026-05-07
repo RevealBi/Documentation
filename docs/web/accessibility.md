@@ -35,4 +35,4 @@ When focus is inside a list, dropdown, or grid-based component, use the **Arrow 
 
 ### Limitations
 
-Keyboard navigation is not supported within visualization components. Only the visualization header is reachable via keyboard.
+Keyboard navigation within visualization components is only supported for **Scatter Maps**, **Grid**, and **Sparkline**. For all other visualization types, only the visualization header is reachable via keyboard. Support for **Pivot** is planned for a future release.
