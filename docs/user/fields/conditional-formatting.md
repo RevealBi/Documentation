@@ -11,12 +11,8 @@ in a numeric column. For instance, values in the lower 50% range of a
 grid can be colored with a red adorner to signal very low values.
 
 ![Pivot table view conditional formatting in the Visualization editor](images/conditional-formatting-pivot-table-view.png)
-The conditional formatting configuration allows you to establish styling
-rules per ranges of data up to three ranges (typically used for styling,
-upper, middle, and lower ranges). Depending on the nature of the
-information, low values might be a good or bad signal, so you have the
-flexibility to configure the styling in the way that makes the most
-sense in your situation.
+The conditional formatting configuration allows you to establish styling 
+rules per ranges of data or based on common comparison operators.
 
 ![Text view conditional formatting showing Marketing Metrics Visualization](images/text-view-conditional-formatting-example.png)
 ## Enabling Conditional Formatting
