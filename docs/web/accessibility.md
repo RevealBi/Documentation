@@ -36,3 +36,20 @@ When focus is inside a list, dropdown, or grid-based component, use the **Arrow 
 ### Limitations
 
 Keyboard navigation within visualization components is only supported for Scatter Maps, Grid, and Sparkline. For all other visualization types, only the visualization header is reachable via keyboard. Support for Pivot is planned for a future release.
+
+## Screen Reader Accessibility
+
+The Reveal SDK includes built-in support for screen readers in **View Mode**, using ARIA (Accessible Rich Internet Applications) attributes to ensure users of assistive technologies can perceive and interact with the dashboard interface.
+
+This feature is **enabled by default** and applies to keyboard navigation in View Mode. No additional configuration is required. You can verify screen reader behavior using standard assistive tools such as NVDA.
+
+### What Is Supported
+
+- All interactive controls expose their role (e.g., button, menu, listbox, grid, checkbox) to screen readers.
+- All interactive controls provide ARIA labels so screen readers can announce their purpose.
+
+### Limitations
+
+:::note Work in Progress
+Screen reader support is actively being expanded and is currently limited to keyboard navigation in View Mode. Text boxes are not yet supported.
+:::
