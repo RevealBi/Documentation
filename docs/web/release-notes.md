@@ -23,8 +23,7 @@ import TabItem from '@theme/TabItem';
 - New data source: Azure Cosmos DB.
 - New data source: ClickHouse.
 - New data source: Elasticsearch.
-- New connector: YouTube Analytics via CData.
-- Conditional formatting can now be applied based on field values for bar, column, and text visualizations.
+- Conditional formatting can now be applied based on field values for Grid, Pivot, Bar, Column, and Text visualizations. In addition to comparing against a fixed (static) value, conditional formatting rules support comparing a field's value against **another field** in the same visualization. The formatting is then evaluated independently for each row based on that row's actual data. [Read more.](https://help.revealbi.io/user/fields/conditional-formatting/).
 - New `RVThumbnail` class for programmatically generating thumbnails of dashboards and individual visualizations.
 - The DataGrid visualization now supports cell selection, multi-cell drag selection, and copying cell values to the clipboard via Ctrl+C, along with an updated column header, alternate row, and cell border design.
 - `RevealView` is now available as a standalone npm package.
@@ -71,9 +70,17 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 
 ```ts
 class MyDataModelProvider implements IRVDataModelProvider {
-    editSchema(userContext: IRVUserContext, dataSet: RVDashboardDataSet, schema: RVDataSchema): void {
-        // customize field schema, inject calculated fields, add custom measures
-    }
+  async editSchema(userContext, dataSourceItem, schema) {
+    schema.find(f => f.name === "Discount").defaultAggregation = RVDashboardAggregationType.CountDistinct;
+    schema.find(f => f.name === "UnitPrice").label = "Price per Unit";
+    return schema;
+  }
+  async getCalculatedFields(userContext, dataSourceItem) {
+    return [{ name: "LineTotal", type: RVDashboardDataType.Number, expression: "[UnitPrice] * [Quantity] * (1 - [Discount])" }];
+  }
+  async getMeasures(userContext, dataSourceItem) {
+    return [{ name: "Total Revenue", expression: "sum([UnitPrice] * [Quantity])", description: "Revenue before discount" }];
+  }
 }
 ```
 
@@ -101,7 +108,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - Keyboard focus was lost when a dashboard finished loading.
 - Gauge visualization did not clamp to its maximum value when the data value exceeded it.
 - Concurrent calls to `overrideLocale` could produce incorrect behavior.
-- A translation was missing in the datasource metadata browser.
 - `parseISODate` was not available in the TypeScript-only build.
 - Thumbnail generation failed for certain chart types.
 - Localization did not work correctly when using module bundlers.
@@ -114,7 +120,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - An error occurred when navigating back after following a dashboard link.
 - MongoDB `VerifyConnection` was failing unexpectedly.
 - A regression caused `filterValueChangedEvent` to not fire correctly.
-- The Japanese language pack was missing from the TypeScript translator implementation.
 - A required configuration entry for YouTube OAuth was missing.
 - A deprecated metric caused failures in the LinkedIn connector.
 - The "titles in first row" parameter for Excel data source items was being incorrectly set.
