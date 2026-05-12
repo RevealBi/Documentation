@@ -71,14 +71,17 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 ```ts
 class MyDataModelProvider implements IRVDataModelProvider {
   async editSchema(userContext, dataSourceItem, schema) {
+    // Modifies existing fields in the schema (e.g. changing defaultAggregation, label, or description). Return the modified array to apply changes, or null to keep the original.
     schema.find(f => f.name === "Discount").defaultAggregation = RVDashboardAggregationType.CountDistinct;
     schema.find(f => f.name === "UnitPrice").label = "Price per Unit";
     return schema;
   }
   async getCalculatedFields(userContext, dataSourceItem) {
+    // Injects new computed fields using expressions that reference existing field names (e.g. [UnitPrice] * [Quantity]). These show up as additional fields in the visualization editor.
     return [{ name: "LineTotal", type: RVDashboardDataType.Number, expression: "[UnitPrice] * [Quantity] * (1 - [Discount])" }];
   }
   async getMeasures(userContext, dataSourceItem) {
+    // Injects custom aggregate measures using expressions like sum(...), sumif(...), or PREVIOUS(...). These appear as available measures when building visualizations.
     return [{ name: "Total Revenue", expression: "sum([UnitPrice] * [Quantity])", description: "Revenue before discount" }];
   }
 }

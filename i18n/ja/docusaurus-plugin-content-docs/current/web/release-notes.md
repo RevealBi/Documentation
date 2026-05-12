@@ -23,8 +23,7 @@ import TabItem from '@theme/TabItem';
 - 新しいデータ ソース: Azure Cosmos DB。
 - 新しいデータ ソース: ClickHouse。
 - 新しいデータ ソース: Elasticsearch。
-- 新しいコネクタ: CData 経由の YouTube Analytics。
-- 棒グラフ、縦棒グラフ、テキスト ビジュアライゼーションで、フィールドの値に基づいた条件付き書式が適用できるようになりました。
+- グリッド、ピボット、棒グラフ、縦棒グラフ、テキスト ビジュアライゼーションで、フィールドの値に基づいた条件付き書式が適用できるようになりました。固定（静的）値との比較に加え、条件付き書式ルールで同じビジュアライゼーション内の**別のフィールド**と比較できるようになりました。書式設定は各行の実際のデータに基づいて個別に評価されます。[詳細はこちら。](https://help.revealbi.io/user/fields/conditional-formatting/)
 - ダッシュボードおよび個々のビジュアライゼーションのサムネイルをプログラムから生成できる新しい `RVThumbnail` クラスが追加されました。
 - DataGrid ビジュアライゼーションで、セルの選択、複数セルのドラッグ選択、Ctrl+C によるクリップボードへのコピーがサポートされました。また、列ヘッダー、交互行、セル境界線のデザインも更新されました。
 - `RevealView` がスタンドアロンの npm パッケージとして利用可能になりました。
@@ -71,9 +70,17 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 
 ```ts
 class MyDataModelProvider implements IRVDataModelProvider {
-    editSchema(userContext: IRVUserContext, dataSet: RVDashboardDataSet, schema: RVDataSchema): void {
-        // フィールド スキーマのカスタマイズ、計算フィールドの注入、カスタム メジャーの追加
-    }
+  async editSchema(userContext, dataSourceItem, schema) {
+    schema.find(f => f.name === "Discount").defaultAggregation = RVDashboardAggregationType.CountDistinct;
+    schema.find(f => f.name === "UnitPrice").label = "Price per Unit";
+    return schema;
+  }
+  async getCalculatedFields(userContext, dataSourceItem) {
+    return [{ name: "LineTotal", type: RVDashboardDataType.Number, expression: "[UnitPrice] * [Quantity] * (1 - [Discount])" }];
+  }
+  async getMeasures(userContext, dataSourceItem) {
+    return [{ name: "Total Revenue", expression: "sum([UnitPrice] * [Quantity])", description: "Revenue before discount" }];
+  }
 }
 ```
 
@@ -101,7 +108,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - ダッシュボードの読み込み完了時にキーボード フォーカスが失われていました。
 - ゲージ ビジュアライゼーションでデータ値が最大値を超えた場合に、最大値にクランプされませんでした。
 - `overrideLocale` の同時呼び出しが不正な動作を引き起こす場合がありました。
-- データ ソース メタデータ ブラウザーで翻訳が欠落していました。
 - TypeScript のみのビルドで `parseISODate` が利用できませんでした。
 - 特定のチャート タイプでサムネイル生成が失敗していました。
 - モジュール バンドラーを使用する場合にローカライズが正しく機能しませんでした。
@@ -114,7 +120,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - ダッシュボード リンクをたどった後に戻る操作でエラーが発生していました。
 - MongoDB の `VerifyConnection` が予期せず失敗していました。
 - `filterValueChangedEvent` が正しく発火しないリグレッションが発生していました。
-- TypeScript トランスレーター実装から日本語言語パックが欠落していました。
 - YouTube OAuth に必要な設定エントリが欠落していました。
 - LinkedIn コネクタで非推奨のメトリクスが原因で失敗が発生していました。
 - Excel データ ソース アイテムの「最初の行をタイトルとして使用」パラメーターが正しく設定されていませんでした。
