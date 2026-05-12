@@ -710,5 +710,9 @@
   "sidebar.aiSidebar.doc.Building a Custom Provider": {
     "message": "Building a Custom Provider",
     "description": "The label for the doc item 'Building a Custom Provider' in sidebar 'aiSidebar', linking to the doc ai/providers-building-custom"
+  },
+  "sidebar.webSidebar.doc.2.0.0 Upgrade Guide": {
+    "message": "2.0.0 アップグレード ガイド",
+    "description": "The label for the doc item '2.0.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0"
   }
 }

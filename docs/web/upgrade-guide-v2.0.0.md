@@ -11,38 +11,209 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 
 ## Overview of Breaking Changes
 
-<!-- TODO: list the high-level breaking changes here so a reader can scan and decide what affects them. -->
+- **jQuery removed** — the SDK no longer depends on jQuery.
+- **NPM delivery** — the client SDK is now delivered as an npm package; legacy script-tag delivery is no longer the recommended approach.
+- **Legacy Java engine & WPF backend removed** — these have been completely removed.
+- **Legacy chart types removed** — previously deprecated chart types are no longer available.
+- **Renamed and removed APIs** — `DateFilter`, filter property names, `RVDashboardThumbnailView`, and `ToJsonStringAsync` have been renamed or removed.
 
 ## Step-by-Step Upgrade
 
-### 1. Update package versions
+### 1. Remove jQuery
 
-<!-- TODO: show the new package versions for ASP.NET, Java, and Node SDKs. -->
+The Reveal SDK no longer requires jQuery. Remove the jQuery script tag that was loaded for the SDK:
 
-### 2. Update API usage
+```html
+<!-- Remove this line -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+```
 
-<!-- TODO: list renamed/removed APIs with before/after snippets in tabs. -->
+:::info
+If your own application code depends on jQuery you can keep it — the Reveal SDK simply no longer requires it.
+:::
 
-<Tabs groupId="example">
-    <TabItem value="before" label="1.8.4">
-        ```csharp
-        // before
-        ```
-    </TabItem>
-    <TabItem value="after" label="2.0.0">
-        ```csharp
-        // after
-        ```
-    </TabItem>
+Also remove **Quill.js** and **Spectrum.js** if they are still present from older versions:
+
+```html
+<!-- Remove these if present -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css" >
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+```
+
+### 2. Switch client SDK to NPM
+
+Replace the legacy script-tag installation with the npm package.
+
+<Tabs groupId="delivery">
+  <TabItem value="before" label="1.x (script tags)">
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/1.8.4/infragistics.reveal.js"></script>
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0 (npm)">
+
+```bash
+npm install reveal-sdk dayjs
+```
+
+```typescript
+import "reveal-sdk";
+```
+
+  </TabItem>
 </Tabs>
 
-### 3. Update configuration
+:::tip Still need script tags?
+The SDK distribution zip is still available for non-bundler setups — but jQuery is no longer needed:
 
-<!-- TODO: any config / appsettings / DI changes go here. -->
+```html
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="./assets/reveal/infragistics.reveal.js"></script>
+```
+:::
+
+### 3. Update server SDK packages
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
+
+```xml
+<PackageReference Include="Reveal.Sdk.AspNetCore" Version="2.0.0" />
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+Update your Maven/Gradle dependency to version **2.0.0** or later.
+
+```xml
+<dependency>
+    <groupId>com.infragistics.reveal.sdk</groupId>
+    <artifactId>reveal-sdk</artifactId>
+    <version>2.0.0</version>
+</dependency>
+```
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+```bash
+npm install reveal-sdk-node@2.0.0
+```
+
+  </TabItem>
+</Tabs>
+
+### 4. Update API usage
+
+#### `DateFilter` → `filters` + `RVDateRule`
+
+The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.
+
+<Tabs groupId="api-datefilter">
+  <TabItem value="before" label="1.x">
+
+```javascript
+visualization.dateFilter = new RVDateDashboardFilter();
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```javascript
+const dateRule = new RVDateRule();
+visualization.filters = [dateRule];
+```
+
+  </TabItem>
+</Tabs>
+
+#### Filter property renames
+
+| Old Name (1.x) | New Name (2.0) |
+|---|---|
+| `NumberOfItemsInGrid` | `FilterCount` |
+| `FilterRangeText` | `FilterSelectionText` |
+| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
+
+Update all references — the old names are no longer available.
+
+#### `RVDashboardThumbnailView` → `RVThumbnail`
+
+<Tabs groupId="api-thumbnail">
+  <TabItem value="before" label="1.x">
+
+```javascript
+const thumbnailView = new RVDashboardThumbnailView();
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```javascript
+const thumbnail = new RVThumbnail();
+```
+
+  </TabItem>
+</Tabs>
+
+The new `RVThumbnail` API also supports runtime theme changes.
+
+#### `ToJsonStringAsync` → `ToJsonString`
+
+<Tabs groupId="api-json">
+  <TabItem value="before" label="1.x">
+
+```csharp
+var json = await dashboard.ToJsonStringAsync();
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```csharp
+var json = dashboard.ToJsonString();
+```
+
+  </TabItem>
+</Tabs>
 
 ## Removed APIs
 
-<!-- TODO: list APIs removed in 2.0 with the recommended replacement. -->
+| API | Replacement |
+|---|---|
+| `DateFilter` property | `filters` collection with `RVDateRule` |
+| `RVDashboardThumbnailView` | `RVThumbnail` |
+| `ToJsonStringAsync` | `ToJsonString` |
+| `NumberOfItemsInGrid` | `FilterCount` |
+| `FilterRangeText` | `FilterSelectionText` |
+| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
+| Legacy chart types (previously deprecated) | Use current [Chart Types](/web/chart-types) |
+| Legacy Java engine | Java SDK (Spring Boot) |
+| WPF backend | ASP.NET, Node.js, or Java server SDKs |
+
+## Summary Checklist
+
+- [ ] Remove jQuery `<script>` tag
+- [ ] Remove Quill.js and Spectrum.js references if still present
+- [ ] Switch client SDK to npm package (or remove jQuery from script-tag setup)
+- [ ] Update server SDK packages to 2.0.0
+- [ ] Replace `DateFilter` usage with `filters` and `RVDateRule`
+- [ ] Rename `NumberOfItemsInGrid` → `FilterCount`
+- [ ] Rename `FilterRangeText` → `FilterSelectionText`
+- [ ] Rename `UpdateFilterRangeText` → `UpdateFilterSelectionText`
+- [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
+- [ ] Replace `ToJsonStringAsync` with `ToJsonString`
+- [ ] Verify no dashboards use removed legacy chart types
+- [ ] If using the legacy Java engine or WPF backend, migrate to a supported server SDK
 
 ## Need help?
 
