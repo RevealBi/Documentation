@@ -32,6 +32,12 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "React", id: "web/getting-started-react" },
           ]
         },
+        {
+          type: "category", label: "Install Client SDK (npm)", link: { type: "doc", id: "web/installation/installation" }, items: [
+            { type: "doc", label: "Angular", key: "installation-angular", id: "web/installation/installation-angular" },
+            { type: "doc", label: "React", key: "installation-react", id: "web/installation/installation-react" },
+          ]
+        },
       ]
     },
 

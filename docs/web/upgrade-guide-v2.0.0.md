@@ -83,6 +83,10 @@ The SDK distribution zip is still available for non-bundler setups — jQuery an
 ```
 :::
 
+:::info Full installation guides
+For a deeper dive into all client SDK installation options — including CDN with ES modules, npm with Angular, and npm with React — see the [Installation Guide](installation/installation.md).
+:::
+
 ### 3. Update server SDK packages
 
 <Tabs groupId="code" queryString>

@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
-## 2.0.0 (May 14th, 2026)
+## 2.0.0 (14th of May, 2026)
 
 ### Breaking Changes
 
