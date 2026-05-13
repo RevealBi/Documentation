@@ -20,9 +20,8 @@ import TabItem from '@theme/TabItem';
 ### New Features
 
 #### All Platforms
-- New data source: Azure Cosmos DB.
+- New data source: Azure CosmosDB.
 - New data source: ClickHouse.
-- New data source: Elasticsearch.
 - Conditional formatting can now be applied based on field values for Grid, Pivot, Bar, Column, and Text visualizations. In addition to comparing against a fixed (static) value, conditional formatting rules support comparing a field's value against **another field** in the same visualization. The formatting is then evaluated independently for each row based on that row's actual data. [Read more.](https://help.revealbi.io/user/fields/conditional-formatting/).
 - New `RVThumbnail` class for programmatically generating thumbnails of dashboards and individual visualizations.
 - The DataGrid visualization now supports cell selection, multi-cell drag selection, and copying cell values to the clipboard via Ctrl+C, along with an updated column header, alternate row, and cell border design.
@@ -32,7 +31,6 @@ import TabItem from '@theme/TabItem';
 - A draggable splitter has been added to the visualization editor between the chart and data areas.
 - Integrated authentication for SQL Server connections has been improved.
 - The official Microsoft SQL Server client library now replaces the previous internal implementation.
-- Snowflake now supports OAuth account type via `AllowsOAuthAccountType`.
 - Data agent connection recovery has been improved to handle network interruptions more reliably.
 
 #### Java
@@ -106,7 +104,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 ### Bugs
 
 #### All Platforms
-- Azure Cosmos DB failed to read hierarchical data.
 - Not all chart series were rendered, and hovering on a combo stacked series caused a crash.
 - Keyboard focus was lost when a dashboard finished loading.
 - Gauge visualization did not clamp to its maximum value when the data value exceeded it.
@@ -114,7 +111,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - `parseISODate` was not available in the TypeScript-only build.
 - Thumbnail generation failed for certain chart types.
 - Localization did not work correctly when using module bundlers.
-- Date filters were not applied correctly in the YouTube Analytics connector.
 - The `RevealView` constructor did not correctly accept a CSS selector string — only DOM elements worked.
 - Date fields were assigned an incorrect column type in `RVJsonSchemaConfigBuilder`.
 - A null reference crash occurred in the pivot field editor when `Data` was not set.
@@ -123,8 +119,6 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - An error occurred when navigating back after following a dashboard link.
 - MongoDB `VerifyConnection` was failing unexpectedly.
 - A regression caused `filterValueChangedEvent` to not fire correctly.
-- A required configuration entry for YouTube OAuth was missing.
-- A deprecated metric caused failures in the LinkedIn connector.
 - The "titles in first row" parameter for Excel data source items was being incorrectly set.
 - Missing title in the datasource selector dialog.
 
