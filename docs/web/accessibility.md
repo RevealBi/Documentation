@@ -48,7 +48,7 @@ Screen reader support is **enabled by default** and applies to keyboard navigati
 - All interactive controls expose their role (e.g., button, menu, listbox, grid, checkbox) to screen readers.
 - All interactive controls provide ARIA labels so screen readers can announce their purpose.
 
-### Known Limitations
+### Limitations
 
 As this feature is still evolving, the following limitations apply in the current release:
 
