@@ -13,13 +13,13 @@ The simplest way to get started is to include the Reveal SDK directly in your HT
 <script src="https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.js"></script>
 ```
 
-## CDN (ES Modules)
+## CDN (ESM)
 
-If you prefer modern ES module syntax without a bundler, you can import the SDK as a module directly in the browser:
+If you prefer ESM (ES module) syntax without a bundler, you can import the SDK as a module directly in the browser:
 
 ```html
 <script type="module">
-    import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.es.js";
+    import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
 
     RevealSdkSettings.setBaseUrl("http://localhost:5111/");
 
