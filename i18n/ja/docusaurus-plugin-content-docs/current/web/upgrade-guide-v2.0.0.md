@@ -15,7 +15,10 @@ import TabItem from '@theme/TabItem';
 - **NPM 配信** — クライアント SDK は npm パッケージとして配信されるようになりました。レガシーなスクリプトタグによる配信は推奨されなくなりました。
 - **レガシー Java エンジンおよび WPF バックエンドの削除** — これらは完全に削除されました。
 - **レガシー チャート タイプの削除** — 以前に非推奨となっていたチャート タイプは利用できなくなりました。
-- **API の名前変更と削除** — `DateFilter`、フィルター プロパティ名、`RVDashboardThumbnailView`、`ToJsonStringAsync` は名前変更または削除されました。
+- **API の名前変更と削除** 
+    - `DateFilter` - _削除_ `RevealView`、`RVDashboard`、`ExportOptionsBase` から非推奨プロパティを削除
+    - `ToJsonStringAsync` - _名前変更_ `ToJsonString` に変更。
+- **非推奨の型** — `RVDashboardThumbnailView` は非推奨になりました。`RVThumbnail` を使用してください。
 
 ## アップグレード手順
 
@@ -116,7 +119,7 @@ npm install reveal-sdk-node@2.0.0
 
 #### `DateFilter` → `filters` + `RVDateRule`
 
-非推奨の `DateFilter` プロパティは削除されました。代わりに `filters` コレクションを使用してください。
+非推奨の `DateFilter` プロパティは削除されました。代わりに `filters` コレクションを使用してください。  DateFilter は `RevealView`、`RVDashboard`、`RVDateDashboardFilter`、`IExportOptions`、`RevealSettings`、`ExportOptionsBase` およびその子クラスから削除されました。
 
 <Tabs groupId="api-datefilter">
   <TabItem value="before" label="1.x">
@@ -135,16 +138,6 @@ visualization.filters = [dateRule];
 
   </TabItem>
 </Tabs>
-
-#### フィルター プロパティの名前変更
-
-| 旧名称 (1.x) | 新名称 (2.0) |
-|---|---|
-| `NumberOfItemsInGrid` | `FilterCount` |
-| `FilterRangeText` | `FilterSelectionText` |
-| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
-
-すべての参照を更新してください — 旧名称は利用できなくなりました。
 
 #### `RVDashboardThumbnailView` → `RVThumbnail`
 
@@ -190,12 +183,9 @@ var json = dashboard.ToJsonString();
 
 | API | 代替 |
 |---|---|
-| `DateFilter` プロパティ | `filters` コレクションと `RVDateRule` |
+| `DateFilter` プロパティ | `filters` コレクション |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
 | `ToJsonStringAsync` | `ToJsonString` |
-| `NumberOfItemsInGrid` | `FilterCount` |
-| `FilterRangeText` | `FilterSelectionText` |
-| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
 | レガシー チャート タイプ (以前に非推奨) | 現在の[チャート タイプ](/web/chart-types)を使用 |
 | レガシー Java エンジン | Java SDK (Spring Boot) |
 | WPF バックエンド | ASP.NET、Node.js、または Java サーバー SDK |
@@ -207,9 +197,6 @@ var json = dashboard.ToJsonString();
 - [ ] クライアント SDK を npm パッケージに切り替え (またはスクリプトタグ構成から jQuery を削除)
 - [ ] サーバー SDK パッケージを 2.0.0 に更新
 - [ ] `DateFilter` の使用を `filters` と `RVDateRule` に置き換え
-- [ ] `NumberOfItemsInGrid` → `FilterCount` に名前変更
-- [ ] `FilterRangeText` → `FilterSelectionText` に名前変更
-- [ ] `UpdateFilterRangeText` → `UpdateFilterSelectionText` に名前変更
 - [ ] `RVDashboardThumbnailView` を `RVThumbnail` に置き換え
 - [ ] `ToJsonStringAsync` を `ToJsonString` に置き換え
 - [ ] 削除されたレガシー チャート タイプを使用しているダッシュボードがないことを確認

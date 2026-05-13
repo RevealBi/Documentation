@@ -15,8 +15,10 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 - **NPM delivery** — the client SDK is now delivered as an npm package; legacy script-tag delivery is no longer the recommended approach.
 - **Legacy Java engine & WPF backend removed** — these have been completely removed.
 - **Legacy chart types removed** — previously deprecated chart types are no longer available.
-- **Renamed and removed APIs** — `DateFilter`, filter property names, and `ToJsonStringAsync` have been renamed or removed.
-- **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of RVThumbnail.
+- **Renamed and removed APIs** 
+    - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard` and `ExportOptionsBase`
+    - `ToJsonStringAsync` - _renamed_ to `ToJsonString`.
+- **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of `RVThumbnail`.
 
 ## Step-by-Step Upgrade
 
@@ -117,7 +119,7 @@ npm install reveal-sdk-node@2.0.0
 
 #### `DateFilter` → `filters` + `RVDateRule`
 
-The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.
+The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.  DateFilter was eliminated from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `IExportOptions`, `RevealSettings`, `ExportOptionsBase` and child classes.
 
 <Tabs groupId="api-datefilter">
   <TabItem value="before" label="1.x">
@@ -136,16 +138,6 @@ visualization.filters = [dateRule];
 
   </TabItem>
 </Tabs>
-
-#### Filter property renames
-
-| Old Name (1.x) | New Name (2.0) |
-|---|---|
-| `NumberOfItemsInGrid` | `FilterCount` |
-| `FilterRangeText` | `FilterSelectionText` |
-| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
-
-Update all references — the old names are no longer available.
 
 #### `RVDashboardThumbnailView` → `RVThumbnail`
 
@@ -191,12 +183,9 @@ var json = dashboard.ToJsonString();
 
 | API | Replacement |
 |---|---|
-| `DateFilter` property | `filters` collection with `RVDateRule` |
+| `DateFilter` property | `filters` collection |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
 | `ToJsonStringAsync` | `ToJsonString` |
-| `NumberOfItemsInGrid` | `FilterCount` |
-| `FilterRangeText` | `FilterSelectionText` |
-| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
 | Legacy chart types (previously deprecated) | Use current [Chart Types](/web/chart-types) |
 | Legacy Java engine | Java SDK (Spring Boot) |
 | WPF backend | ASP.NET, Node.js, or Java server SDKs |
@@ -208,9 +197,6 @@ var json = dashboard.ToJsonString();
 - [ ] Switch client SDK to npm package (or remove jQuery from script-tag setup)
 - [ ] Update server SDK packages to 2.0.0
 - [ ] Replace `DateFilter` usage with `filters` and `RVDateRule`
-- [ ] Rename `NumberOfItemsInGrid` → `FilterCount`
-- [ ] Rename `FilterRangeText` → `FilterSelectionText`
-- [ ] Rename `UpdateFilterRangeText` → `UpdateFilterSelectionText`
 - [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
 - [ ] Replace `ToJsonStringAsync` with `ToJsonString`
 - [ ] Verify no dashboards use removed legacy chart types
