@@ -15,7 +15,8 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 - **NPM delivery** — the client SDK is now delivered as an npm package; legacy script-tag delivery is no longer the recommended approach.
 - **Legacy Java engine & WPF backend removed** — these have been completely removed.
 - **Legacy chart types removed** — previously deprecated chart types are no longer available.
-- **Renamed and removed APIs** — `DateFilter`, filter property names, `RVDashboardThumbnailView`, and `ToJsonStringAsync` have been renamed or removed.
+- **Renamed and removed APIs** — `DateFilter`, filter property names, and `ToJsonStringAsync` have been renamed or removed.
+- **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of RVThumbnail.
 
 ## Step-by-Step Upgrade
 
