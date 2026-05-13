@@ -5,7 +5,7 @@ import BetaWarning from '../_beta-message.md'
 
 <BetaWarning />
 
-The `RvRevealView` web component wraps around the existing jQuery component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
+The `RvRevealView` web component wraps around the existing `RevealView` component to simplify its use. To facilitate this, we've introduced an `options` concept that allows you to control various parts of the UI in a web-friendly way.
 
 # Reveal View
 

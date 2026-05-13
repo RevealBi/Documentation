@@ -21,24 +21,10 @@
 
 ## Step 2 - Add Reveal JavaScript API
 
-1 - Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+1 - Modify the `index.html` file to include the `reveal-sdk.js` script at the bottom of the page just before the closing `</body>` tag.
 
 ```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-```
-
-2 - Install the remaining Reveal JavaScript API dependencies:
-
-- Jquery 2.2 or greater
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
-
-- Day.js 1.8.15 or greater
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 ```
 
 The final `index.html` files should look similar to this:
@@ -55,9 +41,7 @@ The final `index.html` files should look similar to this:
 <body>
 
     // highlight-start
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
     // highlight-end
 </body>
 </html>
@@ -76,11 +60,11 @@ The final `index.html` files should look similar to this:
 ```html
 <script type="text/javascript">
     //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
+    var revealView = new RevealApi.RevealView("#revealView");
 </script>
 ```
 
-Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
+Next, we instantiate a new instance of the `RevealView` by creating a new `RevealApi.RevealView` and passing in the `#revealView` selector.
 
 The final `index.html` file should look like this:
 
@@ -97,12 +81,10 @@ The final `index.html` file should look like this:
     //highlight-start
     <div id="revealView" style="height: 920px; width: 100%;"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 
     <script type="text/javascript">
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new RevealApi.RevealView("#revealView");
     </script>
     //highlight-end
 </body>
@@ -111,7 +93,7 @@ The final `index.html` file should look like this:
 
 :::caution
 
-Clients apps must set the `$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
+Clients apps must set the `RevealApi.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
 
 :::
 

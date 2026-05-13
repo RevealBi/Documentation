@@ -21,48 +21,16 @@ code .
 
 ## Step 2 - Add Reveal JavaScript API
 
-1 - Open and modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+1 - Install the Reveal SDK npm package:
 
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+```bash
+npm install reveal-sdk
 ```
 
-2 - Install the remaining Reveal JavaScript API dependencies:
+2 - Open the `src/app/app.component.ts` file and add the following import at the top:
 
-- Jquery 2.2 or greater
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
-
-- Day.js 1.8.15 or greater
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-The final `index.html` files should look similar to this:
-
-```html title="index.html"
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>GettingStarted</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">  
-</head>
-<body>
-  <app-root></app-root>
-
-  //highlight-start
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-  //highlight-end
-</body>
-</html>
+```ts
+import { RevealView, RevealSdkSettings } from "reveal-sdk";
 ```
 
 ## Step 3 - Initialize the Reveal view
@@ -73,13 +41,9 @@ The final `index.html` files should look similar to this:
 <div #revealView style="height: 100vh; width: 100%; position:relative;"></div>
 ```
 
-2 - Open and modify the `src/app/app.component.ts` file.  First, we need to make sure that we can use jQuery by declaring a new variable named `$`, of type `any`, at the top of the file just under the import statements. This will make sure TypeScript will compile our JavaScript.
+2 - Open and modify the `src/app/app.component.ts` file.
 
-```ts
-declare let $: any;
-```
-
-Next, we need access to the `revalView` that we defined in HTML as a `ViewChild`. Add a property to hold this reference.
+First, add a property to hold the `ViewChild` reference to the `revealView` element.
 
 ```ts title="src/app/app.component.html"
 export class AppComponent {
@@ -113,20 +77,19 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // highlight-next-line
-    var revealView = new $.ig.RevealView(this.el.nativeElement);
+    var revealView = new RevealView(this.el.nativeElement);
   }
   
 }
 ```
 
-Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
+Next, we instantiate a new instance of the `RevealView` by creating a new `RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
 
 The final `app.component.ts` file should look like this:
 
 ```ts title="src/app/app.component.html"
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-
-declare let $: any;
+import { RevealView, RevealSdkSettings } from "reveal-sdk";
 
 @Component({
   selector: 'app-root',
@@ -138,7 +101,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('revealView') el!: ElementRef;
 
   ngAfterViewInit(): void {
-    var revealView = new $.ig.RevealView(this.el.nativeElement);
+    var revealView = new RevealView(this.el.nativeElement);
   }
   
 }
@@ -146,7 +109,7 @@ export class AppComponent implements AfterViewInit {
 
 :::caution
 
-Clients apps must set the `$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
+Clients apps must set the `RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
 
 :::
 

@@ -140,7 +140,7 @@ The `setAdditionalHeadersProvider` callback function is expected to return an ob
   <TabItem value="javascript" label="JavaScript" default>
 
 ```js
-RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+RevealApi.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
   var headers = {};
   headers["x-header-one"] = "single_value";
   headers["x-header-two"] = ["value_1", "value_2"];
@@ -174,7 +174,7 @@ https://youtu.be/q9mbN2kIXFs
 Here is an example of how to pass several property values from the client to the server.  In this case, there are three HTML selects that have orderId, employeeId, and customerId values.  These values are passed to the server in the  `setAdditionalHeadersProvider` callback.
 
 ```` js 
-$.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+RevealApi.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
     return headers;
 });
 ````
@@ -182,13 +182,13 @@ $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
 When the request is made to the `onDataSourcesRequested`, the selected values of each HTML select is set in the `headers` array.
 
 ```` js 
-var selectedCustomerId = $('#customerId').val();
+var selectedCustomerId = document.getElementById('customerId').value;
 headers["x-header-customerId"] = selectedCustomerId;
 
-var selectedOrderId = $('#orderId').val();
+var selectedOrderId = document.getElementById('orderId').value;
 headers["x-header-orderId"] = selectedOrderId;
 
-var selectedEmployeeId = $('#employeeId').val();
+var selectedEmployeeId = document.getElementById('employeeId').value;
 headers["x-header-employeeId"] = selectedEmployeeId;
 ````
 
@@ -222,40 +222,38 @@ This is the full HTML for the client.
       
     <div id="revealView" style="height: calc(100vh - 25px); width: 100%;></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/1.6.4/infragistics.reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 
     <script type="text/javascript">
-        $.ig.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
+        RevealApi.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
 
-        $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+        RevealApi.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
             return headers;
         });
 
         const headers = {};
 
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new RevealApi.RevealView("#revealView");
         revealView.interactiveFilteringEnabled = true;
         revealView.startInEditMode = true;  
 
         revealView.onDataSourcesRequested = (callback) => {    
 
-            var selectedCustomerId = $('#customerId').val();
+            var selectedCustomerId = document.getElementById('customerId').value;
             headers["x-header-customerId"] = selectedCustomerId;
 
-            var selectedOrderId = $('#orderId').val();
+            var selectedOrderId = document.getElementById('orderId').value;
             headers["x-header-orderId"] = selectedOrderId;
 
-            var selectedEmployeeId = $('#employeeId').val();
+            var selectedEmployeeId = document.getElementById('employeeId').value;
             headers["x-header-employeeId"] = selectedEmployeeId;
 
-            var ds = new $.ig.RVAzureSqlDataSource();
+            var ds = new RevealApi.RVAzureSqlDataSource();
             ds.id="sqlServer";
             ds.title = "SQL Server Data Source";
             ds.subtitle = "Full Northwind Database";
 
-            callback(new $.ig.RevealDataSources([ds], [ ], false));        
+            callback(new RevealApi.RevealDataSources([ds], [ ], false));        
         };     
     </script>
 </body>

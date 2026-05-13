@@ -10,15 +10,13 @@ Integrating Reveal SDK Web Component Wrappers into your project is quick and eas
 
 ## Prerequisites
 
-To ensure Reveal SDK Web Component Wrappers function properly, you’ll need to install the Reveal SDK client library. These dependencies are essential as the Reveal SDK Web Component Wrappers are built around the existing jQuery-based RevealView.
+To ensure Reveal SDK Web Component Wrappers function properly, you'll need to install the Reveal SDK client library.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1.8.21/dayjs.min.js"></script>
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 <script>
     // Change to your Reveal SDK server URL
-    $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+    RevealApi.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 </script>
 ```
 

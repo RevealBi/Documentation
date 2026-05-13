@@ -76,7 +76,4 @@ Dependency|License|
 
 ## Javascript (client-side) 
 
-|Dependency|License|
-|----------|-------|
-|[jquery](https://jquery.com/)|[MIT](https://opensource.org/licenses/mit-license.html)|
-|[day.js](https://github.com/iamkun/dayjs)|[MIT](https://opensource.org/licenses/mit-license.html)|
+The Reveal SDK client library has no external runtime dependencies.

@@ -62,15 +62,6 @@ This property enables the ability to provide a background color for a visualizat
 revealView.canChangeVisualizationBackgroundColor = true;
 ```
 
-When using this property, you must install the following dependencies into your client application:
-
-- Spectrum v 1.8.0 or newer
-
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
-```
-
 ### canCopyVisualization
 
 This property shows/hides the **Copy** menu item for a Visualization.

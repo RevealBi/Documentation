@@ -11,13 +11,16 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 
 ## Overview of Breaking Changes
 
-- **jQuery removed** — the SDK no longer depends on jQuery.
+- **jQuery and Day.js removed** — the SDK no longer depends on jQuery or Day.js.
 - **NPM delivery** — the client SDK is now delivered as an npm package; legacy script-tag delivery is no longer the recommended approach.
 - **Legacy Java engine & WPF backend removed** — these have been completely removed.
 - **Legacy chart types removed** — previously deprecated chart types are no longer available.
 - **Renamed and removed APIs** 
     - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard` and `ExportOptionsBase`
     - `ToJsonStringAsync` - _renamed_ to `ToJsonString`.
+    - `NumberOfItemsInGrid` - _renamed_ to `FilterCount`.
+    - `FilterRangeText` - _renamed_ to `FilterSelectionText`.
+    - `UpdateFilterRangeText` - _renamed_ to `UpdateFilterSelectionText`.
 - **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of `RVThumbnail`.
 
 ## Step-by-Step Upgrade
@@ -62,7 +65,7 @@ Replace the legacy script-tag installation with the npm package.
   <TabItem value="after" label="2.0 (npm)">
 
 ```bash
-npm install reveal-sdk dayjs
+npm install reveal-sdk
 ```
 
 ```typescript
@@ -73,11 +76,10 @@ import "reveal-sdk";
 </Tabs>
 
 :::tip Still need script tags?
-The SDK distribution zip is still available for non-bundler setups — but jQuery is no longer needed:
+The SDK distribution zip is still available for non-bundler setups — jQuery and Day.js are no longer needed:
 
 ```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-<script src="./assets/reveal/infragistics.reveal.js"></script>
+<script src="./assets/reveal/reveal-sdk.js"></script>
 ```
 :::
 
@@ -160,6 +162,16 @@ const thumbnail = new RVThumbnail();
 
 The new `RVThumbnail` API also supports runtime theme changes.
 
+#### Renamed filter properties
+
+The following properties have been renamed:
+
+| 1.x | 2.0 |
+|---|---|
+| `NumberOfItemsInGrid` | `FilterCount` |
+| `FilterRangeText` | `FilterSelectionText` |
+| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
+
 #### `ToJsonStringAsync` → `ToJsonString`
 
 <Tabs groupId="api-json">
@@ -186,6 +198,9 @@ var json = dashboard.ToJsonString();
 | `DateFilter` property | `filters` collection |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
 | `ToJsonStringAsync` | `ToJsonString` |
+| `NumberOfItemsInGrid` | `FilterCount` |
+| `FilterRangeText` | `FilterSelectionText` |
+| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
 | Legacy chart types (previously deprecated) | Use current [Chart Types](/web/chart-types) |
 | Legacy Java engine | Java SDK (Spring Boot) |
 | WPF backend | ASP.NET, Node.js, or Java server SDKs |
@@ -199,6 +214,7 @@ var json = dashboard.ToJsonString();
 - [ ] Replace `DateFilter` usage with `filters` and `RVDateRule`
 - [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
 - [ ] Replace `ToJsonStringAsync` with `ToJsonString`
+- [ ] Rename `NumberOfItemsInGrid` to `FilterCount`, `FilterRangeText` to `FilterSelectionText`, and `UpdateFilterRangeText` to `UpdateFilterSelectionText`
 - [ ] Verify no dashboards use removed legacy chart types
 - [ ] If using the legacy Java engine or WPF backend, migrate to a supported server SDK
 
