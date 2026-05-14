@@ -61,7 +61,7 @@ By default, the Reveal SDK uses a convention that will load all dashboards from 
 
 The steps below describe how to install the Reveal SDK into an existing Java application.
 
-The Java SDK requires Java 17 or higher. Because the new Java SDK now wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are no longer supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Because the new Java SDK now wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are no longer supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
 1 - Update the **pom.xml** file, and add the Reveal Maven repository.
 
@@ -84,9 +84,9 @@ The Java SDK requires Java 17 or higher. Because the new Java SDK now wraps nati
 </dependency>
 ```
 
-### Spring Boot - Jersey
+### Spring Boot
 
-Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes with Jersey.
+Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context.
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -99,11 +99,13 @@ public class Application {
     @Bean
     ServletRegistrationBean<RevealEngineServlet> revealServlet() {
        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
                 .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                .build(), request -> new RVUserContext("user identifier", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }
@@ -112,7 +114,7 @@ public class Application {
 
 ### Tomcat
 
-Create a `ServletContextListener` class and register `RevealEngineServlet`.
+Use a Jakarta EE 9 compliant servlet container, such as Tomcat 10 or later. Create a `ServletContextListener` class and register `RevealEngineServlet`.
 
 ```java
 @WebListener
@@ -121,13 +123,15 @@ public class AppInitializer implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
         RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
                 .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                .build(), request -> new RVUserContext("user identifier", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
 
-        ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("revealServlet", revealEngineServlet);
+        ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("myServlet", revealEngineServlet);
         reg.setAsyncSupported(true);
         reg.addMapping("/reveal-api/*");
 	}

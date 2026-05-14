@@ -14,7 +14,7 @@
           href: getting-started-server-node.md
         - name: Node.js - TypeScript
           href: getting-started-server-node-typescript.md
-        - name: Spring Boot - Jersey
+        - name: Spring Boot
           href: getting-started-spring-boot-jersey.md
     - name: Angular
       href: getting-started-angular.md

@@ -1,8 +1,8 @@
-# Setting up the Reveal SDK Server with Spring Boot and Jersey
+# Setting up the Reveal SDK Server with Spring Boot
 
-## Step 1 - Create a Spring Boot with Jersey Project
+## Step 1 - Create a Spring Boot Project
 
-The steps below describe how to create a new Java Spring Boot with Jersey project. If you want to add the Reveal SDK to an existing application, go to Step 2.
+The steps below describe how to create a new Java Spring Boot project. If you want to add the Reveal SDK to an existing application, go to Step 2.
 
 To develop a Spring Boot application in Visual Studio Code, you need to install the following:
 - [Development Kit (JDK)](https://www.microsoft.com/openjdk)
@@ -43,7 +43,7 @@ Version 2.x is not supported since Reveal 1.7.x
 
 ![](images/getting-started-spring-boot-jersey-java-version.jpg)
 
-8 - Choose the **Spring Web** and **Jersey** dependencies.
+8 - Choose the **Spring Web** dependency.
 
 ![](images/getting-started-spring-boot-jersey-dependencies.jpg)
 
@@ -53,7 +53,7 @@ Version 2.x is not supported since Reveal 1.7.x
 
 ## Step 2 - Add Reveal SDK
 
-The Java SDK requires Java 17 or higher. Because the new Java SDK wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are no longer supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Because the new Java SDK wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are no longer supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
 1 - Update the **pom.xml** file.
 
@@ -78,7 +78,7 @@ Next, add the Reveal SDK as a dependency.
 </dependency>
 ```
 
-2 - Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes with Jersey. The `RevealEngineServlet` constructor also receives the request and creates the `RVUserContext`, replacing the previous container-aware user context provider setup.
+2 - Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. The `RevealEngineServlet` constructor also receives the request and creates the `RVUserContext`, replacing the previous container-aware user context provider setup.
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -91,11 +91,13 @@ public class Application {
     @Bean
     ServletRegistrationBean<RevealEngineServlet> revealServlet() {
        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
-                .setDashboardProvider(new RVDashboardProvider("src/main/resources/dashboards"))
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
+                .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                .build(), request -> new RVUserContext("user identifier", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }
@@ -104,15 +106,13 @@ public class Application {
 
 ## Step 3 - Create Dashboards Folder
 
-1 - In Visual Studio Code, select the **resources** folder and then click the New Folder button in the Explorer. Name the new folder **dashboards**.
-
-![](images/getting-started-spring-boot-jersey-dashboards-folder.jpg)
+1 - Create a folder for your dashboards.
 
 2 - Configure `RVDashboardProvider` with the folder that contains your dashboards.
 
 ```java title="Application.java"
 new RevealServerBuilder()
-    .setDashboardProvider(new RVDashboardProvider("src/main/resources/dashboards"))
+    .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
     .build();
 ```
 
