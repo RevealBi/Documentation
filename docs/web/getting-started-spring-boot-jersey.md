@@ -53,7 +53,7 @@ Version 2.x is not supported since Reveal 1.7.x
 
 ## Step 2 - Add Reveal SDK
 
-The Java SDK requires Java 17 or higher. Because the Java SDK now wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are not supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+The Java SDK requires Java 17 or higher. Because the new Java SDK wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are no longer supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
 1 - Update the **pom.xml** file.
 
