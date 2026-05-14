@@ -1,85 +1,156 @@
 # Installing the Client SDK
 
-## Install Using Script Files
+The Reveal SDK client is available as an npm package and as browser-ready JavaScript files. Use npm for applications built with a JavaScript toolchain, use an npm CDN provider for quick browser-based setup, or download the JavaScript files when you want to host the SDK from your own application.
 
-### Using the CDN
-Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+## Install from npm
 
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+Install the `reveal-sdk` package when your application is built with a bundler or framework such as Vite, Webpack, Angular, React, or Vue.
+
+```bash npm2yarn
+npm install reveal-sdk
 ```
 
-:::caution Not for Production
+Import the SDK members you need from `reveal-sdk`:
 
-The Reveal SDK CDN is intended **only** for prototyping, onboarding, demos, and trial scenarios.
+```ts
+import { RevealView, RevealSdkSettings, RVDashboard } from "reveal-sdk";
 
-For production applications, you **must self-host** the Reveal SDK libraries. Relying on the CDN in production is not recommended, as it does not provide the guarantees required for production workloads such as availability guarantees, version control, performance optimization, and long-term stability.
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
 
-To ensure predictable behavior and full control over updates, download the SDK assets and serve them from your own infrastructure when deploying to production environments.
+RVDashboard.loadDashboard("Sales").then(dashboard => {
+    const revealView = new RevealView("#revealView");
+    revealView.dashboard = dashboard;
+});
+```
+
+Add a host element for the Reveal view in your page or component template:
+
+```html
+<div id="revealView" style="height: 600px;"></div>
+```
+
+## Use the CDN
+
+Because the Reveal SDK client is published to npm, you can load the browser-ready bundles from npm CDN providers such as jsDelivr, unpkg, esm.sh, or JSPM. The examples in this topic use jsDelivr, but the same package can be loaded from another provider if you prefer its URL format or caching behavior.
+
+:::tip Versioned URLs
+
+The following examples load the latest published `reveal-sdk` package from jsDelivr. For production applications, pin the package to a specific version, such as `https://cdn.jsdelivr.net/npm/reveal-sdk@2.0.0/dist/reveal-sdk.esm.js`, use an equivalent versioned URL from your preferred npm CDN provider, or host the files yourself.
 
 :::
 
-### Using JavaScript Files
-If using the Reveal CDN is not an option, you can also host the Reveal SDK JavaScript files on your own domain. The Reveal SDK Distribution files can be downloaded from the following link:
+### IIFE
+
+Use the IIFE bundle when your page uses standard script tags instead of JavaScript modules.
+
+```html
+<div id="revealView" style="height: 600px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.js"></script>
+<script>
+    Reveal.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+    Reveal.RVDashboard.loadDashboard("Sales").then(dashboard => {
+        const revealView = new Reveal.RevealView("#revealView");
+        revealView.dashboard = dashboard;
+    });
+</script>
+```
+
+The IIFE bundle exposes the SDK from the global `Reveal` object.
+
+### ESM
+
+Use the ESM bundle when your page uses native browser modules and you want explicit imports.
+
+```html
+<div id="revealView" style="height: 600px;"></div>
+
+<script type="module">
+    import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
+
+    RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+    RVDashboard.loadDashboard("Sales").then(dashboard => {
+        const revealView = new RevealView("#revealView");
+        revealView.dashboard = dashboard;
+    });
+</script>
+```
+
+## Host the JavaScript Files Yourself
+
+If you cannot use npm or a CDN, download the Reveal SDK JavaScript distribution and serve the files from your own application.
 
 https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/reveal-sdk-distribution-js.zip
 
-1 - In your client application, create a new folder called `assets` and then create another folder called `reveal` within the `assets` folder.
+1. In your client application, create a folder for the Reveal assets. For example, create `assets/reveal`.
 
-![](images/javascript-create-reveal-folder.jpg)
+2. Copy the JavaScript files from the downloaded distribution into the `assets/reveal` folder.
 
-2 - Copy all the JavaScript files from the Reveal SDK Distribution files into the `assets/reveal` folder you created previously.
-
-![](images/javascript-copy-reveal-files.jpg)
-
-3 - Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+3. Add the SDK script to your page before the code that creates the `RevealView`.
 
 ```html
-<script src="./assets/reveal/infragistics.reveal.js"></script>
+<script src="./assets/reveal/reveal-sdk.js"></script>
 ```
 
-### Add Dependencies
-The Reveal SDK requires the following dependencies in order to properly function.
-
-**Jquery 2.2 or greater**
+If you self-host the ESM build, import it from the path where you copied the file:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="module">
+    import { RevealView, RevealSdkSettings, RVDashboard } from "./assets/reveal/reveal-sdk.esm.js";
+
+    RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+    RVDashboard.loadDashboard("Sales").then(dashboard => {
+        const revealView = new RevealView("#revealView");
+        revealView.dashboard = dashboard;
+    });
+</script>
 ```
 
-**Day.js 1.8.15 or greater**
+## Configure the Server URL
 
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+Call `RevealSdkSettings.setBaseUrl` when the Reveal SDK server is hosted at a different URL than the client application. This only needs to be configured once, before loading dashboards or creating SDK resources that make server requests.
+
+```ts
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
 ```
 
-**Spectrum v 1.8.0 or newer (Optional)** - this is only needed if you enable the UI for the end user to set the background color for a particular visualization.
+## Complete HTML Example Using ESM
 
-``` html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
-```
-
-Modify the `index.html` file to include all dependency scripts at the bottom of the page just before the `infragistics.reveal.js` script.
-
-The final `index.html` files should look similar to this:
+The following example shows a complete HTML page that loads the Reveal SDK client from jsDelivr, configures the Reveal SDK server URL, and displays the `Sales` dashboard.
 
 ```html title="index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title> 
+    <title>Reveal SDK - HTML/JavaScript</title>
+    <style>
+        html,
+        body,
+        #revealView {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
+    <div id="revealView"></div>
 
-    // highlight-start 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="./assets/reveal/infragistics.reveal.js"></script>   
-    // highlight-end
+    <script type="module">
+        import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
+
+        RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+        RVDashboard.loadDashboard("Sales").then(dashboard => {
+            const revealView = new RevealView("#revealView");
+            revealView.dashboard = dashboard;
+        });
+    </script>
 </body>
 </html>
 ```
