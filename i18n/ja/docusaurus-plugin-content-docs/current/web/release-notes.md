@@ -17,6 +17,12 @@ import TabItem from '@theme/TabItem';
 #### Node
 - ヘッドレス エクスポート オプションの `dateFilter` プロパティは非推奨です。代わりに `RVDateRule` を使用した `filters` 配列をご使用ください。
 
+#### Java
+- Java SDK は Java 17 以上が必須になりました。
+- Java SDK は `io.revealbi:reveal-sdk-servlet` Maven アーティファクトと `RevealEngineServlet` を使用するサーブレット ベース構成になりました。
+- Java SDK は Linux、Windows、macOS をサポートし、3 つの OS すべてで x64 と arm64 の両アーキテクチャをサポートします。
+- Jetty をサーバーとして使用する場合、Reveal SDK が内部で使用している Jetty（現在は 12.0.12）とバージョンが競合する可能性があります。
+
 ### 新機能
 
 #### すべてのプラットフォーム
@@ -36,6 +42,7 @@ import TabItem from '@theme/TabItem';
 - ネットワーク障害後のデータ エージェントの接続回復が改善されました。
 
 #### Java
+- Java SDK はコネクタと拡張ポイントについて .NET SDK と機能同等になりました（`InMemoryDataProvider` を除く）。`InMemoryDataProvider` は今後のリリースで Java に移植される予定です。
 - Java SDK で `RVRedisOptions` を使用した Redis キャッシュがサポートされました。
 - `DefaultDashboardTheme` がサポートされました。
 - ヘッドレス エクスポートで CSV 形式がサポートされました。
