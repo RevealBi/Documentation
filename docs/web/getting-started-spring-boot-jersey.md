@@ -1,4 +1,4 @@
-# Setting up the Reveal SDK Server with Spring Boot
+﻿# Setting up the Reveal SDK Server with Spring Boot
 
 ## Step 1 - Create a Spring Boot Project
 
@@ -76,7 +76,7 @@ Next, add the Reveal SDK as a dependency.
 </dependency>
 ```
 
-2 - Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. The `RevealEngineServlet` constructor also receives the request and creates the `RVUserContext`, replacing the previous container-aware user context provider setup. Replace the sample provider classes and the `createPropertiesFrom(request)` helper with your application's implementations.
+2 - Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. The `RevealEngineServlet` constructor also receives the request and creates the `RVUserContext`, replacing the previous container-aware user context provider setup. Replace the sample provider classes with your application's implementations. If you need to pass request-based properties to the user context, replace `null` with a `Properties` object built from the request.
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -95,8 +95,7 @@ public class Application {
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                // Implement createPropertiesFrom in your application if you need request properties.
-                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }

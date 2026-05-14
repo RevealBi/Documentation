@@ -1,4 +1,4 @@
-# Spring Boot を使用した Reveal SDK サーバーのセットアップ
+﻿# Spring Boot を使用した Reveal SDK サーバーのセットアップ
 
 ## 手順 1 - Spring Boot プロジェクトを作成する
 
@@ -78,7 +78,8 @@ Java SDK には Java 17 以降および Jakarta EE 9 準拠サーバーが必要
 </dependency>
 ```
 
-2 - `RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。`RevealEngineServlet` コンストラクターはリクエストを受け取り、`RVUserContext` を作成します。これは以前のコンテナー対応ユーザー コンテキスト プロバイダー設定の代替です。サンプルのプロバイダー クラスと `createPropertiesFrom(request)` ヘルパーは、アプリケーションの実装に置き換えてください。
+2 - `RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。`RevealEngineServlet` コンストラクターはリクエストを受け取り、`RVUserContext` を作成します。これは以前のコンテナー対応ユーザー コンテキスト プロバイダー設定の代替です。サンプルのプロバイダー クラスはアプリケーションの実装に置き換えてください。リクエスト ベースのプロパティをユーザー コンテキストに渡す必要がある場合は、
+`null` をリクエストから生成した `Properties` オブジェクトに置き換えてください。
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -98,8 +99,7 @@ public class Application {
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                // Implement createPropertiesFrom in your application if you need request properties.
-                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }

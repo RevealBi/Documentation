@@ -1,4 +1,4 @@
-# Server SDK のインストール
+﻿# Server SDK のインストール
 
 ## ASP.NET
 
@@ -86,7 +86,8 @@ Java SDK には Java 17 以降および Jakarta EE 9 準拠サーバーが必要
 
 ### Spring Boot
 
-`RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。サンプルのプロバイダー クラスと `createPropertiesFrom(request)` ヘルパーは、アプリケーションの実装に置き換えてください。
+`RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。サンプルのプロバイダー クラスはアプリケーションの実装に置き換えてください。リクエスト ベースのプロパティをユーザー コンテキストに渡す必要がある場合は、
+`null` をリクエストから生成した `Properties` オブジェクトに置き換えてください。
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -106,8 +107,7 @@ public class Application {
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                // Implement createPropertiesFrom in your application if you need request properties.
-                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }
@@ -116,7 +116,8 @@ public class Application {
 
 ### Tomcat
 
-Tomcat 10 以降などの Jakarta EE 9 準拠サーブレット コンテナーを使用します。`ServletContextListener` クラスを作成し、`RevealEngineServlet` を登録します。サンプルのプロバイダー クラスと `createPropertiesFrom(request)` ヘルパーは、アプリケーションの実装に置き換えてください。
+Tomcat 10 以降などの Jakarta EE 9 準拠サーブレット コンテナーを使用します。`ServletContextListener` クラスを作成し、`RevealEngineServlet` を登録します。サンプルのプロバイダー クラスはアプリケーションの実装に置き換えてください。リクエスト ベースのプロパティをユーザー コンテキストに渡す必要がある場合は、
+`null` をリクエストから生成した `Properties` オブジェクトに置き換えてください。
 
 ```java
 @WebListener
@@ -132,8 +133,7 @@ public class AppInitializer implements ServletContextListener {
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
-                // Implement createPropertiesFrom in your application if you need request properties.
-                .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
         ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("myServlet", revealEngineServlet);
         reg.setAsyncSupported(true);
