@@ -14,6 +14,12 @@ If you use Jetty as your server, its version might conflict with the Jetty versi
 
 :::
 
+:::note
+
+Some platforms are no longer supported by the Java SDK because they cannot run the native .NET components used by Reveal SDK. For example, AIX is not supported.
+
+:::
+
 ## Node
 - NodeJS 16.3 and higher
 
