@@ -95,9 +95,9 @@ Step 4 - While initializing Reveal, set the directory where you extracted the zi
 
 ```java
 String exportToolDir = "<dir>";
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setExportToolContainerPath(exportToolDir).
-    build());
+new RevealServerBuilder()
+    .addSettings(settings -> settings.setExportToolContainerPath(exportToolDir))
+    .build();
 ```
 
 Alternatively, you can specify the directory through the system property **reveal.exportToolContainerPath**, as shown below:

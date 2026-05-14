@@ -58,9 +58,9 @@ builder.Services.AddControllers().AddReveal( builder =>
   <TabItem value="java" label="Java">
 
 ```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder()
-.setLocalFilesStoragePath("data")
-.build());
+new RevealServerBuilder()
+    .addSettings(settings -> settings.setLocalFileStoragePath("data"))
+    .build();
 ```
 
   </TabItem>
