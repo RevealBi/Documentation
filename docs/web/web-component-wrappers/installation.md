@@ -10,36 +10,29 @@ Integrating Reveal SDK Web Component Wrappers into your project is quick and eas
 
 ## Prerequisites
 
-To ensure Reveal SDK Web Component Wrappers function properly, you’ll need to install the Reveal SDK client library. These dependencies are essential as the Reveal SDK Web Component Wrappers are built around the existing jQuery-based RevealView.
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1.8.21/dayjs.min.js"></script>
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-<script>
-    // Change to your Reveal SDK server URL
-    RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
-</script>
-```
-
-For more details on setting up the Reveal SDK, see our [installation documentation.](../install-client-sdk.md).
+The Reveal SDK Web Component Wrappers declare `reveal-sdk` as a peer dependency, so the Reveal SDK client must be installed alongside the wrappers. See [Installing the Client SDK](../install-client-sdk.md) for the available installation options.
 
 ## CDN Installation
 
-If you're looking for the simplest way to integrate, using a CDN is a great option. Include the Reveal SDK Web Component Wrappers directly in your HTML.
+If you're looking for the simplest way to integrate, using a CDN is a great option. Load the Reveal SDK client first, then the wrappers.
 
 ```html
+<script src="https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal-sdk-wrappers/index.umd.min.js"></script>
+<script>
+    // Change to your Reveal SDK server URL
+    Reveal.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+</script>
 ```
 
 ## NPM Installation
 
-For those who prefer local installation and version control, Reveal SDK Web Component Wrappers can be installed via npm.
+For those who prefer local installation and version control, both packages can be installed via npm. Because `reveal-sdk` is a peer dependency of the wrappers, it must be installed explicitly.
 
-### Step 1: Install the Package
-Run the following command in your project directory to install the Web Component Wrappers:
+### Step 1: Install the Packages
+Run the following command in your project directory to install the Reveal SDK client and the Web Component Wrappers:
 ```bash npm2yarn
-npm install reveal-sdk-wrappers
+npm install reveal-sdk reveal-sdk-wrappers
 ```
 
 ### Step 2: Register the Components
