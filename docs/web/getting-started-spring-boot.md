@@ -9,7 +9,7 @@ To develop a Spring Boot application in Visual Studio Code, you need to install 
 - [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 - [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=pivotal.vscode-boot-dev-pack)
 
-More information about how to get started with Visual Studio Code and Java can be found at [Getting Started with Java](https://code.visualstudio.com/docs/java/java-tutorial) tutorial.
+More information about how to get started with Visual Studio Code and Java can be found at the [Getting Started with Java](https://code.visualstudio.com/docs/java/java-tutorial) tutorial.
 
 1 - Start Visual Studio Code, open the Command Palette and type **>Spring Initializr: Create a Maven Project** and press **Enter**.
 
