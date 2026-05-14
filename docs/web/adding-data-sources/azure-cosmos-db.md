@@ -282,10 +282,10 @@ On the client side, you only need to specify basic properties like ID, title, an
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -294,11 +294,11 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const cosmosDS = new $.ig.RVAzureCosmosDBDataSource();
+    const cosmosDS = new RVAzureCosmosDBDataSource();
     cosmosDS.title = "My Azure Cosmos DB Datasource";
     cosmosDS.subtitle = "Azure Cosmos DB";
 
-    callback(new $.ig.RevealDataSources([cosmosDS], [], false));
+    callback(new RevealDataSources([cosmosDS], [], false));
 };
 ```
 
@@ -313,16 +313,16 @@ Data source items represent specific datasets within your Azure Cosmos DB data s
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const cosmosDS = new $.ig.RVAzureCosmosDBDataSource();
+    const cosmosDS = new RVAzureCosmosDBDataSource();
     cosmosDS.title = "My Azure Cosmos DB Datasource";
     cosmosDS.subtitle = "Azure Cosmos DB";
 
     // Create a data source item
-    const cosmosDSI = new $.ig.RVAzureCosmosDBDataSourceItem(cosmosDS);
+    const cosmosDSI = new RVAzureCosmosDBDataSourceItem(cosmosDS);
     cosmosDSI.title = "My Azure Cosmos DB Datasource Item";
     cosmosDSI.subtitle = "Azure Cosmos DB";
 
-    callback(new $.ig.RevealDataSources([cosmosDS], [cosmosDSI], false));
+    callback(new RevealDataSources([cosmosDS], [cosmosDSI], false));
 };
 ```
 
