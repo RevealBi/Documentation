@@ -133,6 +133,6 @@ The native .NET binary is included as a resource in the platform-specific artifa
 
 :::info Get the Code
 
-The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot-jersey).
+The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot).
 
 :::
