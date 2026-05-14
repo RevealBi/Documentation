@@ -3,7 +3,13 @@
 - name: 概要
   href: overview.md
 - name: インストール
-  href: installation.md   
+  items:
+    - name: インストール ガイド
+      href: installation/installation.md
+    - name: Angular
+      href: installation/installation-angular.md
+    - name: React
+      href: installation/installation-react.md
 - name: 作業の開始
   items:
     - name: サーバーの作成

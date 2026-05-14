@@ -155,6 +155,10 @@
     "message": "インストール",
     "description": "The label for category 'Installation' in sidebar 'webSidebar'"
   },
+  "sidebar.webSidebar.category.Install Client SDK (npm)": {
+    "message": "クライアント SDK のインストール (npm)",
+    "description": "The label for category 'Install Client SDK (npm)' in sidebar 'webSidebar'"
+  },
   "sidebar.webSidebar.doc.System Requirements": {
     "message": "システム要件",
     "description": "The label for the doc item 'System Requirements' in sidebar 'webSidebar', linking to the doc web/system-requirements"
