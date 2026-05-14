@@ -80,7 +80,7 @@ Java SDK には Java 17 以降および Jakarta EE 9 準拠サーバーが必要
 </dependency>
 ```
 
-2 - `RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。`RevealEngineServlet` コンストラクターはリクエストを受け取り、`RVUserContext` を作成します。これは以前のコンテナー対応ユーザー コンテキスト プロバイダー設定の代替です。
+2 - `RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。`RevealEngineServlet` コンストラクターはリクエストを受け取り、`RVUserContext` を作成します。これは以前のコンテナー対応ユーザー コンテキスト プロバイダー設定の代替です。サンプルのプロバイダー クラスと `createPropertiesFrom(request)` ヘルパーは、アプリケーションの実装に置き換えてください。
 
 ```java title="Application.java"
 @SpringBootApplication

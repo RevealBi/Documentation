@@ -86,7 +86,7 @@ The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Bec
 
 ### Spring Boot
 
-Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context.
+Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. Replace the sample provider classes and the `createPropertiesFrom(request)` helper with your application's implementations.
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -114,7 +114,7 @@ public class Application {
 
 ### Tomcat
 
-Use a Jakarta EE 9 compliant servlet container, such as Tomcat 10 or later. Create a `ServletContextListener` class and register `RevealEngineServlet`.
+Use a Jakarta EE 9 compliant servlet container, such as Tomcat 10 or later. Create a `ServletContextListener` class and register `RevealEngineServlet`. Replace the sample provider classes and the `createPropertiesFrom(request)` helper with your application's implementations.
 
 ```java
 @WebListener

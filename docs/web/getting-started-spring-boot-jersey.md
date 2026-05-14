@@ -78,7 +78,7 @@ Next, add the Reveal SDK as a dependency.
 </dependency>
 ```
 
-2 - Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. The `RevealEngineServlet` constructor also receives the request and creates the `RVUserContext`, replacing the previous container-aware user context provider setup.
+2 - Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. The `RevealEngineServlet` constructor also receives the request and creates the `RVUserContext`, replacing the previous container-aware user context provider setup. Replace the sample provider classes and the `createPropertiesFrom(request)` helper with your application's implementations.
 
 ```java title="Application.java"
 @SpringBootApplication
