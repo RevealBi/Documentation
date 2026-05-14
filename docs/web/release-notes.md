@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 #### Java
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
 - `DefaultDashboardTheme` is now supported.
-- The Java SDK now has feature parity with the .NET SDK for connectors and extension points, with `InMemoryDataProvider` as a known exception. `InMemoryDataProvider` exists in the .NET SDK but has not been implemented in Java.
+- The Java SDK now has feature parity with the .NET SDK for connectors and extension points, with the exception of `InMemoryDataProvider`, which will be ported to Java in a future release.
 - Headless export now supports CSV format.
 
 ```java
