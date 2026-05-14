@@ -89,7 +89,6 @@ public class Application {
     @Bean
     ServletRegistrationBean<RevealEngineServlet> revealServlet() {
        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
-                // Replace these sample providers with your application's implementations.
                 .setAuthenticationProvider(new MyIRVAuthenticationProvider())
                 .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
                 .setDataSourceProvider(new MyIRVDataSourceProvider())
