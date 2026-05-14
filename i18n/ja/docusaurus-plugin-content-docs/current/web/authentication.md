@@ -232,6 +232,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 
 `RVUsernamePasswordDataSourceCredential` は、以下のデータ ソースでサポートされます。
 - Amazon Redshift
+- ClickHouse
 - Microsoft Analysis Services サーバー
 - Microsoft Dynamics CRM (オンプレミスおよびオンライン)
 - Microsoft SQL Server

@@ -109,7 +109,7 @@ app.use('/', reveal(revealOptions));
 
 ## Username/Password Authentication
 
-If your data source requires the use of a username and password, then you must return an instance of the `RVUsernamePasswordDataSourceCredential` class. The `RVUsernamePasswordDataSourceCredential` class provides constructor overloads to define the **username**, the **password**, and optionally the **domain**.
+If your data source requires the use of a username and password, then you must return an instance of the `RVUsernamePasswordDataSourceCredential` class. The `RVUsernamePasswordDataSourceCredential` class provides constructor overloads to define the **username**, the **password**, and optionally the **domain**. The optional **domain** parameter only applies to data sources that support it. ClickHouse supports username and password credentials, but does not support the **domain** parameter.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -232,6 +232,7 @@ if (dataSource instanceof RVSqlServerDataSource) {
 
 The `RVUsernamePasswordDataSourceCredential` is supported for the following data sources:
 - Amazon Redshift
+- ClickHouse
 - Microsoft Analysis Services Server
 - Microsoft Dynamics CRM (On-Premises and Online)
 - Microsoft SQL Server
