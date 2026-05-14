@@ -224,19 +224,19 @@ Create a new file `index.html` in your project root (or a separate `client` fold
         const SERVER_URL = 'https://localhost:5111/';
 
         // Initialize Reveal SDK and AI Client
-        RevealApi.RevealSdkSettings.setBaseUrl(SERVER_URL);
+        Reveal.RevealSdkSettings.setBaseUrl(SERVER_URL);
         rv.RevealSdkClient.initialize({ hostUrl: SERVER_URL });
         const client = rv.RevealSdkClient.getInstance();
 
         // Load dashboard
-        RevealApi.RVDashboard.loadDashboard("Accounts", (dashboard) => {
+        Reveal.RVDashboard.loadDashboard("Accounts", (dashboard) => {
             const revealView = new RevealView("#revealView");
             revealView.dashboard = dashboard;
 
             // Add AI insight options to the dashboard context menu
             revealView.onMenuOpening = function (visualization, args) {
-                if (args.menuLocation === RevealApi.RVMenuLocation.Dashboard) {
-                    args.menuItems.push(new RevealApi.RVMenuItem("Summary", null, async () => {
+                if (args.menuLocation === Reveal.RVMenuLocation.Dashboard) {
+                    args.menuItems.push(new Reveal.RVMenuItem("Summary", null, async () => {
                         document.getElementById('output').textContent = 'Generating summary...';
                         const result = await client.ai.insights.get({
                             dashboard: dashboard,
@@ -245,7 +245,7 @@ Create a new file `index.html` in your project root (or a separate `client` fold
                         document.getElementById('output').textContent = result.explanation;
                     }));
 
-                    args.menuItems.push(new RevealApi.RVMenuItem("Analysis", null, async () => {
+                    args.menuItems.push(new Reveal.RVMenuItem("Analysis", null, async () => {
                         document.getElementById('output').textContent = 'Generating analysis...';
                         const result = await client.ai.insights.get({
                             dashboard: dashboard,
@@ -254,7 +254,7 @@ Create a new file `index.html` in your project root (or a separate `client` fold
                         document.getElementById('output').textContent = result.explanation;
                     }));
 
-                    args.menuItems.push(new RevealApi.RVMenuItem("Forecast", null, async () => {
+                    args.menuItems.push(new Reveal.RVMenuItem("Forecast", null, async () => {
                         document.getElementById('output').textContent = 'Generating forecast...';
                         const result = await client.ai.insights.get({
                             dashboard: dashboard,

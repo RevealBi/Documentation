@@ -140,7 +140,7 @@ The `setAdditionalHeadersProvider` callback function is expected to return an ob
   <TabItem value="javascript" label="JavaScript" default>
 
 ```js
-RevealApi.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+Reveal.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
   var headers = {};
   headers["x-header-one"] = "single_value";
   headers["x-header-two"] = ["value_1", "value_2"];
@@ -174,7 +174,7 @@ https://youtu.be/q9mbN2kIXFs
 Here is an example of how to pass several property values from the client to the server.  In this case, there are three HTML selects that have orderId, employeeId, and customerId values.  These values are passed to the server in the  `setAdditionalHeadersProvider` callback.
 
 ```` js 
-RevealApi.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+Reveal.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
     return headers;
 });
 ````
@@ -225,15 +225,15 @@ This is the full HTML for the client.
     <script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 
     <script type="text/javascript">
-        RevealApi.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
+        Reveal.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
 
-        RevealApi.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+        Reveal.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
             return headers;
         });
 
         const headers = {};
 
-        var revealView = new RevealApi.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
         revealView.interactiveFilteringEnabled = true;
         revealView.startInEditMode = true;  
 
@@ -248,12 +248,12 @@ This is the full HTML for the client.
             var selectedEmployeeId = document.getElementById('employeeId').value;
             headers["x-header-employeeId"] = selectedEmployeeId;
 
-            var ds = new RevealApi.RVAzureSqlDataSource();
+            var ds = new Reveal.RVAzureSqlDataSource();
             ds.id="sqlServer";
             ds.title = "SQL Server Data Source";
             ds.subtitle = "Full Northwind Database";
 
-            callback(new RevealApi.RevealDataSources([ds], [ ], false));        
+            callback(new Reveal.RevealDataSources([ds], [ ], false));        
         };     
     </script>
 </body>

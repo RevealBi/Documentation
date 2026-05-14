@@ -101,10 +101,10 @@ Here is a complete HTML page using the Reveal SDK with the CDN:
     <script src="https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.js"></script>
 
     <script type="text/javascript">
-        RevealApi.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+        Reveal.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
 
-        RevealApi.RVDashboard.loadDashboard("Sales").then(dashboard => {
-            const revealView = new RevealApi.RevealView("#revealView");
+        Reveal.RVDashboard.loadDashboard("Sales").then(dashboard => {
+            const revealView = new Reveal.RevealView("#revealView");
             revealView.dashboard = dashboard;
         });
     </script>

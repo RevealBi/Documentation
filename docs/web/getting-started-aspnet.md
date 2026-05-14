@@ -117,12 +117,12 @@ The final `_Layout.cshtml` files should look similar to this:
 {
     <script type="text/javascript">
         // highlight-next-line
-        var revealView = new RevealApi.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
     </script>
 }
 ```
 
-Next, we instantiate a new instance of the `RevealView` by creating a new `RevealApi.RevealView` and passing in the `#revealView` selector.
+Next, we instantiate a new instance of the `RevealView` by creating a new `Reveal.RevealView` and passing in the `#revealView` selector.
 
 The final `Index.cshtml` file should look like this:
 
@@ -140,7 +140,7 @@ The final `Index.cshtml` file should look like this:
 {
     <script type="text/javascript">
         // highlight-next-line
-        var revealView = new RevealApi.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
     </script>
 }
 ```

@@ -78,7 +78,7 @@ When the application runs, create a new Visualization and you will see the newly
 In JSON, data is organized hierarchically, often featuring nested structures where objects contain other objects or arrays. To navigate these structures programmatically, you can specify nested properties, which are essentially a sequence of keys or indices that lead to the desired data.
 ```js
 const jsonDsItem = new $.ig.RVJsonDataSourceItem(dsItem);
-jsonDsItem.config = new RevealApi.RVJsonSchemaConfigBuilder()
+jsonDsItem.config = new Reveal.RVJsonSchemaConfigBuilder()
         .addStringField("fieldA")
         .addNumericField("fieldB")
         .addNumericField("/geo/location/lat")

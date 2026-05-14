@@ -16,7 +16,7 @@ To ensure Reveal SDK Web Component Wrappers function properly, you'll need to in
 <script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 <script>
     // Change to your Reveal SDK server URL
-    RevealApi.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+    Reveal.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 </script>
 ```
 

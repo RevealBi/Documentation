@@ -474,7 +474,7 @@ $.ig.RevealSdkSettings.betaFeatures.disable("newDonutChart", "newPieChart");
 - SSAS performance degraded for some visualizations.
 - `NotEquals` and `NotContains` filters do not work in SSAS.
 - The date filter is showing as "Unnamed" in headless export.
-- Interface `IRVDateFilterMenuItem` isn't part of the RevealApi namespace in the "infragistics.reveal.d.ts" file.
+- Interface `IRVDateFilterMenuItem` isn't part of the Reveal namespace in the "infragistics.reveal.d.ts" file.
 - PowerPoint Exports Showing Token and Luis' Name.
 - Highlighting not working for Dates using Google Analytics and similar data sources.
 - Show totals on tooltip flag ignored.

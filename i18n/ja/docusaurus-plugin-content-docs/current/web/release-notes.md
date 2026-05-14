@@ -595,7 +595,7 @@ $.ig.RevealSdkSettings.betaFeatures.disable("newDonutChart", "newPieChart");
 - 一部の表示形式では SSAS のパフォーマンスが低下します。
 - `NotEquals` および `NotContains` フィルターは SSAS では機能しません。
 - ヘッドレス エクスポートでは日付フィルターが「 Unnamed 」として表示されます。
-- インターフェイス `IRVDateFilterMenuItem` は、「infragistics.reveal.d.ts」 ファイルの RevealApi 名前空間の一部ではありません。
+- インターフェイス `IRVDateFilterMenuItem` は、「infragistics.reveal.d.ts」 ファイルの Reveal 名前空間の一部ではありません。
 - PowerPoint エクスポートではトークンと Luis の名前が表示されています。
 - Google Analytics や同様のデータ ソースを使用した日付の強調表示が機能しません。
 - ツールチップに合計を表示するフラグは無視されます。

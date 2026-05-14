@@ -60,11 +60,11 @@ The final `index.html` files should look similar to this:
 ```html
 <script type="text/javascript">
     //highlight-next-line
-    var revealView = new RevealApi.RevealView("#revealView");
+    var revealView = new Reveal.RevealView("#revealView");
 </script>
 ```
 
-Next, we instantiate a new instance of the `RevealView` by creating a new `RevealApi.RevealView` and passing in the `#revealView` selector.
+Next, we instantiate a new instance of the `RevealView` by creating a new `Reveal.RevealView` and passing in the `#revealView` selector.
 
 The final `index.html` file should look like this:
 
@@ -84,7 +84,7 @@ The final `index.html` file should look like this:
     <script src="https://cdn.jsdelivr.net/npm/reveal-sdk@[var:sdkVersion]/dist/reveal-sdk.js"></script>
 
     <script type="text/javascript">
-        var revealView = new RevealApi.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
     </script>
     //highlight-end
 </body>
@@ -93,7 +93,7 @@ The final `index.html` file should look like this:
 
 :::caution
 
-Clients apps must set the `RevealApi.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
+Clients apps must set the `Reveal.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
 
 :::
 

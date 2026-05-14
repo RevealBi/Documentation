@@ -149,8 +149,8 @@ myDateFilter.rule = myRule;
   <TabItem value="before" label="1.x">
 
 ```javascript
-var thumbnailView = new RevealApi.RevealDashboardThumbnailView("#thumbnail");
-RevealApi.RevealUtility.getDashboardInfo("Sales", function (info) {
+var thumbnailView = new Reveal.RevealDashboardThumbnailView("#thumbnail");
+Reveal.RevealUtility.getDashboardInfo("Sales", function (info) {
   thumbnailView.dashboardInfo = info.info;
 });
 ```
@@ -159,7 +159,7 @@ RevealApi.RevealUtility.getDashboardInfo("Sales", function (info) {
   <TabItem value="after" label="2.0">
 
 ```javascript
-RevealApi.RVThumbnail.fromDashboard("#thumbnail", "Sales");
+Reveal.RVThumbnail.fromDashboard("#thumbnail", "Sales");
 ```
 
   </TabItem>
