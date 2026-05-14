@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 - SqlServer client library now on 6.1.4 version.
 
 #### Java
-We're releasing a new version of our Java SDK backend, as part of an ongoing effort to bring Java up to feature parity with our ASP.NET SDK.
+We're releasing a new version of our Java SDK, as part of an ongoing effort to bring Java up to feature parity with our ASP.NET SDK.
 
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
 - `DefaultDashboardTheme` is now supported.
