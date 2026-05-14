@@ -18,7 +18,6 @@ import TabItem from '@theme/TabItem';
 - The `dateFilter` property on headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
 
 #### Java
-
 - The Java SDK now requires Java 17 or higher.
 - The Java SDK now uses the `io.revealbi:reveal-sdk-servlet` Maven artifact and a servlet-based setup with `RevealEngineServlet`.
 - Some platforms are no longer supported by the Java SDK because they cannot run the native .NET components used by Reveal SDK. For example, AIX is not supported.
@@ -41,9 +40,9 @@ import TabItem from '@theme/TabItem';
 - Data agent connection recovery has been improved to handle network interruptions more reliably.
 
 #### Java
+- The Java SDK now has feature parity with the .NET SDK for connectors and extension points, with the exception of `InMemoryDataProvider`, which will be ported to Java in a future release.
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
 - `DefaultDashboardTheme` is now supported.
-- The Java SDK now has feature parity with the .NET SDK for connectors and extension points, with the exception of `InMemoryDataProvider`, which will be ported to Java in a future release.
 - Headless export now supports CSV format.
 
 ```java
