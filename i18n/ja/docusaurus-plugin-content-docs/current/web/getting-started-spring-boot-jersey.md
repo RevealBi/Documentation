@@ -118,7 +118,18 @@ new RevealServerBuilder()
     .build();
 ```
 
-## 手順 4 - パッケージ化と配置
+## 手順 4 - CORS ポリシーの設定 (デバッグ)
+
+アプリケーションの開発およびデバッグ中は、サーバーとクライアント アプリを異なる URL でホストすることが一般的です。たとえば、サーバーが `https://localhost:8080` で動作し、Angular アプリが `https://localhost:4200` で動作しているような場合です。クライアント アプリケーションからダッシュボードを読み込もうとすると、クロス オリジン リソース シェアリング (CORS) ポリシーにより失敗します。このシナリオを有効にするには、`Application.java` に `WebMvcConfigurer` Bean を追加します。
+
+```java title="Application.java"
+@Bean
+WebMvcConfigurer corsConfigurer() {
+    return registry -> registry.addMapping("/**").allowedOrigins("*"); // 開発環境のみ！本番環境では適切に構成してください。
+}
+```
+
+## 手順 5 - パッケージ化と配置
 
 Reveal SDK には、特定のプラットフォームとアーキテクチャの組み合わせ向けにビルドされたネイティブ コンポーネントが含まれています。アプリケーションをパッケージ化すると、Maven は現在のマシン用のネイティブ コンポーネントを選択します。配置先のプラットフォームまたはアーキテクチャがパッケージ化に使用したマシンと異なる場合は、Maven プロファイル パラメーター `-P os_arch` を使用して、対象のプラットフォームとアーキテクチャを選択します。
 

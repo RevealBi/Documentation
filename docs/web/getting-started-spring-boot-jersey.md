@@ -114,7 +114,18 @@ new RevealServerBuilder()
     .build();
 ```
 
-## Step 4 - Packaging and Deployment
+## Step 4 - Setup CORS Policy (Debugging)
+
+While developing and debugging your application, it is common to host the server and client app on different URLs. For example, your server may be running on `https://localhost:8080`, while your Angular app may be running on `https://localhost:4200`. If you try to load a dashboard from the client application, it will fail because of a Cross-Origin Resource Sharing (CORS) policy. To enable this scenario, add a `WebMvcConfigurer` bean to your `Application.java`:
+
+```java title="Application.java"
+@Bean
+WebMvcConfigurer corsConfigurer() {
+    return registry -> registry.addMapping("/**").allowedOrigins("*"); // DEVELOPMENT only! Configure appropriately for production.
+}
+```
+
+## Step 5 - Packaging and Deployment
 
 Reveal SDK includes native components built for specific platform and architecture combinations. When you package an application, Maven selects the native component for the current machine. If the deployment platform or architecture is different from the packaging machine, use the Maven profile parameter `-P os_arch` to select the target platform and architecture.
 
