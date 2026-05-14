@@ -18,10 +18,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -30,7 +30,7 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     //if you are using SID
-    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
+    const oracleSIDDataSource = new RVOracleSIDDataSource();
     oracleSIDDataSource.id = "MyOracleSIDDataSource";
     oracleSIDDataSource.title = "My Oracle SID";
     oracleSIDDataSource.host = "your-host";
@@ -38,14 +38,14 @@ revealView.onDataSourcesRequested = (callback) => {
     oracleSIDDataSource.database = "your-database";
 
     //if you are using Service Name
-    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
+    const oracleServiceDataSource = new RVOracleServiceDataSource();
     oracleServiceDataSource.id = "MyOracleServiceDataSource";
     oracleServiceDataSource.title = "My Oracle Service";
     oracleServiceDataSource.host = "your-host";
     oracleServiceDataSource.port = "your-port";
     oracleServiceDataSource.database = "your-database";
 
-    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [], true));
+    callback(new RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [], true));
 };
 ```
 
@@ -58,7 +58,7 @@ When the application runs, create a new Visualization and you will see the newly
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     //if you are using SID
-    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
+    const oracleSIDDataSource = new RVOracleSIDDataSource();
     oracleSIDDataSource.id = "MyOracleSIDDataSource";
     oracleSIDDataSource.title = "My Oracle SID";
     oracleSIDDataSource.host = "your-host";
@@ -66,22 +66,22 @@ revealView.onDataSourcesRequested = (callback) => {
     oracleSIDDataSource.database = "your-database";
 
     //if you are using Service Name
-    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
+    const oracleServiceDataSource = new RVOracleServiceDataSource();
     oracleServiceDataSource.id = "MyOracleServiceDataSource";
     oracleServiceDataSource.title = "My Oracle Service";
     oracleServiceDataSource.host = "your-host";
     oracleServiceDataSource.port = "your-port";
     oracleServiceDataSource.database = "your-database";
 
-    const oracleSIDDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleSIDDataSource);
+    const oracleSIDDataSourceItem = new RVOracleDataSourceItem(oracleSIDDataSource);
     oracleSIDDataSourceItem.id = "MyOracleSIDDataSourceItem";
     oracleSIDDataSourceItem.title = "My Oracle SID Item";
 
-    const oracleServiceDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleServiceDataSource);
+    const oracleServiceDataSourceItem = new RVOracleDataSourceItem(oracleServiceDataSource);
     oracleServiceDataSourceItem.id = "MyOracleServiceDataSourceItem";
     oracleServiceDataSourceItem.title = "My Oracle Service Item";
 
-    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
+    callback(new RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
 };
 ```
  
@@ -96,24 +96,24 @@ When the application runs, create a new Visualization and you will see the newly
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     //if you are using SID
-    const oracleSIDDataSource = new $.ig.RVOracleSIDDataSource();
+    const oracleSIDDataSource = new RVOracleSIDDataSource();
     oracleSIDDataSource.id = "MyOracleSIDDataSource";
     oracleSIDDataSource.title = "My Oracle SID";
 
     //if you are using Service Name
-    const oracleServiceDataSource = new $.ig.RVOracleServiceDataSource();
+    const oracleServiceDataSource = new RVOracleServiceDataSource();
     oracleServiceDataSource.id = "MyOracleServiceDataSource";
     oracleServiceDataSource.title = "My Oracle Service";
 
-    const oracleSIDDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleSIDDataSource);
+    const oracleSIDDataSourceItem = new RVOracleDataSourceItem(oracleSIDDataSource);
     oracleSIDDataSourceItem.id = "MyOracleSIDDataSourceItem";
     oracleSIDDataSourceItem.title = "My Oracle SID Item";
 
-    const oracleServiceDataSourceItem = new $.ig.RVOracleDataSourceItem(oracleServiceDataSource);
+    const oracleServiceDataSourceItem = new RVOracleDataSourceItem(oracleServiceDataSource);
     oracleServiceDataSourceItem.id = "MyOracleServiceDataSourceItem";
     oracleServiceDataSourceItem.title = "My Oracle Service Item";
 
-    callback(new $.ig.RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
+    callback(new RevealDataSources([oracleSIDDataSource, oracleServiceDataSource], [oracleSIDDataSourceItem, oracleServiceDataSourceItem], true));
 };
 ``` 
 

@@ -262,10 +262,10 @@ On the client side, you only need to specify basic properties like ID, title, an
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -273,11 +273,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const athenaDS = new $.ig.RVAthenaDataSource();
+    const athenaDS = new RVAthenaDataSource();
     athenaDS.title = "My Athena Data Source";
     athenaDS.subtitle = "Amazon Athena";
 
-    callback(new $.ig.RevealDataSources([athenaDS], [], false));
+    callback(new RevealDataSources([athenaDS], [], false));
 };
 ```
 
@@ -292,17 +292,17 @@ Data source items represent specific datasets within your Athena data source tha
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const athenaDS = new $.ig.RVAthenaDataSource();
+    const athenaDS = new RVAthenaDataSource();
     athenaDS.title = "My Athena Data Source";
     athenaDS.subtitle = "Amazon Athena";
     
     // Create a data source item
-    const athenaDSI = new $.ig.RVAthenaDataSourceItem(athenaDS);
+    const athenaDSI = new RVAthenaDataSourceItem(athenaDS);
     athenaDSI.id = "my-data-source-item";
     athenaDSI.title = "My Athena Data Source Item";
     athenaDSI.subtitle = "Amazon Athena";
 
-    callback(new $.ig.RevealDataSources([athenaDS], [athenaDSI], false));
+    callback(new RevealDataSources([athenaDS], [athenaDSI], false));
 };
 ```
 

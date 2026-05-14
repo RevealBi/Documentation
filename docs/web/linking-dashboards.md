@@ -35,7 +35,7 @@ When the dashboard is selected from the custom UI, the next step is to instruct 
 
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboard(dashboardId);
+    return RVDashboard.loadDashboard(dashboardId);
 };
 ```
 
@@ -173,7 +173,7 @@ function closeDialog() {
 5 - Handle the `onLinkedDashboardProviderAsync` event to load the linked dashboards.
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboard(dashboardId);
+    return RVDashboard.loadDashboard(dashboardId);
 };
 ```
 

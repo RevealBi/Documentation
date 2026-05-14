@@ -13,8 +13,8 @@ As you can observe, the generated map lacks context, even if the points are gene
 To incorporate the tiles, you must establish a connection between the SDK and the chosen provider. In this case, we are utilizing `OpenStreetMap` as the selected provider. 
 
 ```js
-const url = 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png'
-$.ig.RevealSdkSettings.visualizations.scatterMaps = $.ig.ScatterMapVisualizationsConfiguration.createOpenStreetMapConfiguration(url);
+const url = 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png';
+RevealSdkSettings.visualizations.scatterMaps = ScatterMapVisualizationsConfiguration.createOpenStreetMapConfiguration(url);
 ```
 
 ![](images/customizing-map-tiles-tiles.jpg)
@@ -30,7 +30,7 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = $.ig.ScatterMapVisualization
 **Step 3** - Add the previously generated key to your application
 
 ```js
-$.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("Bing", "your-key");
+RevealSdkSettings.visualizations.scatterMaps = new ScatterMapVisualizationsConfiguration("Bing", "your-key");
 ```
 
 ### Esri
@@ -42,7 +42,7 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualiza
 **Step 3** - Add the generated token to your application
 
 ```js
-$.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("Esri", "your-token");
+RevealSdkSettings.visualizations.scatterMaps = new ScatterMapVisualizationsConfiguration("Esri", "your-token");
 ```
 
 ### MapBox
@@ -54,7 +54,7 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualiza
 **Step 3** - Add the generated token to your application
 
 ```js
-$.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("MapBox", "your-token");
+RevealSdkSettings.visualizations.scatterMaps = new ScatterMapVisualizationsConfiguration("MapBox", "your-token");
 ```
 
 :::info Get the Code

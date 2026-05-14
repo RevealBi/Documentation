@@ -16,10 +16,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -27,13 +27,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const webDS = new $.ig.RVWebResourceDataSource();
+    const webDS = new RVWebResourceDataSource();
     webDS.title = "Web Data Source";
     webDS.subtitle = "Web Data Source Subtitle";
     webDS.url = "https://excel2json.io/api/share/6e0f06b3-72d3-4fec-7984-08da43f56bb9";
     webDS.useAnonymousAuthentication = true;
 
-    callback(new $.ig.RevealDataSources([webDS], [], false));
+    callback(new RevealDataSources([webDS], [], false));
 };
 ```
 
@@ -47,25 +47,25 @@ After you have created the `RVJsonDataSourceItem` object, add it to the data sou
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const webDS = new $.ig.RVWebResourceDataSource();
+    const webDS = new RVWebResourceDataSource();
     webDS.title = "Web Data Source";
     webDS.subtitle = "Web Data Source Subtitle";
     webDS.url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv";
     webDS.useAnonymousAuthentication = true;
 
     //to skip the "Set up your JSON" dialog and directly use the JSON data
-    const webDSI = new $.ig.RVWebResourceDataSourceItem(webDS);
-    const jsonDSI = new $.ig.RVJsonDataSourceItem(webDSI);
+    const webDSI = new RVWebResourceDataSourceItem(webDS);
+    const jsonDSI = new RVJsonDataSourceItem(webDSI);
     jsonDSI.title = "Sales by Category";
     jsonDSI.subtitle = "Excel2Json";
-    jsonDSI.config = new $.ig.RVJsonSchemaConfigBuilder()
+    jsonDSI.config = new RVJsonSchemaConfigBuilder()
         .addNumericField("CategoryID")
         .addStringField("CategoryName")
         .addStringField("ProductName")
         .addNumericField("ProductSales")
         .build();
 
-    callback(new $.ig.RevealDataSources([webDS], [jsonDSI], false));
+    callback(new RevealDataSources([webDS], [jsonDSI], false));
 };
 ```
 
@@ -77,7 +77,7 @@ When the application runs, create a new Visualization and you will see the newly
 
 In JSON, data is organized hierarchically, often featuring nested structures where objects contain other objects or arrays. To navigate these structures programmatically, you can specify nested properties, which are essentially a sequence of keys or indices that lead to the desired data.
 ```js
-const jsonDsItem = new $.ig.RVJsonDataSourceItem(dsItem);
+const jsonDsItem = new RVJsonDataSourceItem(dsItem);
 jsonDsItem.config = new RevealApi.RVJsonSchemaConfigBuilder()
         .addStringField("fieldA")
         .addNumericField("fieldB")

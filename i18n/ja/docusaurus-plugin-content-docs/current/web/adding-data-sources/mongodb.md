@@ -18,10 +18,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -29,10 +29,10 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mongoDataSource = new $.ig.RVMongoDataSource();
+    var mongoDataSource = new RVMongoDataSource();
     mongoDataSource.title = "My MongoDB";
 
-    callback(new $.ig.RevealDataSources([mongoDataSource], [], false));
+    callback(new RevealDataSources([mongoDataSource], [], false));
 };
 ```
 
@@ -44,14 +44,14 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mongoDataSource = new $.ig.RVMongoDBDataSource();
+    var mongoDataSource = new RVMongoDBDataSource();
     mongoDataSource.title = "My MongoDB";
 
-    var mongoDsi = new $.ig.RVMongoDBDataSourceItem(mongoDataSource);
+    var mongoDsi = new RVMongoDBDataSourceItem(mongoDataSource);
     mongoDsi.id = "MyMongoDatasourceItem";
     mongoDsi.title = "My MongoDB Item";
 
-    callback(new $.ig.RevealDataSources([mongoDataSource], [mongoDsi], false));
+    callback(new RevealDataSources([mongoDataSource], [mongoDsi], false));
 };
 ```
 
@@ -64,18 +64,18 @@ revealView.onDataSourcesRequested = (callback) => {
 **手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを入力してください。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     
-    var mongoDS = new $.ig.RVMongoDBDataSource();
+    var mongoDS = new RVMongoDBDataSource();
     mongoDS.id = "MyMongoDBDataSource";
     mongoDS.title = "My MongoDB";
 
-    var mongoDSI = new $.ig.RVMongoDBDataSourceItem(mongoDS);
+    var mongoDSI = new RVMongoDBDataSourceItem(mongoDS);
     mongoDSI.id = "MyMongoDBDataSourceItem";
     mongoDSI.title = "My MongoDB Item";
 
-    callback(new $.ig.RevealDataSources([mongoDS], [mongoDSI], false));
+    callback(new RevealDataSources([mongoDS], [mongoDSI], false));
 };
 ```
 

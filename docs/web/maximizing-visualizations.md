@@ -16,11 +16,11 @@ In this example, you’d like to showcase these visualizations in your corporate
 
 ## Maximizing Visualizations
 
-To open a dashboard with a maximized visualization, you need to set the dashboard property of __revealView__. Then, set the __maximizedVisualization__ property by passing the visualization you want maximized to the __$.ig.RevealView__ instance. When you don’t set a visualization in this attribute, the whole dashboard is displayed.
+To open a dashboard with a maximized visualization, you need to set the dashboard property of __revealView__. Then, set the __maximizedVisualization__ property by passing the visualization you want maximized to the __RevealView__ instance. When you don’t set a visualization in this attribute, the whole dashboard is displayed.
 
 ``` js
-$.ig.RVDashboard.loadDashboard("AllDivisions", function (dashboard) {
-    var revealView = new $.ig.RevealView("#revealView");
+RVDashboard.loadDashboard("AllDivisions").then(dashboard => {
+    const revealView = new RevealView("#revealView");
     revealView.dashboard = dashboard;
     revealView.maximizedVisualization = dashboard.visualizations.getByTitle('Sales');
 });
@@ -44,7 +44,7 @@ After adding this single line, the dashboard will work as a single visualization
 
 It is also possible for you to dynamically change the single visualization being displayed, without reloading the page. From the user’s perspective, your app would be a single page application with a selector of divisions and a maximized visualization. After the user chooses one division from the list, the maximized visualization is updated.
 
-You can achieve this scenario by using the **maximizeVisualization** method in __$.ig.RevealView__, as shown below:
+You can achieve this scenario by using the **maximizeVisualization** method in __RevealView__, as shown below:
 
 ```html
 <section style="display:grid;grid-template-rows:30px auto;">
@@ -58,24 +58,23 @@ You can achieve this scenario by using the **maximizeVisualization** method in _
 ```
 
 ```js
-var dashboardId = 'AllDivisions';
+const dashboardId = 'AllDivisions';
 
-$.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
-    var revealView = window.revealView = new $.ig.RevealView("#revealView");
+RVDashboard.loadDashboard(dashboardId).then(dashboard => {
+    const revealView = window.revealView = new RevealView("#revealView");
     revealView.singleVisualizationMode = true;
     revealView.dashboard = dashboard;
     revealView.maximizedVisualization = dashboard.visualizations.getByTitle('Sales');
-
 });
 
 function maximizeVisualization(title) {
-    var dashboard = window.revealView.dashboard;
+    const dashboard = window.revealView.dashboard;
     window.revealView.maximizedVisualization = dashboard.visualizations.getByTitle(title);
 }
 ```
 
 To take into account:
-  - The __$.ig.RevealView__ object is set in \_window.revealView\</emphasis\> in order to use it later when **maximizeVisualization** property is set.
+  - The __RevealView__ object is set in \_window.revealView\</emphasis\> in order to use it later when **maximizeVisualization** property is set.
   - The buttons added to the section before the div are used just as an example. They were added as a means to switch the maximized visualization, in your case you’ll have to to use a similar code in your application.
   - In this example, the buttons are hardcoded to match the visualizations in the sample dashboard, but you can also generate the list of buttons dynamically by iterating the list of
-    visualizations in the dashboard. For further details see __$.ig.RVDashboard.visualizations__.
+    visualizations in the dashboard. For further details see __RVDashboard.visualizations__.

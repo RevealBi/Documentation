@@ -28,15 +28,15 @@ override with custom queries. In this example, we are using `RVSqlServerDataSour
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    const sqlServerDataSource = new RVSqlServerDataSource();
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    const sqlServerDataSourceItem = new RVSqlServerDataSourceItem(sqlServerDataSource);
     sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
     sqlServerDataSourceItem.title = "John Orders";
 
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+    callback(new RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 
@@ -59,48 +59,48 @@ if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 1 - Define the data source items on the client.
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
 
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.startInEditMode = true;
 
 revealView.onDataSourcesRequested = (callback) => {
-    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    const sqlServerDataSource = new RVSqlServerDataSource();
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    const sqlServerDataSourceItem = new RVSqlServerDataSourceItem(sqlServerDataSource);
     sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
     sqlServerDataSourceItem.title = "John Orders";
 
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+    callback(new RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 
-2 - In the client, use the method `$.ig.RevealSdkSettings.setAdditionalHeadersProvider()` to set the additional headers to send to the server. In this example we are using a header named `x-sales-person-id`.
+2 - In the client, use the method `RevealSdkSettings.setAdditionalHeadersProvider()` to set the additional headers to send to the server. In this example we are using a header named `x-sales-person-id`.
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
-$.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
     const headers = {};
     //set the x-sales-person-id header that identifies the sales person
     headers["x-sales-person-id"] = "279";
     return headers;
 });
 
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.startInEditMode = true;
 
 revealView.onDataSourcesRequested = (callback) => {
-    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    const sqlServerDataSource = new RVSqlServerDataSource();
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    const sqlServerDataSourceItem = new RVSqlServerDataSourceItem(sqlServerDataSource);
     sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
     sqlServerDataSourceItem.title = "John Orders";
 
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+    callback(new RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 

@@ -174,7 +174,7 @@ https://youtu.be/q9mbN2kIXFs
 Here is an example of how to pass several property values from the client to the server.  In this case, there are three HTML selects that have orderId, employeeId, and customerId values.  These values are passed to the server in the  `setAdditionalHeadersProvider` callback.
 
 ```` js 
-$.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
     return headers;
 });
 ````
@@ -227,15 +227,15 @@ This is the full HTML for the client.
     <script src="https://dl.revealbi.io/reveal/libs/1.6.4/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
-        $.ig.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
+        RevealSdkSettings.setBaseUrl("https://localhost:7006/");
 
-        $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+        RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
             return headers;
         });
 
         const headers = {};
 
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new RevealView("#revealView");
         revealView.interactiveFilteringEnabled = true;
         revealView.startInEditMode = true;  
 
@@ -250,12 +250,12 @@ This is the full HTML for the client.
             var selectedEmployeeId = $('#employeeId').val();
             headers["x-header-employeeId"] = selectedEmployeeId;
 
-            var ds = new $.ig.RVAzureSqlDataSource();
+            var ds = new RVAzureSqlDataSource();
             ds.id="sqlServer";
             ds.title = "SQL Server Data Source";
             ds.subtitle = "Full Northwind Database";
 
-            callback(new $.ig.RevealDataSources([ds], [ ], false));        
+            callback(new RevealDataSources([ds], [ ], false));        
         };     
     </script>
 </body>

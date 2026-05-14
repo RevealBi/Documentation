@@ -293,10 +293,10 @@ On the client side, you only need to specify basic properties like ID, title, an
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -304,11 +304,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const clickHouseDS = new $.ig.RVClickHouseDataSource();
+    const clickHouseDS = new RVClickHouseDataSource();
     clickHouseDS.title = "My ClickHouse Datasource";
     clickHouseDS.subtitle = "ClickHouse";
 
-    callback(new $.ig.RevealDataSources([clickHouseDS], [], false));
+    callback(new RevealDataSources([clickHouseDS], [], false));
 };
 ```
 
@@ -323,17 +323,17 @@ Data source items represent specific datasets within your ClickHouse data source
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const clickHouseDS = new $.ig.RVClickHouseDataSource();
+    const clickHouseDS = new RVClickHouseDataSource();
     clickHouseDS.title = "My ClickHouse Datasource";
     clickHouseDS.subtitle = "ClickHouse";
 
     // Create a data source item
-    const clickHouseDSI = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
+    const clickHouseDSI = new RVClickHouseDataSourceItem(clickHouseDS);
     clickHouseDSI.id = "clickhouse_sales_data";
     clickHouseDSI.title = "My ClickHouse Datasource Item";
     clickHouseDSI.subtitle = "ClickHouse";
 
-    callback(new $.ig.RevealDataSources([clickHouseDS], [clickHouseDSI], false));
+    callback(new RevealDataSources([clickHouseDS], [clickHouseDSI], false));
 };
 ```
 

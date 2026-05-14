@@ -18,25 +18,25 @@ To apply a built-in theme, you need to assign the `RevealSdkSetting.theme` prope
 ##### Mountain Light
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.MountainLightTheme();
+RevealSdkSettings.theme = new MountainLightTheme();
 ```
 
 ##### Mountain Dark
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();
+RevealSdkSettings.theme = new MountainDarkTheme();
 ```
 
 ##### Ocean Light
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.OceanLightTheme();
+RevealSdkSettings.theme = new OceanLightTheme();
 ```
 
 ##### Ocean Dark
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.OceanDarkTheme();
+RevealSdkSettings.theme = new OceanDarkTheme();
 ```
 
 :::info
@@ -80,7 +80,7 @@ If you would like to create a theme based on the values of the an existing theme
 
 ```js
 function cloneCurrentTheme() {
-    var theme = $.ig.RevealSdkSettings.theme.clone();
+    const theme = RevealSdkSettings.theme.clone();
 
     theme.fontColor = "#0000cc";
     theme.accentColor = "#009900";
@@ -96,7 +96,7 @@ function cloneCurrentTheme() {
 After you have cloned and modified and existing theme, you can now apply the theme.
 
 ```js
-$.ig.RevealSdkSettings.theme = this.cloneCurrentTheme();
+RevealSdkSettings.theme = this.cloneCurrentTheme();
 ```
 
 :::info
@@ -113,7 +113,7 @@ Here is an example of a custom theme:
 
 ```js
 function createCustomTheme(){
-    var theme = new $.ig.RevealTheme();
+    const theme = new RevealTheme();
 
     theme.fontColor = "#ff0000";
     theme.accentColor = "rgb(192, 80, 77)";
@@ -132,7 +132,7 @@ function createCustomTheme(){
 After you have created your custom theme, you can now apply the theme.
 
 ```js
-$.ig.RevealSdkSettings.theme = this.createCustomTheme();
+RevealSdkSettings.theme = this.createCustomTheme();
 ```
 
 :::info Get the Code

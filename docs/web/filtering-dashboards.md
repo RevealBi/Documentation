@@ -20,7 +20,7 @@ To set the dashboard's **Date Filter** using a predefined set of date intervals,
 
 For example; this code snippet will set the dashboard's date filter to **YearToDate**:
 ```js
-revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.YearToDate);
+revealView.dashboard.dateFilter = new RVDateDashboardFilter(RVDateFilterType.YearToDate);
 ```
 Here you can see the dashboard UI updated it's Date Filter to **Year To Date**
 
@@ -53,12 +53,12 @@ To set a custom date range, you must set the `Dashboard.dateFilter` property to 
 
 In this example, we set the `DateFilter` to a custom date range spanning the last 75 days:
 ```js
-var fromDate = new Date();
+const fromDate = new Date();
 fromDate.setDate(fromDate.getDate() - 75);
-var toDate = new Date();  
-var dateRange = new $.ig.RVDateRange(fromDate, toDate);
+const toDate = new Date();
+const dateRange = new RVDateRange(fromDate, toDate);
 
-revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.CustomRange, dateRange); 
+revealView.dashboard.dateFilter = new RVDateDashboardFilter(RVDateFilterType.CustomRange, dateRange);
 ```
 
 Here you can see the dashboard UI updated it's Date Filter to display the date range

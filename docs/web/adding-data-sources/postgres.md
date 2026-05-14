@@ -18,10 +18,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -29,13 +29,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var postgresDataSource = new $.ig.RVPostgresDataSource();
+    var postgresDataSource = new RVPostgresDataSource();
     postgresDataSource.host = "your-db-host";
     postgresDataSource.database = "your-db-name";
     postgresDataSource.port = 1234;
     postgresDataSource.title = "My PostgreSQL";
 
-    callback(new $.ig.RevealDataSources([postgresDataSource], [], false));
+    callback(new RevealDataSources([postgresDataSource], [], false));
 };
 ```
 
@@ -47,18 +47,18 @@ When the application runs, create a new Visualization and you will see the newly
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var postgresDataSource = new $.ig.RVPostgresDataSource();
+    var postgresDataSource = new RVPostgresDataSource();
     postgresDataSource.host = "your-db-host";
     postgresDataSource.database = "your-db-name";
     postgresDataSource.port = 1234;
     postgresDataSource.title = "My PostgreSQL";
 
-    var postgresDsi = new $.ig.RVPostgresDataSourceItem(postgresDataSource);
+    var postgresDsi = new RVPostgresDataSourceItem(postgresDataSource);
     postgresDsi.id = "MyPostgresDataSourceItem";
     postgresDsi.title = "My PostgreSQL Item";
     postgresDsi.table = "TableName";    
 
-    callback(new $.ig.RevealDataSources([postgresDataSource], [postgresDsi], false));
+    callback(new RevealDataSources([postgresDataSource], [postgresDsi], false));
 };
 ```
 
@@ -71,18 +71,18 @@ When the application runs, create a new Visualization and you will see the newly
 **Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provie an `id`, `title`, and/or `subtitle`.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     
-    var postgresDataSource = new $.ig.RVPostgresDataSource();
+    var postgresDataSource = new RVPostgresDataSource();
     postgresDataSource.id = "MyPostgresDataSource";
     postgresDataSource.title = "My PostgreSQL";
 
-    var postgresDsi = new $.ig.RVPostgresDataSourceItem(postgresDataSource);
+    var postgresDsi = new RVPostgresDataSourceItem(postgresDataSource);
     postgresDsi.id = "MyPostgresDataSourceItem";
     postgresDsi.title = "My PostgreSQL Item";
 
-    callback(new $.ig.RevealDataSources([postgresDataSource], [postgresDsi], false));
+    callback(new RevealDataSources([postgresDataSource], [postgresDsi], false));
 };
 ```
 

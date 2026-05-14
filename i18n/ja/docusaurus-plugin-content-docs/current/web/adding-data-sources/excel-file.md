@@ -99,10 +99,10 @@ app.use('/', reveal(revealOptions));
 `revealView` を初期化し、イベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], true));
+    callback(new RevealDataSources([], [], true));
 };
 ```
 
@@ -110,10 +110,10 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var localFileItem = new $.ig.RVLocalFileDataSourceItem();
+    var localFileItem = new RVLocalFileDataSourceItem();
     localFileItem.uri = "local:/Samples.xlsx";
 
-    callback(new $.ig.RevealDataSources([], [], true));
+    callback(new RevealDataSources([], [], true));
 };
 ```
 
@@ -132,13 +132,13 @@ Excel ファイルパスの前に `local:/` を付ける必要があります。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var localFileItem = new $.ig.RVLocalFileDataSourceItem();
+    var localFileItem = new RVLocalFileDataSourceItem();
     localFileItem.uri = "local:/Samples.xlsx";
 
-    var excelDataSourceItem  = new $.ig.RVExcelDataSourceItem(localFileItem);
+    var excelDataSourceItem  = new RVExcelDataSourceItem(localFileItem);
     excelDataSourceItem .title = "Local Excel File";
 
-    callback(new $.ig.RevealDataSources([], [excelDataSourceItem], true));
+    callback(new RevealDataSources([], [excelDataSourceItem], true));
 };
 ```
 
@@ -154,6 +154,6 @@ revealView.onDataSourcesRequested = (callback) => {
 
 :::caution
 
-サーバーがクライアント アプリケーションとは異なる URL で実行されている場合は、`$.ig.RevealSdkSettings.setBaseUrl` を呼び出す必要があります。サーバー アプリケーションとクライアント アプリケーションの両方が同じ URL で実行されている場合、このメソッドは必要ありません。このメソッドを呼び出す必要があるのは 1 回だけです。
+サーバーがクライアント アプリケーションとは異なる URL で実行されている場合は、`RevealSdkSettings.setBaseUrl` を呼び出す必要があります。サーバー アプリケーションとクライアント アプリケーションの両方が同じ URL で実行されている場合、このメソッドは必要ありません。このメソッドを呼び出す必要があるのは 1 回だけです。
 
 :::
