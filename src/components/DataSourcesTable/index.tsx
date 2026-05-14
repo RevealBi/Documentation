@@ -1,55 +1,14 @@
 import React from 'react';
+import { useDocsVersionFromPath } from '@site/src/utils/useDocsVersionFromPath';
+import { DataSourceItem, dataSourcesCurrent, dataSourcesV1 } from './data-sources';
 
-type DataSourceItem = {
-    title: string;
-    topic?: string;
-    nuget?: string;
-    maven?: string;
-    npm?: string;
+const DATA_SOURCES_BY_VERSION: Record<string, DataSourceItem[]> = {
+    current: dataSourcesCurrent,
+    '1.8.4': dataSourcesV1,
 };
 
-const DataSources: DataSourceItem[] = [
-    { title: "Amazon Athena", topic: "../adding-data-sources/amazon-athena", nuget: "Reveal.Sdk.Data.Amazon.Athena" },
-    { title: "Amazon Redshift", topic: "", nuget: "Reveal.Sdk.Data.Amazon.Redshift" },
-    { title: "Amazon S3", topic: "../adding-data-sources/amazon-s3", nuget: "Reveal.Sdk.Data.Amazon.S3" },
-    // { title: "Box", topic: "", nuget: "Reveal.Sdk.Data.Box" }, do not advertise
-    { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
-    // { title: "Dropbox", topic: "", nuget: "Reveal.Sdk.Data.Dropbox" }, do not advertise
-    { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
-    { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch", maven: "" },
-    // { title: "Google Analytics 4", topic: "", nuget: "Reveal.Sdk.Data.Google.Analytics4" }, do not advertise
-    { title: "Google BigQuery", topic: "../adding-data-sources/google-big-query", nuget: "Reveal.Sdk.Data.Google.BigQuery" },
-    // { title: "Google Drive", topic: "../adding-data-sources/google-drive", nuget: "Reveal.Sdk.Data.Google.Drive" }, do not advertise
-    { title: "Google Sheets", topic: "../adding-data-sources/google-sheets", nuget: "Reveal.Sdk.Data.Google.Drive" },
-    // { title: "Hubspot", topic: "", nuget: "Reveal.Sdk.Data.HubSpot" }, do not advertise
-    { title: "In-Memory Data", topic: "../adding-data-sources/in-memory-data" },
-    { title: "JSON", topic: "../adding-data-sources/json" },
-    // { title: "Marketo", topic: "", nuget: "Reveal.Sdk.Data.Marketo" }, do not advertise
-    { title: "MariaDB", topic: "../adding-data-sources/mariadb", nuget: "Reveal.Sdk.Data.MariaDB" },
-    { title: "Microsoft Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
-    { title: "Microsoft Azure Analysis Services", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.AnalysisServices" },
-    { title: "Microsoft Azure SQL Database", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
-    { title: "Microsoft Azure Synapse Analytics", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SynapseAnalytics" },
-    // { title: "Microsoft Dynamics CRM", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.Dynamics" }, do not advertise
-    { title: "Microsoft Excel", topic: "../adding-data-sources/excel-file" },
-    // { title: "Microsoft OneDrive", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.OneDrive" }, do not advertise
-    // { title: "Microsoft Reporting Services (SSRS)", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.ReportingServices" }, do not advertise
-    // { title: "Microsoft SharePoint", topic: "", nuget: "Reveal.Sdk.Data.Microsoft.SharePoint" }, do not advertise
-    { title: "Microsoft SQL Server", topic: "../adding-data-sources/ms-sql-server", nuget: "Reveal.Sdk.Data.Microsoft.SqlServer" },
-    { title: "MongoDB", topic: "../adding-data-sources/mongodb", nuget: "Reveal.Sdk.Data.MongoDb", maven: "" },
-    { title: "MySQL", topic: "../adding-data-sources/mysql", nuget: "Reveal.Sdk.Data.MySql" },
-    { title: "OData Feed", topic: "" },
-    { title: "Oracle", topic: "../adding-data-sources/oracle", nuget: "Reveal.Sdk.Data.Oracle" },
-    { title: "PostgreSQL", topic: "../adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },
-    // { title: "Quickbooks", topic: "", nuget: "Reveal.Sdk.Data.Quickbooks" }, do not advertise
-    { title: "REST", topic: "../adding-data-sources/rest" },
-    { title: "Snowflake", topic: "../adding-data-sources/snowflake", nuget: "Reveal.Sdk.Data.Snowflake" },
-    // { title: "Sybase", topic: "", nuget: "Reveal.Sdk.Data.Sybase" }, do not advertise
-    { title: "TSV (Tab Separated Values)", topic: "" },
-]
-
 function createHyperLink({ title, topic }: DataSourceItem) {
-    if (topic) return ( <a href={topic}>{title}</a>);        
+    if (topic) return ( <a href={topic}>{title}</a>);
     return (<span>{title}</span>);
 }
 
@@ -82,6 +41,9 @@ function createNpmLink({ title, npm }: DataSourceItem) {
 }
 
 export default function DataSourcesTable({ isWpf = false }: { isWpf?: boolean }): React.JSX.Element {
+    const version = useDocsVersionFromPath();
+    const sources = DATA_SOURCES_BY_VERSION[version] ?? dataSourcesCurrent;
+
     return (
         <table>
             <thead>
@@ -99,14 +61,14 @@ export default function DataSourcesTable({ isWpf = false }: { isWpf?: boolean })
                 </tr>
             </thead>
             <tbody>
-                {DataSources.map((props, idx) => (
+                {sources.map((props, idx) => (
                     <tr key={idx}>
                         <td>
                             {isWpf ? (
                                 <span>{props.title}</span>
                             ) : (
                                 createHyperLink(props)
-                            )}                            
+                            )}
                         </td>
                         {!isWpf ? (
                             <>

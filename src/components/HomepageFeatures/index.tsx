@@ -21,7 +21,7 @@ function SparkleIcon() {
 }
 
 type QuickLink = {
-  label: JSX.Element;
+  label: React.JSX.Element;
   href: string;
 };
 
@@ -62,7 +62,7 @@ function Labels({ items }: { items: string[] }) {
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.JSX.Element {
   return (
     <section className={styles.section}>
       <div className="container">

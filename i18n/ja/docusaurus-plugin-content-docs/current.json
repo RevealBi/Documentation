@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Current",
     "description": "The label for version current"
   },
   "sidebar.webSidebar.doc.Overview": {
@@ -222,10 +222,6 @@
   "sidebar.webSidebar.category.Release Notes": {
     "message": "リリース ノート",
     "description": "The label for category 'Release Notes' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.1.6.0 Upgrade Guide": {
-    "message": "1.6.0 アップグレード ガイド",
-    "description": "The label for the doc item '1.6.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v1.6.0"
   },
   "sidebar.webSidebar.doc.PostgreSQL": {
     "message": "PostgreSQL",
@@ -538,6 +534,10 @@
   "sidebar.webSidebar.doc.Loading Dashboards": {
     "message": "ダッシュボードの読み込み",
     "description": "The label for the doc item 'Loading Dashboards' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/loading-dashboards"
+  },
+  "sidebar.webSidebar.doc.Accessibility": {
+    "message": "アクセシビリティ",
+    "description": "The label for the doc item 'Accessibility' in sidebar 'webSidebar', linking to the doc web/accessibility"
   },
   "sidebar.webSidebar.doc.Beta Features": {
     "message": "ベータ機能",

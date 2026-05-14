@@ -1,25 +1,47 @@
 import { visit } from 'unist-util-visit';
 
-const plugin = (options) => {
+type Variable = { name: string; value: string };
 
-    const transformer = async (ast) => {
-        visit(ast, ["text", "code", "link"], (node) => {
-            if (node.type === "link") {
-                node.url = getValue(node.url, options);
-            } else {
-                node.value = getValue(node.value, options);
-            }            
-        });
-    };
-    return transformer;
+type Options = {
+    variables?: Variable[];
+    variablesByVersion?: Record<string, Variable[]>;
 };
 
 const pattern = /\[var:([^[\]]+)\]/g;
-const getValue = (value, options) => {
+
+const versionFromPath = (filePath: string): string => {
+    if (!filePath) return 'current';
+    const normalized = filePath.replace(/\\/g, '/');
+    const match = normalized.match(/\/versioned_docs\/version-([^/]+)\//)
+        ?? normalized.match(/\/docusaurus-plugin-content-docs\/version-([^/]+)\//);
+    return match ? match[1] : 'current';
+};
+
+const getValue = (value: string, variables: Variable[]) => {
     return value.replace(pattern, (match, variableName) => {
-        const variable = options.variables.find(varObj => varObj.name === variableName);
+        const variable = variables.find(v => v.name === variableName);
         return variable ? variable.value : match;
     });
+};
+
+const plugin = (options: Options) => {
+    return async (ast: any, file: any) => {
+        const filePath: string = file?.path ?? file?.history?.[0] ?? '';
+        const version = versionFromPath(filePath);
+        const variables =
+            options.variablesByVersion?.[version]
+            ?? options.variablesByVersion?.current
+            ?? options.variables
+            ?? [];
+
+        visit(ast, ['text', 'code', 'link'], (node: any) => {
+            if (node.type === 'link') {
+                node.url = getValue(node.url, variables);
+            } else {
+                node.value = getValue(node.value, variables);
+            }
+        });
+    };
 };
 
 export default plugin;

@@ -3,7 +3,7 @@ import Translate from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 type FrameworkItem = {
-  label: JSX.Element;
+  label: React.JSX.Element;
   link: string;
   badge?: string;
 };
@@ -38,7 +38,7 @@ const frameworks: FrameworkItem[] = [
   },
 ];
 
-export default function FrameworkPicker(): JSX.Element {
+export default function FrameworkPicker(): React.JSX.Element {
   return (
     <section className={styles.section}>
       <div className="container">
