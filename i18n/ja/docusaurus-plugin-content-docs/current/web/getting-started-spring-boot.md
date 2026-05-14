@@ -123,9 +123,27 @@ new RevealServerBuilder()
 アプリケーションの開発およびデバッグ中は、サーバーとクライアント アプリを異なる URL でホストすることが一般的です。たとえば、サーバーが `https://localhost:8080` で動作し、Angular アプリが `https://localhost:4200` で動作しているような場合です。クライアント アプリケーションからダッシュボードを読み込もうとすると、クロス オリジン リソース シェアリング (CORS) ポリシーにより失敗します。このシナリオを有効にするには、`Application.java` に `WebMvcConfigurer` Bean を追加します。
 
 ```java title="Application.java"
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.Ordered;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
 @Bean
-WebMvcConfigurer corsConfigurer() {
-    return registry -> registry.addMapping("/**").allowedOrigins("*"); // 開発環境のみ！本番環境では適切に構成してください。
+FilterRegistrationBean<CorsFilter> corsFilter() {
+    CorsConfiguration config = new CorsConfiguration();
+    config.addAllowedOriginPattern("*");
+    config.addAllowedHeader("*");
+    config.addAllowedMethod("*"); // 開発環境のみ！本番環境では適切に構成してください。
+
+    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    source.registerCorsConfiguration("/**", config);
+
+    FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
+    bean.addUrlPatterns("/*");
+    bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
+    return bean;
 }
 ```
 
