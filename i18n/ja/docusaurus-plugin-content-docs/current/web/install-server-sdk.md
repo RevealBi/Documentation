@@ -61,7 +61,7 @@ app.listen(8080, () => {
 
 以下の手順では、Reveal SDK を既存の Java アプリケーションにインストールする方法について説明します。
 
-Java SDK には Java 17 以降が必要です。Java SDK は現在、ネイティブ .NET コンポーネントをラップしているため、AIX など、それらのコンポーネントを実行できない一部のまれなプラットフォームはサポートされていません。Jetty をサーバーとして使用する場合、そのバージョンが Reveal SDK で内部的に使用される Jetty バージョン (現在は 12.0.12) と競合する可能性があります。
+Java SDK には Java 17 以降および Jakarta EE 9 準拠サーバーが必要です。Java SDK は現在、ネイティブ .NET コンポーネントをラップしているため、AIX など、それらのコンポーネントを実行できない一部のまれなプラットフォームはサポートされていません。Jetty をサーバーとして使用する場合、そのバージョンが Reveal SDK で内部的に使用される Jetty バージョン (現在は 12.0.12) と競合する可能性があります。
 
 1 - **pom.xml** ファイルを更新します。Reveal Maven リポジトリを追加します。
 
@@ -114,7 +114,7 @@ public class Application {
 
 ### Tomcat
 
-`ServletContextListener` クラスを作成し、`RevealEngineServlet` を登録します。
+Tomcat 10 以降などの Jakarta EE 9 準拠サーブレット コンテナーを使用します。`ServletContextListener` クラスを作成し、`RevealEngineServlet` を登録します。
 
 ```java
 @WebListener
