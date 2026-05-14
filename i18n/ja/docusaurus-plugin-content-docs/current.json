@@ -535,6 +535,10 @@
     "message": "ダッシュボードの読み込み",
     "description": "The label for the doc item 'Loading Dashboards' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/loading-dashboards"
   },
+  "sidebar.webSidebar.doc.Accessibility": {
+    "message": "アクセシビリティ",
+    "description": "The label for the doc item 'Accessibility' in sidebar 'webSidebar', linking to the doc web/accessibility"
+  },
   "sidebar.webSidebar.doc.Beta Features": {
     "message": "ベータ機能",
     "description": "The label for the doc item 'Beta Features' in sidebar 'webSidebar', linking to the doc web/beta-features"

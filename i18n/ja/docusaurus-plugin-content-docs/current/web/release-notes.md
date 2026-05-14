@@ -3,6 +3,128 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## 2.0.0 (May 15th, 2026)
+
+### 重大な変更
+
+#### すべてのプラットフォーム
+- レガシーの Java および WPF エンジン バックエンドが削除されました。
+- 非推奨のレガシー チャート タイプが削除されました。
+- 非推奨の `DateFilter` プロパティが削除されました。
+- `RVDashboardThumbnailView` は非推奨となり、新しい `RVThumbnail` クラスに置き換えられました。
+- `NumberOfItemsInGrid`、`FilterRangeText`、`UpdateFilterRangeText` はそれぞれ `FilterCount`、`FilterSelectionText`、`UpdateFilterSelectionText` に名前が変更されました。
+
+#### Node
+- ヘッドレス エクスポート オプションの `dateFilter` プロパティは非推奨です。代わりに `RVDateRule` を使用した `filters` 配列をご使用ください。
+
+### 新機能
+
+#### すべてのプラットフォーム
+- 新しいデータ ソース: Azure Cosmos DB。
+- 新しいデータ ソース: ClickHouse。
+- 新しいデータ ソース: Elasticsearch。
+- グリッド、ピボット、棒グラフ、縦棒グラフ、テキスト ビジュアライゼーションで、フィールドの値に基づいた条件付き書式が適用できるようになりました。固定（静的）値との比較に加え、条件付き書式ルールで同じビジュアライゼーション内の**別のフィールド**と比較できるようになりました。書式設定は各行の実際のデータに基づいて個別に評価されます。[詳細はこちら。](https://help.revealbi.io/user/fields/conditional-formatting/)
+- ダッシュボードおよび個々のビジュアライゼーションのサムネイルをプログラムから生成できる新しい `RVThumbnail` クラスが追加されました。
+- DataGrid ビジュアライゼーションで、セルの選択、複数セルのドラッグ選択、Ctrl+C によるクリップボードへのコピーがサポートされました。また、列ヘッダー、交互行、セル境界線のデザインも更新されました。
+- `RevealView` がスタンドアロンの npm パッケージとして利用可能になりました。
+- `MaxCellsRestriction` に getter および setter アクセサーが追加されました。
+- キーボード ナビゲーションがデフォルトで有効になりました。ウィジェットのタイトルとインタラクティブな要素に、スクリーン リーダー向けの ARIA 属性が改善されました。
+- ビジュアライゼーション エディターのチャート領域とデータ領域の間に、ドラッグ可能なスプリッターが追加されました。
+- SQL Server 接続の統合認証が改善されました。
+- 以前の内部実装に代わり、公式の Microsoft SQL Server クライアント ライブラリが使用されるようになりました。
+- Snowflake で `AllowsOAuthAccountType` による OAuth アカウント タイプがサポートされました。
+- ネットワーク障害後のデータ エージェントの接続回復が改善されました。
+
+#### Java
+- Java SDK で `RVRedisOptions` を使用した Redis キャッシュがサポートされました。
+- `DefaultDashboardTheme` がサポートされました。
+- ヘッドレス エクスポートで CSV 形式がサポートされました。
+
+```java
+CsvExportOptions options = new CsvExportOptions();
+options.setUseFormattedValues(true);
+byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
+```
+
+- カスタム フィールド スキーマ、計算フィールド、カスタム メジャーを有効にするベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
+
+```java
+public class MyDataModelProvider implements IRVDataModelProvider {
+    @Override
+    public void editSchema(IRVUserContext userContext, RVDashboardDataSet dataSet, RVDataSchema schema) {
+        // フィールド スキーマのカスタマイズ、計算フィールドの注入、カスタム メジャーの追加
+    }
+}
+```
+
+- .NET SDK でのみ利用可能だったキャッシュ設定（`maxDownloadSize`、`maxInMemoryCells` など）が Java SDK でも公開されました。
+- ヘッドレス エクスポートの日付フィルター API に `RVDateRule` が追加されました。`dateFilter` プロパティは非推奨です。代わりに `filters` をご使用ください。
+
+```java
+ExportOptions exportOptions = new ExportOptions();
+exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelation.TO_DATE)));
+```
+
+#### Node
+- カスタム フィールド スキーマ、計算フィールド、カスタム メジャーを有効にするベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
+
+```ts
+class MyDataModelProvider implements IRVDataModelProvider {
+  async editSchema(userContext, dataSourceItem, schema) {
+    schema.find(f => f.name === "Discount").defaultAggregation = RVDashboardAggregationType.CountDistinct;
+    schema.find(f => f.name === "UnitPrice").label = "Price per Unit";
+    return schema;
+  }
+  async getCalculatedFields(userContext, dataSourceItem) {
+    return [{ name: "LineTotal", type: RVDashboardDataType.Number, expression: "[UnitPrice] * [Quantity] * (1 - [Discount])" }];
+  }
+  async getMeasures(userContext, dataSourceItem) {
+    return [{ name: "Total Revenue", expression: "sum([UnitPrice] * [Quantity])", description: "Revenue before discount" }];
+  }
+}
+```
+
+- .NET SDK でのみ利用可能だったキャッシュ設定（`maxDownloadSize`、`maxInMemoryCells` など）が Node SDK でも公開されました。
+
+```ts
+const revealOptions: RevealOptions = {
+    maxDownloadSize: 200 * 1024 * 1024,
+    maxInMemoryCells: 10_000_000,
+};
+```
+
+- ヘッドレス エクスポートの日付フィルター API に `RVDateRule` が追加されました。`dateFilter` プロパティは非推奨です。代わりに `filters` をご使用ください。
+
+```ts
+const exportOptions = new ExportOptions();
+exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDate)];
+```
+
+### バグ修正
+
+#### すべてのプラットフォーム
+- Azure Cosmos DB で階層データが読み取れませんでした。
+- 一部のチャート シリーズが描画されず、コンボ積み上げシリーズにホバーするとクラッシュしていました。
+- ダッシュボードの読み込み完了時にキーボード フォーカスが失われていました。
+- ゲージ ビジュアライゼーションでデータ値が最大値を超えた場合に、最大値にクランプされませんでした。
+- `overrideLocale` の同時呼び出しが不正な動作を引き起こす場合がありました。
+- TypeScript のみのビルドで `parseISODate` が利用できませんでした。
+- 特定のチャート タイプでサムネイル生成が失敗していました。
+- モジュール バンドラーを使用する場合にローカライズが正しく機能しませんでした。
+- YouTube Analytics コネクタで日付フィルターが正しく適用されませんでした。
+- `RevealView` コンストラクターが CSS セレクター文字列を正しく受け付けず、DOM 要素のみ機能していました。
+- `RVJsonSchemaConfigBuilder` で日付フィールドに誤った列タイプが割り当てられていました。
+- `Data` が設定されていない場合にピボット フィールド エディターで null 参照クラッシュが発生していました。
+- 条件付き書式ルールで null または空のカラー プロパティを開くとクラッシュしていました。
+- フィルターが一致しない場合にヘッドレス エクスポートが失敗していました。
+- ダッシュボード リンクをたどった後に戻る操作でエラーが発生していました。
+- MongoDB の `VerifyConnection` が予期せず失敗していました。
+- `filterValueChangedEvent` が正しく発火しないリグレッションが発生していました。
+- YouTube OAuth に必要な設定エントリが欠落していました。
+- LinkedIn コネクタで非推奨のメトリクスが原因で失敗が発生していました。
+- Excel データ ソース アイテムの「最初の行をタイトルとして使用」パラメーターが正しく設定されていませんでした。
+- データ ソース セレクター ダイアログでタイトルが表示されていませんでした。
+
 ## 1.8.4 (Mar 5th, 2026)
 
 ### New Features

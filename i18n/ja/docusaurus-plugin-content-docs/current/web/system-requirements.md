@@ -4,9 +4,21 @@
 - ASP.NET 6.0 またはそれ以降
 
 ## Java
-- Java SDK 11.0.10 およびそれ以降 (Spring Boot 3.x では Java SDK 17 以降)
+- Java SDK 17 およびそれ以降
 - Jakarta EE 9 準拠サーバー
 - Maven 3.6.3 およびそれ以降
+
+:::note
+
+Jetty をサーバーとして使用する場合、そのバージョンが Reveal SDK で内部的に使用される Jetty バージョン (現在は 12.0.12) と競合する可能性があります。
+
+:::
+
+:::note
+
+Reveal SDK で使用されるネイティブ .NET コンポーネントを実行できない一部のプラットフォームは、Java SDK でサポートされなくなりました。たとえば、AIX はサポートされていません。
+
+:::
 
 ## Node
 - NodeJS 16.3 およびそれ以降
