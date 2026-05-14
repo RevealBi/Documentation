@@ -21,7 +21,6 @@ import TabItem from '@theme/TabItem';
 
 - The Java SDK now requires Java 17 or higher.
 - The Java SDK now uses the `io.revealbi:reveal-sdk-servlet` Maven artifact and a servlet-based setup with `RevealEngineServlet`.
-- `InMemoryDataProvider` remains unavailable in the Java SDK. This API exists in the .NET SDK but has never been implemented in Java.
 - Some platforms are no longer supported by the Java SDK because they cannot run the native .NET components used by Reveal SDK. For example, AIX is not supported.
 - If you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
@@ -44,6 +43,7 @@ import TabItem from '@theme/TabItem';
 #### Java
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
 - `DefaultDashboardTheme` is now supported.
+- The Java SDK now has feature parity with the .NET SDK for connectors and extension points, with `InMemoryDataProvider` as a known exception. `InMemoryDataProvider` exists in the .NET SDK but has not been implemented in Java.
 - Headless export now supports CSV format.
 
 ```java
