@@ -13,14 +13,9 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 
 - **jQuery and Day.js removed** — the SDK no longer depends on jQuery or Day.js.
 - **NPM delivery** — the client SDK is now delivered as an npm package; legacy script-tag delivery is no longer the recommended approach.
-- **Legacy Java engine & WPF backend removed** — these have been completely removed.
-- **Legacy chart types removed** — previously deprecated chart types are no longer available.
 - **Renamed and removed APIs** 
     - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard` and `ExportOptionsBase`
-    - `ToJsonStringAsync` - _renamed_ to `ToJsonString`.
-    - `NumberOfItemsInGrid` - _renamed_ to `FilterCount`.
-    - `FilterRangeText` - _renamed_ to `FilterSelectionText`.
-    - `UpdateFilterRangeText` - _renamed_ to `UpdateFilterSelectionText`.
+    - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
 - **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of `RVThumbnail`.
 
 ## Step-by-Step Upgrade
@@ -38,7 +33,7 @@ The Reveal SDK no longer requires jQuery. Remove the jQuery script tag that was 
 If your own application code depends on jQuery you can keep it — the Reveal SDK simply no longer requires it.
 :::
 
-Also remove **Quill.js** and **Spectrum.js** if they are still present from older versions:
+Also remove **Day.js**, **Quill.js** and **Spectrum.js** if they are still present from older versions:
 
 ```html
 <!-- Remove these if present -->
@@ -46,6 +41,7 @@ Also remove **Quill.js** and **Spectrum.js** if they are still present from olde
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css" >
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 ```
 
 ### 2. Switch client SDK to NPM
@@ -131,15 +127,17 @@ The deprecated `DateFilter` property has been removed. Use the `filters` collect
   <TabItem value="before" label="1.x">
 
 ```javascript
-visualization.dateFilter = new RVDateDashboardFilter();
+var myRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Month);
+dashboard.dateFilter = new Reveal.RVDateDashboardFilter(myRule);
 ```
 
   </TabItem>
   <TabItem value="after" label="2.0">
 
 ```javascript
-const dateRule = new RVDateRule();
-visualization.filters = [dateRule];
+var myRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Month);
+var myDateFilter = dashboard.filters.findByTitle("My Date Filter");
+myDateFilter.rule = myRule;
 ```
 
   </TabItem>
@@ -158,7 +156,7 @@ const thumbnailView = new RVDashboardThumbnailView();
   <TabItem value="after" label="2.0">
 
 ```javascript
-const thumbnail = new RVThumbnail();
+RevealApi.RVThumbnail.fromDashboard("#thumbnail", "Sales");
 ```
 
   </TabItem>
@@ -166,48 +164,15 @@ const thumbnail = new RVThumbnail();
 
 The new `RVThumbnail` API also supports runtime theme changes.
 
-#### Renamed filter properties
-
-The following properties have been renamed:
-
-| 1.x | 2.0 |
-|---|---|
-| `NumberOfItemsInGrid` | `FilterCount` |
-| `FilterRangeText` | `FilterSelectionText` |
-| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
-
-#### `ToJsonStringAsync` → `ToJsonString`
-
-<Tabs groupId="api-json">
-  <TabItem value="before" label="1.x">
-
-```csharp
-var json = await dashboard.ToJsonStringAsync();
-```
-
-  </TabItem>
-  <TabItem value="after" label="2.0">
-
-```csharp
-var json = dashboard.ToJsonString();
-```
-
-  </TabItem>
-</Tabs>
-
 ## Removed APIs
 
 | API | Replacement |
 |---|---|
 | `DateFilter` property | `filters` collection |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
-| `ToJsonStringAsync` | `ToJsonString` |
-| `NumberOfItemsInGrid` | `FilterCount` |
-| `FilterRangeText` | `FilterSelectionText` |
-| `UpdateFilterRangeText` | `UpdateFilterSelectionText` |
+| `Reveal.Sdk.Dashboard.ToJsonStringAsync` | `ToJsonString` |
 | Legacy chart types (previously deprecated) | Use current [Chart Types](/web/chart-types) |
 | Legacy Java engine | Java SDK (Spring Boot) |
-| WPF backend | ASP.NET, Node.js, or Java server SDKs |
 
 ## Summary Checklist
 
@@ -217,10 +182,9 @@ var json = dashboard.ToJsonString();
 - [ ] Update server SDK packages to 2.0.0
 - [ ] Replace `DateFilter` usage with `filters` and `RVDateRule`
 - [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
-- [ ] Replace `ToJsonStringAsync` with `ToJsonString`
-- [ ] Rename `NumberOfItemsInGrid` to `FilterCount`, `FilterRangeText` to `FilterSelectionText`, and `UpdateFilterRangeText` to `UpdateFilterSelectionText`
+- [ ] Replace `Reveal.Sdk.Dashboard.ToJsonStringAsync` with `ToJsonString`
 - [ ] Verify no dashboards use removed legacy chart types
-- [ ] If using the legacy Java engine or WPF backend, migrate to a supported server SDK
+- [ ] If using the legacy Java engine, migrate to a supported server SDK
 
 ## Need help?
 

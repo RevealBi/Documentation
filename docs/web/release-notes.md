@@ -8,14 +8,14 @@ import TabItem from '@theme/TabItem';
 ### Breaking Changes
 
 #### All Platforms
-- The legacy Java and WPF engine backends have been removed.
+- The legacy Java backend have been removed.
 - Legacy chart types have been removed.
 - The deprecated `DateFilter` property has been removed.
+- `SupportedLocales` was replaced by `BuiltInLocales` in the `RevealSdkSettings.overrideLocale` method.
 - `RVDashboardThumbnailView` has been deprecated in favor of the new `RVThumbnail` class.
-- `NumberOfItemsInGrid`, `FilterRangeText`, and `UpdateFilterRangeText` have been renamed to `FilterCount`, `FilterSelectionText`, and `UpdateFilterSelectionText`.
 
 #### Node
-- The `dateFilter` property on headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
+- The previously deprecated `dateFilter` property has been removed in several places in our SDK. Use the corresponding `filters` array instead.
 
 ### New Features
 
@@ -26,12 +26,12 @@ import TabItem from '@theme/TabItem';
 - New `RVThumbnail` class for programmatically generating thumbnails of dashboards and individual visualizations.
 - The DataGrid visualization now supports cell selection, multi-cell drag selection, and copying cell values to the clipboard via Ctrl+C, along with an updated column header, alternate row, and cell border design.
 - `RevealView` is now available as a standalone npm package.
-- `MaxCellsRestriction` now exposes get and set accessors.
+- New API to set the cells limit in the frontend: `RevealSdkSettings.maxCellsRestriction`.
+- We no longer support NTLM in Linux.
 - Keyboard navigation is now enabled by default. Widget titles and interactive elements include improved ARIA attributes for screen readers.
 - A draggable splitter has been added to the visualization editor between the chart and data areas.
 - Integrated authentication for SQL Server connections has been improved.
-- The official Microsoft SQL Server client library now replaces the previous internal implementation.
-- Data agent connection recovery has been improved to handle network interruptions more reliably.
+- SqlServer client library now on 6.1.4 version.
 
 #### Java
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
@@ -56,7 +56,7 @@ public class MyDataModelProvider implements IRVDataModelProvider {
 ```
 
 - Cache settings previously only available in .NET — including `maxDownloadSize` and `maxInMemoryCells` — are now exposed in the Java SDK.
-- `RVDateRule` is now available for headless export date filters. The `dateFilter` property is deprecated — use `filters` instead.
+- `RVDateRule` is now available for date filters during headless export. The `dateFilter` property is deprecated — use `filters` instead.
 
 ```java
 ExportOptions exportOptions = new ExportOptions();
@@ -64,6 +64,8 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 ```
 
 #### Node
+Several features have been implemented in our Node.js SDK, in an effort to bring it up to feature parity with our ASP.NET SDK.
+
 - `IRVDataModelProvider` is now available as a beta API, enabling custom field schemas, calculated fields, and custom measures — matching the existing .NET implementation.
 
 ```ts
@@ -94,7 +96,7 @@ const revealOptions: RevealOptions = {
 };
 ```
 
-- `RVDateRule` is now available for headless export date filters. The `dateFilter` property is deprecated — use `filters` instead.
+- `RVDateRule` is now available for date filters during headless export. The `dateFilter` property is deprecated — use `filters` instead.
 
 ```ts
 const exportOptions = new ExportOptions();

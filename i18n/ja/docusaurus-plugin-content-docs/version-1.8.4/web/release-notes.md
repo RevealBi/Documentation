@@ -3,23 +3,23 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## 1.8.4 (Mar 5th, 2026)
+## 1.8.4 (2026 年 3 月 5 日)
 
-### New Features
+### 新機能
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- New data source: MariaDB.
-- Redshift now supports stored procedures.
-- KPI visualizations now support conditional formatting.
-- Added "Between" and "Not Between" number comparison operators for conditional formatting.
-- Keyboard accessibility improvements in View Mode for grid and pivot visualizations.
-- Localization now uses the user's language preference instead of the server locale. This affects labels such as "Grand Total" in Excel export, and "Previous" and "Current" in KPI visualizations.
-- Elasticsearch now supports parameterized queries.
-- MySQL now supports timezone conversion.
-- Added a "Remove" button to the visualization editor fields list.
-- Added a search box to the visualization type selection dialog.
-- Added an `onFilterValueChanged` event to the RevealView. The event fires when the user uses the filtering UI or API to modify the selection of a filter.
+- 新しいデータ ソース: MariaDB。
+- Redshift がストアド プロシージャをサポートするようになりました。
+- KPI ビジュアライゼーションで条件付き書式がサポートされるようになりました。
+- 条件付き書式に「次の値の間」および「次の値の間以外」の数値比較演算子が追加されました。
+- グリッドおよびピボット ビジュアライゼーションの表示モードにおけるキーボード アクセシビリティが改善されました。
+- ローカライズがサーバーのロケールではなく、ユーザーの言語設定を使用するようになりました。これは、Excel エクスポートの「総計」や KPI ビジュアライゼーションの「前回」および「現在」などのラベルに影響します。
+- Elasticsearch がパラメーター化クエリをサポートするようになりました。
+- MySQL がタイムゾーン変換をサポートするようになりました。
+- ビジュアライゼーション エディターのフィールド リストに「削除」ボタンが追加されました。
+- ビジュアライゼーション タイプ選択ダイアログに検索ボックスが追加されました。
+- RevealView に `onFilterValueChanged` イベントが追加されました。このイベントは、ユーザーがフィルタリング UI または API を使用してフィルターの選択を変更した際に発火します。
 
 ```javascript
 revealView.onFilterValueChanged = (args) => {
@@ -30,40 +30,40 @@ revealView.onFilterValueChanged = (args) => {
 };
 ```
 
-### Bugs
+### バグ修正
 
-#### All Platforms
+#### すべてのプラットフォーム
 
-- The "Null or empty" filter option text is now localized.
-- Switching visualizations quickly when using statistical functions could lose the original baseline.
-- MongoDB blending regression.
-- Cache not working in some scenarios for NodeJS and Java SDKs.
-- Pivot Excel export headers missing when grand totals are visible.
-- Dashboard filter refresh rate ignoring the metadata screen expiration setting.
-- Stacked chart y-axis range only using first value field's range.
-- Combination chart: changing the display order alters the y-axis range.
-- Local evaluation of "not equals" operators incorrect.
-- ScatterMap null reference exception when reloading data.
-- Date range generation for quarter-based rules incorrect on web.
-- SSAS hierarchical filters not working correctly.
-- MySQL error when the database name includes a hyphen.
-- Field search box not showing up in the visualization editor.
-- Dashboard filter binding issues.
-- Auto connect filters issues.
-- Headless export inconsistencies with deferred rendering.
-- Maximized visualization sizing and loading incorrect when dashboard has global filters.
-- Multiple visualization editors could appear simultaneously in the dashboard layout.
-- Show data labels setting not applied in Excel export.
-- Data source icon not displaying for some data sources.
-- Maximized visualization state incorrectly reported after minimizing.
-- Headless export null pointer when the server returns 4xx or 5xx errors.
-- Exporting a dashboard containing text widget could fail.
-- Null values not treated as the smallest value when sorting.
-- Azure Analysis Services could cause a null reference when global filters are present.
+- 「Null または空」フィルター オプションのテキストがローカライズされるようになりました。
+- 統計関数の使用中にビジュアライゼーションをすばやく切り替えると、元のベースラインが失われることがありました。
+- MongoDB ブレンディングのリグレッション。
+- NodeJS および Java SDK の一部のシナリオでキャッシュが機能しない問題。
+- 総計が表示されている場合にピボット Excel エクスポートのヘッダーが欠落する問題。
+- ダッシュボード フィルターの更新レートがメタデータ画面の有効期限設定を無視する問題。
+- 積み上げチャートの Y 軸の範囲が最初の値フィールドの範囲のみを使用する問題。
+- コンビネーション チャート: 表示順序を変更すると Y 軸の範囲が変わる問題。
+- 「次と等しくない」演算子のローカル評価が正しくない問題。
+- データを再読み込みすると ScatterMap で null 参照例外が発生する問題。
+- Web で四半期ベースのルールの日付範囲生成が正しくない問題。
+- SSAS 階層フィルターが正しく機能しない問題。
+- データベース名にハイフンが含まれている場合に MySQL でエラーが発生する問題。
+- ビジュアライゼーション エディターにフィールド検索ボックスが表示されない問題。
+- ダッシュボード フィルターのバインディングの問題。
+- フィルターの自動接続の問題。
+- 遅延レンダリングを使用したヘッドレス エクスポートの不整合。
+- ダッシュボードにグローバル フィルターがある場合、最大化されたビジュアライゼーションのサイズと読み込みが正しくない問題。
+- ダッシュボード レイアウトで複数のビジュアライゼーション エディターが同時に表示される場合がある問題。
+- データ ラベルの表示設定が Excel エクスポートに適用されない問題。
+- 一部のデータ ソースでデータ ソース アイコンが表示されない問題。
+- 最小化後に最大化されたビジュアライゼーションの状態が正しく報告されない問題。
+- サーバーが 4xx または 5xx エラーを返した場合のヘッドレス エクスポートの null ポインター。
+- テキスト ウィジェットを含むダッシュボードのエクスポートが失敗する場合がある問題。
+- 並べ替え時に null 値が最小値として扱われない問題。
+- グローバル フィルターが存在する場合に Azure Analysis Services で null 参照が発生する場合がある問題。
 
 #### Java
 
-- Headless export crash when exporting a grid visualization.
+- グリッド ビジュアライゼーションをエクスポートする際のヘッドレス エクスポートのクラッシュ。
 
 ## 1.8.3 (2026 年 1 月 9 日)
 

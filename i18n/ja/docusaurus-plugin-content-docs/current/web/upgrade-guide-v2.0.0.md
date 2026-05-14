@@ -11,13 +11,11 @@ import TabItem from '@theme/TabItem';
 
 ## 破壊的変更の概要
 
-- **jQuery の削除** — SDK は jQuery に依存しなくなりました。
+- **jQuery と Day.js の削除** — SDK は jQuery と Day.js に依存しなくなりました。
 - **NPM 配信** — クライアント SDK は npm パッケージとして配信されるようになりました。レガシーなスクリプトタグによる配信は推奨されなくなりました。
-- **レガシー Java エンジンおよび WPF バックエンドの削除** — これらは完全に削除されました。
-- **レガシー チャート タイプの削除** — 以前に非推奨となっていたチャート タイプは利用できなくなりました。
 - **API の名前変更と削除** 
     - `DateFilter` - _削除_ `RevealView`、`RVDashboard`、`ExportOptionsBase` から非推奨プロパティを削除
-    - `ToJsonStringAsync` - _名前変更_ `ToJsonString` に変更。
+    - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _名前変更_ `ToJsonString` に変更。
 - **非推奨の型** — `RVDashboardThumbnailView` は非推奨になりました。`RVThumbnail` を使用してください。
 
 ## アップグレード手順
@@ -35,7 +33,7 @@ Reveal SDK は jQuery を必要としなくなりました。SDK のためにロ
 アプリケーション自体のコードが jQuery に依存している場合はそのまま使用できます — Reveal SDK が jQuery を必要としなくなっただけです。
 :::
 
-また、古いバージョンから残っている **Quill.js** と **Spectrum.js** も削除してください:
+また、古いバージョンから残っている **Day.js**、**Quill.js**、**Spectrum.js** も削除してください:
 
 ```html
 <!-- これらがある場合は削除 -->
@@ -43,6 +41,7 @@ Reveal SDK は jQuery を必要としなくなりました。SDK のためにロ
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css" >
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 ```
 
 ### 2. クライアント SDK を NPM に切り替える
@@ -62,7 +61,7 @@ Reveal SDK は jQuery を必要としなくなりました。SDK のためにロ
   <TabItem value="after" label="2.0 (npm)">
 
 ```bash
-npm install reveal-sdk dayjs
+npm install reveal-sdk
 ```
 
 ```typescript
@@ -73,12 +72,15 @@ import "reveal-sdk";
 </Tabs>
 
 :::tip スクリプトタグが必要ですか?
-バンドラーを使用しない環境向けに SDK 配布 zip は引き続き利用可能ですが、jQuery は不要になりました:
+バンドラーを使用しない環境向けに SDK 配布 zip は引き続き利用可能ですが、jQuery と Day.js は不要になりました:
 
 ```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-<script src="./assets/reveal/infragistics.reveal.js"></script>
+<script src="./assets/reveal/reveal-sdk.js"></script>
 ```
+:::
+
+:::info インストール ガイド
+CDN + ES Modules、Angular での npm、React での npm など、クライアント SDK のインストール方法を詳しく確認する場合は、[インストール ガイド](installation/installation.md) を参照してください。
 :::
 
 ### 3. サーバー SDK パッケージを更新する
@@ -125,15 +127,17 @@ npm install reveal-sdk-node@2.0.0
   <TabItem value="before" label="1.x">
 
 ```javascript
-visualization.dateFilter = new RVDateDashboardFilter();
+var myRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Month);
+dashboard.dateFilter = new Reveal.RVDateDashboardFilter(myRule);
 ```
 
   </TabItem>
   <TabItem value="after" label="2.0">
 
 ```javascript
-const dateRule = new RVDateRule();
-visualization.filters = [dateRule];
+var myRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Month);
+var myDateFilter = dashboard.filters.findByTitle("My Date Filter");
+myDateFilter.rule = myRule;
 ```
 
   </TabItem>
@@ -152,7 +156,7 @@ const thumbnailView = new RVDashboardThumbnailView();
   <TabItem value="after" label="2.0">
 
 ```javascript
-const thumbnail = new RVThumbnail();
+RevealApi.RVThumbnail.fromDashboard("#thumbnail", "Sales");
 ```
 
   </TabItem>
@@ -160,35 +164,15 @@ const thumbnail = new RVThumbnail();
 
 新しい `RVThumbnail` API はランタイムでのテーマ変更もサポートしています。
 
-#### `ToJsonStringAsync` → `ToJsonString`
-
-<Tabs groupId="api-json">
-  <TabItem value="before" label="1.x">
-
-```csharp
-var json = await dashboard.ToJsonStringAsync();
-```
-
-  </TabItem>
-  <TabItem value="after" label="2.0">
-
-```csharp
-var json = dashboard.ToJsonString();
-```
-
-  </TabItem>
-</Tabs>
-
 ## 削除された API
 
 | API | 代替 |
 |---|---|
 | `DateFilter` プロパティ | `filters` コレクション |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
-| `ToJsonStringAsync` | `ToJsonString` |
+| `Reveal.Sdk.Dashboard.ToJsonStringAsync` | `ToJsonString` |
 | レガシー チャート タイプ (以前に非推奨) | 現在の[チャート タイプ](/web/chart-types)を使用 |
 | レガシー Java エンジン | Java SDK (Spring Boot) |
-| WPF バックエンド | ASP.NET、Node.js、または Java サーバー SDK |
 
 ## チェックリスト
 
@@ -198,9 +182,9 @@ var json = dashboard.ToJsonString();
 - [ ] サーバー SDK パッケージを 2.0.0 に更新
 - [ ] `DateFilter` の使用を `filters` と `RVDateRule` に置き換え
 - [ ] `RVDashboardThumbnailView` を `RVThumbnail` に置き換え
-- [ ] `ToJsonStringAsync` を `ToJsonString` に置き換え
+- [ ] `Reveal.Sdk.Dashboard.ToJsonStringAsync` を `ToJsonString` に置き換え
 - [ ] 削除されたレガシー チャート タイプを使用しているダッシュボードがないことを確認
-- [ ] レガシー Java エンジンまたは WPF バックエンドを使用している場合は、サポートされているサーバー SDK に移行
+- [ ] レガシー Java エンジンを使用している場合は、サポートされているサーバー SDK に移行
 
 ## お困りですか?
 
