@@ -137,6 +137,6 @@ Reveal SDK には、特定のプラットフォームとアーキテクチャの
 
 :::info コードの取得
 
-このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot-jersey) にあります。
+このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot) にあります。
 
 :::
