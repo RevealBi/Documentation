@@ -17,6 +17,14 @@ import TabItem from '@theme/TabItem';
 #### Node
 - The `dateFilter` property on headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
 
+#### Java
+
+- The Java SDK now requires Java 17 or higher.
+- The Java SDK now uses the `io.revealbi:reveal-sdk-servlet` Maven artifact and a servlet-based setup with `RevealEngineServlet`.
+- `InMemoryDataProvider` is not available in the Java SDK. Applications using this API must update their data integration code.
+- Some platforms are no longer supported by the Java SDK because they cannot run the native .NET components used by Reveal SDK. For example, AIX is not supported.
+- If you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+
 ### New Features
 
 #### All Platforms
