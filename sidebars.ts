@@ -123,7 +123,7 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Web Component Wrappers  --------------------
+    /* -------------------- Web Component Wrappers  -------------------- 
     {
       type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "web-component-wrappers-overview", id: "web/web-component-wrappers/index" },
