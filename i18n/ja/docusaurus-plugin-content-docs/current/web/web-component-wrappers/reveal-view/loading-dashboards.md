@@ -36,7 +36,7 @@ const App = () => {
 ```
 
 ```js
-$.ig.RVDashboard.loadDashboard("Campaigns", (dashboard) => {
+RVDashboard.loadDashboard("Campaigns").then(dashboard => {
     const revealView = document.getElementById("viewer");
     revealView.dashboard = dashboard;
 });
@@ -44,18 +44,17 @@ $.ig.RVDashboard.loadDashboard("Campaigns", (dashboard) => {
 
 ```tsx
 import { RvRevealView } from "https://esm.sh/reveal-sdk-wrappers-react";
-
-declare const $: any;
+import { RVDashboard } from "reveal-sdk";
 
 const App = () => {
     const [dashboard, setDashboard] = useState<any>();
 
     useEffect(() => {
-        $.ig.RVDashboard.loadDashboard("Campaigns", (dashboard: any) => {
+        RVDashboard.loadDashboard("Campaigns").then((dashboard: any) => {
             setDashboard(dashboard);
         });
     }, [])
-    
+
     return (
         <RvRevealView dashboard={dashboard}></RvRevealView>
     );

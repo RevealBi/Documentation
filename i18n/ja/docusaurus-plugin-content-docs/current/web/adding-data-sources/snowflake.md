@@ -259,10 +259,10 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -270,11 +270,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    const snowflakeDS = new RVSnowflakeDataSource();
     snowflakeDS.title = "Snowflake";
     snowflakeDS.subtitle = "Data Source";
 
-    callback(new $.ig.RevealDataSources([snowflakeDS], [], false));
+    callback(new RevealDataSources([snowflakeDS], [], false));
 };
 ```
 
@@ -289,17 +289,17 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    const snowflakeDS = new RVSnowflakeDataSource();
     snowflakeDS.title = "My Snowflake Datasource";
     snowflakeDS.subtitle = "Snowflake";
 
     // Create a data source item
-    const snowflakeDSI = new $.ig.RVSnowflakeDataSourceItem(snowflakeDS);
+    const snowflakeDSI = new RVSnowflakeDataSourceItem(snowflakeDS);
     snowflakeDSI.id = "MySnowflakeDataSourceItem";
     snowflakeDSI.title = "My Snowflake Datasource Item";
     snowflakeDSI.subtitle = "Snowflake";
 
-    callback(new $.ig.RevealDataSources([snowflakeDS], [snowflakeDSI], false));
+    callback(new RevealDataSources([snowflakeDS], [snowflakeDSI], false));
 };
 ```
 

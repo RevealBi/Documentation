@@ -16,8 +16,8 @@ const client = RevealSdkClient.getInstance();
 
 revealView.onMenuOpening = function (visualization, args) {
   // Dashboard-level insights (right-click on dashboard background)
-  if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
-    args.menuItems.push(new $.ig.RVMenuItem("Summary", null, async () => {
+  if (args.menuLocation === RVMenuLocation.Dashboard) {
+    args.menuItems.push(new RVMenuItem("Summary", null, async () => {
       const insight = await client.ai.insights.get({
         dashboard: revealView.dashboard,
         type: 'summary',
@@ -25,7 +25,7 @@ revealView.onMenuOpening = function (visualization, args) {
       displayInsight(insight.explanation);
     }));
 
-    args.menuItems.push(new $.ig.RVMenuItem("Analysis", null, async () => {
+    args.menuItems.push(new RVMenuItem("Analysis", null, async () => {
       const insight = await client.ai.insights.get({
         dashboard: revealView.dashboard,
         type: 'analysis',
@@ -33,7 +33,7 @@ revealView.onMenuOpening = function (visualization, args) {
       displayInsight(insight.explanation);
     }));
 
-    args.menuItems.push(new $.ig.RVMenuItem("Forecast", null, async () => {
+    args.menuItems.push(new RVMenuItem("Forecast", null, async () => {
       const insight = await client.ai.insights.get({
         dashboard: revealView.dashboard,
         type: 'forecast',
@@ -43,8 +43,8 @@ revealView.onMenuOpening = function (visualization, args) {
   }
 
   // Visualization-level insights (right-click on a specific visualization)
-  if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
-    args.menuItems.push(new $.ig.RVMenuItem("Analyze This", null, async () => {
+  if (args.menuLocation === RVMenuLocation.Visualization) {
+    args.menuItems.push(new RVMenuItem("Analyze This", null, async () => {
       const insight = await client.ai.insights.get({
         dashboard: revealView.dashboard,
         visualizationId: visualization.id,
@@ -62,7 +62,7 @@ For a more interactive experience, use streaming to display insights as they are
 
 ```typescript
 function createInsightMenuItem(label, dashboard, insightType, visualizationId = null) {
-  return new $.ig.RVMenuItem(label, null, async () => {
+  return new RVMenuItem(label, null, async () => {
     const options = {
       dashboard: dashboard,
       type: insightType,
@@ -96,13 +96,13 @@ function createInsightMenuItem(label, dashboard, insightType, visualizationId = 
 
 // Use the helper in onMenuOpening
 revealView.onMenuOpening = function (visualization, args) {
-  if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
+  if (args.menuLocation === RVMenuLocation.Dashboard) {
     args.menuItems.push(createInsightMenuItem("Summary", revealView.dashboard, 'summary'));
     args.menuItems.push(createInsightMenuItem("Analysis", revealView.dashboard, 'analysis'));
     args.menuItems.push(createInsightMenuItem("Forecast", revealView.dashboard, 'forecast'));
   }
 
-  if (args.menuLocation === $.ig.RVMenuLocation.Visualization) {
+  if (args.menuLocation === RVMenuLocation.Visualization) {
     args.menuItems.push(createInsightMenuItem("Summary", revealView.dashboard, 'summary', visualization.id));
     args.menuItems.push(createInsightMenuItem("Analysis", revealView.dashboard, 'analysis', visualization.id));
   }

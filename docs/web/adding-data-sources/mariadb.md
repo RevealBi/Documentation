@@ -215,10 +215,10 @@ On the client side, you only need to specify basic properties like ID, title, an
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -226,11 +226,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const mariadbDS = new $.ig.RVMariaDBDataSource();
+    const mariadbDS = new RVMariaDBDataSource();
     mariadbDS.title = "MariaDB";
     mariadbDS.subtitle = "Data Source";
 
-    callback(new $.ig.RevealDataSources([mariadbDS], [], false));
+    callback(new RevealDataSources([mariadbDS], [], false));
 };
 ```
 
@@ -245,17 +245,17 @@ Data source items represent specific tables or datasets within your MariaDB data
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const mariadbDS = new $.ig.RVMariaDBDataSource();
+    const mariadbDS = new RVMariaDBDataSource();
     mariadbDS.title = "My MariaDB Datasource";
     mariadbDS.subtitle = "MariaDB";
 
     // Create a data source item
-    const mariadbDSI = new $.ig.RVMariaDBDataSourceItem(mariadbDS);
+    const mariadbDSI = new RVMariaDBDataSourceItem(mariadbDS);
     mariadbDSI.id = "mariadb_sales_data";
     mariadbDSI.title = "My MariaDB Datasource Item";
     mariadbDSI.subtitle = "MariaDB";
 
-    callback(new $.ig.RevealDataSources([mariadbDS], [mariadbDSI], true));
+    callback(new RevealDataSources([mariadbDS], [mariadbDSI], true));
 };
 ```
 

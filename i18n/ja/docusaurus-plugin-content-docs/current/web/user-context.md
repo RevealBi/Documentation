@@ -174,7 +174,7 @@ https://youtu.be/q9mbN2kIXFs
 以下は、クライアントからサーバーにいくつかのプロパティ値を渡す方法の例です。この場合、orderId、employeeId、customerId の値を持つ 3 つの HTML 選択があります。これらの値は、`setAdditionalHeadersProvider` コールバックでサーバーに渡されます。
 
 ```` js 
-$.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
     return headers;
 });
 ````
@@ -227,15 +227,15 @@ headers["x-header-employeeId"] = selectedEmployeeId;
     <script src="https://dl.revealbi.io/reveal/libs/1.6.4/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
-        $.ig.RevealSdkSettings.setBaseUrl("https://localhost:7006/");
+        RevealSdkSettings.setBaseUrl("https://localhost:7006/");
 
-        $.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+        RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
             return headers;
         });
 
         const headers = {};
 
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new RevealView("#revealView");
         revealView.interactiveFilteringEnabled = true;
         revealView.startInEditMode = true;  
 
@@ -250,12 +250,12 @@ headers["x-header-employeeId"] = selectedEmployeeId;
             var selectedEmployeeId = $('#employeeId').val();
             headers["x-header-employeeId"] = selectedEmployeeId;
 
-            var ds = new $.ig.RVAzureSqlDataSource();
+            var ds = new RVAzureSqlDataSource();
             ds.id="sqlServer";
             ds.title = "SQL Server Data Source";
             ds.subtitle = "Full Northwind Database";
 
-            callback(new $.ig.RevealDataSources([ds], [ ], false));        
+            callback(new RevealDataSources([ds], [ ], false));        
         };     
     </script>
 </body>

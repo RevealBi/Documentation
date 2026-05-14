@@ -304,10 +304,10 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -315,11 +315,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const databricksDS = new $.ig.RVDatabricksDataSource();
+    const databricksDS = new RVDatabricksDataSource();
     databricksDS.title = "Databricks";
     databricksDS.subtitle = "Data Source";
     
-    callback(new $.ig.RevealDataSources([databricksDS], [], false));
+    callback(new RevealDataSources([databricksDS], [], false));
 };
 ```
 
@@ -334,17 +334,17 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const databricksDS = new $.ig.RVDatabricksDataSource();
+    const databricksDS = new RVDatabricksDataSource();
     databricksDS.title = "My Databricks Datasource";
     databricksDS.subtitle = "Databricks";
     
     // Create a data source item
-    const databricksDSI = new $.ig.RVDatabricksDataSourceItem(databricksDS);
+    const databricksDSI = new RVDatabricksDataSourceItem(databricksDS);
     databricksDSI.id = "databricks_sales_data";
     databricksDSI.title = "My Databricks Datasource Item";
     databricksDSI.subtitle = "Databricks";
 
-    callback(new $.ig.RevealDataSources([databricksDS], [databricksDSI], false));
+    callback(new RevealDataSources([databricksDS], [databricksDSI], false));
 };
 ```
 

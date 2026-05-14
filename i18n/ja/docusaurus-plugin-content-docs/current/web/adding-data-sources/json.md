@@ -16,10 +16,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -27,13 +27,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const webDS = new $.ig.RVWebResourceDataSource();
+    const webDS = new RVWebResourceDataSource();
     webDS.title = "Web Data Source";
     webDS.subtitle = "Web Data Source Subtitle";
     webDS.url = "https://excel2json.io/api/share/6e0f06b3-72d3-4fec-7984-08da43f56bb9";
     webDS.useAnonymousAuthentication = true;
 
-    callback(new $.ig.RevealDataSources([webDS], [], false));
+    callback(new RevealDataSources([webDS], [], false));
 };
 ```
 
@@ -47,25 +47,25 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const webDS = new $.ig.RVWebResourceDataSource();
+    const webDS = new RVWebResourceDataSource();
     webDS.title = "Web Data Source";
     webDS.subtitle = "Web Data Source Subtitle";
     webDS.url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv";
     webDS.useAnonymousAuthentication = true;
 
     //to skip the "Set up your JSON" dialog and directly use the JSON data
-    const webDSI = new $.ig.RVWebResourceDataSourceItem(webDS);
-    const jsonDSI = new $.ig.RVJsonDataSourceItem(webDSI);
+    const webDSI = new RVWebResourceDataSourceItem(webDS);
+    const jsonDSI = new RVJsonDataSourceItem(webDSI);
     jsonDSI.title = "Sales by Category";
     jsonDSI.subtitle = "Excel2Json";
-    jsonDSI.config = new $.ig.RVJsonSchemaConfigBuilder()
+    jsonDSI.config = new RVJsonSchemaConfigBuilder()
         .addNumericField("CategoryID")
         .addStringField("CategoryName")
         .addStringField("ProductName")
         .addNumericField("ProductSales")
         .build();
 
-    callback(new $.ig.RevealDataSources([webDS], [jsonDSI], false));
+    callback(new RevealDataSources([webDS], [jsonDSI], false));
 };
 ```
 
@@ -77,7 +77,7 @@ revealView.onDataSourcesRequested = (callback) => {
 
 JSON では、データは階層的に編成され、多くの場合、オブジェクトに他のオブジェクトまたは配列が含まれる入れ子構造が特徴です。これらの構造をプログラムでナビゲートするには、ネストされたプロパティを指定できます。これは基本的に、目的のデータにつながるキーまたはインデックスのシーケンスです。
 ```js
-const jsonDsItem = new $.ig.RVJsonDataSourceItem(dsItem);
+const jsonDsItem = new RVJsonDataSourceItem(dsItem);
 jsonDsItem.config = new RevealApi.RVJsonSchemaConfigBuilder()
         .addStringField("fieldA")
         .addNumericField("fieldB")

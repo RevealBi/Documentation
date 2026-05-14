@@ -18,7 +18,7 @@ To ensure Reveal SDK Web Component Wrappers function properly, you’ll need to 
 <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 <script>
     // Change to your Reveal SDK server URL
-    $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+    RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 </script>
 ```
 

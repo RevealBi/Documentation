@@ -7,13 +7,13 @@ You can enable a beta feature using:
 
 ```javascript
 //enable one feature
-$.ig.RevealSdkSettings.betaFeatures.enable("newPieChart");
+RevealSdkSettings.betaFeatures.enable("newPieChart");
 
 //enable multiple features
-$.ig.RevealSdkSettings.betaFeatures.enable("newPieChart", "newDonutChart");
+RevealSdkSettings.betaFeatures.enable("newPieChart", "newDonutChart");
 
 //alternatively use an array
-$.ig.RevealSdkSettings.betaFeatures.enable(...[
+RevealSdkSettings.betaFeatures.enable(...[
     "newPieChart",
     "newDonutChart"
 ]);
@@ -23,13 +23,13 @@ $.ig.RevealSdkSettings.betaFeatures.enable(...[
 To disable a previously enabled beta feature:
 
 ```javascript
-$.ig.RevealSdkSettings.betaFeatures.disable("newPieChart");
+RevealSdkSettings.betaFeatures.disable("newPieChart");
 ```
 
 ## Getting All Enabled Beta Features
 
 ```javascript
-const betafeatures = $.ig.RevealSdkSettings.betaFeatures.getEnabledFeatures();
+const betafeatures = RevealSdkSettings.betaFeatures.getEnabledFeatures();
 ```
 
 ## Available Beta Flags

@@ -20,7 +20,7 @@
 
 例えば, このコード スニペットは、ダッシュボードの日付フィルターを **[年度累計]** に設定します。
 ```js
-revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.YearToDate);
+revealView.dashboard.dateFilter = new RVDateDashboardFilter(RVDateFilterType.YearToDate);
 ```
 ここでは、ダッシュボード UI が Date Filter を **[年度累計]** に更新したことを確認できます。
 
@@ -53,12 +53,12 @@ revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilt
 
 この例では、`日付フィルター`を過去 75 日間にわたるカスタムの日付範囲に設定します。
 ```js
-var fromDate = new Date();
+const fromDate = new Date();
 fromDate.setDate(fromDate.getDate() - 75);
-var toDate = new Date();  
-var dateRange = new $.ig.RVDateRange(fromDate, toDate);
+const toDate = new Date();
+const dateRange = new RVDateRange(fromDate, toDate);
 
-revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter($.ig.RVDateFilterType.CustomRange, dateRange); 
+revealView.dashboard.dateFilter = new RVDateDashboardFilter(RVDateFilterType.CustomRange, dateRange);
 ```
 
 ここでは、ダッシュボード UI が更新され、日付範囲が表示されるように Date Filter が更新されていることがわかります。

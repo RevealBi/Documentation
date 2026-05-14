@@ -18,10 +18,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -29,10 +29,10 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mongoDataSource = new $.ig.RVMongoDataSource();
+    var mongoDataSource = new RVMongoDataSource();
     mongoDataSource.title = "My MongoDB";
 
-    callback(new $.ig.RevealDataSources([mongoDataSource], [], false));
+    callback(new RevealDataSources([mongoDataSource], [], false));
 };
 ```
 
@@ -44,14 +44,14 @@ When the application runs, create a new Visualization and you will see the newly
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mongoDataSource = new $.ig.RVMongoDBDataSource();
+    var mongoDataSource = new RVMongoDBDataSource();
     mongoDataSource.title = "My MongoDB";
 
-    var mongoDsi = new $.ig.RVMongoDBDataSourceItem(mongoDataSource);
+    var mongoDsi = new RVMongoDBDataSourceItem(mongoDataSource);
     mongoDsi.id = "MyMongoDatasourceItem";
     mongoDsi.title = "My MongoDB Item";  
 
-    callback(new $.ig.RevealDataSources([mongoDataSource], [mongoDsi], false));
+    callback(new RevealDataSources([mongoDataSource], [mongoDsi], false));
 };
 ```
 
@@ -64,18 +64,18 @@ When the application runs, create a new Visualization and you will see the newly
 **Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provide an `id`, `title`, and/or `subtitle`.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     
-    var mongoDS = new $.ig.RVMongoDBDataSource();
+    var mongoDS = new RVMongoDBDataSource();
     mongoDS.id = "MyMongoDBDataSource";
     mongoDS.title = "My MongoDB";
 
-    var mongoDSI = new $.ig.RVMongoDBDataSourceItem(mongoDS);
+    var mongoDSI = new RVMongoDBDataSourceItem(mongoDS);
     mongoDSI.id = "MyMongoDBDataSourceItem";
     mongoDSI.title = "My MongoDB Item";
 
-    callback(new $.ig.RevealDataSources([mongoDS], [mongoDSI], false));
+    callback(new RevealDataSources([mongoDS], [mongoDSI], false));
 };
 ```
 

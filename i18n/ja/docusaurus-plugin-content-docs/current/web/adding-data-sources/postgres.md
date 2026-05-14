@@ -18,10 +18,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -29,13 +29,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var postgresDataSource = new $.ig.RVPostgresDataSource();
+    var postgresDataSource = new RVPostgresDataSource();
     postgresDataSource.host = "your-db-host";
     postgresDataSource.database = "your-db-name";
     postgresDataSource.port = 1234;
     postgresDataSource.title = "My PostgreSQL";
 
-    callback(new $.ig.RevealDataSources([postgresDataSource], [], false));
+    callback(new RevealDataSources([postgresDataSource], [], false));
 };
 ```
 
@@ -47,18 +47,18 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var postgresDataSource = new $.ig.RVPostgresDataSource();
+    var postgresDataSource = new RVPostgresDataSource();
     postgresDataSource.host = "your-db-host";
     postgresDataSource.database = "your-db-name";
     postgresDataSource.port = 1234;
     postgresDataSource.title = "My PostgreSQL";
 
-    var postgresDsi = new $.ig.RVPostgresDataSourceItem(postgresDataSource);
+    var postgresDsi = new RVPostgresDataSourceItem(postgresDataSource);
     postgresDsi.id = "MyPostgresDataSourceItem";
     postgresDsi.title = "My PostgreSQL Item";
     postgresDsi.table = "TableName";    
 
-    callback(new $.ig.RevealDataSources([postgresDataSource], [postgresDsi], false));
+    callback(new RevealDataSources([postgresDataSource], [postgresDsi], false));
 };
 ```
 
@@ -71,18 +71,18 @@ revealView.onDataSourcesRequested = (callback) => {
 **手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを入力してください。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     
-    var postgresDataSource = new $.ig.RVPostgresDataSource();
+    var postgresDataSource = new RVPostgresDataSource();
     postgresDataSource.id = "MyPostgresDataSource";
     postgresDataSource.title = "My PostgreSQL";
 
-    var postgresDsi = new $.ig.RVPostgresDataSourceItem(postgresDataSource);
+    var postgresDsi = new RVPostgresDataSourceItem(postgresDataSource);
     postgresDsi.id = "MyPostgresDataSourceItem";
     postgresDsi.title = "My PostgreSQL Item";
 
-    callback(new $.ig.RevealDataSources([postgresDataSource], [postgresDsi], false));
+    callback(new RevealDataSources([postgresDataSource], [postgresDsi], false));
 };
 ```
 

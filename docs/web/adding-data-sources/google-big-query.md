@@ -16,10 +16,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+const revealView = new RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new RevealDataSources([], [], false));
 };
 ```
 
@@ -27,10 +27,10 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var bigQuery = new $.ig.RVBigQueryDataSource();
+    var bigQuery = new RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
 
-    callback(new $.ig.RevealDataSources([bigQuery], [], false));
+    callback(new RevealDataSources([bigQuery], [], false));
 };
 ```
 When the application runs, create a new Visualization and you will see the newly created Big Query data source listed in the "Select a Data Source" dialog.
@@ -47,15 +47,15 @@ The `RVBigQueryDataSource` loads tables based on the authentication provider reg
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var bigQuery = new $.ig.RVBigQueryDataSource();
+    var bigQuery = new RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
     bigQuery.subtitle = "My Big Query Subtitle";
 
-    var bigQueryItem = new $.ig.RVBigQueryDataSourceItem(bigQuery);
+    var bigQueryItem = new RVBigQueryDataSourceItem(bigQuery);
     bigQueryItem.title = "My Big Query Item";
     bigQueryItem.subtitle = "My Big Query Item Subtitle";         
 
-    callback(new $.ig.RevealDataSources([bigQuery], [bigQueryItem], false));
+    callback(new RevealDataSources([bigQuery], [bigQueryItem], false));
 };
 ```
 
