@@ -34,6 +34,8 @@ import TabItem from '@theme/TabItem';
 - SqlServer クライアント ライブラリが 6.1.4 になりました。
 
 #### Java
+Java SDK バックエンドの新しいバージョンをリリースしています。これは、Java を ASP.NET SDK と同等の機能レベルに引き上げるための継続的な取り組みの一環です。
+
 - Java SDK で `RVRedisOptions` を使用した Redis キャッシュがサポートされました。
 - `DefaultDashboardTheme` がサポートされました。
 - ヘッドレス エクスポートで CSV 形式がサポートされました。
@@ -44,7 +46,7 @@ options.setUseFormattedValues(true);
 byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
 ```
 
-- カスタム フィールド スキーマ、計算フィールド、カスタム メジャーを有効にするベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
+- ユーザーがデータ ソースのデータ モデルをカスタマイズできるベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
 
 ```java
 public class MyDataModelProvider implements IRVDataModelProvider {
@@ -66,7 +68,7 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 #### Node
 Node.js SDK では、ASP.NET SDK との機能差を埋めるための複数の機能が実装されました。
 
-- カスタム フィールド スキーマ、計算フィールド、カスタム メジャーを有効にするベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
+- ユーザーがデータ ソースのデータ モデルをカスタマイズできるベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
 
 ```ts
 class MyDataModelProvider implements IRVDataModelProvider {

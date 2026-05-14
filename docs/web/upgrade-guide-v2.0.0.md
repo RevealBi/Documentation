@@ -149,7 +149,10 @@ myDateFilter.rule = myRule;
   <TabItem value="before" label="1.x">
 
 ```javascript
-const thumbnailView = new RVDashboardThumbnailView();
+var thumbnailView = new RevealApi.RevealDashboardThumbnailView("#thumbnail");
+RevealApi.RevealUtility.getDashboardInfo("Sales", function (info) {
+  thumbnailView.dashboardInfo = info.info;
+});
 ```
 
   </TabItem>
@@ -180,7 +183,7 @@ The new `RVThumbnail` API also supports runtime theme changes.
 - [ ] Remove Quill.js and Spectrum.js references if still present
 - [ ] Switch client SDK to npm package (or remove jQuery from script-tag setup)
 - [ ] Update server SDK packages to 2.0.0
-- [ ] Replace `DateFilter` usage with `filters` and `RVDateRule`
+- [ ] Replace uses of `DateFilter` property to use `Filters` list instead.
 - [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
 - [ ] Replace `Reveal.Sdk.Dashboard.ToJsonStringAsync` with `ToJsonString`
 - [ ] Verify no dashboards use removed legacy chart types

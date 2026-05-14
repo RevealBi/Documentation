@@ -149,7 +149,10 @@ myDateFilter.rule = myRule;
   <TabItem value="before" label="1.x">
 
 ```javascript
-const thumbnailView = new RVDashboardThumbnailView();
+var thumbnailView = new RevealApi.RevealDashboardThumbnailView("#thumbnail");
+RevealApi.RevealUtility.getDashboardInfo("Sales", function (info) {
+  thumbnailView.dashboardInfo = info.info;
+});
 ```
 
   </TabItem>
@@ -180,7 +183,7 @@ RevealApi.RVThumbnail.fromDashboard("#thumbnail", "Sales");
 - [ ] Quill.js と Spectrum.js の参照がある場合は削除
 - [ ] クライアント SDK を npm パッケージに切り替え (またはスクリプトタグ構成から jQuery を削除)
 - [ ] サーバー SDK パッケージを 2.0.0 に更新
-- [ ] `DateFilter` の使用を `filters` と `RVDateRule` に置き換え
+- [ ] `DateFilter` プロパティの使用を `Filters` リストで置き換え
 - [ ] `RVDashboardThumbnailView` を `RVThumbnail` に置き換え
 - [ ] `Reveal.Sdk.Dashboard.ToJsonStringAsync` を `ToJsonString` に置き換え
 - [ ] 削除されたレガシー チャート タイプを使用しているダッシュボードがないことを確認

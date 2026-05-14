@@ -34,6 +34,8 @@ import TabItem from '@theme/TabItem';
 - SqlServer client library now on 6.1.4 version.
 
 #### Java
+We're releasing a new version of our Java SDK backend, as part of an ongoing effort to bring Java up to feature parity with our ASP.NET SDK.
+
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
 - `DefaultDashboardTheme` is now supported.
 - Headless export now supports CSV format.
@@ -44,7 +46,7 @@ options.setUseFormattedValues(true);
 byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
 ```
 
-- `IRVDataModelProvider` is now available as a beta API, enabling custom field schemas, calculated fields, and custom measures — matching the existing .NET implementation.
+- `IRVDataModelProvider` is now available as a beta API, enabling users to customize the data sources' data model — matching the existing .NET implementation.
 
 ```java
 public class MyDataModelProvider implements IRVDataModelProvider {
@@ -66,7 +68,7 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 #### Node
 Several features have been implemented in our Node.js SDK, in an effort to bring it up to feature parity with our ASP.NET SDK.
 
-- `IRVDataModelProvider` is now available as a beta API, enabling custom field schemas, calculated fields, and custom measures — matching the existing .NET implementation.
+- `IRVDataModelProvider` is now available as a beta API, enabling users to customize the data sources' data model — matching the existing .NET implementation.
 
 ```ts
 class MyDataModelProvider implements IRVDataModelProvider {
