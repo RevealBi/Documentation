@@ -1,166 +1,114 @@
 # Getting Started with Reveal SDK for Angular
 
+This walkthrough shows how to display a Reveal dashboard in an Angular application. Angular already uses a build pipeline, so the recommended approach is to install the Reveal SDK client from npm and import the SDK members directly in your component.
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- Node.js and npm installed.
+- The Angular CLI installed.
+- A Reveal SDK server running with a dashboard named `Sales`.
+
+The examples in this topic use `http://localhost:5111/` as the Reveal SDK server URL. Change this value to match your application.
+
 ## Step 1 - Create the Angular App
 
-1 - Open your favorite terminal
-
-![](images/getting-started-angular-terminal.jpg)
-
-2 - Create a new Angular application using the Angular CLI
+Create a new Angular application with the Angular CLI.
 
 ```bash
-ng new getting-started
+ng new getting-started --routing=false --style=css
 ```
 
-3 - Change directories into the newly created app directory and open the project in your favorite Editor. In this example, we are using Visual Studio Code.
+Change into the new application folder.
 
 ```bash
 cd getting-started
-code .
 ```
 
-## Step 2 - Add Reveal JavaScript API
+If you are adding Reveal SDK to an existing Angular application, you can skip this step.
 
-1 - Open and modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+## Step 2 - Install the Reveal SDK Client
 
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+Install the `reveal-sdk` package.
+
+```bash npm2yarn
+npm install reveal-sdk
 ```
 
-2 - Install the remaining Reveal JavaScript API dependencies:
+You do not need to add any Reveal SDK script tags to `index.html`, and you do not need jQuery, Day.js, or Spectrum.
 
-- Jquery 2.2 or greater
+## Step 3 - Add the RevealView Host Element
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+Open `src/app/app.component.html`, remove the generated placeholder markup, and add an element for the Reveal view.
+
+```html title="src/app/app.component.html"
+<div #revealView class="reveal-view"></div>
 ```
 
-- Day.js 1.8.15 or greater
+The `#revealView` template reference gives the Angular component access to the DOM element where the dashboard will be rendered.
 
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
+Next, open `src/app/app.component.css` and give the host element a visible size.
 
-The final `index.html` files should look similar to this:
+```css title="src/app/app.component.css"
+:host {
+    display: block;
+    height: 100vh;
+}
 
-```html title="index.html"
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>GettingStarted</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">  
-</head>
-<body>
-  <app-root></app-root>
-
-  //highlight-start
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-  //highlight-end
-</body>
-</html>
-```
-
-## Step 3 - Initialize the Reveal view
-
-1 - Open and modify the `src/app/app.component.html` file. Delete all the contents of the file and add a new `<div>` tag and set the reference to `revealView`.
-
-```html
-<div #revealView style="height: 100vh; width: 100%; position:relative;"></div>
-```
-
-2 - Open and modify the `src/app/app.component.ts` file.  First, we need to make sure that we can use jQuery by declaring a new variable named `$`, of type `any`, at the top of the file just under the import statements. This will make sure TypeScript will compile our JavaScript.
-
-```ts
-declare let $: any;
-```
-
-Next, we need access to the `revalView` that we defined in HTML as a `ViewChild`. Add a property to hold this reference.
-
-```ts title="src/app/app.component.html"
-export class AppComponent {
-  
-  // highlight-next-line
-  @ViewChild('revealView') el!: ElementRef;
-  
+.reveal-view {
+    width: 100%;
+    height: 100%;
 }
 ```
 
-Now, we need to implement the `AfterViewInit` interface on our component.
+Reveal dashboards need a container with a height. In this example, the component fills the browser viewport.
 
-```ts title="src/app/app.component.html" {5-7}
-export class AppComponent implements AfterViewInit {
-  
-  @ViewChild('revealView') el!: ElementRef;
+## Step 4 - Create the RevealView
 
-  ngAfterViewInit(): void {
+Open `src/app/app.component.ts` and import the Angular lifecycle members and the Reveal SDK members.
 
-  }
-  
-}
-```
+Use `ViewChild` to get the host element after Angular creates the view. Then, in `ngAfterViewInit`, configure the Reveal SDK server URL, load the `Sales` dashboard, create the `RevealView`, and assign the dashboard.
 
-Once that is complete, we can now initialize the `RevealView`.
-
-```ts title="src/app/app.component.html"
-export class AppComponent implements AfterViewInit {
-  
-  @ViewChild('revealView') el!: ElementRef;
-
-  ngAfterViewInit(): void {
-    // highlight-next-line
-    var revealView = new $.ig.RevealView(this.el.nativeElement);
-  }
-  
-}
-```
-
-Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `revealView` element that has been stored in the `ViewChild` property.
-
-The final `app.component.ts` file should look like this:
-
-```ts title="src/app/app.component.html"
+```ts title="src/app/app.component.ts"
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-
-declare let $: any;
+import { RevealSdkSettings, RevealView, RVDashboard } from 'reveal-sdk';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    standalone: true,
+    imports: [],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
-  
-  @ViewChild('revealView') el!: ElementRef;
+    @ViewChild('revealView') revealViewElement!: ElementRef<HTMLElement>;
 
-  ngAfterViewInit(): void {
-    var revealView = new $.ig.RevealView(this.el.nativeElement);
-  }
-  
+    private revealView?: RevealView;
+
+    async ngAfterViewInit(): Promise<void> {
+        RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+        const dashboard = await RVDashboard.loadDashboard("Sales");
+        this.revealView = new RevealView(this.revealViewElement.nativeElement);
+        this.revealView.dashboard = dashboard;
+    }
 }
 ```
 
-:::caution
+Depending on your Angular version, the generated component may use `styleUrl` instead of `styleUrls`. You can keep the style metadata your project generated; the important parts are the Reveal SDK imports, the `ViewChild`, and the `ngAfterViewInit` code.
 
-Clients apps must set the `$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
+Call `RevealSdkSettings.setBaseUrl` when the Reveal SDK server is hosted at a different URL than the Angular application. If the client and server are hosted from the same origin, you can omit this call.
 
-:::
+## Step 5 - Run the Application
 
-## Step 4 - Run the Application
-
-In the Visual Studio Code terminal, type the `npm start` command
+Start the Angular development server.
 
 ```bash npm2yarn
 npm start
 ```
 
-![](images/angular-app-running.jpg)
-
-**Congratulations!** You have written your first Reveal SDK Angular application.
+Open `http://localhost:4200` in your browser. When the application loads, the Angular component creates a `RevealView`, loads the `Sales` dashboard from the Reveal SDK server, and renders it in the host element.
 
 :::info Get the Code
 
