@@ -1,171 +1,121 @@
 # Reveal SDK for React で作業を開始
 
-## 手順 1 - React アプリの作成
+このウォークスルーでは、React アプリケーションに Reveal ダッシュボードを表示する方法を示します。React アプリケーションにはすでにビルド パイプラインがあるため、Reveal SDK クライアントを npm からインストールし、SDK メンバーをコンポーネントで直接インポートする方法を推奨します。
 
-1 - お気に入りのターミナルを開きます。
+## 前提条件
 
-![](images/getting-started-angular-terminal.jpg)
+開始する前に、次のものが用意されていることを確認してください。
 
-2 - 「create-react-app」コマンドを使用して新しい React アプリケーションを作成します。
+- Node.js と npm がインストールされていること。
+- `Sales` という名前のダッシュボードを含む Reveal SDK サーバーが実行されていること。
+
+このトピックの例では、Reveal SDK サーバー URL として `http://localhost:5111/` を使用します。この値はアプリケーションに合わせて変更してください。
+
+## 手順 1 - React アプリを作成する
+
+Vite を使用して新しい React アプリケーションを作成します。
 
 ```bash
-npx create-react-app getting-started --template typescript
+npm create vite@latest getting-started -- --template react-ts
 ```
 
-3 - ディレクトリを新しく作成した app ディレクトリに移動し、お気に入りのエディターでプロジェクトを開きます。この例では、Visual Studio Code を使用しています。
+新しいアプリケーション フォルダーに移動し、依存関係をインストールします。
 
 ```bash
 cd getting-started
-code .
+npm install
 ```
 
-## 手順 2 - Reveal JavaScript API の追加
+既存の React アプリケーションに Reveal SDK を追加する場合は、この手順をスキップできます。
 
-1 - `public/index.html` ファイルを開いて変更し、ページの下部に (`</body>` 終了タグの直前) `infragistics.reveal.js` スクリプトを含めます。
+## 手順 2 - Reveal SDK クライアントをインストールする
 
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+`reveal-sdk` パッケージをインストールします。
+
+```bash npm2yarn
+npm install reveal-sdk
 ```
 
-2 - 残りの Reveal JavaScript API 依存関係をインストールします。
+`index.html` に Reveal SDK の script タグを追加する必要はありません。また、jQuery、Day.js、Spectrum も必要ありません。
 
-- Jquery 2.2 またはそれ以降
+## 手順 3 - RevealView コンポーネントを追加する
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
+`src/App.tsx` を開き、生成されたコードを次のコンポーネントに置き換えます。
 
-- Day.js 1.8.15 またはそれ以降
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-最終の `index.html` ファイルは以下のようになります。
-
-```html title="index.html"
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    //highlight-start
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-    //highlight-end
-  </body>
-</html>
-```
-
-## 手順 3 - Reveal ビューの初期化
-
-1 - `src/app.tsx` ファイルを開いて変更します。`return` ステートメント内のすべてのコンテンツを削除し、新しい `<div>` タグを追加し、`id` を `revealView` に設定します。
-
-```ts title="src/app.tsx"
-function App() {
-  return (
-    //highlight-next-line
-    <div id="revealView" style={{height: "100vh", width: "100%"}}></div>
-  );
-}
-```
-
-2 - 最初に、import ステートメントの下のファイルの先頭で、タイプ `any` の `$` という名前の新しい変数を宣言することによって、jQuery を使用できることを確認する必要があります。これにより、TypeScript が JavaScript をコンパイルします。
-
-```ts
-declare let $: any;
-```
-
-3 - `App()` 関数コンポーネント内で、`revealView` を初期化します。
-
-```ts
-useEffect(() => {
-  //highlight-next-line
-  var revealView = new $.ig.RevealView("#revealView");
-}, [])
-```
-
-この JavaScript コードは、`useEffect` フックを使用して、コードが一度だけ呼び出されるようにします。次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
-
-最終の `app.tsx` ファイルは以下のようになります。
-
-```ts title="src/app.tsx"
-import React, { useEffect } from 'react';
-import './App.css';
-
-//highlight-next-line
-declare let $: any;
+```tsx title="src/App.tsx"
+import { useEffect, useRef } from "react";
+import { RevealSdkSettings, RevealView, RVDashboard } from "reveal-sdk";
+import "./App.css";
 
 function App() {
-  
-  useEffect(() => {
-    //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
-  }, [])
+    const revealViewElement = useRef<HTMLDivElement>(null);
+    const initialized = useRef(false);
 
-  return (
-    //highlight-next-line
-    <div id="revealView" style={{height: "100vh", width: "100%"}}></div>
-  );
+    useEffect(() => {
+        if (!revealViewElement.current || initialized.current) {
+            return;
+        }
+
+        initialized.current = true;
+
+        RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+        RVDashboard.loadDashboard("Sales").then(dashboard => {
+            if (!revealViewElement.current) {
+                return;
+            }
+
+            const revealView = new RevealView(revealViewElement.current);
+            revealView.dashboard = dashboard;
+        });
+    }, []);
+
+    return <div ref={revealViewElement} className="reveal-view" />;
 }
 
 export default App;
 ```
 
-:::caution
+`useRef` フックにより、Reveal SDK はダッシュボードが描画される DOM 要素にアクセスできます。`useEffect` フックは React が要素を描画した後に実行されるため、このタイミングで安全に `RevealView` を作成できます。
 
-クライアント アプリは、クライアントが別の URL でホストしている場合、`$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
+`initialized` ref は、React の開発時レンダリングでダッシュボードが複数回初期化されることを防ぎます。これは、アプリケーションが `React.StrictMode` 内で実行されている場合に便利です。
 
-:::
+Reveal SDK サーバーが React アプリケーションとは異なる URL でホストされている場合は、`RevealSdkSettings.setBaseUrl` を呼び出します。クライアントとサーバーが同じオリジンでホストされている場合は、この呼び出しを省略できます。
 
-## 手順 4 - アプリケーションの実行
+## 手順 4 - RevealView のサイズを設定する
 
-Visual Studio Code ターミナルで、`npm start` コマンドを入力します。
+`src/App.css` を開き、生成されたスタイルを次の CSS に置き換えます。
 
-```bash npm2yarn
-npm start
+```css title="src/App.css"
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: block;
+}
+
+.reveal-view {
+    width: 100%;
+    height: 100%;
+}
 ```
 
-![](images/angular-app-running.jpg)
+Reveal ダッシュボードには高さを持つコンテナーが必要です。この例では、React アプリケーションと Reveal ビューがブラウザー ウィンドウ全体を埋めます。
 
-完了しました! 最初の Reveal SDK React アプリケーションを作成しました。
+## 手順 5 - アプリケーションを実行する
+
+Vite 開発サーバーを起動します。
+
+```bash npm2yarn
+npm run dev
+```
+
+ターミナルに表示されるローカル URL を開きます。通常は `http://localhost:5173` です。アプリケーションが読み込まれると、React コンポーネントは `RevealView` を作成し、Reveal SDK サーバーから `Sales` ダッシュボードを読み込み、ホスト要素内に描画します。
 
 :::info コードの取得
 

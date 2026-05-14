@@ -1,171 +1,121 @@
 # Getting Started with Reveal SDK for React
 
+This walkthrough shows how to display a Reveal dashboard in a React application. React applications already use a build pipeline, so the recommended approach is to install the Reveal SDK client from npm and import the SDK members directly in your component.
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- Node.js and npm installed.
+- A Reveal SDK server running with a dashboard named `Sales`.
+
+The examples in this topic use `http://localhost:5111/` as the Reveal SDK server URL. Change this value to match your application.
+
 ## Step 1 - Create the React App
 
-1 - Open your favorite terminal
-
-![](images/getting-started-angular-terminal.jpg)
-
-2 - Create a new React application using the "create-react-app" command
+Create a new React application with Vite.
 
 ```bash
-npx create-react-app getting-started --template typescript
+npm create vite@latest getting-started -- --template react-ts
 ```
 
-3 - Change directories into the newly created app directory and open the project in your favorite Editor. In this example, we are using Visual Studio Code.
+Change into the new application folder and install the dependencies.
 
 ```bash
 cd getting-started
-code .
+npm install
 ```
 
-## Step 2 - Add Reveal JavaScript API
+If you are adding Reveal SDK to an existing React application, you can skip this step.
 
-1 - Open and modify the `public/index.html` file  to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
+## Step 2 - Install the Reveal SDK Client
 
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+Install the `reveal-sdk` package.
+
+```bash npm2yarn
+npm install reveal-sdk
 ```
 
-2 - Install the remaining Reveal JavaScript API dependencies:
+You do not need to add any Reveal SDK script tags to `index.html`, and you do not need jQuery, Day.js, or Spectrum.
 
-- Jquery 2.2 or greater
+## Step 3 - Add the RevealView Component
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
+Open `src/App.tsx` and replace the generated code with the following component.
 
-- Day.js 1.8.15 or greater
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-The final `index.html` files should look similar to this:
-
-```html title="index.html"
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    //highlight-start
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-    //highlight-end
-  </body>
-</html>
-```
-
-## Step 3 - Initialize the Reveal view
-
-1 - Open and modify the `src/app.tsx` file. Delete all the contents within the `return` statement and add a new `<div>` tag and set the `id` to `revealView`.
-
-```ts title="src/app.tsx"
-function App() {
-  return (
-    //highlight-next-line
-    <div id="revealView" style={{height: "100vh", width: "100%"}}></div>
-  );
-}
-```
-
-2 - First, we need to make sure that we can use jQuery by declaring a new variable named `$`, of type `any`, at the top of the file just under the import statements. This will make sure TypeScript will compile our JavaScript.
-
-```ts
-declare let $: any;
-```
-
-3 - Within the `App()` function component, initialize the `revealView`.
-
-```ts
-useEffect(() => {
-  //highlight-next-line
-  var revealView = new $.ig.RevealView("#revealView");
-}, [])
-```
-
-This JavaScript code uses the `useEffect` hook to ensure our code is only called once. Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
-
-The final `app.tsx` file should look like this:
-
-```ts title="src/app.tsx"
-import React, { useEffect } from 'react';
-import './App.css';
-
-//highlight-next-line
-declare let $: any;
+```tsx title="src/App.tsx"
+import { useEffect, useRef } from "react";
+import { RevealSdkSettings, RevealView, RVDashboard } from "reveal-sdk";
+import "./App.css";
 
 function App() {
-  
-  useEffect(() => {
-    //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
-  }, [])
+    const revealViewElement = useRef<HTMLDivElement>(null);
+    const initialized = useRef(false);
 
-  return (
-    //highlight-next-line
-    <div id="revealView" style={{height: "100vh", width: "100%"}}></div>
-  );
+    useEffect(() => {
+        if (!revealViewElement.current || initialized.current) {
+            return;
+        }
+
+        initialized.current = true;
+
+        RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+        RVDashboard.loadDashboard("Sales").then(dashboard => {
+            if (!revealViewElement.current) {
+                return;
+            }
+
+            const revealView = new RevealView(revealViewElement.current);
+            revealView.dashboard = dashboard;
+        });
+    }, []);
+
+    return <div ref={revealViewElement} className="reveal-view" />;
 }
 
 export default App;
 ```
 
-:::caution
+The `useRef` hook gives Reveal SDK access to the DOM element where the dashboard will be rendered. The `useEffect` hook runs after React renders the element, which is when it is safe to create the `RevealView`.
 
-Clients apps must set the `$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
+The `initialized` ref prevents the dashboard from being initialized more than once during React development rendering. This is useful when the application is running inside `React.StrictMode`.
 
-:::
+Call `RevealSdkSettings.setBaseUrl` when the Reveal SDK server is hosted at a different URL than the React application. If the client and server are hosted from the same origin, you can omit this call.
 
-## Step 4 - Run the Application
+## Step 4 - Size the RevealView
 
-In the Visual Studio Code terminal, type the `npm start` command
+Open `src/App.css` and replace the generated styles with the following CSS.
 
-```bash npm2yarn
-npm start
+```css title="src/App.css"
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: block;
+}
+
+.reveal-view {
+    width: 100%;
+    height: 100%;
+}
 ```
 
-![](images/angular-app-running.jpg)
+Reveal dashboards need a container with a height. In this example, the React application and the Reveal view fill the browser window.
 
-**Congratulations!** You have written your first Reveal SDK React application.
+## Step 5 - Run the Application
+
+Start the Vite development server.
+
+```bash npm2yarn
+npm run dev
+```
+
+Open the local URL shown in your terminal, usually `http://localhost:5173`. When the application loads, the React component creates a `RevealView`, loads the `Sales` dashboard from the Reveal SDK server, and renders it in the host element.
 
 :::info Get the Code
 
