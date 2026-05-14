@@ -1,127 +1,118 @@
 # Getting Started with Reveal SDK for HTML/JavaScript
 
-## Step 1 - Create an HTML File 
+This walkthrough shows how to create a simple HTML page that displays a Reveal dashboard. It uses the Reveal SDK ESM bundle from an npm CDN provider, so you do not need a build step, bundler, or framework.
 
-1 - Open your favorite code editor and create a new HTML file and save the file with the name `index.html`
+## Prerequisites
 
-```html title="index.html"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title>  
-</head>
-<body>
+Before you start, make sure you have a Reveal SDK server running and a dashboard named `Sales` available on that server. The examples in this topic use `http://localhost:5111/` as the server URL. Change this value to match your application.
 
-</body>
-</html>
-```
+## Step 1 - Create an HTML Page
 
-## Step 2 - Add Reveal JavaScript API
-
-1 - Modify the `index.html` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag.
-
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-```
-
-2 - Install the remaining Reveal JavaScript API dependencies:
-
-- Jquery 2.2 or greater
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
-
-- Day.js 1.8.15 or greater
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-The final `index.html` files should look similar to this:
+Create a file named `index.html` and add the following HTML. The `revealView` element is the container where the Reveal dashboard will be rendered.
 
 ```html title="index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title> 
+    <title>Reveal SDK - HTML/JavaScript</title>
+    <style>
+        html,
+        body,
+        #revealView {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-
-    // highlight-start
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-    // highlight-end
+    <div id="revealView"></div>
 </body>
 </html>
 ```
 
-## Step 3 - Initialize the Reveal view
+The `RevealView` needs a visible height. In this example, the page and the `#revealView` element are set to fill the browser window.
 
-1 - Modify the `index.html` file and add a new `<div>` tag after the opening `<body>` tag, and set the `id` to `revealView`.
+## Step 2 - Import the Reveal SDK
 
-```html
-<div id="revealView" style="height: 920px; width: 100%;"></div>
-```
-
-2 - Add a JavaScript `Script` tag at the bottom of the `index.html` file and initialize the `revealView`.
+Add a `<script type="module">` block before the closing `</body>` tag and import the SDK members you need from the ESM bundle.
 
 ```html
-<script type="text/javascript">
-    //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
+<script type="module">
+    import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
 </script>
 ```
 
-Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
+This example uses jsDelivr, but you can use another npm CDN provider or host the SDK files yourself.
 
-The final `index.html` file should look like this:
+## Step 3 - Configure the Server URL
+
+Inside the module script, call `RevealSdkSettings.setBaseUrl` before loading dashboards. This tells the client where to send Reveal SDK server requests.
+
+```js
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+```
+
+If your client application and Reveal SDK server are hosted from the same origin, you do not need to call `setBaseUrl`.
+
+## Step 4 - Create the RevealView
+
+Load the dashboard from the server, create a `RevealView`, and assign the dashboard to it.
+
+```js
+RVDashboard.loadDashboard("Sales").then(dashboard => {
+    const revealView = new RevealView("#revealView");
+    revealView.dashboard = dashboard;
+});
+```
+
+The selector passed to `RevealView` must match the host element you added to the page.
+
+## Complete Example
+
+Your finished `index.html` should look like this:
 
 ```html title="index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title> 
+    <title>Reveal SDK - HTML/JavaScript</title>
+    <style>
+        html,
+        body,
+        #revealView {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    //highlight-start
-    <div id="revealView" style="height: 920px; width: 100%;"></div>
+    <div id="revealView"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+    <script type="module">
+        import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
 
-    <script type="text/javascript">
-        var revealView = new $.ig.RevealView("#revealView");
+        RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+        RVDashboard.loadDashboard("Sales").then(dashboard => {
+            const revealView = new RevealView("#revealView");
+            revealView.dashboard = dashboard;
+        });
     </script>
-    //highlight-end
 </body>
 </html>
 ```
 
-:::caution
+## Step 5 - Run the Application
 
-Clients apps must set the `$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` to the server address hosting the dashboards if the client is being hosting on a different URL.
+Serve the folder that contains `index.html` with any local static web server, and then open the page in your browser. Running the page from `localhost` is more predictable than opening the file directly because the browser is loading an ES module and making requests to the Reveal SDK server.
 
-:::
-
-## Step 4 - Run the Application
-
-Double-click on the `index.html` file to launch the webpage in your default browser.
-
-![](images/angular-app-running.jpg)
-
-**Congratulations!** You have written your first Reveal SDK application.
+When the page loads, the Reveal SDK client requests the `Sales` dashboard from the Reveal SDK server and renders it inside the `RevealView`.
 
 :::info Get the Code
 

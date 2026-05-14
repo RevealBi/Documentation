@@ -1,172 +1,128 @@
-# Getting Started with Reveal SDK for ASP.NET
+# Getting Started with Reveal SDK for ASP.NET Core Web App
 
-## Step 1 - Create a New ASP.NET Web App
+This walkthrough shows how to display a Reveal dashboard in an ASP.NET Core Razor Pages application. The ASP.NET Core app hosts the Reveal SDK server endpoints, and the Razor page loads the Reveal SDK client from an npm CDN provider using the ESM bundle.
 
-The steps below describe how to create a new ASP.NET Core Web App project. If you want to add the Reveal SDK to an existing application, go to Step 2.
+## Prerequisites
 
-1 - Start Visual Studio and click **Create a new project** on the start page, select the **ASP.NET Core Web App** template, and click **Next**.
+Before you start, make sure you have:
 
-![](images/getting-started-new-asp-net-core-web-app-project.jpg)
+- The .NET SDK installed.
+- A Reveal dashboard file named `Sales.rdash`.
 
-2 - Provide a project name and location, and click **Next**.
+The examples in this topic use a single ASP.NET Core Web App for both the Razor page and the Reveal SDK server endpoints.
 
-![](images/getting-started-new-asp-net-core-web-app-name.jpg)
+## Step 1 - Create the ASP.NET Core Web App
 
-3 - Choose your framework, authentication type, and Docker options, and then click **Create**.
+Create a new Razor Pages application.
 
-![](images/getting-started-new-asp-net-core-web-app-info.jpg)
+```bash
+dotnet new webapp -n GettingStarted
+```
 
-## Step 2 - Add Reveal SDK
+Change into the new application folder.
 
-1 - Right click the Solution, or Project, and select **Manage NuGet Packages** for Solution.
+```bash
+cd GettingStarted
+```
 
-![](images/getting-started-nuget-packages-manage.jpg)
+If you are adding Reveal SDK to an existing ASP.NET Core Web App, you can skip this step.
 
-2 - In the package manager dialog, open the **Browse** tab, select the **Infragistics (Local)** package source, and install the **Reveal.Sdk.AspNetCore** NuGet package into the project.
+## Step 2 - Add the Reveal SDK Server Package
 
-![](images/getting-started-nuget-packages-install.jpg)
+Install the `Reveal.Sdk.AspNetCore` NuGet package.
 
-3 - Open and modify the `Program.cs` file to add the namespace `using Reveal.Sdk;`. Then, add the call to `IMcvBuilder.AddReveal()` as follows:
+```bash
+dotnet add package Reveal.Sdk.AspNetCore
+```
 
-```cs
+Open `Program.cs`, add the `Reveal.Sdk` namespace, and call `AddReveal` on the Razor Pages builder.
+
+```cs title="Program.cs"
 using Reveal.Sdk;
 
+var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddRazorPages().AddReveal();
-```
 
-## Step 3 - Add Reveal JavaScript API
+var app = builder.Build();
 
-1 - Open and modify the `Pages/Shared/_Layout.cshtml` file to include the `infragistics.reveal.js` script at the bottom of the page just before the closing `</body>` tag, but after the `jquery.min.js` script.
-
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-```
-
-2 - Install the remaining Reveal JavaScript API dependencies:
-
-- Jquery 2.2 or greater
-
-```html
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-```
-
-- Day.js 1.8.15 or greater
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-The final `_Layout.cshtml` files should look similar to this:
-
-```html title="Pages/Shared/_Layout.cshtml"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GettingStarted</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GettingStarted.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">GettingStarted</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - GettingStarted - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    // highlight-next-line
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    // highlight-start
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-    // highlight-end
-
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>
-```
-
-## Step 4 - Initialize the Reveal view
-
-1 - Open and modify the `Pages/Index.cshtml` file and add a new `<div>` tag and set the `id` to `revealView`.
-
-```html
-<div id="revealView" style="height: 800px; width: 100%;"></div>
-```
-
-2 - Add a `Scripts` section at the bottom of the `Index.cshtml` file and initialize the `revealView`.
-
-```html
-@section Scripts
+if (!app.Environment.IsDevelopment())
 {
-    <script type="text/javascript">
-        // highlight-next-line
-        var revealView = new $.ig.RevealView("#revealView");
-    </script>
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+app.MapRazorPages();
+app.Run();
 ```
 
-Next, we instantiate a new instance of the `RevealView` by creating a new `$.ig.RevealView` and passing in the `#revealView` selector.
+`AddReveal` registers the Reveal SDK server functionality used by the client-side `RevealView`.
 
-The final `Index.cshtml` file should look like this:
+## Step 3 - Add a Dashboard
 
-```html
+Create a folder named `Dashboards` in the project root and copy `Sales.rdash` into it.
+
+```text
+GettingStarted/
+|-- Dashboards/
+|   |-- Sales.rdash
+|-- Pages/
+|-- Program.cs
+```
+
+By default, the Reveal SDK loads dashboards from the `Dashboards` folder. The dashboard ID used by the client is the file name without the `.rdash` extension, so `Sales.rdash` is loaded as `Sales`.
+
+## Step 4 - Add the RevealView to the Razor Page
+
+Open `Pages/Index.cshtml` and replace the generated page content with the following markup.
+
+```html title="Pages/Index.cshtml"
 @page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-// highlight-next-line
 <div id="revealView" style="height: 800px; width: 100%;"></div>
 
 @section Scripts
 {
-    <script type="text/javascript">
-        // highlight-next-line
-        var revealView = new $.ig.RevealView("#revealView");
+    <script type="module">
+        import { RevealView, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
+
+        RVDashboard.loadDashboard("Sales").then(dashboard => {
+            const revealView = new RevealView("#revealView");
+            revealView.dashboard = dashboard;
+        });
     </script>
 }
 ```
+
+The `#revealView` element is the container where the dashboard is rendered. The module script imports the Reveal SDK client, loads the `Sales` dashboard from the ASP.NET Core app, creates a `RevealView`, and assigns the loaded dashboard to it.
+
+Because the Razor page and Reveal SDK server endpoints are hosted by the same ASP.NET Core app, you do not need to call `RevealSdkSettings.setBaseUrl`.
+
+If your Reveal SDK server is hosted by a different application or URL, import `RevealSdkSettings` and set the server URL before loading dashboards.
+
+```js
+import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
+
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+```
+
 ## Step 5 - Run the Application
 
-Press **F5** to run the application.
+Run the ASP.NET Core application.
 
-![](images/asp-net-core-web-app-running.jpg)
+```bash
+dotnet run
+```
 
-**Congratulations!** You have written your first Reveal SDK application.
+Open the local URL shown in your terminal. When the page loads, the Reveal SDK client requests the `Sales` dashboard from the ASP.NET Core app and renders it inside the `RevealView`.
 
 :::info Get the Code
 

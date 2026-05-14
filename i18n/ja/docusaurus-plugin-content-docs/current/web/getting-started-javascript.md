@@ -1,127 +1,118 @@
 # Reveal SDK for HTML/JavaScript で作業を開始
 
-## 手順 1 - HTML ファイルの作成
+このウォークスルーでは、Reveal ダッシュボードを表示するシンプルな HTML ページを作成します。npm CDN プロバイダーから Reveal SDK の ESM バンドルを読み込むため、ビルド手順、バンドラー、フレームワークは必要ありません。
 
-1 - お気に入りのコード エディターを開き、新しい HTML ファイルを作成し、`index.html` という名前でファイルを保存します。
+## 前提条件
 
-```html title="index.html"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title>  
-</head>
-<body>
+開始する前に、Reveal SDK サーバーが実行されており、そのサーバーで `Sales` という名前のダッシュボードを使用できることを確認してください。このトピックの例では、サーバー URL として `http://localhost:5111/` を使用します。この値はアプリケーションに合わせて変更してください。
 
-</body>
-</html>
-```
+## 手順 1 - HTML ページを作成する
 
-## 手順 2 - Reveal JavaScript API の追加
-
-1 - `index.html` ファイルを変更し、ページの下部に (`</body>` 終了タグの直前) `infragistics.reveal.js` スクリプトを含めます。
-
-```html
-<script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-```
-
-2 - 残りの Reveal JavaScript API 依存関係をインストールします。
-
-- Jquery 2.2 またはそれ以降
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-```
-
-- Day.js 1.8.15 またはそれ以降
-
-```html
-<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-```
-
-最終の `index.html` ファイルは以下のようになります。
+`index.html` という名前のファイルを作成し、次の HTML を追加します。`revealView` 要素は、Reveal ダッシュボードが描画されるコンテナーです。
 
 ```html title="index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title> 
+    <title>Reveal SDK - HTML/JavaScript</title>
+    <style>
+        html,
+        body,
+        #revealView {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-
-    // highlight-start
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
-    // highlight-end
+    <div id="revealView"></div>
 </body>
 </html>
 ```
 
-## 手順 3 - Reveal ビューの初期化
+`RevealView` には表示可能な高さが必要です。この例では、ページと `#revealView` 要素がブラウザー ウィンドウ全体を埋めるように設定しています。
 
-1 - `index.html` ファイルを変更し、開始 `<body>` タグの後に新しい `<div>` タグを追加して、`id` を `revealView` に設定します。
+## 手順 2 - Reveal SDK をインポートする
 
-```html
-<div id="revealView" style="height: 920px; width: 100%;"></div>
-```
-
-2 - `index.html` ファイルの最後に JavaScript の `Script` タグを追加し、`revealView` を初期化します。
+終了 `</body>` タグの前に `<script type="module">` ブロックを追加し、ESM バンドルから必要な SDK メンバーをインポートします。
 
 ```html
-<script type="text/javascript">
-    //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
+<script type="module">
+    import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
 </script>
 ```
 
-次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
+この例では jsDelivr を使用していますが、別の npm CDN プロバイダーを使用することも、SDK ファイルを自分でホストすることもできます。
 
-最終の `index.html` ファイルは以下のようになります。
+## 手順 3 - サーバー URL を構成する
+
+モジュール スクリプト内で、ダッシュボードを読み込む前に `RevealSdkSettings.setBaseUrl` を呼び出します。これにより、Reveal SDK サーバー要求の送信先をクライアントに指定します。
+
+```js
+RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+```
+
+クライアント アプリケーションと Reveal SDK サーバーが同じオリジンでホストされている場合、`setBaseUrl` を呼び出す必要はありません。
+
+## 手順 4 - RevealView を作成する
+
+サーバーからダッシュボードを読み込み、`RevealView` を作成して、そのダッシュボードを割り当てます。
+
+```js
+RVDashboard.loadDashboard("Sales").then(dashboard => {
+    const revealView = new RevealView("#revealView");
+    revealView.dashboard = dashboard;
+});
+```
+
+`RevealView` に渡すセレクターは、ページに追加したホスト要素と一致している必要があります。
+
+## 完全な例
+
+完成した `index.html` は次のようになります。
 
 ```html title="index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reveal Sdk - HTML/JavaScript</title> 
+    <title>Reveal SDK - HTML/JavaScript</title>
+    <style>
+        html,
+        body,
+        #revealView {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    //highlight-start
-    <div id="revealView" style="height: 920px; width: 100%;"></div>
+    <div id="revealView"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>    
-    <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
+    <script type="module">
+        import { RevealView, RevealSdkSettings, RVDashboard } from "https://cdn.jsdelivr.net/npm/reveal-sdk/dist/reveal-sdk.esm.js";
 
-    <script type="text/javascript">
-        var revealView = new $.ig.RevealView("#revealView");
+        RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+
+        RVDashboard.loadDashboard("Sales").then(dashboard => {
+            const revealView = new RevealView("#revealView");
+            revealView.dashboard = dashboard;
+        });
     </script>
-    //highlight-end
 </body>
 </html>
 ```
 
-:::caution
+## 手順 5 - アプリケーションを実行する
 
-クライアント アプリは、クライアントが別の URL でホストしている場合、`$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
+`index.html` を含むフォルダーを任意のローカル静的 Web サーバーで配信し、ブラウザーでページを開きます。ブラウザーが ES モジュールを読み込み、Reveal SDK サーバーへ要求を送信するため、ファイルを直接開くよりも `localhost` から実行する方が安定します。
 
-:::
-
-## 手順 4 - アプリケーションの実行
-
-`index.html` ファイルをダブルクリックしてデフォルトのブラウザーで Web ページを起動します。
-
-![](images/angular-app-running.jpg)
-
-完了しました! 最初の Reveal SDK アプリケーションを作成しました。
+ページが読み込まれると、Reveal SDK クライアントは Reveal SDK サーバーから `Sales` ダッシュボードを要求し、`RevealView` 内に描画します。
 
 :::info コードの取得
 
