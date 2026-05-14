@@ -276,8 +276,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 ## Client-Side Implementation
 
-On the client side, create the data source and data source item with only the `id`, `title`, and `subtitle` properties. Keep the endpoint, database selection, container, and credentials on the server.
-
+On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
 ### Creating Data Sources
 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
@@ -290,41 +289,46 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVAzureCosmosDBDataSource` object. Set only the `id`, `title`, and `subtitle` properties, and then add it to the data sources collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVAzureCosmosDBDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVAzureCosmosDBDataSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
     const cosmosDS = new $.ig.RVAzureCosmosDBDataSource();
-    cosmosDS.id = "azure_cosmos";
-    cosmosDS.title = "Azure Cosmos DB";
-    cosmosDS.subtitle = "Sales";
+    cosmosDS.title = "My Azure Cosmos DB Datasource";
+    cosmosDS.subtitle = "Azure Cosmos DB";
 
     callback(new $.ig.RevealDataSources([cosmosDS], [], false));
 };
 ```
 
+When the application runs, create a new Visualization and you will see the newly created Azure Cosmos DB data source listed in the "Select a Data Source" dialog.
+
+![](images/azure-cosmos-db-data-source.jpg)
+
 ### Creating Data Source Items
 
-Data source items represent specific datasets within your Azure Cosmos DB data source that users can select for visualization. On the client side, only set the `id`, `title`, and `subtitle` properties for the container.
+Data source items represent specific datasets within your Azure Cosmos DB data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
     const cosmosDS = new $.ig.RVAzureCosmosDBDataSource();
-    cosmosDS.id = "azure_cosmos";
-    cosmosDS.title = "Azure Cosmos DB";
-    cosmosDS.subtitle = "Sales";
+    cosmosDS.title = "My Azure Cosmos DB Datasource";
+    cosmosDS.subtitle = "Azure Cosmos DB";
 
     // Create a data source item
     const cosmosDSI = new $.ig.RVAzureCosmosDBDataSourceItem(cosmosDS);
-    cosmosDSI.id = "azure_cosmos_orders";
-    cosmosDSI.title = "Orders";
-    cosmosDSI.subtitle = "Container";
+    cosmosDSI.title = "My Azure Cosmos DB Datasource Item";
+    cosmosDSI.subtitle = "Azure Cosmos DB";
 
     callback(new $.ig.RevealDataSources([cosmosDS], [cosmosDSI], false));
 };
 ```
+
+When the application runs, create a new Visualization and you will see the newly created Azure Cosmos DB data source item listed in the "Select a Data Source" dialog.
+
+![](images/azure-cosmos-db-data-source-item.jpg)
 
 ## Additional Resources
 

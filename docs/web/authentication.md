@@ -399,7 +399,7 @@ Microsoft Entra ID authentication is supported for the following data sources:
 
 ## Key-Pair Authentication
 
-If your data source requires key-pair authentication, then you must return an instance of the `RVKeyPairDataSourceCredential` class. The `RVKeyPairDataSourceCredential` class provides constructor overloads to define the **user** and the **unencrypted RSA private key**. For Azure Cosmos DB, the key value maps to the account key.
+If your data source requires key-pair authentication, then you must return an instance of the `RVKeyPairDataSourceCredential` class. The `RVKeyPairDataSourceCredential` class provides constructor overloads to define the **user** and the **unencrypted RSA private key**.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -410,11 +410,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
     public Task<IRVDataSourceCredential> ResolveCredentialsAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
         IRVDataSourceCredential userCredential = null;
-        if (dataSource is RVAzureCosmosDBDataSource)
-        {
-            userCredential = new RVKeyPairDataSourceCredential(null, "your_account_key");
-        }
-        else if (dataSource is RVSnowflakeDataSource)
+        if (dataSource is RVSnowflakeDataSource)
         {
             userCredential = new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
@@ -431,10 +427,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-        if (dataSource instanceof RVAzureCosmosDBDataSource) {
-            return new RVKeyPairDataSourceCredential(null, "your_account_key");
-        }
-        else if (dataSource instanceof RVSnowflakeDataSource) {
+        if (dataSource instanceof RVSnowflakeDataSource) {
             return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
         return null;
@@ -448,9 +441,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 ```js
 const authenticationProvider = async (userContext, dataSource) => {
-    if (dataSource instanceof reveal.RVAzureCosmosDBDataSource) {
-        return new reveal.RVKeyPairDataSourceCredential(null, "your_account_key");
-    } else if (dataSource instanceof reveal.RVSnowflakeDataSource) {
+    if (dataSource instanceof reveal.RVSnowflakeDataSource) {
         return new reveal.RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
@@ -463,9 +454,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 
 ```ts
 const authenticationProvider = async (userContext:IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-    if (dataSource instanceof RVAzureCosmosDBDataSource) {
-        return new RVKeyPairDataSourceCredential(null, "your_account_key");
-    } else if (dataSource instanceof RVSnowflakeDataSource) {
+    if (dataSource instanceof RVSnowflakeDataSource) {
         return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
