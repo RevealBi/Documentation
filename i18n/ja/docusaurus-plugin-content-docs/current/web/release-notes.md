@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 #### Java
 - Java SDK は Java 17 以上が必須になりました。
 - Java SDK は `io.revealbi:reveal-sdk-servlet` Maven アーティファクトと `RevealEngineServlet` を使用するサーブレット ベース構成になりました。
-- Java SDK は Linux、Windows、macOS をサポートし、3 つの OS すべてで x64 と arm64 の両アーキテクチャをサポートします。
+- Java SDK は Linux、Windows、OSX をサポートし、3 つの OS すべてで x64 と arm64 の両アーキテクチャをサポートします。
 - Jetty をサーバーとして使用する場合、Reveal SDK が内部で使用している Jetty（現在は 12.0.12）とバージョンが競合する可能性があります。
 
 ### 新機能
