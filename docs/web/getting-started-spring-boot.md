@@ -13,11 +13,11 @@ More information about how to get started with Visual Studio Code and Java can b
 
 1 - Start Visual Studio Code, open the Command Palette and type **>Spring Initializr: Create a Maven Project** and press **Enter**.
 
-![](images/getting-started-spring-boot-jersey-project.jpg)
+![](images/getting-started-spring-boot-project.jpg)
 
 2 - Select the Spring Boot version **3.3.2**.
 
-![](images/getting-started-spring-boot-jersey-version.jpg)
+![](images/getting-started-spring-boot-version.jpg)
 
 :::caution
 Version 2.x is not supported since Reveal 1.7.x
@@ -25,29 +25,29 @@ Version 2.x is not supported since Reveal 1.7.x
 
 3 - Select **Java**  as the language.
 
-![](images/getting-started-spring-boot-jersey-language.jpg)
+![](images/getting-started-spring-boot-language.jpg)
 
 4 - Provide the Group Id. In this example, we are using **com.server**.
 
-![](images/getting-started-spring-boot-jersey-group-id.jpg)
+![](images/getting-started-spring-boot-group-id.jpg)
 
 5 - Provide the Artifact Id. In this example we are using **reveal**.
 
-![](images/getting-started-spring-boot-jersey-artifact-id.jpg)
+![](images/getting-started-spring-boot-artifact-id.jpg)
 
 6 - Select the **War** package type.
 
-![](images/getting-started-spring-boot-jersey-package-type.jpg)
+![](images/getting-started-spring-boot-package-type.jpg)
 
 7 - Select the Java version. For Spring Boot 3.x, we need to use at least **17**.
 
-![](images/getting-started-spring-boot-jersey-java-version.jpg)
+![](images/getting-started-spring-boot-java-version.jpg)
 
 8 - Choose the **Spring Web** dependency.
 
 9 - Save and open the newly created project.
 
-![](images/getting-started-spring-boot-jersey-explorer.jpg)
+![](images/getting-started-spring-boot-explorer.jpg)
 
 ## Step 2 - Add Reveal SDK
 

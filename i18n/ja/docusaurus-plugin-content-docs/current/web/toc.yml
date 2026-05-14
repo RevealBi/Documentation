@@ -15,7 +15,7 @@
         - name: Node.js - TypeScript
           href: getting-started-server-node-typescript.md
         - name: Spring Boot
-          href: getting-started-spring-boot-jersey.md
+          href: getting-started-spring-boot.md
     - name: Angular
       href: getting-started-angular.md
     - name: ASP.NET Core Web App

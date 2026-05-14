@@ -19,9 +19,9 @@
     "message": "Node.js - TypeScript",
     "description": "The label for the doc item 'Node.js - TypeScript' in sidebar 'webSidebar', linking to the doc web/getting-started-server-node-typescript"
   },
-  "sidebar.webSidebar.doc.Spring Boot - Jersey": {
-    "message": "Spring Boot - Jersey",
-    "description": "The label for the doc item 'Spring Boot - Jersey' in sidebar 'webSidebar', linking to the doc web/getting-started-spring-boot-jersey"
+  "sidebar.webSidebar.doc.Spring Boot": {
+    "message": "Spring Boot",
+    "description": "The label for the doc item 'Spring Boot' in sidebar 'webSidebar', linking to the doc web/getting-started-spring-boot"
   },
   "sidebar.webSidebar.doc.Angular": {
     "message": "Angular",

@@ -33,7 +33,7 @@ const frameworks: FrameworkItem[] = [
   },
   {
     label: <Translate id="homepage.frameworks.springboot">Spring Boot</Translate>,
-    link: '/web/getting-started-spring-boot-jersey/',
+    link: '/web/getting-started-spring-boot/',
     badge: 'Server',
   },
 ];
