@@ -50,8 +50,6 @@ For Java applications, the ClickHouse data source is already included in the mai
 
 ### Connection Configuration
 
-ClickHouse is typically configured on the server side. This is the recommended approach because it keeps connection settings and credentials out of the client.
-
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
@@ -66,20 +64,10 @@ public class DataSourceProvider : IRVDataSourceProvider
 
         if (dataSourceItem is RVClickHouseDataSourceItem clickHouseItem)
         {
-            // Configure table-based access
-            if (clickHouseItem.Id == "clickhouse_orders_table")
+            // Configure specific item properties as needed
+            if (clickHouseItem.Id == "clickhouse_sales_data")
             {
-                clickHouseItem.Database = "analytics";
-                clickHouseItem.Table = "orders";
-                clickHouseItem.ProcessDataOnServer = true;
-            }
-
-            // Or configure custom-query-based access
-            if (clickHouseItem.Id == "clickhouse_orders_query")
-            {
-                clickHouseItem.Database = "analytics";
-                clickHouseItem.CustomQuery = "SELECT order_date, region, total_amount FROM orders";
-                clickHouseItem.ProcessDataOnServer = true;
+                clickHouseItem.Table = "sales_data";
             }
         }
 
@@ -100,8 +88,6 @@ public class DataSourceProvider : IRVDataSourceProvider
             clickHouseDS.Path = "/";
             clickHouseDS.Timeout = 30;
             clickHouseDS.SkipServerCertificateValidation = false;
-            clickHouseDS.ProcessDataOnServerDefaultValue = true;
-            clickHouseDS.ProcessDataOnServerReadOnly = false;
         }
 
         return Task.FromResult(dataSource);
@@ -119,18 +105,9 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
     await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
     if (dataSourceItem instanceof reveal.RVClickHouseDataSourceItem) {
-        // Configure table-based access
-        if (dataSourceItem.id === "clickhouse_orders_table") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.table = "orders";
-            dataSourceItem.processDataOnServer = true;
-        }
-
-        // Or configure custom-query-based access
-        if (dataSourceItem.id === "clickhouse_orders_query") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.customQuery = "SELECT order_date, region, total_amount FROM orders";
-            dataSourceItem.processDataOnServer = true;
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "clickhouse_sales_data") {
+            dataSourceItem.table = "sales_data";
         }
     }
 
@@ -149,8 +126,6 @@ const dataSourceProvider = async (userContext, dataSource) => {
         dataSource.path = "/";
         dataSource.timeout = 30;
         dataSource.skipServerCertificateValidation = false;
-        dataSource.processDataOnServerDefaultValue = true;
-        dataSource.processDataOnServerReadOnly = false;
     }
 
     return dataSource;
@@ -167,18 +142,9 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
     await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
     if (dataSourceItem instanceof RVClickHouseDataSourceItem) {
-        // Configure table-based access
-        if (dataSourceItem.id === "clickhouse_orders_table") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.table = "orders";
-            dataSourceItem.processDataOnServer = true;
-        }
-
-        // Or configure custom-query-based access
-        if (dataSourceItem.id === "clickhouse_orders_query") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.customQuery = "SELECT order_date, region, total_amount FROM orders";
-            dataSourceItem.processDataOnServer = true;
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "clickhouse_sales_data") {
+            dataSourceItem.table = "sales_data";
         }
     }
 
@@ -197,8 +163,6 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
         dataSource.path = "/";
         dataSource.timeout = 30;
         dataSource.skipServerCertificateValidation = false;
-        dataSource.processDataOnServerDefaultValue = true;
-        dataSource.processDataOnServerReadOnly = false;
     }
 
     return dataSource;
@@ -217,18 +181,9 @@ public class DataSourceProvider implements IRVDataSourceProvider {
         changeDataSource(userContext, dataSourceItem.getDataSource());
 
         if (dataSourceItem instanceof RVClickHouseDataSourceItem clickHouseItem) {
-            // Configure table-based access
-            if ("clickhouse_orders_table".equals(clickHouseItem.getId())) {
-                clickHouseItem.setDatabase("analytics");
-                clickHouseItem.setTable("orders");
-                clickHouseItem.setProcessDataOnServer(true);
-            }
-
-            // Or configure custom-query-based access
-            if ("clickhouse_orders_query".equals(clickHouseItem.getId())) {
-                clickHouseItem.setDatabase("analytics");
-                clickHouseItem.setCustomQuery("SELECT order_date, region, total_amount FROM orders");
-                clickHouseItem.setProcessDataOnServer(true);
+            // Configure specific item properties if needed
+            if ("clickhouse_sales_data".equals(clickHouseItem.getId())) {
+                clickHouseItem.setTable("sales_data");
             }
         }
 
@@ -247,8 +202,6 @@ public class DataSourceProvider implements IRVDataSourceProvider {
             clickHouseDS.setPath("/");
             clickHouseDS.setTimeout(30);
             clickHouseDS.setSkipServerCertificateValidation(false);
-            clickHouseDS.setProcessDataOnServerDefaultValue(true);
-            clickHouseDS.setProcessDataOnServerReadOnly(false);
         }
 
         return dataSource;
@@ -262,8 +215,6 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 :::danger Important
 Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
 :::
-
-ClickHouse supports both table-based access and custom-query-based access. The `database` property defines the Reveal schema boundary. If both `Table` and `CustomQuery` are set on an `RVClickHouseDataSourceItem`, `CustomQuery` takes precedence.
 
 ### Authentication
 
@@ -280,7 +231,8 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVClickHouseDataSource)
         {
-            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
+            // Use Username/Password
+            userCredential = new RVUsernamePasswordDataSourceCredential("your_username", "your_password");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -293,6 +245,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVClickHouseDataSource) {
+        // Use Username/Password
         return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
     }
     return null;
@@ -305,6 +258,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVClickHouseDataSource) {
+        // Use Username/Password
         return new RVUsernamePasswordDataSourceCredential("username", "password");
     }
     return null;
@@ -319,6 +273,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVClickHouseDataSource) {
+            // Use Username/Password
             return new RVUsernamePasswordDataSourceCredential("username", "password");
         }
         return null;
@@ -345,20 +300,21 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVClickHouseDataSource` object. Set the `id`, `title`, and `subtitle` properties. After you have created the `RVClickHouseDataSource` object, add it to the data sources collection.
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVClickHouseDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVClickHouseDataSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     const clickHouseDS = new $.ig.RVClickHouseDataSource();
-    clickHouseDS.id = "clickhouse";
-    clickHouseDS.title = "ClickHouse";
-    clickHouseDS.subtitle = "Data Source";
+    clickHouseDS.title = "My ClickHouse Datasource";
+    clickHouseDS.subtitle = "ClickHouse";
 
     callback(new $.ig.RevealDataSources([clickHouseDS], [], false));
 };
 ```
 
 When the application runs, create a new Visualization and you will see the newly created ClickHouse data source listed in the "Select a Data Source" dialog.
+
+![](images/clickhouse-data-source.jpg)
 
 ### Creating Data Source Items
 
@@ -368,27 +324,22 @@ Data source items represent specific datasets within your ClickHouse data source
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
     const clickHouseDS = new $.ig.RVClickHouseDataSource();
-    clickHouseDS.id = "clickhouse";
     clickHouseDS.title = "My ClickHouse Datasource";
     clickHouseDS.subtitle = "ClickHouse";
 
-    // Create a table-based data source item
-    const clickHouseTableItem = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
-    clickHouseTableItem.id = "clickhouse_orders_table";
-    clickHouseTableItem.title = "Orders Table";
-    clickHouseTableItem.subtitle = "ClickHouse";
+    // Create a data source item
+    const clickHouseDSI = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
+    clickHouseDSI.id = "clickhouse_sales_data";
+    clickHouseDSI.title = "My ClickHouse Datasource Item";
+    clickHouseDSI.subtitle = "ClickHouse";
 
-    // Create a custom-query-based data source item
-    const clickHouseQueryItem = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
-    clickHouseQueryItem.id = "clickhouse_orders_query";
-    clickHouseQueryItem.title = "Orders Query";
-    clickHouseQueryItem.subtitle = "ClickHouse";
-
-    callback(new $.ig.RevealDataSources([clickHouseDS], [clickHouseTableItem, clickHouseQueryItem], false));
+    callback(new $.ig.RevealDataSources([clickHouseDS], [clickHouseDSI], false));
 };
 ```
 
 When the application runs, create a new Visualization and you will see the newly created ClickHouse data source items listed in the "Select a Data Source" dialog.
+
+![](images/clickhouse-data-source-item.jpg)
 
 ## Additional Resources
 

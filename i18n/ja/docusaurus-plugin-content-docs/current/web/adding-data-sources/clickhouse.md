@@ -5,28 +5,28 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ClickHouse データ ソース
+# ClickHouse Data Source
 
-## はじめに
+## Introduction
 
-ClickHouse は、リアルタイム分析と大規模なデータ処理向けに設計された高性能な列指向データベース管理システムです。このトピックでは、Reveal アプリケーションで ClickHouse データ ソースに接続して、テーブルを参照したり、カスタム SQL クエリのデータを可視化および分析したりする方法について説明します。
+ClickHouse is a high-performance column-oriented database management system designed for real-time analytics and large-scale data processing. This topic explains how to connect to ClickHouse data sources in your Reveal application to visualize and analyze your data.
 
-## サーバー構成
+## Server Configuration
 
-### インストール
+### Installation
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-**手順 1** - Reveal ClickHouse コネクタ パッケージをインストールします。
+**Step 1** - Install the Reveal ClickHouse connector package
 
-ASP.NET アプリケーションの場合、ClickHouse サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
+For ASP.NET applications, you need to install a separate NuGet package to enable ClickHouse support:
 
 ```bash
 dotnet add package Reveal.Sdk.Data.ClickHouse
 ```
 
-**手順 2** - アプリケーションに ClickHouse データ ソースを登録します。
+**Step 2** - Register the ClickHouse data source in your application:
 
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
@@ -38,19 +38,17 @@ builder.Services.AddControllers().AddReveal( builder =>
   </TabItem>
   <TabItem value="node" label="Node.js">
 
-Node.js アプリケーションの場合、ClickHouse データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+For Node.js applications, the ClickHouse data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
 
   </TabItem>
   <TabItem value="java" label="Java">
 
-Java アプリケーションの場合、ClickHouse データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
+For Java applications, the ClickHouse data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
 
   </TabItem>
 </Tabs>
 
-### 接続構成
-
-ClickHouse は通常サーバー側で構成します。これが推奨される方法であり、接続設定と認証情報をクライアントに公開せずに済みます。
+### Connection Configuration
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -66,20 +64,10 @@ public class DataSourceProvider : IRVDataSourceProvider
 
         if (dataSourceItem is RVClickHouseDataSourceItem clickHouseItem)
         {
-            // Configure table-based access
-            if (clickHouseItem.Id == "clickhouse_orders_table")
+            // Configure specific item properties as needed
+            if (clickHouseItem.Id == "clickhouse_sales_data")
             {
-                clickHouseItem.Database = "analytics";
-                clickHouseItem.Table = "orders";
-                clickHouseItem.ProcessDataOnServer = true;
-            }
-
-            // Or configure custom-query-based access
-            if (clickHouseItem.Id == "clickhouse_orders_query")
-            {
-                clickHouseItem.Database = "analytics";
-                clickHouseItem.CustomQuery = "SELECT order_date, region, total_amount FROM orders";
-                clickHouseItem.ProcessDataOnServer = true;
+                clickHouseItem.Table = "sales_data";
             }
         }
 
@@ -100,8 +88,6 @@ public class DataSourceProvider : IRVDataSourceProvider
             clickHouseDS.Path = "/";
             clickHouseDS.Timeout = 30;
             clickHouseDS.SkipServerCertificateValidation = false;
-            clickHouseDS.ProcessDataOnServerDefaultValue = true;
-            clickHouseDS.ProcessDataOnServerReadOnly = false;
         }
 
         return Task.FromResult(dataSource);
@@ -119,18 +105,9 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
     await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
     if (dataSourceItem instanceof reveal.RVClickHouseDataSourceItem) {
-        // Configure table-based access
-        if (dataSourceItem.id === "clickhouse_orders_table") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.table = "orders";
-            dataSourceItem.processDataOnServer = true;
-        }
-
-        // Or configure custom-query-based access
-        if (dataSourceItem.id === "clickhouse_orders_query") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.customQuery = "SELECT order_date, region, total_amount FROM orders";
-            dataSourceItem.processDataOnServer = true;
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "clickhouse_sales_data") {
+            dataSourceItem.table = "sales_data";
         }
     }
 
@@ -149,8 +126,6 @@ const dataSourceProvider = async (userContext, dataSource) => {
         dataSource.path = "/";
         dataSource.timeout = 30;
         dataSource.skipServerCertificateValidation = false;
-        dataSource.processDataOnServerDefaultValue = true;
-        dataSource.processDataOnServerReadOnly = false;
     }
 
     return dataSource;
@@ -167,18 +142,9 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
     await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
     if (dataSourceItem instanceof RVClickHouseDataSourceItem) {
-        // Configure table-based access
-        if (dataSourceItem.id === "clickhouse_orders_table") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.table = "orders";
-            dataSourceItem.processDataOnServer = true;
-        }
-
-        // Or configure custom-query-based access
-        if (dataSourceItem.id === "clickhouse_orders_query") {
-            dataSourceItem.database = "analytics";
-            dataSourceItem.customQuery = "SELECT order_date, region, total_amount FROM orders";
-            dataSourceItem.processDataOnServer = true;
+        // Configure specific item properties if needed
+        if (dataSourceItem.id === "clickhouse_sales_data") {
+            dataSourceItem.table = "sales_data";
         }
     }
 
@@ -197,8 +163,6 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
         dataSource.path = "/";
         dataSource.timeout = 30;
         dataSource.skipServerCertificateValidation = false;
-        dataSource.processDataOnServerDefaultValue = true;
-        dataSource.processDataOnServerReadOnly = false;
     }
 
     return dataSource;
@@ -217,18 +181,9 @@ public class DataSourceProvider implements IRVDataSourceProvider {
         changeDataSource(userContext, dataSourceItem.getDataSource());
 
         if (dataSourceItem instanceof RVClickHouseDataSourceItem clickHouseItem) {
-            // Configure table-based access
-            if ("clickhouse_orders_table".equals(clickHouseItem.getId())) {
-                clickHouseItem.setDatabase("analytics");
-                clickHouseItem.setTable("orders");
-                clickHouseItem.setProcessDataOnServer(true);
-            }
-
-            // Or configure custom-query-based access
-            if ("clickhouse_orders_query".equals(clickHouseItem.getId())) {
-                clickHouseItem.setDatabase("analytics");
-                clickHouseItem.setCustomQuery("SELECT order_date, region, total_amount FROM orders");
-                clickHouseItem.setProcessDataOnServer(true);
+            // Configure specific item properties if needed
+            if ("clickhouse_sales_data".equals(clickHouseItem.getId())) {
+                clickHouseItem.setTable("sales_data");
             }
         }
 
@@ -247,8 +202,6 @@ public class DataSourceProvider implements IRVDataSourceProvider {
             clickHouseDS.setPath("/");
             clickHouseDS.setTimeout(30);
             clickHouseDS.setSkipServerCertificateValidation(false);
-            clickHouseDS.setProcessDataOnServerDefaultValue(true);
-            clickHouseDS.setProcessDataOnServerReadOnly(false);
         }
 
         return dataSource;
@@ -259,15 +212,13 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   </TabItem>
 </Tabs>
 
-:::danger 重要
-`ChangeDataSourceAsync` メソッドでデータ ソースに加えた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。両方のメソッドでデータ ソースのプロパティを更新する**必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で、データ ソース項目の基になるデータ ソースをパラメーターとして渡して `ChangeDataSourceAsync` メソッドを呼び出すことをお勧めします。
+:::danger Important
+Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
 :::
 
-ClickHouse は、テーブルベースのアクセスとカスタム クエリベースのアクセスの両方をサポートします。`database` プロパティは Reveal のスキーマ境界を定義します。`RVClickHouseDataSourceItem` で `Table` と `CustomQuery` の両方が設定されている場合は、`CustomQuery` が優先されます。
+### Authentication
 
-### 認証
-
-ClickHouse の認証は、ユーザー名とパスワードの資格情報を使用してサーバー側で処理されます。一般的な認証の詳細については、「[認証](../authentication.md#ユーザー名パスワード認証)」トピックを参照してください。
+Authentication for ClickHouse is handled on the server side using username and password credentials. For general authentication details, see the [Authentication](/web/authentication#usernamepassword-authentication) topic.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -280,7 +231,8 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVClickHouseDataSource)
         {
-            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
+            // Use Username/Password
+            userCredential = new RVUsernamePasswordDataSourceCredential("your_username", "your_password");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -293,6 +245,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVClickHouseDataSource) {
+        // Use Username/Password
         return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
     }
     return null;
@@ -305,6 +258,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVClickHouseDataSource) {
+        // Use Username/Password
         return new RVUsernamePasswordDataSourceCredential("username", "password");
     }
     return null;
@@ -319,6 +273,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVClickHouseDataSource) {
+            // Use Username/Password
             return new RVUsernamePasswordDataSourceCredential("username", "password");
         }
         return null;
@@ -329,13 +284,13 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   </TabItem>
 </Tabs>
 
-## クライアント側の実装
+## Client-Side Implementation
 
-クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本プロパティを指定するだけです。実際の接続構成はサーバー上で行われます。
+On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
 
-### データ ソースの作成
+### Creating Data Sources
 
-**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
+**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
 const revealView = new $.ig.RevealView("#revealView");
@@ -345,69 +300,65 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVClickHouseDataSource` オブジェクトの新しいインスタンスを作成します。`id`、`title`、`subtitle` プロパティを設定します。`RVClickHouseDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
+**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVClickHouseDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVClickHouseDataSource` object, add it to the data sources collection.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     const clickHouseDS = new $.ig.RVClickHouseDataSource();
-    clickHouseDS.id = "clickhouse";
-    clickHouseDS.title = "ClickHouse";
-    clickHouseDS.subtitle = "Data Source";
+    clickHouseDS.title = "My ClickHouse Datasource";
+    clickHouseDS.subtitle = "ClickHouse";
 
     callback(new $.ig.RevealDataSources([clickHouseDS], [], false));
 };
 ```
 
-アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された ClickHouse データ ソースが [データ ソースの選択] ダイアログに表示されます。
+When the application runs, create a new Visualization and you will see the newly created ClickHouse data source listed in the "Select a Data Source" dialog.
 
-### データ ソース項目の作成
+![](images/clickhouse-data-source.jpg)
 
-データ ソース項目は、ユーザーが可視化のために選択できる ClickHouse データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルのみを指定する必要があります。
+### Creating Data Source Items
+
+Data source items represent specific datasets within your ClickHouse data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
     const clickHouseDS = new $.ig.RVClickHouseDataSource();
-    clickHouseDS.id = "clickhouse";
     clickHouseDS.title = "My ClickHouse Datasource";
     clickHouseDS.subtitle = "ClickHouse";
 
-    // Create a table-based data source item
-    const clickHouseTableItem = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
-    clickHouseTableItem.id = "clickhouse_orders_table";
-    clickHouseTableItem.title = "Orders Table";
-    clickHouseTableItem.subtitle = "ClickHouse";
+    // Create a data source item
+    const clickHouseDSI = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
+    clickHouseDSI.id = "clickhouse_sales_data";
+    clickHouseDSI.title = "My ClickHouse Datasource Item";
+    clickHouseDSI.subtitle = "ClickHouse";
 
-    // Create a custom-query-based data source item
-    const clickHouseQueryItem = new $.ig.RVClickHouseDataSourceItem(clickHouseDS);
-    clickHouseQueryItem.id = "clickhouse_orders_query";
-    clickHouseQueryItem.title = "Orders Query";
-    clickHouseQueryItem.subtitle = "ClickHouse";
-
-    callback(new $.ig.RevealDataSources([clickHouseDS], [clickHouseTableItem, clickHouseQueryItem], false));
+    callback(new $.ig.RevealDataSources([clickHouseDS], [clickHouseDSI], false));
 };
 ```
 
-アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された ClickHouse データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
+When the application runs, create a new Visualization and you will see the newly created ClickHouse data source items listed in the "Select a Data Source" dialog.
 
-## その他のリソース
+![](images/clickhouse-data-source-item.jpg)
 
-- [ClickHouse ドキュメント](https://clickhouse.com/docs)
-- [ClickHouse SQL リファレンス](https://clickhouse.com/docs/sql-reference)
+## Additional Resources
 
-## API リファレンス
+- [ClickHouse Documentation](https://clickhouse.com/docs)
+- [ClickHouse SQL Reference](https://clickhouse.com/docs/sql-reference)
+
+## API Reference
 
 <Tabs groupId="code" queryString>
 <TabItem value="aspnet" label="ASP.NET" default>
 
-* [RVClickHouseDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSource.html) - ClickHouse データ ソースを表します
-* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSourceItem.html) - ClickHouse データ ソース項目を表します
+* [RVClickHouseDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSource.html) - Represents a ClickHouse data source
+* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSourceItem.html) - Represents a ClickHouse data source item
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
-* [RVClickHouseDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasource.html) - ClickHouse データ ソースを表します
-* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasourceitem.html) - ClickHouse データ ソース項目を表します
+* [RVClickHouseDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasource.html) - Represents a ClickHouse data source
+* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasourceitem.html) - Represents a ClickHouse data source item
 
 </TabItem>
 </Tabs>
