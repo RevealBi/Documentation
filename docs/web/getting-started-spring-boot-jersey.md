@@ -45,8 +45,6 @@ Version 2.x is not supported since Reveal 1.7.x
 
 8 - Choose the **Spring Web** dependency.
 
-![](images/getting-started-spring-boot-jersey-dependencies.jpg)
-
 9 - Save and open the newly created project.
 
 ![](images/getting-started-spring-boot-jersey-explorer.jpg)
@@ -91,12 +89,14 @@ public class Application {
     @Bean
     ServletRegistrationBean<RevealEngineServlet> revealServlet() {
        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
                 .setAuthenticationProvider(new MyIRVAuthenticationProvider())
                 .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
                 .setDataSourceProvider(new MyIRVDataSourceProvider())
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
+                // Implement createPropertiesFrom in your application if you need request properties.
                 .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");

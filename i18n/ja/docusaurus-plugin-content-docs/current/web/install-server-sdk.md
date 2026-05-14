@@ -99,12 +99,14 @@ public class Application {
     @Bean
     ServletRegistrationBean<RevealEngineServlet> revealServlet() {
        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
                 .setAuthenticationProvider(new MyIRVAuthenticationProvider())
                 .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
                 .setDataSourceProvider(new MyIRVDataSourceProvider())
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
+                // Implement createPropertiesFrom in your application if you need request properties.
                 .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
 
        return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
@@ -123,12 +125,14 @@ public class AppInitializer implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
         RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
                 .setAuthenticationProvider(new MyIRVAuthenticationProvider())
                 .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
                 .setDataSourceProvider(new MyIRVDataSourceProvider())
                 .addSettings(settings -> {
                     // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
                 })
+                // Implement createPropertiesFrom in your application if you need request properties.
                 .build(), request -> new RVUserContext("whatever", createPropertiesFrom(request)));
 
         ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("myServlet", revealEngineServlet);
