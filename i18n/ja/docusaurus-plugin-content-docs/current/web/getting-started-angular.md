@@ -113,13 +113,13 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // highlight-next-line
-    var revealView = new $.ig.RevealView(this.el.nativeElement);
+    var revealView = new Reveal.RevealView(this.el.nativeElement);
   }
   
 }
 ```
 
-次に、新しい `$.ig.RevealView` を作成し、`ViewChild` プロパティに保存されている `revealView` 要素を渡すことで、`RevealView` の新しいインスタンスを作成します。
+次に、新しい `Reveal.RevealView` を作成し、`ViewChild` プロパティに保存されている `revealView` 要素を渡すことで、`RevealView` の新しいインスタンスを作成します。
 
 最終の `app.component.ts` ファイルは以下のようになります。
 
@@ -138,7 +138,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('revealView') el!: ElementRef;
 
   ngAfterViewInit(): void {
-    var revealView = new $.ig.RevealView(this.el.nativeElement);
+    var revealView = new Reveal.RevealView(this.el.nativeElement);
   }
   
 }
@@ -146,7 +146,7 @@ export class AppComponent implements AfterViewInit {
 
 :::caution
 
-クライアント アプリは、クライアントが別の URL でホストしている場合、`$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
+クライアント アプリは、クライアントが別の URL でホストしている場合、`Reveal.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
 
 :::
 

@@ -13,6 +13,7 @@ import TabItem from '@theme/TabItem';
 
 - **jQuery と Day.js の削除** — SDK は jQuery と Day.js に依存しなくなりました。
 - **NPM 配信** — クライアント SDK は npm パッケージとして配信されるようになりました。レガシーなスクリプトタグによる配信は推奨されなくなりました。
+- **`$.ig` と `RevealApi` 名前空間の削除** — グローバル名前空間は `Reveal` のみになりました。`$.ig.ClassName` および `RevealApi.ClassName` を `Reveal.ClassName` に置き換えてください。
 - **API の名前変更と削除** 
     - `DateFilter` - _削除_ `RevealView`、`RVDashboard`、`ExportOptionsBase` から非推奨プロパティを削除
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _名前変更_ `ToJsonString` に変更。
@@ -119,6 +120,29 @@ npm install reveal-sdk-node@2.0.0
 
 ### 4. API の使用方法を更新する
 
+#### `$.ig` / `RevealApi` → `Reveal`
+
+`$.ig` と `RevealApi` のグローバル名前空間は削除されました。名前空間は `Reveal` のみになりました。TypeScript で `infragistics.reveal.d.ts` を使用して IntelliSense を利用していた場合 (例: `new $.ig.RevealView`)、すべての参照を `Reveal` に更新してください。
+
+<Tabs groupId="api-namespace">
+  <TabItem value="before" label="1.x">
+
+```javascript
+$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");
+var revealView = new $.ig.RevealView("#revealView");
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```javascript
+Reveal.RevealSdkSettings.setBaseUrl("https://localhost:5111/");
+var revealView = new Reveal.RevealView("#revealView");
+```
+
+  </TabItem>
+</Tabs>
+
 #### `DateFilter` → `filters` + `RVDateRule`
 
 非推奨の `DateFilter` プロパティは削除されました。代わりに `filters` コレクションを使用してください。  DateFilter は `RevealView`、`RVDashboard`、`RVDateDashboardFilter`、`IExportOptions`、`RevealSettings`、`ExportOptionsBase` およびその子クラスから削除されました。
@@ -127,8 +151,8 @@ npm install reveal-sdk-node@2.0.0
   <TabItem value="before" label="1.x">
 
 ```javascript
-var myRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Month);
-dashboard.dateFilter = new Reveal.RVDateDashboardFilter(myRule);
+var myRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 3, $.ig.RVPeriodType.Month);
+dashboard.dateFilter = new $.ig.RVDateDashboardFilter(myRule);
 ```
 
   </TabItem>
@@ -149,8 +173,8 @@ myDateFilter.rule = myRule;
   <TabItem value="before" label="1.x">
 
 ```javascript
-var thumbnailView = new Reveal.RevealDashboardThumbnailView("#thumbnail");
-Reveal.RevealUtility.getDashboardInfo("Sales", function (info) {
+var thumbnailView = new $.ig.RevealDashboardThumbnailView("#thumbnail");
+$.ig.RevealUtility.getDashboardInfo("Sales", function (info) {
   thumbnailView.dashboardInfo = info.info;
 });
 ```
@@ -171,6 +195,8 @@ Reveal.RVThumbnail.fromDashboard("#thumbnail", "Sales");
 
 | API | 代替 |
 |---|---|
+| `$.ig` 名前空間 | `Reveal` 名前空間 |
+| `RevealApi` 名前空間 | `Reveal` 名前空間 |
 | `DateFilter` プロパティ | `filters` コレクション |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
 | `Reveal.Sdk.Dashboard.ToJsonStringAsync` | `ToJsonString` |
@@ -183,6 +209,7 @@ Reveal.RVThumbnail.fromDashboard("#thumbnail", "Sales");
 - [ ] Quill.js と Spectrum.js の参照がある場合は削除
 - [ ] クライアント SDK を npm パッケージに切り替え (またはスクリプトタグ構成から jQuery を削除)
 - [ ] サーバー SDK パッケージを 2.0.0 に更新
+- [ ] すべてのクライアントコードで `$.ig.` と `RevealApi.` を `Reveal.` に置き換え
 - [ ] `DateFilter` プロパティの使用を `Filters` リストで置き換え
 - [ ] `RVDashboardThumbnailView` を `RVThumbnail` に置き換え
 - [ ] `Reveal.Sdk.Dashboard.ToJsonStringAsync` を `ToJsonString` に置き換え

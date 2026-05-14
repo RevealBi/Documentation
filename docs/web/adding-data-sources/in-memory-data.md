@@ -40,7 +40,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 });
 ```
 
-**Step 3** - Create an `$.ig.RVInMemoryDataSourceItem` in the `RevealView.onDataSourcesRequested` event.
+**Step 3** - Create an `Reveal.RVInMemoryDataSourceItem` in the `RevealView.onDataSourcesRequested` event.
 
 Add an event handler to the `RevealView.onDataSourcesRequested`
 
@@ -50,22 +50,22 @@ First define a `<div>` tag with the `id` set to `revealView`.
 <div id="revealView" style="height: 920px; width: 100%;"></div>
 ```
 
-Then in the event handler, create a new instance of the `$.ig.RVInMemoryDataSourceItem` object and provide a unique name/ID as a parameter. This ID is used in the `IRVDataProvider` to indicate which data source is requesting the data.
+Then in the event handler, create a new instance of the `Reveal.RVInMemoryDataSourceItem` object and provide a unique name/ID as a parameter. This ID is used in the `IRVDataProvider` to indicate which data source is requesting the data.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
-    var inMemoryDataSourceItem = new $.ig.RVInMemoryDataSourceItem("MyDataSetId");
+    var inMemoryDataSourceItem = new Reveal.RVInMemoryDataSourceItem("MyDataSetId");
     inMemoryDataSourceItem.title = "My Data";
 
-    callback(new $.ig.RevealDataSources([], [inMemoryDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([], [inMemoryDataSourceItem], true));
 };
 ```
 
 :::caution
 
-Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
+Calling the `Reveal.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
 :::
 
@@ -279,16 +279,16 @@ First define a `<div>` tag with the `id` set to `revealView`.
 <div id="revealView" style="height: 920px; width: 100%;"></div>
 ```
 
-Now, initialize the `revealView` and handle the `RevealView.onDataSourcesRequested` event. In this example, we are creating a new `$.ig.RVInMemoryDataSourceItem` with the `id` of **SalesRecords** and the `title` set to **Sales Records**.
+Now, initialize the `revealView` and handle the `RevealView.onDataSourcesRequested` event. In this example, we are creating a new `Reveal.RVInMemoryDataSourceItem` with the `id` of **SalesRecords** and the `title` set to **Sales Records**.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
-    var inMemoryDSI = new $.ig.RVInMemoryDataSourceItem("SalesRecords");
+    var inMemoryDSI = new Reveal.RVInMemoryDataSourceItem("SalesRecords");
     inMemoryDSI.title = "Sales Records";
 
-    callback(new $.ig.RevealDataSources([], [inMemoryDSI], true));
+    callback(new Reveal.RevealDataSources([], [inMemoryDSI], true));
 };
 ```
 

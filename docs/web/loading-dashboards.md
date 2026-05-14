@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Loading Dashboards
 
-Reveal Dashboards are stored on the server. The client application will make a call to the `$.ig.RVDashboard.loadDashboard` method passing in the name of the dashboard to load. The request for the dashboard is sent to the server and the server will respond to the client with the requested dashboard. The client will take the dashboard provided in the server response, and set the `RevealView.dashboard` property.
+Reveal Dashboards are stored on the server. The client application will make a call to the `Reveal.RVDashboard.loadDashboard` method passing in the name of the dashboard to load. The request for the dashboard is sent to the server and the server will respond to the client with the requested dashboard. The client will take the dashboard provided in the server response, and set the `RevealView.dashboard` property.
 
 By default, the Reveal SDK uses a convention to load dashboards from a file path. Specifically, the Reveal SDK will look for dashboards in a **Dashboards** folder in the working directory on the server.
 
@@ -33,23 +33,23 @@ Java does not currently support a default dashboard loader. You must create a cu
   </TabItem>
 </Tabs>
 
-2 - In the client application, call the `$.ig.RevealSdkSettings.setBaseUrl` method and pass in your server URL. When debugging, the server URL will be `https://localhost` followed by a port number. For example:
+2 - In the client application, call the `Reveal.RevealSdkSettings.setBaseUrl` method and pass in your server URL. When debugging, the server URL will be `https://localhost` followed by a port number. For example:
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");   
+Reveal.RevealSdkSettings.setBaseUrl("https://localhost:5111/");   
 ```
 
 :::caution
 
-Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
+Calling the `Reveal.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
 :::
 
-3 - Make a call to the `$.ig.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method has a callback which will provide the dashboard being requested from the server. Once you have received the dashboard from the callback, get an instance of the `$.ig.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
+3 - Make a call to the `Reveal.RVDashboard.loadDashboard` method and pass the name of the dashboard file without the .rdash extension. This method has a callback which will provide the dashboard being requested from the server. Once you have received the dashboard from the callback, get an instance of the `Reveal.RevealView` and set the `RevealView.dashboard` property to the dashboard in the response.
 
 ```js
-$.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
-    var revealView = new $.ig.RevealView("#revealView");
+Reveal.RVDashboard.loadDashboard("Sales", (dashboard) => {
+    var revealView = new Reveal.RevealView("#revealView");
     revealView.dashboard = dashboard;
 });
 ```

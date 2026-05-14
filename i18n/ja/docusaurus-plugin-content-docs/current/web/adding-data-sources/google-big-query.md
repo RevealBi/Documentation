@@ -16,10 +16,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -27,10 +27,10 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var bigQuery = new $.ig.RVBigQueryDataSource();
+    var bigQuery = new Reveal.RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
 
-    callback(new $.ig.RevealDataSources([bigQuery], [], false));
+    callback(new Reveal.RevealDataSources([bigQuery], [], false));
 };
 ```
 アプリケーションを実行し、新しい可視化を作成すると、新しく作成された Big Query データ ソースが [データ ソースの選択] ダイアログに 表示されます。
@@ -47,15 +47,15 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var bigQuery = new $.ig.RVBigQueryDataSource();
+    var bigQuery = new Reveal.RVBigQueryDataSource();
     bigQuery.title = "My Big Query";
     bigQuery.subtitle = "My Big Query Subtitle";
 
-    var bigQueryItem = new $.ig.RVBigQueryDataSourceItem(bigQuery);
+    var bigQueryItem = new Reveal.RVBigQueryDataSourceItem(bigQuery);
     bigQueryItem.title = "My Big Query Item";
     bigQueryItem.subtitle = "My Big Query Item Subtitle";         
 
-    callback(new $.ig.RevealDataSources([bigQuery], [bigQueryItem], false));
+    callback(new Reveal.RevealDataSources([bigQuery], [bigQueryItem], false));
 };
 ```
 

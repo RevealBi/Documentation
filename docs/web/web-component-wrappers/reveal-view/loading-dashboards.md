@@ -36,7 +36,7 @@ const App = () => {
 ```
 
 ```js
-$.ig.RVDashboard.loadDashboard("Campaigns", (dashboard) => {
+Reveal.RVDashboard.loadDashboard("Campaigns", (dashboard) => {
     const revealView = document.getElementById("viewer");
     revealView.dashboard = dashboard;
 });
@@ -51,7 +51,7 @@ const App = () => {
     const [dashboard, setDashboard] = useState<any>();
 
     useEffect(() => {
-        $.ig.RVDashboard.loadDashboard("Campaigns", (dashboard: any) => {
+        Reveal.RVDashboard.loadDashboard("Campaigns", (dashboard: any) => {
             setDashboard(dashboard);
         });
     }, [])

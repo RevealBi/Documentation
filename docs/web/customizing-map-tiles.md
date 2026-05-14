@@ -14,7 +14,7 @@ To incorporate the tiles, you must establish a connection between the SDK and th
 
 ```js
 const url = 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png'
-$.ig.RevealSdkSettings.visualizations.scatterMaps = $.ig.ScatterMapVisualizationsConfiguration.createOpenStreetMapConfiguration(url);
+Reveal.RevealSdkSettings.visualizations.scatterMaps = Reveal.ScatterMapVisualizationsConfiguration.createOpenStreetMapConfiguration(url);
 ```
 
 ![](images/customizing-map-tiles-tiles.jpg)
@@ -30,7 +30,7 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = $.ig.ScatterMapVisualization
 **Step 3** - Add the previously generated key to your application
 
 ```js
-$.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("Bing", "your-key");
+Reveal.RevealSdkSettings.visualizations.scatterMaps = new Reveal.ScatterMapVisualizationsConfiguration("Bing", "your-key");
 ```
 
 ### Esri
@@ -42,7 +42,7 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualiza
 **Step 3** - Add the generated token to your application
 
 ```js
-$.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("Esri", "your-token");
+Reveal.RevealSdkSettings.visualizations.scatterMaps = new Reveal.ScatterMapVisualizationsConfiguration("Esri", "your-token");
 ```
 
 ### MapBox
@@ -54,7 +54,7 @@ $.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualiza
 **Step 3** - Add the generated token to your application
 
 ```js
-$.ig.RevealSdkSettings.visualizations.scatterMaps = new $.ig.ScatterMapVisualizationsConfiguration("MapBox", "your-token");
+Reveal.RevealSdkSettings.visualizations.scatterMaps = new Reveal.ScatterMapVisualizationsConfiguration("MapBox", "your-token");
 ```
 
 :::info Get the Code

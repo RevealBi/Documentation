@@ -16,10 +16,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -27,13 +27,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const restDataSource = new $.ig.RVRESTDataSource();
+    const restDataSource = new Reveal.RVRESTDataSource();
     restDataSource.title = "Sales by Category";
     restDataSource.subtitle = "Excel2Json";
     restDataSource.url = "https://excel2json.io/api/share/6e0f06b3-72d3-4fec-7984-08da43f56bb9";
     restDataSource.useAnonymousAuthentication = true;
 
-    callback(new $.ig.RevealDataSources([restDataSource], [], true));
+    callback(new Reveal.RevealDataSources([restDataSource], [], true));
 };
 ```
 

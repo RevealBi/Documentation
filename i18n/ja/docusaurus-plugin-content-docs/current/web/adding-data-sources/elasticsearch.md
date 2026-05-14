@@ -251,10 +251,10 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // ここにデータ ソースを追加する
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -262,11 +262,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const elasticsearchDS = new $.ig.RVElasticsearchDataSource();
+    const elasticsearchDS = new Reveal.RVElasticsearchDataSource();
     elasticsearchDS.title = "My Elasticsearch Data Source";
     elasticsearchDS.subtitle = "Elasticsearch";
 
-    callback(new $.ig.RevealDataSources([elasticsearchDS], [], false));
+    callback(new Reveal.RevealDataSources([elasticsearchDS], [], false));
 };
 ```
 
@@ -279,17 +279,17 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // データ ソースを作成する
-    const elasticsearchDS = new $.ig.RVElasticsearchDataSource();
+    const elasticsearchDS = new Reveal.RVElasticsearchDataSource();
     elasticsearchDS.title = "My Elasticsearch Data Source";
     elasticsearchDS.subtitle = "Elasticsearch";
     
     // データ ソース アイテムを作成する
-    const elasticsearchDSI = new $.ig.RVElasticsearchDataSourceItem(elasticsearchDS);
+    const elasticsearchDSI = new Reveal.RVElasticsearchDataSourceItem(elasticsearchDS);
     elasticsearchDSI.id = "my-data-source-item";
     elasticsearchDSI.title = "My Elasticsearch Data Source Item";
     elasticsearchDSI.subtitle = "Elasticsearch";
 
-    callback(new $.ig.RevealDataSources([elasticsearchDS], [elasticsearchDSI], false));
+    callback(new Reveal.RevealDataSources([elasticsearchDS], [elasticsearchDSI], false));
 };
 ```
 

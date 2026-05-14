@@ -79,11 +79,11 @@ Coming Soon...
 To add a data source or data source item on the client, add an event handler to the `RevealView.onDataSourcesRequested` event. In the event handler, you will write code to create instances of various types of data sources, or data source items, that will be used in the dashboard. You then pass those instances to the `callback` to make them available in the **Select a Data Source** dialog.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
     //provide all data sources and data source items in callback
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 - Data Sources are provided as an array in the first parameter in the callback
@@ -95,16 +95,16 @@ When creating data sources on the client, it is important that all connection in
 ```js
 revealView.onDataSourcesRequested = (callback) => {
 
-    var sqlServerDS = new $.ig.RVSqlServerDataSource();
+    var sqlServerDS = new Reveal.RVSqlServerDataSource();
     sqlServerDS.host = "your-db-host";
     sqlServerDS.database = "your-db-name";
     sqlServerDS.title = "My SQL Server";
 
-    var sqlServerDSI = new $.ig.RVSqlServerDataSourceItem(sqlServerDS);
+    var sqlServerDSI = new Reveal.RVSqlServerDataSourceItem(sqlServerDS);
     sqlServerDSI.title = "My SQL Server Item";
     sqlServerDSI.table = "TableName";    
 
-    callback(new $.ig.RevealDataSources([sqlServerDS], [sqlServerDSI], false));
+    callback(new Reveal.RevealDataSources([sqlServerDS], [sqlServerDSI], false));
 };
 ```
 
@@ -123,18 +123,18 @@ Creating a data source or data source item on the server is similar to creating 
 Start by adding an event handler to the `RevealView.onDataSourcesRequested` event, and create a data source and data source item. In this example, we are using **MS SQL Server**. Notice that we are only setting an `id` which we can use to identify the data source, and the `title` which will be displayed in the **Select a Data Source** dialog.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     
-    var sqlServerDS = new $.ig.RVSqlServerDataSource();
+    var sqlServerDS = new Reveal.RVSqlServerDataSource();
     sqlServerDS.id = "MySqlServerDataSource";
     sqlServerDS.title = "My Sql Server";
 
-    var sqlServerDSI = new $.ig.RVSqlServerDataSourceItem(sqlServerDS);
+    var sqlServerDSI = new Reveal.RVSqlServerDataSourceItem(sqlServerDS);
     sqlServerDSI.id = "MySqlServerDataSourceItem";
     sqlServerDSI.title = "My Sql Server Item";
 
-    callback(new $.ig.RevealDataSources([sqlDataSource], [sqlServerDSI], false));
+    callback(new Reveal.RevealDataSources([sqlDataSource], [sqlServerDSI], false));
 };
 ```
 

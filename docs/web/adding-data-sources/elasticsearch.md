@@ -251,10 +251,10 @@ On the client side, you only need to specify basic properties like ID, title, an
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -262,11 +262,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const elasticsearchDS = new $.ig.RVElasticsearchDataSource();
+    const elasticsearchDS = new Reveal.RVElasticsearchDataSource();
     elasticsearchDS.title = "My Elasticsearch Data Source";
     elasticsearchDS.subtitle = "Elasticsearch";
 
-    callback(new $.ig.RevealDataSources([elasticsearchDS], [], false));
+    callback(new Reveal.RevealDataSources([elasticsearchDS], [], false));
 };
 ```
 
@@ -279,17 +279,17 @@ Data source items represent specific datasets within your Elasticsearch data sou
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const elasticsearchDS = new $.ig.RVElasticsearchDataSource();
+    const elasticsearchDS = new Reveal.RVElasticsearchDataSource();
     elasticsearchDS.title = "My Elasticsearch Data Source";
     elasticsearchDS.subtitle = "Elasticsearch";
     
     // Create a data source item
-    const elasticsearchDSI = new $.ig.RVElasticsearchDataSourceItem(elasticsearchDS);
+    const elasticsearchDSI = new Reveal.RVElasticsearchDataSourceItem(elasticsearchDS);
     elasticsearchDSI.id = "my-data-source-item";
     elasticsearchDSI.title = "My Elasticsearch Data Source Item";
     elasticsearchDSI.subtitle = "Elasticsearch";
 
-    callback(new $.ig.RevealDataSources([elasticsearchDS], [elasticsearchDSI], false));
+    callback(new Reveal.RevealDataSources([elasticsearchDS], [elasticsearchDSI], false));
 };
 ```
 

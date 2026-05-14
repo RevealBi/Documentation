@@ -133,12 +133,12 @@ builder.Services.AddRazorPages().AddReveal();
 {
     <script type="text/javascript">
         // highlight-next-line
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
     </script>
 }
 ```
 
-次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
+次に、新しい `Reveal.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
 
 最終の `Index.cshtml` ファイルは以下のようになります。
 
@@ -156,7 +156,7 @@ builder.Services.AddRazorPages().AddReveal();
 {
     <script type="text/javascript">
         // highlight-next-line
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
     </script>
 }
 ```

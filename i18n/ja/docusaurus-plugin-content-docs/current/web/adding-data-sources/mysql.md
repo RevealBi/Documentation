@@ -18,10 +18,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -29,13 +29,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mySqlDataSource = new $.ig.RVMySqlDataSource();
+    var mySqlDataSource = new Reveal.RVMySqlDataSource();
     mySqlDataSource.host = "your-db-host";
     mySqlDataSource.database = "your-db-name";
     mySqlDataSource.port = 1234;
     mySqlDataSource.title = "My MySQL";
 
-    callback(new $.ig.RevealDataSources([mySqlDataSource], [], false));
+    callback(new Reveal.RevealDataSources([mySqlDataSource], [], false));
 };
 ```
 
@@ -47,18 +47,18 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mySqlDataSource = new $.ig.RVMySqlDataSource();
+    var mySqlDataSource = new Reveal.RVMySqlDataSource();
     mySqlDataSource.host = "your-db-host";
     mySqlDataSource.database = "your-db-name";
     mySqlDataSource.port = 1234;
     mySqlDataSource.title = "My MySQL";
 
-    var mySqlDsi = new $.ig.RVMySqlDataSourceItem(mySqlDataSource);
+    var mySqlDsi = new Reveal.RVMySqlDataSourceItem(mySqlDataSource);
     mySqlDsi.id = "MyMySqlDataSourceItem";
     mySqlDsi.title = "My MySQL Item";
     mySqlDsi.table = "TableName";    
 
-    callback(new $.ig.RevealDataSources([mySqlDataSource], [mySqlDsi], false));
+    callback(new Reveal.RevealDataSources([mySqlDataSource], [mySqlDsi], false));
 };
 ```
 
@@ -71,18 +71,18 @@ revealView.onDataSourcesRequested = (callback) => {
 **手順 1** - クライアントでデータ ソースとデータ ソース項目を作成しますが、接続情報は指定しません。`id`、`title`、および/または `subtitle` のみを入力してください。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
-    var mySqlDataSource = new $.ig.RVMySqlDataSource();
+    var mySqlDataSource = new Reveal.RVMySqlDataSource();
     mySqlDataSource.id = "MyMySqlDataSource";
     mySqlDataSource.title = "My MySQL";
 
-    var mySqlDataSourceItem = new $.ig.RVMySqlDataSourceItem(mySqlDataSource);
+    var mySqlDataSourceItem = new Reveal.RVMySqlDataSourceItem(mySqlDataSource);
     mySqlDataSourceItem.id = "MyMySqlDataSourceItem";
     mySqlDataSourceItem.title = "My MySQL Item";
 
-    callback(new $.ig.RevealDataSources([mySqlDataSource], [mySqlDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([mySqlDataSource], [mySqlDataSourceItem], true));
 };
 ```
 

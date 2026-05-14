@@ -145,8 +145,8 @@ export class DashboardViewerComponent implements AfterViewInit {
     @ViewChild('revealView') el!: ElementRef;
 
     async ngAfterViewInit() {
-        let dashboard = await $.ig.RVDashboard.loadDashboard("Sales");
-        var revealView = new $.ig.RevealView(this.el.nativeElement);
+        let dashboard = await Reveal.RVDashboard.loadDashboard("Sales");
+        var revealView = new Reveal.RevealView(this.el.nativeElement);
         revealView.dashboard = dashboard;
 
         //add custom vizualization to chart types drop down

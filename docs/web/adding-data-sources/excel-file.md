@@ -99,10 +99,10 @@ First define a `<div>` tag with the `id` set to `revealView`.
 Initialize the `revealView` and add the event handler.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], true));
+    callback(new Reveal.RevealDataSources([], [], true));
 };
 ```
 
@@ -110,10 +110,10 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var localFileItem = new $.ig.RVLocalFileDataSourceItem();
+    var localFileItem = new Reveal.RVLocalFileDataSourceItem();
     localFileItem.uri = "local:/Samples.xlsx";
 
-    callback(new $.ig.RevealDataSources([], [], true));
+    callback(new Reveal.RevealDataSources([], [], true));
 };
 ```
 
@@ -132,13 +132,13 @@ Finally, add the `RVExcelDataSourceItem` object to the data source items array i
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var localFileItem = new $.ig.RVLocalFileDataSourceItem();
+    var localFileItem = new Reveal.RVLocalFileDataSourceItem();
     localFileItem.uri = "local:/Samples.xlsx";
 
-    var excelDataSourceItem  = new $.ig.RVExcelDataSourceItem(localFileItem);
+    var excelDataSourceItem  = new Reveal.RVExcelDataSourceItem(localFileItem);
     excelDataSourceItem .title = "Local Excel File";
 
-    callback(new $.ig.RevealDataSources([], [excelDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([], [excelDataSourceItem], true));
 };
 ```
 
@@ -154,6 +154,6 @@ The source code to this sample can be found on [GitHub](https://github.com/Revea
 
 :::caution
 
-Calling the `$.ig.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
+Calling the `Reveal.RevealSdkSettings.setBaseUrl` is required when the server is running on a different URL than the client application. If both the server application and the client application are running on the same URL, this method is not required. This method only needs to be called once.
 
 :::

@@ -76,11 +76,11 @@
 ```html
 <script type="text/javascript">
     //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
+    var revealView = new Reveal.RevealView("#revealView");
 </script>
 ```
 
-次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
+次に、新しい `Reveal.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
 
 最終の `index.html` ファイルは以下のようになります。
 
@@ -102,7 +102,7 @@
     <script src="https://dl.revealbi.io/reveal/libs/[var:sdkVersion]/infragistics.reveal.js"></script>
 
     <script type="text/javascript">
-        var revealView = new $.ig.RevealView("#revealView");
+        var revealView = new Reveal.RevealView("#revealView");
     </script>
     //highlight-end
 </body>
@@ -111,7 +111,7 @@
 
 :::caution
 
-クライアント アプリは、クライアントが別の URL でホストしている場合、`$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
+クライアント アプリは、クライアントが別の URL でホストしている場合、`Reveal.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
 
 :::
 

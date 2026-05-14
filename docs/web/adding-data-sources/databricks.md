@@ -304,10 +304,10 @@ On the client side, you only need to specify basic properties like ID, title, an
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -315,11 +315,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const databricksDS = new $.ig.RVDatabricksDataSource();
+    const databricksDS = new Reveal.RVDatabricksDataSource();
     databricksDS.title = "Databricks";
     databricksDS.subtitle = "Data Source";
     
-    callback(new $.ig.RevealDataSources([databricksDS], [], false));
+    callback(new Reveal.RevealDataSources([databricksDS], [], false));
 };
 ```
 
@@ -334,17 +334,17 @@ Data source items represent specific datasets within your Databricks data source
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const databricksDS = new $.ig.RVDatabricksDataSource();
+    const databricksDS = new Reveal.RVDatabricksDataSource();
     databricksDS.title = "My Databricks Datasource";
     databricksDS.subtitle = "Databricks";
     
     // Create a data source item
-    const databricksDSI = new $.ig.RVDatabricksDataSourceItem(databricksDS);
+    const databricksDSI = new Reveal.RVDatabricksDataSourceItem(databricksDS);
     databricksDSI.id = "databricks_sales_data";
     databricksDSI.title = "My Databricks Datasource Item";
     databricksDSI.subtitle = "Databricks";
 
-    callback(new $.ig.RevealDataSources([databricksDS], [databricksDSI], false));
+    callback(new Reveal.RevealDataSources([databricksDS], [databricksDSI], false));
 };
 ```
 

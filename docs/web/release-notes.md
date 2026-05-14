@@ -8,6 +8,7 @@ import TabItem from '@theme/TabItem';
 ### Breaking Changes
 
 #### All Platforms
+- The `$.ig` and `RevealApi` global namespaces have been removed. Use `Reveal` as the only namespace (e.g. `Reveal.RevealView`, `Reveal.RevealSdkSettings`).
 - The legacy Java backend have been removed.
 - Legacy chart types have been removed.
 - The deprecated `DateFilter` property has been removed.

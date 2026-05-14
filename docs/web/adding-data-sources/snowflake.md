@@ -259,10 +259,10 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-const revealView = new $.ig.RevealView("#revealView");
+const revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     // Add data source here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -270,11 +270,11 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    const snowflakeDS = new Reveal.RVSnowflakeDataSource();
     snowflakeDS.title = "Snowflake";
     snowflakeDS.subtitle = "Data Source";
 
-    callback(new $.ig.RevealDataSources([snowflakeDS], [], false));
+    callback(new Reveal.RevealDataSources([snowflakeDS], [], false));
 };
 ```
 
@@ -289,17 +289,17 @@ Data source items represent specific datasets within your Snowflake data source 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     // Create the data source
-    const snowflakeDS = new $.ig.RVSnowflakeDataSource();
+    const snowflakeDS = new Reveal.RVSnowflakeDataSource();
     snowflakeDS.title = "My Snowflake Datasource";
     snowflakeDS.subtitle = "Snowflake";
 
     // Create a data source item
-    const snowflakeDSI = new $.ig.RVSnowflakeDataSourceItem(snowflakeDS);
+    const snowflakeDSI = new Reveal.RVSnowflakeDataSourceItem(snowflakeDS);
     snowflakeDSI.id = "MySnowflakeDataSourceItem";
     snowflakeDSI.title = "My Snowflake Datasource Item";
     snowflakeDSI.subtitle = "Snowflake";
 
-    callback(new $.ig.RevealDataSources([snowflakeDS], [snowflakeDSI], false));
+    callback(new Reveal.RevealDataSources([snowflakeDS], [snowflakeDSI], false));
 };
 ```
 

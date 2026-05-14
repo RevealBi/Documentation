@@ -2,12 +2,12 @@
 
 Reveal SDK はローカリゼーションの強力なサポートを提供し、多様な世界市場にわたってその多用途性と魅力を強化します。わかりやすく包括的なローカリゼーション フレームワークより、開発者はアプリケーションをさまざまな言語にシームレスに適応させることができます。
 
-現在のローカリゼーション ロケールは、デフォルトではユーザーのブラウザーによって自動的に決定されます。ただし、文字列のローカライズを有効にするには、SDK 自体のロケールを設定する必要があります。この手順では、内部文字列の表示言語をカスタマイズできます。SDK は次のロケールをサポートします: `de`、`es`、`fr`、`it`、`ja`、`ko`、`ms`、`nl`、`pt`、`ru`、`zh- cn`、`zh-tw`。このリストは、`$.ig.SupportedLocales` プロパティを調べることで参照できます。
+現在のローカリゼーション ロケールは、デフォルトではユーザーのブラウザーによって自動的に決定されます。ただし、文字列のローカライズを有効にするには、SDK 自体のロケールを設定する必要があります。この手順では、内部文字列の表示言語をカスタマイズできます。SDK は次のロケールをサポートします: `de`、`es`、`fr`、`it`、`ja`、`ko`、`ms`、`nl`、`pt`、`ru`、`zh- cn`、`zh-tw`。このリストは、`Reveal.SupportedLocales` プロパティを調べることで参照できます。
 
-ロケールを設定するには、メソッド `$.ig.RevealSdkSettings.overrideLocale` を使用し、前述のリストから目的のロケールをパラメーターとして渡します。ロケールを再度オーバーライドする前に、promise を待つことが重要です。問題を回避するには、必ずこの順序に従ってください。
+ロケールを設定するには、メソッド `Reveal.RevealSdkSettings.overrideLocale` を使用し、前述のリストから目的のロケールをパラメーターとして渡します。ロケールを再度オーバーライドする前に、promise を待つことが重要です。問題を回避するには、必ずこの順序に従ってください。
 
 ```js
-$.ig.RevealSdkSettings.overrideLocale('ja').then(_ => {
+Reveal.RevealSdkSettings.overrideLocale('ja').then(_ => {
     ...
 })
 ```
@@ -18,10 +18,10 @@ $.ig.RevealSdkSettings.overrideLocale('ja').then(_ => {
 
 その後、可視化のタイトルや列名などの文字列のローカライズを開始する準備が整います。
 
-カスタム翻訳を提供するには、クライアントに `$.ig.RevealSdkSettings.localizedStringsProvider` イベントのハンドラーを追加する必要があります。このイベントは `RVLocalizationElement` と `RVLocalizationContext` を受け取り、ローカライズされた文字列を返す必要があります。
+カスタム翻訳を提供するには、クライアントに `Reveal.RevealSdkSettings.localizedStringsProvider` イベントのハンドラーを追加する必要があります。このイベントは `RVLocalizationElement` と `RVLocalizationContext` を受け取り、ローカライズされた文字列を返す必要があります。
 
 ```js
-$.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
     ...
     return localizedString;
 };
@@ -30,7 +30,7 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 ここでは、あらゆる入力文字列に対してローカライズされた文字列 `test` を一貫して返すイベント ハンドラーを追加してみます。
 
 ```js
-$.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
     return "test";
 };
 ```
@@ -42,8 +42,8 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 もう少し詳しく見てみましょう。 すべてに対して `test` を返すのではなく、視覚化フィールド ラベルに対してのみ `test` を返すようにしましょう。
 
 ```js
-$.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
-    if (element.elementType === $.ig.RVLocalizationElementType.VisualizationFieldLabel) {
+Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+    if (element.elementType === Reveal.RVLocalizationElementType.VisualizationFieldLabel) {
         return "test";
     }
     return element.title ?? element.name;
@@ -118,11 +118,11 @@ function translate(element) {
 }
 ```
 
-**手順 5** - `$.ig.RevealSdkSettings.localizedStringsProvider` イベントのハンドラーを追加します。
+**手順 5** - `Reveal.RevealSdkSettings.localizedStringsProvider` イベントのハンドラーを追加します。
 
 ```js
-$.ig.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
-    $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
+    Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
         return translate(element);
     };
 })
@@ -165,16 +165,16 @@ function changeLang(lang) {
 }
 
 // set this to your server url
-$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+Reveal.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 
-$.ig.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
-    $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
+    Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
         return translate(element);
     };
 })
 
-$.ig.RVDashboard.loadDashboard("Marketing").then(dashboard => {
-    const revealView = new $.ig.RevealView("#revealView");
+Reveal.RVDashboard.loadDashboard("Marketing").then(dashboard => {
+    const revealView = new Reveal.RevealView("#revealView");
     revealView.dashboard = dashboard;
 })
 ```

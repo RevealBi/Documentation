@@ -16,10 +16,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -27,12 +27,12 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var s3 = new $.ig.RVS3DataSource();
+    var s3 = new Reveal.RVS3DataSource();
     s3.title = "My S3 Server";
     s3.subtitle = "Amazon S3";
     s3.region = "region";
 
-    callback(new $.ig.RevealDataSources([s3], [], false));
+    callback(new Reveal.RevealDataSources([s3], [], false));
 };
 ```
 

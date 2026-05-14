@@ -18,10 +18,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -29,13 +29,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mySqlDataSource = new $.ig.RVMySqlDataSource();
+    var mySqlDataSource = new Reveal.RVMySqlDataSource();
     mySqlDataSource.host = "your-db-host";
     mySqlDataSource.database = "your-db-name";
     mySqlDataSource.port = 1234;
     mySqlDataSource.title = "My MySQL";
 
-    callback(new $.ig.RevealDataSources([mySqlDataSource], [], false));
+    callback(new Reveal.RevealDataSources([mySqlDataSource], [], false));
 };
 ```
 
@@ -47,18 +47,18 @@ When the application runs, create a new Visualization and you will see the newly
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    var mySqlDataSource = new $.ig.RVMySqlDataSource();
+    var mySqlDataSource = new Reveal.RVMySqlDataSource();
     mySqlDataSource.host = "your-db-host";
     mySqlDataSource.database = "your-db-name";
     mySqlDataSource.port = 1234;
     mySqlDataSource.title = "My MySQL";
 
-    var mySqlDsi = new $.ig.RVMySqlDataSourceItem(mySqlDataSource);
+    var mySqlDsi = new Reveal.RVMySqlDataSourceItem(mySqlDataSource);
     mySqlDsi.id = "MyMySqlDataSourceItem";
     mySqlDsi.title = "My MySQL Item";
     mySqlDsi.table = "TableName";    
 
-    callback(new $.ig.RevealDataSources([mySqlDataSource], [mySqlDsi], false));
+    callback(new Reveal.RevealDataSources([mySqlDataSource], [mySqlDsi], false));
 };
 ```
 
@@ -71,18 +71,18 @@ When the application runs, create a new Visualization and you will see the newly
 **Step 1** - Create the data source and data source item on the client, but do not provide any connection information. Only provie an `id`, `title`, and/or `subtitle`.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
-    var mySqlDataSource = new $.ig.RVMySqlDataSource();
+    var mySqlDataSource = new Reveal.RVMySqlDataSource();
     mySqlDataSource.id = "MyMySqlDataSource";
     mySqlDataSource.title = "My MySQL";
 
-    var mySqlDataSourceItem = new $.ig.RVMySqlDataSourceItem(mySqlDataSource);
+    var mySqlDataSourceItem = new Reveal.RVMySqlDataSourceItem(mySqlDataSource);
     mySqlDataSourceItem.id = "MyMySqlDataSourceItem";
     mySqlDataSourceItem.title = "My MySQL Item";
 
-    callback(new $.ig.RevealDataSources([mySqlDataSource], [mySqlDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([mySqlDataSource], [mySqlDataSourceItem], true));
 };
 ```
 

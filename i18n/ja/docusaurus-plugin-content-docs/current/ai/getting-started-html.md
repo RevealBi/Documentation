@@ -225,19 +225,19 @@ dotnet run
         const SERVER_URL = 'https://localhost:5111/';
 
         // Initialize Reveal SDK and AI Client
-        $.ig.RevealSdkSettings.setBaseUrl(SERVER_URL);
+        Reveal.RevealSdkSettings.setBaseUrl(SERVER_URL);
         rv.RevealSdkClient.initialize({ hostUrl: SERVER_URL });
         const client = rv.RevealSdkClient.getInstance();
 
         // Load dashboard
-        $.ig.RVDashboard.loadDashboard("Accounts", (dashboard) => {
-            const revealView = new $.ig.RevealView("#revealView");
+        Reveal.RVDashboard.loadDashboard("Accounts", (dashboard) => {
+            const revealView = new Reveal.RevealView("#revealView");
             revealView.dashboard = dashboard;
 
             // Add AI insight options to the dashboard context menu
             revealView.onMenuOpening = function (visualization, args) {
-                if (args.menuLocation === $.ig.RVMenuLocation.Dashboard) {
-                    args.menuItems.push(new $.ig.RVMenuItem("Summary", null, async () => {
+                if (args.menuLocation === Reveal.RVMenuLocation.Dashboard) {
+                    args.menuItems.push(new Reveal.RVMenuItem("Summary", null, async () => {
                         document.getElementById('output').textContent = 'Generating summary...';
                         const result = await client.ai.insights.get({
                             dashboard: dashboard,
@@ -246,7 +246,7 @@ dotnet run
                         document.getElementById('output').textContent = result.explanation;
                     }));
 
-                    args.menuItems.push(new $.ig.RVMenuItem("Analysis", null, async () => {
+                    args.menuItems.push(new Reveal.RVMenuItem("Analysis", null, async () => {
                         document.getElementById('output').textContent = 'Generating analysis...';
                         const result = await client.ai.insights.get({
                             dashboard: dashboard,
@@ -255,7 +255,7 @@ dotnet run
                         document.getElementById('output').textContent = result.explanation;
                     }));
 
-                    args.menuItems.push(new $.ig.RVMenuItem("Forecast", null, async () => {
+                    args.menuItems.push(new Reveal.RVMenuItem("Forecast", null, async () => {
                         document.getElementById('output').textContent = 'Generating forecast...';
                         const result = await client.ai.insights.get({
                             dashboard: dashboard,

@@ -35,7 +35,7 @@ revealView.onDashboardSelectorRequested = (args) => {
 
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboard(dashboardId);
+    return Reveal.RVDashboard.loadDashboard(dashboardId);
 };
 ```
 
@@ -173,7 +173,7 @@ function closeDialog() {
 5 - `onLinkedDashboardProviderAsync` イベントを処理して、リンクされたダッシュボードを読み込みます。
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
-    return $.ig.RVDashboard.loadDashboard(dashboardId);
+    return Reveal.RVDashboard.loadDashboard(dashboardId);
 };
 ```
 

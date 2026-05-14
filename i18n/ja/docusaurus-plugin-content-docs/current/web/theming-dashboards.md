@@ -18,25 +18,25 @@ Reveal SDK には、適用できる 4 つの定義済みテーマが付属して
 ##### Mountain Light
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.MountainLightTheme();
+Reveal.RevealSdkSettings.theme = new Reveal.MountainLightTheme();
 ```
 
 ##### Mountain Dark
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();
+Reveal.RevealSdkSettings.theme = new Reveal.MountainDarkTheme();
 ```
 
 ##### Ocean Light
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.OceanLightTheme();
+Reveal.RevealSdkSettings.theme = new Reveal.OceanLightTheme();
 ```
 
 ##### Ocean Dark
 
 ```js
-$.ig.RevealSdkSettings.theme = new $.ig.OceanDarkTheme();
+Reveal.RevealSdkSettings.theme = new Reveal.OceanDarkTheme();
 ```
 
 :::info
@@ -80,7 +80,7 @@ Reveal SDK を既存のアプリケーションに埋め込む場合、ダッシ
 
 ```js
 function cloneCurrentTheme() {
-    var theme = $.ig.RevealSdkSettings.theme.clone();
+    var theme = Reveal.RevealSdkSettings.theme.clone();
 
     theme.fontColor = "#0000cc";
     theme.accentColor = "#009900";
@@ -96,7 +96,7 @@ function cloneCurrentTheme() {
 テーマのクローンを作成して変更し、既存のテーマを変更したら、テーマを適用できます。
 
 ```js
-$.ig.RevealSdkSettings.theme = this.cloneCurrentTheme();
+Reveal.RevealSdkSettings.theme = this.cloneCurrentTheme();
 ```
 
 :::info
@@ -113,7 +113,7 @@ $.ig.RevealSdkSettings.theme = this.cloneCurrentTheme();
 
 ```js
 function createCustomTheme(){
-    var theme = new $.ig.RevealTheme();
+    var theme = new Reveal.RevealTheme();
 
     theme.fontColor = "#ff0000";
     theme.accentColor = "rgb(192, 80, 77)";
@@ -132,7 +132,7 @@ function createCustomTheme(){
 カスタム テーマを作成したら、テーマを適用できます。
 
 ```js
-$.ig.RevealSdkSettings.theme = this.createCustomTheme();
+Reveal.RevealSdkSettings.theme = this.createCustomTheme();
 ```
 
 :::info コードの取得

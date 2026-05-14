@@ -16,11 +16,11 @@
 
 ## 表示形式の最大化
 
-表示形式を最大化した状態でダッシュボードを開くには、__revealView__ の dashboard プロパティにダッシュボードを設定する必要があります。次に、__$.ig.RevealView__ インスタンスの __maximizedVisualization__ プロパティに、最大化する表示形式を設定します。このプロパティに表示形式を設定しないと、ダッシュボード全体が表示されます。
+表示形式を最大化した状態でダッシュボードを開くには、__revealView__ の dashboard プロパティにダッシュボードを設定する必要があります。次に、__Reveal.RevealView__ インスタンスの __maximizedVisualization__ プロパティに、最大化する表示形式を設定します。このプロパティに表示形式を設定しないと、ダッシュボード全体が表示されます。
 
 ``` js
-$.ig.RVDashboard.loadDashboard("AllDivisions", function (dashboard) {
-    var revealView = new $.ig.RevealView("#revealView");
+Reveal.RVDashboard.loadDashboard("AllDivisions", function (dashboard) {
+    var revealView = new Reveal.RevealView("#revealView");
     revealView.dashboard = dashboard;
     revealView.maximizedVisualization = dashboard.visualizations.getByTitle('Sales');
 });
@@ -44,7 +44,7 @@ revealView.singleVisualizationMode = true;
 
 ページを再読み込みせずに、表示されている単一の表示形式を動的に変更することもできます。ユーザーの視点では、アプリは部門のリストと最大化された表示形式を備えた単一ページのアプリケーションになります。ユーザーがリストから 1 つの部門を選択すると、最大化された視覚化が更新されます。
 
-このシナリオは、以下に示すように、__$.ig.RevealView__ の **maximizedVisualization** プロパティを使用して実現できます。
+このシナリオは、以下に示すように、__Reveal.RevealView__ の **maximizedVisualization** プロパティを使用して実現できます。
 
 ```html
 <section style="display:grid;grid-template-rows:30px auto;">
@@ -60,8 +60,8 @@ revealView.singleVisualizationMode = true;
 ```js
 var dashboardId = 'AllDivisions';
 
-$.ig.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
-    var revealView = window.revealView = new $.ig.RevealView("#revealView");
+Reveal.RVDashboard.loadDashboard(dashboardId, function (dashboard) {
+    var revealView = window.revealView = new Reveal.RevealView("#revealView");
     revealView.singleVisualizationMode = true;
     revealView.dashboard = dashboard;
     revealView.maximizedVisualization = dashboard.visualizations.getByTitle('Sales');
@@ -75,7 +75,7 @@ function maximizeVisualization(title) {
 ```
 
 注意事項:
-  - __$.ig.RevealView__ オブジェクトは \_window.revealView\</emphasis\> に設定され、後で **maximizeVisualization** プロパティを設定する際に使用できるようになっています。
+  - __Reveal.RevealView__ オブジェクトは \_window.revealView\</emphasis\> に設定され、後で **maximizeVisualization** プロパティを設定する際に使用できるようになっています。
   - div の前のセクションに追加されたボタンは、最大化された表示形式を切り替えるための単なる例です。実際のアプリケーションでは同様のコードを使用する必要があります。
   - この例では、サンプル ダッシュボードが持つ表示形式と一致するようにボタンがハードコードされていますが、ダッシュボードが持つ表示形式のリストから動的に生成することもできます。
-    詳細については __$.ig.RVDashboard.visualizations__ を参照してください。
+    詳細については __Reveal.RVDashboard.visualizations__ を参照してください。

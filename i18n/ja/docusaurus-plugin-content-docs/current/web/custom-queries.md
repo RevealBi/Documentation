@@ -26,15 +26,15 @@ import TabItem from '@theme/TabItem';
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    const sqlServerDataSource = new Reveal.RVSqlServerDataSource();
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    const sqlServerDataSourceItem = new Reveal.RVSqlServerDataSourceItem(sqlServerDataSource);
     sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
     sqlServerDataSourceItem.title = "John Orders";
 
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 
@@ -57,48 +57,48 @@ if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 1 - クライアント上のデータ ソース項目を定義します。
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+Reveal.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
 
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.startInEditMode = true;
 
 revealView.onDataSourcesRequested = (callback) => {
-    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    const sqlServerDataSource = new Reveal.RVSqlServerDataSource();
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    const sqlServerDataSourceItem = new Reveal.RVSqlServerDataSourceItem(sqlServerDataSource);
     sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
     sqlServerDataSourceItem.title = "John Orders";
 
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 
-2 - クライアントでは、`$.ig.RevealSdkSettings.setAdditionalHeadersProvider()` メソッドを使用して、サーバーに送信する追加ヘッダーを設定します。この例では、`x-sales-person-id` という名前のヘッダーを使用しています。
+2 - クライアントでは、`Reveal.RevealSdkSettings.setAdditionalHeadersProvider()` メソッドを使用して、サーバーに送信する追加ヘッダーを設定します。この例では、`x-sales-person-id` という名前のヘッダーを使用しています。
 
 ```js
-$.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
-$.ig.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
+Reveal.RevealSdkSettings.setBaseUrl("http://localhost:5111/");
+Reveal.RevealSdkSettings.setAdditionalHeadersProvider(function (url) {
     const headers = {};
     //set the x-sales-person-id header that identifies the sales person
     headers["x-sales-person-id"] = "279";
     return headers;
 });
 
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.startInEditMode = true;
 
 revealView.onDataSourcesRequested = (callback) => {
-    const sqlServerDataSource = new $.ig.RVSqlServerDataSource();
+    const sqlServerDataSource = new Reveal.RVSqlServerDataSource();
     sqlServerDataSource.id = "MySqlServerDataSource";
     sqlServerDataSource.title = "My SQL Server";
 
-    const sqlServerDataSourceItem = new $.ig.RVSqlServerDataSourceItem(sqlServerDataSource);
+    const sqlServerDataSourceItem = new Reveal.RVSqlServerDataSourceItem(sqlServerDataSource);
     sqlServerDataSourceItem.id = "MySqlServerDataSourceItem";
     sqlServerDataSourceItem.title = "John Orders";
 
-    callback(new $.ig.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([sqlServerDataSource], [sqlServerDataSourceItem], true));
 };
 ```
 

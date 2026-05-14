@@ -79,11 +79,11 @@ Coming Soon...
 クライアントでデータ ソースまたはデータ ソース項目を追加するには、`RevealView.onDataSourcesRequested` イベントにイベント ハンドラーを追加します。イベント ハンドラーでは、ダッシュボードで使用されるさまざまなタイプのデータ ソースまたはデータ ソース項目のインスタンスを作成するコードを記述します。次に、これらのインスタンスを `callback` に渡して、**[データ ソースの選択]** ダイアログで使用できるようにします。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
     //provide all data sources and data source items in callback
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 - データ ソースは、コールバックの最初のパラメーターに配列として提供されます。
@@ -95,16 +95,16 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
 
-    var sqlServerDS = new $.ig.RVSqlServerDataSource();
+    var sqlServerDS = new Reveal.RVSqlServerDataSource();
     sqlServerDS.host = "your-db-host";
     sqlServerDS.database = "your-db-name";
     sqlServerDS.title = "My SQL Server";
 
-    var sqlServerDSI = new $.ig.RVSqlServerDataSourceItem(sqlServerDS);
+    var sqlServerDSI = new Reveal.RVSqlServerDataSourceItem(sqlServerDS);
     sqlServerDSI.title = "My SQL Server Item";
     sqlServerDSI.table = "TableName";    
 
-    callback(new $.ig.RevealDataSources([sqlServerDS], [sqlServerDSI], false));
+    callback(new Reveal.RevealDataSources([sqlServerDS], [sqlServerDSI], false));
 };
 ```
 
@@ -123,18 +123,18 @@ revealView.onDataSourcesRequested = (callback) => {
 イベント ハンドラーを `RevealView.onDataSourcesRequested` イベントに追加することから始め、データ ソースとデータ ソース項目を作成します。この例では、**MS SQL Server** を使用しています。データ ソースの識別に使用できる `id` と、**[データ ソースの選択]** ダイアログに表示される `title` のみを設定していることに注意してください。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     
-    var sqlServerDS = new $.ig.RVSqlServerDataSource();
+    var sqlServerDS = new Reveal.RVSqlServerDataSource();
     sqlServerDS.id = "MySqlServerDataSource";
     sqlServerDS.title = "My Sql Server";
 
-    var sqlServerDSI = new $.ig.RVSqlServerDataSourceItem(sqlServerDS);
+    var sqlServerDSI = new Reveal.RVSqlServerDataSourceItem(sqlServerDS);
     sqlServerDSI.id = "MySqlServerDataSourceItem";
     sqlServerDSI.title = "My Sql Server Item";
 
-    callback(new $.ig.RevealDataSources([sqlDataSource], [sqlServerDSI], false));
+    callback(new Reveal.RevealDataSources([sqlDataSource], [sqlServerDSI], false));
 };
 ```
 

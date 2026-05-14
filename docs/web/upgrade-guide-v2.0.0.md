@@ -13,6 +13,7 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 
 - **jQuery and Day.js removed** — the SDK no longer depends on jQuery or Day.js.
 - **NPM delivery** — the client SDK is now delivered as an npm package; legacy script-tag delivery is no longer the recommended approach.
+- **`$.ig` and `RevealApi` namespaces removed** — the only global namespace is now `Reveal`. Replace `$.ig.ClassName` and `RevealApi.ClassName` with `Reveal.ClassName`.
 - **Renamed and removed APIs** 
     - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard` and `ExportOptionsBase`
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
@@ -119,6 +120,29 @@ npm install reveal-sdk-node@2.0.0
 
 ### 4. Update API usage
 
+#### `$.ig` / `RevealApi` → `Reveal`
+
+The `$.ig` and `RevealApi` global namespaces have been removed. The only namespace is now `Reveal`. If you were using TypeScript with `infragistics.reveal.d.ts` for IntelliSense (e.g. `new $.ig.RevealView`), update all references to use `Reveal` instead.
+
+<Tabs groupId="api-namespace">
+  <TabItem value="before" label="1.x">
+
+```javascript
+$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");
+var revealView = new $.ig.RevealView("#revealView");
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```javascript
+Reveal.RevealSdkSettings.setBaseUrl("https://localhost:5111/");
+var revealView = new Reveal.RevealView("#revealView");
+```
+
+  </TabItem>
+</Tabs>
+
 #### `DateFilter` → `filters` + `RVDateRule`
 
 The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.  DateFilter was eliminated from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `IExportOptions`, `RevealSettings`, `ExportOptionsBase` and child classes.
@@ -127,8 +151,8 @@ The deprecated `DateFilter` property has been removed. Use the `filters` collect
   <TabItem value="before" label="1.x">
 
 ```javascript
-var myRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Month);
-dashboard.dateFilter = new Reveal.RVDateDashboardFilter(myRule);
+var myRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 3, $.ig.RVPeriodType.Month);
+dashboard.dateFilter = new $.ig.RVDateDashboardFilter(myRule);
 ```
 
   </TabItem>
@@ -149,8 +173,8 @@ myDateFilter.rule = myRule;
   <TabItem value="before" label="1.x">
 
 ```javascript
-var thumbnailView = new Reveal.RevealDashboardThumbnailView("#thumbnail");
-Reveal.RevealUtility.getDashboardInfo("Sales", function (info) {
+var thumbnailView = new $.ig.RevealDashboardThumbnailView("#thumbnail");
+$.ig.RevealUtility.getDashboardInfo("Sales", function (info) {
   thumbnailView.dashboardInfo = info.info;
 });
 ```
@@ -171,6 +195,8 @@ The new `RVThumbnail` API also supports runtime theme changes.
 
 | API | Replacement |
 |---|---|
+| `$.ig` namespace | `Reveal` namespace |
+| `RevealApi` namespace | `Reveal` namespace |
 | `DateFilter` property | `filters` collection |
 | `RVDashboardThumbnailView` | `RVThumbnail` |
 | `Reveal.Sdk.Dashboard.ToJsonStringAsync` | `ToJsonString` |
@@ -183,6 +209,7 @@ The new `RVThumbnail` API also supports runtime theme changes.
 - [ ] Remove Quill.js and Spectrum.js references if still present
 - [ ] Switch client SDK to npm package (or remove jQuery from script-tag setup)
 - [ ] Update server SDK packages to 2.0.0
+- [ ] Replace `$.ig.` and `RevealApi.` with `Reveal.` in all client code
 - [ ] Replace uses of `DateFilter` property to use `Filters` list instead.
 - [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
 - [ ] Replace `Reveal.Sdk.Dashboard.ToJsonStringAsync` with `ToJsonString`

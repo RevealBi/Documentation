@@ -40,7 +40,7 @@ builder.Services.AddControllers().AddReveal( builder =>
 });
 ```
 
-**手順 3** - `RevealView.onDataSourcesRequested` イベント内で `$.ig.RVInMemoryDataSourceItem` を作成します。
+**手順 3** - `RevealView.onDataSourcesRequested` イベント内で `Reveal.RVInMemoryDataSourceItem` を作成します。
 
 `RevealView.onDataSourcesRequested` にイベント ハンドラーを追加します。
 
@@ -50,22 +50,22 @@ builder.Services.AddControllers().AddReveal( builder =>
 <div id="revealView" style="height: 920px; width: 100%;"></div>
 ```
 
-次に、イベント ハンドラーで、`$.ig.RVInMemoryDataSourceItem` オブジェクトの新しいインスタンスを作成し、パラメーターとして一意の名前 / ID を指定します。この ID は、`IRVDataProvider` で、要求しているデータはどのデータ ソースかを示すために使用されます。
+次に、イベント ハンドラーで、`Reveal.RVInMemoryDataSourceItem` オブジェクトの新しいインスタンスを作成し、パラメーターとして一意の名前 / ID を指定します。この ID は、`IRVDataProvider` で、要求しているデータはどのデータ ソースかを示すために使用されます。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
-    var inMemoryDataSourceItem = new $.ig.RVInMemoryDataSourceItem("MyDataSetId");
+    var inMemoryDataSourceItem = new Reveal.RVInMemoryDataSourceItem("MyDataSetId");
     inMemoryDataSourceItem.title = "My Data";
 
-    callback(new $.ig.RevealDataSources([], [inMemoryDataSourceItem], true));
+    callback(new Reveal.RevealDataSources([], [inMemoryDataSourceItem], true));
 };
 ```
 
 :::caution
 
-サーバーがクライアント アプリケーションとは異なる URL で実行されている場合は、`$.ig.RevealSdkSettings.setBaseUrl` を呼び出す必要があります。サーバー アプリケーションとクライアント アプリケーションの両方が同じ URL で実行されている場合、このメソッドは必要ありません。このメソッドを呼び出す必要があるのは 1 回だけです。
+サーバーがクライアント アプリケーションとは異なる URL で実行されている場合は、`Reveal.RevealSdkSettings.setBaseUrl` を呼び出す必要があります。サーバー アプリケーションとクライアント アプリケーションの両方が同じ URL で実行されている場合、このメソッドは必要ありません。このメソッドを呼び出す必要があるのは 1 回だけです。
 
 :::
 
@@ -279,16 +279,16 @@ builder.Services.AddControllers().AddReveal( builder =>
 <div id="revealView" style="height: 920px; width: 100%;"></div>
 ```
 
-ここで、`revealView` を初期化し、`RevealView.onDataSourcesRequested` イベントを処理します。この例では、**SalesRecords** の `id` と **SalesRecords** に設定された `title` で新しい `$.ig.RVInMemoryDataSourceItem` を作成しています。
+ここで、`revealView` を初期化し、`RevealView.onDataSourcesRequested` イベントを処理します。この例では、**SalesRecords** の `id` と **SalesRecords** に設定された `title` で新しい `Reveal.RVInMemoryDataSourceItem` を作成しています。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
 
-    var inMemoryDSI = new $.ig.RVInMemoryDataSourceItem("SalesRecords");
+    var inMemoryDSI = new Reveal.RVInMemoryDataSourceItem("SalesRecords");
     inMemoryDSI.title = "Sales Records";
 
-    callback(new $.ig.RevealDataSources([], [inMemoryDSI], true));
+    callback(new Reveal.RevealDataSources([], [inMemoryDSI], true));
 };
 ```
 

@@ -16,10 +16,10 @@ import TabItem from '@theme/TabItem';
 **手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -28,10 +28,10 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     //get file from google drive
-    const googleDriveDSI = new $.ig.RVGoogleDriveDataSourceItem();
+    const googleDriveDSI = new Reveal.RVGoogleDriveDataSourceItem();
     googleDriveDSI.identifier = "file_identifier";
 
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -46,16 +46,16 @@ revealView.onDataSourcesRequested = (callback) => {
 ```js
 revealView.onDataSourcesRequested = (callback) => {
     //get file from google drive
-    const googleDriveDSI = new $.ig.RVGoogleDriveDataSourceItem();
+    const googleDriveDSI = new Reveal.RVGoogleDriveDataSourceItem();
     googleDriveDSI.identifier = "file_identifier";
 
     //indicate the file is a google sheet and set the sheet name
-    const googleSheet  = new $.ig.RVGoogleSheetDataSourceItem(googleDriveDSI);
+    const googleSheet  = new Reveal.RVGoogleSheetDataSourceItem(googleDriveDSI);
     googleDriveDSI.title = "My Google Sheet";
     googleSheet.subtitle = "Google Drive";
     googleSheet.sheet = "Sheet1";
 
-    callback(new $.ig.RevealDataSources([], [googleSheet], false));
+    callback(new Reveal.RevealDataSources([], [googleSheet], false));
 };
 ```
 

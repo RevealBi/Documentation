@@ -2,12 +2,12 @@
 
 The Reveal SDK offers robust support for localization, enhancing its versatility and appeal across diverse global markets. Featuring a user-friendly and comprehensive localization framework, developers can seamlessly adapt the application to various languages.
 
-The current localization locale is automatically determined by the user's browser by default. However, to enable string localization, it is necessary to set the locale for the SDK itself. This step allows for the customization of the display language for internal strings. The SDK supports the following locales: `de`, `es`, `fr`, `it`, `ja`, `ko`, `ms`, `nl`, `pt`, `ru`, `zh-cn`, and `zh-tw`. You can reference this list by examining the `$.ig.SupportedLocales` property.
+The current localization locale is automatically determined by the user's browser by default. However, to enable string localization, it is necessary to set the locale for the SDK itself. This step allows for the customization of the display language for internal strings. The SDK supports the following locales: `de`, `es`, `fr`, `it`, `ja`, `ko`, `ms`, `nl`, `pt`, `ru`, `zh-cn`, and `zh-tw`. You can reference this list by examining the `Reveal.SupportedLocales` property.
 
-To set the locale, use the method `$.ig.RevealSdkSettings.overrideLocale` and pass the desired locale from the aforementioned list as a parameter. It is crucial to await the promise before attempting to override the locale again. Ensure that you follow this sequence to avoid potential issues.
+To set the locale, use the method `Reveal.RevealSdkSettings.overrideLocale` and pass the desired locale from the aforementioned list as a parameter. It is crucial to await the promise before attempting to override the locale again. Ensure that you follow this sequence to avoid potential issues.
 
 ```js
-$.ig.RevealSdkSettings.overrideLocale('ja').then(_ => {
+Reveal.RevealSdkSettings.overrideLocale('ja').then(_ => {
     ...
 })
 ```
@@ -18,10 +18,10 @@ It should change all internal text to japanese.
 
 After that, we are ready to start localizing our strings, such as visualization titles and column names.
 
-To provide your custom translations, you need to add a handler for the `$.ig.RevealSdkSettings.localizedStringsProvider` event on the client. This event receives an `RVLocalizationElement` and an `RVLocalizationContext` and should return a localized string.
+To provide your custom translations, you need to add a handler for the `Reveal.RevealSdkSettings.localizedStringsProvider` event on the client. This event receives an `RVLocalizationElement` and an `RVLocalizationContext` and should return a localized string.
 
 ```js
-$.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
     ...
     return localizedString;
 };
@@ -30,7 +30,7 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 We will add an event handler to consistently return the localized string `test` for any input string.
 
 ```js
-$.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
     return "test";
 };
 ```
@@ -42,8 +42,8 @@ After being added, the dashboard should appear as follows.
 Let's delve a bit deeper. Instead of returning `test` for everything, let's return `test` only for visualization field labels.
 
 ```js
-$.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
-    if (element.elementType === $.ig.RVLocalizationElementType.VisualizationFieldLabel) {
+Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+    if (element.elementType === Reveal.RVLocalizationElementType.VisualizationFieldLabel) {
         return "test";
     }
     return element.title ?? element.name;
@@ -118,11 +118,11 @@ function translate(element) {
 }
 ```
 
-**Step 5** - Add a handler for the `$.ig.RevealSdkSettings.localizedStringsProvider` event.
+**Step 5** - Add a handler for the `Reveal.RevealSdkSettings.localizedStringsProvider` event.
 
 ```js
-$.ig.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
-    $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
+    Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
         return translate(element);
     };
 })
@@ -165,16 +165,16 @@ function changeLang(lang) {
 }
 
 // set this to your server url
-$.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+Reveal.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
 
-$.ig.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
-    $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
+Reveal.RevealSdkSettings.overrideLocale(sessionLang).then(_ => {
+    Reveal.RevealSdkSettings.localizedStringsProvider = function (element, context) {
         return translate(element);
     };
 })
 
-$.ig.RVDashboard.loadDashboard("Marketing").then(dashboard => {
-    const revealView = new $.ig.RevealView("#revealView");
+Reveal.RVDashboard.loadDashboard("Marketing").then(dashboard => {
+    const revealView = new Reveal.RevealView("#revealView");
     revealView.dashboard = dashboard;
 })
 ```

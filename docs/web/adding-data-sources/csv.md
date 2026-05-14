@@ -16,10 +16,10 @@ Currently, the Reveal SDK is in the process of decoupling the data sources from 
 **Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
 
 ```js
-var revealView = new $.ig.RevealView("#revealView");
+var revealView = new Reveal.RevealView("#revealView");
 revealView.onDataSourcesRequested = (callback) => {
     //add code here
-    callback(new $.ig.RevealDataSources([], [], false));
+    callback(new Reveal.RevealDataSources([], [], false));
 };
 ```
 
@@ -27,13 +27,13 @@ revealView.onDataSourcesRequested = (callback) => {
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const webDS = new $.ig.RVWebResourceDataSource();
+    const webDS = new Reveal.RVWebResourceDataSource();
     webDS.title = "Web Data Source";
     webDS.subtitle = "Web Data Source Subtitle";
     webDS.url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv";
     webDS.useAnonymousAuthentication = true;
 
-    callback(new $.ig.RevealDataSources([webDS], [], false));
+    callback(new Reveal.RevealDataSources([webDS], [], false));
 };
 ```
 
@@ -45,19 +45,19 @@ When the application runs, create a new Visualization and you will see the newly
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
-    const webDS = new $.ig.RVWebResourceDataSource();
+    const webDS = new Reveal.RVWebResourceDataSource();
     webDS.title = "Web Data Source";
     webDS.subtitle = "Web Data Source Subtitle";
     webDS.url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv";
     webDS.useAnonymousAuthentication = true;
 
     //to skip the "Set up your CSV" dialog and directly use the CSV data
-    const webDSI = new $.ig.RVWebResourceDataSourceItem(webDS);            
-    const csvDSI = new $.ig.RVCsvDataSourceItem(webDSI);
+    const webDSI = new Reveal.RVWebResourceDataSourceItem(webDS);            
+    const csvDSI = new Reveal.RVCsvDataSourceItem(webDSI);
     csvDSI.title = "CSV Data";
     csvDSI.subtitle = "CSV Data Subtitle";
 
-    callback(new $.ig.RevealDataSources([webDS], [csvDSI], false));
+    callback(new Reveal.RevealDataSources([webDS], [csvDSI], false));
 };
 ```
 

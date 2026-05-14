@@ -118,11 +118,11 @@ declare let $: any;
 ```ts
 useEffect(() => {
   //highlight-next-line
-  var revealView = new $.ig.RevealView("#revealView");
+  var revealView = new Reveal.RevealView("#revealView");
 }, [])
 ```
 
-この JavaScript コードは、`useEffect` フックを使用して、コードが一度だけ呼び出されるようにします。次に、新しい `$.ig.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
+この JavaScript コードは、`useEffect` フックを使用して、コードが一度だけ呼び出されるようにします。次に、新しい `Reveal.RevealView` を作成し、`#revealView` セレクターを渡すことで、`RevealView` の新しいインスタンスを作成します。
 
 最終の `app.tsx` ファイルは以下のようになります。
 
@@ -137,7 +137,7 @@ function App() {
   
   useEffect(() => {
     //highlight-next-line
-    var revealView = new $.ig.RevealView("#revealView");
+    var revealView = new Reveal.RevealView("#revealView");
   }, [])
 
   return (
@@ -151,7 +151,7 @@ export default App;
 
 :::caution
 
-クライアント アプリは、クライアントが別の URL でホストしている場合、`$.ig.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
+クライアント アプリは、クライアントが別の URL でホストしている場合、`Reveal.RevealSdkSettings.setBaseUrl("url-to-server");` をダッシュボードをホストしているサーバー アドレスに設定する必要があります。
 
 :::
 

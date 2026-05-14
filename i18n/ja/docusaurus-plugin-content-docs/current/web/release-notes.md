@@ -8,6 +8,7 @@ import TabItem from '@theme/TabItem';
 ### 重大な変更
 
 #### すべてのプラットフォーム
+- `$.ig` および `RevealApi` のグローバル名前空間が削除されました。`Reveal` のみを名前空間として使用してください (例: `Reveal.RevealView`、`Reveal.RevealSdkSettings`)。
 - レガシー Java バックエンドが削除されました。
 - レガシー チャート タイプが削除されました。
 - 非推奨の `DateFilter` プロパティが削除されました。
@@ -459,7 +460,7 @@ const revealOptions = {
 
 ### バグ修正
 - データが存在しない状態で「並べ替え条件」ラベルでフィールドを選択すると、「Index was outside the bounds of the array. (インデックスが配列の範囲外です。)」というエラーが発生する問題を修正しました。
-- `ERROR TypeError: $.ig.SdkDashboardDocument.fromJson is not a function` というエラーによりサムネイルが正しく表示されない不具合を修正しました。
+- `ERROR TypeError: Reveal.SdkDashboardDocument.fromJson is not a function` というエラーによりサムネイルが正しく表示されない不具合を修正しました。
 
 ## 1.7.5 (2025 年 7 月 8 日)
 
@@ -475,7 +476,7 @@ const revealOptions = {
 ```js
 revealView.onFieldsInitializing = function (args) {
     args.fields.forEach(f => {
-    if (f.type == $.ig.RVDashboardDataType.Date || f.type == $.ig.RVDashboardDataType.DateTime) {
+    if (f.type == Reveal.RVDashboardDataType.Date || f.type == Reveal.RVDashboardDataType.DateTime) {
         f.weekLevelEnabled = true;
     }});
 };
@@ -486,9 +487,9 @@ revealView.onFieldsInitializing = function (args) {
 - 既存の日付ダッシュボード フィルターのルールと範囲のプロパティを API 経由で設定できるようになりました。
 
 ```js
-revealView.dashboard.filters[0].rule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Day);
+revealView.dashboard.filters[0].rule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 2, Reveal.RVPeriodType.Day);
 //-or-
-revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
+revealView.dashboard.filters[0].range = new Reveal.RVDateRange(new Date(2023, 0, 1), new Date(2023, 11, 31));
 ```
 
 - 複数の日付ダッシュボード フィルターのサポートがベータ機能として追加されました。
@@ -563,10 +564,10 @@ revealView.dashboard.filters[0].range = new $.ig.RVDateRange(new Date(2023, 0, 1
 
 ```js
 // Enable beta feature
-$.ig.RevealSdkSettings.betaFeatures.enable("newDonutChart", "newPieChart");
+Reveal.RevealSdkSettings.betaFeatures.enable("newDonutChart", "newPieChart");
 
 // Disable beta feature
-$.ig.RevealSdkSettings.betaFeatures.disable("newDonutChart", "newPieChart");
+Reveal.RevealSdkSettings.betaFeatures.disable("newDonutChart", "newPieChart");
 ```
 
 - チャート ツールバーが正式リリースされました。RevealView の `showToolbar` プロパティを通じて有効または無効にできます。このプロパティのデフォルト値は `false` です。
@@ -631,8 +632,8 @@ revealView.onDateFilterMenuOpening = function(args)
 
     //Add "Last 2 months" to the months section
     pos = list.findIndex(obj => obj.title === "Month to date"); //Last item in the months section
-    var lastTwoMonthsRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Month);
-    newItem = new $.ig.RVDateFilterMenuOption(lastTwoMonthsRule);
+    var lastTwoMonthsRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 2, Reveal.RVPeriodType.Month);
+    newItem = new Reveal.RVDateFilterMenuOption(lastTwoMonthsRule);
     list.splice(pos + 1, 0, newItem);
 
     //Remove the "Today" option
@@ -640,9 +641,9 @@ revealView.onDateFilterMenuOpening = function(args)
     list.splice(pos, 1);
 
     //Add "First week of 2024" to a new section at the end of the menu
-    list.push(new $.ig.RVDateFilterMenuSeparator()); //Add section separator
-    var firstWeek24Range = new $.ig.RVDateRange(new Date("2024-01-01"), new Date("2024-01-31"));
-    newItem = new $.ig.RVDateFilterMenuOption(firstWeek24Range, "First week of 2024")
+    list.push(new Reveal.RVDateFilterMenuSeparator()); //Add section separator
+    var firstWeek24Range = new Reveal.RVDateRange(new Date("2024-01-01"), new Date("2024-01-31"));
+    newItem = new Reveal.RVDateFilterMenuOption(firstWeek24Range, "First week of 2024")
     list.push(newItem);
 };
 ```
@@ -693,7 +694,7 @@ revealView.onDateFilterMenuOpening = function(args)
 
 - (ベータ版) `onMenuOpening` を使用してツールバーのカスタム メニュー項目のサポートが追加されました。
 - (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。インタラクティブ フィルタリングが強化され、XMLA データ ソースがサポートされるようになりました。複数の表示形式がある場合に、「フィルター条件」オプションが表示されるようになりました。さらに、階級区分図では選択した国が強調表示されます。フィルターが追加されると、変更を防ぐために読み取り専用になります。日付によるフィルタリングも可能になりましたが、選択できる日付値は 1 つに制限されています。
-- (ベータ版) 表示形式エディターの設定ペインで、軸タイトルを「なし」、「X 軸」、「Y 軸」、または「両方」のオプションで制御できるようになりました。この機能を有効にするには、`$.ig.RevealSdkSettings.enableBetaFeatures` を `true` に設定します。
+- (ベータ版) 表示形式エディターの設定ペインで、軸タイトルを「なし」、「X 軸」、「Y 軸」、または「両方」のオプションで制御できるようになりました。この機能を有効にするには、`Reveal.RevealSdkSettings.enableBetaFeatures` を `true` に設定します。
 - PostgreSQL データ プロバイダーは、マテリアライズド ビューをサポートするようになりました。
 - BigQuery データ プロバイダーはデータ ブレンディングをサポートするようになりました。
 - ドーナツ型チャートの表示形式では、ラベルなし、ラベルのみ、値のみ、ラベルと値の両方、といった中央ラベル モードがサポートされるようになりました。
@@ -716,13 +717,13 @@ function customizeDateFilterMenu(args)
 
     //Add "Last 2 months" to the "months" section
     pos = list.getItemIndex("Month to date"); //Obtain the beginning of the "years" section
-    var lastTwoMonthsRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Month);
+    var lastTwoMonthsRule = new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 2, Reveal.RVPeriodType.Month);
     list.insert(pos + 1, lastTwoMonthsRule); //Insert using helper
 
     //Add "Last 2 weeks" to a new section after the "days" section
     pos = list.getItemIndex("Last 7 days");
     list.insertSeparator(pos + 3);
-    var lastTwoWeeksOpt = new $.ig.RVDateFilterMenuOption(new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 2, $.ig.RVPeriodType.Week));  //Instantiate RVDateFilterMenuOption directly
+    var lastTwoWeeksOpt = new Reveal.RVDateFilterMenuOption(new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 2, Reveal.RVPeriodType.Week));  //Instantiate RVDateFilterMenuOption directly
     list.insert(pos + 4, lastTwoWeeksOpt);
 
     //Remove "Today" option
@@ -731,12 +732,12 @@ function customizeDateFilterMenu(args)
 
     //Add "First week of 2024" to a new section at the end of the menu
     list.addSeparator();
-    var firstWeekOf2024Range = new $.ig.RVDateRange(new Date("2024-01-01"), new Date("2024-01-07")); //Customized description
+    var firstWeekOf2024Range = new Reveal.RVDateRange(new Date("2024-01-01"), new Date("2024-01-07")); //Customized description
     list.add(firstWeekOf2024Range, "First week of 2024");
 }
 
 //The new rules also integrate with the existing filters API
-revealView.dashboard.dateFilter = new $.ig.RVDateDashboardFilter(new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 3, $.ig.RVPeriodType.Day));
+revealView.dashboard.dateFilter = new Reveal.RVDateDashboardFilter(new Reveal.RVDateRule(Reveal.RVPeriodRelation.Last, 3, Reveal.RVPeriodType.Day));
 ```
 
 - ダッシュボード フィルターは表示形式に自動的に接続を試行するようになりました。接続できない場合は、以前と同じように手動接続を使用できます。
@@ -810,17 +811,17 @@ app.use('/', reveal(revealOptions));
 ```js
 revealView.onTooltipShowing = function (args) {
     //A string pointing to the image may be used or an RVImage, such as:
-    //var caseIcon = new $.ig.RVImage("https://svgsilh.com/png-512/306879.png", "Case Icon"); 
+    //var caseIcon = new Reveal.RVImage("https://svgsilh.com/png-512/306879.png", "Case Icon"); 
     var caseIcon = "https://svgsilh.com/png-512/306879.png";
     var openIcon = "https://svgsilh.com/png-512/41335.png";
 
     if (args.cell.formattedValue == "Digital Security Center")
     {
-        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Escalate Incident", caseIcon, (sender, clickArgs) => { console.log("Clicked"); }));
-        args.customItems.push(new $.ig.RVTooltipItem("Critical", "Open Incident Report", openIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new Reveal.RVTooltipItem("Critical", "Escalate Incident", caseIcon, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new Reveal.RVTooltipItem("Critical", "Open Incident Report", openIcon, (sender, clickArgs) => { console.log("Clicked"); }));
 
-        args.customItems.push(new $.ig.RVTooltipItem("High", "Send Reminder", null, (sender, clickArgs) => { console.log("Clicked"); }));
-        args.customItems.push(new $.ig.RVTooltipItem("High", "Assign Lead Investigator", null, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new Reveal.RVTooltipItem("High", "Send Reminder", null, (sender, clickArgs) => { console.log("Clicked"); }));
+        args.customItems.push(new Reveal.RVTooltipItem("High", "Assign Lead Investigator", null, (sender, clickArgs) => { console.log("Clicked"); }));
     }
 }
 ```
@@ -894,14 +895,14 @@ revealView.onUrlLinkRequested = (args) => {
 
 #### すべてのプラットフォーム
 
-- (ベータ版) カテゴリ チャートに固定線を追加できるようになりました。このベータ機能にアクセスするには、`$.ig.RevealSdkSettings` の `enableBetaFeatures` プロパティを有効にします。エディターの固定行セクションでは、データ フィールド、または最高値、最低値、平均値、または固定値の集計特殊フィールドのいずれかを使用できます。
+- (ベータ版) カテゴリ チャートに固定線を追加できるようになりました。このベータ機能にアクセスするには、`Reveal.RevealSdkSettings` の `enableBetaFeatures` プロパティを有効にします。エディターの固定行セクションでは、データ フィールド、または最高値、最低値、平均値、または固定値の集計特殊フィールドのいずれかを使用できます。
 - 表示形式フィルター API に日付のサポートが追加されました。たとえば、「過去 7 日間」などの日付ベースの表示形式フィルターがある場合、次のコードを使用して、返される `RVDateRange` オブジェクトの `from` プロパティと `to` プロパティをチェックすることで、フィルターが評価した日付範囲を確認できます。
 
 ```js
 var dateRange = revealView.dashboard.visualizations[0].filters[0].dateRange;
 ```
 
-- `$.ig.RevealSdkSettings` の `enableBetaFeatures` フラグを必要とせずに、サーバー側グリッド ページングが利用できるようになりました。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
+- `Reveal.RevealSdkSettings` の `enableBetaFeatures` フラグを必要とせずに、サーバー側グリッド ページングが利用できるようになりました。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
 - 表示形式レベルの説明が追加されました。表示形式を編集するときに、必要に応じて説明を入力できるようになりました。
 - 表示形式ではダッシュボードのリンクが自動的にサポートされるようになりました。デフォルトの機能は、[「ダッシュボードのリンク」](https://help.revealbi.io/ja/web/linking-dashboards/)トピックの手順を使用して上書きできます。
 - 表示形式を最大化すると、オーバーフロー メニューから個別に PDF にエクスポートできるようになりました。
@@ -964,7 +965,7 @@ function addSelValueToFilter(fieldName, valueIdx) {
 }
 ```
 - (ベータ版) 同じ表示形式内でフィルタリングされたデータを比較できます。シリーズのツールチップには、選択した値でフィルタリングするオプションが含まれます。表示形式の残りの部分には、フィルタリングされた値と元の値を簡単に比較できるように、両方の値が表示されます。現在、次のチャート タイプがサポートされています: 縦棒、棒、折れ線、時系列、エリア、ステップ エリア、スプライン、積層型縦棒、積層型エリア、積層型棒。この機能を有効にするには、RevealView で `highlightedFilteringEnabled` を `true` に設定します。
-- (ベータ版) 近似曲線、ラベル、ズームなどにすばやくアクセスするための表示形式ツールバーが追加されました。この機能を有効にするには、`$.ig.RevealSdkSettings` で `enableNewToolbar` を `true` に設定します。
+- (ベータ版) 近似曲線、ラベル、ズームなどにすばやくアクセスするための表示形式ツールバーが追加されました。この機能を有効にするには、`Reveal.RevealSdkSettings` で `enableNewToolbar` を `true` に設定します。
 - SQL ベースのデータ ソースに対しクライアント側でカスタム クエリを提供できる機能を削除しました。
 - RVGoogleAnalyticsDataSource と RVGoogleAnalyticsDataSourceItem は、Google がこのコネクタの API を 2024 年 7 月 1 日に廃止する予定であるため、削除されました。
 - RevealView に `onDashboardChanged` イベントを追加しました。
@@ -1032,7 +1033,7 @@ revealView.onDashboardChanged = function (args: DashboardChangedEventArgs) {
 - グリッドまたはピボットを PDF にエクスポートすると、ページの幅に収まらない列を含むオーバーフロー テーブルが生成されるようになりました。
 - PDF エクスポート時にグリッド列の幅が優先されるようになりました。
 - Excel へのエクスポートにおけるピボット グリッドの表示形式の外観が改善されました。
-- (ベータ版) グリッド表示形式にサーバー側のページング サポートが追加されました。この機能を有効にして、表示形式エディターの設定ペインに表示するには、`$.ig.RevealSdkSettings.enableBetaFeatures` を `true` に設定します。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
+- (ベータ版) グリッド表示形式にサーバー側のページング サポートが追加されました。この機能を有効にして、表示形式エディターの設定ペインに表示するには、`Reveal.RevealSdkSettings.enableBetaFeatures` を `true` に設定します。ページングは​​次のプロバイダーでサポートされています: SQL Server、MySQL、BigQuery、PostgreSQL、SyBase、Athena、Oracle。ストアド プロシージャーをサポートするプロバイダーでは、テーブルのようにクエリを実行して行の範囲を返すことができないため、ストアド プロシージャーを選択するとグリッド ページングが無効になります。さらに、サーバー上でのデータ処理が false の場合、およびブレンドされたデータを使用する場合、ページングは​​使用できません。
 - `SkiaSharp`、`SkiaSharp.HarfBuzz`、および `SkiaSharp.NativeAssets.Linux` v2.88.3 依存関係が v2.88.7 に更新されました。
 表示形式エディターでデータ ツールチップをプレビューするかどうかを制御するフラグが RevealView に追加されました。クエリが最初の 5 行を取得するのを防ぐため、これらはデフォルトでオフになっています。このツールチップを有効にするには、`isPreviewDataInVisualizationEditorEnabled` を `true` に設定します。
 - サーバー上でプロセス データを使用する場合、MySql でブレンディングがサポートされるようになりました。
@@ -1139,7 +1140,7 @@ dataSourceItemFilter?: (userContext: IRVUserContext | null, dataSourceItem: RVDa
 
 - 表示形式の背景色ピッカーが [Coloris](https://github.com/mdbassit/Coloris) を使用するように更新されました。この機能強化により、デフォルトで背景色設定の可視性が有効になったため、プロパティ `canChangeVisualizationBackgroundColor` は廃止対象とされています。さらに、[Spectrum](https://bgrins.github.io/spectrum/) の依存関係は必要なくなりました。
 - キャッシュ ファイル `tabulardata.sqlite` の sqlite ストレージは、無制限に増大することを防ぐためにデフォルトで無効になりました。
-- `$.ig.RevealSdkSettings.enableActionsOnHoverTooltip` が有効になっている場合、アクション ツールチップがピボット表示形式で利用できるようになりました。チャート表示形式上にマウスを置くと、データ ポイントから特定のピクセル数以内にツールチップが表示されるようになりました。
+- `Reveal.RevealSdkSettings.enableActionsOnHoverTooltip` が有効になっている場合、アクション ツールチップがピボット表示形式で利用できるようになりました。チャート表示形式上にマウスを置くと、データ ポイントから特定のピクセル数以内にツールチップが表示されるようになりました。
 - 「サーバーでデータを処理」が有効になっている SQL Server データ ソースで次の関数を使用する計算フィールドのサポート: `fyear`、`and`、`or`、`concatenate`、`replace`、`date`、`time`、`hour`、`minute`、`second`、`formatdate`、および `datevalue`。
 - 実行時にダッシュボード内の URL リンクをインターセプトおよび変更できるようにするために、`onUrlLinkRequested` という名前の新しいクライアント イベントが追加されました。
 
@@ -1233,7 +1234,7 @@ PdfExportOptions options = new PdfExportOptions();
 
 options.InitScript = @"
 	function init(revealView){
-		$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();                   
+		Reveal.RevealSdkSettings.theme = new Reveal.MountainDarkTheme();                   
 
 		revealView.refreshTheme();                
 
@@ -1256,7 +1257,7 @@ await _exporter.ExportToPdf(dashboardId, path, options);
 PdfExportOptions options = new PdfExportOptions();	
 			
 options.setInitScript("function init(revealView){\r\n"
-		+ "		$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();                   \r\n"
+		+ "		Reveal.RevealSdkSettings.theme = new Reveal.MountainDarkTheme();                   \r\n"
 		+ "\r\n"
 		+ "		revealView.refreshTheme();                \r\n"
 		+ "\r\n"
@@ -1293,7 +1294,7 @@ RevealEngineLocator.dashboardExporter.exportToPdf(dashboardId, null, options ,ne
 var options = new PdfExportOptions();
 options.initScript = `
 function init(revealView){
-	$.ig.RevealSdkSettings.theme = new $.ig.MountainDarkTheme();                   
+	Reveal.RevealSdkSettings.theme = new Reveal.MountainDarkTheme();                   
 
 	revealView.refreshTheme();                
 
@@ -1331,10 +1332,10 @@ revealServer.exporter.exportPdf("Cybersecurity_Sample_ManyFilters_Values", "c:\\
 <script type="text/javascript">
         
         //set this to your server url
-        $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");   
-        var revealView = new $.ig.RevealView("#revealView");
+        Reveal.RevealSdkSettings.setBaseUrl("http://localhost:5111/");   
+        var revealView = new Reveal.RevealView("#revealView");
 		
-        $.ig.RVDashboard.loadDashboard("Sales", (dashboard) => {
+        Reveal.RVDashboard.loadDashboard("Sales", (dashboard) => {
             revealView.dashboard = dashboard;
         });
         
@@ -1493,7 +1494,7 @@ var gridConfig = revealView.chartTypes.find(x => x.chartType == 'Grid');
 revealView.chartTypes.splice(revealView.chartTypes.indexOf(gridConfig), 1);
 ```
 
-* (ベータ版) マウスをホバーしているときにチャート アクションを使用できます。`$.ig.RevealSdkSettings.enableActionsOnHoverTooltip = true` を使用してオンにします。
+* (ベータ版) マウスをホバーしているときにチャート アクションを使用できます。`Reveal.RevealSdkSettings.enableActionsOnHoverTooltip = true` を使用してオンにします。
 * 計算フィールドの式言語は、先頭に '0' を付けずに指定された小数をサポートするようになりました (例: '0.5' を意味する '.5')。
 * 次の計算フィールド関数に対する BigQuery データ ソースのサポートが追加されました: YEAR、QUARTER、MONTH、DAY、HOUR、MINUTE、SECOND、REPLACE、WEEKDAY、MONTHNAME、MONTHSHORTNAME、EMPTY、RANDBETWEEN。
 * コピーと貼り付けが改善されました。ブラウザーのタブやページを更新しても機能するようになりました。
@@ -1722,7 +1723,7 @@ RevealEngineLocator.dashboardExporter.exportToPdf(dashboardId, new ExportStreamC
 - コールバックを含むメソッドには、promise メソッドの処理を可能にする追加の署名が含まれるようになりました。
 
 ```javascript
-$.ig.RevealUtility.loadDashboard(dashboardId).then(dashboard => {
+Reveal.RevealUtility.loadDashboard(dashboardId).then(dashboard => {
   revealView.dashboard = dashboard;
 });
 ```
@@ -1730,11 +1731,11 @@ $.ig.RevealUtility.loadDashboard(dashboardId).then(dashboard => {
 async/await を使用する場合:
 
 ```javascript
-let dashboard = await $.ig.RevealUtility.loadDashboard(dashboardId);
+let dashboard = await Reveal.RevealUtility.loadDashboard(dashboardId);
 revealView.dashboard = dashboard;
 ```
 
-- `$.ig.revealSdkSettings` から `ensureFontsLoadedAsync` メソッドを使用してデフォルトのフォントを手動でロードする必要はなくなりました。
+- `Reveal.revealSdkSettings` から `ensureFontsLoadedAsync` メソッドを使用してデフォルトのフォントを手動でロードする必要はなくなりました。
 - 計算フィールドに新しい 'DateDiff' 関数を追加しました。
 
 ### バグ修正
