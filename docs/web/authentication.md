@@ -466,6 +466,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 </Tabs>
 
 The `RVKeyPairDataSourceCredential` is supported for the following data sources:
+- Azure Cosmos DB
 - Snowflake
 
 ## Amazon Web Services
