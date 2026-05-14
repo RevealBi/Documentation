@@ -120,9 +120,13 @@ While developing and debugging your application, it is common to host the server
 
 ```java title="Application.java"
 @Bean
-FilterRegistrationBean<CorsFilter> revealCorsFilter() {
+FilterRegistrationBean<CorsFilter> revealApiCorsFilter() {
     CorsConfiguration config = new CorsConfiguration();
-    config.addAllowedOriginPattern("*");
+    // DEVELOPMENT only. Do not deploy this wildcard localhost pattern to production.
+    // In production, replace this with your exact allowed client origins.
+    // The localhost port pattern below is supported in Spring Boot 3.x.
+    config.addAllowedOriginPattern("http://localhost:*");
+    config.addAllowedOriginPattern("https://localhost:*");
     config.addAllowedHeader("*");
     config.addAllowedMethod("*");
 
