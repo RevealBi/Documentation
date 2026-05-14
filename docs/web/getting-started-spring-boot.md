@@ -31,7 +31,7 @@ Version 2.x is not supported since Reveal 1.7.x
 
 ![](images/getting-started-spring-boot-group-id.jpg)
 
-5 - Provide the Artifact Id. In this example we are using **reveal**.
+5 - Provide the Artifact Id. In this example, we are using **reveal**.
 
 ![](images/getting-started-spring-boot-artifact-id.jpg)
 
