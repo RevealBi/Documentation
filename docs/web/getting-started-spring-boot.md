@@ -23,7 +23,7 @@ More information about how to get started with Visual Studio Code and Java can b
 Version 2.x is not supported since Reveal 1.7.x
 :::
 
-3 - Select **Java**  as the language.
+3 - Select **Java** as the language.
 
 ![](images/getting-started-spring-boot-language.jpg)
 
