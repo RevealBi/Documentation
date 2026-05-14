@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 #### Java
 - The Java SDK now requires Java 17 or higher.
 - The Java SDK now uses the `io.revealbi:reveal-sdk-servlet` Maven artifact and a servlet-based setup with `RevealEngineServlet`.
-- Some platforms are no longer supported by the Java SDK because they cannot run the native .NET components used by Reveal SDK. For example, AIX is not supported.
+- The Java SDK supports Linux, Windows, and macOS, with both x64 and arm64 architectures.
 - If you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
 ### New Features
@@ -128,4 +128,3 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - A regression caused `filterValueChangedEvent` to not fire correctly.
 - The "titles in first row" parameter for Excel data source items was being incorrectly set.
 - Missing title in the datasource selector dialog.
-

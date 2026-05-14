@@ -61,7 +61,7 @@ By default, the Reveal SDK uses a convention that will load all dashboards from 
 
 The steps below describe how to install the Reveal SDK into an existing Java application.
 
-The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Because the new Java SDK now wraps native .NET components, some rare platforms that cannot run .NET, such as AIX, are no longer supported. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. The supported platforms are Linux, Windows, and macOS, with both x64 and arm64 architectures. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
 1 - Update the **pom.xml** file, and add the Reveal Maven repository.
 
@@ -86,7 +86,7 @@ The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Bec
 
 ### Spring Boot
 
-Register `RevealEngineServlet` as a Spring Boot servlet. The current Java SDK no longer sits on top of JAX-RS, so you do not need to register Reveal SDK classes in a JAX-RS context. Replace the sample provider classes with your application's implementations. If you need to pass request-based properties to the user context, replace `null` with a `Properties` object built from the request.
+Register `RevealEngineServlet` as a Spring Boot servlet. Replace the sample provider classes with your application's implementations. If you need to pass request-based properties to the user context, replace `null` with a `Properties` object built from the request.
 
 ```java title="Application.java"
 @SpringBootApplication
@@ -144,4 +144,4 @@ public class AppInitializer implements ServletContextListener {
 
 Reveal SDK includes native components built for specific platform and architecture combinations. When you package an application, Maven selects the native component for the current machine. If the deployment platform or architecture is different from the packaging machine, use the Maven profile parameter `-P os_arch` to select the target platform and architecture.
 
-The native .NET binary is included as a resource in the platform-specific artifacts and is extracted to the temporary directory at runtime. The extracted folder uses the `platform-arch-version` format, such as `linux-aarch64-3`.
+The native binary is included as a resource in the platform-specific artifacts and is extracted to the temporary directory at runtime. The extracted folder uses the `platform-arch-version` format, such as `linux-aarch64-3`.
