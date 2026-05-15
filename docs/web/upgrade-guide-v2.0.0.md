@@ -17,7 +17,7 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 - **Renamed and removed APIs** 
     - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and classes implementing it.
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
-- **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of `RVThumbnail`.
+- **Deprecated types** — `RVDashboardThumbnailView` has been _deprecated_, in favor of `RVThumbnail`.
 
 ## Step-by-Step Upgrade
 
