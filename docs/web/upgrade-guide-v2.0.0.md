@@ -215,7 +215,7 @@ The new `RVThumbnail` API also supports runtime theme changes.
 - [ ] Update server SDK packages to 2.0.0
 - [ ] Replace `$.ig.` and `RevealApi.` with direct imports from `reveal-sdk` in all client code
 - [ ] Replace uses of `DateFilter` property to use `Filters` list instead.
-- [ ] Replace `RVDashboardThumbnailView` with `RVThumbnail`
+- [ ] (recommended) Replace `RVDashboardThumbnailView` with `RVThumbnail`
 - [ ] Replace `Reveal.Sdk.Dashboard.ToJsonStringAsync` with `ToJsonString`
 - [ ] Verify no dashboards use removed legacy chart types
 - [ ] If using the legacy Java engine, migrate to a supported server SDK
