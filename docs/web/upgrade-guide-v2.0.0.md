@@ -143,7 +143,7 @@ const revealView = new RevealView("#revealView");
 
 #### `DateFilter` → `filters` + `RVDateRule`
 
-The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.  DateFilter was eliminated from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and and classes implementing it.
+The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.  DateFilter was eliminated from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and classes implementing it.
 
 <Tabs groupId="api-datefilter">
   <TabItem value="before" label="1.x">
