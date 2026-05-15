@@ -538,7 +538,7 @@
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(新しいタブで開く)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
@@ -642,31 +642,31 @@
     "description": "The back to search text for footer"
   },
   "homepage.hero.cta.getStarted": {
-    "message": "Get Started"
+    "message": "はじめに"
   },
   "homepage.hero.cta.exploreAi": {
-    "message": "Explore AI SDK"
+    "message": "AI SDK を見る"
   },
   "homepage.ai.badge": {
-    "message": "NEW"
+    "message": "新機能"
   },
   "homepage.ai.title": {
-    "message": "AI-Powered Analytics"
+    "message": "AI 搭載アナリティクス"
   },
   "homepage.ai.description": {
-    "message": "Generate dashboards from natural language, get AI insights from your data, and build conversational analytics — all with a few lines of code."
+    "message": "自然言語からダッシュボードを生成し、データから AI インサイトを取得し、会話型アナリティクスを構築できます — すべて数行のコードで実現可能です。"
   },
   "homepage.ai.capability1": {
-    "message": "Natural Language Dashboards"
+    "message": "自然言語ダッシュボード"
   },
   "homepage.ai.capability2": {
-    "message": "AI Insights & Forecasts"
+    "message": "AI インサイトと予測"
   },
   "homepage.ai.capability3": {
-    "message": "Conversational Chat"
+    "message": "会話型チャット"
   },
   "homepage.ai.cta": {
-    "message": "Start building with AI"
+    "message": "AI で構築を始める"
   },
   "homepage.frameworks.html": {
     "message": "HTML / JavaScript"
@@ -687,51 +687,51 @@
     "message": "Spring Boot"
   },
   "homepage.frameworks.title": {
-    "message": "Choose Your Stack"
+    "message": "スタックを選ぶ"
   },
   "homepage.frameworks.subtitle": {
-    "message": "Step-by-step getting started guides for your preferred framework."
+    "message": "お好みのフレームワーク向けのステップ バイ ステップのスタート ガイド。"
   },
   "homepage.sdk.web.link.getStarted": {
-    "message": "Getting Started"
+    "message": "はじめに"
   },
   "homepage.sdk.web.link.dataSources": {
-    "message": "Data Sources"
+    "message": "データ ソース"
   },
   "homepage.sdk.web.link.apiRef": {
-    "message": "API Reference"
+    "message": "API リファレンス"
   },
   "homepage.sdk.web.link.playground": {
-    "message": "Developer Playground"
+    "message": "開発者向けプレイグラウンド"
   },
   "homepage.sdk.ai.link.overview": {
-    "message": "Overview"
+    "message": "概要"
   },
   "homepage.sdk.ai.link.getStarted": {
-    "message": "Getting Started"
+    "message": "はじめに"
   },
   "homepage.sdk.ai.link.insights": {
-    "message": "Insights API"
+    "message": "インサイト API"
   },
   "homepage.sdk.ai.link.chat": {
-    "message": "Chat API"
+    "message": "チャット API"
   },
   "homepage.sdk.web.title": {
     "message": "Web SDK"
   },
   "homepage.sdk.web.subtitle": {
-    "message": "Embedded Analytics"
+    "message": "埋め込みアナリティクス"
   },
   "homepage.sdk.web.description": {
-    "message": "Embed interactive dashboards and data visualizations into any web application. Supports 30+ data sources with full customization."
+    "message": "インタラクティブなダッシュボードやデータ可視化を、あらゆる Web アプリケーションに埋め込みます。30 種類以上のデータ ソースに対応し、フル カスタマイズが可能です。"
   },
   "homepage.sdk.ai.title": {
     "message": "AI SDK"
   },
   "homepage.sdk.ai.subtitle": {
-    "message": "Intelligent Analytics"
+    "message": "インテリジェント アナリティクス"
   },
   "homepage.sdk.ai.description": {
-    "message": "Add AI-powered insights, natural language dashboards, and conversational analytics using LLMs like OpenAI, Anthropic, and Google."
+    "message": "OpenAI、Anthropic、Google などの LLM を使用して、AI 搭載インサイト、自然言語ダッシュボード、会話型アナリティクスを追加できます。"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Current",
+    "message": "現在",
     "description": "The label for version current"
   },
   "sidebar.webSidebar.doc.Overview": {
@@ -552,11 +552,11 @@
     "description": "The label for the doc item 'Elasticsearch' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/elasticsearch"
   },
   "sidebar.webSidebar.category.web-component-wrappers-installation": {
-    "message": "Installation",
+    "message": "インストール",
     "description": "The label for category 'Installation' in sidebar 'webSidebar'"
   },
   "sidebar.webSidebar.doc.web-component-wrappers-overview": {
-    "message": "Overview",
+    "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/index"
   },
   "sidebar.webSidebar.doc.web-component-wrappers-installation-angular": {
@@ -568,27 +568,27 @@
     "description": "The label for the doc item 'React' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/installation-react"
   },
   "sidebar.webSidebar.doc.web-component-wrappers-reveal-view-options": {
-    "message": "Options",
+    "message": "オプション",
     "description": "The label for the doc item 'Options' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/options"
   },
   "sidebar.webSidebar.doc.web-component-wrappers-visualization-viewer-options": {
-    "message": "Options",
+    "message": "オプション",
     "description": "The label for the doc item 'Options' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/visualization-viewer/options"
   },
   "sidebar.userSideBar.doc.user-visualizations-overview": {
-    "message": "Overview",
+    "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/visualizations-overview"
   },
   "sidebar.userSideBar.doc.user-filters-overview": {
-    "message": "Overview",
+    "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/filters-overview"
   },
   "sidebar.userSideBar.doc.user-tutorials-overview": {
-    "message": "Overview",
+    "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/tutorials-overview"
   },
   "sidebar.userSideBar.doc.user-tutorials-text-view": {
-    "message": "Text View",
+    "message": "テキスト ビュー",
     "description": "The label for the doc item 'Text View' in sidebar 'userSideBar', linking to the doc user/tutorials-text-view"
   },
   "sidebar.aiSidebar.category.ai-getting-started-header": {
@@ -680,11 +680,11 @@
     "description": "The label for the doc item 'Streaming Markdown Display' in sidebar 'aiSidebar', linking to the doc ai/guide-streaming-display"
   },
   "sidebar.aiSidebar.category.Providers": {
-    "message": "Providers",
+    "message": "プロバイダー",
     "description": "The label for category 'Providers' in sidebar 'aiSidebar'"
   },
   "sidebar.aiSidebar.doc.ai-providers-overview": {
-    "message": "Overview",
+    "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/providers-overview"
   },
   "sidebar.aiSidebar.doc.OpenAI": {
@@ -704,11 +704,11 @@
     "description": "The label for the doc item 'Google Gemini' in sidebar 'aiSidebar', linking to the doc ai/providers-google-gemini"
   },
   "sidebar.aiSidebar.doc.Custom Endpoints": {
-    "message": "Custom Endpoints",
+    "message": "カスタム エンドポイント",
     "description": "The label for the doc item 'Custom Endpoints' in sidebar 'aiSidebar', linking to the doc ai/providers-custom-endpoints"
   },
   "sidebar.aiSidebar.doc.Building a Custom Provider": {
-    "message": "Building a Custom Provider",
+    "message": "カスタム プロバイダーの構築",
     "description": "The label for the doc item 'Building a Custom Provider' in sidebar 'aiSidebar', linking to the doc ai/providers-building-custom"
   },
   "sidebar.webSidebar.doc.ClickHouse": {
