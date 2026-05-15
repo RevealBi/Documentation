@@ -21,7 +21,7 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "NestJS", id: "web/getting-started-server-nest" },
             { type: "doc", label: "Node.js", id: "web/getting-started-server-node" },
             { type: "doc", label: "Node.js - TypeScript", id: "web/getting-started-server-node-typescript" },
-            { type: "doc", label: "Spring Boot - Jersey", id: "web/getting-started-spring-boot-jersey" },
+            { type: "doc", label: "Spring Boot", id: "web/getting-started-spring-boot" },
           ]
         },
         {

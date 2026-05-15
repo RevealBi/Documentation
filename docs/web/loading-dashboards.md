@@ -133,9 +133,9 @@ builder.Services.AddControllers().AddReveal( builder =>
   <TabItem value="java" label="Java">
 
 ```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setDashboardProvider(new DashboardProvider()).
-    build());
+new RevealServerBuilder()
+    .setDashboardProvider(new DashboardProvider())
+    .build();
 ```
 
   </TabItem>

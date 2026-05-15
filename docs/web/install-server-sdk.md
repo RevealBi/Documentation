@@ -1,4 +1,4 @@
-# Installing the Server SDK
+﻿# Installing the Server SDK
 
 ## ASP.NET
 
@@ -61,6 +61,8 @@ By default, the Reveal SDK uses a convention that will load all dashboards from 
 
 The steps below describe how to install the Reveal SDK into an existing Java application.
 
+The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Supported platforms are Windows, Linux, and macOS, in both x64 and ARM64 for all three. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+
 1 - Update the **pom.xml** file, and add the Reveal Maven repository.
 
 ```xml title="pom.xml"
@@ -76,81 +78,65 @@ The steps below describe how to install the Reveal SDK into an existing Java app
 
 ```xml title="pom.xml"
 <dependency>
-    <groupId>com.infragistics.reveal.sdk</groupId>
-    <artifactId>reveal-sdk</artifactId>
+    <groupId>io.revealbi</groupId>
+    <artifactId>reveal-sdk-servlet</artifactId>
     <version>[var:sdkVersion]</version>
 </dependency>
 ```
 
-### Spring Boot - Jersey
+### Spring Boot
 
-Create a Jersey Config class and initialize the Reveal SDK by calling the `RevealEngineInitializer.initialize` method. In order for the Reveal SDK to function properly with Jersey, we need to register all of the Reveal SDK classes with Jersey. To register the Reveal SDK classes, loop through the classes returned by the `RevealEngineInitializer.getClassesToRegister` method, and register them with the Jersey Config.
+Register `RevealEngineServlet` as a Spring Boot servlet. Replace the sample provider classes with your application's implementations. If you need to pass request-based properties to the user context, replace `null` with a `Properties` object built from the request.
 
-```java title="RevealJerseyConfig.java"
-import org.glassfish.jersey.server.ResourceConfig;
-import org.springframework.stereotype.Component;
+```java title="Application.java"
+@SpringBootApplication
+public class Application {
 
-import com.infragistics.reveal.engine.init.RevealEngineInitializer;
+    public static void main(String[] args) {
+       SpringApplication.run(Application.class, args);
+    }
 
-import javax.ws.rs.ApplicationPath;
+    @Bean
+    ServletRegistrationBean<RevealEngineServlet> revealServlet() {
+       RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
+                .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
+                .addSettings(settings -> {
+                    // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
+                })
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
-@Component
-@ApplicationPath("/")
-public class RevealJerseyConfig extends ResourceConfig 
-{
-    public RevealJerseyConfig()
-    {
-        RevealEngineInitializer.initialize();
-        
-        //register all Reveal classes in JAX-RS context
-        for (Class<?> clazz : RevealEngineInitializer.getClassesToRegister()) {
-        	register(clazz);
-        }
+       return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }
 }
 ```
 
 ### Tomcat
 
-1 - Add a dependency to a Jakarta RESTful Web Services (JAX-RS) implementation. You can choose between multiple options like Jersey, RESTeasy, Apache CXF, etc. Please follow the steps described by the provider of your preference.
-
-As an example, here the dependencies you need to add for Jersey:
-
-```xml
-<dependency>
-    <groupId>org.glassfish.jersey.containers</groupId>
-    <artifactId>jersey-container-servlet</artifactId>
-    <version>2.32</version>
-</dependency>
-<dependency>
-    <groupId>org.glassfish.jersey.inject</groupId>
-    <artifactId>jersey-cdi2-se</artifactId>
-    <version>2.32</version>
-</dependency>
-```
-
-2 - Create a ServletContextListener class and initialize the Reveal SDK by calling the `RevealEngineInitializer.initialize` method.
+Use a Jakarta EE 9 compliant servlet container, such as Tomcat 10 or later. Create a `ServletContextListener` class and register `RevealEngineServlet`. Replace the sample provider classes with your application's implementations. If you need to pass request-based properties to the user context, replace `null` with a `Properties` object built from the request.
 
 ```java
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
-
-import com.infragistics.reveal.engine.init.RevealEngineInitializer;
-
 @WebListener
-public class RevealServletContextListener implements ServletContextListener {
+public class AppInitializer implements ServletContextListener {
 
 	@Override
-	public void contextDestroyed(ServletContextEvent ctx) {
-		
-	}
+	public void contextInitialized(ServletContextEvent sce) {
+        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
+                .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
+                .addSettings(settings -> {
+                    // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
+                })
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
-	@Override
-	public void contextInitialized(ServletContextEvent ctx) {
-		
-		//initialize Reveal
-		RevealEngineInitializer.initialize();
+        ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("myServlet", revealEngineServlet);
+        reg.setAsyncSupported(true);
+        reg.addMapping("/reveal-api/*");
 	}
 }
 ```
+

@@ -17,6 +17,12 @@ import TabItem from '@theme/TabItem';
 #### Node
 - The `dateFilter` property on headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
 
+#### Java
+- The Java SDK now requires Java 17 or higher.
+- The Java SDK now uses the `io.revealbi:reveal-sdk-servlet` Maven artifact and a servlet-based setup with `RevealEngineServlet`.
+- The Java SDK supports Linux, Windows, and macOS, with both x64 and arm64 architectures.
+- If you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
+
 ### New Features
 
 #### All Platforms
@@ -34,6 +40,7 @@ import TabItem from '@theme/TabItem';
 - Data agent connection recovery has been improved to handle network interruptions more reliably.
 
 #### Java
+- The Java SDK now has feature parity with the .NET SDK for connectors and extension points, with the exception of `InMemoryDataProvider`, which will be ported to Java in a future release.
 - The Java SDK now supports Redis caching via `RVRedisOptions`.
 - `DefaultDashboardTheme` is now supported.
 - Headless export now supports CSV format.
@@ -121,4 +128,3 @@ exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDa
 - A regression caused `filterValueChangedEvent` to not fire correctly.
 - The "titles in first row" parameter for Excel data source items was being incorrectly set.
 - Missing title in the datasource selector dialog.
-
