@@ -80,7 +80,6 @@ The SDK distribution zip is still available for non-bundler setups — jQuery an
 ```
 :::
 
-
 ### 3. Update server SDK packages
 
 <Tabs groupId="code" queryString>
