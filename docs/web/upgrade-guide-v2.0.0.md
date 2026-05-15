@@ -93,13 +93,24 @@ Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
 
   </TabItem>
   <TabItem value="java" label="Java">
+  
+1 - Update the **pom.xml** file, and add the Reveal Maven repository.
 
-Update your Maven/Gradle dependency to version **2.0.0** or later.
+```xml title="pom.xml"
+<repositories>
+    <repository>
+        <id>reveal.public</id>
+        <url>https://maven.revealbi.io/repository/public</url>
+    </repository>	
+</repositories>
+```
+
+2 -Add the Reveal SDK as a dependency.
 
 ```xml
 <dependency>
-    <groupId>com.infragistics.reveal.sdk</groupId>
-    <artifactId>reveal-sdk</artifactId>
+    <groupId>io.revealbi</groupId>
+    <artifactId>reveal-sdk-servlet</artifactId>
     <version>2.0.0</version>
 </dependency>
 ```
