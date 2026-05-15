@@ -1,15 +1,99 @@
 {
   "version.label": {
-    "message": "Current",
-    "description": "The label for version current"
+    "message": "1.8.4",
+    "description": "The label for version 1.8.4"
+  },
+  "sidebar.webSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category 'Installation' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Getting Started - Server": {
+    "message": "Getting Started - Server",
+    "description": "The label for category 'Getting Started - Server' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Getting Started - Client": {
+    "message": "Getting Started - Client",
+    "description": "The label for category 'Getting Started - Client' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.General": {
+    "message": "General",
+    "description": "The label for category 'General' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Server Export": {
+    "message": "Server Export",
+    "description": "The label for category 'Server Export' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Using the Reveal View": {
+    "message": "Using the Reveal View",
+    "description": "The label for category 'Using the Reveal View' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Visualizations": {
+    "message": "Visualizations",
+    "description": "The label for category 'Visualizations' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Working with Data Sources": {
+    "message": "Working with Data Sources",
+    "description": "The label for category 'Working with Data Sources' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Data Sources": {
+    "message": "Data Sources",
+    "description": "The label for category 'Data Sources' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Release Information": {
+    "message": "Release Information",
+    "description": "The label for category 'Release Information' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Release Notes": {
+    "message": "Release Notes",
+    "description": "The label for category 'Release Notes' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Web Component Wrappers": {
+    "message": "Web Component Wrappers",
+    "description": "The label for category 'Web Component Wrappers' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.web-component-wrappers-installation": {
+    "message": "Installation",
+    "description": "The label for category 'Installation' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Reveal View": {
+    "message": "Reveal View",
+    "description": "The label for category 'Reveal View' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.category.Vizualization Viewer": {
+    "message": "Vizualization Viewer",
+    "description": "The label for category 'Vizualization Viewer' in sidebar 'webSidebar'"
   },
   "sidebar.webSidebar.doc.Overview": {
     "message": "Overview",
     "description": "The label for the doc item 'Overview' in sidebar 'webSidebar', linking to the doc web/overview"
   },
+  "sidebar.webSidebar.doc.System Requirements": {
+    "message": "System Requirements",
+    "description": "The label for the doc item 'System Requirements' in sidebar 'webSidebar', linking to the doc web/system-requirements"
+  },
+  "sidebar.webSidebar.doc.Install Server SDK": {
+    "message": "Install Server SDK",
+    "description": "The label for the doc item 'Install Server SDK' in sidebar 'webSidebar', linking to the doc web/install-server-sdk"
+  },
+  "sidebar.webSidebar.doc.Install Client SDK": {
+    "message": "Install Client SDK",
+    "description": "The label for the doc item 'Install Client SDK' in sidebar 'webSidebar', linking to the doc web/install-client-sdk"
+  },
+  "sidebar.webSidebar.doc.Adding a License Key": {
+    "message": "Adding a License Key",
+    "description": "The label for the doc item 'Adding a License Key' in sidebar 'webSidebar', linking to the doc web/adding-license-key"
+  },
   "sidebar.webSidebar.doc.ASP.NET Web API": {
     "message": "ASP.NET Web API",
     "description": "The label for the doc item 'ASP.NET Web API' in sidebar 'webSidebar', linking to the doc web/getting-started-server"
+  },
+  "sidebar.webSidebar.doc.NestJS": {
+    "message": "NestJS",
+    "description": "The label for the doc item 'NestJS' in sidebar 'webSidebar', linking to the doc web/getting-started-server-nest"
   },
   "sidebar.webSidebar.doc.Node.js": {
     "message": "Node.js",
@@ -19,9 +103,9 @@
     "message": "Node.js - TypeScript",
     "description": "The label for the doc item 'Node.js - TypeScript' in sidebar 'webSidebar', linking to the doc web/getting-started-server-node-typescript"
   },
-  "sidebar.webSidebar.doc.Spring Boot": {
-    "message": "Spring Boot",
-    "description": "The label for the doc item 'Spring Boot' in sidebar 'webSidebar', linking to the doc web/getting-started-spring-boot"
+  "sidebar.webSidebar.doc.Spring Boot - Jersey": {
+    "message": "Spring Boot - Jersey",
+    "description": "The label for the doc item 'Spring Boot - Jersey' in sidebar 'webSidebar', linking to the doc web/getting-started-spring-boot-jersey"
   },
   "sidebar.webSidebar.doc.Angular": {
     "message": "Angular",
@@ -38,6 +122,26 @@
   "sidebar.webSidebar.doc.React": {
     "message": "React",
     "description": "The label for the doc item 'React' in sidebar 'webSidebar', linking to the doc web/getting-started-react"
+  },
+  "sidebar.webSidebar.doc.Beta Features": {
+    "message": "Beta Features",
+    "description": "The label for the doc item 'Beta Features' in sidebar 'webSidebar', linking to the doc web/beta-features"
+  },
+  "sidebar.webSidebar.doc.Caching": {
+    "message": "Caching",
+    "description": "The label for the doc item 'Caching' in sidebar 'webSidebar', linking to the doc web/caching"
+  },
+  "sidebar.webSidebar.doc.Logging": {
+    "message": "Logging",
+    "description": "The label for the doc item 'Logging' in sidebar 'webSidebar', linking to the doc web/logging"
+  },
+  "sidebar.webSidebar.doc.Configure Export": {
+    "message": "Configure Export",
+    "description": "The label for the doc item 'Configure Export' in sidebar 'webSidebar', linking to the doc web/configure-export"
+  },
+  "sidebar.webSidebar.doc.Theming": {
+    "message": "Theming",
+    "description": "The label for the doc item 'Theming' in sidebar 'webSidebar', linking to the doc web/theming-dashboards"
   },
   "sidebar.webSidebar.doc.Creating": {
     "message": "Creating",
@@ -63,37 +167,29 @@
     "message": "Linking",
     "description": "The label for the doc item 'Linking' in sidebar 'webSidebar', linking to the doc web/linking-dashboards"
   },
+  "sidebar.webSidebar.doc.Localizing": {
+    "message": "Localizing",
+    "description": "The label for the doc item 'Localizing' in sidebar 'webSidebar', linking to the doc web/localizing"
+  },
   "sidebar.webSidebar.doc.Exporting": {
     "message": "Exporting",
     "description": "The label for the doc item 'Exporting' in sidebar 'webSidebar', linking to the doc web/exporting-dashboards"
   },
-  "sidebar.webSidebar.doc.Theming": {
-    "message": "Theming",
-    "description": "The label for the doc item 'Theming' in sidebar 'webSidebar', linking to the doc web/theming-dashboards"
+  "sidebar.webSidebar.doc.Chart Types": {
+    "message": "Chart Types",
+    "description": "The label for the doc item 'Chart Types' in sidebar 'webSidebar', linking to the doc web/chart-types"
   },
-  "sidebar.webSidebar.doc.Excel File": {
-    "message": "Excel File",
-    "description": "The label for the doc item 'Excel File' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/excel-file"
+  "sidebar.webSidebar.doc.Custom Menu Items": {
+    "message": "Custom Menu Items",
+    "description": "The label for the doc item 'Custom Menu Items' in sidebar 'webSidebar', linking to the doc web/custom-menu-items"
   },
-  "sidebar.webSidebar.doc.In Memory Data": {
-    "message": "In Memory Data",
-    "description": "The label for the doc item 'In Memory Data' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/in-memory-data"
+  "sidebar.webSidebar.doc.Custom Visualizations": {
+    "message": "Custom Visualizations",
+    "description": "The label for the doc item 'Custom Visualizations' in sidebar 'webSidebar', linking to the doc web/custom-visualizations"
   },
-  "sidebar.webSidebar.doc.MS SQL Server": {
-    "message": "MS SQL Server",
-    "description": "The label for the doc item 'MS SQL Server' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/ms-sql-server"
-  },
-  "sidebar.webSidebar.doc.Authentication": {
-    "message": "Authentication",
-    "description": "The label for the doc item 'Authentication' in sidebar 'webSidebar', linking to the doc web/authentication"
-  },
-  "sidebar.webSidebar.doc.User Context": {
-    "message": "User Context",
-    "description": "The label for the doc item 'User Context' in sidebar 'webSidebar', linking to the doc web/user-context"
-  },
-  "sidebar.webSidebar.doc.Obfuscate Connection Data": {
-    "message": "Obfuscate Connection Data",
-    "description": "The label for the doc item 'Obfuscate Connection Data' in sidebar 'webSidebar', linking to the doc web/obfuscate-connection-data"
+  "sidebar.webSidebar.doc.Customizing Map Tiles": {
+    "message": "Customizing Map Tiles",
+    "description": "The label for the doc item 'Customizing Map Tiles' in sidebar 'webSidebar', linking to the doc web/customizing-map-tiles"
   },
   "sidebar.webSidebar.doc.Maximizing Visualizations": {
     "message": "Maximizing Visualizations",
@@ -107,93 +203,9 @@
     "message": "Tooltips",
     "description": "The label for the doc item 'Tooltips' in sidebar 'webSidebar', linking to the doc web/tooltips"
   },
-  "sidebar.webSidebar.doc.Known Issues": {
-    "message": "Known Issues",
-    "description": "The label for the doc item 'Known Issues' in sidebar 'webSidebar', linking to the doc web/known-issues"
-  },
-  "sidebar.webSidebar.doc.Third-Party Software": {
-    "message": "Third-Party Software",
-    "description": "The label for the doc item 'Third-Party Software' in sidebar 'webSidebar', linking to the doc web/third-party-software"
-  },
-  "sidebar.webSidebar.doc.Data Limits": {
-    "message": "Data Limits",
-    "description": "The label for the doc item 'Data Limits' in sidebar 'webSidebar', linking to the doc web/data-size-limits"
-  },
-  "sidebar.webSidebar.category.General": {
-    "message": "General",
-    "description": "The label for category 'General' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Working with Data Sources": {
-    "message": "Working with Data Sources",
-    "description": "The label for category 'Working with Data Sources' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Release Information": {
-    "message": "Release Information",
-    "description": "The label for category 'Release Information' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Getting Started - Server": {
-    "message": "Getting Started - Server",
-    "description": "The label for category 'Getting Started - Server' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Getting Started - Client": {
-    "message": "Getting Started - Client",
-    "description": "The label for category 'Getting Started - Client' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Data Sources": {
-    "message": "Data Sources",
-    "description": "The label for category 'Data Sources' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Using the Reveal View": {
-    "message": "Using the Reveal View",
-    "description": "The label for category 'Using the Reveal View' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Visualizations": {
-    "message": "Visualizations",
-    "description": "The label for category 'Visualizations' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Installation": {
-    "message": "Installation",
-    "description": "The label for category 'Installation' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.System Requirements": {
-    "message": "System Requirements",
-    "description": "The label for the doc item 'System Requirements' in sidebar 'webSidebar', linking to the doc web/system-requirements"
-  },
-  "sidebar.webSidebar.doc.Adding a License Key": {
-    "message": "Adding a License Key",
-    "description": "The label for the doc item 'Adding a License Key' in sidebar 'webSidebar', linking to the doc web/adding-license-key"
-  },
-  "sidebar.webSidebar.doc.Install Server SDK": {
-    "message": "Install Server SDK",
-    "description": "The label for the doc item 'Install Server SDK' in sidebar 'webSidebar', linking to the doc web/install-server-sdk"
-  },
-  "sidebar.webSidebar.doc.Install Client SDK": {
-    "message": "Install Client SDK",
-    "description": "The label for the doc item 'Install Client SDK' in sidebar 'webSidebar', linking to the doc web/install-client-sdk"
-  },
-  "sidebar.webSidebar.category.Getting Started": {
-    "message": "Getting Started",
-    "description": "The label for category 'Getting Started' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Server Export": {
-    "message": "Server Export",
-    "description": "The label for category 'Server Export' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.Logging": {
-    "message": "Logging",
-    "description": "The label for the doc item 'Logging' in sidebar 'webSidebar', linking to the doc web/logging"
-  },
-  "sidebar.webSidebar.doc.Configure Export": {
-    "message": "Configure Export",
-    "description": "The label for the doc item 'Configure Export' in sidebar 'webSidebar', linking to the doc web/configure-export"
-  },
-  "sidebar.webSidebar.doc.Google Sheets": {
-    "message": "Google Sheets",
-    "description": "The label for the doc item 'Google Sheets' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/google-sheets"
-  },
-  "sidebar.webSidebar.doc.Google Big Query": {
-    "message": "Google Big Query",
-    "description": "The label for the doc item 'Google Big Query' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/google-big-query"
+  "sidebar.webSidebar.doc.Amazon Athena": {
+    "message": "Amazon Athena",
+    "description": "The label for the doc item 'Amazon Athena' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/amazon-athena"
   },
   "sidebar.webSidebar.doc.Amazon S3": {
     "message": "Amazon S3",
@@ -203,73 +215,121 @@
     "message": "CSV",
     "description": "The label for the doc item 'CSV' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/csv"
   },
+  "sidebar.webSidebar.doc.Databricks": {
+    "message": "Databricks",
+    "description": "The label for the doc item 'Databricks' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/databricks"
+  },
+  "sidebar.webSidebar.doc.Elasticsearch": {
+    "message": "Elasticsearch",
+    "description": "The label for the doc item 'Elasticsearch' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/elasticsearch"
+  },
+  "sidebar.webSidebar.doc.Excel File": {
+    "message": "Excel File",
+    "description": "The label for the doc item 'Excel File' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/excel-file"
+  },
+  "sidebar.webSidebar.doc.Google Big Query": {
+    "message": "Google Big Query",
+    "description": "The label for the doc item 'Google Big Query' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/google-big-query"
+  },
+  "sidebar.webSidebar.doc.Google Sheets": {
+    "message": "Google Sheets",
+    "description": "The label for the doc item 'Google Sheets' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/google-sheets"
+  },
+  "sidebar.webSidebar.doc.In Memory Data": {
+    "message": "In Memory Data",
+    "description": "The label for the doc item 'In Memory Data' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/in-memory-data"
+  },
   "sidebar.webSidebar.doc.JSON": {
     "message": "JSON",
     "description": "The label for the doc item 'JSON' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/json"
-  },
-  "sidebar.webSidebar.doc.REST": {
-    "message": "REST",
-    "description": "The label for the doc item 'REST' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/rest"
-  },
-  "sidebar.webSidebar.doc.Amazon Athena": {
-    "message": "Amazon Athena",
-    "description": "The label for the doc item 'Amazon Athena' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/amazon-athena"
-  },
-  "sidebar.webSidebar.doc.Chart Types": {
-    "message": "Chart Types",
-    "description": "The label for the doc item 'Chart Types' in sidebar 'webSidebar', linking to the doc web/chart-types"
-  },
-  "sidebar.webSidebar.category.Release Notes": {
-    "message": "Release Notes",
-    "description": "The label for category 'Release Notes' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.PostgreSQL": {
-    "message": "PostgreSQL",
-    "description": "The label for the doc item 'PostgreSQL' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/postgres"
-  },
-  "sidebar.webSidebar.doc.MongoDB": {
-    "message": "MongoDB",
-    "description": "The label for the doc item 'MongoDB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/mongodb"
-  },
-  "sidebar.webSidebar.doc.Snowflake": {
-    "message": "Snowflake",
-    "description": "The label for the doc item 'Snowflake' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/snowflake"
-  },
-  "sidebar.webSidebar.doc.MySQL": {
-    "message": "MySQL",
-    "description": "The label for the doc item 'MySQL' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/mysql"
   },
   "sidebar.webSidebar.doc.MariaDB": {
     "message": "MariaDB",
     "description": "The label for the doc item 'MariaDB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/mariadb"
   },
-  "sidebar.webSidebar.doc.Custom Queries": {
-    "message": "Custom Queries",
-    "description": "The label for the doc item 'Custom Queries' in sidebar 'webSidebar', linking to the doc web/custom-queries"
+  "sidebar.webSidebar.doc.MongoDB": {
+    "message": "MongoDB",
+    "description": "The label for the doc item 'MongoDB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/mongodb"
+  },
+  "sidebar.webSidebar.doc.MS SQL Server": {
+    "message": "MS SQL Server",
+    "description": "The label for the doc item 'MS SQL Server' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/ms-sql-server"
+  },
+  "sidebar.webSidebar.doc.MySQL": {
+    "message": "MySQL",
+    "description": "The label for the doc item 'MySQL' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/mysql"
   },
   "sidebar.webSidebar.doc.Oracle": {
     "message": "Oracle",
     "description": "The label for the doc item 'Oracle' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/oracle"
   },
-  "sidebar.webSidebar.doc.Caching": {
-    "message": "Caching",
-    "description": "The label for the doc item 'Caching' in sidebar 'webSidebar', linking to the doc web/caching"
+  "sidebar.webSidebar.doc.PostgreSQL": {
+    "message": "PostgreSQL",
+    "description": "The label for the doc item 'PostgreSQL' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/postgres"
   },
-  "sidebar.webSidebar.doc.Custom Menu Items": {
-    "message": "Custom Menu Items",
-    "description": "The label for the doc item 'Custom Menu Items' in sidebar 'webSidebar', linking to the doc web/custom-menu-items"
+  "sidebar.webSidebar.doc.REST": {
+    "message": "REST",
+    "description": "The label for the doc item 'REST' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/rest"
   },
-  "sidebar.webSidebar.doc.Localizing": {
-    "message": "Localizing",
-    "description": "The label for the doc item 'Localizing' in sidebar 'webSidebar', linking to the doc web/localizing"
+  "sidebar.webSidebar.doc.Snowflake": {
+    "message": "Snowflake",
+    "description": "The label for the doc item 'Snowflake' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/snowflake"
   },
-  "sidebar.webSidebar.doc.Customizing Map Tiles": {
-    "message": "Customizing Map Tiles",
-    "description": "The label for the doc item 'Customizing Map Tiles' in sidebar 'webSidebar', linking to the doc web/customizing-map-tiles"
+  "sidebar.webSidebar.doc.Authentication": {
+    "message": "Authentication",
+    "description": "The label for the doc item 'Authentication' in sidebar 'webSidebar', linking to the doc web/authentication"
   },
-  "sidebar.webSidebar.doc.Custom Visualizations": {
-    "message": "Custom Visualizations",
-    "description": "The label for the doc item 'Custom Visualizations' in sidebar 'webSidebar', linking to the doc web/custom-visualizations"
+  "sidebar.webSidebar.doc.Custom Queries": {
+    "message": "Custom Queries",
+    "description": "The label for the doc item 'Custom Queries' in sidebar 'webSidebar', linking to the doc web/custom-queries"
+  },
+  "sidebar.webSidebar.doc.Obfuscate Connection Data": {
+    "message": "Obfuscate Connection Data",
+    "description": "The label for the doc item 'Obfuscate Connection Data' in sidebar 'webSidebar', linking to the doc web/obfuscate-connection-data"
+  },
+  "sidebar.webSidebar.doc.User Context": {
+    "message": "User Context",
+    "description": "The label for the doc item 'User Context' in sidebar 'webSidebar', linking to the doc web/user-context"
+  },
+  "sidebar.webSidebar.doc.1.6.0 Upgrade Guide": {
+    "message": "1.6.0 Upgrade Guide",
+    "description": "The label for the doc item '1.6.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v1.6.0"
+  },
+  "sidebar.webSidebar.doc.Known Issues": {
+    "message": "Known Issues",
+    "description": "The label for the doc item 'Known Issues' in sidebar 'webSidebar', linking to the doc web/known-issues"
+  },
+  "sidebar.webSidebar.doc.Data Limits": {
+    "message": "Data Limits",
+    "description": "The label for the doc item 'Data Limits' in sidebar 'webSidebar', linking to the doc web/data-size-limits"
+  },
+  "sidebar.webSidebar.doc.Third-Party Software": {
+    "message": "Third-Party Software",
+    "description": "The label for the doc item 'Third-Party Software' in sidebar 'webSidebar', linking to the doc web/third-party-software"
+  },
+  "sidebar.webSidebar.doc.web-component-wrappers-overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/index"
+  },
+  "sidebar.webSidebar.doc.web-component-wrappers-installation-angular": {
+    "message": "Angular",
+    "description": "The label for the doc item 'Angular' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/installation-angular"
+  },
+  "sidebar.webSidebar.doc.web-component-wrappers-installation-react": {
+    "message": "React",
+    "description": "The label for the doc item 'React' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/installation-react"
+  },
+  "sidebar.webSidebar.doc.web-component-wrappers-reveal-view-options": {
+    "message": "Options",
+    "description": "The label for the doc item 'Options' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/options"
+  },
+  "sidebar.webSidebar.doc.Loading Dashboards": {
+    "message": "Loading Dashboards",
+    "description": "The label for the doc item 'Loading Dashboards' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/loading-dashboards"
+  },
+  "sidebar.webSidebar.doc.web-component-wrappers-visualization-viewer-options": {
+    "message": "Options",
+    "description": "The label for the doc item 'Options' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/visualization-viewer/options"
   },
   "sidebar.userSideBar.category.Dashboards": {
     "message": "Dashboards",
@@ -326,6 +386,10 @@
   "sidebar.userSideBar.doc.Linking": {
     "message": "Linking",
     "description": "The label for the doc item 'Linking' in sidebar 'userSideBar', linking to the doc user/dashboard-linking"
+  },
+  "sidebar.userSideBar.doc.user-visualizations-overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/visualizations-overview"
   },
   "sidebar.userSideBar.doc.Visualization Editor": {
     "message": "Visualization Editor",
@@ -463,6 +527,10 @@
     "message": "Statistical Functions",
     "description": "The label for the doc item 'Statistical Functions' in sidebar 'userSideBar', linking to the doc user/statistical-functions"
   },
+  "sidebar.userSideBar.doc.user-filters-overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/filters-overview"
+  },
   "sidebar.userSideBar.doc.Dashboard Filters": {
     "message": "Dashboard Filters",
     "description": "The label for the doc item 'Dashboard Filters' in sidebar 'userSideBar', linking to the doc user/filters-dashboard"
@@ -482,6 +550,10 @@
   "sidebar.userSideBar.doc.Visualization Filters": {
     "message": "Visualization Filters",
     "description": "The label for the doc item 'Visualization Filters' in sidebar 'userSideBar', linking to the doc user/filters-visualization"
+  },
+  "sidebar.userSideBar.doc.user-tutorials-overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/tutorials-overview"
   },
   "sidebar.userSideBar.doc.Candlestick Charts": {
     "message": "Candlestick Charts",
@@ -515,74 +587,6 @@
     "message": "Stacked Charts",
     "description": "The label for the doc item 'Stacked Charts' in sidebar 'userSideBar', linking to the doc user/tutorials-stacked-charts"
   },
-  "sidebar.webSidebar.category.Web Component Wrappers": {
-    "message": "Web Component Wrappers",
-    "description": "The label for category 'Web Component Wrappers' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Reveal View": {
-    "message": "Reveal View",
-    "description": "The label for category 'Reveal View' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.category.Vizualization Viewer": {
-    "message": "Vizualization Viewer",
-    "description": "The label for category 'Vizualization Viewer' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.NestJS": {
-    "message": "NestJS",
-    "description": "The label for the doc item 'NestJS' in sidebar 'webSidebar', linking to the doc web/getting-started-server-nest"
-  },
-  "sidebar.webSidebar.doc.Loading Dashboards": {
-    "message": "Loading Dashboards",
-    "description": "The label for the doc item 'Loading Dashboards' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/loading-dashboards"
-  },
-  "sidebar.webSidebar.doc.Beta Features": {
-    "message": "Beta Features",
-    "description": "The label for the doc item 'Beta Features' in sidebar 'webSidebar', linking to the doc web/beta-features"
-  },
-  "sidebar.webSidebar.doc.Databricks": {
-    "message": "Databricks",
-    "description": "The label for the doc item 'Databricks' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/databricks"
-  },
-  "sidebar.webSidebar.doc.Elasticsearch": {
-    "message": "Elasticsearch",
-    "description": "The label for the doc item 'Elasticsearch' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/elasticsearch"
-  },
-  "sidebar.webSidebar.category.web-component-wrappers-installation": {
-    "message": "Installation",
-    "description": "The label for category 'Installation' in sidebar 'webSidebar'"
-  },
-  "sidebar.webSidebar.doc.web-component-wrappers-overview": {
-    "message": "Overview",
-    "description": "The label for the doc item 'Overview' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/index"
-  },
-  "sidebar.webSidebar.doc.web-component-wrappers-installation-angular": {
-    "message": "Angular",
-    "description": "The label for the doc item 'Angular' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/installation-angular"
-  },
-  "sidebar.webSidebar.doc.web-component-wrappers-installation-react": {
-    "message": "React",
-    "description": "The label for the doc item 'React' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/installation-react"
-  },
-  "sidebar.webSidebar.doc.web-component-wrappers-reveal-view-options": {
-    "message": "Options",
-    "description": "The label for the doc item 'Options' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/reveal-view/options"
-  },
-  "sidebar.webSidebar.doc.web-component-wrappers-visualization-viewer-options": {
-    "message": "Options",
-    "description": "The label for the doc item 'Options' in sidebar 'webSidebar', linking to the doc web/web-component-wrappers/visualization-viewer/options"
-  },
-  "sidebar.userSideBar.doc.user-visualizations-overview": {
-    "message": "Overview",
-    "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/visualizations-overview"
-  },
-  "sidebar.userSideBar.doc.user-filters-overview": {
-    "message": "Overview",
-    "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/filters-overview"
-  },
-  "sidebar.userSideBar.doc.user-tutorials-overview": {
-    "message": "Overview",
-    "description": "The label for the doc item 'Overview' in sidebar 'userSideBar', linking to the doc user/tutorials-overview"
-  },
   "sidebar.userSideBar.doc.user-tutorials-text-view": {
     "message": "Text View",
     "description": "The label for the doc item 'Text View' in sidebar 'userSideBar', linking to the doc user/tutorials-text-view"
@@ -595,9 +599,25 @@
     "message": "Installation",
     "description": "The label for category 'Installation' in sidebar 'aiSidebar'"
   },
+  "sidebar.aiSidebar.category.Providers": {
+    "message": "Providers",
+    "description": "The label for category 'Providers' in sidebar 'aiSidebar'"
+  },
   "sidebar.aiSidebar.category.Metadata": {
     "message": "Metadata",
     "description": "The label for category 'Metadata' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Using the SDK": {
+    "message": "Using the SDK",
+    "description": "The label for category 'Using the SDK' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.API Reference": {
+    "message": "API Reference",
+    "description": "The label for category 'API Reference' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'aiSidebar'"
   },
   "sidebar.aiSidebar.doc.Overview": {
     "message": "Overview",
@@ -615,69 +635,9 @@
     "message": "Install Client SDK",
     "description": "The label for the doc item 'Install Client SDK' in sidebar 'aiSidebar', linking to the doc ai/install-client-sdk"
   },
-  "sidebar.aiSidebar.doc.Metadata Catalog": {
-    "message": "Metadata Catalog",
-    "description": "The label for the doc item 'Metadata Catalog' in sidebar 'aiSidebar', linking to the doc ai/metadata-catalog"
-  },
-  "sidebar.aiSidebar.doc.Insights": {
-    "message": "Insights",
-    "description": "The label for the doc item 'Insights' in sidebar 'aiSidebar', linking to the doc ai/sdk-insights"
-  },
-  "sidebar.aiSidebar.doc.Chat": {
-    "message": "Chat",
-    "description": "The label for the doc item 'Chat' in sidebar 'aiSidebar', linking to the doc ai/sdk-chat"
-  },
-  "sidebar.aiSidebar.category.Using the SDK": {
-    "message": "Using the SDK",
-    "description": "The label for category 'Using the SDK' in sidebar 'aiSidebar'"
-  },
-  "sidebar.aiSidebar.category.API Reference": {
-    "message": "API Reference",
-    "description": "The label for category 'API Reference' in sidebar 'aiSidebar'"
-  },
-  "sidebar.aiSidebar.category.Guides": {
-    "message": "Guides",
-    "description": "The label for category 'Guides' in sidebar 'aiSidebar'"
-  },
   "sidebar.aiSidebar.doc.Getting Started - HTML/JS": {
     "message": "Getting Started - HTML/JS",
     "description": "The label for the doc item 'Getting Started - HTML/JS' in sidebar 'aiSidebar', linking to the doc ai/getting-started-html"
-  },
-  "sidebar.aiSidebar.doc.ai-sdk-overview": {
-    "message": "Overview",
-    "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/sdk-overview"
-  },
-  "sidebar.aiSidebar.doc.Streaming Responses": {
-    "message": "Streaming Responses",
-    "description": "The label for the doc item 'Streaming Responses' in sidebar 'aiSidebar', linking to the doc ai/sdk-streaming"
-  },
-  "sidebar.aiSidebar.doc.Error Handling": {
-    "message": "Error Handling",
-    "description": "The label for the doc item 'Error Handling' in sidebar 'aiSidebar', linking to the doc ai/sdk-error-handling"
-  },
-  "sidebar.aiSidebar.doc.Insights Endpoint": {
-    "message": "Insights Endpoint",
-    "description": "The label for the doc item 'Insights Endpoint' in sidebar 'aiSidebar', linking to the doc ai/insights"
-  },
-  "sidebar.aiSidebar.doc.Chat Endpoint": {
-    "message": "Chat Endpoint",
-    "description": "The label for the doc item 'Chat Endpoint' in sidebar 'aiSidebar', linking to the doc ai/chat"
-  },
-  "sidebar.aiSidebar.doc.Insights with Context Menus": {
-    "message": "Insights with Context Menus",
-    "description": "The label for the doc item 'Insights with Context Menus' in sidebar 'aiSidebar', linking to the doc ai/guide-insights-context-menus"
-  },
-  "sidebar.aiSidebar.doc.Building a Chat Interface": {
-    "message": "Building a Chat Interface",
-    "description": "The label for the doc item 'Building a Chat Interface' in sidebar 'aiSidebar', linking to the doc ai/guide-chat-interface"
-  },
-  "sidebar.aiSidebar.doc.Streaming Markdown Display": {
-    "message": "Streaming Markdown Display",
-    "description": "The label for the doc item 'Streaming Markdown Display' in sidebar 'aiSidebar', linking to the doc ai/guide-streaming-display"
-  },
-  "sidebar.aiSidebar.category.Providers": {
-    "message": "Providers",
-    "description": "The label for category 'Providers' in sidebar 'aiSidebar'"
   },
   "sidebar.aiSidebar.doc.ai-providers-overview": {
     "message": "Overview",
@@ -707,20 +667,48 @@
     "message": "Building a Custom Provider",
     "description": "The label for the doc item 'Building a Custom Provider' in sidebar 'aiSidebar', linking to the doc ai/providers-building-custom"
   },
-  "sidebar.webSidebar.doc.Accessibility": {
-    "message": "Accessibility",
-    "description": "The label for the doc item 'Accessibility' in sidebar 'webSidebar', linking to the doc web/accessibility"
+  "sidebar.aiSidebar.doc.Metadata Catalog": {
+    "message": "Metadata Catalog",
+    "description": "The label for the doc item 'Metadata Catalog' in sidebar 'aiSidebar', linking to the doc ai/metadata-catalog"
   },
-  "sidebar.webSidebar.doc.ClickHouse": {
-    "message": "ClickHouse",
-    "description": "The label for the doc item 'ClickHouse' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/clickhouse"
+  "sidebar.aiSidebar.doc.ai-sdk-overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/sdk-overview"
   },
-  "sidebar.webSidebar.doc.Cosmos DB": {
-    "message": "Cosmos DB",
-    "description": "The label for the doc item 'Cosmos DB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/azure-cosmos-db"
+  "sidebar.aiSidebar.doc.Insights": {
+    "message": "Insights",
+    "description": "The label for the doc item 'Insights' in sidebar 'aiSidebar', linking to the doc ai/sdk-insights"
   },
-  "sidebar.webSidebar.doc.2.0.0 Upgrade Guide": {
-    "message": "2.0.0 Upgrade Guide",
-    "description": "The label for the doc item '2.0.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0"
+  "sidebar.aiSidebar.doc.Chat": {
+    "message": "Chat",
+    "description": "The label for the doc item 'Chat' in sidebar 'aiSidebar', linking to the doc ai/sdk-chat"
+  },
+  "sidebar.aiSidebar.doc.Streaming Responses": {
+    "message": "Streaming Responses",
+    "description": "The label for the doc item 'Streaming Responses' in sidebar 'aiSidebar', linking to the doc ai/sdk-streaming"
+  },
+  "sidebar.aiSidebar.doc.Error Handling": {
+    "message": "Error Handling",
+    "description": "The label for the doc item 'Error Handling' in sidebar 'aiSidebar', linking to the doc ai/sdk-error-handling"
+  },
+  "sidebar.aiSidebar.doc.Insights Endpoint": {
+    "message": "Insights Endpoint",
+    "description": "The label for the doc item 'Insights Endpoint' in sidebar 'aiSidebar', linking to the doc ai/insights"
+  },
+  "sidebar.aiSidebar.doc.Chat Endpoint": {
+    "message": "Chat Endpoint",
+    "description": "The label for the doc item 'Chat Endpoint' in sidebar 'aiSidebar', linking to the doc ai/chat"
+  },
+  "sidebar.aiSidebar.doc.Insights with Context Menus": {
+    "message": "Insights with Context Menus",
+    "description": "The label for the doc item 'Insights with Context Menus' in sidebar 'aiSidebar', linking to the doc ai/guide-insights-context-menus"
+  },
+  "sidebar.aiSidebar.doc.Building a Chat Interface": {
+    "message": "Building a Chat Interface",
+    "description": "The label for the doc item 'Building a Chat Interface' in sidebar 'aiSidebar', linking to the doc ai/guide-chat-interface"
+  },
+  "sidebar.aiSidebar.doc.Streaming Markdown Display": {
+    "message": "Streaming Markdown Display",
+    "description": "The label for the doc item 'Streaming Markdown Display' in sidebar 'aiSidebar', linking to the doc ai/guide-streaming-display"
   }
 }
