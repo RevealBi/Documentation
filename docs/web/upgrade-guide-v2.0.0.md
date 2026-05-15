@@ -23,7 +23,7 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 
 ### 1. Remove jQuery
 
-The Reveal SDK no longer requires jQuery. Remove the jQuery script tag that was loaded for the SDK:
+The Reveal SDK no longer requires jQuery. Remove the jQuery script tag that was previously required by the SDK:
 
 ```html
 <!-- Remove this line -->
