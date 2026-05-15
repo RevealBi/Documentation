@@ -80,9 +80,6 @@ import { RevealSdkSettings, RevealView } from "reveal-sdk";
 ```
 :::
 
-:::info インストール ガイド
-CDN + ES Modules、Angular での npm、React での npm など、クライアント SDK のインストール方法を詳しく確認する場合は、[インストール ガイド](installation/installation.md) を参照してください。
-:::
 
 ### 3. サーバー SDK パッケージを更新する
 
