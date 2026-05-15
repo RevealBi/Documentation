@@ -169,6 +169,8 @@ myDateFilter.rule = myRule;
 
 #### `RVDashboardThumbnailView` → `RVThumbnail`
 
+Usage of `RVDashboardThumbnailView` is being deprecated. The class will continue to be available for some time, but we recommend that you migrate your code to use `RVThumbnail` instead.
+
 <Tabs groupId="api-thumbnail">
   <TabItem value="before" label="1.x">
 
