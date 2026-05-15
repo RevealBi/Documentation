@@ -15,7 +15,7 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 - **NPM delivery** — the client SDK is now delivered as an npm package. Legacy script-tag delivery is no longer the recommended approach.
 - **`$.ig` and `RevealApi` namespaces removed** — all types are now imported directly from the `reveal-sdk` npm package. Replace `$.ig.ClassName` and `RevealApi.ClassName` with direct imports (e.g. `import { ClassName } from "reveal-sdk"`).
 - **Renamed and removed APIs** 
-    - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `IExportOptions`, `RevealSettings`, `ExportOptionsBase` and child classes.
+    - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and and classes implementing it.
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
 - **Deprecated types** — `RVDashboardThumbnailView` has been deprecated, in favor of `RVThumbnail`.
 
