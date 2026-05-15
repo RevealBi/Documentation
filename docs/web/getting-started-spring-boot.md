@@ -35,6 +35,8 @@ Version 2.x is not supported since Reveal 1.7.x
 
 ![](images/getting-started-spring-boot-artifact-id.jpg)
 
+If prompted for the package name, use **com.server.reveal**.
+
 6 - Select the **War** package type.
 
 ![](images/getting-started-spring-boot-package-type.jpg)
@@ -76,65 +78,117 @@ Next, add the Reveal SDK as a dependency.
 </dependency>
 ```
 
-2 - Register `RevealEngineServlet` as a Spring Boot servlet. Replace the sample provider classes with your application's implementations. If you need to pass request-based properties to the user context, replace `null` with a `Properties` object built from the request.
+2 - Register `RevealEngineServlet` as a Spring Boot servlet. The sample maps Reveal at the root path (`/*`) so the Getting Started client applications can connect without changing `RevealSdkSettings.setBaseUrl`.
 
-```java title="Application.java"
+```java title="RevealApplication.java"
+package com.server.reveal;
+
+import io.revealbi.core.RevealServerBuilder;
+import io.revealbi.core.RVDashboardProvider;
+import io.revealbi.servlet.RevealEngineServlet;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
+
+import java.nio.file.Paths;
+
 @SpringBootApplication
-public class Application {
+public class RevealApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-       SpringApplication.run(Application.class, args);
+        SpringApplication.run(RevealApplication.class, args);
+    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(RevealApplication.class);
     }
 
     @Bean
     ServletRegistrationBean<RevealEngineServlet> revealServlet() {
-       RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
-                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
-                .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
-                .setDataSourceProvider(new MyIRVDataSourceProvider())
-                .addSettings(settings -> {
-                    // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
-                })
-                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
+        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(
+            new RevealServerBuilder()
+                .setDashboardProvider(new RVDashboardProvider(Paths.get("Dashboards").toAbsolutePath().toString()))
+                .build()
+        );
 
-       return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
+        ServletRegistrationBean<RevealEngineServlet> registration =
+            new ServletRegistrationBean<>(revealEngineServlet, "/*");
+        registration.setAsyncSupported(true);
+        registration.setLoadOnStartup(1);
+        return registration;
     }
 }
 ```
 
-## Step 3 - Create Dashboards Folder
+## Step 3 - Register Dashboard Provider
 
-1 - Create a folder for your dashboards.
+The dashboard provider tells the Reveal SDK where to load and save dashboard files. The built-in `RVDashboardProvider` uses the path you provide to its constructor.
+
+1 - Create the `Dashboards` folder in the server project root.
 
 2 - Configure `RVDashboardProvider` with the folder that contains your dashboards.
 
-```java title="Application.java"
+```java title="RevealApplication.java"
 new RevealServerBuilder()
-    .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+    .setDashboardProvider(new RVDashboardProvider(Paths.get("Dashboards").toAbsolutePath().toString()))
     .build();
 ```
 
 ## Step 4 - Setup CORS Policy (Debugging)
 
-While developing and debugging your application, it is common to host the server and client app on different URLs. For example, your server may be running on `https://localhost:8080`, while your Angular app may be running on `https://localhost:4200`. If you try to load a dashboard from the client application, it will fail because of a Cross-Origin Resource Sharing (CORS) policy. To enable this scenario for the Reveal servlet endpoint, add a servlet CORS filter bean to your `Application.java`:
+While developing and debugging your application, it is common to host the server and client app on different URLs. For example, this sample server runs on `http://localhost:5111`, while your Angular app may be running on `http://localhost:4200`. If you try to load a dashboard from the client application, it will fail because of a Cross-Origin Resource Sharing (CORS) policy. To enable this scenario for local development, add a permissive CORS filter:
 
-```java title="Application.java"
-@Bean
-FilterRegistrationBean<CorsFilter> revealApiCorsFilter() {
-    CorsConfiguration config = new CorsConfiguration();
-    // DEVELOPMENT only. Do not deploy this wildcard localhost pattern to production.
-    // In production, replace this with your exact allowed client origins.
-    // The localhost port pattern below is supported in Spring Boot 3.x.
-    config.addAllowedOriginPattern("http://localhost:*");
-    config.addAllowedOriginPattern("https://localhost:*");
-    config.addAllowedHeader("*");
-    config.addAllowedMethod("*");
+```java title="PermissiveCorsFilter.java"
+@Component
+public class PermissiveCorsFilter implements Filter {
 
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    source.registerCorsConfiguration("/reveal-api/**", config);
-    return new FilterRegistrationBean<>(new CorsFilter(source));
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+
+        HttpServletResponse httpResponse = (HttpServletResponse) response;
+        HttpServletRequest httpRequest = (HttpServletRequest) request;
+        String origin = httpRequest.getHeader("Origin");
+        String requestedMethod = httpRequest.getHeader("Access-Control-Request-Method");
+        String requestedHeaders = httpRequest.getHeader("Access-Control-Request-Headers");
+
+        httpResponse.setHeader("Access-Control-Allow-Origin", origin == null ? "*" : origin);
+        httpResponse.setHeader("Vary", "Origin");
+        httpResponse.setHeader("Access-Control-Allow-Methods", requestedMethod == null ? "GET, POST, PUT, DELETE, OPTIONS, HEAD" : requestedMethod);
+        httpResponse.setHeader("Access-Control-Allow-Headers", requestedHeaders == null ? "X-Requested-With, Authorization, Accept-Version, Content-MD5, CSRF-Token, Content-Type, Cache-Control, Pragma" : requestedHeaders);
+        httpResponse.setHeader("Access-Control-Expose-Headers", "*");
+        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
+        httpResponse.setHeader("Access-Control-Max-Age", "3600");
+
+        if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
+            httpResponse.setStatus(HttpServletResponse.SC_NO_CONTENT);
+            return;
+        }
+
+        chain.doFilter(request, response);
+    }
 }
 ```
+
+## Step 5 - Run the Server
+
+Run the Spring Boot application from the server project folder and pass the server port as a Spring Boot argument.
+
+```powershell
+.\mvnw.cmd spring-boot:run "-Dspring-boot.run.arguments=--server.port=5111"
+```
+
+On macOS or Linux:
+
+```bash
+./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=5111
+```
+
+The server listens on `http://localhost:5111`.
 
 :::info Get the Code
 
