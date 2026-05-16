@@ -170,7 +170,5 @@ territoryFilter.selectedValues = [];
 :::
 
 ## フィルターの非表示
-カスタム フィルター UI またはその他のカスタム フィルター操作を使用する場合、エンドユーザーがダッシュボードのフィルター処理で混乱しないように、`RevealView` でフィルターを含むパネルを非表示にすることができます。`RevealView.showFilters` プロパティを `false` に設定すると、日付とダッシュボードのフィルターを非表示にできます。
-```cs
-revealView.showFilters = false;
-```
+
+`RevealView` のフィルター パネルを非表示にするには (たとえば、カスタム フィルター UI を提供する場合)、[Reveal View のカスタマイズ](customizing-reveal-view.md#showfilters) で説明されている `showFilters` プロパティを使用します。

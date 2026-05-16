@@ -94,14 +94,11 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Customizing the Reveal View --------------------
-     * "Editing" is a placeholder until editing-dashboards.md is split into
-     * customizing-reveal-view.md (canX/showX) + editor-events.md
-     * (onVisualizationEditor* lifecycle) in a later IA-v2 sub-PR.
-     */
+    /* -------------------- Customizing the Reveal View -------------------- */
     {
       type: "category", label: "Customizing the Reveal View", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Editing", id: "web/editing-dashboards" },
+        { type: "doc", label: "UI Visibility & Permissions", id: "web/customizing-reveal-view" },
+        { type: "doc", label: "Editor Events", id: "web/editor-events" },
         { type: "doc", label: "Theming", id: "web/theming-dashboards" },
         { type: "doc", label: "Localization", id: "web/localizing" },
       ]
