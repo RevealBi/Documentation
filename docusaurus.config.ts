@@ -62,9 +62,10 @@ const config: Config = {
         { from: '/web/web-component-wrappers/reveal-view/loading-dashboards', to: '/web-components/reveal-view/loading-dashboards' },
         { from: '/web/web-component-wrappers/visualization-viewer', to: '/web-components/visualization-viewer' },
         { from: '/web/web-component-wrappers/visualization-viewer/options', to: '/web-components/visualization-viewer/options' },
-        // editing-dashboards.md split into customizing-reveal-view.md (canX/showX properties)
-        // and editor-events.md (onVisualizationEditor* lifecycle). Old URL points at the larger half.
-        { from: '/web/editing-dashboards', to: '/web/customizing-reveal-view' },
+        // editing-dashboards.md replaced by scenario-driven Common Patterns under
+        // /web/customizing/* plus per-event examples in /web/editor-events. Old URL
+        // points at the Common Patterns overview as the most natural landing.
+        { from: '/web/editing-dashboards', to: '/web/customizing' },
       ],
     }],
   ],

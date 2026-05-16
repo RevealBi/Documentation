@@ -171,5 +171,8 @@ You can find a sample demonstrating Dashboard Filters on [GitHub](https://github
 :::
 
 ## Hiding Filters
+When using custom filter UI's or other custom filtering interactions, you may want to hide the panel containing the filters in the `RevealView` so the end-user won't get confused filtering the dashboard. You can hide the date and dashboard filters by setting the `RevealView.showFilters` property to `false`.
 
-To hide the filter panel in the `RevealView` (for example, when providing a custom filter UI), use the `showFilters` property documented in [Customizing the Reveal View](customizing-reveal-view.md#showfilters).
+```js
+revealView.showFilters = false;
+```

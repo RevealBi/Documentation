@@ -1,84 +1,103 @@
 # Editor Events
 
-The Visualization Editor exposes four lifecycle events you can hook into to run code before or after the editor opens and closes — useful for enforcing permissions, validating input, or running custom logic when end-users edit visualizations.
+The Visualization Editor exposes four lifecycle events you can hook into to run code before or after the editor opens or closes. Each event is paired below with a realistic example beyond the basic signature.
 
-For the static properties that show/hide editor UI elements (the `canX` / `showX` toggles), see [Customizing the Reveal View](customizing-reveal-view.md).
+For property-level customization (`canX` / `showX` toggles for menu items and buttons), see [Common Patterns](customizing/index.md). For the full property surface, see the [`RevealView` API reference](https://help.revealbi.io/api/javascript/latest/classes/RevealView.html).
 
 ## onVisualizationEditorOpening
 
-There may be times when you want to execute some application logic **before** the visualization editor has opened, and you may want to even prevent the editor from opening until a condition is met. To do this, you can add an event handler to the `RevealView.onVisualizationEditorOpening` event.
+Fires **before** the editor opens. Set `args.cancel = true` to prevent it.
+
+Use this to enforce permission rules, gate editing behind a confirmation, or block edits to specific visualizations.
 
 ```js
-revealView.onVisualizationEditorOpening = function (args) {
-    if(args.isNewVisualization == false){ //the user is trying to edit an existing visualization
-        args.cancel = true; //prevent it
+revealView.onVisualizationEditorOpening = (args) => {
+    // Block edits to visualizations marked as "locked" by title convention.
+    if (!args.isNewVisualization && args.visualization.title.startsWith("[Locked]")) {
+        alert("This visualization is locked and cannot be edited.");
+        args.cancel = true;
     }
 };
 ```
 
-The `VisualizationEditorOpeningArgs` contains the following properties:
-- **cancel** - gets or sets a value indicating whether the event should be canceled. `true` if the event should be canceled; otherwise `false`
-- **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
-- **visualization** - the visualization that was edited and/or added
-
-:::info
-
-If you set `VisualizationEditorOpeningArgs.cancel` to `true`, then the Visualization Editor will not open.
-
-:::
+`VisualizationEditorOpeningArgs`:
+- **cancel** — set to `true` to abort the open.
+- **isNewVisualization** — `true` if the user is creating a new visualization, `false` if editing an existing one.
+- **visualization** — the visualization being opened (only meaningful when `isNewVisualization` is `false`).
 
 ## onVisualizationEditorOpened
 
-If you would like to be notified **after** the Visualization Editor has been opened, either when editing an existing visualization or creating a new one, you can add an event handler to the `RevealView.onVisualizationEditorOpened` event.
+Fires **after** the editor has opened. Use it for analytics, onboarding hints, or any side-effect that should run once the editor is on screen.
 
 ```js
-revealView.onVisualizationEditorOpened = function (args) {
-    if(args.isNewVisualization == false) { 
-        //the user is editing an existing visualization
-    }
+let editorOpenedAt;
+
+revealView.onVisualizationEditorOpened = (args) => {
+    editorOpenedAt = Date.now();
+    analytics.track("editor_opened", {
+        isNew: args.isNewVisualization,
+        visualizationTitle: args.visualization?.title,
+    });
 };
 ```
 
-The `VisualizationEditorOpenedEventArgs` contains the following properties:
-- **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
-- **visualization** - the visualization that was edited and/or added
+`VisualizationEditorOpenedEventArgs`:
+- **isNewVisualization** — `true` for a newly added visualization, `false` for an existing one.
+- **visualization** — the visualization being edited.
 
 ## onVisualizationEditorClosing
 
-There may be times when you want to execute some application logic **before** the visualization editor has closed, and you may want to even prevent the editor from closing until a condition is met. To do this, you can add an event handler to the `RevealView.onVisualizationEditorClosing` event.
+Fires **before** the editor closes. Set `args.cancel = true` to keep it open. Set `args.resetVisualization = true` to revert any unsaved edits.
+
+Use this to confirm unsaved changes, run client-side validation, or auto-revert when the user cancels.
 
 ```js
-revealView.onVisualizationEditorClosing = function (args) {
-    if(args.isNewVisualization == false) {  //the user is editing
-         args.resetVisualization = true; //puts the widget to the state when it was when the user started editing it
+revealView.onVisualizationEditorClosing = (args) => {
+    // If the user cancelled (closed with the X), revert in-progress changes.
+    if (args.isCancelled) {
+        args.resetVisualization = true;
+        return;
+    }
+
+    // If the visualization has no title, prompt for one before allowing close.
+    if (!args.visualization.title?.trim()) {
+        alert("Please give this visualization a title before saving.");
+        args.cancel = true;
     }
 };
 ```
 
-The `VisualizationEditorClosingArgs` contains the following properties:
-- **cancel** - gets or sets a value indicating whether the event should be canceled. `true` if the event should be canceled; otherwise `false`
-- **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
-- **resetVisualization** - if `true`, resets the visualization back to the state prior to being edited.
-- **visualization** - the visualization that was edited and/or added
+`VisualizationEditorClosingArgs`:
+- **cancel** — set to `true` to keep the editor open.
+- **isNewVisualization** — `true` for a newly added visualization, `false` for an existing one.
+- **resetVisualization** — set to `true` to revert the visualization to its pre-edit state.
+- **visualization** — the visualization being edited.
 
 :::info
 
-If you set `VisualizationEditorClosingArgs.cancel` to `true`, then the Visualization Editor will not close.
+`isCancelled` is also available here in some SDK builds; check the [API reference](https://help.revealbi.io/api/javascript/latest/classes/RevealView.html#onVisualizationEditorClosing) for your version.
 
 :::
 
 ## onVisualizationEditorClosed
 
-Anytime an end-user edits a single visualization in the `RevealView`, the `RevealView.onVisualizationEditorClosed` event is fired **after** the editor is closed. This can be in response to editing an existing visualization, or adding a new visualization. You can respond to this event by adding an event handler to the `RevealView.onVisualizationEditorClosed` event.
+Fires **after** the editor has closed. Pairs naturally with `onVisualizationEditorOpened` for timing, analytics, or post-edit processing.
 
 ```js
-revealView.onVisualizationEditorClosed = function (args) {
-    if(args.isNewVisualization == false) { 
+revealView.onVisualizationEditorClosed = (args) => {
+    if (editorOpenedAt) {
+        const durationMs = Date.now() - editorOpenedAt;
+        analytics.track("editor_closed", {
+            isNew: args.isNewVisualization,
+            cancelled: args.isCancelled,
+            durationMs,
+        });
+        editorOpenedAt = null;
     }
 };
 ```
 
-The `VisualizationEditorClosedEventArgs` contains the following properties:
-- **isCancelled** - determines if the visualization editor was closed via the **X button** (`false`) or the **Check Button** (`true`)
-- **isNewVisualization** - if `true`, the visualization is a newly added visualization. If `false`, it is an existing visualization
-- **visualization** - the visualization that was edited and/or added
+`VisualizationEditorClosedEventArgs`:
+- **isCancelled** — `false` if the user confirmed the edit (✓ button), `true` if they cancelled (✗ button).
+- **isNewVisualization** — `true` for a newly added visualization, `false` for an existing one.
+- **visualization** — the visualization that was edited or added.
