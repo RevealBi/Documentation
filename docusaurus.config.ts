@@ -66,15 +66,6 @@ const config: Config = {
         // plus per-event examples in /web/editor-events. Old URL points at the
         // Common Patterns overview as the most natural landing.
         { from: '/web/editing-dashboards', to: '/web/scenarios' },
-        // /web/customizing/* renamed to /web/scenarios/* in the scenario-led
-        // sidebar reshuffle. Original "Customizing" framing was too narrow once
-        // the section grew to cover non-customization patterns (read-only embed,
-        // multi-dashboard navigation, drill-through, etc.).
-        { from: '/web/customizing', to: '/web/scenarios' },
-        { from: '/web/customizing/view-only-embed', to: '/web/scenarios/view-only-embed' },
-        { from: '/web/customizing/custom-save-workflow', to: '/web/scenarios/custom-save-workflow' },
-        { from: '/web/customizing/locked-down-export', to: '/web/scenarios/locked-down-export' },
-        { from: '/web/customizing/editor-on-load-kiosk', to: '/web/scenarios/editor-on-load-kiosk' },
       ],
     }],
   ],

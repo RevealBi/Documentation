@@ -7,6 +7,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Get Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "web-overview", id: "web/overview" },
+        { type: "doc", label: "Concepts", id: "web/concepts" },
         {
           type: "category", label: "Installation", key: "installation", items: [
             { type: "doc", label: "System Requirements", id: "web/system-requirements" },
@@ -36,12 +37,15 @@ const sidebars: SidebarsConfig = {
     },
 
     /* -------------------- Embedding --------------------
-     * Future home of unified "Embed a Dashboard" + "Embed a Single Visualization"
-     * topics. Loading/Creating/Saving live here as transitional placeholders
-     * and will be merged into those topics in upcoming sub-PRs.
+     * Embed a Dashboard and Embed a Single Visualization are the canonical
+     * topics. Loading/Creating/Saving remain as transitional pages for now —
+     * they cover server-side IRVDashboardProvider patterns that will move
+     * to a dedicated Dashboard Provider topic under Connect Data.
      */
     {
       type: "category", label: "Embedding", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Embed a Dashboard", id: "web/embedding/dashboard" },
+        { type: "doc", label: "Embed a Single Visualization", id: "web/embedding/single-visualization" },
         { type: "doc", label: "Loading", id: "web/loading-dashboards" },
         { type: "doc", label: "Creating", id: "web/creating-dashboards" },
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
