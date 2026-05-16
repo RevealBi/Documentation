@@ -10,7 +10,7 @@ Integrating Reveal SDK Web Component Wrappers into your project is quick and eas
 
 ## Prerequisites
 
-The Reveal SDK Web Component Wrappers declare `reveal-sdk` as a peer dependency, so the Reveal SDK client must be installed alongside the wrappers. See [Installing the Client SDK](../install-client-sdk.md) for the available installation options.
+The Reveal SDK Web Component Wrappers declare `reveal-sdk` as a peer dependency, so the Reveal SDK client must be installed alongside the wrappers. See [Installing the Client SDK](../web/install-client-sdk.md) for the available installation options.
 
 ## CDN Installation
 
