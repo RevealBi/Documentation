@@ -124,32 +124,39 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Web Component Wrappers  -------------------- */
+  ],
+
+  /* ===================================================================
+   *  Web Components (Angular / React) — separate experimental sibling
+   *  project; not part of the core Web SDK. Surfaced as its own top-level
+   *  navbar entry so its status is not conflated with the core jQuery
+   *  RevealView product.
+   * =================================================================== */
+  webComponentsSidebar: [
     {
-      type: "category", label: "Web Component Wrappers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Overview", key: "web-component-wrappers-overview", id: "web/web-component-wrappers/index" },
+      type: "category", label: "Web Components", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Overview", key: "web-components-overview", id: "web-components/index" },
         {
-          type: "category", label: "Installation", key: "web-component-wrappers-installation", link: { type: "doc", id: "web/web-component-wrappers/installation" }, items: [
-            { type: "doc", label: "Angular", key: "web-component-wrappers-installation-angular", id: "web/web-component-wrappers/installation-angular" },
-            { type: "doc", label: "React", key: "web-component-wrappers-installation-react", id: "web/web-component-wrappers/installation-react" },
+          type: "category", label: "Installation", key: "web-components-installation", link: { type: "doc", id: "web-components/installation" }, items: [
+            { type: "doc", label: "Angular", key: "web-components-installation-angular", id: "web-components/installation-angular" },
+            { type: "doc", label: "React", key: "web-components-installation-react", id: "web-components/installation-react" },
           ]
         },
         {
-          type: "category", label: "Reveal View", link: { type: "doc", id: "web/web-component-wrappers/reveal-view/index" }, items: [
-            { type: "doc", label: "Options", key: "web-component-wrappers-reveal-view-options", id: "web/web-component-wrappers/reveal-view/options" },
-            { type: "doc", label: "Loading Dashboards", id: "web/web-component-wrappers/reveal-view/loading-dashboards" },
+          type: "category", label: "Reveal View", key: "web-components-reveal-view", link: { type: "doc", id: "web-components/reveal-view/index" }, items: [
+            { type: "doc", label: "Options", key: "web-components-reveal-view-options", id: "web-components/reveal-view/options" },
+            { type: "doc", label: "Loading Dashboards", key: "web-components-reveal-view-loading-dashboards", id: "web-components/reveal-view/loading-dashboards" },
           ]
         },
         {
-          type: "category", label: "Vizualization Viewer", link: { type: "doc", id: "web/web-component-wrappers/visualization-viewer/index" }, items: [
-            { type: "doc", label: "Options", key: "web-component-wrappers-visualization-viewer-options", id: "web/web-component-wrappers/visualization-viewer/options" },
+          type: "category", label: "Visualization Viewer", key: "web-components-visualization-viewer", link: { type: "doc", id: "web-components/visualization-viewer/index" }, items: [
+            { type: "doc", label: "Options", key: "web-components-visualization-viewer-options", id: "web-components/visualization-viewer/options" },
           ]
         },
       ]
     },
-
   ],
-  
+
   userSideBar: [
     {
       type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [

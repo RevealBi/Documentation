@@ -48,6 +48,22 @@ const config: Config = {
     ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
     ["@inkeep/cxkit-docusaurus", { ChatButton: chatButtonSettings, SearchBar: searchBarSettings }],
     ["@docusaurus/plugin-google-tag-manager", { containerId: "GTM-WXWCMQZ" }],
+    // IA-v2 redirect map. Each file move/rename in the docs-ia-v2 effort appends its
+    // { from, to } here so old URLs keep resolving. Append-only — never remove entries.
+    ["@docusaurus/plugin-client-redirects", {
+      redirects: [
+        // Web Components extracted from /web/web-component-wrappers/* to /web-components/*
+        { from: '/web/web-component-wrappers', to: '/web-components' },
+        { from: '/web/web-component-wrappers/installation', to: '/web-components/installation' },
+        { from: '/web/web-component-wrappers/installation-angular', to: '/web-components/installation-angular' },
+        { from: '/web/web-component-wrappers/installation-react', to: '/web-components/installation-react' },
+        { from: '/web/web-component-wrappers/reveal-view', to: '/web-components/reveal-view' },
+        { from: '/web/web-component-wrappers/reveal-view/options', to: '/web-components/reveal-view/options' },
+        { from: '/web/web-component-wrappers/reveal-view/loading-dashboards', to: '/web-components/reveal-view/loading-dashboards' },
+        { from: '/web/web-component-wrappers/visualization-viewer', to: '/web-components/visualization-viewer' },
+        { from: '/web/web-component-wrappers/visualization-viewer/options', to: '/web-components/visualization-viewer/options' },
+      ],
+    }],
   ],
 
   i18n: {
@@ -130,6 +146,7 @@ const config: Config = {
           items: [
             { label: "Web", to: "web" },
             { label: "AI", to: "ai/overview" },
+            { label: "Web Components", to: "web-components" },
             { label: "User", to: "user" },
           ]
         },
@@ -176,6 +193,7 @@ const config: Config = {
               label: 'AI SDK',
               to: 'ai/overview',
             },
+            { label: "Web Components", to: "web-components" },
             { label: "User", to: "user" },
           ],
         },
