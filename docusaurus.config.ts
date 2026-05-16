@@ -48,6 +48,11 @@ const config: Config = {
     ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
     ["@inkeep/cxkit-docusaurus", { ChatButton: chatButtonSettings, SearchBar: searchBarSettings }],
     ["@docusaurus/plugin-google-tag-manager", { containerId: "GTM-WXWCMQZ" }],
+    // IA-v2 redirect map. Each file move/rename in the docs-ia-v2 effort appends its
+    // { from, to } here so old URLs keep resolving. Append-only — never remove entries.
+    ["@docusaurus/plugin-client-redirects", {
+      redirects: [],
+    }],
   ],
 
   i18n: {
