@@ -2,7 +2,7 @@
 
 The Visualization Editor exposes four lifecycle events you can hook into to run code before or after the editor opens or closes. Each event is paired below with a realistic example beyond the basic signature.
 
-For property-level customization (`canX` / `showX` toggles for menu items and buttons), see [Common Patterns](customizing/index.md). For the full property surface, see the [`RevealView` API reference](https://help.revealbi.io/api/javascript/latest/classes/RevealView.html).
+For property-level customization (`canX` / `showX` toggles for menu items and buttons), see [Common Patterns](scenarios/index.md). For the full property surface, see the [`RevealView` API reference](https://help.revealbi.io/api/javascript/latest/classes/RevealView.html).
 
 ## onVisualizationEditorOpening
 

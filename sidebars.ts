@@ -7,6 +7,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Get Started", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "web-overview", id: "web/overview" },
+        { type: "doc", label: "Concepts", id: "web/concepts" },
         {
           type: "category", label: "Installation", key: "installation", items: [
             { type: "doc", label: "System Requirements", id: "web/system-requirements" },
@@ -35,33 +36,47 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Dashboards -------------------- */
+    /* -------------------- Embedding --------------------
+     * Embed a Dashboard and Embed a Single Visualization are the canonical
+     * topics. Loading/Creating/Saving remain as transitional pages for now —
+     * they cover server-side IRVDashboardProvider patterns that will move
+     * to a dedicated Dashboard Provider topic under Connect Data.
+     */
     {
-      type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+      type: "category", label: "Embedding", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Embed a Dashboard", id: "web/embedding/dashboard" },
+        { type: "doc", label: "Embed a Single Visualization", id: "web/embedding/single-visualization" },
         { type: "doc", label: "Loading", id: "web/loading-dashboards" },
         { type: "doc", label: "Creating", id: "web/creating-dashboards" },
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
-        { type: "doc", label: "Linking", id: "web/linking-dashboards" },
+      ]
+    },
+
+    /* -------------------- Common Patterns --------------------
+     * Scenario recipes (1-page each). Files under docs/web/scenarios/.
+     * Existing feature pages (Click Events, Filtering, Linking, Theming,
+     * Localization) live here as transitional placeholders and will be
+     * rewritten as scenarios in upcoming sub-PRs.
+     */
+    {
+      type: "category", label: "Common Patterns", collapsed: false, collapsible: false, className: "sidebar__header",
+      link: { type: "doc", id: "web/scenarios/index" },
+      items: [
+        { type: "doc", label: "Read-only Embed", id: "web/scenarios/view-only-embed" },
+        { type: "doc", label: "Editor on Load (Kiosk)", id: "web/scenarios/editor-on-load-kiosk" },
+        { type: "doc", label: "Custom Save Destination", id: "web/scenarios/custom-save-workflow" },
+        { type: "doc", label: "Locked-down Export Menu", id: "web/scenarios/locked-down-export" },
         { type: "doc", label: "Filtering", id: "web/filtering-dashboards" },
-      ]
-    },
-
-    /* -------------------- Visualizations -------------------- */
-    {
-      type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Chart Types", id: "web/chart-types" },
-        { type: "doc", label: "Custom Visualizations", id: "web/custom-visualizations" },
-        { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items" },
-        { type: "doc", label: "Customizing Map Tiles", id: "web/customizing-map-tiles" },
-        { type: "doc", label: "Maximizing", id: "web/maximizing-visualizations" },
-        { type: "doc", label: "Tooltips", id: "web/tooltips" },
+        { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Click Events", id: "web/click-events" },
+        { type: "doc", label: "Theming", id: "web/theming-dashboards" },
+        { type: "doc", label: "Localization", id: "web/localizing" },
       ]
     },
 
-    /* -------------------- Data Sources -------------------- */
+    /* -------------------- Connect Data -------------------- */
     {
-      type: "category", label: "Data Sources", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+      type: "category", label: "Connect Data", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "data-sources-overview", id: "web/datasources" },
         { type: "doc", label: "Authentication", id: "web/authentication" },
         { type: "doc", label: "User Context", id: "web/user-context" },
@@ -94,28 +109,9 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Customizing the Reveal View -------------------- */
+    /* -------------------- Export and Share -------------------- */
     {
-      type: "category", label: "Customizing the Reveal View", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        {
-          type: "category", label: "Common Patterns", key: "customizing-common-patterns",
-          link: { type: "doc", id: "web/customizing/index" },
-          items: [
-            { type: "doc", label: "View-only Embed", id: "web/customizing/view-only-embed" },
-            { type: "doc", label: "Custom Save Workflow", id: "web/customizing/custom-save-workflow" },
-            { type: "doc", label: "Locked-down Export Menu", id: "web/customizing/locked-down-export" },
-            { type: "doc", label: "Editor-on-Load Kiosk", id: "web/customizing/editor-on-load-kiosk" },
-          ]
-        },
-        { type: "doc", label: "Editor Events", id: "web/editor-events" },
-        { type: "doc", label: "Theming", id: "web/theming-dashboards" },
-        { type: "doc", label: "Localization", id: "web/localizing" },
-      ]
-    },
-
-    /* -------------------- Exporting -------------------- */
-    {
-      type: "category", label: "Exporting", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+      type: "category", label: "Export and Share", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "End-User Export", id: "web/exporting-dashboards" },
         { type: "doc", label: "Server-Side Export", id: "web/server-export" },
         { type: "doc", label: "Configure Server Export", id: "web/configure-export" },
@@ -130,12 +126,24 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
-    /* -------------------- Reference -------------------- */
+    /* -------------------- Reference --------------------
+     * Lookup-shaped content. Custom Visualizations, Custom Menu Items,
+     * Customizing Map Tiles, Tooltips, Maximizing, Editor Events, and
+     * Chart Types all live here as feature topics — the kind of thing
+     * a developer comes to look up rather than read end-to-end.
+     */
     {
       type: "category", label: "Reference", collapsed: false, collapsible: false, className: "sidebar__header", items: [
-        { type: "doc", label: "Accessibility", id: "web/accessibility" },
-        { type: "doc", label: "Beta Features", id: "web/beta-features" },
+        { type: "doc", label: "Editor Events", id: "web/editor-events" },
+        { type: "doc", label: "Chart Types", id: "web/chart-types" },
+        { type: "doc", label: "Custom Visualizations", id: "web/custom-visualizations" },
+        { type: "doc", label: "Custom Menu Items", id: "web/custom-menu-items" },
+        { type: "doc", label: "Customizing Map Tiles", id: "web/customizing-map-tiles" },
+        { type: "doc", label: "Tooltips", id: "web/tooltips" },
+        { type: "doc", label: "Maximizing", id: "web/maximizing-visualizations" },
         { type: "doc", label: "Data Limits", id: "web/data-size-limits" },
+        { type: "doc", label: "Beta Features", id: "web/beta-features" },
+        { type: "doc", label: "Accessibility", id: "web/accessibility" },
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
         { type: "doc", label: "Third-Party Software", id: "web/third-party-software" },
       ]
