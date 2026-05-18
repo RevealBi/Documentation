@@ -2,6 +2,8 @@
 sidebar_label: Metadata Catalog
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Metadata Catalog
 
@@ -162,15 +164,59 @@ Store the catalog in a standalone JSON file. This is the simplest approach and i
 
 **2. Point the builder at the file:**
 
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
 ```csharp title="Program.cs"
 builder.Services.AddRevealAI()
     .UseMetadataCatalogFile("config/catalog.json")
     .AddOpenAI();
 ```
 
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+Pass the catalog path via the `metadataCatalogFile` option of the AI plugin:
+
+```javascript title="server.js"
+const path = require('path');
+
+revealAI.withOptions({
+    defaultProvider: 'openai',
+    settings: aiSettings,
+    metadataCatalogFile: path.resolve(__dirname, 'config', 'catalog.json')
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+Pass the catalog path as the second argument to `RevealAIPluginOptions`:
+
+```java title="Application.java"
+RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
+        "openai",
+        Path.of("src", "main", "resources", "Reveal", "Metadata", "catalog.json")
+                .toAbsolutePath().normalize().toString(),
+        null,
+        null,
+        Map.of("settings", aiSettings));
+```
+
+  </TabItem>
+</Tabs>
+
 Both absolute and relative paths are supported. Relative paths are resolved against the application's current working directory.
 
 ### Option 2: Custom Provider
+
+:::info ASP.NET Core only
+
+The `IMetadataCatalogProvider` extension point is currently available on **ASP.NET Core** only. Node.js and Java applications must use the JSON file approach described above.
+
+:::
 
 Implement `IMetadataCatalogProvider` to load datasource definitions from any source — a database, an API, a key vault, or anything else.
 
@@ -220,6 +266,9 @@ Your provider class is resolved through dependency injection, so you can inject 
 
 The **Metadata Manager** controls where generated metadata files are written on disk. These files are ephemeral — they are generated automatically and can be regenerated at any time.
 
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
 ```json title="appsettings.json"
 {
   "RevealAI": {
@@ -230,6 +279,41 @@ The **Metadata Manager** controls where generated metadata files are written on 
 }
 ```
 
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript title="server.js"
+const path = require('path');
+const os = require('os');
+
+revealAI.withOptions({
+    defaultProvider: 'openai',
+    settings: aiSettings,
+    metadataCatalogFile: 'config/catalog.json',
+    metadataManager: {
+        outputPath: path.resolve(os.homedir(), 'AImetadata')
+    }
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java title="Application.java"
+RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
+        "openai",
+        "config/catalog.json",
+        new RevealAIPluginOptions.MetadataManagerOptions(
+                Path.of(System.getProperty("user.home"), "AImetadata").toString()),
+        null,
+        Map.of("settings", aiSettings));
+```
+
+  </TabItem>
+</Tabs>
+
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | `OutputPath` | string | No | Directory where generated metadata files are stored. Defaults to `{user-home}/reveal/ai/metadata`. |
@@ -239,6 +323,12 @@ The **Metadata Manager** controls where generated metadata files are written on 
 ## Metadata Service Options
 
 The **Metadata Service** controls *when* metadata is generated. You can trigger generation at application startup, on a recurring schedule, or both.
+
+:::info ASP.NET Core only
+
+Scheduled metadata generation via `MetadataService` is currently available on **ASP.NET Core** only. On Node.js and Java, metadata is generated on demand when the AI plugin needs it.
+
+:::
 
 ```json title="appsettings.json"
 {
@@ -260,7 +350,7 @@ The **Metadata Service** controls *when* metadata is generated. You can trigger 
 
 ## Complete Configuration Example
 
-Here is a complete example showing a catalog file, `appsettings.json` for the manager and service options, and the `Program.cs` setup:
+Here is a complete example showing the catalog file, configuration, and server registration for each platform:
 
 ```json title="config/catalog.json"
 {
@@ -297,6 +387,9 @@ Here is a complete example showing a catalog file, `appsettings.json` for the ma
 }
 ```
 
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
 ```json title="appsettings.json"
 {
   "RevealAI": {
@@ -319,3 +412,64 @@ builder.Services.AddRevealAI()
     .UseMetadataCatalogFile("config/catalog.json")
     .AddOpenAI();
 ```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript title="server.js"
+const reveal = require('reveal-sdk-node');
+const revealAI = require('reveal-sdk-node-ai');
+const express = require('express');
+const path = require('path');
+
+const aiSettings = {
+    openai: {
+        ApiKey: process.env.OPENAI_API_KEY,
+        Model: 'gpt-4.1'
+    }
+};
+
+const revealOptions = {
+    plugins: [
+        revealAI.withOptions({
+            defaultProvider: 'openai',
+            settings: aiSettings,
+            metadataCatalogFile: path.resolve(__dirname, 'config', 'catalog.json'),
+            metadataManager: {
+                outputPath: path.resolve('D:', 'metadata', 'output')
+            }
+        })
+    ]
+};
+
+const app = express();
+app.use('/', reveal(revealOptions));
+app.listen(5111);
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java title="Application.java"
+Map<String, Object> aiSettings = Map.of(
+        "openai", Map.of(
+                "ApiKey", System.getenv("OPENAI_API_KEY"),
+                "Model", "gpt-4.1"));
+
+RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
+        "openai",
+        Path.of("config", "catalog.json").toAbsolutePath().normalize().toString(),
+        new RevealAIPluginOptions.MetadataManagerOptions(
+                Path.of("D:", "metadata", "output").toString()),
+        null,
+        Map.of("settings", aiSettings));
+
+IRevealServer revealServer = new RevealServerBuilder()
+        .addPlugin(RevealAIPlugin.withOptions(aiPluginOptions))
+        .build();
+```
+
+  </TabItem>
+</Tabs>

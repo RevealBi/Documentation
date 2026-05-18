@@ -2,6 +2,8 @@
 sidebar_label: Custom Endpoints
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Custom Endpoints
 
@@ -11,7 +13,10 @@ You can use the OpenAI provider with any OpenAI-compatible API endpoint. This is
 
 Set the `Endpoint` option on the OpenAI provider to point to your custom API:
 
-```csharp
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp title="Program.cs"
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
@@ -35,11 +40,48 @@ Or using `appsettings.json`:
 }
 ```
 
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript title="server.js"
+const aiSettings = {
+    openai: {
+        ApiKey: 'your-api-key',
+        Endpoint: 'https://your-custom-endpoint.com/v1',
+        Model: 'your-model-name'
+    }
+};
+
+revealAI.withOptions({
+    defaultProvider: 'openai',
+    settings: aiSettings
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java title="Application.java"
+Map<String, Object> aiSettings = Map.of(
+        "openai", Map.of(
+                "ApiKey", "your-api-key",
+                "Endpoint", "https://your-custom-endpoint.com/v1",
+                "Model", "your-model-name"));
+```
+
+  </TabItem>
+</Tabs>
+
 ## Common Use Cases
 
 ### Local Model Servers
 
 Tools like [Ollama](https://ollama.ai), [LM Studio](https://lmstudio.ai), and [vLLM](https://github.com/vllm-project/vllm) expose OpenAI-compatible APIs that can be used directly:
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
 
 ```csharp
 // Ollama example
@@ -52,9 +94,43 @@ builder.Services.AddRevealAI()
     });
 ```
 
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript
+// Ollama example
+const aiSettings = {
+    openai: {
+        ApiKey: 'ollama',  // Ollama doesn't require a real key
+        Endpoint: 'http://localhost:11434/v1',
+        Model: 'llama3'
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+// Ollama example
+Map<String, Object> aiSettings = Map.of(
+        "openai", Map.of(
+                "ApiKey", "ollama",  // Ollama doesn't require a real key
+                "Endpoint", "http://localhost:11434/v1",
+                "Model", "llama3"));
+```
+
+  </TabItem>
+</Tabs>
+
 ### Third-Party Providers
 
 Many AI providers offer OpenAI-compatible endpoints:
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
 
 ```csharp
 builder.Services.AddRevealAI()
@@ -65,6 +141,35 @@ builder.Services.AddRevealAI()
         options.Model = "provider-model-name";
     });
 ```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const aiSettings = {
+    openai: {
+        ApiKey: 'your-provider-api-key',
+        Endpoint: 'https://api.provider.com/v1',
+        Model: 'provider-model-name'
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Map<String, Object> aiSettings = Map.of(
+        "openai", Map.of(
+                "ApiKey", "your-provider-api-key",
+                "Endpoint", "https://api.provider.com/v1",
+                "Model", "provider-model-name"));
+```
+
+  </TabItem>
+</Tabs>
 
 ## Limitations
 
