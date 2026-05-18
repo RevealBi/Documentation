@@ -24,6 +24,12 @@ Before you begin, ensure you meet the [System Requirements](system-requirements.
 2. [Reveal SDK AI Server](install-server-sdk.md) installed
 3. **LLM Provider API Key** from [OpenAI](https://platform.openai.com/api-keys), [Anthropic](https://platform.anthropic.com/account/keys), or [Google Cloud](https://cloud.google.com/vertex-ai)
 
+:::info Other server platforms
+
+This guide uses ASP.NET Core for the server. The Reveal SDK AI Server is also available for **Node.js** and **Java** — see [Install Server SDK](install-server-sdk.md) for the equivalent installation and configuration steps. The HTML/JavaScript client below is identical regardless of which server you choose.
+
+:::
+
 ## Step 1: Create the ASP.NET Core Server
 
 ### 1.1 Create a New ASP.NET Core Web API Project

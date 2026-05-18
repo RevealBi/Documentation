@@ -2,6 +2,8 @@
 sidebar_label: Chat Endpoint
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Chat Endpoint
 
@@ -171,7 +173,10 @@ Chat maintains server-side conversation history per user and datasource. This en
 
 ## Server-Side Implementation
 
-The Chat endpoint is automatically registered when you configure Reveal AI in your ASP.NET Core application:
+The Chat endpoints are registered automatically when you configure Reveal AI in your application. No additional controller, route, or servlet wiring is required — both POST and DELETE endpoints are ready as soon as the AI services are added.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
 
 ```csharp title="Program.cs"
 using Reveal.Sdk;
@@ -179,10 +184,8 @@ using Reveal.Sdk.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Reveal SDK
 builder.Services.AddControllers().AddReveal(revealBuilder =>
 {
-    // Configure datasource provider
     revealBuilder.AddDataSourceProvider<DataSourceProvider>();
 });
 
@@ -190,17 +193,75 @@ builder.Services.AddControllers().AddReveal(revealBuilder =>
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
     {
-        options.ApiKey = builder.Configuration["OpenAI:ApiKey"];
-        options.ModelId = "gpt-4.1";
-    });
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
+        options.Model = "gpt-4.1";
+    })
+    .UseMetadataCatalogFile("config/catalog.json");
 
 var app = builder.Build();
-
 app.MapControllers();
 app.Run();
 ```
 
-No additional controller or routing configuration is needed. Both POST and DELETE endpoints are ready to use once you call `AddRevealAI()`.
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript title="server.js"
+const reveal = require('reveal-sdk-node');
+const revealAI = require('reveal-sdk-node-ai');
+const express = require('express');
+const path = require('path');
+
+const aiSettings = {
+    openai: {
+        ApiKey: process.env.OPENAI_API_KEY,
+        Model: 'gpt-4.1'
+    }
+};
+
+const revealOptions = {
+    dataSourceProvider: dataSourceProvider,
+    plugins: [
+        revealAI.withOptions({
+            defaultProvider: 'openai',
+            settings: aiSettings,
+            metadataCatalogFile: path.resolve(__dirname, 'Reveal', 'Metadata', 'catalog.json')
+        })
+    ]
+};
+
+const app = express();
+app.use('/', reveal(revealOptions));
+app.listen(5111);
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java title="Application.java"
+Map<String, Object> aiSettings = Map.of(
+        "openai", Map.of(
+                "ApiKey", System.getenv("OPENAI_API_KEY"),
+                "Model", "gpt-4.1"));
+
+RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
+        "openai",
+        Path.of("src", "main", "resources", "Reveal", "Metadata", "catalog.json")
+                .toAbsolutePath().normalize().toString(),
+        null,
+        null,
+        Map.of("settings", aiSettings));
+
+IRevealServer revealServer = new RevealServerBuilder()
+        .setDataSourceProvider(dataSourceProvider)
+        .addPlugin(RevealAIPlugin.withOptions(aiPluginOptions))
+        .build();
+```
+
+  </TabItem>
+</Tabs>
 
 ## Metadata Configuration
 
