@@ -147,7 +147,7 @@ const config: Config = {
           position: "left",
           items: [
             { label: "Blogs", to: "https://www.revealbi.io/blog" },
-            { label: "Developer Playground", to: "playground" },
+            // { label: "Developer Playground", to: "playground" },
             { label: "Samples", to: "https://github.com/RevealBi/sdk-samples-javascript" },
             { label: "Videos", to: "https://www.youtube.com/@RevealBI" }
           ]
