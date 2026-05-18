@@ -18,14 +18,3 @@ If you use Jetty as your server, its version might conflict with the Jetty versi
 
 ## Node
 - NodeJS 16.3 and higher
-
-:::note
-
-If developing on a Mac M1/M2/M3/M4, Rosetta must be installed.
-
-To manually install Rosetta run the following command in the terminal:
-```bash
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
-```
-
-:::
