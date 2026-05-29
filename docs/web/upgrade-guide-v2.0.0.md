@@ -116,7 +116,7 @@ Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
 </dependency>
 ```
 
-For the full Java server migration path, including servlet bootstrap, user context, CORS, and routing changes, see [Migrating Java Projects to Reveal SDK 2.0](java-sdk-2.0-migration-guide.md).
+For the full Java server migration path, including servlet bootstrap, user context, CORS, and routing changes, see [Migrating Java Projects to Reveal SDK 2.0](upgrade-guide-v2.0.0-java.md).
 
   </TabItem>
   <TabItem value="node" label="Node.js">
