@@ -96,17 +96,30 @@ import { RevealSdkSettings, RevealView } from "reveal-sdk";
   </TabItem>
   <TabItem value="java" label="Java">
 
-Maven/Gradle の依存関係をバージョン **2.0.0** 以降に更新します。
+1 - **pom.xml** を更新し、Reveal Maven リポジトリを追加します。
+
+```xml title="pom.xml"
+<repositories>
+   <repository>
+       <id>reveal.public</id>
+       <url>https://maven.revealbi.io/repository/public</url>
+   </repository>
+</repositories>
+```
+
+2 - Reveal SDK 依存関係を追加します。
 
 ```xml
 <dependency>
-    <groupId>com.infragistics.reveal.sdk</groupId>
-    <artifactId>reveal-sdk</artifactId>
-    <version>2.0.0</version>
+   <groupId>io.revealbi</groupId>
+   <artifactId>reveal-sdk-servlet</artifactId>
+   <version>2.0.0</version>
 </dependency>
 ```
 
-  </TabItem>
+サーブレットのブートストラップ、ユーザー コンテキスト、CORS、ルーティング変更を含む Java サーバー移行の全体手順は、[Reveal SDK 2.0 への Java プロジェクト移行](/web/java-sdk-2.0-migration-guide) を参照してください。
+
+ </TabItem>
   <TabItem value="node" label="Node.js">
 
 ```bash
