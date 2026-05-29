@@ -116,6 +116,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
             { type: "doc", label: "2.0.0 Upgrade Guide", id: "web/upgrade-guide-v2.0.0" },
+            { type: "doc", label: "Java 2.0 Migration Guide", id: "web/java-sdk-2.0-migration-guide" },
           ]
         },
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
@@ -149,7 +150,7 @@ const sidebars: SidebarsConfig = {
     },
 
   ],
-  
+
   userSideBar: [
     {
       type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
@@ -323,4 +324,3 @@ const sidebars: SidebarsConfig = {
 };
 
 export default sidebars;
-
