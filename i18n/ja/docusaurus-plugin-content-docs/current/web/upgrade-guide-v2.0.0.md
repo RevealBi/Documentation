@@ -117,7 +117,7 @@ import { RevealSdkSettings, RevealView } from "reveal-sdk";
 </dependency>
 ```
 
-サーブレットのブートストラップ、ユーザー コンテキスト、CORS、ルーティング変更を含む Java サーバー移行の全体手順は、[Reveal SDK 2.0 への Java プロジェクト移行](/web/java-sdk-2.0-migration-guide) を参照してください。
+サーブレットのブートストラップ、ユーザー コンテキスト、CORS、ルーティング変更を含む Java サーバー移行の全体手順は、[Reveal SDK 2.0 への Java プロジェクト移行](/web/upgrade-guide-v2.0.0-java) を参照してください。
 
  </TabItem>
   <TabItem value="node" label="Node.js">

@@ -725,6 +725,6 @@
   },
   "sidebar.webSidebar.doc.Java 2.0 Migration Guide": {
     "message": "Java 2.0 移行ガイド",
-    "description": "The label for the doc item 'Java 2.0 Migration Guide' in sidebar 'webSidebar', linking to the doc web/java-sdk-2.0-migration-guide"
+    "description": "The label for the doc item 'Java 2.0 Migration Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0-java"
   }
 }
