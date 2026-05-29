@@ -20,10 +20,6 @@ Reveal SDK 2.0 for Java requires **Java 17 or later** and a Jakarta EE 9 complia
 | Java 11 or later | Java 17 or later |
 | In-process Java engine | Java proxy starts the native Reveal engine as a child process |
 
-:::note Architecture change
-In 2.0, your Java application is no longer the Reveal engine. The Java SDK starts the bundled `RevealEnginePrg` binary as a child process, forwards Reveal HTTP requests to it, and receives callback requests from it to invoke your Java providers, such as `IRVAuthenticationProvider` and `IRVDataSourceProvider`.
-:::
-
 ## Migration Steps
 
 1. Update Maven dependencies and Java version.
