@@ -18,6 +18,7 @@ import TabItem from '@theme/TabItem';
     - `DateFilter` - _削除_ `RevealView`、`RVDashboard`、`ExportOptionsBase` から非推奨プロパティを削除
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _名前変更_ `ToJsonString` に変更。
 - **非推奨の型** — `RVDashboardThumbnailView` は非推奨になりました。`RVThumbnail` を使用してください。
+- **SQL Server 証明書** — SQL Server ベースのコネクタは、公式の Microsoft SQL Server クライアント ライブラリを使用するようになりました。SQL Server、Azure SQL、または Azure Synapse への接続で信頼されていない、または自己署名の証明書を使用している場合は、データ ソース設定時に `TrustServerCertificate` を設定してください。
 
 ## アップグレード手順
 
@@ -116,6 +117,10 @@ npm install reveal-sdk-node@2.0.0
 </Tabs>
 
 ### 4. API の使用方法を更新する
+
+#### SQL Server コネクタの証明書信頼
+
+SQL Server ベースのコネクタは、公式の Microsoft SQL Server クライアント ライブラリを使用するようになりました。クライアントでは既定で信頼された TLS 証明書が必要になる場合があるため、これまで接続できていた信頼されていない証明書や自己署名証明書の環境では、サーバー側のデータ ソース設定時に `TrustServerCertificate` を設定する必要があります。
 
 #### `$.ig` / `RevealApi` → 直接インポート
 
@@ -216,6 +221,7 @@ RVThumbnail.fromDashboard("#thumbnail", "Sales");
 - [ ] `DateFilter` プロパティの使用を `Filters` リストで置き換え
 - [ ] `RVDashboardThumbnailView` を `RVThumbnail` に置き換え
 - [ ] `Reveal.Sdk.Dashboard.ToJsonStringAsync` を `ToJsonString` に置き換え
+- [ ] SQL Server ベースのコネクタで信頼されていない証明書または自己署名証明書を使用している場合は、データ ソース設定時に `TrustServerCertificate` を設定
 - [ ] 削除されたレガシー チャート タイプを使用しているダッシュボードがないことを確認
 - [ ] レガシー Java エンジンを使用している場合は、サポートされているサーバー SDK に移行
 
