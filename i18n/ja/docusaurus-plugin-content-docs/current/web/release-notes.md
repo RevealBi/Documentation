@@ -13,6 +13,7 @@ import TabItem from '@theme/TabItem';
 - 非推奨の `DateFilter` プロパティが削除されました。
 - `RVDashboardThumbnailView` は非推奨となり、新しい `RVThumbnail` クラスに置き換えられました。
 - `NumberOfItemsInGrid`、`FilterRangeText`、`UpdateFilterRangeText` はそれぞれ `FilterCount`、`FilterSelectionText`、`UpdateFilterSelectionText` に名前が変更されました。
+- SQL Server ベースのコネクタは、公式の Microsoft SQL Server クライアント ライブラリを使用するようになりました。信頼されていない、または自己署名のサーバー証明書を使用する接続では、データ ソース設定時に `TrustServerCertificate` を設定する必要がある場合があります。
 
 #### Node
 - ヘッドレス エクスポート オプションの `dateFilter` プロパティは非推奨です。代わりに `RVDateRule` を使用した `filters` 配列をご使用ください。
