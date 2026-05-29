@@ -18,6 +18,7 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
     - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and classes implementing it.
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
 - **Deprecated types** — `RVDashboardThumbnailView` has been _deprecated_, in favor of `RVThumbnail`.
+- **SQL Server certificates** — SQL Server-based connectors now use the official Microsoft SQL Server client library. If your SQL Server, Azure SQL, or Azure Synapse connection uses an untrusted or self-signed certificate, set `TrustServerCertificate` during data source setup.
 
 ## Step-by-Step Upgrade
 
@@ -115,6 +116,10 @@ npm install reveal-sdk-node@2.0.0
 </Tabs>
 
 ### 4. Update API usage
+
+#### SQL Server connector certificate trust
+
+SQL Server-based connectors now use the official Microsoft SQL Server client library. The client may require trusted TLS certificates by default, so connections that previously worked with untrusted or self-signed certificates may need to set `TrustServerCertificate` during server-side data source setup.
 
 #### `$.ig` / `RevealApi` → Direct imports
 
@@ -217,6 +222,7 @@ The new `RVThumbnail` API also supports runtime theme changes.
 - [ ] Replace uses of `DateFilter` property to use `Filters` list instead.
 - [ ] (recommended) Replace `RVDashboardThumbnailView` with `RVThumbnail`
 - [ ] Replace `Reveal.Sdk.Dashboard.ToJsonStringAsync` with `ToJsonString`
+- [ ] If using SQL Server-based connectors with untrusted or self-signed certificates, set `TrustServerCertificate` during data source setup
 - [ ] Verify no dashboards use removed legacy chart types
 - [ ] If using the legacy Java engine, migrate to a supported server SDK
 
