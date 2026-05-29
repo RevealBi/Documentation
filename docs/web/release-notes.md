@@ -13,6 +13,7 @@ import TabItem from '@theme/TabItem';
 - The deprecated `DateFilter` property has been removed.
 - `RVDashboardThumbnailView` has been deprecated in favor of the new `RVThumbnail` class.
 - `NumberOfItemsInGrid`, `FilterRangeText`, and `UpdateFilterRangeText` have been renamed to `FilterCount`, `FilterSelectionText`, and `UpdateFilterSelectionText`.
+- SQL Server-based connectors now use the official Microsoft SQL Server client library. Connections that rely on an untrusted or self-signed server certificate may need to set `TrustServerCertificate` during data source setup.
 
 #### Node
 - The `dateFilter` property on headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
