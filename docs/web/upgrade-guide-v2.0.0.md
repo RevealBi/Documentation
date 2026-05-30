@@ -14,7 +14,7 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 - **jQuery and Day.js removed** — the SDK no longer depends on jQuery or Day.js.
 - **NPM delivery** — the client SDK is now delivered as an npm package. Legacy script-tag delivery is no longer the recommended approach.
 - **`$.ig` and `RevealApi` namespaces removed** — all types are now imported directly from the `reveal-sdk` npm package. Replace `$.ig.ClassName` and `RevealApi.ClassName` with direct imports (e.g. `import { ClassName } from "reveal-sdk"`).
-- **Renamed and removed APIs** 
+- **Renamed and removed APIs**
     - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and classes implementing it.
     - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
 - **Deprecated types** — `RVDashboardThumbnailView` has been _deprecated_, in favor of `RVThumbnail`.
@@ -94,7 +94,7 @@ Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
 
   </TabItem>
   <TabItem value="java" label="Java">
-  
+
 1 - Update the **pom.xml** file, and add the Reveal Maven repository.
 
 ```xml title="pom.xml"
@@ -102,7 +102,7 @@ Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
     <repository>
         <id>reveal.public</id>
         <url>https://maven.revealbi.io/repository/public</url>
-    </repository>	
+    </repository>
 </repositories>
 ```
 
@@ -115,6 +115,8 @@ Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
     <version>2.0.0</version>
 </dependency>
 ```
+
+For the full Java server migration path, including servlet bootstrap, user context, CORS, and routing changes, see [Migrating Java Projects to Reveal SDK 2.0](upgrade-guide-v2.0.0-java.md).
 
   </TabItem>
   <TabItem value="node" label="Node.js">
