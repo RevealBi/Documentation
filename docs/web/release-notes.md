@@ -10,9 +10,9 @@ import TabItem from '@theme/TabItem';
 #### All Platforms
 - The legacy Java and WPF engine backends have been removed.
 - Legacy chart types have been removed.
-- The deprecated `DateFilter` property has been removed from several classes in the SDK.
+- The deprecated `DateFilter` property has been removed from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions`, and related classes.
 - `RVDashboardThumbnailView` has been deprecated in favor of the new `RVThumbnail` class.
-- SQL Server-based connectors now use the official Microsoft SQL Server client library. Connections that rely on an untrusted or self-signed server certificate may need to set `TrustServerCertificate` during data source setup.
+- SQL Server-based connectors now use the official Microsoft SQL Server client library, which requires trusted TLS certificates by default. If your SQL Server, Azure SQL, or Azure Synapse connection uses an untrusted or self-signed certificate, set `TrustServerCertificate` during the data source setup.
 
 #### Node
 - The `dateFilter` property has been removed from the headless export options. Use the `filters` array with `RVDateDashboardFilter` and `RVDateRule` instead.
@@ -43,7 +43,6 @@ RVThumbnail.fromDashboard("#thumbnail", "Sales");
 - Keyboard navigation is now enabled by default. Widget titles and interactive elements include improved ARIA attributes for screen readers.
 - A draggable splitter has been added to the visualization editor between the chart and data areas.
 - Integrated authentication for SQL Server connections has been improved.
-- The official Microsoft SQL Server client library now replaces the previous internal implementation.
 - Data agent connection recovery has been improved to handle network interruptions more reliably.
 
 #### Java
@@ -55,7 +54,7 @@ RVThumbnail.fromDashboard("#thumbnail", "Sales");
 ```java
 CsvExportOptions options = new CsvExportOptions();
 options.setUseFormattedValues(true);
-byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
+CompletableFuture<InputStream> result = dashboardExporter.exportToCsv("dashboardId", null, options);
 ```
 
 - `IRVDataModelProvider` is now available as a beta API, enabling custom field schemas, calculated fields, and custom measures — matching the existing .NET implementation.
@@ -63,18 +62,31 @@ byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
 ```java
 public class MyDataModelProvider implements IRVDataModelProvider {
     @Override
-    public void editSchema(IRVUserContext userContext, RVDashboardDataSet dataSet, RVDataSchema schema) {
-        // customize field schema, inject calculated fields, add custom measures
+    public CompletableFuture<List<RVDataModelField>> editSchema(RVDataSourceItem dataSourceItem, List<RVDataModelField> schema, IRequestContext requestContext) {
+        // customize field schema
+        return CompletableFuture.completedFuture(schema);
+    }
+
+    @Override
+    public CompletableFuture<List<RVDataModelCalculatedField>> getCalculatedFields(RVDataSourceItem dataSourceItem, IRequestContext requestContext) {
+        // inject calculated fields
+        return CompletableFuture.completedFuture(null);
+    }
+
+    @Override
+    public CompletableFuture<List<RVDataModelMeasure>> getMeasures(RVDataSourceItem dataSourceItem, IRequestContext requestContext) {
+        // inject custom measures
+        return CompletableFuture.completedFuture(null);
     }
 }
 ```
 
 - Cache settings previously only available in .NET — including `maxDownloadSize` and `maxInMemoryCells` — are now exposed in the Java SDK.
-- `RVDateRule` is now available for headless export date filters. The `dateFilter` property is deprecated — use `filters` instead.
+- `RVDateRule` is now available for headless export date filters. Use the `filters` array with `RVDateDashboardFilter` to specify date-based filters.
 
 ```java
 ExportOptions exportOptions = new ExportOptions();
-exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelation.TO_DATE)));
+exportOptions.setFilters(new ArrayList<>(List.of(new RVDateDashboardFilter(new RVDateRule(RVPeriodRelation.TO_DATE, RVPeriodType.YEAR)))));
 ```
 
 #### Node
