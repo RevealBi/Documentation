@@ -86,7 +86,7 @@ public class MyDataModelProvider implements IRVDataModelProvider {
 
 ```java
 ExportOptions exportOptions = new ExportOptions();
-exportOptions.setFilters(new ArrayList<>(List.of(new RVDateDashboardFilter(new RVDateRule(RVPeriodRelation.TO_DATE, RVPeriodType.YEAR)))));
+exportOptions.getFilters().add(new RVDateDashboardFilter(new RVDateRule(RVPeriodRelation.TO_DATE, RVPeriodType.YEAR)));
 ```
 
 #### Node
