@@ -10,13 +10,12 @@ import TabItem from '@theme/TabItem';
 #### All Platforms
 - The legacy Java and WPF engine backends have been removed.
 - Legacy chart types have been removed.
-- The deprecated `DateFilter` property has been removed.
+- The deprecated `DateFilter` property has been removed from several classes in the SDK.
 - `RVDashboardThumbnailView` has been deprecated in favor of the new `RVThumbnail` class.
-- `NumberOfItemsInGrid`, `FilterRangeText`, and `UpdateFilterRangeText` have been renamed to `FilterCount`, `FilterSelectionText`, and `UpdateFilterSelectionText`.
 - SQL Server-based connectors now use the official Microsoft SQL Server client library. Connections that rely on an untrusted or self-signed server certificate may need to set `TrustServerCertificate` during data source setup.
 
 #### Node
-- The `dateFilter` property on headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
+- The `dateFilter` property in the headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
 
 #### Java
 - The Java SDK now requires Java 17 or higher.
@@ -30,7 +29,14 @@ import TabItem from '@theme/TabItem';
 - New data source: Azure CosmosDB.
 - New data source: ClickHouse.
 - Conditional formatting can now be applied based on field values for Grid, Pivot, Bar, Column, and Text visualizations. In addition to comparing against a fixed (static) value, conditional formatting rules support comparing a field's value against **another field** in the same visualization. The formatting is then evaluated independently for each row based on that row's actual data. [Read more.](https://help.revealbi.io/user/fields/conditional-formatting/).
-- New `RVThumbnail` class for programmatically generating thumbnails of dashboards and individual visualizations.
+- New `RVThumbnail` class for programmatically generating thumbnails of dashboards and individual visualizations. It replaces the deprecated `RVDashboardThumbnailView` API and supports runtime theme changes.
+
+```typescript
+import { RVThumbnail } from "reveal-sdk";
+
+RVThumbnail.fromDashboard("#thumbnail", "Sales");
+```
+
 - The DataGrid visualization now supports cell selection, multi-cell drag selection, and copying cell values to the clipboard via Ctrl+C, along with an updated column header, alternate row, and cell border design.
 - `RevealView` is now available as a standalone npm package.
 - `MaxCellsRestriction` now exposes get and set accessors.
