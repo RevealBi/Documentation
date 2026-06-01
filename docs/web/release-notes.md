@@ -82,7 +82,7 @@ public class MyDataModelProvider implements IRVDataModelProvider {
 ```
 
 - Cache settings previously only available in .NET — including `maxDownloadSize` and `maxInMemoryCells` — are now exposed in the Java SDK.
-- `RVDateRule` is now available for headless export date filters. Use the `filters` array with `RVDateDashboardFilter` to specify date-based filters.
+- `RVDateRule` is now available for headless export date filters.
 
 ```java
 ExportOptions exportOptions = new ExportOptions();
