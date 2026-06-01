@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 - SQL Server-based connectors now use the official Microsoft SQL Server client library. Connections that rely on an untrusted or self-signed server certificate may need to set `TrustServerCertificate` during data source setup.
 
 #### Node
-- The `dateFilter` property in the headless export options is deprecated. Use the `filters` array with `RVDateRule` instead.
+- The `dateFilter` property has been removed from the headless export options. Use the `filters` array with `RVDateDashboardFilter` and `RVDateRule` instead.
 
 #### Java
 - The Java SDK now requires Java 17 or higher.
@@ -108,11 +108,11 @@ const revealOptions: RevealOptions = {
 };
 ```
 
-- `RVDateRule` is now available for headless export date filters. The `dateFilter` property is deprecated — use `filters` instead.
+- `RVDateRule` is now available for headless export date filters. The `dateFilter` property has been removed — use `filters` instead.
 
 ```ts
 const exportOptions = new ExportOptions();
-exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDate)];
+exportOptions.filters = [new RVDateDashboardFilter(new RVDateRule(RVPeriodRelation.ToDate, RVPeriodType.Year))];
 ```
 
 ### Bugs
