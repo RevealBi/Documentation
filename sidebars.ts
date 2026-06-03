@@ -48,6 +48,7 @@ const sidebars: SidebarsConfig = {
           ]
         },
         { type: "doc", label: "Theming", id: "web/theming-dashboards" },
+        { type: "doc", label: "Thumbnail Generation", id: "web/thumbnail-generation" },
       ]
     },
 

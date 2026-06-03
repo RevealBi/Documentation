@@ -10,13 +10,12 @@ import TabItem from '@theme/TabItem';
 #### すべてのプラットフォーム
 - レガシーの Java および WPF エンジン バックエンドが削除されました。
 - 非推奨のレガシー チャート タイプが削除されました。
-- 非推奨の `DateFilter` プロパティが削除されました。
+- 非推奨の `DateFilter` プロパティが `RevealView`、`RVDashboard`、`RVDateDashboardFilter`、`RevealSettings`、`IExportOptions`、および関連クラスから削除されました。
 - `RVDashboardThumbnailView` は非推奨となり、新しい `RVThumbnail` クラスに置き換えられました。
-- `NumberOfItemsInGrid`、`FilterRangeText`、`UpdateFilterRangeText` はそれぞれ `FilterCount`、`FilterSelectionText`、`UpdateFilterSelectionText` に名前が変更されました。
 - SQL Server ベースのコネクタは、公式の Microsoft SQL Server クライアント ライブラリを使用するようになりました。信頼されていない、または自己署名のサーバー証明書を使用する接続では、データ ソース設定時に `TrustServerCertificate` を設定する必要がある場合があります。
 
 #### Node
-- ヘッドレス エクスポート オプションの `dateFilter` プロパティは非推奨です。代わりに `RVDateRule` を使用した `filters` 配列をご使用ください。
+- ヘッドレス エクスポート オプションの `dateFilter` プロパティは削除されました。代わりに `RVDateDashboardFilter` と `RVDateRule` を使用した `filters` 配列をご使用ください。
 
 #### Java
 - Java SDK は Java 17 以上が必須になりました。
@@ -31,7 +30,18 @@ import TabItem from '@theme/TabItem';
 - 新しいデータ ソース: ClickHouse。
 - 新しいデータ ソース: Elasticsearch。
 - グリッド、ピボット、棒グラフ、縦棒グラフ、テキスト ビジュアライゼーションで、フィールドの値に基づいた条件付き書式が適用できるようになりました。固定（静的）値との比較に加え、条件付き書式ルールで同じビジュアライゼーション内の**別のフィールド**と比較できるようになりました。書式設定は各行の実際のデータに基づいて個別に評価されます。[詳細はこちら。](https://help.revealbi.io/user/fields/conditional-formatting/)
-- ダッシュボードおよび個々のビジュアライゼーションのサムネイルをプログラムから生成できる新しい `RVThumbnail` クラスが追加されました。
+- ダッシュボードおよび個々のビジュアライゼーションのサムネイルをプログラムから生成できる新しい `RVThumbnail` クラスが追加されました。非推奨の `RVDashboardThumbnailView` API を置き換え、ランタイム テーマの変更もサポートします。
+
+```typescript
+import { RVThumbnail } from "reveal-sdk";
+
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+}
+
+renderThumbnail();
+```
+
 - DataGrid ビジュアライゼーションで、セルの選択、複数セルのドラッグ選択、Ctrl+C によるクリップボードへのコピーがサポートされました。また、列ヘッダー、交互行、セル境界線のデザインも更新されました。
 - `RevealView` がスタンドアロンの npm パッケージとして利用可能になりました。
 - `MaxCellsRestriction` に getter および setter アクセサーが追加されました。
@@ -51,7 +61,7 @@ import TabItem from '@theme/TabItem';
 ```java
 CsvExportOptions options = new CsvExportOptions();
 options.setUseFormattedValues(true);
-byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
+CompletableFuture<InputStream> result = dashboardExporter.exportToCsv("dashboardId", null, options);
 ```
 
 - カスタム フィールド スキーマ、計算フィールド、カスタム メジャーを有効にするベータ API として `IRVDataModelProvider` が利用可能になりました。既存の .NET 実装と同等の機能を提供します。
@@ -59,18 +69,31 @@ byte[] result = dashboardExporter.exportToCsv("dashboardId", options);
 ```java
 public class MyDataModelProvider implements IRVDataModelProvider {
     @Override
-    public void editSchema(IRVUserContext userContext, RVDashboardDataSet dataSet, RVDataSchema schema) {
-        // フィールド スキーマのカスタマイズ、計算フィールドの注入、カスタム メジャーの追加
+    public CompletableFuture<List<RVDataModelField>> editSchema(RVDataSourceItem dataSourceItem, List<RVDataModelField> schema, IRequestContext requestContext) {
+        // フィールド スキーマのカスタマイズ
+        return CompletableFuture.completedFuture(schema);
+    }
+
+    @Override
+    public CompletableFuture<List<RVDataModelCalculatedField>> getCalculatedFields(RVDataSourceItem dataSourceItem, IRequestContext requestContext) {
+        // 計算フィールドの注入
+        return CompletableFuture.completedFuture(null);
+    }
+
+    @Override
+    public CompletableFuture<List<RVDataModelMeasure>> getMeasures(RVDataSourceItem dataSourceItem, IRequestContext requestContext) {
+        // カスタム メジャーの追加
+        return CompletableFuture.completedFuture(null);
     }
 }
 ```
 
 - .NET SDK でのみ利用可能だったキャッシュ設定（`maxDownloadSize`、`maxInMemoryCells` など）が Java SDK でも公開されました。
-- ヘッドレス エクスポートの日付フィルター API に `RVDateRule` が追加されました。`dateFilter` プロパティは非推奨です。代わりに `filters` をご使用ください。
+- ヘッドレス エクスポートの日付フィルターに `RVDateRule` が利用できるようになりました。
 
 ```java
 ExportOptions exportOptions = new ExportOptions();
-exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelation.TO_DATE)));
+exportOptions.getFilters().add(new RVDateDashboardFilter(new RVDateRule(RVPeriodRelation.TO_DATE, RVPeriodType.YEAR)));
 ```
 
 #### Node
@@ -79,14 +102,17 @@ exportOptions.setFilters(List.of(new RVDateRule(RVPeriodType.YEAR, RVPeriodRelat
 ```ts
 class MyDataModelProvider implements IRVDataModelProvider {
   async editSchema(userContext, dataSourceItem, schema) {
+    // スキーマ内の既存フィールドを変更します（例: defaultAggregation、label、description の変更）。変更を適用するには変更後の配列を返し、元のままにするには null を返します。
     schema.find(f => f.name === "Discount").defaultAggregation = RVDashboardAggregationType.CountDistinct;
     schema.find(f => f.name === "UnitPrice").label = "Price per Unit";
     return schema;
   }
   async getCalculatedFields(userContext, dataSourceItem) {
+    // 既存のフィールド名を参照する式を使用して新しい計算フィールドを注入します（例: [UnitPrice] * [Quantity]）。これらはビジュアライゼーション エディターに追加フィールドとして表示されます。
     return [{ name: "LineTotal", type: RVDashboardDataType.Number, expression: "[UnitPrice] * [Quantity] * (1 - [Discount])" }];
   }
   async getMeasures(userContext, dataSourceItem) {
+    // sum(...)、sumif(...)、PREVIOUS(...) などの式を使用してカスタム集計メジャーを注入します。これらはビジュアライゼーション構築時に利用可能なメジャーとして表示されます。
     return [{ name: "Total Revenue", expression: "sum([UnitPrice] * [Quantity])", description: "Revenue before discount" }];
   }
 }
@@ -101,11 +127,11 @@ const revealOptions: RevealOptions = {
 };
 ```
 
-- ヘッドレス エクスポートの日付フィルター API に `RVDateRule` が追加されました。`dateFilter` プロパティは非推奨です。代わりに `filters` をご使用ください。
+- ヘッドレス エクスポートの日付フィルターに `RVDateRule` が利用できるようになりました。`dateFilter` プロパティは削除されました — 代わりに `filters` をご使用ください。
 
 ```ts
 const exportOptions = new ExportOptions();
-exportOptions.filters = [new RVDateRule(RVPeriodType.Year, RVPeriodRelation.ToDate)];
+exportOptions.filters = [new RVDateDashboardFilter(new RVDateRule(RVPeriodRelation.ToDate, RVPeriodType.Year))];
 ```
 
 ### バグ修正
