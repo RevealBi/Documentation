@@ -34,7 +34,11 @@ import TabItem from '@theme/TabItem';
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-RVThumbnail.fromDashboard("#thumbnail", "Sales");
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+}
+
+renderThumbnail();
 ```
 
 - The DataGrid visualization now supports cell selection, multi-cell drag selection, and copying cell values to the clipboard via Ctrl+C, along with an updated column header, alternate row, and cell border design.

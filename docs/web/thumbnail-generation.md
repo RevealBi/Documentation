@@ -10,10 +10,16 @@ Create an HTML element for the thumbnail and pass its selector to `RVThumbnail.f
 <div id="thumbnail" style="width: 240px; height: 160px;"></div>
 ```
 
+Set an explicit width and height on the container so the thumbnail has a visible rendering area.
+
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+}
+
+renderThumbnail();
 ```
 
 When the second argument is a string, Reveal SDK loads the dashboard information from the server using that dashboard ID. You can also pass an existing `RVDashboard` instance.
@@ -21,8 +27,12 @@ When the second argument is a string, Reveal SDK loads the dashboard information
 ```typescript
 import { RVDashboard, RVThumbnail } from "reveal-sdk";
 
-const dashboard = await RVDashboard.loadDashboard("Sales");
-await RVThumbnail.fromDashboard("#thumbnail", dashboard);
+async function renderThumbnail() {
+  const dashboard = await RVDashboard.loadDashboard("Sales");
+  await RVThumbnail.fromDashboard("#thumbnail", dashboard);
+}
+
+renderThumbnail();
 ```
 
 ## Render a Visualization Thumbnail
@@ -32,13 +42,21 @@ To render a thumbnail for a specific visualization in a dashboard, pass the visu
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-await RVThumbnail.fromDashboard("#thumbnail", "Sales", "Sales by Territory");
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales", "Sales by Territory");
+}
+
+renderThumbnail();
 ```
 
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-await RVThumbnail.fromDashboard("#thumbnail", "Sales", 0);
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales", 0);
+}
+
+renderThumbnail();
 ```
 
 ## Render a Chart Type Thumbnail
@@ -76,6 +94,10 @@ RevealSdkSettings.theme = new MountainDarkTheme();
 Thumbnail resources are released automatically when the container element is removed from the DOM. You can also dispose of a thumbnail explicitly from a framework lifecycle hook.
 
 ```typescript
-const thumbnail = await RVThumbnail.fromDashboard("#thumbnail", "Sales");
-thumbnail?.dispose();
+async function renderThumbnail() {
+  const thumbnail = await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+  thumbnail?.dispose();
+}
+
+renderThumbnail();
 ```

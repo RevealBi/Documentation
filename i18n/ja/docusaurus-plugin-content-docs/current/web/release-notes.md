@@ -35,7 +35,11 @@ import TabItem from '@theme/TabItem';
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-RVThumbnail.fromDashboard("#thumbnail", "Sales");
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+}
+
+renderThumbnail();
 ```
 
 - DataGrid ビジュアライゼーションで、セルの選択、複数セルのドラッグ選択、Ctrl+C によるクリップボードへのコピーがサポートされました。また、列ヘッダー、交互行、セル境界線のデザインも更新されました。

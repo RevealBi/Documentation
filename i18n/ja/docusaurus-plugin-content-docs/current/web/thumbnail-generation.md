@@ -10,10 +10,16 @@
 <div id="thumbnail" style="width: 240px; height: 160px;"></div>
 ```
 
+サムネイルに表示領域を確保するため、コンテナーには明示的な幅と高さを設定してください。
+
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+}
+
+renderThumbnail();
 ```
 
 2 番目の引数が文字列の場合、Reveal SDK はそのダッシュボード ID を使用してサーバーからダッシュボード情報を読み込みます。既存の `RVDashboard` インスタンスを渡すこともできます。
@@ -21,8 +27,12 @@ await RVThumbnail.fromDashboard("#thumbnail", "Sales");
 ```typescript
 import { RVDashboard, RVThumbnail } from "reveal-sdk";
 
-const dashboard = await RVDashboard.loadDashboard("Sales");
-await RVThumbnail.fromDashboard("#thumbnail", dashboard);
+async function renderThumbnail() {
+  const dashboard = await RVDashboard.loadDashboard("Sales");
+  await RVThumbnail.fromDashboard("#thumbnail", dashboard);
+}
+
+renderThumbnail();
 ```
 
 ## ビジュアライゼーション サムネイルのレンダリング
@@ -32,13 +42,21 @@ await RVThumbnail.fromDashboard("#thumbnail", dashboard);
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-await RVThumbnail.fromDashboard("#thumbnail", "Sales", "Sales by Territory");
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales", "Sales by Territory");
+}
+
+renderThumbnail();
 ```
 
 ```typescript
 import { RVThumbnail } from "reveal-sdk";
 
-await RVThumbnail.fromDashboard("#thumbnail", "Sales", 0);
+async function renderThumbnail() {
+  await RVThumbnail.fromDashboard("#thumbnail", "Sales", 0);
+}
+
+renderThumbnail();
 ```
 
 ## チャート タイプ サムネイルのレンダリング
@@ -76,6 +94,10 @@ RevealSdkSettings.theme = new MountainDarkTheme();
 サムネイルのリソースは、コンテナー要素が DOM から削除されると自動的に解放されます。フレームワークのライフサイクル フックからサムネイルを明示的に破棄することもできます。
 
 ```typescript
-const thumbnail = await RVThumbnail.fromDashboard("#thumbnail", "Sales");
-thumbnail?.dispose();
+async function renderThumbnail() {
+  const thumbnail = await RVThumbnail.fromDashboard("#thumbnail", "Sales");
+  thumbnail?.dispose();
+}
+
+renderThumbnail();
 ```
