@@ -78,9 +78,9 @@ The client SDK runs in your web application and provides:
 - Built-in streaming support via Server-Sent Events (SSE)
 - Request cancellation and error handling
 
-### Server SDK (ASP.NET Core)
+### Server SDK (ASP.NET Core, Node.js, Java)
 
-The server SDK handles:
+The server SDK runs on ASP.NET Core, Node.js, and Java, and handles:
 
 - LLM provider integration (OpenAI, Anthropic, Google, etc.)
 - Datasource metadata generation and caching

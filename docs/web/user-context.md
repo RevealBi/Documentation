@@ -97,9 +97,9 @@ Follow these steps to implement the `UserContextProvider`.
   <TabItem value="java" label="Java">
 
   ```java
-  RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-      setUserContextProvider(new UserContextProvider()).
-      build());
+  new RevealServerBuilder()
+      .setUserContextProvider(new UserContextProvider())
+      .build();
   ```
 
   </TabItem>

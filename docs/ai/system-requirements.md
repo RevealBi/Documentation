@@ -34,9 +34,24 @@ While the client SDK works with vanilla JavaScript, it integrates seamlessly wit
 
 ## Server SDK Requirements
 
+The AI Server SDK runs on ASP.NET Core, Node.js, and Java.
+
 ### ASP.NET Core
 
-- ASP.NET 8.0 or higher
+- .NET 8.0 or higher
+- `Reveal.Sdk.AspNetCore` 1.8.4 or higher
+
+### Node.js (Preview)
+
+- Node.js 16 or higher
+- `reveal-sdk-node` 2.0.0 or higher
+
+### Java (Preview)
+
+- Java 17 or higher
+- Maven 3.6 or higher
+- `io.revealbi:reveal-sdk-servlet` 2.0.0 or higher (or the Spring Boot equivalent)
+- A Jakarta EE 9 compliant servlet container (e.g., Tomcat 10+, Jetty 12+)
 
 ## Reveal SDK Base Requirements
 
@@ -44,7 +59,7 @@ Reveal SDK AI extends the base Reveal SDK, so you must also meet the standard Re
 
 - Valid Reveal SDK license
 - Reveal SDK Web (JavaScript) package
-- Reveal.Sdk.AspNetCore package (compatible version)
+- The base Reveal Server SDK package for your platform (`Reveal.Sdk.AspNetCore`, `reveal-sdk-node`, or `io.revealbi:reveal-sdk-servlet`)
 
 ### TypeScript Support
 

@@ -1,4 +1,4 @@
-# Server SDK のインストール
+﻿# Server SDK のインストール
 
 ## ASP.NET
 
@@ -61,6 +61,8 @@ app.listen(8080, () => {
 
 以下の手順では、Reveal SDK を既存の Java アプリケーションにインストールする方法について説明します。
 
+Java SDK には Java 17 以降および Jakarta EE 9 準拠サーバーが必要です。Java SDK は現在、ネイティブ .NET コンポーネントをラップしているため、AIX など、それらのコンポーネントを実行できない一部のまれなプラットフォームはサポートされていません。Jetty をサーバーとして使用する場合、そのバージョンが Reveal SDK で内部的に使用される Jetty バージョン (現在は 12.0.12) と競合する可能性があります。
+
 1 - **pom.xml** ファイルを更新します。Reveal Maven リポジトリを追加します。
 
 ```xml title="pom.xml"
@@ -76,81 +78,67 @@ app.listen(8080, () => {
 
 ```xml title="pom.xml"
 <dependency>
-    <groupId>com.infragistics.reveal.sdk</groupId>
-    <artifactId>reveal-sdk</artifactId>
+    <groupId>io.revealbi</groupId>
+    <artifactId>reveal-sdk-servlet</artifactId>
     <version>[var:sdkVersion]</version>
 </dependency>
 ```
 
-### Spring Boot - Jersey
+### Spring Boot
 
-Jersey Config クラスを作成し、`RevealEngineInitializer.initialize` メソッドを呼び出して Reveal SDK を初期化します。Reveal SDK を Jersey で正しく動作させるためには、Reveal SDK の全クラスを Jersey に登録する必要があります。Reveal SDK のクラスを登録するには、`RevealEngineInitializer.getClassesToRegister` メソッドによって返されるクラスをループして、Jersey Config にそれらを登録します。
+`RevealEngineServlet` を Spring Boot サーブレットとして登録します。現在の Java SDK は JAX-RS 上で動作しなくなったため、Reveal SDK クラスを JAX-RS コンテキストに登録する必要はありません。サンプルのプロバイダー クラスはアプリケーションの実装に置き換えてください。リクエスト ベースのプロパティをユーザー コンテキストに渡す必要がある場合は、
+`null` をリクエストから生成した `Properties` オブジェクトに置き換えてください。
 
-```java title="RevealJerseyConfig.java"
-import org.glassfish.jersey.server.ResourceConfig;
-import org.springframework.stereotype.Component;
+```java title="Application.java"
+@SpringBootApplication
+public class Application {
 
-import com.infragistics.reveal.engine.init.RevealEngineInitializer;
+    public static void main(String[] args) {
+       SpringApplication.run(Application.class, args);
+    }
 
-import javax.ws.rs.ApplicationPath;
+    @Bean
+    ServletRegistrationBean<RevealEngineServlet> revealServlet() {
+       RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
+                .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
+                .addSettings(settings -> {
+                    // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
+                })
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
-@Component
-@ApplicationPath("/")
-public class RevealJerseyConfig extends ResourceConfig 
-{
-    public RevealJerseyConfig()
-    {
-        RevealEngineInitializer.initialize();
-        
-        //register all Reveal classes in JAX-RS context
-        for (Class<?> clazz : RevealEngineInitializer.getClassesToRegister()) {
-        	register(clazz);
-        }
+       return new ServletRegistrationBean<>(revealEngineServlet, "/reveal-api/*");
     }
 }
 ```
 
 ### Tomcat
 
-1 - Jakarta RESTful Web Services (JAX-RS) 実装への依存関係を追加します。Jersey、RESTeasy、Apache CXF など複数の選択肢の中から選ぶことができます。お好みのプロバイダー提供元が説明する手順に従ってください。
-
-例として Jersey 用に追加する必要がある依存関係を以下に示します:
-
-```xml
-<dependency>
-    <groupId>org.glassfish.jersey.containers</groupId>
-    <artifactId>jersey-container-servlet</artifactId>
-    <version>2.32</version>
-</dependency>
-<dependency>
-    <groupId>org.glassfish.jersey.inject</groupId>
-    <artifactId>jersey-cdi2-se</artifactId>
-    <version>2.32</version>
-</dependency>
-```
-
-2 - ServletContextListener クラスを作成し `RevealEngineInitializer.initialize` メソッドを呼び出して Reveal SDK を初期化します。
+Tomcat 10 以降などの Jakarta EE 9 準拠サーブレット コンテナーを使用します。`ServletContextListener` クラスを作成し、`RevealEngineServlet` を登録します。サンプルのプロバイダー クラスはアプリケーションの実装に置き換えてください。リクエスト ベースのプロパティをユーザー コンテキストに渡す必要がある場合は、
+`null` をリクエストから生成した `Properties` オブジェクトに置き換えてください。
 
 ```java
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
-
-import com.infragistics.reveal.engine.init.RevealEngineInitializer;
-
 @WebListener
-public class RevealServletContextListener implements ServletContextListener {
+public class AppInitializer implements ServletContextListener {
 
 	@Override
-	public void contextDestroyed(ServletContextEvent ctx) {
-		
-	}
+	public void contextInitialized(ServletContextEvent sce) {
+        RevealEngineServlet revealEngineServlet = new RevealEngineServlet(() -> new RevealServerBuilder()
+                // Replace these sample providers with your application's implementations.
+                .setAuthenticationProvider(new MyIRVAuthenticationProvider())
+                .setDashboardProvider(new RVDashboardProvider("c:\\your-path"))
+                .setDataSourceProvider(new MyIRVDataSourceProvider())
+                .addSettings(settings -> {
+                    // settings.setLicense("your license or remove to use ~/.revealbi-sdk/license.key");
+                })
+                .build(), request -> new RVUserContext("whatever", null /* replace null with a Properties built from the request if needed */));
 
-	@Override
-	public void contextInitialized(ServletContextEvent ctx) {
-		
-		//initialize Reveal
-		RevealEngineInitializer.initialize();
+        ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("myServlet", revealEngineServlet);
+        reg.setAsyncSupported(true);
+        reg.addMapping("/reveal-api/*");
 	}
 }
 ```
+

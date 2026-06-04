@@ -11,38 +11,233 @@ First follow the [1.x upgrade guides in the 1.8.4 documentation](/1.8.4/web/upgr
 
 ## Overview of Breaking Changes
 
-<!-- TODO: list the high-level breaking changes here so a reader can scan and decide what affects them. -->
+- **jQuery and Day.js removed** — the SDK no longer depends on jQuery or Day.js.
+- **NPM delivery** — the client SDK is now delivered as an npm package. Legacy script-tag delivery is no longer the recommended approach.
+- **`$.ig` and `RevealApi` namespaces removed** — all types are now imported directly from the `reveal-sdk` npm package. Replace `$.ig.ClassName` and `RevealApi.ClassName` with direct imports (e.g. `import { ClassName } from "reveal-sdk"`).
+- **Renamed and removed APIs**
+    - `DateFilter` - _removed_ deprecated property from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and classes implementing it.
+    - `Reveal.Sdk.Dashboard.ToJsonStringAsync` - _renamed_ to `ToJsonString`.
+- **Deprecated types** — `RVDashboardThumbnailView` has been _deprecated_, in favor of `RVThumbnail`.
+- **SQL Server certificates** — SQL Server-based connectors now use the official Microsoft SQL Server client library. If your SQL Server, Azure SQL, or Azure Synapse connection uses an untrusted or self-signed certificate, set `TrustServerCertificate` during data source setup.
 
 ## Step-by-Step Upgrade
 
-### 1. Update package versions
+### 1. Remove jQuery
 
-<!-- TODO: show the new package versions for ASP.NET, Java, and Node SDKs. -->
+The Reveal SDK no longer requires jQuery. Remove the jQuery script tag that was previously required by the SDK:
 
-### 2. Update API usage
+```html
+<!-- Remove this line -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+```
 
-<!-- TODO: list renamed/removed APIs with before/after snippets in tabs. -->
+:::info
+If your own application code depends on jQuery you can keep it — the Reveal SDK simply no longer requires it.
+:::
 
-<Tabs groupId="example">
-    <TabItem value="before" label="1.8.4">
-        ```csharp
-        // before
-        ```
-    </TabItem>
-    <TabItem value="after" label="2.0.0">
-        ```csharp
-        // after
-        ```
-    </TabItem>
+Also remove **Day.js**, **Quill.js** and **Spectrum.js** if they are still present from older versions:
+
+```html
+<!-- Remove these if present -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css" rel="stylesheet" type="text/css" >
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" type="text/css" >
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+```
+
+### 2. Switch client SDK to NPM
+
+Replace the legacy script-tag installation with the npm package.
+
+<Tabs groupId="delivery">
+  <TabItem value="before" label="1.x (script tags)">
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://dl.revealbi.io/reveal/libs/1.8.4/infragistics.reveal.js"></script>
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0 (npm)">
+
+```bash
+npm install reveal-sdk
+```
+
+```typescript
+import { RevealSdkSettings, RevealView } from "reveal-sdk";
+```
+
+  </TabItem>
 </Tabs>
 
-### 3. Update configuration
+:::tip Still need script tags?
+The SDK distribution zip is still available for non-bundler setups — jQuery and Day.js are no longer needed:
 
-<!-- TODO: any config / appsettings / DI changes go here. -->
+```html
+<script src="./assets/reveal/reveal-sdk.js"></script>
+```
+:::
+
+### 3. Update server SDK packages
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+Update the `Reveal.Sdk.*` NuGet packages to version **2.0.0** or later.
+
+```xml
+<PackageReference Include="Reveal.Sdk.AspNetCore" Version="2.0.0" />
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+1 - Update the **pom.xml** file, and add the Reveal Maven repository.
+
+```xml title="pom.xml"
+<repositories>
+    <repository>
+        <id>reveal.public</id>
+        <url>https://maven.revealbi.io/repository/public</url>
+    </repository>
+</repositories>
+```
+
+2 -Add the Reveal SDK as a dependency.
+
+```xml
+<dependency>
+    <groupId>io.revealbi</groupId>
+    <artifactId>reveal-sdk-servlet</artifactId>
+    <version>2.0.0</version>
+</dependency>
+```
+
+For the full Java server migration path, including servlet bootstrap, user context, CORS, and routing changes, see [Migrating Java Projects to Reveal SDK 2.0](upgrade-guide-v2.0.0-java.md).
+
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+
+```bash
+npm install reveal-sdk-node@2.0.0
+```
+
+  </TabItem>
+</Tabs>
+
+### 4. Update API usage
+
+#### SQL Server connector certificate trust
+
+SQL Server-based connectors now use the official Microsoft SQL Server client library. The client may require trusted TLS certificates by default, so connections that previously worked with untrusted or self-signed certificates may need to set `TrustServerCertificate` during server-side data source setup.
+
+#### `$.ig` / `RevealApi` → Direct imports
+
+The `$.ig` and `RevealApi` global namespaces have been removed. All types are now imported directly from the `reveal-sdk` npm package. If you were using TypeScript with `infragistics.reveal.d.ts` for IntelliSense (e.g. `new $.ig.RevealView`), update all references to use direct imports instead.
+
+<Tabs groupId="api-namespace">
+  <TabItem value="before" label="1.x">
+
+```javascript
+$.ig.RevealSdkSettings.setBaseUrl("https://localhost:5111/");
+var revealView = new $.ig.RevealView("#revealView");
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```typescript
+import { RevealSdkSettings, RevealView } from "reveal-sdk";
+
+RevealSdkSettings.setBaseUrl("https://localhost:5111/");
+const revealView = new RevealView("#revealView");
+```
+
+  </TabItem>
+</Tabs>
+
+#### `DateFilter` → `filters` + `RVDateRule`
+
+The deprecated `DateFilter` property has been removed. Use the `filters` collection instead.  DateFilter was eliminated from `RevealView`, `RVDashboard`, `RVDateDashboardFilter`, `RevealSettings`, `IExportOptions` and classes implementing it.
+
+<Tabs groupId="api-datefilter">
+  <TabItem value="before" label="1.x">
+
+```javascript
+var myRule = new $.ig.RVDateRule($.ig.RVPeriodRelation.Last, 3, $.ig.RVPeriodType.Month);
+dashboard.dateFilter = new $.ig.RVDateDashboardFilter(myRule);
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```typescript
+import { RVDateRule, RVPeriodRelation, RVPeriodType } from "reveal-sdk";
+
+const myRule = new RVDateRule(RVPeriodRelation.Last, 3, RVPeriodType.Month);
+const myDateFilter = dashboard.filters.findByTitle("My Date Filter");
+myDateFilter.rule = myRule;
+```
+
+  </TabItem>
+</Tabs>
+
+#### `RVDashboardThumbnailView` → `RVThumbnail`
+
+Usage of `RVDashboardThumbnailView` is being deprecated. The class will continue to be available for some time, but we recommend that you migrate your code to use `RVThumbnail` instead.
+
+<Tabs groupId="api-thumbnail">
+  <TabItem value="before" label="1.x">
+
+```javascript
+var thumbnailView = new $.ig.RevealDashboardThumbnailView("#thumbnail");
+$.ig.RevealUtility.getDashboardInfo("Sales", function (info) {
+  thumbnailView.dashboardInfo = info.info;
+});
+```
+
+  </TabItem>
+  <TabItem value="after" label="2.0">
+
+```typescript
+import { RVThumbnail } from "reveal-sdk";
+
+RVThumbnail.fromDashboard("#thumbnail", "Sales");
+```
+
+  </TabItem>
+</Tabs>
+
+The new `RVThumbnail` API also supports runtime theme changes.
 
 ## Removed APIs
 
-<!-- TODO: list APIs removed in 2.0 with the recommended replacement. -->
+| API | Replacement |
+|---|---|
+| `$.ig` namespace | Direct imports from `reveal-sdk` |
+| `RevealApi` namespace | Direct imports from `reveal-sdk` |
+| `DateFilter` property | `filters` collection |
+| `RVDashboardThumbnailView` | `RVThumbnail` |
+| `Reveal.Sdk.Dashboard.ToJsonStringAsync` | `ToJsonString` |
+| Legacy chart types (previously deprecated) | Use current [Chart Types](/web/chart-types) |
+| Legacy Java engine | Java SDK (Spring Boot) |
+
+## Summary Checklist
+
+- [ ] Remove jQuery `<script>` tag
+- [ ] Remove Quill.js and Spectrum.js references if still present
+- [ ] Switch client SDK to npm package (or remove jQuery from script-tag setup)
+- [ ] Update server SDK packages to 2.0.0
+- [ ] Replace `$.ig.` and `RevealApi.` with direct imports from `reveal-sdk` in all client code
+- [ ] Replace uses of `DateFilter` property to use `Filters` list instead.
+- [ ] (recommended) Replace `RVDashboardThumbnailView` with `RVThumbnail`
+- [ ] Replace `Reveal.Sdk.Dashboard.ToJsonStringAsync` with `ToJsonString`
+- [ ] If using SQL Server-based connectors with untrusted or self-signed certificates, set `TrustServerCertificate` during data source setup
+- [ ] Verify no dashboards use removed legacy chart types
+- [ ] If using the legacy Java engine, migrate to a supported server SDK
 
 ## Need help?
 

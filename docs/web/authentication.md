@@ -75,9 +75,9 @@ builder.Services.AddControllers().AddReveal( builder =>
   <TabItem value="java" label="Java">
 
 ```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setAuthProvider(new AuthenticationProvider()).
-    build());
+new RevealServerBuilder()
+    .setAuthenticationProvider(new AuthenticationProvider())
+    .build();
 ```
 
   </TabItem>

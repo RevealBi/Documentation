@@ -95,9 +95,9 @@ sudo apt-get install -y --allow-unauthenticated libx11-dev
 
 ```java
 String exportToolDir = "<dir>";
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setExportToolContainerPath(exportToolDir).
-    build());
+new RevealServerBuilder()
+    .addSettings(settings -> settings.setExportToolContainerPath(exportToolDir))
+    .build();
 ```
 
 また、以下のようにシステムプロパティ **reveal.exportToolContainerPath** を通じてディレクトリを指定することもできます:

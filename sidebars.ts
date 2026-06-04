@@ -21,7 +21,7 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "NestJS", id: "web/getting-started-server-nest" },
             { type: "doc", label: "Node.js", id: "web/getting-started-server-node" },
             { type: "doc", label: "Node.js - TypeScript", id: "web/getting-started-server-node-typescript" },
-            { type: "doc", label: "Spring Boot - Jersey", id: "web/getting-started-spring-boot-jersey" },
+            { type: "doc", label: "Spring Boot", id: "web/getting-started-spring-boot" },
           ]
         },
         {
@@ -48,6 +48,7 @@ const sidebars: SidebarsConfig = {
           ]
         },
         { type: "doc", label: "Theming", id: "web/theming-dashboards" },
+        { type: "doc", label: "Thumbnail Generation", id: "web/thumbnail-generation" },
       ]
     },
 
@@ -116,6 +117,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category", label: "Release Notes", link: { type: "doc", id: "web/release-notes" }, items: [
             { type: "doc", label: "2.0.0 Upgrade Guide", id: "web/upgrade-guide-v2.0.0" },
+            { type: "doc", label: "Java 2.0 Migration Guide", id: "web/upgrade-guide-v2.0.0-java" },
           ]
         },
         { type: "doc", label: "Known Issues", id: "web/known-issues" },
@@ -149,7 +151,7 @@ const sidebars: SidebarsConfig = {
     },
 
   ],
-  
+
   userSideBar: [
     {
       type: "category", label: "Dashboards", collapsed: false, collapsible: false, className: "sidebar__header", items: [
@@ -323,4 +325,3 @@ const sidebars: SidebarsConfig = {
 };
 
 export default sidebars;
-

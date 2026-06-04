@@ -7,6 +7,12 @@ sidebar_label: Building a Custom Provider
 
 If you need to integrate with an LLM service that isn't supported out of the box, you can create a custom provider by implementing the `IAIProvider` interface and registering it with the SDK.
 
+:::info ASP.NET Core only
+
+Custom providers built against the `IAIProvider` interface are currently supported on **ASP.NET Core** only. Node.js and Java applications must use one of the built-in providers — if your target service exposes an OpenAI-compatible API, use the [Custom Endpoints](providers-custom-endpoints.md) approach with the OpenAI provider.
+
+:::
+
 ## Step 1: Create the Provider Class
 
 Implement the `IAIProvider` interface:

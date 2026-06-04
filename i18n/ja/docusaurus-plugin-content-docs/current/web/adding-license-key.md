@@ -47,9 +47,11 @@ services.AddMvc().AddReveal(builder =>
   <TabItem value="java" label="Java">
 
 ```java
-RevealEngineInitializer.initialize(new InitializeParameterBuilder().
-    setLicense("LICENSE_KEY").
-    build());
+new RevealServerBuilder()
+    .addSettings(settings -> {
+        settings.setLicense("LICENSE_KEY");
+    })
+    .build();
 ```
 
   </TabItem>
