@@ -112,6 +112,7 @@ const config: Config = {
   ],
 
   themeConfig: {
+    image: 'img/reveal-social-black-font-preview.png',
     algolia: {
       appId: 'QBVJ183IXZ',
       apiKey: 'be244eaae98ce29feeb1882558494e62',
