@@ -121,7 +121,7 @@ At minimum, each datasource needs an `Id` and a `Provider`:
 | `Name` | string | Yes | The actual column name in the database |
 | `Alias` | string | No | Display alias for the field (e.g., `"Order Date"` for `"OrderDate"`) |
 | `Description` | string | No | Human-readable description. Helps the AI understand what the field represents. |
-| `Expression` | string | No | Calculation to perform when using this field in a dashboard. Can refer to existing fields in the table. If this value is set, it transforms this field into a predefined calculated field the AI can pick. It's important that `"Name"` is unique (not an existing field in the table). |
+| `Expression` | string | No | Calculation to perform when using this field in a dashboard. Can refer to existing fields in the table. If this value is set, it transforms this field into a predefined calculated field the AI can pick. It's important that `Name` is unique (not an existing field in the table). |
 | `ExpressionType` | string | Yes if `Expression` is set | Type of calculated field that will be created for this expression: `"CalculatedField"` (for pre-calculated values) or `"PostCalculatedField"` (for post-calculated values). |
 | `DataType` | string | Yes if `Expression` is set | The return datatype of the `Expression` defined for this field. Possibe values are: `"String"`, `"Number"`, `"Percentage"`, `"Currency"`, `"Date"`, `"DateTime"`, `"Time"`. |
 
