@@ -20,6 +20,7 @@ Custom Queries are supported for the following data sources:
 - [Oracle](adding-data-sources/oracle.md)
 - [PostgreSQL](adding-data-sources/postgres.md)
 - [Snowflake](adding-data-sources/snowflake.md)
+- [SQLite](adding-data-sources/sqlite.md)
 
 **Step 1** - Define the data source items on the client
 
