@@ -65,5 +65,6 @@ export const dataSourcesCurrent: DataSourceItem[] = [
     { title: "PostgreSQL", topic: "../adding-data-sources/postgres", nuget: "Reveal.Sdk.Data.PostgreSQL" },
     { title: "REST", topic: "../adding-data-sources/rest" },
     { title: "Snowflake", topic: "../adding-data-sources/snowflake", nuget: "Reveal.Sdk.Data.Snowflake" },
+    { title: "SQLite", topic: "../adding-data-sources/sqlite", nuget: "Reveal.Sdk.Data.SQLite" },
     { title: "TSV (Tab Separated Values)", topic: "" },
 ];
