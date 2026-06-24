@@ -86,6 +86,7 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "Amazon S3", id: "web/adding-data-sources/amazon-s3" },
             { type: "doc", label: "ClickHouse", id: "web/adding-data-sources/clickhouse" },
             { type: "doc", label: "Cosmos DB", id: "web/adding-data-sources/azure-cosmos-db" },
+            { type: "doc", label: "Cube", id: "web/adding-data-sources/cube" },
             { type: "doc", label: "CSV", id: "web/adding-data-sources/csv" },
             { type: "doc", label: "Databricks", id: "web/adding-data-sources/databricks" },
             { type: "doc", label: "Elasticsearch", id: "web/adding-data-sources/elasticsearch" },

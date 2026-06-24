@@ -315,6 +315,7 @@ const authenticationProvider = async (userContext:IRVUserContext | null, dataSou
 
 The `RVBearerTokenDataSourceCredential` is supported for the following data sources:
 - Box
+- Cube
 - Databricks
 - Dropbox
 - Google Analytics
