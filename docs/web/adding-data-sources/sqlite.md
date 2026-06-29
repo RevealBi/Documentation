@@ -208,7 +208,7 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   </TabItem>
 </Tabs>
 
-`Database` points to the SQLite database file, it accepts both absolute and relative paths. For .NET, the relative paths are resolved against `AppContext.BaseDirectory`. For Node.js and Java, the relative paths are resolved against the directory containing the `RevealEnginePrg` native engine binary.
+`Database` points to the SQLite database file, it accepts both absolute and relative paths. For .NET, the relative paths are resolved against `AppContext.BaseDirectory`. For Node.js and Java, the relative paths are resolved against the application's working directory.
 
 `DisableDateTypeInference` is optional on both `RVSQLiteDataSource` and `RVSQLiteDataSourceItem`. When enabled, Reveal keeps SQLite date-like values as their raw string or numeric types instead of promoting them to date/datetime fields automatically.
 

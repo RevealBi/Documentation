@@ -208,7 +208,7 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   </TabItem>
 </Tabs>
 
-`Database` は SQLite データベース ファイルを指し、絶対パスと相対パスの両方を指定できます。.NET の場合、相対パスは `AppContext.BaseDirectory` を基準に解決されます。Node.js および Java の場合、相対パスは `RevealEnginePrg` ネイティブ エンジン バイナリが含まれているディレクトリを基準に解決されます。
+`Database` は SQLite データベース ファイルを指し、絶対パスと相対パスの両方を指定できます。.NET の場合、相対パスは `AppContext.BaseDirectory` を基準に解決されます。Node.js および Java の場合、相対パスはアプリケーションの作業ディレクトリを基準に解決されます。
 
 `DisableDateTypeInference` は `RVSQLiteDataSource` と `RVSQLiteDataSourceItem` の両方でオプションです。有効にすると、Reveal は SQLite の日付に似た値を、自動的に日付/日時フィールドに昇格させる代わりに、生の文字列または数値型のまま保持します。
 
