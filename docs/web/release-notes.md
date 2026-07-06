@@ -54,7 +54,7 @@ static setAdditionalHeadersProvider(
 - Added `empty-data` text to the DataGrid visualization, and updated the empty-state icon shown for the first visualization added to a dashboard.
 
 #### AI
-- Introduced the first iteration of semantic context, improving how the AI understands dashboard data.
+- Introduced the first iteration of metadata enrichment, enabling automatic completion of the metadata catalog using AI. Disabled by default.
 - Added support for connecting multiple custom AI providers (Node and Java, C# already had it)
 - Migrated the Anthropic provider to the official Anthropic SDK.
 - Metadata layer improvements, including hot reload / partial regeneration, per-user context support, and a new pluggable metadata storage provider.
