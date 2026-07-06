@@ -54,16 +54,12 @@ static setAdditionalHeadersProvider(
 - Added `empty-data` text to the DataGrid visualization, and updated the empty-state icon shown for the first visualization added to a dashboard.
 
 #### AI
-- Agent Chat now supports skills via the new Reveal Skills Plugin.
-- A data agent can now be selected directly on the connection screen.
-- Dashboard generation has been reworked with a new, improved approach.
 - Introduced the first iteration of semantic context, improving how the AI understands dashboard data.
-- Added support for connecting multiple custom AI providers.
-- AI provider and model settings can now be overridden on a per-model basis.
+- Added support for connecting multiple custom AI providers (Node and Java, C# already had it)
 - Migrated the Anthropic provider to the official Anthropic SDK.
 - Metadata layer improvements, including hot reload / partial regeneration, per-user context support, and a new pluggable metadata storage provider.
-- Added a database template to the metadata catalog.
 - Exposed a `networkTimeout` option for built-in connectors.
+- Fixed date range handling for specific named quarters and months in dashboard generation.
 
 ### Bugs
 
@@ -87,14 +83,7 @@ static setAdditionalHeadersProvider(
 - Improved maximize reliability.
 
 #### Java
-- Fixed BigQuery data source item serialization. CHECK THE PR/ISSUE.
-
-#### AI
-- Fixed data source dispatch for SSAS-HTTP and Oracle SID connections.
-- AI-generated dashboards now rank by measure only when explicitly requested.
-- Fixed date range handling for specific named quarters and months in dashboard generation.
-- Fixed Excel handling issues after a library update.
-- Various reliability fixes to the metadata layer, including improved observability, round-trip timeout handling, and fingerprint carry-over.
+- Fixed BigQuery data source item serialization.
 
 ## 2.0.0 (May 14th, 2026)
 
