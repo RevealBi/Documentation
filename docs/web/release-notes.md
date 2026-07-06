@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 - New data source: SQLite, with support for custom queries.
 - New data source: Cube.
-- New data source: DuckDB.
+- New data source: DuckDB, with support for file and MotherDuck databases, custom queries, and stored procedures (DuckDB macros).
 - Most database connectors have been migrated to a new (v2) connector architecture, which adds built-in SQL injection protection.
 - The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) (`newDataGrid` beta feature) now supports sorting, grouping, and filtering when attached to a paged data source, bringing it closer to parity with the classic grid's paging experience.
 - Linear and radial gauge visualizations have an updated UI and are no longer in beta.
