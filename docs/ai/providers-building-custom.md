@@ -222,7 +222,7 @@ builder.Services.AddRevealAI()
 
 ## Java: Custom Providers via Callbacks
 
-In Java, custom providers are not implemented as `IAIProvider` classes. Instead, you register a **callback** with the `RevealAIPlugin` that receives the prompt request as JSON and returns the response as JSON. The plugin bridges the callback to the underlying AI engine.
+To implement a custom provider, register a **callback** with the `RevealAIPlugin` that receives the prompt request as JSON and returns the response as JSON. The plugin bridges the callback to the underlying AI engine.
 
 ### Registration Conventions
 
@@ -310,7 +310,7 @@ Real callbacks should parse the incoming JSON (for example with Jackson) to read
 
 ## Node.js: Custom Providers via Callbacks
 
-Node.js uses the same callback-based mechanism as Java. You supply a callback (or a map of named callbacks) to the AI plugin options; each callback receives the request as a JSON string and returns the response as a JSON string.
+You supply a callback (or a map of named callbacks) to the AI plugin options; each callback receives the request as a JSON string and returns the response as a JSON string.
 
 ### Registration Conventions
 
