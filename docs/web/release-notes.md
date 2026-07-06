@@ -64,7 +64,7 @@ RevealSdkSettings.setAdditionalHeadersProvider(async (url: string) => {
 - Improved maximize reliability.
 
 #### Java
-- Fixed BigQuery data source item serialization.
+- Fixed an issue that would cause an error when defining BigQuery data source items in Java.
 
 ## 2.0.0 (May 14th, 2026)
 
