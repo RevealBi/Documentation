@@ -29,25 +29,6 @@ RevealSdkSettings.setAdditionalHeadersProvider(async (url: string) => {
 });
 ```
 
-Updated method signature:
-
-```typescript
-static setAdditionalHeadersProvider(
-  provider: (url: string) => Record<string, any> | Promise<Record<string, any> | null> | null
-) {
-  if (provider == null) {
-    (window as any).IGAppExtraHeadersProvider = null;
-  } else {
-    (window as any).IGAppExtraHeadersProvider = (url: string): Record<string, any> | Promise<Record<string, any> | null> | null => {
-      if (url != null && url.startsWith(InfragisticsAPIRequestBase.baseInfragisticsAPIURL)) {
-        return provider(url);
-      }
-      return null;
-    };
-  }
-}
-```
-
 - Excel export now supports number formatting.
 - MongoDB connector: added support for `allowDiskUse`.
 - Improvements to custom visualization templates.
