@@ -44,6 +44,7 @@ export const dataSourcesCurrent: DataSourceItem[] = [
     { title: "Amazon S3", topic: "../adding-data-sources/amazon-s3", nuget: "Reveal.Sdk.Data.Amazon.S3" },
     { title: "ClickHouse", topic: "../adding-data-sources/clickhouse", nuget: "Reveal.Sdk.Data.ClickHouse" },
     { title: "Cosmos DB", topic: "../adding-data-sources/azure-cosmos-db", nuget: "Reveal.Sdk.Data.AzureCosmosDB" },
+    { title: "Cube", topic: "../adding-data-sources/cube", nuget: "Reveal.Sdk.Data.Cube" },
     { title: "CSV (Comma Separated Values)", topic: "../adding-data-sources/csv" },
     { title: "Databricks", topic: "../adding-data-sources/databricks", nuget: "Reveal.Sdk.Data.Databricks" },
     { title: "Elasticsearch", topic: "../adding-data-sources/elasticsearch", nuget: "Reveal.Sdk.Data.Elasticsearch", maven: "" },
