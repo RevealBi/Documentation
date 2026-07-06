@@ -77,4 +77,4 @@ builder.Services.AddRevealAI()
 
 ## カスタムプロバイダー
 
-エンドポイントが OpenAI 互換 API 形式に従っていない場合は、代わりに[カスタムプロバイダーの構築](providers-building-custom.md)を検討してください。
+エンドポイントが OpenAI 互換 API 形式に従っていない場合は、代わりに[カスタムプロバイダーの構築](providers-building-custom.md)を検討してください。カスタムプロバイダーは ASP.NET Core（`IAIProvider` インターフェース）、および Java と Node.js（プラグインコールバック経由）で利用できます。

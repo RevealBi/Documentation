@@ -194,4 +194,4 @@ Map<String, Object> aiSettings = Map.of(
 
 ## Custom Providers
 
-If you need to integrate with an LLM service that isn't supported out of the box, you can [build a custom provider](providers-building-custom.md). Custom providers are currently supported on ASP.NET Core only.
+If you need to integrate with an LLM service that isn't supported out of the box, you can [build a custom provider](providers-building-custom.md). Custom providers are supported on **ASP.NET Core** (via the `IAIProvider` interface), **Java** (via a callback registered with the plugin), and **Node.js** (via a callback in the plugin options).
