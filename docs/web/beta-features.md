@@ -59,9 +59,12 @@ The new data grid offers:
 - Column summaries support
 - Column pinning functionality
 - Responsive layout for better mobile and tablet experiences
+- Sorting, grouping, and filtering when the grid is bound to a **paged** data source
 - And more improvements for a modern grid experience
 
 This feature introduces a significant upgrade to the grid visualization, providing users with a more powerful and flexible data grid component. It is ideal for users who need advanced grid functionality and better performance when working with tabular data.
+
+> **Recent update:** Paged grids previously disabled grouping and filtering (and paged sorting was limited). Sorting, grouping, and filtering are now applied server-side and kept in sync with paging, so multi-column sort precedence, grouping, and column filters work the same way whether or not paging is enabled.
 
 > ✅ **Recommended** for testing improved grid performance and new grid capabilities in your dashboards.
 

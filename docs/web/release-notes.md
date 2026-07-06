@@ -3,6 +3,99 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 2.1.0 (July 7th, 2026)
+
+### Breaking Changes
+
+- Removed the legacy `$.ig` and `RevealApi` global objects.
+
+### New Features
+
+- New data source: SQLite, with support for custom queries.
+- New data source: Cube.
+- New data source: DuckDB.
+- Most database connectors have been migrated to a new (v2) connector architecture, which adds built-in SQL injection protection.
+- The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) (`newDataGrid` beta feature) now supports sorting, grouping, and filtering when attached to a paged data source, bringing it closer to parity with the classic grid's paging experience.
+- Linear and radial gauge visualizations have an updated UI and are no longer in beta.
+- Additional keyboard navigation and accessibility improvements for Pivot, Grid, and Sparkline visualizations, plus full keyboard navigation support in Edit Mode.
+- SQL Server data source: added support for the `ApplicationIntent=ReadOnly` and `MultiSubnetFailover` connection options.
+- Updated date filter UI. "Add Filter" is now hidden when all fields are already filtered.
+- `additionalHeadersProvider` now supports an async implementation:
+
+```typescript
+RevealSdkSettings.setAdditionalHeadersProvider(async (url: string) => {
+  const token = await refreshTokenIfNeeded();
+  return { Authorization: `Bearer ${token}` };
+});
+```
+
+Updated method signature:
+
+```typescript
+static setAdditionalHeadersProvider(
+  provider: (url: string) => Record<string, any> | Promise<Record<string, any> | null> | null
+) {
+  if (provider == null) {
+    (window as any).IGAppExtraHeadersProvider = null;
+  } else {
+    (window as any).IGAppExtraHeadersProvider = (url: string): Record<string, any> | Promise<Record<string, any> | null> | null => {
+      if (url != null && url.startsWith(InfragisticsAPIRequestBase.baseInfragisticsAPIURL)) {
+        return provider(url);
+      }
+      return null;
+    };
+  }
+}
+```
+
+- Excel export now supports number formatting.
+- MongoDB connector: added support for `allowDiskUse`.
+- Improvements to custom visualization templates.
+- Added `empty-data` text to the DataGrid visualization, and updated the empty-state icon shown for the first visualization added to a dashboard.
+
+#### AI
+- Agent Chat now supports skills via the new Reveal Skills Plugin.
+- A data agent can now be selected directly on the connection screen.
+- Dashboard generation has been reworked with a new, improved approach.
+- Introduced the first iteration of semantic context, improving how the AI understands dashboard data.
+- Added support for connecting multiple custom AI providers.
+- AI provider and model settings can now be overridden on a per-model basis.
+- Migrated the Anthropic provider to the official Anthropic SDK.
+- Metadata layer improvements, including hot reload / partial regeneration, per-user context support, and a new pluggable metadata storage provider.
+- Added a database template to the metadata catalog.
+- Exposed a `networkTimeout` option for built-in connectors.
+
+### Bugs
+
+#### All Platforms
+- Fixed a crash in the TreeMap visualization caused by stale interaction data.
+- Fixed a missing tooltip in the Pivot visualization.
+- Fixed field-based conditional formatting for hidden and calculated fields.
+- Fixed the Grid visualization not showing its "no data" message.
+- Fixed hierarchy expansion when consecutive levels contain identical values.
+- Custom visualizations are no longer hidden when the context menu is open.
+- Fixed `RevealView` reverting a dashboard to its pre-edit state.
+- Fixed negative percentage formatting.
+- Fixed selected date values not propagating correctly during XMLA-to-tabular conversion.
+- The "Filter By" context menu option is now hidden when already filtered by that field.
+- Fixed incorrect query results when filtering by a hidden value field.
+- Fixed several issues with filter value selection.
+- Fixed data ranges in bubble chart Excel exports.
+- Fixed image export incorrectly restoring a stray dashboard close button.
+- Fixed loading XLSX files that use prefixed namespaces or absolute relationship targets.
+- Fixed filter and maximize issues in Embedded Dashboard.
+- Improved maximize reliability.
+
+#### Java
+- Fixed BigQuery data source item serialization. CHECK THE PR/ISSUE.
+
+#### AI
+- Fixed data source dispatch for SSAS-HTTP and Oracle SID connections.
+- AI-generated dashboards now rank by measure only when explicitly requested.
+- Fixed date range handling for specific named quarters and months in dashboard generation.
+- Fixed Excel handling issues after a library update.
+- Various reliability fixes to the metadata layer, including improved observability, round-trip timeout handling, and fingerprint carry-over.
+
 ## 2.0.0 (May 14th, 2026)
 
 ### Breaking Changes
