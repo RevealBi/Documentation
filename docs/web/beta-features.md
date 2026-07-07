@@ -35,21 +35,6 @@ const betafeatures = RevealSdkSettings.betaFeatures.getEnabledFeatures();
 ## Available Beta Flags
 The following beta feature flags are available:
 
-### `newBulletGraph`
-Enables the experimental bullet graph visualization.
-
-> 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
-
-### `newCircularGauge`
-Enables the experimental radial (circular) gauge visualization.
-
-> 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
-
-### `newLinearGauge`
-Enables the experimental linear gauge visualization.
-
-> 🚫 **Not recommended** for general use at this time. This component is still **in active development** and is **not production-ready**. Expect limited functionality, incomplete styling, and potential issues.
-
 ### `newDataGrid`
 Enables the new data grid visualization in the Reveal SDK.
 
