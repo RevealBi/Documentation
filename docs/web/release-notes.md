@@ -3,6 +3,69 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 2.1.0 (July 7th, 2026)
+
+### Breaking Changes
+
+- Removed the legacy `$.ig` and `RevealApi` global objects.
+
+### New Features
+
+- New data source: SQLite, with support for custom queries.
+- New data source: Cube.
+- New data source: DuckDB, with support for file and MotherDuck databases, custom queries, and stored procedures (DuckDB macros).
+- Most database connectors have been migrated to a new (v2) connector architecture, which adds built-in SQL injection protection.
+- The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) (`newDataGrid` beta feature) now supports sorting, grouping, and filtering when attached to a paged data source, bringing it closer to parity with the classic grid's paging experience.
+- Linear gauge, radial gauge, and bullet graph visualizations have an updated UI and are no longer in beta.
+- Additional keyboard navigation and accessibility improvements for Pivot, Grid, and Sparkline visualizations, plus full keyboard navigation support in Edit Mode.
+- SQL Server data source: added support for the `ApplicationIntent=ReadOnly` and `MultiSubnetFailover` connection options.
+- Updated date filter UI. "Add Filter" is now hidden when all fields are already filtered.
+- `additionalHeadersProvider` now supports an async implementation:
+
+```typescript
+RevealSdkSettings.setAdditionalHeadersProvider(async (url: string) => {
+  const token = await refreshTokenIfNeeded();
+  return { Authorization: `Bearer ${token}` };
+});
+```
+
+- Excel export now supports number formatting.
+- MongoDB connector: added support for `allowDiskUse`.
+- Improvements to custom visualization templates.
+- Added `empty-data` text to the DataGrid visualization, and updated the empty-state icon shown for the first visualization added to a dashboard.
+
+#### AI
+- Introduced the first iteration of metadata enrichment, enabling automatic completion of the metadata catalog using AI. Disabled by default.
+- Added support for connecting multiple custom AI providers (Node and Java, C# already had it)
+- Migrated the Anthropic provider to the official Anthropic SDK.
+- Metadata layer improvements, including hot reload / partial regeneration, per-user context support, and a new pluggable metadata storage provider.
+- Exposed a `networkTimeout` option for built-in connectors.
+- Fixed date range handling for specific named quarters and months in dashboard generation.
+
+### Bugs
+
+#### All Platforms
+- Fixed a crash in the TreeMap visualization caused by stale interaction data.
+- Fixed a missing tooltip in the Pivot visualization.
+- Fixed field-based conditional formatting for hidden and calculated fields.
+- Fixed the Grid visualization not showing its "no data" message.
+- Fixed hierarchy expansion when consecutive levels contain identical values.
+- Custom visualizations are no longer hidden when the context menu is open.
+- Fixed `RevealView` reverting a dashboard to its pre-edit state.
+- Fixed negative percentage formatting.
+- Fixed selected date values not propagating correctly during XMLA-to-tabular conversion.
+- The "Filter By" context menu option is now hidden when already filtered by that field.
+- Fixed incorrect query results when filtering by a hidden value field.
+- Fixed several issues with filter value selection.
+- Fixed data ranges in bubble chart Excel exports.
+- Fixed image export incorrectly restoring a stray dashboard close button.
+- Fixed loading XLSX files that use prefixed namespaces or absolute relationship targets.
+- Fixed filter and maximize issues in Embedded Dashboard.
+- Improved maximize reliability.
+
+#### Java
+- Fixed an issue that would cause an error when defining BigQuery data source items in Java.
+
 ## 2.0.0 (May 14th, 2026)
 
 ### Breaking Changes
