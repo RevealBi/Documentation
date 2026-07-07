@@ -2,7 +2,9 @@
 
 ## Keyboard Accessibility
 
-The Reveal SDK supports keyboard navigation in View Mode, allowing users to interact with dashboards without a mouse. All interactive elements have visible focus indicators and follow a logical tab order.
+The Reveal SDK supports keyboard navigation in View Mode and Edit Mode, allowing users to interact with dashboards without a mouse. All interactive elements have visible focus indicators and follow a logical tab order.
+
+Edit Mode keyboard navigation is currently in progress. Most authoring interactions are already supported, with only a few remaining areas still pending.
 
 ### Navigating the Dashboard
 
@@ -35,7 +37,7 @@ When focus is inside a list, dropdown, or grid-based component, use the **Arrow 
 
 ### Limitations
 
-Keyboard navigation within visualization components is only supported for Scatter Maps, Grid, and Sparkline. For all other visualization types, only the visualization header is reachable via keyboard. Support for Pivot is planned for a future release.
+Keyboard navigation within visualization components is supported for Scatter Maps, Grid, Sparkline, and Pivot. For all other visualization types, only the visualization header is reachable via keyboard.
 
 ## Screen Reader Accessibility
 
