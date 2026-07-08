@@ -66,6 +66,10 @@ RevealSdkSettings.setAdditionalHeadersProvider(async (url: string) => {
 #### Java
 - Fixed an issue that would cause an error when defining BigQuery data source items in Java.
 
+### Known Issues
+
+- An intermittent timeout issue has been observed in Node.js environments during request execution. The issue is difficult to reproduce and its root cause is still under investigation. As a result, some requests may occasionally fail and succeed when retried.
+
 ## 2.0.0 (May 14th, 2026)
 
 ### Breaking Changes
