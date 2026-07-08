@@ -332,6 +332,10 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
+When the application runs, create a new Visualization and you will see the newly created DuckDB data source listed in the "Select a Data Source" dialog.
+
+![](images/duckdb-data-source.jpg)
+
 ### Creating Data Source Items
 
 Data source items represent specific tables, views, or DuckDB table macros within your DuckDB data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
@@ -353,6 +357,10 @@ revealView.onDataSourcesRequested = (callback) => {
     callback(new RevealDataSources([duckDBDS], [duckDBDSI], false));
 };
 ```
+
+When the application runs, create a new Visualization and you will see the newly created DuckDB data source item listed in the "Select a Data Source" dialog.
+
+![](images/duckdb-data-source-item.jpg)
 
 ## Additional Resources
 
