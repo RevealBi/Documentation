@@ -30,6 +30,8 @@ stream.on('text', (content) => {
 
 const result = await stream.finalResponse();
 console.log('Streaming complete:', result.explanation);
+console.log('Stop reason:', result.finishReason);
+console.log('Token usage:', result.usage);
 ```
 
 ## Combining with Progress Messages
@@ -57,7 +59,8 @@ stream.on('text', (content) => {
   output.scrollTop = output.scrollHeight; // Auto-scroll
 });
 
-await stream.finalResponse();
+const result = await stream.finalResponse();
+console.log(result.finishReason, result.usage);
 ```
 
 ## Tips

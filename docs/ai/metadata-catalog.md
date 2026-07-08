@@ -131,7 +131,9 @@ Common provider values:
 
 | Provider | Description |
 |----------|-------------|
+| `Cube` | Cube |
 | `SQLServer` | Microsoft SQL Server |
+| `SQLite` | SQLite |
 | `PostgreSQL` | PostgreSQL |
 | `MySQL` | MySQL |
 | `Oracle` | Oracle (Service Name) |
@@ -144,6 +146,8 @@ Common provider values:
 | `AmazonRedshift` | Amazon Redshift |
 | `MongoDB` | MongoDB |
 | `WebService` | Web Service / REST API / Excel files |
+
+Use the exact provider names shown above in your metadata catalog.
 
 ---
 

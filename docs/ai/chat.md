@@ -84,9 +84,16 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 ```json
 {
   "explanation": "Based on your data, I've created a dashboard showing sales by region...",
-  "dashboard": "{...rdash JSON...}"
+  "dashboard": "{...rdash JSON...}",
+  "finishReason": "Stop",
+  "usage": {
+    "inputTokens": 1243,
+    "outputTokens": 287
+  }
 }
 ```
+
+`finishReason` is the stop reason reported by the LLM. `usage` contains token counts when the active provider reports them.
 
 On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
 
@@ -133,7 +140,12 @@ data: {
   "message": "Chat processed successfully",
   "result": {
     "explanation": "Based on your data, I've created a dashboard showing sales by region...",
-    "dashboard": "{...rdash JSON...}"
+    "dashboard": "{...rdash JSON...}",
+    "finishReason": "Stop",
+    "usage": {
+      "inputTokens": 1243,
+      "outputTokens": 287
+    }
   }
 }
 ```
@@ -141,6 +153,10 @@ data: {
 **Result Structure:**
 - `explanation`: Natural language explanation of what was done
 - `dashboard`: Generated or modified dashboard JSON (when applicable)
+- `finishReason`: Why the LLM stopped generating content. Common values are `Stop`, `Length`, and `ContentFilter`
+- `usage`: Optional token usage details from the provider, typically including `inputTokens` and `outputTokens`
+
+The streamed `text` events only carry explanation fragments. `finishReason` and `usage` are returned in the final `complete` event payload.
 
 #### error Event
 Sent if processing fails.

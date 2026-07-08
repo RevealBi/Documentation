@@ -71,9 +71,16 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 
 ```json
 {
-  "explanation": "Sales revenue reached $2.4M in Q4 2024, up 18% from Q3..."
+  "explanation": "Sales revenue reached $2.4M in Q4 2024, up 18% from Q3...",
+  "finishReason": "Stop",
+  "usage": {
+    "inputTokens": 842,
+    "outputTokens": 191
+  }
 }
 ```
+
+`finishReason` is the stop reason reported by the LLM. `usage` contains token counts when the active provider reports them.
 
 On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
 
@@ -111,10 +118,22 @@ event: complete
 data: {
   "message": "Insights generated successfully",
   "result": {
-    "explanation": "Sales revenue reached $2.4M in Q4 2024, up 18% from Q3..."
+    "explanation": "Sales revenue reached $2.4M in Q4 2024, up 18% from Q3...",
+    "finishReason": "Stop",
+    "usage": {
+      "inputTokens": 842,
+      "outputTokens": 191
+    }
   }
 }
 ```
+
+**Result Structure:**
+- `explanation`: Complete natural language insight
+- `finishReason`: Why the LLM stopped generating content. Common values are `Stop`, `Length`, and `ContentFilter`
+- `usage`: Optional token usage details from the provider, typically including `inputTokens` and `outputTokens`
+
+The streamed `text` events only carry explanation fragments. `finishReason` and `usage` are returned in the final `complete` event payload.
 
 #### error Event
 Sent if insight generation fails.

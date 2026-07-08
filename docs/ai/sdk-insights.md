@@ -22,6 +22,9 @@ const insight = await client.ai.insights.get({
 
 console.log(insight.explanation);
 // "Sales revenue reached $2.4M in Q4 2024..."
+
+console.log(insight.finishReason);
+console.log(insight.usage?.inputTokens, insight.usage?.outputTokens);
 ```
 
 ## Insight Types
@@ -99,9 +102,16 @@ All parameters are passed in a single request object:
 ## Response Type
 
 ```typescript
+interface TokenUsage {
+  inputTokens: number;
+  outputTokens: number;
+}
+
 interface InsightResponse {
-  explanation: string;  // Complete AI-generated explanation
+  explanation: string;     // Complete AI-generated explanation
+  finishReason?: string;   // Stop reason returned by the LLM
+  usage?: TokenUsage;      // Provider token usage, when available
 }
 ```
 
-The `explanation` field contains the full insight text, whether you use non-streaming or streaming mode.
+The `explanation` field contains the full insight text, whether you use non-streaming or streaming mode. `finishReason` reports why generation stopped, and `usage` exposes provider token counts when available.

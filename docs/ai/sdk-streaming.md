@@ -52,6 +52,8 @@ stream.on('error', (error) => console.error('Error:', error));
 
 const result = await stream.finalResponse();
 console.log('Complete:', result.explanation);
+console.log('Stop reason:', result.finishReason);
+console.log('Token usage:', result.usage);
 ```
 
 ### Pattern 3: Aggregated Result from Stream
@@ -68,6 +70,7 @@ const stream = await client.ai.insights.get({
 // Wait for completion, returns InsightResponse
 const result = await stream.finalResponse();
 console.log(result.explanation);
+console.log(result.finishReason, result.usage);
 ```
 
 This is useful when you want the server-side benefits of streaming (e.g., timeout avoidance for long-running requests) without handling individual events.
@@ -84,6 +87,8 @@ When `stream: true`, the return type is `AIStream<T>` where `T` is the response 
 | `.on(event, handler)` | Register event-specific listeners |
 | `.finalResponse()` | Returns a promise that resolves with the complete response |
 | `.abort()` | Cancel the stream |
+
+The object returned by `.finalResponse()` is the same `ChatResponse` or `InsightResponse` you receive in non-streaming mode, including `finishReason` and optional `usage`.
 
 ## Stream Events
 
