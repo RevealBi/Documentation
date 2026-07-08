@@ -305,7 +305,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
 
 ## Client-Side Implementation
 
-On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual DuckDB file path, MotherDuck database name, schema, and query configuration happen on the server.
+On the client side, you only need to specify basic properties like id, title, and subtitle for the data source. The actual DuckDB file path, MotherDuck database name, schema, and query configuration happen on the server.
 
 ### Creating Data Sources
 
