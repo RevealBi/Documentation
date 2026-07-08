@@ -5,29 +5,28 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# MariaDB Data Source
+# MariaDB データ ソース
 
-## Introduction
+## 概要
 
-MariaDB is a community-developed, commercially supported open-source relational database that is a drop-in replacement for MySQL. This topic explains how to connect to MariaDB data sources in your Reveal application to visualize and analyze your data.
+MariaDB は、コミュニティ主導で開発され、商用サポートも提供されているオープンソースのリレーショナル データベースで、MySQL のドロップイン置換として利用できます。このトピックでは、Reveal アプリケーションで MariaDB データ ソースに接続して、データを視覚化および分析する方法について説明します。
 
+## サーバーの構成
 
-## Server Configuration
-
-### Installation
+### インストール
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-**Step 1** - Install the Reveal MariaDB connector package
+**手順 1** - Reveal MariaDB コネクタ パッケージをインストールします。
 
-For ASP.NET applications, you need to install a separate NuGet package to enable MariaDB support:
+ASP.NET アプリケーションの場合、MariaDB サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
 
 ```bash
 dotnet add package Reveal.Sdk.Data.MariaDB
 ```
 
-**Step 2** - Register the MariaDB data source in your application:
+**手順 2** - アプリケーションに MariaDB データ ソースを登録します。
 
 ```csharp
 builder.Services.AddControllers().AddReveal(builder =>
@@ -39,13 +38,13 @@ builder.Services.AddControllers().AddReveal(builder =>
   </TabItem>
   <TabItem value="node" label="Node.js">
 
-For Node.js applications, the MariaDB data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js アプリケーションの場合、MariaDB データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
  
 </Tabs>
 
-### Connection Configuration
+### 接続の構成
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -152,13 +151,13 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 </Tabs>
 
-:::danger Important
-Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
+:::danger 重要
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。両方のメソッドでデータ ソース プロパティを**更新する必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で、データ ソース項目の基になるデータ ソースをパラメーターとして渡して `ChangeDataSourceAsync` メソッドを呼び出すことをお勧めします。
 :::
 
-### Authentication
+### 認証
 
-Authentication for MariaDB is typically handled with username and password. For detailed information on authentication options, see the [Authentication](web/authentication.md) topic.
+MariaDB の認証は通常、ユーザー名とパスワードを使用して処理されます。認証オプションの詳細については、[認証](../authentication.md) トピックを参照してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -206,13 +205,13 @@ const authenticationProvider = async (userContext: IRVUserContext | null, dataSo
 
 </Tabs>
 
-## Client-Side Implementation
+## クライアント側の実装
 
-On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
+クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本プロパティのみを指定する必要があります。実際の接続構成はサーバー上で行われます。
 
-### Creating Data Sources
+### データ ソースの作成
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 const revealView = new RevealView("#revealView");
@@ -222,7 +221,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVMariaDBDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVMariaDBDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVMariaDBDataSource` オブジェクトの新しいインスタンスを作成します。`title` と `subtitle` プロパティを設定します。`RVMariaDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -234,13 +233,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created MariaDB data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された MariaDB データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/mariadb-data-source.jpg)
 
-### Creating Data Source Items
+### データ ソース項目の作成
 
-Data source items represent specific tables or datasets within your MariaDB data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+データ ソース項目は、ユーザーが視覚化のために選択できる MariaDB データ ソース内の特定のテーブルまたはデータセットを表します。クライアント側では、ID、タイトル、サブタイトルのみを指定する必要があります。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -259,32 +258,32 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created MariaDB data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された MariaDB データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/mariadb-data-source-item.jpg)
 
-:::warning Error Messages
-MariaDB is MySQL-compatible, and it is common for drivers and error messages to reference MySQL even when connected to MariaDB.
+:::warning エラー メッセージ
+MariaDB は MySQL と互換性があるため、MariaDB に接続している場合でも、ドライバーやエラー メッセージが MySQL を参照することは一般的です。
 :::
 
-## Additional Resources
+## その他のリソース
 
-- [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
-- [Sample Source Code on GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MariaDB)
+- [MariaDB ドキュメント](https://mariadb.com/kb/en/documentation/)
+- [GitHub のサンプル ソース コード](https://github.com/RevealBi/sdk-samples-javascript/tree/main/DataSources/MariaDB)
 
-## API Reference
+## API リファレンス
 
 <Tabs groupId="code" queryString>
 <TabItem value="aspnet" label="ASP.NET" default>
 
-* [RVMariaDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.MariaDB.RVMariaDBDataSource.html) - Represents a MariaDB data source
-* [RVMariaDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.MariaDB.RVMariaDBDataSourceItem.html) - Represents a MariaDB data source item
+* [RVMariaDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.MariaDB.RVMariaDBDataSource.html) - MariaDB データ ソースを表します
+* [RVMariaDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.MariaDB.RVMariaDBDataSourceItem.html) - MariaDB データ ソース項目を表します
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
-* [RVMariaDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvmariadbdatasource.html) - Represents a MariaDB data source
-* [RVMariaDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvmariadbdatasourceitem.html) - Represents a MariaDB data source item
+* [RVMariaDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvmariadbdatasource.html) - MariaDB データ ソースを表します
+* [RVMariaDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvmariadbdatasourceitem.html) - MariaDB データ ソース項目を表します
 
 </TabItem>
 </Tabs>

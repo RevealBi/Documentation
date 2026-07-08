@@ -5,28 +5,28 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Azure Cosmos DB Data Source
+# Azure Cosmos DB データ ソース
 
-## Introduction
+## 概要
 
-Azure Cosmos DB is a fully managed database service on Azure that provides low-latency access to globally distributed data. This topic explains how to connect Azure Cosmos DB data sources in your Reveal application to visualize and analyze your data.
+Azure Cosmos DB は、グローバルに分散されたデータに低遅延でアクセスできる Azure 上のフルマネージド データベース サービスです。このトピックでは、Reveal アプリケーションで Azure Cosmos DB データ ソースに接続して、データを視覚化および分析する方法について説明します。
 
-## Server Configuration
+## サーバーの構成
 
-### Installation
+### インストール
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-**Step 1** - Install the Reveal Azure Cosmos DB connector package.
+**手順 1** - Reveal Azure Cosmos DB コネクタ パッケージをインストールします。
 
-For ASP.NET applications, you need to install a separate NuGet package to enable Azure Cosmos DB support:
+ASP.NET アプリケーションの場合、Azure Cosmos DB サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
 
 ```bash
 dotnet add package Reveal.Sdk.Data.AzureCosmosDB
 ```
 
-**Step 2** - Register the Azure Cosmos DB data source in your application.
+**手順 2** - アプリケーションに Azure Cosmos DB データ ソースを登録します。
 
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
@@ -38,22 +38,22 @@ builder.Services.AddControllers().AddReveal( builder =>
   </TabItem>
   <TabItem value="node" label="Node.js">
 
-For Node.js applications, the Azure Cosmos DB data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js アプリケーションの場合、Azure Cosmos DB データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
   <TabItem value="node-ts" label="Node.js - TS">
 
-For Node.js TypeScript applications, the Azure Cosmos DB data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js TypeScript アプリケーションの場合、Azure Cosmos DB データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
   <TabItem value="java" label="Java">
 
-For Java applications, the Azure Cosmos DB data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Java アプリケーションの場合、Azure Cosmos DB データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
 </Tabs>
 
-### Connection Configuration
+### 接続の構成
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -202,13 +202,13 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   </TabItem>
 </Tabs>
 
-:::danger Important
-Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
+:::danger 重要
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。両方のメソッドでデータ ソース プロパティを**更新する必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で、データ ソース項目の基になるデータ ソースをパラメーターとして渡して `ChangeDataSourceAsync` メソッドを呼び出すことをお勧めします。
 :::
 
-### Authentication
+### 認証
 
-Authentication for Azure Cosmos DB is handled on the server side using `RVKeyPairDataSourceCredential`. For Azure Cosmos DB, the credential key maps to your account key. For detailed information on authentication options, see the [Authentication](../authentication.md) topic.
+Azure Cosmos DB の認証は、`RVKeyPairDataSourceCredential` を使用してサーバー側で処理されます。Azure Cosmos DB では、資格情報の key がアカウント キーに対応します。認証オプションの詳細については、[認証](../authentication.md) トピックを参照してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -274,12 +274,13 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   </TabItem>
 </Tabs>
 
-## Client-Side Implementation
+## クライアント側の実装
 
-On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
-### Creating Data Sources
+クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本プロパティのみを指定する必要があります。実際の接続構成はサーバー上で行われます。
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+### データ ソースの作成
+
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 const revealView = new RevealView("#revealView");
@@ -289,7 +290,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVAzureCosmosDBDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVAzureCosmosDBDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVAzureCosmosDBDataSource` オブジェクトの新しいインスタンスを作成します。`title` と `subtitle` プロパティを設定します。`RVAzureCosmosDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -302,13 +303,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Azure Cosmos DB data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Azure Cosmos DB データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/azure-cosmos-db-data-source.jpg)
 
-### Creating Data Source Items
+### データ ソース項目の作成
 
-Data source items represent specific datasets within your Azure Cosmos DB data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+データ ソース項目は、ユーザーが視覚化のために選択できる Azure Cosmos DB データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルのみを指定する必要があります。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -326,27 +327,27 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created Azure Cosmos DB data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された Azure Cosmos DB データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/azure-cosmos-db-data-source-item.jpg)
 
-## Additional Resources
+## その他のリソース
 
-- [Azure Cosmos DB documentation](https://learn.microsoft.com/azure/cosmos-db/)
+- [Azure Cosmos DB ドキュメント](https://learn.microsoft.com/azure/cosmos-db/)
 
-## API Reference
+## API リファレンス
 
 <Tabs groupId="code" queryString>
 <TabItem value="aspnet" label="ASP.NET" default>
 
-* [RVAzureCosmosDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.AzureCosmosDB.RVAzureCosmosDBDataSource.html) - Represents an Azure Cosmos DB data source
-* [RVAzureCosmosDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.AzureCosmosDB.RVAzureCosmosDBDataSourceItem.html) - Represents an Azure Cosmos DB data source item
+* [RVAzureCosmosDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.AzureCosmosDB.RVAzureCosmosDBDataSource.html) - Azure Cosmos DB データ ソースを表します
+* [RVAzureCosmosDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.AzureCosmosDB.RVAzureCosmosDBDataSourceItem.html) - Azure Cosmos DB データ ソース項目を表します
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
-* [RVAzureCosmosDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvazurecosmosdbdatasource.html) - Represents an Azure Cosmos DB data source
-* [RVAzureCosmosDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvazurecosmosdbdatasourceitem.html) - Represents an Azure Cosmos DB data source item
+* [RVAzureCosmosDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvazurecosmosdbdatasource.html) - Azure Cosmos DB データ ソースを表します
+* [RVAzureCosmosDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvazurecosmosdbdatasourceitem.html) - Azure Cosmos DB データ ソース項目を表します
 
 </TabItem>
 </Tabs>

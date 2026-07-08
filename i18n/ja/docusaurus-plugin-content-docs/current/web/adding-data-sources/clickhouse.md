@@ -5,28 +5,28 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ClickHouse Data Source
+# ClickHouse データ ソース
 
-## Introduction
+## 概要
 
-ClickHouse is a high-performance column-oriented database management system designed for real-time analytics and large-scale data processing. This topic explains how to connect to ClickHouse data sources in your Reveal application to visualize and analyze your data.
+ClickHouse は、リアルタイム分析と大規模データ処理向けに設計された高性能な列指向データベース管理システムです。このトピックでは、Reveal アプリケーションで ClickHouse データ ソースに接続して、データを視覚化および分析する方法について説明します。
 
-## Server Configuration
+## サーバーの構成
 
-### Installation
+### インストール
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-**Step 1** - Install the Reveal ClickHouse connector package
+**手順 1** - Reveal ClickHouse コネクタ パッケージをインストールします。
 
-For ASP.NET applications, you need to install a separate NuGet package to enable ClickHouse support:
+ASP.NET アプリケーションの場合、ClickHouse サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
 
 ```bash
 dotnet add package Reveal.Sdk.Data.ClickHouse
 ```
 
-**Step 2** - Register the ClickHouse data source in your application:
+**手順 2** - アプリケーションに ClickHouse データ ソースを登録します。
 
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
@@ -38,17 +38,17 @@ builder.Services.AddControllers().AddReveal( builder =>
   </TabItem>
   <TabItem value="node" label="Node.js">
 
-For Node.js applications, the ClickHouse data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js アプリケーションの場合、ClickHouse データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
   <TabItem value="java" label="Java">
 
-For Java applications, the ClickHouse data source is already included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Java アプリケーションの場合、ClickHouse データ ソースはメインの Reveal SDK パッケージに既に含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
 </Tabs>
 
-### Connection Configuration
+### 接続の構成
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -212,13 +212,13 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   </TabItem>
 </Tabs>
 
-:::danger Important
-Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
+:::danger 重要
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。両方のメソッドでデータ ソース プロパティを**更新する必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で、データ ソース項目の基になるデータ ソースをパラメーターとして渡して `ChangeDataSourceAsync` メソッドを呼び出すことをお勧めします。
 :::
 
-### Authentication
+### 認証
 
-Authentication for ClickHouse is handled on the server side using username and password credentials. For general authentication details, see the [Authentication](/web/authentication#usernamepassword-authentication) topic.
+ClickHouse の認証は、ユーザー名とパスワードの資格情報を使用してサーバー側で処理されます。一般的な認証の詳細については、[認証](../authentication.md) トピックを参照してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -284,13 +284,13 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   </TabItem>
 </Tabs>
 
-## Client-Side Implementation
+## クライアント側の実装
 
-On the client side, you only need to specify basic properties like ID, title, and subtitle for the data source. The actual connection configuration happens on the server.
+クライアント側では、データ ソースの ID、タイトル、サブタイトルなどの基本プロパティのみを指定する必要があります。実際の接続構成はサーバー上で行われます。
 
-### Creating Data Sources
+### データ ソースの作成
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 const revealView = new RevealView("#revealView");
@@ -300,7 +300,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVClickHouseDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVClickHouseDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVClickHouseDataSource` オブジェクトの新しいインスタンスを作成します。`title` と `subtitle` プロパティを設定します。`RVClickHouseDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -312,13 +312,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created ClickHouse data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された ClickHouse データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/clickhouse-data-source.jpg)
 
-### Creating Data Source Items
+### データ ソース項目の作成
 
-Data source items represent specific datasets within your ClickHouse data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+データ ソース項目は、ユーザーが視覚化のために選択できる ClickHouse データ ソース内の特定のデータセットを表します。クライアント側では、ID、タイトル、サブタイトルのみを指定する必要があります。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -337,28 +337,28 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created ClickHouse data source items listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された ClickHouse データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/clickhouse-data-source-item.jpg)
 
-## Additional Resources
+## その他のリソース
 
-- [ClickHouse Documentation](https://clickhouse.com/docs)
-- [ClickHouse SQL Reference](https://clickhouse.com/docs/sql-reference)
+- [ClickHouse ドキュメント](https://clickhouse.com/docs)
+- [ClickHouse SQL リファレンス](https://clickhouse.com/docs/sql-reference)
 
-## API Reference
+## API リファレンス
 
 <Tabs groupId="code" queryString>
 <TabItem value="aspnet" label="ASP.NET" default>
 
-* [RVClickHouseDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSource.html) - Represents a ClickHouse data source
-* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSourceItem.html) - Represents a ClickHouse data source item
+* [RVClickHouseDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSource.html) - ClickHouse データ ソースを表します
+* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.ClickHouse.RVClickHouseDataSourceItem.html) - ClickHouse データ ソース項目を表します
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
-* [RVClickHouseDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasource.html) - Represents a ClickHouse data source
-* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasourceitem.html) - Represents a ClickHouse data source item
+* [RVClickHouseDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasource.html) - ClickHouse データ ソースを表します
+* [RVClickHouseDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvclickhousedatasourceitem.html) - ClickHouse データ ソース項目を表します
 
 </TabItem>
 </Tabs>
