@@ -254,7 +254,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVDuckDBDataSource duckDBDS && duckDBDS.Database?.StartsWith("md:") == true)
         {
-            userCredential = new RVBearerTokenDataSourceCredential("your_motherduck_access_token", "your_userid");
+            userCredential = new RVPersonalAccessTokenDataSourceCredential("your_motherduck_access_token");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -267,7 +267,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVDuckDBDataSource && dataSource.database?.startsWith("md:")) {
-        return new reveal.RVBearerTokenDataSourceCredential("your_motherduck_access_token", "your_userid");
+        return new reveal.RVPersonalAccessTokenDataSourceCredential("your_motherduck_access_token");
     }
     return null;
 }
@@ -279,7 +279,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVDuckDBDataSource && dataSource.database?.startsWith("md:")) {
-        return new RVBearerTokenDataSourceCredential("your_motherduck_access_token", "your_userid");
+        return new RVPersonalAccessTokenDataSourceCredential("your_motherduck_access_token");
     }
     return null;
 }
@@ -293,7 +293,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVDuckDBDataSource duckDBDS && duckDBDS.getDatabase() != null && duckDBDS.getDatabase().startsWith("md:")) {
-            return new RVBearerTokenDataSourceCredential("your_motherduck_access_token", "your_userid");
+            return new RVPersonalAccessTokenDataSourceCredential("your_motherduck_access_token");
         }
         return null;
     }
