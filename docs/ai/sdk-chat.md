@@ -23,6 +23,9 @@ const response = await client.ai.chat.sendMessage({
 console.log(response.explanation);
 // "I've analyzed your sales data for Q4 2024..."
 
+console.log(response.finishReason);
+console.log(response.usage?.inputTokens, response.usage?.outputTokens);
+
 if (response.dashboard) {
   // Load the generated dashboard
   loadDashboard(response.dashboard);
@@ -103,11 +106,18 @@ All parameters are passed in a single request object:
 ## Response Type
 
 ```typescript
+interface TokenUsage {
+  inputTokens: number;
+  outputTokens: number;
+}
+
 interface ChatResponse {
-  explanation?: string;   // AI-generated explanation
-  dashboard?: string;     // Generated/modified dashboard JSON
-  error?: string;         // Error message if request failed
+  explanation?: string;             // AI-generated explanation
+  dashboard?: string;               // Generated/modified dashboard JSON
+  finishReason?: string;            // Stop reason returned by the LLM
+  usage?: TokenUsage;               // Provider token usage, when available
+  error?: string;                   // Error message if request failed
 }
 ```
 
-The `explanation` field contains the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified.
+The `explanation` field contains the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified. `finishReason` reports why generation stopped, and `usage` exposes provider token counts when available.

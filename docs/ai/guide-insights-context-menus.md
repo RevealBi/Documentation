@@ -89,7 +89,8 @@ function createInsightMenuItem(label, dashboard, insightType, visualizationId = 
       showError(error);
     });
 
-    await stream.finalResponse();
+    const result = await stream.finalResponse();
+    console.log(result.finishReason, result.usage);
     hideProgressIndicator();
   });
 }

@@ -47,6 +47,9 @@ async function sendChatMessage(userInput: string) {
   messages.push({ role: 'assistant', content: currentMessage });
   renderMessages();
 
+  console.log('Stop reason:', result.finishReason);
+  console.log('Token usage:', result.usage);
+
   if (result.dashboard) {
     loadDashboard(result.dashboard);
   }
@@ -79,6 +82,8 @@ if (result.dashboard) {
   // Load the new or modified dashboard
   revealView.dashboard = await RVDashboard.loadFromJson(result.dashboard);
 }
+
+console.log(result.finishReason, result.usage);
 ```
 
 ### Editing Existing Dashboards
