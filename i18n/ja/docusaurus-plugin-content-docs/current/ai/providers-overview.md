@@ -86,4 +86,4 @@ builder.Services.AddRevealAI()
 
 ## カスタムプロバイダー
 
-標準でサポートされていない LLM サービスと統合する必要がある場合は、[カスタムプロバイダーを構築](providers-building-custom.md)できます。
+標準でサポートされていない LLM サービスと統合する必要がある場合は、[カスタムプロバイダーを構築](providers-building-custom.md)できます。カスタムプロバイダーは **ASP.NET Core**（`IAIProvider` インターフェース経由）、**Java**（プラグインに登録したコールバック経由）、および **Node.js**（プラグインオプションのコールバック経由）でサポートされています。

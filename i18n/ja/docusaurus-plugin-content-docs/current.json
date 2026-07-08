@@ -719,6 +719,10 @@
     "message": "Cosmos DB",
     "description": "The label for the doc item 'Cosmos DB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/azure-cosmos-db"
   },
+  "sidebar.webSidebar.doc.Cube": {
+    "message": "Cube",
+    "description": "The label for the doc item 'Cube' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/cube"
+  },
   "sidebar.webSidebar.doc.2.0.0 Upgrade Guide": {
     "message": "2.0.0 アップグレード ガイド",
     "description": "The label for the doc item '2.0.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0"
