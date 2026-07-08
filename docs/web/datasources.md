@@ -4,12 +4,6 @@ import DataSourcesTable from '@site/src/components/DataSourcesTable';
 
 # Data Sources
 
-:::danger breaking changes
-
-Currently, the Reveal SDK is in the process of decoupling the data sources from the Reveal SDK core package. In order to ensure the project's continued functionality, you might be required to install additional packages into your project. Please see the [Supported Data Sources](web/datasources.md#supported-data-sources) topic for more information.
-
-:::
-
 The Reveal SDK supports over 30 data sources, including analytics tools, content managers, cloud services, CRMs, databases, spreadsheets, and public data sources, with more shipping every month.  Data sources define where the data comes from in a dashboard, with each data source having unique properties, like connection strings, user id, password, and more that you set in code to connect to and retrieve data.
 
 The Reveal SDK has two concepts regarding data sources.
