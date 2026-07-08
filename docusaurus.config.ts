@@ -4,15 +4,14 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
-import { chatButtonSettings, searchBarSettings } from './inkeep.config';
 
 // SDK version: exact build referenced by CodePreview's CDN URL — must match a real release.
-const sdkVersion = "2.0.0";
+const sdkVersion = "2.1.0";
 const sdkVersion_v1 = "1.8.4";
 
 // Docs version: human-readable label shown in the page version badge ("Version: X").
 // Bump this as the 2.x docs evolve — no need to archive the version.
-const docsVersion = "2.0";
+const docsVersion = "2.1";
 const docsVersion_v1 = "1.8.4";
 
 const config: Config = {
@@ -46,7 +45,6 @@ const config: Config = {
 
   plugins: [
     ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
-    ["@inkeep/cxkit-docusaurus", { ChatButton: chatButtonSettings, SearchBar: searchBarSettings }],
     ["@docusaurus/plugin-google-tag-manager", { containerId: "GTM-WXWCMQZ" }],
   ],
 
@@ -115,7 +113,7 @@ const config: Config = {
     image: 'img/reveal-social-black-font-preview.png',
     algolia: {
       appId: 'QBVJ183IXZ',
-      apiKey: 'be244eaae98ce29feeb1882558494e62',
+      apiKey: '2637a7e021356df827f773d64378034d',
       indexName: 'help-revealbi',
     },
     navbar: {
