@@ -12,6 +12,7 @@ import TabItem from '@theme/TabItem';
 - Amazon Redshift
 - [DuckDB](adding-data-sources/duckdb.md)
 - [Google BigQuery](adding-data-sources/google-big-query.md)
+- [MariaDB](adding-data-sources/mariadb.md)
 - Microsoft Azure SQL Database
 - Microsoft Azure Synapse Analytics
 - [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
@@ -19,6 +20,7 @@ import TabItem from '@theme/TabItem';
 - [Oracle](adding-data-sources/oracle.md)
 - [PostgreSQL](adding-data-sources/postgres.md)
 - [Snowflake](adding-data-sources/snowflake.md)
+- [SQLite](adding-data-sources/sqlite.md)
 
 **手順 1** - クライアント上のデータ ソース項目を定義します。
 
