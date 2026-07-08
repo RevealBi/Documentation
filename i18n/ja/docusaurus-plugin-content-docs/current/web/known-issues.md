@@ -63,6 +63,10 @@ body > pre.rv-multiline-editor {
 
 - Node.js を使用していて、[Linux ARM64 上で実行する場合、Chromium は自動的にインストールできません](https://github.com/puppeteer/puppeteer/issues/7740)。そのため、ダッシュボードをエクスポートする前に、パッケージ マネージャーを使用して、または手動で、Chromium をインストールする必要があります。Reveal は Chromium バイナリを `/usr/bin/chromium` の下で探します。
 
+## Node.js でのリクエストの断続的なタイムアウト
+
+- Node.js 環境において、リクエストの実行中に断続的なタイムアウトの問題が確認されています。この問題は再現が困難であり、根本原因は現在も調査中です。その結果、一部のリクエストが失敗し、再試行すると成功する場合があります。
+
 ## グリッド行ページング
 
 - ページングは​​次のプロバイダーでサポートされています:SQL Server、MySQL、BigQuery、MongoDB、PostgreSQL、Snowflake、SyBase、Redshift、Databricks、Cube.dev、Athena、および Oracle。
