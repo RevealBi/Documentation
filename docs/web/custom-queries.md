@@ -11,12 +11,13 @@ Custom Queries are supported for the following data sources:
 
 - [Amazon Athena](adding-data-sources/amazon-athena.md)
 - Amazon Redshift
+- [DuckDB](adding-data-sources/duckdb.md)
 - [Google BigQuery](adding-data-sources/google-big-query.md)
+- [MariaDB](adding-data-sources/mariadb.md)
 - Microsoft Azure SQL Database
 - Microsoft Azure Synapse Analytics
 - [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
 - [MySQL](adding-data-sources/mysql.md)
-- [MariaDB](adding-data-sources/mariadb.md)
 - [Oracle](adding-data-sources/oracle.md)
 - [PostgreSQL](adding-data-sources/postgres.md)
 - [Snowflake](adding-data-sources/snowflake.md)

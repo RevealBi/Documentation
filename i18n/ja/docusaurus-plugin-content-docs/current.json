@@ -547,6 +547,10 @@
     "message": "Databricks",
     "description": "The label for the doc item 'Databricks' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/databricks"
   },
+  "sidebar.webSidebar.doc.DuckDB": {
+    "message": "DuckDB",
+    "description": "The label for the doc item 'DuckDB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/duckdb"
+  },
   "sidebar.webSidebar.doc.Elasticsearch": {
     "message": "Elasticsearch",
     "description": "The label for the doc item 'Elasticsearch' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/elasticsearch"
