@@ -5,28 +5,28 @@ pagination_next: web/authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# DuckDB Data Source
+# DuckDB データ ソース
 
-## Introduction
+## はじめに
 
-DuckDB is an in-process analytical database designed for fast local analytics. Reveal supports DuckDB database files as well as MotherDuck databases, so you can visualize and analyze embedded data sets, local files, and cloud-hosted DuckDB workloads from the same data-source type.
+DuckDB は、高速なローカル分析向けに設計されたインプロセスの分析データベースです。Reveal は DuckDB データベース ファイルと MotherDuck データベースの両方をサポートしているため、同じデータ ソース タイプから埋め込みデータ セット、ローカル ファイル、クラウドでホストされる DuckDB ワークロードを視覚化および分析できます。
 
-## Server Configuration
+## サーバー構成
 
-### Installation
+### インストール
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-**Step 1** - Install the Reveal DuckDB connector package.
+**手順 1** - Reveal DuckDB コネクタ パッケージをインストールします。
 
-For ASP.NET applications, you need to install a separate NuGet package to enable DuckDB support:
+ASP.NET アプリケーションの場合、DuckDB サポートを有効にするには、別の NuGet パッケージをインストールする必要があります。
 
 ```bash
 dotnet add package Reveal.Sdk.Data.DuckDB
 ```
 
-**Step 2** - Register the DuckDB data source in your application.
+**手順 2** - アプリケーションに DuckDB データ ソースを登録します。
 
 ```csharp
 builder.Services.AddControllers().AddReveal( builder =>
@@ -38,22 +38,22 @@ builder.Services.AddControllers().AddReveal( builder =>
   </TabItem>
   <TabItem value="node" label="Node.js">
 
-For Node.js applications, the DuckDB data source is included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js アプリケーションの場合、DuckDB データ ソースはメインの Reveal SDK パッケージに含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
   <TabItem value="node-ts" label="Node.js - TS">
 
-For Node.js TypeScript applications, the DuckDB data source is included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Node.js TypeScript アプリケーションの場合、DuckDB データ ソースはメインの Reveal SDK パッケージに含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
   <TabItem value="java" label="Java">
 
-For Java applications, the DuckDB data source is included in the main Reveal SDK package. No additional installation is required beyond the standard Reveal SDK setup.
+Java アプリケーションの場合、DuckDB データ ソースはメインの Reveal SDK パッケージに含まれています。標準の Reveal SDK セットアップ以外に追加のインストールは必要ありません。
 
   </TabItem>
 </Tabs>
 
-### Connection Configuration
+### 接続構成
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -229,19 +229,19 @@ public class DataSourceProvider implements IRVDataSourceProvider {
   </TabItem>
 </Tabs>
 
-`Database` accepts both absolute and relative DuckDB file paths. For ASP.NET, relative paths are resolved against `AppContext.BaseDirectory`. For MotherDuck, set the value to `md:databaseName`.
+`Database` は、絶対パスと相対パスの両方の DuckDB ファイル パスを受け入れます。ASP.NET の場合、相対パスは `AppContext.BaseDirectory` を基準に解決されます。MotherDuck の場合は、値を `md:databaseName` に設定します。
 
-`Schema` is optional on both `RVDuckDBDataSource` and `RVDuckDBDataSourceItem`. If you do not set it, Reveal uses the default DuckDB schema, `main`.
+`Schema` は `RVDuckDBDataSource` と `RVDuckDBDataSourceItem` の両方でオプションです。設定しない場合、Reveal は既定の DuckDB スキーマである `main` を使用します。
 
-DuckDB supports custom queries and DuckDB table macros on the server. For more information, see [Custom Queries](/web/custom-queries).
+DuckDB は、サーバー側でカスタム クエリと DuckDB テーブル マクロをサポートします。詳細については、[カスタム クエリ](/web/custom-queries) を参照してください。
 
-:::danger Important
-Any changes made to the data source in the `ChangeDataSourceAsync` method are not carried over into the `ChangeDataSourceItemAsync` method. You **must** update the data source properties in both methods. We recommend calling the `ChangeDataSourceAsync` method within the `ChangeDataSourceItemAsync` method passing the data source item's underlying data source as the parameter as shown in the examples above.
+:::danger 重要
+`ChangeDataSourceAsync` メソッドでデータ ソースに加えた変更は、`ChangeDataSourceItemAsync` メソッドには引き継がれません。両方のメソッドでデータ ソースのプロパティを**更新する必要があります**。上記の例に示すように、`ChangeDataSourceItemAsync` メソッド内で、データ ソース項目の基になるデータ ソースをパラメーターとして渡して `ChangeDataSourceAsync` メソッドを呼び出すことをお勧めします。
 :::
 
-### Authentication
+### 認証
 
-Local DuckDB database files do not require authentication. When connecting to MotherDuck, provide a personal access token on the server through your authentication provider.
+ローカル DuckDB データベース ファイルでは認証は必要ありません。MotherDuck に接続する場合は、認証プロバイダーを使用してサーバー側で個人用アクセス トークンを提供します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -303,13 +303,13 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
   </TabItem>
 </Tabs>
 
-## Client-Side Implementation
+## クライアント側の実装
 
-On the client side, you only need to specify basic properties like id, title, and subtitle for the data source. The actual DuckDB file path, MotherDuck database name, schema, and query configuration happen on the server.
+クライアント側では、データ ソースの id、title、subtitle などの基本プロパティだけを指定する必要があります。実際の DuckDB ファイル パス、MotherDuck データベース名、スキーマ、クエリ構成はサーバー上で行われます。
 
-### Creating Data Sources
+### データ ソースの作成
 
-**Step 1** - Add an event handler for the `RevealView.onDataSourcesRequested` event.
+**手順 1** - `RevealView.onDataSourcesRequested` イベントのイベント ハンドラーを追加します。
 
 ```js
 const revealView = new RevealView("#revealView");
@@ -319,7 +319,7 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-**Step 2** - In the `RevealView.onDataSourcesRequested` event handler, create a new instance of the `RVDuckDBDataSource` object. Set the `title` and `subtitle` properties. After you have created the `RVDuckDBDataSource` object, add it to the data sources collection.
+**手順 2** - `RevealView.onDataSourcesRequested` イベント ハンドラーで、`RVDuckDBDataSource` オブジェクトの新しいインスタンスを作成します。`title` と `subtitle` プロパティを設定します。`RVDuckDBDataSource` オブジェクトを作成したら、それをデータ ソース コレクションに追加します。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -332,13 +332,13 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created DuckDB data source listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された DuckDB データ ソースが [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/duckdb-data-source.jpg)
 
-### Creating Data Source Items
+### データ ソース項目の作成
 
-Data source items represent specific tables, views, or DuckDB table macros within your DuckDB data source that users can select for visualization. On the client side, you only need to specify ID, title, and subtitle.
+データ ソース項目は、ユーザーが視覚化のために選択できる DuckDB データ ソース内の特定のテーブル、ビュー、または DuckDB テーブル マクロを表します。クライアント側では、ID、タイトル、サブタイトルのみを指定する必要があります。
 
 ```js
 revealView.onDataSourcesRequested = (callback) => {
@@ -358,28 +358,28 @@ revealView.onDataSourcesRequested = (callback) => {
 };
 ```
 
-When the application runs, create a new Visualization and you will see the newly created DuckDB data source item listed in the "Select a Data Source" dialog.
+アプリケーションが実行されたら、新しい可視化を作成すると、新しく作成された DuckDB データ ソース項目が [データ ソースの選択] ダイアログに表示されます。
 
 ![](images/duckdb-data-source-item.jpg)
 
-## Additional Resources
+## その他のリソース
 
-- [DuckDB Documentation](https://duckdb.org/docs/)
-- [MotherDuck Documentation](https://motherduck.com/docs/)
+- [DuckDB ドキュメント](https://duckdb.org/docs/)
+- [MotherDuck ドキュメント](https://motherduck.com/docs/)
 
-## API Reference
+## API リファレンス
 
 <Tabs groupId="code" queryString>
 <TabItem value="aspnet" label="ASP.NET" default>
 
-* [RVDuckDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.DuckDB.RVDuckDBDataSource.html) - Represents a DuckDB data source
-* [RVDuckDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.DuckDB.RVDuckDBDataSourceItem.html) - Represents a DuckDB data source item
+* [RVDuckDBDataSource](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.DuckDB.RVDuckDBDataSource.html) - DuckDB データ ソースを表します
+* [RVDuckDBDataSourceItem](https://help.revealbi.io/api/aspnet/latest/Reveal.Sdk.Data.DuckDB.RVDuckDBDataSourceItem.html) - DuckDB データ ソース項目を表します
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
-* [RVDuckDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvduckdbdatasource.html) - Represents a DuckDB data source
-* [RVDuckDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvduckdbdatasourceitem.html) - Represents a DuckDB data source item
+* [RVDuckDBDataSource](https://help.revealbi.io/api/javascript/latest/classes/rvduckdbdatasource.html) - DuckDB データ ソースを表します
+* [RVDuckDBDataSourceItem](https://help.revealbi.io/api/javascript/latest/classes/rvduckdbdatasourceitem.html) - DuckDB データ ソース項目を表します
 
 </TabItem>
 </Tabs>
