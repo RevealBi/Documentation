@@ -93,7 +93,6 @@ All parameters are passed in a single request object:
 | `visualizationId` | `string` | No | Visualization ID to analyze |
 | `type` | `InsightType` | Yes | Type: `'summary'`, `'analysis'`, `'forecast'` |
 | `forecastPeriods` | `number` | No | Periods to forecast (default: 6) |
-| `model` | `string` | No | Name of specific LLM model to use |
 | `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
 | `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
 

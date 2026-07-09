@@ -269,6 +269,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Providers", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "ai-providers-overview", id: "ai/providers-overview" },
+        { type: "doc", label: "Choosing a Model", id: "ai/choosing-a-model" },
         { type: "doc", label: "OpenAI", id: "ai/providers-openai" },
         { type: "doc", label: "Azure OpenAI", id: "ai/providers-azure-openai" },
         { type: "doc", label: "Anthropic", id: "ai/providers-anthropic" },
