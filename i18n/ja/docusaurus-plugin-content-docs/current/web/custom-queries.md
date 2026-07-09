@@ -8,24 +8,24 @@ import TabItem from '@theme/TabItem';
 
 サポート マトリックス:
 
-| データ ソース | カスタム クエリ | パラメーター化カスタム クエリ | 注記 |
-| --- | --- | --- | --- |
-| [Amazon Athena](adding-data-sources/amazon-athena.md) | Yes | Yes | |
-| Amazon Redshift | Yes | Yes | |
-| [ClickHouse](adding-data-sources/clickhouse.md) | Yes | Yes | |
-| [Databricks](adding-data-sources/databricks.md) | Yes | Yes | |
-| [DuckDB](adding-data-sources/duckdb.md) | Yes | No | `CustomQueryParameters` はサポートされません |
-| [Elasticsearch](adding-data-sources/elasticsearch.md) | Yes | Yes | |
-| [Google BigQuery](adding-data-sources/google-big-query.md) | Yes | Yes | |
-| [MariaDB](adding-data-sources/mariadb.md) | Yes | Yes | Java SDK ではパラメーター化カスタム クエリをサポートしません |
-| Microsoft Azure SQL Database | Yes | Yes | |
-| Microsoft Azure Synapse Analytics | Yes | Yes | |
-| [Microsoft SQL Server](adding-data-sources/ms-sql-server.md) | Yes | Yes | |
-| [MySQL](adding-data-sources/mysql.md) | Yes | Yes | |
-| [Oracle](adding-data-sources/oracle.md) | Yes | No | `CustomQueryParameters` はサポートされません |
-| [PostgreSQL](adding-data-sources/postgres.md) | Yes | Yes | |
-| [Snowflake](adding-data-sources/snowflake.md) | Yes | Yes | |
-| [SQLite](adding-data-sources/sqlite.md) | Yes | No | `CustomQueryParameters` はサポートされません |
+| データ ソース | カスタム クエリ | パラメーター化カスタム クエリ |
+| --- | --- | --- |
+| [Amazon Athena](adding-data-sources/amazon-athena.md) | Yes | Yes |
+| Amazon Redshift | Yes | Yes |
+| [ClickHouse](adding-data-sources/clickhouse.md) | Yes | Yes |
+| [Databricks](adding-data-sources/databricks.md) | Yes | Yes |
+| [DuckDB](adding-data-sources/duckdb.md) | Yes | No |
+| [Elasticsearch](adding-data-sources/elasticsearch.md) | Yes | Yes |
+| [Google BigQuery](adding-data-sources/google-big-query.md) | Yes | Yes |
+| [MariaDB](adding-data-sources/mariadb.md) | Yes | Yes |
+| Microsoft Azure SQL Database | Yes | Yes |
+| Microsoft Azure Synapse Analytics | Yes | Yes |
+| [Microsoft SQL Server](adding-data-sources/ms-sql-server.md) | Yes | Yes |
+| [MySQL](adding-data-sources/mysql.md) | Yes | Yes |
+| [Oracle](adding-data-sources/oracle.md) | Yes | No |
+| [PostgreSQL](adding-data-sources/postgres.md) | Yes | Yes |
+| [Snowflake](adding-data-sources/snowflake.md) | Yes | Yes |
+| [SQLite](adding-data-sources/sqlite.md) | Yes | No |
 
 :::note
 
