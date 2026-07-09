@@ -1,0 +1,23 @@
+{
+  "skill_name": "data-source-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Based on the existing SQLite and Databricks topics, add a new DuckDB data-source topic to this repository. Keep the sidebar and supported-data-source table in sync, update any shared connector references only if DuckDB needs them, and create the Japanese localization too.",
+      "expected_output": "Creates the English DuckDB topic, the Japanese DuckDB topic, the required sidebar/table/reference updates, and validates the result with the docs build.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Document a new ClickHouse-like data source in the Reveal docs. Use the closest existing connector pages as templates, add the English topic, add the Japanese localized topic, mirror screenshots if needed, and make sure the docs build is clean.",
+      "expected_output": "Chooses the correct templates, edits the expected English and Japanese files, mirrors images when referenced, and catches locale-specific link problems during validation.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I added a new data source page already, but I need you to finish the documentation workflow: update the sidebar, supported data-sources table, any shared connector reference pages affected by custom-query support, and create the Japanese localized page in the same repo style.",
+      "expected_output": "Completes the surrounding documentation work without rewriting unrelated pages, updates shared references only when justified, and adds a Japanese page that matches nearby localized connector topics.",
+      "files": []
+    }
+  ]
+}
