@@ -7,21 +7,34 @@ Custom queries are specially crafted instructions for retrieving or manipulating
 specific requirements. Unlike predefined queries in database management systems, custom queries are tailored to meet
 unique or complex data retrieval and manipulation needs.
 
-Custom Queries are supported for the following data sources:
+Support matrix:
 
-- [Amazon Athena](adding-data-sources/amazon-athena.md)
-- Amazon Redshift
-- [DuckDB](adding-data-sources/duckdb.md)
-- [Google BigQuery](adding-data-sources/google-big-query.md)
-- [MariaDB](adding-data-sources/mariadb.md)
-- Microsoft Azure SQL Database
-- Microsoft Azure Synapse Analytics
-- [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
-- [MySQL](adding-data-sources/mysql.md)
-- [Oracle](adding-data-sources/oracle.md)
-- [PostgreSQL](adding-data-sources/postgres.md)
-- [Snowflake](adding-data-sources/snowflake.md)
-- [SQLite](adding-data-sources/sqlite.md)
+| Data source | Custom queries | Parameterized custom queries |
+| --- | --- | --- |
+| [Amazon Athena](adding-data-sources/amazon-athena.md) | Yes | Yes |
+| Amazon Redshift | Yes | Yes |
+| [ClickHouse](adding-data-sources/clickhouse.md) | Yes | Yes |
+| [Databricks](adding-data-sources/databricks.md) | Yes | Yes |
+| [DuckDB](adding-data-sources/duckdb.md) | Yes | No |
+| [Elasticsearch](adding-data-sources/elasticsearch.md) | Yes | Yes |
+| [Google BigQuery](adding-data-sources/google-big-query.md) | Yes | Yes |
+| [MariaDB](adding-data-sources/mariadb.md) | Yes | Yes |
+| Microsoft Azure SQL Database | Yes | Yes |
+| Microsoft Azure Synapse Analytics | Yes | Yes |
+| [Microsoft SQL Server](adding-data-sources/ms-sql-server.md) | Yes | Yes |
+| [MySQL](adding-data-sources/mysql.md) | Yes | Yes |
+| [Oracle](adding-data-sources/oracle.md) | Yes | No |
+| [PostgreSQL](adding-data-sources/postgres.md) | Yes | Yes |
+| [Snowflake](adding-data-sources/snowflake.md) | Yes | Yes |
+| [SQLite](adding-data-sources/sqlite.md) | Yes | No |
+
+:::note
+
+Use `CustomQueryParameters` instead of embedding values directly into `CustomQuery`. Add named placeholders such as `@salesPersonId` to the query text and pass the matching values separately.
+
+See the support matrix above for data source coverage. DuckDB, SQLite, and Oracle support `CustomQuery`, but do not currently support `CustomQueryParameters`. MariaDB parameterized custom queries are also out of scope in the Java SDK.
+
+:::
 
 **Step 1** - Define the data source items on the client
 
@@ -52,11 +65,15 @@ if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 
     //parametrize your custom query with the property obtained before
     sqlDataSourceItem.CustomQuery =
-        $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
+        "SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = @salesPersonId";
+    sqlDataSourceItem.CustomQueryParameters = new Dictionary<string, object>
+    {
+        ["@salesPersonId"] = salesPersonId
+    };
 }
 ```
 
-## Example - Building a custom query using client provided values
+## Example - Building a parameterized custom query using client provided values
 
 1 - Define the data source items on the client.
 
@@ -128,7 +145,7 @@ public class UserContextProvider : IRVUserContextProvider
 }
 ```
 
-4 - In the data source provider, override the data source item to define your custom query.
+4 - In the data source provider, override the data source item to define your parameterized custom query.
 
 ```cs
 public class DataSourceProvider : IRVDataSourceProvider
@@ -148,7 +165,11 @@ public class DataSourceProvider : IRVDataSourceProvider
 
                 //parametrize your custom query with the property obtained before
                 sqlDataSourceItem.CustomQuery =
-                    $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
+                    "SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = @salesPersonId";
+                sqlDataSourceItem.CustomQueryParameters = new Dictionary<string, object>
+                {
+                    ["@salesPersonId"] = salesPersonId
+                };
             }
         }
 
