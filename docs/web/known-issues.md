@@ -70,6 +70,10 @@ body > pre.rv-multiline-editor {
 
 - [Chromium can't be installed automatically when running on Linux ARM64](https://github.com/puppeteer/puppeteer/issues/7740) when using Node.js, so it must be installed using your package manager or a manual install before attempting to export a dashboard. Reveal searches from the Chromium binary under `/usr/bin/chromium`.
 
+## Intermittent Request Timeouts in Node.js
+
+- An intermittent timeout issue has been observed in Node.js environments during request execution. The issue is difficult to reproduce and its root cause is still under investigation. Early evidence suggests software firewalls provided by the operating system or antivirus software may interfere with the server connection, especially on developer machines. As a result, some requests may occasionally fail and succeed when retried.
+
 ## Headless Export
 
 - Headless export in Node.js SDK is not available for Linux/MacOSX
