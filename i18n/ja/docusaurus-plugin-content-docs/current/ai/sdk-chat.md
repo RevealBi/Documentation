@@ -96,7 +96,6 @@ console.log(response.explanation);
 | `visualizationId` | `string` | いいえ | ビジュアライゼーション固有のコンテキスト用のビジュアライゼーション ID |
 | `intent` | `string` | いいえ | 自由形式の LLM クエリ用のインテント |
 | `updateChatState` | `boolean` | いいえ | このクエリの後にチャットの状態を更新するかどうか |
-| `model` | `string` | いいえ | 使用する特定の LLM モデルの名前 |
 | `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal |
 | `stream` | `boolean` | いいえ | ストリーミングモードを有効にする（デフォルト: `false`） |
 

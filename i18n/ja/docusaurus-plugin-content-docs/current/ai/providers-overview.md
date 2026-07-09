@@ -18,19 +18,15 @@ Reveal SDK AI は、さまざまな大規模言語モデル（LLM）サービス
 
 ## プロバイダーの仕組み
 
-すべてのプロバイダーは `IAIProvider` インターフェースを実装し、`IRevealAIBuilder` のフルーエント API を通じて登録されます。SDK はキー付きサービスを使用した依存性注入を採用しており、複数のプロバイダーを同時に登録できます。
+すべてのプロバイダーは `IAIProvider` インターフェースを実装し、`IRevealAIBuilder` のフルーエント API を通じて登録されます。1 つのプロバイダーを設定すると、AI ランタイムはすべてのリクエストでそれを使用します。
 
 ### プロバイダーの登録
 
-プロバイダーは `AddRevealAI()` の後に拡張メソッドをチェーンして追加します：
+プロバイダーは `AddRevealAI()` の後に拡張メソッドを追加して登録します：
 
 ```csharp
 builder.Services.AddRevealAI()
     .AddOpenAI(options =>
-    {
-        options.ApiKey = "your-api-key";
-    })
-    .AddAnthropic(options =>
     {
         options.ApiKey = "your-api-key";
     });
@@ -38,7 +34,7 @@ builder.Services.AddRevealAI()
 
 ### デフォルトプロバイダー
 
-特定のプロバイダーが指定されていない場合、SDK はデフォルトプロバイダーを使用します。`appsettings.json` で設定できます：
+`DefaultProvider` 設定で、SDK が使用するプロバイダーを指定します。`appsettings.json` で設定できます：
 
 ```json title="appsettings.json"
 {
@@ -52,7 +48,7 @@ builder.Services.AddRevealAI()
 
 ### 設定のバインディング
 
-すべてのプロバイダーは `appsettings.json` の `RevealAI` セクションからの設定バインディングをサポートしています。コードで設定したオプションは設定ファイルの値よりも優先されます：
+プロバイダーは `appsettings.json` の `RevealAI` セクションからの設定バインディングをサポートしています。コードで設定したオプションは設定ファイルの値よりも優先されます：
 
 ```json title="appsettings.json"
 {
@@ -61,27 +57,9 @@ builder.Services.AddRevealAI()
     "OpenAI": {
       "ApiKey": "sk-...",
       "Model": "gpt-4.1"
-    },
-    "Anthropic": {
-      "ApiKey": "sk-ant-..."
     }
   }
 }
-```
-
-### 複数プロバイダーの使用
-
-複数のプロバイダーを登録でき、SDK はリクエストに基づいて適切なプロバイダーを解決します。以下のようなシナリオで便利です：
-
-- 異なる種類の分析に異なるモデルを使用する
-- フォールバックオプションを提供する
-- 簡単なタスクをより安価なモデルにルーティングしてコストを最適化する
-
-```csharp
-builder.Services.AddRevealAI()
-    .AddOpenAI()        // "openai" として登録
-    .AddAnthropic()     // "anthropic" として登録
-    .AddGoogle();       // "google" として登録
 ```
 
 ## カスタムプロバイダー

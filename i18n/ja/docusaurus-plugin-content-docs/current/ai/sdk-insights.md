@@ -90,7 +90,6 @@ const insight = await client.ai.insights.get({
 | `visualizationId` | `string` | いいえ | 分析対象のビジュアライゼーション ID |
 | `type` | `InsightType` | はい | タイプ: `'summary'`、`'analysis'`、`'forecast'` |
 | `forecastPeriods` | `number` | いいえ | 予測する期間数（デフォルト: 6） |
-| `model` | `string` | いいえ | 使用する特定の LLM モデルの名前 |
 | `signal` | `AbortSignal` | いいえ | リクエストをキャンセルするための AbortSignal |
 | `stream` | `boolean` | いいえ | ストリーミングモードを有効にする（デフォルト: `false`） |
 

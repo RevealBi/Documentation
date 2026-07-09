@@ -99,7 +99,6 @@ All parameters are passed in a single request object:
 | `visualizationId` | `string` | No | Visualization ID for visualization-specific context |
 | `intent` | `string` | No | Intent for freeform LLM queries |
 | `updateChatState` | `boolean` | No | Whether to update the chat state after this query |
-| `model` | `string` | No | Name of specific LLM model to use |
 | `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
 | `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
 
