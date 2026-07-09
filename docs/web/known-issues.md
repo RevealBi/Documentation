@@ -72,7 +72,7 @@ body > pre.rv-multiline-editor {
 
 ## Intermittent Request Timeouts in Node.js
 
-- An intermittent timeout issue has been observed in Node.js environments during request execution. The issue is difficult to reproduce and its root cause is still under investigation. As a result, some requests may occasionally fail and succeed when retried.
+- An intermittent timeout issue has been observed in Node.js environments during request execution. The issue is difficult to reproduce and its root cause is still under investigation. Early evidence suggests software firewalls provided by the operating system or antivirus software may interfere with the server connection, especially on developer machines. As a result, some requests may occasionally fail and succeed when retried.
 
 ## Headless Export
 
