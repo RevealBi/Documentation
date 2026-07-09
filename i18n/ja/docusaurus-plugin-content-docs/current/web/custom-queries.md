@@ -6,21 +6,34 @@ import TabItem from '@theme/TabItem';
 カスタム クエリは、特定の要件に従ってデータベース内のデータを取得または操作するために特別に作成された命令です。
 データベース管理システムの事前定義クエリとは異なり、カスタム クエリは、独自のまたは複雑なデータの取得と操作のニーズを満たすように調整されています。
 
-カスタム クエリは、次のデータ ソースでサポートされています。
+サポート マトリックス:
 
-- [Amazon Athena](adding-data-sources/amazon-athena.md)
-- Amazon Redshift
-- [DuckDB](adding-data-sources/duckdb.md)
-- [Google BigQuery](adding-data-sources/google-big-query.md)
-- [MariaDB](adding-data-sources/mariadb.md)
-- Microsoft Azure SQL Database
-- Microsoft Azure Synapse Analytics
-- [Microsoft SQL Server](adding-data-sources/ms-sql-server.md)
-- [MySQL](adding-data-sources/mysql.md)
-- [Oracle](adding-data-sources/oracle.md)
-- [PostgreSQL](adding-data-sources/postgres.md)
-- [Snowflake](adding-data-sources/snowflake.md)
-- [SQLite](adding-data-sources/sqlite.md)
+| データ ソース | カスタム クエリ | パラメーター化カスタム クエリ |
+| --- | --- | --- |
+| [Amazon Athena](adding-data-sources/amazon-athena.md) | Yes | Yes |
+| Amazon Redshift | Yes | Yes |
+| [ClickHouse](adding-data-sources/clickhouse.md) | Yes | Yes |
+| [Databricks](adding-data-sources/databricks.md) | Yes | Yes |
+| [DuckDB](adding-data-sources/duckdb.md) | Yes | No |
+| [Elasticsearch](adding-data-sources/elasticsearch.md) | Yes | Yes |
+| [Google BigQuery](adding-data-sources/google-big-query.md) | Yes | Yes |
+| [MariaDB](adding-data-sources/mariadb.md) | Yes | Yes |
+| Microsoft Azure SQL Database | Yes | Yes |
+| Microsoft Azure Synapse Analytics | Yes | Yes |
+| [Microsoft SQL Server](adding-data-sources/ms-sql-server.md) | Yes | Yes |
+| [MySQL](adding-data-sources/mysql.md) | Yes | Yes |
+| [Oracle](adding-data-sources/oracle.md) | Yes | No |
+| [PostgreSQL](adding-data-sources/postgres.md) | Yes | Yes |
+| [Snowflake](adding-data-sources/snowflake.md) | Yes | Yes |
+| [SQLite](adding-data-sources/sqlite.md) | Yes | No |
+
+:::note
+
+`CustomQuery` に値を直接埋め込むのではなく、`CustomQueryParameters` を使用してください。クエリ文字列には `@salesPersonId` のような名前付きプレースホルダーを追加し、一致する値は別に渡します。
+
+データ ソースの対応状況については、上記のサポート マトリックスを参照してください。DuckDB、SQLite、Oracle は `CustomQuery` をサポートしていますが、現時点では `CustomQueryParameters` をサポートしていません。MariaDB のパラメーター化されたカスタム クエリも、Java SDK ではサポートされていません。
+
+:::
 
 **手順 1** - クライアント上のデータ ソース項目を定義します。
 
@@ -51,11 +64,15 @@ if (sqlDataSourceItem.Id == "MySqlServerDataSourceItem")
 
     //parametrize your custom query with the property obtained before
     sqlDataSourceItem.CustomQuery =
-        $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
+        "SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = @salesPersonId";
+    sqlDataSourceItem.CustomQueryParameters = new Dictionary<string, object>
+    {
+        ["@salesPersonId"] = salesPersonId
+    };
 }
 ```
 
-## 例 - クライアントが提供する値を使用したカスタム クエリの作成
+## 例 - クライアントが提供する値を使用したパラメーター化カスタム クエリの作成
 
 1 - クライアント上のデータ ソース項目を定義します。
 
@@ -127,7 +144,7 @@ public class UserContextProvider : IRVUserContextProvider
 }
 ```
 
-4 - データ ソース プロバイダーで、データ ソース項目をオーバーライドしてカスタム クエリを定義します。
+4 - データ ソース プロバイダーで、データ ソース項目をオーバーライドしてパラメーター化されたカスタム クエリを定義します。
 
 ```cs
 public class DataSourceProvider : IRVDataSourceProvider
@@ -147,9 +164,13 @@ public class DataSourceProvider : IRVDataSourceProvider
 
                 //parametrize your custom query with the property obtained before
                 sqlDataSourceItem.CustomQuery =
-                    $"SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = {salesPersonId}";
+                    "SELECT * FROM [Sales].[SalesOrderHeader] WHERE [SalesPersonId] = @salesPersonId";
+                sqlDataSourceItem.CustomQueryParameters = new Dictionary<string, object>
+                {
+                    ["@salesPersonId"] = salesPersonId
+                };
             }
-        } 
+        }
 
         return Task.FromResult(dataSourceItem);
     }
