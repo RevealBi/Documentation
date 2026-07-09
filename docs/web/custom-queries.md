@@ -32,7 +32,7 @@ Support matrix:
 
 Use `CustomQueryParameters` instead of embedding values directly into `CustomQuery`. Add named placeholders such as `@salesPersonId` to the query text and pass the matching values separately.
 
-See the support matrix above for data source coverage. DuckDB, SQLite, and Oracle support `CustomQuery`, but do not currently support `CustomQueryParameters`. MariaDB parameterized custom queries are also out of scope in the Java SDK.
+See the support matrix above for data source coverage. DuckDB, SQLite, and Oracle support `CustomQuery`, but do not currently support `CustomQueryParameters`. MariaDB parameterized custom queries are also not supported in the Java SDK.
 
 :::
 

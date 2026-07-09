@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 `CustomQuery` に値を直接埋め込むのではなく、`CustomQueryParameters` を使用してください。クエリ文字列には `@salesPersonId` のような名前付きプレースホルダーを追加し、一致する値は別に渡します。
 
-データ ソースごとのサポート範囲については、上記のサポート マトリックスを参照してください。DuckDB、SQLite、および Oracle は `CustomQuery` をサポートしますが、現時点では `CustomQueryParameters` をサポートしていません。MariaDB のパラメーター化されたカスタム クエリも、Java SDK では対象外です。
+データ ソースの対応状況については、上記のサポート マトリックスを参照してください。DuckDB、SQLite、Oracle は `CustomQuery` をサポートしていますが、現時点では `CustomQueryParameters` をサポートしていません。MariaDB のパラメーター化されたカスタム クエリも、Java SDK ではサポートされていません。
 
 :::
 
