@@ -70,7 +70,7 @@ See the corresponding provider help page for all configuration options.
 
 ### Strong alternatives
 
-If you have more difficult tasks, you an also consider these other models that have obtained perfect scores in our benchmarks:
+If you are handling more complex tasks, you an also consider these other models that have obtained perfect scores in our benchmarks:
 
 - **OpenAI GPT 5.6 Sol** ([OpenAI](providers-openai.md)) 
 - **Claude Opus 4.7** ([Anthropic](providers-anthropic.md))
