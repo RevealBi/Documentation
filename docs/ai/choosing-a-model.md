@@ -87,9 +87,9 @@ If you need to keep data on your own infrastructure or avoid per-token API costs
 
 **Use Gemma 4 26B (`gemma-4-26b-a4b-it`).** Among locally hosted models it delivers the best overall accuracy on both workloads, and it is small enough to run on a capable workstation (validated on a 64 GB Apple Silicon machine). Note: this model was recently updated after release to fix issues with the embedded prompt template, make sure to use the latest version for best results.
 
-If your primary use ase is Dashboard Generation, **Qwen3.6 35B-A3B** is a great choice, but its performance on Data Insights is significantly worse than Gemma 4.
+If your primary use case is Dashboard Generation, **Qwen3.6 35B-A3B** is a great choice, but its performance on Data Insights is significantly worse than Gemma 4.
 
-If you want faster responses and a smaller memory footprint, **GPT-OSS 20B** is a strong runner-up — noticeably quicker, though a step behind Gemma 4 26B on data insights.
+If you want faster responses and a smaller memory footprint, **GPT-OSS 20B** is a strong runner-up — noticeably quicker, though a step behind Gemma 4 26B.
 
 Run either model with a server that exposes an OpenAI-compatible API — such as [Ollama](https://ollama.ai), [LM Studio](https://lmstudio.ai), or [vLLM](https://github.com/vllm-project/vllm) — and set the `Endpoint` and `Model` options:
 
