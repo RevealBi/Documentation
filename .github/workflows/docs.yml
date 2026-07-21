@@ -25,6 +25,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        env:
+          PLUGIN_PAT: ${{ secrets.PLUGIN_PAT }}
 
       - name: Build documentation
         run: npm run build
