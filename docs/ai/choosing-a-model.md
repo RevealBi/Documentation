@@ -18,7 +18,7 @@ Reveal asks the model to handle two very different kinds of work, and a model th
 
 ## Recommended flagship models
 
-In our latest runs the following are models strike a great balance between quality and cost, being our top recommendations for general use cases from each major commercial provider:
+In our latest runs the following models strike a great balance between quality and cost, being our top recommendations for general use cases from each major commercial provider:
 
 - **OpenAI GPT 5.6 Luna** ([OpenAI](providers-openai.md)) 
 - **Claude Haiku 4.5** ([Anthropic](providers-anthropic.md))
