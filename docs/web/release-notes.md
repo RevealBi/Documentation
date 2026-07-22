@@ -43,7 +43,7 @@ renderThumbnail();
 
 - The DataGrid visualization now supports cell selection, multi-cell drag selection, and copying cell values to the clipboard via Ctrl+C, along with an updated column header, alternate row, and cell border design.
 - `RevealView` is now available as a standalone npm package.
-- `MaxCellsRestriction` now exposes get and set accessors.
+- The cell limit setting has moved from `$.ig.RVUtility.prototype.maxCellsRestriction` to `RevealSdkSettings.maxCellsRestriction`.
 - Keyboard navigation is now enabled by default. Widget titles and interactive elements include improved ARIA attributes for screen readers.
 - A draggable splitter has been added to the visualization editor between the chart and data areas.
 - Integrated authentication for SQL Server connections has been improved.

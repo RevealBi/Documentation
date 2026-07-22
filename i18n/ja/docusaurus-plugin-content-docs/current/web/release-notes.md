@@ -44,7 +44,7 @@ renderThumbnail();
 
 - DataGrid ビジュアライゼーションで、セルの選択、複数セルのドラッグ選択、Ctrl+C によるクリップボードへのコピーがサポートされました。また、列ヘッダー、交互行、セル境界線のデザインも更新されました。
 - `RevealView` がスタンドアロンの npm パッケージとして利用可能になりました。
-- `MaxCellsRestriction` に getter および setter アクセサーが追加されました。
+- セル数の上限設定が `$.ig.RVUtility.prototype.maxCellsRestriction` から `RevealSdkSettings.maxCellsRestriction` に変更されました。
 - キーボード ナビゲーションがデフォルトで有効になりました。ウィジェットのタイトルとインタラクティブな要素に、スクリーン リーダー向けの ARIA 属性が改善されました。
 - ビジュアライゼーション エディターのチャート領域とデータ領域の間に、ドラッグ可能なスプリッターが追加されました。
 - SQL Server 接続の統合認証が改善されました。
