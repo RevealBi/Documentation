@@ -196,7 +196,7 @@ These models can be self-hosted or accessed through a hosted-inference provider,
 | Model | Dashboard generation | Data insights | Notes |
 |-------|:--------------------:|:-------------:|-------|
 | **Gemma 4 26B-A4B** *(recommended)* | 8 | 9 | Best balance between accuracy and speed overall |
-| **Qwen 3.6 26B** *(recommended)* | 10 | 9 | Best open-weight accuracy overall (dense, slower, tested with reasoning disabled)|
+| **Qwen 3.6 27B** *(recommended)* | 10 | 9 | Best open-weight accuracy overall (dense, slower, tested with reasoning disabled)|
 | Qwen3.6 35B-A3B | 10 | 5 | Excellent dashboard generation; weaker insights (tested with reasoning disabled) |
 | GPT-OSS 20B | 6 | 6 | Fastest; light memory footprint |
 | GPT-OSS 120B | 5 | 8 | Larger; strong on data insights |
