@@ -20,6 +20,8 @@ steps:
 - script: |
     npm install
   displayName: Npm Install
+  env:
+    PLUGIN_PAT: $(PLUGIN_PAT)
 
 - script: |
     npm run build
