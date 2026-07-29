@@ -80,9 +80,7 @@ revealView.onFieldsInitializing = function (args) {
 }
 ```
 
-:::note
-`onFieldsInitializing` only renames the entries shown in the field picker. Once a field has been selected as a dashboard filter, the filter control displays the field's raw name rather than the label set through this event. This is a current limitation, not a configuration step you can work around.
-:::
+Once a field is selected as a dashboard filter, the filter control continues to display the label assigned through `onFieldsInitializing`, consistent with what was shown in the picker.
 
 ## Example: Selecting the locale from a combo box
 
