@@ -52,7 +52,37 @@ RevealSdkSettings.localizedStringsProvider = function (element, context) {
 
 ![](images/localization-test-visualization-fields.jpg)
 
-この方法を使用して、要素タイプ `DashboardFilterTitle`、`DashboardTitle`、`FieldLabel`、`VisualizationFieldLabel`、および `VisualizationTitle` のローカライズ動作をカスタマイズできます。
+`localizedStringsProvider` はダッシュボード モデルに対するパスです。ダッシュボードのタイトル、グローバル フィルター、およびすでにダッシュボードの一部になっているウィジェットを走査し、そのモデルにバインドされている要素のみを認識します。データ ソースのスキーマから直接生成される UI 要素、たとえばダッシュボード フィルターを追加する際に表示されるフィールド ピッカーには、このイベントはフックされません。以下の表は、各要素タイプが実際にどこで発生するかを示しています。
+
+| 要素タイプ | 発生するタイミング |
+| --- | --- |
+| `DashboardTitle` | ダッシュボードのタイトル |
+| `DashboardFilterTitle` | すでにダッシュボードに追加されているグローバル (ダッシュボード) フィルターのタイトル |
+| `VisualizationTitle` | ビジュアライゼーションのタイトル |
+| `FieldLabel` | ダッシュボードにバインドされているが、まだどのビジュアライゼーションにも含まれておらず、サマリー定義でも使用されていないフィールド |
+| `VisualizationFieldLabel` | ビジュアライゼーションで使用されている、集計が適用され得るフィールド |
+
+つまり、`FieldLabel` と `VisualizationFieldLabel` は、すでにダッシュボードやビジュアライゼーションにバインドされているフィールドのみをカバーします。ダッシュボード フィルターを追加する際に表示されるフィールド一覧のような、スキーマ駆動のピッカーに対しては発生しません。このフィールド一覧をローカライズする方法については、以下の[ダッシュボード フィルターのフィールドをローカライズする](#localizing-dashboard-filter-fields)を参照してください。
+
+## ダッシュボード フィルターのフィールドをローカライズする {#localizing-dashboard-filter-fields}
+
+**ダッシュボード フィルターの追加** を選択し、続けて **フィールドを選択** を選ぶと表示されるフィールド一覧は、ダッシュボード モデルではなく、データ ソースのスキーマから直接生成されます。`localizedStringsProvider` はダッシュボードにすでにバインドされている要素しか処理しないため、この一覧に対しては呼び出されず、ここから翻訳を返してもフィールド ピッカーには反映されません。
+
+この一覧に表示されるフィールド名をカスタマイズするには、代わりに `revealView.onFieldsInitializing` イベントを使用します。このイベントは、ダッシュボード フィルターのフィールド ピッカーを含め、データ ソースのスキーマからフィールド一覧が生成されるたびに発生し、表示されるフィールドの名前変更、削除、並べ替えができます。
+
+```js
+revealView.onFieldsInitializing = function (args) {
+    var editedFields = args.fields;
+    // Spend フィールドの表示名を Spent に変更する
+    var fieldToChange = editedFields.find(f => f.name == "Spend");
+    if (fieldToChange) { fieldToChange.label = "Spent"; }
+    args.fields = editedFields;
+}
+```
+
+:::note
+`onFieldsInitializing` は、フィールド ピッカーに表示されるエントリの名前を変更するだけです。フィールドがダッシュボード フィルターとして選択された後は、フィルター コントロールはこのイベントで設定したラベルではなく、フィールドの元の名前を表示します。これは回避策のある設定項目ではなく、現時点での製品上の制限です。
+:::
 
 ## 例: コンボ ボックスからロケールを選択する
 

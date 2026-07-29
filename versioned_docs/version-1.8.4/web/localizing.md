@@ -52,7 +52,37 @@ $.ig.RevealSdkSettings.localizedStringsProvider = function (element, context) {
 
 ![](images/localization-test-visualization-fields.jpg)
 
-You can use this way to customize the localization behavior for the following element types: `DashboardFilterTitle`, `DashboardTitle`, `FieldLabel`, `VisualizationFieldLabel` and `VisualizationTitle`.
+`$.ig.RevealSdkSettings.localizedStringsProvider` is a dashboard-model pass: it walks the dashboard title, global filters, and widgets that are already part of the dashboard, and only ever sees elements that have been bound into that model. It does not hook into UI surfaces that are populated directly from a data source's schema, such as the field picker shown when adding a dashboard filter. The table below shows where each element type is actually raised.
+
+| Element type | Raised for |
+| --- | --- |
+| `DashboardTitle` | The dashboard's title |
+| `DashboardFilterTitle` | The title of a global (dashboard) filter that has already been added to the dashboard |
+| `VisualizationTitle` | A visualization's title |
+| `FieldLabel` | A field that is bound to the dashboard but not (yet) part of any visualization, nor used in a summarization definition |
+| `VisualizationFieldLabel` | A field that is being used in a visualization, and can have an aggregation applied to it |
+
+In other words, `FieldLabel` and `VisualizationFieldLabel` only cover fields that are already bound into a dashboard or a visualization — they are not raised for schema-driven pickers such as the field list shown when adding a dashboard filter. See [Localizing dashboard filter fields](#localizing-dashboard-filter-fields) below for how to localize that list.
+
+## Localizing dashboard filter fields {#localizing-dashboard-filter-fields}
+
+When you choose **Add Dashboard Filter** and then **Select a field**, the field list shown there is populated directly from the data source's schema, not from the dashboard model. Because `$.ig.RevealSdkSettings.localizedStringsProvider` only processes elements already bound into the dashboard, it is never invoked for this list, and returning a translation from it has no effect on the field picker.
+
+To customize the field names shown in this list, use the `revealView.onFieldsInitializing` event instead. It is raised whenever a field list is being populated from a data source's schema — including the dashboard filter field picker — and lets you rename, remove, or reorder the fields shown.
+
+```js
+revealView.onFieldsInitializing = function (args) {
+    var editedFields = args.fields;
+    // change name to show to Spend field to Spent
+    var fieldToChange = editedFields.find(f => f.name == "Spend");
+    if (fieldToChange) { fieldToChange.label = "Spent"; }
+    args.fields = editedFields;
+}
+```
+
+:::note
+`onFieldsInitializing` only renames the entries shown in the field picker. Once a field has been selected as a dashboard filter, the filter control displays the field's raw name rather than the label set through this event. This is a current limitation, not a configuration step you can work around.
+:::
 
 ## Example: Selecting the locale from a combo box
 
