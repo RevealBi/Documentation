@@ -167,6 +167,7 @@ The full results for every model tested are below. Find your current model to se
 | GPT-5 | OpenAI | 6 | 6 |
 | GPT-4.1 | OpenAI | 10 | 9 |
 | Claude Fable 5 | Anthropic | 10 | 10 |
+| Claude Opus 5 | Anthropic | 10 | 10 |
 | **Claude Opus 4.8** *(recommended)* | Anthropic | 10 | 10 |
 | **Claude Opus 4.7** *(recommended)* | Anthropic | 10 | 10 |
 | Claude Opus 4.6 | Anthropic | 9 | 10 |
@@ -197,6 +198,9 @@ These models can be self-hosted or accessed through a hosted-inference provider,
 |-------|:--------------------:|:-------------:|-------|
 | **Gemma 4 26B-A4B** *(recommended)* | 8 | 9 | Best balance between accuracy and speed overall |
 | **Qwen 3.6 27B** *(recommended)* | 10 | 9 | Best open-weight accuracy overall (dense, slower, tested with reasoning disabled)|
+| Gemma 4 12b | 10 | 8 | Excellent results, a bit slow |
+| Qwen3.5 9B | 8 | 9 | Great results, especially for a smaller model (tested with reasoning enabled) |
+| Ornith 1.0 35b | 9 | 7 | Great results, large token usage (tested with reasoning disabled) |
 | Qwen3.6 35B-A3B | 10 | 5 | Excellent dashboard generation; weaker insights (tested with reasoning disabled) |
 | GPT-OSS 20B | 6 | 6 | Fastest; light memory footprint |
 | GPT-OSS 120B | 5 | 8 | Larger; strong on data insights |
