@@ -25,7 +25,9 @@ console.log(response.explanation);
 
 if (response.dashboard) {
   // Load the generated dashboard
-  loadDashboard(response.dashboard);
+  const json = JSON.parse(response.dashboard);
+  const dashboard = RevealUtility.createDashboardFromJsonObject(json);
+  revealView.dashboard = dashboard;
 }
 ```
 
