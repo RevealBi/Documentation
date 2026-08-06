@@ -46,7 +46,7 @@ const config: Config = {
   plugins: [
     ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
     ["@docusaurus/plugin-google-tag-manager", { containerId: "GTM-WXWCMQZ" }],
-    ["@igniteui/reveal-ai-plugin", { stage: "dev" }],
+    ["@igniteui/reveal-ai-plugin", {}],
   ],
 
   i18n: {
