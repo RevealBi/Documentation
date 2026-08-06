@@ -11,6 +11,7 @@ sidebar_label: チャット
 
 ```typescript
 import { RevealSdkClient } from '@revealbi/api';
+import { RevealUtility } from 'reveal-sdk';
 
 const client = RevealSdkClient.getInstance();
 
@@ -25,7 +26,9 @@ console.log(response.explanation);
 
 if (response.dashboard) {
   // Load the generated dashboard
-  loadDashboard(response.dashboard);
+  const json = JSON.parse(response.dashboard);
+  const dashboard = RevealUtility.createDashboardFromJsonObject(json);
+  revealView.dashboard = dashboard;
 }
 ```
 
