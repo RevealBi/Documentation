@@ -11,6 +11,7 @@ sidebar_label: チャット
 
 ```typescript
 import { RevealSdkClient } from '@revealbi/api';
+import { RevealUtility } from 'reveal-sdk';
 
 const client = RevealSdkClient.getInstance();
 
