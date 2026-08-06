@@ -11,6 +11,7 @@ The `client.ai.chat.sendMessage()` method enables conversational analytics — u
 
 ```typescript
 import { RevealSdkClient } from '@revealbi/api';
+import { RevealUtility } from 'reveal-sdk';
 
 const client = RevealSdkClient.getInstance();
 
@@ -28,7 +29,9 @@ console.log(response.usage?.inputTokens, response.usage?.outputTokens);
 
 if (response.dashboard) {
   // Load the generated dashboard
-  loadDashboard(response.dashboard);
+  const json = JSON.parse(response.dashboard);
+  const dashboard = RevealUtility.createDashboardFromJsonObject(json);
+  revealView.dashboard = dashboard;
 }
 ```
 
