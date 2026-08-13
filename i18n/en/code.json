@@ -733,5 +733,21 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "Back to search",
     "description": "The back to search text for footer"
+  },
+  "featureStatus.preview.label": {
+    "message": "Preview",
+    "description": "Short badge label marking a documented feature as being in preview"
+  },
+  "featureStatus.preview.title": {
+    "message": "This feature is in preview.",
+    "description": "Bold lead-in of the preview feature banner"
+  },
+  "featureStatus.preview.description": {
+    "message": "It's available for you to try and give feedback on, but its API and behavior may change before it becomes generally available.",
+    "description": "Body text of the preview feature banner"
+  },
+  "featureStatus.preview.feedbackLink": {
+    "message": "Share feedback",
+    "description": "Link text inviting the reader to give feedback on a preview feature"
   }
 }

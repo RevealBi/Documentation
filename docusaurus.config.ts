@@ -79,10 +79,12 @@ const config: Config = {
             current: {
               label: 'Current',
               path: '',
+              badge: false, // hide the "Version: X" badge (also disabled on 1.8.4 below)
             },
             '1.8.4': {
               label: '1.8.4',
               path: '1.8.4',
+              badge: false,
             },
           },
           beforeDefaultRemarkPlugins: [
