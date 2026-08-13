@@ -131,5 +131,84 @@ thead, tbody{
 }
 
 th:empty{
-  display: none; 
+  display: none;
+}
+
+/* -------------------- Feature status markers (Preview) --------------------
+   Drives three surfaces from one frontmatter field (sidebar_custom_props.status):
+   - the top-of-page banner  (src/components/FeatureStatus PreviewBanner)
+   - the inline <Preview /> pill (src/components/FeatureStatus PreviewBadge)
+   - the sidebar pill via ::after (class added in src/theme/DocSidebarItem/Link)
+   To add another status, duplicate the color vars + selectors with a new name. */
+:root {
+  --feature-preview-color: #6d28d9;
+  --feature-preview-bg: rgba(124, 58, 237, 0.10);
+  --feature-preview-border: rgba(124, 58, 237, 0.35);
+}
+
+[data-theme='dark'] {
+  --feature-preview-color: #c4b5fd;
+  --feature-preview-bg: rgba(124, 58, 237, 0.18);
+  --feature-preview-border: rgba(124, 58, 237, 0.45);
+}
+
+/* Inline pill (<Preview />) and sidebar pill (::after) share one look. */
+.featureStatusBadge,
+.menu__list-item.sidebar-status--preview > .menu__link::after {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: var(--feature-preview-color);
+  background: var(--feature-preview-bg);
+  border: 1px solid var(--feature-preview-border);
+}
+
+.featureStatusBadge {
+  margin-left: 6px;
+}
+
+.menu__list-item.sidebar-status--preview > .menu__link::after {
+  content: "Preview";
+  margin-left: 6px;
+}
+
+/* Top-of-page banner. */
+.featureStatusBanner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 0 0 0.5rem;
+  padding: 12px 16px;
+  border: 1px solid var(--feature-preview-border);
+  border-left-width: 4px;
+  border-radius: 6px;
+  background: var(--feature-preview-bg);
+}
+
+.featureStatusBanner__label {
+  flex: 0 0 auto;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--feature-preview-color);
+}
+
+.featureStatusBanner__body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.featureStatusBanner__body a {
+  font-weight: 600;
 }
