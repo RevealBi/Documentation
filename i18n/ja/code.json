@@ -733,5 +733,21 @@
   },
   "homepage.sdk.ai.description": {
     "message": "OpenAI、Anthropic、Google などの LLM を使用して、AI 搭載インサイト、自然言語ダッシュボード、会話型アナリティクスを追加できます。"
+  },
+  "featureStatus.preview.label": {
+    "message": "プレビュー",
+    "description": "Short badge label marking a documented feature as being in preview"
+  },
+  "featureStatus.preview.title": {
+    "message": "この機能はプレビュー版です。",
+    "description": "Bold lead-in of the preview feature banner"
+  },
+  "featureStatus.preview.description": {
+    "message": "お試しいただき、フィードバックをお寄せいただけます。ただし、正式リリースまでに API や動作が変更される場合があります。",
+    "description": "Body text of the preview feature banner"
+  },
+  "featureStatus.preview.feedbackLink": {
+    "message": "フィードバックを送る",
+    "description": "Link text inviting the reader to give feedback on a preview feature"
   }
 }

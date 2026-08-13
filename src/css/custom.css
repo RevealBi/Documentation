@@ -136,10 +136,11 @@ th:empty{
 
 /* -------------------- Feature status markers (Preview) --------------------
    Drives three surfaces from one frontmatter field (sidebar_custom_props.status):
-   - the top-of-page banner  (src/components/FeatureStatus PreviewBanner)
+   - the top-of-page banner    (src/components/FeatureStatus PreviewBanner)
    - the inline <Preview /> pill (src/components/FeatureStatus PreviewBadge)
-   - the sidebar pill via ::after (class added in src/theme/DocSidebarItem/Link)
-   To add another status, duplicate the color vars + selectors with a new name. */
+   - the sidebar pill           (src/theme/DocSidebarItem/Link)
+   All pill text is real, localizable markup — no CSS-generated content.
+   To add another status, add its color vars + a .featureStatusBadge--<name>. */
 :root {
   --feature-preview-color: #6d28d9;
   --feature-preview-bg: rgba(124, 58, 237, 0.10);
@@ -152,10 +153,10 @@ th:empty{
   --feature-preview-border: rgba(124, 58, 237, 0.45);
 }
 
-/* Inline pill (<Preview />) and sidebar pill (::after) share one look. */
-.featureStatusBadge,
-.menu__list-item.sidebar-status--preview > .menu__link::after {
+/* Pill shape — shared by the inline <Preview /> and the sidebar pill. */
+.featureStatusBadge {
   display: inline-block;
+  margin-left: 6px;
   padding: 0 6px;
   border-radius: 10px;
   font-size: 10px;
@@ -165,18 +166,12 @@ th:empty{
   text-transform: uppercase;
   white-space: nowrap;
   vertical-align: middle;
+}
+
+.featureStatusBadge--preview {
   color: var(--feature-preview-color);
   background: var(--feature-preview-bg);
   border: 1px solid var(--feature-preview-border);
-}
-
-.featureStatusBadge {
-  margin-left: 6px;
-}
-
-.menu__list-item.sidebar-status--preview > .menu__link::after {
-  content: "Preview";
-  margin-left: 6px;
 }
 
 /* Top-of-page banner. */
