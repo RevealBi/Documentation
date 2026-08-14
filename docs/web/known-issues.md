@@ -31,6 +31,42 @@ There are two options to resolve this:
    If you must remain on Windows, host the application inside a **Windows Container**.
    This allows installing and configuring Playwright within the container image, bypassing the Windows App Service limitation.
 
+## Create React App 5 Production Builds
+
+### Issue
+
+Existing Create React App 5 applications using `react-scripts@5.0.1` may experience very long production build times or appear to stall when consuming Reveal SDK from npm.
+
+### Cause and Context
+
+This occurs when the Create React App/Webpack production pipeline processes the Reveal ESM bundle. Create React App has been deprecated by the React team. For new applications, or migrations where practical, use a maintained React framework or a modern build tool such as Vite.
+
+### Workaround
+
+For an existing Create React App application that cannot migrate yet:
+
+1. Copy `node_modules/reveal-sdk/dist/reveal-sdk.js` and `node_modules/reveal-sdk/dist/locales/` to `public/reveal/`.
+2. Add the IIFE bundle to `public/index.html`:
+
+```html
+<script src="%PUBLIC_URL%/reveal/reveal-sdk.js"></script>
+```
+
+3. Configure Webpack externals in your CRA override:
+
+```js
+config.externals = {
+    ...(config.externals || {}),
+    "reveal-sdk": "Reveal",
+};
+```
+
+4. Continue to import Reveal from npm in your application:
+
+```ts
+import * as Reveal from "reveal-sdk";
+```
+
 ## Custom Visualizations Not Supported on Export
 
 ### Issue

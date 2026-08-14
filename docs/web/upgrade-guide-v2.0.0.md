@@ -73,6 +73,10 @@ import { RevealSdkSettings, RevealView } from "reveal-sdk";
   </TabItem>
 </Tabs>
 
+:::caution Create React App 5 applications
+If your application uses Create React App 5 with `react-scripts@5.0.1`, see [Create React App 5 Production Builds](known-issues.md#create-react-app-5-production-builds) for production-build guidance before switching the Reveal client to npm.
+:::
+
 :::tip Still need script tags?
 The SDK distribution zip is still available for non-bundler setups — jQuery and Day.js are no longer needed:
 
