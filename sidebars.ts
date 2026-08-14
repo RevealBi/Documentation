@@ -283,6 +283,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Metadata", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Metadata Catalog", id: "ai/metadata-catalog" },
+        { type: "doc", label: "Metadata Storage Provider", id: "ai/metadata-storage-provider" },
         // { type: "doc", label: "Metadata Service", id: "ai/metadata-service" },
         // { type: "doc", label: "Custom Context Providers", id: "ai/metadata-custom-context-providers" },
       ]
