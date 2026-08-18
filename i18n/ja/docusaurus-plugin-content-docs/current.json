@@ -95,6 +95,10 @@
     "message": "接続データの難読化",
     "description": "The label for the doc item 'Obfuscate Connection Data' in sidebar 'webSidebar', linking to the doc web/obfuscate-connection-data"
   },
+  "sidebar.webSidebar.doc.Hyperlink Columns": {
+    "message": "ハイパーリンク列",
+    "description": "The label for the doc item 'Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
+  },
   "sidebar.webSidebar.doc.Maximizing Visualizations": {
     "message": "表示形式の最大化",
     "description": "The label for the doc item 'Maximizing Visualizations' in sidebar 'webSidebar', linking to the doc web/maximizing-visualizations"

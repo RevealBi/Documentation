@@ -182,3 +182,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LinkingDashboards-UI) にあります。
 
 :::
+
+## 関連項目
+
+- [ハイパーリンク列](hyperlink-columns.md) - グリッド、ピボット、スパークライン、データ グリッドの列の値を、URL や別のダッシュボードを開くリンクに変換します。
