@@ -1,5 +1,39 @@
 # Known Issues
 
+## Chrome/Edge DevTools Freeze When Using reveal-sdk in Angular
+
+### Issue
+
+Opening Chrome or Edge DevTools for an Angular application that imports `reveal-sdk` through Angular's Vite-based development server can make the DevTools frontend unresponsive for five minutes or longer.
+
+Angular's Vite-based development server generates a `reveal-sdk.js.map` file from the monolithic Reveal ESM bundle. DevTools discovers and processes this source map, but because it is very large, the processing causes the freeze.
+
+The root cause is that DevTools applies a default ignore-list rule that suppresses source map processing for paths matching `/node_modules/.vite/deps/`. A normal React/Vite dependency URL such as `/node_modules/.vite/deps/reveal-sdk.js` matches that rule and is skipped. However, Angular serves the optimized dependency through a URL containing `/.angular/cache/.../vite/deps/reveal-sdk.js`, which does **not** match the default rule. DevTools therefore fetches and processes the large generated map.
+
+### Workarounds
+
+**Option 1 – Redirect the Angular cache into `node_modules` (recommended)**
+
+Customize the Angular CLI cache path in `angular.json` so that the dependency URL matches DevTools' built-in ignore rule:
+
+```json
+"cli": {
+  "cache": {
+    "path": "node_modules/.cache/angular"
+  }
+}
+```
+
+**Option 2 – Add a custom DevTools ignore rule**
+
+Add the following custom exclusion rule in **DevTools → Settings → Ignore List → Custom exclusion rules**:
+
+```
+.*\/\.angular\/cache\/.*\/vite\/deps\/reveal-sdk\.js.*
+```
+
+> **Note:** This option works but must be configured individually for each developer and each browser profile.
+
 ## Export Not Supported on Windows Azure App Service
 
 ### Issue

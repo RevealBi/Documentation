@@ -1,5 +1,39 @@
 # 既知の問題
 
+## Chrome/Edge DevTools が Angular で reveal-sdk を使用するとフリーズする
+
+### 問題
+
+Angular の Vite ベースの開発サーバーを通じて `reveal-sdk` をインポートしている Angular アプリケーションで Chrome または Edge の DevTools を開くと、DevTools のフロントエンドが 5 分以上応答しなくなる場合があります。
+
+Angular の Vite ベースの開発サーバーは、Reveal モノリシック ESM バンドルから `reveal-sdk.js.map` ファイルを生成します。DevTools がこのソース マップを検出して処理しようとしますが、ファイルが非常に大きいためフリーズが発生します。
+
+根本原因は、DevTools が `/node_modules/.vite/deps/` に一致するパスに対してソース マップの処理を抑制するデフォルトの無視リスト ルールを適用していることにあります。通常の React/Vite 依存関係の URL (`/node_modules/.vite/deps/reveal-sdk.js` など) はこのルールに一致するためスキップされます。しかし Angular は最適化された依存関係を `/.angular/cache/.../vite/deps/reveal-sdk.js` を含む URL で提供するため、デフォルト ルールに**一致しません**。その結果、DevTools が大きなマップを取得・処理しフリーズが発生します。
+
+### 回避策
+
+**オプション 1 – Angular キャッシュを `node_modules` 配下にリダイレクトする (推奨)**
+
+依存関係 URL が DevTools の組み込み無視ルールに一致するよう、`angular.json` で Angular CLI のキャッシュ パスをカスタマイズします。
+
+```json
+"cli": {
+  "cache": {
+    "path": "node_modules/.cache/angular"
+  }
+}
+```
+
+**オプション 2 – DevTools にカスタム無視ルールを追加する**
+
+**DevTools → 設定 → 無視リスト → カスタム除外ルール** に以下のルールを追加します。
+
+```
+.*\/\.angular\/cache\/.*\/vite\/deps\/reveal-sdk\.js.*
+```
+
+> **注意:** この方法は有効ですが、開発者ごと、ブラウザー プロファイルごとに個別に設定する必要があります。
+
 ## Windows Azure App Service でのエクスポート非対応
 
 ### 問題
