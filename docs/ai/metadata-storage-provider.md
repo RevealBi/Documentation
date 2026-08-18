@@ -29,37 +29,30 @@ public interface IMetadataStorageProvider
 | Method | Purpose |
 |---|---|
 | `GetByIdAsync` | Returns an item, or `null` if it is not stored. |
-| `CreateAsync` / `UpdateAsync` | Saves a new or existing item. Implementations may throw if its existence expectation is not met. |
+| `CreateAsync` | Saves a new item. Implementations may throw when the item already exists. |
+| `UpdateAsync` | Replaces an existing item. Implementations may throw when the item does not exist. |
 | `DeleteAsync` | Removes an item by its logical ID. |
 | `ListAsync` | Lists IDs matching a case-insensitive wildcard pattern. `*` returns all IDs. |
 
-## Scope metadata to the user
+## Scope and filter metadata
 
-Every operation receives `IRVUserContext`. Use it to partition records by tenant or user and apply permission rules. In a multi-tenant store, never use only the metadata ID as the storage key.
+Every operation receives `IRVUserContext`, but metadata generation and metadata retrieval use it differently.
 
-For example, compose the storage key from the user context before retrieving metadata:
+When Reveal generates metadata, it runs as the built-in system-wide metadata user, `reveal-ai-metadata-user`. Use this stage to store the full generated metadata in a scope that fits your application, such as a tenant, datasource, or shared department. A tenant-scoped store is a common approach when a database belongs to a tenant and its metadata can be shared by that tenant's users.
+
+When Reveal retrieves metadata for a request, the context represents the actual user. Use that context together with your authorization rules to return only the metadata that user is allowed to see. For example, a provider can retrieve tenant metadata and filter inaccessible tables before returning it:
 
 ```csharp
-public Task<T?> GetByIdAsync<T>(string id, IRVUserContext userContext)
+public async Task<T?> GetByIdAsync<T>(string id, IRVUserContext userContext)
 {
-    var storageKey = $"{userContext.UserId}:{id}";
-    return _storage.GetAsync<T>(storageKey);
+    var metadata = await _storage.GetAsync<T>(id);
+    return await _permissions.CanReadAsync(userContext, id) ? metadata : default;
 }
 ```
 
-Apply the same scope when listing metadata so a user cannot discover another user's IDs:
+You can isolate metadata per user instead, but then metadata shared by several users must be replicated and all copies must be updated when regeneration occurs. Whichever storage and filtering strategy you choose, apply it consistently to create, update, delete, list, and read operations.
 
-```csharp
-public Task<IEnumerable<string>> ListAsync(
-    IRVUserContext userContext,
-    string searchPattern = "*")
-{
-    var prefix = $"{userContext.UserId}:";
-    return _storage.ListAsync(prefix, searchPattern);
-}
-```
-
-`_storage` represents your database, blob store, or other persistence mechanism. Apply the same user or tenant scope consistently to create, update, delete, list, and read operations. A complete implementation belongs in an application sample rather than in this page.
+`_storage` represents your database, blob store, or other persistence mechanism. A complete implementation belongs in an application sample rather than in this page.
 
 ## Register the provider
 
