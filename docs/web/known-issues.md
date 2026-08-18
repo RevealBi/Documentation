@@ -4,7 +4,7 @@
 
 ### Issue
 
-Opening Chrome or Edge DevTools for an Angular application that imports `reveal-sdk` through Angular's Vite-based development server can make the DevTools frontend unresponsive for five minutes or longer.
+Opening Chrome or Edge DevTools for an Angular application that imports `reveal-sdk` can make the DevTools frontend unresponsive.
 
 Angular's Vite-based development server generates a `reveal-sdk.js.map` file from the monolithic Reveal ESM bundle. DevTools discovers and processes this source map, but because it is very large, the processing causes the freeze.
 
