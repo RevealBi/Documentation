@@ -8,7 +8,6 @@ Opening Chrome or Edge DevTools for an Angular application that imports `reveal-
 
 Angular's Vite-based development server generates a `reveal-sdk.js.map` file from the monolithic Reveal ESM bundle. DevTools discovers and processes this source map, but because it is very large, the processing causes the freeze.
 
-The root cause is that DevTools applies a default ignore-list rule that suppresses source map processing for paths matching `/node_modules/.vite/deps/`. A normal React/Vite dependency URL such as `/node_modules/.vite/deps/reveal-sdk.js` matches that rule and is skipped. However, Angular serves the optimized dependency through a URL containing `/.angular/cache/.../vite/deps/reveal-sdk.js`, which does **not** match the default rule. DevTools therefore fetches and processes the large generated map.
 
 ### Workarounds
 
