@@ -8,7 +8,6 @@ Opening Chrome or Edge DevTools for an Angular application that imports `reveal-
 
 Angular's Vite-based development server generates a `reveal-sdk.js.map` file from the monolithic Reveal ESM bundle. DevTools discovers and processes this source map, but because it is very large, the processing causes the freeze.
 
-
 ### Workarounds
 
 **Option 1 – Redirect the Angular cache into `node_modules` (recommended)**

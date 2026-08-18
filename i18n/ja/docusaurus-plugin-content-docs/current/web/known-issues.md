@@ -4,11 +4,9 @@
 
 ### 問題
 
-Angular の Vite ベースの開発サーバーを通じて `reveal-sdk` をインポートしている Angular アプリケーションで Chrome または Edge の DevTools を開くと、DevTools のフロントエンドが 5 分以上応答しなくなる場合があります。
+`reveal-sdk` をインポートしている Angular アプリケーションで Chrome または Edge の DevTools を開くと、DevTools のフロントエンドが応答しなくなる場合があります。
 
 Angular の Vite ベースの開発サーバーは、Reveal モノリシック ESM バンドルから `reveal-sdk.js.map` ファイルを生成します。DevTools がこのソース マップを検出して処理しようとしますが、ファイルが非常に大きいためフリーズが発生します。
-
-根本原因は、DevTools が `/node_modules/.vite/deps/` に一致するパスに対してソース マップの処理を抑制するデフォルトの無視リスト ルールを適用していることにあります。通常の React/Vite 依存関係の URL (`/node_modules/.vite/deps/reveal-sdk.js` など) はこのルールに一致するためスキップされます。しかし Angular は最適化された依存関係を `/.angular/cache/.../vite/deps/reveal-sdk.js` を含む URL で提供するため、デフォルト ルールに**一致しません**。その結果、DevTools が大きなマップを取得・処理しフリーズが発生します。
 
 ### 回避策
 
