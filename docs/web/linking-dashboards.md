@@ -182,3 +182,7 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, title) => {
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/LinkingDashboards-UI)
 
 :::
+
+## See Also
+
+- [Hyperlink Columns](hyperlink-columns.md) - turning Grid, Pivot, Sparkline, and Data Grid column values into links that open a URL or another dashboard.
