@@ -19,6 +19,10 @@ For instance, in a Column Chart, all numeric columns are added to the
 chart. The automatic selection of columns done by Reveal can be modified
 in the Chart Settings configuration.
 
+Category charts also support annotations, which let you add notes
+directly onto the chart, anchored to a data point, a category, or a range
+of categories. Read more in the [Chart Annotations](../chart-annotations.md) topic.
+
 ## Chart Trendlines
 
 Chart settings enable the display of trend lines, which are lines that

@@ -335,6 +335,10 @@
     "message": "表示形式エディター",
     "description": "The label for the doc item 'Visualization Editor' in sidebar 'userSideBar', linking to the doc user/visualization-editor"
   },
+  "sidebar.userSideBar.doc.Chart Annotations": {
+    "message": "チャートの注釈",
+    "description": "The label for the doc item 'Chart Annotations' in sidebar 'userSideBar', linking to the doc user/chart-annotations"
+  },
   "sidebar.userSideBar.doc.Category": {
     "message": "カテゴリ",
     "description": "The label for the doc item 'Category' in sidebar 'userSideBar', linking to the doc user/chart-types/category-charts"
