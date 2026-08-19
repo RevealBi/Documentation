@@ -1,6 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Hyperlink Columns
 
 Hyperlink columns turn the values of a Grid, Pivot, Sparkline, or Data Grid column into clickable links. Because both the destination and the displayed text can include field tokens, every row gets its own destination built from that row's data — for example, an **Order Id** column where each cell opens the detail page for that specific order.
@@ -55,16 +52,13 @@ Only the `http`, `https`, `mailto`, and `tel` schemes are allowed. URLs containi
 
 :::caution
 
-Relative URLs are supported on **Web** only, where the browser supplies a base URL. The WPF, iOS, and Android clients require absolute URLs.
+Relative URLs rely on the browser supplying a base URL, so they resolve only in the Web client.
 
 :::
 
 ## Handling URL Links in Code
 
 The `onUrlLinkRequested` callback runs before navigation. Use it to inspect or rewrite the destination, or to cancel navigation by returning a null or empty value — which is also how a single-page application routes internally without a full page reload.
-
-<Tabs groupId="code" queryString>
-  <TabItem value="javascript" label="JavaScript" default>
 
 ```js
 revealView.onUrlLinkRequested = (args) => {
@@ -84,31 +78,9 @@ revealView.onUrlLinkRequested = (args) => {
 };
 ```
 
-  </TabItem>
-
-  <TabItem value="wpf" label="WPF">
-
-```cs
-_revealView.UrlLinkRequested = (args) =>
-{
-    Debug.WriteLine(args.Url);
-    Debug.WriteLine(args.Target);
-    Debug.WriteLine(args.Visualization.Title);
-    Debug.WriteLine(args.Cell?.FormattedValue);
-
-    return args.Url + "&source=reveal";
-};
-```
-
-  </TabItem>
-</Tabs>
-
 ## Handling Dashboard Links in Code
 
 When a hyperlink column opens a dashboard, the `onLinkedDashboardProviderAsync` callback receives an extra argument object carrying the click context, so the application can return a different dashboard — or one loaded with different data — depending on the row that was clicked.
-
-<Tabs groupId="code" queryString>
-  <TabItem value="javascript" label="JavaScript" default>
 
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle, args) => {
@@ -122,28 +94,6 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle, args) => {
 };
 ```
 
-  </TabItem>
-
-  <TabItem value="wpf" label="WPF">
-
-```cs
-_revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) =>
-{
-    if (args != null)
-    {
-        Debug.WriteLine(args.DashboardId);
-        Debug.WriteLine(args.Title);
-        Debug.WriteLine(args.Visualization.Title);
-        Debug.WriteLine(args.Cell?.FormattedValue);
-    }
-
-    return new RVDashboard(dashboardId);
-};
-```
-
-  </TabItem>
-</Tabs>
-
 | Member | Description |
 |---|---|
 | `dashboardId` | The identifier of the linked dashboard. |
@@ -156,18 +106,14 @@ _revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) =>
 
 ### Upgrading Existing Code
 
-:::warning Breaking Change
+The third parameter is optional, so existing handlers keep working unchanged. Add it only when the cell or row context is needed.
 
-The WPF `LinkedDashboardProvider` callback now takes a third parameter; existing handlers will not compile until it is added to their signature. In JavaScript the third parameter is optional, so existing handlers keep working unchanged — add it only when the cell or row context is needed.
-
-:::
-
-```cs
+```js
 // Before
-_revealView.LinkedDashboardProvider = (dashboardId, linkTitle) => new RVDashboard(dashboardId);
+revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle) => RVDashboard.loadDashboard(dashboardId);
 
 // After
-_revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) => new RVDashboard(dashboardId);
+revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle, args) => RVDashboard.loadDashboard(dashboardId);
 ```
 
 ## Interactive Filtering and Hyperlink Cells
@@ -177,7 +123,7 @@ In the Data Grid, clicking a cell displays the standard interactive filtering ac
 ## Limitations
 
 - Hyperlink configuration is a client-side feature. There is no equivalent API in the Java or Node.js server SDKs.
-- Relative URLs resolve only on the Web client. WPF, iOS, and Android require absolute URLs.
+- Relative URLs resolve only in the Web client.
 - Only the `http`, `https`, `mailto`, and `tel` schemes are permitted.
 - Tokens referring to fields outside the visualization resolve to an empty string.
 - A column supports a single link action; multiple actions on one cell are not available.

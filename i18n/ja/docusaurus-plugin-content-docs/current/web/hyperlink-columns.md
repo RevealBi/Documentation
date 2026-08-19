@@ -1,6 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # ハイパーリンク列
 
 ハイパーリンク列は、グリッド、ピボット、スパークライン、データ グリッドの列の値をクリック可能なリンクに変換します。リンク先と表示テキストの両方にフィールド トークンを含めることができるため、各行のデータに基づいて行ごとに固有のリンク先が生成されます。たとえば、**注文 ID** 列では、各セルがその注文の詳細ページを開きます。
@@ -55,16 +52,13 @@ https://www.example.com/search?customer=[CompanyName]
 
 :::caution
 
-相対 URL は、ブラウザーが解決用のベース URL を提供する **Web** でのみサポートされています。WPF、iOS、Android のクライアントでは絶対 URL が必要です。
+相対 URL はブラウザーが提供するベース URL に依存するため、Web クライアントでのみ解決されます。
 
 :::
 
 ## コードでの URL リンクの処理
 
 `onUrlLinkRequested` コールバックは、ナビゲーションの前に実行されます。これを使用して、リンク先を検査または書き換えることができます。また、null または空の値を返すとナビゲーションをキャンセルできます。これは、シングル ページ アプリケーションがページ全体を再読み込みせずに内部でルーティングする方法でもあります。
-
-<Tabs groupId="code" queryString>
-  <TabItem value="javascript" label="JavaScript" default>
 
 ```js
 revealView.onUrlLinkRequested = (args) => {
@@ -84,31 +78,9 @@ revealView.onUrlLinkRequested = (args) => {
 };
 ```
 
-  </TabItem>
-
-  <TabItem value="wpf" label="WPF">
-
-```cs
-_revealView.UrlLinkRequested = (args) =>
-{
-    Debug.WriteLine(args.Url);
-    Debug.WriteLine(args.Target);
-    Debug.WriteLine(args.Visualization.Title);
-    Debug.WriteLine(args.Cell?.FormattedValue);
-
-    return args.Url + "&source=reveal";
-};
-```
-
-  </TabItem>
-</Tabs>
-
 ## コードでのダッシュボード リンクの処理
 
 ハイパーリンク列がダッシュボードを開く場合、`onLinkedDashboardProviderAsync` コールバックはクリックのコンテキストを持つ追加の引数オブジェクトを受け取ります。これにより、アプリケーションはクリックされた行に応じて、異なるダッシュボード、または異なるデータが読み込まれたダッシュボードを返すことができます。
-
-<Tabs groupId="code" queryString>
-  <TabItem value="javascript" label="JavaScript" default>
 
 ```js
 revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle, args) => {
@@ -122,28 +94,6 @@ revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle, args) => {
 };
 ```
 
-  </TabItem>
-
-  <TabItem value="wpf" label="WPF">
-
-```cs
-_revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) =>
-{
-    if (args != null)
-    {
-        Debug.WriteLine(args.DashboardId);
-        Debug.WriteLine(args.Title);
-        Debug.WriteLine(args.Visualization.Title);
-        Debug.WriteLine(args.Cell?.FormattedValue);
-    }
-
-    return new RVDashboard(dashboardId);
-};
-```
-
-  </TabItem>
-</Tabs>
-
 | メンバー | 説明 |
 |---|---|
 | `dashboardId` | リンクされたダッシュボードの識別子。 |
@@ -156,18 +106,14 @@ _revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) =>
 
 ### 既存コードのアップグレード
 
-:::warning 重大な変更
+3 番目のパラメーターは任意であるため、既存のハンドラーは変更なしで動作し続けます。セルまたは行のコンテキストが必要な場合にのみ追加してください。
 
-WPF の `LinkedDashboardProvider` コールバックは 3 番目のパラメーターを受け取るようになりました。既存のハンドラーは、シグネチャにこのパラメーターを追加するまでコンパイルできません。JavaScript では 3 番目のパラメーターは任意であるため、既存のハンドラーは変更なしで動作し続けます。セルまたは行のコンテキストが必要な場合にのみ追加してください。
-
-:::
-
-```cs
+```js
 // Before
-_revealView.LinkedDashboardProvider = (dashboardId, linkTitle) => new RVDashboard(dashboardId);
+revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle) => RVDashboard.loadDashboard(dashboardId);
 
 // After
-_revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) => new RVDashboard(dashboardId);
+revealView.onLinkedDashboardProviderAsync = (dashboardId, linkTitle, args) => RVDashboard.loadDashboard(dashboardId);
 ```
 
 ## インタラクティブなフィルタリングとハイパーリンク セル
@@ -177,7 +123,7 @@ _revealView.LinkedDashboardProvider = (dashboardId, linkTitle, args) => new RVDa
 ## 制限事項
 
 - ハイパーリンクの構成はクライアント側の機能です。Java および Node.js のサーバー SDK には同等の API はありません。
-- 相対 URL は Web クライアントでのみ解決されます。WPF、iOS、Android では絶対 URL が必要です。
+- 相対 URL は Web クライアントでのみ解決されます。
 - 使用できるスキームは `http`、`https`、`mailto`、`tel` のみです。
 - 表示形式に含まれていないフィールドを参照するトークンは、空の文字列に解決されます。
 - 1 つの列でサポートされるリンク アクションは 1 つのみです。1 つのセルに複数のアクションを設定することはできません。
