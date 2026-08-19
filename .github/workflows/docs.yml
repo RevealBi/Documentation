@@ -28,6 +28,14 @@ jobs:
         env:
           PLUGIN_PAT: ${{ secrets.PLUGIN_PAT }}
 
+      # The AI search plugin is an optionalDependency, so a missing or unauthorized
+      # install is silent. Fail loudly on the deploy path so staging/production never
+      # ship without AI search. PR builds intentionally skip this: a PR must not fail
+      # over registry access.
+      - name: Verify AI search plugin is installed
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node -e "require.resolve('@igniteui/reveal-ai-plugin')"
+
       - name: Build documentation
         run: npm run build
 

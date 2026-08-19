@@ -14,6 +14,23 @@ const sdkVersion_v1 = "1.8.4";
 const docsVersion = "2.1";
 const docsVersion_v1 = "1.8.4";
 
+// The AI search plugin lives in a private @igniteui GitHub Packages feed, so most
+// contributors cannot install it (it is an optionalDependency and is simply skipped).
+// Load it only when present, so the docs build and run for everyone; the deploy
+// workflow verifies it IS installed before publishing to staging/production.
+function revealAIPlugin(): any[] {
+  try {
+    require.resolve("@igniteui/reveal-ai-plugin");
+    return [["@igniteui/reveal-ai-plugin", {}]];
+  } catch {
+    console.warn(
+      "[docs] @igniteui/reveal-ai-plugin is not installed - AI search is disabled for this build. " +
+      "This is expected without private registry access; all other docs functionality is unaffected."
+    );
+    return [];
+  }
+}
+
 const config: Config = {
   title: 'Reveal',
   tagline: 'Embedded Analytics & Business Intelligence Tools',
@@ -46,7 +63,7 @@ const config: Config = {
   plugins: [
     ["docusaurus-node-polyfills", { onlyAliases: ["process"] }],
     ["@docusaurus/plugin-google-tag-manager", { containerId: "GTM-WXWCMQZ" }],
-    ["@igniteui/reveal-ai-plugin", {}],
+    ...revealAIPlugin(),
   ],
 
   i18n: {
