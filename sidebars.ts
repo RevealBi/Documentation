@@ -175,6 +175,7 @@ const sidebars: SidebarsConfig = {
       type: "category", label: "Visualizations", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Overview", key: "user-visualizations-overview", id: "user/visualizations-overview" },
         { type: "doc", label: "Visualization Editor", id: "user/visualization-editor" },
+        { type: "doc", label: "Chart Annotations", id: "user/chart-annotations" },
         { type: "category", label: "Chart Types", items: [
           { type: "doc", label: "Category", id: "user/chart-types/category-charts" },
           { type: "category", label: "Choropleth ", link: { type: "doc", id: "user/chart-types/choropleth-map" }, items: [
