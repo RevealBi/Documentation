@@ -38,6 +38,8 @@ The `RevealView.onTooltipShowing` event will not be triggered for visualizations
 Use the `RevealView.showTooltips` property to turn tooltips on or off for every visualization in the dashboard. The property defaults to `true`.
 
 ```js
+import { RevealView } from "reveal-sdk";
+
 const revealView = new RevealView("#revealView");
 revealView.showTooltips = false;
 ```
@@ -110,6 +112,8 @@ revealView.onTooltipShowing = (args) => {
 Use the `TooltipShowingEventArgs.customItems` collection to add your own menu items to the tooltip. Each item is an `RVTooltipItem`, created with a group header, a title, an icon, and a click handler.
 
 ```js
+import { RVTooltipItem } from "reveal-sdk";
+
 revealView.onTooltipShowing = (args) => {
     args.customItems.push(new RVTooltipItem("Actions", "View Details", null, (sender, e) => {
         console.log("View Details clicked", e);
