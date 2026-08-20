@@ -5,6 +5,7 @@ A tooltip is a message which appears when the end-user hovers over a data point 
 ![](images/tooltips.jpg)
 
 Tooltips are shown on hover for every visualization type that supports them - charts, pie, funnel and treemap visualizations, maps, grids and data charts. Tooltip actions, such as drill down or filtering, are available directly from the tooltip without an extra click.
+Tooltips will follow the mouse cursor as it moves, and will become anchored once the mouse momentarily stops moving, making them available for clicking the actions contained in them.
 
 :::info
 
