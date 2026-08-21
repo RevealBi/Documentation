@@ -59,7 +59,7 @@ document.getElementById("toggleTooltips").addEventListener("click", () => {
 
 :::
 
-If you are using the Reveal SDK in a WPF or .NET MAUI application, the equivalent property on the `RevealView` control is `ShowTooltips`.
+If you are using the Reveal SDK in a .NET MAUI application, the equivalent property on the `RevealView` control is `ShowTooltips`.
 
 ### Migrating from `hoverTooltipsEnabled`
 
@@ -75,7 +75,7 @@ revealView.showTooltips = false;
 
 :::warning
 
-`hoverTooltipsEnabled` still works and forwards to `showTooltips`, so existing code continues to run. It is deprecated and will be removed in a future release - update to `showTooltips` when you get the chance. The same applies to the `HoverTooltipsEnabled` property in WPF and .NET MAUI applications.
+`hoverTooltipsEnabled` still works and forwards to `showTooltips`, so existing code continues to run. It is deprecated and will be removed in a future release - update to `showTooltips` when you get the chance. The same applies to the `HoverTooltipsEnabled` property in .NET MAUI applications.
 
 :::
 
