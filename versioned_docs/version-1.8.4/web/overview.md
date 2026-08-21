@@ -5,7 +5,7 @@ import CodePreview from "@site/src/components/CodePreview";
 Reveal is a business intelligence solution that is purpose-built for embedded analytics. With Reveal, you can:
 
 - Deliver full-featured self-service dashboards and modern reporting.
-- Use in any JavaScript framework (like React, Angular, Vue JS, Web Components or Blazor).
+- Use in any JavaScript framework (like React, Angular, Vue JS, Web Components or Blazor) or Windows Forms application.
 - Customize the UX to match your brand experience.
 - Connect to almost any data source to populate your dashboards.
 - Deploy to any cloud – public or private – or your own on-prem servers, in a Java, ASP.NET or Node.js backend.
