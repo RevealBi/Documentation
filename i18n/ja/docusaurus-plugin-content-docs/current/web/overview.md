@@ -3,7 +3,7 @@
 Reveal は、組み込み分析用に構築されたビジネス インテリジェンス ソリューションです。Reveal を使用すると、次のことができます:
 
 - 機能豊かなセルフ サービス ダッシュボードと最新のレポート機能を提供します。
-- あらゆる JavaScript フレームワーク (React、Angular、Vue JS、Web Components、Blazor など)、Windows Forms、または WPF アプリケーションで使用できます。
+- あらゆる JavaScript フレームワーク (React、Angular、Vue JS、Web Components、Blazor など) または Windows Forms アプリケーションで使用できます。
 - ブランド エクスペリエンスに合わせて UX をカスタマイズできます。
 - ほぼすべてのデータ ソースに接続して、ダッシュボードを作成することができます。
 - Java、ASP.NET、または Node.js のバックエンドを、任意のクラウド (パブリックまたはプライベート) または独自のオンプレミス サーバーに配置できます。
