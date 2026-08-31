@@ -42,7 +42,6 @@ const asString = revealView.dashboard.toJsonString();
 - Fixed a crash when sorting an XMLA data source by caption.
 - Fixed stale data in paged Grid Excel and CSV exports.
 - Fixed a crash when repeatedly closing the data filter dialog.
-- The LinkedIn Organic connector now reports a specific error when the account has no associated company.
 - Fixed `SortInterval` in the SQLite connector to match the engine implementation.
 - Fixed MSSQL pagination failing when the query has no `ORDER BY` clause.
 - Fixed Excel data labels for calculated fields using default formatting.
