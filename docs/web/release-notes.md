@@ -12,8 +12,6 @@ import TabItem from '@theme/TabItem';
 
 ### New Features
 
-- New connector: Reddit Ads, with ad account metadata, campaign, ad group and ad definitions, and performance metrics.
-- New connector: Microsoft Ads.
 - Charts now support user-authored [annotations](https://help.revealbi.io/user/chart-annotations/), with a dedicated editor and styling options. Point, slice, and strip annotation types are available on the category chart family, and annotations are saved with the dashboard so every viewer sees the same note in the same place.
 - The Grid, Pivot, Sparkline, and new DataGrid visualizations now support [hyperlink columns](https://help.revealbi.io/web/hyperlink-columns/), with URL and dashboard linking and field-token substitution. Cell and row context is passed to the dashboard-linking callback.
 - Visualization column hyperlinks and row-level actions now support relative URLs, which are normalized automatically when the URL field loses focus.
