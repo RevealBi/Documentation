@@ -8,7 +8,6 @@ import TabItem from '@theme/TabItem';
 ### Breaking Changes
 
 - The MariaDB package no longer depends on the MySQL connector. Projects that relied on this transitive dependency must reference the MySQL connector explicitly.
-- The bundled SQLite native library has been updated to `SQLitePCLRaw.bundle_e_sqlite3` 2.1.12.
 - The `newTooltip` beta feature flag has been removed. Hover tooltips are now the default, so any call that enables the flag can be deleted.
 
 ### New Features
