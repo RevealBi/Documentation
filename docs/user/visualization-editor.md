@@ -58,5 +58,6 @@ Among other things, you will be able to:
 - **Sort** & **filter** data.
 - **Aggregate data** in the data editor.
 - **Search**, **Visualize** & **format** data.
+- **Annotate** your charts with notes anchored to specific data points, categories, or ranges. Read more in the [Chart Annotations](chart-annotations.md) topic.
 
 After you're done building the visualization, select the *check* icon to return to the *Dashboard Editor*. In the Dashboard Editor, you can control the layout, size, and location of the visualizations in a dashboard by simply dragging visualizations and their borders. When you are ready formatting and styling your dashboard, click/tap on the *check* icon again to save your dashboard.  
