@@ -54,7 +54,7 @@ const asString = revealView.dashboard.toJsonString();
 - Fixed a blank radial chart.
 - Fixed incorrect results returned by the `Find` function.
 - Fixed an issue in the KPI visualization.
-- Fixed grid paging in WPF.
+- Fixed a bug in grid paging.
 - Removed a spurious "Do not create many of these" message.
 
 #### ASP.NET
