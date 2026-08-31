@@ -27,7 +27,7 @@ Annotations are available on the category chart family:
 
 Stacked chart variants - such as Stacked Column or Stacked Bar - do not support annotations. In a stacked chart, each segment is drawn at an accumulated position rather than at its own value, so an annotation cannot be reliably anchored to the value you clicked.
 
-If your visualization is not one of the supported types, the *Annotate* button in the Visualization Editor is disabled.
+If your visualization is not one of the supported types, the *Annotate* button is hidden in the Visualization Editor - it does not appear in the toolbar or in the overflow menu.
 
 ## Adding an Annotation
 
@@ -101,9 +101,9 @@ Editing and deleting are available only while **Annotate** mode is on. With the 
 
 ## Choosing an Annotation Color
 
-The annotation dialog offers a row of color swatches drawn from your dashboard's current theme. The color you pick becomes the annotation's **background**, filling its label and card - it is not a separate marker at the anchor point.
+The annotation dialog offers a row of color swatches drawn from your dashboard's current theme. The row starts with a *no color* swatch - the default - and ends with a **+** swatch that opens the full color picker, so you are not limited to the theme's colors. The color you pick becomes the annotation's **background**, filling its label and card - it is not a separate marker at the anchor point.
 
-Picking a color is optional. Without one, an annotation is transparent when collapsed and falls back to the theme background when hovered or expanded. Choose a color when you want it to stand out at a glance.
+Picking a color is optional. With the *no color* swatch selected, an annotation is transparent when collapsed and falls back to the theme background when hovered or expanded. Choose a color when you want it to stand out at a glance.
 
 Your color survives a theme change. Everything else - text color, borders, spacing - is derived from the active theme, so annotations follow along when you restyle the dashboard.
 
