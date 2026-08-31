@@ -28,7 +28,7 @@ const asString = revealView.dashboard.toJsonString();
 
 - The SQLite and DuckDB connectors now support parameterized custom queries.
 - The PostgreSQL connector now supports stored procedures.
-- Snowflake now supports `applyTimeZone`.
+- Snowflake now supports `applyTimeZone` function.
 - MongoDB connector: fields missed by schema inference can now be used explicitly.
 - MongoDB query performance and join handling have been improved.
 - Tables, views, and stored procedures are now sorted alphabetically for SQL data sources.
