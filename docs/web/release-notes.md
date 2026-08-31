@@ -3,6 +3,71 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 2.2.0 (September 15th, 2026)
+
+### Breaking Changes
+
+- The MariaDB package no longer depends on the MySQL connector. Projects that relied on this transitive dependency must reference the MySQL connector explicitly.
+- The bundled SQLite native library has been updated to `SQLitePCLRaw.bundle_e_sqlite3` 2.1.12.
+- The `newTooltip` beta feature flag has been removed. Hover tooltips are now the default, so any call that enables the flag can be deleted.
+
+### New Features
+
+- New connector: Reddit Ads, with ad account metadata, campaign, ad group and ad definitions, and performance metrics.
+- New connector: Microsoft Ads.
+- Charts now support user-authored [annotations](https://help.revealbi.io/user/chart-annotations/), with a dedicated editor and styling options. Point, slice, and strip annotation types are available on the category chart family, and annotations are saved with the dashboard so every viewer sees the same note in the same place.
+- The Grid, Pivot, Sparkline, and new DataGrid visualizations now support [hyperlink columns](https://help.revealbi.io/web/hyperlink-columns/), with URL and dashboard linking and field-token substitution. Cell and row context is passed to the dashboard-linking callback.
+- Visualization column hyperlinks and row-level actions now support relative URLs, which are normalized automatically when the URL field loses focus.
+- The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) now supports interactive filtering through a "Filter By" action on eligible cells.
+- `RVDashboard` now exposes methods for loading a dashboard from JSON and serializing it back:
+
+```typescript
+const dashboard = RVDashboard.loadFromJson(json);
+revealView.dashboard = dashboard;
+
+const asObject = revealView.dashboard.toJson();
+const asString = revealView.dashboard.toJsonString();
+```
+
+- The SQLite and DuckDB connectors now support parameterized custom queries.
+- The PostgreSQL connector now supports stored procedures.
+- Snowflake now supports `applyTimeZone`.
+- MongoDB connector: fields missed by schema inference can now be used explicitly.
+- MongoDB query performance and join handling have been improved.
+- Tables, views, and stored procedures are now sorted alphabetically for SQL data sources.
+- The redesigned [tooltip](https://help.revealbi.io/web/tooltips/) is no longer in beta and is now the default. Tooltips appear on hover for every visualization type that supports them, and tooltip actions such as drill down and filtering are available directly from the tooltip. Use `RevealView.showTooltips` to turn them on or off.
+- Error messages for invalid data source URLs are now clearer.
+- Google Ads manager-account metric rejections are now logged as warnings rather than errors.
+- Japanese resource strings have been reviewed and corrected for consistency.
+
+### Bugs
+
+#### All Platforms
+- Fixed a crash when sorting an XMLA data source by caption.
+- Fixed stale data in paged Grid Excel and CSV exports.
+- Fixed a crash when repeatedly closing the data filter dialog.
+- The LinkedIn Organic connector now reports a specific error when the account has no associated company.
+- Fixed `SortInterval` in the SQLite connector to match the engine implementation.
+- Fixed MSSQL pagination failing when the query has no `ORDER BY` clause.
+- Fixed Excel data labels for calculated fields using default formatting.
+- Fixed several issues in SSRS.
+- Fixed dashboard filters in SEO Insights.
+- Tooltips now follow the field's thousands-separator setting.
+- Fixed a TypeScript cast that could break `infragistics.rvcore.js`.
+- Fixed handling of subqueries without join nodes.
+- Refreshing a data filter's value list now re-fetches the values.
+- Fixed section fields when data blending is used.
+- Fixed a blank radial chart.
+- Fixed incorrect results returned by the `Find` function.
+- Fixed an issue in the KPI visualization.
+- Fixed an OData data source crash and validation recursion.
+- Fixed the ClickHouse connector logging at an incorrect level.
+- Fixed grid paging in WPF.
+- Removed a spurious "Do not create many of these" message.
+
+#### ASP.NET
+- Fixed an `Unexpected UserContext instance type` error when auto-loading date filter parameters.
+
 ## 2.1.0 (July 7th, 2026)
 
 ### Breaking Changes
