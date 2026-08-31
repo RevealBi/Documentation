@@ -34,7 +34,6 @@ const asString = revealView.dashboard.toJsonString();
 - Tables, views, and stored procedures are now sorted alphabetically for SQL data sources.
 - The redesigned [tooltip](https://help.revealbi.io/web/tooltips/) is no longer in beta and is now the default. Tooltips appear on hover for every visualization type that supports them, and tooltip actions such as drill down and filtering are available directly from the tooltip. Use `RevealView.showTooltips` to turn them on or off.
 - Error messages for invalid data source URLs are now clearer.
-- Google Ads manager-account metric rejections are now logged as warnings rather than errors.
 - Japanese resource strings have been reviewed and corrected for consistency.
 
 ### Bugs
