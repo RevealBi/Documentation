@@ -9,6 +9,7 @@ import TabItem from '@theme/TabItem';
 
 - The MariaDB package no longer depends on the MySQL connector. Projects that relied on this transitive dependency must reference the MySQL connector explicitly.
 - The `newTooltip` beta feature flag has been removed. Hover tooltips are now the default, so any call that enables the flag can be deleted.
+- The new DataGrid is now the default grid visualization for the Reveal SDK. Existing Grid visualizations render with the DataGrid without any dashboard change. To keep using the original grid, disable the `newDataGrid` beta feature.
 
 ### New Features
 
@@ -16,7 +17,7 @@ import TabItem from '@theme/TabItem';
 - The Grid, Pivot, Sparkline, and new DataGrid visualizations now support [hyperlink columns](https://help.revealbi.io/web/hyperlink-columns/), with URL and dashboard linking and field-token substitution. Cell and row context is passed to the dashboard-linking callback.
 - The redesigned [tooltip](https://help.revealbi.io/web/tooltips/) is no longer in beta and is now the default. Tooltips appear on hover for every visualization type that supports them, and tooltip actions such as drill down and filtering are available directly from the tooltip. Use `RevealView.showTooltips` to turn them on or off.
 - Visualization column hyperlinks and row-level actions now support relative URLs, which are normalized automatically when the URL field loses focus.
-- The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) now supports interactive filtering through a "Filter By" action on eligible cells.
+- The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) is now the default grid for the Reveal SDK, and it also supports interactive filtering through a "Filter By" action on eligible cells.
 - `RVDashboard` now exposes methods for loading a dashboard from JSON and serializing it back:
 
 ```typescript
@@ -54,6 +55,9 @@ const asString = revealView.dashboard.toJsonString();
 - Fixed incorrect results returned by the `Find` function.
 - Fixed an issue in the KPI visualization.
 - Fixed a bug in grid paging.
+- Fixed bold conditional formatting in the DataGrid, which previously applied only italic styling.
+- Fixed DataGrid date and time cells falling back to an unformatted value when the column had no explicit date format.
+- Column summaries that are configured but hidden are no longer displayed in the DataGrid.
 
 #### ASP.NET
 - Fixed an `Unexpected UserContext instance type` error when auto-loading date filter parameters.
