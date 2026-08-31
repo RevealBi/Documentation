@@ -54,7 +54,6 @@ const asString = revealView.dashboard.toJsonString();
 - Fixed a blank radial chart.
 - Fixed incorrect results returned by the `Find` function.
 - Fixed an issue in the KPI visualization.
-- Fixed the ClickHouse connector logging at an incorrect level.
 - Fixed grid paging in WPF.
 - Removed a spurious "Do not create many of these" message.
 
