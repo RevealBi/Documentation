@@ -48,7 +48,6 @@ const asString = revealView.dashboard.toJsonString();
 - Fixed several issues in SSRS.
 - Fixed dashboard filters in SEO Insights.
 - Tooltips now follow the field's thousands-separator setting.
-- Fixed a TypeScript cast that could break `infragistics.rvcore.js`.
 - Fixed handling of subqueries without join nodes.
 - Refreshing a data filter's value list now re-fetches the values.
 - Fixed section fields when data blending is used.
