@@ -14,6 +14,7 @@ import TabItem from '@theme/TabItem';
 
 - Charts now support user-authored [annotations](https://help.revealbi.io/user/chart-annotations/), with a dedicated editor and styling options. Point, slice, and strip annotation types are available on the category chart family, and annotations are saved with the dashboard so every viewer sees the same note in the same place.
 - The Grid, Pivot, Sparkline, and new DataGrid visualizations now support [hyperlink columns](https://help.revealbi.io/web/hyperlink-columns/), with URL and dashboard linking and field-token substitution. Cell and row context is passed to the dashboard-linking callback.
+- The redesigned [tooltip](https://help.revealbi.io/web/tooltips/) is no longer in beta and is now the default. Tooltips appear on hover for every visualization type that supports them, and tooltip actions such as drill down and filtering are available directly from the tooltip. Use `RevealView.showTooltips` to turn them on or off.
 - Visualization column hyperlinks and row-level actions now support relative URLs, which are normalized automatically when the URL field loses focus.
 - The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) now supports interactive filtering through a "Filter By" action on eligible cells.
 - `RVDashboard` now exposes methods for loading a dashboard from JSON and serializing it back:
@@ -32,9 +33,8 @@ const asString = revealView.dashboard.toJsonString();
 - MongoDB connector: fields missed by schema inference can now be used explicitly.
 - MongoDB query performance and join handling have been improved.
 - Tables, views, and stored procedures are now sorted alphabetically for SQL data sources.
-- The redesigned [tooltip](https://help.revealbi.io/web/tooltips/) is no longer in beta and is now the default. Tooltips appear on hover for every visualization type that supports them, and tooltip actions such as drill down and filtering are available directly from the tooltip. Use `RevealView.showTooltips` to turn them on or off.
 - Error messages for invalid data source URLs are now clearer.
-- Japanese resource strings have been reviewed and corrected for consistency.
+- General Japanese resource strings have been reviewed and corrected for consistency.
 
 ### Bugs
 
@@ -46,7 +46,6 @@ const asString = revealView.dashboard.toJsonString();
 - Fixed MSSQL pagination failing when the query has no `ORDER BY` clause.
 - Fixed Excel data labels for calculated fields using default formatting.
 - Fixed several issues in SSRS.
-- Fixed dashboard filters in SEO Insights.
 - Tooltips now follow the field's thousands-separator setting.
 - Fixed handling of subqueries without join nodes.
 - Refreshing a data filter's value list now re-fetches the values.
