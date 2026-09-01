@@ -45,7 +45,7 @@ The AI Client SDK is written in TypeScript and includes complete type definition
 
 ## Framework-Specific Setup
 
-For `RevealSdkClient.initialize()` configuration options, including dynamic bearer-token authentication and custom request headers, see [Using the SDK](./sdk-overview.md#initialization).
+For `RevealSdkClient.initialize()` authentication and request header options, see [Request Configuration](/ai/sdk-request-configuration).
 
 ### Vanilla JavaScript
 
