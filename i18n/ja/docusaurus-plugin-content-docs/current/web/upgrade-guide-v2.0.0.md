@@ -73,6 +73,10 @@ import { RevealSdkSettings, RevealView } from "reveal-sdk";
   </TabItem>
 </Tabs>
 
+:::caution Create React App 5 アプリケーション
+アプリケーションで Create React App 5 と `react-scripts@5.0.1` を使用している場合は、Reveal クライアントを npm に切り替える前に、[Create React App 5 の本番ビルド](known-issues.md#create-react-app-5-production-builds) で本番ビルドに関するガイダンスを参照してください。
+:::
+
 :::tip スクリプトタグが必要ですか?
 バンドラーを使用しない環境向けに SDK 配布 zip は引き続き利用可能ですが、jQuery と Day.js は不要になりました:
 
