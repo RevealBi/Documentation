@@ -31,6 +31,62 @@
    Windows 環境を維持する必要がある場合は、アプリケーションを **Windows コンテナー**内でホストします。
    これにより、コンテナー イメージ内で Playwright をインストールおよび構成でき、Windows App Service の制限を回避できます。
 
+## Create React App 5 の本番ビルド {#create-react-app-5-production-builds}
+
+### 問題
+
+`react-scripts@5.0.1` を使用している既存の Create React App 5 アプリケーションでは、Reveal SDK を npm から使用する際に、本番ビルドに非常に長い時間がかかる、またはビルドが停止したように見える場合があります。
+
+### 原因と背景
+
+これは、Create React App/Webpack の本番ビルド パイプラインが Reveal の ESM バンドルを処理する際に発生します。Create React App は React チームによって非推奨とされています。新しいアプリケーションの場合、または移行が現実的な場合は、メンテナンスされている React フレームワークや、Vite などの最新のビルド ツールを使用してください。
+
+### 回避策
+
+まだ移行できない既存の Create React App アプリケーションでは、実行時に `reveal-sdk` がブラウザー (IIFE) バンドルに解決されるように Webpack を構成します。**Webpack の external と IIFE バンドルの両方が必要です**。external のみの場合、実行時にインポートの実装が存在しません。また、IIFE のみの場合、ESM パッケージが Webpack の本番パイプラインに残ります。
+
+Create React App は Webpack 構成を公開していないため、オーバーライド ツールが必要です。以下の手順では [react-app-rewired](https://github.com/timarney/react-app-rewired) を使用します。アプリケーションですでに [CRACO](https://craco.js.org/) を使用している場合は、同じ `externals` の変更を `craco.config.js` に適用してください。
+
+1. `react-app-rewired` をインストールし、アプリケーションのビルドに使用します。
+
+   ```bash npm2yarn
+   npm install react-app-rewired --save-dev
+   ```
+
+   ```json title="package.json"
+   "scripts": {
+       "start": "react-app-rewired start",
+       "build": "react-app-rewired build"
+   }
+   ```
+
+2. プロジェクトのルートに `config-overrides.js` を作成し、Webpack の external を構成します。
+
+   ```js title="config-overrides.js"
+   module.exports = function override(config) {
+       config.externals = {
+           ...(config.externals || {}),
+           "reveal-sdk": "Reveal",
+       };
+
+       return config;
+   };
+   ```
+
+3. `node_modules/reveal-sdk/dist/reveal-sdk.js` と `node_modules/reveal-sdk/dist/locales/` を、公開されているレイアウトを維持したまま `public/reveal/` にコピーします。SDK はロケール ファイルを `reveal-sdk.js` からの相対パスで解決するため、追加のロケール構成は必要ありません。
+
+4. IIFE バンドルを `public/index.html` に追加します。
+
+   ```html
+   <script src="%PUBLIC_URL%/reveal/reveal-sdk.js"></script>
+   ```
+
+5. アプリケーションでは、引き続き npm から Reveal をインポートします。
+
+   ```ts
+   import * as Reveal from "reveal-sdk";
+   ```
+
 ## エクスポート時にカスタム表示形式がサポートされない
 
 ### 問題

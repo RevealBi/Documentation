@@ -28,6 +28,10 @@ npm install
 
 既存の React アプリケーションに Reveal SDK を追加する場合は、この手順をスキップできます。
 
+:::caution 既存の Create React App アプリケーション
+`react-scripts@5.0.1` を使用している既存の Create React App 5 アプリケーションでは、本番ビルドに問題が発生する場合があります。Create React App は React チームによって非推奨とされています。新しいアプリケーション、および移行が現実的な場合は、このガイドで示すように Vite を推奨します。ガイダンスについては、[Create React App 5 の本番ビルド](known-issues.md#create-react-app-5-production-builds) を参照してください。
+:::
+
 ## 手順 2 - Reveal SDK クライアントをインストールする
 
 `reveal-sdk` パッケージをインストールします。
