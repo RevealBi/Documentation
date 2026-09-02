@@ -45,6 +45,8 @@ The AI Client SDK is written in TypeScript and includes complete type definition
 
 ## Framework-Specific Setup
 
+For `RevealSdkClient.initialize()` authentication and request header options, see [Request Configuration](/ai/sdk-request-configuration).
+
 ### Vanilla JavaScript
 
 #### Using ES Modules
