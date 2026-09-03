@@ -6,12 +6,12 @@ import replace from './plugins/remark/replace-variables';
 import apiDocs from './plugins/remark/api-docs';
 
 // SDK version: exact build referenced by CodePreview's CDN URL — must match a real release.
-const sdkVersion = "2.1.0";
+const sdkVersion = "2.2.0";
 const sdkVersion_v1 = "1.8.4";
 
 // Docs version: human-readable label shown in the page version badge ("Version: X").
 // Bump this as the 2.x docs evolve — no need to archive the version.
-const docsVersion = "2.1";
+const docsVersion = "2.2";
 const docsVersion_v1 = "1.8.4";
 
 // The AI search plugin lives in a private @igniteui GitHub Packages feed, so most
