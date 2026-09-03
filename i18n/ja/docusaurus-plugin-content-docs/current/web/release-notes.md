@@ -18,7 +18,6 @@ import TabItem from '@theme/TabItem';
 - 表示形式の列ハイパーリンクおよび行レベルのアクションで相対 URL がサポートされるようになりました。URL フィールドがフォーカスを外れると自動的に正規化されます。
 - [新しい DataGrid 表示形式](https://help.revealbi.io/web/beta-features/#newdatagrid)が Reveal SDK のデフォルトのグリッドになりました。また、対象となるセルの「フィルター条件」アクションによるインタラクティブ フィルタリングもサポートされます。
 - `RVDashboard` に、JSON からダッシュボードを読み込み、JSON にシリアル化するメソッドが追加されました:
-- SQL ベースのデータ ソースを選択すると、メタデータ画面にデータベース名ではなくデータ ソースのタイトルが表示されるようになりました。
 ```typescript
 const dashboard = RVDashboard.loadFromJson(json);
 revealView.dashboard = dashboard;
@@ -26,7 +25,7 @@ revealView.dashboard = dashboard;
 const asObject = revealView.dashboard.toJson();
 const asString = revealView.dashboard.toJsonString();
 ```
-
+- SQL ベースのデータ ソースを選択すると、メタデータ画面にデータベース名ではなくデータ ソースのタイトルが表示されるようになりました。
 - SQLite および DuckDB コネクタで、パラメーター化されたカスタム クエリがサポートされるようになりました。
 - PostgreSQL コネクタでストアド プロシージャがサポートされるようになりました。
 - Snowflake で `applyTimeZone` 関数がサポートされるようになりました。
