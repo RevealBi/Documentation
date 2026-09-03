@@ -3,11 +3,10 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
-## 2.2.0 (September 2nd, 2026)
+## 2.2.0 (September 3rd, 2026)
 
 ### Breaking Changes
 
-- The MariaDB package no longer depends on the MySQL connector. Projects that relied on this transitive dependency must reference the MySQL connector explicitly.
 - The `newTooltip` beta feature flag has been removed. Hover tooltips are now the default, so any call that enables the flag can be deleted.
 - The new DataGrid is now the default grid visualization for the Reveal SDK. Existing Grid visualizations render with the new DataGrid without any dashboard changes. To continue using the legacy Grid, disable the `newDataGrid` feature flag. When conditional-formatting rules overlap on the same cell, the new DataGrid applies all matching rules in list order, with later rules taking precedence for overlapping formatting properties. This behavior differs from the legacy Grid and may affect dashboards that rely on overlapping rules after upgrading.
 
