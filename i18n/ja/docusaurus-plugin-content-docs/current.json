@@ -95,10 +95,6 @@
     "message": "接続データの難読化",
     "description": "The label for the doc item 'Obfuscate Connection Data' in sidebar 'webSidebar', linking to the doc web/obfuscate-connection-data"
   },
-  "sidebar.webSidebar.doc.Hyperlink Columns": {
-    "message": "グリッド ハイパーリンク列",
-    "description": "The label for the doc item 'Grid Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
-  },
   "sidebar.webSidebar.doc.Grid Hyperlink Columns": {
     "message": "グリッド ハイパーリンク列",
     "description": "The label for the doc item 'Grid Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
