@@ -1,6 +1,6 @@
-# Hyperlink Columns
+# Grid Hyperlink Columns
 
-Hyperlink columns turn the values of a Grid, Pivot, Sparkline, or Data Grid column into clickable links. Because both the destination and the displayed text can include field tokens, every row gets its own destination built from that row's data — for example, an **Order Id** column where each cell opens the detail page for that specific order.
+Grid hyperlink columns turn the values of a Grid, Pivot, Sparkline, or Data Grid column into clickable links. Because both the destination and the displayed text can include field tokens, every row gets its own destination built from that row's data — for example, an **Order Id** column where each cell opens the detail page for that specific order.
 
 ## Configuring a Hyperlink Column
 

@@ -18,7 +18,6 @@ import TabItem from '@theme/TabItem';
 - Visualization column hyperlinks and row-level actions now support relative URLs, which are normalized automatically when the URL field loses focus.
 - The [new DataGrid visualization](https://help.revealbi.io/web/beta-features/#newdatagrid) is now the default grid for the Reveal SDK, and it also supports interactive filtering through a "Filter By" action on eligible cells.
 - `RVDashboard` now exposes methods for loading a dashboard from JSON and serializing it back:
-- When selecting a SQL-based data source, the metadata screen now displays the data source title instead of the database name.
 ```typescript
 const dashboard = RVDashboard.loadFromJson(json);
 revealView.dashboard = dashboard;
@@ -26,7 +25,7 @@ revealView.dashboard = dashboard;
 const asObject = revealView.dashboard.toJson();
 const asString = revealView.dashboard.toJsonString();
 ```
-
+- When selecting a SQL-based data source, the metadata screen now displays the data source title instead of the database name.
 - The SQLite and DuckDB connectors now support parameterized custom queries.
 - The PostgreSQL connector now supports stored procedures.
 - Snowflake now supports `applyTimeZone` function.

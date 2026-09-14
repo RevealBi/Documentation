@@ -99,9 +99,9 @@
     "message": "データ グリッド",
     "description": "The label for the doc item 'Data Grid' in sidebar 'webSidebar', linking to the doc web/data-grid"
   },
-  "sidebar.webSidebar.doc.Hyperlink Columns": {
-    "message": "ハイパーリンク列",
-    "description": "The label for the doc item 'Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
+  "sidebar.webSidebar.doc.Grid Hyperlink Columns": {
+    "message": "グリッド ハイパーリンク列",
+    "description": "The label for the doc item 'Grid Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
   },
   "sidebar.webSidebar.doc.Maximizing Visualizations": {
     "message": "表示形式の最大化",
