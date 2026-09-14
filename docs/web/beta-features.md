@@ -53,6 +53,8 @@ This feature introduces a significant upgrade to the grid visualization, providi
 
 > ✅ **Recommended** for testing improved grid performance and new grid capabilities in your dashboards.
 
+See [Data Grid](data-grid.md) for a full walkthrough of the column options menu, filtering, summaries, theming and the current limitations.
+
 ### `newTooltip`
 
 **Released.** Hover tooltips are now the default tooltip experience in the Reveal SDK and this beta flag has been removed. Enabling it no longer has any effect and the call can be deleted.
