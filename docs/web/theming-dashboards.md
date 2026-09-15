@@ -63,10 +63,18 @@ The `RevealTheme` has the following properties:
 | **regularFont**                                   | Sets the regular font style.                                                                                   |
 | **boldFont**                                      | Sets the bold font style.                                                                                      |
 | **mediumFont**                                    | Sets the medium font style.                                                                                    |
+| **italicFont**                                    | Sets the italic font style.                                                                                    |
+| **boldItalicFont**                                | Sets the bold italic font style.                                                                               |
 | **fontColor**                                     | Sets the color of the font.                                                                                    |
 | **highlightColor**                                | Sets the highlighting color in specific dashboard scenarios (forecast and outliers statistical functions).     |
 | **visualizationMargin**                                | Sets the margin size in pixels between visualizations.     |
 | **useRoundedCorners**                             | Rounded corners in buttons, tooltips, containers, visualizations, etc. If set to false, squared corners will be shown.                                                                                                                                                                        |
+
+:::info
+
+Each font property takes the name of a font family, and Reveal renders it at normal weight and style. See [Theme Fonts](theming-fonts.md) to learn how the font properties are resolved and how to use a single font family for every style.
+
+:::
 
 :::info
 
