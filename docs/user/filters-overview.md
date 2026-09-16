@@ -27,6 +27,8 @@ The following sections will cover:
   - [Dashboard Filters](filters-dashboard.md) in both the *Dashboard* and
     the *Visualization editor*
 
+  - [Cascading Filters](filters-dashboard.md#cascading-filters)
+
   - [Dashboard Filter configurable properties](filters-dashboard-properties.md), including:
 
       - [Displayed Field](filters-dashboard-properties.md#displayed-field)
@@ -36,6 +38,8 @@ The following sections will cover:
       - [Required Selection](filters-dashboard-properties.md#required-selection)
 
       - [Data Filters](filters-dashboard-properties.md#data-filters)
+
+      - [Hierarchy](filters-dashboard-properties.md#hierarchy)
 
   - [Dashboard Filters and their connections to visualizations](filters-connecting.md), also
     referred to as visualization binding

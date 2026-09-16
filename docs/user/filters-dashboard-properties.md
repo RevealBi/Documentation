@@ -36,6 +36,8 @@ You will be able to change the following settings for the filter:
 
 - [**Data Filters:**](#data-filters) This setting allows you to apply any field filters and rules to the data source used for the dashboard filter.
 
+- [**Hierarchy:**](#hierarchy) This setting lets you turn the filter into an expandable, drill-down tree, when the underlying data source supports it.
+
 - [**Connected Visualizations:**](filters-connecting.md) Whether your dashboard will be connected to any visualization or not.
 
 ## Displayed Field
@@ -120,6 +122,33 @@ filter and have the dashboard filter show only the employees in the
 
 5.  Choose *London, UK* from the list and click/tap on the *Create Filter*
     button.
+
+## Hierarchy
+
+Some dashboard filters can be turned into hierarchical filters, which display their values as an expandable tree instead of a flat list, letting you drill down level by level (for example *Category* ⇒ *Subcategory* ⇒ *Product*) instead of picking from one long list.
+
+There are two ways a dashboard filter can become hierarchical, depending on its data source:
+
+  - **OLAP data sources** (such as Microsoft Analysis Services): this happens automatically. When you select the field for the filter, choosing a whole dimension in the schema browser instead of one specific level makes Reveal build the filter as a hierarchy, using that dimension's own levels. There is no separate setting to turn on.
+
+  - **Data sources with parameters** (stored procedures in SQL-based connectors, REST services, and OData functions or actions): when your dashboard filter is built from one of these, its settings panel will show a *Hierarchy* section. Turn on the **Enable Hierarchy** toggle, then map one of the data source's parameters to a field in your dataset. This tells Reveal which field's value to send to the data source whenever you expand a node, so it can fetch that node's children.
+
+Only a data source that itself takes input parameters can offer the *Hierarchy* option. In practice, this means:
+
+  - On SQL-based connectors (such as MS SQL Server, PostgreSQL, MySQL, Oracle, and others), only a stored procedure that takes input parameters qualifies. Regular tables or views will never show the *Hierarchy* option, even from the same connection.
+
+  - For a REST service, it depends on whether the endpoint's URL contains placeholder segments, such as `.../orders/{customerId}`. A URL without placeholders has nothing to map.
+
+  - For OData, only a function or action that declares parameters qualifies, not a plain entity set.
+
+:::note
+- Not every parameter needs to be mapped to a field. A parameter can also be given a fixed value instead. You only need to map the parameter(s) needed to identify the node whose children you want to fetch.
+
+- Hierarchical filters can cascade with other filters using the same rule as regular dashboard filters (see [Cascading Filters](filters-dashboard.md#cascading-filters)), meaning they need to point to the same underlying data item. Because levels load on demand though, a cascading update can only affect the levels that are already expanded. Collapsed branches pick up the change the next time they are expanded.
+
+- Searching in a hierarchical filter only looks within the level that is currently visible, not the whole hierarchy, since deeper levels may not be loaded yet.
+:::
+
 ## Next Steps 
 
 Now that you have already created your dashboard filter, you will need
