@@ -129,12 +129,12 @@ Some dashboard filters can be turned into hierarchical filters, which display th
 
 There are two ways a dashboard filter can become hierarchical, depending on its data source:
 
-  - **OLAP data sources** (such as Microsoft Analysis Services): this happens automatically. When you select the field for the filter, choosing a whole dimension in the schema browser instead of one specific level makes Reveal build the filter as a hierarchy, using that dimension's own levels. There is no separate setting to turn on.
+  - **Multidimensional data sources** (such as Microsoft Analysis Services): this happens automatically. Hierarchies for these data sources are already defined on the server side, so when you select the field for the filter, Reveal picks up its hierarchy and lets you expand and drill through it, the same way it does for [Ad-Hoc Hierarchies](fields/adhoc-hierarchies.md). There is no separate setting to turn on.
 
   - **Data sources with parameters** (stored procedures in SQL-based connectors, REST services, and OData functions or actions): when your dashboard filter is built from one of these, its settings panel will show a *Hierarchy* section. Turn on the **Enable Hierarchy** toggle, then map one of the data source's parameters to a field in your dataset. This tells Reveal which field's value to send to the data source whenever you expand a node, so it can fetch that node's children.
 
 :::note
-The OLAP path is also available for *Visualization Quick Filters*, using the same automatic behavior. The parameter-based path is not, it is only available for Dashboard Filters. See [Hierarchical Filters](filters-visualization.md#hierarchical-filters) in Visualization Quick Filters.
+The multidimensional path is also available for *Visualization Quick Filters*, using the same automatic behavior. The parameter-based path is not, it is only available for Dashboard Filters. See [Hierarchical Filters](filters-visualization.md#hierarchical-filters) in Visualization Quick Filters.
 :::
 
 Only a data source that itself takes input parameters can offer the *Hierarchy* option. In practice, this means:
