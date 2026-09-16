@@ -140,3 +140,7 @@ RevealSdkSettings.theme = this.createCustomTheme();
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/ThemingDashboards) にあります。
 
 :::
+
+:::note
+テーマは、グリッド表示形式のすべての要素にも適用されます。ヘッダーとセルの背景、区切り線、スクロールバー、選択セルの強調表示、集計行、列オプション メニューが対象です。[グリッド チャート](../user/chart-types/grid-chart.md) を参照してください。
+:::
