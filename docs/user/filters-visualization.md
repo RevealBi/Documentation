@@ -54,3 +54,11 @@ However, if you select Office at **Cranbury, New Jersey, USA** and **Montevideo,
 This is a different feature from cascading between *Dashboard Filters*, which additionally requires both filters to be built from the same underlying data item. See [Cascading Filters](filters-dashboard.md#cascading-filters) in Dashboard Filters.
 :::
 
+## Hierarchical Filters
+
+If the field you pick for a Quick Filter comes from an OLAP data source (such as Microsoft Analysis Services) and represents a whole dimension rather than one specific level, Reveal automatically turns the filter into an expandable, drill-down tree instead of a flat list. There is no separate setting to turn this on.
+
+:::note
+This automatic behavior is shared with Dashboard Filters. Quick Filters do not, however, support the parameter-based hierarchies available for Dashboard Filters, where a stored procedure, REST, or OData parameter is mapped to a field. See [Hierarchy](filters-dashboard-properties.md#hierarchy) in Dashboard Filters and Their Properties.
+:::
+

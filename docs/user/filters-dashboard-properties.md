@@ -133,6 +133,10 @@ There are two ways a dashboard filter can become hierarchical, depending on its 
 
   - **Data sources with parameters** (stored procedures in SQL-based connectors, REST services, and OData functions or actions): when your dashboard filter is built from one of these, its settings panel will show a *Hierarchy* section. Turn on the **Enable Hierarchy** toggle, then map one of the data source's parameters to a field in your dataset. This tells Reveal which field's value to send to the data source whenever you expand a node, so it can fetch that node's children.
 
+:::note
+The OLAP path is also available for *Visualization Quick Filters*, using the same automatic behavior. The parameter-based path is not, it is only available for Dashboard Filters. See [Hierarchical Filters](filters-visualization.md#hierarchical-filters) in Visualization Quick Filters.
+:::
+
 Only a data source that itself takes input parameters can offer the *Hierarchy* option. In practice, this means:
 
   - On SQL-based connectors (such as MS SQL Server, PostgreSQL, MySQL, Oracle, and others), only a stored procedure that takes input parameters qualifies. Regular tables or views will never show the *Hierarchy* option, even from the same connection.
