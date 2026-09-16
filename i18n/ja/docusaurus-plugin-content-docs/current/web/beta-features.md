@@ -41,7 +41,7 @@ const betafeatures = RevealSdkSettings.betaFeatures.getEnabledFeatures();
 
 列オプション メニュー、フィルタリング、集計、グループ化、ページングの詳細な解説に加えて、コードから構成できる項目と現在の制限事項については、[グリッド チャート](../user/chart-types/grid-chart.md) を参照してください。
 
-#### 従来のグリッドに戻す
+#### 従来のグリッドを使用する
 
 このフラグは引き続き有効なため、`RevealView` を作成する前にフラグを**無効化**することで従来のグリッドに戻すことができます。
 

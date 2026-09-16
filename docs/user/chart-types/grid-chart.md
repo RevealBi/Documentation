@@ -9,10 +9,6 @@ The grid chart displays your data in a matrix of rows and columns. Beyond simply
 
 This topic covers what you can do with a grid in *Dashboard View mode* first, then the settings available when authoring one in the **Visualization Editor**.
 
-:::note
-There is no practical limit on how many rows and columns work well. Columns are fitted to the available width, and because you can filter, group and summarize the data directly from the grid, larger result sets remain readable.
-:::
-
 ## The Column Options Menu
 
 Every column header carries a **⋮** button. It opens the column options menu, which gathers everything you can do to that column in one place.
@@ -89,6 +85,10 @@ Groups render collapsed by default, so you can see the full set of values before
 :::
 
 ## Paging
+
+:::note
+There is no practical limit on how many rows and columns work well, with or without paging. Because you can filter, group and summarize the data directly from the grid, larger result sets remain readable.
+:::
 
 When paging is enabled on a grid, the rows are split across pages and a pager appears along the bottom of the visualization. Use **Items per Page** to choose how many rows each page holds, and the arrows to move between pages — the innermost arrows step one page at a time, the outermost jump to the first or last page.
 
@@ -197,7 +197,7 @@ This section is for developers embedding the Reveal SDK. If you are working with
 That means there is currently **no supported way to turn an individual feature off** — you cannot, for example, keep the column options menu but remove the filter section, or disable copying.
 
 :::info
-**Client-side only.** This grid is the default and needs nothing enabled. Which grid renders is decided in the browser while the visualization is built, so the server SDK plays no part in it and needs no configuration. A single server can back applications using either grid. If you need the legacy grid while migrating, see [Reverting to the Legacy Grid](../../web/beta-features.md#reverting-to-the-legacy-grid).
+**Client-side only.** This grid is the default and needs nothing enabled. Which grid renders is decided in the browser while the visualization is built, so the server SDK plays no part in it and needs no configuration. A single server can back applications using either grid. If you need the legacy grid while migrating, see [Using the Legacy Grid](../../web/beta-features.md#using-the-legacy-grid).
 :::
 
 ### What You Can Customize
