@@ -40,7 +40,7 @@ You can apply more than one sorting criteria. Sorting a second column **adds** t
 
 Here `product` sorts first and `region` second. Sorting is case-insensitive, so `Alpha`, `alpha` and `ALPHA` are ordered together rather than being separated into upper- and lower-case blocks.
 
-To remove sorting from a column, open its **⋮** menu and clear the selected sort option.
+Clicking a header cycles through three states — ascending, then descending, then unsorted — so a third click removes the sort. You can also open the column's **⋮** menu and clear the selected sort option.
 
 ## Filtering a Column
 
@@ -106,7 +106,9 @@ Sorting, filtering and grouping are unaffected by paging.
 
 ## Resizing and Reordering Columns
 
-Columns are fitted to the available width, and both gestures live on the column header:
+By default, columns share the available width proportionally. Columns given an explicit width in the visualization editor keep that width instead, so a grid with authored widths does not stretch to fill the visualization and may scroll horizontally.
+
+Both gestures live on the column header:
 
 | Gesture | Result |
 |---|---|
@@ -143,7 +145,9 @@ ALPHA,South,"$57,919.01",-13.0%,2024-01-02
 Alpha,East,"$65,838.02",24.0%,2024-01-03
 ```
 
-Values are copied **formatted**, exactly as they appear on screen — a currency cell copies as `$50,000.00` rather than `50000`. Any value containing a comma is quoted, so the separator is never ambiguous.
+Values are copied **formatted**, exactly as they appear on screen — a currency cell copies as `$50,000.00` rather than `50000`.
+
+Values are quoted following the usual CSV convention, so the separator is never ambiguous. A value is wrapped in double quotes when it contains a comma, a double quote, or a line break, and any double quotes inside it are doubled — a cell reading `6" pipe` copies as `"6"" pipe"`.
 
 :::note
 Only one range can be selected at a time — selecting another replaces it.
