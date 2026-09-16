@@ -139,7 +139,7 @@ The multidimensional path is also available for *Visualization Quick Filters*, u
 
 Only a data source that itself takes input parameters can offer the *Hierarchy* option. In practice, this means:
 
-  - On SQL-based connectors (such as MS SQL Server, PostgreSQL, MySQL, Oracle, and others), hierarchical filters are only allowed on stored procedures that takes input parameters. Regular tables or views will never show the *Hierarchy* option, even from the same connection.
+  - On SQL-based connectors (such as MS SQL Server, PostgreSQL, MySQL, Oracle, and others), hierarchical filters are only allowed on stored procedures that take input parameters. Regular tables or views will never show the *Hierarchy* option, even from the same connection.
 
   - For a REST service, it depends on whether the endpoint's URL contains placeholder segments, such as `.../orders/{customerId}`. A URL without placeholders has nothing to map.
 
