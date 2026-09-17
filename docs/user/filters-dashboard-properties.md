@@ -120,23 +120,6 @@ filter and have the dashboard filter show only the employees in the
 
 5.  Choose *London, UK* from the list and click/tap on the *Create Filter*
     button.
-
-## Hierarchy
-
-Dashboard filters built from multidimensional data sources (such as Microsoft Analysis Services) are automatically displayed as hierarchical filters: their values appear as an expandable tree instead of a flat list, letting you drill down level by level (for example *Category* ⇒ *Subcategory* ⇒ *Product*) instead of picking from one long list.
-
-Hierarchies for these data sources are already defined on the server side, so when you select the element for the filter, Reveal picks up its hierarchy and lets you expand and drill through it, the same way it does for [Ad-Hoc Hierarchies](fields/adhoc-hierarchies.md). There is no separate setting to turn this on.
-
-:::note
-The same automatic behavior is available for *Visualization Quick Filters*. See [Hierarchical Filters](filters-visualization.md#hierarchical-filters) in Visualization Quick Filters.
-:::
-
-:::note
-- Hierarchical filters can cascade with other filters using the same rule as regular dashboard filters (see [Cascading Filters](filters-dashboard.md#cascading-filters)), meaning they need to point to the same underlying data item. Because levels load on demand though, a cascading update can only affect the levels that are already expanded. Collapsed branches pick up the change the next time they are expanded.
-
-- Searching in a hierarchical filter only looks within the level that is currently visible, not the whole hierarchy, since deeper levels may not be loaded yet.
-:::
-
 ## Next Steps 
 
 Now that you have already created your dashboard filter, you will need

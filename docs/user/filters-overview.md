@@ -39,8 +39,6 @@ The following sections will cover:
 
       - [Data Filters](filters-dashboard-properties.md#data-filters)
 
-      - [Hierarchy](filters-dashboard-properties.md#hierarchy)
-
   - [Dashboard Filters and their connections to visualizations](filters-connecting.md), also
     referred to as visualization binding
 
