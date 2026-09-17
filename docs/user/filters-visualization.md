@@ -59,6 +59,6 @@ This is a different feature from cascading between *Dashboard Filters*, which ad
 If the field you pick for a Quick Filter comes from a multidimensional data source (such as Microsoft Analysis Services), Reveal automatically turns the filter into an expandable, drill-down tree instead of a flat list, since hierarchies for these data sources are already defined on the server side. There is no separate setting to turn this on.
 
 :::note
-This automatic behavior is shared with Dashboard Filters. Quick Filters do not, however, support the parameter-based hierarchies available for Dashboard Filters, where a stored procedure, REST, or OData parameter is mapped to a field. See [Hierarchy](filters-dashboard-properties.md#hierarchy) in Dashboard Filters and Their Properties.
+This automatic behavior is shared with Dashboard Filters. See [Hierarchy](filters-dashboard-properties.md#hierarchy) in Dashboard Filters and Their Properties.
 :::
 

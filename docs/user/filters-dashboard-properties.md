@@ -36,8 +36,6 @@ You will be able to change the following settings for the filter:
 
 - [**Data Filters:**](#data-filters) This setting allows you to apply any field filters and rules to the data source used for the dashboard filter.
 
-- [**Hierarchy:**](#hierarchy) This setting lets you turn the filter into an expandable, drill-down tree, when the underlying data source supports it.
-
 - [**Connected Visualizations:**](filters-connecting.md) Whether your dashboard will be connected to any visualization or not.
 
 ## Displayed Field
@@ -125,29 +123,15 @@ filter and have the dashboard filter show only the employees in the
 
 ## Hierarchy
 
-Some dashboard filters can be turned into hierarchical filters, which display their values as an expandable tree instead of a flat list, letting you drill down level by level (for example *Category* ⇒ *Subcategory* ⇒ *Product*) instead of picking from one long list.
+Dashboard filters built from multidimensional data sources (such as Microsoft Analysis Services) are automatically displayed as hierarchical filters: their values appear as an expandable tree instead of a flat list, letting you drill down level by level (for example *Category* ⇒ *Subcategory* ⇒ *Product*) instead of picking from one long list.
 
-There are two ways a dashboard filter can become hierarchical, depending on its data source:
-
-  - **Multidimensional data sources** (such as Microsoft Analysis Services): this happens automatically. Hierarchies for these data sources are already defined on the server side, so when you select the field for the filter, Reveal picks up its hierarchy and lets you expand and drill through it, the same way it does for [Ad-Hoc Hierarchies](fields/adhoc-hierarchies.md). There is no separate setting to turn on.
-
-  - **Data sources with parameters** (stored procedures in SQL-based connectors, REST services, and OData functions or actions): when your dashboard filter is built from one of these, its settings panel will show a *Hierarchy* section. Turn on the **Enable Hierarchy** toggle, then map one of the data source's parameters to a field in your dataset. This tells Reveal which field's value to send to the data source whenever you expand a node, so it can fetch that node's children.
+Hierarchies for these data sources are already defined on the server side, so when you select the element for the filter, Reveal picks up its hierarchy and lets you expand and drill through it, the same way it does for [Ad-Hoc Hierarchies](fields/adhoc-hierarchies.md). There is no separate setting to turn this on.
 
 :::note
-The multidimensional path is also available for *Visualization Quick Filters*, using the same automatic behavior. The parameter-based path is not, it is only available for Dashboard Filters. See [Hierarchical Filters](filters-visualization.md#hierarchical-filters) in Visualization Quick Filters.
+The same automatic behavior is available for *Visualization Quick Filters*. See [Hierarchical Filters](filters-visualization.md#hierarchical-filters) in Visualization Quick Filters.
 :::
 
-Only a data source that itself takes input parameters can offer the *Hierarchy* option. In practice, this means:
-
-  - On SQL-based connectors (such as MS SQL Server, PostgreSQL, MySQL, Oracle, and others), hierarchical filters are only allowed on stored procedures that take input parameters. Regular tables or views will never show the *Hierarchy* option, even from the same connection.
-
-  - For a REST service, it depends on whether the endpoint's URL contains placeholder segments, such as `.../orders/{customerId}`. A URL without placeholders has nothing to map.
-
-  - For OData, only a function or action that declares parameters qualifies, not a plain entity set.
-
 :::note
-- Not every parameter needs to be mapped to a field. A parameter can also be given a fixed value instead. You only need to map the parameter(s) needed to identify the node whose children you want to fetch.
-
 - Hierarchical filters can cascade with other filters using the same rule as regular dashboard filters (see [Cascading Filters](filters-dashboard.md#cascading-filters)), meaning they need to point to the same underlying data item. Because levels load on demand though, a cascading update can only affect the levels that are already expanded. Collapsed branches pick up the change the next time they are expanded.
 
 - Searching in a hierarchical filter only looks within the level that is currently visible, not the whole hierarchy, since deeper levels may not be loaded yet.

@@ -78,5 +78,3 @@ parameters at the bottom of the *Vizualization*'s drop-down list in the
 :::note
 **Date Filters**: You can bind only dashboard filters to parameters. Date filter binding to parameters is not supported.
 :::
-
-As a special use case, parameter binding can be used to define hierarchical filters. For help on how to set that up, see [Hierarchy](filters-dashboard-properties.md#hierarchy).
