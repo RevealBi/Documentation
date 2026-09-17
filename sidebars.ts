@@ -299,6 +299,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Chat", id: "ai/sdk-chat" },
         { type: "doc", label: "Streaming Responses", id: "ai/sdk-streaming" },
         { type: "doc", label: "Error Handling", id: "ai/sdk-error-handling" },
+        { type: "doc", label: "Request Configuration", id: "ai/sdk-request-configuration" },
       ]
     },
 
