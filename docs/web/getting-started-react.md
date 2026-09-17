@@ -28,6 +28,10 @@ npm install
 
 If you are adding Reveal SDK to an existing React application, you can skip this step.
 
+:::caution Existing Create React App applications
+Existing Create React App 5 applications using `react-scripts@5.0.1` may experience production-build issues. Create React App has been deprecated by the React team; Vite, as shown in this guide, is recommended for new applications and migrations where practical. See [Create React App 5 Production Builds](known-issues.md#create-react-app-5-production-builds) for guidance.
+:::
+
 ## Step 2 - Install the Reveal SDK Client
 
 Install the `reveal-sdk` package.
