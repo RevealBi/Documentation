@@ -36,22 +36,24 @@ const betafeatures = RevealSdkSettings.betaFeatures.getEnabledFeatures();
 The following beta feature flags are available:
 
 ### `newDataGrid`
-Enables the new data grid visualization in the Reveal SDK.
 
-The new data grid offers:
-- Improved rendering performance
-- Enhanced sorting and filtering capabilities
-- Column summaries support
-- Column pinning functionality
-- Responsive layout for better mobile and tablet experiences
-- Sorting, grouping, and filtering when the grid is bound to a **paged** data source
-- And more improvements for a modern grid experience
+**Released.** The new data grid is now the default grid visualization in the Reveal SDK, so this flag no longer needs to be enabled. Existing Grid visualizations render with the new data grid without any dashboard changes.
 
-This feature introduces a significant upgrade to the grid visualization, providing users with a more powerful and flexible data grid component. It is ideal for users who need advanced grid functionality and better performance when working with tabular data.
+See [Grid Chart](../user/chart-types/grid-chart.md) for a full walkthrough of the column options menu, filtering, summaries, grouping and paging, along with what can be configured from code and the current limitations.
 
-> **Recent update:** Paged grids previously disabled grouping and filtering (and paged sorting was limited). Sorting, grouping, and filtering are now applied server-side and kept in sync with paging, so multi-column sort precedence, grouping, and column filters work the same way whether or not paging is enabled.
+#### Using the Legacy Grid
 
-> ✅ **Recommended** for testing improved grid performance and new grid capabilities in your dashboards.
+The flag is still honored, so you can go back to the legacy grid by **disabling** it before creating a `RevealView`:
+
+```javascript
+RevealSdkSettings.betaFeatures.disable("newDataGrid");
+```
+
+This is intended as a temporary escape hatch while you migrate; the legacy grid will be removed in a future release.
+
+:::caution
+Conditional formatting behaves differently between the two grids. When several rules match the same cell, the new data grid applies all matching rules in list order, with later rules winning for any properties they share. Dashboards that rely on overlapping rules may look different after upgrading.
+:::
 
 ### `newTooltip`
 
