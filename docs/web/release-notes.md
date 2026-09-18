@@ -3,6 +3,15 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## Preview (weekly preview)
+
+> Changes below are available in the weekly preview builds and will ship in the next RTM release.
+
+### Bugs
+
+#### All Platforms
+- String values in Grid and Pivot PDF exports are no longer cut off at 200 characters. Exported text now follows the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-pdf-exports) setting (default 256 characters). Note that cells have a fixed width, so longer values wrap and increase page count, and that `MaxStringCellSize` is a server-wide data-loading setting rather than an export option — review its documented trade-offs before raising it.
+
 ## 2.2.0 (September 3rd, 2026)
 
 ### Breaking Changes

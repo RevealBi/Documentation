@@ -3,6 +3,15 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
+## Preview (weekly preview)
+
+> 以下の変更は毎週のプレビュー ビルドで利用可能で、次回の RTM リリースに含まれる予定です。
+
+### バグ
+
+#### すべてのプラットフォーム
+- グリッドおよびピボットの PDF エクスポートで、文字列値が 200 文字で切り捨てられることがなくなりました。エクスポートされるテキストは [`MaxStringCellSize`](https://help.revealbi.io/ja/web/data-size-limits/#maxstringcellsize-と-pdf-エクスポート) 設定 (デフォルトは 256 文字) に従うようになりました。セルは幅が固定されているため長い値は折り返されてページ数が増加すること、また `MaxStringCellSize` はエクスポートのオプションではなくサーバー全体のデータ読み込み設定であることにご注意ください。値を大きくする前に、ドキュメントに記載のトレードオフをご確認ください。
+
 ## 2.2.0 (September 3rd, 2026)
 
 ### 重大な変更

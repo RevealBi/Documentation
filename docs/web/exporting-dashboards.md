@@ -139,6 +139,18 @@ When the **PDF** menu item is clicked, the end-user is prompted with various opt
 
 ![](images/export-pdf-options.jpg)
 
+### Text length in exported Grid and Pivot cells
+
+String values in Grid and Pivot PDF exports are limited by `MaxStringCellSize`, which defaults to 256 characters. Longer values are truncated. There is no "unlimited" option.
+
+Grid and Pivot cells have a fixed width, so the exported document does not adjust its layout to fit long values — they wrap onto multiple lines, increasing row heights and page count. The SDK does not shorten values to fit the page.
+
+:::warning
+`MaxStringCellSize` is not an export setting. It is applied by the engine when data is loaded into its cache, before any visualization or export runs, and it is a single server-wide value with no per-dashboard or per-export override. Raising it to widen a PDF column also changes how all data is ingested and cached for every dashboard on the server, and the change only takes effect for data cached afterwards — you must clear the data cache as well. See [Data Limits](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-pdf-exports) before changing it.
+:::
+
+If only one report needs longer text, prefer reshaping the data — splitting the long column, or trimming it in the query — over raising the global limit.
+
 ## Export to PowerPoint
 A PowerPoint export is performed when the end-user clicks the **PowerPoint** menu item from the **Export** overflow menu. 
 
