@@ -60,3 +60,40 @@ Conditional formatting behaves differently between the two grids. When several r
 **Released.** Hover tooltips are now the default tooltip experience in the Reveal SDK and this beta flag has been removed. Enabling it no longer has any effect and the call can be deleted.
 
 Tooltips now appear on hover for every visualization type that supports them, and tooltip actions such as drill down and filtering are available directly from the tooltip. Use the `RevealView.showTooltips` property to turn tooltips on or off. See [Working with Tooltips](tooltips.md) for details.
+
+## Beta Server APIs
+
+### `IRVDataModelProvider`
+Lets you customize the data model of a data source item on the server, without changing the underlying data source:
+- **`EditSchemaAsync`**: modify existing fields (label, description, default aggregation, week level). Return the modified list to apply the changes, or `null` to keep the original schema.
+- **`GetCalculatedFieldsAsync`**: add calculated fields based on expressions that reference existing fields (e.g. `[UnitPrice] * [Quantity]`).
+- **`GetMeasuresAsync`**: add custom measures based on aggregate expressions (e.g. `sum(...)`, `sumif(...)`, `PREVIOUS(...)`).
+
+Calculated fields and measures show up in the visualization editor like any other field.
+
+```csharp
+public class MyDataModelProvider : IRVDataModelProvider
+{
+    public Task<List<RVDataModelField>> EditSchemaAsync(IRequestContext requestContext, RVDataSourceItem dataSourceItem, List<RVDataModelField> schema)
+    {
+        schema.First(f => f.Name == "UnitPrice").Label = "Price per Unit";
+        return Task.FromResult(schema);
+    }
+
+    public Task<List<RVDataModelCalculatedField>> GetCalculatedFieldsAsync(IRequestContext userContext, RVDataSourceItem dataSourceItem)
+    {
+        return Task.FromResult(new List<RVDataModelCalculatedField> {
+            new RVDataModelCalculatedField("LineTotal", RVDashboardDataType.Number, "[UnitPrice] * [Quantity] * (1 - [Discount])")
+        });
+    }
+
+    public Task<List<RVDataModelMeasure>> GetMeasuresAsync(IRequestContext userContext, RVDataSourceItem dataSourceItem)
+    {
+        return Task.FromResult(new List<RVDataModelMeasure> {
+            new RVDataModelMeasure("Total Revenue", "sum([UnitPrice] * [Quantity])") { Description = "Revenue before discount" }
+        });
+    }
+}
+```
+
+Register the provider with `AddDataModelProvider<MyDataModelProvider>()` in ASP.NET, `setDataModelProvider(...)` on the `RevealServerBuilder` in Java, or the `dataModelProvider` option in Node.js.
