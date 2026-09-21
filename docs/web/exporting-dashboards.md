@@ -139,6 +139,24 @@ When the **PDF** menu item is clicked, the end-user is prompted with various opt
 
 ![](images/export-pdf-options.jpg)
 
+### Text length in exported Grid and Pivot cells
+
+String values in Grid and Pivot exports follow the same character limit as the dashboard itself, set by `MaxStringCellSize` and defaulting to 256 characters. Values longer than the limit are truncated, so the exported document shows exactly as much text per cell as the visualization on screen does.
+
+To show more characters in an export, raise `MaxStringCellSize`. It is a server-wide data-loading setting rather than an export option, so the longer text appears in the dashboard as well, for every dashboard on the server. Because the limit is applied as data is loaded, a new value applies to existing data once the application is restarted with a fresh cache. See [Data Limits](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) for the trade-offs and the steps.
+
+### Cache update
+
+If a cache update is needed, start the application with a fresh cache:
+
+1. Shut down the application.
+2. Delete the cache folder — `RevealCache_XXXX` in the system temporary directory by default, or the locations set through `CachePath` and `DataCachePath`. See [Cache files](https://help.revealbi.io/web/caching/#cache-files).
+3. Restart the application.
+
+Data is loaded again on first use and picks up the new limit. The **Refresh** option in the visualization menu updates a single data source and is not a substitute for this.
+
+Grid and Pivot cells have a fixed width, so the exported document does not adjust its layout to fit long values — they wrap onto multiple lines, increasing row heights and page count.
+
 ## Export to PowerPoint
 A PowerPoint export is performed when the end-user clicks the **PowerPoint** menu item from the **Export** overflow menu. 
 
