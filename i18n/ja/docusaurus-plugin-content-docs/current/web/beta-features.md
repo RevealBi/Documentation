@@ -63,3 +63,40 @@ Reveal SDK で新しいホバーベースのツールチップ エクスペリ�
 この動作は、ユーザーがデータ ポイントを**クリックした**後にのみ表示されるデフォルトのツールチップからの大きな変更です。`newTooltip` フラグにより、インタラクションの流れが簡素化され、ホバー ツールチップによる高速かつ手間の少ないデータ探索が可能になります。
 
 > ✅ より高速でインタラクティブなデータ探索をテストする場合に**推奨されます**。
+
+## ベータ版サーバー API
+
+### `IRVDataModelProvider`
+基になるデータ ソースを変更せずに、サーバー上でデータ ソース項目のデータ モデルをカスタマイズできます。
+- **`EditSchemaAsync`**: 既存のフィールド (ラベル、説明、既定の集計、週レベル) を変更します。変更を適用するには変更後のリストを返し、元のスキーマを保持するには `null` を返します。
+- **`GetCalculatedFieldsAsync`**: 既存のフィールドを参照する式に基づいて計算フィールドを追加します (例: `[UnitPrice] * [Quantity]`)。
+- **`GetMeasuresAsync`**: 集計式に基づくカスタム メジャーを追加します (例: `sum(...)`、`sumif(...)`、`PREVIOUS(...)`)。
+
+計算フィールドとメジャーは、他のフィールドと同様に表示形式エディターに表示されます。
+
+```csharp
+public class MyDataModelProvider : IRVDataModelProvider
+{
+    public Task<List<RVDataModelField>> EditSchemaAsync(IRequestContext requestContext, RVDataSourceItem dataSourceItem, List<RVDataModelField> schema)
+    {
+        schema.First(f => f.Name == "UnitPrice").Label = "Price per Unit";
+        return Task.FromResult(schema);
+    }
+
+    public Task<List<RVDataModelCalculatedField>> GetCalculatedFieldsAsync(IRequestContext userContext, RVDataSourceItem dataSourceItem)
+    {
+        return Task.FromResult(new List<RVDataModelCalculatedField> {
+            new RVDataModelCalculatedField("LineTotal", RVDashboardDataType.Number, "[UnitPrice] * [Quantity] * (1 - [Discount])")
+        });
+    }
+
+    public Task<List<RVDataModelMeasure>> GetMeasuresAsync(IRequestContext userContext, RVDataSourceItem dataSourceItem)
+    {
+        return Task.FromResult(new List<RVDataModelMeasure> {
+            new RVDataModelMeasure("Total Revenue", "sum([UnitPrice] * [Quantity])") { Description = "Revenue before discount" }
+        });
+    }
+}
+```
+
+プロバイダーは、ASP.NET では `AddDataModelProvider<MyDataModelProvider>()`、Java では `RevealServerBuilder` の `setDataModelProvider(...)`、Node.js では `dataModelProvider` オプションを使用して登録します。
