@@ -25,10 +25,7 @@ To change the server-side values, use the properties exposed by [`RevealEmbedSet
 
 This means text length in a PDF export always matches what the dashboard itself displays. If you want a PDF to show more characters per cell, raise `MaxStringCellSize`; the dashboard will show the longer text as well.
 
-The setting is applied once, server-wide, when data is loaded — it is not a per-dashboard or per-export option. Raising it affects every dashboard on the server, so consider the following before changing it:
-
-- Longer strings consume the `MaxTotalStringsSize` budget (64 million characters by default) proportionally faster. Datasets that cross that limit **fail to load with a data-size error** rather than degrading gracefully. If you raise `MaxStringCellSize` substantially, review `MaxTotalStringsSize` at the same time.
-- Grid and Pivot cells have a fixed width, so longer values wrap onto multiple lines. In a PDF export this increases row heights and page count.
+The setting is applied once, server-wide, when data is loaded — it is not a per-dashboard or per-export option. Raising it affects every dashboard on the server. Keep in mind that Grid and Pivot cells have a fixed width, so longer values wrap onto multiple lines; in a PDF export this increases row heights and page count.
 
 Set the value to the shortest length that keeps your data readable, rather than raising it to accommodate the longest value your data might contain. Reveal is an analytics tool, and its visualizations are designed around aggregated values and short labels; columns holding paragraphs of text are usually better split, shortened in the query, or kept out of the visualization entirely.
 
@@ -39,7 +36,6 @@ builder.Services.AddControllers().AddReveal(revealSetupBuilder =>
     {
         // Server-wide. Applies to all data loading, for every dashboard.
         settings.MaxStringCellSize = 1024;
-        settings.MaxTotalStringsSize = 128000000; // review alongside the above
     });
 });
 ```
