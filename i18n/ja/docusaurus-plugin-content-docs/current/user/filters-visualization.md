@@ -34,3 +34,6 @@ _language: ja
 
 ![Cascading Filter for the State Population Dashboard showing counties in Arkansas](images/cascading-filter-second-filter.png)
 
+:::note
+この機能は、*ダッシュボード フィルター*間のカスケードとは異なる機能です。ダッシュボード フィルターのカスケードでは、両方のフィルターが同じ基になるデータ項目から作成されている必要があります。詳細については、ダッシュボード フィルターの[「フィルターのカスケード」](filters-dashboard.md#フィルターのカスケード)を参照してください。
+:::

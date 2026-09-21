@@ -18,6 +18,8 @@ Reveal は、日付範囲をダッシュボード フィルターとして有効
 
   - **ダッシュボード**と**表示形式エディター**の両方の[ダッシュボード フィルター](filters-dashboard.md)
 
+  - [フィルターのカスケード](filters-dashboard.md#フィルターのカスケード)
+
   - [ダッシュボード フィルターの構成可能なプロパティ](filters-dashboard-properties.md):
 
       - [表示フィールド](filters-dashboard-properties.md#表示フィールド)
