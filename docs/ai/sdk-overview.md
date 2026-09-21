@@ -33,6 +33,8 @@ The client SDK requires the [AI Server SDK](/ai/install-server-sdk) to be instal
 
 :::
 
+If your AI server requires authentication or additional request headers, see [Request Configuration](/ai/sdk-request-configuration).
+
 ## Getting the Client Instance
 
 Once initialized, get the shared client instance anywhere in your application:
