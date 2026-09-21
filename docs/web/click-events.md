@@ -22,3 +22,7 @@ The `RVDataCell` has the following properties:
 - **columnName** - the name of the column belonging to the data point
 - **formattedValue** - the formatted value of the data point
 - **value** - the original value of the data point
+
+:::info
+In a grid, this event is raised when an end-user clicks a cell, and is the supported way to respond to that click from code. See [Grid Chart](../user/chart-types/grid-chart.md).
+:::

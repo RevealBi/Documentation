@@ -22,3 +22,7 @@ revealView.onVisualizationDataPointClicked = (visualization, cell, row) => {
 - **columnName** - データ ポイントに属する列の名前
 - **formattedValue** - データ ポイントの書式設定された値
 - **value** - データ ポイントの元の値
+
+:::info
+グリッドでは、エンドユーザーがセルをクリックしたときにこのイベントが発生します。コードからそのクリックに応答するための、サポートされている方法です。[グリッド チャート](../user/chart-types/grid-chart.md) を参照してください。
+:::

@@ -50,3 +50,7 @@ However, if you select Office at **Cranbury, New Jersey, USA** and **Montevideo,
 
 ![Cascading Filter for the State Population Dashboard showing counties in Arkansas](images/cascading-filter-second-filter.png)
 
+:::note
+This is a different feature from cascading between *Dashboard Filters*, which additionally requires both filters to be built from the same underlying data item. See [Cascading Filters](filters-dashboard.md#cascading-filters) in Dashboard Filters.
+:::
+

@@ -27,6 +27,8 @@ The following sections will cover:
   - [Dashboard Filters](filters-dashboard.md) in both the *Dashboard* and
     the *Visualization editor*
 
+  - [Cascading Filters](filters-dashboard.md#cascading-filters)
+
   - [Dashboard Filter configurable properties](filters-dashboard-properties.md), including:
 
       - [Displayed Field](filters-dashboard-properties.md#displayed-field)

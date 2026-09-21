@@ -140,3 +140,7 @@ RevealSdkSettings.theme = this.createCustomTheme();
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/ThemingDashboards)
 
 :::
+
+:::note
+The theme also drives every surface of the grid visualization — header and cell backgrounds, separators, scrollbars, the selected-cell highlight, the summary row and the column options menu. See [Grid Chart](../user/chart-types/grid-chart.md).
+:::
