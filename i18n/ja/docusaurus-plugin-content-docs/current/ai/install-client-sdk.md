@@ -45,6 +45,8 @@ AI クライアント SDK は TypeScript で記述されており、完全な型
 
 ## フレームワーク別のセットアップ
 
+`RevealSdkClient.initialize()` の認証とリクエストヘッダーのオプションについては、[リクエスト構成](/ai/sdk-request-configuration)をご覧ください。
+
 ### バニラ JavaScript
 
 #### ES Modules を使用する場合
