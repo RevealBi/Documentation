@@ -71,6 +71,14 @@
     "message": "テーマ設定",
     "description": "The label for the doc item 'Theming' in sidebar 'webSidebar', linking to the doc web/theming-dashboards"
   },
+  "sidebar.webSidebar.category.Theming": {
+    "message": "テーマ設定",
+    "description": "The label for category 'Theming' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.doc.Fonts": {
+    "message": "フォント",
+    "description": "The label for the doc item 'Fonts' in sidebar 'webSidebar', linking to the doc web/theming-fonts"
+  },
   "sidebar.webSidebar.doc.Excel File": {
     "message": "Excel ファイル",
     "description": "The label for the doc item 'Excel File' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/excel-file"
@@ -670,6 +678,10 @@
   "sidebar.aiSidebar.doc.Error Handling": {
     "message": "エラーハンドリング",
     "description": "The label for the doc item 'Error Handling' in sidebar 'aiSidebar', linking to the doc ai/sdk-error-handling"
+  },
+  "sidebar.aiSidebar.doc.Request Configuration": {
+    "message": "リクエスト構成",
+    "description": "The label for the doc item 'Request Configuration' in sidebar 'aiSidebar', linking to the doc ai/sdk-request-configuration"
   },
   "sidebar.aiSidebar.doc.Insights Endpoint": {
     "message": "インサイトエンドポイント",

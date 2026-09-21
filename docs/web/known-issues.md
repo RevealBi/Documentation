@@ -63,6 +63,62 @@ There are two options to resolve this:
    If you must remain on Windows, host the application inside a **Windows Container**.
    This allows installing and configuring Playwright within the container image, bypassing the Windows App Service limitation.
 
+## Create React App 5 Production Builds
+
+### Issue
+
+Existing Create React App 5 applications using `react-scripts@5.0.1` may experience very long production build times or appear to stall when consuming Reveal SDK from npm.
+
+### Cause and Context
+
+This occurs when the Create React App/Webpack production pipeline processes the Reveal ESM bundle. Create React App has been deprecated by the React team. For new applications, or migrations where practical, use a maintained React framework or a modern build tool such as Vite.
+
+### Workaround
+
+For an existing Create React App application that cannot migrate yet, configure Webpack to resolve `reveal-sdk` to the browser (IIFE) bundle at runtime. **Both the Webpack external and the IIFE bundle are required**: the external alone leaves the import without a runtime implementation, and the IIFE alone still leaves the ESM package in Webpack's production pipeline.
+
+Create React App does not expose its Webpack configuration, so this requires an override tool. The following steps use [react-app-rewired](https://github.com/timarney/react-app-rewired). If your application already uses [CRACO](https://craco.js.org/), apply the same `externals` change in `craco.config.js` instead.
+
+1. Install `react-app-rewired` and use it to build the application.
+
+   ```bash npm2yarn
+   npm install react-app-rewired --save-dev
+   ```
+
+   ```json title="package.json"
+   "scripts": {
+       "start": "react-app-rewired start",
+       "build": "react-app-rewired build"
+   }
+   ```
+
+2. Create `config-overrides.js` in the project root and configure the Webpack external.
+
+   ```js title="config-overrides.js"
+   module.exports = function override(config) {
+       config.externals = {
+           ...(config.externals || {}),
+           "reveal-sdk": "Reveal",
+       };
+
+       return config;
+   };
+   ```
+
+3. Copy `node_modules/reveal-sdk/dist/reveal-sdk.js` and `node_modules/reveal-sdk/dist/locales/` to `public/reveal/`, keeping the published layout. The SDK resolves its locale files relative to `reveal-sdk.js`, so no additional locale configuration is required.
+
+4. Add the IIFE bundle to `public/index.html`:
+
+   ```html
+   <script src="%PUBLIC_URL%/reveal/reveal-sdk.js"></script>
+   ```
+
+5. Continue to import Reveal from npm in your application:
+
+   ```ts
+   import * as Reveal from "reveal-sdk";
+   ```
+
 ## Custom Visualizations Not Supported on Export
 
 ### Issue

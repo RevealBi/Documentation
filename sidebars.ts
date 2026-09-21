@@ -47,7 +47,11 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "Configure Export", id: "web/configure-export" },
           ]
         },
-        { type: "doc", label: "Theming", id: "web/theming-dashboards" },
+        {
+          type: "category", label: "Theming", link: { type: "doc", id: "web/theming-dashboards" }, items: [
+            { type: "doc", label: "Fonts", id: "web/theming-fonts" },
+          ]
+        },
         { type: "doc", label: "Thumbnail Generation", id: "web/thumbnail-generation" },
       ]
     },
@@ -299,6 +303,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Chat", id: "ai/sdk-chat" },
         { type: "doc", label: "Streaming Responses", id: "ai/sdk-streaming" },
         { type: "doc", label: "Error Handling", id: "ai/sdk-error-handling" },
+        { type: "doc", label: "Request Configuration", id: "ai/sdk-request-configuration" },
       ]
     },
 
