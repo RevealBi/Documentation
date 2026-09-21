@@ -43,7 +43,7 @@ The families can come from any source, as long as each name resolves to the inte
 
 ## One Font Family for Every Style
 
-Assign the same family to every property. When a style property has the same value as `regularFont`, Reveal looks for an `@font-face` rule for that family with the weight and style of the property, and renders the property's text with that face.
+Assign the same family to every property. When a style property is set to exactly the same string as `regularFont`, Reveal looks for an `@font-face` rule for that family with the weight and style of the property, and renders the property's text with that face.
 
 ```js
 const theme = new RevealTheme();
@@ -58,7 +58,21 @@ RevealSdkSettings.theme = theme;
 
 ![](images/theming-fonts-shared-family.jpg)
 
-Each property is matched against the `@font-face` descriptors below. A rule that declares a weight range, as variable fonts do, matches any weight inside the range.
+:::caution
+
+The values are compared as strings, so every property must be assigned the identical string. A value that names the same family in another way is treated as a dedicated family: its text renders with the regular face, and no warning is logged.
+
+```js
+theme.regularFont = "Crimson Pro";
+theme.boldFont = "'Crimson Pro'";        // extra quotes: not the same string
+theme.italicFont = "Crimson Pro, serif"; // fallback list: not the same string
+```
+
+Assigning every property from a single variable avoids the mismatch.
+
+:::
+
+Each property is matched against the `@font-face` descriptors below. Declare each weight as a single value. A rule that declares a weight range needs the extra step described in [Variable Fonts](#variable-fonts).
 
 | Property           | font-weight | font-style |
 | ----------         | ----------- | ---------- |
@@ -69,7 +83,7 @@ Each property is matched against the `@font-face` descriptors below. A rule that
 
 ### Declaring the Font Faces
 
-With this pattern, the page must declare an `@font-face` rule for every weight and style that the theme uses. When loading from Google Fonts, request each weight and style explicitly:
+With this pattern, the page must declare an `@font-face` rule for every weight and style that the theme uses. When loading from Google Fonts, request each weight and style explicitly, as a list of weights (`400;500;700`) and not as a range (`200..900`):
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -91,6 +105,20 @@ Reveal reads the `@font-face` rules when the theme is assigned to `RevealSdkSett
 
 :::
 
+### Variable Fonts
+
+A variable font is usually declared with a weight range, such as `font-weight: 200 900`. Requesting a range from Google Fonts (`wght@200..900`) produces the same kind of rule. Reveal finds a rule like this for `mediumFont`, `boldFont` and `boldItalicFont`, but because it renders every property at normal weight, the text is drawn at weight 400 and looks regular. No warning is logged, because a matching face was found.
+
+Declare one rule per weight instead, each with a single `font-weight` value. Every rule can point to the same variable font file:
+
+```css
+@font-face { font-family: "Crimson Pro"; font-weight: 400; font-style: normal; src: url("fonts/CrimsonPro-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 500; font-style: normal; src: url("fonts/CrimsonPro-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 700; font-style: normal; src: url("fonts/CrimsonPro-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 400; font-style: italic; src: url("fonts/CrimsonPro-Italic-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 700; font-style: italic; src: url("fonts/CrimsonPro-Italic-VariableFont_wght.woff2"); }
+```
+
 ### Missing Font Faces
 
 If no `@font-face` rule matches a property, the text for that property renders with the regular face. For example, requesting only the regular weight from Google Fonts leaves the titles, grid headers and gauge values regular even though `boldFont` is set:
@@ -108,6 +136,28 @@ Reveal could not resolve a 700 face for the theme font "Crimson Pro". Text using
 ```
 
 To fix it, add the missing weight or style to your font stylesheet, or assign a dedicated family to that property as shown in [Dedicated Font Family per Style](#dedicated-font-family-per-style).
+
+## Applying Font Changes
+
+Font properties take effect when a theme is assigned to `RevealSdkSettings.theme`. The assignment is the step that applies them. Reading `RevealSdkSettings.theme` returns the current theme object, and changing a font property on that object applies nothing: the text keeps rendering with the previous fonts, and no warning is logged.
+
+```js
+// Wrong: the change is never applied
+RevealSdkSettings.theme.boldFont = "Crimson Pro";
+```
+
+Change a copy of the theme and assign it:
+
+```js
+// Right: the assignment applies the fonts
+const theme = RevealSdkSettings.theme.clone();
+theme.regularFont = "Crimson Pro";
+theme.boldFont = "Crimson Pro";
+
+RevealSdkSettings.theme = theme;
+```
+
+`RevealView.refreshTheme` does not replace the assignment. It reloads the dashboard with the theme that was last assigned, so call it after the assignment when a `RevealView` is already showing a dashboard.
 
 ## Limitations
 

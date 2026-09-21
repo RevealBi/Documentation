@@ -43,7 +43,7 @@ RevealSdkSettings.theme = theme;
 
 ## すべてのスタイルに 1 つのフォント ファミリを使用
 
-すべてのプロパティに同じファミリを割り当てます。スタイル プロパティの値が `regularFont` と同じ場合、Reveal はそのファミリの `@font-face` ルールのうち、プロパティの太さとスタイルに一致するものを探し、その書体でプロパティのテキストを描画します。
+すべてのプロパティに同じファミリを割り当てます。スタイル プロパティに `regularFont` とまったく同じ文字列が設定されている場合、Reveal はそのファミリの `@font-face` ルールのうち、プロパティの太さとスタイルに一致するものを探し、その書体でプロパティのテキストを描画します。
 
 ```js
 const theme = new RevealTheme();
@@ -58,7 +58,21 @@ RevealSdkSettings.theme = theme;
 
 ![](images/theming-fonts-shared-family.jpg)
 
-各プロパティは、以下の `@font-face` 記述子と照合されます。可変フォントのように太さの範囲を宣言しているルールは、その範囲内のすべての太さに一致します。
+:::caution
+
+値は文字列として比較されるため、すべてのプロパティに同一の文字列を割り当てる必要があります。同じファミリを別の書き方で指定した値は、専用のファミリとして扱われます。そのテキストは標準の書体で描画され、警告も記録されません。
+
+```js
+theme.regularFont = "Crimson Pro";
+theme.boldFont = "'Crimson Pro'";        // 引用符が余分: 同じ文字列ではありません
+theme.italicFont = "Crimson Pro, serif"; // フォールバック リスト: 同じ文字列ではありません
+```
+
+すべてのプロパティを 1 つの変数から割り当てると、このような不一致を防げます。
+
+:::
+
+各プロパティは、以下の `@font-face` 記述子と照合されます。各太さは単一の値で宣言してください。太さの範囲を宣言しているルールには、[可変フォント](#可変フォント)で説明する追加の手順が必要です。
 
 | プロパティ           | font-weight | font-style |
 | ----------         | ----------- | ---------- |
@@ -69,7 +83,7 @@ RevealSdkSettings.theme = theme;
 
 ### フォントの書体の宣言
 
-このパターンでは、テーマが使用するすべての太さとスタイルについて、ページで `@font-face` ルールを宣言する必要があります。Google Fonts から読み込む場合は、各太さとスタイルを明示的に要求します。
+このパターンでは、テーマが使用するすべての太さとスタイルについて、ページで `@font-face` ルールを宣言する必要があります。Google Fonts から読み込む場合は、各太さとスタイルを、範囲 (`200..900`) ではなく太さのリスト (`400;500;700`) として明示的に要求します。
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -91,6 +105,20 @@ Reveal は、テーマが `RevealSdkSettings.theme` に割り当てられた時�
 
 :::
 
+### 可変フォント
+
+可変フォントは通常、`font-weight: 200 900` のように太さの範囲を指定して宣言されます。Google Fonts に範囲 (`wght@200..900`) を要求した場合も、同じ種類のルールが生成されます。Reveal は `mediumFont`、`boldFont`、`boldItalicFont` に対してこのようなルールを見つけますが、すべてのプロパティを標準の太さで描画するため、テキストは太さ 400 で描画され、標準の書体に見えます。一致する書体は見つかっているため、警告は記録されません。
+
+代わりに、太さごとに 1 つのルールを宣言し、それぞれに単一の `font-weight` 値を指定してください。すべてのルールは同じ可変フォント ファイルを参照できます。
+
+```css
+@font-face { font-family: "Crimson Pro"; font-weight: 400; font-style: normal; src: url("fonts/CrimsonPro-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 500; font-style: normal; src: url("fonts/CrimsonPro-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 700; font-style: normal; src: url("fonts/CrimsonPro-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 400; font-style: italic; src: url("fonts/CrimsonPro-Italic-VariableFont_wght.woff2"); }
+@font-face { font-family: "Crimson Pro"; font-weight: 700; font-style: italic; src: url("fonts/CrimsonPro-Italic-VariableFont_wght.woff2"); }
+```
+
 ### フォントの書体が見つからない場合
 
 プロパティに一致する `@font-face` ルールがない場合、そのプロパティのテキストは標準の書体で描画されます。たとえば、Google Fonts から標準の太さのみを要求すると、`boldFont` を設定していても、タイトル、グリッドのヘッダー、ゲージの値は標準のままになります。
@@ -108,6 +136,28 @@ Reveal could not resolve a 700 face for the theme font "Crimson Pro". Text using
 ```
 
 解決するには、不足している太さまたはスタイルをフォントのスタイルシートに追加するか、[スタイルごとに専用のフォント ファミリを使用](#スタイルごとに専用のフォント-ファミリを使用)で説明されているように、そのプロパティに専用のファミリを割り当てます。
+
+## フォントの変更の適用
+
+フォント プロパティは、テーマが `RevealSdkSettings.theme` に割り当てられた時点で有効になります。フォントを適用するのは、この割り当てです。`RevealSdkSettings.theme` を読み取ると現在のテーマ オブジェクトが返されますが、そのオブジェクトのフォント プロパティを変更しても何も適用されません。テキストは以前のフォントで描画されたままになり、警告も記録されません。
+
+```js
+// 誤り: この変更は適用されません
+RevealSdkSettings.theme.boldFont = "Crimson Pro";
+```
+
+テーマのクローンを変更して、それを割り当ててください。
+
+```js
+// 正しい例: 割り当てによってフォントが適用されます
+const theme = RevealSdkSettings.theme.clone();
+theme.regularFont = "Crimson Pro";
+theme.boldFont = "Crimson Pro";
+
+RevealSdkSettings.theme = theme;
+```
+
+`RevealView.refreshTheme` は、この割り当ての代わりになるものではありません。このメソッドは、最後に割り当てられたテーマでダッシュボードを再読み込みするため、`RevealView` がすでにダッシュボードを表示している場合は、割り当ての後に呼び出してください。
 
 ## 制限事項
 
