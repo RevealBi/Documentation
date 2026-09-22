@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://help.revealbi.io/sbom/catalog.schema.json",
+  "title": "Reveal SBOM catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "format",
+    "entries"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "format": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "mediaType"],
+      "properties": {
+        "name": {
+          "const": "CycloneDX"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^1\\.[0-9]+$"
+        },
+        "mediaType": {
+          "const": "application/vnd.cyclonedx+json"
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "product",
+        "packageVersion",
+        "scope",
+        "platform",
+        "platformLabel",
+        "architecture",
+        "architectureLabel",
+        "downloadUrl",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]+$"
+        },
+        "product": {
+          "type": "string",
+          "minLength": 1
+        },
+        "packageVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+(?:\\.[0-9]+){1,3}$"
+        },
+        "scope": {
+          "enum": ["server", "client"]
+        },
+        "platform": {
+          "enum": ["dotnet", "java", "node", "javascript"]
+        },
+        "platformLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "architecture": {
+          "enum": ["independent", "win-x64", "linux-x64", "browser"]
+        },
+        "architectureLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "downloadUrl": {
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-fA-F0-9]{64}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "server"
+              }
+            },
+            "required": ["scope"]
+          },
+          "then": {
+            "properties": {
+              "platform": {
+                "enum": ["dotnet", "java", "node"]
+              },
+              "architecture": {
+                "enum": ["independent", "win-x64", "linux-x64"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "client"
+              }
+            },
+            "required": ["scope"]
+          },
+          "then": {
+            "properties": {
+              "platform": {
+                "const": "javascript"
+              },
+              "architecture": {
+                "const": "browser"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,108 @@
+{
+  "$schema": "./catalog.schema.json",
+  "schemaVersion": 1,
+  "format": {
+    "name": "CycloneDX",
+    "version": "1.7",
+    "mediaType": "application/vnd.cyclonedx+json"
+  },
+  "entries": [
+    {
+      "id": "reveal-server-2.2.0-dotnet-independent",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.0",
+      "scope": "server",
+      "platform": "dotnet",
+      "platformLabel": ".NET",
+      "architecture": "independent",
+      "architectureLabel": "Platform independent",
+      "downloadUrl": "./files/reveal-server/dotnet/2.2.0/Reveal.Sdk.AspNetCore-2.2.0.cdx.json",
+      "sha256": "321feeb50ab3d5583b08097a2a0d28c5ad50bcce83d375874adc5cb04fc1eec0"
+    },
+    {
+      "id": "reveal-server-2.2.0-java-win-x64",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.0",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "architecture": "win-x64",
+      "architectureLabel": "Windows x64",
+      "downloadUrl": "./files/reveal-server/java/2.2.0/reveal-sdk-java-windows-x86_64.cdx.json",
+      "sha256": "0257b07f94c533fe420b0ca6d7058c2a27c91796acb3c19955093a56f78de3f4"
+    },
+    {
+      "id": "reveal-server-2.2.0-java-linux-x64",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.0",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "architecture": "linux-x64",
+      "architectureLabel": "Linux x64",
+      "downloadUrl": "./files/reveal-server/java/2.2.0/reveal-sdk-java-linux-x86_64.cdx.json",
+      "sha256": "18ce486e42333e79717aec7691e61e1e09536e758e859ae750e8e2ccc60aa3d4"
+    },
+    {
+      "id": "reveal-server-2.2.0-node-win-x64",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.0",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "architecture": "win-x64",
+      "architectureLabel": "Windows x64",
+      "downloadUrl": "./files/reveal-server/node/2.2.0/reveal-sdk-node-win-x64-2.2.0.cdx.json",
+      "sha256": "741b1a64cec16c41edf225f52116a7323f8f0f287481e649ab3362a716aaf859"
+    },
+    {
+      "id": "reveal-server-2.2.0-node-linux-x64",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.0",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "architecture": "linux-x64",
+      "architectureLabel": "Linux x64",
+      "downloadUrl": "./files/reveal-server/node/2.2.0/reveal-sdk-node-linux-x64-2.2.0.cdx.json",
+      "sha256": "a569b6dacdd17d847943d51bfc80d41985f53cac88d11570463d25edc6e10a14"
+    },
+    {
+      "id": "reveal-ai-1.5.213-dotnet-independent",
+      "product": "Reveal AI",
+      "packageVersion": "1.5.213",
+      "scope": "server",
+      "platform": "dotnet",
+      "platformLabel": ".NET",
+      "architecture": "independent",
+      "architectureLabel": "Platform independent",
+      "downloadUrl": "./files/reveal-ai/dotnet/1.5.213/reveal-sdk-ai-dotnet-1.5.213.cdx.json",
+      "sha256": "ab38d6b2d329e13bc3454a0098abf6897a8d93c77992ec05dcdf53ac0ea7a489"
+    },
+    {
+      "id": "reveal-ai-1.2.0-java-independent",
+      "product": "Reveal AI",
+      "packageVersion": "1.2.0",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "architecture": "independent",
+      "architectureLabel": "Platform independent",
+      "downloadUrl": "./files/reveal-ai/java/1.2.0/reveal-sdk-ai-java-1.2.0.cdx.json",
+      "sha256": "3fc4bd20c6c58da444cf78ba3f6d1dc7555d3d9bd5fe78dc6093c8c4d02fc44a"
+    },
+    {
+      "id": "reveal-ai-1.2.0-node-independent",
+      "product": "Reveal AI",
+      "packageVersion": "1.2.0",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "architecture": "independent",
+      "architectureLabel": "Platform independent",
+      "downloadUrl": "./files/reveal-ai/node/1.2.0/reveal-sdk-ai-node-1.2.0.cdx.json",
+      "sha256": "7ec07c0fd208e3177581655210c10c64fb94a1c61f0332ebc5eb685b7d05d463"
+    }
+  ]
+}
+

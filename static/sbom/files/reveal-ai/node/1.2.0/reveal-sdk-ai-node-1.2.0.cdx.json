@@ -1,0 +1,2321 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:0fef343a-4ce2-438d-906a-706700070bdd",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-22T03:28:20Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.52.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:npm/reveal-sdk-node-ai@1.2.0",
+      "type": "library",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "reveal-sdk-node-ai",
+      "version": "1.2.0",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "9a6e1cca058b636bc5071710e5d6d95c55bbb0dd"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "4e79fb601ebd019b9fdaea1b0d8533bc5c616930c664d19039390fd62064196a"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "ad4afecc090c74ea8f808ca66ee103a0b690f787d2931d059b1524b0471a129405e2cf488e8427cd5793469834c49188fbba161aaf399c24196f34533cc9794c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Reveal License"
+          }
+        }
+      ],
+      "purl": "pkg:npm/reveal-sdk-node-ai@1.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reveal-sdk-node-ai/-/reveal-sdk-node-ai-1.2.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://help.revealbi.io/ai/install-server-sdk/"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:release-tag",
+          "value": "v1.5.213"
+        },
+        {
+          "name": "infragistics:source-commit",
+          "value": "ad38d3cf5ae60af7fde8523928ede1eca268979f"
+        },
+        {
+          "name": "infragistics:npm-integrity",
+          "value": "sha512-rUr+zAkMdOqPgIymbuEDoLaQ94fSkx0FmxUksEcaEpQF4s9IjoQnzVeTRpg0xJGI+7oWGq85nCQZbzRTPMl5TA=="
+        },
+        {
+          "name": "infragistics:scope",
+          "value": "additive-ai-wrapper; pair with matching Reveal Server SDK Node 2.2.0 architecture SBOM"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:npm/reveal-sdk-node@2.2.0",
+      "type": "library",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "reveal-sdk-node",
+      "version": "2.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/reveal-sdk-node@2.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reveal-sdk-node/-/reveal-sdk-node-2.2.0.tgz"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:declared-version-range",
+          "value": ">=2.2.0"
+        },
+        {
+          "name": "infragistics:required-platform-sbom",
+          "value": "Reveal Server SDK Node 2.2.0 architecture SBOM"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:generic/AIPlugin@2.2.0.0",
+      "type": "library",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "AIPlugin",
+      "version": "2.2.0.0",
+      "scope": "required",
+      "purl": "pkg:generic/AIPlugin@2.2.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dotnet-deps-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "dotnet"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "dotnet"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "dotnet-portable-executable-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiplugin:aiplugin:2.2.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "\\native\\AIPlugin.dll"
+        },
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.2.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/AIPlugin.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/AIPlugin.dll=fd978a0c956b1ea2ec10f718ef6189cf3a422fb0aaf161aafed70c54f60a6f45"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Anthropic@12.24.1",
+      "authors": [
+        {
+          "name": "Anthropic"
+        }
+      ],
+      "name": "Anthropic",
+      "version": "12.24.1",
+      "description": "The official .NET library for the Anthropic API.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright 2026 Anthropic",
+      "purl": "pkg:nuget/Anthropic@12.24.1",
+      "externalReferences": [
+        {
+          "url": "https://docs.anthropic.com/claude/reference/",
+          "type": "website"
+        },
+        {
+          "url": "https://www.github.com/anthropics/anthropic-sdk-csharp",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "12.24.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Anthropic.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Anthropic.dll=534ec9f194ca86423b0fc0f9b6601e379295659c622c3762b8f94bca85e54785"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Azure.AI.OpenAI",
+      "version": "2.8.0-beta.1",
+      "description": "Azure OpenAI's official extension package for using OpenAI's .NET library with the Azure OpenAI Service.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.8.0-beta.1/sdk/openai/Azure.AI.OpenAI/README.md",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.800.25.61201"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Azure.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Azure.AI.OpenAI.dll=4690f5e82b37bb693f5aa58ffc099b3937f10ef69850d0929a18abc96292bd17"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/DotLiquid@2.3.197",
+      "authors": [
+        {
+          "name": "Tim Jones, Alessandro Petrelli"
+        }
+      ],
+      "name": "DotLiquid",
+      "version": "2.3.197",
+      "description": "DotLiquid is a templating system ported to the .NET framework from Ruby’s Liquid Markup.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "MS-PL"
+          }
+        }
+      ],
+      "purl": "pkg:nuget/DotLiquid@2.3.197",
+      "externalReferences": [
+        {
+          "url": "https://www.dotliquid.org/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotliquid/dotliquid.git",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.3.197"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/DotLiquid.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/DotLiquid.dll=1981abe7f827e61be22445730134ce7e39e44db00ed55c7faddcb83aea2f430e"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/it/DotLiquid.resources.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/it/DotLiquid.resources.dll=993fd6d9c2ea7e50a75ca7f080fef1968b1f2dac455c6ab11a6e31e19d2930e2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Api.CommonProtos",
+      "version": "2.17.0",
+      "description": "Common Protocol Buffer messages for Google APIs",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "purl": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.17.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.CommonProtos.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.CommonProtos.dll=329cf0f2b66c5cbf675321f0d6b33c17d1092e5761f32d3d2c1307a110c0dbbd"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Api.Gax",
+      "version": "4.12.1",
+      "description": "Support classes for Google API client libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "purl": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "4.12.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.Gax.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.Gax.dll=b724c4317e3247d31108dfd9f0c266694e661e3890200869de41fdbb0812957a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Api.Gax.Grpc",
+      "version": "4.12.1",
+      "description": "Additional support classes for Google gRPC API client libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "purl": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "4.12.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.Gax.Grpc.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.Gax.Grpc.dll=2c447aafe6c5793b8a5c395ea2fbd57bbaff9576a47b29bf1f71ca3ed5459328"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Apis",
+      "version": "1.72.0",
+      "description": "The Google APIs Client Library is a runtime client for working with Google services.\nThe library supports service requests, media upload and download, etc.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "purl": "pkg:nuget/Google.Apis@1.72.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.dll=f26773f2c697cf381393183c141a1a6529d7c1e269c28a18b05d450cccf7a393"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Apis.Auth",
+      "version": "1.72.0",
+      "description": "The Google APIs Client Library is a runtime client for working with Google services.\n\nThis package includes auth components like user-credential, authorization code flow, etc. for making authenticated calls using the OAuth2 spec.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "purl": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.Auth.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.Auth.dll=a83ec6d1c80a0fcc818fae12ea93a7c425435cb55cf7e5328275432556471a80"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Apis.Core",
+      "version": "1.72.0",
+      "description": "The Google APIs Core Library contains the Google APIs HTTP layer, JSON support, Data-store, logging and so on.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "purl": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.Core.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.Core.dll=138a800b3dbf78e7d70a031516efb9f75e0a1af198301721ecfbefd0e9a0ea4b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Cloud.AIPlatform.V1",
+      "version": "3.60.0",
+      "description": "Recommended Google client library to access the Vertex AI API (v1), which allows you to train high-quality custom machine learning models with minimal machine learning expertise and effort.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2026 Google LLC",
+      "purl": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.60.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.AIPlatform.V1.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.AIPlatform.V1.dll=75f934ac7ceb5b4576a14e23988357a8dc3dbb20839188d254faf6aa56cf7e70"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Cloud.Iam.V1",
+      "version": "3.5.0",
+      "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "purl": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.5.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.Iam.V1.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.Iam.V1.dll=828687648dd36cd45d5a075f954f3b224bb721c2fad02c39b729176ab6718e90"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.Cloud.Location",
+      "version": "2.4.0",
+      "description": "gRPC services for the Google Cloud Locations API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "purl": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.4.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.Location.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.Location.dll=35a2c85ff192d479dfc57e4870a58616b9e641c90d1625f0842146642fc7c6a6"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.LongRunning@3.5.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "name": "Google.LongRunning",
+      "version": "3.5.0",
+      "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "purl": "pkg:nuget/Google.LongRunning@3.5.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.5.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.LongRunning.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.LongRunning.dll=f28db50842aaebe022b837be016aca0a77bcf71b2f371a785428c1ab504b919c"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Protobuf@3.31.1",
+      "authors": [
+        {
+          "name": "Google Inc."
+        }
+      ],
+      "name": "Google.Protobuf",
+      "version": "3.31.1",
+      "description": "C# runtime library for Protocol Buffers - Google's data interchange format.",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2015, Google Inc.",
+      "purl": "pkg:nuget/Google.Protobuf@3.31.1",
+      "externalReferences": [
+        {
+          "url": "https://github.com/protocolbuffers/protobuf",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/protocolbuffers/protobuf.git",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.31.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Protobuf.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Protobuf.dll=dbd8f2ff0822d2fc0164ae255c0661ce84afc9ba328a30a4a50ba5f54ffee896"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Auth@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "name": "Grpc.Auth",
+      "version": "2.71.0",
+      "description": "gRPC C# Authentication Library",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "purl": "pkg:nuget/Grpc.Auth@2.71.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Auth.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Auth.dll=d9f18b65825caaec7242324cb96f03d263aa9086d1ec747d1d28242bf8f58db2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "name": "Grpc.Core.Api",
+      "version": "2.71.0",
+      "description": "gRPC C# Surface API",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "purl": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Core.Api.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Core.Api.dll=c14ac4d4c97e03cf1f05892caeb6346457ac25c8b1b7ee3e12a720fcaa1fb2e2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "name": "Grpc.Net.Client",
+      "version": "2.71.0",
+      "description": ".NET client for gRPC",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "purl": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Net.Client.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Net.Client.dll=75fe0ec43986ef6e78cf41268728909b9819263273fb1e84146c1c6ef58e0028"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "name": "Grpc.Net.Common",
+      "version": "2.71.0",
+      "description": "Infrastructure for common functionality in gRPC",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "purl": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Net.Common.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Net.Common.dll=c31a578aed06bd7723ec24139882bbd10e18b79a6fe190482c771113ce32bd43"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.AI.Abstractions",
+      "version": "10.8.3",
+      "description": "Abstractions representing generative AI components.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/extensions",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.800.326.37702"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.AI.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.AI.Abstractions.dll=6a94202a8b3b01f558a71bad4cb94232a6e419d2230f22287bfa56b6eba4cce3"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.AI.OpenAI",
+      "version": "10.8.3",
+      "description": "Implementation of generative AI abstractions for OpenAI-compatible endpoints.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/extensions",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.800.326.37702"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.AI.OpenAI.dll=a9cb6276857d3dbdf9c3f5eaa61df54f481998dc77275ddf988fff5feb9a9c51"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.FileProviders.Abstractions",
+      "version": "10.0.3",
+      "description": "Abstractions of files and directories.\n\nCommonly Used Types:\nMicrosoft.Extensions.FileProviders.IDirectoryContents\nMicrosoft.Extensions.FileProviders.IFileInfo\nMicrosoft.Extensions.FileProviders.IFileProvider",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.3"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll=d007f41f3f8902f56ce5b6d1dff420bb0df2d35bd3fdf202467cbb1d49fb8c08"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.Hosting.Abstractions",
+      "version": "10.0.3",
+      "description": "Hosting and startup abstractions for applications.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.3"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll=97fac88b2f6dd64dda07e844f91fbe02042fe379216e92e2604553efda591248"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.ObjectPool",
+      "version": "8.0.1",
+      "description": "A simple object pool implementation.\n\nThis package was built from the source code at https://github.com/dotnet/aspnetcore/tree/8e941eb42f819adb116b881195158b3887a70a1c",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "externalReferences": [
+        {
+          "url": "https://asp.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/aspnetcore",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "8.0.1"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.ObjectPool.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.ObjectPool.dll=16ba19a951af5463d6141197a41386c16424be28855c3e82750039fc5cafc58e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.Options.DataAnnotations",
+      "version": "10.0.10",
+      "description": "Provides additional DataAnnotations specific functionality related to Options.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.10"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll=ddf6b2cd3148611375d25eb9ca92c98d250b84b4eb33f6f60efbfff5a7893124"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.5.212.28020",
+      "type": "library",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "Reveal.Sdk.AI.Abstractions.Debug",
+      "version": "1.5.212.28020",
+      "scope": "required",
+      "purl": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.5.212.28020",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dotnet-deps-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "dotnet"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "dotnet"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "dotnet-portable-executable-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:infragistics:reveal_sdk_ai:1.5.212.28020:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "\\native\\Reveal.Sdk.AI.Abstractions.Debug.dll"
+        },
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Abstractions.Debug.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Abstractions.Debug.dll=594ded20b4a66389e6bad065cf3678743303b75905f05fafe3c17b3cb4692e6d"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.5.213",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "name": "Reveal.Sdk.AI.Anthropic",
+      "version": "1.5.213",
+      "description": "Anthropic AI provider integration for the Reveal SDK. Enables the use of Anthropic's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.5.213",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Anthropic.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Anthropic.dll=8469678f611bde34307c5655fd48e0cdb318df37072ee64f3da76f478fa25e79"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.5.213",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "name": "Reveal.Sdk.AI.AspNetCore",
+      "version": "1.5.213",
+      "description": "ASP.NET Core integration for Reveal.Sdk.AI, enabling AI-powered analytics in ASP.NET Core applications.",
+      "copyright": "Copyright © Infragistics 2026",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.5.213",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.AspNetCore.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.AspNetCore.dll=ebac18666a8bb2dfc09e6c62e7c853058ee3b0c88491f7cfcecd196c74617cb1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.5.213",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "name": "Reveal.Sdk.AI.AzureOpenAI",
+      "version": "1.5.213",
+      "description": "Azure OpenAI provider integration for the Reveal SDK. Enables the use of Azure OpenAI's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.5.213",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll=ca804f3ef54998739c249c0c499147c709a5808d07a80535790ce9c6a72f9839"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.5.213",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "name": "Reveal.Sdk.AI.Google",
+      "version": "1.5.213",
+      "description": "Google AI provider integration for the Reveal SDK. Enables the use of Google's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Google@1.5.213",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Google.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Google.dll=83db537f5d38f49401ad8274a7c6904fae47e8fcb854d6493766f0d6cd327e7f"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.5.213",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "name": "Reveal.Sdk.AI.OpenAI",
+      "version": "1.5.213",
+      "description": "OpenAI provider integration for the Reveal SDK. Enables the use of OpenAI's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.5.213",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.OpenAI.dll=f85d4c4827a8d28031b31c06e1b7db736681aa8db6e981f3dbf8b6596df789aa"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI@1.5.213",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "name": "Reveal.Sdk.AI",
+      "version": "1.5.213",
+      "description": "AI capabilities for Reveal SDK, providing intelligent data analysis and insights.",
+      "copyright": "Copyright © Infragistics 2026",
+      "purl": "pkg:nuget/Reveal.Sdk.AI@1.5.213",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.5.212.28020"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.dll=c76f5e99f1e4a23ba45d8164beebb4d5343945d8e2ba24569f6fe231ceee32a8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.672-beta",
+      "authors": [
+        {
+          "name": "Brian Lagunas"
+        }
+      ],
+      "name": "Reveal.Sdk.Dom",
+      "version": "0.1.672-beta",
+      "description": "The Reveal.Sdk.Dom is a Document Object Model (DOM) for the Reveal .rdash file format. It allows developers using the Reveal SDK to load, edit, and create dashboards using .NET.",
+      "copyright": "Copyright ©2022 Infragistics Inc.",
+      "purl": "pkg:nuget/Reveal.Sdk.Dom@0.1.672-beta",
+      "externalReferences": [
+        {
+          "url": "https://www.revealbi.io/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/RevealBi/Reveal.Sdk.Dom",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "0.1.672.8487"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.Dom.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.Dom.dll=63249495301708c6614a38a81828736321b26a2a185999ca7b8a1900887fffb2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/SqlParserCS@0.6.5",
+      "authors": [
+        {
+          "name": "Tyler Brinks"
+        }
+      ],
+      "name": "SqlParserCS",
+      "version": "0.6.5",
+      "description": "Friendly SQL Parser for .NET",
+      "copyright": "2025 Tyler Brinks",
+      "purl": "pkg:nuget/SqlParserCS@0.6.5",
+      "externalReferences": [
+        {
+          "url": "https://github.com/TylerBrinks/SqlParser-cs",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/TylerBrinks/SqlParser-cs",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "0.6.5-release.0+Branch.release-0.6.5.Sha.d95fb53f6bbee0a0aa6d8143a8cdd3e51d690fac.d95fb53f6bbee0a0aa6d8143a8cdd3e51d690fac"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/SqlParser.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/SqlParser.dll=0c80f92bc658c0a55feb3f9a51fbcb5ec48368a0389d609ec1c3fea8ac886518"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.ClientModel@1.14.0",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.ClientModel",
+      "version": "1.14.0",
+      "description": "Contains building blocks for clients that call cloud services.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.ClientModel@1.14.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/blob/System.ClientModel_1.14.0/sdk/core/System.ClientModel/README.md",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.1400.26.30307"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.ClientModel.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.ClientModel.dll=8cc9da03e824b1f5ed412f3fde42539ae258d9e1b2db991feb8603b878bcac8a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.IO.Pipelines",
+      "version": "10.0.10",
+      "description": "Single producer single consumer byte buffer management.\n\nCommonly Used Types:\nSystem.IO.Pipelines.Pipe\nSystem.IO.Pipelines.PipeWriter\nSystem.IO.Pipelines.PipeReader",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.10"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.IO.Pipelines.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.IO.Pipelines.dll=9fa53a32f45686f97af49aba89fba89a5e0140d5839618fae318edac635437c8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Memory.Data@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.Memory.Data",
+      "version": "10.0.3",
+      "description": "A lightweight abstraction for a payload of bytes. Provides methods for converting between strings, streams, JSON, and bytes.\n\nCommonly Used Types:\nSystem.BinaryData",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.Memory.Data@10.0.3",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.3"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Memory.Data.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Memory.Data.dll=e7837fb6e7d6dae7d2a05a8934c3ed92ecff3192ee86521de9cf080b28bb96b2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.Net.ServerSentEvents",
+      "version": "10.0.2",
+      "description": "Provides a simple parser for server-sent events (SSE).\n\nCommonly Used Types:\nSystem.Net.ServerSentEvents.SseParser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.2"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Net.ServerSentEvents.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Net.ServerSentEvents.dll=9f970a18ca00533628c71e471e05984b1c0d179b121aa0b7ab0b08c1f0fa5a60"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.Text.Encodings.Web",
+      "version": "10.0.10",
+      "description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\n\nCommonly Used Types:\nSystem.Text.Encodings.Web.HtmlEncoder\nSystem.Text.Encodings.Web.UrlEncoder\nSystem.Text.Encodings.Web.JavaScriptEncoder",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.10"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Text.Encodings.Web.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Text.Encodings.Web.dll=98951dac337286ddb49b53f316209830ca1ccc6c56b57c51033273d02ccd286b"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll=da808440792e010b374d20dd4695574ea60f893382bd5afc8c444853033a38aa"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Text.Json@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.Text.Json",
+      "version": "10.0.10",
+      "description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\n\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.Text.Json@10.0.10",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.10"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Text.Json.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Text.Json.dll=cfbdfa2690d3770d531ec91c19d340dccc117df74427a7e4227d71d514eea063"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/OpenAI@2.12.0",
+      "authors": [
+        {
+          "name": "OpenAI"
+        }
+      ],
+      "name": "OpenAI",
+      "version": "2.12.0",
+      "description": "The official .NET library for the OpenAI service API.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright (c) 2026 OpenAI (https://openai.com)",
+      "purl": "pkg:nuget/OpenAI@2.12.0",
+      "externalReferences": [
+        {
+          "url": "https://github.com/openai/openai-dotnet/tree/OpenAI_2.12.0",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/openai/openai-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "scope": "required",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.12.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/OpenAI.dll=6f47facf543ac57942252e365c9ed2506c5d858efa43ef9d4c875f71f92606ea"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/reveal-sdk-node-ai@1.2.0",
+      "dependsOn": [
+        "pkg:npm/reveal-sdk-node@2.2.0",
+        "pkg:generic/AIPlugin@2.2.0.0",
+        "pkg:nuget/Anthropic@12.24.1",
+        "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+        "pkg:nuget/DotLiquid@2.3.197",
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Apis@1.72.0",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Apis.Core@1.72.0",
+        "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+        "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+        "pkg:nuget/Google.Cloud.Location@2.4.0",
+        "pkg:nuget/Google.LongRunning@3.5.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Auth@2.71.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Client@2.71.0",
+        "pkg:nuget/Grpc.Net.Common@2.71.0",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.5.212.28020",
+        "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.5.213",
+        "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.5.213",
+        "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.5.213",
+        "pkg:nuget/Reveal.Sdk.AI.Google@1.5.213",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.5.213",
+        "pkg:nuget/Reveal.Sdk.AI@1.5.213",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.672-beta",
+        "pkg:nuget/SqlParserCS@0.6.5",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.IO.Pipelines@10.0.10",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10",
+        "pkg:nuget/OpenAI@2.12.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/reveal-sdk-node@2.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/AIPlugin@2.2.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Anthropic@12.24.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/DotLiquid@2.3.197",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.LongRunning@3.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Protobuf@3.31.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Auth@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.5.212.28020",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.5.213",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.5.213",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.5.213",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.5.213",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.5.213",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI@1.5.213",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.672-beta",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/SqlParserCS@0.6.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.ClientModel@1.14.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Memory.Data@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Text.Json@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/OpenAI@2.12.0",
+      "dependsOn": []
+    }
+  ]
+}

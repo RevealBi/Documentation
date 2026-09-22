@@ -38,6 +38,10 @@ jobs:
 
       - name: Build documentation
         run: npm run build
+        env:
+          # Leave this repository variable unset to use static/sbom/catalog.json.
+          # Production should point it at the public CDN catalog.
+          SBOM_CATALOG_URL: ${{ vars.SBOM_CATALOG_URL }}
 
       - name: Upload build artifacts
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'

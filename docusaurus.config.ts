@@ -14,6 +14,11 @@ const sdkVersion_v1 = "1.8.4";
 const docsVersion = "2.2";
 const docsVersion_v1 = "1.8.4";
 
+// The SBOM catalog is loaded at runtime so releases can be published without
+// rebuilding the documentation site. The checked-in catalog is a development
+// fallback; set SBOM_CATALOG_URL to the public CDN URL for production.
+const sbomCatalogUrl = process.env.SBOM_CATALOG_URL?.trim() || "/sbom/catalog.json";
+
 // The AI search plugin lives in a private @igniteui GitHub Packages feed, so most
 // contributors cannot install it (it is an optionalDependency and is simply skipped).
 // Load it only when present, so the docs build and run for everyone; the deploy
@@ -44,6 +49,7 @@ const config: Config = {
   // Per-version values exposed to client components. Keyed by docs version id ("current" or the snapshot label).
   customFields: {
     sdkVersion: sdkVersion,
+    sbomCatalogUrl,
     sdkVersions: {
       current: sdkVersion,
       "1.8.4": sdkVersion_v1,
@@ -239,25 +245,30 @@ const config: Config = {
               label: 'Blogs',
               href: 'https://www.revealbi.io/blog',
             },
+            {
+              label: 'Trust Center',
+              to: '/trust/',
+            },
           ],
         },
         {
           title: "Legal",
           items: [
             {
+              label: "Reveal SDK License Agreement",
+              href: "https://www.revealbi.io/license-agreements/embedded-sdk",
+            },
+            {
               label: "Privacy Policy",
-              href: "https://www.infragistics.com/legal/privacy",
-              "href_jp": "https://jp.infragistics.com/legal/privacy",
+              href: "https://www.revealbi.io/privacy-policy",
             },
             {
               label: "Cookies",
-              href: "https://www.infragistics.com/legal/cookie-policy",
-              "href_jp": "https://jp.infragistics.com/legal/cookie-policy",
+              href: "https://www.revealbi.io/cookie-policy",
             },
             {
               label: "Terms of Use",
-              href: "https://www.infragistics.com/legal/terms-of-use",
-              "href_jp": "https://jp.infragistics.com/legal/terms-of-use",
+              href: "https://www.revealbi.io/terms-of-use",
             },
           ]
         }
