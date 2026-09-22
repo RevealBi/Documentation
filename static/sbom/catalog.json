@@ -77,7 +77,7 @@
       "architecture": "independent",
       "architectureLabel": "Platform independent",
       "downloadUrl": "./files/reveal-ai/dotnet/1.5.213/reveal-sdk-ai-dotnet-1.5.213.cdx.json",
-      "sha256": "ab38d6b2d329e13bc3454a0098abf6897a8d93c77992ec05dcdf53ac0ea7a489"
+      "sha256": "1c07856d33794e2997eaf75c79c9e8a8f3a1e7e1804e6273275131aba2bc81d5"
     },
     {
       "id": "reveal-ai-1.2.0-java-independent",
@@ -89,7 +89,7 @@
       "architecture": "independent",
       "architectureLabel": "Platform independent",
       "downloadUrl": "./files/reveal-ai/java/1.2.0/reveal-sdk-ai-java-1.2.0.cdx.json",
-      "sha256": "3fc4bd20c6c58da444cf78ba3f6d1dc7555d3d9bd5fe78dc6093c8c4d02fc44a"
+      "sha256": "379fd827778c0046723edd24c3bb46b9846b85ed285e2df80d412dca2cc3be79"
     },
     {
       "id": "reveal-ai-1.2.0-node-independent",
@@ -101,7 +101,19 @@
       "architecture": "independent",
       "architectureLabel": "Platform independent",
       "downloadUrl": "./files/reveal-ai/node/1.2.0/reveal-sdk-ai-node-1.2.0.cdx.json",
-      "sha256": "7ec07c0fd208e3177581655210c10c64fb94a1c61f0332ebc5eb685b7d05d463"
+      "sha256": "97824d6de2fbaebeb88a50502dee7faeeb0d48988d3404ad7ab8975da6675109"
+    },
+    {
+      "id": "reveal-client-2.2.1-javascript-browser",
+      "product": "Reveal Client",
+      "packageVersion": "2.2.1",
+      "scope": "client",
+      "platform": "javascript",
+      "platformLabel": "JavaScript",
+      "architecture": "browser",
+      "architectureLabel": "Browser",
+      "downloadUrl": "./files/reveal-client/javascript/2.2.1/reveal-sdk-client-2.2.1.cdx.json",
+      "sha256": "8189468febaa0b3bb1911904d380b3538954963768d23d7bc21e81de280feb39"
     }
   ]
 }

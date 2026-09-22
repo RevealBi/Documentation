@@ -104,9 +104,9 @@ export default function SecurityOverview(): React.JSX.Element {
           credentials to be embedded in the browser client.
         </FeatureCard>
         <FeatureCard icon="supply-chain" title="Supply-chain transparency">
-          Release-specific CycloneDX SBOMs describe the components in supported production
-          server packages. Each downloadable SBOM includes a SHA-256 checksum for verifying the
-          SBOM file.
+          Release-specific CycloneDX SBOMs describe the components in supported server and
+          browser client packages. Each downloadable SBOM includes a SHA-256 checksum for
+          verifying the SBOM file.
         </FeatureCard>
       </section>
 

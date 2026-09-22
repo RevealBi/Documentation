@@ -61,8 +61,8 @@ npm run build
 ### SBOM catalog
 
 The unversioned Trust Center loads its SBOM catalog at runtime. Local builds
-use `static/sbom/catalog.json`, which contains sample production-server entries
-for Windows x64 and Linux x64.
+use `static/sbom/catalog.json`, which contains the current server and browser
+client release entries.
 
 Until public CDN storage is available, the current downloadable documents live
 under `static/sbom/files` and the catalog uses relative URLs. Remove those checked-in
@@ -83,9 +83,8 @@ move together between staging and production CDN prefixes.
 
 Validate production catalogs against `static/sbom/catalog.schema.json` before
 publishing them. Server entries may be `independent` or limited to the supported
-production targets `win-x64` and `linux-x64`; the schema also reserves `browser`
-for a future Client SDK SBOM. Use one `independent` entry when the same SBOM applies
-to both server operating systems rather than duplicating its download URL. Catalog
-entries use the package version as their only product version. Only numeric RTM
-package versions are accepted; preview releases and CI builds must not be added to
-the catalog.
+production targets `win-x64` and `linux-x64`; Client SDK entries use `javascript`
+and `browser`. Use one `independent` entry when the same SBOM applies to both server
+operating systems rather than duplicating its download URL. Catalog entries use the
+package version as their only product version. Only numeric RTM package versions are
+accepted; preview releases and CI builds must not be added to the catalog.

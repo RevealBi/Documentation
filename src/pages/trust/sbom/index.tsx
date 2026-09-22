@@ -179,7 +179,8 @@ function resolveDownloadUrl(downloadUrl: string, catalogUrl: string): string | n
 }
 
 function ProductMark({product}: {product: string}): React.JSX.Element {
-  return <span className={styles.productMark}>{product === 'Reveal AI' ? 'AI' : 'R'}</span>;
+  const label = product === 'Reveal AI' ? 'AI' : product === 'Reveal Client' ? 'C' : 'R';
+  return <span className={styles.productMark}>{label}</span>;
 }
 
 export default function SbomPage(): React.JSX.Element {
@@ -275,7 +276,7 @@ export default function SbomPage(): React.JSX.Element {
     <TrustCenterLayout
       activePage="sbom"
       title="Software Bill of Materials"
-      description="Download CycloneDX software bills of materials for Reveal server releases on Windows x64 and Linux x64.">
+      description="Download CycloneDX software bills of materials for Reveal server and browser client releases.">
       <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
         <span>Trust Center</span>
         <span aria-hidden="true">/</span>
@@ -286,8 +287,8 @@ export default function SbomPage(): React.JSX.Element {
         <div>
           <h1>Software Bill of Materials</h1>
           <p>
-            Download a CycloneDX SBOM for the exact Reveal server package version and
-            runtime you deploy.
+            Download a CycloneDX SBOM for the exact Reveal package version and runtime
+            you deploy.
           </p>
         </div>
         <span className={styles.formatBadge}>
@@ -305,7 +306,7 @@ export default function SbomPage(): React.JSX.Element {
           </article>
           <article>
             <span>2</span>
-            <div><h3>Match the runtime</h3><p>Select .NET, Java, or Node. Match the operating-system architecture when one is listed.</p></div>
+            <div><h3>Match the runtime</h3><p>Select .NET, Java, Node, or JavaScript. Match the operating-system architecture when one is listed.</p></div>
           </article>
           <article>
             <span>3</span>

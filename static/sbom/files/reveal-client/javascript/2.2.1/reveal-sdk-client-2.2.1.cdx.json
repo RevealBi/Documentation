@@ -1,0 +1,162 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "npm",
+          "version": "11.16.0"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "10.3.0",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            }
+          ]
+        },
+        {
+          "type": "application",
+          "name": "cyclonedx-npm",
+          "group": "@cyclonedx",
+          "version": "6.0.1",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            },
+            {
+              "name": "cdx:npm:package:constraint:engine:npm",
+              "value": ">=9"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "name": "reveal-sdk",
+      "version": "2.2.1",
+      "bom-ref": "reveal-sdk@2.2.1",
+      "author": "Reveal Team",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "780c9fdc921caa183d297a7d86de4c7cb3ecab2c"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "fb03e5bb3494c013e24bba0be24781a1c7ea3df0dce0ad73be9ed325805a9caf"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "d5fbcbefdfb4660e6f1c18ebbe0645918544ec6e5047a259b959a66642fcb7452ecb80029cd2d9fc2cb854307a47248f0b6e405138bad6a7418c5b8e492993a8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "See license file in root.",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/reveal-sdk@2.2.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reveal-sdk/-/reveal-sdk-2.2.1.tgz"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        },
+        {
+          "name": "infragistics:npm-integrity",
+          "value": "sha512-1fvL79+0Zg5vHBjrvgZFkYVE7G5QR6JZuVmmZkL8t0Uuy4ACnNLZ/Cy4VDB6RySPC25AUTi61qdBjFuOSSmTqA=="
+        },
+        {
+          "name": "infragistics:scope",
+          "value": "browser client package"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "reveal-sdk@2.2.1"
+    }
+  ]
+}
