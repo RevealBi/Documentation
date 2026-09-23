@@ -50,7 +50,6 @@
         "contentsLabel": {"type": "string", "minLength": 1},
         "artifactType": {"enum": ["bundle", "file"]},
         "downloadUrl": {"type": "string", "minLength": 1},
-        "manifestUrl": {"type": "string", "minLength": 1},
         "mediaType": {"enum": ["application/zip", "application/vnd.cyclonedx+json"]},
         "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
       },
@@ -58,12 +57,10 @@
         {
           "if": {"properties": {"artifactType": {"const": "bundle"}}, "required": ["artifactType"]},
           "then": {
-            "required": ["manifestUrl"],
             "properties": {"mediaType": {"const": "application/zip"}}
           },
           "else": {
-            "properties": {"mediaType": {"const": "application/vnd.cyclonedx+json"}},
-            "not": {"required": ["manifestUrl"]}
+            "properties": {"mediaType": {"const": "application/vnd.cyclonedx+json"}}
           }
         },
         {

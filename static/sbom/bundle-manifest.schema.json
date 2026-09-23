@@ -41,12 +41,11 @@
     "file": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["displayName", "kind", "archivePath", "downloadUrl", "mediaType", "sha256"],
+      "required": ["displayName", "kind", "archivePath", "mediaType", "sha256"],
       "properties": {
         "displayName": {"type": "string", "minLength": 1},
         "kind": {"enum": ["aggregate", "base", "connector", "package", "runtime"]},
         "archivePath": {"type": "string", "pattern": "^(?![/\\\\]|.*\\.\\.).+\\.cdx\\.json$"},
-        "downloadUrl": {"type": "string", "minLength": 1},
         "mediaType": {"const": "application/vnd.cyclonedx+json"},
         "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
         "packageName": {"type": "string", "minLength": 1},

@@ -11,7 +11,6 @@ type SbomEntry = {
   contentsLabel: string;
   downloadUrl: string;
   id: string;
-  manifestUrl: string | null;
   mediaType: 'application/zip' | 'application/vnd.cyclonedx+json';
   packageVersion: string;
   platform: 'dotnet' | 'java' | 'javascript' | 'node';
@@ -51,13 +50,6 @@ function requireString(value: unknown, field: string): string {
   return value;
 }
 
-function optionalString(value: unknown, field: string): string | null {
-  if (value === null || value === undefined) {
-    return null;
-  }
-  return requireString(value, field);
-}
-
 function parseEntry(value: unknown, index: number): SbomEntry {
   if (!isObject(value)) {
     throw new Error(`Catalog entry ${index + 1} is not an object.`);
@@ -68,7 +60,6 @@ function parseEntry(value: unknown, index: number): SbomEntry {
   const artifactType = requireString(value.artifactType, 'artifactType') as SbomArtifactType;
   const packageVersion = requireString(value.packageVersion, 'packageVersion');
   const downloadUrl = requireString(value.downloadUrl, 'downloadUrl');
-  const manifestUrl = optionalString(value.manifestUrl, 'manifestUrl');
   const mediaType = requireString(value.mediaType, 'mediaType') as SbomEntry['mediaType'];
   const sha256 = requireString(value.sha256, 'sha256');
 
@@ -95,14 +86,14 @@ function parseEntry(value: unknown, index: number): SbomEntry {
     throw new Error(`Catalog entry ${index + 1} has an unsupported artifact type.`);
   }
   if (artifactType === 'bundle') {
-    if (!manifestUrl || mediaType !== 'application/zip') {
+    if (mediaType !== 'application/zip') {
       throw new Error(
-        `Catalog entry ${index + 1} must provide a manifest and use the ZIP media type.`,
+        `Catalog entry ${index + 1} must use the ZIP media type.`,
       );
     }
-  } else if (manifestUrl || mediaType !== 'application/vnd.cyclonedx+json') {
+  } else if (mediaType !== 'application/vnd.cyclonedx+json') {
     throw new Error(
-      `Catalog entry ${index + 1} must be a CycloneDX JSON file without a manifest.`,
+      `Catalog entry ${index + 1} must be a CycloneDX JSON file.`,
     );
   }
   if (!SHA_256_PATTERN.test(sha256)) {
@@ -114,7 +105,6 @@ function parseEntry(value: unknown, index: number): SbomEntry {
     contentsLabel: requireString(value.contentsLabel, 'contentsLabel'),
     downloadUrl,
     id: requireString(value.id, 'id'),
-    manifestUrl,
     mediaType,
     packageVersion,
     platform,
@@ -306,7 +296,7 @@ export default function SbomPage(): React.JSX.Element {
           </article>
           <article>
             <span>3</span>
-            <div><h3>Choose the document</h3><p>Download a JSON file or open a server ZIP and select the architecture or package listed in its manifest.</p></div>
+            <div><h3>Choose the document</h3><p>Download a JSON file or open a ZIP and select the architecture- or package-specific document you need.</p></div>
           </article>
         </div>
       </section>
@@ -391,10 +381,6 @@ export default function SbomPage(): React.JSX.Element {
                     typeof window !== 'undefined'
                       ? resolveDownloadUrl(entry.downloadUrl, catalogUrl)
                       : null;
-                  const resolvedManifestUrl =
-                    entry.manifestUrl && typeof window !== 'undefined'
-                      ? resolveDownloadUrl(entry.manifestUrl, catalogUrl)
-                      : null;
                   const canDownload = resolvedUrl !== null;
                   return (
                     <tr key={entry.id}>
@@ -411,20 +397,13 @@ export default function SbomPage(): React.JSX.Element {
                       <td>{entry.contentsLabel}</td>
                       <td className={styles.downloadCell}>
                         {canDownload ? (
-                          <div className={styles.downloadActions}>
-                            <a
-                              className={styles.downloadButton}
-                              href={resolvedUrl}
-                              aria-label={`Download ${entry.product} ${entry.packageVersion} ${entry.platformLabel} SBOM ${entry.artifactType}`}>
-                              <span aria-hidden="true">↓</span>
-                              Download {entry.artifactType === 'bundle' ? 'ZIP' : 'JSON'}
-                            </a>
-                            {resolvedManifestUrl && (
-                              <a className={styles.manifestLink} href={resolvedManifestUrl}>
-                                View contents
-                              </a>
-                            )}
-                          </div>
+                          <a
+                            className={styles.downloadButton}
+                            href={resolvedUrl}
+                            aria-label={`Download ${entry.product} ${entry.packageVersion} ${entry.platformLabel} SBOM ${entry.artifactType}`}>
+                            <span aria-hidden="true">↓</span>
+                            Download {entry.artifactType === 'bundle' ? 'ZIP' : 'JSON'}
+                          </a>
                         ) : (
                           <span className={styles.unavailableBadge}>Coming soon</span>
                         )}

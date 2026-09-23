@@ -287,12 +287,6 @@
   min-width: 170px;
 }
 
-.downloadActions {
-  display: inline-grid;
-  justify-items: start;
-  gap: 0.4rem;
-}
-
 .downloadButton {
   display: inline-flex;
   align-items: center;
@@ -314,18 +308,6 @@
   background: #d84d0d;
   border-color: #d84d0d;
   text-decoration: none;
-}
-
-.manifestLink {
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.78rem;
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 0.16rem;
-}
-
-.manifestLink:hover {
-  color: #d84d0d;
 }
 
 .unavailableBadge {
