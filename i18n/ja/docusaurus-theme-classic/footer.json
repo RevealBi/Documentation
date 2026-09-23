@@ -53,15 +53,15 @@
   },
   "link.item.label.Privacy Policy": {
     "message": "プライバシーポリシー",
-    "description": "The label of footer link with label=Privacy Policy linking to https://www.infragistics.com/legal/privacy"
+    "description": "The label of footer link with label=Privacy Policy linking to https://www.revealbi.io/privacy-policy"
   },
   "link.item.label.Cookies": {
     "message": "クッキーポリシー",
-    "description": "The label of footer link with label=Cookies linking to https://www.infragistics.com/legal/cookie-policy"
+    "description": "The label of footer link with label=Cookies linking to https://www.revealbi.io/cookie-policy"
   },
   "link.item.label.Terms of Use": {
     "message": " 利用条件",
-    "description": "The label of footer link with label=Terms of Use linking to https://www.infragistics.com/legal/terms-of-use"
+    "description": "The label of footer link with label=Terms of Use linking to https://www.revealbi.io/terms-of-use"
   },
   "link.item.label.User": {
     "message": "ユーザー",

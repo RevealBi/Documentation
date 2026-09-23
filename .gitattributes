@@ -1,0 +1,2 @@
+static/sbom/files/**/*.cdx.json -text
+static/sbom/bundles/**/*.zip binary

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://help.revealbi.io/sbom/catalog.schema.json",
+  "title": "Reveal SBOM catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "format", "entries"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 2},
+    "format": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "mediaType"],
+      "properties": {
+        "name": {"const": "CycloneDX"},
+        "version": {"type": "string", "pattern": "^1\\.[0-9]+$"},
+        "mediaType": {"const": "application/vnd.cyclonedx+json"}
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/entry"}
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "product",
+        "packageVersion",
+        "scope",
+        "platform",
+        "platformLabel",
+        "contentsLabel",
+        "artifactType",
+        "downloadUrl",
+        "mediaType",
+        "sha256"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+        "product": {"type": "string", "minLength": 1},
+        "packageVersion": {"type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+){1,3}$"},
+        "scope": {"enum": ["server", "client"]},
+        "platform": {"enum": ["dotnet", "java", "node", "javascript"]},
+        "platformLabel": {"type": "string", "minLength": 1},
+        "contentsLabel": {"type": "string", "minLength": 1},
+        "artifactType": {"enum": ["bundle", "file"]},
+        "downloadUrl": {"type": "string", "minLength": 1},
+        "mediaType": {"enum": ["application/zip", "application/vnd.cyclonedx+json"]},
+        "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"artifactType": {"const": "bundle"}}, "required": ["artifactType"]},
+          "then": {
+            "properties": {"mediaType": {"const": "application/zip"}}
+          },
+          "else": {
+            "properties": {"mediaType": {"const": "application/vnd.cyclonedx+json"}}
+          }
+        },
+        {
+          "if": {"properties": {"scope": {"const": "server"}}, "required": ["scope"]},
+          "then": {"properties": {"platform": {"enum": ["dotnet", "java", "node"]}}}
+        },
+        {
+          "if": {"properties": {"scope": {"const": "client"}}, "required": ["scope"]},
+          "then": {
+            "properties": {
+              "platform": {"const": "javascript"},
+              "artifactType": {"const": "file"}
+            }
+          }
+        }
+      ]
+    }
+  }
+}

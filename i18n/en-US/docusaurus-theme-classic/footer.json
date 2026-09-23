@@ -57,15 +57,15 @@
   },
   "link.item.label.Privacy Policy": {
     "message": "Privacy Policy",
-    "description": "The label of footer link with label=Privacy Policy linking to https://www.infragistics.com/legal/privacy"
+    "description": "The label of footer link with label=Privacy Policy linking to https://www.revealbi.io/privacy-policy"
   },
   "link.item.label.Cookies": {
     "message": "Cookies",
-    "description": "The label of footer link with label=Cookies linking to https://www.infragistics.com/legal/cookie-policy"
+    "description": "The label of footer link with label=Cookies linking to https://www.revealbi.io/cookie-policy"
   },
   "link.item.label.Terms of Use": {
     "message": "Terms of Use",
-    "description": "The label of footer link with label=Terms of Use linking to https://www.infragistics.com/legal/terms-of-use"
+    "description": "The label of footer link with label=Terms of Use linking to https://www.revealbi.io/terms-of-use"
   },
   "copyright": {
     "message": "Copyright © 2026 Infragistics. All Rights Reserved.",

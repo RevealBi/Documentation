@@ -1,0 +1,102 @@
+{
+  "$schema": "./catalog.schema.json",
+  "schemaVersion": 2,
+  "format": {
+    "name": "CycloneDX",
+    "version": "1.7",
+    "mediaType": "application/vnd.cyclonedx+json"
+  },
+  "entries": [
+    {
+      "id": "reveal-server-2.2.1-dotnet",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.1",
+      "scope": "server",
+      "platform": "dotnet",
+      "platformLabel": ".NET",
+      "contentsLabel": "ASP.NET SDK, data package, all-connectors aggregate, and 21 connectors",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-server/dotnet/2.2.1/reveal-server-dotnet-2.2.1-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "1bedf478a0620bc1e24dc975a5678ed9dceb05395e39983c5cf36c1d88b87281"
+    },
+    {
+      "id": "reveal-server-2.2.1-java",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.1",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "contentsLabel": "Windows x64 and Linux x64",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-server/java/2.2.1/reveal-server-java-2.2.1-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "4a65f2aed7cb571a0ff4675be121d774f2849b4b5bff66154784befc19ae3020"
+    },
+    {
+      "id": "reveal-server-2.2.1-node",
+      "product": "Reveal Server",
+      "packageVersion": "2.2.1",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "contentsLabel": "Windows x64 and Linux x64",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-server/node/2.2.1/reveal-server-node-2.2.1-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "a512f032322fa75756c0d9adbd0a8bff7c9a135647791b6498b33dad787db602"
+    },
+    {
+      "id": "reveal-ai-1.5.213-dotnet",
+      "product": "Reveal AI",
+      "packageVersion": "1.5.213",
+      "scope": "server",
+      "platform": "dotnet",
+      "platformLabel": ".NET",
+      "contentsLabel": "All-packages aggregate and 7 NuGet package SBOMs",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-ai/dotnet/1.5.213/reveal-ai-dotnet-1.5.213-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "b26d123afe3f71751283f2ae738e1e8db29a2878f6f29e072925c48e9e207d5b"
+    },
+    {
+      "id": "reveal-ai-1.2.0-java",
+      "product": "Reveal AI",
+      "packageVersion": "1.2.0",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "contentsLabel": "Platform independent",
+      "artifactType": "file",
+      "downloadUrl": "./files/reveal-ai/java/1.2.0/reveal-sdk-ai-java-1.2.0.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "379fd827778c0046723edd24c3bb46b9846b85ed285e2df80d412dca2cc3be79"
+    },
+    {
+      "id": "reveal-ai-1.2.0-node",
+      "product": "Reveal AI",
+      "packageVersion": "1.2.0",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "contentsLabel": "Platform independent",
+      "artifactType": "file",
+      "downloadUrl": "./files/reveal-ai/node/1.2.0/reveal-sdk-ai-node-1.2.0.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "97824d6de2fbaebeb88a50502dee7faeeb0d48988d3404ad7ab8975da6675109"
+    },
+    {
+      "id": "reveal-client-2.2.1-javascript",
+      "product": "Reveal Client",
+      "packageVersion": "2.2.1",
+      "scope": "client",
+      "platform": "javascript",
+      "platformLabel": "JavaScript",
+      "contentsLabel": "Browser package",
+      "artifactType": "file",
+      "downloadUrl": "./files/reveal-client/javascript/2.2.1/reveal-sdk-client-2.2.1.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "8189468febaa0b3bb1911904d380b3538954963768d23d7bc21e81de280feb39"
+    }
+  ]
+}
