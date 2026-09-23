@@ -14,12 +14,12 @@
       "scope": "server",
       "platform": "dotnet",
       "platformLabel": ".NET",
-      "contentsLabel": "Base SDK, all-connectors aggregate, and 21 connector packages",
+      "contentsLabel": "ASP.NET SDK, data package, all-connectors aggregate, and 21 connectors",
       "artifactType": "bundle",
       "downloadUrl": "./bundles/reveal-server/dotnet/2.2.1/reveal-server-dotnet-2.2.1-sbom.zip",
       "manifestUrl": "./bundles/reveal-server/dotnet/2.2.1/manifest.json",
       "mediaType": "application/zip",
-      "sha256": "6cff6c8d73d8efe5af309362ca33e99783ade0969c90037e9058f8738bb59e65"
+      "sha256": "06709ac60637c37c6dbc15eff78a489020b174e3d9c47721e114e5107c634d24"
     },
     {
       "id": "reveal-server-2.2.1-java",
@@ -56,11 +56,12 @@
       "scope": "server",
       "platform": "dotnet",
       "platformLabel": ".NET",
-      "contentsLabel": "Platform independent",
-      "artifactType": "file",
-      "downloadUrl": "./files/reveal-ai/dotnet/1.5.213/reveal-sdk-ai-dotnet-1.5.213.cdx.json",
-      "mediaType": "application/vnd.cyclonedx+json",
-      "sha256": "1c07856d33794e2997eaf75c79c9e8a8f3a1e7e1804e6273275131aba2bc81d5"
+      "contentsLabel": "All-packages aggregate and 7 NuGet package SBOMs",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-ai/dotnet/1.5.213/reveal-ai-dotnet-1.5.213-sbom.zip",
+      "manifestUrl": "./bundles/reveal-ai/dotnet/1.5.213/manifest.json",
+      "mediaType": "application/zip",
+      "sha256": "041a8878782c7720651b929fff863064cd070307e177818ad68380b817306e72"
     },
     {
       "id": "reveal-ai-1.2.0-java",

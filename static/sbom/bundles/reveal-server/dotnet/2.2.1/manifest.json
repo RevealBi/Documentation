@@ -7,7 +7,7 @@
     "packageVersion": "2.2.1",
     "platform": "dotnet",
     "platformLabel": ".NET",
-    "description": "Base ASP.NET package, an all-connectors aggregate, and one SBOM for each optional data connector package."
+    "description": "ASP.NET and data packages, an all-connectors aggregate, and one SBOM for each optional data connector package."
   },
   "format": {
     "name": "CycloneDX",
@@ -23,6 +23,15 @@
       "mediaType": "application/vnd.cyclonedx+json",
       "sha256": "ae2c633cccefa141a42dbd24b261f613c707bcf980222bcad4ac8226af0857a5",
       "packageName": "Reveal.Sdk.AspNetCore"
+    },
+    {
+      "displayName": "Reveal.Sdk.Data",
+      "kind": "package",
+      "archivePath": "sboms/Reveal.Sdk.Data-2.2.1.cdx.json",
+      "downloadUrl": "../../../../files/reveal-server/dotnet/2.2.1/Reveal.Sdk.Data-2.2.1.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "7c43e1931ee9778ca0f2d2fa020f322a9d860d6f670ef2867a94b5d634f3d71f",
+      "packageName": "Reveal.Sdk.Data"
     },
     {
       "displayName": "Reveal Server .NET SDK - All Connectors",

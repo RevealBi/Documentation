@@ -14,7 +14,7 @@
       "required": ["id", "product", "packageVersion", "platform", "platformLabel", "description"],
       "properties": {
         "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
-        "product": {"const": "Reveal Server"},
+        "product": {"enum": ["Reveal Server", "Reveal AI"]},
         "packageVersion": {"type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+){1,3}$"},
         "platform": {"enum": ["dotnet", "java", "node"]},
         "platformLabel": {"type": "string", "minLength": 1},
@@ -44,7 +44,7 @@
       "required": ["displayName", "kind", "archivePath", "downloadUrl", "mediaType", "sha256"],
       "properties": {
         "displayName": {"type": "string", "minLength": 1},
-        "kind": {"enum": ["aggregate", "base", "connector", "runtime"]},
+        "kind": {"enum": ["aggregate", "base", "connector", "package", "runtime"]},
         "archivePath": {"type": "string", "pattern": "^(?![/\\\\]|.*\\.\\.).+\\.cdx\\.json$"},
         "downloadUrl": {"type": "string", "minLength": 1},
         "mediaType": {"const": "application/vnd.cyclonedx+json"},
@@ -59,7 +59,7 @@
           "then": {"required": ["architecture", "architectureLabel"]}
         },
         {
-          "if": {"properties": {"kind": {"const": "connector"}}, "required": ["kind"]},
+          "if": {"properties": {"kind": {"enum": ["connector", "package"]}}, "required": ["kind"]},
           "then": {"required": ["packageName"]}
         }
       ]
