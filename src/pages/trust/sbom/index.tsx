@@ -4,18 +4,21 @@ import TrustCenterLayout from '@site/src/components/TrustCenterLayout';
 import styles from './styles.module.css';
 
 type SbomScope = 'client' | 'server';
+type SbomArtifactType = 'bundle' | 'file';
 
 type SbomEntry = {
-  architecture: 'browser' | 'independent' | 'linux-x64' | 'win-x64';
-  architectureLabel: string;
-  downloadUrl: string | null;
+  artifactType: SbomArtifactType;
+  contentsLabel: string;
+  downloadUrl: string;
   id: string;
+  manifestUrl: string | null;
+  mediaType: 'application/zip' | 'application/vnd.cyclonedx+json';
   packageVersion: string;
   platform: 'dotnet' | 'java' | 'javascript' | 'node';
   platformLabel: string;
   product: string;
   scope: SbomScope;
-  sha256: string | null;
+  sha256: string;
 };
 
 type SbomCatalog = {
@@ -25,7 +28,7 @@ type SbomCatalog = {
     name: 'CycloneDX';
     version: string;
   };
-  schemaVersion: 1;
+  schemaVersion: 2;
 };
 
 type LoadState =
@@ -35,7 +38,6 @@ type LoadState =
 
 const SHA_256_PATTERN = /^[a-fA-F0-9]{64}$/;
 const RTM_VERSION_PATTERN = /^[0-9]+(?:\.[0-9]+){1,3}$/;
-const SERVER_ARCHITECTURES = new Set(['independent', 'win-x64', 'linux-x64']);
 const SERVER_PLATFORMS = new Set(['dotnet', 'java', 'node']);
 
 function isObject(value: unknown): value is Record<string, unknown> {
@@ -63,13 +65,12 @@ function parseEntry(value: unknown, index: number): SbomEntry {
 
   const scope = requireString(value.scope, 'scope') as SbomScope;
   const platform = requireString(value.platform, 'platform') as SbomEntry['platform'];
-  const architecture = requireString(
-    value.architecture,
-    'architecture',
-  ) as SbomEntry['architecture'];
+  const artifactType = requireString(value.artifactType, 'artifactType') as SbomArtifactType;
   const packageVersion = requireString(value.packageVersion, 'packageVersion');
-  const downloadUrl = optionalString(value.downloadUrl, 'downloadUrl');
-  const sha256 = optionalString(value.sha256, 'sha256');
+  const downloadUrl = requireString(value.downloadUrl, 'downloadUrl');
+  const manifestUrl = optionalString(value.manifestUrl, 'manifestUrl');
+  const mediaType = requireString(value.mediaType, 'mediaType') as SbomEntry['mediaType'];
+  const sha256 = requireString(value.sha256, 'sha256');
 
   if (scope !== 'server' && scope !== 'client') {
     throw new Error(`Catalog entry ${index + 1} has an unsupported scope.`);
@@ -84,32 +85,37 @@ function parseEntry(value: unknown, index: number): SbomEntry {
     if (!SERVER_PLATFORMS.has(platform)) {
       throw new Error(`Catalog entry ${index + 1} has an unsupported server platform.`);
     }
-    if (!SERVER_ARCHITECTURES.has(architecture)) {
+  } else if (platform !== 'javascript' || artifactType !== 'file') {
+    throw new Error(
+      `Catalog entry ${index + 1} must use a JavaScript file for a client SBOM.`,
+    );
+  }
+
+  if (artifactType !== 'bundle' && artifactType !== 'file') {
+    throw new Error(`Catalog entry ${index + 1} has an unsupported artifact type.`);
+  }
+  if (artifactType === 'bundle') {
+    if (!manifestUrl || mediaType !== 'application/zip') {
       throw new Error(
-        `Catalog entry ${index + 1} targets '${architecture}'. Server SBOMs may only be platform-independent or target win-x64 or linux-x64.`,
+        `Catalog entry ${index + 1} must provide a manifest and use the ZIP media type.`,
       );
     }
-  } else if (platform !== 'javascript' || architecture !== 'browser') {
+  } else if (manifestUrl || mediaType !== 'application/vnd.cyclonedx+json') {
     throw new Error(
-      `Catalog entry ${index + 1} must use the javascript/browser target for a client SBOM.`,
+      `Catalog entry ${index + 1} must be a CycloneDX JSON file without a manifest.`,
     );
   }
-
-  if ((downloadUrl === null) !== (sha256 === null)) {
-    throw new Error(
-      `Catalog entry ${index + 1} must provide both a download URL and SHA-256 checksum, or neither.`,
-    );
-  }
-
-  if (sha256 && !SHA_256_PATTERN.test(sha256)) {
+  if (!SHA_256_PATTERN.test(sha256)) {
     throw new Error(`Catalog entry ${index + 1} has an invalid SHA-256 checksum.`);
   }
 
   return {
-    architecture,
-    architectureLabel: requireString(value.architectureLabel, 'architectureLabel'),
+    artifactType,
+    contentsLabel: requireString(value.contentsLabel, 'contentsLabel'),
     downloadUrl,
     id: requireString(value.id, 'id'),
+    manifestUrl,
+    mediaType,
     packageVersion,
     platform,
     platformLabel: requireString(value.platformLabel, 'platformLabel'),
@@ -123,7 +129,7 @@ function parseCatalog(value: unknown): SbomCatalog {
   if (!isObject(value)) {
     throw new Error('The SBOM catalog is not a JSON object.');
   }
-  if (value.schemaVersion !== 1) {
+  if (value.schemaVersion !== 2) {
     throw new Error('The SBOM catalog uses an unsupported schema version.');
   }
   if (!isObject(value.format) || value.format.name !== 'CycloneDX') {
@@ -158,7 +164,7 @@ function parseCatalog(value: unknown): SbomCatalog {
       name: 'CycloneDX',
       version: requireString(value.format.version, 'format.version'),
     },
-    schemaVersion: 1,
+    schemaVersion: 2,
   };
 }
 
@@ -196,7 +202,6 @@ export default function SbomPage(): React.JSX.Element {
   const [product, setProduct] = useState('all');
   const [packageVersion, setPackageVersion] = useState('all');
   const [platform, setPlatform] = useState('all');
-  const [architecture, setArchitecture] = useState('all');
 
   useEffect(() => {
     const controller = new AbortController();
@@ -238,11 +243,6 @@ export default function SbomPage(): React.JSX.Element {
     () => uniqueSorted(catalog?.entries.map(entry => entry.platformLabel) ?? []),
     [catalog],
   );
-  const architectures = useMemo(
-    () => uniqueSorted(catalog?.entries.map(entry => entry.architectureLabel) ?? []),
-    [catalog],
-  );
-
   const filteredEntries = useMemo(() => {
     if (!catalog) {
       return [];
@@ -251,7 +251,6 @@ export default function SbomPage(): React.JSX.Element {
       .filter(entry => product === 'all' || entry.product === product)
       .filter(entry => packageVersion === 'all' || entry.packageVersion === packageVersion)
       .filter(entry => platform === 'all' || entry.platformLabel === platform)
-      .filter(entry => architecture === 'all' || entry.architectureLabel === architecture)
       .sort((left, right) => {
         const productComparison = left.product.localeCompare(right.product);
         if (productComparison !== 0) return productComparison;
@@ -259,17 +258,14 @@ export default function SbomPage(): React.JSX.Element {
           numeric: true,
         });
         if (versionComparison !== 0) return versionComparison;
-        const platformComparison = left.platformLabel.localeCompare(right.platformLabel);
-        if (platformComparison !== 0) return platformComparison;
-        return left.architectureLabel.localeCompare(right.architectureLabel);
+        return left.platformLabel.localeCompare(right.platformLabel);
       });
-  }, [architecture, catalog, packageVersion, platform, product]);
+  }, [catalog, packageVersion, platform, product]);
 
   function clearFilters(): void {
     setProduct('all');
     setPackageVersion('all');
     setPlatform('all');
-    setArchitecture('all');
   }
 
   return (
@@ -287,8 +283,8 @@ export default function SbomPage(): React.JSX.Element {
         <div>
           <h1>Software Bill of Materials</h1>
           <p>
-            Download a CycloneDX SBOM for the exact Reveal package version and runtime
-            you deploy.
+            Download CycloneDX SBOMs for the exact Reveal package version and runtime
+            you deploy. Server bundles group related documents into a single download.
           </p>
         </div>
         <span className={styles.formatBadge}>
@@ -306,11 +302,11 @@ export default function SbomPage(): React.JSX.Element {
           </article>
           <article>
             <span>2</span>
-            <div><h3>Match the runtime</h3><p>Select .NET, Java, Node, or JavaScript. Match the operating-system architecture when one is listed.</p></div>
+            <div><h3>Match the platform</h3><p>Select .NET, Java, Node, or JavaScript for the package you deploy.</p></div>
           </article>
           <article>
             <span>3</span>
-            <div><h3>Download the SBOM</h3><p>Download the CycloneDX JSON document that matches your deployment.</p></div>
+            <div><h3>Choose the document</h3><p>Download a JSON file or open a server ZIP and select the architecture or package listed in its manifest.</p></div>
           </article>
         </div>
       </section>
@@ -353,13 +349,6 @@ export default function SbomPage(): React.JSX.Element {
               {platforms.map(value => <option key={value} value={value}>{value}</option>)}
             </select>
           </label>
-          <label>
-            <span>Architecture</span>
-            <select value={architecture} onChange={event => setArchitecture(event.target.value)}>
-              <option value="all">All architectures</option>
-              {architectures.map(value => <option key={value} value={value}>{value}</option>)}
-            </select>
-          </label>
           <button type="button" className={styles.clearButton} onClick={clearFilters}>
             Clear
           </button>
@@ -384,7 +373,7 @@ export default function SbomPage(): React.JSX.Element {
                 <col className={styles.productColumn} />
                 <col className={styles.packageVersionColumn} />
                 <col className={styles.platformColumn} />
-                <col className={styles.architectureColumn} />
+                <col className={styles.contentsColumn} />
                 <col className={styles.sbomColumn} />
               </colgroup>
               <thead>
@@ -392,15 +381,19 @@ export default function SbomPage(): React.JSX.Element {
                   <th scope="col">Product</th>
                   <th scope="col">Package version</th>
                   <th scope="col">Platform</th>
-                  <th scope="col">Architecture</th>
+                  <th scope="col">Includes</th>
                   <th scope="col">SBOM</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredEntries.map(entry => {
                   const resolvedUrl =
-                    entry.downloadUrl && typeof window !== 'undefined'
+                    typeof window !== 'undefined'
                       ? resolveDownloadUrl(entry.downloadUrl, catalogUrl)
+                      : null;
+                  const resolvedManifestUrl =
+                    entry.manifestUrl && typeof window !== 'undefined'
+                      ? resolveDownloadUrl(entry.manifestUrl, catalogUrl)
                       : null;
                   const canDownload = resolvedUrl !== null;
                   return (
@@ -415,16 +408,23 @@ export default function SbomPage(): React.JSX.Element {
                       </td>
                       <td className={styles.packageVersionCell}>{entry.packageVersion}</td>
                       <td>{entry.platformLabel}</td>
-                      <td>{entry.architectureLabel}</td>
+                      <td>{entry.contentsLabel}</td>
                       <td className={styles.downloadCell}>
                         {canDownload ? (
-                          <a
-                            className={styles.downloadButton}
-                            href={resolvedUrl}
-                            aria-label={`Download ${entry.product} ${entry.packageVersion} ${entry.platformLabel} ${entry.architectureLabel} SBOM`}>
-                            <span aria-hidden="true">↓</span>
-                            Download JSON
-                          </a>
+                          <div className={styles.downloadActions}>
+                            <a
+                              className={styles.downloadButton}
+                              href={resolvedUrl}
+                              aria-label={`Download ${entry.product} ${entry.packageVersion} ${entry.platformLabel} SBOM ${entry.artifactType}`}>
+                              <span aria-hidden="true">↓</span>
+                              Download {entry.artifactType === 'bundle' ? 'ZIP' : 'JSON'}
+                            </a>
+                            {resolvedManifestUrl && (
+                              <a className={styles.manifestLink} href={resolvedManifestUrl}>
+                                View contents
+                              </a>
+                            )}
+                          </div>
                         ) : (
                           <span className={styles.unavailableBadge}>Coming soon</span>
                         )}

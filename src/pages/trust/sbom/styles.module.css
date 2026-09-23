@@ -91,7 +91,7 @@
 
 .filters {
   display: grid;
-  grid-template-columns: 1.1fr 0.85fr 0.9fr 1fr auto;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
   gap: 0.75rem;
   align-items: end;
   padding: 1rem 1.45rem;
@@ -160,7 +160,7 @@
 .table {
   display: table;
   width: 100%;
-  min-width: 940px;
+  min-width: 980px;
   margin: 0;
   border-collapse: collapse;
   table-layout: fixed;
@@ -168,23 +168,23 @@
 }
 
 .productColumn {
-  width: 25%;
+  width: 22%;
 }
 
 .packageVersionColumn {
-  width: 17%;
+  width: 15%;
 }
 
 .platformColumn {
-  width: 14%;
+  width: 12%;
 }
 
-.architectureColumn {
-  width: 18%;
+.contentsColumn {
+  width: 31%;
 }
 
 .sbomColumn {
-  width: 26%;
+  width: 20%;
 }
 
 .table caption {
@@ -284,7 +284,13 @@
 }
 
 .downloadCell {
-  min-width: 195px;
+  min-width: 170px;
+}
+
+.downloadActions {
+  display: inline-grid;
+  justify-items: start;
+  gap: 0.4rem;
 }
 
 .downloadButton {
@@ -308,6 +314,18 @@
   background: #d84d0d;
   border-color: #d84d0d;
   text-decoration: none;
+}
+
+.manifestLink {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
+}
+
+.manifestLink:hover {
+  color: #d84d0d;
 }
 
 .unavailableBadge {

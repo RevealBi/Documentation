@@ -1,0 +1,39 @@
+{
+  "$schema": "../../../../bundle-manifest.schema.json",
+  "schemaVersion": 1,
+  "bundle": {
+    "id": "reveal-server-2.2.1-node",
+    "product": "Reveal Server",
+    "packageVersion": "2.2.1",
+    "platform": "node",
+    "platformLabel": "Node",
+    "description": "Windows x64 and Linux x64 runtime SBOMs."
+  },
+  "format": {
+    "name": "CycloneDX",
+    "version": "1.7",
+    "mediaType": "application/vnd.cyclonedx+json"
+  },
+  "files": [
+    {
+      "displayName": "Reveal Server Node - Windows x64",
+      "kind": "runtime",
+      "archivePath": "sboms/reveal-sdk-node-win-x64-2.2.1.cdx.json",
+      "downloadUrl": "../../../../files/reveal-server/node/2.2.1/reveal-sdk-node-win-x64-2.2.1.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "6bb9f335aaa7e4d89404b2b6bfbc682e79b4d8edf6a1f22fd258347121685104",
+      "architecture": "win-x64",
+      "architectureLabel": "Windows x64"
+    },
+    {
+      "displayName": "Reveal Server Node - Linux x64",
+      "kind": "runtime",
+      "archivePath": "sboms/reveal-sdk-node-linux-x64-2.2.1.cdx.json",
+      "downloadUrl": "../../../../files/reveal-server/node/2.2.1/reveal-sdk-node-linux-x64-2.2.1.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "ba4442cb6ac99095770964f2d2f4af8940b31bdab895b04acd726ea8c5ad4500",
+      "architecture": "linux-x64",
+      "architectureLabel": "Linux x64"
+    }
+  ]
+}

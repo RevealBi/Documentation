@@ -1,0 +1,39 @@
+{
+  "$schema": "../../../../bundle-manifest.schema.json",
+  "schemaVersion": 1,
+  "bundle": {
+    "id": "reveal-server-2.2.1-java",
+    "product": "Reveal Server",
+    "packageVersion": "2.2.1",
+    "platform": "java",
+    "platformLabel": "Java",
+    "description": "Windows x64 and Linux x64 runtime SBOMs."
+  },
+  "format": {
+    "name": "CycloneDX",
+    "version": "1.7",
+    "mediaType": "application/vnd.cyclonedx+json"
+  },
+  "files": [
+    {
+      "displayName": "Reveal Server Java - Windows x64",
+      "kind": "runtime",
+      "archivePath": "sboms/reveal-sdk-java-windows-x86_64.cdx.json",
+      "downloadUrl": "../../../../files/reveal-server/java/2.2.1/reveal-sdk-java-windows-x86_64.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "e1c042db00bc2534ead82b302a19e0d9bc6a6ee34f4dc4a18cebd55f1bf4ed5e",
+      "architecture": "win-x64",
+      "architectureLabel": "Windows x64"
+    },
+    {
+      "displayName": "Reveal Server Java - Linux x64",
+      "kind": "runtime",
+      "archivePath": "sboms/reveal-sdk-java-linux-x86_64.cdx.json",
+      "downloadUrl": "../../../../files/reveal-server/java/2.2.1/reveal-sdk-java-linux-x86_64.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "35fe25ee48f98e2437c774c3259f48b83b0224ac114a327bf41d28cae1355093",
+      "architecture": "linux-x64",
+      "architectureLabel": "Linux x64"
+    }
+  ]
+}
