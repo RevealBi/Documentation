@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:05d9dab3-e400-4ac4-8544-c8efda731f3c",
+  "serialNumber": "urn:uuid:86a0805b-84cc-4cc0-8bf3-19bba4b56a59",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-09-22T02:06:15Z",
+    "timestamp": "2026-09-23T00:06:00.570Z",
     "tools": {
       "components": [
         {
@@ -27,24 +27,24 @@
     },
     "component": {
       "type": "framework",
-      "bom-ref": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.0",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.1",
       "authors": [
         {
           "name": "Reveal Team"
         }
       ],
       "name": "Reveal.Sdk.AspNetCore",
-      "version": "2.2.0",
+      "version": "2.2.1",
       "description": "Check out the docs at https://help.revealbi.io/web",
       "scope": "required",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "29565C6259ED97AE8E134F10EEE9BBEBE27DD7201DD100E8F1937F59131CD6DC17BBF3282FAAA75D6CC397C62E8E395E5DF47D6F50AC89BF3AA3E028E6157E61"
+          "content": "CE2D8996E7A1BC13AA8DB6878B62852640BDE89E781B8A0C82DA4873E9599A19C568BA1AB3395F249C012F16E19444F3E5B0A17979B1C3C2C100DE21664AF24B"
         }
       ],
       "copyright": "Copyright ©2023 Infragistics Inc.",
-      "purl": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.0",
+      "purl": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.1",
       "supplier": {
         "name": "Infragistics Inc."
       },
@@ -59,7 +59,7 @@
         },
         {
           "type": "distribution",
-          "url": "https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/2.2.0"
+          "url": "https://www.nuget.org/packages/Reveal.Sdk.AspNetCore/2.2.1"
         }
       ],
       "properties": [
@@ -1846,24 +1846,24 @@
     },
     {
       "type": "library",
-      "bom-ref": "pkg:nuget/Reveal.Sdk.Data@2.2.0",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.Data@2.2.1",
       "authors": [
         {
           "name": "Reveal Team"
         }
       ],
       "name": "Reveal.Sdk.Data",
-      "version": "2.2.0",
+      "version": "2.2.1",
       "description": "Reveal.Sdk.Data",
       "scope": "required",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "F5D8442092B33E3A31E5D883BCDBC4F29AF50F2FEC865CD75B9F3DF304BFA8DC2E2DC75D1BB562E10F34AB19019E031CB7F9287CFB4A183610DFE2FBB8F56533"
+          "content": "C948D3BF4C19E982C5DCE187F62C62D45AD96C50CC61B29A06720A5AAF68AB24DF04BDAF3859840EA1B2F75E4B72A44C70659FD589953218AD3EF8418B544CE1"
         }
       ],
       "copyright": "Copyright ©2023 Infragistics Inc.",
-      "purl": "pkg:nuget/Reveal.Sdk.Data@2.2.0"
+      "purl": "pkg:nuget/Reveal.Sdk.Data@2.2.1"
     },
     {
       "type": "library",
@@ -6085,23 +6085,17 @@
       "dependsOn": []
     },
     {
-      "ref": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.0",
-      "dependsOn": [
-        "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.0"
-      ]
-    },
-    {
-      "ref": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.0",
+      "ref": "pkg:nuget/Reveal.Sdk.AspNetCore@2.2.1",
       "dependsOn": [
         "pkg:nuget/Microsoft.AspNetCore.Mvc.NewtonsoftJson@6.0.19",
         "pkg:nuget/Microsoft.Extensions.Hosting@6.0.1",
         "pkg:nuget/Microsoft.Extensions.ObjectPool@6.0.1",
         "pkg:nuget/Microsoft.Playwright@1.55.0",
-        "pkg:nuget/Reveal.Sdk.Data@2.2.0"
+        "pkg:nuget/Reveal.Sdk.Data@2.2.1"
       ]
     },
     {
-      "ref": "pkg:nuget/Reveal.Sdk.Data@2.2.0",
+      "ref": "pkg:nuget/Reveal.Sdk.Data@2.2.1",
       "dependsOn": [
         "pkg:nuget/Antlr4.Runtime.Standard@4.13.1",
         "pkg:nuget/DocumentFormat.OpenXml@2.9.1",
@@ -7088,5 +7082,6 @@
         "pkg:nuget/SkiaSharp.HarfBuzz@2.88.7"
       ]
     }
-  ]
+  ],
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json"
 }
