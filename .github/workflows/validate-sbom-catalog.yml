@@ -1,0 +1,61 @@
+name: Validate SBOM Catalog
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - static/sbom/**
+      - tools/sbom/**
+      - .github/workflows/*sbom*.yml
+  # Weekly check that the public catalog and every file it lists are still reachable and intact.
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      catalog:
+        description: Catalog path or URL to validate (defaults to static/sbom/catalog.json)
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/sbom
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/sbom/package-lock.json
+
+      - name: Install SBOM tools
+        run: npm ci
+
+      - name: Validate catalog
+        env:
+          EVENT: ${{ github.event_name }}
+          INPUT_CATALOG: ${{ inputs.catalog }}
+          SBOM_CATALOG_URL: ${{ vars.SBOM_CATALOG_URL }}
+        run: |
+          catalog="../../static/sbom/catalog.json"
+          if [ -n "$INPUT_CATALOG" ]; then
+            catalog="$INPUT_CATALOG"
+          elif [ "$EVENT" = "schedule" ]; then
+            if [ -z "$SBOM_CATALOG_URL" ]; then
+              echo "SBOM_CATALOG_URL is not set; validating the checked-in catalog."
+            else
+              catalog="$SBOM_CATALOG_URL"
+            fi
+          fi
+          node validate.mjs --catalog "$catalog"

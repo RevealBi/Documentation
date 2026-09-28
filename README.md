@@ -81,10 +81,16 @@ requests from `https://help.revealbi.io`. Relative SBOM download URLs in the
 catalog are resolved against the catalog URL, so the catalog and SBOM files can
 move together between staging and production CDN prefixes.
 
-Validate production catalogs against `static/sbom/catalog.schema.json` before
-publishing them. Server entries may be `independent` or limited to the supported
-production targets `win-x64` and `linux-x64`; Client SDK entries use `javascript`
-and `browser`. Use one `independent` entry when the same SBOM applies to both server
-operating systems rather than duplicating its download URL. Catalog entries use the
-package version as their only product version. Only numeric RTM package versions are
-accepted; preview releases and CI builds must not be added to the catalog.
+SBOMs are generated from the published RTM packages and added to the catalog by the
+[Publish SBOM Catalog](.github/workflows/publish-sbom-catalog.yml) workflow. Do not edit
+`catalog.json` or the SBOM files by hand. See [tools/sbom/README.md](tools/sbom/README.md)
+for the release process, validation rules, and rollback. Only numeric RTM package versions
+are accepted; preview releases and CI builds must not be added to the catalog.
+
+To validate the checked-in catalog locally:
+
+```bash
+cd tools/sbom
+npm ci
+npm run validate:docs
+```

@@ -1,0 +1,423 @@
+name: Publish SBOM Catalog
+
+# Generates CycloneDX SBOMs from RTM packages that are already published to NuGet, Maven,
+# and npm, validates them, and publishes them to the Trust Center catalog.
+#
+# Targets:
+#   dry-run  generate and validate only; download the result from the run's artifacts
+#   docs-pr  open a pull request that adds the files to static/sbom (interim, until the
+#            public SBOM storage exists)
+#   storage  upload to the public SBOM storage; catalog.json is replaced last
+#
+# Release pipelines trigger it with a repository_dispatch event, for example:
+#   gh api repos/RevealBi/Documentation/dispatches -f event_type=rtm-packages-published \
+#     -F 'client_payload[product]=reveal-server' -F 'client_payload[version]=2.2.2'
+# See tools/sbom/README.md.
+
+on:
+  workflow_dispatch:
+    inputs:
+      product:
+        description: Product whose RTM packages were published
+        type: choice
+        options:
+          - reveal-server
+          - reveal-ai
+          - reveal-client
+      platform:
+        description: Platform to generate, or all platforms of the product
+        type: choice
+        default: all
+        options:
+          - all
+          - dotnet
+          - java
+          - node
+          - javascript
+      version:
+        description: Published RTM package version, numeric only (for example 2.2.2)
+        type: string
+        required: true
+      target:
+        description: Where to publish the result
+        type: choice
+        default: dry-run
+        options:
+          - dry-run
+          - docs-pr
+          - storage
+      allow_replace:
+        description: Replace an entry that is already published for the same product, platform, and version
+        type: boolean
+        default: false
+  repository_dispatch:
+    types:
+      - rtm-packages-published
+
+permissions:
+  contents: read
+
+# One publication at a time, so two runs never read and rewrite catalog.json concurrently.
+concurrency:
+  group: sbom-catalog-publish
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    name: Plan
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      product: ${{ steps.plan.outputs.product }}
+      version: ${{ steps.plan.outputs.version }}
+      target: ${{ steps.plan.outputs.target }}
+      allow_replace: ${{ steps.plan.outputs.allow_replace }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Inputs come from a person or from another repository's dispatch payload. They are
+      # passed through env (never interpolated into scripts) and validated against
+      # sbom.config.json before any later job uses them.
+      - name: Validate inputs and build the matrix
+        id: plan
+        working-directory: tools/sbom
+        env:
+          PRODUCT: ${{ inputs.product || github.event.client_payload.product }}
+          PLATFORM: ${{ inputs.platform || github.event.client_payload.platform || 'all' }}
+          VERSION: ${{ inputs.version || github.event.client_payload.version }}
+          TARGET: ${{ inputs.target || github.event.client_payload.target || 'docs-pr' }}
+          ALLOW_REPLACE: ${{ inputs.allow_replace || github.event.client_payload.allow_replace || 'false' }}
+        run: |
+          case "$TARGET" in dry-run|docs-pr|storage) ;; *) echo "::error::Unknown target '$TARGET'."; exit 1 ;; esac
+          case "$ALLOW_REPLACE" in true|false) ;; *) echo "::error::allow_replace must be true or false."; exit 1 ;; esac
+          node plan.mjs --product "$PRODUCT" --platform "$PLATFORM" --version "$VERSION"
+          {
+            echo "product=$PRODUCT"
+            echo "version=$VERSION"
+            echo "target=$TARGET"
+            echo "allow_replace=$ALLOW_REPLACE"
+          } >> "$GITHUB_OUTPUT"
+          echo "### SBOM publication: $PRODUCT $VERSION ($PLATFORM) -> $TARGET" >> "$GITHUB_STEP_SUMMARY"
+
+  generate:
+    name: Generate ${{ matrix.platform }}
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    defaults:
+      run:
+        working-directory: tools/sbom
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/sbom/package-lock.json
+
+      - name: Install SBOM tools
+        run: npm ci
+
+      - name: Setup .NET
+        if: matrix.ecosystem == 'nuget'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install CycloneDX for .NET
+        if: matrix.ecosystem == 'nuget'
+        run: |
+          dotnet tool install --global CycloneDX --version "$(node -p "require('./sbom.config.json').tools['cyclonedx-dotnet']")"
+          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+
+      - name: Setup Java
+        if: matrix.ecosystem == 'maven'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install syft
+        if: matrix.embedded
+        id: syft
+        uses: anchore/sbom-action/download-syft@v0
+        with:
+          syft-version: v1.52.0
+
+      - name: Generate SBOMs
+        env:
+          PRODUCT: ${{ matrix.product }}
+          PLATFORM: ${{ matrix.platform }}
+          VERSION: ${{ matrix.version }}
+          LAYOUT: ${{ needs.plan.outputs.target == 'storage' && 'storage' || 'docs' }}
+          SYFT: ${{ steps.syft.outputs.cmd }}
+        run: node generate.mjs --product "$PRODUCT" --platform "$PLATFORM" --version "$VERSION" --layout "$LAYOUT" --out "$RUNNER_TEMP/sbom"
+
+      - name: Upload generated SBOMs
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-${{ matrix.platform }}
+          path: |
+            ${{ runner.temp }}/sbom/site
+            ${{ runner.temp }}/sbom/entries
+          if-no-files-found: error
+          retention-days: 7
+
+  assemble:
+    name: Assemble and validate
+    needs: [plan, generate]
+    runs-on: ubuntu-latest
+    outputs:
+      changed_ids: ${{ steps.merge.outputs.changed_ids }}
+    defaults:
+      run:
+        working-directory: tools/sbom
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/sbom/package-lock.json
+
+      - name: Install SBOM tools
+        run: npm ci
+
+      - name: Download generated SBOMs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sbom-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/sbom
+
+      # The catalog the new entries are merged into: the published one for storage, the
+      # checked-in fallback otherwise. A copy is kept so publish-storage can detect a catalog
+      # that changed while this run waited for approval.
+      - name: Fetch the current catalog
+        env:
+          TARGET: ${{ needs.plan.outputs.target }}
+          SBOM_CATALOG_URL: ${{ vars.SBOM_CATALOG_URL }}
+        run: |
+          if [ "$TARGET" = "storage" ]; then
+            if [ -z "$SBOM_CATALOG_URL" ]; then
+              echo "::error::Set the SBOM_CATALOG_URL repository variable before publishing to storage."
+              exit 1
+            fi
+            curl --fail --silent --show-error --location "$SBOM_CATALOG_URL" -o "$RUNNER_TEMP/sbom/base-catalog.json"
+          else
+            cp ../../static/sbom/catalog.json "$RUNNER_TEMP/sbom/base-catalog.json"
+          fi
+
+      - name: Merge catalog entries
+        id: merge
+        env:
+          ALLOW_REPLACE: ${{ needs.plan.outputs.allow_replace }}
+        run: |
+          extra=()
+          if [ "$ALLOW_REPLACE" = "true" ]; then extra+=(--allow-replace); fi
+          node merge-catalog.mjs \
+            --catalog "$RUNNER_TEMP/sbom/base-catalog.json" \
+            --entries "$RUNNER_TEMP/sbom/entries" \
+            --output "$RUNNER_TEMP/sbom/site/catalog.json" \
+            --changed-ids-file "$RUNNER_TEMP/sbom/changed-ids.txt" \
+            "${extra[@]}"
+          echo "changed_ids=$(cat "$RUNNER_TEMP/sbom/changed-ids.txt")" >> "$GITHUB_OUTPUT"
+
+      - name: Validate SBOMs, bundles, and catalog
+        if: steps.merge.outputs.changed_ids != ''
+        env:
+          CHANGED_IDS: ${{ steps.merge.outputs.changed_ids }}
+        run: node validate.mjs --catalog "$RUNNER_TEMP/sbom/site/catalog.json" --ids "$CHANGED_IDS"
+
+      - name: Upload release
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-release
+          path: |
+            ${{ runner.temp }}/sbom/site
+            ${{ runner.temp }}/sbom/base-catalog.json
+            ${{ runner.temp }}/sbom/changed-ids.txt
+          if-no-files-found: error
+          retention-days: 30
+
+  publish-docs-pr:
+    name: Open documentation pull request
+    needs: [plan, assemble]
+    if: needs.plan.outputs.target == 'docs-pr' && needs.assemble.outputs.changed_ids != ''
+    runs-on: ubuntu-latest
+    # Configure required reviewers on this environment to gate every publication.
+    environment: sbom-production
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/sbom/package-lock.json
+
+      - name: Download release
+        uses: actions/download-artifact@v4
+        with:
+          name: sbom-release
+          path: ${{ runner.temp }}/release
+
+      - name: Copy SBOMs into static/sbom
+        run: cp -R "$RUNNER_TEMP/release/site/." static/sbom/
+
+      - name: Validate the documentation catalog
+        working-directory: tools/sbom
+        run: |
+          npm ci
+          node validate.mjs --catalog ../../static/sbom/catalog.json
+
+      # Pull requests opened with GITHUB_TOKEN do not trigger other workflows. Provide an
+      # SBOM_PR_TOKEN secret (fine-grained PAT or GitHub App token) to run PR checks on them.
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.SBOM_PR_TOKEN || github.token }}
+          base: master
+          branch: sbom/${{ needs.plan.outputs.product }}-${{ needs.plan.outputs.version }}
+          add-paths: static/sbom
+          commit-message: Publish ${{ needs.plan.outputs.product }} ${{ needs.plan.outputs.version }} SBOMs
+          title: Publish ${{ needs.plan.outputs.product }} ${{ needs.plan.outputs.version }} SBOMs
+          body: |
+            Adds CycloneDX SBOMs generated from the published RTM packages to the Trust Center catalog.
+
+            - Product: `${{ needs.plan.outputs.product }}`
+            - Version: `${{ needs.plan.outputs.version }}`
+            - Catalog entries: `${{ needs.assemble.outputs.changed_ids }}`
+
+            Generated and validated by [run ${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+          delete-branch: true
+
+  publish-storage:
+    name: Publish to SBOM storage
+    needs: [plan, assemble]
+    if: needs.plan.outputs.target == 'storage' && needs.assemble.outputs.changed_ids != ''
+    runs-on: ubuntu-latest
+    environment: sbom-production
+    env:
+      BUCKET: ${{ vars.SBOM_STORAGE_BUCKET }}
+      PREFIX: ${{ vars.SBOM_STORAGE_PREFIX || 'sbom' }}
+      SBOM_CATALOG_URL: ${{ vars.SBOM_CATALOG_URL }}
+      DISTRIBUTION_ID: ${{ vars.SBOM_CLOUDFRONT_DISTRIBUTION_ID }}
+      ALLOW_REPLACE: ${{ needs.plan.outputs.allow_replace }}
+      CHANGED_IDS: ${{ needs.assemble.outputs.changed_ids }}
+    steps:
+      - name: Check storage configuration
+        run: |
+          missing=0
+          for name in BUCKET SBOM_CATALOG_URL; do
+            if [ -z "${!name}" ]; then echo "::error::Repository variable for $name is not set."; missing=1; fi
+          done
+          exit "$missing"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/sbom/package-lock.json
+
+      - name: Install SBOM tools
+        working-directory: tools/sbom
+        run: npm ci
+
+      - name: Download release
+        uses: actions/download-artifact@v4
+        with:
+          name: sbom-release
+          path: ${{ runner.temp }}/release
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.SBOM_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SBOM_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.SBOM_STORAGE_REGION || 'us-east-1' }}
+
+      - name: Check that the catalog has not changed since it was merged
+        run: |
+          current="$(curl --fail --silent --show-error --location "$SBOM_CATALOG_URL" | sha256sum | cut -d' ' -f1)"
+          merged_from="$(sha256sum "$RUNNER_TEMP/release/base-catalog.json" | cut -d' ' -f1)"
+          if [ "$current" != "$merged_from" ]; then
+            echo "::error::catalog.json changed after this run merged its entries. Re-run the workflow."
+            exit 1
+          fi
+
+      # SBOM files first. Existing objects are only overwritten when their content is
+      # identical or allow_replace is set, so published RTM SBOMs stay immutable.
+      - name: Upload SBOM files
+        working-directory: ${{ runner.temp }}/release/site
+        run: |
+          while IFS= read -r file; do
+            key="$PREFIX/${file#./}"
+            if aws s3api head-object --bucket "$BUCKET" --key "$key" > /dev/null 2>&1; then
+              remote_hash="$(aws s3 cp "s3://$BUCKET/$key" - | sha256sum | cut -d' ' -f1)"
+              new_hash="$(sha256sum "$file" | cut -d' ' -f1)"
+              if [ "$remote_hash" = "$new_hash" ]; then echo "unchanged $key"; continue; fi
+              if [ "$ALLOW_REPLACE" != "true" ]; then
+                echo "::error::$key already exists with different content."
+                exit 1
+              fi
+            fi
+            case "$file" in
+              *.zip) type=application/zip ;;
+              *) type=application/vnd.cyclonedx+json ;;
+            esac
+            aws s3 cp "$file" "s3://$BUCKET/$key" --content-type "$type" --cache-control "public, max-age=86400"
+          done < <(find . -type f ! -name catalog.json | sort)
+
+      - name: Verify the uploaded files are publicly reachable
+        working-directory: tools/sbom
+        run: node validate.mjs --catalog "$RUNNER_TEMP/release/site/catalog.json" --base-url "$SBOM_CATALOG_URL" --ids "$CHANGED_IDS"
+
+      - name: Back up the current catalog
+        run: |
+          stamp="$(date -u +%Y%m%dT%H%M%SZ)"
+          aws s3 cp "s3://$BUCKET/$PREFIX/catalog.json" "s3://$BUCKET/$PREFIX/catalog-history/catalog-$stamp.json"
+          echo "Previous catalog saved as catalog-history/catalog-$stamp.json" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish catalog.json
+        run: |
+          aws s3 cp "$RUNNER_TEMP/release/site/catalog.json" "s3://$BUCKET/$PREFIX/catalog.json" \
+            --content-type application/json --cache-control "public, max-age=300"
+          if [ -n "$DISTRIBUTION_ID" ]; then
+            aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/$PREFIX/catalog.json"
+          fi
+
+      # A CDN may serve the previous catalog for up to its max-age, so retry for a few minutes.
+      - name: Verify the published catalog
+        working-directory: tools/sbom
+        run: |
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if node validate.mjs --catalog "$SBOM_CATALOG_URL" --ids "$CHANGED_IDS"; then exit 0; fi
+            echo "Attempt $attempt failed; retrying in 45 seconds."
+            sleep 45
+          done
+          echo "::error::The public catalog does not serve the new entries. Restore it with the Restore SBOM Catalog workflow if needed."
+          exit 1
