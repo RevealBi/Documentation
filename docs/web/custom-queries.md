@@ -15,7 +15,7 @@ Support matrix:
 | Amazon Redshift | Yes | Yes |
 | [ClickHouse](adding-data-sources/clickhouse.md) | Yes | Yes |
 | [Databricks](adding-data-sources/databricks.md) | Yes | Yes |
-| [DuckDB](adding-data-sources/duckdb.md) | Yes | No |
+| [DuckDB](adding-data-sources/duckdb.md) | Yes | Yes |
 | [Elasticsearch](adding-data-sources/elasticsearch.md) | Yes | Yes |
 | [Google BigQuery](adding-data-sources/google-big-query.md) | Yes | Yes |
 | [MariaDB](adding-data-sources/mariadb.md) | Yes | Yes |
@@ -23,16 +23,16 @@ Support matrix:
 | Microsoft Azure Synapse Analytics | Yes | Yes |
 | [Microsoft SQL Server](adding-data-sources/ms-sql-server.md) | Yes | Yes |
 | [MySQL](adding-data-sources/mysql.md) | Yes | Yes |
-| [Oracle](adding-data-sources/oracle.md) | Yes | No |
+| [Oracle](adding-data-sources/oracle.md) | Yes | Yes |
 | [PostgreSQL](adding-data-sources/postgres.md) | Yes | Yes |
 | [Snowflake](adding-data-sources/snowflake.md) | Yes | Yes |
-| [SQLite](adding-data-sources/sqlite.md) | Yes | No |
+| [SQLite](adding-data-sources/sqlite.md) | Yes | Yes |
 
 :::note
 
 Use `CustomQueryParameters` instead of embedding values directly into `CustomQuery`. Add named placeholders such as `@salesPersonId` to the query text and pass the matching values separately.
 
-See the support matrix above for data source coverage. DuckDB, SQLite, and Oracle support `CustomQuery`, but do not currently support `CustomQueryParameters`. MariaDB parameterized custom queries are also not supported in the Java SDK.
+See the support matrix above for data source coverage. MariaDB parameterized custom queries are also not supported in the Java SDK.
 
 :::
 
