@@ -2,9 +2,9 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
   "serialNumber": "urn:uuid:f4346490-d4a2-422f-af0c-0b37c456a8a6",
-  "version": 1,
+  "version": 2,
   "metadata": {
-    "timestamp": "2026-09-23T01:13:46Z",
+    "timestamp": "2026-09-30T00:00:00Z",
     "tools": {
       "components": [
         {
@@ -71,7 +71,48 @@
           "value": "architecture-neutral NuGet package"
         }
       ]
-    }
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-09-30T00:00:00Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Production runtime artifacts distributed for Reveal server and browser client packages."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Package versions were matched against the OSV complete offline vulnerability databases. Each match was then reviewed against the packaged runtime, Reveal integration code, and the vulnerable behavior described by the advisory."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.6.0"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-09-30"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "vex_statements_included"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "5"
+      }
+    ]
   },
   "components": [
     {
@@ -5899,6 +5940,343 @@
       "dependsOn": [
         "pkg:nuget/SkiaSharp@2.88.7",
         "pkg:nuget/SkiaSharp.HarfBuzz@2.88.7"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vex:GHSA-447r-wph3-92pm:pkg:nuget/System.Formats.Asn1@7.0.0",
+      "id": "GHSA-447r-wph3-92pm",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-447r-wph3-92pm"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-38095",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-38095"
+          }
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "Microsoft Security Advisory CVE-2024-38095 | .NET Denial of Service Vulnerability",
+      "advisories": [
+        {
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-447r-wph3-92pm"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38095"
+        },
+        {
+          "url": "https://github.com/dotnet/runtime"
+        },
+        {
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38095"
+        }
+      ],
+      "published": "2024-07-09T21:14:53Z",
+      "updated": "2026-09-10T03:50:22.626103852Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The version appears in the NuGet dependency graph, but verification of a .NET 8 publish using the released Reveal package found no System.Formats.Asn1 7.0.0 assembly in the production runtime output. .NET 8 supplies the runtime implementation instead.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Formats.Asn1@7.0.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7jgj-8wvc-jh57:pkg:nuget/System.Net.Http@4.3.0",
+      "id": "GHSA-7jgj-8wvc-jh57",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7jgj-8wvc-jh57"
+      },
+      "references": [
+        {
+          "id": "CVE-2018-8292",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2018-8292"
+          }
+        }
+      ],
+      "cwes": [
+        200
+      ],
+      "description": ".NET Core Information Disclosure",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-8292"
+        },
+        {
+          "url": "https://github.com/dotnet/announcements/issues/88"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2018:2902"
+        },
+        {
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8292"
+        }
+      ],
+      "published": "2021-04-21T19:16:06Z",
+      "updated": "2023-11-08T04:00:26.990614Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Net.Http 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Net.Http@4.3.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-cmhx-cq75-c4mj:pkg:nuget/System.Text.RegularExpressions@4.3.0",
+      "id": "GHSA-cmhx-cq75-c4mj",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-cmhx-cq75-c4mj"
+      },
+      "references": [
+        {
+          "id": "CVE-2019-0820",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2019-0820"
+          }
+        }
+      ],
+      "cwes": [
+        1333,
+        400
+      ],
+      "description": "Regular Expression Denial of Service in System.Text.RegularExpressions",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0820"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1259"
+        },
+        {
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0820"
+        }
+      ],
+      "published": "2021-08-04T21:03:46Z",
+      "updated": "2023-11-08T04:00:33.819349Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Text.RegularExpressions 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Text.RegularExpressions@4.3.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-m5vv-6r4h-3vj9:pkg:nuget/Microsoft.Identity.Client@4.56.0",
+      "id": "GHSA-m5vv-6r4h-3vj9",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-m5vv-6r4h-3vj9"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-35255",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-35255"
+          }
+        }
+      ],
+      "cwes": [
+        362
+      ],
+      "description": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability",
+      "recommendation": "Update the Analysis Services connector dependency chain to a Microsoft.Identity.Client release containing the CVE-2024-35255 fix.",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35255"
+        },
+        {
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/4806#issuecomment-2178960340"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-go/commit/50774cd9709905523136fb05e8c85a50e8984499"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-java/commit/5bf020d6ea056de40e2738e3647a4e06f902c18d"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-js/commit/c6aa75d312ae463e744163cedfd8fc480cc8d492"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/commit/9279a4f38bf69b457cfb9b354f210e0a540a5c53"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-python/commit/cb065acd7d0f957327dc4f02d1646d4e51a94178"
+        },
+        {
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35255"
+        }
+      ],
+      "published": "2024-06-11T18:30:50Z",
+      "updated": "2026-09-10T03:50:17.839035905Z",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "The Analysis Services connector includes Microsoft.Identity.Client 4.56.0 through Microsoft.AnalysisServices.AdomdClient and its broker dependency. Authentication code paths are present, and the review did not identify a Reveal control that excludes the advisory's affected behavior. The finding is therefore treated as exploitable until the dependency is updated.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/Microsoft.Identity.Client@4.56.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-x674-v45j-fwxw:pkg:nuget/Microsoft.Identity.Client@4.56.0",
+      "id": "GHSA-x674-v45j-fwxw",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-x674-v45j-fwxw"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-27086",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-27086"
+          }
+        }
+      ],
+      "cwes": [
+        863,
+        926
+      ],
+      "description": "MSAL.NET applications targeting Xamarin Android and .NET Android (MAUI) susceptible to local denial of service",
+      "advisories": [
+        {
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/security/advisories/GHSA-x674-v45j-fwxw"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27086"
+        },
+        {
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/commit/413e319472ccf48c86647f19fa2aa49ff6038488"
+        },
+        {
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/entra/msal/dotnet"
+        },
+        {
+          "url": "https://www.nuget.org/packages/Microsoft.Identity.Client"
+        }
+      ],
+      "published": "2024-04-16T21:41:57Z",
+      "updated": "2026-09-10T03:50:13.576933407Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The advisory applies to Xamarin Android, .NET Android, and MAUI applications. Reveal's production server connector targets Windows x64 and Linux x64 on .NET 8, so the affected mobile runtime environment is absent.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/Microsoft.Identity.Client@4.56.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
       ]
     }
   ]

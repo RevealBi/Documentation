@@ -105,8 +105,8 @@ export default function SecurityOverview(): React.JSX.Element {
         </FeatureCard>
         <FeatureCard icon="supply-chain" title="Supply-chain transparency">
           Release-specific CycloneDX SBOMs describe the components in supported server and
-          browser client packages. Each downloadable SBOM includes a SHA-256 checksum for
-          verifying the SBOM file.
+          browser client packages. Embedded VEX assessments document the applicability of known
+          vulnerabilities identified during release review.
         </FeatureCard>
       </section>
 
@@ -126,7 +126,7 @@ export default function SecurityOverview(): React.JSX.Element {
               <li>Maintain supported SDK packages and their runtime dependencies.</li>
               <li>Deliver fixes and security updates through supported releases.</li>
               <li>Document security integration points and safe configuration patterns.</li>
-              <li>Publish release-specific SBOMs and their file checksums.</li>
+              <li>Publish release-specific SBOMs with reviewed VEX assessments.</li>
             </ul>
           </article>
           <article>
@@ -193,9 +193,8 @@ export default function SecurityOverview(): React.JSX.Element {
             <div>
               <h3>Maintain and monitor the deployment</h3>
               <p>
-                Keep the SDK and runtime current, retain security-relevant logs, verify downloaded
-                SBOM files using their published checksums, and review SBOM components in the
-                context of your deployment.
+                Keep the SDK and runtime current, retain security-relevant logs, and review SBOM
+                components and VEX assessments in the context of your deployment.
               </p>
             </div>
           </li>

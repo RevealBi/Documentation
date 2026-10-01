@@ -18,7 +18,7 @@
       "artifactType": "bundle",
       "downloadUrl": "./bundles/reveal-server/dotnet/2.2.1/reveal-server-dotnet-2.2.1-sbom.zip",
       "mediaType": "application/zip",
-      "sha256": "1bedf478a0620bc1e24dc975a5678ed9dceb05395e39983c5cf36c1d88b87281"
+      "sha256": "cc82853cefcbe1298b0fff277c1f5ad219614fd6b63cbb05c5d562459b4c4fc3"
     },
     {
       "id": "reveal-server-2.2.1-java",
@@ -31,7 +31,7 @@
       "artifactType": "bundle",
       "downloadUrl": "./bundles/reveal-server/java/2.2.1/reveal-server-java-2.2.1-sbom.zip",
       "mediaType": "application/zip",
-      "sha256": "4a65f2aed7cb571a0ff4675be121d774f2849b4b5bff66154784befc19ae3020"
+      "sha256": "2a55448e77d4533916be36bda5106cf4e0742c8d706e46f358f58e2c831380fd"
     },
     {
       "id": "reveal-server-2.2.1-node",
@@ -44,7 +44,7 @@
       "artifactType": "bundle",
       "downloadUrl": "./bundles/reveal-server/node/2.2.1/reveal-server-node-2.2.1-sbom.zip",
       "mediaType": "application/zip",
-      "sha256": "a512f032322fa75756c0d9adbd0a8bff7c9a135647791b6498b33dad787db602"
+      "sha256": "64e0cbba6b2ccab40f8b94f768ba690fec22cccb62d84a2973532b2e04c0b6b6"
     },
     {
       "id": "reveal-ai-1.5.213-dotnet",
@@ -57,7 +57,7 @@
       "artifactType": "bundle",
       "downloadUrl": "./bundles/reveal-ai/dotnet/1.5.213/reveal-ai-dotnet-1.5.213-sbom.zip",
       "mediaType": "application/zip",
-      "sha256": "b26d123afe3f71751283f2ae738e1e8db29a2878f6f29e072925c48e9e207d5b"
+      "sha256": "94ca1028ef751da0fcccea32f064898bbc406fba4cefff8c361aee003209728a"
     },
     {
       "id": "reveal-ai-1.2.0-java",
@@ -70,7 +70,7 @@
       "artifactType": "file",
       "downloadUrl": "./files/reveal-ai/java/1.2.0/reveal-sdk-ai-java-1.2.0.cdx.json",
       "mediaType": "application/vnd.cyclonedx+json",
-      "sha256": "379fd827778c0046723edd24c3bb46b9846b85ed285e2df80d412dca2cc3be79"
+      "sha256": "e14af195a1c8a6035ae759e289e4732c7de7a3131b5e983c1ae3183c2793700a"
     },
     {
       "id": "reveal-ai-1.2.0-node",
@@ -83,7 +83,7 @@
       "artifactType": "file",
       "downloadUrl": "./files/reveal-ai/node/1.2.0/reveal-sdk-ai-node-1.2.0.cdx.json",
       "mediaType": "application/vnd.cyclonedx+json",
-      "sha256": "97824d6de2fbaebeb88a50502dee7faeeb0d48988d3404ad7ab8975da6675109"
+      "sha256": "5f2c084ba306b84735421e32579421e6b64d9a7751a3566f03c422c9e5ff31f2"
     },
     {
       "id": "reveal-client-2.2.1-javascript",
@@ -96,7 +96,7 @@
       "artifactType": "file",
       "downloadUrl": "./files/reveal-client/javascript/2.2.1/reveal-sdk-client-2.2.1.cdx.json",
       "mediaType": "application/vnd.cyclonedx+json",
-      "sha256": "8189468febaa0b3bb1911904d380b3538954963768d23d7bc21e81de280feb39"
+      "sha256": "fcd5b96811160b4020f9ed7f44a52cccb5aa18760fbf245499a757b0a50b3354"
     }
   ]
 }

@@ -274,7 +274,9 @@ export default function SbomPage(): React.JSX.Element {
           <h1>Software Bill of Materials</h1>
           <p>
             Download CycloneDX SBOMs for the exact Reveal package version and runtime
-            you deploy. Server bundles group related documents into a single download.
+            you deploy. Server bundles group related documents into a single download. Each
+            SBOM also includes a VEX assessment for known vulnerabilities identified when the
+            release was reviewed.
           </p>
         </div>
         <span className={styles.formatBadge}>
@@ -296,7 +298,7 @@ export default function SbomPage(): React.JSX.Element {
           </article>
           <article>
             <span>3</span>
-            <div><h3>Choose the document</h3><p>Download a JSON file or open a ZIP and select the architecture- or package-specific document you need.</p></div>
+            <div><h3>Choose the document</h3><p>Download a JSON file or open a ZIP and select the architecture- or package-specific document you need. VEX status and rationale are included in the JSON.</p></div>
           </article>
         </div>
       </section>
