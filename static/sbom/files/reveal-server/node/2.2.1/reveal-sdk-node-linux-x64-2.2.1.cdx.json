@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "version": 1,
+  "version": 2,
   "serialNumber": "urn:uuid:9ce845f8-c11e-4f3b-9026-659e309f7176",
   "metadata": {
-    "timestamp": "2026-09-23T00:06:00.570Z",
+    "timestamp": "2026-09-30T00:00:00Z",
     "tools": {
       "components": [
         {
@@ -164,7 +164,48 @@
           "url": "https://dl.infragistics.com/reveal/Builds/sdk/node-binaries/v2.2.1/linux-x64/RevealEnginePrg.gz"
         }
       ]
-    }
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-09-30T00:00:00Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Production runtime artifacts distributed for Reveal server and browser client packages."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Package versions were matched against the OSV complete offline vulnerability databases. Each match was then reviewed against the packaged runtime, Reveal integration code, and the vulnerable behavior described by the advisory."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.6.0"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-09-30"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "vex_statements_included"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "6"
+      }
+    ]
   },
   "components": [
     {
@@ -11882,6 +11923,395 @@
       "ref": "pkg:nuget/log4net@2.0.12?package-id=104094791ffe04c0",
       "dependsOn": [
         "pkg:nuget/System.Configuration.ConfigurationManager@8.0.1?package-id=76ed11f49aa6cbb4"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vex:GHSA-4f7c-pmjv-c25w:pkg:nuget/log4net@2.0.12?package-id=104094791ffe04c0",
+      "id": "GHSA-4f7c-pmjv-c25w",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-4f7c-pmjv-c25w"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-40021",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-40021"
+          }
+        }
+      ],
+      "cwes": [
+        116
+      ],
+      "description": "Apache Log4net: Silent log event loss in XmlLayout and XmlLayoutSchemaLog4J due to unescaped XML 1.0 forbidden characters",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40021"
+        },
+        {
+          "url": "https://github.com/apache/logging-log4net/pull/280"
+        },
+        {
+          "url": "https://github.com/apache/logging-log4net"
+        },
+        {
+          "url": "https://lists.apache.org/thread/q8otftjswhk69n3kxslqg7cobr0x4st7"
+        },
+        {
+          "url": "https://logging.apache.org/cyclonedx/vdr.xml"
+        },
+        {
+          "url": "https://logging.apache.org/log4net/manual/configuration/layouts.html"
+        },
+        {
+          "url": "https://logging.apache.org/security.html#CVE-2026-40021"
+        }
+      ],
+      "published": "2026-04-10T18:31:18Z",
+      "updated": "2026-05-05T16:01:27.342560Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The dependency is introduced by Snowflake.Data, but neither Reveal nor the packaged Snowflake provider configures XmlLayout or XmlLayoutSchemaLog4J. Exploitation requires one of those affected XML layouts to be configured.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/log4net@2.0.12?package-id=104094791ffe04c0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-6c8g-7p36-r338:pkg:nuget/SharpCompress@0.30.1?package-id=25d43a7c2d631938",
+      "id": "GHSA-6c8g-7p36-r338",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-6c8g-7p36-r338"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-44788",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-44788"
+          }
+        }
+      ],
+      "cwes": [
+        22
+      ],
+      "description": "SharpCompress has directory traversal via directory entries in WriteToDirectory (zip slip variant)",
+      "advisories": [
+        {
+          "url": "https://github.com/adamhathcock/sharpcompress/security/advisories/GHSA-6c8g-7p36-r338"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44788"
+        },
+        {
+          "url": "https://github.com/adamhathcock/sharpcompress/commit/2021a06626d0555a4d69471386e763ca5f5d5dfb"
+        },
+        {
+          "url": "https://github.com/adamhathcock/sharpcompress"
+        }
+      ],
+      "published": "2026-05-08T23:50:40Z",
+      "updated": "2026-07-21T20:15:26.449621242Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "SharpCompress is introduced by MongoDB.Driver.Core for compression support. Inspection of the packaged driver found no call to the affected WriteToDirectory extraction API, so the directory traversal path is not invoked.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/SharpCompress@0.30.1?package-id=25d43a7c2d631938"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7jgj-8wvc-jh57:pkg:nuget/System.Net.Http@4.3.0?package-id=0c3c04cf68c1fe36",
+      "id": "GHSA-7jgj-8wvc-jh57",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7jgj-8wvc-jh57"
+      },
+      "references": [
+        {
+          "id": "CVE-2018-8292",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2018-8292"
+          }
+        }
+      ],
+      "cwes": [
+        200
+      ],
+      "description": ".NET Core Information Disclosure",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-8292"
+        },
+        {
+          "url": "https://github.com/dotnet/announcements/issues/88"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2018:2902"
+        },
+        {
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8292"
+        }
+      ],
+      "published": "2021-04-21T19:16:06Z",
+      "updated": "2023-11-08T04:00:26.990614Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Net.Http 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Net.Http@4.3.0?package-id=0c3c04cf68c1fe36"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7pqw-9j4j-h8q3:reveal-sdk-node@2.2.1|extract-zip@2.0.1",
+      "id": "GHSA-7pqw-9j4j-h8q3",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7pqw-9j4j-h8q3"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-19693",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-19693"
+          }
+        }
+      ],
+      "cwes": [
+        22
+      ],
+      "description": "extract-zip allows arbitrary file writes through symlink archive entries",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19693"
+        },
+        {
+          "url": "https://github.com/max-mapper/extract-zip/pull/160"
+        },
+        {
+          "url": "https://github.com/max-mapper/extract-zip"
+        },
+        {
+          "url": "https://www.npmjs.com/package/extract-zip"
+        }
+      ],
+      "published": "2026-08-17T15:30:40Z",
+      "updated": "2026-09-08T21:10:57.608811Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "extract-zip is used only by @puppeteer/browsers to install a hard-coded Chrome Headless Shell build from its trusted upstream distribution. Reveal exposes no archive, archive URL, or extraction-path input; exploitation would require substitution of that upstream archive.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "reveal-sdk-node@2.2.1|extract-zip@2.0.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-jmr9-qjv8-65gv:reveal-sdk-node@2.2.1|extract-zip@2.0.1",
+      "id": "GHSA-jmr9-qjv8-65gv",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-jmr9-qjv8-65gv"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-56876",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-56876"
+          }
+        }
+      ],
+      "cwes": [
+        22
+      ],
+      "description": "extract-zip unvalidated symlink path traversal",
+      "advisories": [
+        {
+          "url": "https://github.com/ziad626/extract-zip-security-research/security/advisories/GHSA-x7jf-2287-qcpf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56876"
+        },
+        {
+          "url": "https://github.com/max-mapper/extract-zip"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-177-01.json"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-56876"
+        }
+      ],
+      "published": "2026-06-26T18:34:00Z",
+      "updated": "2026-09-10T03:51:08.769710691Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "extract-zip is used only by @puppeteer/browsers to install a hard-coded Chrome Headless Shell build from its trusted upstream distribution. Reveal exposes no archive, archive URL, or extraction-path input; exploitation would require substitution of that upstream archive.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "reveal-sdk-node@2.2.1|extract-zip@2.0.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-pggp-6c3x-2xmx:pkg:nuget/Snappier@1.0.0?package-id=ed8ec0914530c0b5",
+      "id": "GHSA-pggp-6c3x-2xmx",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-pggp-6c3x-2xmx"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-44302",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-44302"
+          }
+        }
+      ],
+      "cwes": [
+        835
+      ],
+      "description": "Snappier has an infinite loop during SnappyStream decompression with malformed framed input",
+      "advisories": [
+        {
+          "url": "https://github.com/brantburnett/Snappier/security/advisories/GHSA-pggp-6c3x-2xmx"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44302"
+        },
+        {
+          "url": "https://github.com/brantburnett/Snappier"
+        }
+      ],
+      "published": "2026-05-06T20:53:23Z",
+      "updated": "2026-05-13T16:57:26.783651Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "MongoDB.Driver.Core 2.21.0 uses Snappier's block APIs Snappy.GetUncompressedLength and Snappy.Decompress. It does not use the affected SnappyStream framed-decompression API, so the infinite-loop path is not reachable.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/Snappier@1.0.0?package-id=ed8ec0914530c0b5"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
       ]
     }
   ]

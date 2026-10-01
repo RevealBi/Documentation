@@ -2,9 +2,9 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
   "serialNumber": "urn:uuid:07417131-4f44-4fae-a38f-af1c33544f9a",
-  "version": 1,
+  "version": 2,
   "metadata": {
-    "timestamp": "2026-09-22T03:12:50Z",
+    "timestamp": "2026-09-30T00:00:00Z",
     "tools": {
       "components": [
         {
@@ -47,7 +47,48 @@
           "value": "aggregate-all-server-ai-nuget-packages-and-providers"
         }
       ]
-    }
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-09-30T00:00:00Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Production runtime artifacts distributed for Reveal server and browser client packages."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Package versions were matched against the OSV complete offline vulnerability databases. Each match was then reviewed against the packaged runtime, Reveal integration code, and the vulnerable behavior described by the advisory."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.6.0"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-09-30"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "vex_statements_included"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "4"
+      }
+    ]
   },
   "components": [
     {
@@ -8946,6 +8987,258 @@
         "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.5.213",
         "pkg:nuget/Reveal.Sdk.AI.Google@1.5.213",
         "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.5.213"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vex:GHSA-23fw-v26w-5fgq:pkg:nuget/Microsoft.Build.Tasks.Git@8.0.0",
+      "id": "GHSA-23fw-v26w-5fgq",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-23fw-v26w-5fgq"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-62900",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-62900"
+          }
+        }
+      ],
+      "cwes": [
+        212
+      ],
+      "description": "Microsoft Security Advisory CVE-2026-62900 – .NET Information Disclosure Vulnerability",
+      "advisories": [
+        {
+          "url": "https://github.com/dotnet/sourcelink/security/advisories/GHSA-23fw-v26w-5fgq"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62900"
+        },
+        {
+          "url": "https://github.com/dotnet/sourcelink"
+        },
+        {
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62900"
+        }
+      ],
+      "published": "2026-09-08T20:25:10Z",
+      "updated": "2026-09-08T20:55:49.340034088Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "This is a transitive Source Link build dependency. Verification of a .NET 8 publish using the released Reveal package found no Microsoft.Build.Tasks.Git or Source Link assembly in the production runtime output; the VEX scope is the distributed production runtime.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/Microsoft.Build.Tasks.Git@8.0.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-447r-wph3-92pm:pkg:nuget/System.Formats.Asn1@7.0.0",
+      "id": "GHSA-447r-wph3-92pm",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-447r-wph3-92pm"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-38095",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-38095"
+          }
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "Microsoft Security Advisory CVE-2024-38095 | .NET Denial of Service Vulnerability",
+      "advisories": [
+        {
+          "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-447r-wph3-92pm"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38095"
+        },
+        {
+          "url": "https://github.com/dotnet/runtime"
+        },
+        {
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38095"
+        }
+      ],
+      "published": "2024-07-09T21:14:53Z",
+      "updated": "2026-09-10T03:50:22.626103852Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The version appears in the NuGet dependency graph, but verification of a .NET 8 publish using the released Reveal package found no System.Formats.Asn1 7.0.0 assembly in the production runtime output. .NET 8 supplies the runtime implementation instead.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Formats.Asn1@7.0.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7jgj-8wvc-jh57:pkg:nuget/System.Net.Http@4.3.0",
+      "id": "GHSA-7jgj-8wvc-jh57",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7jgj-8wvc-jh57"
+      },
+      "references": [
+        {
+          "id": "CVE-2018-8292",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2018-8292"
+          }
+        }
+      ],
+      "cwes": [
+        200
+      ],
+      "description": ".NET Core Information Disclosure",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-8292"
+        },
+        {
+          "url": "https://github.com/dotnet/announcements/issues/88"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2018:2902"
+        },
+        {
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8292"
+        }
+      ],
+      "published": "2021-04-21T19:16:06Z",
+      "updated": "2023-11-08T04:00:26.990614Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Net.Http 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Net.Http@4.3.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-cmhx-cq75-c4mj:pkg:nuget/System.Text.RegularExpressions@4.3.0",
+      "id": "GHSA-cmhx-cq75-c4mj",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-cmhx-cq75-c4mj"
+      },
+      "references": [
+        {
+          "id": "CVE-2019-0820",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2019-0820"
+          }
+        }
+      ],
+      "cwes": [
+        1333,
+        400
+      ],
+      "description": "Regular Expression Denial of Service in System.Text.RegularExpressions",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0820"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1259"
+        },
+        {
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0820"
+        }
+      ],
+      "published": "2021-08-04T21:03:46Z",
+      "updated": "2023-11-08T04:00:33.819349Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Text.RegularExpressions 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:nuget/System.Text.RegularExpressions@4.3.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
       ]
     }
   ]

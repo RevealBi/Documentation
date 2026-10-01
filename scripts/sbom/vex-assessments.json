@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "assessment": {
+    "organization": "Infragistics, Inc.",
+    "product": "Reveal",
+    "date": "2026-09-30T00:00:00Z",
+    "scope": "Production runtime artifacts distributed for Reveal server and browser client packages.",
+    "method": "Package versions were matched against the OSV complete offline vulnerability databases. Each match was then reviewed against the packaged runtime, Reveal integration code, and the vulnerable behavior described by the advisory.",
+    "scanner": {
+      "name": "OSV-Scanner",
+      "version": "2.6.0",
+      "mode": "offline",
+      "databaseSnapshot": "2026-09-30"
+    }
+  },
+  "decisions": [
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-72hv-8253-57qq",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI parses JSON synchronously through ObjectMapper.readTree. It does not use Jackson's asynchronous parser, so the vulnerable async number-length path is not invoked."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-r7wm-3cxj-wff9",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI parses JSON synchronously through ObjectMapper.readTree. It does not use Jackson's asynchronous parser or feed chunked numeric tokens to it, so the vulnerable path is not invoked."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-3pjw-73gf-8qr5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize Java records using @JsonIgnore together with a PropertyNamingStrategy. Its Jackson use is limited to JsonNode and Map values with the default ObjectMapper configuration."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-5jmj-h7xm-6q6v",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not enable case-insensitive property deserialization or use @JsonIgnoreProperties on deserialization targets. Its Jackson use is limited to JsonNode and Map values with the default ObjectMapper configuration."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-cxp5-3px4-pw24",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not configure @JsonIdentityInfo or deserialize object graphs with forward references. It reads JSON trees and Map values, so the vulnerable forward-reference completion path is not invoked."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-gx83-3vf8-gh7j",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not activate Jackson default typing or configure DefaultBaseTypeLimitingValidator. The affected polymorphic type-validation path is not used."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-hgj6-7826-r7m5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize attacker-controlled JSON into InetSocketAddress values. Its Jackson targets are JsonNode and Map values, so eager DNS resolution is not reachable."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-j3rv-43j4-c7qm",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not activate Jackson default typing, configure a PolymorphicTypeValidator, or deserialize polymorphic application types. The affected generic-type validation path is not used."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-q4xh-88c3-wmh7",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize JSON into XMLGregorianCalendar or Duration targets. Its Jackson targets are JsonNode and Map values, so the vulnerable unbounded numeric conversion is not invoked."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-rmj7-2vxq-3g9f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not activate Jackson default typing or configure BasicPolymorphicTypeValidator array subtype rules. The affected polymorphic array path is not used."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-vvgp-rfg2-7rr6",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize attacker-controlled JSON into InetAddress values. Its Jackson targets are JsonNode and Map values, so eager DNS resolution is not reachable."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-wjgm-6hv5-3cvf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize attacker-controlled JSON into java.nio.file.Path values. Its Jackson targets are JsonNode and Map values, so FileSystemProvider resolution is not reachable."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-wv8q-qhhj-9h54",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not enable polymorphic default typing, use @JsonTypeInfo, or configure a default implementation for unknown type identifiers. The affected raw type-ID retention path is not used."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-355h-qmc2-wpwf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Reveal uses Jetty for a direct internal callback server and does not place that endpoint behind a second HTTP parser. The proxy/backend parser differential required for request smuggling is absent, and callback requests must also carry the per-instance RevealBI-Auth token."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-wjpw-4j6x-6rwh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal rewrites callback traffic to a fixed 127.0.0.1 destination, normalizes the relative path with java.net.URI, and does not make a security decision from Jetty's interpretation of an attacker-controlled authority. The vulnerable parsing differential is not used by the integration."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-7p3p-8qv8-m2vh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Reveal creates the embedded Jetty callback server with the default HTTP/1.1 ServerConnector and does not configure HTTP/2 or HTTP/3. The protocol environment required for the authority/Host mismatch is absent."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-f4v5-65jj-pcr2",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal's callback handler does not read, copy, or use HTTP trailer fields. The affected cross-request trailer state is not consumed by the integration."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-xxh7-fcf3-rj7f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Reveal does not create or configure Jetty's GzipHandler for the embedded callback server. The vulnerable request decompression handler is not present in the Reveal server path."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "jetty-util",
+      "version": "12.0.12",
+      "advisory": "GHSA-w7x5-g22v-xqhr",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Reveal does not create or configure Jetty SecurityHandler.PathMapped for the embedded callback server. The affected path-mapping implementation is not present in the Reveal server path."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-7pqw-9j4j-h8q3",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "extract-zip is used only by @puppeteer/browsers to install a hard-coded Chrome Headless Shell build from its trusted upstream distribution. Reveal exposes no archive, archive URL, or extraction-path input; exploitation would require substitution of that upstream archive."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-jmr9-qjv8-65gv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "extract-zip is used only by @puppeteer/browsers to install a hard-coded Chrome Headless Shell build from its trusted upstream distribution. Reveal exposes no archive, archive URL, or extraction-path input; exploitation would require substitution of that upstream archive."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "log4net",
+      "version": "2.0.12",
+      "advisory": "GHSA-4f7c-pmjv-c25w",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The dependency is introduced by Snowflake.Data, but neither Reveal nor the packaged Snowflake provider configures XmlLayout or XmlLayoutSchemaLog4J. Exploitation requires one of those affected XML layouts to be configured."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Microsoft.Build.Tasks.Git",
+      "version": "8.0.0",
+      "advisory": "GHSA-23fw-v26w-5fgq",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "This is a transitive Source Link build dependency. Verification of a .NET 8 publish using the released Reveal package found no Microsoft.Build.Tasks.Git or Source Link assembly in the production runtime output; the VEX scope is the distributed production runtime."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Microsoft.Identity.Client",
+      "version": "4.56.0",
+      "advisory": "GHSA-m5vv-6r4h-3vj9",
+      "recommendation": "Update the Analysis Services connector dependency chain to a Microsoft.Identity.Client release containing the CVE-2024-35255 fix.",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "The Analysis Services connector includes Microsoft.Identity.Client 4.56.0 through Microsoft.AnalysisServices.AdomdClient and its broker dependency. Authentication code paths are present, and the review did not identify a Reveal control that excludes the advisory's affected behavior. The finding is therefore treated as exploitable until the dependency is updated."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Microsoft.Identity.Client",
+      "version": "4.56.0",
+      "advisory": "GHSA-x674-v45j-fwxw",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The advisory applies to Xamarin Android, .NET Android, and MAUI applications. Reveal's production server connector targets Windows x64 and Linux x64 on .NET 8, so the affected mobile runtime environment is absent."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "SharpCompress",
+      "version": "0.30.1",
+      "advisory": "GHSA-6c8g-7p36-r338",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "SharpCompress is introduced by MongoDB.Driver.Core for compression support. Inspection of the packaged driver found no call to the affected WriteToDirectory extraction API, so the directory traversal path is not invoked."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Snappier",
+      "version": "1.0.0",
+      "advisory": "GHSA-pggp-6c3x-2xmx",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "MongoDB.Driver.Core 2.21.0 uses Snappier's block APIs Snappy.GetUncompressedLength and Snappy.Decompress. It does not use the affected SnappyStream framed-decompression API, so the infinite-loop path is not reachable."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Formats.Asn1",
+      "version": "7.0.0",
+      "advisory": "GHSA-447r-wph3-92pm",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The version appears in the NuGet dependency graph, but verification of a .NET 8 publish using the released Reveal package found no System.Formats.Asn1 7.0.0 assembly in the production runtime output. .NET 8 supplies the runtime implementation instead."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Net.Http",
+      "version": "4.3.0",
+      "advisory": "GHSA-7jgj-8wvc-jh57",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Net.Http 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Text.RegularExpressions",
+      "version": "4.3.0",
+      "advisory": "GHSA-cmhx-cq75-c4mj",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The legacy package version appears in the dependency graph, but Reveal's production servers run on .NET 8 and do not deploy the System.Text.RegularExpressions 4.3.0 implementation. The production runtime uses the serviced .NET 8 framework assembly."
+      }
+    }
+  ]
+}

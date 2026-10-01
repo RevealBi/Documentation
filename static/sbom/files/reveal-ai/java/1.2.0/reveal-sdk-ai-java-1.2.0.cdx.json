@@ -3,9 +3,9 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
   "serialNumber": "urn:uuid:b151cef0-edd1-4dc0-b536-8d6c98e4b510",
-  "version": 1,
+  "version": 2,
   "metadata": {
-    "timestamp": "2026-09-22T03:28:20Z",
+    "timestamp": "2026-09-30T00:00:00Z",
     "tools": {
       "components": [
         {
@@ -114,7 +114,48 @@
           "url": "https://help.revealbi.io/ai/install-server-sdk/"
         }
       ]
-    }
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-09-30T00:00:00Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Production runtime artifacts distributed for Reveal server and browser client packages."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Package versions were matched against the OSV complete offline vulnerability databases. Each match was then reviewed against the packaged runtime, Reveal integration code, and the vulnerable behavior described by the advisory."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.6.0"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-09-30"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "vex_statements_included"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "13"
+      }
+    ]
   },
   "components": [
     {
@@ -2648,6 +2689,1058 @@
     {
       "ref": "pkg:nuget/OpenAI@2.12.0",
       "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vex:GHSA-3pjw-73gf-8qr5:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-3pjw-73gf-8qr5",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-3pjw-73gf-8qr5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59888",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-59888"
+          }
+        }
+      ],
+      "cwes": [
+        915
+      ],
+      "description": "jackson-databind: @JsonIgnore on a Record property is bypassed with a PropertyNamingStrategy",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-3pjw-73gf-8qr5"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59888"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5974"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/baa2cdf5ca2b2717fbb88d91955d69d8651df3e4"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/c7c678360624da5bc7eed2152789fa522880db9d"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-07-21T19:33:06Z",
+      "updated": "2026-09-10T03:51:10.312389083Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize Java records using @JsonIgnore together with a PropertyNamingStrategy. Its Jackson use is limited to JsonNode and Map values with the default ObjectMapper configuration.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-5jmj-h7xm-6q6v:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-5jmj-h7xm-6q6v",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-5jmj-h7xm-6q6v"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54515",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54515"
+          }
+        }
+      ],
+      "cwes": [
+        915
+      ],
+      "description": "jackson-databind has case-insensitive deserialization bypasses per-property @JsonIgnoreProperties",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5jmj-h7xm-6q6v"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54515"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5962"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5964"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/0e1b0b211f7a53baa62ba2f4c9bd006c7bf4d5fa"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-06-23T21:23:58Z",
+      "updated": "2026-09-10T03:51:08.069993966Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not enable case-insensitive property deserialization or use @JsonIgnoreProperties on deserialization targets. Its Jackson use is limited to JsonNode and Map values with the default ObjectMapper configuration.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-72hv-8253-57qq:pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "id": "GHSA-72hv-8253-57qq",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-72hv-8253-57qq"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-18401",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-18401"
+          }
+        }
+      ],
+      "cwes": [
+        770
+      ],
+      "description": "jackson-core: Number Length Constraint Bypass in Async Parser Leads to Potential DoS Condition",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-72hv-8253-57qq"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18401"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1555"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/b0c428e6f993e1b5ece5c1c3cb2523e887cd52cf"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ],
+      "published": "2026-02-28T02:01:05Z",
+      "updated": "2026-09-10T03:50:34.318297905Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI parses JSON synchronously through ObjectMapper.readTree. It does not use Jackson's asynchronous parser, so the vulnerable async number-length path is not invoked.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-cxp5-3px4-pw24:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-cxp5-3px4-pw24",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-cxp5-3px4-pw24"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-91777",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-91777"
+          }
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "jackson-databind quadratic forward-reference completion ",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-cxp5-3px4-pw24"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91777"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6204"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6204"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/37ad9b81712cbb9fb62c2d2c1813593252a24b67"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.11"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.3"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.3"
+        }
+      ],
+      "published": "2026-09-30T15:37:24Z",
+      "updated": "2026-09-30T15:46:18.051343022Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not configure @JsonIdentityInfo or deserialize object graphs with forward references. It reads JSON trees and Map values, so the vulnerable forward-reference completion path is not invoked.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-gx83-3vf8-gh7j:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-gx83-3vf8-gh7j",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-gx83-3vf8-gh7j"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-83557",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-83557"
+          }
+        }
+      ],
+      "cwes": [
+        502,
+        915
+      ],
+      "description": "jackson-databind: Comparable missing from DefaultBaseTypeLimitingValidator's unsafe base types (incomplete PolymorphicTypeValidator denylist)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-gx83-3vf8-gh7j"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83557"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6156"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6155"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/eb3b7fc0f9c0d27f471550ac3316b17d1987388f"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.10"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.2"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2"
+        }
+      ],
+      "published": "2026-09-28T20:44:25Z",
+      "updated": "2026-09-28T21:00:05.608227628Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not activate Jackson default typing or configure DefaultBaseTypeLimitingValidator. The affected polymorphic type-validation path is not used.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-hgj6-7826-r7m5:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-hgj6-7826-r7m5",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-hgj6-7826-r7m5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54514",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54514"
+          }
+        }
+      ],
+      "cwes": [
+        918
+      ],
+      "description": "jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-hgj6-7826-r7m5"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54514"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5951"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/1f5a1037b1e9e05920e755cb35f198bcd46667e4"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-06-23T21:22:54Z",
+      "updated": "2026-09-10T03:50:49.909813840Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize attacker-controlled JSON into InetSocketAddress values. Its Jackson targets are JsonNode and Map values, so eager DNS resolution is not reachable.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-j3rv-43j4-c7qm:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-j3rv-43j4-c7qm",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-j3rv-43j4-c7qm"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54512",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54512"
+          }
+        }
+      ],
+      "cwes": [
+        184,
+        502
+      ],
+      "description": "jackson-databind has a PolymorphicTypeValidator bypass via generic type parameters that allows arbitrary class instantiation",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-j3rv-43j4-c7qm"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54512"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5988"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/434d6c511de7fdd9872f29157aafb6162d12d8d5"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-06-23T21:21:38Z",
+      "updated": "2026-09-10T03:50:50.187641487Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not activate Jackson default typing, configure a PolymorphicTypeValidator, or deserialize polymorphic application types. The affected generic-type validation path is not used.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-q4xh-88c3-wmh7:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-q4xh-88c3-wmh7",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-q4xh-88c3-wmh7"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-68497",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-68497"
+          }
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-q4xh-88c3-wmh7"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68497"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6127"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/a99b7e74c8928f43f6975773a8c862c8316178bd"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.10"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.2"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2"
+        }
+      ],
+      "published": "2026-09-28T20:19:46Z",
+      "updated": "2026-09-28T20:30:05.315085978Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize JSON into XMLGregorianCalendar or Duration targets. Its Jackson targets are JsonNode and Map values, so the vulnerable unbounded numeric conversion is not invoked.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-r7wm-3cxj-wff9:pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "id": "GHSA-r7wm-3cxj-wff9",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-r7wm-3cxj-wff9"
+      },
+      "cwes": [
+        770
+      ],
+      "description": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-r7wm-3cxj-wff9"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1611"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/050b429804dce2a7e08f0be1b0b4c3d040fdb9cd"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/4cdd529749da396cc7edf6d4a2aad41d47902641"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/c5941e5aae7fd5aeac55d66933cfb82b9aabeef8"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ],
+      "published": "2026-07-21T21:58:53Z",
+      "updated": "2026-09-10T03:51:12.027829369Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI parses JSON synchronously through ObjectMapper.readTree. It does not use Jackson's asynchronous parser or feed chunked numeric tokens to it, so the vulnerable path is not invoked.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-rmj7-2vxq-3g9f:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-rmj7-2vxq-3g9f",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-rmj7-2vxq-3g9f"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54513",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54513"
+          }
+        }
+      ],
+      "cwes": [
+        184
+      ],
+      "description": "jackson-databind has an array subtype allowlist bypass in BasicPolymorphicTypeValidator (allowIfSubTypeIsArray)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-rmj7-2vxq-3g9f"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54513"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5983"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5981"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5984"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/24529da29fdf46ff94ca38de9ebf31cd188f5e8e"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/01d1692c8d0ed03e51a0e3c4f8a9e6908e4931e5"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50849"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:54435"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:54622"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:62260"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:66488"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:66545"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-54513"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492010"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-54513.json"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:36839"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:40895"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:41951"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:43218"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:43400"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44061"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44062"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44063"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44064"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44065"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44066"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44271"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:48095"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:48151"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50846"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50847"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50848"
+        }
+      ],
+      "published": "2026-06-23T21:22:15Z",
+      "updated": "2026-09-11T15:45:08.499771763Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not activate Jackson default typing or configure BasicPolymorphicTypeValidator array subtype rules. The affected polymorphic array path is not used.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-vvgp-rfg2-7rr6:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-vvgp-rfg2-7rr6",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-vvgp-rfg2-7rr6"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-77310",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-77310"
+          }
+        }
+      ],
+      "cwes": [
+        918
+      ],
+      "description": "jackson-databind: Incomplete fix for CVE-2026-54514: eager DNS resolution (SSRF) still present in InetAddress deserialization",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-vvgp-rfg2-7rr6"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77310"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6058"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/2fc7bd9057dd051d7dea0e5fcad89822d0fa5ebd"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.9"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.5"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.1"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.5"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.1"
+        }
+      ],
+      "published": "2026-09-28T20:17:41Z",
+      "updated": "2026-09-28T20:30:05.324367371Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize attacker-controlled JSON into InetAddress values. Its Jackson targets are JsonNode and Map values, so eager DNS resolution is not reachable.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-wjgm-6hv5-3cvf:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-wjgm-6hv5-3cvf",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-wjgm-6hv5-3cvf"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-19032",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-19032"
+          }
+        }
+      ],
+      "cwes": [
+        470,
+        610
+      ],
+      "description": "jackson-databind: Path Deserialization Missing Scheme Allowlist for FileSystemProvider Resolution",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-wjgm-6hv5-3cvf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19032"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6129"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/cc6756b61ed90b6b9227f670e0408d5d9bd48551"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/ce26eda3481cd796f76ba4c53ffe1da23b53f166"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/d94bb632becfe0ba96926b9909ab06d1f87aad6d"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.10"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.2"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2"
+        }
+      ],
+      "published": "2026-09-28T20:19:19Z",
+      "updated": "2026-09-28T20:30:05.331167692Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not deserialize attacker-controlled JSON into java.nio.file.Path values. Its Jackson targets are JsonNode and Map values, so FileSystemProvider resolution is not reachable.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-wv8q-qhhj-9h54:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-wv8q-qhhj-9h54",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-wv8q-qhhj-9h54"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-91776",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-91776"
+          }
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "jackson-databind retains every unknown raw type ID ",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-wv8q-qhhj-9h54"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91776"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6203"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/2870d1d6dc1b7e1c07ee11dd5b04ab71cddbb577"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.11"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.3"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.3"
+        }
+      ],
+      "published": "2026-09-30T15:36:55Z",
+      "updated": "2026-09-30T15:46:18.451708212Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Reveal AI does not enable polymorphic default typing, use @JsonTypeInfo, or configure a default implementation for unknown type identifiers. The affected raw type-ID retention path is not used.",
+        "firstIssued": "2026-09-30T00:00:00Z",
+        "lastUpdated": "2026-09-30T00:00:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.6.0"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-09-30"
+        }
+      ]
     }
   ]
 }
