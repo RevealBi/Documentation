@@ -1,5 +1,9 @@
 # Dependencies
 /node_modules
+/tools/sbom/node_modules
+
+# SBOM generator output
+/tools/sbom/out
 
 # Production
 /build

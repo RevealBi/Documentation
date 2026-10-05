@@ -1,0 +1,93 @@
+name: Restore SBOM Catalog
+
+# Rolls the public catalog.json back to a copy saved by Publish SBOM Catalog. SBOM files are
+# never deleted by a publication, so restoring the catalog alone is a complete rollback and
+# needs no documentation rebuild. Run without a file name to list the saved copies.
+
+on:
+  workflow_dispatch:
+    inputs:
+      history_file:
+        description: File under catalog-history/ to restore (for example catalog-20260925T120000Z.json). Leave empty to list them.
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sbom-catalog-publish
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    name: Restore catalog.json
+    runs-on: ubuntu-latest
+    environment: sbom-production
+    env:
+      BUCKET: ${{ vars.SBOM_STORAGE_BUCKET }}
+      PREFIX: ${{ vars.SBOM_STORAGE_PREFIX || 'sbom' }}
+      SBOM_CATALOG_URL: ${{ vars.SBOM_CATALOG_URL }}
+      DISTRIBUTION_ID: ${{ vars.SBOM_CLOUDFRONT_DISTRIBUTION_ID }}
+      HISTORY_FILE: ${{ inputs.history_file }}
+    steps:
+      - name: Check inputs and configuration
+        run: |
+          if [ -z "$BUCKET" ] || [ -z "$SBOM_CATALOG_URL" ]; then
+            echo "::error::Set the SBOM_STORAGE_BUCKET and SBOM_CATALOG_URL repository variables."
+            exit 1
+          fi
+          if [ -n "$HISTORY_FILE" ] && ! [[ "$HISTORY_FILE" =~ ^catalog-[0-9]{8}T[0-9]{6}Z\.json$ ]]; then
+            echo "::error::history_file must look like catalog-20260925T120000Z.json."
+            exit 1
+          fi
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.SBOM_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SBOM_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.SBOM_STORAGE_REGION || 'us-east-1' }}
+
+      - name: List saved catalogs
+        if: inputs.history_file == ''
+        run: |
+          {
+            echo "### Saved catalogs"
+            echo '```'
+            aws s3 ls "s3://$BUCKET/$PREFIX/catalog-history/" | sort -r | head -50
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Checkout repository
+        if: inputs.history_file != ''
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: inputs.history_file != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/sbom/package-lock.json
+
+      # The saved catalog must still validate and every download it lists must still match.
+      - name: Validate the saved catalog
+        if: inputs.history_file != ''
+        working-directory: tools/sbom
+        run: |
+          npm ci
+          aws s3 cp "s3://$BUCKET/$PREFIX/catalog-history/$HISTORY_FILE" "$RUNNER_TEMP/restore.json"
+          node validate.mjs --catalog "$RUNNER_TEMP/restore.json" --base-url "$SBOM_CATALOG_URL"
+
+      - name: Restore catalog.json
+        if: inputs.history_file != ''
+        run: |
+          stamp="$(date -u +%Y%m%dT%H%M%SZ)"
+          aws s3 cp "s3://$BUCKET/$PREFIX/catalog.json" "s3://$BUCKET/$PREFIX/catalog-history/catalog-$stamp.json"
+          aws s3 cp "$RUNNER_TEMP/restore.json" "s3://$BUCKET/$PREFIX/catalog.json" \
+            --content-type application/json --cache-control "public, max-age=300"
+          if [ -n "$DISTRIBUTION_ID" ]; then
+            aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/$PREFIX/catalog.json"
+          fi
+          echo "Restored $HISTORY_FILE. The replaced catalog was saved as catalog-history/catalog-$stamp.json." >> "$GITHUB_STEP_SUMMARY"
