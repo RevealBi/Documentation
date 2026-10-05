@@ -32,7 +32,6 @@ const sidebars: SidebarsConfig = {
             { type: "doc", label: "React", id: "web/getting-started-react" },
           ]
         },
-        { type: "doc", label: "AI Agent Skills", id: "web/ai-agent-skills" },
       ]
     },
 

@@ -263,10 +263,6 @@
     "message": "Oracle",
     "description": "The label for the doc item 'Oracle' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/oracle"
   },
-  "sidebar.webSidebar.doc.AI Agent Skills": {
-    "message": "AI エージェント スキル",
-    "description": "The label for the doc item 'AI Agent Skills' in sidebar 'webSidebar', linking to the doc web/ai-agent-skills"
-  },
   "sidebar.webSidebar.doc.Caching": {
     "message": "キャッシュ",
     "description": "The label for the doc item 'Caching' in sidebar 'webSidebar', linking to the doc web/caching"
