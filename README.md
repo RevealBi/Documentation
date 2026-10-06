@@ -9,24 +9,18 @@ npm install
 
 > **Note on the AI search plugin**
 >
-> `@igniteui/reveal-ai-plugin` powers the AI search box. It is published to a private
-> GitHub Packages feed under the `@igniteui` scope, so most contributors cannot download
-> it - `npm install` will log a `401 Unauthorized` for that one package.
+> `@igniteui/reveal-ai-plugin` powers the AI search box. It is installed from git, from
+> the internal [IgniteUI/reveal-ai-plugin](https://github.com/IgniteUI/reveal-ai-plugin)
+> repository, and built during `npm install`. If you cannot read that repository, `npm install`
+> will log a git error for that one package.
 >
 > **This is expected and safe to ignore.** The plugin is an *optional* dependency, so the
 > install still succeeds, and the site builds and runs normally - only the AI search box
 > is missing. The build prints a line confirming it was skipped.
 >
-> If you need the AI search box locally, you must have read access to the `@igniteui`
-> package feed (ask the team that publishes the plugin - being a member of the Reveal
-> org is not sufficient on its own). Then export a GitHub PAT with the `read:packages`
-> scope before installing:
->
-> ```bash
-> export PLUGIN_PAT=<your_github_pat>          # macOS/Linux
-> $env:PLUGIN_PAT="<your_github_pat>"          # Windows PowerShell
-> npm install
-> ```
+> If you need the AI search box locally, you only need read access to that repository
+> (members of our GitHub enterprise have it, since the repo is internal) and working git
+> credentials for github.com, over SSH or HTTPS. No PAT is required.
 
 ### Run the docs
 

@@ -23,15 +23,36 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      # @igniteui/reveal-ai-plugin is installed from git (IgniteUI/reveal-ai-plugin), which
+      # lives in another org. A GitHub App installed there with Contents: read mints a
+      # short-lived token for that one repo. Secrets are unavailable to fork/Dependabot
+      # PRs, so this step may fail there; the plugin install is then skipped.
+      - name: Create plugin repo token
+        id: plugin-token
+        continue-on-error: true
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.INFRA_APP_ID }}
+          private-key: ${{ secrets.INFRA_APP_PRIVATE_KEY }}
+          owner: IgniteUI
+          repositories: reveal-ai-plugin
+
+      # Rewrite the plugin's git URLs (ssh form from package-lock.json, https form from
+      # package.json resolution) to carry the token. Passed as env so nothing is written
+      # to the runner's git config.
       - name: Install dependencies
         run: npm ci
         env:
-          PLUGIN_PAT: ${{ secrets.PLUGIN_PAT }}
+          GIT_CONFIG_COUNT: 2
+          GIT_CONFIG_KEY_0: url.https://x-access-token:${{ steps.plugin-token.outputs.token }}@github.com/IgniteUI/reveal-ai-plugin.insteadOf
+          GIT_CONFIG_VALUE_0: ssh://git@github.com/IgniteUI/reveal-ai-plugin
+          GIT_CONFIG_KEY_1: url.https://x-access-token:${{ steps.plugin-token.outputs.token }}@github.com/IgniteUI/reveal-ai-plugin.insteadOf
+          GIT_CONFIG_VALUE_1: https://github.com/IgniteUI/reveal-ai-plugin
 
       # The AI search plugin is an optionalDependency, so a missing or unauthorized
       # install is silent. Fail loudly on the deploy path so staging/production never
       # ship without AI search. PR builds intentionally skip this: a PR must not fail
-      # over registry access.
+      # over plugin repo access.
       - name: Verify AI search plugin is installed
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: node -e "require.resolve('@igniteui/reveal-ai-plugin')"
