@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - master
+  # Manual runs (from any branch) deploy to Staging; pushes to master deploy to Production.
+  workflow_dispatch:
 
 jobs:
   build:
@@ -54,7 +56,7 @@ jobs:
       # ship without AI search. PR builds intentionally skip this: a PR must not fail
       # over plugin repo access.
       - name: Verify AI search plugin is installed
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name != 'pull_request'
         run: node -e "require.resolve('@igniteui/reveal-ai-plugin')"
 
       - name: Build documentation
@@ -65,15 +67,76 @@ jobs:
           SBOM_CATALOG_URL: ${{ vars.SBOM_CATALOG_URL }}
 
       - name: Upload build artifacts
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: docs-build
           path: build/
           retention-days: 1
 
+  # One job for both targets: a push to master deploys to Production, a manual run deploys
+  # to Staging. The runner group, runner label and environment always come from the same
+  # condition. The "Documentation Production" runner group only accepts this workflow on
+  # master; the "Documentation" group serves Staging runs from any branch.
+  # The job only copies the built artifact; no repository code or npm packages run on-prem.
   deploy:
-    name: Deploy to Staging
+    name: Deploy to ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+    needs: build
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+    runs-on:
+      group: ${{ github.event_name == 'push' && 'Documentation Production' || 'Documentation' }}
+      labels: ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+    environment: ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+    permissions: {}
+    concurrency:
+      group: docs-deploy-${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: docs-build
+          path: ${{ runner.temp }}\docs-build
+
+      # Empty the destination, then move the build into it. robocopy is used for both
+      # because Move-Item cannot move directories across volumes (runner disk -> share)
+      # and robocopy handles long paths. Exit codes 0-7 are success, 8+ are failures.
+      - name: Replace destination contents
+        shell: powershell
+        env:
+          DESTINATION: ${{ secrets.DOCUMENTATION_DESTINATION }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $destination = "$env:DESTINATION".Trim()
+          $source = Join-Path $env:RUNNER_TEMP 'docs-build'
+
+          if (-not $destination) { throw 'DOCUMENTATION_DESTINATION is not set for this environment.' }
+          if (-not (Test-Path -LiteralPath $destination -PathType Container)) { throw 'The destination directory does not exist or is not reachable.' }
+          # Guard against a mis-set secret wiping a whole drive or share.
+          if ($destination.TrimEnd('\') -eq [System.IO.Path]::GetPathRoot($destination).TrimEnd('\')) { throw 'The destination must not be a drive or share root.' }
+          if (-not (Get-ChildItem -LiteralPath $source -Force | Select-Object -First 1)) { throw 'The docs-build artifact is empty.' }
+
+          # robocopy lists every purged path even with /NFL /NDL, so its output is shown only on failure.
+          function Invoke-Robocopy([string] $Activity, [string[]] $Arguments) {
+            $output = & robocopy @Arguments /NFL /NDL /NJH /NJS /NP /R:2 /W:5 /MT:16
+            if ($LASTEXITCODE -ge 8) {
+              $output | Write-Host
+              throw "$Activity failed (robocopy exit code $LASTEXITCODE)."
+            }
+          }
+
+          $empty = Join-Path $env:RUNNER_TEMP 'empty'
+          New-Item -ItemType Directory -Path $empty -Force | Out-Null
+          Invoke-Robocopy 'Clearing the destination' @($empty, $destination, '/MIR')
+          Invoke-Robocopy 'Moving the build' @($source, $destination, '/E', '/MOVE')
+
+          Write-Host 'Deployed docs-build to the destination.'
+          exit 0
+
+  # Previous S3 staging deploy, kept for later use.
+  deploy-future:
+    name: Deploy future
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
