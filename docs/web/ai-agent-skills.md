@@ -14,12 +14,12 @@ The skills live in the [`skills/`](https://github.com/RevealBi/Reveal.Sdk/tree/m
 - **Server setup** for ASP.NET Core, Node.js (Express, NestJS, CommonJS or ES modules) and Java (Spring Boot, Jakarta EE 9 containers)
 - **Client setup** for plain HTML/JavaScript, Angular, React, Vue and the web component wrappers
 - **Data sources** such as SQL Server, PostgreSQL, Snowflake, REST, Excel/CSV and in-memory data, with connection details kept on the server
-- **User context and security**: passing the signed-in user to the server examples, multi-tenancy and per-user credentials.
+- **User context and security**: passing the signed-in user to the server, multi-tenancy and per-user credentials.
 - **Dashboards**: loading, saving, creating and storing dashboards outside the file system.
 - **Theming and data export**
 - **Troubleshooting** for the most common setup problems: a blank or unstyled view, CORS errors, empty widgets and failed exports.
 
-It also includes minimal ASP.NET Core and Node.js projects that the assistant adapts into your app.
+It also includes minimal ASP.NET Core and Node.js projects that the assistant adapts into your app. They let you view, create and save dashboards, and each user's saved dashboards are kept separate. They reject unauthenticated requests until you connect your app's sign-in. For a quick local run, start them with `--anonymous-demo`, which allows anonymous access on localhost only.
 
 ## Installing the Skill
 
