@@ -30,7 +30,7 @@
     "react-dom": "^18.2.0"
   },
   "optionalDependencies": {
-    "@igniteui/reveal-ai-plugin": "github:IgniteUI/reveal-ai-plugin#semver:^1.2.1"
+    "@igniteui/reveal-ai-plugin": "github:IgniteUI/reveal-ai-plugin#semver:^1.2.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.1",
