@@ -16,8 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      # Don't persist GITHUB_TOKEN in the checkout's git config: its Authorization header
+      # would override the plugin repo token below for every github.com request that npm's
+      # git calls make from this directory, so the plugin install would silently fail.
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -80,7 +85,7 @@ jobs:
   # master; the "Documentation" group serves Staging runs from any branch.
   # The job only copies the built artifact; no repository code or npm packages run on-prem.
   deploy:
-    name: Deploy to ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+    name: Deploy
     needs: build
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/master')
     runs-on:
