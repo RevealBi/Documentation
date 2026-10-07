@@ -16,8 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      # Don't persist GITHUB_TOKEN in the checkout's git config: its Authorization header
+      # would override the plugin repo token below for every github.com request that npm's
+      # git calls make from this directory, so the plugin install would silently fail.
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -79,17 +84,31 @@ jobs:
   # condition. The "Documentation Production" runner group only accepts this workflow on
   # master; the "Documentation" group serves Staging runs from any branch.
   # The job only copies the built artifact; no repository code or npm packages run on-prem.
+  #
+  # Every server in the environment hosts its own copy, so the job runs once per runner.
+  # The runner names come from the DOCS_STAGING_RUNNERS / DOCS_PRODUCTION_RUNNERS repository
+  # variables (JSON arrays, e.g. ["SERVER1","SERVER2"]) and are matched by the label each
+  # runner has for its own name. Servers are updated one at a time so the others keep
+  # serving while one is emptied and refilled, and a failure on one doesn't cancel the rest.
   deploy:
-    name: Deploy to ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+    name: Deploy
     needs: build
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        runner: ${{ fromJSON(github.event_name == 'push' && vars.DOCS_PRODUCTION_RUNNERS || vars.DOCS_STAGING_RUNNERS) }}
     runs-on:
       group: ${{ github.event_name == 'push' && 'Documentation Production' || 'Documentation' }}
-      labels: ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+      labels:
+        - ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+        - ${{ matrix.runner }}
     environment: ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
     permissions: {}
+    # Per server, so a newer run waits for that server instead of cancelling a sibling.
     concurrency:
-      group: docs-deploy-${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+      group: docs-deploy-${{ matrix.runner }}
       cancel-in-progress: false
 
     steps:
