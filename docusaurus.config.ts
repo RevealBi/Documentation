@@ -19,8 +19,8 @@ const docsVersion_v1 = "1.8.4";
 // fallback; set SBOM_CATALOG_URL to the public CDN URL for production.
 const sbomCatalogUrl = process.env.SBOM_CATALOG_URL?.trim() || "/sbom/catalog.json";
 
-// The AI search plugin lives in a private @igniteui GitHub Packages feed, so most
-// contributors cannot install it (it is an optionalDependency and is simply skipped).
+// The AI search plugin is installed from the internal IgniteUI/reveal-ai-plugin repo, so
+// contributors without access cannot install it (it is an optionalDependency and is simply skipped).
 // Load it only when present, so the docs build and run for everyone; the deploy
 // workflow verifies it IS installed before publishing to staging/production.
 function revealAIPlugin(): any[] {
