@@ -78,8 +78,8 @@ jobs:
         with:
           name: docs-build
           path: build/
-          # Kept long enough for a pending Production approval to still find the artifact.
-          retention-days: 7
+          # Kept for the full 30-day window an environment approval can stay pending.
+          retention-days: 30
 
   # Staging: deployed automatically on every merge to master, and on manual runs from any
   # branch (to preview a change before merging). Production is promoted from this same run
@@ -133,6 +133,8 @@ jobs:
 
           if (-not $destination) { throw 'DOCUMENTATION_DESTINATION is not set for this environment.' }
           if (-not (Test-Path -LiteralPath $destination -PathType Container)) { throw 'The destination directory does not exist or is not reachable.' }
+          # Resolve to the canonical path first so segments like '..' can't slip past the root guard.
+          $destination = (Resolve-Path -LiteralPath $destination).ProviderPath
           # Guard against a mis-set secret wiping a whole drive or share.
           if ($destination.TrimEnd('\') -eq [System.IO.Path]::GetPathRoot($destination).TrimEnd('\')) { throw 'The destination must not be a drive or share root.' }
           if (-not (Get-ChildItem -LiteralPath $source -Force | Select-Object -First 1)) { throw 'The docs-build artifact is empty.' }
@@ -200,6 +202,8 @@ jobs:
 
           if (-not $destination) { throw 'DOCUMENTATION_DESTINATION is not set for this environment.' }
           if (-not (Test-Path -LiteralPath $destination -PathType Container)) { throw 'The destination directory does not exist or is not reachable.' }
+          # Resolve to the canonical path first so segments like '..' can't slip past the root guard.
+          $destination = (Resolve-Path -LiteralPath $destination).ProviderPath
           # Guard against a mis-set secret wiping a whole drive or share.
           if ($destination.TrimEnd('\') -eq [System.IO.Path]::GetPathRoot($destination).TrimEnd('\')) { throw 'The destination must not be a drive or share root.' }
           if (-not (Get-ChildItem -LiteralPath $source -Force | Select-Object -First 1)) { throw 'The docs-build artifact is empty.' }
