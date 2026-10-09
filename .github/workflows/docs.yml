@@ -7,7 +7,8 @@ on:
   push:
     branches:
       - master
-  # Manual runs (from any branch) deploy to Staging; pushes to master deploy to Production.
+  # Manual runs (from any branch) and pushes to master deploy to Staging; Production is
+  # promoted from the master run after approval.
   workflow_dispatch:
 
 jobs:
@@ -77,36 +78,103 @@ jobs:
         with:
           name: docs-build
           path: build/
-          retention-days: 1
+          # Kept long enough for a pending Production approval to still find the artifact.
+          retention-days: 7
 
-  # One job for both targets: a push to master deploys to Production, a manual run deploys
-  # to Staging. The runner group, runner label and environment always come from the same
-  # condition. The "Documentation Production" runner group only accepts this workflow on
-  # master; the "Documentation" group serves Staging runs from any branch.
-  # The job only copies the built artifact; no repository code or npm packages run on-prem.
+  # Staging: deployed automatically on every merge to master, and on manual runs from any
+  # branch (to preview a change before merging). Production is promoted from this same run
+  # by the deploy-production job below.
   #
   # Every server in the environment hosts its own copy, so the job runs once per runner.
   # The runner names come from the DOCS_STAGING_RUNNERS / DOCS_PRODUCTION_RUNNERS repository
   # variables (JSON arrays, e.g. ["SERVER1","SERVER2"]) and are matched by the label each
   # runner has for its own name. Servers are updated one at a time so the others keep
   # serving while one is emptied and refilled, and a failure on one doesn't cancel the rest.
-  deploy:
-    name: Deploy
+  # The jobs only copy the built artifact; no repository code or npm packages run on-prem.
+  deploy-staging:
+    name: Deploy to Staging
     needs: build
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/master')
     strategy:
       fail-fast: false
       max-parallel: 1
       matrix:
-        runner: ${{ fromJSON(github.event_name == 'push' && vars.DOCS_PRODUCTION_RUNNERS || vars.DOCS_STAGING_RUNNERS) }}
+        runner: ${{ fromJSON(vars.DOCS_STAGING_RUNNERS) }}
     runs-on:
-      group: ${{ github.event_name == 'push' && 'Documentation Production' || 'Documentation' }}
+      group: Documentation
       labels:
-        - ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+        - Staging
         - ${{ matrix.runner }}
-    environment: ${{ github.event_name == 'push' && 'Production' || 'Staging' }}
+    environment: Staging
     permissions: {}
     # Per server, so a newer run waits for that server instead of cancelling a sibling.
+    concurrency:
+      group: docs-deploy-${{ matrix.runner }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: docs-build
+          path: ${{ runner.temp }}\docs-build
+
+      # Empty the destination, then move the build into it. robocopy is used for both
+      # because Move-Item cannot move directories across volumes (runner disk -> share)
+      # and robocopy handles long paths. Exit codes 0-7 are success, 8+ are failures.
+      - name: Replace destination contents
+        shell: powershell
+        env:
+          DESTINATION: ${{ secrets.DOCUMENTATION_DESTINATION }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $destination = "$env:DESTINATION".Trim()
+          $source = Join-Path $env:RUNNER_TEMP 'docs-build'
+
+          if (-not $destination) { throw 'DOCUMENTATION_DESTINATION is not set for this environment.' }
+          if (-not (Test-Path -LiteralPath $destination -PathType Container)) { throw 'The destination directory does not exist or is not reachable.' }
+          # Guard against a mis-set secret wiping a whole drive or share.
+          if ($destination.TrimEnd('\') -eq [System.IO.Path]::GetPathRoot($destination).TrimEnd('\')) { throw 'The destination must not be a drive or share root.' }
+          if (-not (Get-ChildItem -LiteralPath $source -Force | Select-Object -First 1)) { throw 'The docs-build artifact is empty.' }
+
+          # robocopy lists every purged path even with /NFL /NDL, so its output is shown only on failure.
+          function Invoke-Robocopy([string] $Activity, [string[]] $Arguments) {
+            $output = & robocopy @Arguments /NFL /NDL /NJH /NJS /NP /R:2 /W:5 /MT:16
+            if ($LASTEXITCODE -ge 8) {
+              $output | Write-Host
+              throw "$Activity failed (robocopy exit code $LASTEXITCODE)."
+            }
+          }
+
+          $empty = Join-Path $env:RUNNER_TEMP 'empty'
+          New-Item -ItemType Directory -Path $empty -Force | Out-Null
+          Invoke-Robocopy 'Clearing the destination' @($empty, $destination, '/MIR')
+          Invoke-Robocopy 'Moving the build' @($source, $destination, '/E', '/MOVE')
+
+          Write-Host 'Deployed docs-build to the destination.'
+          exit 0
+
+  # Production: the manual promotion. It runs only for a merge to master, after Staging has
+  # deployed, and pauses until a reviewer approves it. This gate is the "Production"
+  # environment's "Required reviewers" rule (Settings > Environments > Production); without
+  # that rule this job would deploy without waiting. It publishes the exact artifact that
+  # was staged. The "Documentation Production" runner group only accepts this workflow on master.
+  deploy-production:
+    name: Deploy to Production
+    needs: [build, deploy-staging]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        runner: ${{ fromJSON(vars.DOCS_PRODUCTION_RUNNERS) }}
+    runs-on:
+      group: Documentation Production
+      labels:
+        - Production
+        - ${{ matrix.runner }}
+    environment: Production
+    permissions: {}
     concurrency:
       group: docs-deploy-${{ matrix.runner }}
       cancel-in-progress: false
