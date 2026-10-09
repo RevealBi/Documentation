@@ -156,14 +156,30 @@ jobs:
           Write-Host 'Deployed docs-build to the destination.'
           exit 0
 
-  # Production: the manual promotion. It runs only for a merge to master, after Staging has
-  # deployed, and pauses until a reviewer approves it. This gate is the "Production"
-  # environment's "Required reviewers" rule (Settings > Environments > Production); without
-  # that rule this job would deploy without waiting. It publishes the exact artifact that
-  # was staged. The "Documentation Production" runner group only accepts this workflow on master.
+  # Production approval gate: a single job, so one click approves the whole rollout. If the
+  # approval lived on the per-server deploy jobs, max-parallel: 1 would start them one at a
+  # time and ask for a separate approval for each server. This job needs the
+  # "Production Approval" environment to have the "Required reviewers" rule (Settings >
+  # Environments); that environment holds no secrets. Without the rule, Production deploys
+  # right after Staging with no pause.
+  approve-production:
+    name: Approve Production deploy
+    needs: [build, deploy-staging]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    environment: Production Approval
+    permissions: {}
+    steps:
+      - name: Approved
+        run: echo "Production deploy approved."
+
+  # Production: runs only after approve-production, one server at a time. It publishes the
+  # exact artifact that was staged. The "Production" environment holds the destination secret
+  # and must NOT have its own required reviewers, or each server would ask for approval again.
+  # The "Documentation Production" runner group only accepts this workflow on master.
   deploy-production:
     name: Deploy to Production
-    needs: [build, deploy-staging]
+    needs: [build, approve-production]
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     strategy:
       fail-fast: false
