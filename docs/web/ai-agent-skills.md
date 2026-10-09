@@ -36,9 +36,17 @@ It also includes minimal ASP.NET Core and Node.js projects that the assistant ad
 - **Delivering dashboards** as files, from your server's dashboard provider at request time, straight into a `RevealView`, or as JSON in a database.
 - **Bulk migrations** across many stored dashboards.
 
-The skill always uses the latest version of the DOM libraries, and it has the assistant write code against the types you have installed, not from memory. It also knows the library behaviors that are easy to get wrong and catch only at render time, such as how date filters bind to fields and how loaded dashboards differ from new ones.
+The skill always uses the latest version of the DOM libraries, and it has the assistant write code against the types you have installed, not from memory. It also knows the library behaviors that are easy to get wrong and catch only at render time, such as how date filters bind to fields, what a new date filter shows by default, and how loaded dashboards differ from new ones.
 
-It also includes ready-to-run TypeScript and .NET projects with examples and tests, a tool that prints the installed API for any class, and a local preview server with sample data. The assistant writes the code, type-checks it and runs it. It then renders the dashboard in a real Reveal server and reads the screenshot and any widget errors before it hands the result back to you. The preview server is anonymous, read-only and listens on localhost only. It's a development tool and should not be deployed.
+It also includes ready-to-run TypeScript and .NET projects with examples and tests, a tool that prints the installed API for any class, a tool that lists what a dashboard contains, and a local preview server with sample data. The assistant writes the code, type-checks it and runs it. It then renders the dashboard in a real Reveal server and reads the screenshot and any widget errors, including visualizations that crash, come back empty or never finish drawing, before it hands the result back to you. The preview server is anonymous, read-only and listens on localhost only. It's a development tool and should not be deployed: the assistant runs it outside your repository and stops it when it's done.
+
+### The skill works only through the DOM
+
+The assistant never writes or patches a dashboard's `Dashboard.json` itself. When the Reveal DOM can't do what you asked, or saving through it would drop something the dashboard has, the assistant stops before it writes anything. It tells you what's missing and what it would cost, offers a draft issue for the library's GitHub repository, and asks you how to proceed: skip that part, make the change in the Reveal editor, or edit the JSON by hand as a one-off. It edits the JSON only if you say so.
+
+For example, before it changes a dashboard built in the Reveal editor, the assistant runs a check that lists the settings a round trip through the DOM would lose, such as custom date formats, hidden fields, or the sort order of a field. If the check finds any, you decide what happens next. It does the same for requests the DOM doesn't support yet, such as a chart of the top N categories by an aggregated value, a time series visualization (it doesn't render yet), or several date filters on one dashboard in TypeScript. Where the DOM offers a substitute that shows the same live data, such as a line chart by day, the assistant uses it and says so.
+
+The skill keeps a list of these known limitations, each linked to its issue in the library's GitHub repository, and its tests flag when a library release fixes some of them. If you hit a limitation that isn't tracked yet, open an issue in the repository of the library you use, [revealbi-dom](https://github.com/RevealBi/revealbi-dom/issues) for TypeScript and JavaScript or [Reveal.Sdk.Dom](https://github.com/RevealBi/Reveal.Sdk.Dom/issues) for .NET. The assistant can draft it for you.
 
 :::note
 
@@ -109,8 +117,9 @@ These load `reveal-embed`. The assistant first works out your server and client 
 - *"Add a pie chart of revenue by category to dashboards/Sales.rdash and remove the Orders grid."*
 - *"What's inside Sales.rdash? List the charts and the fields they use."*
 - *"Using @revealbi/dom, how do I connect a date filter to a column chart?"*
+- *"Add a bar chart of revenue by product to dashboards/Sales.rdash. The sales team built it in the Reveal editor."*
 
-These load `reveal-dashboard-authoring`. The assistant sets up a small workspace in your repository, checks the installed library's API, and writes and runs the code. It then renders the result before it reports back.
+These load `reveal-dashboard-authoring`. The assistant sets up a small workspace in your repository, checks the installed library's API, and writes and runs the code. It then renders the result before it reports back. For the last prompt it first checks what saving the editor-made dashboard through the DOM would lose, and asks you before it goes on if the answer is "something".
 
 :::tip
 
@@ -122,7 +131,7 @@ The skills follow your project's existing conventions, such as dependency inject
 
 We ran the same embedding task on a variety of apps, both with and without the `reveal-embed` skill. We graded each run on several measures, including a browser check, security probes, a static code check and an LLM judge.
 
-| --- | Without skill | With skill |
+| | Without skill | With skill |
 | --- | --- | --- |
 | **Quality** | | |
 | Judge score | 21/30 (70%) | **28/30 (93%)** |
@@ -145,6 +154,37 @@ These figures come from internal tests and are shown for illustration only. They
 
 :::
 
+## What the reveal-dashboard-authoring Skill Buys You
+
+We gave five dashboard tasks to Claude Code (Claude Sonnet 5) in a small Node.js project, with and without the `reveal-dashboard-authoring` skill, two runs each. Each result was rendered in a Reveal server, checked against what the task asked for, and scored by an LLM judge from 0 to 10. The table shows the average of the two runs.
+
+| Task | Without skill | With skill |
+| --- | --- | --- |
+| Generate a dashboard from a sales API, with a date filter and a region filter | $1.86, 7.2 min, judge 7.0. One run delivered a chart with no data and reported success. | **$0.90, 3.1 min, judge 8.5.** Both runs rendered with data. |
+| Generate a .NET dashboard over SQL Server, with no credentials in the file | $2.15, 10.5 min, judge 6.5. One run left generated ids a server can't allow-list. | **$0.85, 7.3 min, judge 9.0** |
+| List what's inside an existing dashboard | $0.34, 1.6 min, judge 9.0 | $0.29, 1.0 min, judge 9.0 |
+| Build a dashboard from an untrusted AI-generated spec | $1.48, 7.5 min, judge 9.0 | $1.51, 8.8 min, judge 9.0 |
+| Edit a dashboard built in the Reveal editor | **$0.71, 2.7 min, judge 9.0.** Edited the dashboard's JSON directly, which kept every setting. | $1.49, 4.6 min, judge 7.0. Saving through the DOM dropped custom date formats without a warning. |
+| **All five tasks** | $1.31 and 5.9 min per run, judge 8.1 | **$1.01 and 5.0 min per run, judge 8.5** |
+
+The skill helped most when the assistant generates a dashboard, where it was about twice as fast and cost about half as much. It made no difference for reading a dashboard or for building one from an untrusted spec, which the assistant handles well on its own. The editing result is why the skill now checks for losses before it edits an editor-made dashboard and asks you first, instead of editing silently or editing the JSON itself.
+
+We then repeated the tests that went wrong or hit a library limitation with the updated skill:
+
+| Request | Without skill | With the updated skill |
+| --- | --- | --- |
+| Edit an editor-made dashboard | Edited the JSON directly, without asking (2 of 2 runs) | Listed what would be lost and asked how to proceed (4 of 4 runs) |
+| A time series chart of daily revenue | A chart that never drew, reported as done (2 of 2 runs) | A line chart by day that renders, with a note on why (2 of 2 runs) |
+| A chart of the top 3 products by revenue | A wrong or empty chart, reported as done (2 of 2 runs) | Explained that the DOM can't express it and offered options (3 of 3 runs) |
+
+We adjusted the skill's wording for the last row while running these same tasks, so treat that row as an indication of the intended behavior, not as a measured rate.
+
+:::note
+
+These figures come from internal tests on one project and one model, two runs per task, with an earlier version of the skill for the first table. They are shown for illustration only. They are not a guarantee or a benchmark. Your results will vary depending on the AI model and version, the coding assistant and its settings, your prompt, your project's stack and existing code, and current model pricing. AI agents are also non-deterministic, so the same task can produce different results from run to run. Cost is API-equivalent.
+
+:::
+
 ## Feedback
 
-If a skill gives wrong or outdated guidance, [open an issue](https://github.com/RevealBi/Reveal.Sdk/issues) in the Reveal.Sdk repository and include the skill name and the prompt you used.
+If a skill gives wrong or outdated guidance, [open an issue](https://github.com/RevealBi/Reveal.Sdk/issues) in the Reveal.Sdk repository and include the skill name and the prompt you used. For a limitation of the DOM libraries themselves, use the [revealbi-dom](https://github.com/RevealBi/revealbi-dom/issues) or [Reveal.Sdk.Dom](https://github.com/RevealBi/Reveal.Sdk.Dom/issues) repository.
