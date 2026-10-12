@@ -313,6 +313,7 @@ const sidebars: SidebarsConfig = {
       type: "category", label: "API Reference", collapsed: false, collapsible: false, className: "sidebar__header", items: [
         { type: "doc", label: "Insights Endpoint", id: "ai/insights" },
         { type: "doc", label: "Chat Endpoint", id: "ai/chat" },
+        { type: "doc", label: "Metadata Generation Endpoint", id: "ai/metadata-generation" },
       ]
     },
 
