@@ -6,7 +6,7 @@ sidebar_custom_props:
 
 # Metadata Generation Endpoint
 
-Reveal SDK AI generates metadata for the datasources in your [metadata catalog](metadata-catalog.md): their databases, tables, fields, cached filter values and field statistics. The [Metadata Service](metadata-catalog.md#metadata-service-options) can generate it at startup or on a schedule. The metadata generation endpoint lets you trigger it on demand, for every datasource or only for the datasources, databases and tables you name.
+Reveal SDK AI generates metadata for the datasources in your [metadata catalog](/ai/metadata-catalog): their databases, tables, fields, cached filter values and field statistics. The [Metadata Service](/ai/metadata-catalog#metadata-service-options) can generate it at startup or on a schedule. The metadata generation endpoint lets you trigger it on demand, for every datasource or only for the datasources, databases and tables you name.
 
 Generating only what changed is useful when:
 
@@ -132,7 +132,7 @@ A target without a `database` applies to each database the catalog allows. A tar
 
 If a targeted generation is cancelled, fails, or the application restarts while it runs, send the same request again. Tables whose metadata didn't complete are regenerated, even without `forceRegeneration`.
 
-The [Metadata Service](metadata-catalog.md#metadata-service-options) also completes the tables the generation already rewrote (their field statistics and enrichment) the next time it runs: at startup, which is on by default, or on its `CronSchedule`. It processes only those tables, not the whole datasource.
+The [Metadata Service](/ai/metadata-catalog#metadata-service-options) also completes the tables the generation already rewrote (their field statistics and enrichment) the next time it runs: at startup, which is on by default, or on its `CronSchedule`. It processes only those tables, not the whole datasource.
 
 ---
 
