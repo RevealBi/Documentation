@@ -6,7 +6,9 @@ import TabItem from '@theme/TabItem';
 In Reveal SDK, caching is a default mechanism designed to optimize performance by storing all queried data in a faster and embedded database, referred to as a cache. This process ensures that frequently accessed data is readily available, and upon initiating a query, the SDK automatically checks if the requested data is already present in the cache. In the event of a cache hit, the SDK swiftly retrieves the information without the need for an additional request to the original source.
 
 ## How caching works
-When you query data through the SDK, a new *key* is created, encompassing all the options used to obtain that data, for each pipeline step. This *key* is stored alongside the resultant data from the pipeline step. Upon repeating the same operation, the key specific to each pipeline step will be recognized, and the corresponding data will be retrieved from the cache. However, if you alter any aspect of the data query for a particular step, such as ordering or filtering, the *key* won't match, and only the affected step and subsequent steps will perform the process. This new query will be saved alongside its results. For instance, changing the order of data obtained from an Excel file won't trigger the file to be downloaded again; only the specific step requiring modification, like the filter and the steps after it, will perform the process.
+When you request data, Reveal can reuse cached results when the applicable data source, credential, and query information matches and the results meet the configured refresh frequency. The information used to determine whether results can be reused depends on the data source and credential type. See the [FAQ](#faq) for guidance on user-specific data.
+
+Changing a query option, such as a filter or sort order, may require new results for that operation while allowing other cached results to be reused. For example, changing the sort order of data from an Excel file does not necessarily require downloading the file again.
 
 ### Processing pipeline
 The processing pipeline outlines the sequential stages through which data is systematically processed. Understanding the processing pipeline is important to discern where and how the cache comes into action, playing a significant role in optimizing data retrieval and enhancing overall processing efficiency.
@@ -96,9 +98,11 @@ The available options are the following:
 ![](images/cache-frequency.jpg)
 
 ## Disabling caching
-Disabling caching is not an available option; however, you can achieve a similar result by setting the data source refresh data frequency to `Always`. This configuration ensures that the application consistently retrieves fresh data, bypassing the cache. It's essential to note that even if the cache is not consulted during queries, the processed data will still be saved. While this approach guarantees access to the most up-to-date information, it's important to be mindful of potential performance impacts due to the increased load on the data source when utilizing real-time access. Developers may opt for this configuration temporarily for debugging purposes or when working with dynamic data that frequently changes.
+Reveal does not provide a single setting to disable all caching. To request fresh data for visualization data queries, set the data source refresh data frequency to `Always`.
 
-To bypass caching, set the data source refresh data frequency to `Always`.
+Processed results can still be stored in the cache. More frequent refreshes can increase load on the data source and affect performance.
+
+Refresh frequency controls data freshness. It does not replace server-side authorization or the credential configuration described in the [FAQ](#faq).
 
 ![](images/cache-disable.jpg)
 
@@ -287,20 +291,33 @@ initializeParameterBuilder.enableRedisCache((options) -> {
 
 **Q: How can I segregate cache entries for different users?**
 
-**A:** This is often done for security reasons. However, if different users have equal access rights to the underlying data source, sharing cache entries can enhance the overall performance. Reveal, by default, leans toward the later approach. When it comes to security, you need to:
-  - Set the `IRVUserContext.UserId` property in the `IRVUserContextProvider` to identify the current user. This context is accessible in the `IRVDataSourceProvider` and `IRVAuthenticationProvider`, enabling user-specific decisions.
-  - Configure the data source in the `IRVDataSourceProvider` for the current user. Limit data sources to those relevant to the user's role, and adjust properties accordingly (e.g., ensure Database/Table/CustomQuery properties align with the user's permissions).
-  - Assign appropriate credentials for the user in the `IRVAuthenticationProvider`.
+**A:** Reveal can share cached results to improve performance. Your application must authorize each request for the data it can return, whether that data is cached or retrieved from the data source. Configure the following providers on the server:
 
-  These steps are crucial for security, regardless of caching. Regarding caching, Reveal utilizes provided information (data source, credentials, and sometimes UserId) to create cache entries. These entries may be shared among users only if they share the same data source and credentials, indicating they can execute identical queries with matching permissions.
+- In `IRVUserContextProvider`, return the current user's context with a `UserId` derived from an identity verified by your server.
+- In `IRVDataSourceProvider`, enforce the user's access to data sources and queries. Set properties such as `Database`, `Table`, and `CustomQuery` according to the user's permissions where applicable. Do not rely on client-side filtering to enforce access restrictions.
+- In `IRVAuthenticationProvider`, return credentials appropriate for the data the current user is permitted to access.
+
+See [User Context](user-context.md) and [Authentication](authentication.md) for provider configuration.
+
+Cache sharing depends on the data source, query, and credential type. Different `IRVUserContext.UserId` values do not guarantee separate cache entries for every data source or SDK feature. For deployments that require strict separation, validate the data-source and editing features you enable with users from different tenants and permission scopes.
 
 **Q: How does `IRVUserContext.UserId` impact cache entries?**
 
-**A:** Currently, there's no assurance that distinct UserId values will generate separate entries in the cache. However, it's crucial to ensure that the UserId is correctly set when using `RVHeadersDataSourceCredentials` credentials type, as not doing so can lead to cache issues.
+**A:** `IRVUserContext.UserId` identifies the current user to your SDK providers. Its effect on cache reuse depends on the credential type.
+
+When using `RVHeadersDataSourceCredentials`, set `IRVUserContext.UserId` to a consistent, nonempty identifier for the authenticated user and the applicable tenant and permission scope. Keep the value stable across requests that should share results, and use different values for users or scopes that must not share them. For example, users in different tenants must not share an identifier simply because their local usernames match.
+
+For visualization data queries using these credentials, different header, token, or cookie values alone do not separate cached results. If `UserId` and the applicable data source and query information match, cached results may be reused even when those credential values differ. Reusing an identifier for users with different access rights can therefore cause a user to receive cached results intended for another user.
+
+Do not use a missing or empty `UserId`, or a shared placeholder such as `guest`, for users with different permissions. Do not rely on token or cookie changes to enforce access restrictions. When a user's tenant or permissions change, update the server-side authorization and ensure that the identity used for headers credentials reflects the new access scope.
 
 **Q: How does the `RVBearerTokenDataSourceCredential.UserId` property impact cache entries?**
 
-**A:** If the `RVBearerTokenDataSourceCredential.UserId` is set, it will be used when creating the cache entry key, and it is recommended to do so to improve performance. Note that the UserId in `RVBearerTokenDataSourceCredential` may differ from the one in `IRVUserContext`; it corresponds to the UserId linked with the `RVBearerTokenDataSourceCredential' access token.
+**A:** `RVBearerTokenDataSourceCredential.UserId` identifies the user associated with the access token. Set a consistent, nonempty value for that user and permission scope to allow cached results to be reused across token refreshes. This property is separate from `IRVUserContext.UserId`, and the two values may differ.
+
+Do not assign the same credential `UserId` to tokens that represent different users, tenants, or permission scopes. A changed token alone does not separate cached results when this credential `UserId` and the applicable data source and query information match.
+
+If you pass a bearer token in an authorization header through `RVHeadersDataSourceCredentials`, follow the guidance for headers credentials above.
 
 **Q: In my deployment, there will be several instances of the Reveal server. How can they share the cache?**
 
