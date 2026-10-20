@@ -298,6 +298,8 @@ initializeParameterBuilder.enableRedisCache((options) -> {
 
 **答え:** 現在のところ、個別の UserId 値がキャッシュ内に個別のエントリを生成するという保証はありません。ただし、`RVHeadersDataSourceCredentials` 資格情報タイプを使用する場合は、UserId が正しく設定されていることを確認することが重要です。正しく設定されていないと、キャッシュの問題が発生する可能性があります。
 
+`RVHeadersDataSourceCredentials` を使用する場合は、認証されたユーザーと該当するテナントや権限範囲に基づく、一貫した空でない識別子を `IRVUserContext.UserId` に設定してください。視覚化のデータ リクエストでは、この識別子と関連するデータ ソースおよびクエリの情報が一致すると、ヘッダーや Cookie の値が異なっていても、キャッシュされた結果が再利用される場合があります。アクセス権の異なるユーザー間で識別子を再利用すると、別のユーザー向けの結果が返される可能性があります。各リクエストのアクセスをサーバー側で認可してください。`UserId` だけで、すべての SDK 機能における分離が保証されるわけではありません。
+
 **質問: `RVBearerTokenDataSourceCredential.UserId` プロパティはキャッシュ エントリにどのような影響を与えますか?**
 
 **答え:** `RVBearerTokenDataSourceCredential.UserId` が設定されている場合は、キャッシュ エントリ キーの作成時に使用されるため、パフォーマンスを向上させるために設定することをお勧めします。`RVBearerTokenDataSourceCredential` の UserId は `RVBearerTokenDataSourceCredential` アクセス トークンにリンクされた UserId に対応し、`IRVUserContext` の UserId と異なる場合があることに注意してください。
