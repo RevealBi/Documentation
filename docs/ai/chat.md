@@ -129,8 +129,6 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 
 It's the operation that ran, which can differ from the requested `intent`: an edit requested when the session has no dashboard builds a new one and reports `generation-build-report`.
 
-Every value but `default` can be sent as the next request's `intent` to run the same operation. `widget-analysis` and `widget-adjustment-global-filters` also need that request's `visualizationId`, which the response doesn't include: send the same one as before.
-
 On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
 
 ```json
