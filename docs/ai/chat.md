@@ -50,6 +50,7 @@ DELETE /api/reveal/ai/chat/session
   // Optional context
   dashboard?: string,             // Dashboard JSON for editing/analysis
   visualizationId?: string,       // Visualization ID for visualization-specific operations
+  intent?: string,                // Operation to run, skipping the intent classifier (see Intent values)
 
   // Optional configuration
   model?: string,                 // LLM model override
@@ -62,18 +63,35 @@ DELETE /api/reveal/ai/chat/session
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `datasourceId` | string | Yes | Identifier of the datasource to query |
-| `message` | string | Conditional* | User's natural language message or request |
+| `message` | string | Yes | User's natural language message or request |
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
+| `intent` | string | No | Operation to run instead of letting the AI classify the message. See [Intent values](#intent-values) |
 | `model` | string | No | Name of specific LLM model to use for this request |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
-
-\* Either `message` or `intent` must be provided
 
 **Parameter Details:**
 
 - **`datasourceId`**: Required for all requests. Provides context about available data structures.
 - **`dashboard`**: Provide when editing existing dashboards or analyzing dashboard content.
+
+### Intent values
+
+Without an `intent`, the AI decides from the message whether to build, edit or analyze a dashboard, or to answer conversationally. Set `intent` to run a specific operation instead. The values are the same intent names the response's `intent` field reports, so a response's `intent` can be sent back on the next request:
+
+| Value | Operation |
+|---|---|
+| `generation-build-report` | Generate a new dashboard |
+| `generation-edit-existing-report` | Edit the current dashboard |
+| `generation-add-widget-filters` | Add filters to the current dashboard's visualizations |
+| `generation-add-global-filters` | Add dashboard filters to the current dashboard |
+| `widget-adjustment-global-filters` | Adjust the dashboard filters the visualization in `visualizationId` uses |
+| `widget-analysis` | Analyze the visualization in `visualizationId` |
+| `dashboard-analysis` | Analyze the whole dashboard |
+
+The values are case-insensitive. The earlier values (`buildreport`, `editexistingreport`, `addwidgetfilters`, `addglobalfilters`, `adjustwidgetglobalfilters`, `widgetanalysis`, `dashboardanalysis`) still work.
+
+An operation that needs a dashboard falls back when the session has none: an edit or a filter request builds a new dashboard, and a filter adjustment runs a dashboard analysis. An unrecognized value runs a dashboard analysis.
 
 ## Response Format
 
@@ -85,6 +103,7 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 {
   "explanation": "Based on your data, I've created a dashboard showing sales by region...",
   "dashboard": "{...rdash JSON...}",
+  "intent": "generation-build-report",
   "finishReason": "Stop",
   "usage": {
     "inputTokens": 1243,
@@ -93,7 +112,22 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 }
 ```
 
-`finishReason` is the stop reason reported by the LLM. `usage` contains token counts when the active provider reports them.
+`intent` names the operation that ran (see [Response intent](#response-intent)). `finishReason` is the stop reason reported by the LLM. `usage` contains token counts when the active provider reports them.
+
+#### Response intent
+
+`intent` tells you what the request did, for example whether a message edited the current dashboard or built a new one:
+
+| Value | The request... |
+|---|---|
+| `generation-build-report` | Generated a new dashboard |
+| `generation-edit-existing-report`, `generation-add-widget-filters`, `generation-add-global-filters` | Edited the current dashboard |
+| `widget-analysis` | Analyzed a visualization |
+| `dashboard-analysis` | Analyzed the whole dashboard |
+| `widget-adjustment-global-filters` | Adjusted the dashboard filters a visualization uses |
+| `default` | Answered conversationally, without changing the dashboard |
+
+It's the operation that ran, which can differ from the requested `intent`: an edit requested when the session has no dashboard builds a new one and reports `generation-build-report`.
 
 On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
 
@@ -141,6 +175,7 @@ data: {
   "result": {
     "explanation": "Based on your data, I've created a dashboard showing sales by region...",
     "dashboard": "{...rdash JSON...}",
+    "intent": "generation-build-report",
     "finishReason": "Stop",
     "usage": {
       "inputTokens": 1243,
@@ -153,10 +188,11 @@ data: {
 **Result Structure:**
 - `explanation`: Natural language explanation of what was done
 - `dashboard`: Generated or modified dashboard JSON (when applicable)
+- `intent`: The operation that ran (see [Response intent](#response-intent))
 - `finishReason`: Why the LLM stopped generating content. Common values are `Stop`, `Length`, and `ContentFilter`
 - `usage`: Optional token usage details from the provider, typically including `inputTokens` and `outputTokens`
 
-The streamed `text` events only carry explanation fragments. `finishReason` and `usage` are returned in the final `complete` event payload.
+The streamed `text` events only carry explanation fragments. `intent`, `finishReason` and `usage` are returned in the final `complete` event payload.
 
 #### error Event
 Sent if processing fails.

@@ -102,8 +102,29 @@ builder.Services.AddRevealAI()
     .AddProfile("default", p => { p.Provider = "openai"; p.Model = "gpt-4.1-mini"; })
     .AddProfile("dashboard-generation", p => { p.Provider = "anthropic"; p.Model = "claude-sonnet-4-5"; })
     .SetDefaultProfile("default")
-    .MapIntent(AIIntents.GenerationBuildReport, "dashboard-generation");
+    .MapIntent(Intents.GenerationBuildReport, "dashboard-generation");
 ```
+
+Each AI call Reveal makes is tagged with one of these intents (constants on `Intents`):
+
+| Intent | Constant | Used for |
+|---|---|---|
+| `default` | `Intents.Default` | Conversational answers, and any work that isn't mapped |
+| `intent-classifier` | `Intents.IntentClassifier` | Deciding what a chat message asks for |
+| `generation-build-report` | `Intents.GenerationBuildReport` | Generating a new dashboard |
+| `generation-edit-existing-report` | `Intents.GenerationEditExistingReport` | Editing an existing dashboard |
+| `generation-add-widget-filters` | `Intents.GenerationAddWidgetFilters` | Adding filters to a dashboard's visualizations |
+| `generation-add-global-filters` | `Intents.GenerationAddGlobalFilters` | Adding dashboard filters |
+| `widget-analysis` | `Intents.WidgetAnalysis` | Analyzing a visualization. A dashboard analysis also runs each visualization's analysis, and the summary of their results, under this intent |
+| `dashboard-analysis` | `Intents.DashboardAnalysis` | Analyzing a whole dashboard: planning which visualizations to analyze and writing the final report |
+| `widget-adjustment-global-filters` | `Intents.WidgetAdjustmentGlobalFilters` | Adjusting the dashboard filters a visualization uses |
+| `metadata-semantic-enrichment` | `Intents.MetadataSemanticEnrichment` | Describing datasource metadata in the background |
+| `datasource-evaluate` | `Intents.DatasourceEvaluate` | Evaluating datasources for a request |
+| `datasource-ranker` | `Intents.DatasourceRanker` | Ranking datasources for a request |
+
+:::note
+`Intents` was previously named `AIIntents`. `AIIntents` still works, with the same values, but is obsolete: the compiler warns (CS0618) and points to `Intents`.
+:::
 
 The server exposes profiles allowed for the current user at `GET /api/reveal/ai/profiles`. The response includes profile names, display information, and default status—not the provider connection or model ID.
 

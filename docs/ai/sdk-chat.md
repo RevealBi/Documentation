@@ -100,7 +100,7 @@ All parameters are passed in a single request object:
 | `datasourceId` | `string` | No | Datasource identifier for context |
 | `dashboard` | `string \| RVDashboard` | No | Dashboard JSON or RVDashboard object for editing/analysis |
 | `visualizationId` | `string` | No | Visualization ID for visualization-specific context |
-| `intent` | `string` | No | Intent for freeform LLM queries |
+| `intent` | `string` | No | Operation to run instead of letting the AI classify the message, such as `generation-edit-existing-report` or `dashboard-analysis`. See [Intent values](chat.md#intent-values) |
 | `updateChatState` | `boolean` | No | Whether to update the chat state after this query |
 | `signal` | `AbortSignal` | No | AbortSignal for cancelling the request |
 | `stream` | `boolean` | No | Enable streaming mode (default: `false`) |
@@ -116,10 +116,11 @@ interface TokenUsage {
 interface ChatResponse {
   explanation?: string;             // AI-generated explanation
   dashboard?: string;               // Generated/modified dashboard JSON
+  intent?: string;                  // The operation that ran, e.g. "generation-edit-existing-report"
   finishReason?: string;            // Stop reason returned by the LLM
   usage?: TokenUsage;               // Provider token usage, when available
   error?: string;                   // Error message if request failed
 }
 ```
 
-The `explanation` field contains the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified. `finishReason` reports why generation stopped, and `usage` exposes provider token counts when available.
+The `explanation` field contains the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified. `intent` names the operation that ran (for example, whether the message edited the dashboard or built a new one); see [Response intent](chat.md#response-intent) for the values. It can be passed back as the next request's `intent`. `finishReason` reports why generation stopped, and `usage` exposes provider token counts when available.
