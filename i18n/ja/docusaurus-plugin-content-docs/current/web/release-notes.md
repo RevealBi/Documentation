@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 ### 重大な変更
 
 #### AI
-- ダッシュボード分析のプランと最終レポートは、`widget-analysis` ではなく新しい `dashboard-analysis` インテントで実行されるようになりました。`MapIntent` で `widget-analysis` をプロファイルにマッピングしている場合は、`dashboard-analysis` もマッピングしてください。マッピングしない場合、これら 2 つの呼び出しはエンド ユーザーが選択したプロファイルまたはデフォルト プロファイルを使用します。`widget-analysis` のみがマッピングされている場合、サーバーは起動時に警告をログに記録します。`widget-analysis` をチェックするクォータ ゲート、使用状況シンク、カスタム プロバイダーでは、`dashboard-analysis` もチェックしてください。各表示形式の分析とその結果の要約は、引き続き `widget-analysis` で実行されます。詳細は [AI プロバイダー](../ai/providers-overview.md)を参照してください。
+- ダッシュボード分析のプランと最終レポートは、`widget-analysis` ではなく新しい `dashboard-analysis` インテントで実行されるようになりました。`widget-analysis` をプロファイルにルーティングしている場合 (`MapIntent`、`RevealAI:Intents` 構成、またはプロファイル セレクターの `IntentProfiles`) は、`dashboard-analysis` も同様にルーティングしてください。ルーティングしない場合、これら 2 つの呼び出しはエンド ユーザーが選択したプロファイルまたはデフォルト プロファイルを使用します。`widget-analysis` がマッピングされていて `dashboard-analysis` がマッピングされていない場合、サーバーは起動時に警告をログに記録します。ただし、この警告が対象とするのは `MapIntent` と構成のみで、プロファイル セレクターのユーザーごとのオーバーライドは対象外です。`widget-analysis` をチェックするクォータ ゲート、使用状況シンク、カスタム プロバイダーでは、`dashboard-analysis` もチェックしてください。各表示形式の分析とその結果の要約は、引き続き `widget-analysis` で実行されます。詳細は [AI プロバイダー](../ai/providers-overview.md)を参照してください。
 
 ### 新機能
 

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 ### Breaking Changes
 
 #### AI
-- A dashboard analysis's plan and final report now run under the new `dashboard-analysis` intent instead of `widget-analysis`. If you map `widget-analysis` to a profile with `MapIntent`, map `dashboard-analysis` too, or those two calls use the end user's chosen profile or your default profile; the server logs a warning at startup when only `widget-analysis` is mapped. Quota gates, usage sinks and custom providers that check for `widget-analysis` should check for `dashboard-analysis` as well. Each visualization's analysis, and the summary of their results, still run under `widget-analysis`. See [intent routing](../ai/providers-overview.md#default-profile-and-intent-routing).
+- A dashboard analysis's plan and final report now run under the new `dashboard-analysis` intent instead of `widget-analysis`. Wherever you route `widget-analysis` to a profile (`MapIntent`, the `RevealAI:Intents` configuration, or a profile selector's `IntentProfiles`), route `dashboard-analysis` too, or those two calls use the end user's chosen profile or your default profile. The server logs a warning at startup when `widget-analysis` is mapped and `dashboard-analysis` isn't; it only sees `MapIntent` and configuration, not a profile selector's per-user overrides. Quota gates, usage sinks and custom providers that check for `widget-analysis` should check for `dashboard-analysis` as well. Each visualization's analysis, and the summary of their results, still run under `widget-analysis`. See [intent routing](../ai/providers-overview.md#default-profile-and-intent-routing).
 
 ### New Features
 
