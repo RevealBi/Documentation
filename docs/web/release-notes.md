@@ -7,17 +7,6 @@ import TabItem from '@theme/TabItem';
 
 > Changes below are available in the weekly preview builds and will ship in the next RTM release.
 
-### Breaking Changes
-
-#### AI
-- A dashboard analysis's plan and final report now run under the new `dashboard-analysis` intent instead of `widget-analysis`. Wherever you route `widget-analysis` to a profile (`MapIntent`, the `RevealAI:Intents` configuration, or a profile selector's `IntentProfiles`), route `dashboard-analysis` too, or those two calls use the end user's chosen profile or your default profile. The server logs a warning at startup when `widget-analysis` is mapped and `dashboard-analysis` isn't; it only sees `MapIntent` and configuration, not a profile selector's per-user overrides. Quota gates, usage sinks and custom providers that check for `widget-analysis` should check for `dashboard-analysis` as well. Each visualization's analysis, and the summary of their results, still run under `widget-analysis`. See [intent routing](../ai/providers-overview.md#default-profile-and-intent-routing).
-
-### New Features
-
-#### AI
-- The chat response has a new `intent` field naming the operation that ran, such as `generation-build-report` for a new dashboard or `generation-edit-existing-report` for an edit. The chat request's `intent` takes the same names; the earlier values (`editexistingreport`, ...) still work. See [Response intent](../ai/chat.md#response-intent).
-- `AIIntents` is renamed to `Intents`. `AIIntents` still works, with the same values, but is obsolete.
-
 ### Bugs
 
 #### All Platforms

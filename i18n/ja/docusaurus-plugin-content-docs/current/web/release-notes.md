@@ -7,17 +7,6 @@ import TabItem from '@theme/TabItem';
 
 > 以下の変更は毎週のプレビュー ビルドで利用可能で、次回の RTM リリースに含まれる予定です。
 
-### 重大な変更
-
-#### AI
-- ダッシュボード分析のプランと最終レポートは、`widget-analysis` ではなく新しい `dashboard-analysis` インテントで実行されるようになりました。`widget-analysis` をプロファイルにルーティングしている場合 (`MapIntent`、`RevealAI:Intents` 構成、またはプロファイル セレクターの `IntentProfiles`) は、`dashboard-analysis` も同様にルーティングしてください。ルーティングしない場合、これら 2 つの呼び出しはエンド ユーザーが選択したプロファイルまたはデフォルト プロファイルを使用します。`widget-analysis` がマッピングされていて `dashboard-analysis` がマッピングされていない場合、サーバーは起動時に警告をログに記録します。ただし、この警告が対象とするのは `MapIntent` と構成のみで、プロファイル セレクターのユーザーごとのオーバーライドは対象外です。`widget-analysis` をチェックするクォータ ゲート、使用状況シンク、カスタム プロバイダーでは、`dashboard-analysis` もチェックしてください。各表示形式の分析とその結果の要約は、引き続き `widget-analysis` で実行されます。詳細は [AI プロバイダー](../ai/providers-overview.md)を参照してください。
-
-### 新機能
-
-#### AI
-- チャットの応答に、実行された操作を示す新しい `intent` フィールドが追加されました。たとえば、新しいダッシュボードの場合は `generation-build-report`、編集の場合は `generation-edit-existing-report` です。チャット リクエストの `intent` も同じ名前を受け付けます。以前の値 (`editexistingreport` など) も引き続き使用できます。詳細は [AI チャット](../ai/chat.md)を参照してください。
-- `AIIntents` の名前が `Intents` に変更されました。`AIIntents` は同じ値で引き続き動作しますが、非推奨です。
-
 ### バグ
 
 #### すべてのプラットフォーム
