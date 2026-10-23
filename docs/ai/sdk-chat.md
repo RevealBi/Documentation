@@ -123,4 +123,4 @@ interface ChatResponse {
 }
 ```
 
-The `explanation` field contains the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified. `intent` names the operation that ran (for example, whether the message edited the dashboard or built a new one); see [Response intent](chat.md#response-intent) for the values. It can be passed back as the next request's `intent`. `finishReason` reports why generation stopped, and `usage` exposes provider token counts when available.
+The `explanation` field contains the AI's natural language response. The `dashboard` field is populated when dashboards are generated or modified. `intent` names the operation that ran (for example, whether the message edited the dashboard or built a new one); see [Response intent](chat.md#response-intent) for the values. It can be passed back as the next request's `intent`; for `widget-analysis` and `widget-adjustment-global-filters`, send the same `visualizationId` too, since the response doesn't include it. `finishReason` reports why generation stopped, and `usage` exposes provider token counts when available.

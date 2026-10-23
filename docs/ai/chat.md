@@ -77,7 +77,7 @@ DELETE /api/reveal/ai/chat/session
 
 ### Intent values
 
-Without an `intent`, the AI decides from the message whether to build, edit or analyze a dashboard, or to answer conversationally. Set `intent` to run a specific operation instead. The values are the same intent names the response's `intent` field reports, so a response's `intent` can be sent back on the next request:
+Without an `intent`, the AI decides from the message whether to build, edit or analyze a dashboard, or to answer conversationally. Set `intent` to run a specific operation instead. The values are the same intent names the response's [`intent`](#response-intent) field reports:
 
 | Value | Operation |
 |---|---|
@@ -85,8 +85,8 @@ Without an `intent`, the AI decides from the message whether to build, edit or a
 | `generation-edit-existing-report` | Edit the current dashboard |
 | `generation-add-widget-filters` | Add filters to the current dashboard's visualizations |
 | `generation-add-global-filters` | Add dashboard filters to the current dashboard |
-| `widget-adjustment-global-filters` | Adjust the dashboard filters the visualization in `visualizationId` uses |
-| `widget-analysis` | Analyze the visualization in `visualizationId` |
+| `widget-adjustment-global-filters` | Adjust the dashboard filters the visualization in `visualizationId` uses. Without `visualizationId`, it adjusts every dashboard filter |
+| `widget-analysis` | Analyze the visualization in `visualizationId`. Requires `visualizationId` |
 | `dashboard-analysis` | Analyze the whole dashboard |
 
 The values are case-insensitive. The earlier values (`buildreport`, `editexistingreport`, `addwidgetfilters`, `addglobalfilters`, `adjustwidgetglobalfilters`, `widgetanalysis`, `dashboardanalysis`) still work.
@@ -128,6 +128,8 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 | `default` | Answered conversationally, without changing the dashboard |
 
 It's the operation that ran, which can differ from the requested `intent`: an edit requested when the session has no dashboard builds a new one and reports `generation-build-report`.
+
+Every value but `default` can be sent as the next request's `intent` to run the same operation. `widget-analysis` and `widget-adjustment-global-filters` also need that request's `visualizationId`, which the response doesn't include: send the same one as before.
 
 On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
 

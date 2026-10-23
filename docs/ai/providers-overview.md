@@ -116,7 +116,7 @@ Each AI call Reveal makes is tagged with one of these intents (constants on `Int
 | `generation-add-widget-filters` | `Intents.GenerationAddWidgetFilters` | Adding filters to a dashboard's visualizations |
 | `generation-add-global-filters` | `Intents.GenerationAddGlobalFilters` | Adding dashboard filters |
 | `widget-analysis` | `Intents.WidgetAnalysis` | Analyzing a visualization. A dashboard analysis also runs each visualization's analysis, and the summary of their results, under this intent |
-| `dashboard-analysis` | `Intents.DashboardAnalysis` | Analyzing a whole dashboard: planning which visualizations to analyze and writing the final report |
+| `dashboard-analysis` | `Intents.DashboardAnalysis` | Analyzing a whole dashboard: planning which visualizations to analyze and writing the final report. Until you map it, it follows your `widget-analysis` mapping |
 | `widget-adjustment-global-filters` | `Intents.WidgetAdjustmentGlobalFilters` | Adjusting the dashboard filters a visualization uses |
 | `metadata-semantic-enrichment` | `Intents.MetadataSemanticEnrichment` | Describing datasource metadata in the background |
 | `datasource-evaluate` | `Intents.DatasourceEvaluate` | Evaluating datasources for a request |
