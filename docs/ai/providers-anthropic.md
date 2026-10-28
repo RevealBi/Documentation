@@ -209,6 +209,57 @@ The same option names are used across all server platforms — ASP.NET sets them
 | `ApiKey` | `string` | `""` | **Required.** Your Anthropic API key. |
 | `Model` | `string` | `"claude-opus-4-1"` | The Claude model to use. |
 | `MaxTokens` | `int` | `4096` | Maximum number of tokens to generate in the response. |
+| `PromptCaching` | `bool` | `true` | Caches the static part of each prompt so later requests read it at a fraction of the input price. See [Prompt caching](#prompt-caching). |
+
+## Prompt caching
+
+Every prompt the AI SDK sends starts with a static part: its instructions, the schema of the tables in use, and the date rules. With `PromptCaching` on (the default), the provider marks where that part ends as an Anthropic cache point. The same step of a later request reads it back from Anthropic's cache: on a chat's next turns, and in other users' chats over the same tables, for as long as Anthropic keeps it (5 minutes after its last use).
+
+**Cost.** Anthropic bills a cache write at 1.25 times its input price and a cache read at 0.1 times it, so a static part that's read back once within 5 minutes has already paid for its write. On a benchmark of repeated dashboard requests and three-turn chats with `claude-sonnet-5-5`, three quarters of the requests read from the cache, and input cost 21% less than with caching off.
+
+**When to turn it off.** When the same kind of request rarely comes again within 5 minutes (few, scattered users, or tables that differ on every request), most static parts are written and never read, which costs up to about 10% more input than with caching off.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+builder.Services.AddRevealAI()
+    .AddAnthropic(options =>
+    {
+        options.ApiKey = builder.Configuration["RevealAI:Anthropic:ApiKey"];
+        options.PromptCaching = false;
+    });
+```
+
+Or in configuration: `RevealAI:Providers:<name>:PromptCaching` set to `false`.
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const aiSettings = {
+    anthropic: {
+        ApiKey: process.env.ANTHROPIC_API_KEY,
+        PromptCaching: false
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Map.of(
+    "ApiKey", System.getenv("ANTHROPIC_API_KEY"),
+    "PromptCaching", false)
+```
+
+  </TabItem>
+</Tabs>
+
+Token usage records count the cache's writes and reads within `InputTokens`; `CachedInputTokens` holds the reads.
 
 ## Available Models
 
