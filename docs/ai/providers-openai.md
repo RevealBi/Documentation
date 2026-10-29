@@ -221,6 +221,57 @@ The same option names are used across all server platforms — ASP.NET sets them
 | `TopP` | `float?` | `1.0` | Nucleus sampling parameter. |
 | `Endpoint` | `string` | `""` | Custom endpoint URL. Use this for OpenAI-compatible APIs. |
 | `ReasoningEffort` | `string?` | `null` | Reasoning effort level for reasoning models (e.g., o3, o4). |
+| `PromptCaching` | `bool` | `true` | On gpt-5.6 and later, caches the static part of each prompt so later requests read it at a fraction of the input price. See [Prompt caching](#prompt-caching). |
+
+## Prompt caching
+
+Every prompt the AI SDK sends starts with a static part: its instructions, the schema of the tables in use, and the date rules. On gpt-5.6 and later models, with `PromptCaching` on (the default), the provider places an OpenAI cache breakpoint where that part ends. The same step of a later request reads it back from OpenAI's cache: on a chat's next turns, and in other users' chats over the same tables, for as long as OpenAI keeps it (at least 30 minutes). The rest of the prompt is billed as plain input. A one-off prompt with no static part (metadata enrichment, datasource ranking) isn't cached, since it would pay for the write and never be read.
+
+**Cost.** OpenAI bills a cache write at 1.25 times its input price and a cache read at 0.1 times it, so a static part that's read back once has already paid for its write. On a benchmark of repeated dashboard requests with `gpt-5.6-luna`, 61 of 71 requests read from the cache, and input cost 38% less than with caching off.
+
+**When to turn it off.** When the same kind of request rarely comes again within 30 minutes (few, scattered users, or tables that differ on every request), most static parts are written and never read, which costs up to about 11% more input than with caching off. With `PromptCaching` off, gpt-5.6 and later requests neither write nor read the cache. Also turn it off if you point `Endpoint` at a gateway that serves gpt-5.6 or later but rejects OpenAI's `prompt_cache_options` field.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+builder.Services.AddRevealAI()
+    .AddOpenAI(options =>
+    {
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
+        options.PromptCaching = false;
+    });
+```
+
+Or in configuration: `RevealAI:Providers:<name>:PromptCaching` set to `false`.
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const aiSettings = {
+    openai: {
+        ApiKey: process.env.OPENAI_API_KEY,
+        PromptCaching: false
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Map.of(
+    "ApiKey", System.getenv("OPENAI_API_KEY"),
+    "PromptCaching", false)
+```
+
+  </TabItem>
+</Tabs>
+
+Earlier models (gpt-4.1, gpt-5.5 and before) reuse a repeated prompt start on their own at no extra cost, and ignore this setting. Token usage records count the cache's reads in `CachedInputTokens`.
 
 ## Reasoning Models
 
