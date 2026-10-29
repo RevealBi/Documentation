@@ -225,7 +225,7 @@ The same option names are used across all server platforms — ASP.NET sets them
 
 ## Prompt caching
 
-Every prompt the AI SDK sends starts with a static part: its instructions, the schema of the tables in use, and the date rules. On gpt-5.6 and later models, with `PromptCaching` on (the default), the provider places an OpenAI cache breakpoint where that part ends. The same step of a later request reads it back from OpenAI's cache: on a chat's next turns, and in other users' chats over the same tables, for as long as OpenAI keeps it (at least 30 minutes). The rest of the prompt is billed as plain input. A one-off prompt with no static part (metadata enrichment, datasource ranking) isn't cached, since it would pay for the write and never be read.
+Every prompt the AI SDK sends starts with a static part: its instructions, the schema of the tables in use, and the date rules. On gpt-5.6 and later models, with `PromptCaching` on (the default), the provider places an OpenAI cache breakpoint where that part ends. The same step of a later request reads it back from OpenAI's cache: on a chat's next turns, and in other users' chats over the same tables, for as long as OpenAI keeps it (at least 30 minutes). The rest of the prompt is billed as plain input. A one-off prompt with no static part (metadata enrichment, datasource ranking) isn't cached, since it would pay for the write and never be read. Neither is a chat answer sent after the earlier turns of the conversation: its cached part would hold those turns, and the next turn's are one exchange longer, so it would never be read either.
 
 **Cost.** OpenAI bills a cache write at 1.25 times its input price and a cache read at 0.1 times it, so a static part that's read back once has already paid for its write. On a benchmark of repeated dashboard requests with `gpt-5.6-luna`, 61 of 71 requests read from the cache, and input cost 38% less than with caching off.
 
@@ -271,7 +271,7 @@ Map.of(
   </TabItem>
 </Tabs>
 
-Earlier models (gpt-4.1, gpt-5.5 and before) reuse a repeated prompt start on their own at no extra cost, and ignore this setting. If `Endpoint` points at a gateway or deployment that refuses OpenAI's prompt-cache fields, the provider sends the call again without them and stops sending them for that model, so you don't need to turn the setting off for it. Token usage records count the cache's reads in `CachedInputTokens`.
+Earlier models (gpt-4.1, gpt-5.5 and before) reuse a repeated prompt start on their own at no extra cost, and ignore this setting. If `Endpoint` points at a gateway or deployment that refuses OpenAI's prompt-cache fields, the provider sends the call again without them, so you don't need to turn the setting off for it. It then stops sending them for that model, which also means no prompt caching for it, until the connection is recreated: when the process restarts, or for a bring-your-own-key connection, when its cached provider expires. It logs a warning when that happens. Token usage records count the cache's reads in `CachedInputTokens`.
 
 ## Reasoning Models
 
