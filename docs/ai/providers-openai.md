@@ -229,7 +229,7 @@ Every prompt the AI SDK sends starts with a static part: its instructions, the s
 
 **Cost.** OpenAI bills a cache write at 1.25 times its input price and a cache read at 0.1 times it, so a static part that's read back once has already paid for its write. On a benchmark of repeated dashboard requests with `gpt-5.6-luna`, 61 of 71 requests read from the cache, and input cost 38% less than with caching off.
 
-**When to turn it off.** When the same kind of request rarely comes again within 30 minutes (few, scattered users, or tables that differ on every request), most static parts are written and never read, which costs up to about 11% more input than with caching off. With `PromptCaching` off, gpt-5.6 and later requests neither write nor read the cache. Also turn it off if you point `Endpoint` at a gateway that serves gpt-5.6 or later but rejects OpenAI's `prompt_cache_options` field.
+**When to turn it off.** When the same kind of request rarely comes again within 30 minutes (few, scattered users, or tables that differ on every request), most static parts are written and never read, which costs up to about 11% more input than with caching off. With `PromptCaching` off, gpt-5.6 and later requests neither write nor read the cache.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -271,7 +271,7 @@ Map.of(
   </TabItem>
 </Tabs>
 
-Earlier models (gpt-4.1, gpt-5.5 and before) reuse a repeated prompt start on their own at no extra cost, and ignore this setting. Token usage records count the cache's reads in `CachedInputTokens`.
+Earlier models (gpt-4.1, gpt-5.5 and before) reuse a repeated prompt start on their own at no extra cost, and ignore this setting. If `Endpoint` points at a gateway or deployment that refuses OpenAI's prompt-cache fields, the provider sends the call again without them and stops sending them for that model, so you don't need to turn the setting off for it. Token usage records count the cache's reads in `CachedInputTokens`.
 
 ## Reasoning Models
 
