@@ -66,6 +66,7 @@ DELETE /api/reveal/ai/chat/session
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
 | `model` | string | No | Name of specific LLM model to use for this request |
+| `timeZone` | string | No | IANA time zone name (for example `"Asia/Tokyo"`) for the data the AI reads. The client sends it automatically; see [Time Zone](/ai/sdk-request-configuration#time-zone). Defaults to UTC |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
 
 \* Either `message` or `intent` must be provided

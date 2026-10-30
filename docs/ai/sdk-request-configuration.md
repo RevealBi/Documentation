@@ -12,7 +12,7 @@ Request configuration is a preview feature. It works as described below, but the
 
 :::
 
-`RevealSdkClient.initialize()` accepts options that control the HTTP requests the client sends to your AI server. Configure them only when your application needs authentication or additional request headers.
+`RevealSdkClient.initialize()` accepts options that control the HTTP requests the client sends to your AI server. Configure them only when your application needs authentication, additional request headers, or a time zone other than the browser's.
 
 ## Bearer-Token Authentication
 
@@ -60,6 +60,21 @@ RevealSdkClient.initialize({
   })
 });
 ```
+
+## Time Zone
+
+The chat and insights requests carry a time zone, and the server reads the dashboard data in that zone. It matters for calculated fields that convert dates to the user's zone, such as `applytimezone([OrderDate], currenttimezone())`. Insights then describe the same values the user sees in the viewer.
+
+By default the client sends the browser's zone, the same one the Reveal viewer uses. Set `timeZone` (an IANA name) when your application shows dashboards in a different zone:
+
+```typescript
+RevealSdkClient.initialize({
+  hostUrl: 'https://your-server.com',
+  timeZone: 'Asia/Tokyo'
+});
+```
+
+Requests without a time zone, for example from callers that use the HTTP endpoints directly, are read in UTC. The server also uses UTC, and logs a warning, when the zone isn't a known IANA name (for example a Windows id such as `"Pacific Standard Time"`).
 
 ## Streaming Requests
 
