@@ -261,6 +261,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", key: "ai-getting-started-header", items: [
         { type: "doc", label: "Overview", id: "ai/overview" },
+        { type: "doc", label: "Data Handling", id: "ai/data-handling" },
         {
           type: "category", label: "Installation", items: [
             { type: "doc", label: "System Requirements", id: "ai/system-requirements" },
