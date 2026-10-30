@@ -105,6 +105,33 @@ builder.Services.AddRevealAI()
     .MapIntent(AIIntents.GenerationBuildReport, "dashboard-generation");
 ```
 
+#### Ranking datasources on a fast profile
+
+When a dashboard request doesn't name a datasource, Reveal ranks the datasources that could answer it before it generates the dashboard. Ranking is its own intent, `AIIntents.DatasourceRanker` (`datasource-ranker`), and runs on the default profile, not on the profile the client requested. With many datasources it takes up to three model calls in a row, and it's often the slowest part of the request.
+
+To speed it up, map the intent to a fast, low-latency profile:
+
+```csharp
+builder.Services.AddRevealAI()
+    // ...
+    .AddProfile("fast", p => { p.Provider = "openai"; p.Model = "gpt-4.1-mini"; })
+    .MapIntent(AIIntents.DatasourceRanker, "fast");
+```
+
+Or in configuration:
+
+```json
+{
+  "RevealAI": {
+    "Intents": {
+      "datasource-ranker": "fast"
+    }
+  }
+}
+```
+
+The ranker's model decides which datasource a dashboard reads. A small model is faster, but it ranks less reliably than a larger one. Try it on the questions your users ask before you switch.
+
 The server exposes profiles allowed for the current user at `GET /api/reveal/ai/profiles`. The response includes profile names, display information, and default status—not the provider connection or model ID.
 
 ### Compatibility
