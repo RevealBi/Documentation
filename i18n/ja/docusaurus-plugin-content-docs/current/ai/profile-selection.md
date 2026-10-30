@@ -136,6 +136,12 @@ IRevealServer revealServer = new RevealServerBuilder()
 
 ## ユーザーごとにプロファイルをルーティングする
 
+:::info プレビュー
+
+プロファイル セレクター (`IAIProfileSelector`) はプレビュー機能です。以下で説明するとおりに動作しますが、API は今後変更される可能性があります。
+
+:::
+
 セレクターは ASP.NET で使用できます。`IAIProfileSelector` を実装し、`AIProfileSelection` を返します。通常のルーティングを維持する場合は `null` を返します。
 
 ```csharp title="PlanProfileSelector.cs"

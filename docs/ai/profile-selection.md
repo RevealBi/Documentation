@@ -136,6 +136,12 @@ The authorizer drives both the profile list and request validation:
 
 ## Route profiles per user
 
+:::info Preview
+
+The profile selector (`IAIProfileSelector`) is a preview feature. It works as described below, but its API may still change.
+
+:::
+
 The selector is available on ASP.NET. Implement `IAIProfileSelector` and return an `AIProfileSelection`, or `null` to keep the normal routing:
 
 ```csharp title="PlanProfileSelector.cs"
