@@ -12,6 +12,7 @@ Supported dashboard export formats:
 Supported visualization export formats:
 - Excel
 - Image
+- PDF
 
 All export options can be found under the **Export** menu item in the `RevealView` overflow menu when a dashboard is opened or a visualization is maximized
 
@@ -162,11 +163,13 @@ A PowerPoint export is performed when the end-user clicks the **PowerPoint** men
 
 ![](images/export-powerpoint.jpg)
 
-The **PowerPoint** menu item can be shown/hidden by setting the `RevealView.ShowExportToPowerpoint` property.
+The **PowerPoint** menu item is hidden by default. To enable PowerPoint export from the dashboard, set `revealView.showExportToPowerPoint` to `true`.
 
 ```js
-revealView.showExportToPowerPoint = false;
+revealView.showExportToPowerPoint = true;
 ```
+
+PowerPoint is not currently available from the individual visualization export menu.
 
 When the **PowerPoint** menu item is clicked, the end-user is prompted with various options which allows them to change the title of the PowerPoint document, choose which visualizations to include in the document, a title and description of each visualization, and branding.
 
