@@ -4,13 +4,13 @@ sidebar_label: Observability
 
 # Observability
 
-Reveal records every AI call it makes: chat, insights, and background metadata work, on every provider. Without any setup, each call is written to the user's logs and counted in OpenTelemetry metrics, so the user can see where tokens go per intent, profile, and model before going live. Clients also receive the profile and token usage of each response.
+Reveal records every AI call it makes: chat, insights, and background metadata work, on every provider. Without any setup, each call is written to the developer's logs and counted in OpenTelemetry metrics, so the developer can see where tokens go per intent, profile, and model before going live. Clients also receive the profile and token usage of each response.
 
-The log and metrics belong to the ASP.NET server. To receive the same records in the user's own store, or in a Node.js or Java application, register a [usage sink](usage-tracking.md).
+The log and metrics belong to the ASP.NET server. To receive the same records in the developer's own store, or in a Node.js or Java application, register a [usage sink](usage-tracking.md).
 
 ## Usage log
 
-Each AI call is logged as one structured line under the `Reveal.Sdk.AI.Usage` category: at `Information` for end-user calls, and at `Debug` for background calls Reveal makes on its own. The line includes the end user, intent, profile, provider, model, token counts, duration, and outcome, and the IDs that group the calls of one operation. It never includes prompt or response text.
+Each AI call is logged as one structured line under the `Reveal.Sdk.AI.Usage` category: at `Information` for user calls, and at `Debug` for background calls Reveal makes on its own. The line includes the user, intent, profile, provider, model, token counts, duration, and outcome, and the IDs that group the calls of one operation. It never includes prompt or response text.
 
 Silence or redirect it with standard log filtering:
 

@@ -89,10 +89,10 @@ Errors from the server are thrown as a `RevealAIError`. Besides `message`, it ca
 | Constant | `code` | HTTP status | Cause |
 |---|---|---|---|
 | `ProfileNotFound` | `ai.profile_not_found` | 400 | The requested [profile](providers-overview.md#profiles) doesn't exist. |
-| `ProfileNotAllowed` | `ai.profile_not_allowed` | 403 | The end user may not use the requested profile. See [Profile Selection](profile-selection.md). |
-| `ConnectionInvalid` | `ai.connection_invalid` | 400 | The end user's own connection can't be used. See [Dynamic Profiles](byok.md). |
-| `NotEntitled` | `ai.not_entitled` | 403 | The end user's plan doesn't include this feature or profile. |
-| `QuotaExceeded` | `ai.quota_exceeded` | 429 | The end user's budget is exhausted. |
+| `ProfileNotAllowed` | `ai.profile_not_allowed` | 403 | The user may not use the requested profile. See [Profile Selection](profile-selection.md). |
+| `ConnectionInvalid` | `ai.connection_invalid` | 400 | The user's own connection can't be used. See [Dynamic Profiles](byok.md). |
+| `NotEntitled` | `ai.not_entitled` | 403 | The user's plan doesn't include this feature or profile. |
+| `QuotaExceeded` | `ai.quota_exceeded` | 429 | The user's budget is exhausted. |
 | `RateLimited` | `ai.rate_limited` | 429 | Too many requests. |
 | `Denied` | `ai.denied` | 403 | The call was denied for another reason. |
 
