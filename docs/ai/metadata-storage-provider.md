@@ -52,6 +52,12 @@ public async Task<T?> GetByIdAsync<T>(string id, IRVUserContext userContext)
 
 You can isolate metadata per user instead, but then metadata shared by several users must be replicated and all copies must be updated when regeneration occurs. Whichever storage and filtering strategy you choose, apply it consistently to create, update, delete, list, and read operations.
 
+When you filter metadata per user, keep these rules:
+
+- **Base each answer on the ID and the user context only.** During one dashboard generation or edit, Reveal reads each item and each listing once for the requesting user, then reuses that answer for the rest of the request. Nothing is reused across requests or users, so a permission change takes effect on the next request. When Reveal writes metadata, requests already running read it again; changes your application makes to the storage directly are seen from the next request.
+- **Return unfiltered metadata to `reveal-ai-metadata-user`.** Reveal writes metadata as that user, and some writes save back an item it has just read. For example, it adds each table's alias and description to the datasource index the first time a user asks for table summaries. If your provider filtered what that user reads, the filtered copy would be saved for everyone.
+- **Filter the datasource index like the table items.** The index lists every table of the datasource, with their aliases and descriptions.
+
 `_storage` represents your database, blob store, or other persistence mechanism. A complete implementation belongs in an application sample rather than in this page.
 
 ## Register the provider
