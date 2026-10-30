@@ -231,7 +231,7 @@ The check and the settle receive the same context. In Node.js and Java the prope
 | `IsSystemCall` | `true` for background work Reveal performs under the system user, such as metadata enrichment. |
 | `IsUserConnection` | `true` when the call uses a connection the end user supplied instead of one the user configured. |
 
-Because the gate sees the routed profile and the intent of every call, the user can price or restrict specific profiles and features, not just total usage. Gating one intent means gating its related intents too. For example, a dashboard analysis runs under `dashboard-analysis`, not `widget-analysis`, so a free tier that blocks `widget-analysis` should also block `dashboard-analysis`.
+Because the gate sees the routed profile and the intent of every call, the user can price or restrict specific profiles and features, not just total usage. Gating one intent means gating its related intents too. For example, a dashboard analysis plans and writes its report under `dashboard-analysis` and analyzes each widget under `widget-analysis`, so a free tier that blocks `widget-analysis` should also block `dashboard-analysis`.
 
 ## Decisions and client errors
 
@@ -284,7 +284,7 @@ The settle receives the same context the check saw and an `AIUsageRecord` with t
 ## Behavior to know
 
 - **Every provider call is gated.** One end-user action can make several AI calls; for example, a chat message classifies the request before generating a dashboard. The check runs once per call, and a denial at any step fails the whole operation.
-- **Background work bypasses the gate by default.** Calls Reveal makes on its own, such as metadata enrichment, are the user's spend rather than an end user's, so they are not checked or settled. To budget them as well, set `RevealAI:Gate:IncludeSystemCalls` to `true`; those calls arrive with `IsSystemCall` set to `true`.
+- **Background work bypasses the gate by default.** Calls Reveal makes on its own, such as metadata enrichment, are the user's spend rather than an end user's, so they are not checked or settled. To budget them as well on ASP.NET, set `RevealAI:Gate:IncludeSystemCalls` to `true`; those calls arrive with `IsSystemCall` set to `true`.
 
   ```json title="appsettings.json"
   {
@@ -296,4 +296,4 @@ The settle receives the same context the check saw and an `AIUsageRecord` with t
   }
   ```
 
-- **A failing gate fails the call.** On ASP.NET, an exception thrown by `CheckAsync` fails the request. In Node.js and Java, a `quotaGate` callback that throws or returns a missing or malformed decision denies the call with `ai.denied`: a broken gate is never an open gate.
+- **A failing gate fails the call.** On ASP.NET, an exception thrown by `CheckAsync` fails the request without producing a usage record, and a `null` decision allows the call. In Node.js and Java, a `quotaGate` callback that throws or returns a missing or malformed decision denies the call with `ai.denied`: a broken gate is never an open gate.

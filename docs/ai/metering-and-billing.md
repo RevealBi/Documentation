@@ -4,7 +4,7 @@ sidebar_label: Metering and Billing
 
 # Metering and Billing
 
-Every AI call Reveal makes spends tokens on the user's provider account. Reveal gives the user two hooks to track and control that spend. Both observe every AI call, whatever the feature or provider, so no call goes uncounted.
+Every AI call Reveal makes spends tokens on the user's provider account. Reveal gives the user two hooks to track and control that spend. Both see AI calls from every feature and provider. Usage tracking records every call, including background work Reveal performs on its own; the quota gate skips that background work by default.
 
 | | [Usage tracking](usage-tracking.md) | [Quotas and billing](quota-gate.md) |
 |---|---|---|

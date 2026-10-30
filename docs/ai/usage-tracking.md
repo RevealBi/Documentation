@@ -141,7 +141,7 @@ In Node.js and Java the property names are camel-cased, and `Duration` is `durat
 | `CallId` | Unique ID of this provider call. |
 | `ParentOperationId` | The operation a call ran under when it was made on that operation's behalf with its own `OperationId`, such as datasource ranking during a dashboard generation. `null` otherwise. |
 | `Timestamp` | When the call started, in UTC. |
-| `UserId` | The end user the call was made for. |
+| `UserId` | The end user the call was made for, or `anonymous` when the end user has no ID. |
 | `IsSystemCall` | `true` for background work Reveal performs on its own, such as metadata enrichment. |
 | `IsUserConnection` | `true` when the call used a connection the end user supplied instead of one the user configured. |
 | `Intent` | The workflow the call belongs to, such as `generation-build-report` or `widget-analysis`. |
@@ -149,9 +149,9 @@ In Node.js and Java the property names are camel-cased, and `Duration` is `durat
 | `Provider` | The provider registration name, or the provider type for a connection the end user supplied. |
 | `Model` | The model the call ran on, when known. |
 | `InputTokens`, `OutputTokens`, `TotalTokens` | Token counts. `null` when the provider reported no usage, which is distinct from `0`. |
-| `ReasoningTokens` | Tokens spent on internal reasoning. `null` when the provider doesn't report them. OpenAI and Azure OpenAI include them in `OutputTokens`; Google Gemini counts them separately. |
-| `CachedInputTokens` | Input tokens served from the provider's prompt cache. `null` when the provider doesn't report them. Anthropic counts them separately from `InputTokens`; the other providers include them. |
-| `Stage`, `Attempt` | For dashboard generation: the step the call belongs to (for example, `DefineFields`), and `1` for a prompt's first call or `2` and up for calls that repair an invalid answer. `null` otherwise. |
+| `ReasoningTokens` | Tokens spent on internal reasoning. `null` when the provider doesn't report them. OpenAI and Azure OpenAI include them in `OutputTokens`; Google Gemini counts them separately; Anthropic doesn't report them. |
+| `CachedInputTokens` | Input tokens served from the provider's prompt cache. `null` when the provider doesn't report them. Every built-in provider also includes them in `InputTokens`. |
+| `Stage`, `Attempt` | Set only by the multi-step dashboard generator (`UseDashboardGeneratorV2`): the step the call belongs to (for example, `DefineFields`), and `1` for a prompt's first call or `2` and up for calls that repair an invalid answer. `null` otherwise. |
 | `Duration` | How long the provider call took. |
 | `FinishReason` | Why the model stopped, when the call succeeded: `Stop`, `Length`, `ContentFilter`, or `Other`. |
 | `Succeeded` | Whether the call completed successfully. |

@@ -92,6 +92,8 @@ revealAI.withOptions({
 });
 ```
 
+Dynamic profiles require the `providers` and `profiles` options shown here: once `dynamicProfiles` is used, the `defaultProvider` and `settings` options shown in [Install Server SDK](install-server-sdk.md) are ignored. Dynamic profiles can't have a display name or description in Node.js, so a model picker shows the profile name.
+
   </TabItem>
 
   <TabItem value="java" label="Java">
@@ -99,6 +101,15 @@ revealAI.withOptions({
 Declare the dynamic profile with `addDynamicProfile`, and register a `"connectionResolver"` callback. It receives `{ profileName, user }` as JSON and returns the end user's connection, or `null` when the end user hasn't set one up:
 
 ```java title="Application.java"
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.revealbi.ai.RevealAIPlugin;
+import io.revealbi.ai.RevealAIPluginOptions;
+import io.revealbi.core.RevealPluginCallback;
+
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+
 ObjectMapper json = new ObjectMapper();
 
 RevealAIPluginOptions aiPluginOptions = RevealAIPluginOptions.builder()
@@ -131,6 +142,8 @@ IRevealServer revealServer = new RevealServerBuilder()
         .build();
 ```
 
+Dynamic profiles require the `addProvider` and `addProfile` options shown here: once `addDynamicProfile` is used, the `defaultProvider` and `settings` options shown in [Install Server SDK](install-server-sdk.md) are ignored. Dynamic profiles can't have a display name or description in Java, so a model picker shows the profile name.
+
   </TabItem>
 </Tabs>
 
@@ -140,10 +153,10 @@ IRevealServer revealServer = new RevealServerBuilder()
 
 | Property | Required | Description |
 |---|---|---|
-| `ProviderType` | Yes | The provider to connect to: `openai`, `azure-openai`, `anthropic`, `google`, or `openai-compatible`. The user's server must register that provider, for example with `AddOpenAI()`. |
+| `ProviderType` | Yes | The provider to connect to: `openai`, `azure-openai`, `anthropic`, or `openai-compatible`. Google Gemini isn't available for dynamic profiles. The user's server must register the provider: `AddOpenAI()` for `openai`, `AddAzureOpenAI()` for `azure-openai`, `AddAnthropic()` for `anthropic`, and `AddOpenAICompatible()` for `openai-compatible`. |
 | `Model` | Yes | The model ID, or the deployment name for Azure OpenAI. |
 | `ApiKey` | No | The end user's API key, when the provider needs one. |
-| `Endpoint` | No | A custom endpoint URL. Rejected unless the user allows custom endpoints. |
+| `Endpoint` | No | A custom endpoint URL. Required for `azure-openai` and `openai-compatible`. Rejected unless the user allows custom endpoints. |
 | `Settings` | No | Generation settings for this end user's calls, such as `Temperature` or `MaxOutputTokens`. |
 
 Reveal creates the provider client from the connection and reuses it for up to 15 minutes. A connection with any different value, such as a new API key, gets a new client immediately.
@@ -152,7 +165,7 @@ Reveal creates the provider client from the connection and reuses it for up to 1
 
 Connections come from end users, so Reveal constrains them:
 
-- **Custom endpoints are rejected by default.** This prevents end users from making the user's server send requests to arbitrary URLs. To allow them, for example for self-hosted models, set `RevealAI:DynamicProfiles:AllowCustomEndpoints` to `true`.
+- **Custom endpoints are rejected by default.** This prevents end users from making the user's server send requests to arbitrary URLs. Azure OpenAI and OpenAI-compatible connections always need an endpoint, so end users can't connect to them until custom endpoints are allowed. To allow them, set `RevealAI:DynamicProfiles:AllowCustomEndpoints` to `true`.
 - **The user can restrict the provider types** end users may connect to with `RevealAI:DynamicProfiles:AllowedProviderTypes`. By default, every provider type the user's server registers is allowed.
 
 ```json title="appsettings.json"
@@ -169,6 +182,8 @@ Connections come from end users, so Reveal constrains them:
 
 `CacheTtl` sets how long a provider client created from an end user's connection is reused.
 
+These settings are available on ASP.NET only. On Node.js and Java the defaults apply: custom endpoints are always rejected, so `azure-openai` and `openai-compatible` connections can't be used; every provider type the user's server registers is allowed; and provider clients are reused for 15 minutes.
+
 API keys are never logged or used directly as cache keys.
 
 ## How dynamic profiles behave
@@ -177,7 +192,7 @@ API keys are never logged or used directly as cache keys.
 - **An invalid connection fails the request.** A missing model, a provider type that isn't allowed or registered, a custom endpoint the user didn't allow, or a resolver that throws fails the end user's request with HTTP 400 and the code `ai.connection_invalid`. When listing profiles, a resolver that throws hides the profile instead.
 - **Reveal never falls back to the user's own keys.** If the provider rejects the end user's key, for example because it was revoked, the call fails like any other provider error.
 - **The user's intent mappings still apply.** Intents the user pins with `MapIntent`, or with a [profile selector](profile-selection.md), keep running on the user's models, and the rest run on the end user's connection.
-- **The user's other hooks still apply.** The [profile authorizer](profile-selection.md) can still hide the profile, and calls on an end user's connection reach the [quota gate](quota-gate.md) and [usage tracking](usage-tracking.md) with `IsUserConnection` set to `true`. Use it, for example, to skip token billing for end users spending their own key.
+- **The user's other hooks still apply.** The [profile authorizer](profile-selection.md) receives dynamic profiles among its candidates and can hide them, and calls on an end user's connection reach the [quota gate](quota-gate.md) and [usage tracking](usage-tracking.md) with `IsUserConnection` set to `true`. Use it, for example, to skip token billing for end users spending their own key.
 - **A profile selector can't choose a dynamic profile.** Running on an end user's own key is always the end user's explicit choice.
 - In Node.js and Java, a resolver callback that throws or returns a malformed result is treated as `null`, and a warning is logged.
 

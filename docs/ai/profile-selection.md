@@ -78,6 +78,16 @@ revealAI.withOptions({
 Register a `"profileAuthorizer"` callback. It receives `{ user, candidateProfiles }` as JSON and returns a JSON array of the names the end user may use:
 
 ```java title="Application.java"
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.revealbi.ai.RevealAIPlugin;
+import io.revealbi.core.RevealPluginCallback;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+
 ObjectMapper json = new ObjectMapper();
 
 RevealPluginCallback profileAuthorizer = (userContext, message) -> {
@@ -114,6 +124,7 @@ The authorizer drives both the profile list and request validation:
 
 - `GET /api/reveal/ai/profiles`, and `client.ai.profiles.list()` in the client SDK, return only the profiles the end user may use, so a model picker shows only those.
 - A request for any other profile fails with HTTP 403 and the code `ai.profile_not_allowed`. A request for a profile that doesn't exist fails with HTTP 400 and `ai.profile_not_found`. Reveal never falls back to another profile silently.
+- The candidates include [dynamic (BYOK) profiles](byok.md). An authorizer that keeps only specific names, like the free-plan branch above, hides them too.
 - The user's intent mappings and default profile are the user's own decisions, so the authorizer doesn't filter them. It only governs what clients may request.
 - In Node.js and Java, a callback that throws or returns a malformed result denies every profile, and names that weren't among the candidates are ignored.
 
@@ -159,6 +170,8 @@ builder.Services.AddRevealAI()
     .UseProfileSelector<PlanProfileSelector>();
 ```
 
+For a simple selector, pass a delegate instead: `UseProfileSelector((user, cancellationToken) => ...)`.
+
 | Property | Description |
 |---|---|
 | `IntentProfiles` | Profiles for specific intents. They take precedence over the user's intent mappings and over the profile the client requested. Intent names are matched case-insensitively. |
@@ -176,8 +189,9 @@ How the selector behaves:
 
 - **It runs once per end-user operation**, such as a chat message or an insight, not once per AI call, so one plan lookup covers every call in the operation. It doesn't run for background work Reveal performs on its own, such as metadata enrichment.
 - **An end user's explicit choice is never overridden by `DefaultProfile`.** If some end users shouldn't be able to pick a profile at all, remove it with the authorizer: the end user then gets a clear error instead of being silently rerouted.
-- **Selected profiles must be profiles the user defined.** The authorizer doesn't filter them, and naming an unknown profile, or a [dynamic (BYOK) profile](byok.md), fails the operation with a server error.
+- **`DefaultProfile` doesn't change the default reported by `GET /api/reveal/ai/profiles`.** If a model picker preselects that reported default and sends it with every request, it counts as an explicit choice, and the selector's `DefaultProfile` never applies.
+- **Selected profiles must be profiles the user defined.** The authorizer doesn't filter them, and naming an unknown profile, or a [dynamic (BYOK) profile](byok.md), fails the operation.
 - **Errors fail the operation.** If the user's plan store is unavailable, requests fail rather than run on the wrong tier.
 - **Keep it consistent with the quota gate.** The [quota gate](quota-gate.md) sees the profile each call actually used, including profiles the selector chose, so both should read the same plan data.
 
-A dashboard analysis runs under its own intent, `dashboard-analysis`, not under `widget-analysis`. Wherever the user routes `widget-analysis`, route `dashboard-analysis` too, as the example does.
+A dashboard analysis uses two intents: `dashboard-analysis` for its plan and final report, and `widget-analysis` for each widget's analysis and the summary of them. Wherever the user routes `widget-analysis`, route `dashboard-analysis` too, as the example does.
