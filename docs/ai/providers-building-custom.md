@@ -45,6 +45,10 @@ public sealed class MyCustomProvider : IAIProvider
 
 Return `AIResponse` with the generated `Text`; include `FinishReason`, `Model`, and `AITokenUsage` whenever the service reports them.
 
+A user message can carry `StablePrefixLength`: how many leading characters of its `Content` stay the same from one request to the next (the prompt's instructions and schema). It counts UTF-16 code units, as `string.Length` does. It's a hint for services with explicit prompt caching, which can mark that prefix as a cache point; a service that caches prefixes on its own, or doesn't cache, can ignore it.
+
+Node.js and Java custom provider callbacks receive each message as exactly `{ role, content }`, so the messages can be passed to an LLM client as they are. The hint comes beside them, as `stablePrefixLengths`: one entry per message (a number or `null`), present only when a message has a stable prefix.
+
 ## Register the connection and profile
 
 ```csharp title="Program.cs"
