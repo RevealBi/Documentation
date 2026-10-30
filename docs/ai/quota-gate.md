@@ -54,6 +54,7 @@ public sealed class PlanBillingGate : IAIQuotaGate
     public async ValueTask<AIGateDecision> CheckAsync(AICallContext context, CancellationToken cancellationToken)
     {
         var tenant = GetClaim(context, "TenantId");
+        // Retrieve the plan from custom storage
         var plan = await _plans.GetAsync(tenant, context.User.UserId, cancellationToken);
 
         if (!plan.AllowsProfile(context.Profile))
@@ -62,6 +63,7 @@ public sealed class PlanBillingGate : IAIQuotaGate
                 "This model isn't included in your plan.");
         }
 
+        // Check the balance in custom storage
         if (await _usage.RemainingTokensAsync(tenant, cancellationToken) <= 0)
         {
             return AIGateDecision.Deny(AIDenialReason.QuotaExceeded,
@@ -72,6 +74,7 @@ public sealed class PlanBillingGate : IAIQuotaGate
         return AIGateDecision.Allow();
     }
 
+    // Debit the balance in custom storage
     public ValueTask SettleAsync(AICallContext context, AIUsageRecord actual, CancellationToken cancellationToken)
         => _usage.DebitAsync(
             tenant: GetClaim(context, "TenantId"),
@@ -83,8 +86,6 @@ public sealed class PlanBillingGate : IAIQuotaGate
         => context.User.Properties?.TryGetValue(key, out var value) == true ? value?.ToString() : null;
 }
 ```
-
-`IPlanStore` and `IUsageStore` stand for the developer's own plan and balance storage.
 
   </TabItem>
 
@@ -98,11 +99,13 @@ revealAI.withOptions({
     callbacks: {
         quotaGate: async (context) => {
             const tenant = context.user?.properties?.TenantId;
+            // Retrieve the plan from custom storage
             const plan = await plans.get(tenant, context.user?.userId);
 
             if (!plan.allowsProfile(context.profile)) {
                 return { allow: false, reason: 'notEntitled', message: "This model isn't included in your plan." };
             }
+            // Check the balance in custom storage
             if (await usage.remainingTokens(tenant) <= 0) {
                 return {
                     allow: false,
@@ -115,13 +118,12 @@ revealAI.withOptions({
         },
 
         quotaSettle: async ({ context, usage: actual }) => {
+            // Debit the balance in custom storage
             await usage.debit(context.user?.properties?.TenantId, context.callId, actual.totalTokens ?? 0);
         }
     }
 });
 ```
-
-`plans` and `usage` stand for the developer's own plan and balance storage.
 
   </TabItem>
 
@@ -145,6 +147,7 @@ ObjectMapper json = new ObjectMapper();
 
 QuotaGateCallback quotaGate = context -> {
     String tenant = context.path("user").path("properties").path("TenantId").asText(null);
+    // Retrieve the plan from custom storage
     Plan plan = plans.get(tenant, context.path("user").path("userId").asText(null));
 
     if (!plan.allowsProfile(context.path("profile").asText())) {
@@ -153,6 +156,7 @@ QuotaGateCallback quotaGate = context -> {
                 "reason", "notEntitled",
                 "message", "This model isn't included in your plan."));
     }
+    // Check the balance in custom storage
     if (usage.remainingTokens(tenant) <= 0) {
         return json.valueToTree(Map.of(
                 "allow", false,
@@ -167,6 +171,7 @@ RevealPluginCallback quotaSettle = (userContext, message) -> {
     try {
         JsonNode settlement = json.readTree(message);
         JsonNode context = settlement.path("context");
+        // Debit the balance in custom storage
         usage.debit(
                 context.path("user").path("properties").path("TenantId").asText(null),
                 context.path("callId").asText(),
@@ -183,8 +188,6 @@ IRevealServer revealServer = new RevealServerBuilder()
                 "quotaSettle", quotaSettle)))
         .build();
 ```
-
-`plans` and `usage` stand for the developer's own plan and balance storage.
 
   </TabItem>
 </Tabs>

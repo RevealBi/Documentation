@@ -158,8 +158,6 @@ IRevealServer revealServer = new RevealServerBuilder()
   </TabItem>
 </Tabs>
 
-`IUserSettingsStore`、`userSettings`、`UserConnection` は、開発者独自のユーザー接続のストレージを表します。
-
 ## 接続
 
 | プロパティ | 必須 | 説明 |

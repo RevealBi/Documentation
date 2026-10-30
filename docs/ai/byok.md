@@ -158,8 +158,6 @@ Dynamic profiles require the `addProvider` and `addProfile` options shown here: 
   </TabItem>
 </Tabs>
 
-`IUserSettingsStore`, `userSettings`, and `UserConnection` stand for the developer's own storage of user connections.
-
 ## Connection
 
 | Property | Required | Description |

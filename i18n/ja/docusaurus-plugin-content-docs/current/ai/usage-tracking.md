@@ -67,6 +67,7 @@ builder.Services.AddRevealAI()
     .AddOpenAI()
     .AddUsageSink((record, cancellationToken) =>
     {
+        // Queue the record for custom storage
         usageQueue.Enqueue(record);
         return ValueTask.CompletedTask;
     });
@@ -85,6 +86,7 @@ revealAI.withOptions({
     // providers, profiles, ...
     callbacks: {
         usageSink: (record) => {
+            // Queue the record for custom storage
             usageQueue.push({
                 userId: record.userId,
                 intent: record.intent,
@@ -113,6 +115,7 @@ import io.revealbi.core.RevealServerBuilder;
 
 import java.util.Map;
 
+// Queue the record for custom storage
 UsageSinkCallback usageSink = record -> usageQueue.add(new UsageRow(
         record.path("userId").asText(),
         record.path("intent").asText(),
@@ -130,8 +133,6 @@ IRevealServer revealServer = new RevealServerBuilder()
 
   </TabItem>
 </Tabs>
-
-`usageQueue`、`IUsageQueue`、`UsageRow` は、開発者独自のバッファリングとストレージを表します。
 
 ## 使用量レコード
 
