@@ -30,7 +30,7 @@ public sealed class PlanProfileAuthorizer : IAIProfileAuthorizer
 
     public PlanProfileAuthorizer(IPlanStore plans) => _plans = plans;
 
-    public async ValueTask<IReadOnlyCollection<string>> FilterProfilesAsync(
+    public async ValueTask<IReadOnlyCollection<string>> GetAuthorizedProfilesAsync(
         IRVUserContext user, IReadOnlyCollection<string> candidateProfiles, CancellationToken cancellationToken)
     {
         // Retrieve the plan from custom storage
