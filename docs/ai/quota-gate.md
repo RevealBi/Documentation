@@ -228,7 +228,7 @@ The check and the settle receive the same context. In Node.js and Java the prope
 | `Profile` | The [profile](providers-overview.md#profiles) that serves the call, after intent routing. |
 | `Provider` | The provider registration name, or the provider type for a connection the user supplied. |
 | `Model` | The model the call will use, when known. |
-| `IsSystemCall` | `true` for background work Reveal performs under the system user, such as metadata enrichment. |
+| `IsSystemCall` | `true` for background work Reveal performs under the system user, such as metadata enrichment and datasource ranking during a dashboard generation. |
 | `IsUserConnection` | `true` when the call uses a connection the user supplied instead of one the developer configured. |
 
 Because the gate sees the routed profile and the intent of every call, the developer can price or restrict specific profiles and features, not just total usage. Gating one intent means gating its related intents too. For example, a dashboard analysis plans and writes its report under `dashboard-analysis` and analyzes each widget under `widget-analysis`, so a free tier that blocks `widget-analysis` should also block `dashboard-analysis`.
@@ -274,7 +274,7 @@ try {
 
 ## Settling usage
 
-The settle receives the same context the check saw and an `AIUsageRecord` with the actual usage: `InputTokens`, `OutputTokens`, `TotalTokens`, `ReasoningTokens`, `CachedInputTokens`, `Model`, `Duration`, `Succeeded`, and `ErrorCode`. Token counts are `null` when the provider reported no usage, which is distinct from `0`. The record contains no prompt or response text.
+The settle receives the same context the check saw and an `AIUsageRecord` with the actual usage: `InputTokens`, `OutputTokens`, `TotalTokens`, `ReasoningTokens`, `CachedInputTokens`, `Model`, `Duration`, `Succeeded`, and `ErrorCode`. Token counts are `null` when the provider reported no usage, which is distinct from `0`. `TotalTokens` is `InputTokens` plus `OutputTokens`; Google Gemini reports reasoning tokens separately from output, so add `ReasoningTokens` when billing Gemini calls. The record contains no prompt or response text.
 
 - **It runs for every call that passed the check**, including calls that failed, timed out, or were canceled. Reservation-based accounting therefore never leaks a reservation. It is not called for denied calls, or when the check itself fails.
 - **It runs in the request.** Keep it fast: a quick write to the developer's store, or an internal queue flushed separately.
@@ -283,8 +283,8 @@ The settle receives the same context the check saw and an `AIUsageRecord` with t
 
 ## Behavior to know
 
-- **Every provider call is gated.** One user action can make several AI calls; for example, a chat message classifies the request before generating a dashboard. The check runs once per call, and a denial at any step fails the whole operation.
-- **Background work bypasses the gate by default.** Calls Reveal makes on its own, such as metadata enrichment, are the developer's spend rather than a user's, so they are not checked or settled. To budget them as well on ASP.NET, set `RevealAI:Gate:IncludeSystemCalls` to `true`; those calls arrive with `IsSystemCall` set to `true`.
+- **Every provider call made for a user is gated.** One user action can make several AI calls; for example, a chat message classifies the request before generating a dashboard. The check runs once per call, and a denial at any step fails the whole operation. Datasource ranking during a dashboard generation is the exception: Reveal runs it as background work, so it follows the next rule.
+- **Background work bypasses the gate by default.** Calls Reveal makes on its own, such as metadata enrichment and datasource ranking during a dashboard generation, are the developer's spend rather than a user's, so they are not checked or settled. To budget them as well on ASP.NET, set `RevealAI:Gate:IncludeSystemCalls` to `true`; those calls arrive with `IsSystemCall` set to `true`.
 
   ```json title="appsettings.json"
   {
@@ -296,4 +296,4 @@ The settle receives the same context the check saw and an `AIUsageRecord` with t
   }
   ```
 
-- **A failing gate fails the call.** On ASP.NET, an exception thrown by `CheckAsync` fails the request without producing a usage record, and a `null` decision allows the call. In Node.js and Java, a `quotaGate` callback that throws or returns a missing or malformed decision denies the call with `ai.denied`: a broken gate is never an open gate.
+- **A failing gate fails the call.** On ASP.NET, an exception thrown by `CheckAsync` fails the request without producing a usage record, and the client receives the exception's message, so keep sensitive details out of it. A `null` decision allows the call. In Node.js and Java, a `quotaGate` callback that throws or returns a missing or malformed decision denies the call with `ai.denied`: a broken gate is never an open gate.

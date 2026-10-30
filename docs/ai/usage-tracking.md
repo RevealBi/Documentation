@@ -142,7 +142,7 @@ In Node.js and Java the property names are camel-cased, and `Duration` is `durat
 | `ParentOperationId` | The operation a call ran under when it was made on that operation's behalf with its own `OperationId`, such as datasource ranking during a dashboard generation. `null` otherwise. |
 | `Timestamp` | When the call started, in UTC. |
 | `UserId` | The user the call was made for, or `anonymous` when the user has no ID. |
-| `IsSystemCall` | `true` for background work Reveal performs on its own, such as metadata enrichment. |
+| `IsSystemCall` | `true` for background work Reveal performs on its own, such as metadata enrichment and datasource ranking during a dashboard generation. `UserId` is then the system user's; for ranking, `ParentOperationId` links the call to the user's operation. |
 | `IsUserConnection` | `true` when the call used a connection the user supplied instead of one the developer configured. |
 | `Intent` | The workflow the call belongs to, such as `generation-build-report` or `widget-analysis`. |
 | `Profile` | The [profile](providers-overview.md#profiles) that served the call. |

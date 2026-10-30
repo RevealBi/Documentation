@@ -61,12 +61,13 @@ Declare the dynamic profile and register the resolver in one call:
 ```csharp title="Program.cs"
 builder.Services.AddRevealAI()
     .AddOpenAI()
-    .AddAnthropic()
     .AddProfile("default", p => { p.Provider = "openai"; p.Model = "gpt-4.1"; })
     .AddDynamicProfile<UserConnectionResolver>("my-ai", displayName: "Use my own key");
 ```
 
 `displayName` and `description` are optional, and are what a model picker shows. The profile name is the identifier clients send.
+
+A dynamic profile can't be the default profile, so declare at least one static profile, as the `default` profile above. Users can only connect to [provider types the server makes available](#available-provider-types).
 
   </TabItem>
 
@@ -161,13 +162,26 @@ Dynamic profiles require the `addProvider` and `addProfile` options shown here: 
 
 | Property | Required | Description |
 |---|---|---|
-| `ProviderType` | Yes | The provider to connect to: `openai`, `azure-openai`, `anthropic`, or `openai-compatible`. Google Gemini isn't available for dynamic profiles. The developer's server must register the provider: `AddOpenAI()` for `openai`, `AddAzureOpenAI()` for `azure-openai`, `AddAnthropic()` for `anthropic`, and `AddOpenAICompatible()` for `openai-compatible`. |
+| `ProviderType` | Yes | The provider to connect to: `openai`, `azure-openai`, `anthropic`, or `openai-compatible`. Google Gemini isn't available for dynamic profiles. The provider type must be [available on the server](#available-provider-types). |
 | `Model` | Yes | The model ID, or the deployment name for Azure OpenAI. |
-| `ApiKey` | No | The user's API key, when the provider needs one. |
+| `ApiKey` | Yes, except for `openai-compatible` | The user's API key. Without it, the request fails with `ai.connection_invalid`. |
 | `Endpoint` | No | A custom endpoint URL. Required for `azure-openai` and `openai-compatible`. Rejected unless the developer allows custom endpoints. |
 | `Settings` | No | Generation settings for this user's calls, such as `Temperature` or `MaxOutputTokens`. |
 
 Reveal creates the provider client from the connection and reuses it for up to 15 minutes. A connection with any different value, such as a new API key, gets a new client immediately.
+
+## Available provider types
+
+Users can only connect to provider types the developer's server registers, and registering a provider type requires a complete connection of the developer's own for that provider: Reveal creates every registered provider at startup, and fails to start if its connection is missing a required value such as the API key. For example, to let users bring Anthropic keys, the server also needs its own Anthropic connection.
+
+| Provider type | ASP.NET | Node.js and Java |
+|---|---|---|
+| `openai` | `AddOpenAI()` | A `providers` entry with `type: 'OpenAI'` |
+| `azure-openai` | `AddAzureOpenAI()` | A `providers` entry with `type: 'AzureOpenAI'` |
+| `anthropic` | `AddAnthropic()` | A `providers` entry with `type: 'Anthropic'` |
+| `openai-compatible` | `AddOpenAICompatible("<name>")`, with a `BaseUrl` | A `providers` entry with `type: 'OpenAICompatible'` |
+
+In Java, add the entry with `addProvider`. Each registration reads its connection, such as the API key, from configuration (`RevealAI:Providers:<name>` on ASP.NET) or from the options of its `providers` entry.
 
 ## Security
 
@@ -211,11 +225,12 @@ Each dynamic profile is a choice the user can make, so most applications need on
 - **If the model depends on the user's plan**, use one dynamic profile and return a different `Model` from the resolver.
 - **If users choose between several of their own connections**, such as a fast one and a premium one, declare one dynamic profile per choice. A single resolver serves them all and receives the profile name; return `null` for profiles the user's plan doesn't include.
 
-On ASP.NET, register the resolver with the first profile, and declare the others without it:
+On ASP.NET, register the resolver with the first profile, and declare the others without it. A static default profile is still required:
 
 ```csharp title="Program.cs"
 builder.Services.AddRevealAI()
     .AddOpenAI()
+    .AddProfile("default", p => { p.Provider = "openai"; p.Model = "gpt-4.1"; })
     .AddDynamicProfile<UserConnectionResolver>("my-fast", "My key (fast)")
     .AddDynamicProfile("my-premium", "My key (premium)");
 ```

@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 [Profiles](providers-overview.md#profiles) name the models and settings the developer's server offers.
 
-By default, every user can request every profile, and calls that request none use the developer's intent mappings and default profile.
+By default, every user can request every profile. Calls for intents the developer has mapped use the mapped profile; other calls use the requested profile, or the default profile when none is requested.
 
 Two hooks let the developer make those decisions per user, typically from the user's plan:
 
@@ -191,7 +191,7 @@ For each AI call, Reveal uses the first profile that applies, in this order:
 
 How the selector behaves:
 
-- **It runs once per user operation**, such as a chat message or an insight, not once per AI call, so one plan lookup covers every call in the operation. It doesn't run for background work Reveal performs on its own, such as metadata enrichment.
+- **It runs once per user operation**, such as a chat message or an insight, not once per AI call, so one plan lookup covers every call in the operation. It doesn't run for background work Reveal performs on its own, such as metadata enrichment and datasource ranking during a dashboard generation.
 - **A user's explicit choice is never overridden by `DefaultProfile`.** If some users shouldn't be able to pick a profile at all, remove it with the authorizer: the user then gets a clear error instead of being silently rerouted.
 - **`DefaultProfile` doesn't change the default reported by `GET /api/reveal/ai/profiles`.** If a model picker preselects that reported default and sends it with every request, it counts as an explicit choice, and the selector's `DefaultProfile` never applies.
 - **Selected profiles must be profiles the developer defined.** The authorizer doesn't filter them, and naming an unknown profile, or a [dynamic (BYOK) profile](byok.md), fails the operation.
