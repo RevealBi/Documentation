@@ -60,6 +60,7 @@ POST /api/reveal/ai/insights
 | `forecastPeriods` | number | No | Number of periods to forecast (default: 6). Only used when `insightType` is `"Forecast"` |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
 | `model` | string | No | Name of specific LLM model to use for this request |
+| `timeZone` | string | No | IANA time zone name (for example `"Asia/Tokyo"`) for the data the AI reads. The client sends it automatically; see [Time Zone](/ai/sdk-request-configuration#time-zone). Defaults to UTC |
 
 \* Either `dashboardJson` or `dashboardId` must be provided
 
