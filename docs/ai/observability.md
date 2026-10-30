@@ -61,7 +61,7 @@ builder.Services.AddOpenTelemetry()
 
 ## Usage in responses
 
-Chat and insights responses tell the client which profile served the request and how many tokens it used, summed across all the AI calls the request made:
+Chat and insights responses tell the client which profile served the request and how many tokens it used. `profile` is the profile that served the request's `default` intent; when other intents are mapped to other profiles, those calls may have run elsewhere. `usage` is summed across the request's AI calls, except datasource ranking during a dashboard generation, which runs as background work:
 
 ```typescript
 const response = await client.ai.chat.sendMessage({

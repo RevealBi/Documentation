@@ -112,7 +112,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.revealbi.ai.RevealAIPlugin;
 import io.revealbi.ai.RevealAIPluginOptions;
+import io.revealbi.core.IRevealServer;
 import io.revealbi.core.RevealPluginCallback;
+import io.revealbi.core.RevealServerBuilder;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
@@ -187,7 +189,7 @@ In Java, add the entry with `addProvider`. Each registration reads its connectio
 
 Connections come from users, so Reveal constrains them:
 
-- **Custom endpoints are rejected by default.** This prevents users from making the developer's server send requests to arbitrary URLs. Azure OpenAI and OpenAI-compatible connections always need an endpoint, so users can't connect to them until custom endpoints are allowed. To allow them, set `RevealAI:DynamicProfiles:AllowCustomEndpoints` to `true`.
+- **Custom endpoints are rejected by default.** This prevents users from making the developer's server send requests to arbitrary URLs. Azure OpenAI and OpenAI-compatible connections always need an endpoint, so users can't connect to them until custom endpoints are allowed. To allow them, set `RevealAI:DynamicProfiles:AllowCustomEndpoints` to `true`. The setting applies to every provider type: once it's on, users can set an endpoint of their choice for any connection, not only Azure OpenAI and OpenAI-compatible ones.
 - **The developer can restrict the provider types** users may connect to with `RevealAI:DynamicProfiles:AllowedProviderTypes`. By default, every provider type the developer's server registers is allowed.
 
 ```json title="appsettings.json"
@@ -211,12 +213,13 @@ API keys are never logged or used directly as cache keys.
 ## How dynamic profiles behave
 
 - **Users without a connection don't see the profile.** The resolver runs when the profile list is requested and when a request uses the profile. When it returns `null`, the profile is hidden from that user, and requests for it fail with HTTP 403 and the code `ai.profile_not_allowed`.
-- **An invalid connection fails the request.** A missing model, a provider type that isn't allowed or registered, a custom endpoint the developer didn't allow, or a resolver that throws fails the user's request with HTTP 400 and the code `ai.connection_invalid`. When listing profiles, a resolver that throws hides the profile instead.
+- **An invalid connection fails the request.** A missing model, a provider type that isn't allowed or registered, a custom endpoint the developer didn't allow, or, on ASP.NET, a resolver that throws fails the user's request with HTTP 400 and the code `ai.connection_invalid`. When listing profiles, a resolver that throws hides the profile instead.
 - **Reveal never falls back to the developer's own keys.** If the provider rejects the user's key, for example because it was revoked, the call fails like any other provider error.
 - **The developer's intent mappings still apply.** Intents the developer pins with `MapIntent`, or with a [profile selector](profile-selection.md), keep running on the developer's models, and the rest run on the user's connection.
 - **The developer's other hooks still apply.** The [profile authorizer](profile-selection.md) receives dynamic profiles among its candidates and can hide them, and calls on a user's connection reach the [quota gate](quota-gate.md) and [usage tracking](usage-tracking.md) with `IsUserConnection` set to `true`. Use it, for example, to skip token billing for users spending their own key.
 - **A profile selector can't choose a dynamic profile.** Running on a user's own key is always the user's explicit choice.
-- In Node.js and Java, a resolver callback that throws or returns a malformed result is treated as `null`, and a warning is logged.
+- **Datasource ranking runs on the developer's models.** During a dashboard generation, Reveal ranks datasources as background work, on the developer's default profile or the profile mapped to the `datasource-ranker` intent, even for users on their own key.
+- In Node.js and Java, a resolver callback that throws or returns a malformed result is treated as `null`, and a warning is logged: the profile is hidden, and requests for it fail with HTTP 403 and `ai.profile_not_allowed`.
 
 ## Several dynamic profiles
 

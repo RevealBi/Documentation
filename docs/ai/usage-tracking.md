@@ -108,6 +108,8 @@ Register a `UsageSinkCallback` under `"usageSink"`. It receives one record per c
 ```java title="Application.java"
 import io.revealbi.ai.RevealAIPlugin;
 import io.revealbi.ai.UsageSinkCallback;
+import io.revealbi.core.IRevealServer;
+import io.revealbi.core.RevealServerBuilder;
 
 import java.util.Map;
 
@@ -164,5 +166,6 @@ Records never contain prompt or response text, so users' data doesn't flow into 
 - **Sinks run outside the request.** Records are handed to the sinks on background tasks, so a slow or failing sink never slows down or fails an AI call.
 - **Delivery is best effort.** At most 8 records are delivered at a time. When all 8 slots are busy, further records skip the sinks and a warning is logged; they are still logged and counted in metrics. Return quickly: when writing to a remote store, enqueue the record internally and write in batches on a separate schedule.
 - **Failures are logged and isolated.** An exception from a sink is logged and never reaches the AI call or the other sinks.
+- **Sinks receive each record in turn.** A slow sink delays the record for the sinks registered after it, and keeps one of the 8 delivery slots busy.
 
 Because delivery is best effort, don't bill from a usage sink. The [quota gate](quota-gate.md) settles every call inside the request, with the full user context.

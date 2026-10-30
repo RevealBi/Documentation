@@ -134,7 +134,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.revealbi.ai.QuotaGateCallback;
 import io.revealbi.ai.RevealAIPlugin;
+import io.revealbi.core.IRevealServer;
 import io.revealbi.core.RevealPluginCallback;
+import io.revealbi.core.RevealServerBuilder;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
@@ -248,7 +250,7 @@ A denial fails the request. The client receives a [ProblemDetails](https://www.r
 
 Retry times are rounded up to whole seconds, with a minimum of one. If a streaming response has already started when a call is denied, the stream ends with an `error` event that carries the same `code` and `retryAfterSeconds`.
 
-The client SDK surfaces these responses as a `RevealAIError` with `code`, `status`, and `retryAfterSeconds` properties:
+The client SDK surfaces these responses as a `RevealAIError` with `code`, `status`, and `retryAfterSeconds` properties. See [Error Codes](sdk-error-handling.md#error-codes) for every code the client can receive:
 
 ```typescript
 import { RevealAIError, AIErrorCodes } from '@revealbi/api';

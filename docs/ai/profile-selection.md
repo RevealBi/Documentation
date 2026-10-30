@@ -85,7 +85,9 @@ Register a `"profileAuthorizer"` callback. It receives `{ user, candidateProfile
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.revealbi.ai.RevealAIPlugin;
+import io.revealbi.core.IRevealServer;
 import io.revealbi.core.RevealPluginCallback;
+import io.revealbi.core.RevealServerBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,8 +103,8 @@ RevealPluginCallback profileAuthorizer = (userContext, message) -> {
         List<String> allowed = new ArrayList<>();
         for (JsonNode profile : request.path("candidateProfiles")) {
             String name = profile.asText();
-            if (plan.equals("enterprise")
-                    || (plan.equals("pro") && !name.equals("premium"))
+            if ("enterprise".equals(plan)
+                    || ("pro".equals(plan) && !name.equals("premium"))
                     || name.equals("default")) {
                 allowed.add(name);
             }
@@ -174,7 +176,7 @@ builder.Services.AddRevealAI()
     .UseProfileSelector<PlanProfileSelector>();
 ```
 
-For a simple selector, pass a delegate instead: `UseProfileSelector((user, cancellationToken) => ...)`.
+For a simple selector, pass a delegate instead: `UseProfileSelector((user, cancellationToken) => ...)`. Only one selector is supported; registering a second one replaces the first.
 
 | Property | Description |
 |---|---|
