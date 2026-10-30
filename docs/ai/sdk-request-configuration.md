@@ -63,7 +63,7 @@ RevealSdkClient.initialize({
 
 ## Time Zone
 
-The chat and insights requests carry a time zone, and the server reads the dashboard data in that zone. It matters for calculated fields that convert dates to the user's zone, such as `applytimezone([OrderDate], currenttimezone())`. Insights then describe the same values the user sees in the viewer.
+The chat and insights requests carry a time zone, and the server reads the dashboard data in that zone. It matters for calculated fields that convert dates to the user's zone, such as `applytimezone([OrderDate], currenttimezone())`. Insights then describe the same values the user sees in the viewer. The AI also takes today's date from this zone, so a request for "this month" or "yesterday" means the user's month or day.
 
 By default the client sends the browser's zone, the same one the Reveal viewer uses. Set `timeZone` (an IANA name) when your application shows dashboards in a different zone:
 
