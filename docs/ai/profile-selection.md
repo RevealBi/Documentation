@@ -7,17 +7,17 @@ import TabItem from '@theme/TabItem';
 
 # Profile Selection
 
-[Profiles](providers-overview.md#profiles) name the models and settings your server offers. By default, every user can request every profile, and calls that request none use your intent mappings and default profile. Two hooks let you make those decisions per user, typically from the user's plan:
+[Profiles](providers-overview.md#profiles) name the models and settings the user's server offers. By default, every end user can request every profile, and calls that request none use the user's intent mappings and default profile. Two hooks let the user make those decisions per end user, typically from the end user's plan:
 
-- A **profile authorizer** decides which profiles a user may request. It filters the profile list clients see, and rejects requests for any other profile.
-- A **profile selector** decides which profiles serve a user, without the client asking. Use it to route, for example, dashboard generation to a premium model for enterprise users.
+- A **profile authorizer** decides which profiles an end user may request. It filters the profile list clients see, and rejects requests for any other profile.
+- A **profile selector** decides which profiles serve an end user, without the client asking. Use it to route, for example, dashboard generation to a premium model for end users on an enterprise plan.
 
-## Restrict which profiles a user may use
+## Restrict which profiles an end user may use
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-Implement `IAIProfileAuthorizer` and return the subset of the candidate profiles the user may use:
+Implement `IAIProfileAuthorizer` and return the subset of the candidate profiles the end user may use:
 
 ```csharp title="PlanProfileAuthorizer.cs"
 using Reveal.Sdk;
@@ -55,7 +55,7 @@ The authorizer is registered as a singleton. Only one authorizer is supported; r
 
   <TabItem value="node" label="Node.js">
 
-Add a `profileAuthorizer` callback and return the names the user may use:
+Add a `profileAuthorizer` callback and return the names the end user may use:
 
 ```javascript title="server.js"
 revealAI.withOptions({
@@ -75,7 +75,7 @@ revealAI.withOptions({
 
   <TabItem value="java" label="Java">
 
-Register a `"profileAuthorizer"` callback. It receives `{ user, candidateProfiles }` as JSON and returns a JSON array of the names the user may use:
+Register a `"profileAuthorizer"` callback. It receives `{ user, candidateProfiles }` as JSON and returns a JSON array of the names the end user may use:
 
 ```java title="Application.java"
 ObjectMapper json = new ObjectMapper();
@@ -108,16 +108,16 @@ IRevealServer revealServer = new RevealServerBuilder()
   </TabItem>
 </Tabs>
 
-`plans` and `IPlanStore` stand for your own plan storage.
+`plans` and `IPlanStore` stand for the user's own plan storage.
 
 The authorizer drives both the profile list and request validation:
 
-- `GET /api/reveal/ai/profiles`, and `client.ai.profiles.list()` in the client SDK, return only the profiles the user may use, so your model picker shows only those.
+- `GET /api/reveal/ai/profiles`, and `client.ai.profiles.list()` in the client SDK, return only the profiles the end user may use, so a model picker shows only those.
 - A request for any other profile fails with HTTP 403 and the code `ai.profile_not_allowed`. A request for a profile that doesn't exist fails with HTTP 400 and `ai.profile_not_found`. Reveal never falls back to another profile silently.
-- Your intent mappings and default profile are your own decisions, so the authorizer doesn't filter them. It only governs what clients may request.
+- The user's intent mappings and default profile are the user's own decisions, so the authorizer doesn't filter them. It only governs what clients may request.
 - In Node.js and Java, a callback that throws or returns a malformed result denies every profile, and names that weren't among the candidates are ignored.
 
-## Route profiles per user
+## Route profiles per end user
 
 The selector is available on ASP.NET. Implement `IAIProfileSelector` and return an `AIProfileSelection`, or `null` to keep the normal routing:
 
@@ -161,23 +161,23 @@ builder.Services.AddRevealAI()
 
 | Property | Description |
 |---|---|
-| `IntentProfiles` | Profiles for specific intents. They take precedence over your intent mappings and over the profile the client requested. Intent names are matched case-insensitively. |
-| `DefaultProfile` | The profile for this user's calls that have no other assignment. A profile the client requested takes precedence. |
+| `IntentProfiles` | Profiles for specific intents. They take precedence over the user's intent mappings and over the profile the client requested. Intent names are matched case-insensitively. |
+| `DefaultProfile` | The profile for this end user's calls that have no other assignment. A profile the client requested takes precedence. |
 
 For each AI call, Reveal uses the first profile that applies, in this order:
 
 1. The selector's `IntentProfiles` entry for the call's intent.
-2. Your intent mapping (`MapIntent` or `RevealAI:Intents`).
+2. The user's intent mapping (`MapIntent` or `RevealAI:Intents`).
 3. The profile the client requested.
 4. The selector's `DefaultProfile`.
-5. Your default profile.
+5. The user's default profile.
 
 How the selector behaves:
 
-- **It runs once per user operation**, such as a chat message or an insight, not once per AI call, so one plan lookup covers every call in the operation. It doesn't run for background work Reveal performs on its own, such as metadata enrichment.
-- **A user's explicit choice is never overridden by `DefaultProfile`.** If some users shouldn't be able to pick a profile at all, remove it with the authorizer: the user then gets a clear error instead of being silently rerouted.
-- **Selected profiles must be profiles you defined.** The authorizer doesn't filter them, and naming an unknown profile, or a [dynamic (BYOK) profile](byok.md), fails the operation with a server error.
-- **Errors fail the operation.** If your plan store is unavailable, requests fail rather than run on the wrong tier.
-- **Keep it consistent with your quota gate.** The [quota gate](quota-gate.md) sees the profile each call actually used, including profiles the selector chose, so both should read the same plan data.
+- **It runs once per end-user operation**, such as a chat message or an insight, not once per AI call, so one plan lookup covers every call in the operation. It doesn't run for background work Reveal performs on its own, such as metadata enrichment.
+- **An end user's explicit choice is never overridden by `DefaultProfile`.** If some end users shouldn't be able to pick a profile at all, remove it with the authorizer: the end user then gets a clear error instead of being silently rerouted.
+- **Selected profiles must be profiles the user defined.** The authorizer doesn't filter them, and naming an unknown profile, or a [dynamic (BYOK) profile](byok.md), fails the operation with a server error.
+- **Errors fail the operation.** If the user's plan store is unavailable, requests fail rather than run on the wrong tier.
+- **Keep it consistent with the quota gate.** The [quota gate](quota-gate.md) sees the profile each call actually used, including profiles the selector chose, so both should read the same plan data.
 
-A dashboard analysis runs under its own intent, `dashboard-analysis`, not under `widget-analysis`. Wherever you route `widget-analysis`, route `dashboard-analysis` too, as the example does.
+A dashboard analysis runs under its own intent, `dashboard-analysis`, not under `widget-analysis`. Wherever the user routes `widget-analysis`, route `dashboard-analysis` too, as the example does.

@@ -7,14 +7,14 @@ import TabItem from '@theme/TabItem';
 
 # Quotas and Billing
 
-Every AI call Reveal makes spends tokens on your provider account. The quota gate lets you decide, per call and per user, whether that spend is allowed, and records what it actually cost. Use it to enforce plan entitlements, token budgets, and rate limits, and to debit actual usage against a balance. To only observe usage, without controlling it, use [usage tracking](usage-tracking.md) instead.
+Every AI call Reveal makes spends tokens on the user's provider account. The quota gate lets the user decide, per call and per end user, whether that spend is allowed, and records what it actually cost. Use it to enforce plan entitlements, token budgets, and rate limits, and to debit actual usage against a balance. To only observe usage, without controlling it, use [usage tracking](usage-tracking.md) instead.
 
 The gate has two halves that receive the same call context:
 
-- **Check** runs before tokens are spent. Verify that the user's plan includes the feature or [profile](providers-overview.md#profiles) and that budget remains. A denied call never reaches the provider.
+- **Check** runs before tokens are spent. Verify that the end user's plan includes the feature or [profile](providers-overview.md#profiles) and that budget remains. A denied call never reaches the provider.
 - **Settle** runs after the call completes or fails, with the token counts the provider reported. Debit them against the balance here, or release a reservation made during the check.
 
-Both halves receive the full user context, so per-request claims your `IRVUserContextProvider` stores in `Properties` (tenant ID, plan, cost center) are available when you check and when you bill.
+Both halves receive the full end-user context, so per-request claims the user's `IRVUserContextProvider` stores in `Properties` (tenant ID, plan, cost center) are available at check time and at billing time.
 
 ## Implement the gate
 
@@ -84,7 +84,7 @@ public sealed class PlanBillingGate : IAIQuotaGate
 }
 ```
 
-`IPlanStore` and `IUsageStore` stand for your own plan and balance storage.
+`IPlanStore` and `IUsageStore` stand for the user's own plan and balance storage.
 
   </TabItem>
 
@@ -121,7 +121,7 @@ revealAI.withOptions({
 });
 ```
 
-`plans` and `usage` stand for your own plan and balance storage.
+`plans` and `usage` stand for the user's own plan and balance storage.
 
   </TabItem>
 
@@ -182,7 +182,7 @@ IRevealServer revealServer = new RevealServerBuilder()
         .build();
 ```
 
-`plans` and `usage` stand for your own plan and balance storage.
+`plans` and `usage` stand for the user's own plan and balance storage.
 
   </TabItem>
 </Tabs>
@@ -204,34 +204,34 @@ The gate is registered as a singleton. Ensure the implementation is thread-safe 
 
   <TabItem value="node" label="Node.js">
 
-The callbacks are registered when you pass them to `revealAI.withOptions(...)`. `quotaSettle` is only invoked when `quotaGate` is also registered.
+The callbacks are registered when they are passed to `revealAI.withOptions(...)`. `quotaSettle` is only invoked when `quotaGate` is also registered.
 
   </TabItem>
 
   <TabItem value="java" label="Java">
 
-The callbacks are registered when you pass them to `RevealAIPlugin.withOptions(...)`. `quotaSettle` is only invoked when `quotaGate` is also registered.
+The callbacks are registered when they are passed to `RevealAIPlugin.withOptions(...)`. `quotaSettle` is only invoked when `quotaGate` is also registered.
 
   </TabItem>
 </Tabs>
 
 ## Call context
 
-The check and the settle receive the same context. In Node.js and Java the property names are camel-cased (`operationId`, `callId`, ...), and the user is a `{ userId, properties }` object.
+The check and the settle receive the same context. In Node.js and Java the property names are camel-cased (`operationId`, `callId`, ...), and the end user is a `{ userId, properties }` object.
 
 | Property | Description |
 |---|---|
-| `OperationId` | Groups the calls of one top-level operation, such as a chat turn or an insight. Stable across the operation, so you can cache a per-operation decision. |
+| `OperationId` | Groups the calls of one top-level operation, such as a chat turn or an insight. Stable across the operation, so a per-operation decision can be cached. |
 | `CallId` | Unique ID of this provider call. The settle receives the same ID; use it as the idempotency key when debiting. |
-| `User` | The user context, including `UserId` and the claims in `Properties`. |
+| `User` | The end-user context, including `UserId` and the claims in `Properties`. |
 | `Intent` | The workflow the call belongs to, such as `generation-build-report` or `widget-analysis`. |
 | `Profile` | The [profile](providers-overview.md#profiles) that serves the call, after intent routing. |
 | `Provider` | The provider registration name, or the provider type for a connection the end user supplied. |
 | `Model` | The model the call will use, when known. |
 | `IsSystemCall` | `true` for background work Reveal performs under the system user, such as metadata enrichment. |
-| `IsUserConnection` | `true` when the call uses a connection the end user supplied instead of one you configured. |
+| `IsUserConnection` | `true` when the call uses a connection the end user supplied instead of one the user configured. |
 
-Because the gate sees the routed profile and the intent of every call, you can price or restrict specific profiles and features, not just total usage. If you gate one intent, gate its related intents too. For example, a dashboard analysis runs under `dashboard-analysis`, not `widget-analysis`, so a free tier that blocks `widget-analysis` should also block `dashboard-analysis`.
+Because the gate sees the routed profile and the intent of every call, the user can price or restrict specific profiles and features, not just total usage. Gating one intent means gating its related intents too. For example, a dashboard analysis runs under `dashboard-analysis`, not `widget-analysis`, so a free tier that blocks `widget-analysis` should also block `dashboard-analysis`.
 
 ## Decisions and client errors
 
@@ -277,14 +277,14 @@ try {
 The settle receives the same context the check saw and an `AIUsageRecord` with the actual usage: `InputTokens`, `OutputTokens`, `TotalTokens`, `ReasoningTokens`, `CachedInputTokens`, `Model`, `Duration`, `Succeeded`, and `ErrorCode`. Token counts are `null` when the provider reported no usage, which is distinct from `0`. The record contains no prompt or response text.
 
 - **It runs for every call that passed the check**, including calls that failed, timed out, or were canceled. Reservation-based accounting therefore never leaks a reservation. It is not called for denied calls, or when the check itself fails.
-- **It runs in the request.** Keep it fast: a quick write to your store, or an internal queue that you flush separately.
-- **Its failures are logged, not propagated.** Reveal won't fail a call it has already served because billing failed. If you need guaranteed delivery of billing writes, make the write durable, for example with a local outbox.
-- **Each server settles its own calls**, so in a multi-server deployment only your shared balance store needs to be consistent.
+- **It runs in the request.** Keep it fast: a quick write to the user's store, or an internal queue flushed separately.
+- **Its failures are logged, not propagated.** Reveal won't fail a call it has already served because billing failed. If billing writes need guaranteed delivery, make the write durable, for example with a local outbox.
+- **Each server settles its own calls**, so in a multi-server deployment only the user's shared balance store needs to be consistent.
 
 ## Behavior to know
 
-- **Every provider call is gated.** One user action can make several AI calls; for example, a chat message classifies the request before generating a dashboard. The check runs once per call, and a denial at any step fails the whole operation.
-- **Background work bypasses the gate by default.** Calls Reveal makes on its own, such as metadata enrichment, are your spend rather than an end user's, so they are not checked or settled. To budget them as well, set `RevealAI:Gate:IncludeSystemCalls` to `true`; those calls arrive with `IsSystemCall` set to `true`.
+- **Every provider call is gated.** One end-user action can make several AI calls; for example, a chat message classifies the request before generating a dashboard. The check runs once per call, and a denial at any step fails the whole operation.
+- **Background work bypasses the gate by default.** Calls Reveal makes on its own, such as metadata enrichment, are the user's spend rather than an end user's, so they are not checked or settled. To budget them as well, set `RevealAI:Gate:IncludeSystemCalls` to `true`; those calls arrive with `IsSystemCall` set to `true`.
 
   ```json title="appsettings.json"
   {

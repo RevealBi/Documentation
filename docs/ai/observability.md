@@ -4,13 +4,13 @@ sidebar_label: Observability
 
 # Observability
 
-Reveal records every AI call it makes: chat, insights, and background metadata work, on every provider. Without any setup, each call is written to your logs and counted in OpenTelemetry metrics, so you can see where tokens go per intent, profile, and model before you go live. Clients also receive the profile and token usage of each response.
+Reveal records every AI call it makes: chat, insights, and background metadata work, on every provider. Without any setup, each call is written to the user's logs and counted in OpenTelemetry metrics, so the user can see where tokens go per intent, profile, and model before going live. Clients also receive the profile and token usage of each response.
 
-The log and metrics belong to the ASP.NET server. To receive the same records in your own store, or in your Node.js or Java application, register a [usage sink](usage-tracking.md).
+The log and metrics belong to the ASP.NET server. To receive the same records in the user's own store, or in a Node.js or Java application, register a [usage sink](usage-tracking.md).
 
 ## Usage log
 
-Each AI call is logged as one structured line under the `Reveal.Sdk.AI.Usage` category: at `Information` for user calls, and at `Debug` for background calls Reveal makes on its own. The line includes the user, intent, profile, provider, model, token counts, duration, and outcome, and the IDs that group the calls of one operation. It never includes prompt or response text.
+Each AI call is logged as one structured line under the `Reveal.Sdk.AI.Usage` category: at `Information` for end-user calls, and at `Debug` for background calls Reveal makes on its own. The line includes the end user, intent, profile, provider, model, token counts, duration, and outcome, and the IDs that group the calls of one operation. It never includes prompt or response text.
 
 Silence or redirect it with standard log filtering:
 
@@ -48,7 +48,7 @@ Each measurement is tagged with:
 | `reveal.ai.succeeded` | Whether the call succeeded. |
 | `reveal.ai.stage` | The dashboard generation step, for calls made in one. |
 
-To export them, add the meter to your OpenTelemetry configuration:
+To export them, add the meter to the OpenTelemetry configuration:
 
 ```csharp title="Program.cs"
 builder.Services.AddOpenTelemetry()

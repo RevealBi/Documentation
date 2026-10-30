@@ -7,11 +7,11 @@ import TabItem from '@theme/TabItem';
 
 # Usage Tracking
 
-Reveal produces a usage record for every AI call it makes: chat, insights, and background metadata work, on every provider. Each record carries the token counts the provider reported, plus the user, intent, profile, and model involved. Out of the box, records are [logged and counted in metrics](observability.md). Register a usage sink to also send them to your own store, for analytics, dashboards, or cost reporting.
+Reveal produces a usage record for every AI call it makes: chat, insights, and background metadata work, on every provider. Each record carries the token counts the provider reported, plus the end user, intent, profile, and model involved. Out of the box, records are [logged and counted in metrics](observability.md). Register a usage sink to also send them to the user's own store, for analytics, dashboards, or cost reporting.
 
 Usage records are for observability. To enforce budgets and debit tokens against a balance, use the [quota gate](quota-gate.md).
 
-## Send usage records to your own store
+## Send usage records to an external store
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -72,7 +72,7 @@ builder.Services.AddRevealAI()
     });
 ```
 
-You can register several sinks; each receives every record, and a failing sink does not affect the others. Sinks are singletons, so ensure your implementation is thread-safe and inject only singleton-safe dependencies.
+The user can register several sinks; each receives every record, and a failing sink does not affect the others. Sinks are singletons, so ensure the implementation is thread-safe and inject only singleton-safe dependencies.
 
   </TabItem>
 
@@ -129,7 +129,7 @@ IRevealServer revealServer = new RevealServerBuilder()
   </TabItem>
 </Tabs>
 
-`usageQueue`, `IUsageQueue`, and `UsageRow` stand for your own buffering and storage.
+`usageQueue`, `IUsageQueue`, and `UsageRow` stand for the user's own buffering and storage.
 
 ## Usage record
 
@@ -141,9 +141,9 @@ In Node.js and Java the property names are camel-cased, and `Duration` is `durat
 | `CallId` | Unique ID of this provider call. |
 | `ParentOperationId` | The operation a call ran under when it was made on that operation's behalf with its own `OperationId`, such as datasource ranking during a dashboard generation. `null` otherwise. |
 | `Timestamp` | When the call started, in UTC. |
-| `UserId` | The user the call was made for. |
+| `UserId` | The end user the call was made for. |
 | `IsSystemCall` | `true` for background work Reveal performs on its own, such as metadata enrichment. |
-| `IsUserConnection` | `true` when the call used a connection the end user supplied instead of one you configured. |
+| `IsUserConnection` | `true` when the call used a connection the end user supplied instead of one the user configured. |
 | `Intent` | The workflow the call belongs to, such as `generation-build-report` or `widget-analysis`. |
 | `Profile` | The [profile](providers-overview.md#profiles) that served the call. |
 | `Provider` | The provider registration name, or the provider type for a connection the end user supplied. |
@@ -157,12 +157,12 @@ In Node.js and Java the property names are camel-cased, and `Duration` is `durat
 | `Succeeded` | Whether the call completed successfully. |
 | `ErrorCode` | When `Succeeded` is `false`: `provider_error`, `timeout`, `cancelled`, or `denied` (blocked by the quota gate). |
 
-Records never contain prompt or response text, so your users' data doesn't flow into your analytics pipeline. Failed calls produce records too, which lets you compute the cost per successful answer and alert on provider errors.
+Records never contain prompt or response text, so end users' data doesn't flow into the user's analytics pipeline. Failed calls produce records too, which lets the user compute the cost per successful answer and alert on provider errors.
 
 ## Delivery
 
-- **Sinks run outside the request.** Records are handed to your sinks on background tasks, so a slow or failing sink never slows down or fails an AI call.
-- **Delivery is best effort.** At most 8 records are delivered at a time. When all 8 slots are busy, further records skip your sinks and a warning is logged; they are still logged and counted in metrics. Return quickly: if you write to a remote store, enqueue the record internally and write in batches on your own schedule.
+- **Sinks run outside the request.** Records are handed to the sinks on background tasks, so a slow or failing sink never slows down or fails an AI call.
+- **Delivery is best effort.** At most 8 records are delivered at a time. When all 8 slots are busy, further records skip the sinks and a warning is logged; they are still logged and counted in metrics. Return quickly: when writing to a remote store, enqueue the record internally and write in batches on a separate schedule.
 - **Failures are logged and isolated.** An exception from a sink is logged and never reaches the AI call or the other sinks.
 
-Because delivery is best effort, don't bill from a usage sink. The [quota gate](quota-gate.md) settles every call inside the request, with the full user context.
+Because delivery is best effort, don't bill from a usage sink. The [quota gate](quota-gate.md) settles every call inside the request, with the full end-user context.

@@ -11,16 +11,16 @@ import TabItem from '@theme/TabItem';
 
 A dynamic profile lets each end user bring their own key (BYOK) to run AI features on their own provider account, with their own API key and model.
 
-The user stores each user's connection (in your database, with your encryption, set up through your own settings screen), and Reveal asks for it when the user needs it.
+The user keeps each end user's connection in their own application (its database, its encryption, its settings screen), and Reveal asks for it when the end user needs it.
 
-A dynamic profile is a [profile](providers-overview.md#profiles) clients can request like any other, but its connection comes from a resolver you implement, per user. It appears in the profile list only for users who have a connection, so it fits naturally into a model picker as an option like "Use my own key".
+A dynamic profile is a [profile](providers-overview.md#profiles) clients can request like any other, but its connection comes from a resolver the user implements, per end user. It appears in the profile list only for end users who have a connection, so it fits naturally into a model picker as an option like "Use my own key".
 
 ## Declare the profile and resolver
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-Implement `IAIConnectionResolver`. Return the user's connection, or `null` when the user hasn't set one up:
+Implement `IAIConnectionResolver`. Return the end user's connection, or `null` when the end user hasn't set one up:
 
 ```csharp title="UserConnectionResolver.cs"
 using Reveal.Sdk;
@@ -67,7 +67,7 @@ builder.Services.AddRevealAI()
 
   <TabItem value="node" label="Node.js">
 
-List the dynamic profile names in `dynamicProfiles`, and add a `connectionResolver` callback. Return the user's connection, or `null` when the user hasn't set one up:
+List the dynamic profile names in `dynamicProfiles`, and add a `connectionResolver` callback. Return the end user's connection, or `null` when the end user hasn't set one up:
 
 ```javascript title="server.js"
 revealAI.withOptions({
@@ -96,7 +96,7 @@ revealAI.withOptions({
 
   <TabItem value="java" label="Java">
 
-Declare the dynamic profile with `addDynamicProfile`, and register a `"connectionResolver"` callback. It receives `{ profileName, user }` as JSON and returns the user's connection, or `null` when the user hasn't set one up:
+Declare the dynamic profile with `addDynamicProfile`, and register a `"connectionResolver"` callback. It receives `{ profileName, user }` as JSON and returns the end user's connection, or `null` when the end user hasn't set one up:
 
 ```java title="Application.java"
 ObjectMapper json = new ObjectMapper();
@@ -134,26 +134,26 @@ IRevealServer revealServer = new RevealServerBuilder()
   </TabItem>
 </Tabs>
 
-`IUserSettingsStore`, `userSettings`, and `UserConnection` stand for your own storage of user connections.
+`IUserSettingsStore`, `userSettings`, and `UserConnection` stand for the user's own storage of end-user connections.
 
 ## Connection
 
 | Property | Required | Description |
 |---|---|---|
-| `ProviderType` | Yes | The provider to connect to: `openai`, `azure-openai`, `anthropic`, `google`, or `openai-compatible`. Your server must register that provider, for example with `AddOpenAI()`. |
+| `ProviderType` | Yes | The provider to connect to: `openai`, `azure-openai`, `anthropic`, `google`, or `openai-compatible`. The user's server must register that provider, for example with `AddOpenAI()`. |
 | `Model` | Yes | The model ID, or the deployment name for Azure OpenAI. |
-| `ApiKey` | No | The user's API key, when the provider needs one. |
-| `Endpoint` | No | A custom endpoint URL. Rejected unless you allow custom endpoints. |
-| `Settings` | No | Generation settings for this user's calls, such as `Temperature` or `MaxOutputTokens`. |
+| `ApiKey` | No | The end user's API key, when the provider needs one. |
+| `Endpoint` | No | A custom endpoint URL. Rejected unless the user allows custom endpoints. |
+| `Settings` | No | Generation settings for this end user's calls, such as `Temperature` or `MaxOutputTokens`. |
 
 Reveal creates the provider client from the connection and reuses it for up to 15 minutes. A connection with any different value, such as a new API key, gets a new client immediately.
 
 ## Security
 
-Connections come from your users, so Reveal constrains them:
+Connections come from end users, so Reveal constrains them:
 
-- **Custom endpoints are rejected by default.** This prevents users from making your server send requests to arbitrary URLs. To allow them, for example for self-hosted models, set `RevealAI:DynamicProfiles:AllowCustomEndpoints` to `true`.
-- **You can restrict the provider types** users may connect to with `RevealAI:DynamicProfiles:AllowedProviderTypes`. By default, every provider type your server registers is allowed.
+- **Custom endpoints are rejected by default.** This prevents end users from making the user's server send requests to arbitrary URLs. To allow them, for example for self-hosted models, set `RevealAI:DynamicProfiles:AllowCustomEndpoints` to `true`.
+- **The user can restrict the provider types** end users may connect to with `RevealAI:DynamicProfiles:AllowedProviderTypes`. By default, every provider type the user's server registers is allowed.
 
 ```json title="appsettings.json"
 {
@@ -167,26 +167,26 @@ Connections come from your users, so Reveal constrains them:
 }
 ```
 
-`CacheTtl` sets how long a provider client created from a user's connection is reused.
+`CacheTtl` sets how long a provider client created from an end user's connection is reused.
 
 API keys are never logged or used directly as cache keys.
 
 ## How dynamic profiles behave
 
-- **Users without a connection don't see the profile.** The resolver runs when the profile list is requested and when a request uses the profile. When it returns `null`, the profile is hidden from that user, and requests for it fail with HTTP 403 and the code `ai.profile_not_allowed`.
-- **An invalid connection fails the request.** A missing model, a provider type that isn't allowed or registered, a custom endpoint you didn't allow, or a resolver that throws fails the user's request with HTTP 400 and the code `ai.connection_invalid`. When listing profiles, a resolver that throws hides the profile instead.
-- **Reveal never falls back to your own keys.** If the provider rejects the user's key, for example because it was revoked, the call fails like any other provider error.
-- **Your intent mappings still apply.** Intents you pin with `MapIntent`, or with a [profile selector](profile-selection.md), keep running on your models, and the rest run on the user's connection.
-- **Your other hooks still apply.** The [profile authorizer](profile-selection.md) can still hide the profile, and calls on a user's connection reach the [quota gate](quota-gate.md) and [usage tracking](usage-tracking.md) with `IsUserConnection` set to `true`. Use it, for example, to skip token billing for users spending their own key.
-- **A profile selector can't choose a dynamic profile.** Running on a user's own key is always the user's explicit choice.
+- **End users without a connection don't see the profile.** The resolver runs when the profile list is requested and when a request uses the profile. When it returns `null`, the profile is hidden from that end user, and requests for it fail with HTTP 403 and the code `ai.profile_not_allowed`.
+- **An invalid connection fails the request.** A missing model, a provider type that isn't allowed or registered, a custom endpoint the user didn't allow, or a resolver that throws fails the end user's request with HTTP 400 and the code `ai.connection_invalid`. When listing profiles, a resolver that throws hides the profile instead.
+- **Reveal never falls back to the user's own keys.** If the provider rejects the end user's key, for example because it was revoked, the call fails like any other provider error.
+- **The user's intent mappings still apply.** Intents the user pins with `MapIntent`, or with a [profile selector](profile-selection.md), keep running on the user's models, and the rest run on the end user's connection.
+- **The user's other hooks still apply.** The [profile authorizer](profile-selection.md) can still hide the profile, and calls on an end user's connection reach the [quota gate](quota-gate.md) and [usage tracking](usage-tracking.md) with `IsUserConnection` set to `true`. Use it, for example, to skip token billing for end users spending their own key.
+- **A profile selector can't choose a dynamic profile.** Running on an end user's own key is always the end user's explicit choice.
 - In Node.js and Java, a resolver callback that throws or returns a malformed result is treated as `null`, and a warning is logged.
 
 ## Several dynamic profiles
 
-Each dynamic profile is a choice the user can make, so most applications need only one.
+Each dynamic profile is a choice the end user can make, so most applications need only one.
 
-- **If the model depends on the user's plan**, use one dynamic profile and return a different `Model` from the resolver.
-- **If users choose between several of their own connections**, such as a fast one and a premium one, declare one dynamic profile per choice. A single resolver serves them all and receives the profile name; return `null` for profiles the user's plan doesn't include.
+- **If the model depends on the end user's plan**, use one dynamic profile and return a different `Model` from the resolver.
+- **If end users choose between several of their own connections**, such as a fast one and a premium one, declare one dynamic profile per choice. A single resolver serves them all and receives the profile name; return `null` for profiles the end user's plan doesn't include.
 
 On ASP.NET, register the resolver with the first profile, and declare the others without it:
 
