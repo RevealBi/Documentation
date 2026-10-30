@@ -11,11 +11,11 @@ import TabItem from '@theme/TabItem';
 
 A dynamic profile lets each user bring their own key (BYOK): run AI features on their own provider account, with their own API key and model.
 
-Reveal doesn't store users' keys. To offer dynamic profiles, the developer provides:
+Reveal doesn't store users' keys. To offer dynamic profiles, the developer needs to provide:
 
 1. A screen where users choose a provider and model and enter their API key.
 2. Storage for those connection details. Reveal never stores them itself.
-3. A resolver that returns a user's connection details when Reveal asks for them.
+3. A resolver that retrieves and returns a user's connection details when Reveal asks for them.
 
 A dynamic profile is then a [profile](providers-overview.md#profiles) clients can request like any other, whose connection details come from that resolver. It appears in the profile list only for users who have a connection, so it fits naturally into a model picker as an option like "Use my own key".
 
@@ -24,7 +24,7 @@ A dynamic profile is then a [profile](providers-overview.md#profiles) clients ca
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-Implement `IAIConnectionResolver`. Return the user's connection, or `null` when the user hasn't set one up:
+Implement `IAIConnectionResolver`. Return the user's connection for the requested profile, or `null` when the user hasn't set one up:
 
 ```csharp title="UserConnectionResolver.cs"
 using Reveal.Sdk;
@@ -39,7 +39,8 @@ public sealed class UserConnectionResolver : IAIConnectionResolver
     public async ValueTask<AIConnectionDescriptor?> ResolveAsync(
         string profileName, IRVUserContext user, CancellationToken cancellationToken)
     {
-        var connection = await _settings.GetAIConnectionAsync(user.UserId, cancellationToken);
+        // Retrieve details from custom storage
+        var connection = await _settings.GetAIConnectionAsync(user.UserId, profileName, cancellationToken);
         if (connection is null)
         {
             return null;
@@ -71,7 +72,7 @@ builder.Services.AddRevealAI()
 
   <TabItem value="node" label="Node.js">
 
-List the dynamic profile names in `dynamicProfiles`, and add a `connectionResolver` callback. Return the user's connection, or `null` when the user hasn't set one up:
+List the dynamic profile names in `dynamicProfiles`, and add a `connectionResolver` callback. Return the user's connection for the requested profile, or `null` when the user hasn't set one up:
 
 ```javascript title="server.js"
 revealAI.withOptions({
@@ -84,7 +85,8 @@ revealAI.withOptions({
     dynamicProfiles: ['my-ai'],
     callbacks: {
         connectionResolver: async ({ profileName, user }) => {
-            const connection = await userSettings.getAIConnection(user?.userId);
+            // Retrieve details from custom storage
+            const connection = await userSettings.getAIConnection(user?.userId, profileName);
             if (!connection) return null;
             return {
                 providerType: connection.providerType,    // for example, 'openai'
@@ -102,7 +104,7 @@ Dynamic profiles require the `providers` and `profiles` options shown here: once
 
   <TabItem value="java" label="Java">
 
-Declare the dynamic profile with `addDynamicProfile`, and register a `"connectionResolver"` callback. It receives `{ profileName, user }` as JSON and returns the user's connection, or `null` when the user hasn't set one up:
+Declare the dynamic profile with `addDynamicProfile`, and register a `"connectionResolver"` callback. It receives `{ profileName, user }` as JSON and returns the user's connection for that profile, or `null` when the user hasn't set one up:
 
 ```java title="Application.java"
 import com.fasterxml.jackson.databind.JsonNode;
@@ -126,8 +128,10 @@ RevealAIPluginOptions aiPluginOptions = RevealAIPluginOptions.builder()
 RevealPluginCallback connectionResolver = (userContext, message) -> {
     try {
         JsonNode request = json.readTree(message);
+        // Retrieve details from custom storage
         UserConnection connection = userSettings.getAIConnection(
-                request.path("user").path("userId").asText(null));
+                request.path("user").path("userId").asText(null),
+                request.path("profileName").asText());
         if (connection == null) {
             return CompletableFuture.completedFuture("null");
         }

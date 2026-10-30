@@ -6,7 +6,7 @@ sidebar_label: Metering and Billing
 
 Every AI call Reveal makes spends tokens on the developer's provider account. Reveal gives the developer two hooks to track and control that spend. Both see AI calls from every feature and provider. Usage tracking records every call, including background work Reveal performs on its own; the quota gate skips that background work by default.
 
-| | [Usage tracking](usage-tracking.md) | [Quotas and billing](quota-gate.md) |
+| &nbsp; | [Usage tracking](usage-tracking.md) | [Quotas and billing](quota-gate.md) |
 |---|---|---|
 | **Purpose** | Observability: record what each call used. | Policy: decide whether a call may run, and charge for it. |
 | **Hook** | Usage sink (`IAIUsageSink`, or the `usageSink` callback) | Quota gate (`IAIQuotaGate`, or the `quotaGate` and `quotaSettle` callbacks) |
