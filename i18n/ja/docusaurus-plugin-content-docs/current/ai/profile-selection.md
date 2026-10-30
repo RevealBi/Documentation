@@ -33,6 +33,7 @@ public sealed class PlanProfileAuthorizer : IAIProfileAuthorizer
     public async ValueTask<IReadOnlyCollection<string>> FilterProfilesAsync(
         IRVUserContext user, IReadOnlyCollection<string> candidateProfiles, CancellationToken cancellationToken)
     {
+        // Retrieve the plan from custom storage
         var plan = await _plans.GetPlanAsync(user.UserId, cancellationToken);
         return plan switch
         {
@@ -63,6 +64,7 @@ revealAI.withOptions({
     // providers, profiles, ...
     callbacks: {
         profileAuthorizer: async ({ user, candidateProfiles }) => {
+            // Retrieve the plan from custom storage
             const plan = await plans.get(user?.userId);
             if (plan === 'enterprise') return candidateProfiles;
             if (plan === 'pro') return candidateProfiles.filter(p => p !== 'premium');
@@ -96,6 +98,7 @@ ObjectMapper json = new ObjectMapper();
 RevealPluginCallback profileAuthorizer = (userContext, message) -> {
     try {
         JsonNode request = json.readTree(message);
+        // Retrieve the plan from custom storage
         String plan = plans.get(request.path("user").path("userId").asText(null));
         List<String> allowed = new ArrayList<>();
         for (JsonNode profile : request.path("candidateProfiles")) {
@@ -120,8 +123,6 @@ IRevealServer revealServer = new RevealServerBuilder()
 
   </TabItem>
 </Tabs>
-
-`plans` と `IPlanStore` は、開発者独自のプランのストレージを表します。
 
 オーソライザーは、プロファイルの一覧とリクエストの検証の両方を制御します。
 
