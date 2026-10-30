@@ -4,7 +4,9 @@ sidebar_label: Observability
 
 # Observability
 
-Reveal records every AI call it makes: chat, insights, and background metadata work, on every provider. Without any setup, each call is written to the developer's logs and counted in OpenTelemetry metrics, so the developer can see where tokens go per intent, profile, and model before going live. Clients also receive the profile and token usage of each response.
+Reveal records every AI call it makes: chat, insights, and background metadata work, on every provider.
+
+Without any setup, each call is written to the developer's logs and counted in OpenTelemetry metrics, so the developer can see where tokens go per intent, profile, and model before going live. Clients also receive the profile and token usage of each response.
 
 The log and metrics belong to the ASP.NET server. To receive the same records in the developer's own store, or in a Node.js or Java application, register a [usage sink](usage-tracking.md).
 

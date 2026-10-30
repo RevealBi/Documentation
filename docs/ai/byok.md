@@ -9,11 +9,15 @@ import TabItem from '@theme/TabItem';
 
 # Dynamic Profiles (BYOK)
 
-A dynamic profile lets each user bring their own key (BYOK) to run AI features on their own provider account, with their own API key and model.
+A dynamic profile lets each user bring their own key (BYOK): run AI features on their own provider account, with their own API key and model.
 
-Reveal doesn't store users' keys. The developer's application keeps each user's connection details, and Reveal asks for them through a resolver when the user needs them.
+Reveal doesn't store users' keys. To offer dynamic profiles, the developer provides:
 
-A dynamic profile is a [profile](providers-overview.md#profiles) clients can request like any other, but its connection comes from a resolver the developer implements, per user. It appears in the profile list only for users who have a connection, so it fits naturally into a model picker as an option like "Use my own key".
+1. A screen where users choose a provider and model and enter their API key.
+2. Storage for those connection details. Reveal never stores them itself.
+3. A resolver that returns a user's connection details when Reveal asks for them.
+
+A dynamic profile is then a [profile](providers-overview.md#profiles) clients can request like any other, whose connection details come from that resolver. It appears in the profile list only for users who have a connection, so it fits naturally into a model picker as an option like "Use my own key".
 
 ## Declare the profile and resolver
 

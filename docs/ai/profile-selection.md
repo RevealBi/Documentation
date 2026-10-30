@@ -7,7 +7,11 @@ import TabItem from '@theme/TabItem';
 
 # Profile Selection
 
-[Profiles](providers-overview.md#profiles) name the models and settings the developer's server offers. By default, every user can request every profile, and calls that request none use the developer's intent mappings and default profile. Two hooks let the developer make those decisions per user, typically from the user's plan:
+[Profiles](providers-overview.md#profiles) name the models and settings the developer's server offers.
+
+By default, every user can request every profile, and calls that request none use the developer's intent mappings and default profile.
+
+Two hooks let the developer make those decisions per user, typically from the user's plan:
 
 - A **profile authorizer** decides which profiles a user may request. It filters the profile list clients see, and rejects requests for any other profile.
 - A **profile selector** decides which profiles serve a user, without the client asking. Use it to route, for example, dashboard generation to a premium model for users on an enterprise plan.
@@ -17,7 +21,7 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
 
-Implement `IAIProfileAuthorizer` and return the subset of the candidate profiles the user may use:
+Implement `IAIProfileAuthorizer` and return the candidate profiles the user may use:
 
 ```csharp title="PlanProfileAuthorizer.cs"
 using Reveal.Sdk;
@@ -49,7 +53,7 @@ builder.Services.AddRevealAI()
     .AddProfileAuthorizer<PlanProfileAuthorizer>();
 ```
 
-The authorizer is registered as a singleton. Only one authorizer is supported; registering a second replaces the first.
+The authorizer is registered as a singleton. Only one authorizer is supported; registering a second one replaces the first.
 
   </TabItem>
 
