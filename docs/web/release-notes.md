@@ -7,6 +7,10 @@ import TabItem from '@theme/TabItem';
 
 > Changes below are available in the weekly preview builds and will ship in the next RTM release.
 
+### Breaking Changes
+
+- In the Reveal SDK web client, dashboard visualizations no longer share the same `id="WidgetView"`. Each rendered visualization now gets a generated, view-specific DOM id, such as `WidgetView_<viewKey>_<widgetId>`. This id is not stable: it changes whenever the `RevealView` is recreated, so do not use it as a selector. Update any CSS rules or UI automation that target `#WidgetView` to use the `[data-rv-name="WidgetView"]` attribute selector instead, which matches every visualization container. The visualization editor's preview also carries this attribute instead of the previous `WidgetView` id.
+
 ### Bugs
 
 #### All Platforms
