@@ -30,7 +30,7 @@ public sealed class PlanProfileAuthorizer : IAIProfileAuthorizer
 
     public PlanProfileAuthorizer(IPlanStore plans) => _plans = plans;
 
-    public async ValueTask<IReadOnlyCollection<string>> FilterProfilesAsync(
+    public async ValueTask<IReadOnlyCollection<string>> GetAuthorizedProfilesAsync(
         IRVUserContext user, IReadOnlyCollection<string> candidateProfiles, CancellationToken cancellationToken)
     {
         // Retrieve the plan from custom storage
@@ -127,7 +127,7 @@ IRevealServer revealServer = new RevealServerBuilder()
 オーソライザーは、プロファイルの一覧とリクエストの検証の両方を制御します。
 
 - `GET /api/reveal/ai/profiles` と、クライアント SDK の `client.ai.profiles.list()` は、ユーザーが使用できるプロファイルのみを返します。そのため、モデル ピッカーにはそれらだけが表示されます。
-- それ以外のプロファイルへのリクエストは、HTTP 403 とコード `ai.profile_not_allowed` で失敗します。存在しないプロファイルへのリクエストは、HTTP 400 と `ai.profile_not_found` で失敗します。Reveal が別のプロファイルに暗黙的にフォールバックすることはありません。
+- それ以外のプロファイルへのリクエストは、HTTP 403 とコード `ai.profile_not_allowed` で失敗します。存在しないプロファイルへのリクエストは、HTTP 400 と `ai.profile_not_found` で失敗します。Reveal が別のプロファイルに暗黙的にフォールバックすることはありません。ただし、`profile` の代わりに非推奨の `model` フィールドを使用するリクエストは例外で、不明な名前が指定されると既定のプロファイルにフォールバックし、警告がログに記録されます。
 - 候補には[動的 (BYOK) プロファイル](byok.md)も含まれます。上の無料プランの分岐のように特定の名前だけを残すオーソライザーは、動的プロファイルも非表示にします。
 - 開発者のインテント マッピングと既定のプロファイルは開発者自身の判断であるため、オーソライザーはそれらをフィルターしません。オーソライザーが制御するのは、クライアントがリクエストできるものだけです。
 - Node.js と Java では、コールバックが例外をスローするか不正な形式の結果を返すと、すべてのプロファイルが拒否されます。候補に含まれていなかった名前は無視されます。

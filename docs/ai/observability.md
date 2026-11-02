@@ -12,7 +12,7 @@ The log and metrics belong to the ASP.NET server. To receive the same records in
 
 ## Usage log
 
-Each AI call is logged as one structured line under the `Reveal.Sdk.AI.Usage` category: at `Information` for user calls, and at `Debug` for background calls Reveal makes on its own. The line includes the user, intent, profile, provider, model, token counts, duration, and outcome, and the IDs that group the calls of one operation. It never includes prompt or response text.
+Each AI call is logged as one structured line under the `Reveal.Sdk.AI.Usage` category: at `Information` for user calls, and at `Debug` for background calls Reveal makes on its own. The line includes the user, intent, profile, provider, model, token counts, duration, whether the call succeeded, and the finish reason, and the IDs that group the calls of one operation. It never includes prompt or response text.
 
 Silence or redirect it with standard log filtering:
 
