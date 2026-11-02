@@ -128,4 +128,4 @@ try {
 }
 ```
 
-When streaming, an error that occurs before the stream opens is thrown the same way. An error after the stream has opened arrives as an `error` event, whose `code` and `retryAfterSeconds` are available in the `for-await` pattern; `finalResponse()` then rejects with a `RevealAIError` whose `status` is `0`.
+When streaming chat, an error that occurs before the stream opens is thrown the same way. Insights streams open as soon as the request arrives, so every insights error, including `ai.profile_not_allowed` and a quota denial, arrives as an `error` event. An error after the stream has opened arrives as an `error` event, whose `code` and `retryAfterSeconds` are available in the `for-await` pattern; `finalResponse()` then rejects with a `RevealAIError` whose `status` is `0`.

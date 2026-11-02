@@ -128,4 +128,4 @@ try {
 }
 ```
 
-ストリーミングの場合、ストリームが開く前に発生したエラーは同じようにスローされます。ストリームが開いた後に発生したエラーは `error` イベントとして届き、その `code` と `retryAfterSeconds` は `for-await` パターンで取得できます。その後、`finalResponse()` は `status` が `0` の `RevealAIError` で reject されます。
+チャットをストリーミングする場合、ストリームが開く前に発生したエラーは同じようにスローされます。インサイトのストリームはリクエストを受け取るとすぐに開くため、`ai.profile_not_allowed` やクォータによる拒否を含むすべてのインサイトのエラーは `error` イベントとして届きます。ストリームが開いた後に発生したエラーは `error` イベントとして届き、その `code` と `retryAfterSeconds` は `for-await` パターンで取得できます。その後、`finalResponse()` は `status` が `0` の `RevealAIError` で reject されます。

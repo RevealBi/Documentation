@@ -127,7 +127,7 @@ IRevealServer revealServer = new RevealServerBuilder()
 The authorizer drives both the profile list and request validation:
 
 - `GET /api/reveal/ai/profiles`, and `client.ai.profiles.list()` in the client SDK, return only the profiles the user may use, so a model picker shows only those.
-- A request for any other profile fails with HTTP 403 and the code `ai.profile_not_allowed`. A request for a profile that doesn't exist fails with HTTP 400 and `ai.profile_not_found`. Reveal never falls back to another profile silently.
+- A request for any other profile fails with HTTP 403 and the code `ai.profile_not_allowed`. A request for a profile that doesn't exist fails with HTTP 400 and `ai.profile_not_found`. Reveal never falls back to another profile silently, except for requests that still use the deprecated `model` field instead of `profile`: an unknown name there falls back to the default profile and logs a warning.
 - The candidates include [dynamic (BYOK) profiles](byok.md). An authorizer that keeps only specific names, like the free-plan branch above, hides them too.
 - The developer's intent mappings and default profile are the developer's own decisions, so the authorizer doesn't filter them. It only governs what clients may request.
 - In Node.js and Java, a callback that throws or returns a malformed result denies every profile, and names that weren't among the candidates are ignored.
