@@ -786,5 +786,25 @@
   "sidebar.aiSidebar.doc.Quotas and Billing": {
     "message": "クォータと課金",
     "description": "The label for the doc item 'Quotas and Billing' in sidebar 'aiSidebar', linking to the doc ai/quota-gate"
+  },
+  "sidebar.webSidebar.doc.Thumbnail Generation": {
+    "message": "サムネイル生成",
+    "description": "The label for the doc item 'Thumbnail Generation' in sidebar 'webSidebar', linking to the doc web/thumbnail-generation"
+  },
+  "sidebar.webSidebar.doc.SQLite": {
+    "message": "SQLite",
+    "description": "The label for the doc item 'SQLite' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/sqlite"
+  },
+  "sidebar.aiSidebar.doc.Choosing a Model": {
+    "message": "モデルの選択",
+    "description": "The label for the doc item 'Choosing a Model' in sidebar 'aiSidebar', linking to the doc ai/choosing-a-model"
+  },
+  "sidebar.aiSidebar.doc.Metadata Storage Provider": {
+    "message": "Metadata Storage Provider",
+    "description": "The label for the doc item 'Metadata Storage Provider' in sidebar 'aiSidebar', linking to the doc ai/metadata-storage-provider"
+  },
+  "sidebar.aiSidebar.doc.Metadata Generation Endpoint": {
+    "message": "メタデータ生成エンドポイント",
+    "description": "The label for the doc item 'Metadata Generation Endpoint' in sidebar 'aiSidebar', linking to the doc ai/metadata-generation"
   }
 }

@@ -722,5 +722,89 @@
   "sidebar.webSidebar.doc.2.0.0 Upgrade Guide": {
     "message": "2.0.0 Upgrade Guide",
     "description": "The label for the doc item '2.0.0 Upgrade Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0"
+  },
+  "sidebar.webSidebar.category.Theming": {
+    "message": "Theming",
+    "description": "The label for category 'Theming' in sidebar 'webSidebar'"
+  },
+  "sidebar.webSidebar.doc.AI Agent Skills": {
+    "message": "AI Agent Skills",
+    "description": "The label for the doc item 'AI Agent Skills' in sidebar 'webSidebar', linking to the doc web/ai-agent-skills"
+  },
+  "sidebar.webSidebar.doc.Fonts": {
+    "message": "Fonts",
+    "description": "The label for the doc item 'Fonts' in sidebar 'webSidebar', linking to the doc web/theming-fonts"
+  },
+  "sidebar.webSidebar.doc.Thumbnail Generation": {
+    "message": "Thumbnail Generation",
+    "description": "The label for the doc item 'Thumbnail Generation' in sidebar 'webSidebar', linking to the doc web/thumbnail-generation"
+  },
+  "sidebar.webSidebar.doc.Grid Hyperlink Columns": {
+    "message": "Grid Hyperlink Columns",
+    "description": "The label for the doc item 'Grid Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
+  },
+  "sidebar.webSidebar.doc.Cube": {
+    "message": "Cube",
+    "description": "The label for the doc item 'Cube' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/cube"
+  },
+  "sidebar.webSidebar.doc.DuckDB": {
+    "message": "DuckDB",
+    "description": "The label for the doc item 'DuckDB' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/duckdb"
+  },
+  "sidebar.webSidebar.doc.SQLite": {
+    "message": "SQLite",
+    "description": "The label for the doc item 'SQLite' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/sqlite"
+  },
+  "sidebar.webSidebar.doc.Java 2.0 Migration Guide": {
+    "message": "Java 2.0 Migration Guide",
+    "description": "The label for the doc item 'Java 2.0 Migration Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0-java"
+  },
+  "sidebar.userSideBar.doc.Chart Annotations": {
+    "message": "Chart Annotations",
+    "description": "The label for the doc item 'Chart Annotations' in sidebar 'userSideBar', linking to the doc user/chart-annotations"
+  },
+  "sidebar.aiSidebar.category.Server Configuration": {
+    "message": "Server Configuration",
+    "description": "The label for category 'Server Configuration' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Metering and Billing": {
+    "message": "Metering and Billing",
+    "description": "The label for category 'Metering and Billing' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.doc.Choosing a Model": {
+    "message": "Choosing a Model",
+    "description": "The label for the doc item 'Choosing a Model' in sidebar 'aiSidebar', linking to the doc ai/choosing-a-model"
+  },
+  "sidebar.aiSidebar.doc.Metadata Storage Provider": {
+    "message": "Metadata Storage Provider",
+    "description": "The label for the doc item 'Metadata Storage Provider' in sidebar 'aiSidebar', linking to the doc ai/metadata-storage-provider"
+  },
+  "sidebar.aiSidebar.doc.Profile Selection": {
+    "message": "Profile Selection",
+    "description": "The label for the doc item 'Profile Selection' in sidebar 'aiSidebar', linking to the doc ai/profile-selection"
+  },
+  "sidebar.aiSidebar.doc.Dynamic Profiles (BYOK)": {
+    "message": "Dynamic Profiles (BYOK)",
+    "description": "The label for the doc item 'Dynamic Profiles (BYOK)' in sidebar 'aiSidebar', linking to the doc ai/byok"
+  },
+  "sidebar.aiSidebar.doc.Observability": {
+    "message": "Observability",
+    "description": "The label for the doc item 'Observability' in sidebar 'aiSidebar', linking to the doc ai/observability"
+  },
+  "sidebar.aiSidebar.doc.Usage Tracking": {
+    "message": "Usage Tracking",
+    "description": "The label for the doc item 'Usage Tracking' in sidebar 'aiSidebar', linking to the doc ai/usage-tracking"
+  },
+  "sidebar.aiSidebar.doc.Quotas and Billing": {
+    "message": "Quotas and Billing",
+    "description": "The label for the doc item 'Quotas and Billing' in sidebar 'aiSidebar', linking to the doc ai/quota-gate"
+  },
+  "sidebar.aiSidebar.doc.Request Configuration": {
+    "message": "Request Configuration",
+    "description": "The label for the doc item 'Request Configuration' in sidebar 'aiSidebar', linking to the doc ai/sdk-request-configuration"
+  },
+  "sidebar.aiSidebar.doc.Metadata Generation Endpoint": {
+    "message": "Metadata Generation Endpoint",
+    "description": "The label for the doc item 'Metadata Generation Endpoint' in sidebar 'aiSidebar', linking to the doc ai/metadata-generation"
   }
 }

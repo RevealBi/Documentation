@@ -2,6 +2,8 @@
 sidebar_label: メタデータカタログ
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # メタデータカタログ
 
@@ -238,7 +240,10 @@ builder.Services.AddRevealAI()
 
 ## メタデータサービスオプション {#metadata-service-options}
 
-**メタデータサービス**は、メタデータがいつ生成されるかを制御します。アプリケーション起動時、定期的なスケジュール、またはその両方で生成をトリガーできます。
+**メタデータサービス**は、メタデータがいつ生成されるかを制御します。既定では、アプリケーションの起動時に実行され、不足しているメタデータの生成、失敗したメタデータや古いメタデータの再試行、保留中のエンリッチメントの完了を行います。定期的なスケジュールで実行することもできます。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
 
 ```json title="appsettings.json"
 {
@@ -251,10 +256,56 @@ builder.Services.AddRevealAI()
 }
 ```
 
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+同じ `RevealAI` セクションを `withOptions` に渡します。プラグイン自体が定義していないオプションは、そのまま転送されます。
+
+```javascript title="server.js"
+revealAI.withOptions({
+    defaultProvider: 'openai',
+    settings: aiSettings,
+    metadataCatalogFile: 'config/catalog.json',
+    RevealAI: {
+        MetadataService: {
+            GenerateOnStartup: true,
+            CronSchedule: '0 0 * * *'
+        }
+    }
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+同じ `RevealAI` セクションを `additionalOptions` マップで渡します。
+
+```java title="Application.java"
+RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
+        "openai",
+        "config/catalog.json",
+        null,
+        null,
+        Map.of(
+                "settings", aiSettings,
+                "RevealAI", Map.of(
+                        "MetadataService", Map.of(
+                                "GenerateOnStartup", true,
+                                "CronSchedule", "0 0 * * *"))));
+```
+
+  </TabItem>
+</Tabs>
+
 | プロパティ | 型 | 必須 | 説明 |
 |----------|------|----------|-------------|
-| `GenerateOnStartup` | boolean | いいえ | `true` の場合、アプリケーション起動時にメタデータを生成します。デフォルトは `false` です。 |
+| `GenerateOnStartup` | boolean | いいえ | `true` の場合、アプリケーション起動時にメタデータを生成します。デフォルトは `true` です。 |
 | `CronSchedule` | string | いいえ | 定期的なメタデータ生成のための Cron 式（例: 毎日深夜に実行する場合は `"0 0 * * *"`）。 |
+| `ForceRegeneration` | boolean | いいえ | `true` の場合、起動時とスケジュールによる実行で、メタデータがすでに存在していても再生成します。デフォルトは `false` です。 |
+
+すべてのデータソース、または特定のデータソース、データベース、テーブルのみを対象に、必要なときにメタデータを生成するには、[メタデータ生成エンドポイント](metadata-generation.md)（プレビュー）を使用します。
 
 ---
 
