@@ -643,6 +643,10 @@
     "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/overview"
   },
+  "sidebar.aiSidebar.doc.Data Handling": {
+    "message": "データの取り扱い",
+    "description": "The label for the doc item 'Data Handling' in sidebar 'aiSidebar', linking to the doc ai/data-handling"
+  },
   "sidebar.aiSidebar.doc.System Requirements": {
     "message": "システム要件",
     "description": "The label for the doc item 'System Requirements' in sidebar 'aiSidebar', linking to the doc ai/system-requirements"
@@ -788,7 +792,7 @@
     "description": "The label for the doc item 'Quotas and Billing' in sidebar 'aiSidebar', linking to the doc ai/quota-gate"
   },
   "sidebar.webSidebar.doc.Thumbnail Generation": {
-    "message": "サムネイル生成",
+    "message": "サムネイルの生成",
     "description": "The label for the doc item 'Thumbnail Generation' in sidebar 'webSidebar', linking to the doc web/thumbnail-generation"
   },
   "sidebar.webSidebar.doc.SQLite": {
@@ -800,7 +804,7 @@
     "description": "The label for the doc item 'Choosing a Model' in sidebar 'aiSidebar', linking to the doc ai/choosing-a-model"
   },
   "sidebar.aiSidebar.doc.Metadata Storage Provider": {
-    "message": "Metadata Storage Provider",
+    "message": "メタデータ ストレージ プロバイダー",
     "description": "The label for the doc item 'Metadata Storage Provider' in sidebar 'aiSidebar', linking to the doc ai/metadata-storage-provider"
   },
   "sidebar.aiSidebar.doc.Metadata Generation Endpoint": {

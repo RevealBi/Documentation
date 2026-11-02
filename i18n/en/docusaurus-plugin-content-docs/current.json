@@ -771,6 +771,10 @@
     "message": "Metering and Billing",
     "description": "The label for category 'Metering and Billing' in sidebar 'aiSidebar'"
   },
+  "sidebar.aiSidebar.doc.Data Handling": {
+    "message": "Data Handling",
+    "description": "The label for the doc item 'Data Handling' in sidebar 'aiSidebar', linking to the doc ai/data-handling"
+  },
   "sidebar.aiSidebar.doc.Choosing a Model": {
     "message": "Choosing a Model",
     "description": "The label for the doc item 'Choosing a Model' in sidebar 'aiSidebar', linking to the doc ai/choosing-a-model"
