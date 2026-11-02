@@ -296,6 +296,21 @@ const sidebars: SidebarsConfig = {
       ]
     },
 
+    /* -------------------- Server Configuration -------------------- */
+    {
+      type: "category", label: "Server Configuration", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Profile Selection", id: "ai/profile-selection" },
+        { type: "doc", label: "Dynamic Profiles (BYOK)", id: "ai/byok" },
+        { type: "doc", label: "Observability", id: "ai/observability" },
+        {
+          type: "category", label: "Metering and Billing", link: { type: "doc", id: "ai/metering-and-billing" }, items: [
+            { type: "doc", label: "Usage Tracking", id: "ai/usage-tracking" },
+            { type: "doc", label: "Quotas and Billing", id: "ai/quota-gate" },
+          ]
+        },
+      ]
+    },
+
     /* -------------------- Using the SDK -------------------- */
     {
       type: "category", label: "Using the SDK", collapsed: false, collapsible: false, className: "sidebar__header", items: [

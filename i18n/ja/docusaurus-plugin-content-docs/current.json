@@ -758,5 +758,33 @@
   "sidebar.webSidebar.doc.Java 2.0 Migration Guide": {
     "message": "Java 2.0 移行ガイド",
     "description": "The label for the doc item 'Java 2.0 Migration Guide' in sidebar 'webSidebar', linking to the doc web/upgrade-guide-v2.0.0-java"
+  },
+  "sidebar.aiSidebar.category.Server Configuration": {
+    "message": "サーバー構成",
+    "description": "The label for category 'Server Configuration' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.Metering and Billing": {
+    "message": "使用量の計測と課金",
+    "description": "The label for category 'Metering and Billing' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.doc.Profile Selection": {
+    "message": "プロファイルの選択",
+    "description": "The label for the doc item 'Profile Selection' in sidebar 'aiSidebar', linking to the doc ai/profile-selection"
+  },
+  "sidebar.aiSidebar.doc.Dynamic Profiles (BYOK)": {
+    "message": "動的プロファイル (BYOK)",
+    "description": "The label for the doc item 'Dynamic Profiles (BYOK)' in sidebar 'aiSidebar', linking to the doc ai/byok"
+  },
+  "sidebar.aiSidebar.doc.Observability": {
+    "message": "オブザーバビリティ",
+    "description": "The label for the doc item 'Observability' in sidebar 'aiSidebar', linking to the doc ai/observability"
+  },
+  "sidebar.aiSidebar.doc.Usage Tracking": {
+    "message": "使用量の追跡",
+    "description": "The label for the doc item 'Usage Tracking' in sidebar 'aiSidebar', linking to the doc ai/usage-tracking"
+  },
+  "sidebar.aiSidebar.doc.Quotas and Billing": {
+    "message": "クォータと課金",
+    "description": "The label for the doc item 'Quotas and Billing' in sidebar 'aiSidebar', linking to the doc ai/quota-gate"
   }
 }

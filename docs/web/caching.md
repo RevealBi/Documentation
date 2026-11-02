@@ -298,6 +298,8 @@ initializeParameterBuilder.enableRedisCache((options) -> {
 
 **A:** Currently, there's no assurance that distinct UserId values will generate separate entries in the cache. However, it's crucial to ensure that the UserId is correctly set when using `RVHeadersDataSourceCredentials` credentials type, as not doing so can lead to cache issues.
 
+When using `RVHeadersDataSourceCredentials`, set `IRVUserContext.UserId` to a stable, nonempty identifier derived from the authenticated user and applicable tenant or permission scope. For visualization data requests, cached results can be reused when this identifier and the relevant data source and query information match, even if header or cookie values differ. Reusing an identifier across different access rights can therefore return results intended for another user. Enforce authorization on the server for each request; `UserId` alone is not a guarantee of isolation for every SDK feature.
+
 **Q: How does the `RVBearerTokenDataSourceCredential.UserId` property impact cache entries?**
 
 **A:** If the `RVBearerTokenDataSourceCredential.UserId` is set, it will be used when creating the cache entry key, and it is recommended to do so to improve performance. Note that the UserId in `RVBearerTokenDataSourceCredential` may differ from the one in `IRVUserContext`; it corresponds to the UserId linked with the `RVBearerTokenDataSourceCredential' access token.

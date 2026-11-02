@@ -102,7 +102,7 @@ builder.Services.AddRevealAI()
     .AddProfile("default", p => { p.Provider = "openai"; p.Model = "gpt-4.1-mini"; })
     .AddProfile("dashboard-generation", p => { p.Provider = "anthropic"; p.Model = "claude-sonnet-4-5"; })
     .SetDefaultProfile("default")
-    .MapIntent(AIIntents.GenerationBuildReport, "dashboard-generation");
+    .MapIntent(Intents.GenerationBuildReport, "dashboard-generation");
 ```
 
 The server exposes profiles allowed for the current user at `GET /api/reveal/ai/profiles`. The response includes profile names, display information, and default status—not the provider connection or model ID.
