@@ -47,8 +47,6 @@ Filter values are collected for individual fields. The SDK can include those val
 
 The data reflects the visualization's fields, filters, and aggregations. A visualization that exposes detail records can therefore supply detailed values rather than only totals. Analysis can perform calculations against the fetched data and send their results in later model calls. Formatting and sampling limits on an initial prompt do not bound all subsequent calculation output.
 
-Your application decides when to request Insights and which AI operations users can access. If your deployment must restrict analysis data, apply that restriction to chat analysis as well as to the Insights interface.
-
 ### Optional metadata enrichment
 
 AI-based semantic enrichment is disabled by default in the built-in metadata manager. Enabling `MetadataManagerOptions.EnableSemanticEnrichment` allows metadata generation to call the model to improve descriptions and aliases. Those calls can include actual sample field values.
