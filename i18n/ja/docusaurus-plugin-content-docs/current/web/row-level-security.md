@@ -15,31 +15,27 @@ import TabItem from '@theme/TabItem';
 
 ## 仕組み
 
-行フィルターは、[データ ソース プロバイダー](replacing-datasources.md)で設定します。データ ソース プロバイダーは、リクエストが読み取るすべてのデータ ソース項目に対して Reveal が呼び出すサーバー側のコールバックです。フィルターは、現在のリクエストの[ユーザー コンテキスト](user-context.md) (ユーザー ID、ロール、およびサインインしたユーザーについてサーバーが把握しているその他の値 (クレーム)) から作成されます。
+フィルターは、現在のリクエストの[ユーザー コンテキスト](user-context.md) (ユーザー ID、ロール、およびサインインしたユーザーについてサーバーが把握しているその他の値 (クレーム)) を使用して、[データ ソース プロバイダー](replacing-datasources.md)で設定します。
 
 - **フィルターはサーバー上に留まります。** フィルターがクライアントに送信されることはなく、クライアントが何を送信しても、フィルターを削除したり置き換えたりすることはできません。
-- **フィルターはすべての集計の前に実行されます。** データベースの場合、フィルターはクエリの `WHERE` 句の一部になります。合計、ピボットの総計、フィルター値のリスト、ブレンドされたデータは、ユーザーが参照できる行のみから計算されます。
+- **フィルターはすべての集計の前に実行されます。** ほとんどのデータベース項目では、フィルターはクエリの `WHERE` 句の一部になります。合計、ピボットの総計、フィルター値のリスト、ブレンドされたデータは、ユーザーが参照できる行のみから計算されます。
 - **値はクエリ パラメーターとして送信されます。** ユーザー コンテキストの値がクエリ テキストに連結されることはないため、値によってクエリが変更されることはありません。
 - **キャッシュはフィルターを考慮します。** 結果はフィルター値ごとにキャッシュされるため、あるユーザー向けに計算された結果が、フィルター値の異なるユーザーに提供されることはありません。
 - **フェールクローズで動作します。** 必要な値がないなど、フィルターを適用できない場合は、フィルターされていない行を返すのではなく、リクエストが失敗します。
 
-:::info 有効化は不要
-行レベル セキュリティは、Reveal SDK 2.3.0 以降ではデフォルトで有効になっています。機能フラグや設定、追加のパッケージは必要なく、行レベル セキュリティを実行する Engine2 エンジンもデフォルトで有効です。行レベル セキュリティはすべてサーバー上で構成します。JavaScript クライアントには行レベル セキュリティの API はなく、クライアント コードを変更する必要もありません。
-
-デフォルトで有効になっていても、既存のダッシュボードの動作は変わりません。行レベル セキュリティは行フィルターを指定したデータ ソース項目にのみ適用され、その他の項目はこれまでとまったく同じようにクエリされます。使用を開始するには、[行レベル セキュリティの設定](#行レベル-セキュリティの設定)で説明しているように、データ ソース プロバイダーで行フィルターを追加します。
-:::
-
 ### 要件
 
-- **Reveal SDK 2.3.0 以降。** 行レベル セキュリティは、バージョン 2.3.0 以降の ASP.NET、Java、Node.js サーバー SDK で使用できます。
+行レベル セキュリティは、バージョン 2.3.0 以降の ASP.NET、Java、Node.js サーバー SDK で使用できます。機能フラグや設定、追加のパッケージは必要なく、クライアント API もありません。行レベル セキュリティはすべてサーバー上で構成し、クライアント コードを変更する必要はありません。行レベル セキュリティは行フィルターを指定したデータ ソース項目にのみ適用され、その他の項目はこれまでとまったく同じようにクエリされます。
+
 - **Engine2。** 行フィルターは、Reveal のデータ処理エンジンである Engine2 によって適用されます。Engine2 はデフォルトで有効です (ASP.NET では `Engine2Enabled`、Java では `setEngine2Enabled`、Node.js では `engine2Enabled` オプション)。Engine2 が無効になっている場合、またはリクエストを Engine2 で実行できない場合、行フィルターを持つ項目を読み取るリクエストはすべて、"Row-level security is only available on Engine2, and this request cannot run on it" というエラーで失敗します。
 - **表形式のデータ ソース項目。** 行フィルターは、表形式のデータ ソース項目のプロパティです。対象となるのは、テーブル、ビュー、カスタム クエリ、ストアド プロシージャーなどのデータベース項目と、CSV、Excel、JSON のファイル項目です。
+- **サーバー側のデータ ソース。** サーバー側のデータ ソースが有効になっている場合 (`ServerSideDataSourcesEnabled`)、行フィルターはサポートされません。
 
 ## 行レベル セキュリティの設定
 
 **手順 1** - フィルターに必要な値をユーザー コンテキストに格納します。
 
-これらの値は、クライアントが送信する値からではなく、認証によってすでに確立されている ID から読み取ってください。ユーザー コンテキストの各プロパティは、フィルターが名前で読み取ることのできる値です。ロールは、定義済みの `Roles` プロパティに格納されます。
+これらの値は、認証によってすでに確立されている ID から読み取ってください。ユーザー コンテキストの各プロパティは、フィルターが名前で読み取ることのできる値です。ロールは、定義済みの `Roles` プロパティに格納されます。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -131,7 +127,7 @@ const userContextProvider = (request: IncomingMessage) => {
 
 **手順 2** - データ ソース プロバイダーで、データ ソース項目に行フィルターを設定します。
 
-プロバイダーが受け取るデータ ソース項目は、クライアントから送信されたものです。フィルターを設定する前に、データベース項目のテーブル、スキーマ、カスタム クエリ、ストアド プロシージャーなど、項目が読み取る内容を決定するすべてのプロパティを、サーバー側の値を使用して設定します。アプリケーションが提供しない項目に対しては、例外をスローしてください。`null` を返すと、項目はクライアントが送信したとおりのまま保持されます。
+プロバイダーが受け取るデータ ソース項目は、クライアントから送信されたものです。フィルターを設定する前に、データベース項目のテーブル、スキーマ、カスタム クエリ、ストアド プロシージャーなど、項目が読み取る内容を決定するすべてのプロパティを、サーバー側の値を使用して設定します。テーブル名やファイル パスなど、リクエストに含まれる値は、使用する前に独自の値にマッピングしてください。アプリケーションが提供しない項目に対しては、例外をスローしてください。`null` を返すと、項目はクライアントが送信したとおりのまま保持されます。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -163,11 +159,7 @@ public class DataSourceProvider : IRVDataSourceProvider
 
     public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
-        if (dataSource is RVSqlServerDataSource sqlServer)
-        {
-            sqlServer.Host = "your-server";
-            sqlServer.Database = "Sales";
-        }
+        // Set the host and database from your server's configuration
         return Task.FromResult(dataSource);
     }
 }
@@ -202,10 +194,7 @@ public class DataSourceProvider implements IRVDataSourceProvider {
     }
 
     public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-        if (dataSource instanceof RVSqlServerDataSource sqlServer) {
-            sqlServer.setHost("your-server");
-            sqlServer.setDatabase("Sales");
-        }
+        // Set the host and database from your server's configuration
         return dataSource;
     }
 }
@@ -239,10 +228,7 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
 };
 
 const dataSourceProvider = async (userContext, dataSource) => {
-  if (dataSource instanceof reveal.RVSqlServerDataSource) {
-    dataSource.host = "your-server";
-    dataSource.database = "Sales";
-  }
+  // Set the host and database from your server's configuration
   return dataSource;
 };
 ```
@@ -275,16 +261,15 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
 };
 
 const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-  if (dataSource instanceof RVSqlServerDataSource) {
-    dataSource.host = "your-server";
-    dataSource.database = "Sales";
-  }
+  // Set the host and database from your server's configuration
   return dataSource;
 };
 ```
 
   </TabItem>
 </Tabs>
+
+データ ソースを設定する方法の詳細については、[データ ソースの置き換え](replacing-datasources.md)を参照してください。
 
 **手順 3** - 両方のプロバイダーを Reveal SDK に登録します。
 
@@ -359,23 +344,64 @@ Java と Node.js では、名前は小文字で始まります (`fieldEqualsCont
   <TabItem value="aspnet" label="ASP.NET" default>
 
 ```cs
-// The row's OwnerId is the user's id
-RowFilter.FieldEqualsContext("OwnerId", "UserId");
-
-// The row's Region is one of the user's regions
-RowFilter.FieldInContext("Region", "regions");
-
-// Fixed values
-RowFilter.FieldEqualsValue("Status", "Active");
-RowFilter.FieldInValues("Country", "UY", "AR", "BR");
-
 // The user's tenant, and either one of the user's regions or a row the user owns
 RowFilter.All(
     RowFilter.FieldEqualsContext("TenantId", "tenant_id"),
     RowFilter.Any(
         RowFilter.FieldInContext("Region", "regions").WhenMissing(RowFilterMissing.DenyRows),
         RowFilter.FieldEqualsContext("OwnerId", "UserId")));
+```
 
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+// The user's tenant, and either one of the user's regions or a row the user owns
+RowFilter.all(
+    RowFilter.fieldEqualsContext("TenantId", "tenant_id"),
+    RowFilter.any(
+        RowFilter.fieldInContext("Region", "regions").whenMissing(RowFilterMissing.DENY_ROWS),
+        RowFilter.fieldEqualsContext("OwnerId", "UserId")));
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```js
+// The user's tenant, and either one of the user's regions or a row the user owns
+reveal.RowFilter.all(
+  reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id"),
+  reveal.RowFilter.any(
+    reveal.RowFilter.fieldInContext("Region", "regions").whenMissing(reveal.RowFilterMissing.DenyRows),
+    reveal.RowFilter.fieldEqualsContext("OwnerId", "UserId")));
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">
+
+```ts
+// The user's tenant, and either one of the user's regions or a row the user owns
+RowFilter.all(
+  RowFilter.fieldEqualsContext("TenantId", "tenant_id"),
+  RowFilter.any(
+    RowFilter.fieldInContext("Region", "regions").whenMissing(RowFilterMissing.DenyRows),
+    RowFilter.fieldEqualsContext("OwnerId", "UserId")));
+```
+
+  </TabItem>
+</Tabs>
+
+### 式フィルター
+
+式フィルターでは、[計算フィールド](../user/fields/calculated/overview.md)と同じ言語を使用します。各 `VARIABLE("name")` は、まず式自体のパラメーターから値を読み取り、次にユーザー コンテキストから読み取ります。ユーザー コンテキストでは、`UserId` はユーザー ID を表します。
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
 // An expression, with a value of its own
 RowFilter.Expression(
     "AND([TenantId] = VARIABLE(\"tenant_id\"), [Discount] < VARIABLE(\"max_discount\"))",
@@ -387,23 +413,6 @@ RowFilter.Expression(
   <TabItem value="java" label="Java">
 
 ```java
-// The row's OwnerId is the user's id
-RowFilter.fieldEqualsContext("OwnerId", "UserId");
-
-// The row's Region is one of the user's regions
-RowFilter.fieldInContext("Region", "regions");
-
-// Fixed values
-RowFilter.fieldEqualsValue("Status", "Active");
-RowFilter.fieldInValues("Country", "UY", "AR", "BR");
-
-// The user's tenant, and either one of the user's regions or a row the user owns
-RowFilter.all(
-    RowFilter.fieldEqualsContext("TenantId", "tenant_id"),
-    RowFilter.any(
-        RowFilter.fieldInContext("Region", "regions").whenMissing(RowFilterMissing.DENY_ROWS),
-        RowFilter.fieldEqualsContext("OwnerId", "UserId")));
-
 // An expression, with a value of its own
 RowFilter.expression(
     "AND([TenantId] = VARIABLE(\"tenant_id\"), [Discount] < VARIABLE(\"max_discount\"))",
@@ -415,23 +424,6 @@ RowFilter.expression(
   <TabItem value="node" label="Node.js">
 
 ```js
-// The row's OwnerId is the user's id
-reveal.RowFilter.fieldEqualsContext("OwnerId", "UserId");
-
-// The row's Region is one of the user's regions
-reveal.RowFilter.fieldInContext("Region", "regions");
-
-// Fixed values
-reveal.RowFilter.fieldEqualsValue("Status", "Active");
-reveal.RowFilter.fieldInValues("Country", "UY", "AR", "BR");
-
-// The user's tenant, and either one of the user's regions or a row the user owns
-reveal.RowFilter.all(
-  reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id"),
-  reveal.RowFilter.any(
-    reveal.RowFilter.fieldInContext("Region", "regions").whenMissing(reveal.RowFilterMissing.DenyRows),
-    reveal.RowFilter.fieldEqualsContext("OwnerId", "UserId")));
-
 // An expression, with a value of its own
 reveal.RowFilter.expression(
   'AND([TenantId] = VARIABLE("tenant_id"), [Discount] < VARIABLE("max_discount"))',
@@ -443,23 +435,6 @@ reveal.RowFilter.expression(
   <TabItem value="node-ts" label="Node.js - TS">
 
 ```ts
-// The row's OwnerId is the user's id
-RowFilter.fieldEqualsContext("OwnerId", "UserId");
-
-// The row's Region is one of the user's regions
-RowFilter.fieldInContext("Region", "regions");
-
-// Fixed values
-RowFilter.fieldEqualsValue("Status", "Active");
-RowFilter.fieldInValues("Country", "UY", "AR", "BR");
-
-// The user's tenant, and either one of the user's regions or a row the user owns
-RowFilter.all(
-  RowFilter.fieldEqualsContext("TenantId", "tenant_id"),
-  RowFilter.any(
-    RowFilter.fieldInContext("Region", "regions").whenMissing(RowFilterMissing.DenyRows),
-    RowFilter.fieldEqualsContext("OwnerId", "UserId")));
-
 // An expression, with a value of its own
 RowFilter.expression(
   'AND([TenantId] = VARIABLE("tenant_id"), [Discount] < VARIABLE("max_discount"))',
@@ -469,11 +444,7 @@ RowFilter.expression(
   </TabItem>
 </Tabs>
 
-フィルターは不変です。`ExemptRoles` と `WhenMissing` は新しいフィルターを返すため、フィルターを一度作成すれば、すべてのリクエストで再利用できます。
-
-### 式フィルター
-
-式フィルターでは、[計算フィールド](../user/fields/calculated/overview.md)と同じ言語を使用します。各 `VARIABLE("name")` は、まず式自体のパラメーターから値を読み取り、次にユーザー コンテキストから読み取ります。ユーザー コンテキストでは、`UserId` はユーザー ID を表します。以下の点に注意してください。
+以下の点に注意してください。
 
 - 値のない変数があると、リクエストは失敗します。他のフィルターとは異なり、式フィルターでは代わりに行を拒否することはできません。
 - 変数名の大文字と小文字は区別されます。また、`_ig_rv_` で始まる名前は予約されています。
@@ -481,9 +452,11 @@ RowFilter.expression(
 - 式フィルターを `All` や `Any` と組み合わせることはできません。代わりに、式の中で `AND` と `OR` を使用して条件を組み合わせてください。
 - `TODAY()` や `NOW()` などの時間関数はクライアントが送信するタイム ゾーンを使用するため、これらの関数で指定した境界は最大で 1 日ずれる可能性があります。代わりに、日付をパラメーターとして渡してください。
 
-## ロールの除外
+## ロールの除外と値がない場合の処理
 
-`ExemptRoles` は、指定したロールのいずれかを持つユーザーに対してフィルターを解除します。ロールはユーザー コンテキストの `Roles` プロパティから読み取られ、大文字と小文字を区別して比較されます。
+`ExemptRoles` は、指定したロールのいずれかを持つユーザーに対してフィルターを解除します。ロールはユーザー コンテキストの `Roles` プロパティから読み取られ、大文字と小文字を区別して比較されます。`Roles` プロパティには、文字列のコレクションを格納する必要があります。単一の文字列など、それ以外の値が格納されている場合、ロールを除外するフィルターによってリクエストが失敗します。
+
+デフォルトでは、現在のユーザーが持っていないユーザー コンテキストの値を読み取るフィルターは、リクエストを**拒否**します。この場合、表示形式にはデータではなくエラーが表示されます。代わりに行を表示しないようにするには、`WhenMissing` に `DenyRows` を指定します。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -491,6 +464,8 @@ RowFilter.expression(
 ```cs
 // Administrators and auditors see every tenant
 RowFilter.FieldEqualsContext("TenantId", "tenant_id").ExemptRoles("admin", "auditor");
+
+RowFilter.FieldEqualsContext("TenantId", "tenant_id").WhenMissing(RowFilterMissing.DenyRows);
 ```
 
   </TabItem>
@@ -500,6 +475,8 @@ RowFilter.FieldEqualsContext("TenantId", "tenant_id").ExemptRoles("admin", "audi
 ```java
 // Administrators and auditors see every tenant
 RowFilter.fieldEqualsContext("TenantId", "tenant_id").exemptRoles("admin", "auditor");
+
+RowFilter.fieldEqualsContext("TenantId", "tenant_id").whenMissing(RowFilterMissing.DENY_ROWS);
 ```
 
   </TabItem>
@@ -509,6 +486,8 @@ RowFilter.fieldEqualsContext("TenantId", "tenant_id").exemptRoles("admin", "audi
 ```js
 // Administrators and auditors see every tenant
 reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id").exemptRoles("admin", "auditor");
+
+reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id").whenMissing(reveal.RowFilterMissing.DenyRows);
 ```
 
   </TabItem>
@@ -518,45 +497,7 @@ reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id").exemptRoles("admin"
 ```ts
 // Administrators and auditors see every tenant
 RowFilter.fieldEqualsContext("TenantId", "tenant_id").exemptRoles("admin", "auditor");
-```
 
-  </TabItem>
-</Tabs>
-
-`Roles` プロパティには、文字列のコレクションを格納する必要があります。単一の文字列など、それ以外の値が格納されている場合、ロールを除外するフィルターによってリクエストが失敗します。
-
-## ユーザー コンテキストの値がない場合
-
-デフォルトでは、現在のユーザーが持っていないユーザー コンテキストの値を読み取るフィルターは、リクエストを**拒否**します。この場合、表示形式にはデータではなくエラーが表示されます。代わりに行を表示しないようにするには、`WhenMissing` に `DenyRows` を指定します。
-
-<Tabs groupId="code" queryString>
-  <TabItem value="aspnet" label="ASP.NET" default>
-
-```cs
-RowFilter.FieldEqualsContext("TenantId", "tenant_id").WhenMissing(RowFilterMissing.DenyRows);
-```
-
-  </TabItem>
-
-  <TabItem value="java" label="Java">
-
-```java
-RowFilter.fieldEqualsContext("TenantId", "tenant_id").whenMissing(RowFilterMissing.DENY_ROWS);
-```
-
-  </TabItem>
-
-  <TabItem value="node" label="Node.js">
-
-```js
-reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id").whenMissing(reveal.RowFilterMissing.DenyRows);
-```
-
-  </TabItem>
-
-  <TabItem value="node-ts" label="Node.js - TS">
-
-```ts
 RowFilter.fieldEqualsContext("TenantId", "tenant_id").whenMissing(RowFilterMissing.DenyRows);
 ```
 
@@ -569,11 +510,13 @@ RowFilter.fieldEqualsContext("TenantId", "tenant_id").whenMissing(RowFilterMissi
 - 空の文字列は値であり、値がないものとは見なされません。`tenant_id` が `""` のユーザーには、`TenantId` が空の行が表示されます。値を持たないユーザーについては、プロパティを省略してください。
 - `Any` の中では、`DenyRows` を指定したフィルターはその行を許可しないだけで、他のフィルターは引き続き適用されます。前述の例で、リージョンを持たないユーザーでも自分が所有する行を参照できるのは、このためです。
 
+フィルターは不変です。`ExemptRoles` と `WhenMissing` は新しいフィルターを返すため、フィルターを一度作成すれば、すべてのリクエストで再利用できます。
+
 ## ファイル データ ソースの保護
 
-CSV、Excel、JSON のデータ ソース項目は、ローカル ファイル項目などの**リソース項目**を介してファイルを読み取ります。CSV 項目の行フィルターではファイル自体は保護されないため、リソース項目にも `RawAccessForbidden` を設定する必要があります。これにより、Reveal はファイルのダウンロードや JSON 構造の参照など、ファイルをそのまま読み取るリクエストをすべて拒否し、フィルターされた項目を介してのみファイルを読み取ります。行フィルターを持つ項目のリソース項目に `RawAccessForbidden` が設定されていない場合、その項目へのリクエストは失敗します。
+CSV、Excel、JSON の項目は、ローカル ファイル項目などの**リソース項目**を介してファイルを読み取ります。行フィルターは、リソース項目ではなく、ファイルを読み取る項目に設定します。フィルターではファイル自体は保護されないため、リソース項目にも `RawAccessForbidden` を設定する必要があります。これにより、Reveal はフィルターされた項目を介してのみファイルを読み取り、ファイルのダウンロードや JSON 構造の参照など、ファイルをそのまま読み取るリクエストをすべて拒否します。行フィルターを持つ項目のリソース項目に `RawAccessForbidden` が設定されていない場合、その項目へのリクエストは失敗します。
 
-フィルターは、リソース項目ではなく、ファイルを読み取る項目に設定します。プロバイダーはリソース項目を、単独で受け取る場合と、それを読み取る項目の中に含まれた状態で受け取る場合があります。以下のように、リソース項目に対してプロバイダーを呼び出して、どちらの場合も同じように処理してください。
+プロバイダーはリソース項目を、単独で受け取る場合と、それを読み取る項目の中に含まれた状態で受け取る場合があります。以下のように、リソース項目に対してプロバイダーを呼び出して、どちらの場合も同じように処理してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -665,26 +608,24 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
   </TabItem>
 </Tabs>
 
-Excel 項目の場合はシートと範囲を、JSON 項目の場合は列の構成も、サーバー上で設定してください。データベース項目のテーブルと同様に、これらの設定によって、フィールド名がどの列を指すかが決まります。
+Excel 項目のシートと範囲、JSON 項目の列の構成も、サーバー上で設定してください。データベース項目のテーブルと同様に、これらの設定によって、フィールド名がどの列を指すかが決まります。
 
 ## サーバーでのダッシュボードのエクスポート
 
-[サーバーでダッシュボードをエクスポートする](server-export.md)場合は、[ユーザー コンテキストの提供](server-export.md#ユーザー-コンテキストの提供)で説明しているように、エクスポート メソッドにユーザー コンテキストを渡します。これにより、エクスポートにはそのユーザーが参照するのと同じ行が含まれます。ユーザー コンテキストを渡さない場合、フィルターがユーザー コンテキストから読み取る値はすべてないものと見なされます。その結果、エクスポートは失敗するか、`DenyRows` を使用するフィルターの場合は行が含まれません。
+[サーバーでダッシュボードをエクスポートする](server-export.md)場合は、[ユーザー コンテキストの提供](server-export.md#ユーザー-コンテキストの提供)で説明しているように、エクスポート メソッドにユーザー コンテキストを渡して、エクスポートにそのユーザーが参照する行が含まれるようにします。ユーザー コンテキストを渡さない場合、ユーザー コンテキストの値はすべてないものと見なされ、エクスポートは失敗するか、`DenyRows` を使用するフィルターの場合は行が含まれません。
 
 ## ベスト プラクティス
 
-- **すべてをサーバー上で決定します。** 項目が読み取る内容を決定するプロパティを設定し、提供しない項目に対しては例外をスローします。テーブル名やファイル パスなど、リクエストに含まれる値は、まず独自の値にマッピングしてから判断に使用してください。
 - **値の型を列の型に合わせます。** テキスト列には文字列を、数値列には数値をユーザー コンテキストに格納します。型の異なる値はどの行とも一致しない可能性があり、変換に失敗すると、ユーザーが参照できない行の値を含むデータベース エラーが発生する可能性があります。
 - **データベースでの値の比較方法を把握します。** フィルターは、データ ソースの規則に従ってデータ ソース内で値を比較します。SQL Server と MySQL のデフォルトの照合順序では、`'acme'` は `'ACME'` や `'acme '` とも一致します。ファイル データ ソースでは、値は完全一致で比較されます。大文字と小文字や末尾のスペースのみが異なるキーは使用しないでください。
 - **値のリストを短く保ちます。** `FieldInContext` と `FieldInValues` は、値が約 1,000 個を超えると失敗する可能性があり、SQL Server では 1 つのクエリで使用できるパラメーターは最大 2,100 個です。大規模な権限リストの場合は、代わりに行をグループ化する列でフィルターするか、データを権限テーブルと結合するビューを公開し、そのビューを `UserId` でフィルターしてください。
-- **データ ソース プロバイダーを高速に保ちます。** データ ソース プロバイダーは、すべてのデータ リクエストで実行されます。ユーザーの権限など、プロバイダーで必要な検索結果はキャッシュしてください。
+- **データ ソース プロバイダーを高速に保ちます。** データ ソース プロバイダーはすべてのデータ リクエストで実行されるため、ユーザーの権限などの検索結果はキャッシュしてください。
 
 ## 制限事項
 
 - **計算フィールド。** フィルターは物理フィールドのみを読み取ります。フィルターが読み取るフィールドと同じ名前の計算フィールドを宣言するリクエストは拒否されるため、そのような計算フィールドの名前を変更してください。
-- **スキーマの変更。** Reveal は、フィルターされた項目を読み取るすべてのリクエストをデータ ソースのスキーマと照合し、そのスキーマをサーバー上にキャッシュします。フィルター対象の列のデータ型が変更された場合、サーバーのキャッシュされたスキーマがクリアされ (サーバーの再起動など)、変更前に保存されたダッシュボードが更新されるまで、それらのリクエストは失敗します。ダッシュボードを更新するには、ダッシュボード エディターでデータ ソースのフィールドを更新してから、ダッシュボードを保存します。ダッシュボードの保存後にデータ ソースに追加されたフィルター対象の列については、変更は必要ありません。
+- **スキーマの変更。** Reveal は、フィルターされた項目を読み取るリクエストを、サーバー上にキャッシュしたスキーマと照合します。フィルター対象の列のデータ型が変更された場合、キャッシュされたスキーマをクリアし (サーバーの再起動など)、さらに変更前に保存されたダッシュボードでダッシュボード エディターからデータ ソースのフィールドを更新して保存するまで、それらのリクエストは失敗します。ダッシュボードの保存後に追加されたフィルター対象の列については、変更は必要ありません。
 - **ストアド プロシージャー。** ストアド プロシージャーが返す行は、データベースではなく、プロシージャーの実行後に Reveal によってフィルターされます。プロシージャーが多数の行を返す場合は、ユーザーの値をプロシージャーのパラメーターとしても渡してください。
-- **サーバー側のデータ ソース。** サーバー側のデータ ソースが有効になっている場合 (`ServerSideDataSourcesEnabled`)、行フィルターはサポートされません。
 
 ## 関連トピック
 
