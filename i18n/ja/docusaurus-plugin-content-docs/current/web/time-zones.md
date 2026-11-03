@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # タイムゾーン
 
-Reveal SDK はデフォルトで、**今日**や**今月**などの相対日付フィルター、日付ピッカー、および `currentTimeZone()` 関数にブラウザーのタイムゾーンを使用します。ユーザーが異なるタイムゾーンでダッシュボードを表示する必要がある場合 (たとえば、プロファイル上はニューヨークで勤務しているものの、ノート PC がロンドンに設定されているユーザーの場合)、`RevealSdkSettings.timeZone` を設定します。Reveal はブラウザーのタイムゾーンの代わりにそのタイムゾーンを使用し、すべての DateTime 値をそのタイムゾーンに変換して、すでに開いているダッシュボードを再読み込みします。
+Reveal SDK はデフォルトで、**今日**や**今月**などの相対日付フィルター、日付ピッカー、および `currentTimeZone()` 関数にブラウザーのタイムゾーンを使用します。別のタイムゾーンでダッシュボードを表示するには (たとえば、ノート PC がロンドンに設定されているニューヨーク勤務のユーザー向け)、`RevealSdkSettings.timeZone` を設定します。Reveal はそのタイムゾーンを使用し、すべての DateTime 値をそのタイムゾーンに変換します。
 
-Reveal にはタイムゾーン ピッカーは含まれていません。[言語](localizing.md)と同様に、アプリケーションが UI を提供し、SDK を通じてタイムゾーンを設定します。
+Reveal にはタイムゾーン ピッカーは含まれていません。[言語](localizing.md)と同様に、UI はアプリケーションが提供します。
 
 :::info
 
-タイムゾーン API は Reveal SDK 2.3.0 以降で利用できます。変換はサーバーで行われるため、クライアントとサーバーの両方で 2.3.0 以降を使用してください。
+変換はサーバーで行われるため、タイムゾーン API を使用するには、クライアントとサーバーの両方で Reveal SDK 2.3.0 以降が必要です。
 
 :::
 
@@ -33,9 +33,9 @@ RevealSdkSettings.timeZone = "Europe/Madrid";
 RevealSdkSettings.timeZone = null;
 ```
 
-`RevealView` を作成する前に設定することも、ダッシュボードを開いている間にいつでも設定することもできます ([開いているダッシュボードでのタイムゾーンの切り替え](#switching-the-time-zone-on-an-open-dashboard)を参照してください)。
+`RevealView` を作成する前に設定することも、ダッシュボードを開いている間にいつでも設定することもできます ([開いているダッシュボードでのタイムゾーンの切り替え](#switching-the-time-zone-on-an-open-dashboard)を参照してください)。タイムゾーンはグローバルな設定です。ページ上のすべての `RevealView` が同じタイムゾーンを使用します。
 
-設定した値によって、使用されるタイムゾーンと、DateTime 値をそのタイムゾーンに変換するかどうかの 2 点が決まります。
+設定した値によって、タイムゾーンと DateTime 値を変換するかどうかが決まります。
 
 | 値 | 使用されるタイムゾーン | DateTime 値の変換 |
 |---|---|---|
@@ -43,36 +43,15 @@ RevealSdkSettings.timeZone = null;
 | `RVTimeZone.Browser` | ブラウザーのタイムゾーン | あり (ブラウザーのタイムゾーンに変換) |
 | `RVTimeZone` のメンバーまたは IANA 名 | 指定したタイムゾーン | あり (指定したタイムゾーンに変換) |
 
-`RVTimeZone.Browser` は、「日付を自分のタイムゾーンで表示する」ためのオプションです。ブラウザーのタイムゾーンを維持したまま、変換を有効にします。
+日付をユーザー自身のタイムゾーンで表示するには、`RVTimeZone.Browser` を使用します。使用中のタイムゾーンを取得するには、`RevealSdkSettings.getCurrentTimeZone()` を呼び出します。
 
-`RevealSdkSettings.timeZone` を読み取ると、設定した値 (タイムゾーン名、`RVTimeZone.Browser`、または `null`) が返されます。名前はブラウザーの表記で返されるため、名前が変更されたタイムゾーンでは古い表記になる場合があります (たとえば、`Asia/Kolkata` が `Asia/Calcutta` として返されます)。どの方法で選択されたかにかかわらず、使用中のタイムゾーンを取得するには `RevealSdkSettings.getCurrentTimeZone()` を呼び出します。
-
-```js
-RevealSdkSettings.timeZone = RVTimeZone.Browser;
-console.log(RevealSdkSettings.timeZone);              // "Browser"
-console.log(RevealSdkSettings.getCurrentTimeZone());  // the browser's time zone, e.g. "Europe/London"
-```
-
-タイムゾーンはクライアントで設定します。クライアントがすべてのデータ リクエストとともにタイムゾーンを送信するため、サーバー SDK (ASP.NET、Java、Node.js) ではタイムゾーン用のコードは必要ありません。サーバー側で独自のタイムゾーンを指定するのは[エクスポート](#exports)のみです。
+クライアントがすべてのデータ リクエストとともにタイムゾーンを送信するため、サーバー SDK (ASP.NET、Java、Node.js) ではタイムゾーン用のコードは必要ありません。独自のタイムゾーンを指定するのは[サーバー側のエクスポート](#exports)のみです。
 
 ## タイムゾーン リストの作成 {#building-the-list-of-time-zones}
 
-`RVTimeZone` には、よく使用される 139 のタイムゾーン (UTC オフセットと夏時間ルールの組み合わせごとに 1 つ) と `Browser` が含まれています。これは Windows で使用されているものと同じセットを IANA 名に対応付けたものであるため、すべてのメンバーがブラウザーとサーバーの両方で受け入れられます。`Etc/GMT` のメンバーは、IANA の定義どおり符号が反転した固定オフセットです。たとえば、`Etc/GMT+8` は UTC−8 を表します。
-
-```js
-const select = document.getElementById("timeZone");
-for (const zone of Object.values(RVTimeZone)) {
-    if (zone !== RVTimeZone.Browser) {
-        select.add(new Option(zone.replace(/_/g, " "), zone));
-    }
-}
-```
+`RVTimeZone` には、よく使用される 139 のタイムゾーン (UTC オフセットと夏時間ルールの組み合わせごとに 1 つ) と `Browser` が含まれています。すべてのメンバーは、ブラウザーとサーバーの両方で受け入れられる IANA 名です。`Etc/GMT` のメンバーは、IANA の定義どおり符号が反転した固定オフセットです。たとえば、`Etc/GMT+8` は UTC−8 を表します。[このトピックの最後にある例](#example-letting-users-pick-their-time-zone)では、これらのメンバーをセレクターに追加します。
 
 ブラウザーが認識するすべてのタイムゾーンを選択肢として提供するには、代わりに `Intl.supportedValuesOf("timeZone")` を使用します。
-
-[このトピックの最後にある例](#example-letting-users-pick-their-time-zone)では、ダッシュボードの上にあるセレクターにリストを表示し、その横に使用中のタイムゾーンを表示します。
-
-![](images/time-zones-picker.jpg)
 
 ## 無効なタイムゾーン名の処理 {#handling-invalid-time-zone-names}
 
@@ -86,7 +65,7 @@ try {
 }
 ```
 
-例では、保存された名前が無効になっている場合、セレクターの横にエラーが表示され、ダッシュボードはブラウザーのタイムゾーンで読み込まれます。
+[例](#example-letting-users-pick-their-time-zone)では、保存された名前が無効になっている場合、セレクターの横にエラーが表示されます。
 
 ![](images/time-zones-invalid.jpg)
 
@@ -94,13 +73,13 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 ## 開いているダッシュボードでのタイムゾーンの切り替え {#switching-the-time-zone-on-an-open-dashboard}
 
-ダッシュボードの表示中に `RevealSdkSettings.timeZone` を設定すると、そのデータがその場で再読み込みされます。ほかのメソッドを呼び出す必要はありません。ダッシュボードは再構築されないため、ユーザーの次の状態は維持されます。
+ダッシュボードの表示中に `RevealSdkSettings.timeZone` を設定すると、そのデータがその場で再読み込みされます。ダッシュボードは再構築されないため、ユーザーの次の状態は維持されます。
 
 - フィルターの選択
 - 最大化された表示形式
 - ドリルダウンのレベルとスクロール位置
 
-相対日付フィルターは新しいタイムゾーンに合わせて移動し (**今日**はそのタイムゾーンでの今日になります)、開いているポップアップは閉じます。ページ上のすべての `RevealView` が再読み込みされます。すでに使用中の値を設定した場合は、何も再読み込みされません。
+相対日付フィルターは新しいタイムゾーンに合わせて移動し (**今日**はそのタイムゾーンでの今日になります)、開いているポップアップは閉じます。すでに使用中の値を設定した場合は、何も再読み込みされません。
 
 次の例では、`Asia/Tokyo` に切り替える前に **Region** フィルターを **Americas** に設定しています。フィルターは維持され、注文時刻のみが変わります。
 
@@ -112,9 +91,8 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 - **タイムゾーンを持たない値は UTC として扱われます。** SQL Server の `datetimeoffset` や Oracle の `TIMESTAMP WITH TIME ZONE` など、独自のオフセットを持つ値は、最初に UTC に正規化されます。
 - **変換されるのは DateTime フィールドのみです。** 同じ行の DateTime が別の日に移動した場合でも、Date フィールドと Time フィールドがずれることはありません。
-- **グループ化はタイムゾーンに従います。** 日、週、月によるグループ化には変換後の値が使用されるため、UTC で 1 月 31 日 23:30 の売上は、東京では 2 月 1 日として集計されます。
-- **計算フィールドは 1 回だけ変換されます。** 計算フィールドは変換済みのフィールドを読み取るため、再度変換されることはありません。
-- **`applyTimeZone()` は値を再度変換します。** 変換済みのフィールドに `applyTimeZone()` 数式を適用すると、値がもう一度シフトされます。[既存のダッシュボードのアップグレード](#upgrading-existing-dashboards)を参照してください。
+- **グループ化はタイムゾーンに従います。** 日、週、月によるグループ化には変換後の値が使用されます。
+- **計算フィールドは 1 回だけ変換されます。** 計算フィールドは変換済みのフィールドを読み取るため、再度変換されることはありません。`applyTimeZone()` を呼び出す数式は、値をもう一度変換します ([既存のダッシュボードのアップグレード](#upgrading-existing-dashboards)を参照してください)。
 
 たとえば、`2024-01-31 23:30` として保存されている `OrderDate` DateTime フィールドと、`2024-02-02` として保存されている `ShipDate` Date フィールドを持つ注文の場合:
 
@@ -124,7 +102,7 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 | `RVTimeZone.AmericaNewYork` | 2024-01-31 18:30 | 2024-02-02 |
 | `RVTimeZone.AsiaTokyo` | 2024-02-01 08:30 | 2024-02-02 |
 
-以下のダッシュボードには、1 月 31 日から 2 月 1 日にかけて、UTC の午前 0 時前後に発生した 12 件の注文が含まれています。タイムゾーンを設定せず、ブラウザーがロンドンにある状態では、**Sales by Day** は注文を 2 日に分けてグループ化します。
+以下のダッシュボードには、1 月 31 日から 2 月 1 日にかけて、UTC の午前 0 時前後に発生した 12 件の注文が含まれています。タイムゾーンを設定しない場合、**Sales by Day** は注文を 2 日に分けてグループ化します。
 
 ![](images/time-zones-no-override.jpg)
 
@@ -193,12 +171,13 @@ const stream = await revealServer.exporter.exportPdf(dashboardName, null, option
 
 ## 既存のダッシュボードのアップグレード {#upgrading-existing-dashboards}
 
-- **手動で変換を行っていた `applyTimeZone()` 数式を削除してください。** `applyTimeZone([OrderDate], currentTimeZone())` などの計算フィールドを使用してローカル時刻を表示していたダッシュボードでは、タイムゾーンが設定されている間は `OrderDate` がすでに変換された状態で取得されるため、数式によって値が 2 回変換されます。`[OrderDate]` を直接使用してください。`applyTimeZone([OrderDate], "Europe/Madrid")` のように固定のタイムゾーンを指定した数式も同様です。`RevealSdkSettings.timeZone` が `null` の間は、ダッシュボードは従来どおり動作します。
-- **`DisplayInLocalTimeZone` は削除されました。** このフィールド設定には効果がありませんでした。この設定を含むダッシュボードも引き続き読み込まれます。
+`applyTimeZone([OrderDate], currentTimeZone())` や `applyTimeZone([OrderDate], "Europe/Madrid")` など、手動で変換を行っていた `applyTimeZone()` 数式を削除し、`[OrderDate]` を直接使用してください。タイムゾーンが設定されている間は `OrderDate` がすでに変換されているため、これらの数式によって値が 2 回変換されます。`RevealSdkSettings.timeZone` が `null` の間は、ダッシュボードは従来どおり動作します。
 
 ## 例: ユーザーによるタイムゾーンの選択 {#example-letting-users-pick-their-time-zone}
 
-この例では、ダッシュボードの横にタイムゾーン セレクターを追加し、使用中のタイムゾーンを表示して、ユーザーの選択を記憶し、フィルターを失うことなく開いているダッシュボードのタイムゾーンを切り替えます。このトピックのスクリーンショットは、この例を使用して撮影したものです。
+この例では、ダッシュボードの横にタイムゾーン セレクターを追加し、使用中のタイムゾーンを表示して、ユーザーの選択を記憶し、フィルターを失うことなく開いているダッシュボードのタイムゾーンを切り替えます。
+
+![](images/time-zones-picker.jpg)
 
 **手順 1** - セレクター、使用中のタイムゾーンを表示するラベル、およびエラーを表示する場所を追加します。
 
@@ -257,10 +236,4 @@ RVDashboard.loadDashboard("Sales").then(dashboard => {
 });
 ```
 
-この例では選択を `localStorage` に保存するため、ユーザーの選択は同じブラウザーでのみ引き継がれます。デバイス間で選択を引き継ぐには、アプリケーションのユーザー プロファイルに保存し、`RevealView` を作成する前にそこから読み取ります。保存された名前が無効になっている場合は、`setTimeZone` がエラーを表示し、ダッシュボードはブラウザーのタイムゾーンで読み込まれます。
-
-## 制限事項 {#limitations}
-
-- IANA タイムゾーン名を使用してください。`+05:30` などのオフセット文字列はサーバーで失敗します。
-- 変換は[上記のデータ ソース](#supported-data-sources)でのみサポートされます。
-- タイムゾーンはグローバルな設定です。ページ上のすべての `RevealView` が同じタイムゾーンを使用します。
+デバイス間で選択を引き継ぐには、`localStorage` の代わりにアプリケーションのユーザー プロファイルに保存し、`RevealView` を作成する前にそこから読み取ります。

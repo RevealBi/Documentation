@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Time Zones
 
-By default, the Reveal SDK uses the browser's time zone for relative date filters such as **Today** or **This Month**, for the date pickers, and for the `currentTimeZone()` function. When your users need to see dashboards in a different time zone, for example a user whose profile says they work in New York while their laptop is set to London, set `RevealSdkSettings.timeZone`. Reveal then uses that time zone instead of the browser's, converts every DateTime value to it, and reloads any dashboard that is already open.
+By default, the Reveal SDK uses the browser's time zone for relative date filters such as **Today** or **This Month**, for the date pickers, and for the `currentTimeZone()` function. To show dashboards in another time zone, for example to a user who works in New York on a laptop set to London, set `RevealSdkSettings.timeZone`. Reveal then uses that time zone and converts every DateTime value to it.
 
-Reveal doesn't include a time zone picker. As with the [language](localizing.md), your application provides the UI and sets the time zone through the SDK.
+Reveal doesn't include a time zone picker: as with the [language](localizing.md), your application provides the UI.
 
 :::info
 
-The time zone API is available in Reveal SDK 2.3.0 and later. Use 2.3.0 or later on both the client and the server: the conversion happens on the server.
+The time zone API requires Reveal SDK 2.3.0 or later on both the client and the server, because the conversion happens on the server.
 
 :::
 
@@ -33,9 +33,9 @@ RevealSdkSettings.timeZone = "Europe/Madrid";
 RevealSdkSettings.timeZone = null;
 ```
 
-You can set it before creating the `RevealView`, or at any time while a dashboard is open (see [Switching the Time Zone on an Open Dashboard](#switching-the-time-zone-on-an-open-dashboard)).
+You can set it before creating the `RevealView`, or at any time while a dashboard is open (see [Switching the Time Zone on an Open Dashboard](#switching-the-time-zone-on-an-open-dashboard)). The time zone is global: every `RevealView` on the page uses the same one.
 
-The value you set decides two things: which time zone Reveal uses, and whether DateTime values are converted to it.
+The value decides both the time zone and whether DateTime values are converted:
 
 | Value | Time zone used | DateTime values converted |
 |---|---|---|
@@ -43,36 +43,15 @@ The value you set decides two things: which time zone Reveal uses, and whether D
 | `RVTimeZone.Browser` | The browser's | Yes, to the browser's time zone |
 | An `RVTimeZone` member or an IANA name | That time zone | Yes, to that time zone |
 
-`RVTimeZone.Browser` is the option for "show dates in my own time zone": it keeps the browser's time zone and turns the conversion on.
+Use `RVTimeZone.Browser` to show dates in the user's own time zone. To get the time zone in use, call `RevealSdkSettings.getCurrentTimeZone()`.
 
-Reading `RevealSdkSettings.timeZone` returns the value you set: the time zone name, `RVTimeZone.Browser`, or `null`. The name comes back as the browser spells it, which can be an older spelling of a renamed zone (for example `Asia/Calcutta` for `Asia/Kolkata`). To get the time zone in use, whichever way it was chosen, call `RevealSdkSettings.getCurrentTimeZone()`.
-
-```js
-RevealSdkSettings.timeZone = RVTimeZone.Browser;
-console.log(RevealSdkSettings.timeZone);              // "Browser"
-console.log(RevealSdkSettings.getCurrentTimeZone());  // the browser's time zone, e.g. "Europe/London"
-```
-
-The time zone is set on the client. The server SDKs (ASP.NET, Java and Node.js) need no code for it: the client sends the time zone with every data request. On the server, only [exports](#exports) take a time zone of their own.
+The server SDKs (ASP.NET, Java and Node.js) need no code for this: the client sends the time zone with every data request. Only [server-side exports](#exports) take a time zone of their own.
 
 ## Building the List of Time Zones
 
-`RVTimeZone` lists the 139 most used time zones, one for each distinct UTC offset and daylight saving rule, plus `Browser`. It's the same set Windows uses, mapped to IANA names, so every member is accepted by the browser and by the server. The `Etc/GMT` members are fixed offsets with the sign inverted, as IANA defines them: `Etc/GMT+8` is UTC−8.
-
-```js
-const select = document.getElementById("timeZone");
-for (const zone of Object.values(RVTimeZone)) {
-    if (zone !== RVTimeZone.Browser) {
-        select.add(new Option(zone.replace(/_/g, " "), zone));
-    }
-}
-```
+`RVTimeZone` lists the 139 most used time zones, one for each distinct UTC offset and daylight saving rule, plus `Browser`. Every member is an IANA name accepted by both the browser and the server. The `Etc/GMT` members are fixed offsets with the sign inverted, as IANA defines them: `Etc/GMT+8` is UTC−8. The [example at the end of this topic](#example-letting-users-pick-their-time-zone) fills a selector with these members.
 
 To offer every time zone the browser knows, use `Intl.supportedValuesOf("timeZone")` instead.
-
-The [example at the end of this topic](#example-letting-users-pick-their-time-zone) puts the list in a selector above the dashboard, with the time zone in use next to it:
-
-![](images/time-zones-picker.jpg)
 
 ## Handling Invalid Time Zone Names
 
@@ -86,7 +65,7 @@ try {
 }
 ```
 
-In the example, a saved name that is no longer valid shows the error next to the selector, and the dashboard loads in the browser's time zone:
+In the [example](#example-letting-users-pick-their-time-zone), a saved name that is no longer valid shows the error next to the selector:
 
 ![](images/time-zones-invalid.jpg)
 
@@ -94,13 +73,13 @@ Use IANA names only. Windows names such as `Pacific Standard Time` are rejected.
 
 ## Switching the Time Zone on an Open Dashboard
 
-Setting `RevealSdkSettings.timeZone` while a dashboard is displayed reloads its data in place. You don't need to call anything else. The dashboard isn't rebuilt, so the user keeps:
+Setting `RevealSdkSettings.timeZone` while a dashboard is displayed reloads its data in place. The dashboard isn't rebuilt, so the user keeps:
 
 - their filter selections
 - the maximized visualization
 - drill-down levels and scroll positions
 
-Relative date filters move to the new time zone (**Today** becomes today in that zone), and open popups close. Every `RevealView` on the page reloads. Setting the value that is already in use reloads nothing.
+Relative date filters move to the new time zone (**Today** becomes today in that zone), and open popups close. Setting the value that is already in use reloads nothing.
 
 Here the **Region** filter was set to **Americas** before switching to `Asia/Tokyo`. The filter is kept, and only the order times change:
 
@@ -112,9 +91,8 @@ While a time zone is set, the server converts every DateTime field to it before 
 
 - **Values without a time zone are treated as UTC.** Values that carry their own offset, such as SQL Server `datetimeoffset` or Oracle `TIMESTAMP WITH TIME ZONE`, are normalized to UTC first.
 - **Only DateTime fields are converted.** Date and Time fields are never shifted, even when the DateTime on the same row moves to another day.
-- **Grouping follows the time zone.** Grouping by day, week or month uses the converted values, so a sale at 23:30 UTC on January 31 counts toward February 1 in Tokyo.
-- **Calculated fields are converted once.** They read fields that are already converted, so they aren't converted again.
-- **`applyTimeZone()` converts again.** An `applyTimeZone()` formula over a converted field shifts it a second time. See [Upgrading Existing Dashboards](#upgrading-existing-dashboards).
+- **Grouping follows the time zone.** Grouping by day, week or month uses the converted values.
+- **Calculated fields are converted once.** They read fields that are already converted, so they aren't converted again. A formula that calls `applyTimeZone()` converts a second time (see [Upgrading Existing Dashboards](#upgrading-existing-dashboards)).
 
 For example, take an order with an `OrderDate` DateTime field stored as `2024-01-31 23:30` and a `ShipDate` Date field stored as `2024-02-02`:
 
@@ -124,7 +102,7 @@ For example, take an order with an `OrderDate` DateTime field stored as `2024-01
 | `RVTimeZone.AmericaNewYork` | 2024-01-31 18:30 | 2024-02-02 |
 | `RVTimeZone.AsiaTokyo` | 2024-02-01 08:30 | 2024-02-02 |
 
-The dashboard below holds twelve orders placed around midnight UTC between January 31 and February 1. With no time zone set, the browser is in London, and **Sales by Day** groups the orders into two days:
+The dashboard below holds twelve orders placed around midnight UTC between January 31 and February 1. With no time zone set, **Sales by Day** groups them into two days:
 
 ![](images/time-zones-no-override.jpg)
 
@@ -193,12 +171,13 @@ The same property is available on the Excel and PowerPoint export options. To ex
 
 ## Upgrading Existing Dashboards
 
-- **Remove `applyTimeZone()` formulas that did the conversion by hand.** A dashboard that used a calculated field such as `applyTimeZone([OrderDate], currentTimeZone())` to show local times now gets `OrderDate` already converted while a time zone is set, so the formula converts it twice. Use `[OrderDate]` directly. The same applies to formulas with a fixed zone, such as `applyTimeZone([OrderDate], "Europe/Madrid")`. Dashboards keep working as before while `RevealSdkSettings.timeZone` is `null`.
-- **`DisplayInLocalTimeZone` has been removed.** This field setting had no effect. Dashboards that contain it still load.
+Remove `applyTimeZone()` formulas that did the conversion by hand, such as `applyTimeZone([OrderDate], currentTimeZone())` or `applyTimeZone([OrderDate], "Europe/Madrid")`, and use `[OrderDate]` directly. While a time zone is set, `OrderDate` is already converted, so these formulas convert it twice. Dashboards keep working as before while `RevealSdkSettings.timeZone` is `null`.
 
 ## Example: Letting Users Pick Their Time Zone
 
-This example adds a time zone selector next to the dashboard, shows the time zone in use, remembers the user's choice, and switches the open dashboard without losing its filters. The screenshots in this topic were taken with it.
+This example adds a time zone selector next to the dashboard, shows the time zone in use, remembers the user's choice, and switches the open dashboard without losing its filters:
+
+![](images/time-zones-picker.jpg)
 
 **Step 1** - Add the selector, a label for the time zone in use, and a place for errors.
 
@@ -257,10 +236,4 @@ RVDashboard.loadDashboard("Sales").then(dashboard => {
 });
 ```
 
-This example keeps the choice in `localStorage`, so it only follows the user on the same browser. To follow the user across devices, save it in your application's user profile and read it from there before creating the `RevealView`. If a saved name is no longer valid, `setTimeZone` reports it and the dashboard loads in the browser's time zone.
-
-## Limitations
-
-- Use IANA time zone names. Offset strings such as `+05:30` fail on the server.
-- The conversion is supported only for the [data sources listed above](#supported-data-sources).
-- The time zone is global: every `RevealView` on the page uses the same one.
+To follow the user across devices, save the choice in your application's user profile instead of `localStorage`, and read it from there before creating the `RevealView`.
