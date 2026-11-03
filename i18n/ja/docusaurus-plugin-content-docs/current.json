@@ -103,6 +103,10 @@
     "message": "接続データの難読化",
     "description": "The label for the doc item 'Obfuscate Connection Data' in sidebar 'webSidebar', linking to the doc web/obfuscate-connection-data"
   },
+  "sidebar.webSidebar.doc.Row-Level Security": {
+    "message": "行レベル セキュリティ",
+    "description": "The label for the doc item 'Row-Level Security' in sidebar 'webSidebar', linking to the doc web/row-level-security"
+  },
   "sidebar.webSidebar.doc.Grid Hyperlink Columns": {
     "message": "グリッド ハイパーリンク列",
     "description": "The label for the doc item 'Grid Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
