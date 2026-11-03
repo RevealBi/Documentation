@@ -94,6 +94,8 @@ var pdfOptions = new PdfExportOptions()
 var stream = await dashboardExporter.ExportToPdf(dashboardName, options: pdfOptions);
 ```
 
+特定のタイムゾーンでエクスポートするには、`TimeZone` オプションに IANA タイムゾーン名を設定します。設定すると DateTime 値はそのタイムゾーンに変換され、設定しない場合、エクスポートは UTC を使用します。[タイムゾーン](time-zones.md#exports)を参照してください。
+
 ## 例: サーバーでのエクスポート
 この例では、形式に基づいてダッシュボードをエクスポートするサービス エンドポイントを作成します。
 
