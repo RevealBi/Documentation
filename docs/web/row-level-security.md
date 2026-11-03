@@ -23,12 +23,15 @@ You set a row filter in your [data source provider](replacing-datasources.md), t
 - **Caching respects the filter.** Results are cached per filter value, so results computed for one user are never served to a user whose filter values differ.
 - **It fails closed.** When a filter can't be applied, for example because a value it needs is missing, the request fails instead of returning unfiltered rows.
 
-:::info
-Row-level security is configured entirely on the server. The JavaScript client has no row-level security API, and your client code doesn't change.
+:::info Nothing to enable
+Row-level security is on by default in Reveal SDK 2.3.0 and later. There's no feature flag, setting or extra package to add, and the Engine2 engine it runs on is also on by default. It's configured entirely on the server: the JavaScript client has no row-level security API, and your client code doesn't change.
+
+Being on by default doesn't change how your existing dashboards behave. Row-level security applies only to the data source items you give a row filter, and every other item is queried exactly as before. To start using it, add a row filter in your data source provider, as described in [Setting Up Row-Level Security](#setting-up-row-level-security).
 :::
 
 ### Requirements
 
+- **Reveal SDK 2.3.0 or later.** Row-level security is available in the ASP.NET, Java and Node.js server SDKs starting with version 2.3.0.
 - **Engine2.** Row filters are applied by Engine2, Reveal's data-processing engine, which is enabled by default (`Engine2Enabled` in ASP.NET, `setEngine2Enabled` in Java, the `engine2Enabled` option in Node.js). If Engine2 is disabled, or a request can't run on it, any request that reads an item with a row filter fails with the error "Row-level security is only available on Engine2, and this request cannot run on it".
 - **Tabular data source items.** A row filter is a property of tabular data source items: database items such as tables, views, custom queries and stored procedures, and CSV, Excel and JSON file items.
 
