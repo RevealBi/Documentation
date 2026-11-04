@@ -51,7 +51,7 @@ PDF または PowerPoint 形式へのエクスポートには、時間がかか�
 :::
 
 ### ユーザー コンテキストの提供
-ダッシュボードには、Reveal SDK [ユーザー コンテキスト](user-context.md)を必要とするデータ ソースがある場合があります。この場合、エクスポート メソッドの引数として Reveal SDK の `IRVUserContext` を指定して、ダッシュボードのエクスポートを確実に成功させる必要があります。
+ダッシュボードには、Reveal SDK [ユーザー コンテキスト](user-context.md)を必要とするデータ ソースがある場合があります。この場合、エクスポート メソッドの引数として Reveal SDK の `IRVUserContext` を指定して、ダッシュボードのエクスポートを確実に成功させる必要があります。これは、データ ソース項目で[行レベル セキュリティ](row-level-security.md)を使用するダッシュボードにも当てはまります。エクスポートには、渡したユーザー コンテキストのユーザーの行が含まれます。
 
 `IRVUserContext` を取得する最初の手順は、`IRVUserContextProvider` と `IHttpContextAccessor` を ASP.NET コントローラーまたは最小限の API 関数に挿入することです。次に、引数として `IHttpContextAccessor.HttpContext` を渡して `IRVUserContextProvider.GetUserContext` を呼び出します。
 
