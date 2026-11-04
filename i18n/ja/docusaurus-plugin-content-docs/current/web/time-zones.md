@@ -112,13 +112,7 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 ### サポートされるデータ ソース {#supported-data-sources}
 
-変換は Reveal のサーバー側データ エンジンで実行されます。このエンジンは次のデータ ソースをサポートしています。
-
-- Amazon Athena、Amazon Redshift、Azure SQL、Azure Synapse、ClickHouse、Cosmos DB、Databricks、DuckDB、Elasticsearch、Google BigQuery、MariaDB、MongoDB、MS SQL Server、MySQL、Oracle、PostgreSQL、Snowflake、SQLite
-- CSV、Excel、JSON データ (REST、Amazon S3、SharePoint、OneDrive、Google Drive、Dropbox、Box、またはローカル ストレージから読み取るファイルを含む)
-- Google スプレッドシートおよびインメモリ データ
-
-Cube、OData、Salesforce、Dynamics 365、HubSpot、Marketo、QuickBooks、Google Analytics 4、Reporting Services など、その他のデータ ソースは変換できません。タイムゾーンが設定されている間、これらのデータ ソースを使用し DateTime フィールドを含む表示形式には、「Converting to the current time zone requires Engine2…」というエラーが表示されます。これらのデータ ソースのいずれかをサポートされるデータ ソースとブレンドした表示形式でも同様です。これらのデータ ソースを使用するダッシュボードでは、`RevealSdkSettings.timeZone` を `null` のままにしてください。
+タイムゾーンの変換は、[データ ソース別の機能サポート](datasources.md#feature-support-by-data-source)に記載されているデータ ソースでのみ動作します。タイムゾーンが設定されている間、DateTime フィールドを含む表示形式が、その他のデータ ソースを使用している場合、その他のデータ ソースをブレンドしている場合、または入れ替えたデータを使用している場合は、「Converting to the current time zone requires Engine2…」というエラーが表示されます。これらのダッシュボードでは、`RevealSdkSettings.timeZone` を `null` のままにしてください。
 
 ## エクスポート {#exports}
 
