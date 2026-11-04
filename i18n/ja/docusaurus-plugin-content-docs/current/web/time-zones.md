@@ -112,7 +112,13 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 ### サポートされるデータ ソース {#supported-data-sources}
 
-変換は、Reveal のサーバー側データ エンジンである [Engine2](engine2.md) でのみ実行されます。タイムゾーンが設定されている間、Engine2 で実行できない DateTime フィールドを含む表示形式には、「Converting to the current time zone requires Engine2…」というエラーが表示されます。これは、Cube、OData、Salesforce など Engine2 がサポートしていないデータ ソース、それらのいずれかをブレンドした表示形式、および入れ替えたデータで発生します。Engine2 がサポートするデータ ソースについては [Engine2](engine2.md#supported-data-sources) を参照してください。その他のデータ ソースを使用するダッシュボードでは、`RevealSdkSettings.timeZone` を `null` のままにしてください。
+変換は Reveal のサーバー側データ エンジンで実行されます。このエンジンは次のデータ ソースをサポートしています。
+
+- Amazon Athena、Amazon Redshift、Azure SQL、Azure Synapse、ClickHouse、Cosmos DB、Databricks、DuckDB、Elasticsearch、Google BigQuery、MariaDB、MongoDB、MS SQL Server、MySQL、Oracle、PostgreSQL、Snowflake、SQLite
+- CSV、Excel、JSON データ (REST、Amazon S3、SharePoint、OneDrive、Google Drive、Dropbox、Box、またはローカル ストレージから読み取るファイルを含む)
+- Google スプレッドシートおよびインメモリ データ
+
+Cube、OData、Salesforce、Dynamics 365、HubSpot、Marketo、QuickBooks、Google Analytics 4、Reporting Services など、その他のデータ ソースは変換できません。タイムゾーンが設定されている間、これらのデータ ソースを使用し DateTime フィールドを含む表示形式には、「Converting to the current time zone requires Engine2…」というエラーが表示されます。これらのデータ ソースのいずれかをサポートされるデータ ソースとブレンドした表示形式でも同様です。これらのデータ ソースを使用するダッシュボードでは、`RevealSdkSettings.timeZone` を `null` のままにしてください。
 
 ## エクスポート {#exports}
 

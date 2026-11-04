@@ -112,7 +112,13 @@ With `RVTimeZone.AsiaTokyo`, every `OrderDate` moves nine hours ahead, so the sa
 
 ### Supported Data Sources
 
-The conversion runs only on [Engine2](engine2.md), Reveal's server-side data engine. While a time zone is set, visualizations with DateTime fields that can't run on Engine2 show the error "Converting to the current time zone requires Engine2…". This happens with data sources Engine2 doesn't support, such as Cube, OData or Salesforce, with visualizations that blend one of them, and with transposed data. See [Engine2](engine2.md#supported-data-sources) for the data sources it supports, and keep `RevealSdkSettings.timeZone` set to `null` for dashboards that use the others.
+The conversion runs in Reveal's server-side data engine, which supports:
+
+- Amazon Athena, Amazon Redshift, Azure SQL, Azure Synapse, ClickHouse, Cosmos DB, Databricks, DuckDB, Elasticsearch, Google BigQuery, MariaDB, MongoDB, MS SQL Server, MySQL, Oracle, PostgreSQL, Snowflake and SQLite
+- CSV, Excel and JSON data, including files read from REST, Amazon S3, SharePoint, OneDrive, Google Drive, Dropbox, Box or local storage
+- Google Sheets and in-memory data
+
+Other data sources, such as Cube, OData, Salesforce, Dynamics 365, HubSpot, Marketo, QuickBooks, Google Analytics 4 and Reporting Services, can't be converted. While a time zone is set, visualizations over them that have DateTime fields show the error "Converting to the current time zone requires Engine2…", and so do visualizations that blend one of them with a supported data source. Keep `RevealSdkSettings.timeZone` set to `null` for dashboards that use these data sources.
 
 ## Exports
 
