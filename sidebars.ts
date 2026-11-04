@@ -42,6 +42,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Accessibility", id: "web/accessibility" },
         { type: "doc", label: "Beta Features", id: "web/beta-features" },
         { type: "doc", label: "Caching", id: "web/caching" },
+        { type: "doc", label: "Engine2", id: "web/engine2" },
         { type: "doc", label: "Logging", id: "web/logging" },
         {
           type: "category", label: "Server Export", link: { type: "doc", id: "web/server-export" }, items: [

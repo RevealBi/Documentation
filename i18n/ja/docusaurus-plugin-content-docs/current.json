@@ -271,6 +271,10 @@
     "message": "キャッシュ",
     "description": "The label for the doc item 'Caching' in sidebar 'webSidebar', linking to the doc web/caching"
   },
+  "sidebar.webSidebar.doc.Engine2": {
+    "message": "Engine2",
+    "description": "The label for the doc item 'Engine2' in sidebar 'webSidebar', linking to the doc web/engine2"
+  },
   "sidebar.webSidebar.doc.Custom Menu Items": {
     "message": "カスタム メニュー項目",
     "description": "The label for the doc item 'Custom Menu Items' in sidebar 'webSidebar', linking to the doc web/custom-menu-items"

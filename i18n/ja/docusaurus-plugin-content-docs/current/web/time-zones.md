@@ -8,19 +8,27 @@ import TabItem from '@theme/TabItem';
 
 # タイムゾーン
 
-Reveal SDK はデフォルトで、**今日**や**今月**などの相対日付フィルター、日付ピッカー、および `currentTimeZone()` 関数にブラウザーのタイムゾーンを使用します。別のタイムゾーンでダッシュボードを表示するには (たとえば、ノート PC がロンドンに設定されているニューヨーク勤務のユーザー向け)、`RevealSdkSettings.timeZone` を設定します。Reveal はそのタイムゾーンを使用し、すべての DateTime 値をそのタイムゾーンに変換します。
+Reveal SDK はデフォルトで、**今日**や**今月**などの相対日付フィルター、日付ピッカー、および `currentTimeZone()` 関数にブラウザーのタイムゾーンを使用します。別のタイムゾーンでダッシュボードを表示するには (たとえば、ノート PC がロンドンに設定されているニューヨーク勤務のユーザー向け)、`RevealSdkSettings.timeZone` を設定します。Reveal はそのタイムゾーンを使用し、データ ソースから読み取るすべての DateTime フィールド (計算フィールドを除く) をそのタイムゾーンに変換します。
 
 Reveal にはタイムゾーン ピッカーは含まれていません。[言語](localizing.md)と同様に、UI はアプリケーションが提供します。
 
 :::info
 
-変換はサーバーで行われるため、タイムゾーン API を使用するには、クライアントとサーバーの両方で Reveal SDK 2.3.0 以降が必要です。
+タイムゾーン API は Reveal SDK 2.3.0 以降で使用できます。
 
 :::
 
 ## タイムゾーンの設定 {#setting-the-time-zone}
 
-`RevealSdkSettings.timeZone` に `RVTimeZone` のメンバーまたは任意の IANA タイムゾーン名を設定します。ブラウザーのタイムゾーンに戻すには `null` を設定します。
+`RevealSdkSettings.timeZone` に次のいずれかの値を設定します。
+
+| 値 | 相対日付フィルター、日付ピッカー、`currentTimeZone()` が使用するタイムゾーン | DateTime 値 |
+|---|---|---|
+| `null` (デフォルト) | ブラウザーのタイムゾーン | 変換なし (保存されている値のまま表示) |
+| `RVTimeZone.Browser` | ブラウザーのタイムゾーン | ブラウザーのタイムゾーンに変換 |
+| `RVTimeZone` のメンバーまたは IANA 名 | 指定したタイムゾーン | 指定したタイムゾーンに変換 |
+
+`null` と `RVTimeZone.Browser` の違いは変換の有無だけです。`2024-01-31 23:30` として保存されている値は、`null` では `23:30` と表示され、ブラウザーがニューヨークに設定されている場合、`RVTimeZone.Browser` では `18:30` と表示されます。DateTime 値をユーザー自身のタイムゾーンで表示するには、`RVTimeZone.Browser` を使用します。
 
 ```js
 // Use New York time instead of the browser's
@@ -29,21 +37,11 @@ RevealSdkSettings.timeZone = RVTimeZone.AmericaNewYork;
 // Any IANA time zone name works too
 RevealSdkSettings.timeZone = "Europe/Madrid";
 
-// Go back to the browser's time zone, with no conversion
+// Go back to the default: the browser's time zone, with no conversion
 RevealSdkSettings.timeZone = null;
 ```
 
-`RevealView` を作成する前に設定することも、ダッシュボードを開いている間にいつでも設定することもできます ([開いているダッシュボードでのタイムゾーンの切り替え](#switching-the-time-zone-on-an-open-dashboard)を参照してください)。タイムゾーンはグローバルな設定です。ページ上のすべての `RevealView` が同じタイムゾーンを使用します。
-
-設定した値によって、タイムゾーンと DateTime 値を変換するかどうかが決まります。
-
-| 値 | 使用されるタイムゾーン | DateTime 値の変換 |
-|---|---|---|
-| `null` (デフォルト) | ブラウザーのタイムゾーン | なし (保存されている値のまま表示) |
-| `RVTimeZone.Browser` | ブラウザーのタイムゾーン | あり (ブラウザーのタイムゾーンに変換) |
-| `RVTimeZone` のメンバーまたは IANA 名 | 指定したタイムゾーン | あり (指定したタイムゾーンに変換) |
-
-日付をユーザー自身のタイムゾーンで表示するには、`RVTimeZone.Browser` を使用します。使用中のタイムゾーンを取得するには、`RevealSdkSettings.getCurrentTimeZone()` を呼び出します。
+`RevealView` を作成する前に設定することも、ダッシュボードを開いている間にいつでも設定することもできます ([開いているダッシュボードでのタイムゾーンの切り替え](#switching-the-time-zone-on-an-open-dashboard)を参照してください)。タイムゾーンはグローバルな設定です。ページ上のすべての `RevealView` が同じタイムゾーンを使用します。使用中のタイムゾーンを取得するには、`RevealSdkSettings.getCurrentTimeZone()` を呼び出します。
 
 クライアントがすべてのデータ リクエストとともにタイムゾーンを送信するため、サーバー SDK (ASP.NET、Java、Node.js) ではタイムゾーン用のコードは必要ありません。独自のタイムゾーンを指定するのは[サーバー側のエクスポート](#exports)のみです。
 
@@ -87,12 +85,14 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 ## DateTime 値の変換方法 {#how-datetime-values-are-converted}
 
-タイムゾーンが設定されている間、サーバーはグループ化、フィルタリング、計算フィールド、および書式設定の前に、すべての DateTime フィールドをそのタイムゾーンに変換します。ダッシュボードやデータ ソースを変更する必要はありません。
+タイムゾーンが設定されている間、サーバーはデータ ソースから読み取るすべての DateTime フィールド (計算フィールドを除く) をそのタイムゾーンに変換します。変換はグループ化、フィルタリング、書式設定の前、および計算フィールドの評価前に行われるため、計算フィールドは変換後の値を読み取ります。ダッシュボードやデータ ソースを変更する必要はありません。
 
-- **タイムゾーンを持たない値は UTC として扱われます。** SQL Server の `datetimeoffset` や Oracle の `TIMESTAMP WITH TIME ZONE` など、独自のオフセットを持つ値は、最初に UTC に正規化されます。
+変換は UTC を起点に行われます。Reveal 全体と同様に、タイムゾーンを持たない DateTime 値は UTC として扱われ、SQL Server の `datetimeoffset` や Oracle の `TIMESTAMP WITH TIME ZONE` など、独自のオフセットを持つ値は UTC に正規化されます。
+
 - **変換されるのは DateTime フィールドのみです。** 同じ行の DateTime が別の日に移動した場合でも、Date フィールドと Time フィールドがずれることはありません。
 - **グループ化はタイムゾーンに従います。** 日、週、月によるグループ化には変換後の値が使用されます。
-- **計算フィールドは 1 回だけ変換されます。** 計算フィールドは変換済みのフィールドを読み取るため、再度変換されることはありません。`applyTimeZone()` を呼び出す数式は、値をもう一度変換します ([既存のダッシュボードのアップグレード](#upgrading-existing-dashboards)を参照してください)。
+- **計算フィールドは変換されません。** 計算フィールドが読み取るフィールドはすでに変換済みのため、再度変換されることはありません。`applyTimeZone()` を呼び出す数式は、値をもう一度変換します ([既存のダッシュボードのアップグレード](#upgrading-existing-dashboards)を参照してください)。
+- **カスタム表示形式には変換後の値が渡されます。** [カスタム表示形式](custom-visualizations.md)に渡されるデータは、すでに使用中のタイムゾーンに変換されています。
 
 たとえば、`2024-01-31 23:30` として保存されている `OrderDate` DateTime フィールドと、`2024-02-02` として保存されている `ShipDate` Date フィールドを持つ注文の場合:
 
@@ -112,13 +112,7 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 ### サポートされるデータ ソース {#supported-data-sources}
 
-変換は Reveal のサーバー側データ エンジンで実行されます。このエンジンは次のデータ ソースをサポートしています。
-
-- Amazon Athena、Amazon Redshift、Azure SQL、Azure Synapse、ClickHouse、Cosmos DB、Databricks、DuckDB、Elasticsearch、Google BigQuery、MariaDB、MongoDB、MS SQL Server、MySQL、Oracle、PostgreSQL、Snowflake、SQLite
-- CSV、Excel、JSON データ (REST、Amazon S3、SharePoint、OneDrive、Google Drive、Dropbox、Box、またはローカル ストレージから読み取るファイルを含む)
-- Google スプレッドシートおよびインメモリ データ
-
-Cube、OData、Salesforce、Dynamics 365、HubSpot、Marketo、QuickBooks、Google Analytics 4、Reporting Services など、その他のデータ ソースは変換できません。タイムゾーンが設定されている間、これらのデータ ソースを使用し DateTime フィールドを含む表示形式には、「Converting to the current time zone requires Engine2…」というエラーが表示されます。これらのデータ ソースのいずれかをサポートされるデータ ソースとブレンドした表示形式でも同様です。これらのデータ ソースを使用するダッシュボードでは、`RevealSdkSettings.timeZone` を `null` のままにしてください。
+変換は、Reveal のサーバー側データ エンジンである [Engine2](engine2.md) でのみ実行されます。タイムゾーンが設定されている間、Engine2 で実行できない DateTime フィールドを含む表示形式には、「Converting to the current time zone requires Engine2…」というエラーが表示されます。これは、Cube、OData、Salesforce など Engine2 がサポートしていないデータ ソース、それらのいずれかをブレンドした表示形式、および入れ替えたデータで発生します。Engine2 がサポートするデータ ソースについては [Engine2](engine2.md#supported-data-sources) を参照してください。その他のデータ ソースを使用するダッシュボードでは、`RevealSdkSettings.timeZone` を `null` のままにしてください。
 
 ## エクスポート {#exports}
 
@@ -167,7 +161,7 @@ const stream = await revealServer.exporter.exportPdf(dashboardName, null, option
   </TabItem>
 </Tabs>
 
-同じプロパティは Excel および PowerPoint のエクスポート オプションでも使用できます。ユーザーがアプリケーションで選択したタイムゾーンでエクスポートするには、エクスポート リクエストとともにその選択をサーバーに送信します。
+同じプロパティは、Excel、PowerPoint、画像、CSV のすべてのエクスポート オプション クラスで使用できます。ユーザーがアプリケーションで選択したタイムゾーンでエクスポートするには、エクスポート リクエストとともにその選択をサーバーに送信します。
 
 ## 既存のダッシュボードのアップグレード {#upgrading-existing-dashboards}
 

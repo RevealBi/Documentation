@@ -9,11 +9,11 @@ import TabItem from '@theme/TabItem';
 
 ### Breaking Changes
 
-- The `DisplayInLocalTimeZone` field setting has been removed. It had no effect, so nothing needs to change, and dashboards that contain it still load.
+- The `DisplayInLocalTimeZone` field setting has been removed. Dashboards that contain it still load, and the setting is ignored.
 
 ### New Features
 
-- Dashboards can now be shown in a [time zone](https://help.revealbi.io/web/time-zones/) other than the browser's. Set `RevealSdkSettings.timeZone` to an `RVTimeZone` member or to any IANA time zone name: relative date filters and `currentTimeZone()` use it, and every DateTime field is converted to it on the server, with no changes to dashboards or data sources. Setting it on an open dashboard reloads the data in place, keeping filter selections and the maximized visualization. Server-side exports take the time zone from the `TimeZone` export option, and use UTC when it isn't set. Dashboards that convert dates with `applyTimeZone()` should drop that formula when a time zone is set, or the values are converted twice.
+- Dashboards can now be shown in a [time zone](https://help.revealbi.io/web/time-zones/) other than the browser's. Set `RevealSdkSettings.timeZone` to an `RVTimeZone` member or to any IANA time zone name: relative date filters and `currentTimeZone()` use it, and every DateTime field read from the data source is converted to it on the server, with no changes to dashboards or data sources. Setting it on an open dashboard reloads the data in place, keeping filter selections and the maximized visualization. Server-side exports take the time zone from the `TimeZone` export option, and use UTC when it isn't set. Dashboards that convert dates with `applyTimeZone()` should drop that formula when a time zone is set, or the values are converted twice.
 
 ### Bugs
 

@@ -8,19 +8,27 @@ import TabItem from '@theme/TabItem';
 
 # Time Zones
 
-By default, the Reveal SDK uses the browser's time zone for relative date filters such as **Today** or **This Month**, for the date pickers, and for the `currentTimeZone()` function. To show dashboards in another time zone, for example to a user who works in New York on a laptop set to London, set `RevealSdkSettings.timeZone`. Reveal then uses that time zone and converts every DateTime value to it.
+By default, the Reveal SDK uses the browser's time zone for relative date filters such as **Today** or **This Month**, for the date pickers, and for the `currentTimeZone()` function. To show dashboards in another time zone, for example to a user who works in New York on a laptop set to London, set `RevealSdkSettings.timeZone`. Reveal then uses that time zone and converts every DateTime field read from the data source (not calculated fields) to it.
 
 Reveal doesn't include a time zone picker: as with the [language](localizing.md), your application provides the UI.
 
 :::info
 
-The time zone API requires Reveal SDK 2.3.0 or later on both the client and the server, because the conversion happens on the server.
+The time zone API is available in Reveal SDK 2.3.0 and later.
 
 :::
 
 ## Setting the Time Zone
 
-Set `RevealSdkSettings.timeZone` to a member of `RVTimeZone` or to any IANA time zone name. Set it to `null` to go back to the browser's time zone.
+Set `RevealSdkSettings.timeZone` to one of these values:
+
+| Value | Time zone used by relative date filters, date pickers and `currentTimeZone()` | DateTime values |
+|---|---|---|
+| `null` (the default) | The browser's | Not converted, shown as stored |
+| `RVTimeZone.Browser` | The browser's | Converted to the browser's time zone |
+| An `RVTimeZone` member or an IANA name | That time zone | Converted to that time zone |
+
+`null` and `RVTimeZone.Browser` differ only in the conversion. A value stored as `2024-01-31 23:30` is shown as `23:30` with `null`, and as `18:30` with `RVTimeZone.Browser` in a browser set to New York. Use `RVTimeZone.Browser` to show DateTime values in the user's own time zone.
 
 ```js
 // Use New York time instead of the browser's
@@ -29,21 +37,11 @@ RevealSdkSettings.timeZone = RVTimeZone.AmericaNewYork;
 // Any IANA time zone name works too
 RevealSdkSettings.timeZone = "Europe/Madrid";
 
-// Go back to the browser's time zone, with no conversion
+// Go back to the default: the browser's time zone, with no conversion
 RevealSdkSettings.timeZone = null;
 ```
 
-You can set it before creating the `RevealView`, or at any time while a dashboard is open (see [Switching the Time Zone on an Open Dashboard](#switching-the-time-zone-on-an-open-dashboard)). The time zone is global: every `RevealView` on the page uses the same one.
-
-The value decides both the time zone and whether DateTime values are converted:
-
-| Value | Time zone used | DateTime values converted |
-|---|---|---|
-| `null` (the default) | The browser's | No, they're shown as stored |
-| `RVTimeZone.Browser` | The browser's | Yes, to the browser's time zone |
-| An `RVTimeZone` member or an IANA name | That time zone | Yes, to that time zone |
-
-Use `RVTimeZone.Browser` to show dates in the user's own time zone. To get the time zone in use, call `RevealSdkSettings.getCurrentTimeZone()`.
+You can set it before creating the `RevealView`, or at any time while a dashboard is open (see [Switching the Time Zone on an Open Dashboard](#switching-the-time-zone-on-an-open-dashboard)). The time zone is global: every `RevealView` on the page uses the same one. To get the time zone in use, call `RevealSdkSettings.getCurrentTimeZone()`.
 
 The server SDKs (ASP.NET, Java and Node.js) need no code for this: the client sends the time zone with every data request. Only [server-side exports](#exports) take a time zone of their own.
 
@@ -87,12 +85,14 @@ Here the **Region** filter was set to **Americas** before switching to `Asia/Tok
 
 ## How DateTime Values Are Converted
 
-While a time zone is set, the server converts every DateTime field to it before grouping, filtering, calculated fields and formatting. Dashboards and data sources don't need any changes.
+While a time zone is set, the server converts every DateTime field read from the data source (not calculated fields) to it. The conversion happens before grouping, filtering and formatting, and before calculated fields are evaluated, so they read converted values. Dashboards and data sources don't need any changes.
 
-- **Values without a time zone are treated as UTC.** Values that carry their own offset, such as SQL Server `datetimeoffset` or Oracle `TIMESTAMP WITH TIME ZONE`, are normalized to UTC first.
+The conversion starts from UTC. As everywhere in Reveal, DateTime values without a time zone are treated as UTC, and values that carry their own offset, such as SQL Server `datetimeoffset` or Oracle `TIMESTAMP WITH TIME ZONE`, are normalized to UTC.
+
 - **Only DateTime fields are converted.** Date and Time fields are never shifted, even when the DateTime on the same row moves to another day.
 - **Grouping follows the time zone.** Grouping by day, week or month uses the converted values.
-- **Calculated fields are converted once.** They read fields that are already converted, so they aren't converted again. A formula that calls `applyTimeZone()` converts a second time (see [Upgrading Existing Dashboards](#upgrading-existing-dashboards)).
+- **Calculated fields aren't converted.** The fields they read are already converted, so they aren't converted again. A formula that calls `applyTimeZone()` converts a second time (see [Upgrading Existing Dashboards](#upgrading-existing-dashboards)).
+- **Custom visualizations get converted values.** The data passed to a [custom visualization](custom-visualizations.md) is already in the time zone in use.
 
 For example, take an order with an `OrderDate` DateTime field stored as `2024-01-31 23:30` and a `ShipDate` Date field stored as `2024-02-02`:
 
@@ -112,13 +112,7 @@ With `RVTimeZone.AsiaTokyo`, every `OrderDate` moves nine hours ahead, so the sa
 
 ### Supported Data Sources
 
-The conversion runs in Reveal's server-side data engine, which supports:
-
-- Amazon Athena, Amazon Redshift, Azure SQL, Azure Synapse, ClickHouse, Cosmos DB, Databricks, DuckDB, Elasticsearch, Google BigQuery, MariaDB, MongoDB, MS SQL Server, MySQL, Oracle, PostgreSQL, Snowflake and SQLite
-- CSV, Excel and JSON data, including files read from REST, Amazon S3, SharePoint, OneDrive, Google Drive, Dropbox, Box or local storage
-- Google Sheets and in-memory data
-
-Other data sources, such as Cube, OData, Salesforce, Dynamics 365, HubSpot, Marketo, QuickBooks, Google Analytics 4 and Reporting Services, can't be converted. While a time zone is set, visualizations over them that have DateTime fields show the error "Converting to the current time zone requires Engine2…", and so do visualizations that blend one of them with a supported data source. Keep `RevealSdkSettings.timeZone` set to `null` for dashboards that use these data sources.
+The conversion runs only on [Engine2](engine2.md), Reveal's server-side data engine. While a time zone is set, visualizations with DateTime fields that can't run on Engine2 show the error "Converting to the current time zone requires Engine2…". This happens with data sources Engine2 doesn't support, such as Cube, OData or Salesforce, with visualizations that blend one of them, and with transposed data. See [Engine2](engine2.md#supported-data-sources) for the data sources it supports, and keep `RevealSdkSettings.timeZone` set to `null` for dashboards that use the others.
 
 ## Exports
 
@@ -167,7 +161,7 @@ const stream = await revealServer.exporter.exportPdf(dashboardName, null, option
   </TabItem>
 </Tabs>
 
-The same property is available on the Excel and PowerPoint export options. To export in the time zone a user picked in your application, send their choice to the server with the export request.
+The same property is available on every export options class: Excel, PowerPoint, Image and CSV. To export in the time zone a user picked in your application, send their choice to the server with the export request.
 
 ## Upgrading Existing Dashboards
 
