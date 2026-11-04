@@ -116,6 +116,7 @@ import io.revealbi.core.IRevealServer;
 import io.revealbi.core.RevealPluginCallback;
 import io.revealbi.core.RevealServerBuilder;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
@@ -138,10 +139,11 @@ RevealPluginCallback connectionResolver = (userContext, message) -> {
         if (connection == null) {
             return CompletableFuture.completedFuture("null");
         }
-        return CompletableFuture.completedFuture(json.writeValueAsString(Map.of(
-                "providerType", connection.providerType(),    // for example, "openai"
-                "model", connection.model(),
-                "apiKey", connection.decryptedApiKey())));
+        Map<String, String> descriptor = new HashMap<>();
+        descriptor.put("providerType", connection.providerType());    // for example, "openai"
+        descriptor.put("model", connection.model());
+        descriptor.put("apiKey", connection.decryptedApiKey());       // may be null for openai-compatible
+        return CompletableFuture.completedFuture(json.writeValueAsString(descriptor));
     } catch (Exception ex) {
         return CompletableFuture.failedFuture(ex);
     }

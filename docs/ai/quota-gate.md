@@ -301,4 +301,4 @@ The settle receives the same context the check saw and an `AIUsageRecord` with t
   }
   ```
 
-- **A failing gate fails the call.** On ASP.NET, an exception thrown by `CheckAsync` fails the request without producing a usage record, and the client receives the exception's message, so keep sensitive details out of it. A `null` decision allows the call. In Node.js and Java, a `quotaGate` callback that throws or returns a missing or malformed decision denies the call with `ai.denied`: a broken gate is never an open gate.
+- **A failing gate fails the call.** On ASP.NET, an exception thrown by `CheckAsync` fails the request without producing a usage record, and the client receives the exception's message, so keep sensitive details out of it. The message arrives as a generic HTTP 400 error, prefixed by Reveal and without a `code`; to give the client a stable code, return a denial instead of throwing. A `null` decision allows the call. In Node.js and Java, a `quotaGate` callback that throws or returns a missing or malformed decision denies the call with `ai.denied`: a broken gate is never an open gate.

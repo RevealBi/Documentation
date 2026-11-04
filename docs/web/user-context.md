@@ -163,6 +163,10 @@ RevealSdkSettings.setAdditionalHeadersProvider((url: string) => {
 
 ## Example: Implementing User Context for Row-Level Security 
 
+:::tip
+The Reveal SDK now has built-in [row-level security](row-level-security.md): a row filter you set in the data source provider is applied to every query that reads the data source item, with no custom query or stored procedure parameters needed.
+:::
+
 The `IRVUserContextProvider` interface in Reveal BI allows you to pass client-side information to the server. This information can be used in custom queries, as parameters for stored procedures and functions, and more. This document will guide you on how to use the `IRVUserContextProvider` and how to pass parameters from the client to the server.
 
 You can watch and end-to-end webinar explaing this step-by-step here:

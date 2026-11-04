@@ -117,6 +117,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Authentication", id: "web/authentication" },
         { type: "doc", label: "Custom Queries", id: "web/custom-queries" },
         { type: "doc", label: "Obfuscate Connection Data", id: "web/obfuscate-connection-data" },
+        { type: "doc", label: "Row-Level Security", id: "web/row-level-security" },
         { type: "doc", label: "User Context", id: "web/user-context" },
       ]
     },
@@ -262,6 +263,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", key: "ai-getting-started-header", items: [
         { type: "doc", label: "Overview", id: "ai/overview" },
+        { type: "doc", label: "Data Handling", id: "ai/data-handling" },
         {
           type: "category", label: "Installation", items: [
             { type: "doc", label: "System Requirements", id: "ai/system-requirements" },

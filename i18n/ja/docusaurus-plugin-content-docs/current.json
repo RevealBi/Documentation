@@ -103,6 +103,10 @@
     "message": "接続データの難読化",
     "description": "The label for the doc item 'Obfuscate Connection Data' in sidebar 'webSidebar', linking to the doc web/obfuscate-connection-data"
   },
+  "sidebar.webSidebar.doc.Row-Level Security": {
+    "message": "行レベル セキュリティ",
+    "description": "The label for the doc item 'Row-Level Security' in sidebar 'webSidebar', linking to the doc web/row-level-security"
+  },
   "sidebar.webSidebar.doc.Grid Hyperlink Columns": {
     "message": "グリッド ハイパーリンク列",
     "description": "The label for the doc item 'Grid Hyperlink Columns' in sidebar 'webSidebar', linking to the doc web/hyperlink-columns"
@@ -647,6 +651,10 @@
     "message": "概要",
     "description": "The label for the doc item 'Overview' in sidebar 'aiSidebar', linking to the doc ai/overview"
   },
+  "sidebar.aiSidebar.doc.Data Handling": {
+    "message": "データの取り扱い",
+    "description": "The label for the doc item 'Data Handling' in sidebar 'aiSidebar', linking to the doc ai/data-handling"
+  },
   "sidebar.aiSidebar.doc.System Requirements": {
     "message": "システム要件",
     "description": "The label for the doc item 'System Requirements' in sidebar 'aiSidebar', linking to the doc ai/system-requirements"
@@ -790,5 +798,21 @@
   "sidebar.aiSidebar.doc.Quotas and Billing": {
     "message": "クォータと課金",
     "description": "The label for the doc item 'Quotas and Billing' in sidebar 'aiSidebar', linking to the doc ai/quota-gate"
+  },
+  "sidebar.webSidebar.doc.Thumbnail Generation": {
+    "message": "サムネイルの生成",
+    "description": "The label for the doc item 'Thumbnail Generation' in sidebar 'webSidebar', linking to the doc web/thumbnail-generation"
+  },
+  "sidebar.webSidebar.doc.SQLite": {
+    "message": "SQLite",
+    "description": "The label for the doc item 'SQLite' in sidebar 'webSidebar', linking to the doc web/adding-data-sources/sqlite"
+  },
+  "sidebar.aiSidebar.doc.Choosing a Model": {
+    "message": "モデルの選択",
+    "description": "The label for the doc item 'Choosing a Model' in sidebar 'aiSidebar', linking to the doc ai/choosing-a-model"
+  },
+  "sidebar.aiSidebar.doc.Metadata Storage Provider": {
+    "message": "メタデータ ストレージ プロバイダー",
+    "description": "The label for the doc item 'Metadata Storage Provider' in sidebar 'aiSidebar', linking to the doc ai/metadata-storage-provider"
   }
 }
