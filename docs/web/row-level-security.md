@@ -1,7 +1,5 @@
 ---
 sidebar_label: Row-Level Security
-sidebar_custom_props:
-  status: preview
 ---
 
 import Tabs from '@theme/Tabs';
@@ -28,8 +26,7 @@ You set the filter in your [data source provider](replacing-datasources.md), usi
 Row-level security is available in the ASP.NET, Java and Node.js server SDKs, version 2.3.0 and later. There's no feature flag, setting or package to add, and no client API: it's configured entirely on the server, and your client code doesn't change. It applies only to data source items you give a row filter, and every other item is queried exactly as before.
 
 - **Engine2.** Row filters are applied by Engine2, Reveal's data-processing engine, which is enabled by default (`Engine2Enabled` in ASP.NET, `setEngine2Enabled` in Java, the `engine2Enabled` option in Node.js). If Engine2 is disabled, or a request can't run on it, any request that reads an item with a row filter fails with the error "Row-level security is only available on Engine2, and this request cannot run on it".
-- **Tabular data source items.** A row filter is a property of tabular data source items: database items such as tables, views, custom queries and stored procedures, and CSV, Excel and JSON file items.
-- **Server-side data sources.** Row filters aren't supported when server-side data sources are enabled (`ServerSideDataSourcesEnabled`).
+- **Tabular data source items on an Engine2 connector.** A row filter is a property of tabular data source items: database items such as tables, views, custom queries and stored procedures, and CSV, Excel and JSON file items. The item's connector must also run on Engine2. Some connectors, such as Sybase, Microsoft Dynamics CRM, OData, HubSpot, QuickBooks and Marketo, don't: you can set a row filter on their items, but every request that reads them fails with the error above.
 
 ## Setting Up Row-Level Security
 
@@ -67,11 +64,11 @@ public class UserContextProvider : IRVUserContextProvider
   <TabItem value="java" label="Java">
 
 ```java
-public class UserContextProvider extends RVContainerRequestAwareUserContextProvider {
+public class UserContextProvider implements IRVServletUserContextProvider {
     @Override
-    protected IRVUserContext getUserContext(ContainerRequestContext requestContext) {
+    public IRVUserContext getUserContext(HttpServletRequest request) {
         // The signed-in user, as your authentication layer established it; AppUser is your own user model
-        AppUser user = users.find(requestContext.getSecurityContext().getUserPrincipal().getName());
+        AppUser user = users.find(request.getUserPrincipal().getName());
 
         RVUserContext userContext = new RVUserContext(user.getId());
         userContext.setClaim("tenant_id", user.getTenantId());
@@ -127,7 +124,9 @@ Never fill the user context from values the client sends for this purpose, such 
 
 **Step 2** - Set a row filter on the data source items in your data source provider.
 
-The data source item your provider receives comes from the client. Before setting a filter, set everything that decides what the item reads, such as the table, schema, custom query or stored procedure of a database item, using values from your server. Map any value the request carries, such as a table name or file path, to a value of your own before using it. Throw an exception for items your application doesn't serve: returning `null` keeps the item as the client sent it.
+The data source item your provider receives comes from the client, so write both provider methods as an allowlist: return only the data sources and items your application serves, and throw an exception for anything else. Returning `null` keeps the item as the client sent it. Before setting a filter, set everything that decides what the item reads, such as the table, schema, custom query or stored procedure of a database item, using values from your server. Map any value the request carries, such as a table name or file path, to a value of your own before using it.
+
+The provider also calls itself on the resource item of CSV, Excel and JSON items, as described in [Securing File Data Sources](#securing-file-data-sources).
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -141,6 +140,11 @@ public class DataSourceProvider : IRVDataSourceProvider
     {
         await ChangeDataSourceAsync(userContext, dataSourceItem.DataSource);
 
+        if (dataSourceItem is RVResourceBasedDataSourceItem resourceBasedItem)
+        {
+            await ChangeDataSourceItemAsync(userContext, dashboardId, (RVDataSourceItem)resourceBasedItem.ResourceItem);
+        }
+
         if (dataSourceItem is RVSqlServerDataSourceItem sqlItem)
         {
             // Decide on the server what the item reads
@@ -153,14 +157,25 @@ public class DataSourceProvider : IRVDataSourceProvider
 
             // Every row the user reads from the table must belong to their tenant
             sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
+            return sqlItem;
         }
-        return dataSourceItem;
+
+        // Refuse every item your application doesn't serve
+        throw new InvalidOperationException("This data source item is not available.");
     }
 
     public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
     {
-        // Set the host and database from your server's configuration
-        return Task.FromResult(dataSource);
+        if (dataSource is RVSqlServerDataSource sqlServer)
+        {
+            // Set the host and database from your server's configuration
+            sqlServer.Host = "db.example.com";
+            sqlServer.Database = "Sales";
+            return Task.FromResult(dataSource);
+        }
+
+        // Refuse every data source your application doesn't serve
+        throw new InvalidOperationException("This data source is not available.");
     }
 }
 ```
@@ -176,6 +191,10 @@ public class DataSourceProvider implements IRVDataSourceProvider {
     public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardId, RVDataSourceItem dataSourceItem) {
         changeDataSource(userContext, dataSourceItem.getDataSource());
 
+        if (dataSourceItem instanceof RVResourceBasedDataSourceItem resourceBasedItem) {
+            changeDataSourceItem(userContext, dashboardId, (RVDataSourceItem) resourceBasedItem.getResourceItem());
+        }
+
         if (dataSourceItem instanceof RVSqlServerDataSourceItem sqlItem) {
             // Decide on the server what the item reads
             String table = TABLES.stream()
@@ -189,13 +208,23 @@ public class DataSourceProvider implements IRVDataSourceProvider {
 
             // Every row the user reads from the table must belong to their tenant
             sqlItem.setRowFilter(RowFilter.fieldEqualsContext("TenantId", "tenant_id"));
+            return sqlItem;
         }
-        return dataSourceItem;
+
+        // Refuse every item your application doesn't serve
+        throw new IllegalArgumentException("This data source item is not available.");
     }
 
     public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
-        // Set the host and database from your server's configuration
-        return dataSource;
+        if (dataSource instanceof RVSqlServerDataSource sqlServer) {
+            // Set the host and database from your server's configuration
+            sqlServer.setHost("db.example.com");
+            sqlServer.setDatabase("Sales");
+            return sqlServer;
+        }
+
+        // Refuse every data source your application doesn't serve
+        throw new IllegalArgumentException("This data source is not available.");
     }
 }
 ```
@@ -210,6 +239,10 @@ const TABLES = ["Orders", "Customers"];
 const dataSourceItemProvider = async (userContext, dataSourceItem) => {
   await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
+  if (dataSourceItem instanceof reveal.RVResourceBasedDataSourceItem) {
+    await dataSourceItemProvider(userContext, dataSourceItem.resourceItem);
+  }
+
   if (dataSourceItem instanceof reveal.RVSqlServerDataSourceItem) {
     // Decide on the server what the item reads
     const table = TABLES.find(t => t.toLowerCase() === String(dataSourceItem.table).toLowerCase());
@@ -223,13 +256,23 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
 
     // Every row the user reads from the table must belong to their tenant
     dataSourceItem.rowFilter = reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id");
+    return dataSourceItem;
   }
-  return dataSourceItem;
+
+  // Refuse every item your application doesn't serve
+  throw new Error("This data source item is not available.");
 };
 
 const dataSourceProvider = async (userContext, dataSource) => {
-  // Set the host and database from your server's configuration
-  return dataSource;
+  if (dataSource instanceof reveal.RVSqlServerDataSource) {
+    // Set the host and database from your server's configuration
+    dataSource.host = "db.example.com";
+    dataSource.database = "Sales";
+    return dataSource;
+  }
+
+  // Refuse every data source your application doesn't serve
+  throw new Error("This data source is not available.");
 };
 ```
 
@@ -240,8 +283,12 @@ const dataSourceProvider = async (userContext, dataSource) => {
 ```ts
 const TABLES = ["Orders", "Customers"];
 
-const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem) => {
+const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem): Promise<RVDataSourceItem> => {
   await dataSourceProvider(userContext, dataSourceItem.dataSource);
+
+  if (dataSourceItem instanceof RVResourceBasedDataSourceItem) {
+    await dataSourceItemProvider(userContext, dataSourceItem.resourceItem as RVDataSourceItem);
+  }
 
   if (dataSourceItem instanceof RVSqlServerDataSourceItem) {
     // Decide on the server what the item reads
@@ -256,13 +303,23 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
 
     // Every row the user reads from the table must belong to their tenant
     dataSourceItem.rowFilter = RowFilter.fieldEqualsContext("TenantId", "tenant_id");
+    return dataSourceItem;
   }
-  return dataSourceItem;
+
+  // Refuse every item your application doesn't serve
+  throw new Error("This data source item is not available.");
 };
 
-const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
-  // Set the host and database from your server's configuration
-  return dataSource;
+const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource): Promise<RVDashboardDataSource> => {
+  if (dataSource instanceof RVSqlServerDataSource) {
+    // Set the host and database from your server's configuration
+    dataSource.host = "db.example.com";
+    dataSource.database = "Sales";
+    return dataSource;
+  }
+
+  // Refuse every data source your application doesn't serve
+  throw new Error("This data source is not available.");
 };
 ```
 
@@ -289,10 +346,11 @@ builder.Services.AddControllers().AddReveal(builder =>
   <TabItem value="java" label="Java">
 
 ```java
-new RevealServerBuilder()
-    .setUserContextProvider(new UserContextProvider())
-    .setDataSourceProvider(new DataSourceProvider())
-    .build();
+RevealEngineServlet servlet = new RevealEngineServlet(
+    new RevealServerBuilder()
+        .setDataSourceProvider(new DataSourceProvider())
+        .build(),
+    new UserContextProvider());
 ```
 
   </TabItem>
@@ -526,19 +584,41 @@ public async Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext use
 {
     await ChangeDataSourceAsync(userContext, dataSourceItem.DataSource);
 
-    if (dataSourceItem is RVResourceBasedDataSourceItem fileItem)
+    if (dataSourceItem is RVResourceBasedDataSourceItem resourceBasedItem)
     {
-        // A CSV, Excel or JSON item: change its resource item the same way, then filter the rows it reads
-        await ChangeDataSourceItemAsync(userContext, dashboardId, (RVDataSourceItem)fileItem.ResourceItem);
-        fileItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
+        // A CSV, Excel or JSON item: change the resource item that reads its file the same way
+        await ChangeDataSourceItemAsync(userContext, dashboardId, (RVDataSourceItem)resourceBasedItem.ResourceItem);
     }
-    else if (dataSourceItem is RVLocalFileDataSourceItem file)
+
+    if (dataSourceItem is RVLocalFileDataSourceItem file)
     {
         // The file holds every tenant's rows: never serve it as it is
         file.Uri = MapFile(file.Uri); // your own mapping to the files you serve; throws for any other
         file.RawAccessForbidden = true;
+        return file;
     }
-    return dataSourceItem;
+
+    if (dataSourceItem is RVCsvDataSourceItem csvItem)
+    {
+        // Every row the user reads from the file must belong to their tenant
+        csvItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
+        return csvItem;
+    }
+
+    // Refuse every item your application doesn't serve
+    throw new InvalidOperationException("This data source item is not available.");
+}
+
+public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+{
+    // The data sources of the CSV item and of the local file item that reads its file
+    if (dataSource is RVCsvDataSource || dataSource is RVLocalFileDataSource)
+    {
+        return Task.FromResult(dataSource);
+    }
+
+    // Refuse every data source your application doesn't serve
+    throw new InvalidOperationException("This data source is not available.");
 }
 ```
 
@@ -550,16 +630,36 @@ public async Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext use
 public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardId, RVDataSourceItem dataSourceItem) {
     changeDataSource(userContext, dataSourceItem.getDataSource());
 
-    if (dataSourceItem instanceof RVResourceBasedDataSourceItem fileItem) {
-        // A CSV, Excel or JSON item: change its resource item the same way, then filter the rows it reads
-        changeDataSourceItem(userContext, dashboardId, (RVDataSourceItem) fileItem.getResourceItem());
-        fileItem.setRowFilter(RowFilter.fieldEqualsContext("TenantId", "tenant_id"));
-    } else if (dataSourceItem instanceof RVLocalFileDataSourceItem file) {
+    if (dataSourceItem instanceof RVResourceBasedDataSourceItem resourceBasedItem) {
+        // A CSV, Excel or JSON item: change the resource item that reads its file the same way
+        changeDataSourceItem(userContext, dashboardId, (RVDataSourceItem) resourceBasedItem.getResourceItem());
+    }
+
+    if (dataSourceItem instanceof RVLocalFileDataSourceItem file) {
         // The file holds every tenant's rows: never serve it as it is
         file.setUri(mapFile(file.getUri())); // your own mapping to the files you serve; throws for any other
         file.setRawAccessForbidden(true);
+        return file;
     }
-    return dataSourceItem;
+
+    if (dataSourceItem instanceof RVCsvDataSourceItem csvItem) {
+        // Every row the user reads from the file must belong to their tenant
+        csvItem.setRowFilter(RowFilter.fieldEqualsContext("TenantId", "tenant_id"));
+        return csvItem;
+    }
+
+    // Refuse every item your application doesn't serve
+    throw new IllegalArgumentException("This data source item is not available.");
+}
+
+public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+    // The data sources of the CSV item and of the local file item that reads its file
+    if (dataSource instanceof RVCsvDataSource || dataSource instanceof RVLocalFileDataSource) {
+        return dataSource;
+    }
+
+    // Refuse every data source your application doesn't serve
+    throw new IllegalArgumentException("This data source is not available.");
 }
 ```
 
@@ -572,15 +672,35 @@ const dataSourceItemProvider = async (userContext, dataSourceItem) => {
   await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
   if (dataSourceItem instanceof reveal.RVResourceBasedDataSourceItem) {
-    // A CSV, Excel or JSON item: change its resource item the same way, then filter the rows it reads
+    // A CSV, Excel or JSON item: change the resource item that reads its file the same way
     await dataSourceItemProvider(userContext, dataSourceItem.resourceItem);
-    dataSourceItem.rowFilter = reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id");
-  } else if (dataSourceItem instanceof reveal.RVLocalFileDataSourceItem) {
+  }
+
+  if (dataSourceItem instanceof reveal.RVLocalFileDataSourceItem) {
     // The file holds every tenant's rows: never serve it as it is
     dataSourceItem.uri = mapFile(dataSourceItem.uri); // your own mapping to the files you serve; throws for any other
     dataSourceItem.rawAccessForbidden = true;
+    return dataSourceItem;
   }
-  return dataSourceItem;
+
+  if (dataSourceItem instanceof reveal.RVCsvDataSourceItem) {
+    // Every row the user reads from the file must belong to their tenant
+    dataSourceItem.rowFilter = reveal.RowFilter.fieldEqualsContext("TenantId", "tenant_id");
+    return dataSourceItem;
+  }
+
+  // Refuse every item your application doesn't serve
+  throw new Error("This data source item is not available.");
+};
+
+const dataSourceProvider = async (userContext, dataSource) => {
+  // The data sources of the CSV item and of the local file item that reads its file
+  if (dataSource instanceof reveal.RVCsvDataSource || dataSource instanceof reveal.RVLocalFileDataSource) {
+    return dataSource;
+  }
+
+  // Refuse every data source your application doesn't serve
+  throw new Error("This data source is not available.");
 };
 ```
 
@@ -593,22 +713,42 @@ const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSo
   await dataSourceProvider(userContext, dataSourceItem.dataSource);
 
   if (dataSourceItem instanceof RVResourceBasedDataSourceItem) {
-    // A CSV, Excel or JSON item: change its resource item the same way, then filter the rows it reads
+    // A CSV, Excel or JSON item: change the resource item that reads its file the same way
     await dataSourceItemProvider(userContext, dataSourceItem.resourceItem as RVDataSourceItem);
-    dataSourceItem.rowFilter = RowFilter.fieldEqualsContext("TenantId", "tenant_id");
-  } else if (dataSourceItem instanceof RVLocalFileDataSourceItem) {
+  }
+
+  if (dataSourceItem instanceof RVLocalFileDataSourceItem) {
     // The file holds every tenant's rows: never serve it as it is
     dataSourceItem.uri = mapFile(dataSourceItem.uri); // your own mapping to the files you serve; throws for any other
     dataSourceItem.rawAccessForbidden = true;
+    return dataSourceItem;
   }
-  return dataSourceItem;
+
+  if (dataSourceItem instanceof RVCsvDataSourceItem) {
+    // Every row the user reads from the file must belong to their tenant
+    dataSourceItem.rowFilter = RowFilter.fieldEqualsContext("TenantId", "tenant_id");
+    return dataSourceItem;
+  }
+
+  // Refuse every item your application doesn't serve
+  throw new Error("This data source item is not available.");
+};
+
+const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource): Promise<RVDashboardDataSource> => {
+  // The data sources of the CSV item and of the local file item that reads its file
+  if (dataSource instanceof RVCsvDataSource || dataSource instanceof RVLocalFileDataSource) {
+    return dataSource;
+  }
+
+  // Refuse every data source your application doesn't serve
+  throw new Error("This data source is not available.");
 };
 ```
 
   </TabItem>
 </Tabs>
 
-Also set an Excel item's sheet and range, and a JSON item's column configuration, on the server: like a database item's table, they decide which columns a field name refers to.
+If you also serve Excel or JSON items, set an Excel item's sheet and range, and a JSON item's column configuration, on the server: like a database item's table, they decide which columns a field name refers to.
 
 ## Exporting Dashboards on the Server
 
@@ -618,14 +758,14 @@ When you [export a dashboard on the server](server-export.md), pass the user con
 
 - **Match the value type to the column type.** Put a string in the user context for a text column and a number for a numeric column. A value of another type can match no rows, and a failed conversion can produce a database error that quotes a value from a row the user can't see.
 - **Know how your database compares values.** Filters compare values in the data source, by its rules. With SQL Server and MySQL default collations, `'acme'` also matches `'ACME'` and `'acme '`; file data sources compare values exactly. Don't use keys that differ only by case or trailing spaces.
-- **Keep value lists short.** `FieldInContext` and `FieldInValues` can fail from about 1,000 values, and SQL Server allows at most 2,100 parameters in a query. For large permission lists, filter on a column that groups rows instead, or expose a view that joins your data with a permissions table and filter it on `UserId`.
 - **Keep the data source provider fast.** It runs for every data request, so cache lookups such as the user's permissions.
 
 ## Limitations
 
-- **Calculated fields.** A filter reads physical fields only. A request that declares a calculated field with the same name as a field a filter reads is refused, so rename such calculated fields.
-- **Schema changes.** Reveal checks requests that read a filtered item against a schema it caches on the server. If a filtered column's data type changes, those requests fail until you do both: clear the cached schema, for example by restarting the server, and, in dashboards saved before the change, refresh the data source fields in the dashboard editor and save. A filtered column added after a dashboard was saved needs no change.
-- **Stored procedures.** Rows a stored procedure returns are filtered by Reveal after the procedure runs, not by the database. If the procedure returns many rows, also pass the user's values as procedure parameters.
+- **Calculated fields.** A filter reads fields of the data source only. It can't read a calculated field.
+- **Custom queries.** A custom query must return every field the item's row filter reads.
+- **Data model provider.** A [data model provider](beta-features.md#irvdatamodelprovider) can't hide a field a filter reads: keep the field in the schema the provider returns.
+- **Stored procedures.** Reveal filters the rows a stored procedure returns after the procedure runs, not in the database. If the procedure can filter its rows itself, pass the user's values as procedure parameters instead of setting a row filter.
 
 ## Related Topics
 
