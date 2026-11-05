@@ -6,15 +6,15 @@ sidebar_custom_props:
 
 # Metadata Generation Endpoint
 
-Reveal SDK AI generates metadata for the datasources in your [metadata catalog](/ai/metadata-catalog): their databases, tables, fields, cached filter values and field statistics. The [Metadata Service](/ai/metadata-catalog#metadata-service-options) can generate it at startup or on a schedule. The metadata generation endpoint lets you trigger it on demand, for every datasource or only for the datasources, databases and tables you name.
+Reveal SDK AI generates metadata for the datasources in the [metadata catalog](/ai/metadata-catalog): their databases, tables, fields, cached filter values and field statistics. The [Metadata Service](/ai/metadata-catalog#metadata-service-options) can generate it at startup or on a schedule. The metadata generation endpoint triggers it on demand, for every datasource or only for the datasources, databases and tables the request names.
 
 Generating only what changed is useful when:
 
 - a table gained or lost columns, and only that table needs new metadata;
 - a new database or table was added to a datasource that already has metadata;
-- a stored table document is missing or damaged, and you want to repair it without regenerating the whole datasource.
+- a stored table document is missing or damaged, and needs repairing without regenerating the whole datasource.
 
-The endpoint is available on ASP.NET Core, Node.js and Java, at the same path as the other AI endpoints.
+The endpoint is available on ASP.NET Core, Node.js and Java, at the same path as the other AI endpoints. On ASP.NET Core, `targets` and the request validation described on this page require `Reveal.Sdk.AI` 1.6.172-preview or later, which is only available as a preview so far.
 
 ---
 
@@ -26,6 +26,12 @@ POST /api/reveal/ai/metadata/generate
 
 Generation runs in the background. The endpoint answers right away with `202 Accepted` and what will be generated, and the work continues after the response is sent.
 
+:::caution
+
+Generating and cancelling metadata are administrative operations: they run datasource queries and AI requests for the whole application. Restrict these routes to administrators. See [Data handling](data-handling.md#application-and-provider-responsibilities) for authenticating and authorizing AI endpoints; `RevealAI.AuthorizationPolicy` applies one policy to every AI endpoint, these included.
+
+:::
+
 ## Request Format
 
 ```typescript
@@ -33,7 +39,7 @@ Generation runs in the background. The endpoint answers right away with `202 Acc
   // What to generate. Omit it to generate every datasource.
   targets?: [
     {
-      datasourceId: string,    // Catalog datasource Id
+      datasourceId: string,    // Catalog datasource Id ({Id}_{ItemId} when it has an ItemId)
       database?: string,       // Omit for any database
       tables?: string[]        // Omit for every table
     }
@@ -57,11 +63,11 @@ Generation runs in the background. The endpoint answers right away with `202 Acc
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| `datasourceId` | string | Yes | The datasource `Id` from the metadata catalog. |
+| `datasourceId` | string | Yes | The datasource `Id` from the metadata catalog. For a datasource with an `ItemId`, such as a file-based source, it is `{Id}_{ItemId}`, with any character that isn't valid in a file name replaced by `_`. |
 | `database` | string | No | The database name (the catalog, for XMLA datasources). When omitted, the target applies to any database. |
 | `tables` | string[] | No | The table names (cubes, for XMLA datasources), schema-qualified where the datasource has schemas (for example, `dbo.Orders`). When omitted, the target covers every table. |
 
-Omitting `database` or `tables` is the only way to say "any" or "every":
+Omit `database` for any database, and `tables` for every table. Omitting `tables` is the only way to say "every table":
 
 | Target | Generates |
 |--------|-----------|
@@ -92,8 +98,8 @@ The request is validated strictly, so that a mistake can't silently turn into "g
 - an empty `targets` list, or an empty `tables` list;
 - a `"*"` entry in `tables` (omit `tables` instead);
 - an empty or blank `datasourceId`, `database` or table name, or one with leading or trailing spaces;
-- both `targets` and `datasourceIds`;
-- an unknown JSON property, on the request or on a target. For example, a misspelled `"target"` would otherwise be ignored and generate every datasource.
+- a non-empty `datasourceIds` together with `targets`;
+- an unknown JSON property, on the request or on a target. For example, a misspelled `"target"` would otherwise be ignored and generate every datasource. This error has a different shape, see [400 Bad Request](#400-bad-request).
 
 </details>
 
@@ -106,7 +112,7 @@ The request is validated strictly, so that a mistake can't silently turn into "g
 A target with only a `datasourceId` covers the whole datasource. It behaves exactly like the deprecated `datasourceIds`:
 
 - **With `forceRegeneration`**, the datasource's metadata is deleted and rebuilt, so tables the source no longer has are removed.
-- **Without it**, a datasource that already has metadata is skipped.
+- **Without it**, a datasource that already has stored metadata is skipped, whatever its status, including when its last generation failed. The `reason` in the response says which.
 
 When a datasource has both a whole-datasource target and other targets, the whole datasource wins, since it covers them.
 
@@ -114,13 +120,13 @@ When a datasource has both a whole-datasource target and other targets, the whol
 
 Any other target generates only the tables it names, and merges them into the datasource's existing metadata:
 
-- Nothing outside the targets is regenerated or deleted. The rest of the datasource keeps its metadata, including descriptions you edited.
+- Nothing outside the targets is regenerated or deleted. The rest of the datasource keeps its metadata, including edited descriptions.
 - Targeted tables are never deleted either, even when the source no longer has them, because a dropped table can't be told apart from a typo or a temporary empty result. To remove tables, regenerate the whole datasource with `forceRegeneration`.
 - **Without `forceRegeneration`**, a targeted table is skipped when its metadata is complete and its schema hasn't changed. A table that gained or lost a column is regenerated.
 - **With `forceRegeneration`**, every targeted table is regenerated.
 - A stored table document that can't be read (for example, after an interrupted write) counts as missing, so targeting that table repairs it.
 
-The datasource must already have metadata. To generate databases or tables of a datasource that has none, or whose last generation failed, generate the whole datasource first.
+The datasource must already have usable metadata. To generate databases or tables of a datasource that has none, generate the whole datasource first. When its last generation failed or produced no tables, generate the whole datasource with `forceRegeneration`, because without it the datasource is skipped.
 
 ### Catalog restrictions
 
@@ -185,7 +191,7 @@ With `targets`, the response also lists what each datasource gets:
 | Property | Type | Description |
 |----------|------|-------------|
 | `datasourceId` | string | The datasource, as requested. |
-| `mode` | string | `"full"`: the whole datasource is generated. `"targeted"`: only `targets` are generated and merged into the existing metadata. `"skipped"`: nothing is generated, because the whole datasource already has metadata and `forceRegeneration` is `false`. |
+| `mode` | string | `"full"`: the whole datasource is generated. `"targeted"`: only `targets` are generated and merged into the existing metadata. `"skipped"`: nothing is generated, because the whole datasource already has stored metadata, whatever its status, and `forceRegeneration` is `false`. |
 | `reason` | string | Why the datasource is skipped. `null` otherwise. |
 | `targets` | array | For `"targeted"`: what the targets resolved to after the [catalog restrictions](#catalog-restrictions), grouped by database. `tables` is omitted when the whole database is covered. `null` otherwise. |
 
@@ -203,6 +209,8 @@ For an invalid request (see [Requests that are rejected](#request-format)), `err
 }
 ```
 
+An unknown JSON property, or a body that isn't valid JSON, is rejected before these checks with ASP.NET Core's standard validation response instead: a `ValidationProblemDetails` object (`application/problem+json`) with `title`, `status` and `errors`, and no `error`.
+
 When the request is valid but can't be done as given, `errors` lists every problem, each naming its datasource:
 
 ```json
@@ -219,7 +227,7 @@ This happens when a request names:
 
 - a datasource that isn't in the catalog;
 - a database or table the [catalog restrictions](#catalog-restrictions) don't allow, even when a whole-datasource target of the same datasource covers it;
-- databases or tables of a datasource with no usable metadata (none, failed, or empty). Generate the whole datasource first;
+- databases or tables of a datasource with no usable metadata (none, failed, or empty). Generate the whole datasource first, with `forceRegeneration` when its metadata failed or is empty;
 - databases or tables of a datasource whose stored metadata index can't be read. Regenerate the whole datasource with `forceRegeneration`, which rebuilds it.
 
 ### 409 Conflict
@@ -234,7 +242,9 @@ A metadata generation is already running on this server instance. Wait for it to
 
 :::note
 
-Only one generation runs at a time on each server instance. When your application runs several instances, each one checks only its own generations.
+Only one generation runs at a time on each server instance, and each instance checks only its own generations. A `409` can also come from the Metadata Service, while it generates at startup or on its `CronSchedule`. Cancelling stops only the generation on the instance that handles the request.
+
+When several instances share metadata storage, trigger generation from one designated instance, or coordinate it in the application, so that generations don't overlap.
 
 :::
 
@@ -255,7 +265,7 @@ GET /api/reveal/ai/metadata/status
 }
 ```
 
-`status` is one of `"NotStarted"`, `"Queued"`, `"Generating"`, `"Enriching"`, `"Completed"` or `"Failed"`. It reflects the metadata that is currently stored, not one particular request, so a generation that had nothing to do also reads `"Completed"`.
+`status` is `"NotStarted"` when the catalog has no datasources and `"Completed"` when the metadata of every datasource is complete. Otherwise it is a descriptive progress message, such as `"Generating metadata for NorthwindDB"`, not a fixed value. It reflects the overall readiness of the stored metadata, not one particular request: `"Completed"` doesn't mean that a given generation request has finished, and a generation that had nothing to do also reads `"Completed"`.
 
 Cancel the running generation:
 
