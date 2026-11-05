@@ -30,6 +30,10 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - DataGrid の四辺すべてに 1 ピクセルの境界線が表示されるようになりました。以前は、グリッドに集計がある場合にのみ下の境界線が表示されていました。
 - Claude Code、GitHub Copilot、Cursor などの AI コーディング アシスタント向けの [AI エージェント スキル](https://help.revealbi.io/ja/web/ai-agent-skills/)を利用できます。`reveal-embed` はアプリケーションへの Reveal の埋め込みを支援し、`reveal-dashboard-authoring` は Reveal DOM を使用して `.rdash` ファイルを作成および編集します。
 
+### 改善
+
+- 新しいデータ エンジンが、クライアントとサーバーの両方でデフォルトになりました。新しいデータ エンジンは、コネクタがサポートしている場合、集計、フィルター、結合、ページングをデータ ソースにプッシュ ダウンします。[タイムゾーンの変換](https://help.revealbi.io/ja/web/time-zones/)と[行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)は、このエンジン上で動作します。いくつかのケースでは、以前のバージョンと結果が異なります: `ROW`、`PREVIOUS`、または非推奨の集計関数を使用する計算フィールドはエラーで拒否され、文字列はデータ ソースの照合順序で並べ替えられ、SQL Server および Redshift での整数値の平均は小数部を保持します。以前のエンジンを引き続き使用するには、両側で新しいエンジンをオフにしてください: クライアントで `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` を呼び出し、サーバーの設定 (ASP.NET の `Engine2Enabled`、Java の `setEngine2Enabled`、Node.js の `engine2Enabled` オプション) をオフにします。
+
 #### AI
 - [プロファイル オーソライザー](https://help.revealbi.io/ja/ai/profile-selection/) (`IAIProfileAuthorizer`) は、各ユーザーがリクエストできる AI プロファイルを、通常はユーザーのプランに基づいて決定します。これにより、顧客のプランごとに異なるモデルを提供できます。
 - [クォータ ゲート](https://help.revealbi.io/ja/ai/quota-gate/) (`IAIQuotaGate`、または Node.js と Java では `quotaGate` および `quotaSettle` コールバック) は、トークンが消費される前にすべての AI 呼び出しをチェックし、呼び出し後に実際のトークン使用量を精算します。拒否された呼び出しはプロバイダーに到達せず、クライアントは `ai.quota_exceeded` などの安定したコードを持つ `RevealAIError` を受け取るため、アプリでアップグレードを促す表示に利用できます。
@@ -47,10 +51,6 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 
 #### Node.js
 - `advancedSettings` は、宣言された型である `Map` でなければならなくなりました。このリリースより前は、`Map` が空のオブジェクトとしてシリアル化されてエンジンに届かなかったため、プレーン オブジェクトだけが機能していました。プレーン オブジェクトは、起動時に `object is not iterable` で失敗するようになりました。
-
-### 改善
-
-- 新しいデータ エンジンが、クライアントとサーバーの両方でデフォルトになりました。新しいデータ エンジンは、コネクタがサポートしている場合、集計、フィルター、結合、ページングをデータ ソースにプッシュ ダウンします。[タイムゾーンの変換](https://help.revealbi.io/ja/web/time-zones/)と[行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)は、このエンジン上で動作します。いくつかのケースでは、以前のバージョンと結果が異なります: `ROW`、`PREVIOUS`、または非推奨の集計関数を使用する計算フィールドはエラーで拒否され、文字列はデータ ソースの照合順序で並べ替えられ、SQL Server および Redshift での整数値の平均は小数部を保持します。以前のエンジンを引き続き使用するには、両側で新しいエンジンをオフにしてください: クライアントで `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` を呼び出し、サーバーの設定 (ASP.NET の `Engine2Enabled`、Java の `setEngine2Enabled`、Node.js の `engine2Enabled` オプション) をオフにします。
 
 ### バグ修正
 
