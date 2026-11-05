@@ -3,18 +3,82 @@ import TabItem from '@theme/TabItem';
 
 # リリース ノート
 
-## Preview (weekly preview)
-
-> 以下の変更は毎週のプレビュー ビルドで利用可能で、次回の RTM リリースに含まれる予定です。
+## 2.3.0 (November 5, 2026)
 
 ### 新機能
 
 - ダッシュボードを、ブラウザーとは異なる[タイムゾーン](https://help.revealbi.io/ja/web/time-zones/)で表示できるようになりました。`RevealSdkSettings.timeZone` に `RVTimeZone` のメンバーまたは任意の IANA タイムゾーン名を設定すると、相対日付フィルターと `currentTimeZone()` がそのタイムゾーンを使用し、データ ソースから読み取るすべての DateTime フィールドがサーバーでそのタイムゾーンに変換されます。ダッシュボードやデータ ソースを変更する必要はありません。開いているダッシュボードで設定すると、フィルターの選択と最大化された表示形式を維持したまま、データがその場で再読み込みされます。サーバー側のエクスポートでは、エクスポート オプションの `TimeZone` からタイムゾーンを取得し、設定されていない場合は UTC を使用します。`applyTimeZone()` で日付を変換しているダッシュボードでは、タイムゾーンを設定する際にその数式を削除してください。削除しない場合、値が 2 回変換されます。
+- [行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)が、ASP.NET、Java、Node.js のサーバー SDK で利用可能になりました。データ ソース プロバイダーでデータ ソース項目に行フィルターを設定すると、Reveal はその項目を読み取るすべてのクエリ (表示形式、合計、フィルターの値リスト、ブレンドされたデータ、エクスポート) にフィルターを適用します。ユーザー コンテキストの値はクエリ パラメーターとして送信され、フィルターがクライアントに送られることはありません。フィルターを適用できない場合、リクエストはフィルターされていない行を返すのではなく失敗します。行フィルターは、[データ ソース別の機能サポート](https://help.revealbi.io/ja/web/datasources/#feature-support-by-data-source)に記載されているデータ ソースで機能します。
+```csharp
+sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
+```
+- Excel および CSV エクスポートで、表示形式のデータがブラウザーからサーバーに送り返されなくなったため、大きなグリッドがサーバーのリクエスト サイズ制限で失敗することはなくなりました。クライアントはフィルターと並べ替えを含むダッシュボードのみを送信し、サーバーが自らクエリを実行します。ページングされたグリッドはページごとに読み取られ (エクスポート構成の `DataSourceQueryPageSize`、デフォルトは 1,000 行)、サーバー上の一時ファイルを介して書き込まれるため、グリッドは Excel のシートあたりの上限である 1,048,576 行まで完全にエクスポートされます。ASP.NET と Node.js では、エクスポートをキャンセルするとサーバー側の処理も停止します。データを読み取れない表示形式は、エクスポート全体を失敗させる代わりに、エラーを示すシートになります。
+- グリッドの PDF エクスポートで、ダッシュボードの表示と同じように条件付き書式 (背景色と文字色、太字、斜体、取り消し線、アイコン) が適用されるようになりました。
+- Excel エクスポートで、ダッシュボードがチャートの凡例を下に表示している場合、凡例が下に保持されるようになりました。Excel ではチャートの上または下にある凡例は常に中央揃えになるため、左揃えまたは右揃えの凡例は中央揃えでエクスポートされます。
+- Excel エクスポートで、大きな数値の書式設定が保持されるようになりました。`1.23M` と表示される値は `0.00,,"M"` という数値書式でエクスポートされ、セルには正確な値が保持されます。
+- **Next N days** (次の N 日間) の日付ルールに今日を含めることができるようになりました。`new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` は今日とその後の 6 日間を対象とします。最後の引数を指定しない場合、期間は従来どおり明日から始まります。Web クライアント、ASP.NET、Java、Node.js で利用できます。
+- `onUrlLinkRequested` コールバックで、`args.url` にクリックされた行の解決済み URL が格納され、新しい `args.urlTemplate` にダッシュボードで構成された URL テンプレートが格納されるようになりました。これはグリッド、ピボット、スパークラインのハイパーリンク列に適用されます。コールバックからテンプレートを返す方法も引き続き機能し、Reveal はナビゲーションの前にそれを解決します。
+- Oracle コネクタが v2 コネクタ アーキテクチャを使用するようになり、集計が Reveal ではなく Oracle で実行されるようになりました。また、パラメーター化されたカスタム クエリと PL/SQL の `BOOLEAN` 型のストアド プロシージャ引数がサポートされ、Java の `RVOracleDataSourceItem` に `procedure` と `procedureParameters` が追加されました。
+- `RVPostgresDataSource` に 2 つの新しい TLS 設定が追加されました: `SslMode` (`Disable`、`Allow`、`Prefer`、`Require`、`VerifyCA`、`VerifyFull`。PostgreSQL の `sslmode` と同じ意味) と、サーバー上の PEM 形式の CA 証明書のパスを指定する `SslRootCertificate` です。これらはサーバー側専用の設定で、データ ソース プロバイダーで設定します。設定しない場合、接続はこれまでどおりに動作します。
+- SQL データ ソースに、秒単位で指定する 2 つの新しいサーバー側設定が追加されました: クエリの実行を許可する時間を指定する `CommandTimeout` と、接続を待機する時間を指定する `ConnectionTimeout` です。PostgreSQL、Amazon Redshift、MySQL、MariaDB、SQL Server (Azure SQL および Azure Synapse を含む)、Oracle、Snowflake、Sybase で利用できます。データ ソース プロバイダーで設定してください。設定しない場合、各コネクタは現在のタイムアウトを維持します。
+- 同じクラスター上にある 2 つの Amazon Redshift データ ソースのブレンドが、各側を読み取って Reveal で結合する代わりに、Redshift の 1 つのクロスデータベース クエリとして実行されるようになりました。
+- Node.js および Java SDK で、インメモリ データ ソースがサポートされるようになりました。データは、Node.js では `dataProvider` オプション、Java では `RevealServerBuilder.setDataProvider` で提供します。
+- Web SDK で `italicFont` および `boldItalicFont` テーマ設定が適用されるようになりました。また、1 つのフォント ファミリを複数のスタイル スロットに割り当てることができ、Reveal がそれぞれに合った太さとスタイルを選択します。すでに `italicFont` または `boldItalicFont` を設定している場合、斜体の条件付き書式スタイルを使用するグリッド セルは、アップグレード後に外観が変わります。詳細は[テーマのフォント](https://help.revealbi.io/ja/web/theming-fonts/)を参照してください。
+- [Redis キャッシュ](https://help.revealbi.io/ja/web/caching/#redis-cache)が有効な場合、XMLA と Cube のメタデータ、およびダッシュボード フィルターとクイック フィルターの値リストも Redis キャッシュに格納されるようになりました。
+- チャートで、データ内のすべての系列が描画されるようになりました。以前は、標準のチャートでは最大 30 系列、積み上げ棒チャートと積み上げ縦棒チャートでは最大 100 系列までしか表示されず、残りは警告なしに省略されていました。
+- ツールチップがマウス ポインターの右下に表示され、ページの端付近ではページ内に収まるように反転するようになりました。
+- DataGrid の四辺すべてに 1 ピクセルの境界線が表示されるようになりました。以前は、グリッドに集計がある場合にのみ下の境界線が表示されていました。
+- Claude Code、GitHub Copilot、Cursor などの AI コーディング アシスタント向けの [AI エージェント スキル](https://help.revealbi.io/ja/web/ai-agent-skills/)を利用できます。`reveal-embed` はアプリケーションへの Reveal の埋め込みを支援し、`reveal-dashboard-authoring` は Reveal DOM を使用して `.rdash` ファイルを作成および編集します。
 
-### バグ
+#### AI
+- [プロファイル オーソライザー](https://help.revealbi.io/ja/ai/profile-selection/) (`IAIProfileAuthorizer`) は、各ユーザーがリクエストできる AI プロファイルを、通常はユーザーのプランに基づいて決定します。これにより、顧客のプランごとに異なるモデルを提供できます。
+- [クォータ ゲート](https://help.revealbi.io/ja/ai/quota-gate/) (`IAIQuotaGate`、または Node.js と Java では `quotaGate` および `quotaSettle` コールバック) は、トークンが消費される前にすべての AI 呼び出しをチェックし、呼び出し後に実際のトークン使用量を精算します。拒否された呼び出しはプロバイダーに到達せず、クライアントは `ai.quota_exceeded` などの安定したコードを持つ `RevealAIError` を受け取るため、アプリでアップグレードを促す表示に利用できます。
+- [使用量の追跡](https://help.revealbi.io/ja/ai/usage-tracking/)では、すべての AI 呼び出しについて、トークン数、ユーザー、インテント、プロファイル、モデルを含むレコードを、`IAIUsageSink` または `usageSink` コールバックを通じて独自のストアに送信します。レコードにプロンプトや応答のテキストが含まれることはありません。
+- [オブザーバビリティ](https://help.revealbi.io/ja/ai/observability/)はセットアップ不要で機能します。ASP.NET サーバーはすべての AI 呼び出しをログに記録して OpenTelemetry メトリックでカウントし、各応答はそのプロファイルとトークン使用量を返します。
+- [動的プロファイル](https://help.revealbi.io/ja/ai/byok/) (プレビュー) を使用すると、各ユーザーが独自のキー (BYOK) とモデルを使用できます。`AddDynamicProfile` (Node.js と Java では `addDynamicProfile`) で宣言します。Reveal はキーを保存しません。
+
+### 重大な変更
 
 #### すべてのプラットフォーム
-- グリッドおよびピボットの PDF エクスポートで、文字列値が 200 文字で切り捨てられることがなくなりました。従来、PDF エクスポーターはエンジンの制限に加えて独自の 200 文字の制限を適用していたため、エクスポートに表示されるテキストがダッシュボードよりも短くなる場合がありました。この追加の制限が削除され、エクスポートされるテキストはエンジンの [`MaxStringCellSize`](https://help.revealbi.io/ja/web/data-size-limits/#maxstringcellsize-と長いテキスト値) 設定 (デフォルトは 256 文字) に従うようになり、エクスポートにはダッシュボードと同じ長さのテキストがセルごとに表示されます。さらに多くの文字を表示するには `MaxStringCellSize` を大きくしてください。セルは幅が固定されているため、長い値は折り返されてページ数が増加することにご注意ください。
+- Snowflake コネクタで、ユーザー名とパスワードによる認証がサポートされなくなりました。代わりに、認証プロバイダーから [`RVKeyPairDataSourceCredential`](https://help.revealbi.io/ja/web/authentication/#キーペア認証) を返してください。
+
+#### Java および Node.js
+- データ ソース プロバイダー、認証プロバイダー、ダッシュボード プロバイダーなどの拡張ポイントの背後にあるコードが例外をスローした場合、ASP.NET と同様にリクエストが失敗するようになりました。データ リクエストでは、ユーザーに表示されるエラーに相関 ID が含まれ、サーバーはこの ID を例外とともにログに記録します。以前の Node.js SDK は、例外をログに記録したうえで、クライアントから送信されたデータ ソース項目のまま処理を続行していました。
+
+#### Node.js
+- `advancedSettings` は、宣言された型である `Map` でなければならなくなりました。このリリースより前は、`Map` が空のオブジェクトとしてシリアル化されてエンジンに届かなかったため、プレーン オブジェクトだけが機能していました。プレーン オブジェクトは、起動時に `object is not iterable` で失敗するようになりました。
+
+### 改善
+
+- 新しいデータ エンジンが、クライアントとサーバーの両方でデフォルトになりました。新しいデータ エンジンは、コネクタがサポートしている場合、集計、フィルター、結合、ページングをデータ ソースにプッシュ ダウンします。[タイムゾーンの変換](https://help.revealbi.io/ja/web/time-zones/)と[行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)は、このエンジン上で動作します。いくつかのケースでは、以前のバージョンと結果が異なります: `ROW`、`PREVIOUS`、または非推奨の集計関数を使用する計算フィールドはエラーで拒否され、文字列はデータ ソースの照合順序で並べ替えられ、SQL Server および Redshift での整数値の平均は小数部を保持します。以前のエンジンを引き続き使用するには、両側で新しいエンジンをオフにしてください: クライアントで `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` を呼び出し、サーバーの設定 (ASP.NET の `Engine2Enabled`、Java の `setEngine2Enabled`、Node.js の `engine2Enabled` オプション) をオフにします。
+
+### バグ修正
+
+主な修正を以下に示します。すべての修正については、[2026 年 9 月 1 日から 11 月 5 日までに GitHub でクローズされたバグ](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted)を参照してください。
+
+#### すべてのプラットフォーム
+- グリッドおよびピボットの PDF エクスポートで、テキストが 200 文字で切り捨てられなくなりました。ダッシュボードと同様に、[`MaxStringCellSize`](https://help.revealbi.io/ja/web/data-size-limits/#maxstringcellsize-と長いテキスト値) 設定 (デフォルトは 256 文字) に従います。
+- PDF エクスポートがダッシュボードのレイアウトと一致し、データのないチャートには「表示するデータはありません」メッセージが表示されるようになりました。
+- サーバー側のエクスポートでマップが空白になる問題と、読み込みの完了前にキャプチャされる問題を修正しました。
+- チャートのタイトルにアポストロフィが含まれると Excel エクスポートが失敗する問題と、通貨記号に文字 (`USD` など) が含まれると Excel が修復を求める問題を修正しました。
+- データが切り詰められた DataGrid で、並べ替え、グループ化、フィルタリングがサーバー上で行われるようになりました。グリッドがサーバー上で処理されている間は、正しくない合計が表示されるため、列集計は非表示になります。
+- `RevealView.dashboard` を割り当てる前に `canAddDashboardFilter` または `canAddDateFilter` を設定しても、例外がスローされなくなりました。
+- Tab キーと Shift+Tab キーが、再びホスト ページのフォーカス順序に従うようになりました。
+- `RevealView` が削除されたときにリスナーを解放するようになり、セッション中にダッシュボードの切り替えが遅くなることはなくなりました。
+- PostgreSQL の `uuid` 列のフィルター、`date` 列に対する Redshift の `DATEDIFF`、Oracle の `TIMESTAMP WITH TIME ZONE` の値、ClickHouse のブレンドで一致しない行に関する問題を修正しました。
+- SQLite キャッシュのキャッシュ キーが衝突し、ページングされたグリッドのすべてのページに最初のページが表示される問題を修正しました。
+- Linux および macOS で、サーバーのデフォルトのタイムゾーンが「Unknown time zone」で失敗する場合がある問題を修正しました。
+- リクエストにデータ ソースが含まれていないデータ ソース項目は、「The data source was not found.」で拒否されるようになりました。
+- サーバー側のエクスポート エンドポイントを強化し、JSON ではない本文に対して 400 を返すようになりました。
+
+#### ASP.NET
+- `Reveal.Sdk.Data.Sybase` パッケージで `System.Data.SqlClient` への依存関係が宣言されるようになり、アプリがこのパッケージを参照していなくても Sybase のリクエストが失敗しなくなりました。
+
+#### Java および Node.js
+- サーバー SDK はクライアントから送信された `RevealBI-` ヘッダーをエンジンに転送しなくなり、エンジンの内部エンドポイントはサーバー SDK からのリクエストのみを受け付けるようになりました。
+
+#### Node.js
+- ヘッドレスの PDF および画像エクスポートで、ユーザーの言語が適用されるようになりました。
 
 ## 2.2.0 (September 3rd, 2026)
 
