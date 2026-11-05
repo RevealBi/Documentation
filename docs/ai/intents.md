@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Reveal tags every AI call it makes with an **intent**. An intent names the workflow the call belongs to, such as generating a dashboard, analyzing a visualization, or ranking datasources. The developer can map an intent to a [profile](/ai/providers-overview#profiles) to run that workflow on a specific model. For example, dashboard generation can run on a larger model, and quick background steps can run on a fast, inexpensive one.
 
-Intents are fixed by Reveal. The developer can't define new ones, but can map any of them to a profile.
+Intents are fixed by Reveal. The developer can't define new ones, but they can designate which profile each intent runs on.
 
 ## Intent values
 
@@ -150,7 +150,7 @@ An application that checks `widget-analysis` in any of these places should check
 
 The [Chat endpoint](/ai/chat) also uses intent names. A chat request can set `intent` to run a specific operation instead of letting the AI classify the message, and the response's `intent` reports the operation that ran. The accepted values, and how the response reports them, are described in [Chat Endpoint](/ai/chat).
 
-## Ranking datasources on a fast profile
+## Setting datasources ranking to a fast profile
 
 When a dashboard request doesn't name a datasource and more than one datasource is available to the user, Reveal ranks the datasources that could answer it before it generates the dashboard. Ranking is its own intent, `Intents.DatasourceRanker` (`datasource-ranker`), and runs on the default profile, not on the profile the client requested. With many datasources it takes up to three model calls in a row, and it's often the slowest part of the request.
 
