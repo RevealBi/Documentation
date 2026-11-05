@@ -61,6 +61,12 @@ const dateRange = new RVDateRange(fromDate, toDate);
 revealView.dashboard.dateFilter = new RVDateDashboardFilter(RVDateFilterType.CustomRange, dateRange);
 ```
 
+:::note
+
+日付は、ローカルのタイムゾーンではなく `Date.UTC` で作成してください。`Date.UTC` は数値を返すため、`new Date(...)` で囲んでください。月は 0 から始まるため、`new Date(Date.UTC(2012, 0, 1))` は UTC の 2012 年 1 月 1 日になります。`new Date(2012, 0, 1)` はブラウザーのタイムゾーンの午前 0 時になるため、UTC では別の日になる場合があります。
+
+:::
+
 ここでは、ダッシュボード UI が更新され、日付範囲が表示されるように Date Filter が更新されていることがわかります。
 
 ![](images/filtering-date-filter-daterange.jpg)
