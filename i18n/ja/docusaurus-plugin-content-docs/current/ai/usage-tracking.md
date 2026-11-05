@@ -154,7 +154,7 @@ Node.js と Java では、プロパティ名はキャメルケースになり、
 | `InputTokens`、`OutputTokens`、`TotalTokens` | トークン数。プロバイダーが使用量を報告しなかった場合は `null` で、`0` とは区別されます。 |
 | `ReasoningTokens` | 内部の推論に使われたトークン。プロバイダーが報告しない場合は `null`。OpenAI と Azure OpenAI は `OutputTokens` に含め、Google Gemini は別に数え、Anthropic は報告しません。 |
 | `CachedInputTokens` | プロバイダーのプロンプト キャッシュから提供された入力トークン。プロバイダーが報告しない場合は `null`。すべての組み込みプロバイダーは、これを `InputTokens` にも含めます。 |
-| `Stage`、`Attempt` | マルチステップのダッシュボード ジェネレーター (`UseDashboardGeneratorV2`) のみが設定します。呼び出しが属するステップ (例: `DefineWidgets`) と、プロンプトの最初の呼び出しなら `1`、無効な回答を修正する呼び出しなら `2` 以上。それ以外の場合は `null`。 |
+| `Stage`、`Attempt` | ダッシュボード ジェネレーターのみが設定します。呼び出しが属するステップ (例: `DefineWidgets`) と、プロンプトの最初の呼び出しなら `1`、無効な回答を修正する呼び出しなら `2` 以上。それ以外の場合は `null`。 |
 | `Duration` | プロバイダー呼び出しの所要時間。 |
 | `FinishReason` | 呼び出しが成功した場合の、モデルが停止した理由: `Stop`、`Length`、`ContentFilter`、`Other`。 |
 | `Succeeded` | 呼び出しが正常に完了したかどうか。 |
