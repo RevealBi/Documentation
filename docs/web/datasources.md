@@ -343,7 +343,7 @@ _**Included in SDK** - there is not a separate package to install for this data 
 [Time zone conversion](time-zones.md) and [row-level security](row-level-security.md) work only with these data sources:
 
 - Amazon Athena, Amazon Redshift, Azure SQL, Azure Synapse, ClickHouse, Cosmos DB, Databricks, DuckDB, Elasticsearch, Google BigQuery, MariaDB, MongoDB, MS SQL Server, MySQL, Oracle, PostgreSQL, Snowflake and SQLite
-- CSV, Excel and JSON data, including files read from REST, Amazon S3, SharePoint, OneDrive, Google Drive, Dropbox, Box or local storage
+- CSV, Excel and JSON data, including files read from REST, Amazon S3 or local storage
 - Google Sheets and in-memory data
 
 They also don't work on visualizations that blend in any other data source, or on data transposed in the data source preview.

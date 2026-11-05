@@ -343,7 +343,7 @@ app.use('/', reveal(revealOptions));
 [タイムゾーンの変換](time-zones.md)と[行レベル セキュリティ](row-level-security.md)は、次のデータ ソースでのみ動作します。
 
 - Amazon Athena、Amazon Redshift、Azure SQL、Azure Synapse、ClickHouse、Cosmos DB、Databricks、DuckDB、Elasticsearch、Google BigQuery、MariaDB、MongoDB、MS SQL Server、MySQL、Oracle、PostgreSQL、Snowflake、SQLite
-- CSV、Excel、JSON データ (REST、Amazon S3、SharePoint、OneDrive、Google Drive、Dropbox、Box、またはローカル ストレージから読み取るファイルを含む)
+- CSV、Excel、JSON データ (REST、Amazon S3、またはローカル ストレージから読み取るファイルを含む)
 - Google スプレッドシートおよびインメモリ データ
 
 その他のデータ ソースをブレンドした表示形式や、データ ソースのプレビューで入れ替えたデータでも動作しません。
