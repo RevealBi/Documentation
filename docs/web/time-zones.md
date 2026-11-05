@@ -89,6 +89,8 @@ While a time zone is set, the server converts every DateTime field read from the
 
 The conversion starts from UTC. As everywhere in Reveal, DateTime values without a time zone are treated as UTC, and values that carry their own offset, such as SQL Server `datetimeoffset` or Oracle `TIMESTAMP WITH TIME ZONE`, are normalized to UTC.
 
+The same applies to dates your JavaScript code passes to the SDK, such as a custom date range. Build them with `Date.UTC`; see [Using a Custom Date Range](filtering-dashboards.md#using-a-custom-date-range).
+
 - **Only DateTime fields are converted.** Date and Time fields are never shifted, even when the DateTime on the same row moves to another day.
 - **Grouping follows the time zone.** Grouping by day, week or month uses the converted values.
 - **Calculated fields aren't converted.** The fields they read are already converted, so they aren't converted again. A formula that calls `applyTimeZone()` converts a second time (see [Upgrading Existing Dashboards](#upgrading-existing-dashboards)).
