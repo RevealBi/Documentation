@@ -48,7 +48,7 @@ Each measurement is tagged with:
 | `gen_ai.provider.name` | The provider registration name. |
 | `gen_ai.request.model` | The model. |
 | `reveal.ai.succeeded` | Whether the call succeeded. |
-| `reveal.ai.stage` | The dashboard generation step, for calls made by the multi-step dashboard generator (`UseDashboardGeneratorV2`). |
+| `reveal.ai.stage` | The dashboard generation step, for calls made by the dashboard generator. |
 
 To export them, add the meter to the OpenTelemetry configuration:
 
