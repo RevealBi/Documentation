@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 ### 新機能
 
-- ダッシュボードを、ブラウザーとは異なる[タイムゾーン](https://help.revealbi.io/ja/web/time-zones/)で表示できるようになりました。`RevealSdkSettings.timeZone` に `RVTimeZone` のメンバーまたは任意の IANA タイムゾーン名を設定すると、相対日付フィルターと `currentTimeZone()` がそのタイムゾーンを使用し、データ ソースから読み取るすべての DateTime フィールドがサーバーでそのタイムゾーンに変換されます。ダッシュボードやデータ ソースを変更する必要はありません。開いているダッシュボードで設定すると、フィルターの選択と最大化された表示形式を維持したまま、データがその場で再読み込みされます。サーバー側のエクスポートでは、エクスポート オプションの `TimeZone` からタイムゾーンを取得し、設定されていない場合は UTC を使用します。`applyTimeZone()` で日付を変換しているダッシュボードでは、タイムゾーンを設定する際にその数式を削除してください。削除しない場合、値が 2 回変換されます。
+- ダッシュボードを、ブラウザーとは異なる[タイムゾーン](https://help.revealbi.io/ja/web/time-zones/)で表示できるようになりました。`RevealSdkSettings.timeZone` に `RVTimeZone` のメンバーまたは任意の IANA タイムゾーン名を設定すると、相対日付フィルターと `currentTimeZone()` がそのタイムゾーンを使用し、データ ソースから読み取るすべての DateTime フィールドがサーバーでそのタイムゾーンに変換されます。ダッシュボードやデータ ソースを変更する必要はありません。開いているダッシュボードで設定すると、フィルターの選択と最大化された表示形式を維持したまま、データがその場で再読み込みされます。サーバー側のエクスポートでは、エクスポート オプションの `TimeZone` からタイムゾーンを取得し、設定されていない場合は UTC を使用します。`applyTimeZone()` で日付を変換しているダッシュボードでは、タイムゾーンを設定する際にその数式を削除してください。数式が読み取るフィールドはすでに変換されているため、数式によって 2 回目の変換が行われます。
 - [行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)が、ASP.NET、Java、Node.js のサーバー SDK で利用可能になりました。データ ソース プロバイダーでデータ ソース項目に行フィルターを設定すると、Reveal はその項目を読み取るすべてのクエリ (表示形式、合計、フィルターの値リスト、ブレンドされたデータ、エクスポート) にフィルターを適用します。ユーザー コンテキストの値はクエリ パラメーターとして送信され、フィルターがクライアントに送られることはありません。フィルターを適用できない場合、リクエストはフィルターされていない行を返すのではなく失敗します。行フィルターは、[データ ソース別の機能サポート](https://help.revealbi.io/ja/web/datasources/#feature-support-by-data-source)に記載されているデータ ソースで機能します。
 ```csharp
 sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
@@ -21,7 +21,6 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - Oracle コネクタが v2 コネクタ アーキテクチャを使用するようになり、集計が Reveal ではなく Oracle で実行されるようになりました。また、パラメーター化されたカスタム クエリと PL/SQL の `BOOLEAN` 型のストアド プロシージャ引数がサポートされ、Java の `RVOracleDataSourceItem` に `procedure` と `procedureParameters` が追加されました。
 - `RVPostgresDataSource` に 2 つの新しい TLS 設定が追加されました: `SslMode` (`Disable`、`Allow`、`Prefer`、`Require`、`VerifyCA`、`VerifyFull`。PostgreSQL の `sslmode` と同じ意味) と、サーバー上の PEM 形式の CA 証明書のパスを指定する `SslRootCertificate` です。これらはサーバー側専用の設定で、データ ソース プロバイダーで設定します。設定しない場合、接続はこれまでどおりに動作します。
 - SQL データ ソースに、秒単位で指定する 2 つの新しいサーバー側設定が追加されました: クエリの実行を許可する時間を指定する `CommandTimeout` と、接続を待機する時間を指定する `ConnectionTimeout` です。PostgreSQL、Amazon Redshift、MySQL、MariaDB、SQL Server (Azure SQL および Azure Synapse を含む)、Oracle、Snowflake、Sybase で利用できます。データ ソース プロバイダーで設定してください。設定しない場合、各コネクタは現在のタイムアウトを維持します。
-- 同じクラスター上にある 2 つの Amazon Redshift データ ソースのブレンドが、各側を読み取って Reveal で結合する代わりに、Redshift の 1 つのクロスデータベース クエリとして実行されるようになりました。
 - Node.js および Java SDK で、インメモリ データ ソースがサポートされるようになりました。データは、Node.js では `dataProvider` オプション、Java では `RevealServerBuilder.setDataProvider` で提供します。
 - Web SDK で `italicFont` および `boldItalicFont` テーマ設定が適用されるようになりました。また、1 つのフォント ファミリを複数のスタイル スロットに割り当てることができ、Reveal がそれぞれに合った太さとスタイルを選択します。すでに `italicFont` または `boldItalicFont` を設定している場合、斜体の条件付き書式スタイルを使用するグリッド セルは、アップグレード後に外観が変わります。詳細は[テーマのフォント](https://help.revealbi.io/ja/web/theming-fonts/)を参照してください。
 - [Redis キャッシュ](https://help.revealbi.io/ja/web/caching/#redis-cache)が有効な場合、XMLA と Cube のメタデータ、およびダッシュボード フィルターとクイック フィルターの値リストも Redis キャッシュに格納されるようになりました。
@@ -35,6 +34,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - 新しいデータ エンジンが、クライアントとサーバーの両方でデフォルトになりました。新しいデータ エンジンは、コネクタがサポートしている場合、集計、フィルター、結合、ページングをデータ ソースにプッシュ ダウンします。[タイムゾーンの変換](https://help.revealbi.io/ja/web/time-zones/)と[行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)は、このエンジン上で動作します。いくつかのケースでは、以前のバージョンと結果が異なります: `ROW`、`PREVIOUS`、または非推奨の集計関数を使用する計算フィールドはエラーで拒否され、文字列はデータ ソースの照合順序で並べ替えられ、SQL Server および Redshift での整数値の平均は小数部を保持します。以前のエンジンを引き続き使用するには、両側で新しいエンジンをオフにしてください: クライアントで `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` を呼び出し、サーバーの設定 (ASP.NET の `Engine2Enabled`、Java の `setEngine2Enabled`、Node.js の `engine2Enabled` オプション) をオフにします。
 
 #### AI
+- [ダッシュボードの生成](https://help.revealbi.io/ja/ai/chat/)で、Reveal がサポートするすべての表示形式を作成でき、事後計算フィールドも追加できるようになりました。また、生成されるダッシュボードで複数のデータ ソースを使用でき、1 つの表示形式で複数のデータ ソースのデータを結合することもできます。この結合には、Reveal のブレンドと同じ制限が適用されます。
 - [プロファイル オーソライザー](https://help.revealbi.io/ja/ai/profile-selection/) (`IAIProfileAuthorizer`) は、各ユーザーがリクエストできる AI プロファイルを、通常はユーザーのプランに基づいて決定します。これにより、顧客のプランごとに異なるモデルを提供できます。
 - [クォータ ゲート](https://help.revealbi.io/ja/ai/quota-gate/) (`IAIQuotaGate`、または Node.js と Java では `quotaGate` および `quotaSettle` コールバック) は、トークンが消費される前にすべての AI 呼び出しをチェックし、呼び出し後に実際のトークン使用量を精算します。拒否された呼び出しはプロバイダーに到達せず、クライアントは `ai.quota_exceeded` などの安定したコードを持つ `RevealAIError` を受け取るため、アプリでアップグレードを促す表示に利用できます。
 - [使用量の追跡](https://help.revealbi.io/ja/ai/usage-tracking/)では、すべての AI 呼び出しについて、トークン数、ユーザー、インテント、プロファイル、モデルを含むレコードを、`IAIUsageSink` または `usageSink` コールバックを通じて独自のストアに送信します。レコードにプロンプトや応答のテキストが含まれることはありません。
@@ -45,6 +45,9 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 
 #### すべてのプラットフォーム
 - Snowflake コネクタで、ユーザー名とパスワードによる認証がサポートされなくなりました。代わりに、認証プロバイダーから [`RVKeyPairDataSourceCredential`](https://help.revealbi.io/ja/web/authentication/#キーペア認証) を返してください。
+- 同じクラスター (同じホストとポート) 上にある 2 つの Amazon Redshift データ ソースのブレンドが、各側を読み取って Reveal で結合する代わりに、メインのデータ ソースの接続で 1 つのクロスデータベース クエリとして実行されるようになりました。結合されるテーブルはメインのデータ ソースの資格情報と権限で読み取られ、結合されるデータ ソースのカスタム クエリ項目では、テーブルを 3 部構成の名前 (`database.schema.table`) で指定する必要があります。Redshift のクロスデータベース クエリは RA3 ノードと Redshift Serverless でのみ実行されるため、DC2 または DS2 クラスターでは、以前は動作していたこのブレンドが失敗するようになりました。
+- 無効な引数 (型が正しくない引数、負の数の対数、0 による剰余など) で呼び出された関数が、空の値を返さなくなりました。結果はデータ ソースによって異なり、エラーになる場合があります。このような式は、`IF([Value] > 0, LOG10([Value]), EMPTY())` のようにガードしてください。
+- ダッシュボード フィルターとクイック フィルターの検索ボックスで、文字列フィールドのみが検索されるようになりました。数値フィールドと日付フィールドでは検索語が無視され、値の最初のページが表示されます。以前は、文字列以外のフィールドでの検索が機能するかどうかはデータ ソースによって異なり、Reveal がデータを取り込む場合は機能しませんでした。フィールドを検索可能にする必要がある場合は、その値を文字列の列として公開してください。
 
 #### Java および Node.js
 - データ ソース プロバイダー、認証プロバイダー、ダッシュボード プロバイダーなどの拡張ポイントの背後にあるコードが例外をスローした場合、ASP.NET と同様にリクエストが失敗するようになりました。データ リクエストでは、ユーザーに表示されるエラーに相関 ID が含まれ、サーバーはこの ID を例外とともにログに記録します。以前の Node.js SDK は、例外をログに記録したうえで、クライアントから送信されたデータ ソース項目のまま処理を続行していました。
