@@ -346,4 +346,4 @@ _**Included in SDK** - there is not a separate package to install for this data 
 - CSV, Excel and JSON data, including files read from REST, Amazon S3 or local storage
 - Google Sheets and in-memory data
 
-They also don't work on visualizations that blend in any other data source, or on data transposed in the data source preview.
+They also don't work on visualizations that blend in a data source that isn't in the list above, or on data transposed in the data source preview.
