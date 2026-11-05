@@ -302,6 +302,7 @@ const sidebars: SidebarsConfig = {
     /* -------------------- Server Configuration -------------------- */
     {
       type: "category", label: "Server Configuration", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Intents", id: "ai/intents" },
         { type: "doc", label: "Profile Selection", id: "ai/profile-selection" },
         { type: "doc", label: "Dynamic Profiles (BYOK)", id: "ai/byok" },
         { type: "doc", label: "Observability", id: "ai/observability" },
