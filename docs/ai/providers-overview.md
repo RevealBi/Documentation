@@ -105,9 +105,11 @@ builder.Services.AddRevealAI()
     .MapIntent(Intents.GenerationBuildReport, "dashboard-generation");
 ```
 
+The server exposes profiles allowed for the current user at `GET /api/reveal/ai/profiles`. The response includes profile names, display information, and default status—not the provider connection or model ID.
+
 #### Ranking datasources on a fast profile
 
-When a dashboard request doesn't name a datasource, Reveal ranks the datasources that could answer it before it generates the dashboard. Ranking is its own intent, `AIIntents.DatasourceRanker` (`datasource-ranker`), and runs on the default profile, not on the profile the client requested. With many datasources it takes up to three model calls in a row, and it's often the slowest part of the request.
+When a dashboard request doesn't name a datasource and more than one datasource is available to the user, Reveal ranks the datasources that could answer it before it generates the dashboard. Ranking is its own intent, `Intents.DatasourceRanker` (`datasource-ranker`), and runs on the default profile, not on the profile the client requested. With many datasources it takes up to three model calls in a row, and it's often the slowest part of the request.
 
 To speed it up, map the intent to a fast, low-latency profile:
 
@@ -115,7 +117,7 @@ To speed it up, map the intent to a fast, low-latency profile:
 builder.Services.AddRevealAI()
     // ...
     .AddProfile("fast", p => { p.Provider = "openai"; p.Model = "gpt-4.1-mini"; })
-    .MapIntent(AIIntents.DatasourceRanker, "fast");
+    .MapIntent(Intents.DatasourceRanker, "fast");
 ```
 
 Or in configuration:
@@ -130,9 +132,7 @@ Or in configuration:
 }
 ```
 
-The ranker's model decides which datasource a dashboard reads. A small model is faster, but it ranks less reliably than a larger one. Try it on the questions your users ask before you switch.
-
-The server exposes profiles allowed for the current user at `GET /api/reveal/ai/profiles`. The response includes profile names, display information, and default status—not the provider connection or model ID.
+The ranker's model influences which datasource a dashboard reads, and a decisive ranking selects the datasource directly. A small model is faster, but it ranks less reliably than a larger one. The developer should test it with the questions users actually ask before switching.
 
 ### Compatibility
 
