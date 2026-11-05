@@ -1,13 +1,5 @@
 # Configure Export
 
-## Linux: Excel export
-
-Excel export on Linux needs the `libfontconfig1` package. Install it on every server that runs Excel export, even if you don't export to Image, PDF or PowerPoint. Without it, the export fails with an HTTP 500 error.
-
-```bash
-sudo apt-get install -y libfontconfig1
-```
-
 ## ASP.NET
 
 In order to export dashboards to **Image**, **PDF** or **PowerPoint** (either programmatically or through user interaction) the Reveal SDK uses [Playwright](https://playwright.dev/dotnet/) internally.
@@ -83,6 +75,12 @@ For other environments, the following dependencies may be required:
 ```bash
 sudo apt-get install -y --allow-unauthenticated libc6-dev
 sudo apt-get install -y --allow-unauthenticated libx11-dev
+```
+
+Excel export also needs the `libfontconfig1` package on Linux. This applies to every server SDK, including ASP.NET and Node.js. Install it on each server that runs Excel export, even if you don't export to Image, PDF or PowerPoint. Without it, Excel export fails with an HTTP 500 error.
+
+```bash
+sudo apt-get install -y libfontconfig1
 ```
 
 ### ExportTool Manual Setup

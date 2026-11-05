@@ -1,13 +1,5 @@
 # エクスポートの構成
 
-## Linux: Excel エクスポート
-
-Linux で Excel エクスポートを行うには、`libfontconfig1` パッケージが必要です。Excel エクスポートを実行するすべてのサーバーにインストールしてください。PDF、画像、PowerPoint にエクスポートしない場合も同様です。インストールしないと、エクスポートは HTTP 500 エラーで失敗します。
-
-```bash
-sudo apt-get install -y libfontconfig1
-```
-
 ## ASP.NET
 
 ダッシュボードを**画像**、**PDF**、または **PowerPoint** に (プログラムで、またはユーザーの操作を通じて) エクスポートするために、RevealSDK は内部で [Playwright](https://playwright.dev/dotnet/) を使用します。
@@ -83,6 +75,12 @@ mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="inst
 ```bash
 sudo apt-get install -y --allow-unauthenticated libc6-dev
 sudo apt-get install -y --allow-unauthenticated libx11-dev
+```
+
+Excel エクスポートには、Linux で `libfontconfig1` パッケージも必要です。これはすべてのサーバー SDK に適用されます (ASP.NET と Node.js を含みます)。Excel エクスポートを実行する各サーバーにインストールしてください。PDF、画像、PowerPoint にエクスポートしない場合も同様です。インストールしないと、Excel エクスポートは HTTP 500 エラーで失敗します。
+
+```bash
+sudo apt-get install -y libfontconfig1
 ```
 
 ### ExportTool の手動セットアップ
