@@ -25,8 +25,8 @@ import TabItem from '@theme/TabItem';
 
 行レベル セキュリティは、バージョン 2.3.0 以降の ASP.NET、Java、Node.js サーバー SDK で使用できます。機能フラグや設定、追加のパッケージは必要なく、クライアント API もありません。行レベル セキュリティはすべてサーバー上で構成し、クライアント コードを変更する必要はありません。行レベル セキュリティは行フィルターを指定したデータ ソース項目にのみ適用され、その他の項目はこれまでとまったく同じようにクエリされます。
 
-- **Engine2。** 行フィルターは、Reveal のデータ処理エンジンである Engine2 によって適用されます。Engine2 はデフォルトで有効です (ASP.NET では `Engine2Enabled`、Java では `setEngine2Enabled`、Node.js では `engine2Enabled` オプション)。Engine2 が無効になっている場合、またはリクエストを Engine2 で実行できない場合、行フィルターを持つ項目を読み取るリクエストはすべて、"Row-level security is only available on Engine2, and this request cannot run on it" というエラーで失敗します。
-- **Engine2 で実行されるコネクタの表形式のデータ ソース項目。** 行フィルターは、表形式のデータ ソース項目のプロパティです。対象となるのは、テーブル、ビュー、カスタム クエリ、ストアド プロシージャーなどのデータベース項目と、CSV、Excel、JSON のファイル項目です。さらに、項目のコネクタが Engine2 で実行される必要があります。Sybase、Microsoft Dynamics CRM、OData、HubSpot、QuickBooks、Marketo などの一部のコネクタは Engine2 で実行されません。これらのコネクタの項目にも行フィルターを設定できますが、その項目を読み取るリクエストはすべて上記のエラーで失敗します。
+- **サポートされるデータ ソース。** 行フィルターは表形式のデータ ソース項目に適用されます。対象となるのは、テーブル、ビュー、カスタム クエリ、ストアド プロシージャーなどのデータベース項目と、CSV、Excel、JSON のファイル項目です。項目のデータ ソースは、[データ ソース別の機能サポート](datasources.md#feature-support-by-data-source)に記載されているものである必要があります。その他のデータ ソースの項目にも行フィルターを設定できますが、その項目を読み取るリクエストはすべて "Row-level security is only available on Engine2, and this request cannot run on it" というエラーで失敗します。行フィルターを持つ項目を読み取る表示形式が、その他のデータ ソースをブレンドしている場合や、入れ替えたデータを使用している場合も、同じエラーで失敗します。
+- **`Engine2Enabled` 設定を有効のままにすること。** このサーバー設定はデフォルトで有効です (ASP.NET では `Engine2Enabled`、Java では `setEngine2Enabled`、Node.js では `engine2Enabled` オプション)。無効にすると、行フィルターを持つ項目を読み取るリクエストはすべて同じエラーで失敗します。
 
 ## 行レベル セキュリティの設定
 

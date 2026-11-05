@@ -283,6 +283,10 @@
     "message": "ローカライズ",
     "description": "The label for the doc item 'Localizing' in sidebar 'webSidebar', linking to the doc web/localizing"
   },
+  "sidebar.webSidebar.doc.Time Zones": {
+    "message": "タイムゾーン",
+    "description": "The label for the doc item 'Time Zones' in sidebar 'webSidebar', linking to the doc web/time-zones"
+  },
   "sidebar.webSidebar.doc.Customizing Map Tiles": {
     "message": "マップ タイルのカスタマイズ",
     "description": "The label for the doc item 'Customizing Map Tiles' in sidebar 'webSidebar', linking to the doc web/customizing-map-tiles"

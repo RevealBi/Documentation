@@ -67,6 +67,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Localizing", id: "web/localizing" },
+        { type: "doc", label: "Time Zones", id: "web/time-zones" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         {
           type: "category", label: "Visualizations", items: [

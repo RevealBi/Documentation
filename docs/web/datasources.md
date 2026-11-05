@@ -337,3 +337,13 @@ Use the table below to see which data sources are supported and which packages y
 <DataSourcesTable></DataSourcesTable>
 
 _**Included in SDK** - there is not a separate package to install for this data source. The data source ships with the Reveal SDK._
+
+### Feature Support by Data Source
+
+[Time zone conversion](time-zones.md) and [row-level security](row-level-security.md) work only with these data sources:
+
+- Amazon Athena, Amazon Redshift, Azure SQL, Azure Synapse, ClickHouse, Cosmos DB, Databricks, DuckDB, Elasticsearch, Google BigQuery, MariaDB, MongoDB, MS SQL Server, MySQL, Oracle, PostgreSQL, Snowflake and SQLite
+- CSV, Excel and JSON data, including files read from REST, Amazon S3 or local storage
+- Google Sheets and in-memory data
+
+They also don't work on visualizations that blend in a data source that isn't in the list above, or on data transposed in the data source preview.
