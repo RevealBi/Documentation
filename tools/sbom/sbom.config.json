@@ -1,0 +1,399 @@
+{
+  "$comment": "Release definitions for SBOM generation. Placeholders: {version}, {package}. Every SBOM is generated from the exact published package in its public registry; nothing here refers to local build output.",
+  "format": {
+    "name": "CycloneDX",
+    "version": "1.7",
+    "mediaType": "application/vnd.cyclonedx+json"
+  },
+  "supplier": "Infragistics Inc.",
+  "website": "https://revealbi.io",
+  "registries": {
+    "nuget": "https://api.nuget.org/v3/index.json",
+    "maven": "https://maven.revealbi.io/repository/public",
+    "npm": "https://registry.npmjs.org"
+  },
+  "tools": {
+    "cyclonedx-dotnet": "6.2.0",
+    "cyclonedx-maven-plugin": "2.9.3"
+  },
+  "revealComponentPatterns": [
+    "^pkg:nuget/Reveal\\.",
+    "^pkg:maven/io\\.revealbi/",
+    "^pkg:npm/reveal-sdk",
+    "^pkg:generic/Reveal"
+  ],
+  "products": {
+    "reveal-server": {
+      "name": "Reveal Server",
+      "scope": "server",
+      "platforms": {
+        "dotnet": {
+          "label": ".NET",
+          "ecosystem": "nuget",
+          "targetFramework": "net8.0",
+          "artifactType": "bundle",
+          "contentsLabel": "ASP.NET SDK, data package, all-connectors aggregate, and {connectorCount} connectors",
+          "bundle": {
+            "fileName": "reveal-server-dotnet-{version}-sbom.zip",
+            "description": "ASP.NET and data packages, an all-connectors aggregate, and one SBOM for each optional data connector package.",
+            "readme": [
+              "Reveal Server .NET SDK SBOM bundle",
+              "Package version: {version}",
+              "",
+              "Use the package-specific documents for the packages in your deployment. The all-connectors aggregate is provided for customers who deploy every connector.",
+              "See manifest.json for file names and SHA-256 hashes."
+            ]
+          },
+          "properties": [
+            {"name": "io.revealbi.sbom.distribution", "value": "dotnet"},
+            {"name": "io.revealbi.sbom.runtime", "value": "architecture-neutral NuGet package"}
+          ],
+          "documents": [
+            {
+              "kind": "base",
+              "packages": ["Reveal.Sdk.AspNetCore"],
+              "fileName": "Reveal.Sdk.AspNetCore-{version}.cdx.json",
+              "componentType": "framework",
+              "documentation": "https://help.revealbi.io/web/install-server-sdk/#aspnet"
+            },
+            {
+              "kind": "package",
+              "packages": ["Reveal.Sdk.Data"],
+              "fileName": "Reveal.Sdk.Data-{version}.cdx.json",
+              "documentation": "https://help.revealbi.io/web/datasources/#supported-data-sources"
+            },
+            {
+              "kind": "aggregate",
+              "displayName": "Reveal Server .NET SDK - All Connectors",
+              "packages": ["Reveal.Sdk.AspNetCore", "@connector"],
+              "fileName": "reveal-server-dotnet-all-connectors-{version}.cdx.json",
+              "root": {
+                "type": "framework",
+                "name": "Reveal Server .NET SDK - All Connectors",
+                "purl": "pkg:generic/reveal-server-dotnet@{version}?variant=all-connectors",
+                "properties": [{"name": "io.revealbi.sbom.variant", "value": "all-connectors"}]
+              },
+              "documentation": "https://help.revealbi.io/web/datasources/#supported-data-sources"
+            },
+            {
+              "kind": "connector",
+              "folder": "connectors",
+              "fileName": "{package}-{version}.cdx.json",
+              "documentation": "https://help.revealbi.io/web/datasources/#supported-data-sources",
+              "forEach": [
+                "Reveal.Sdk.Data.Amazon.Athena",
+                "Reveal.Sdk.Data.Amazon.Redshift",
+                "Reveal.Sdk.Data.Amazon.S3",
+                "Reveal.Sdk.Data.AzureCosmosDB",
+                "Reveal.Sdk.Data.ClickHouse",
+                "Reveal.Sdk.Data.Cube",
+                "Reveal.Sdk.Data.Databricks",
+                "Reveal.Sdk.Data.DuckDB",
+                "Reveal.Sdk.Data.Elasticsearch",
+                "Reveal.Sdk.Data.Google.BigQuery",
+                "Reveal.Sdk.Data.Google.Drive",
+                "Reveal.Sdk.Data.MariaDB",
+                "Reveal.Sdk.Data.Microsoft.AnalysisServices",
+                "Reveal.Sdk.Data.Microsoft.SqlServer",
+                "Reveal.Sdk.Data.Microsoft.SynapseAnalytics",
+                "Reveal.Sdk.Data.MongoDB",
+                "Reveal.Sdk.Data.MySql",
+                "Reveal.Sdk.Data.Oracle",
+                "Reveal.Sdk.Data.PostgreSQL",
+                "Reveal.Sdk.Data.Snowflake",
+                "Reveal.Sdk.Data.SQLite"
+              ]
+            }
+          ]
+        },
+        "java": {
+          "label": "Java",
+          "ecosystem": "maven",
+          "artifactType": "bundle",
+          "contentsLabel": "Windows x64 and Linux x64",
+          "bundle": {
+            "fileName": "reveal-server-java-{version}-sbom.zip",
+            "description": "Windows x64 and Linux x64 runtime SBOMs.",
+            "readme": [
+              "Reveal Server Java SDK SBOM bundle",
+              "Package version: {version}",
+              "",
+              "This archive contains CycloneDX JSON SBOMs for the supported production deployment targets: Windows x64 and Linux x64.",
+              "Choose the document that matches your deployment architecture.",
+              "See manifest.json for file names and SHA-256 hashes."
+            ]
+          },
+          "properties": [
+            {"name": "io.revealbi.sbom.distribution", "value": "java"}
+          ],
+          "documents": [
+            {
+              "kind": "runtime",
+              "displayName": "Reveal Server Java - Windows x64",
+              "architecture": "win-x64",
+              "architectureLabel": "Windows x64",
+              "fileName": "reveal-sdk-java-windows-x86_64-{version}.cdx.json",
+              "packages": ["io.revealbi:reveal-sdk-servlet", "io.revealbi:reveal-sdk-engine-windows-x86_64"],
+              "mavenExclusions": ["io.revealbi:reveal-sdk-engine-windows-x86_64", "io.revealbi:reveal-sdk-engine-windows-aarch64", "io.revealbi:reveal-sdk-engine-linux-x86_64", "io.revealbi:reveal-sdk-engine-linux-aarch64", "io.revealbi:reveal-sdk-engine-mac-x86_64", "io.revealbi:reveal-sdk-engine-mac-aarch64"],
+              "root": {
+                "type": "application",
+                "name": "Reveal Java SDK",
+                "group": "io.revealbi",
+                "description": "Reveal Java SDK {version} for Windows x64.",
+                "purl": "pkg:maven/io.revealbi/reveal-sdk-servlet@{version}?arch=x86_64&os=windows&type=jar",
+                "distributionUrl": "https://maven.revealbi.io/repository/public/io/revealbi/reveal-sdk-servlet/{version}/reveal-sdk-servlet-{version}.jar",
+                "properties": [
+                  {"name": "io.revealbi.sbom.architecture", "value": "x86_64"},
+                  {"name": "io.revealbi.sbom.runtime", "value": "win-x64"}
+                ]
+              },
+              "embedded": {
+                "source": "maven",
+                "artifact": "io.revealbi:reveal-sdk-engine-windows-x86_64",
+                "binary": "RevealEnginePrg",
+                "scanAs": "RevealEnginePrg.exe",
+                "engineName": "RevealEnginePrg",
+                "purl": "pkg:generic/RevealEnginePrg@{version}?arch=x86_64&distribution=java&os=windows"
+              },
+              "documentation": "https://help.revealbi.io/web/install-server-sdk/#java"
+            },
+            {
+              "kind": "runtime",
+              "displayName": "Reveal Server Java - Linux x64",
+              "architecture": "linux-x64",
+              "architectureLabel": "Linux x64",
+              "fileName": "reveal-sdk-java-linux-x86_64-{version}.cdx.json",
+              "packages": ["io.revealbi:reveal-sdk-servlet", "io.revealbi:reveal-sdk-engine-linux-x86_64"],
+              "mavenExclusions": ["io.revealbi:reveal-sdk-engine-windows-x86_64", "io.revealbi:reveal-sdk-engine-windows-aarch64", "io.revealbi:reveal-sdk-engine-linux-x86_64", "io.revealbi:reveal-sdk-engine-linux-aarch64", "io.revealbi:reveal-sdk-engine-mac-x86_64", "io.revealbi:reveal-sdk-engine-mac-aarch64"],
+              "root": {
+                "type": "application",
+                "name": "Reveal Java SDK",
+                "group": "io.revealbi",
+                "description": "Reveal Java SDK {version} for Linux x64.",
+                "purl": "pkg:maven/io.revealbi/reveal-sdk-servlet@{version}?arch=x86_64&os=linux&type=jar",
+                "distributionUrl": "https://maven.revealbi.io/repository/public/io/revealbi/reveal-sdk-servlet/{version}/reveal-sdk-servlet-{version}.jar",
+                "properties": [
+                  {"name": "io.revealbi.sbom.architecture", "value": "x86_64"},
+                  {"name": "io.revealbi.sbom.runtime", "value": "linux-x64"}
+                ]
+              },
+              "embedded": {
+                "source": "maven",
+                "artifact": "io.revealbi:reveal-sdk-engine-linux-x86_64",
+                "binary": "RevealEnginePrg",
+                "engineName": "RevealEnginePrg",
+                "purl": "pkg:generic/RevealEnginePrg@{version}?arch=x86_64&distribution=java&os=linux"
+              },
+              "documentation": "https://help.revealbi.io/web/install-server-sdk/#java"
+            }
+          ]
+        },
+        "node": {
+          "label": "Node",
+          "ecosystem": "npm",
+          "artifactType": "bundle",
+          "contentsLabel": "Windows x64 and Linux x64",
+          "bundle": {
+            "fileName": "reveal-server-node-{version}-sbom.zip",
+            "description": "Windows x64 and Linux x64 runtime SBOMs.",
+            "readme": [
+              "Reveal Server Node SDK SBOM bundle",
+              "Package version: {version}",
+              "",
+              "This archive contains CycloneDX JSON SBOMs for the supported production deployment targets: Windows x64 and Linux x64.",
+              "Choose the document that matches your deployment architecture.",
+              "See manifest.json for file names and SHA-256 hashes."
+            ]
+          },
+          "properties": [
+            {"name": "io.revealbi.sbom.distribution", "value": "node"}
+          ],
+          "documents": [
+            {
+              "kind": "runtime",
+              "displayName": "Reveal Server Node - Windows x64",
+              "architecture": "win-x64",
+              "architectureLabel": "Windows x64",
+              "fileName": "reveal-sdk-node-win-x64-{version}.cdx.json",
+              "packages": ["reveal-sdk-node"],
+              "npmTarget": {"os": "win32", "cpu": "x64"},
+              "root": {
+                "type": "application",
+                "name": "Reveal Node.js SDK",
+                "description": "Reveal Node.js SDK {version} for Windows x64.",
+                "purl": "pkg:npm/reveal-sdk-node@{version}?arch=x86_64&os=windows",
+                "distributionUrl": "https://registry.npmjs.org/reveal-sdk-node/-/reveal-sdk-node-{version}.tgz",
+                "properties": [
+                  {"name": "io.revealbi.sbom.architecture", "value": "x86_64"},
+                  {"name": "io.revealbi.sbom.runtime", "value": "win-x64"}
+                ]
+              },
+              "embedded": {
+                "source": "url",
+                "url": "https://dl.infragistics.com/reveal/Builds/sdk/node-binaries/v{version}/win-x64/RevealEnginePrg.exe.gz",
+                "binary": "RevealEnginePrg.exe",
+                "engineName": "RevealEnginePrg",
+                "purl": "pkg:generic/RevealEnginePrg@{version}?arch=x86_64&distribution=node&os=windows"
+              },
+              "documentation": "https://help.revealbi.io/web/install-server-sdk/#nodejs"
+            },
+            {
+              "kind": "runtime",
+              "displayName": "Reveal Server Node - Linux x64",
+              "architecture": "linux-x64",
+              "architectureLabel": "Linux x64",
+              "fileName": "reveal-sdk-node-linux-x64-{version}.cdx.json",
+              "packages": ["reveal-sdk-node"],
+              "npmTarget": {"os": "linux", "cpu": "x64"},
+              "root": {
+                "type": "application",
+                "name": "Reveal Node.js SDK",
+                "description": "Reveal Node.js SDK {version} for Linux x64.",
+                "purl": "pkg:npm/reveal-sdk-node@{version}?arch=x86_64&os=linux",
+                "distributionUrl": "https://registry.npmjs.org/reveal-sdk-node/-/reveal-sdk-node-{version}.tgz",
+                "properties": [
+                  {"name": "io.revealbi.sbom.architecture", "value": "x86_64"},
+                  {"name": "io.revealbi.sbom.runtime", "value": "linux-x64"}
+                ]
+              },
+              "embedded": {
+                "source": "url",
+                "url": "https://dl.infragistics.com/reveal/Builds/sdk/node-binaries/v{version}/linux-x64/RevealEnginePrg.gz",
+                "binary": "RevealEnginePrg",
+                "engineName": "RevealEnginePrg",
+                "purl": "pkg:generic/RevealEnginePrg@{version}?arch=x86_64&distribution=node&os=linux"
+              },
+              "documentation": "https://help.revealbi.io/web/install-server-sdk/#nodejs"
+            }
+          ]
+        }
+      }
+    },
+    "reveal-ai": {
+      "name": "Reveal AI",
+      "scope": "server",
+      "platforms": {
+        "dotnet": {
+          "label": ".NET",
+          "ecosystem": "nuget",
+          "targetFramework": "net8.0",
+          "artifactType": "bundle",
+          "contentsLabel": "All-packages aggregate and {packageCount} NuGet package SBOMs",
+          "bundle": {
+            "fileName": "reveal-ai-dotnet-{version}-sbom.zip",
+            "description": "All-packages aggregate and one SBOM for each Reveal AI NuGet package.",
+            "readme": [
+              "Reveal AI .NET SDK SBOM bundle",
+              "Package version: {version}",
+              "",
+              "This archive contains a CycloneDX JSON aggregate for the complete Reveal AI .NET SDK and one package-specific SBOM for each published NuGet package.",
+              "Use the package-specific documents for the packages in your deployment, or the aggregate when you need the complete .NET AI distribution.",
+              "See manifest.json for file names and SHA-256 hashes."
+            ]
+          },
+          "properties": [
+            {"name": "io.revealbi.sbom.product", "value": "Reveal AI"},
+            {"name": "io.revealbi.sbom.distribution", "value": "dotnet"},
+            {"name": "io.revealbi.sbom.runtime", "value": "architecture-neutral NuGet package"}
+          ],
+          "documents": [
+            {
+              "kind": "aggregate",
+              "displayName": "Reveal AI .NET SDK - All Packages",
+              "packages": ["@package"],
+              "fileName": "reveal-sdk-ai-dotnet-all-packages-{version}.cdx.json",
+              "root": {
+                "type": "library",
+                "name": "Reveal AI .NET SDK - All Packages",
+                "purl": "pkg:generic/reveal-ai-dotnet@{version}?variant=all-packages",
+                "properties": [{"name": "io.revealbi.sbom.variant", "value": "all-packages"}]
+              },
+              "documentation": "https://help.revealbi.io/ai/install-server-sdk/"
+            },
+            {
+              "kind": "package",
+              "folder": "packages",
+              "fileName": "{package}-{version}.cdx.json",
+              "documentation": "https://help.revealbi.io/ai/install-server-sdk/",
+              "forEach": [
+                "Reveal.Sdk.AI",
+                "Reveal.Sdk.AI.Abstractions",
+                "Reveal.Sdk.AI.Anthropic",
+                "Reveal.Sdk.AI.AspNetCore",
+                "Reveal.Sdk.AI.AzureOpenAI",
+                "Reveal.Sdk.AI.Google",
+                "Reveal.Sdk.AI.OpenAI"
+              ]
+            }
+          ]
+        },
+        "java": {
+          "label": "Java",
+          "ecosystem": "maven",
+          "artifactType": "file",
+          "contentsLabel": "Platform independent",
+          "properties": [
+            {"name": "io.revealbi.sbom.product", "value": "Reveal AI"},
+            {"name": "io.revealbi.sbom.distribution", "value": "java"},
+            {"name": "io.revealbi.sbom.scope", "value": "Additive to the Reveal Server Java SDK; pair with the matching Reveal Server Java runtime SBOM."}
+          ],
+          "documents": [
+            {
+              "kind": "package",
+              "fileName": "reveal-sdk-ai-java-{version}.cdx.json",
+              "packages": ["io.revealbi:reveal-sdk-ai"],
+              "boundaries": ["^pkg:maven/io\\.revealbi/reveal-sdk-servlet@"],
+              "embedded": {"source": "package"},
+              "documentation": "https://help.revealbi.io/ai/install-server-sdk/"
+            }
+          ]
+        },
+        "node": {
+          "label": "Node",
+          "ecosystem": "npm",
+          "artifactType": "file",
+          "contentsLabel": "Platform independent",
+          "properties": [
+            {"name": "io.revealbi.sbom.product", "value": "Reveal AI"},
+            {"name": "io.revealbi.sbom.distribution", "value": "node"},
+            {"name": "io.revealbi.sbom.scope", "value": "Additive to the Reveal Server Node SDK; pair with the matching Reveal Server Node runtime SBOM."}
+          ],
+          "documents": [
+            {
+              "kind": "package",
+              "fileName": "reveal-sdk-ai-node-{version}.cdx.json",
+              "packages": ["reveal-sdk-node-ai"],
+              "boundaries": ["^pkg:npm/reveal-sdk-node@"],
+              "embedded": {"source": "package"},
+              "documentation": "https://help.revealbi.io/ai/install-server-sdk/"
+            }
+          ]
+        }
+      }
+    },
+    "reveal-client": {
+      "name": "Reveal Client",
+      "scope": "client",
+      "platforms": {
+        "javascript": {
+          "label": "JavaScript",
+          "ecosystem": "npm",
+          "artifactType": "file",
+          "contentsLabel": "Browser package",
+          "properties": [
+            {"name": "io.revealbi.sbom.distribution", "value": "javascript"},
+            {"name": "io.revealbi.sbom.runtime", "value": "browser client package"}
+          ],
+          "documents": [
+            {
+              "kind": "package",
+              "fileName": "reveal-sdk-client-{version}.cdx.json",
+              "packages": ["reveal-sdk"],
+              "documentation": "https://help.revealbi.io/web/install-client-sdk/"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

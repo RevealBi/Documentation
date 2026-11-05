@@ -1,0 +1,25 @@
+{
+  "name": "reveal-sbom-tools",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Generates, bundles, validates, and catalogs CycloneDX SBOMs for published Reveal RTM packages.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "generate": "node generate.mjs",
+    "merge-catalog": "node merge-catalog.mjs",
+    "validate": "node validate.mjs",
+    "validate:docs": "node validate.mjs --catalog ../../static/sbom/catalog.json",
+    "plan": "node plan.mjs"
+  },
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "10.3.0",
+    "@cyclonedx/cyclonedx-npm": "6.0.1",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "ajv-formats-draft2019": "1.6.1",
+    "fflate": "0.8.3"
+  }
+}
