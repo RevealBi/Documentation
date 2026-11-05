@@ -70,5 +70,13 @@
   "link.item.label.AI SDK": {
     "message": "AI SDK",
     "description": "The label of footer link with label=AI SDK linking to ai/overview"
+  },
+  "link.item.label.Trust Center": {
+    "message": "Trust Center",
+    "description": "The label of footer link with label=Trust Center linking to /trust/"
+  },
+  "link.item.label.Reveal SDK License Agreement": {
+    "message": "Reveal SDK License Agreement",
+    "description": "The label of footer link with label=Reveal SDK License Agreement linking to https://www.revealbi.io/license-agreements/embedded-sdk"
   }
 }

@@ -61,6 +61,12 @@ const dateRange = new RVDateRange(fromDate, toDate);
 revealView.dashboard.dateFilter = new RVDateDashboardFilter(RVDateFilterType.CustomRange, dateRange);
 ```
 
+:::note
+
+Build a fixed date with `Date.UTC`, not with the local time zone. `Date.UTC` returns a number, so wrap it in `new Date(...)`. The month is zero-based, so `new Date(Date.UTC(2012, 0, 1))` is January 1, 2012 in UTC. `new Date(2012, 0, 1)` is midnight in the browser's time zone, which can fall on another day in UTC.
+
+:::
+
 Here you can see the dashboard UI updated it's Date Filter to display the date range
 
 ![](images/filtering-date-filter-daterange.jpg)

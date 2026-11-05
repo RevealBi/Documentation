@@ -77,6 +77,12 @@ sudo apt-get install -y --allow-unauthenticated libc6-dev
 sudo apt-get install -y --allow-unauthenticated libx11-dev
 ```
 
+Excel エクスポートには、Linux で `libfontconfig1` パッケージも必要です。これはすべてのサーバー SDK に適用されます (ASP.NET と Node.js を含みます)。Excel エクスポートを実行する各サーバーにインストールしてください。PDF、画像、PowerPoint にエクスポートしない場合も同様です。インストールしないと、Excel エクスポートは HTTP 500 エラーで失敗します。
+
+```bash
+sudo apt-get install -y libfontconfig1
+```
+
 ### ExportTool の手動セットアップ
 
 ここからの手順は、以下のシナリオの場合のみ必要です。

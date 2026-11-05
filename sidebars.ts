@@ -67,6 +67,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Saving", id: "web/saving-dashboards" },
         { type: "doc", label: "Linking", id: "web/linking-dashboards" },
         { type: "doc", label: "Localizing", id: "web/localizing" },
+        { type: "doc", label: "Time Zones", id: "web/time-zones" },
         { type: "doc", label: "Exporting", id: "web/exporting-dashboards" },
         {
           type: "category", label: "Visualizations", items: [
@@ -116,6 +117,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Authentication", id: "web/authentication" },
         { type: "doc", label: "Custom Queries", id: "web/custom-queries" },
         { type: "doc", label: "Obfuscate Connection Data", id: "web/obfuscate-connection-data" },
+        { type: "doc", label: "Row-Level Security", id: "web/row-level-security" },
         { type: "doc", label: "User Context", id: "web/user-context" },
       ]
     },
@@ -261,6 +263,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category", label: "Getting Started", collapsed: false, collapsible: false, className: "sidebar__header", key: "ai-getting-started-header", items: [
         { type: "doc", label: "Overview", id: "ai/overview" },
+        { type: "doc", label: "Data Handling", id: "ai/data-handling" },
         {
           type: "category", label: "Installation", items: [
             { type: "doc", label: "System Requirements", id: "ai/system-requirements" },
@@ -293,6 +296,21 @@ const sidebars: SidebarsConfig = {
         { type: "doc", label: "Metadata Storage Provider", id: "ai/metadata-storage-provider" },
         // { type: "doc", label: "Metadata Service", id: "ai/metadata-service" },
         // { type: "doc", label: "Custom Context Providers", id: "ai/metadata-custom-context-providers" },
+      ]
+    },
+
+    /* -------------------- Server Configuration -------------------- */
+    {
+      type: "category", label: "Server Configuration", collapsed: false, collapsible: false, className: "sidebar__header", items: [
+        { type: "doc", label: "Profile Selection", id: "ai/profile-selection" },
+        { type: "doc", label: "Dynamic Profiles (BYOK)", id: "ai/byok" },
+        { type: "doc", label: "Observability", id: "ai/observability" },
+        {
+          type: "category", label: "Metering and Billing", link: { type: "doc", id: "ai/metering-and-billing" }, items: [
+            { type: "doc", label: "Usage Tracking", id: "ai/usage-tracking" },
+            { type: "doc", label: "Quotas and Billing", id: "ai/quota-gate" },
+          ]
+        },
       ]
     },
 

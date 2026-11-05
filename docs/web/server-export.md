@@ -51,7 +51,7 @@ Exporting to the PDF or PowerPoint formats can be time consuming. If invoking a 
 :::
 
 ## Provide User Context
-Sometimes dashboards have data sources that require the Reveal SDK [User Context](user-context.md). In this case, you must provide the Reveal SDK `IRVUserContext` as an argument to the export method to ensure a successful dashboard export.
+Sometimes dashboards have data sources that require the Reveal SDK [User Context](user-context.md). In this case, you must provide the Reveal SDK `IRVUserContext` as an argument to the export method to ensure a successful dashboard export. This includes dashboards whose data source items use [row-level security](row-level-security.md): the export contains the rows of the user whose context you pass.
 
 The first step to obtain the `IRVUserContext` is to inject the `IRVUserContextProvider` and `IHttpContextAccessor` into the ASP.NET controller or minimal API function. Next, make a call to the `IRVUserContextProvider.GetUserContext` passing the `IHttpContextAccessor.HttpContext` as an argument.
 
@@ -93,6 +93,8 @@ var pdfOptions = new PdfExportOptions()
 //export Pdf to stream
 var stream = await dashboardExporter.ExportToPdf(dashboardName, options: pdfOptions);
 ```
+
+To export in a specific time zone, set the `TimeZone` option to an IANA time zone name. DateTime values are then converted to it; without it, the export uses UTC. See [Time Zones](time-zones.md#exports).
 
 ## Example: Exporting on the Server
 In this example, we will create a service endpoint that will export a dashboard based on the format.

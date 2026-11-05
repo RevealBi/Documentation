@@ -337,3 +337,13 @@ app.use('/', reveal(revealOptions));
 <DataSourcesTable></DataSourcesTable>
 
 **SDK に含まれている** - このデータ ソースにインストールするための個別のパッケージはありません。データ ソースは Reveal SDK に含まれています。
+
+### データ ソース別の機能サポート {#feature-support-by-data-source}
+
+[タイムゾーンの変換](time-zones.md)と[行レベル セキュリティ](row-level-security.md)は、次のデータ ソースでのみ動作します。
+
+- Amazon Athena、Amazon Redshift、Azure SQL、Azure Synapse、ClickHouse、Cosmos DB、Databricks、DuckDB、Elasticsearch、Google BigQuery、MariaDB、MongoDB、MS SQL Server、MySQL、Oracle、PostgreSQL、Snowflake、SQLite
+- CSV、Excel、JSON データ (REST、Amazon S3、またはローカル ストレージから読み取るファイルを含む)
+- Google スプレッドシートおよびインメモリ データ
+
+上記の一覧にないデータ ソースをブレンドした表示形式や、データ ソースのプレビューで入れ替えたデータでも動作しません。
