@@ -38,7 +38,7 @@ public interface IMetadataStorageProvider
 
 Every operation receives `IRVUserContext`, but metadata generation and metadata retrieval use it differently.
 
-When Reveal generates metadata, it runs as the built-in system-wide metadata user, `reveal-ai-metadata-user`. Use this stage to store the full generated metadata in a scope that fits your application, such as a tenant, datasource, or shared department. A tenant-scoped store is a common approach when a database belongs to a tenant and its metadata can be shared by that tenant's users.
+When Reveal generates metadata, it runs as the system metadata user, whose ID is `reveal-ai-metadata-user` by default. Use this stage to store the full generated metadata in a scope that fits your application, such as a tenant, datasource, or shared department. A tenant-scoped store is a common approach when a database belongs to a tenant and its metadata can be shared by that tenant's users.
 
 When Reveal retrieves metadata for a request, the context represents the actual user. Use that context together with your authorization rules to return only the metadata that user is allowed to see. For example, a provider can retrieve tenant metadata and filter inaccessible tables before returning it:
 
@@ -52,10 +52,10 @@ public async Task<T?> GetByIdAsync<T>(string id, IRVUserContext userContext)
 
 You can isolate metadata per user instead, but then metadata shared by several users must be replicated and all copies must be updated when regeneration occurs. Whichever storage and filtering strategy you choose, apply it consistently to create, update, delete, list, and read operations.
 
-When you filter metadata per user, keep these rules:
+When a provider filters metadata per user, keep these rules:
 
-- **Base each answer on the ID and the user context only.** During one dashboard generation or edit, Reveal reads each item and each listing once for the requesting user, then reuses that answer for the rest of the request. Nothing is reused across requests or users, so a permission change takes effect on the next request. When Reveal writes metadata, requests already running read it again; changes your application makes to the storage directly are seen from the next request.
-- **Return unfiltered metadata to `reveal-ai-metadata-user`.** Reveal writes metadata as that user, and some writes save back an item it has just read. For example, it adds each table's alias and description to the datasource index the first time a user asks for table summaries. If your provider filtered what that user reads, the filtered copy would be saved for everyone.
+- **Base each result on the item ID (or the `ListAsync` search pattern) and the user context only.** Reveal may reuse a result within the same request: while it generates or edits a dashboard, it can read an item or a listing once for the requesting user and serve that result for the rest of the request. Nothing is reused across requests or users, so a permission change takes effect on the next request. When a server instance writes metadata, requests already running on that instance read it again. A write from another instance, or a change the application makes to the storage directly, is seen from the next request.
+- **Return unfiltered metadata to the system metadata user.** Reveal writes metadata as that user (`reveal-ai-metadata-user` by default), and some writes save back an item it has just read. For example, it adds each table's alias and description to the datasource index the first time table summaries are requested for that datasource. If the provider filtered what that user reads, the filtered copy would be saved for everyone. Keep that user's ID distinct from the IDs of real users.
 - **Filter the datasource index like the table items.** The index lists every table of the datasource, with their aliases and descriptions.
 
 `_storage` represents your database, blob store, or other persistence mechanism. A complete implementation belongs in an application sample rather than in this page.
