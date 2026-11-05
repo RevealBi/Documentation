@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Intents
 
-Reveal tags every AI call it makes with an **intent**. An intent names the workflow the call belongs to, such as generating a dashboard, analyzing a visualization, or ranking datasources. The developer can map an intent to a [profile](providers-overview.md#profiles) to run that workflow on a specific model. For example, dashboard generation can run on a larger model, and quick background steps can run on a fast, inexpensive one.
+Reveal tags every AI call it makes with an **intent**. An intent names the workflow the call belongs to, such as generating a dashboard, analyzing a visualization, or ranking datasources. The developer can map an intent to a [profile](/ai/providers-overview#profiles) to run that workflow on a specific model. For example, dashboard generation can run on a larger model, and quick background steps can run on a fast, inexpensive one.
 
 Intents are fixed by Reveal. The developer can't define new ones, but can map any of them to a profile.
 
@@ -24,14 +24,14 @@ The constants are on the `Intents` class in the `Reveal.Sdk.AI` namespace. In No
 | `generation-add-widget-filters` | `Intents.GenerationAddWidgetFilters` | Adding filters to a dashboard's visualizations. |
 | `generation-add-global-filters` | `Intents.GenerationAddGlobalFilters` | Adding dashboard filters. |
 | `widget-adjustment-global-filters` | `Intents.WidgetAdjustmentGlobalFilters` | Adjusting the dashboard filters a visualization uses. |
-| `widget-analysis` | `Intents.WidgetAnalysis` | Analyzing a visualization, from chat or from [Insights](insights.md). A dashboard analysis also runs each visualization's analysis, and the summary of their results, under this intent. |
+| `widget-analysis` | `Intents.WidgetAnalysis` | Analyzing a visualization, from chat or from [Insights](/ai/insights). A dashboard analysis also runs each visualization's analysis, and the summary of their results, under this intent. |
 | `dashboard-analysis` | `Intents.DashboardAnalysis` | Analyzing a whole dashboard, from chat or from Insights without a visualization: planning which visualizations to analyze and writing the final report. |
 | `datasource-ranker` | `Intents.DatasourceRanker` | Ranking the datasources that could answer a request for a new dashboard. It runs as background work. See [Ranking datasources on a fast profile](#ranking-datasources-on-a-fast-profile). |
 | `datasource-evaluate` | `Intents.DatasourceEvaluate` | Checking whether a single datasource can answer a request. The chat and insights endpoints don't make this call. |
-| `metadata-semantic-enrichment` | `Intents.MetadataSemanticEnrichment` | Describing datasource metadata in the background, when semantic enrichment is enabled (see [Data Handling](data-handling.md#optional-metadata-enrichment)). |
+| `metadata-semantic-enrichment` | `Intents.MetadataSemanticEnrichment` | Describing datasource metadata in the background, when semantic enrichment is enabled (see [Data Handling](/ai/data-handling#optional-metadata-enrichment)). |
 
 :::note `default` intent vs. default profile
-The `default` intent is the workflow for conversational answers. It isn't the [default profile](providers-overview.md#default-profile-and-intent-routing), which serves every intent that isn't mapped when the client doesn't request a profile. Mapping the `default` intent to a profile moves only conversational answers to it.
+The `default` intent is the workflow for conversational answers. It isn't the [default profile](/ai/providers-overview#default-profile-and-intent-routing), which serves every intent that isn't mapped when the client doesn't request a profile. Mapping the `default` intent to a profile moves only conversational answers to it.
 :::
 
 :::caution `widget-analysis` and `dashboard-analysis`
@@ -44,7 +44,7 @@ Map an intent to a profile the developer has defined. Each AI call picks its pro
 
 1. The profile mapped to the call's intent.
 2. The profile the client requested.
-3. The [default profile](providers-overview.md#default-profile-and-intent-routing).
+3. The [default profile](/ai/providers-overview#default-profile-and-intent-routing).
 
 An intent that isn't mapped follows the requested profile, or the default profile when the client requests none. Background work, such as datasource ranking and metadata enrichment, never has a requested profile, so it runs on the default profile unless its intent is mapped.
 
@@ -103,7 +103,7 @@ revealAI.withOptions({
 });
 ```
 
-Intent mappings require the `providers` and `profiles` options: once `intents` is used, the `defaultProvider` and `settings` options shown in [Install Server SDK](install-server-sdk.md) are ignored.
+Intent mappings require the `providers` and `profiles` options: once `intents` is used, the `defaultProvider` and `settings` options shown in [Install Server SDK](/ai/install-server-sdk) are ignored.
 
   </TabItem>
 
@@ -123,7 +123,7 @@ RevealAIPluginOptions aiPluginOptions = RevealAIPluginOptions.builder()
         .build();
 ```
 
-Intent mappings require the `addProvider` and `addProfile` options: once `mapIntent` is used, the `defaultProvider` and `settings` options shown in [Install Server SDK](install-server-sdk.md) are ignored.
+Intent mappings require the `addProvider` and `addProfile` options: once `mapIntent` is used, the `defaultProvider` and `settings` options shown in [Install Server SDK](/ai/install-server-sdk) are ignored.
 
   </TabItem>
 </Tabs>
@@ -131,24 +131,24 @@ Intent mappings require the `addProvider` and `addProfile` options: once `mapInt
 The server checks the mappings at startup:
 
 - A mapping to a profile that isn't defined fails at startup, and the error lists the defined profiles.
-- An intent can't be mapped to a [dynamic (BYOK) profile](byok.md). Those resolve per user and can only be requested by the client.
+- An intent can't be mapped to a [dynamic (BYOK) profile](/ai/byok). Those resolve per user and can only be requested by the client.
 - A mapping whose key isn't one of the intents above logs a warning: it never matches a call.
 
-Intent mappings are the developer's decisions. A [profile authorizer](profile-selection.md) doesn't filter them, and they still apply to users on their own connection: mapped intents keep running on the developer's models.
+Intent mappings are the developer's decisions. A [profile authorizer](/ai/profile-selection) doesn't filter them, and they still apply to users on their own connection: mapped intents keep running on the developer's models.
 
 ## Where else the intent appears
 
 Every AI call carries its intent, so the developer can tell workflows apart beyond routing:
 
-- **[Usage tracking](usage-tracking.md)** and **[observability](observability.md)**: each usage record has an `Intent`, and the logs and metrics report it, so token use can be broken down per workflow.
-- **[Quota gate](quota-gate.md)**: the gate receives the intent of every call, so a plan can allow or restrict specific workflows.
-- **[Custom providers](providers-building-custom.md)**: `AIRequest.Intent` tells the provider which workflow sent the call. Routing has already happened by then. A provider that still implements the legacy `SendPromptAsync` receives the earlier spelling of the value, such as `generationbuildreport`.
+- **[Usage tracking](/ai/usage-tracking)** and **[observability](/ai/observability)**: each usage record has an `Intent`, and the logs and metrics report it, so token use can be broken down per workflow.
+- **[Quota gate](/ai/quota-gate)**: the gate receives the intent of every call, so a plan can allow or restrict specific workflows.
+- **[Custom providers](/ai/providers-building-custom)**: `AIRequest.Intent` tells the provider which workflow sent the call. Routing has already happened by then. A provider that still implements the legacy `SendPromptAsync` receives the earlier spelling of the value, such as `generationbuildreport`.
 
 An application that checks `widget-analysis` in any of these places should check `dashboard-analysis` as well.
 
 ## The chat `intent` field
 
-The [Chat endpoint](chat.md) also uses intent names. A chat request can set `intent` to run a specific operation instead of letting the AI classify the message, and the response's `intent` reports the operation that ran. The accepted values, and how the response reports them, are described in [Chat Endpoint](chat.md).
+The [Chat endpoint](/ai/chat) also uses intent names. A chat request can set `intent` to run a specific operation instead of letting the AI classify the message, and the response's `intent` reports the operation that ran. The accepted values, and how the response reports them, are described in [Chat Endpoint](/ai/chat).
 
 ## Ranking datasources on a fast profile
 
