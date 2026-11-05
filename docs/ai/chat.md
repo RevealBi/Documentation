@@ -90,6 +90,8 @@ Without an `intent`, the AI decides from the message whether to build, edit or a
 | `widget-analysis` | Analyze the visualization in `visualizationId`. Requires `visualizationId` |
 | `dashboard-analysis` | Analyze the whole dashboard |
 
+These are the chat operations among Reveal's intents. [Intents](./intents.md) lists every intent, including the ones a request can't set, and how to map each one to a profile.
+
 The values are case-insensitive. The earlier values (`buildreport`, `editexistingreport`, `addwidgetfilters`, `addglobalfilters`, `adjustwidgetglobalfilters`, `widgetanalysis`, `dashboardanalysis`) still work.
 
 When the session has no visualizations, an edit or an add-filters request builds a new dashboard, and a dashboard filter adjustment runs a dashboard analysis. An empty or unrecognized value, `default` included, runs a dashboard analysis.
@@ -119,7 +121,7 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 
 #### Response intent
 
-`intent` reports what the request did, for example whether a message edited the current dashboard or built a new one:
+`intent` reports what the request did, for example whether a message edited the current dashboard or built a new one. The values are [intent](./intents.md) names:
 
 | Value | The request... |
 |---|---|
