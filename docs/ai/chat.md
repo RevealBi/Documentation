@@ -67,6 +67,7 @@ DELETE /api/reveal/ai/chat/session
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
 | `intent` | string | No | Operation to run instead of letting the AI classify the message. See [Intent values](#intent-values) |
+| `updateChatState` | boolean | No | With `intent`, whether the session keeps the operation's result for later requests. Defaults to `false` |
 | `model` | string | No | Name of specific LLM model to use for this request |
 | `stream` | boolean | No | When `true`, returns a `text/event-stream` (SSE) response with progress events, text chunks, and a final complete event. When `false` (default), returns a plain `application/json` response. |
 
@@ -77,7 +78,7 @@ DELETE /api/reveal/ai/chat/session
 
 ### Intent values
 
-Without an `intent`, the AI decides from the message whether to build, edit or analyze a dashboard, or to answer conversationally. Set `intent` to run a specific operation instead. The values are the same intent names the response's [`intent`](#response-intent) field reports:
+Without an `intent`, the AI decides from the message whether to build, edit or analyze a dashboard, or to answer conversationally. Set `intent` to run a specific operation instead. The values are the same intent names the response's [`intent`](#response-intent) field reports, except `default`, which isn't accepted as a request value:
 
 | Value | Operation |
 |---|---|
@@ -91,7 +92,9 @@ Without an `intent`, the AI decides from the message whether to build, edit or a
 
 The values are case-insensitive. The earlier values (`buildreport`, `editexistingreport`, `addwidgetfilters`, `addglobalfilters`, `adjustwidgetglobalfilters`, `widgetanalysis`, `dashboardanalysis`) still work.
 
-An operation that needs a dashboard falls back when the session has none: an edit or a filter request builds a new dashboard, and a filter adjustment runs a dashboard analysis. An unrecognized value runs a dashboard analysis.
+When the session has no visualizations, an edit or an add-filters request builds a new dashboard, and a dashboard filter adjustment runs a dashboard analysis. An empty or unrecognized value, `default` included, runs a dashboard analysis.
+
+A request with an `intent` isn't part of the conversation: it doesn't add a turn to the [conversation history](#conversation-history), and by default the session doesn't keep its result, so a later request still works on the earlier dashboard. Set `updateChatState` to `true` to keep the result in the session.
 
 ## Response Format
 
@@ -116,7 +119,7 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 
 #### Response intent
 
-`intent` tells you what the request did, for example whether a message edited the current dashboard or built a new one:
+`intent` reports what the request did, for example whether a message edited the current dashboard or built a new one:
 
 | Value | The request... |
 |---|---|
@@ -127,7 +130,7 @@ When `stream` is `false` or omitted, the endpoint returns a plain JSON response:
 | `widget-adjustment-global-filters` | Adjusted the dashboard filters a visualization uses |
 | `default` | Answered conversationally, without changing the dashboard |
 
-It's the operation that ran, which can differ from the requested `intent`: an edit requested when the session has no dashboard builds a new one and reports `generation-build-report`.
+It's the operation that ran, which can differ from the requested `intent`: an edit requested when the session has no visualizations builds a new dashboard and reports `generation-build-report`. `intent` is missing or `null` when the server couldn't determine which operation ran.
 
 On error, the response includes an error message with the appropriate HTTP status code (400 or 500):
 
