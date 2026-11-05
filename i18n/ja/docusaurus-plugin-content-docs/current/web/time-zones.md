@@ -89,6 +89,8 @@ IANA 名のみを使用してください。`Pacific Standard Time` などの Wi
 
 変換は UTC を起点に行われます。Reveal 全体と同様に、タイムゾーンを持たない DateTime 値は UTC として扱われ、SQL Server の `datetimeoffset` や Oracle の `TIMESTAMP WITH TIME ZONE` など、独自のオフセットを持つ値は UTC に正規化されます。
 
+同じ規則は、カスタムの日付範囲など、JavaScript コードから SDK に渡す日付にも適用されます。`Date.UTC` を使用して作成してください。詳しくは [カスタム日付範囲の使用](filtering-dashboards.md#カスタム日付範囲の使用) を参照してください。
+
 - **変換されるのは DateTime フィールドのみです。** 同じ行の DateTime が別の日に移動した場合でも、Date フィールドと Time フィールドがずれることはありません。
 - **グループ化はタイムゾーンに従います。** 日、週、月によるグループ化には変換後の値が使用されます。
 - **計算フィールドは変換されません。** 計算フィールドが読み取るフィールドはすでに変換済みのため、再度変換されることはありません。`applyTimeZone()` を呼び出す数式は、値をもう一度変換します ([既存のダッシュボードのアップグレード](#upgrading-existing-dashboards)を参照してください)。
