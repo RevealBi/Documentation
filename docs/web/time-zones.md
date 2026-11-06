@@ -116,6 +116,8 @@ With `RVTimeZone.AsiaTokyo`, every `OrderDate` moves nine hours ahead, so the sa
 
 Time zone conversion works only with the data sources listed in [Feature Support by Data Source](datasources.md#feature-support-by-data-source). While a time zone is set, visualizations with DateTime fields show the error "Converting to the current time zone requires Engine2…" when they use any other data source, blend one in, or use transposed data. Keep `RevealSdkSettings.timeZone` set to `null` for those dashboards.
 
+Time zone conversion also requires the new data engine, which is on by default. If you turn it off, visualizations with DateTime fields show the same error while a time zone is set.
+
 ## Exports
 
 Exports started from the `RevealView` contain the values the user sees, in the time zone in use.

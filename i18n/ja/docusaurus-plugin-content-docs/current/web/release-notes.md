@@ -31,7 +31,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 
 ### 改善
 
-- 新しいデータ エンジンが、クライアントとサーバーの両方でデフォルトになりました。新しいデータ エンジンは、コネクタがサポートしている場合、集計、フィルター、結合、ページングをデータ ソースにプッシュ ダウンします。[タイムゾーンの変換](https://help.revealbi.io/ja/web/time-zones/)と[行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)は、このエンジン上で動作します。いくつかのケースでは、以前のバージョンと結果が異なります: `ROW`、`PREVIOUS`、または非推奨の集計関数を使用する計算フィールドはエラーで拒否され、文字列はデータ ソースの照合順序で並べ替えられ、SQL Server および Redshift での整数値の平均は小数部を保持します。以前のエンジンを引き続き使用するには、両側で新しいエンジンをオフにしてください: クライアントで `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` を呼び出し、サーバーの設定 (ASP.NET の `Engine2Enabled`、Java の `setEngine2Enabled`、Node.js の `engine2Enabled` オプション) をオフにします。
+- 新しいデータ エンジンが、クライアントとサーバーの両方でデフォルトになりました。新しいデータ エンジンは、コネクタがサポートしている場合、集計、フィルター、結合、ページングをデータ ソースにプッシュ ダウンします。[タイムゾーンの変換](https://help.revealbi.io/ja/web/time-zones/)と[行レベル セキュリティ](https://help.revealbi.io/ja/web/row-level-security/)は、このエンジンを必要とします。いくつかのケースでは、以前のバージョンと結果が異なります: `ROW`、`PREVIOUS`、または非推奨の集計関数を使用する計算フィールドはエラーで拒否され、文字列はデータ ソースの照合順序で並べ替えられ、SQL Server および Redshift での整数値の平均は小数部を保持します。以前のエンジンを引き続き使用するには、両側で新しいエンジンをオフにしてください: クライアントで `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` を呼び出し、サーバーの設定 (ASP.NET の `Engine2Enabled`、Java の `setEngine2Enabled`、Node.js の `engine2Enabled` オプション) をオフにします。以前のエンジンでは、日付をタイムゾーンに変換する表示形式と、行フィルターが設定された項目へのリクエストは、エラーで失敗します。
 
 #### AI
 - [ダッシュボードの生成](https://help.revealbi.io/ja/ai/chat/)で、Reveal がサポートするすべての表示形式を作成でき、事後計算フィールドも追加できるようになりました。また、生成されるダッシュボードで複数のデータ ソースを使用でき、1 つの表示形式で複数のデータ ソースのデータを結合することもできます。この結合には、Reveal のブレンドと同じ制限が適用されます。
