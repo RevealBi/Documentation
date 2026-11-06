@@ -147,7 +147,7 @@ Node.js と Java では、プロパティ名はキャメルケースになり、
 | `UserId` | 呼び出しの対象ユーザー。ユーザーに ID がない場合は `anonymous`。 |
 | `IsSystemCall` | メタデータの拡充やダッシュボード生成中のデータソースのランク付けなど、Reveal が独自に行うバックグラウンド処理の場合は `true`。この場合 `UserId` はシステム ユーザーのものになり、ランク付けでは `ParentOperationId` が呼び出しをユーザーの操作に関連付けます。 |
 | `IsUserConnection` | 開発者が構成した接続ではなく、ユーザーが提供した接続を呼び出しが使用した場合は `true`。 |
-| `Intent` | 呼び出しが属するワークフロー (例: `generation-build-report`、`widget-analysis`)。 |
+| `Intent` | 呼び出しが属するワークフロー (例: `generation-build-report`、`widget-analysis`)。[インテント](intents.md)を参照してください。 |
 | `Profile` | 呼び出しを処理した[プロファイル](providers-overview.md)。 |
 | `Provider` | プロバイダーの登録名。ユーザーが提供した接続の場合はプロバイダーの種類。 |
 | `Model` | 呼び出しが実行されたモデル (判明している場合)。 |

@@ -88,7 +88,7 @@ public interface IAIProvider
 | プロパティ | 型 | 説明 |
 |----------|------|-------------|
 | `Prompt` | `string` | LLM に送信するプロンプト。 |
-| `Intent` | `string` | リクエストのインテント（例: `"default"`）。 |
+| `Intent` | `string` | リクエストのインテント（例: `"default"`）。[インテント](intents.md)を参照してください。 |
 | `Model` | `string?` | オプションのモデルオーバーライド。`null` の場合、プロバイダーのデフォルトモデルを使用します。 |
 
 ### ProviderResponse

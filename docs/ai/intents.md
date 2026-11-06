@@ -26,7 +26,7 @@ The constants are on the `Intents` class in the `Reveal.Sdk.AI` namespace. In No
 | `widget-adjustment-global-filters` | `Intents.WidgetAdjustmentGlobalFilters` | Adjusting the dashboard filters a visualization uses. |
 | `widget-analysis` | `Intents.WidgetAnalysis` | Analyzing a visualization, from chat or from [Insights](/ai/insights). A dashboard analysis also runs each visualization's analysis, and the summary of their results, under this intent. |
 | `dashboard-analysis` | `Intents.DashboardAnalysis` | Analyzing a whole dashboard, from chat or from Insights without a visualization: planning which visualizations to analyze and writing the final report. |
-| `datasource-ranker` | `Intents.DatasourceRanker` | Ranking the datasources that could answer a request for a new dashboard. It runs as background work. See [Ranking datasources on a fast profile](#ranking-datasources-on-a-fast-profile). |
+| `datasource-ranker` | `Intents.DatasourceRanker` | Ranking the datasources that could answer a request for a new dashboard. It runs as background work. See [Ranking datasources on a fast profile](#setting-datasources-ranking-to-a-fast-profile). |
 | `datasource-evaluate` | `Intents.DatasourceEvaluate` | Checking whether a single datasource can answer a request. The chat and insights endpoints don't make this call. |
 | `metadata-semantic-enrichment` | `Intents.MetadataSemanticEnrichment` | Describing datasource metadata in the background, when semantic enrichment is enabled (see [Data Handling](/ai/data-handling#optional-metadata-enrichment)). |
 
