@@ -190,7 +190,7 @@ const dataSourceProvider = async (userContext: IRVUserContext | null, dataSource
 
 ### 認証
 
-Snowflake の認証は、ユーザー名とパスワードの資格情報を使用してサーバー側で処理されます。すべての認証オプションの詳細については、「[認証](../authentication.md)」トピックを参照してください。
+Snowflake の認証は、[キーペア認証](../authentication.md#キーペア認証)を使用してサーバー側で処理されます。Snowflake のユーザーと暗号化されていない RSA 秘密キーを指定した `RVKeyPairDataSourceCredential` を返してください。Snowflake は、`RVBearerTokenDataSourceCredential` を介した OAuth アクセス トークンも受け付けます。ユーザー名とパスワードの資格情報はサポートされておらず、これを使用するリクエストは「Invalid authentication type.」で失敗します。すべての認証オプションの詳細については、「[認証](../authentication.md)」トピックを参照してください。
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -203,7 +203,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVSnowflakeDataSource)
         {
-            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
+            userCredential = new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -216,7 +216,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVSnowflakeDataSource) {
-        return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
+        return new reveal.RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
 }
@@ -228,7 +228,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVSnowflakeDataSource) {
-        return new RVUsernamePasswordDataSourceCredential("username", "password");
+        return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
 }
@@ -242,7 +242,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVSnowflakeDataSource) {
-            return new RVUsernamePasswordDataSourceCredential("username", "password");
+            return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
         return null;
     }

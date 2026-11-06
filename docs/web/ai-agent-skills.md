@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # AI Agent Skills
 
-The Reveal SDK ships [Agent Skills](https://agentskills.io) that teach AI coding assistants such as Claude Code, GitHub Copilot and Cursor how to build with Reveal. A skill is a folder of instructions, reference pages and starter code that the assistant loads only when your request needs it. With the skill installed, the assistant works from curated Reveal guidance instead of searching the web and guessing at APIs.
+The Reveal SDK ships [Agent Skills](https://agentskills.io) that teach AI coding assistants such as Claude Code, GitHub Copilot, Cursor and Codex how to build with Reveal. A skill is a folder of instructions, reference pages and starter code that the assistant loads only when your request needs it. With the skill installed, the assistant works from curated Reveal guidance instead of searching the web and guessing at APIs.
 
 There are two skills:
 
@@ -95,7 +95,7 @@ Copy the skill folders from the [`skills/`](https://github.com/RevealBi/Reveal.S
 | --- | --- |
 | `.claude/skills/<skill-name>/` | Claude Code, GitHub Copilot and Cursor |
 | `.github/skills/<skill-name>/` | GitHub Copilot |
-| `.agents/skills/<skill-name>/` | GitHub Copilot and Cursor |
+| `.agents/skills/<skill-name>/` | GitHub Copilot, Cursor and Codex |
 
 Commit the folder so everyone working on the project gets the skills.
 

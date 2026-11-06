@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # AI エージェント スキル
 
-Reveal SDK には、Claude Code、GitHub Copilot、Cursor などの AI コーディング アシスタントに Reveal を使用した開発方法を教える[エージェント スキル](https://agentskills.io) が付属しています。スキルは、指示、リファレンス ページ、スターター コードをまとめたフォルダーで、アシスタントはリクエストに必要な場合にのみそれを読み込みます。スキルをインストールすると、アシスタントは Web を検索して API を推測するのではなく、厳選された Reveal のガイダンスに基づいて作業します。
+Reveal SDK には、Claude Code、GitHub Copilot、Cursor、Codex などの AI コーディング アシスタントに Reveal を使用した開発方法を教える[エージェント スキル](https://agentskills.io) が付属しています。スキルは、指示、リファレンス ページ、スターター コードをまとめたフォルダーで、アシスタントはリクエストに必要な場合にのみそれを読み込みます。スキルをインストールすると、アシスタントは Web を検索して API を推測するのではなく、厳選された Reveal のガイダンスに基づいて作業します。
 
 スキルは 2 つあります。
 
@@ -95,7 +95,7 @@ Claude Code 内で次のコマンドを実行します。
 | --- | --- |
 | `.claude/skills/<skill-name>/` | Claude Code、GitHub Copilot、Cursor |
 | `.github/skills/<skill-name>/` | GitHub Copilot |
-| `.agents/skills/<skill-name>/` | GitHub Copilot、Cursor |
+| `.agents/skills/<skill-name>/` | GitHub Copilot、Cursor、Codex |
 
 プロジェクトに関わる全員がスキルを使用できるように、フォルダーをコミットしてください。
 

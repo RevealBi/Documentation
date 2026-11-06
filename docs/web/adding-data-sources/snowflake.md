@@ -190,7 +190,7 @@ Any changes made to the data source in the `ChangeDataSourceAsync` method are no
 
 ### Authentication
 
-Authentication for Snowflake is handled on the server side using username and password credentials. For detailed information on all authentication options, see the [Authentication](../authentication.md) topic.
+Authentication for Snowflake is handled on the server side using [key-pair authentication](../authentication.md#key-pair-authentication): return an `RVKeyPairDataSourceCredential` with the Snowflake user and the unencrypted RSA private key. Snowflake also accepts an OAuth access token through `RVBearerTokenDataSourceCredential`. Username and password credentials aren't supported, and a request that uses them fails with "Invalid authentication type." For detailed information on all authentication options, see the [Authentication](../authentication.md) topic.
 
 <Tabs groupId="code" queryString>
   <TabItem value="aspnet" label="ASP.NET" default>
@@ -203,7 +203,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
         IRVDataSourceCredential userCredential = null;
         if (dataSource is RVSnowflakeDataSource)
         {
-            userCredential = new RVUsernamePasswordDataSourceCredential("username", "password");
+            userCredential = new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
         return Task.FromResult<IRVDataSourceCredential>(userCredential);
     }
@@ -216,7 +216,7 @@ public class AuthenticationProvider: IRVAuthenticationProvider
 ```javascript
 const authenticationProvider = async (userContext, dataSource) => {
     if (dataSource instanceof reveal.RVSnowflakeDataSource) {
-        return new reveal.RVUsernamePasswordDataSourceCredential("username", "password");
+        return new reveal.RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
 }
@@ -228,7 +228,7 @@ const authenticationProvider = async (userContext, dataSource) => {
 ```ts
 const authenticationProvider = async (userContext: IRVUserContext | null, dataSource: RVDashboardDataSource) => {
     if (dataSource instanceof RVSnowflakeDataSource) {
-        return new RVUsernamePasswordDataSourceCredential("username", "password");
+        return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
     }
     return null;
 }
@@ -242,7 +242,7 @@ public class AuthenticationProvider implements IRVAuthenticationProvider {
     @Override
     public IRVDataSourceCredential resolveCredentials(IRVUserContext userContext, RVDashboardDataSource dataSource) {
         if (dataSource instanceof RVSnowflakeDataSource) {
-            return new RVUsernamePasswordDataSourceCredential("username", "password");
+            return new RVKeyPairDataSourceCredential("user", "unencrypted rsa-key");
         }
         return null;
     }

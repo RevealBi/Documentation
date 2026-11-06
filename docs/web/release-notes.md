@@ -3,18 +3,102 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
-## Preview (weekly preview)
-
-> Changes below are available in the weekly preview builds and will ship in the next RTM release.
+## 2.3.0 (November 5, 2026)
 
 ### New Features
 
-- Dashboards can now be shown in a [time zone](https://help.revealbi.io/web/time-zones/) other than the browser's. Set `RevealSdkSettings.timeZone` to an `RVTimeZone` member or to any IANA time zone name: relative date filters and `currentTimeZone()` use it, and every DateTime field read from the data source is converted to it on the server, with no changes to dashboards or data sources. Setting it on an open dashboard reloads the data in place, keeping filter selections and the maximized visualization. Server-side exports take the time zone from the `TimeZone` export option, and use UTC when it isn't set. Dashboards that convert dates with `applyTimeZone()` should drop that formula when a time zone is set, or the values are converted twice.
+- **Dashboards can now be shown in a [time zone](https://help.revealbi.io/web/time-zones/) other than the browser's**. Set `RevealSdkSettings.timeZone` to an `RVTimeZone` member or to any IANA time zone name: relative date filters and `currentTimeZone()` use it, and every DateTime field read from the data source is converted to it on the server, with no changes to dashboards or data sources. Setting it on an open dashboard reloads the data in place, keeping filter selections and the maximized visualization. Server-side exports take the time zone from the `TimeZone` export option, and use UTC when it isn't set. Dashboards that convert dates with `applyTimeZone()` should drop that formula when a time zone is set: the field it reads is already converted, so the formula converts it a second time.
+- **[Row-level security](https://help.revealbi.io/web/row-level-security/) is now available in the ASP.NET, Java and Node.js server SDKs**. Set a row filter on a data source item in your data source provider, and Reveal applies it to every query that reads the item: visualizations, totals, filter value lists, blended data and exports. User context values are sent as query parameters, the filter never reaches the client, and when a filter can't be applied the request fails instead of returning unfiltered rows. Row filters work with the data sources listed in [Feature Support by Data Source](https://help.revealbi.io/web/datasources/#feature-support-by-data-source).
+```csharp
+sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
+```
+- **Excel and CSV exports no longer send the visualization data from the browser back to the server, so large grids no longer fail at the server's request size limit**. The client sends only the dashboard, with its filters and sorting, and the server runs the queries itself. Paged grids are read page by page (`DataSourceQueryPageSize` in the export configuration, 1,000 rows by default) and written through temporary files on the server, so grids export completely, up to Excel's limit of 1,048,576 rows per sheet. On ASP.NET and Node.js, cancelling the export stops the server work. A visualization whose data can't be read gets a sheet with the error instead of failing the whole export.
+- **Grid PDF exports now apply conditional formatting as the dashboard shows it**: background and text colors, bold, italic and strikethrough text, and icons.
+- **Excel exports now keep the chart legend at the bottom when the dashboard shows it there**. Excel always centers a legend above or below a chart, so a left- or right-aligned legend exports centered.
+- **Excel exports now keep large-number formatting**: a value shown as `1.23M` exports with the number format `0.00,,"M"`, and the cell keeps the exact value.
+- **Next N days** date rules can now include today: `new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` covers today and the next six days. Without the last argument, the period starts tomorrow, as before. Available in the JavaScript client and in the ASP.NET, Java and Node.js server SDKs.
+- In the `onUrlLinkRequested` callback, `args.url` now holds the resolved URL of the clicked row, and the new `args.urlTemplate` holds the URL template configured in the dashboard. This applies to Grid, Pivot and Sparkline hyperlink columns. Returning a template from the callback still works: Reveal resolves it before navigating.
+- The Oracle connector now runs on the v2 engine. This brings the following:
+
+1. Aggregations run in Oracle. New Oracle data source items use server-side aggregation by default. Existing dashboards keep their current behavior. To switch a visualization, turn on `Process data on server`.
+2. SQL injection protection. The connector quotes identifiers and passes values as query parameters.
+3. Parameterized custom queries. Custom queries can use @Name placeholders with CustomQueryParameters.
+4. PL/SQL BOOLEAN procedure arguments. Stored procedures with a BOOLEAN argument now receive a real boolean value.
+6. These functions now work correctly on Oracle - LOG, LOG10, HOUR, MINUTE, SECOND, MILLISECOND on DATE columns, DATEDIFF, FIND, MONTHNAME, MONTHSHORTNAME
+- `RVPostgresDataSource` has two new TLS settings: `SslMode` (`Disable`, `Allow`, `Prefer`, `Require`, `VerifyCA` or `VerifyFull`, with the same meaning as PostgreSQL's `sslmode`) and `SslRootCertificate`, the path to a PEM CA certificate on the server. They're server-side only: set them in your data source provider. When they aren't set, connections behave as before.
+- SQL data sources have two new server-side settings, in seconds: `CommandTimeout`, how long a query may run, and `ConnectionTimeout`, how long to wait for a connection. They're available on PostgreSQL, Amazon Redshift, MySQL, MariaDB, SQL Server (including Azure SQL and Azure Synapse), Oracle, Snowflake and Sybase. Set them in your data source provider. When they aren't set, each connector keeps its current timeout.
+- The Node.js and Java SDKs now support in-memory data sources. Supply the data with the `dataProvider` option in Node.js, or with `RevealServerBuilder.setDataProvider` in Java.
+- The web SDK now applies the `italicFont` and `boldItalicFont` theme settings, and one font family can be assigned to several style slots, with Reveal picking the matching weight and style for each. If you already set `italicFont` or `boldItalicFont`, grid cells with an italic conditional formatting style change appearance after upgrading. See [Theme Fonts](https://help.revealbi.io/web/theming-fonts/).
+- When the [Redis cache](https://help.revealbi.io/web/caching/#redis-cache) is enabled, it now also stores XMLA and Cube metadata and the value lists of dashboard and quick filters.
+- **Charts now render every series in the data**. Previously, standard charts showed at most 30 series and stacked bar and column charts at most 100, and the rest were dropped without a warning.
+- Tooltips now open to the bottom right of the mouse pointer, flipping to stay within the page near its edges.
+- The DataGrid now has a 1-pixel border on all four sides. Previously, it showed only a bottom border, and only when the grid had summaries.
+- [AI Agent Skills](https://help.revealbi.io/web/ai-agent-skills/) are available for AI coding assistants such as Claude Code, GitHub Copilot, Cursor and Codex: `reveal-embed` helps embed Reveal in your application, and `reveal-dashboard-authoring` creates and edits `.rdash` files with the Reveal DOM.
+
+### Improvements
+
+- The new data engine is now the default on both the client and the server. It pushes aggregation, filters, joins and paging down to the data source wherever the connector supports them, and [time zone conversion](https://help.revealbi.io/web/time-zones/) and [row-level security](https://help.revealbi.io/web/row-level-security/) require it. A few results can differ from earlier versions: calculated fields that use `ROW`, `PREVIOUS` or the deprecated aggregation functions are rejected with an error, strings sort in the data source's collation, and an average over integer values on SQL Server and Redshift keeps its decimals. To keep the previous engine, turn the new one off on both sides: call `RevealSdkSettings.betaFeatures.disable("engine2Enabled")` on the client, and turn off `Engine2Enabled` in ASP.NET, `setEngine2Enabled` in Java or the `engine2Enabled` option in Node.js. With the previous engine, visualizations that convert dates to a time zone, and requests for an item with a row filter, fail with an error.
+
+#### AI
+- [Dashboard generation](https://help.revealbi.io/ai/chat/) now creates every visualization type Reveal supports and can add post-calculated fields. A generated dashboard can also use several data sources, and one visualization can join data from more than one of them, with the same restrictions as blending in Reveal.
+- A [profile authorizer](https://help.revealbi.io/ai/profile-selection/) (`IAIProfileAuthorizer`) decides which AI profiles each user may request, typically from the user's plan, so each of your customer plans can get its own models.
+- The [quota gate](https://help.revealbi.io/ai/quota-gate/) (`IAIQuotaGate`, or the `quotaGate` and `quotaSettle` callbacks in Node.js and Java) checks every AI call made for a user before tokens are spent and settles the actual token usage after it. Background work, such as metadata enrichment and datasource ranking, isn't checked or settled by default; on ASP.NET, set `RevealAI:Gate:IncludeSystemCalls` to `true` to include it. A denied call never reaches the provider, and the client gets a `RevealAIError` with a stable code, such as `ai.quota_exceeded`, that your app can turn into an upgrade prompt.
+- [Usage tracking](https://help.revealbi.io/ai/usage-tracking/) creates a record of every AI call, with its token counts, user, intent, profile and model, and hands it to your own store through an `IAIUsageSink` or the `usageSink` callback. Delivery to the sink is best effort, so bill from the quota gate, not from the sink. Records never contain prompt or response text.
+- [Observability](https://help.revealbi.io/ai/observability/) works without setup: the ASP.NET server logs every AI call and counts it in OpenTelemetry metrics, and each response reports its profile and token usage.
+- [Dynamic profiles](https://help.revealbi.io/ai/byok/) (preview) let each user bring their own key (BYOK) and model. Declare them with `AddDynamicProfile` in ASP.NET, `addDynamicProfile` in Java or the `dynamicProfiles` option in Node.js. Reveal doesn't store the keys.
+- Prompts now put the instructions and schema first and each turn's content last, so the provider's prompt cache covers more of every request. Prompt caching is on by default for Anthropic (`RevealAI:Providers:<name>:PromptCaching`). Later turns of a chat no longer resend every earlier dashboard version, so input tokens stop growing with each turn.
+- `ChatResponse` has a new `intent` field with the intent that actually ran, such as `generation-build-report` or `widget-analysis`. It can differ from the requested intent, for example when an edit request has no dashboard and builds a new one, so your UI can react to what the turn did.
+- On ASP.NET, `RevealAIOptions.RequestBudget` (`RevealAI:RequestBudget`) limits how long a chat request may run (`MaxDuration`) and how many repairs (`MaxRepairs`) and fallbacks (`MaxFallbacks`) a dashboard generation may make. No limit applies by default, and a request that runs out fails with the dashboard as it was.
+- Chat and insights requests now send the AI client's `timeZone`, or the browser's time zone when it isn't set, so the filter values and widget data the AI reads are in the same zone as the dashboard.
+- The metadata generation endpoint (preview), `POST /api/reveal/ai/metadata/generate`, accepts a `targets` list to generate metadata for only some data sources, databases or tables.
+
+### Breaking Changes
+
+#### All Platforms
+- The Snowflake connector no longer supports username and password authentication. Return an [`RVKeyPairDataSourceCredential`](https://help.revealbi.io/web/authentication/#key-pair-authentication) from your authentication provider instead.
+- A blend of two Amazon Redshift data sources on the same cluster (same host and port) now runs as one cross-database query on the main data source's connection, instead of reading each side and joining them in Reveal. The joined tables are read with the main data source's credentials and grants, and a custom query item of the joined data source must name its tables with their three-part name (`database.schema.table`). Redshift runs cross-database queries only on RA3 nodes and Redshift Serverless, so on a DC2 or DS2 cluster this blend, which worked before, now fails.
+- A function called with invalid arguments, such as an argument of the wrong type, the logarithm of a negative number or a modulo by zero, no longer returns an empty value. The result depends on the data source and can be an error. Guard such expressions, for example `IF([Value] > 0, LOG10([Value]), EMPTY())`.
+- The search box of dashboard filters and quick filters now searches only string fields. On numeric and date fields, the search term is ignored and the first page of values is shown. Before, search on other field types worked or not depending on the data source, and never when Reveal ingested the data. To make a field searchable, expose its value as a string column.
+
+#### Java and Node.js
+- When your code behind an extension point throws, for example in a data source provider, an authentication provider or a dashboard provider, the request now fails, as it does in ASP.NET. For data requests, the error shown to the user includes a correlation id, which the server also logs with the exception. Previously, the Node.js SDK logged the exception and went on with the data source item as the client sent it.
+
+#### Node.js
+- `advancedSettings` must now be a `Map`, its declared type. Before this release, a `Map` was serialized as an empty object and never reached the engine, so a plain object was the only form that worked. A plain object now fails at startup with `object is not iterable`.
 
 ### Bugs
 
+The list below covers the main fixes. For additional resolved issues, see the [public bugs closed on GitHub between September 1 and November 5, 2026](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted).
+
 #### All Platforms
-- String values in Grid and Pivot PDF exports are no longer cut off at 200 characters. The PDF exporter previously applied its own 200-character limit on top of the engine's, so exports could show less text than the dashboard. That extra limit has been removed, and exported text now follows the engine's [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (default 256 characters), so an export shows the same amount of text per cell as the dashboard does. To show more, raise `MaxStringCellSize`. Note that cells have a fixed width, so longer values wrap and increase page count.
+- Grid and Pivot PDF exports no longer truncate text at 200 characters. They now follow the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (256 characters by default), as the dashboard does.
+- PDF exports now match the dashboard's layout, and charts with no data show the "no data" message.
+- Fixed maps that were blank in server-side exports or captured before they finished loading.
+- Fixed Excel exports that failed on a chart title with an apostrophe, or needed repair when a currency symbol contained letters, such as `USD`.
+- Headless PDF, PowerPoint and image exports now delete their temporary files when the returned stream is closed or the export fails. In Java and Node.js, the engine's temporary file is also deleted when the returned stream is closed.
+- A DataGrid with truncated data now sorts, groups and filters on the server. Column summaries are hidden while a grid is processed on the server, because they would show wrong totals.
+- Applying changes from a DataGrid column menu no longer submits a form that contains the dashboard, which reloaded the page.
+- KPI vs Time visualizations with a category no longer pair values with the wrong category, or drop categories, when the two periods return their categories in a different order.
+- Setting `canAddDashboardFilter` or `canAddDateFilter` before `RevealView.dashboard` no longer throws.
+- Tab and Shift+Tab follow the host page's focus order again.
+- `RevealView` now releases its listeners when it's removed, so switching dashboards no longer slows down over a session.
+- Field labels from `RevealSdkSettings.localizedStringsProvider` no longer revert to the column names when the data source is refreshed or changed in the visualization editor.
+- The dialog that opens when you edit a data source in the visualization editor now shows the custom icon returned by `onAssetRequested`, as the data source selection dialog does.
+- Fixed PostgreSQL `uuid` filters, Redshift `DATEDIFF` on `date` columns, Oracle `TIMESTAMP WITH TIME ZONE` values and unmatched rows in ClickHouse blends.
+- Fixed a SQLite cache key collision that made paged grids show the first page on every page.
+- Fixed the server's default time zone on Linux and macOS, which could fail with "Unknown time zone".
+- A data source item whose data source isn't in the request is now refused with "The data source was not found."
+- Hardened the server-side export endpoint, which now returns 400 for a request body that isn't JSON.
+
+#### ASP.NET
+- `Reveal.Sdk.Data.Sybase` now declares its dependency on `System.Data.SqlClient`, so Sybase requests no longer fail in apps that don't reference it.
+
+#### Java and Node.js
+- The server SDK no longer forwards client-sent `RevealBI-` headers to the engine, and the engine's internal endpoints accept only requests from the server SDK.
+- The server SDK now passes its startup options, which can include secrets, to the engine process through standard input instead of command-line arguments, which other local users could read.
+
+#### Node.js
+- Headless PDF and image exports now use the user's language.
 
 ## 2.2.0 (September 3rd, 2026)
 
