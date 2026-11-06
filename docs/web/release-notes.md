@@ -71,7 +71,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 The list below covers the main fixes. For additional resolved issues, see the [public bugs closed on GitHub between September 1 and November 5, 2026](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted).
 
 #### All Platforms
-- Grid and Pivot PDF exports no longer cut text at 200 characters. They now follow the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (256 characters by default), as the dashboard does.
+- Grid and Pivot PDF exports no longer truncate text at 200 characters. They now follow the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (256 characters by default), as the dashboard does.
 - PDF exports now match the dashboard's layout, and charts with no data show the "no data" message.
 - Fixed maps that were blank in server-side exports or captured before they finished loading.
 - Fixed Excel exports that failed on a chart title with an apostrophe, or needed repair when a currency symbol contained letters, such as `USD`.
