@@ -33,7 +33,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - **Charts now render every series in the data**. Previously, standard charts showed at most 30 series and stacked bar and column charts at most 100, and the rest were dropped without a warning.
 - Tooltips now open to the bottom right of the mouse pointer, and flip to stay on the page near its edges.
 - The DataGrid now has a 1-pixel border on all four sides. Previously, it showed only a bottom border, and only when the grid had summaries.
-- [AI Agent Skills](https://help.revealbi.io/web/ai-agent-skills/) are available for AI coding assistants such as Claude Code, GitHub Copilot and Cursor: `reveal-embed` helps embed Reveal in your application, and `reveal-dashboard-authoring` creates and edits `.rdash` files with the Reveal DOM.
+- [AI Agent Skills](https://help.revealbi.io/web/ai-agent-skills/) are available for AI coding assistants such as Claude Code, GitHub Copilot, Cursor and Codex: `reveal-embed` helps embed Reveal in your application, and `reveal-dashboard-authoring` creates and edits `.rdash` files with the Reveal DOM.
 
 ### Improvements
 

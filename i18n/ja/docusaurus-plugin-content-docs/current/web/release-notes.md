@@ -27,7 +27,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - チャートで、データ内のすべての系列が描画されるようになりました。以前は、標準のチャートでは最大 30 系列、積み上げ棒チャートと積み上げ縦棒チャートでは最大 100 系列までしか表示されず、残りは警告なしに省略されていました。
 - ツールチップがマウス ポインターの右下に表示され、ページの端付近ではページ内に収まるように反転するようになりました。
 - DataGrid の四辺すべてに 1 ピクセルの境界線が表示されるようになりました。以前は、グリッドに集計がある場合にのみ下の境界線が表示されていました。
-- Claude Code、GitHub Copilot、Cursor などの AI コーディング アシスタント向けの [AI エージェント スキル](https://help.revealbi.io/ja/web/ai-agent-skills/)を利用できます。`reveal-embed` はアプリケーションへの Reveal の埋め込みを支援し、`reveal-dashboard-authoring` は Reveal DOM を使用して `.rdash` ファイルを作成および編集します。
+- Claude Code、GitHub Copilot、Cursor、Codex などの AI コーディング アシスタント向けの [AI エージェント スキル](https://help.revealbi.io/ja/web/ai-agent-skills/)を利用できます。`reveal-embed` はアプリケーションへの Reveal の埋め込みを支援し、`reveal-dashboard-authoring` は Reveal DOM を使用して `.rdash` ファイルを作成および編集します。
 
 ### 改善
 
