@@ -16,7 +16,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - **Grid PDF exports now apply conditional formatting as the dashboard shows it**: background and text colors, bold, italic and strikethrough text, and icons.
 - **Excel exports now keep the chart legend at the bottom when the dashboard shows it there**. Excel always centers a legend above or below a chart, so a left- or right-aligned legend exports centered.
 - **Excel exports now keep large-number formatting**: a value shown as `1.23M` exports with the number format `0.00,,"M"`, and the cell keeps the exact value.
-- **Next N days** date rules can now include today: `new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` covers today and the next six days. Without the last argument, the period starts tomorrow, as before. Available in the web client, ASP.NET, Java and Node.js.
+- **Next N days** date rules can now include today: `new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` covers today and the next six days. Without the last argument, the period starts tomorrow, as before. Available in the JavaScript client and in the ASP.NET, Java and Node.js server SDKs.
 - In the `onUrlLinkRequested` callback, `args.url` now holds the resolved URL of the clicked row, and the new `args.urlTemplate` holds the URL template configured in the dashboard. This applies to Grid, Pivot and Sparkline hyperlink columns. Returning a template from the callback still works: Reveal resolves it before navigating.
 - The **Oracle connector** now uses the v2 connector architecture, so aggregations run in Oracle instead of in Reveal. It also supports parameterized custom queries and PL/SQL `BOOLEAN` stored procedure arguments, and the Java `RVOracleDataSourceItem` now has `procedure` and `procedureParameters`.
 - `RVPostgresDataSource` has two new TLS settings: `SslMode` (`Disable`, `Allow`, `Prefer`, `Require`, `VerifyCA` or `VerifyFull`, with the same meaning as PostgreSQL's `sslmode`) and `SslRootCertificate`, the path to a PEM CA certificate on the server. They're server-side only: set them in your data source provider. When they aren't set, connections behave as before.
@@ -36,10 +36,15 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 #### AI
 - [Dashboard generation](https://help.revealbi.io/ai/chat/) now creates every visualization type Reveal supports and can add post-calculated fields. A generated dashboard can also use several data sources, and one visualization can join data from more than one of them, with the same restrictions as blending in Reveal.
 - A [profile authorizer](https://help.revealbi.io/ai/profile-selection/) (`IAIProfileAuthorizer`) decides which AI profiles each user may request, typically from the user's plan, so each of your customer plans can get its own models.
-- The [quota gate](https://help.revealbi.io/ai/quota-gate/) (`IAIQuotaGate`, or the `quotaGate` and `quotaSettle` callbacks in Node.js and Java) checks every AI call before tokens are spent and settles the actual token usage after it. A denied call never reaches the provider, and the client gets a `RevealAIError` with a stable code, such as `ai.quota_exceeded`, that your app can turn into an upgrade prompt.
-- [Usage tracking](https://help.revealbi.io/ai/usage-tracking/) sends a record of every AI call, with its token counts, user, intent, profile and model, to your own store through an `IAIUsageSink` or the `usageSink` callback. Records never contain prompt or response text.
+- The [quota gate](https://help.revealbi.io/ai/quota-gate/) (`IAIQuotaGate`, or the `quotaGate` and `quotaSettle` callbacks in Node.js and Java) checks every AI call made for a user before tokens are spent and settles the actual token usage after it. Background work, such as metadata enrichment and datasource ranking, isn't checked or settled by default; on ASP.NET, set `RevealAI:Gate:IncludeSystemCalls` to `true` to include it. A denied call never reaches the provider, and the client gets a `RevealAIError` with a stable code, such as `ai.quota_exceeded`, that your app can turn into an upgrade prompt.
+- [Usage tracking](https://help.revealbi.io/ai/usage-tracking/) creates a record of every AI call, with its token counts, user, intent, profile and model, and hands it to your own store through an `IAIUsageSink` or the `usageSink` callback. Delivery to the sink is best effort, so bill from the quota gate, not from the sink. Records never contain prompt or response text.
 - [Observability](https://help.revealbi.io/ai/observability/) works without setup: the ASP.NET server logs every AI call and counts it in OpenTelemetry metrics, and each response reports its profile and token usage.
-- [Dynamic profiles](https://help.revealbi.io/ai/byok/) (preview) let each user bring their own key (BYOK) and model. Declare them with `AddDynamicProfile` (`addDynamicProfile` in Node.js and Java). Reveal doesn't store the keys.
+- [Dynamic profiles](https://help.revealbi.io/ai/byok/) (preview) let each user bring their own key (BYOK) and model. Declare them with `AddDynamicProfile` in ASP.NET, `addDynamicProfile` in Java or the `dynamicProfiles` option in Node.js. Reveal doesn't store the keys.
+- Prompts now put the instructions and schema first and each turn's content last, so the provider's prompt cache covers more of every request. Prompt caching is on by default for Anthropic (`RevealAI:Providers:<name>:PromptCaching`). Later turns of a chat no longer resend every earlier dashboard version, so input tokens stop growing with each turn.
+- `ChatResponse` has a new `intent` field with the intent that actually ran, such as `generation-build-report` or `widget-analysis`. It can differ from the requested intent, for example when an edit request has no dashboard and builds a new one, so your UI can react to what the turn did.
+- On ASP.NET, `RevealAIOptions.RequestBudget` (`RevealAI:RequestBudget`) limits how long a chat request may run (`MaxDuration`) and how many repairs (`MaxRepairs`) and fallbacks (`MaxFallbacks`) a dashboard generation may make. No limit applies by default, and a request that runs out fails with the dashboard as it was.
+- Chat and insights requests now send the AI client's `timeZone`, or the browser's time zone when it isn't set, so the filter values and widget data the AI reads are in the same zone as the dashboard.
+- The metadata generation endpoint (preview), `POST /api/reveal/ai/metadata/generate`, accepts a `targets` list to generate metadata for only some data sources, databases or tables.
 
 ### Breaking Changes
 
@@ -57,17 +62,22 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 
 ### Bugs
 
-The list below covers the main fixes. For the full list, see the [public bugs closed on GitHub between September 1 and November 5, 2026](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted).
+The list below covers the main fixes. For additional resolved issues, see the [public bugs closed on GitHub between September 1 and November 5, 2026](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted).
 
 #### All Platforms
 - Grid and Pivot PDF exports no longer cut text at 200 characters. They now follow the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (256 characters by default), as the dashboard does.
 - PDF exports now match the dashboard's layout, and charts with no data show the "no data" message.
 - Fixed maps that were blank in server-side exports or captured before they finished loading.
 - Fixed Excel exports that failed on a chart title with an apostrophe, or needed repair when a currency symbol contained letters, such as `USD`.
+- Headless PDF, PowerPoint and image exports now delete their temporary files when the returned stream is closed or the export fails. In Java and Node.js, the engine's temporary file is also deleted when the returned stream is closed.
 - A DataGrid with truncated data now sorts, groups and filters on the server. Column summaries are hidden while a grid is processed on the server, because they would show wrong totals.
+- Applying changes from a DataGrid column menu no longer submits a form that contains the dashboard, which reloaded the page.
+- KPI vs Time visualizations with a category no longer pair values with the wrong category, or drop categories, when the two periods return their categories in a different order.
 - Setting `canAddDashboardFilter` or `canAddDateFilter` before `RevealView.dashboard` no longer throws.
 - Tab and Shift+Tab follow the host page's focus order again.
 - `RevealView` now releases its listeners when it's removed, so switching dashboards no longer slows down over a session.
+- Field labels from `RevealSdkSettings.localizedStringsProvider` no longer revert to the column names when the data source is refreshed or changed in the visualization editor.
+- The dialog that opens when you edit a data source in the visualization editor now shows the custom icon returned by `onAssetRequested`, as the data source selection dialog does.
 - Fixed PostgreSQL `uuid` filters, Redshift `DATEDIFF` on `date` columns, Oracle `TIMESTAMP WITH TIME ZONE` values and unmatched rows in ClickHouse blends.
 - Fixed a SQLite cache key collision that made paged grids show the first page on every page.
 - Fixed the server's default time zone on Linux and macOS, which could fail with "Unknown time zone".

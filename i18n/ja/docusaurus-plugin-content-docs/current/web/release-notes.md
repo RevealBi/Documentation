@@ -16,7 +16,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - グリッドの PDF エクスポートで、ダッシュボードの表示と同じように条件付き書式 (背景色と文字色、太字、斜体、取り消し線、アイコン) が適用されるようになりました。
 - Excel エクスポートで、ダッシュボードがチャートの凡例を下に表示している場合、凡例が下に保持されるようになりました。Excel ではチャートの上または下にある凡例は常に中央揃えになるため、左揃えまたは右揃えの凡例は中央揃えでエクスポートされます。
 - Excel エクスポートで、大きな数値の書式設定が保持されるようになりました。`1.23M` と表示される値は `0.00,,"M"` という数値書式でエクスポートされ、セルには正確な値が保持されます。
-- **Next N days** (次の N 日間) の日付ルールに今日を含めることができるようになりました。`new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` は今日とその後の 6 日間を対象とします。最後の引数を指定しない場合、期間は従来どおり明日から始まります。Web クライアント、ASP.NET、Java、Node.js で利用できます。
+- **Next N days** (次の N 日間) の日付ルールに今日を含めることができるようになりました。`new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` は今日とその後の 6 日間を対象とします。最後の引数を指定しない場合、期間は従来どおり明日から始まります。JavaScript クライアントと、ASP.NET、Java、Node.js のサーバー SDK で利用できます。
 - `onUrlLinkRequested` コールバックで、`args.url` にクリックされた行の解決済み URL が格納され、新しい `args.urlTemplate` にダッシュボードで構成された URL テンプレートが格納されるようになりました。これはグリッド、ピボット、スパークラインのハイパーリンク列に適用されます。コールバックからテンプレートを返す方法も引き続き機能し、Reveal はナビゲーションの前にそれを解決します。
 - Oracle コネクタが v2 コネクタ アーキテクチャを使用するようになり、集計が Reveal ではなく Oracle で実行されるようになりました。また、パラメーター化されたカスタム クエリと PL/SQL の `BOOLEAN` 型のストアド プロシージャ引数がサポートされ、Java の `RVOracleDataSourceItem` に `procedure` と `procedureParameters` が追加されました。
 - `RVPostgresDataSource` に 2 つの新しい TLS 設定が追加されました: `SslMode` (`Disable`、`Allow`、`Prefer`、`Require`、`VerifyCA`、`VerifyFull`。PostgreSQL の `sslmode` と同じ意味) と、サーバー上の PEM 形式の CA 証明書のパスを指定する `SslRootCertificate` です。これらはサーバー側専用の設定で、データ ソース プロバイダーで設定します。設定しない場合、接続はこれまでどおりに動作します。
@@ -36,10 +36,15 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 #### AI
 - [ダッシュボードの生成](https://help.revealbi.io/ja/ai/chat/)で、Reveal がサポートするすべての表示形式を作成でき、事後計算フィールドも追加できるようになりました。また、生成されるダッシュボードで複数のデータ ソースを使用でき、1 つの表示形式で複数のデータ ソースのデータを結合することもできます。この結合には、Reveal のブレンドと同じ制限が適用されます。
 - [プロファイル オーソライザー](https://help.revealbi.io/ja/ai/profile-selection/) (`IAIProfileAuthorizer`) は、各ユーザーがリクエストできる AI プロファイルを、通常はユーザーのプランに基づいて決定します。これにより、顧客のプランごとに異なるモデルを提供できます。
-- [クォータ ゲート](https://help.revealbi.io/ja/ai/quota-gate/) (`IAIQuotaGate`、または Node.js と Java では `quotaGate` および `quotaSettle` コールバック) は、トークンが消費される前にすべての AI 呼び出しをチェックし、呼び出し後に実際のトークン使用量を精算します。拒否された呼び出しはプロバイダーに到達せず、クライアントは `ai.quota_exceeded` などの安定したコードを持つ `RevealAIError` を受け取るため、アプリでアップグレードを促す表示に利用できます。
-- [使用量の追跡](https://help.revealbi.io/ja/ai/usage-tracking/)では、すべての AI 呼び出しについて、トークン数、ユーザー、インテント、プロファイル、モデルを含むレコードを、`IAIUsageSink` または `usageSink` コールバックを通じて独自のストアに送信します。レコードにプロンプトや応答のテキストが含まれることはありません。
+- [クォータ ゲート](https://help.revealbi.io/ja/ai/quota-gate/) (`IAIQuotaGate`、または Node.js と Java では `quotaGate` および `quotaSettle` コールバック) は、トークンが消費される前にユーザーのために行われるすべての AI 呼び出しをチェックし、呼び出し後に実際のトークン使用量を精算します。メタデータの拡充やデータソースのランク付けなどのバックグラウンド処理は、既定ではチェックも精算もされません。ASP.NET でこれらも含めるには、`RevealAI:Gate:IncludeSystemCalls` を `true` に設定します。拒否された呼び出しはプロバイダーに到達せず、クライアントは `ai.quota_exceeded` などの安定したコードを持つ `RevealAIError` を受け取るため、アプリでアップグレードを促す表示に利用できます。
+- [使用量の追跡](https://help.revealbi.io/ja/ai/usage-tracking/)では、すべての AI 呼び出しについて、トークン数、ユーザー、インテント、プロファイル、モデルを含むレコードを作成し、`IAIUsageSink` または `usageSink` コールバックを通じて独自のストアに渡します。シンクへの配信はベスト エフォートのため、課金にはシンクではなくクォータ ゲートを使用してください。レコードにプロンプトや応答のテキストが含まれることはありません。
 - [オブザーバビリティ](https://help.revealbi.io/ja/ai/observability/)はセットアップ不要で機能します。ASP.NET サーバーはすべての AI 呼び出しをログに記録して OpenTelemetry メトリックでカウントし、各応答はそのプロファイルとトークン使用量を返します。
-- [動的プロファイル](https://help.revealbi.io/ja/ai/byok/) (プレビュー) を使用すると、各ユーザーが独自のキー (BYOK) とモデルを使用できます。`AddDynamicProfile` (Node.js と Java では `addDynamicProfile`) で宣言します。Reveal はキーを保存しません。
+- [動的プロファイル](https://help.revealbi.io/ja/ai/byok/) (プレビュー) を使用すると、各ユーザーが独自のキー (BYOK) とモデルを使用できます。ASP.NET では `AddDynamicProfile`、Java では `addDynamicProfile`、Node.js では `dynamicProfiles` オプションで宣言します。Reveal はキーを保存しません。
+- プロンプトで指示とスキーマが先頭に、各ターンの内容が末尾に置かれるようになったため、プロバイダーのプロンプト キャッシュが各リクエストのより多くの部分をカバーします。Anthropic では、プロンプト キャッシュがデフォルトで有効です (`RevealAI:Providers:<name>:PromptCaching`)。チャットの後続のターンで、以前のすべてのダッシュボードのバージョンが再送信されなくなったため、ターンごとに入力トークンが増え続けることはなくなりました。
+- `ChatResponse` に、実際に実行されたインテント (`generation-build-report` や `widget-analysis` など) を示す新しい `intent` フィールドが追加されました。ダッシュボードがない状態での編集リクエストで新しいダッシュボードが作成される場合など、リクエストされたインテントと異なることがあるため、アプリの UI をそのターンで実際に行われた処理に合わせることができます。
+- ASP.NET では、`RevealAIOptions.RequestBudget` (`RevealAI:RequestBudget`) で、チャット リクエストの実行時間 (`MaxDuration`) と、ダッシュボード生成で行える修復 (`MaxRepairs`) およびフォールバック (`MaxFallbacks`) の回数を制限できます。デフォルトでは制限はなく、上限に達したリクエストはダッシュボードをその時点の状態のままにして失敗します。
+- チャットとインサイトのリクエストで、AI クライアントの `timeZone` (設定されていない場合はブラウザーのタイムゾーン) が送信されるようになりました。これにより、AI が読み取るフィルター値と表示形式のデータが、ダッシュボードと同じタイムゾーンになります。
+- メタデータ生成エンドポイント (プレビュー) の `POST /api/reveal/ai/metadata/generate` で `targets` リストを指定し、一部のデータ ソース、データベース、テーブルのみのメタデータを生成できるようになりました。
 
 ### 重大な変更
 
@@ -57,17 +62,22 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 
 ### バグ修正
 
-主な修正を以下に示します。すべての修正については、[2026 年 9 月 1 日から 11 月 5 日までに GitHub でクローズされたバグ](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted)を参照してください。
+主な修正を以下に示します。その他の解決済みの問題については、[2026 年 9 月 1 日から 11 月 5 日までに GitHub でクローズされたバグ](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted)を参照してください。
 
 #### すべてのプラットフォーム
 - グリッドおよびピボットの PDF エクスポートで、テキストが 200 文字で切り捨てられなくなりました。ダッシュボードと同様に、[`MaxStringCellSize`](https://help.revealbi.io/ja/web/data-size-limits/#maxstringcellsize-と長いテキスト値) 設定 (デフォルトは 256 文字) に従います。
 - PDF エクスポートがダッシュボードのレイアウトと一致し、データのないチャートには「表示するデータはありません」メッセージが表示されるようになりました。
 - サーバー側のエクスポートでマップが空白になる問題と、読み込みの完了前にキャプチャされる問題を修正しました。
 - チャートのタイトルにアポストロフィが含まれると Excel エクスポートが失敗する問題と、通貨記号に文字 (`USD` など) が含まれると Excel が修復を求める問題を修正しました。
+- ヘッドレスの PDF、PowerPoint、画像エクスポートで、返されたストリームを閉じたとき、またはエクスポートが失敗したときに、一時ファイルが削除されるようになりました。Java および Node.js では、返されたストリームを閉じたときに、エンジンの一時ファイルも削除されます。
 - データが切り詰められた DataGrid で、並べ替え、グループ化、フィルタリングがサーバー上で行われるようになりました。グリッドがサーバー上で処理されている間は、正しくない合計が表示されるため、列集計は非表示になります。
+- DataGrid の列メニューで変更を適用しても、ダッシュボードを含むフォームが送信されてページが再読み込みされることはなくなりました。
+- カテゴリを持つ KPI vs Time 表示形式で、2 つの期間のカテゴリが異なる順序で返された場合に、値が誤ったカテゴリに対応付けられたり、カテゴリが欠落したりする問題を修正しました。
 - `RevealView.dashboard` を割り当てる前に `canAddDashboardFilter` または `canAddDateFilter` を設定しても、例外がスローされなくなりました。
 - Tab キーと Shift+Tab キーが、再びホスト ページのフォーカス順序に従うようになりました。
 - `RevealView` が削除されたときにリスナーを解放するようになり、セッション中にダッシュボードの切り替えが遅くなることはなくなりました。
+- 表示形式エディターでデータ ソースを更新または変更したときに、`RevealSdkSettings.localizedStringsProvider` で設定したフィールド ラベルが列名に戻らなくなりました。
+- 表示形式エディターでデータ ソースを編集するときに開くダイアログに、データ ソース選択ダイアログと同様に、`onAssetRequested` から返されたカスタム アイコンが表示されるようになりました。
 - PostgreSQL の `uuid` 列のフィルター、`date` 列に対する Redshift の `DATEDIFF`、Oracle の `TIMESTAMP WITH TIME ZONE` の値、ClickHouse のブレンドで一致しない行に関する問題を修正しました。
 - SQLite キャッシュのキャッシュ キーが衝突し、ページングされたグリッドのすべてのページに最初のページが表示される問題を修正しました。
 - Linux および macOS で、サーバーのデフォルトのタイムゾーンが「Unknown time zone」で失敗する場合がある問題を修正しました。
