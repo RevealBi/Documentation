@@ -18,7 +18,13 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - **Excel exports now keep large-number formatting**: a value shown as `1.23M` exports with the number format `0.00,,"M"`, and the cell keeps the exact value.
 - **Next N days** date rules can now include today: `new RVDateRule(RVPeriodRelation.Next, 7, RVPeriodType.Day, true)` covers today and the next six days. Without the last argument, the period starts tomorrow, as before. Available in the JavaScript client and in the ASP.NET, Java and Node.js server SDKs.
 - In the `onUrlLinkRequested` callback, `args.url` now holds the resolved URL of the clicked row, and the new `args.urlTemplate` holds the URL template configured in the dashboard. This applies to Grid, Pivot and Sparkline hyperlink columns. Returning a template from the callback still works: Reveal resolves it before navigating.
-- The **Oracle connector** now uses the v2 connector architecture, so aggregations run in Oracle instead of in Reveal. It also supports parameterized custom queries and PL/SQL `BOOLEAN` stored procedure arguments, and the Java `RVOracleDataSourceItem` now has `procedure` and `procedureParameters`.
+- The Oracle connector now runs on the v2 engine. This brings the following:
+
+1. Aggregations run in Oracle. New Oracle data source items use server-side aggregation by default. Existing dashboards keep their current behavior. To switch a visualization, turn on `Process data on server`.
+2. SQL injection protection. The connector quotes identifiers and passes values as query parameters.
+3. Parameterized custom queries. Custom queries can use @Name placeholders with CustomQueryParameters.
+4. PL/SQL BOOLEAN procedure arguments. Stored procedures with a BOOLEAN argument now receive a real boolean value.
+6. These functions now work correctly on Oracle - LOG, LOG10, HOUR, MINUTE, SECOND, MILLISECOND on DATE columns, DATEDIFF, FIND, MONTHNAME, MONTHSHORTNAME
 - `RVPostgresDataSource` has two new TLS settings: `SslMode` (`Disable`, `Allow`, `Prefer`, `Require`, `VerifyCA` or `VerifyFull`, with the same meaning as PostgreSQL's `sslmode`) and `SslRootCertificate`, the path to a PEM CA certificate on the server. They're server-side only: set them in your data source provider. When they aren't set, connections behave as before.
 - SQL data sources have two new server-side settings, in seconds: `CommandTimeout`, how long a query may run, and `ConnectionTimeout`, how long to wait for a connection. They're available on PostgreSQL, Amazon Redshift, MySQL, MariaDB, SQL Server (including Azure SQL and Azure Synapse), Oracle, Snowflake and Sybase. Set them in your data source provider. When they aren't set, each connector keeps its current timeout.
 - The Node.js and Java SDKs now support in-memory data sources. Supply the data with the `dataProvider` option in Node.js, or with `RevealServerBuilder.setDataProvider` in Java.
