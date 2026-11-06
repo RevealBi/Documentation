@@ -95,6 +95,7 @@ The list below covers the main fixes. For additional resolved issues, see the [p
 
 #### Java and Node.js
 - The server SDK no longer forwards client-sent `RevealBI-` headers to the engine, and the engine's internal endpoints accept only requests from the server SDK.
+- The server SDK now passes its startup options, which can include secrets, to the engine process through standard input instead of command-line arguments, which other local users could read.
 
 #### Node.js
 - Headless PDF and image exports now use the user's language.
