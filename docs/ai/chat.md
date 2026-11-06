@@ -41,13 +41,11 @@ DELETE /api/reveal/ai/chat/session
 
 ```typescript
 {
-  // Required
-  datasourceId: string,          // Datasource identifier for context
-
   // Message (one required)
   message?: string,               // Natural language message/request
 
   // Optional context
+  datasourceId?: string,          // Datasource to work with (omit it to let the AI choose from the catalog)
   dashboard?: string,             // Dashboard JSON for editing/analysis
   visualizationId?: string,       // Visualization ID for visualization-specific operations
 
@@ -61,7 +59,7 @@ DELETE /api/reveal/ai/chat/session
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `datasourceId` | string | Yes | Identifier of the datasource to query |
+| `datasourceId` | string | No | Identifier of the datasource to work with. Omit it to let the AI choose the datasources from the catalog. |
 | `message` | string | Conditional* | User's natural language message or request |
 | `dashboard` | string | No | Dashboard JSON (RDash format) for editing or analysis context |
 | `visualizationId` | string | No | Visualization identifier for visualization-specific operations |
@@ -72,7 +70,7 @@ DELETE /api/reveal/ai/chat/session
 
 **Parameter Details:**
 
-- **`datasourceId`**: Required for all requests. Provides context about available data structures.
+- **`datasourceId`**: The datasource the chat works with. Without it, the chat session works over the whole metadata catalog: the AI picks the datasources each request needs, and one dashboard can combine several of them. The AI only considers the datasources whose metadata the request's user can read. If your application restricts datasources per user, filter metadata per user in your [metadata storage provider](./metadata-storage-provider.md), returning nothing for the datasources a user can't use. The browser decides whether a request names a datasource, so don't rely on it to restrict access.
 - **`dashboard`**: Provide when editing existing dashboards or analyzing dashboard content.
 
 ## Response Format
@@ -281,7 +279,7 @@ IRevealServer revealServer = new RevealServerBuilder()
 
 ## Metadata Configuration
 
-Chat requires a **metadata catalog** to understand your datasource structure. The `datasourceId` parameter in chat requests must match an `Id` defined in your catalog.
+Chat requires a **metadata catalog** to understand your datasource structure. When a chat request names a datasource, its `datasourceId` must match an `Id` defined in your catalog.
 
 :::info
 

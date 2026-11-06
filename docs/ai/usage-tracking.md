@@ -154,7 +154,7 @@ In Node.js and Java the property names are camel-cased, and `Duration` is `durat
 | `InputTokens`, `OutputTokens`, `TotalTokens` | Token counts. `null` when the provider reported no usage, which is distinct from `0`. |
 | `ReasoningTokens` | Tokens spent on internal reasoning. `null` when the provider doesn't report them. OpenAI and Azure OpenAI include them in `OutputTokens`; Google Gemini counts them separately; Anthropic doesn't report them. |
 | `CachedInputTokens` | Input tokens served from the provider's prompt cache. `null` when the provider doesn't report them. Every built-in provider also includes them in `InputTokens`. |
-| `Stage`, `Attempt` | Set only by the multi-step dashboard generator (`UseDashboardGeneratorV2`): the step the call belongs to (for example, `DefineFields`), and `1` for a prompt's first call or `2` and up for calls that repair an invalid answer. `null` otherwise. |
+| `Stage`, `Attempt` | Set only by the dashboard generator: the step the call belongs to (for example, `DefineWidgets`), and `1` for a prompt's first call or `2` and up for calls that repair an invalid answer. `null` otherwise. |
 | `Duration` | How long the provider call took. |
 | `FinishReason` | Why the model stopped, when the call succeeded: `Stop`, `Length`, `ContentFilter`, or `Other`. |
 | `Succeeded` | Whether the call completed successfully. |
