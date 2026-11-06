@@ -84,6 +84,6 @@ The server SDK runs on ASP.NET Core, Node.js, and Java, and handles:
 
 - LLM provider integration (OpenAI, Anthropic, Google, etc.)
 - Datasource metadata generation and caching
-- Intent-based LLM routing
+- [Intent-based LLM routing](intents.md)
 - Context management for conversational AI
 - Security and authentication

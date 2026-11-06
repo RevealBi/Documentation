@@ -39,7 +39,7 @@ public sealed class MyCustomProvider : IAIProvider
 |---|---|
 | `Messages` | Conversation messages with their roles. |
 | `Settings` | Fully resolved profile settings, including the model. |
-| `Intent` | The SDK workflow that initiated the request. |
+| `Intent` | The SDK workflow that initiated the request. See [Intents](intents.md). |
 | `ResponseFormat` | Whether text or JSON output is requested. |
 | `UserContext` | Calling user, or the system user for background work. |
 

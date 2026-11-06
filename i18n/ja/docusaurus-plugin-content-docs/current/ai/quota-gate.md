@@ -229,7 +229,7 @@ builder.Services.AddRevealAI()
 | `OperationId` | チャットのターンやインサイトなど、1 つの最上位操作の呼び出しをまとめます。操作の間は変わらないため、操作ごとの判断をキャッシュできます。 |
 | `CallId` | このプロバイダー呼び出しの一意の ID。精算も同じ ID を受け取るため、差し引き時の冪等キーとして使用します。 |
 | `User` | `UserId` と `Properties` のクレームを含むユーザー コンテキスト。 |
-| `Intent` | 呼び出しが属するワークフロー (例: `generation-build-report`、`widget-analysis`)。 |
+| `Intent` | 呼び出しが属するワークフロー (例: `generation-build-report`、`widget-analysis`)。[インテント](intents.md)を参照してください。 |
 | `Profile` | インテントのルーティング後に呼び出しを処理する[プロファイル](providers-overview.md)。 |
 | `Provider` | プロバイダーの登録名。ユーザーが提供した接続の場合はプロバイダーの種類。 |
 | `Model` | 呼び出しが使用するモデル (判明している場合)。 |

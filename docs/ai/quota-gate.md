@@ -229,7 +229,7 @@ The check and the settle receive the same context. In Node.js and Java the prope
 | `OperationId` | Groups the calls of one top-level operation, such as a chat turn or an insight. Stable across the operation, so a per-operation decision can be cached. |
 | `CallId` | Unique ID of this provider call. The settle receives the same ID; use it as the idempotency key when debiting. |
 | `User` | The user context, including `UserId` and the claims in `Properties`. |
-| `Intent` | The workflow the call belongs to, such as `generation-build-report` or `widget-analysis`. |
+| `Intent` | The workflow the call belongs to, such as `generation-build-report` or `widget-analysis`. See [Intents](intents.md). |
 | `Profile` | The [profile](providers-overview.md#profiles) that serves the call, after intent routing. |
 | `Provider` | The provider registration name, or the provider type for a connection the user supplied. |
 | `Model` | The model the call will use, when known. |

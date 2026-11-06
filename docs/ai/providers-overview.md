@@ -93,7 +93,9 @@ builder.Services.AddRevealAI()
 
 ### Default profile and intent routing
 
-`DefaultProfile` is used when no profile is requested and the intent is unmapped. If exactly one profile exists, Reveal uses it by default. Pin a workflow to a profile with `MapIntent`; intent mappings take precedence over a client-requested profile.
+`DefaultProfile` is used when no profile is requested and the intent is unmapped. If exactly one profile exists, Reveal uses it by default.
+
+Each AI call Reveal makes is tagged with an [intent](intents.md) that names its workflow, such as `generation-build-report`. Pin a workflow to a profile with `MapIntent`; intent mappings take precedence over a client-requested profile. [Intents](intents.md) lists every intent and how to map it in ASP.NET, Node.js and Java.
 
 ```csharp
 builder.Services.AddRevealAI()

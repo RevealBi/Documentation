@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 [Profiles](providers-overview.md#profiles) name the models and settings the developer's server offers.
 
-By default, every user can request every profile. Calls for intents the developer has mapped use the mapped profile; other calls use the requested profile, or the default profile when none is requested.
+By default, every user can request every profile. Calls for [intents](intents.md) the developer has mapped use the mapped profile; other calls use the requested profile, or the default profile when none is requested.
 
 A **profile authorizer** lets the developer decide which profiles each user may request, typically from the user's plan. It filters the profile list clients see, and rejects requests for any other profile.
 
