@@ -31,7 +31,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 - The web SDK now applies the `italicFont` and `boldItalicFont` theme settings, and one font family can be assigned to several style slots, with Reveal picking the matching weight and style for each. If you already set `italicFont` or `boldItalicFont`, grid cells with an italic conditional formatting style change appearance after upgrading. See [Theme Fonts](https://help.revealbi.io/web/theming-fonts/).
 - When the [Redis cache](https://help.revealbi.io/web/caching/#redis-cache) is enabled, it now also stores XMLA and Cube metadata and the value lists of dashboard and quick filters.
 - **Charts now render every series in the data**. Previously, standard charts showed at most 30 series and stacked bar and column charts at most 100, and the rest were dropped without a warning.
-- Tooltips now open to the bottom right of the mouse pointer, and flip to stay on the page near its edges.
+- Tooltips now open to the bottom right of the mouse pointer, flipping to stay within the page near its edges.
 - The DataGrid now has a 1-pixel border on all four sides. Previously, it showed only a bottom border, and only when the grid had summaries.
 - [AI Agent Skills](https://help.revealbi.io/web/ai-agent-skills/) are available for AI coding assistants such as Claude Code, GitHub Copilot, Cursor and Codex: `reveal-embed` helps embed Reveal in your application, and `reveal-dashboard-authoring` creates and edits `.rdash` files with the Reveal DOM.
 
@@ -71,7 +71,7 @@ sqlItem.RowFilter = RowFilter.FieldEqualsContext("TenantId", "tenant_id");
 The list below covers the main fixes. For additional resolved issues, see the [public bugs closed on GitHub between September 1 and November 5, 2026](https://github.com/RevealBi/Reveal.Sdk/issues?q=state%3Aclosed+closed%3A2026-09-01..2026-11-05+type%3ABug+reason%3Acompleted).
 
 #### All Platforms
-- Grid and Pivot PDF exports no longer cut text at 200 characters. They now follow the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (256 characters by default), as the dashboard does.
+- Grid and Pivot PDF exports no longer truncate text at 200 characters. They now follow the [`MaxStringCellSize`](https://help.revealbi.io/web/data-size-limits/#maxstringcellsize-and-long-text-values) setting (256 characters by default), as the dashboard does.
 - PDF exports now match the dashboard's layout, and charts with no data show the "no data" message.
 - Fixed maps that were blank in server-side exports or captured before they finished loading.
 - Fixed Excel exports that failed on a chart title with an apostrophe, or needed repair when a currency symbol contained letters, such as `USD`.
