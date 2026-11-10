@@ -39,13 +39,11 @@ DELETE /api/reveal/ai/chat/session
 
 ```typescript
 {
-  // Required
-  datasourceId: string,          // Datasource identifier for context
-
   // Message (one required)
   message?: string,               // Natural language message/request
 
   // Optional context
+  datasourceId?: string,          // Datasource to work with (omit it to let the AI choose from the catalog)
   dashboard?: string,             // Dashboard JSON for editing/analysis
   visualizationId?: string,       // Visualization ID for visualization-specific operations
 
@@ -59,7 +57,7 @@ DELETE /api/reveal/ai/chat/session
 
 | パラメーター | 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| `datasourceId` | string | はい | クエリ対象のデータソースの識別子 |
+| `datasourceId` | string | いいえ | 使用するデータソースの識別子。省略すると、AI がカタログからデータソースを選択します。 |
 | `message` | string | 条件付き* | ユーザーの自然言語メッセージまたはリクエスト |
 | `dashboard` | string | いいえ | 編集または分析コンテキスト用のダッシュボード JSON（RDash 形式） |
 | `visualizationId` | string | いいえ | ビジュアライゼーション固有の操作のためのビジュアライゼーション識別子 |
@@ -70,7 +68,7 @@ DELETE /api/reveal/ai/chat/session
 
 **パラメーターの詳細:**
 
-- **`datasourceId`**: すべてのリクエストで必須です。利用可能なデータ構造に関するコンテキストを提供します。
+- **`datasourceId`**: チャットで使用するデータソース。指定しない場合、チャット セッションはメタデータ カタログ全体を対象に動作します。AI は各リクエストに必要なデータソースを選択し、1 つのダッシュボードで複数のデータソースを組み合わせることができます。AI が対象とするのは、リクエストのユーザーがメタデータを読み取れるデータソースのみです。アプリケーションでユーザーごとにデータソースを制限している場合は、[メタデータ ストレージ プロバイダー](../metadata-storage-provider/)でユーザーごとにメタデータをフィルターし、ユーザーが使用できないデータソースについては何も返さないようにしてください。リクエストでデータソースを指定するかどうかはブラウザーが決めるため、アクセスの制限にはこれに依存しないでください。
 - **`dashboard`**: 既存のダッシュボードを編集する場合やダッシュボードの内容を分析する場合に指定します。
 
 ## レスポンス形式
@@ -204,7 +202,7 @@ app.Run();
 
 ## メタデータ構成
 
-チャットにはデータソースの構造を理解するための**メタデータカタログ**が必要です。チャットリクエストの `datasourceId` パラメーターは、カタログで定義された `Id` と一致する必要があります。
+チャットにはデータソースの構造を理解するための**メタデータカタログ**が必要です。チャットリクエストでデータソースを指定する場合、その `datasourceId` はカタログで定義された `Id` と一致する必要があります。
 
 :::info
 

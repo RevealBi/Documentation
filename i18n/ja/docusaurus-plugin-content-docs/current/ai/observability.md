@@ -48,7 +48,7 @@ Reveal は、`reveal.sdk.ai` メーターで次のインストルメントを公
 | `gen_ai.provider.name` | プロバイダーの登録名。 |
 | `gen_ai.request.model` | モデル。 |
 | `reveal.ai.succeeded` | 呼び出しが成功したかどうか。 |
-| `reveal.ai.stage` | ダッシュボード生成のステップ (マルチステップのダッシュボード ジェネレーター (`UseDashboardGeneratorV2`) による呼び出しの場合)。 |
+| `reveal.ai.stage` | ダッシュボード生成のステップ (ダッシュボード ジェネレーターによる呼び出しの場合)。 |
 
 メトリクスをエクスポートするには、OpenTelemetry の構成にメーターを追加します。
 
