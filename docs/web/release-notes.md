@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 ### Improvements
 
-- Server-side export in the ASP.NET and Java SDKs now uses Playwright 1.64.1, which bundles Node.js 24.22.1 with the [October 2026 Node.js security fixes](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases).
+- Export in the ASP.NET and Java SDKs now uses Playwright 1.64.1, which bundles Node.js 24.22.1 with the [October 2026 Node.js security fixes](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases).
 - The Redis cache and MongoDB packages now include their XML documentation, so IDEs show the API descriptions.
 
 ### Breaking Changes
@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 - Server startup now fails when the new data engine is enabled and the legacy cache is disabled, either directly or by enabling cache encryption. The new engine needs the legacy cache. Before this release, such a server started, and visualizations that convert dates to a time zone or use `applyTimeZone()` failed. Keep the legacy cache enabled, which is the default, or disable the new engine on both the client and the server.
 
 #### ASP.NET and Java
-- Server-side export no longer runs on macOS 11.0 to 13.4, because the bundled Node.js 24 requires macOS 13.5 or later (see [Platform support](https://nodejs.org/en/blog/migrations/v22-to-v24) in the Node.js migration guide). To keep exporting on these macOS versions, install Node.js 22 and set the `PLAYWRIGHT_NODEJS_PATH` environment variable to its `node` binary before the server process starts. In Java, set it for the Java process: the SDK passes it on to the engine.
+- Export no longer runs on macOS 11.0 to 13.4, because the bundled Node.js 24 requires macOS 13.5 or later (see [Platform support](https://nodejs.org/en/blog/migrations/v22-to-v24) in the Node.js migration guide). To keep exporting on these macOS versions, install Node.js 22 and set the `PLAYWRIGHT_NODEJS_PATH` environment variable to its `node` binary before the server process starts. In Java, set it for the Java process: the SDK passes it on to the engine.
 
 #### ASP.NET
 - An application that also references `Microsoft.Playwright` older than 1.64.1 no longer builds, and fails with `error NU1605: Detected package downgrade`. Update the reference to 1.64.1 or later, or remove it.
