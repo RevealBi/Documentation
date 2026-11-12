@@ -7,12 +7,13 @@ import apiDocs from './plugins/remark/api-docs';
 
 // SDK version: exact build referenced by CodePreview's CDN URL — must match a real release.
 const sdkVersion = "2.3.0";
+// 1.8.5 shipped no web client, so the 1.8.x docs load the 1.8.4 client.
 const sdkVersion_v1 = "1.8.4";
 
 // Docs version: human-readable label shown in the page version badge ("Version: X").
 // Bump this as the 2.x docs evolve — no need to archive the version.
 const docsVersion = "2.3";
-const docsVersion_v1 = "1.8.4";
+const docsVersion_v1 = "1.8.5";
 
 // The SBOM catalog is loaded at runtime so releases can be published without
 // rebuilding the documentation site. The checked-in catalog is a development
@@ -104,8 +105,9 @@ const config: Config = {
               path: '',
               badge: false, // hide the "Version: X" badge (also disabled on 1.8.4 below)
             },
+            // The id and path stay 1.8.4, so existing /1.8.4/ links keep working. The label names the latest 1.8.x release.
             '1.8.4': {
-              label: '1.8.4',
+              label: '1.8.5',
               path: '1.8.4',
               badge: false,
             },
