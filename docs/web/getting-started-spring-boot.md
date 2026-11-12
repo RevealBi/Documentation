@@ -195,3 +195,76 @@ The server listens on `http://localhost:5111`.
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot).
 
 :::
+
+## Add a Health Check
+
+The Java SDK runs the Reveal engine as a separate process. If that process stops, for example because the operating system ends it when memory runs low, the Reveal server fails: it answers every request with 503, exports fail, and it doesn't recover on its own. Restarting the application starts a new engine, so report the failure in the application's health check and let your platform, such as Kubernetes, restart the application.
+
+`IRevealServer.getStatus()` returns the state of the server, `RUNNING`, `FAILED` or `SHUT_DOWN`, and for `FAILED` a message with the reason. `IRevealServer.addStatusChangeListener` registers a listener that is called once, when the server fails or shuts down, or right away if that already happened.
+
+1 - Add Spring Boot Actuator to the **pom.xml** file.
+
+```xml title="pom.xml"
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+
+2 - Declare the Reveal server as a bean, so the servlet and the health check use the same instance, and register a status change listener that logs when the server fails.
+
+```java title="RevealApplication.java"
+private static final Logger log = LoggerFactory.getLogger(RevealApplication.class);
+
+@Bean
+IRevealServer revealServer() {
+    IRevealServer server = new RevealServerBuilder()
+        // ...
+        .build();
+    server.addStatusChangeListener(status -> log.warn("Reveal server is {}: {}", status.getState(), status.getMessage()));
+    return server;
+}
+
+@Bean
+ServletRegistrationBean<RevealEngineServlet> revealServlet(IRevealServer revealServer) {
+    ServletRegistrationBean<RevealEngineServlet> registration =
+        new ServletRegistrationBean<>(new RevealEngineServlet(revealServer), "/*");
+    // ...
+}
+```
+
+3 - Add a health indicator that reports the Reveal server as down once it stops running.
+
+```java title="RevealServerHealthIndicator.java"
+@Component
+public class RevealServerHealthIndicator implements HealthIndicator {
+
+    private final IRevealServer revealServer;
+
+    public RevealServerHealthIndicator(IRevealServer revealServer) {
+        this.revealServer = revealServer;
+    }
+
+    @Override
+    public Health health() {
+        RevealServerStatus status = revealServer.getStatus();
+        if (status.getState() == RevealServerState.RUNNING) {
+            return Health.up().build();
+        }
+        Health.Builder health = Health.down().withDetail("state", status.getState());
+        if (status.getMessage() != null) {
+            health.withDetail("reason", status.getMessage());
+        }
+        return health.build();
+    }
+}
+```
+
+Once the Reveal server fails, `/actuator/health` answers 503. Point your platform's health check at it so the platform restarts the application.
+
+If your platform uses the Spring Boot liveness probe, `/actuator/health/liveness`, enable it and add the health indicator, named `revealServer`, to its group. The probe doesn't include other health indicators by default.
+
+```properties title="application.properties"
+management.endpoint.health.probes.enabled=true
+management.endpoint.health.group.liveness.include=livenessState,revealServer
+```
