@@ -3,6 +3,38 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 2.3.2 (November 12, 2026)
+
+### Improvements
+
+- Server-side export in the ASP.NET and Java SDKs now uses Playwright 1.64.1, which bundles Node.js 24.22.1 with the [October 2026 Node.js security fixes](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases).
+- The Redis cache and MongoDB packages now include their XML documentation, so IDEs show the API descriptions.
+
+### Breaking Changes
+
+#### All Platforms
+- Server startup now fails when the new data engine is enabled and the legacy cache is disabled, either directly or by enabling cache encryption. The new engine needs the legacy cache. Before this release, such a server started, and visualizations that convert dates to a time zone or use `applyTimeZone()` failed. Keep the legacy cache enabled, which is the default, or disable the new engine on both the client and the server.
+
+#### ASP.NET and Java
+- Server-side export no longer runs on macOS 11.0 to 13.4, because the bundled Node.js 24 requires macOS 13.5 or later (see [Platform support](https://nodejs.org/en/blog/migrations/v22-to-v24) in the Node.js migration guide). To keep exporting on these macOS versions, install Node.js 22 and set the `PLAYWRIGHT_NODEJS_PATH` environment variable to its `node` binary before the server process starts. In Java, set it for the Java process: the SDK passes it on to the engine.
+
+#### ASP.NET
+- An application that also references `Microsoft.Playwright` older than 1.64.1 no longer builds, and fails with `error NU1605: Detected package downgrade`. Update the reference to 1.64.1 or later, or remove it.
+
+### Bugs
+
+#### All Platforms
+- Column filters of paged grids now work on fields whose names contain spaces. Before, the list of filter values stayed empty, and the server answered "Field not found".
+- On Snowflake, a sum of a division of integers that runs in the database no longer rounds each row to six decimals.
+- Server-side Excel exports now fill in the period heading of sparkline columns, and show the difference heading in the export language.
+
+#### Java
+- The Java SDK now uses the legacy cache by default, as the ASP.NET and Node.js SDKs do. With the default settings, time zone conversion and `applyTimeZone()` failed.
+- The callback server now listens on 127.0.0.1 only.
+
+#### Node.js
+- The server SDK now installs Chromium outside the application folder, so tools that watch the folder, such as nodemon, no longer restart the application during the install. Two processes no longer install Chromium at the same time, and a failed export no longer crashes the server.
+
 ## 2.3.0 (November 5, 2026)
 
 ### New Features
