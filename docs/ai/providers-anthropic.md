@@ -209,6 +209,58 @@ The same option names are used across all server platforms — ASP.NET sets them
 | `ApiKey` | `string` | `""` | **Required.** Your Anthropic API key. |
 | `Model` | `string` | `"claude-opus-4-1"` | The Claude model to use. |
 | `MaxTokens` | `int` | `4096` | Maximum number of tokens to generate in the response. |
+| `PromptCaching` | `bool` | `true` | Caches the static part of each prompt so later requests can reuse it at a fraction of the input price. See [Prompt Caching](#prompt-caching). |
+
+## Prompt Caching
+
+Most prompts the AI SDK sends start with a static part: its instructions, the schema of the tables in use, and the date rules. With `PromptCaching` on (the default), the provider marks where that part ends as an Anthropic cache point. The same step of a later request may then reuse it from Anthropic's cache: on a chat's next turns, and in other users' chats over the same tables, for as long as Anthropic keeps it (5 minutes, refreshed each time it's reused and counted from the start of the request that writes or reads it, so time spent generating a response counts against it). Reuse isn't guaranteed: the static part has to be identical, and Anthropic doesn't cache a part shorter than the model's minimum (for example 512 tokens on Claude Sonnet 5.5, 4,096 tokens on Claude Haiku 4.5). Cache entries aren't shared across Anthropic workspaces, so bring-your-own-key connections that use different Anthropic accounts don't reuse each other's entries. A conversation sent as chat turns (the answer to a clarifying question) is cached up to its last block instead, which the conversation's next turn can reuse. A one-off prompt with no static part (metadata enrichment, datasource ranking) isn't cached, since it would pay for the write and never be read.
+
+**Cost.** Anthropic bills a cache write at 1.25 times its input price. The cache read rate depends on the model: 0.1 times the input price on most models, and 0.05 times on Claude Sonnet 5.5 and Opus 5.5. Either way, a static part that's read back once within 5 minutes has already paid for its write. In one benchmark of repeated dashboard requests and three-turn chats with `claude-sonnet-5-5` and a warm cache, three quarters of the requests read from the cache, and input cost 21% less than with caching off. Actual savings depend on the workload.
+
+**When to turn it off.** When the same kind of request rarely comes again within 5 minutes (few, scattered users, or tables that differ on every request), most static parts are written and never read, and each of those writes costs a quarter more than plain input for the part written. In the benchmark's workload, where the static part was about 40% of a prompt, that came to about 10% more input than with caching off; the larger the static share of the prompts, the higher the extra cost, up to 25%. With `PromptCaching` off, requests neither write nor read Anthropic's cache. The setting applies to the Anthropic connections the developer registers; bring-your-own-key Anthropic connections don't expose it and always use the default.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+builder.Services.AddRevealAI()
+    .AddAnthropic(options =>
+    {
+        options.ApiKey = builder.Configuration["RevealAI:Anthropic:ApiKey"];
+        options.PromptCaching = false;
+    });
+```
+
+Or in configuration: set `PromptCaching` to `false` in the connection's section, `RevealAI:Providers:anthropic` or the legacy `RevealAI:Anthropic` section shown in [Using a Configuration File](#using-a-configuration-file) (`RevealAI:Providers:<name>` for a connection registered under a custom name). When both sections set it, `RevealAI:Providers:anthropic` wins.
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const aiSettings = {
+    anthropic: {
+        ApiKey: process.env.ANTHROPIC_API_KEY,
+        PromptCaching: false
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Map<String, Object> aiSettings = Map.of(
+        "anthropic", Map.of(
+                "ApiKey", System.getenv("ANTHROPIC_API_KEY"),
+                "PromptCaching", false));
+```
+
+  </TabItem>
+</Tabs>
+
+Token usage records count the cache's writes and reads within `InputTokens`; `CachedInputTokens` holds the reads.
 
 ## Available Models
 
