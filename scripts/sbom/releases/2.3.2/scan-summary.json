@@ -1,0 +1,280 @@
+{
+  "date": "2026-11-13T20:18:06.960Z",
+  "documents": [
+    {
+      "file": "reveal-server/dotnet/2.3.2/Reveal.Sdk.AspNetCore-2.3.2.cdx.json",
+      "components": 157,
+      "matchedPackages": 157,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/packages/Reveal.Sdk.Cache.Redis-2.3.2.cdx.json",
+      "components": 5,
+      "matchedPackages": 5,
+      "statements": 0
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/Reveal.Sdk.Data-2.3.2.cdx.json",
+      "components": 119,
+      "matchedPackages": 119,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Athena-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Redshift-2.3.2.cdx.json",
+      "components": 124,
+      "matchedPackages": 124,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.S3-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.AzureCosmosDB-2.3.2.cdx.json",
+      "components": 133,
+      "matchedPackages": 133,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Box-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.ClickHouse-2.3.2.cdx.json",
+      "components": 139,
+      "matchedPackages": 139,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Cube-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Databricks-2.3.2.cdx.json",
+      "components": 121,
+      "matchedPackages": 121,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Dropbox-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.DuckDB-2.3.2.cdx.json",
+      "components": 123,
+      "matchedPackages": 123,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Elasticsearch-2.3.2.cdx.json",
+      "components": 123,
+      "matchedPackages": 123,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Analytics4-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.BigQuery-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Drive-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.SearchConsole-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.HubSpot-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MariaDB-2.3.2.cdx.json",
+      "components": 123,
+      "matchedPackages": 123,
+      "statements": 4
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Marketo-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.AnalysisServices-2.3.2.cdx.json",
+      "components": 131,
+      "matchedPackages": 131,
+      "statements": 5
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.Dynamics-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.OneDrive-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.ReportingServices-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SharePoint-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SqlServer-2.3.2.cdx.json",
+      "components": 142,
+      "matchedPackages": 142,
+      "statements": 4
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SynapseAnalytics-2.3.2.cdx.json",
+      "components": 143,
+      "matchedPackages": 143,
+      "statements": 4
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MongoDB-2.3.2.cdx.json",
+      "components": 133,
+      "matchedPackages": 133,
+      "statements": 5
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MySql-2.3.2.cdx.json",
+      "components": 122,
+      "matchedPackages": 122,
+      "statements": 4
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Oracle-2.3.2.cdx.json",
+      "components": 122,
+      "matchedPackages": 122,
+      "statements": 4
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.PostgreSQL-2.3.2.cdx.json",
+      "components": 123,
+      "matchedPackages": 123,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.QuickBooks-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.SQLite-2.3.2.cdx.json",
+      "components": 120,
+      "matchedPackages": 120,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Snowflake-2.3.2.cdx.json",
+      "components": 153,
+      "matchedPackages": 153,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Sybase-2.3.2.cdx.json",
+      "components": 127,
+      "matchedPackages": 127,
+      "statements": 3
+    },
+    {
+      "file": "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+      "components": 277,
+      "matchedPackages": 277,
+      "statements": 7
+    },
+    {
+      "file": "reveal-client/javascript/2.3.2/reveal-sdk-client-2.3.2.cdx.json",
+      "components": 0,
+      "matchedPackages": 0,
+      "statements": 0
+    },
+    {
+      "file": "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json",
+      "components": 436,
+      "matchedPackages": 436,
+      "statements": 16
+    },
+    {
+      "file": "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+      "components": 369,
+      "matchedPackages": 369,
+      "statements": 17
+    },
+    {
+      "file": "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+      "components": 437,
+      "matchedPackages": 437,
+      "statements": 16
+    },
+    {
+      "file": "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+      "components": 370,
+      "matchedPackages": 370,
+      "statements": 17
+    }
+  ],
+  "decisions": 29,
+  "states": {
+    "not_affected": 23,
+    "exploitable": 1,
+    "in_triage": 5
+  },
+  "databases": [
+    {
+      "ecosystem": "NuGet",
+      "url": "https://osv-vulnerabilities.storage.googleapis.com/NuGet/all.zip",
+      "sha256": "adaa02619e33dbf39391aff6c763c652c9fa2d98c5367e536698726948f58778"
+    },
+    {
+      "ecosystem": "npm",
+      "url": "https://osv-vulnerabilities.storage.googleapis.com/npm/all.zip",
+      "sha256": "906eb05ba0663ece2a609f8cd3bec24f04c9b987934d20a4291f491998aac5dd"
+    },
+    {
+      "ecosystem": "Maven",
+      "url": "https://osv-vulnerabilities.storage.googleapis.com/Maven/all.zip",
+      "sha256": "c7adfd1da096969751bf014817a5948d59241487937119413107037fc94e4ddf"
+    }
+  ]
+}

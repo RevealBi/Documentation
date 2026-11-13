@@ -70,9 +70,16 @@ function componentMatches(component, packageData) {
   const packageName = packageData.name.toLowerCase();
   const componentName = String(component.name ?? '').toLowerCase();
   const purl = String(component.purl ?? '').toLowerCase();
+  const mavenName = component.group
+    ? `${component.group}:${componentName}`.toLowerCase()
+    : componentName;
 
   return String(component.version ?? '') === packageData.version
-    && (componentName === packageName || purl.includes(`/${packageName}@`));
+    && (packageData.ecosystem === 'Maven'
+      ? mavenName === packageName
+        || (!packageName.includes(':') && componentName === packageName)
+        || purl.startsWith(`pkg:maven/${packageName.replace(':', '/')}@`)
+      : componentName === packageName || purl.includes(`/${packageName}@`));
 }
 
 function findComponentReferences(document, packageData) {

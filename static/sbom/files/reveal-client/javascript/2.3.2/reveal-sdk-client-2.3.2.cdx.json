@@ -1,0 +1,204 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 2,
+  "serialNumber": "urn:uuid:13bb66ed-12d5-477e-81a6-531c6b5c1bb1",
+  "metadata": {
+    "timestamp": "2026-11-13T20:18:06.960Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "npm",
+          "version": "11.16.0"
+        },
+        {
+          "type": "application",
+          "name": "cyclonedx-npm",
+          "group": "@cyclonedx",
+          "version": "6.0.1",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            },
+            {
+              "name": "cdx:npm:package:constraint:engine:npm",
+              "value": ">=9"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "10.5.1",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "reveal-sdk",
+      "version": "2.3.2",
+      "bom-ref": "reveal-sdk@2.3.2",
+      "author": "Reveal Team",
+      "description": "https://help.revealbi.io/web/getting-started-javascript",
+      "licenses": [
+        {
+          "license": {
+            "name": "See license file in root.",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/reveal-sdk@2.3.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        },
+        {
+          "name": "io.revealbi.sbom.npm-integrity",
+          "value": "sha512-QqSrXfX/n5f1UHcChVsWcfRzwuTepdVn71+Jg20labfBWhNsy/HFq5YG88zAztY5yAc1EC5C8dBA5T/o5jiR+Q=="
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "eb493c5f434e0d8702200ec2e079825cda2bf9de832147ad28030800208a8e99"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "42a4ab5df5ff9f97f5507702855b1671f473c2e4dea5d567ef5f89836d2569b7c15a136ccbf1c5ab9606f3ccc0ced639c80735102e42f1d040e53fe8e63891f9"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reveal-sdk/-/reveal-sdk-2.3.2.tgz"
+        }
+      ],
+      "supplier": {
+        "name": "Infragistics, Inc."
+      }
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "io.revealbi.sbom.release",
+        "value": "2.3.2"
+      },
+      {
+        "name": "io.revealbi.sbom.inventory-scope",
+        "value": "Published npm runtime dependency manifest. The prebundled browser implementation and its build-time inputs are not individually inventoried; zero package matches is not a complete audit of bundled JavaScript."
+      },
+      {
+        "name": "io.revealbi.sbom.publication-status",
+        "value": "Draft; release-owner approval pending"
+      },
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-11-13T20:18:06.960Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Reveal 2.3.2 published NuGet packages evaluated on .NET 8, Windows/Linux x64 Java and Node server distributions, and the browser npm runtime dependency manifest. Custom host integrations, host OS libraries, separately downloaded Chromium and prebundled browser subcomponents are outside scan coverage."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Resolved published package graphs and inspected released embedded engine manifests. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites, released bytecode/decompilation, and runtime asset/reference inspection; unresolved configuration or call-path exposure remains in_triage."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.7.1"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline; --no-resolve --all-packages"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-11-13"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "no_known_vulnerabilities_detected"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "0"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "reveal-sdk@2.3.2"
+    }
+  ]
+}

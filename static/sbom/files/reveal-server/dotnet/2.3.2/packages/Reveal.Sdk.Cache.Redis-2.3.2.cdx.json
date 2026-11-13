@@ -1,0 +1,335 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:f1818e25-63dc-4cc2-a31d-7261bc2cc9f4",
+  "version": 2,
+  "metadata": {
+    "timestamp": "2026-11-13T20:18:06.960Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "authors": [
+            {
+              "name": "CycloneDX"
+            }
+          ],
+          "name": "CycloneDX module for .NET",
+          "version": "6.2.0.0",
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-dotnet",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.Cache.Redis@2.3.2",
+      "authors": [
+        {
+          "name": "Reveal Team"
+        }
+      ],
+      "name": "Reveal.Sdk.Cache.Redis",
+      "version": "2.3.2",
+      "description": "Reveal Redis cache provider",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "F4B5F3A40CE0B5DD2106EB7C460CD49DE6826BACFB73D4FED1F5B6EF68F2BD6C3581F2BC9BCDE18523C25A6405709AB92F664336E35F538A0CEF3154D0526158"
+        }
+      ],
+      "purl": "pkg:nuget/Reveal.Sdk.Cache.Redis@2.3.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://www.nuget.org/packages/Reveal.Sdk.Cache.Redis/2.3.2"
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "io.revealbi.sbom.release",
+        "value": "2.3.2"
+      },
+      {
+        "name": "io.revealbi.sbom.inventory-scope",
+        "value": "Published NuGet package dependency graph resolved for net8.0; development dependencies excluded. Framework-provided and build-only packages may appear in the restore graph."
+      },
+      {
+        "name": "io.revealbi.sbom.publication-status",
+        "value": "Draft; release-owner approval pending"
+      },
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-11-13T20:18:06.960Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Reveal 2.3.2 published NuGet packages evaluated on .NET 8, Windows/Linux x64 Java and Node server distributions, and the browser npm runtime dependency manifest. Custom host integrations, host OS libraries, separately downloaded Chromium and prebundled browser subcomponents are outside scan coverage."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Resolved published package graphs and inspected released embedded engine manifests. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites, released bytecode/decompilation, and runtime asset/reference inspection; unresolved configuration or call-path exposure remains in_triage."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.7.1"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline; --no-resolve --all-packages"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-11-13"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "no_known_vulnerabilities_detected"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "0"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@8.0.0",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "version": "8.0.0",
+      "description": "Abstractions for dependency injection.\n\nCommonly Used Types:\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "94BC05ED29755109565D9CDFC901087EE1FA08302DDA393106BC9A0BD7384F0DC2B6C2F123C1BD53FCE06BABDBFA845DC6D22A163C4B0646C5251DCC5AEAC282"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@8.0.0",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/runtime",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@8.0.0",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "Microsoft.Extensions.Logging.Abstractions",
+      "version": "8.0.0",
+      "description": "Logging abstractions for Microsoft.Extensions.Logging.\n\nCommonly Used Types:\nMicrosoft.Extensions.Logging.ILogger\nMicrosoft.Extensions.Logging.ILoggerFactory\nMicrosoft.Extensions.Logging.ILogger<TCategoryName>\nMicrosoft.Extensions.Logging.LogLevel\nMicrosoft.Extensions.Logging.Logger<T>\nMicrosoft.Extensions.Logging.LoggerMessage\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "50A0ADD96D30D90580FB8E02A25CEA0AA15F4D22744279B5ACFE18CC8568B74402AA062D5DB13CC5887A08BFD24E07CBC88B2FC10EE8EEC2C37EDF3BCDA7F8A7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@8.0.0",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/runtime",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Pipelines.Sockets.Unofficial@2.2.8",
+      "authors": [
+        {
+          "name": "Pipelines.Sockets.Unofficial"
+        }
+      ],
+      "name": "Pipelines.Sockets.Unofficial",
+      "version": "2.2.8",
+      "description": "Package Description",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "38CA43D4599A530BAA9C43B4CF69A7D13A9ECE539E4C16AA419EF3BE27481BAEB7FA0F1706ED210EBA0229A9D2E7B663D1A3C57454061C88DDD6D524441274B3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Marc Gravell 2018",
+      "purl": "pkg:nuget/Pipelines.Sockets.Unofficial@2.2.8",
+      "externalReferences": [
+        {
+          "url": "https://github.com/mgravell/Pipelines.Sockets.Unofficial",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/mgravell/Pipelines.Sockets.Unofficial",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/StackExchange.Redis@2.9.17",
+      "authors": [
+        {
+          "name": "Stack Exchange, Inc.,Marc Gravell,Nick Craver"
+        }
+      ],
+      "name": "StackExchange.Redis",
+      "version": "2.9.17",
+      "description": "High performance Redis client, incorporating both synchronous and asynchronous usage.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "78824B5028BBE9BB6E39AADACBC10665649362573F1E2F88BCB7D05D97AC0C468CBBB1309464CB64E8752D1547A6D8206C30B5C292CA8AD57A6916E436174189"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "2014 - 2025 Stack Exchange, Inc.",
+      "purl": "pkg:nuget/StackExchange.Redis@2.9.17",
+      "externalReferences": [
+        {
+          "url": "https://stackexchange.github.io/StackExchange.Redis/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/StackExchange/StackExchange.Redis/",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.IO.Pipelines@5.0.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "name": "System.IO.Pipelines",
+      "version": "5.0.1",
+      "description": "Single producer single consumer byte buffer management.\n\nCommonly Used Types:\nSystem.IO.Pipelines.Pipe\nSystem.IO.Pipelines.PipeWriter\nSystem.IO.Pipelines.PipeReader\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "B5960F39E3A05E0738CA9CFF49F2883FE59CC97D0F2F75F1BB8B37A5C96DE0AC3631393F2B6A176895BC903BCD58581CA6E9E107DE65AFAA4B8A4D4875D61C40"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "purl": "pkg:nuget/System.IO.Pipelines@5.0.1",
+      "externalReferences": [
+        {
+          "url": "https://github.com/dotnet/runtime",
+          "type": "website"
+        },
+        {
+          "url": "git://github.com/dotnet/runtime",
+          "type": "vcs"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@8.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@8.0.0",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@8.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Pipelines.Sockets.Unofficial@2.2.8",
+      "dependsOn": [
+        "pkg:nuget/System.IO.Pipelines@5.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.Cache.Redis@2.3.2",
+      "dependsOn": [
+        "pkg:nuget/StackExchange.Redis@2.9.17"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/StackExchange.Redis@2.9.17",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@8.0.0",
+        "pkg:nuget/Pipelines.Sockets.Unofficial@2.2.8"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/System.IO.Pipelines@5.0.1",
+      "dependsOn": []
+    }
+  ]
+}
