@@ -8,6 +8,58 @@
   },
   "entries": [
     {
+      "id": "reveal-server-2.3.2-dotnet",
+      "product": "Reveal Server",
+      "packageVersion": "2.3.2",
+      "scope": "server",
+      "platform": "dotnet",
+      "platformLabel": ".NET",
+      "contentsLabel": "ASP.NET SDK, Data, 33 connectors, Redis cache, and all-connectors aggregate",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-server/dotnet/2.3.2/reveal-server-dotnet-2.3.2-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "57dd3744dce652e00338ff38f9355a3250ff6cfba2de467ba7a66c545d859ecd"
+    },
+    {
+      "id": "reveal-server-2.3.2-java",
+      "product": "Reveal Server",
+      "packageVersion": "2.3.2",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "contentsLabel": "Windows x64 and Linux x64",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-server/java/2.3.2/reveal-server-java-2.3.2-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "40fb9c8ace8ee8b3177d7e0ffc730c56d3f4b5ebcaf393db806c0c915dc6d19f"
+    },
+    {
+      "id": "reveal-server-2.3.2-node",
+      "product": "Reveal Server",
+      "packageVersion": "2.3.2",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "contentsLabel": "Windows x64 and Linux x64",
+      "artifactType": "bundle",
+      "downloadUrl": "./bundles/reveal-server/node/2.3.2/reveal-server-node-2.3.2-sbom.zip",
+      "mediaType": "application/zip",
+      "sha256": "de6ce09ae756c7766b9c45c588131e3c939f5a0426043d5557fe810b75f4797a"
+    },
+    {
+      "id": "reveal-client-2.3.2-javascript",
+      "product": "Reveal Client",
+      "packageVersion": "2.3.2",
+      "scope": "client",
+      "platform": "javascript",
+      "platformLabel": "JavaScript",
+      "contentsLabel": "Browser npm runtime dependency manifest",
+      "artifactType": "file",
+      "downloadUrl": "./files/reveal-client/javascript/2.3.2/reveal-sdk-client-2.3.2.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "62d5ef81e04b7bcde24b8b6a8e07867c74e5f0f0efb70d6c7a24458550f86b21"
+    },
+    {
       "id": "reveal-server-2.2.1-dotnet",
       "product": "Reveal Server",
       "packageVersion": "2.2.1",
