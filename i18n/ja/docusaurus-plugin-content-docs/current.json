@@ -818,5 +818,9 @@
   "sidebar.aiSidebar.doc.Metadata Storage Provider": {
     "message": "メタデータ ストレージ プロバイダー",
     "description": "The label for the doc item 'Metadata Storage Provider' in sidebar 'aiSidebar', linking to the doc ai/metadata-storage-provider"
+  },
+  "sidebar.aiSidebar.doc.Metadata Generation Endpoint": {
+    "message": "メタデータ生成エンドポイント",
+    "description": "The label for the doc item 'Metadata Generation Endpoint' in sidebar 'aiSidebar', linking to the doc ai/metadata-generation"
   }
 }
