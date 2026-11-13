@@ -200,7 +200,7 @@ The source code to this sample can be found on [GitHub](https://github.com/Revea
 
 The Java SDK runs the Reveal engine as a separate process. If that process stops, for example because the operating system ends it when memory runs low, the Reveal server fails: it answers every request with 503, exports fail, and it doesn't recover on its own. Restarting the application starts a new engine, so report the failure in the application's health check and let your platform, such as Kubernetes, restart the application.
 
-`IRevealServer.getStatus()` returns the state of the server, `RUNNING`, `FAILED` or `SHUT_DOWN`, and for `FAILED` a message with the reason. `IRevealServer.addStatusChangeListener` registers a listener that is called once, when the server fails or shuts down, or right away if that already happened.
+`IRevealServer.getStatus()` returns the state of the server, `RUNNING`, `FAILED` or `SHUT_DOWN`, and for `FAILED` a message with the reason. `IRevealServer.getTermination()` returns a `CompletionStage` that completes with the `FAILED` or `SHUT_DOWN` status once the server stops running.
 
 1 - Add Spring Boot Actuator to the **pom.xml** file.
 
@@ -211,7 +211,7 @@ The Java SDK runs the Reveal engine as a separate process. If that process stops
 </dependency>
 ```
 
-2 - Declare the Reveal server as a bean, so the servlet and the health check use the same instance, and register a status change listener that logs when the server fails.
+2 - Declare the Reveal server as a bean, so the servlet and the health check use the same instance, and log when the server stops running.
 
 ```java title="RevealApplication.java"
 private static final Logger log = LoggerFactory.getLogger(RevealApplication.class);
@@ -221,7 +221,7 @@ IRevealServer revealServer() {
     IRevealServer server = new RevealServerBuilder()
         // ...
         .build();
-    server.addStatusChangeListener(status -> log.warn("Reveal server is {}: {}", status.getState(), status.getMessage()));
+    server.getTermination().thenAccept(status -> log.warn("Reveal server is {}: {}", status.getState(), status.getMessage()));
     return server;
 }
 
