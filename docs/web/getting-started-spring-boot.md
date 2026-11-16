@@ -233,6 +233,8 @@ ServletRegistrationBean<RevealEngineServlet> revealServlet(IRevealServer revealS
 }
 ```
 
+The callback runs on the thread that stops the server, so use `thenAcceptAsync` with your own executor for slow work, and handle the exceptions it throws, which are otherwise lost. A failed server stays `FAILED` even if the application shuts down afterwards.
+
 3 - Add a health indicator that reports the Reveal server as down once it stops running.
 
 ```java title="RevealServerHealthIndicator.java"
@@ -262,9 +264,65 @@ public class RevealServerHealthIndicator implements HealthIndicator {
 
 Once the Reveal server fails, `/actuator/health` answers 503. Point your platform's health check at it so the platform restarts the application.
 
-If your platform uses the Spring Boot liveness probe, `/actuator/health/liveness`, enable it and add the health indicator, named `revealServer`, to its group. The probe doesn't include other health indicators by default.
+If your platform uses the Spring Boot probes, `/actuator/health/liveness` and `/actuator/health/readiness`, enable them and add the health indicator, named `revealServer`, to their groups. The probes don't include other health indicators by default. Your platform restarts the application when the liveness probe fails, and stops sending it traffic when the readiness probe fails.
 
 ```properties title="application.properties"
 management.endpoint.health.probes.enabled=true
 management.endpoint.health.group.liveness.include=livenessState,revealServer
+management.endpoint.health.group.readiness.include=readinessState,revealServer
 ```
+
+### Without Spring Boot
+
+In Tomcat or another servlet container, keep the Reveal server in the `ServletContextListener`, pass it to `RevealEngineServlet` and to a health servlet, and shut it down when the application stops: `RevealEngineServlet` only shuts down a server that it builds itself.
+
+```java title="AppInitializer.java"
+@WebListener
+public class AppInitializer implements ServletContextListener {
+
+    private IRevealServer revealServer;
+
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+        revealServer = new RevealServerBuilder()
+            // ...
+            .build();
+
+        ServletRegistration.Dynamic reg = sce.getServletContext().addServlet("myServlet", new RevealEngineServlet(revealServer));
+        reg.setAsyncSupported(true);
+        reg.addMapping("/reveal-api/*");
+
+        sce.getServletContext().addServlet("revealHealth", new RevealServerHealthServlet(revealServer)).addMapping("/health");
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent sce) {
+        try {
+            revealServer.shutdown();
+        } catch (Exception e) {
+            sce.getServletContext().log("Could not shut down the Reveal server", e);
+        }
+    }
+}
+```
+
+```java title="RevealServerHealthServlet.java"
+public class RevealServerHealthServlet extends HttpServlet {
+
+    private final IRevealServer revealServer;
+
+    public RevealServerHealthServlet(IRevealServer revealServer) {
+        this.revealServer = revealServer;
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        RevealServerStatus status = revealServer.getStatus();
+        response.setStatus(status.getState() == RevealServerState.RUNNING ? 200 : 503);
+        response.setContentType("text/plain;charset=UTF-8");
+        response.getWriter().write(status.getMessage() == null ? status.getState().toString() : status.getState() + ": " + status.getMessage());
+    }
+}
+```
+
+Once the Reveal server fails, `/health` answers 503.

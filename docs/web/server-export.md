@@ -188,6 +188,8 @@ public class RevealExportController {
 }
 ```
 
+If an export fails, you get an `ExportException`, with the HTTP status in the message when the server answered with an error, such as `Export failed with status 500`. The server and other requests aren't affected. Once the Reveal server has [failed](getting-started-spring-boot.md#add-a-health-check), every export fails with status 503.
+
   </TabItem>
 
   <TabItem value="node" label="Node.js">    

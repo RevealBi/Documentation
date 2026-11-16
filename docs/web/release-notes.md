@@ -3,6 +3,24 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## Preview
+
+### New Features
+
+- The Java SDK now reports when the Reveal server stops working, for example when the operating system ends the engine process because memory runs low. `IRevealServer.getStatus()` returns `RUNNING`, `FAILED` or `SHUT_DOWN`, with the reason for a failure, and `IRevealServer.getTermination()` completes once the server stops running. The SDK doesn't restart the engine: report the failure in your application's [health check](https://help.revealbi.io/web/getting-started-spring-boot/#add-a-health-check) so your platform restarts the application.
+
+### Breaking Changes
+
+#### Java
+
+- Server-side exports now fail with an `ExportException` when the export fails on the server. Previously, `export` and the `exportTo...` methods that write a file returned the error text in place of the file path. Handle the exception instead of checking the returned path.
+
+### Bugs
+
+#### Java
+
+- After the engine process stopped, the server answered every request with 503 but gave the application no way to detect it, so health checks kept reporting it as healthy. It now reports the failure through `IRevealServer.getStatus()`.
+
 ## 2.3.2 (November 12, 2026)
 
 ### Improvements
