@@ -1,0 +1,257 @@
+{
+  "release": {
+    "version": "2.3.2",
+    "url": "https://github.com/Infragistics-BusinessTools/Reveal/releases/tag/2.3.2",
+    "publishedAt": "2026-11-12T14:35:16Z"
+  },
+  "assessmentDate": "2026-11-13T20:18:06.960Z",
+  "tools": {
+    "dotnetCycloneDX": "6.2.0",
+    "npmCycloneDX": "6.0.1",
+    "mavenCycloneDX": "2.9.3",
+    "maven": "3.9.11",
+    "osvScanner": "2.7.1",
+    "node": "v24.18.0"
+  },
+  "artifacts": [
+    {
+      "file": "artifacts/java-linux-x86_64.jar",
+      "bytes": 169441091,
+      "sha256": "963b1d435b9a5ad85cafc6185617737f19b4b37ef05ee3ac01ee965a4c83a9e2"
+    },
+    {
+      "file": "artifacts/java-windows-x86_64.jar",
+      "bytes": 149356157,
+      "sha256": "c9365a293851046be74c5cfbc0924d57d6cacac274919a5fa970d7c9265ae31e"
+    },
+    {
+      "file": "artifacts/node-linux-x64.gz",
+      "bytes": 209313344,
+      "sha256": "920862a86fe99aab0569631d1a0686f5d2a45a556cd2fabec36647a86f54524d"
+    },
+    {
+      "file": "artifacts/node-win-x64.gz",
+      "bytes": 153022795,
+      "sha256": "ff0e83dfc22ff3f4dfb72858f441b00e33f2c1772aad52edb1c8dfc2ffd3807d"
+    },
+    {
+      "file": "artifacts/reveal-sdk-2.3.2.tgz",
+      "bytes": 11160810,
+      "sha256": "eb493c5f434e0d8702200ec2e079825cda2bf9de832147ad28030800208a8e99"
+    },
+    {
+      "file": "artifacts/reveal-sdk-core-2.3.2.jar",
+      "bytes": 335257,
+      "sha256": "5fab20ef08264d4ee3ffb51db9ef889b6e1bd2d43fec12e1b0ec488337f8328a"
+    },
+    {
+      "file": "artifacts/reveal-sdk-node-2.3.2.tgz",
+      "bytes": 130322,
+      "sha256": "fbc0c5f80272cdc108811f7c38201fea41b43ea301f8ec89f7fedfdfb2b44cec"
+    },
+    {
+      "file": "nuget/reveal.sdk.aspnetcore/2.3.2/reveal.sdk.aspnetcore.2.3.2.nupkg",
+      "bytes": 3818345,
+      "sha256": "9448bb495b1795e3e444272f3d44997f14935f51f4149766b1607d893ab05915"
+    },
+    {
+      "file": "nuget/reveal.sdk.cache.redis/2.3.2/reveal.sdk.cache.redis.2.3.2.nupkg",
+      "bytes": 46031,
+      "sha256": "ad669fdce4445795d0b52e2deb11cd4bdf4bf01475fbf1d58d65b20c2a541e44"
+    },
+    {
+      "file": "nuget/reveal.sdk.data/2.3.2/reveal.sdk.data.2.3.2.nupkg",
+      "bytes": 14879250,
+      "sha256": "0b6198342d15c8b90279813d1ea23254740d874f6f7d1be34820e711c6ade79f"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.amazon.athena/2.3.2/reveal.sdk.data.amazon.athena.2.3.2.nupkg",
+      "bytes": 55110,
+      "sha256": "cea85607bdbe51694fb15a651cce2f8a87575a2bb0b05eb68d4074d3fa34f898"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.amazon.redshift/2.3.2/reveal.sdk.data.amazon.redshift.2.3.2.nupkg",
+      "bytes": 45161,
+      "sha256": "52c869b1fd16a5b3eb4cc4e441cd92af7809f9be47f0f8337f2f6edae0382a04"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.amazon.s3/2.3.2/reveal.sdk.data.amazon.s3.2.3.2.nupkg",
+      "bytes": 46331,
+      "sha256": "c04905e973160141412cff6d194ec6ee24191e53343fcc46e221af548f22f2f6"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.azurecosmosdb/2.3.2/reveal.sdk.data.azurecosmosdb.2.3.2.nupkg",
+      "bytes": 59544,
+      "sha256": "92e015690a47bc70299a21e341edf5c95a1b7ee83b79255d08c177829a5c0054"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.box/2.3.2/reveal.sdk.data.box.2.3.2.nupkg",
+      "bytes": 41879,
+      "sha256": "97675900f5d68587068ad49b891ffbc28fac33a1f59294292d4e13151757b20e"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.clickhouse/2.3.2/reveal.sdk.data.clickhouse.2.3.2.nupkg",
+      "bytes": 61707,
+      "sha256": "89733fda45d7670fbba87994a3a65f820ad6f73fa5794a6c3f79dfb38cd94212"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.cube/2.3.2/reveal.sdk.data.cube.2.3.2.nupkg",
+      "bytes": 67808,
+      "sha256": "87e17078f34724a5bf864ace0af89e94af916cfde6f3c76b0533860677b0b35c"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.databricks/2.3.2/reveal.sdk.data.databricks.2.3.2.nupkg",
+      "bytes": 52165,
+      "sha256": "8edcd8db869a0d079ff03a3d1e3815faf11919949346b9d0be388ee90a456d5a"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.dropbox/2.3.2/reveal.sdk.data.dropbox.2.3.2.nupkg",
+      "bytes": 41802,
+      "sha256": "49487d102eec63c379a90324ac4c477855bd44e55fe36f6f7ad3b31ec764bcc3"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.duckdb/2.3.2/reveal.sdk.data.duckdb.2.3.2.nupkg",
+      "bytes": 57772,
+      "sha256": "3659f95c5ba841e5cf4c5df9ff7de9e584eec49a116cc48d5e547f82bd779887"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.elasticsearch/2.3.2/reveal.sdk.data.elasticsearch.2.3.2.nupkg",
+      "bytes": 58982,
+      "sha256": "962596e3978f8a45eb461db8b8f91aff0d3df1b63fc96c740df8641adf872c83"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.google.analytics4/2.3.2/reveal.sdk.data.google.analytics4.2.3.2.nupkg",
+      "bytes": 63879,
+      "sha256": "9d2bc3b04b86989010ce107e200e1fa89c89600ba05c28ff758c3523893ec84a"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.google.bigquery/2.3.2/reveal.sdk.data.google.bigquery.2.3.2.nupkg",
+      "bytes": 57028,
+      "sha256": "481969de869e562495e60b5ab3cfb4822fdcd804dd67b5ca1b9fc04faadbf1f0"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.google.drive/2.3.2/reveal.sdk.data.google.drive.2.3.2.nupkg",
+      "bytes": 41913,
+      "sha256": "942b8658cb906f91cd123439421acc8c5d800d963a087695d68f58b458e0c18f"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.google.searchconsole/2.3.2/reveal.sdk.data.google.searchconsole.2.3.2.nupkg",
+      "bytes": 53742,
+      "sha256": "e20630282869f31921fce737f324250dc364d76baf39c16fcb186959f16d192c"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.hubspot/2.3.2/reveal.sdk.data.hubspot.2.3.2.nupkg",
+      "bytes": 57107,
+      "sha256": "ae7e74a3b91d7dc7ddbf98a1c5272068e1f05f845da69a9c7f610da5d0651e8d"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.mariadb/2.3.2/reveal.sdk.data.mariadb.2.3.2.nupkg",
+      "bytes": 41453,
+      "sha256": "9555fb18893587a1ec2d84e5a095b60bcb8e68c5d9f5133e6beab5d50eb73fe4"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.marketo/2.3.2/reveal.sdk.data.marketo.2.3.2.nupkg",
+      "bytes": 54400,
+      "sha256": "3ae0e0a8bc4cdcbbe0734eacfe8eb0e6e0d8db190ec8b7f54ad2283df0c84be0"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.analysisservices/2.3.2/reveal.sdk.data.microsoft.analysisservices.2.3.2.nupkg",
+      "bytes": 90784,
+      "sha256": "8e05ac1ff6bacffc8b7836641f5e0a1257fa4ed567b36ff662560d977aaad9aa"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.dynamics/2.3.2/reveal.sdk.data.microsoft.dynamics.2.3.2.nupkg",
+      "bytes": 79009,
+      "sha256": "ee87b4f6c49d05764726b160f860edf43808d7b76d930b900a96dba243818a91"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.onedrive/2.3.2/reveal.sdk.data.microsoft.onedrive.2.3.2.nupkg",
+      "bytes": 48246,
+      "sha256": "0283417800ad9bf4acd9047dfd5cf940ab3ed522e6f901d1e4484354e7092979"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.reportingservices/2.3.2/reveal.sdk.data.microsoft.reportingservices.2.3.2.nupkg",
+      "bytes": 52922,
+      "sha256": "c99a6725f603cf5e96f64b26c83290a4c978ad49971c7554c633ee7be177125d"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.sharepoint/2.3.2/reveal.sdk.data.microsoft.sharepoint.2.3.2.nupkg",
+      "bytes": 63487,
+      "sha256": "fc3a34dbdae06fea394bf4f1943a40f1a05c2cc7be2292329c64e247f9210c3b"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.sqlserver/2.3.2/reveal.sdk.data.microsoft.sqlserver.2.3.2.nupkg",
+      "bytes": 62264,
+      "sha256": "2ab347abfbc5a60491c780913bbc2a02cb19b12ce1fafeb447a155c4a2ce6516"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.microsoft.synapseanalytics/2.3.2/reveal.sdk.data.microsoft.synapseanalytics.2.3.2.nupkg",
+      "bytes": 40433,
+      "sha256": "d260c49591e93299d02ee6aa97629e58eda53098ab0dbd3aff23940cfc352946"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.mongodb/2.3.2/reveal.sdk.data.mongodb.2.3.2.nupkg",
+      "bytes": 60382,
+      "sha256": "abad5e0eaa60fb78237e7458e3187a395ac48df8c58d0f12444e8a59078fb194"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.mysql/2.3.2/reveal.sdk.data.mysql.2.3.2.nupkg",
+      "bytes": 55730,
+      "sha256": "7312a26291f71f9ffa4ff809c7de8c34cf9b4c8802eb345a55d3508d7d30f29b"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.oracle/2.3.2/reveal.sdk.data.oracle.2.3.2.nupkg",
+      "bytes": 57839,
+      "sha256": "8baae224c9a1ecad43091ea3a17ce16f9ec30d13eac36cb5d7b216816d3b7531"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.postgresql/2.3.2/reveal.sdk.data.postgresql.2.3.2.nupkg",
+      "bytes": 62373,
+      "sha256": "3d0aefdfc8edfcf03ad527b1267fb5d38b5063a047423ed231452d7ddc880268"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.quickbooks/2.3.2/reveal.sdk.data.quickbooks.2.3.2.nupkg",
+      "bytes": 75924,
+      "sha256": "211c55c07a9f890df359a5b59584213574e74aafa88582ef458fb8e82230b94f"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.sqlite/2.3.2/reveal.sdk.data.sqlite.2.3.2.nupkg",
+      "bytes": 47858,
+      "sha256": "b7b872dd4c3d597127c3a33ab8c568be675ceb9c6a35b0522fdfa14c1a2fa707"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.snowflake/2.3.2/reveal.sdk.data.snowflake.2.3.2.nupkg",
+      "bytes": 57233,
+      "sha256": "582de77bf98bcf5c7f0a3d67b9ba76350e7ce32040acf5e9e504aee476e0f619"
+    },
+    {
+      "file": "nuget/reveal.sdk.data.sybase/2.3.2/reveal.sdk.data.sybase.2.3.2.nupkg",
+      "bytes": 50855,
+      "sha256": "dc0c085ad6dc5992140e6c1cd6208f10549f0e37c7bc3e018828461e59826fd5"
+    }
+  ],
+  "schemas": [
+    {
+      "file": "bom-1.7.schema.json",
+      "sha256": "73308edec3ab2d38bfffd993e96a042b594314143b6971a6e9ed98bbb6bd76ce"
+    },
+    {
+      "file": "spdx.schema.json",
+      "sha256": "4b345e2329f209f34e960ae2a8e7cb46a166907e6a45e94978565925dc47b359"
+    },
+    {
+      "file": "jsf-0.82.schema.json",
+      "sha256": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae"
+    },
+    {
+      "file": "cryptography-defs.schema.json",
+      "sha256": "027b059a729a06d591bac79a584ef04f83fc32d91a826fdba6ad3c98a10e5b44"
+    }
+  ],
+  "notes": [
+    "npm tarball SHA-512 integrity values were verified against registry metadata.",
+    "OSV and Maven executables/archives were checksum-verified against publisher checksum files.",
+    "cryptography-defs schema was supplied by the pinned CycloneDX npm library; other schema files were downloaded from the official CycloneDX specification repository.",
+    "No Reveal product build was performed. NuGet restore and reference resolution, Maven dependency/SBOM goals, and npm install with scripts disabled were used."
+  ]
+}

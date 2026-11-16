@@ -1,0 +1,29 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "file": "assessment-evidence.zip",
+      "sha256": "38dbcef909d27e463cea7eae597cc4536ab2205e88c636628864135164cb3216"
+    },
+    {
+      "file": "provenance.json",
+      "sha256": "7f57ad61b918b6a183ee9a8107e5d78cec94f689c9d4a450a7da42e30165c143"
+    },
+    {
+      "file": "README.md",
+      "sha256": "d19190362c81c14c4d03130d7973011a18f4d07a80e1dd5800d7a481767aca57"
+    },
+    {
+      "file": "reveal-2.3.2-sbom-vex.zip",
+      "sha256": "46937d076ab404e0c9a276ac593a1ff03f6d3f6b478c806659786a5b2c4df354"
+    },
+    {
+      "file": "scan-summary.json",
+      "sha256": "440ae984660fd85309063f52e530cc2ad08a1832386cdcbbaa6004cdf3825e70"
+    },
+    {
+      "file": "vex-assessments.json",
+      "sha256": "780f152356695a149d5a124d1179cc5332f844aed6ffbb9d08f7a1dbf9b58e92"
+    }
+  ]
+}

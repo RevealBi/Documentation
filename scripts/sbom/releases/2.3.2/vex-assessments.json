@@ -1,0 +1,705 @@
+{
+  "schemaVersion": 1,
+  "assessment": {
+    "organization": "Infragistics, Inc.",
+    "product": "Reveal",
+    "date": "2026-11-13T20:18:06.960Z",
+    "scope": "Reveal 2.3.2 published NuGet packages evaluated on .NET 8, Windows/Linux x64 Java and Node server distributions, and the browser npm runtime dependency manifest. Custom host integrations, host OS libraries, separately downloaded Chromium and prebundled browser subcomponents are outside scan coverage.",
+    "method": "Resolved published package graphs and inspected released embedded engine manifests. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites, released bytecode/decompilation, and runtime asset/reference inspection; unresolved configuration or call-path exposure remains in_triage.",
+    "scanner": {
+      "name": "OSV-Scanner",
+      "version": "2.7.1",
+      "mode": "offline; --no-resolve --all-packages",
+      "databaseSnapshot": "2026-11-13"
+    },
+    "publicationStatus": "draft_pending_release_owner_approval"
+  },
+  "decisions": [
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Formats.Asn1",
+      "version": "7.0.0",
+      "advisory": "GHSA-447r-wph3-92pm",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The System.Formats.Asn1 7.0.0 entry is dependency-graph metadata, not the implementation used by the assessed .NET 8 runtime. Resolving the released Reveal.Sdk.Data 2.3.2 with CopyLocalLockFileAssemblies=true produced 143 copy-local references and none of the legacy Asn1, Http or RegularExpressions assemblies. The four distributed engine .deps.json files likewise have no runtime asset for the legacy Http/Private.Uri entries; the embedded .NET runtime packs are 8.0.34. This decision assumes a serviced .NET 8 host for the NuGet distribution and does not certify an older/custom host runtime."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/Reveal.Sdk.AspNetCore-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/Reveal.Sdk.Data-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Athena-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Redshift-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.S3-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.AzureCosmosDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Box-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.ClickHouse-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Cube-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Databricks-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Dropbox-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.DuckDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Elasticsearch-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Analytics4-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.BigQuery-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Drive-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.SearchConsole-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.HubSpot-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MariaDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Marketo-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.AnalysisServices-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.Dynamics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.OneDrive-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.ReportingServices-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SharePoint-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MongoDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MySql-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.PostgreSQL-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.QuickBooks-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.SQLite-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Snowflake-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Sybase-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Net.Http",
+      "version": "4.3.0",
+      "advisory": "GHSA-7jgj-8wvc-jh57",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The System.Net.Http 4.3.0 entry is dependency-graph metadata, not the implementation used by the assessed .NET 8 runtime. Resolving the released Reveal.Sdk.Data 2.3.2 with CopyLocalLockFileAssemblies=true produced 143 copy-local references and none of the legacy Asn1, Http or RegularExpressions assemblies. The four distributed engine .deps.json files likewise have no runtime asset for the legacy Http/Private.Uri entries; the embedded .NET runtime packs are 8.0.34. This decision assumes a serviced .NET 8 host for the NuGet distribution and does not certify an older/custom host runtime."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/Reveal.Sdk.AspNetCore-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/Reveal.Sdk.Data-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Athena-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Redshift-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.S3-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.AzureCosmosDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Box-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.ClickHouse-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Cube-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Databricks-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Dropbox-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.DuckDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Elasticsearch-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Analytics4-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.BigQuery-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Drive-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.SearchConsole-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.HubSpot-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MariaDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Marketo-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.AnalysisServices-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.Dynamics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.OneDrive-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.ReportingServices-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SharePoint-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SqlServer-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SynapseAnalytics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MongoDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MySql-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Oracle-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.PostgreSQL-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.QuickBooks-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.SQLite-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Snowflake-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Sybase-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Text.RegularExpressions",
+      "version": "4.3.0",
+      "advisory": "GHSA-cmhx-cq75-c4mj",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The System.Text.RegularExpressions 4.3.0 entry is dependency-graph metadata, not the implementation used by the assessed .NET 8 runtime. Resolving the released Reveal.Sdk.Data 2.3.2 with CopyLocalLockFileAssemblies=true produced 143 copy-local references and none of the legacy Asn1, Http or RegularExpressions assemblies. The four distributed engine .deps.json files likewise have no runtime asset for the legacy Http/Private.Uri entries; the embedded .NET runtime packs are 8.0.34. This decision assumes a serviced .NET 8 host for the NuGet distribution and does not certify an older/custom host runtime."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/Reveal.Sdk.AspNetCore-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/Reveal.Sdk.Data-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Athena-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.Redshift-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Amazon.S3-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.AzureCosmosDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Box-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.ClickHouse-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Cube-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Databricks-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Dropbox-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.DuckDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Elasticsearch-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Analytics4-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.BigQuery-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.Drive-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Google.SearchConsole-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.HubSpot-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MariaDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Marketo-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.AnalysisServices-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.Dynamics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.OneDrive-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.ReportingServices-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SharePoint-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SqlServer-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SynapseAnalytics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MongoDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MySql-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Oracle-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.PostgreSQL-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.QuickBooks-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.SQLite-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Sybase-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "MySqlConnector",
+      "version": "2.3.5",
+      "advisory": "GHSA-473q-m89c-ghf8",
+      "recommendation": "Upgrade MySqlConnector to 2.6.1 or later; custom providers using VerifyCA/VerifyFull must configure SslCa until patched.",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The advisory requires VerifyCA or VerifyFull without SslCa. Decompiled released MySqlClient.GetConnectionString creates a MySqlConnectionStringBuilder and never sets SslMode or imports an arbitrary connection string; the released MariaDBProvider inherits MySqlProvider. MySqlConnector 2.3.5 declares Preferred as the SslMode default, and the four engine connector assemblies contain no set_SslMode reference. The advisory explicitly excludes Preferred/Required. Reassess any custom provider that enables VerifyCA/VerifyFull without SslCa; this decision does not assert that Preferred authenticates the server."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MariaDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MySql-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Microsoft.Identity.Client",
+      "version": "4.56.0",
+      "advisory": "GHSA-m5vv-6r4h-3vj9",
+      "recommendation": "Update the Analysis Services dependency chain to Microsoft.Identity.Client 4.61.3 or a later supported patched release, and verify the resolved runtime version.",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "The separately restored Reveal.Sdk.Data.Microsoft.AnalysisServices 2.3.2 package selects Microsoft.Identity.Client 4.56.0 through Microsoft.AnalysisServices.AdomdClient and Microsoft.Identity.Client.Broker. project.assets.json includes its lib/net6.0/Microsoft.Identity.Client.dll runtime asset. No enforced Reveal mitigation excludes the affected authentication behavior, so the prior conservative exploitable assessment is retained. The all-connectors graph and released Node/Java engines resolve MSAL 4.80.0; this statement applies only where 4.56.0 is actually selected."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.AnalysisServices-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Microsoft.Identity.Client",
+      "version": "4.56.0",
+      "advisory": "GHSA-x674-v45j-fwxw",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "This advisory is limited to Xamarin Android / .NET Android / MAUI. The assessed package graph targets net8.0 server applications; no Android or MAUI runtime is included."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.AnalysisServices-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Security.Cryptography.Pkcs",
+      "version": "8.0.1",
+      "advisory": "GHSA-2fmv-rv2c-59x7",
+      "recommendation": "Upgrade System.Security.Cryptography.Pkcs to 8.0.2 or a supported patched version and repackage the self-contained engines.",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The affected API is EnvelopedCms.Decode on Windows. Static reference inspection of the released engine assemblies and selected NuGet runtime assemblies found no EnvelopedCms caller outside the Pkcs implementation and the System.Security type-forwarding facade. The Reports implementation uses SignedCms.ComputeSignature/Encode for output signing. No Reveal integration path to EnvelopedCms.Decode was identified. Custom host code that decodes CMS envelopes is outside this assessment."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SqlServer-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SynapseAnalytics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Security.Cryptography.Pkcs",
+      "version": "8.0.1",
+      "advisory": "GHSA-846f-f764-76mx",
+      "recommendation": "Upgrade System.Security.Cryptography.Pkcs to 8.0.2 or a supported patched version and repackage the self-contained engines.",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "The affected API is SignedCms.CheckSignature. The vulnerable package is in the resolved graph and packaged engines. Static inspection found a SignedCms reference in the Windows Microsoft.Data.SqlClient runtime assembly as well as the Reports library. Reports uses ComputeSignature/Encode, but SQL Client attestation/signature-verification reachability has not been excluded for all supported connection configurations. No not_affected claim is made; confirm whether attacker-controlled CMS/X.509 data can reach CheckSignature or update the package."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SqlServer-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Microsoft.SynapseAnalytics-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "SharpCompress",
+      "version": "0.30.1",
+      "advisory": "GHSA-6c8g-7p36-r338",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "MongoDB.Driver.Core 2.21.0 introduces this package for compression. Inspection of the selected NuGet runtime and all four engine assemblies found WriteToDirectory only inside SharpCompress itself, with no integration caller. The affected directory-extraction API is not invoked by the packaged Reveal/MongoDB compression path."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MongoDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "Snappier",
+      "version": "1.0.0",
+      "advisory": "GHSA-pggp-6c3x-2xmx",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Decompiled MongoDB.Driver.Core 2.21.0 SnappyCompressor calls Snappy.GetUncompressedLength and Snappy.Decompress block APIs. Static reference inspection found SnappyStream only inside Snappier itself. The affected framed-stream decompression path is not used."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.MongoDB-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Security.Cryptography.Pkcs",
+      "version": "8.0.0",
+      "advisory": "GHSA-2fmv-rv2c-59x7",
+      "recommendation": "Upgrade System.Security.Cryptography.Pkcs to 8.0.2 or a supported patched version and repackage the self-contained engines.",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The affected API is EnvelopedCms.Decode on Windows. Static reference inspection of the released engine assemblies and selected NuGet runtime assemblies found no EnvelopedCms caller outside the Pkcs implementation and the System.Security type-forwarding facade. The Reports implementation uses SignedCms.ComputeSignature/Encode for output signing. No Reveal integration path to EnvelopedCms.Decode was identified. Custom host code that decodes CMS envelopes is outside this assessment."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Oracle-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Security.Cryptography.Pkcs",
+      "version": "8.0.0",
+      "advisory": "GHSA-846f-f764-76mx",
+      "recommendation": "Upgrade System.Security.Cryptography.Pkcs to 8.0.2 or a supported patched version and repackage the self-contained engines.",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "The affected API is SignedCms.CheckSignature. The vulnerable package is in the resolved graph and packaged engines. Static inspection found a SignedCms reference in the Windows Microsoft.Data.SqlClient runtime assembly as well as the Reports library. Reports uses ComputeSignature/Encode, but SQL Client attestation/signature-verification reachability has not been excluded for all supported connection configurations. No not_affected claim is made; confirm whether attacker-controlled CMS/X.509 data can reach CheckSignature or update the package."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Oracle-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "log4net",
+      "version": "2.0.12",
+      "advisory": "GHSA-4f7c-pmjv-c25w",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The package is introduced by Snowflake.Data. Static reference inspection of the selected runtime and released engines found no XmlLayout or XmlLayoutSchemaLog4J use outside logging implementation assemblies. Reveal ships no configuration enabling those log4net layouts. This decision covers the supplied integration; a host that configures either XML layout must reassess and upgrade to log4net 3.3.0 or later."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/dotnet/2.3.2/connectors/Reveal.Sdk.Data.Snowflake-2.3.2.cdx.json",
+          "reveal-server/dotnet/2.3.2/reveal-server-dotnet-all-connectors-2.3.2.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Private.Uri",
+      "version": "4.3.0",
+      "advisory": "GHSA-5f2m-466j-3848",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The System.Private.Uri 4.3.0 entry is dependency-graph metadata, not the implementation used by the assessed .NET 8 runtime. Resolving the released Reveal.Sdk.Data 2.3.2 with CopyLocalLockFileAssemblies=true produced 143 copy-local references and none of the legacy Asn1, Http or RegularExpressions assemblies. The four distributed engine .deps.json files likewise have no runtime asset for the legacy Http/Private.Uri entries; the embedded .NET runtime packs are 8.0.34. This decision assumes a serviced .NET 8 host for the NuGet distribution and does not certify an older/custom host runtime."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Private.Uri",
+      "version": "4.3.0",
+      "advisory": "GHSA-x5qj-9vmx-7g6g",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The System.Private.Uri 4.3.0 entry is dependency-graph metadata, not the implementation used by the assessed .NET 8 runtime. Resolving the released Reveal.Sdk.Data 2.3.2 with CopyLocalLockFileAssemblies=true produced 143 copy-local references and none of the legacy Asn1, Http or RegularExpressions assemblies. The four distributed engine .deps.json files likewise have no runtime asset for the legacy Http/Private.Uri entries; the embedded .NET runtime packs are 8.0.34. This decision assumes a serviced .NET 8 host for the NuGet distribution and does not certify an older/custom host runtime."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "NuGet",
+      "package": "System.Private.Uri",
+      "version": "4.3.0",
+      "advisory": "GHSA-xhfc-gr8f-ffwc",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "The System.Private.Uri 4.3.0 entry is dependency-graph metadata, not the implementation used by the assessed .NET 8 runtime. Resolving the released Reveal.Sdk.Data 2.3.2 with CopyLocalLockFileAssemblies=true produced 143 copy-local references and none of the legacy Asn1, Http or RegularExpressions assemblies. The four distributed engine .deps.json files likewise have no runtime asset for the legacy Http/Private.Uri entries; the embedded .NET runtime packs are 8.0.34. This decision assumes a serviced .NET 8 host for the NuGet distribution and does not certify an older/custom host runtime."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-355h-qmc2-wpwf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The released CallbackServer constructs a direct HTTP/1.1 ServerConnector bound to 127.0.0.1. It has no reverse proxy/second HTTP parser in front of the callback endpoint, so the parser differential needed for the described smuggling scenario is absent. The handler also verifies the per-instance RevealBI-Auth token."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-wjpw-4j6x-6rwh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The released Java integration uses the callback URI for endpoint/query routing and fixed local engine destinations; it does not enforce a host allowlist/denylist using Jetty parsing of an attacker-selected authority. No integration security decision depending on the described URI-parser differential was identified."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-7p3p-8qv8-m2vh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Released CallbackServer bytecode creates ServerConnector(Server) with the default HTTP/1.1 connection factory. No HTTP/2 or HTTP/3 artifacts or connection factories are present in the Maven graph. The affected :authority/Host protocol combination is absent."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-f4v5-65jj-pcr2",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Inspection of every class in the released reveal-sdk-core and reveal-sdk-servlet JARs found no getTrailers reference. The callback handler does not consume HTTP trailers, so stale trailer fields cannot affect a Reveal callback decision."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-xxh7-fcf3-rj7f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The released CallbackServer installs its callback handler directly. Neither released Java SDK JAR references GzipHandler, so the affected decompression handler is not configured."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-util",
+      "version": "12.0.12",
+      "advisory": "GHSA-w7x5-g22v-xqhr",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "Neither released Java SDK JAR references SecurityHandler.PathMapped, and the callback server installs a direct handler with token authentication instead of a path-mapped security handler. The affected configuration is absent."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.json:json",
+      "version": "20231013",
+      "advisory": "GHSA-ghc9-756g-vrcv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The published POM declares org.json, but inspection of every class in the released reveal-sdk-core and reveal-sdk-servlet JARs found no org/json, org.json or JSONTokener reference. Reveal uses Jackson for JSON parsing. No released integration caller reaches the affected JSON-java numeric-token parser."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/java/2.3.2/reveal-sdk-java-linux-x86_64.cdx.json",
+          "reveal-server/java/2.3.2/reveal-sdk-java-windows-x86_64.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-5pm8-86m8-9m6r",
+      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs; update the dependency chain when patched.",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers. Reveal downloads a fixed HTTPS browser build, but the released downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp. get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact, so the required input/configuration cannot be ruled out for every installation. Review FTP-backed PAC configurations and update the transitive dependency when a patched release is available."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-c475-qrg2-pj4r",
+      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs; update the dependency chain when patched.",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers. Reveal downloads a fixed HTTPS browser build, but the released downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp. get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact, so the required input/configuration cannot be ruled out for every installation. Review FTP-backed PAC configurations and update the transitive dependency when a patched release is available."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-r4jh-29pc-gfqr",
+      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs; update the dependency chain when patched.",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers. Reveal downloads a fixed HTTPS browser build, but the released downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp. get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact, so the required input/configuration cannot be ruled out for every installation. Review FTP-backed PAC configurations and update the transitive dependency when a patched release is available."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-7pqw-9j4j-h8q3",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The released PuppeteerUtils.download selects the fixed Chrome Headless Shell build 132.0.6834.110 from the upstream browser distribution and a fixed per-user cache directory. Reveal exposes no archive, archive URL, or extraction path input to this call. The described attacks require substituting a malicious archive for that trusted distribution. Supply-chain compromise or a locally tampered cache is outside this assessment; reassess if custom archive sources are introduced."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-jmr9-qjv8-65gv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The released PuppeteerUtils.download selects the fixed Chrome Headless Shell build 132.0.6834.110 from the upstream browser distribution and a fixed per-user cache directory. Reveal exposes no archive, archive URL, or extraction path input to this call. The described attacks require substituting a malicious archive for that trusted distribution. Supply-chain compromise or a locally tampered cache is outside this assessment; reassess if custom archive sources are introduced."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zod",
+      "version": "3.25.76",
+      "advisory": "GHSA-mrhx-c7xc-m3w5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Zod is introduced through chromium-bidi. The released Reveal Node renderer calls puppeteer.launch with executablePath and args only; it does not select WebDriver BiDi. Inspection of the resolved BrowserLauncher confirms that this Chrome launch creates CdpBrowser unless protocol is explicitly webDriverBiDi. The vulnerable BiDi schema-validation path is therefore not used by the supplied renderer. Reassess custom BiDi integration."
+      },
+      "evidence": {
+        "documents": [
+          "reveal-server/node/2.3.2/reveal-sdk-node-linux-x64-2.3.2.cdx.json",
+          "reveal-server/node/2.3.2/reveal-sdk-node-win-x64-2.3.2.cdx.json"
+        ],
+        "record": "assessment-evidence.zip",
+        "review": "Static artifact/configuration assessment; release-owner approval pending."
+      }
+    }
+  ]
+}

@@ -3,6 +3,30 @@ import TabItem from '@theme/TabItem';
 
 # Release Notes
 
+## 1.8.5 (Nov 12th, 2026)
+
+This release brings the server-side export security fixes of 2.3.0 to 1.8.x.
+
+### Breaking Changes
+
+#### All Platforms
+
+- Server-side PDF, PowerPoint and image exports now block every network request from the export page, except Google Fonts (`fonts.googleapis.com` and `fonts.gstatic.com`). If an export init script or a custom visualization loads content from another host, that content is missing from the exported file, and no error is reported.
+
+#### ASP.NET
+
+- The server-side export endpoint (`POST /tools/exportDashboard`) now returns 400 for a request body that isn't a JSON object.
+
+### Bugs
+
+#### All Platforms
+
+- Hardened server-side export: the dashboard now reaches the export page as data, not as script text.
+
+#### Node.js
+
+- The server SDK no longer forwards client-sent `RevealBI-` headers to the engine, and the engine's internal export endpoint accepts only requests from the server SDK.
+
 ## 1.8.4 (Mar 5th, 2026)
 
 ### New Features
