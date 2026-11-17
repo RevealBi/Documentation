@@ -256,3 +256,244 @@ function downloadFile(blob, format) {
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/Exporting-Server).
 
 :::
+
+## Image Columns in Exports
+
+A text column in the Data Grid can show its values as images (see [Image Columns](../user/chart-types/grid-chart.md#image-columns)). The browser that renders a server export has no network access, so for PDF, PowerPoint and Image exports the server downloads each distinct image URL in the dashboard's image columns, scales it down to the column's image size, and embeds it in the export:
+
+- **Image** exports, and the dashboard image that PDF and PowerPoint exports can start with, show the images in the grid.
+- **PDF** exports also draw the images in the cells of the grid's data table.
+- **PowerPoint** data tables, and **Excel** and **CSV** exports, write the cell value as text: the URL, or the full `data:` text.
+
+Values that are already `data:` image URLs need no download and are exported as images. Only absolute `http`, `https` and `data:` URLs are treated as images; relative URLs and other schemes are exported as text. An SVG image appears in the dashboard image, but the PDF data table prints its URL.
+
+When an image can't be exported (it is rejected, fails to download, or goes past one of the [limits](#image-download-limits)), the dashboard image shows the "image not available" placeholder for it and the PDF data table prints its URL. The rest of the export is not affected.
+
+:::note
+
+Exports the end-user starts from the dashboard's **Export** menu, and `RevealView.toImage`, are captured from the page in the browser, which doesn't load remote images. In these exports image cells show their URL as text, while `data:` images still show as images. Their data tables print every image cell as text, `data:` images included.
+
+:::
+
+### Validating Image URLs
+
+Each image is downloaded the same way as a Web Resource, through your [data source provider](replacing-datasources.md) and [authentication provider](authentication.md). For every distinct image URL in an export, the data source provider receives an `RVWebResourceDataSourceItem` whose data source has:
+
+- an `Id` of `__RevealExportImage:` followed by the image URL,
+- a `Url` set to the image URL (the item's `Url` holds it too),
+- `RefuseRedirects` set to `true` (see [Redirects](#redirects)).
+
+In ASP.NET and Java, the provider also receives the id of the dashboard being exported. The provider decides what happens to the image:
+
+- Return `null`, or the item unchanged, to download the URL as it is.
+- Return the item changed, for example with a different `Url` or a `DefaultRefreshRate` (see [Caching Images](#caching-images)).
+- Throw an exception to reject the image. The export goes on without it. In Java and Node.js the rejection is also logged as a provider error.
+
+The authentication provider is called for each image data source as well. Returning `null` downloads the image without credentials.
+
+:::danger
+
+Without a data source provider, every image URL in the data is downloaded. The data source provider is the only check on which hosts the server contacts, so if your data can hold URLs you don't control, allow only the image hosts you trust and throw for the rest. In the same way, return credentials from your authentication provider only for the image hosts that need them.
+
+:::
+
+If your data source provider throws for items it doesn't recognize, as recommended in [Row-Level Security](row-level-security.md), handle the image items before anything else, or every image is rejected.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+public class DataSourceProvider : IRVDataSourceProvider
+{
+    private const string ExportImagePrefix = "__RevealExportImage:";
+    private static readonly string[] ImageHosts = { "images.example.com", "cdn.example.com" };
+
+    public Task<RVDataSourceItem> ChangeDataSourceItemAsync(IRVUserContext userContext, string dashboardId, RVDataSourceItem dataSourceItem)
+    {
+        if (dataSourceItem is RVWebResourceDataSourceItem imageItem &&
+            dataSourceItem.DataSource?.Id?.StartsWith(ExportImagePrefix, StringComparison.Ordinal) == true)
+        {
+            var url = new Uri(imageItem.Url);
+            if (url.Scheme != Uri.UriSchemeHttps || !ImageHosts.Contains(url.Host, StringComparer.OrdinalIgnoreCase))
+            {
+                // Rejects this image; the export goes on without it
+                throw new InvalidOperationException($"Images from '{url.Host}' are not exported.");
+            }
+
+            // Reuses a download of this image for up to an hour
+            imageItem.DefaultRefreshRate = 60;
+            return Task.FromResult<RVDataSourceItem>(imageItem);
+        }
+
+        // The rest of your provider
+        return Task.FromResult<RVDataSourceItem>(null);
+    }
+
+    public Task<RVDashboardDataSource> ChangeDataSourceAsync(IRVUserContext userContext, RVDashboardDataSource dataSource)
+    {
+        return Task.FromResult<RVDashboardDataSource>(null);
+    }
+}
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+public class DataSourceProvider implements IRVDataSourceProvider {
+    private static final String EXPORT_IMAGE_PREFIX = "__RevealExportImage:";
+    private static final Set<String> IMAGE_HOSTS = Set.of("images.example.com", "cdn.example.com");
+
+    public RVDataSourceItem changeDataSourceItem(IRVUserContext userContext, String dashboardId, RVDataSourceItem dataSourceItem) {
+        RVDashboardDataSource dataSource = dataSourceItem.getDataSource();
+        if (dataSourceItem instanceof RVWebResourceDataSourceItem imageItem &&
+                dataSource != null && dataSource.getId() != null && dataSource.getId().startsWith(EXPORT_IMAGE_PREFIX)) {
+            URI url = URI.create(imageItem.getUrl());
+            String host = url.getHost() == null ? "" : url.getHost().toLowerCase(Locale.ROOT);
+            if (!"https".equalsIgnoreCase(url.getScheme()) || !IMAGE_HOSTS.contains(host)) {
+                // Rejects this image; the export goes on without it
+                throw new IllegalArgumentException("Images from '" + host + "' are not exported.");
+            }
+
+            // Reuses a download of this image for up to an hour
+            imageItem.setDefaultRefreshRate(60);
+            return imageItem;
+        }
+
+        // The rest of your provider
+        return null;
+    }
+
+    public RVDashboardDataSource changeDataSource(IRVUserContext userContext, RVDashboardDataSource dataSource) {
+        return null;
+    }
+}
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```js
+const EXPORT_IMAGE_PREFIX = "__RevealExportImage:";
+const IMAGE_HOSTS = ["images.example.com", "cdn.example.com"];
+
+const dataSourceItemProvider = async (userContext, dataSourceItem) => {
+  if (dataSourceItem instanceof reveal.RVWebResourceDataSourceItem &&
+      dataSourceItem.dataSource?.id?.startsWith(EXPORT_IMAGE_PREFIX)) {
+    const url = new URL(dataSourceItem.url);
+    if (url.protocol !== "https:" || !IMAGE_HOSTS.includes(url.hostname)) {
+      // Rejects this image; the export goes on without it
+      throw new Error(`Images from '${url.hostname}' are not exported.`);
+    }
+
+    // Reuses a download of this image for up to an hour
+    dataSourceItem.defaultRefreshRate = 60;
+    return dataSourceItem;
+  }
+
+  // The rest of your provider
+  return null;
+};
+```
+
+  </TabItem>
+
+  <TabItem value="node-ts" label="Node.js - TS">
+
+```ts
+const EXPORT_IMAGE_PREFIX = "__RevealExportImage:";
+const IMAGE_HOSTS = ["images.example.com", "cdn.example.com"];
+
+const dataSourceItemProvider = async (userContext: IRVUserContext | null, dataSourceItem: RVDataSourceItem): Promise<RVDataSourceItem | null> => {
+  if (dataSourceItem instanceof RVWebResourceDataSourceItem &&
+      dataSourceItem.dataSource?.id?.startsWith(EXPORT_IMAGE_PREFIX)) {
+    const url = new URL(dataSourceItem.url ?? "");
+    if (url.protocol !== "https:" || !IMAGE_HOSTS.includes(url.hostname)) {
+      // Rejects this image; the export goes on without it
+      throw new Error(`Images from '${url.hostname}' are not exported.`);
+    }
+
+    // Reuses a download of this image for up to an hour
+    dataSourceItem.defaultRefreshRate = 60;
+    return dataSourceItem;
+  }
+
+  // The rest of your provider
+  return null;
+};
+```
+
+  </TabItem>
+
+</Tabs>
+
+Register the provider as shown in [Replacing Data Sources](replacing-datasources.md).
+
+### Caching Images
+
+By default an image is downloaded again for every export. To reuse a download, set the item's `DefaultRefreshRate` in your data source provider, as in the sample above: a download of the same URL that is no older than that many minutes is reused. A `DefaultRefreshRate` set on the data source doesn't apply to images.
+
+### Redirects
+
+Image downloads don't follow redirects, because a redirect receives the request's headers, credentials included, whatever host it points to. Any `3xx` response fails the image. To follow redirects for a host you trust, set `RefuseRedirects` to `false` on the item's data source in your data source provider.
+
+`RefuseRedirects` is a property of every Web Resource data source (`RVWebResourceDataSource`), so you can also set it to `true` on your own Web Resource data sources to make their downloads fail on a redirect instead of following it. It is `RefuseRedirects` in ASP.NET, `getRefuseRedirects`/`setRefuseRedirects` in Java, and `refuseRedirects` in JavaScript and Node.js. Because the client can set it too, set it in your data source provider when it matters.
+
+### Image Download Limits
+
+The image downloads of an export are bounded so that they can't hold up the export or use too much memory. Images are downloaded in row order (the first row of every grid, then the second, and so on), so the rows at the top of each grid get their images first.
+
+| Limit | Value |
+|---|---|
+| Downloads at the same time, across all exports on the server | 4 by default, set with `MaxConcurrentImageDownloads` |
+| Time for the downloads of an export to start | 15 seconds; images not started by then are skipped |
+| Time for one image, from the request to the last byte | 5 seconds |
+| Size of one image, `data:` images included | 5 MB; a download is also bound by the [`MaxDownloadSize`](caching.md) setting |
+| Size of one SVG image | 256 KB |
+| Images kept by one export, after scaling | 50 MB |
+
+A download also fails when the response isn't an image (its content type doesn't start with `image/`), for example an HTML error page. PNG, GIF and other images that aren't JPEG or WebP fail when they are larger than 25 megapixels; JPEG and WebP images are decoded at a reduced size. When some images of an export aren't embedded, the server logs a warning with the counts.
+
+To change the number of downloads at the same time, set `MaxConcurrentImageDownloads`. It must be at least 1.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```cs
+builder.Services.AddControllers().AddReveal(builder =>
+{
+    builder.AddSettings(settings =>
+    {
+        settings.Export.MaxConcurrentImageDownloads = 8;
+    });
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+new RevealServerBuilder()
+    .addSettings(settings -> settings.getExportConfiguration().setMaxConcurrentImageDownloads(8))
+    .build();
+```
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```js
+const revealOptions = {
+	exportConfiguration: {
+		maxConcurrentImageDownloads: 8
+	}
+};
+app.use('/', reveal(revealOptions));
+```
+
+  </TabItem>
+
+</Tabs>

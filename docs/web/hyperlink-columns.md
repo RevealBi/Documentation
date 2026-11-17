@@ -4,15 +4,17 @@ Grid hyperlink columns turn the values of a Grid, Pivot, Sparkline, or Data Grid
 
 ## Configuring a Hyperlink Column
 
-Hyperlinks are configured by the end-user in the visualization editor and stored in the dashboard file. Open the visualization editor, select a field, and open the **Hyperlink** section of the field settings. Any field works — text, number, and date fields alike.
+Hyperlinks are configured by the end-user in the visualization editor and stored in the dashboard file. Open the visualization editor, select a field, open the **Display** tab of the field settings, and choose **URL** or **Dashboard Link** in **Display as**. Any field works — text, number, and date fields alike.
 
 | Setting | Description |
 |---|---|
-| **Link type** | **URL** navigates to a web address; **Dashboard** opens another dashboard and can pass filter values to it. |
+| **Display as** | **Text** shows the plain value; **URL** navigates to a web address; **Dashboard Link** opens another dashboard and can pass filter values to it. |
 | **Open Target** | Where the link opens — a new window or tab, or the current one. |
 | **Display Text** | Optional template. When empty, the cell keeps showing the underlying value; when set, the resolved text is shown instead while the cell still navigates to the configured destination. |
 
-Clearing the hyperlink configuration in the field settings removes the link and returns the column to a plain value column.
+Setting **Display as** back to **Text** removes the link and returns the column to a plain value column.
+
+For text fields in the Data Grid, **Display as** also offers **Image**, which shows each value as an image instead of a link. See [Image Columns](../user/chart-types/grid-chart.md#image-columns).
 
 :::info
 
