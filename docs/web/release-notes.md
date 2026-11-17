@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 ### New Features
 
-- The Java SDK now reports when the Reveal server stops working, for example when the operating system ends the engine process because memory runs low. `IRevealServer.getStatus()` returns `RUNNING`, `FAILED` or `SHUT_DOWN`, with the reason for a failure, and `IRevealServer.getTermination()` completes once the server stops running. The SDK doesn't restart the engine: report the failure in your application's [health check](https://help.revealbi.io/web/getting-started-spring-boot/#add-a-health-check) so your platform restarts the application.
+- The Java SDK now reports when the Reveal server stops working, for example when the operating system ends the engine process because memory runs low. `IRevealServer.getStatus()` returns `RUNNING`, `FAILED` or `SHUT_DOWN`, with the reason for a failure, and `IRevealServer.getTermination()` completes once the server stops running. The SDK doesn't restart the engine: report the failure in your application's [health check](https://help.revealbi.io/web/java-health-check/) so your platform restarts the application.
 
 ### Breaking Changes
 
