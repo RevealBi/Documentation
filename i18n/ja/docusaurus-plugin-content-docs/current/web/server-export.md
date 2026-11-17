@@ -188,6 +188,8 @@ public class RevealExportController {
 }
 ```
 
+エクスポートが失敗すると `ExportException` がスローされます。サーバーがエラーを返した場合は、`Export failed with status 500` のように、メッセージに HTTP ステータスが含まれます。サーバーやその他のリクエストには影響しません。Reveal サーバーが[失敗](java-health-check.md)した後は、すべてのエクスポートがステータス 503 で失敗します。
+
   </TabItem>
 
 <TabItem value="node" label="Node.js">    
