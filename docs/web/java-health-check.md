@@ -5,7 +5,7 @@ description: Report in your application's health check when the Reveal server of
 
 # Java Health Checks
 
-The Java SDK runs the Reveal engine as a separate process. If that process stops, for example because the operating system ends it when memory runs low, the Reveal server fails: it answers every request with 503, exports fail, and it doesn't recover on its own. Restarting the application starts a new engine, so report the failure in the application's health check and let your platform, such as Kubernetes, restart the application.
+The Java SDK runs the Reveal engine as a separate process. If that process stops, for example because the operating system ends it when memory runs low, the Reveal server fails: it answers every request with 503, exports fail, and it doesn't recover on its own. Restarting the application starts a new engine, so report the failure in the application's health check and let your platform restart the application.
 
 `IRevealServer.getStatus()` returns the state of the server, `RUNNING`, `FAILED` or `SHUT_DOWN`, and for `FAILED` a message with the reason. `IRevealServer.getTermination()` returns a `CompletionStage` that completes with the `FAILED` or `SHUT_DOWN` status once the server stops running.
 
@@ -71,15 +71,7 @@ public class RevealServerHealthIndicator implements HealthIndicator {
 
 Once the Reveal server fails, `/actuator/health` answers 503. Point your platform's health check at it so the platform restarts the application.
 
-If your platform uses the Spring Boot probes, `/actuator/health/liveness` and `/actuator/health/readiness`, enable them and add the health indicator, named `revealServer`, to their groups. The probes don't include other health indicators by default. Your platform restarts the application when the liveness probe fails, and stops sending it traffic when the readiness probe fails.
-
-```properties title="application.properties"
-management.endpoint.health.probes.enabled=true
-management.endpoint.health.group.liveness.include=livenessState,revealServer
-management.endpoint.health.group.readiness.include=readinessState,revealServer
-```
-
-## Without Spring Boot
+## Servlet Containers
 
 In Tomcat or another servlet container, keep the Reveal server in the `ServletContextListener`, pass it to `RevealEngineServlet` and to a health servlet, and shut it down when the application stops: `RevealEngineServlet` only shuts down a server that it builds itself.
 
