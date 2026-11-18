@@ -188,7 +188,13 @@ public class RevealExportController {
 }
 ```
 
-If an export fails, you get an `ExportException`, with the HTTP status in the message when the server answered with an error, such as `Export failed with status 500`. The server and other requests aren't affected. Once the Reveal server has [failed](java-health-check.md), every export fails with status 503.
+If an export fails, the future that the export method returns completes with an `ExportException`, both for the methods that write a file and for the ones that return a stream. The message includes the HTTP status when the server answered with an error, such as `Export failed with status 500`. The server and other requests aren't affected. Once the Reveal server has [failed](java-health-check.md), every export fails with status 503.
+
+```java
+exporter.exportToPdf(dashboardId, filePath)
+    .thenAccept(path -> send(path))
+    .exceptionally(t -> { log.error("Export failed", t.getCause()); return null; });
+```
 
   </TabItem>
 
