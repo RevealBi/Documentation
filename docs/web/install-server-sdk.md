@@ -63,6 +63,8 @@ The steps below describe how to install the Reveal SDK into an existing Java app
 
 The Java SDK requires Java 17 or higher and a Jakarta EE 9 compliant server. Supported platforms are Windows, Linux, and macOS, in both x64 and ARM64 for all three. Also, if you use Jetty as your server, its version might conflict with the Jetty version used internally by Reveal SDK, which is currently 12.0.12.
 
+To report when the Reveal server stops working, see [Java Health Checks](java-health-check.md).
+
 1 - Update the **pom.xml** file, and add the Reveal Maven repository.
 
 ```xml title="pom.xml"

@@ -188,6 +188,14 @@ public class RevealExportController {
 }
 ```
 
+エクスポートが失敗すると、エクスポート メソッドが返す Future が `ExportException` で完了します。これはファイルを書き込むメソッドとストリームを返すメソッドの両方に該当します。サーバーがエラーを返した場合は、`Export failed with status 500` のように、メッセージに HTTP ステータスが含まれます。サーバーやその他のリクエストには影響しません。Reveal サーバーが[失敗](java-health-check.md)した後は、すべてのエクスポートがステータス 503 で失敗します。
+
+```java
+exporter.exportToPdf(dashboardId, filePath)
+    .thenAccept(path -> send(path))
+    .exceptionally(t -> { log.error("Export failed", t.getCause()); return null; });
+```
+
   </TabItem>
 
 <TabItem value="node" label="Node.js">    

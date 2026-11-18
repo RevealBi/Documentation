@@ -287,6 +287,10 @@
     "message": "タイムゾーン",
     "description": "The label for the doc item 'Time Zones' in sidebar 'webSidebar', linking to the doc web/time-zones"
   },
+  "sidebar.webSidebar.doc.Java Health Checks": {
+    "message": "Java のヘルス チェック",
+    "description": "The label for the doc item 'Java Health Checks' in sidebar 'webSidebar', linking to the doc web/java-health-check"
+  },
   "sidebar.webSidebar.doc.Customizing Map Tiles": {
     "message": "マップ タイルのカスタマイズ",
     "description": "The label for the doc item 'Customizing Map Tiles' in sidebar 'webSidebar', linking to the doc web/customizing-map-tiles"
