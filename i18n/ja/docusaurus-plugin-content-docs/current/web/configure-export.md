@@ -13,6 +13,7 @@
 - ChromiumDownloadFolder - Chromium 実行可能ファイルがダウンロードされるパス。
 - ChromiumExecutablePath - Chromium 実行可能ファイルがサーバーに予めインストールされているパス。
 - MaxConcurrentExportingThreads - エクスポートに使用される最大同時スレッド数。
+- MaxConcurrentExports - 同時に実行される画像、PDF、PowerPoint エクスポートの数。サーバーで実行中のすべてのエクスポートの合計で数えます。エクスポートはデータを読み込む前に順番を待つため、待機中のエクスポートはデータをメモリに保持しません。ExportingTimeout の時間内に開始できないエクスポートは失敗します。デフォルト値は MaxConcurrentExportingThreads の 2 倍です。
 - ExportingTimeout - エクスポート操作のタイムアウト期間 (ミリ秒単位)。デフォルト値は 30000 ms。指定されたタイムアウト期間内にエクスポート操作が終了しない場合、エクスポート操作は失敗します。
 
 Playwright と Chromium をサーバーに手動でインストールするには、[Playwright CLI](https://playwright.dev/dotnet/docs/cli) を使用します。
