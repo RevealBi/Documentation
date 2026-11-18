@@ -9,6 +9,19 @@ import TabItem from '@theme/TabItem';
 
 - The Java SDK now reports when the Reveal server stops working, for example when the operating system ends the engine process because memory runs low. `IRevealServer.getStatus()` returns `RUNNING`, `FAILED` or `SHUT_DOWN`, with the reason for a failure, and `IRevealServer.getTermination()` completes once the server stops running. The SDK doesn't restart the engine: report the failure in your application's [health check](https://help.revealbi.io/web/java-health-check/) so your platform restarts the application.
 
+### Improvements
+
+- The ASP.NET SDK packages (`Reveal.Sdk.AspNetCore`, `Reveal.Sdk.Data`, the `Reveal.Sdk.Data.*` data source packages and `Reveal.Sdk.Cache.Redis`) now include a .NET 10 build next to the .NET 8 one. Projects that target .NET 10 use it automatically, and .NET 8 projects keep working unchanged.
+- The Java and Node.js SDKs now run their engine on .NET 10. The engine includes its own runtime, so there is still nothing to install.
+
+### Breaking Changes
+
+#### Java and Node.js
+- On Linux, the engine now requires glibc 2.27 or later, as .NET 10 does (Ubuntu 18.04 or later, for example). Distributions with an older glibc, such as Ubuntu 16.04, can no longer start the engine.
+
+#### ASP.NET
+- In a .NET 10 project, `Reveal.Sdk.AspNetCore` now depends on version 10.0.0 or later of `Microsoft.AspNetCore.Mvc.NewtonsoftJson`, `Microsoft.Extensions.Hosting` and `Microsoft.Extensions.ObjectPool`. A .NET 10 application that references an older version of one of them no longer builds, and fails with `error NU1605: Detected package downgrade`. Update the reference to 10.0.0 or later, or remove it. .NET 8 projects are not affected.
+
 ### Bugs
 
 #### Java
