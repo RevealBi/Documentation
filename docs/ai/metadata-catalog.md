@@ -170,9 +170,11 @@ In this example, the AI sees only the `dbo.Orders` and `dbo.Employees` tables. I
 Keep the following in mind:
 
 - **Listing fields alone doesn't restrict them.** In `"Default"` mode, `Fields` only adds descriptions, aliases and calculated fields; every other field stays visible. Set `"DiscoveryMode": "Restricted"` on the table to hide the fields you don't list.
-- **A restricted table needs a `Fields` list.** A `"Restricted"` table without `Fields` restricts nothing, the same as a `"Restricted"` database without `Tables`.
-- **Calculated fields are always visible.** Fields defined with an `Expression` are always available to the AI, and so is the expression text. An expression that uses a hidden column reveals that column's name.
-- **Field names are not case-sensitive.** `"title"` matches the `Title` column.
+- **A restricted table needs a `Fields` list.** A `"Restricted"` table without `Fields` restricts nothing, the same as a `"Restricted"` database without `Tables`. An empty list (`"Fields": []`) hides every column.
+- **Calculated fields can use hidden columns.** Fields defined with an `Expression` are always available to the AI. A calculated field (`"ExpressionType": "CalculatedField"`) can use a hidden column, such as `[Salary] / 12` with `Salary` left out of the list: generated dashboards still query the hidden column to compute it, but the AI can't use the column itself. The expression text is shown to the AI, so it reveals the hidden column's name. A post-calculated field (`"PostCalculatedField"`) works on a widget's values, so it can only use listed fields.
+- **Your own descriptions are used as written.** Table and field descriptions from the catalog are shown to the AI as they are. Don't mention hidden columns in them.
+- **Names must match exactly, apart from case.** `"title"` matches the `Title` column, but a table name must include its schema, as in `"dbo.Employees"`. Check the server log after generating a datasource's metadata: a warning names each restricted table that matched no table, whose fields were then left visible, and each listed field that matched no column.
+- **It controls what the AI sees, not data access.** People who edit a dashboard in Reveal can still browse the datasource's columns.
 
 #### Cubes
 
