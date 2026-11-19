@@ -63,6 +63,8 @@ app.listen(8080, () => {
 
 Java SDK には Java 17 以降および Jakarta EE 9 準拠サーバーが必要です。Java SDK は現在、ネイティブ .NET コンポーネントをラップしているため、AIX など、それらのコンポーネントを実行できない一部のまれなプラットフォームはサポートされていません。Jetty をサーバーとして使用する場合、そのバージョンが Reveal SDK で内部的に使用される Jetty バージョン (現在は 12.0.12) と競合する可能性があります。
 
+Reveal サーバーが動作を停止したときに報告するには、[Java のヘルス チェック](java-health-check.md)を参照してください。
+
 1 - **pom.xml** ファイルを更新します。Reveal Maven リポジトリを追加します。
 
 ```xml title="pom.xml"

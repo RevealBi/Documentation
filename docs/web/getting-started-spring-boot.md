@@ -195,3 +195,5 @@ The server listens on `http://localhost:5111`.
 The source code to this sample can be found on [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot).
 
 :::
+
+To report when the Reveal server stops working, see [Java Health Checks](java-health-check.md).

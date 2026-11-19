@@ -152,3 +152,5 @@ FilterRegistrationBean<CorsFilter> corsFilter() {
 このサンプルのソース コードは [GitHub](https://github.com/RevealBi/sdk-samples-javascript/tree/main/01-GettingStarted/server/spring-boot) にあります。
 
 :::
+
+Reveal サーバーが動作を停止したときに報告するには、[Java のヘルス チェック](java-health-check.md)を参照してください。
