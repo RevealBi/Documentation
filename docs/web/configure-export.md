@@ -14,6 +14,7 @@ These settings are exposed through the `RevealEmbedSettings.Export` property.
 - ChromiumExecutablePath - the path where the Chromium executables have been preinstalled on the server.
 - MaxConcurrentExportingThreads - the number of max concurrent threads used for exporting
 - ExportingTimeout - the timeout period, in milliseconds, for an export operation. Default value is 30000 ms. If an export operation does not finish within the specified timeout period, the export operation will fail.
+- MaxConcurrentImageDownloads - the number of images downloaded at the same time for Data Grid image columns in server exports, counted across all the exports running on the server. Default value is 4. See [Image Columns in Exports](server-export.md#image-columns-in-exports).
 
 To manually install Playwright and Chromium on the server, use the [Playwright CLI](https://playwright.dev/dotnet/docs/cli):
 
