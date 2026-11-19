@@ -221,6 +221,58 @@ The same option names are used across all server platforms — ASP.NET sets them
 | `TopP` | `float?` | `1.0` | Nucleus sampling parameter. |
 | `Endpoint` | `string` | `""` | Custom endpoint URL. Use this for OpenAI-compatible APIs. |
 | `ReasoningEffort` | `string?` | `null` | Reasoning effort level for reasoning models (e.g., o3, o4). |
+| `PromptCaching` | `bool` | `true` | On gpt-5.6 and later, caches the static part of each prompt so later requests can reuse it at a fraction of the input price. See [Prompt Caching](#prompt-caching). |
+
+## Prompt Caching
+
+Most prompts the AI SDK sends start with a static part: its instructions, the schema of the tables in use, and the date rules. On gpt-5.6 and later models, with `PromptCaching` on (the default), the provider places an OpenAI cache breakpoint where that part ends. The same step of a later request may then reuse it from OpenAI's cache: on a chat's next turns, and in other users' chats over the same tables, for as long as OpenAI keeps it (at least 30 minutes by default). Reuse isn't guaranteed: the static part has to be identical, OpenAI doesn't cache prompts shorter than 1,024 tokens, and a hit also depends on OpenAI's cache availability and routing. Cache entries aren't shared across OpenAI organizations or processing regions, so bring-your-own-key connections that use different OpenAI accounts don't reuse each other's entries. The rest of the prompt is billed as plain input. A one-off prompt with no static part (metadata enrichment, datasource ranking) isn't cached, since it would pay for the write and never be read. Neither is the answer to a clarifying question: its cached part would hold the earlier turns of the conversation, and the next turn's are one exchange longer, so it would never be read either.
+
+**Cost.** OpenAI bills a cache write at 1.25 times its input price. The cache read rate depends on the model: 0.1 times the input price on most gpt-5.6 and later models, so on those a static part that's read back once has already paid for its write. In one benchmark of repeated dashboard requests with `gpt-5.6-luna` and a warm cache, 61 of 71 requests read from the cache, and estimated input cost was about 38% lower than an uncached baseline. Actual savings depend on the workload.
+
+**When to turn it off.** When the same kind of request rarely comes again within 30 minutes (few, scattered users, or tables that differ on every request), most static parts are written and never read, and each of those writes costs a quarter more than plain input for the part written. In the benchmark's workload, where the static part was about 40% of a prompt, that came to about 11% more input than with caching off; the larger the static share of the prompts, the higher the extra cost, up to 25%. With `PromptCaching` off, gpt-5.6 and later requests neither write nor read the cache. The setting applies to the OpenAI connections the developer registers; bring-your-own-key OpenAI connections don't expose it and always use the default.
+
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
+
+```csharp
+builder.Services.AddRevealAI()
+    .AddOpenAI(options =>
+    {
+        options.ApiKey = builder.Configuration["RevealAI:OpenAI:ApiKey"];
+        options.PromptCaching = false;
+    });
+```
+
+Or in configuration: set `PromptCaching` to `false` in the connection's section, `RevealAI:Providers:openai` or the legacy `RevealAI:OpenAI` section shown in [Using a Configuration File](#using-a-configuration-file) (`RevealAI:Providers:<name>` for a connection registered under a custom name).
+
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+```javascript
+const aiSettings = {
+    openai: {
+        ApiKey: process.env.OPENAI_API_KEY,
+        PromptCaching: false
+    }
+};
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+```java
+Map<String, Object> aiSettings = Map.of(
+        "openai", Map.of(
+                "ApiKey", System.getenv("OPENAI_API_KEY"),
+                "PromptCaching", false));
+```
+
+  </TabItem>
+</Tabs>
+
+Earlier models (gpt-4.1, gpt-5.5 and before) reuse a repeated prompt start on their own at no extra cost, and ignore this setting. If `Endpoint` points at a gateway or deployment that refuses OpenAI's prompt-cache fields with a 400 or 422 error naming them, the provider sends the call again without them, as a best-effort compatibility fallback. Turning `PromptCaching` off doesn't avoid that error, since the provider still sends a cache mode field on gpt-5.6 and later models. After a fallback, the provider stops sending the fields for that model until the connection is recreated, and logs a warning. Those requests then get the endpoint's default caching behavior, which, for an endpoint that forwards them to OpenAI, may still include OpenAI's implicit caching and its write charges. Token usage records count the cache's reads in `CachedInputTokens`.
 
 ## Reasoning Models
 
