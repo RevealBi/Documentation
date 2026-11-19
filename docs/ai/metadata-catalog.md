@@ -103,7 +103,7 @@ At minimum, each datasource needs an `Id` and a `Provider`:
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | `Name` | string | Yes | The name of the database |
-| `DiscoveryMode` | string | No | `"Default"` (discover all tables) or `"Restricted"` (only listed tables). Defaults to `"Default"`. |
+| `DiscoveryMode` | string | No | `"Default"` (discover all tables) or `"Restricted"` (only listed tables). Defaults to `"Default"`. See [Restricting Tables and Fields](#restricting-tables-and-fields). |
 | `Tables` | array | No | List of table schemas in this database |
 
 #### Table
@@ -112,6 +112,7 @@ At minimum, each datasource needs an `Id` and a `Provider`:
 |----------|------|----------|-------------|
 | `Name` | string | Yes | The fully qualified table name (e.g., `"dbo.Orders"`) |
 | `Description` | string | No | Human-readable description. Helps the AI understand what the table contains. |
+| `DiscoveryMode` | string | No | `"Default"` (the AI sees every field) or `"Restricted"` (the AI sees only the listed fields). Defaults to `"Default"`. See [Restricting Tables and Fields](#restricting-tables-and-fields). |
 | `Fields` | array | No | List of field schemas in this table |
 
 #### Field
@@ -124,6 +125,103 @@ At minimum, each datasource needs an `Id` and a `Provider`:
 | `Expression` | string | No | Calculation to perform when using this field in a dashboard. Can refer to existing fields in the table. If this value is set, it transforms this field into a predefined calculated field the AI can pick. It's important that `Name` is unique (not an existing field in the table). |
 | `ExpressionType` | string | Yes if `Expression` is set | Type of calculated field that will be created for this expression: `"CalculatedField"` (for pre-calculated values) or `"PostCalculatedField"` (for post-calculated values). |
 | `DataType` | string | Yes if `Expression` is set | The return datatype of the `Expression` defined for this field. Possible values are: `"String"`, `"Number"`, `"Percentage"`, `"Currency"`, `"Date"`, `"DateTime"`, `"Time"`. |
+
+### Restricting Tables and Fields
+
+By default, the AI can see every table in a database and every field in a table. Use `DiscoveryMode` to limit what it sees:
+
+- On a **database**, `"Restricted"` limits the AI to the tables listed in `Tables`.
+- On a **table**, `"Restricted"` limits the AI to the fields listed in `Fields`.
+
+The two settings are independent. A table can restrict its fields whether its database is `"Restricted"` or `"Default"`.
+
+```json
+{
+  "Datasources": [
+    {
+      "Id": "NorthwindDB",
+      "Provider": "SQLServer",
+      "Databases": [
+        {
+          "Name": "Northwind",
+          "DiscoveryMode": "Restricted",
+          "Tables": [
+            { "Name": "dbo.Orders" },
+            {
+              "Name": "dbo.Employees",
+              "DiscoveryMode": "Restricted",
+              "Fields": [
+                { "Name": "EmployeeID" },
+                { "Name": "FirstName" },
+                { "Name": "LastName" },
+                { "Name": "Title", "Description": "Job title" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+In this example, the AI sees only the `dbo.Orders` and `dbo.Employees` tables. It sees every field of `dbo.Orders`, but only four fields of `dbo.Employees`. Columns such as `BirthDate`, `HomePhone` and `Address` are not described to the AI, and it cannot use them in a dashboard, even if a user asks for them by name.
+
+Keep the following in mind:
+
+- **Listing fields alone doesn't restrict them.** In `"Default"` mode, `Fields` only adds descriptions, aliases and calculated fields; every other field stays visible. Set `"DiscoveryMode": "Restricted"` on the table to hide the fields you don't list.
+- **A restricted table needs a `Fields` list.** A `"Restricted"` table without `Fields` restricts nothing, the same as a `"Restricted"` database without `Tables`. An empty list (`"Fields": []`) hides every column.
+- **Calculated fields can use hidden columns.** Fields defined with an `Expression` are always available to the AI. A calculated field (`"ExpressionType": "CalculatedField"`) can use a hidden column, such as `[Salary] / 12` with `Salary` left out of the list: generated dashboards still query the hidden column to compute it, but the AI can't use the column itself. The expression text is shown to the AI, so it reveals the hidden column's name. A post-calculated field (`"PostCalculatedField"`) works on a widget's values, so it can only use listed fields.
+- **Your own descriptions are used as written.** Table and field descriptions from the catalog are shown to the AI as they are. Don't mention hidden columns in them.
+- **Names must match exactly, apart from case.** `"title"` matches the `Title` column, but a table name must include its schema, as in `"dbo.Employees"`. Check the server log after generating a datasource's metadata: a warning names each restricted table that matched no table, whose fields were then left visible, each listed field that matched no column, and each column a calculated field uses that matches none.
+- **It controls what the AI sees, not data access.** People who edit a dashboard in Reveal can still browse the datasource's columns.
+
+#### Cubes
+
+For cube providers (such as `SSAS` and `SSASHTTP`), each entry in `Databases` is a catalog and each entry in `Tables` is a cube. `"Restricted"` on a catalog limits the AI to the listed cubes. `"Restricted"` on a cube limits it to the listed measures, dimensions and hierarchies, using their unique names:
+
+```json
+{
+  "Datasources": [
+    {
+      "Id": "AdventureWorksCube",
+      "Provider": "SSASHTTP",
+      "Databases": [
+        {
+          "Name": "Adventure Works DW 2008R2",
+          "DiscoveryMode": "Restricted",
+          "Tables": [
+            {
+              "Name": "Finance",
+              "DiscoveryMode": "Restricted",
+              "Fields": [
+                { "Name": "[Measures].[Amount]" },
+                { "Name": "[Account].[Accounts]" },
+                { "Name": "[Date]" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+Because a hierarchy can't be used partially, a cube is restricted in whole units:
+
+| You list | The AI sees |
+|----------|-------------|
+| A measure (`[Measures].[Amount]`) | That measure |
+| A dimension (`[Date]`) | The dimension, with all its hierarchies, levels and sets |
+| A hierarchy (`[Account].[Accounts]`) | The hierarchy, with its levels and sets, inside its dimension |
+| A level or a set | Nothing on its own. List its hierarchy or dimension instead. |
+
+In this example, the AI sees the `Amount` measure, the `Accounts` hierarchy of the `Account` dimension, and everything in the `Date` dimension. The cube's other measures and dimensions, such as `Department` and `Scenario`, are hidden.
+
+#### Applying a Change
+
+`DiscoveryMode` is applied when metadata is generated. Metadata that was already generated keeps the old tables and fields until it is generated again. After you change a restriction, remove the datasource's generated metadata (by default, the files in the [metadata output folder](#metadata-manager-options) whose names start with the datasource `Id`). The next time metadata generation runs, for example at startup or on the [schedule](#metadata-service-options), the datasource's metadata is generated again with the new restriction.
 
 ### Provider Types
 
