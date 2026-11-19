@@ -279,7 +279,7 @@ When an image can't be exported (it is rejected, fails to download, or goes past
 
 :::note
 
-Exports the end-user starts from the dashboard's **Export** menu, and `RevealView.toImage`, are captured from the page in the browser, which doesn't load remote images. In these exports image cells show their URL as text, while `data:` images still show as images. Their data tables print every image cell as text, `data:` images included.
+Exports the end-user starts from the dashboard's **Export** menu, and `RevealView.toImage`, are rendered from a snapshot of the page, which doesn't include remote images. In these exports image cells show their URL as text, while `data:` images still show as images. Their data tables print every image cell as text, `data:` images included.
 
 :::
 

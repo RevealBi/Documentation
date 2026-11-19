@@ -126,6 +126,10 @@ Never fill the user context from values the client sends for this purpose, such 
 
 The data source item your provider receives comes from the client, so write both provider methods as an allowlist: return only the data sources and items your application serves, and throw an exception for anything else. Returning `null` keeps the item as the client sent it. Before setting a filter, set everything that decides what the item reads, such as the table, schema, custom query or stored procedure of a database item, using values from your server. Map any value the request carries, such as a table name or file path, to a value of your own before using it.
 
+:::note
+Server exports of Data Grid image columns also call your data source provider, once for each image URL. Handle those items before the code that throws, or every image is left out of the export. See [Validating Image URLs](server-export.md#validating-image-urls).
+:::
+
 The provider also calls itself on the resource item of CSV, Excel and JSON items, as described in [Securing File Data Sources](#securing-file-data-sources).
 
 <Tabs groupId="code" queryString>
