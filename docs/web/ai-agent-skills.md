@@ -131,7 +131,7 @@ The skills follow your project's existing conventions, such as dependency inject
 
 We ran the same embedding task on a variety of apps, both with and without the `reveal-embed` skill. We graded each run on several measures, including a browser check, security probes, a static code check and an LLM judge.
 
-| | Without skill | With skill |
+| Measure | Without skill | With skill |
 | --- | --- | --- |
 | **Quality** | | |
 | Judge score | 21/30 (70%) | **28/30 (93%)** |
