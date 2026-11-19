@@ -13,6 +13,7 @@ These settings are exposed through the `RevealEmbedSettings.Export` property.
 - ChromiumDownloadFolder - the path where the Chromium executables will be downloaded
 - ChromiumExecutablePath - the path where the Chromium executables have been preinstalled on the server.
 - MaxConcurrentExportingThreads - the number of max concurrent threads used for exporting
+- MaxConcurrentDocumentExports - the number of Image, PDF and PowerPoint exports in progress at the same time, counted across all the exports running on the server. An export waits for its turn before it loads its data, so waiting exports don't hold any data in memory. An export that can't start within the ExportingTimeout fails. Default value is twice MaxConcurrentExportingThreads.
 - ExportingTimeout - the timeout period, in milliseconds, for an export operation. Default value is 30000 ms. If an export operation does not finish within the specified timeout period, the export operation will fail.
 - MaxConcurrentImageDownloads - the number of images downloaded at the same time for Data Grid image columns in server exports, counted across all the exports running on the server. Default value is 4. See [Image Columns in Exports](server-export.md#image-columns-in-exports).
 
