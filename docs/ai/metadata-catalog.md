@@ -343,13 +343,10 @@ RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
 
 ## Metadata Service Options
 
-The **Metadata Service** controls *when* metadata is generated. You can trigger generation at application startup, on a recurring schedule, or both.
+The **Metadata Service** controls *when* metadata is generated. By default, it runs when the application starts: it generates missing metadata, retries failed or outdated metadata, and completes pending enrichment. It can also run on a recurring schedule.
 
-:::info ASP.NET Core only
-
-Scheduled metadata generation via `MetadataService` is currently available on **ASP.NET Core** only. On Node.js and Java, metadata is generated on demand when the AI plugin needs it.
-
-:::
+<Tabs groupId="code" queryString>
+  <TabItem value="aspnet" label="ASP.NET" default>
 
 ```json title="appsettings.json"
 {
@@ -362,10 +359,62 @@ Scheduled metadata generation via `MetadataService` is currently available on **
 }
 ```
 
+  </TabItem>
+
+  <TabItem value="node" label="Node.js">
+
+Pass the same `RevealAI` section to `withOptions`. Options the plugin doesn't define itself are forwarded as-is.
+
+```javascript title="server.js"
+revealAI.withOptions({
+    defaultProvider: 'openai',
+    settings: aiSettings,
+    metadataCatalogFile: 'config/catalog.json',
+    RevealAI: {
+        MetadataService: {
+            GenerateOnStartup: true,
+            CronSchedule: '0 0 * * *'
+        }
+    }
+});
+```
+
+  </TabItem>
+
+  <TabItem value="java" label="Java">
+
+Pass the same `RevealAI` section in the `additionalOptions` map.
+
+```java title="Application.java"
+RevealAIPluginOptions aiPluginOptions = new RevealAIPluginOptions(
+        "openai",
+        "config/catalog.json",
+        null,
+        null,
+        Map.of(
+                "settings", aiSettings,
+                "RevealAI", Map.of(
+                        "MetadataService", Map.of(
+                                "GenerateOnStartup", true,
+                                "CronSchedule", "0 0 * * *"))));
+```
+
+  </TabItem>
+</Tabs>
+
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| `GenerateOnStartup` | boolean | No | When `true`, generates metadata when the application starts. Defaults to `false`. |
-| `CronSchedule` | string | No | Cron expression for recurring metadata generation (e.g., `"0 0 * * *"` for daily at midnight). |
+| `GenerateOnStartup` | boolean | No | When `true`, generates missing metadata when the application starts. Defaults to `true`. When `false` but `CronSchedule` is set, the startup run still retries failed or outdated metadata, applies `ForceRegeneration` and completes pending enrichment; it only skips generating missing metadata. |
+| `CronSchedule` | string | No | Cron expression for recurring metadata generation, evaluated in UTC (e.g., `"0 0 * * *"` for daily at midnight UTC). |
+| `ForceRegeneration` | boolean | No | When `true`, the startup and scheduled runs regenerate metadata even if it already exists. Defaults to `false`. |
+
+:::caution
+
+With `ForceRegeneration`, every startup and scheduled run rebuilds all metadata, repeating the datasource queries and AI requests, and their cost, on each instance that runs the Metadata Service. To refresh only part of the metadata, use a targeted request to the Metadata Generation Endpoint instead.
+
+:::
+
+To generate metadata on demand, for every datasource or only for specific datasources, databases and tables, use the [Metadata Generation Endpoint](metadata-generation.md) (preview).
 
 ---
 

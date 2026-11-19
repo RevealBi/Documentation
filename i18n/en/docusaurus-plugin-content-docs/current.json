@@ -806,5 +806,9 @@
   "sidebar.aiSidebar.doc.Request Configuration": {
     "message": "Request Configuration",
     "description": "The label for the doc item 'Request Configuration' in sidebar 'aiSidebar', linking to the doc ai/sdk-request-configuration"
+  },
+  "sidebar.aiSidebar.doc.Metadata Generation Endpoint": {
+    "message": "Metadata Generation Endpoint",
+    "description": "The label for the doc item 'Metadata Generation Endpoint' in sidebar 'aiSidebar', linking to the doc ai/metadata-generation"
   }
 }
