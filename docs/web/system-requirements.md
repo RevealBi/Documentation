@@ -27,3 +27,7 @@ If you use Jetty as your server, its version might conflict with the Jetty versi
 The Java and Node.js SDKs include their own .NET 10 runtime, so you don't need to install .NET.
 
 :::
+
+## Linux
+
+Connecting to Microsoft Analysis Services over HTTP with a Windows (domain) account requires the `gss-ntlmssp` package. Without it, the connection fails with "Unable to connect". This applies to the ASP.NET, Java and Node.js SDKs.
