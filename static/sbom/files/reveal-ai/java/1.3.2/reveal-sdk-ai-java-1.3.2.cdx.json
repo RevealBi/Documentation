@@ -1,0 +1,5362 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:e6f85109-9db6-42df-b986-351d059af76f",
+  "version": 2,
+  "metadata": {
+    "timestamp": "2026-11-26T14:44:00Z",
+    "lifecycles": [
+      {
+        "phase": "post-build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "author": "OWASP Foundation",
+          "group": "org.cyclonedx",
+          "name": "cyclonedx-maven-plugin",
+          "version": "2.9.3",
+          "description": "CycloneDX Maven plugin",
+          "hashes": [
+            {
+              "alg": "MD5",
+              "content": "e7c87ab327b65b23c681fc9dc8bb620b"
+            },
+            {
+              "alg": "SHA-1",
+              "content": "fa3f0f04f4d5077b5e085d4d09aa2e68aeba5260"
+            },
+            {
+              "alg": "SHA-256",
+              "content": "c452d5eebe28bc86bef2e7c72d129f04f60877bef843eac8120f01fb655be293"
+            },
+            {
+              "alg": "SHA-512",
+              "content": "ec0344ed2ffe62d565aaf936a37140d04c7fffa8669a666be0366cd44eec3195232d79841cdec47030b79068216ac7e1a8c805255758e3d418dae32a4b9b9beb"
+            },
+            {
+              "alg": "SHA-384",
+              "content": "3df26b2a00d87fe090851975ebcc30217f98634e7c47d07128e148f325ebfe3bc0790b2f52ad4591734b7b0de738f003"
+            },
+            {
+              "alg": "SHA3-384",
+              "content": "470c1b4962379b5b6494c75bd1475da3519bbe2543999c95f26b4021164d3d05419b0c3f704443162fe5433a204250e9"
+            },
+            {
+              "alg": "SHA3-256",
+              "content": "900e9c4edb18940ed3c4a4ba6946957fa613ef0d4b0c380551638f229206373c"
+            },
+            {
+              "alg": "SHA3-512",
+              "content": "5e36433e18ae24f7460902da27818874df5d1d73df1a97e49e7369335f7cc61ca595466a2d37789fba7eaa7f7f251b29216c3d7a78910b2ec38e2ed68ea84876"
+            }
+          ]
+        },
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.57.2"
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.revealbi/reveal-sdk-ai@1.3.2?type=jar",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "group": "io.revealbi",
+      "name": "reveal-sdk-ai",
+      "version": "1.3.2",
+      "description": "Reveal SDK AI plugin for Java — adds AI capabilities to Reveal BI dashboards",
+      "licenses": [
+        {
+          "license": {
+            "name": "Reveal License"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.revealbi/reveal-sdk-ai@1.3.2?type=jar",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d92d58ed30ed36c869556567010f9adc"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "85eba7aa857b003392f3472dc23ab085d276faff"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "c20c730ab1fd6e5fa4cc56d8816e0c84af0a22a4140a1971330a8bef1b9304eb"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "293d43093b9af2076ec44cc372d5cdfba0990eaa7af19a86110edd66b37baeac56c0706189aac8219f6559f0c4c3faf0ed85baaf923810f6736c1c0441a49fa2"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "e0519f30452c2d570155c495639f06f9ee64a25bc31cd234967aa9e03c71e0bc9d30d11e1c6df9196082ed1e0e9ccd2b"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "4f935c3a7c337357198fc49ab7453adcd2b710073e3fa5076931d377ebb9221a74c858e8349c4a27eb4bae6673aa6cca"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "8eae6653652198fb7478132a6d0076e2b95eab9a72b9fb7a44d706354f7d3cce"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "e1408b1c694dcc6732631358d9941a1ab30e3195ee702f14f10bfe506a692b502b5159156fcd9993915faa942b8e891adc881af3e21a3714af8e808d863faf97"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://maven.revealbi.io/repository/public/io/revealbi/reveal-sdk-ai/1.3.2/reveal-sdk-ai-1.3.2.jar"
+        },
+        {
+          "type": "website",
+          "url": "https://help.revealbi.io/ai/install-server-sdk/"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:release-tag",
+          "value": "v1.7.21-preview"
+        },
+        {
+          "name": "infragistics:native-source-commit",
+          "value": "5ada28193ec979abc8a3c08c06a2e891af7f1983"
+        },
+        {
+          "name": "infragistics:source-commit",
+          "value": "7f5636e2c30bbfc616c2209b33c9b5d0ec36417b"
+        },
+        {
+          "name": "infragistics:scope",
+          "value": "AI wrapper plus the reveal-sdk-servlet 2.3.0 Maven runtime graph declared by its POM. The OS-selected reveal-sdk-engine 2.3.0 dependency is not inventoried here."
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "maven.goal",
+        "value": "makeBom"
+      },
+      {
+        "name": "maven.scopes",
+        "value": "compile,runtime,system"
+      },
+      {
+        "name": "io.revealbi.sbom.platform-resolution",
+        "value": "Platform independent. reveal-sdk-core 2.3.0 selects reveal-sdk-engine-<os>-<arch> 2.3.0 through OS-activated Maven profiles; that host-selected engine dependency was excluded during resolution and is not part of this inventory."
+      },
+      {
+        "name": "io.revealbi.sbom.release",
+        "value": "ai-1.3.2"
+      },
+      {
+        "name": "io.revealbi.sbom.inventory-scope",
+        "value": "Published Maven compile/runtime dependencies of io.revealbi:reveal-sdk-ai:1.3.2 resolved from its released POM in isolation (Maven 3.9.16): reveal-sdk-servlet 2.3.0, reveal-sdk-core 2.3.0, Jetty 12.0.12, org.json, SLF4J API and Jackson 2.17.2 (the AI POM pins jackson-databind 2.17.2, which overrides the core [2.13,3.0) range). Plus the .NET assemblies bundled under native/ in the JAR, identified as NuGet packages. Excluded: the OS-selected reveal-sdk-engine 2.3.0 JAR, host-provided assemblies the plugin loads from the Reveal engine, provided servlet API, and host operating-system libraries. An application that declares a newer Reveal Java SDK overrides the 2.3.0 graph."
+      },
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-11-26T14:44:00Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI wrapper, the bundled .NET AI assemblies, the Maven runtime graph of reveal-sdk-servlet 2.3.0 and the npm production graph of reveal-sdk-node 2.3.2. The OS-selected Reveal engine, host-provided .NET assemblies, separately downloaded Chromium and host OS libraries are outside scan coverage."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Resolved the published POM and npm package graphs and identified the bundled .NET assemblies by SHA-256 match against published NuGet packages. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites and released bytecode (javap) and JavaScript inspection; unresolved configuration or call-path exposure remains in_triage."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.7.1"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline; --no-resolve --all-packages"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-11-26"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "vex_statements_included"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "23"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.revealbi/reveal-sdk-servlet@2.3.0?type=jar",
+      "group": "io.revealbi",
+      "name": "reveal-sdk-servlet",
+      "version": "2.3.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "16cae95f715193e714fc5a72bf70cb86"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "81438a35edfde384fd8ca14db06b0cc597e8c44b"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "2700b8d5c58b73b8cdc76d257d18026c39d8811cdc0e95d376d1f662fccc0bbd"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "c4674fe159e23f4858595d8a9253c00dee095ddfc3d72aa8eaf67efa617321105caaeb53235da300991b632515f973189a61312b4a853a5c015c08e58433b7d1"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "e4aa0510d174a561ac4ad2c732b5d7c060694df4b297eb820dcf5cde6f88937251bd06ce7c721d51c4459316b4d2e512"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "5894ae20507fcee3de78da1a9c8bd7d095f0a583594e2dc26bfcd336a46cfe8342e46467d58b14b654d1906d00409740"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "a628dd75d9a82fce11a3daea7e01bad08504c34f3673f4e6d6eac97909673bc6"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "b7c908761dd57535ec606e8c0a16b04c56607b8f82656c1f9a41be55060559b84be093a6949d66c3d95456ae8ccb4b9fdb2968f3b7eb80590e96cd99576a3d43"
+        }
+      ],
+      "purl": "pkg:maven/io.revealbi/reveal-sdk-servlet@2.3.0?type=jar",
+      "supplier": {
+        "name": "Infragistics"
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.revealbi/reveal-sdk-core@2.3.0?type=jar",
+      "group": "io.revealbi",
+      "name": "reveal-sdk-core",
+      "version": "2.3.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "279738b7d08af40d9b7a71db7d24c15d"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "cc3c9764caa0ff084a18a2dba226939be5c3b386"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "dc8818925a1611bea638b9ea9027db38fde5d80ffcc824d432e2b1c15ac49744"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "b6507516f1900a1afd7e2b0cadaab99f283a211587a16d1f1520561d1256eb533a2903df66b3858ddf1ae4045099ef13f0da0d29a27ea92f1a5d2ebb1a90e99c"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b3e4fc93e4349f4b75401114b6027c26a232ff3640553ed18598a678a0818b7297a7f70d411402c1a3b6b4f34b3628d6"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "2200b7acc5831bb51e560f2cf5f9cfc34ed579de46c8873967c83ffbd2089fac697552a9884b34f6dccd84633675bd8d"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "3e7ab64727799972e169ec6a621b67a0915128b259d037eb3cf72632cbcd8020"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "701d69450fedcda63100659674050e3d7bf713533e4dbd8bf64aad69777c01a05f6853acbe15bdd066347606bd81b38c7a784d085426912fc142ef429082ac23"
+        }
+      ],
+      "purl": "pkg:maven/io.revealbi/reveal-sdk-core@2.3.0?type=jar",
+      "supplier": {
+        "name": "Infragistics"
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.json/json@20231013?type=jar",
+      "group": "org.json",
+      "name": "json",
+      "version": "20231013",
+      "description": "JSON is a light-weight, language independent, data interchange format. See http://www.JSON.org/ The files in this package implement JSON encoders/decoders in Java. It also includes the capability to convert between JSON and XML, HTTP headers, Cookies, and CDL. This is a reference implementation. There are a large number of JSON packages in Java. Perhaps someday the Java community will standardize on one. Until then, choose carefully.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "1a0702c57783ce9e948252c34644f328"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "e22e0c040fe16f04ffdb85d851d77b07fc05ea52"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "0f18192df289114e17aa1a0d0a7f8372cc9f5c7e4f7e39adcf8906fe714fa7d3"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "a5cdd1ed984448d6538746429f2d1a0ec8f64f93af0e84870ce898a9f07a81d11bf27d2ee081471975772efc8a0d3d5e05541197a532066e9edb09ad032d31a3"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "5d2629c7fa21af332369d9feb30dca6bbc76378615252fd5fc8a9bd55deba17951a45ae3384672f317b12a5d25a285bc"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "b96f3dc5d35e439d33e31522538d5d91cb8d88f12d19071a66ab31722c46fbb9c945f3894942203f4dd945df93bc3d91"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "69c7a6f7873b85a74ec9547b081d217a7407deac8d0912ac4906c0eb2c2f87f5"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "fd2bcc534d0bcd4b1cf3337e1f5f8073d5693f3e65d789203312a166f91874d7c31ea1715de9eaea3e0437639591ae4157ceef4b76354e6681f34bc034a06d7a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Public Domain",
+            "url": "https://github.com/stleary/JSON-java/blob/master/LICENSE"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.json/json@20231013?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/douglascrockford/JSON-java"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/douglascrockford/JSON-java.git"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+      "publisher": "Webtide",
+      "group": "org.eclipse.jetty",
+      "name": "jetty-server",
+      "version": "12.0.12",
+      "description": "The legacy jetty server artifact.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "015e76b0d3f29dc9a7f1d76da93f258a"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "77591ab10113d7de7eb8a01bb4d9d23b234aebd1"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "299b992e50c7d9871b450fa33aa0e36d5641218ae10ffbf4449f59d845fe2e22"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "3dae7c18a5748485153402727eae138935e87b3e80517acbe7f823f16fa85479edc1bcb79c0d27d27b19424ea933ac12527c591dccd2d05bf6d5ae69567ba009"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "bc1978251a2f5eecf52025b8f0f339d09b9ee30cf1ac6c05d3bdb73ef358b6485e5734e5285ba83214da59190675e899"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "f38f1e5fd5b0981df804d26b6159a3b4ea9551f00ff06c02e8657f5b8f8278ae4d198a195dae51b125d56769f96abb9f"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "7241020ee93020055674c8a076181b8572979045f6f38824a9e01d98033832e7"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "15c03f1940f92351ee4e0a55ada644e5f3519ea165102477b25f10f832a7bdc348e1d92f161293498db4acd64a26c62751f48dfec0672152f988343bc369e4a2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jetty.org/jetty-core/jetty-server"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jetty/jetty.project/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://www.eclipse.org/lists/jetty-dev/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jetty/jetty.project/jetty-core/jetty-server"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+      "publisher": "Webtide",
+      "group": "org.eclipse.jetty",
+      "name": "jetty-http",
+      "version": "12.0.12",
+      "description": "The Eclipse Jetty Project",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "6df36f430a5ff932095e56d9b1f814ff"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "549fe58ae50b9c061d09803fb0d2659a93ce0ecd"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "83a7d1b268f6a8dc87981caa96b4a87df6e7f6bd9d9315099aae7056e91b02ce"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "25b4b8def1ec445cc263cc9eb4762d9dab7af070a7b08cc8593963f239ed26267a9c213532838b5f96fe789a4859869c7d9b702b7bbdeebbf1f28a5274c3e6f2"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "074a6fbc4cd64ecbe8cfdc3e7d098c1e88bcb9a5b7c6652d6f37fd009185d92f64a2c89a88a2e22c04140aa94b1101b5"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "d84690b15991db94b34d55ba473929b44b0b78d4df469ede462500004441d9ad63a4c5e9c812e4118165484a983f226b"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "b8e3e77feb862c21d4c5ae2b2c9b9eeb47ea610d01e36a206a58538930271c17"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "d1e5a24a9d1a17826f724758177d121c681453dbd3937448d818a79cb63bf47846306d4f85428547d464b374ef64931a370c792f2624c4633a24c9ea0267da56"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jetty.org/jetty-core/jetty-http"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jetty/jetty.project/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://www.eclipse.org/lists/jetty-dev/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jetty/jetty.project/jetty-core/jetty-http"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar",
+      "publisher": "Webtide",
+      "group": "org.eclipse.jetty",
+      "name": "jetty-util",
+      "version": "12.0.12",
+      "description": "Utility classes for Jetty",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5d734e1499a7edb8bebefbeacf13f3a6"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "f7b1e4f835c38d12668b426d327118e767d2f1d4"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "6186c46baa8e236fdebedb26c6d2bfa10203908db08050d72425f5aca707c18d"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "ec16ee722c16f52b583ba77666ba724eef1df6a0517fe91d89be7d0c2e0f67b765a511e1c117743e259e8b4bb4dd3081ee3dbf264dedb0cb4fa0c6ecbce6a781"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "574b2e08e2722b7677efddbe9e1b1b6b494c50ec74e11e7c20564175b045a78aaed4dcf46b87cfe4fd15428e9b069fde"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "41d0fadbdb24f9131a41300d8a88c8b7a2a40b3a288c701664038b9ce4aff956ee257e1cd7868bb1f16ae0b465db9651"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "a7c28361864b7f2a19ca2813cb5bd188baefda9c1b7bed2948b051b0fba0d06f"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "c82d9e895a606a390cb6d77b4297086e8e7788f6652e1d24f760bbb56587fa5492eadfa8713693f4eec997390b90a426beb2a5d4f7893bd83f32311fc5a60b10"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jetty.org/jetty-core/jetty-util"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jetty/jetty.project/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://www.eclipse.org/lists/jetty-dev/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jetty/jetty.project/jetty-core/jetty-util"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+      "publisher": "Webtide",
+      "group": "org.eclipse.jetty",
+      "name": "jetty-io",
+      "version": "12.0.12",
+      "description": "The Eclipse Jetty Project",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2c2b6c2aa02d06eb806fcd02311d6fc6"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "4e2cd5c23e8ba550238f35c361c22ffb1e7bf00c"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "0187db0f7a994677ca44f8065f5a46aeee405d6a4b7e91b74a50ca262ddcbb39"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "f1da5e46d9b8a0c487ac2294afeb412f00406852802da28db26f7be9e9e4bc082479a95609d17477023f88d7aef9677ad2f9998736efe7373f3c370fad8f1256"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "0c3b2dbccb0e9a1c4bed1e08bd3b1306682d3b61081d239967bccb5688c58f5e2c95699abe422949e9fecdb96ffbbe94"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "7f1981bedecabb5e4c01b9bdf564999fd68e1a07153338ddfbe528bdbf6686d67d69f4718b8ec44cdd05dd7ac5451990"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "f0d1a01219f9d105c9b70dc6e052aa1bd678c7f9c1e60163e9355339d71cf782"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "c67cb2315a34916bd06553ae1c69c6f586a7608fd09bdafabc03945198495edb8d48b3fe3083bb5b70dd8d75efdce25eafa2410023a6f2dec2ffa0a3c0809732"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jetty.org/jetty-core/jetty-io"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jetty/jetty.project/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://www.eclipse.org/lists/jetty-dev/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jetty/jetty.project/jetty-core/jetty-io"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar",
+      "publisher": "QOS.ch",
+      "group": "org.slf4j",
+      "name": "slf4j-api",
+      "version": "2.0.13",
+      "description": "The slf4j API",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7f4028aa04f75427327f3f30cd62ba4e"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "80229737f704b121a318bba5d5deacbcf395bc77"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "e7c2a48e8515ba1f49fa637d57b4e2f590b3f5bd97407ac699c3aa5efb1204a9"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "b4eeb5757118e264ec7f107d879270784357380d6f53471b7874dd7e0166fdf5686a95eb66bab867abbe9536da032ab052e207165211391c293cbf6178431fb6"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b67cbb4ef32141423000dd4e067bf32e0c1dd2c4689c611522b9fedfc1744513175a22f4b1276f2cec4721c9467cf882"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "817fc9641f4fc52bfd76006886c6eba975f6f09b2a7cc59334729a8cc033807c8e89be9ec4309acfc16ed65ff6eee018"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "f26080cceb5a2e605f3844d6dc8dd3f14c543cb14510765d841d71a64fa454dc"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "00646c78d65ec854e157638f40735f1888aa585ede59915d58386c599c2fe54ec8c1da73284aeff00ce3142165e33c4c995ad39d08843c31e9e4d7e32c746836"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.slf4j.org"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/qos-ch/slf4j/slf4j-parent/slf4j-api"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.eclipse.jetty/jetty-client@12.0.12?type=jar",
+      "publisher": "Webtide",
+      "group": "org.eclipse.jetty",
+      "name": "jetty-client",
+      "version": "12.0.12",
+      "description": "The Eclipse Jetty Project",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "552a2b1ab07f9fd00e00c9e4346e9e21"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "38e3bc5b5023eca185622e5301f6755088cf1b4c"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "d737d69d3500ac637fe1d8387e6c36e40e442bcb6ce2ba1f82587d57b8802161"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "e9bc7b1a25a18d0b3b894ee9f0a54b605b40df214420021e9cc369dce924dda7479648abd259129db94aff548a109bd5b9b54e34d1f891901da2a551e9aed428"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "f43546b67fd79388464648e49b86531e1da0a61d54d8df649fc195a2e7c7fb9cee3d389b8126bec95429bf7883fce39f"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "24c5801a66ae1a426c9dcddf6985f37e835880852f23552b56ec4715e637d50e3591f7091505f4712c4c3b65b0d44a86"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "a309fefffa8532b770922c32eca108b5c24a6b0195ab079b55aa532054d22b08"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "51621d6de584ce2c15a0303a16587a4ce78495ea27c4ce8a3616cdb0b8c2a41db2fa7f017524b2cadb9e0b7ae7d52fcab7c2a386a0939011156dd18ca28ad836"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.eclipse.jetty/jetty-client@12.0.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jetty.org/jetty-core/jetty-client"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jetty/jetty.project/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://www.eclipse.org/lists/jetty-dev/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jetty/jetty.project/jetty-core/jetty-client"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.0.12?type=jar",
+      "publisher": "Webtide",
+      "group": "org.eclipse.jetty",
+      "name": "jetty-alpn-client",
+      "version": "12.0.12",
+      "description": "The Eclipse Jetty Project",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a461cbd3348127d992aacf2787a2397e"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "3a37c538d31b49f1d40e68dd8aa772775fb3d913"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "e267fdc6cc74db2e9e26ec27965d5a733004d7684ba6c2ed7c0b30a70434a47b"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "82479e589072266c8d4ec9daca81b576096053bab45858198264f1498f70f72df1b4dba4ba2495d44525402278e8cad5f0b00a9505eb8939f5bd6bee32e19496"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "0dc9f15476ba44ff5825267469bcebc1d7632924cc01771a9c458594a6b290d85a8a3b138f84ec3f29b33f8db63cf434"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "0edb20528744c80e4f8c2a5e5614eaa1c7d1ef4fdd179350dd23cb061ef77b56ac9b33ed6f7c14dd38be48864d39cf4e"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "942dc7e6117c0744c066af77f8118b8bebc24b0b93343da34dd760436f8751a8"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "efe8875565871128f6a949d8eada60f3014fde0ff1cd65ec7591cd188c49456d4b03cb869763a505fbf10d313103bdd14853368bb4174c9309d340a1f85f1670"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.0.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jetty.org/jetty-core/jetty-alpn/jetty-alpn-client"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jetty/jetty.project/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://www.eclipse.org/lists/jetty-dev/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jetty/jetty.project/jetty-core/jetty-alpn/jetty-alpn-client"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "publisher": "FasterXML",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "version": "2.17.2",
+      "description": "General data-binding functionality for Jackson: works on core streaming API",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "3e1ff7c1f0fda885946619a47ef9d5de"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "e6deb029e5901e027c129341fac39e515066b68c"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "c04993f33c0f845342653784f14f38373d005280e6359db5f808701cfae73c0c"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "ec62267bf58aea531ec7f253e67974fac89e8aa61e7b54a7fb00edf3132ecb969b510630fd353adbbd2ab7d845a25702f168c296c57983a00bd6abc9ce3630f9"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "d2de4602f779a456d0037f9d64efa8bcf9a1a9f06e3c628b2a3b2313319e22209cdfab9157f9251243bc05da870bdcf4"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "14618ad7737700ccd941feefd0bbbb7235ecbc1ac0cf22ba1bd72155eb68a800e98fe72f6ea03ab71cb9927a1d117d39"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "800f9886351c0968d6640e9c7e312c963b0146022fcfc27b173d06fe0c581041"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "49ff7e89ab8936043ac9371cc05c57bf88899a91ca11bd50227c58da9e6716c270e38c34bade5ba5cf39ed6443edf538bd25e85127c3e22f6788b84e14f3019a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/FasterXML/jackson"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/FasterXML/jackson-databind/issues"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.2?type=jar",
+      "publisher": "FasterXML",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-annotations",
+      "version": "2.17.2",
+      "description": "Core annotations used for value types, used by Jackson data binding package.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e68e7e593ae47e106421688707683297"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "147b7b9412ffff24339f8aba080b292448e08698"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "873a606e23507969f9bbbea939d5e19274a88775ea5a169ba7e2d795aa5156e1"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "006d3a054b22daa7f378b005cc29b3544dc7f3b509176e0eac946e0a3bafa73b824bae61b5183b61938b19044d2142a285da2fce2ffdaef5bfe91b2d8dcb6804"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "edb09e196ede070ba1ab1b99e96be6049f60b664eb89e60e28f08327e510e7aedf8c4696bc719113d24fe3367b8b89b7"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "9c54c25762e7b5e05c5e17deaa35ef5b9af764fb3e19bd790479920d9fb7084f3e89dd2ea2ef2fd680e72aebe74ab271"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "5d1625676fc95b4625ef73658e47074a24804518d1455a610ff40b3017b1b86e"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "b4354ed913789689ac4f7dc7385aa2de383324a6b8ff59a2497b6b605c2451bec372c8a4335189c916b24c7a68e83102e0f53fca54c2389f2006ccc84a5eaa17"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/FasterXML/jackson"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/FasterXML/jackson-annotations/issues"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/FasterXML/jackson-annotations"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "publisher": "FasterXML",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-core",
+      "version": "2.17.2",
+      "description": "Core Jackson processing abstractions (aka Streaming API), implementation for JSON",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "50c2dab1f29136714d5ef5c6c640336c"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "969a35cb35c86512acbadcdbbbfb044c877db814"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "721a189241dab0525d9e858e5cb604d3ecc0ede081e2de77d6f34fa5779a5b46"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "694ae3bf756421d925f833f59a6309c7748ac3a68b28ed4de8ce0d6f93347dfc19991d1106db911c7da78e20734e6f44a02caef751150378a6ffa638c80fc75b"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "acc969e3c312f9d2694e3202eb601dbe2317cb9a444dcb67f6e0f00871f6d5593bebcba272afab55f2541c6a7a107842"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "890610781e8f8c3c1283d8f6bd446d19dd5d83107a852f1446d5d2a4fdb57ff611b36b2267eba46746a305607c5e586a"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "a4b8acc3fd90cc86a9a1507a3e51abf984521f9189218f17a3b551e0a7ccdf44"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "f55e7d0b7a68919c8f8d3b5472796ecb82df852a97b1bb4bb0b45d1f9408d50545b717e8632f7ff975b77541e4d4b35de6ed32eeaff556677227b0985a74172b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/FasterXML/jackson-core"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/FasterXML/jackson-core/issues"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/AIPlugin@2.3.0.0",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "AIPlugin",
+      "version": "2.3.0.0",
+      "scope": "required",
+      "purl": "pkg:generic/AIPlugin@2.3.0.0",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.3.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/AIPlugin.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/AIPlugin.dll=6ed0903790be53db2550030b3e0ab8f03e69f97d7da54b1aab2e7b15751a68b8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "Reveal.Sdk.AI.Abstractions.Debug",
+      "version": "1.7.21.23258",
+      "scope": "required",
+      "purl": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Abstractions.Debug.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Abstractions.Debug.dll=70bd47102b0fcd455ad92f3ceb698f58f3ce09e43b876f0e857baa8ea9a12634"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Anthropic@12.24.1",
+      "name": "Anthropic",
+      "version": "12.24.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Anthropic@12.24.1",
+      "authors": [
+        {
+          "name": "Anthropic"
+        }
+      ],
+      "description": "The official .NET library for the Anthropic API.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright 2026 Anthropic",
+      "externalReferences": [
+        {
+          "url": "https://docs.anthropic.com/claude/reference/",
+          "type": "website"
+        },
+        {
+          "url": "https://www.github.com/anthropics/anthropic-sdk-csharp",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "12.24.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Anthropic.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Anthropic.dll=534ec9f194ca86423b0fc0f9b6601e379295659c622c3762b8f94bca85e54785"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "name": "Azure.AI.OpenAI",
+      "version": "2.8.0-beta.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Azure OpenAI's official extension package for using OpenAI's .NET library with the Azure OpenAI Service.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.8.0-beta.1/sdk/openai/Azure.AI.OpenAI/README.md",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.800.25.61201"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Azure.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Azure.AI.OpenAI.dll=4690f5e82b37bb693f5aa58ffc099b3937f10ef69850d0929a18abc96292bd17"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/DotLiquid@2.3.197",
+      "name": "DotLiquid",
+      "version": "2.3.197",
+      "scope": "required",
+      "purl": "pkg:nuget/DotLiquid@2.3.197",
+      "authors": [
+        {
+          "name": "Tim Jones, Alessandro Petrelli"
+        }
+      ],
+      "description": "DotLiquid is a templating system ported to the .NET framework from Ruby’s Liquid Markup.",
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR MS-PL"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://www.dotliquid.org/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotliquid/dotliquid.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.3.197"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/DotLiquid.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/DotLiquid.dll=1981abe7f827e61be22445730134ce7e39e44db00ed55c7faddcb83aea2f430e"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/it/DotLiquid.resources.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/it/DotLiquid.resources.dll=993fd6d9c2ea7e50a75ca7f080fef1968b1f2dac455c6ab11a6e31e19d2930e2"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "name": "Google.Api.CommonProtos",
+      "version": "2.17.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Common Protocol Buffer messages for Google APIs",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.17.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.CommonProtos.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.CommonProtos.dll=329cf0f2b66c5cbf675321f0d6b33c17d1092e5761f32d3d2c1307a110c0dbbd"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "name": "Google.Api.Gax.Grpc",
+      "version": "4.12.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Additional support classes for Google gRPC API client libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "4.12.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.Gax.Grpc.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.Gax.Grpc.dll=2c447aafe6c5793b8a5c395ea2fbd57bbaff9576a47b29bf1f71ca3ed5459328"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "name": "Google.Api.Gax",
+      "version": "4.12.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Support classes for Google API client libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "4.12.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.Gax.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.Gax.dll=b724c4317e3247d31108dfd9f0c266694e661e3890200869de41fdbb0812957a"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "name": "Google.Apis.Auth",
+      "version": "1.72.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "The Google APIs Client Library is a runtime client for working with Google services.\r\n\r\nThis package includes auth components like user-credential, authorization code flow, etc. for making authenticated calls using the OAuth2 spec.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.Auth.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.Auth.dll=a83ec6d1c80a0fcc818fae12ea93a7c425435cb55cf7e5328275432556471a80"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "name": "Google.Apis.Core",
+      "version": "1.72.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "The Google APIs Core Library contains the Google APIs HTTP layer, JSON support, Data-store, logging and so on.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.Core.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.Core.dll=138a800b3dbf78e7d70a031516efb9f75e0a1af198301721ecfbefd0e9a0ea4b"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis@1.72.0",
+      "name": "Google.Apis",
+      "version": "1.72.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Apis@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "The Google APIs Client Library is a runtime client for working with Google services.\r\nThe library supports service requests, media upload and download, etc.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.dll=f26773f2c697cf381393183c141a1a6529d7c1e269c28a18b05d450cccf7a393"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "name": "Google.Cloud.AIPlatform.V1",
+      "version": "3.60.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Recommended Google client library to access the Vertex AI API (v1), which allows you to train high-quality custom machine learning models with minimal machine learning expertise and effort.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2026 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.60.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.AIPlatform.V1.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.AIPlatform.V1.dll=75f934ac7ceb5b4576a14e23988357a8dc3dbb20839188d254faf6aa56cf7e70"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "name": "Google.Cloud.Iam.V1",
+      "version": "3.5.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.5.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.Iam.V1.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.Iam.V1.dll=828687648dd36cd45d5a075f954f3b224bb721c2fad02c39b729176ab6718e90"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "name": "Google.Cloud.Location",
+      "version": "2.4.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "gRPC services for the Google Cloud Locations API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.4.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.Location.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.Location.dll=35a2c85ff192d479dfc57e4870a58616b9e641c90d1625f0842146642fc7c6a6"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.LongRunning@3.5.0",
+      "name": "Google.LongRunning",
+      "version": "3.5.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.LongRunning@3.5.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.5.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.LongRunning.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.LongRunning.dll=f28db50842aaebe022b837be016aca0a77bcf71b2f371a785428c1ab504b919c"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Protobuf@3.31.1",
+      "name": "Google.Protobuf",
+      "version": "3.31.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Protobuf@3.31.1",
+      "authors": [
+        {
+          "name": "Google Inc."
+        }
+      ],
+      "description": "C# runtime library for Protocol Buffers - Google's data interchange format.",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2015, Google Inc.",
+      "externalReferences": [
+        {
+          "url": "https://github.com/protocolbuffers/protobuf",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/protocolbuffers/protobuf.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.31.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Protobuf.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Protobuf.dll=dbd8f2ff0822d2fc0164ae255c0661ce84afc9ba328a30a4a50ba5f54ffee896"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Auth@2.71.0",
+      "name": "Grpc.Auth",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Auth@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": "gRPC C# Authentication Library",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Auth.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Auth.dll=d9f18b65825caaec7242324cb96f03d263aa9086d1ec747d1d28242bf8f58db2"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "name": "Grpc.Core.Api",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": "gRPC C# Surface API",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Core.Api.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Core.Api.dll=c14ac4d4c97e03cf1f05892caeb6346457ac25c8b1b7ee3e12a720fcaa1fb2e2"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "name": "Grpc.Net.Client",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": ".NET client for gRPC",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Net.Client.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Net.Client.dll=75fe0ec43986ef6e78cf41268728909b9819263273fb1e84146c1c6ef58e0028"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "name": "Grpc.Net.Common",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": "Infrastructure for common functionality in gRPC",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Net.Common.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Net.Common.dll=c31a578aed06bd7723ec24139882bbd10e18b79a6fe190482c771113ce32bd43"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "name": "Microsoft.Extensions.AI.Abstractions",
+      "version": "10.8.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Abstractions representing generative AI components.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/extensions",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.800.326.37702"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.AI.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.AI.Abstractions.dll=6a94202a8b3b01f558a71bad4cb94232a6e419d2230f22287bfa56b6eba4cce3"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "name": "Microsoft.Extensions.AI.OpenAI",
+      "version": "10.8.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Implementation of generative AI abstractions for OpenAI-compatible endpoints.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/extensions",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.800.326.37702"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.AI.OpenAI.dll=a9cb6276857d3dbdf9c3f5eaa61df54f481998dc77275ddf988fff5feb9a9c51"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "name": "Microsoft.Extensions.FileProviders.Abstractions",
+      "version": "10.0.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Abstractions of files and directories.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.FileProviders.IDirectoryContents\r\nMicrosoft.Extensions.FileProviders.IFileInfo\r\nMicrosoft.Extensions.FileProviders.IFileProvider",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.326.7603"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll=d007f41f3f8902f56ce5b6d1dff420bb0df2d35bd3fdf202467cbb1d49fb8c08"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "name": "Microsoft.Extensions.Hosting.Abstractions",
+      "version": "10.0.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Hosting and startup abstractions for applications.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.326.7603"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll=97fac88b2f6dd64dda07e844f91fbe02042fe379216e92e2604553efda591248"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "name": "Microsoft.Extensions.ObjectPool",
+      "version": "8.0.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "A simple object pool implementation.\r\n\r\nThis package was built from the source code at https://github.com/dotnet/aspnetcore/tree/8e941eb42f819adb116b881195158b3887a70a1c",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://asp.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/aspnetcore",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "8.0.123.58008"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.ObjectPool.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.ObjectPool.dll=16ba19a951af5463d6141197a41386c16424be28855c3e82750039fc5cafc58e"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "name": "Microsoft.Extensions.Options.DataAnnotations",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides additional DataAnnotations specific functionality related to Options.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll=ddf6b2cd3148611375d25eb9ca92c98d250b84b4eb33f6f60efbfff5a7893124"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/OpenAI@2.12.0",
+      "name": "OpenAI",
+      "version": "2.12.0",
+      "scope": "required",
+      "purl": "pkg:nuget/OpenAI@2.12.0",
+      "authors": [
+        {
+          "name": "OpenAI"
+        }
+      ],
+      "description": "The official .NET library for the OpenAI service API.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright (c) 2026 OpenAI (https://openai.com)",
+      "externalReferences": [
+        {
+          "url": "https://github.com/openai/openai-dotnet/tree/OpenAI_2.12.0",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/openai/openai-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.12.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/OpenAI.dll=6f47facf543ac57942252e365c9ed2506c5d858efa43ef9d4c875f71f92606ea"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.Anthropic",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "Anthropic AI provider integration for the Reveal SDK. Enables the use of Anthropic's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Anthropic.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Anthropic.dll=97931f981240367edad200e3140b105a36d0e12cb4f06e7ba4df61884c7bf47e"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "false"
+        },
+        {
+          "name": "infragistics:build-variant",
+          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.AspNetCore",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "ASP.NET Core integration for Reveal.Sdk.AI, enabling AI-powered analytics in ASP.NET Core applications.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.AspNetCore.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.AspNetCore.dll=06f2b997c166d4722abcdcf6d1028a8a37ccdc31f6032ad211858a8befea184e"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "false"
+        },
+        {
+          "name": "infragistics:build-variant",
+          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.AzureOpenAI",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "Azure OpenAI provider integration for the Reveal SDK. Enables the use of Azure OpenAI's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll=06242d559afa45a1b856d5bce032d52ebffd902a80debfb61a718b751b769188"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "false"
+        },
+        {
+          "name": "infragistics:build-variant",
+          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.Google",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "Google AI provider integration for the Reveal SDK. Enables the use of Google's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Google.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Google.dll=cb6f4c16a4f2482d9d56249e4945bd4e0ef8a2dc56f9d0e545ff4daf6f14c2e9"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "false"
+        },
+        {
+          "name": "infragistics:build-variant",
+          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.OpenAI",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "OpenAI provider integration for the Reveal SDK. Enables the use of OpenAI's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.OpenAI.dll=31d79358630aa8ca2939a28e0bb59f6b99bcc0f32137ff1ab4ebc3d7b52cc753"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "false"
+        },
+        {
+          "name": "infragistics:build-variant",
+          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+      "name": "Reveal.Sdk.AI",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "AI capabilities for Reveal SDK, providing intelligent data analysis and insights.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.dll=e3e0395721180274182c528873f0c8b2dff880d864c00bde82e37dc698415135"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "false"
+        },
+        {
+          "name": "infragistics:build-variant",
+          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+      "name": "Reveal.Sdk.Dom",
+      "version": "0.1.689-beta",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+      "authors": [
+        {
+          "name": "Brian Lagunas"
+        }
+      ],
+      "description": "The Reveal.Sdk.Dom is a Document Object Model (DOM) for the Reveal .rdash file format. It allows developers using the Reveal SDK to load, edit, and create dashboards using .NET.",
+      "copyright": "Copyright ©2022 Infragistics Inc.",
+      "externalReferences": [
+        {
+          "url": "https://www.revealbi.io/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/RevealBi/Reveal.Sdk.Dom",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "0.1.689.5097"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.Dom.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.Dom.dll=41eaca1a5ca0554bda7c39bbe6fdfe7cf40ac1353797bf9ef92936c770438c65"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/SqlParserCS@0.6.5",
+      "name": "SqlParserCS",
+      "version": "0.6.5",
+      "scope": "required",
+      "purl": "pkg:nuget/SqlParserCS@0.6.5",
+      "authors": [
+        {
+          "name": "Tyler Brinks"
+        }
+      ],
+      "description": "Friendly SQL Parser for .NET",
+      "copyright": "2025 Tyler Brinks",
+      "externalReferences": [
+        {
+          "url": "https://github.com/TylerBrinks/SqlParser-cs",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/TylerBrinks/SqlParser-cs",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "0.6.5.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/SqlParser.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/SqlParser.dll=0c80f92bc658c0a55feb3f9a51fbcb5ec48368a0389d609ec1c3fea8ac886518"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.ClientModel@1.14.0",
+      "name": "System.ClientModel",
+      "version": "1.14.0",
+      "scope": "required",
+      "purl": "pkg:nuget/System.ClientModel@1.14.0",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Contains building blocks for clients that call cloud services.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/blob/System.ClientModel_1.14.0/sdk/core/System.ClientModel/README.md",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.1400.26.30307"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.ClientModel.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.ClientModel.dll=8cc9da03e824b1f5ed412f3fde42539ae258d9e1b2db991feb8603b878bcac8a"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "name": "System.IO.Pipelines",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Single producer single consumer byte buffer management.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Pipelines.Pipe\r\nSystem.IO.Pipelines.PipeWriter\r\nSystem.IO.Pipelines.PipeReader",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.IO.Pipelines.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.IO.Pipelines.dll=9fa53a32f45686f97af49aba89fba89a5e0140d5839618fae318edac635437c8"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Memory.Data@10.0.3",
+      "name": "System.Memory.Data",
+      "version": "10.0.3",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Memory.Data@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "A lightweight abstraction for a payload of bytes. Provides methods for converting between strings, streams, JSON, and bytes.\r\n\r\nCommonly Used Types:\r\nSystem.BinaryData",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.326.7603"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Memory.Data.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Memory.Data.dll=e7837fb6e7d6dae7d2a05a8934c3ed92ecff3192ee86521de9cf080b28bb96b2"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "name": "System.Net.ServerSentEvents",
+      "version": "10.0.2",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides a simple parser for server-sent events (SSE).\r\n\r\nCommonly Used Types:\r\nSystem.Net.ServerSentEvents.SseParser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.225.61305"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Net.ServerSentEvents.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Net.ServerSentEvents.dll=9f970a18ca00533628c71e471e05984b1c0d179b121aa0b7ab0b08c1f0fa5a60"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "name": "System.Text.Encodings.Web",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll=da808440792e010b374d20dd4695574ea60f893382bd5afc8c444853033a38aa"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Text.Encodings.Web.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Text.Encodings.Web.dll=98951dac337286ddb49b53f316209830ca1ccc6c56b57c51033273d02ccd286b"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Text.Json@10.0.10",
+      "name": "System.Text.Json",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Text.Json@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Text.Json.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Text.Json.dll=cfbdfa2690d3770d531ec91c19d340dccc117df74427a7e4227d71d514eea063"
+        },
+        {
+          "name": "infragistics:nuget-binary-match",
+          "value": "true"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:maven/io.revealbi/reveal-sdk-ai@1.3.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.revealbi/reveal-sdk-servlet@2.3.0?type=jar",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+        "pkg:generic/AIPlugin@2.3.0.0",
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Anthropic@12.24.1",
+        "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+        "pkg:nuget/DotLiquid@2.3.197",
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Apis.Core@1.72.0",
+        "pkg:nuget/Google.Apis@1.72.0",
+        "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+        "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+        "pkg:nuget/Google.Cloud.Location@2.4.0",
+        "pkg:nuget/Google.LongRunning@3.5.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Auth@2.71.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Client@2.71.0",
+        "pkg:nuget/Grpc.Net.Common@2.71.0",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/SqlParserCS@0.6.5",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.IO.Pipelines@10.0.10",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.revealbi/reveal-sdk-servlet@2.3.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.revealbi/reveal-sdk-core@2.3.0?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.revealbi/reveal-sdk-core@2.3.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.json/json@20231013?type=jar",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+        "pkg:maven/org.eclipse.jetty/jetty-client@12.0.12?type=jar",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.json/json@20231013?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.eclipse.jetty/jetty-client@12.0.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.0.12?type=jar",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.0.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.0.12?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.13?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.2?type=jar",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.2?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/AIPlugin@2.3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Anthropic@12.24.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/DotLiquid@2.3.197",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.LongRunning@3.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Protobuf@3.31.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Auth@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/OpenAI@2.12.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/SqlParserCS@0.6.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.ClientModel@1.14.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Memory.Data@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Text.Json@10.0.10",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vex:GHSA-355h-qmc2-wpwf:pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+      "id": "GHSA-355h-qmc2-wpwf",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-355h-qmc2-wpwf"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-2332",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-2332"
+          }
+        }
+      ],
+      "cwes": [
+        444
+      ],
+      "description": "Jetty has HTTP Request Smuggling via Chunked Extension Quoted-String Parsing",
+      "advisories": [
+        {
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-355h-qmc2-wpwf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2332"
+        },
+        {
+          "url": "https://w4ke.info/2025/06/18/funky-chunks.html"
+        },
+        {
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-2332.json"
+        },
+        {
+          "url": "https://gitlab.eclipse.org/security/cve-assignment/-/issues/89"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2458187"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-2332"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50263"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50223"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50222"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50221"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:25089"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:22453"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:21773"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:20568"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:17668"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:14272"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:10175"
+        }
+      ],
+      "published": "2026-04-14T23:40:31Z",
+      "updated": "2026-09-10T03:50:42.440988142Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Request smuggling needs a front-end proxy and Jetty to disagree on where a request ends. reveal-sdk-core 2.3.0 CallbackServer.start() creates a direct HTTP/1.1 ServerConnector on an ephemeral port for the local Reveal engine; nothing in the SDK places a proxy in front of it. Unlike core 2.3.2, core 2.3.0 does not call setHost, so the listener binds the wildcard address. A client that connects directly can only send requests on its own connection, and the handler rejects every request (404) whose RevealBI-Auth header does not match the per-process UUID.randomUUID() token before routing. Reassess if a reverse proxy is placed in front of the callback port.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-3pjw-73gf-8qr5:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-3pjw-73gf-8qr5",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-3pjw-73gf-8qr5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59888",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-59888"
+          }
+        }
+      ],
+      "cwes": [
+        915
+      ],
+      "description": "jackson-databind: @JsonIgnore on a Record property is bypassed with a PropertyNamingStrategy",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-3pjw-73gf-8qr5"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59888"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5974"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/baa2cdf5ca2b2717fbb88d91955d69d8651df3e4"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/c7c678360624da5bc7eed2152789fa522880db9d"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-07-21T19:33:06Z",
+      "updated": "2026-09-10T03:51:10.312389083Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass requires deserializing into a Java record that uses @JsonIgnore while a PropertyNamingStrategy is configured. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no com.fasterxml.jackson.annotation type and never sets a naming strategy. The three records in reveal-sdk-ai (RevealAIPluginOptions and its nested option records) are not deserialization targets: Reveal deserializes only into JsonNode, ObjectNode, Object, HashMap or LinkedHashMap<String,Object>. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-5gvw-p9qm-jgwh:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-5gvw-p9qm-jgwh",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-5gvw-p9qm-jgwh"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59889",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-59889"
+          }
+        }
+      ],
+      "cwes": [
+        863
+      ],
+      "description": "jackson-databind: @JsonView bypassed for @JsonUnwrapped container properties on deserialization",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59889"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6060"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6056"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/d627a8a86fcb062429282f79f3f256f181ed2c7b"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-07-21T22:00:43Z",
+      "updated": "2026-10-19T19:45:04.650428177Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass requires a bean property annotated with both @JsonView and @JsonUnwrapped, deserialized under an active view. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no Jackson annotation, view or ObjectReader, and deserializes only into untyped trees and maps (JsonNode, ObjectNode, Object, HashMap, LinkedHashMap<String,Object>). Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-5jmj-h7xm-6q6v:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-5jmj-h7xm-6q6v",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-5jmj-h7xm-6q6v"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54515",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54515"
+          }
+        }
+      ],
+      "cwes": [
+        915
+      ],
+      "description": "jackson-databind has case-insensitive deserialization bypasses per-property @JsonIgnoreProperties",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5jmj-h7xm-6q6v"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54515"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5962"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5964"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/0e1b0b211f7a53baa62ba2f4c9bd006c7bf4d5fa"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-06-23T21:23:58Z",
+      "updated": "2026-09-10T03:51:08.069993966Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass requires case-insensitive property matching (MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES or @JsonFormat) together with @JsonIgnoreProperties on a bean target. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references neither MapperFeature nor any Jackson annotation, calls no ObjectMapper configure/enable/disable method, and deserializes only into untyped trees and maps. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-72hv-8253-57qq:pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "id": "GHSA-72hv-8253-57qq",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-72hv-8253-57qq"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-18401",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-18401"
+          }
+        }
+      ],
+      "cwes": [
+        770
+      ],
+      "description": "jackson-core: Number Length Constraint Bypass in Async Parser Leads to Potential DoS Condition",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-72hv-8253-57qq"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18401"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1555"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/b0c428e6f993e1b5ece5c1c3cb2523e887cd52cf"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ],
+      "published": "2026-02-28T02:01:05Z",
+      "updated": "2026-09-10T03:50:34.318297905Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The number-length bypass is in Jackson's non-blocking (async) parser. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no non-blocking parser, byte feeder or JsonFactory reference; every parse goes through ObjectMapper.readTree(String), which uses the synchronous reader-based parser. jackson-databind 2.17.2 itself never creates a non-blocking parser. Jackson 2.17.2 is selected because the reveal-sdk-ai POM pins it, so both the AI wrapper and reveal-sdk-core run on it; host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7hhh-6rmp-j9qf:pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "id": "GHSA-7hhh-6rmp-j9qf",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7hhh-6rmp-j9qf"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-89425",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-89425"
+          }
+        }
+      ],
+      "cwes": [
+        400,
+        770
+      ],
+      "description": "jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -> unbounded StringBuilder growth (DoS)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-7hhh-6rmp-j9qf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89425"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1698"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/211cf2c5d91abbec38067f37efc1363cd4e88ee3"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/releases/tag/jackson-core-2.18.11"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/releases/tag/jackson-core-3.2.3"
+        }
+      ],
+      "published": "2026-10-01T15:20:27Z",
+      "updated": "2026-10-01T15:30:05.552671898Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The unbounded error message is built only by UTF8DataInputJsonParser, which Jackson creates for java.io.DataInput sources. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no java/io/DataInput reference; the only parse entry point is ObjectMapper.readTree(String), which uses ReaderBasedJsonParser, a parser the advisory confirms enforces maxErrorTokenLength. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7p3p-8qv8-m2vh:pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+      "id": "GHSA-7p3p-8qv8-m2vh",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7p3p-8qv8-m2vh"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-6790",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6790"
+          }
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "Eclipse Jetty: HTTP Authority/Host mismatch",
+      "advisories": [
+        {
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-7p3p-8qv8-m2vh"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6790"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/issues/14870"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/14871"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/14897"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/14970"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/3e5a4daec196859b8886b6f67b1157dab47cdb6f"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/67ba9e6b39661810123680d9c894e99a7940c73d"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/cbca3076f7c914a232e7a8b22fa95fbf7e67a6cc"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.0.35"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.1.9"
+        },
+        {
+          "url": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/99"
+        }
+      ],
+      "published": "2026-07-22T22:56:43Z",
+      "updated": "2026-09-10T03:51:11.096731360Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The missing :authority/Host consistency check is on Jetty's HTTP/2 and HTTP/3 paths; the advisory states HTTP/1.1 already enforces it. reveal-sdk-core 2.3.0 CallbackServer.start() creates ServerConnector(Server) with the default HTTP/1.1 connection factory, and the resolved Maven graph contains no jetty-http2 or jetty-http3 artifact. The callback handler also makes no host-based decision.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-cxp5-3px4-pw24:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-cxp5-3px4-pw24",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-cxp5-3px4-pw24"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-91777",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-91777"
+          }
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "jackson-databind quadratic forward-reference completion ",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-cxp5-3px4-pw24"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91777"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6204"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6204"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/37ad9b81712cbb9fb62c2d2c1813593252a24b67"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.11"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.3"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.3"
+        }
+      ],
+      "published": "2026-09-30T15:37:24Z",
+      "updated": "2026-09-30T15:46:18.051343022Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Forward-reference completion is used only for object identities (@JsonIdentityInfo) on bean targets. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no Jackson annotation or object-identity type, and untyped tree and map deserialization does not track object identities. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-f4v5-65jj-pcr2:pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+      "id": "GHSA-f4v5-65jj-pcr2",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-f4v5-65jj-pcr2"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-10051",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-10051"
+          }
+        }
+      ],
+      "cwes": [
+        200
+      ],
+      "description": "Eclipse Jetty: Cross-Request Leakage for trailers on HTTP/1.1 keep-alive connections",
+      "advisories": [
+        {
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-f4v5-65jj-pcr2"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10051"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/15162"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/15163"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/72206b3ea623cf7ed8729b47a83ee628ff10e8eb"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/dc27e8d3ab743fe27935ea2d8c41756eb6c5bae9"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.0.36"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.1.10"
+        },
+        {
+          "url": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/119"
+        }
+      ],
+      "published": "2026-07-22T22:56:05Z",
+      "updated": "2026-09-10T03:50:51.882727145Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Stale trailer fields are visible only to code that reads Request.getTrailers(). No class in reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references getTrailers, so no Reveal callback decision reads trailers.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-ghc9-756g-vrcv:pkg:maven/org.json/json@20231013?type=jar",
+      "id": "GHSA-ghc9-756g-vrcv",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-ghc9-756g-vrcv"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59171",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-59171"
+          }
+        }
+      ],
+      "cwes": [
+        400,
+        770
+      ],
+      "description": "JSON-java: JSONTokener Has Unbounded Numeric String Resource-Exhaustion DoS",
+      "advisories": [
+        {
+          "url": "https://github.com/stleary/JSON-java/security/advisories/GHSA-ghc9-756g-vrcv"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59171"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java/pull/1065"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java/pull/1067"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java/commit/703ac34a55400f9c50889e3d0c778b6d7962e81c"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java/commit/ab92bb9088a37f9e346cd1dda66f6a3c40a201e0"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java/commit/fce83c91bb229dde472283dea648a9a8955237fd"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java"
+        },
+        {
+          "url": "https://github.com/stleary/JSON-java/releases/tag/20260719"
+        }
+      ],
+      "published": "2026-11-09T21:12:46Z",
+      "updated": "2026-11-09T21:30:07.800246808Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "reveal-sdk-core 2.3.0 declares org.json:json 20231013, but no class in reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0, reveal-sdk-core 2.3.0, Jackson 2.17.2, Jetty 12.0.12 or SLF4J API 2.0.13 in the resolved graph references org/json. JSONTokener is never called; Reveal parses JSON with Jackson.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.json/json@20231013?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-gx83-3vf8-gh7j:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-gx83-3vf8-gh7j",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-gx83-3vf8-gh7j"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-83557",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-83557"
+          }
+        }
+      ],
+      "cwes": [
+        502,
+        915
+      ],
+      "description": "jackson-databind: Comparable missing from DefaultBaseTypeLimitingValidator's unsafe base types (incomplete PolymorphicTypeValidator denylist)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-gx83-3vf8-gh7j"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83557"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6156"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6155"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/eb3b7fc0f9c0d27f471550ac3316b17d1987388f"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.10"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.2"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2"
+        }
+      ],
+      "published": "2026-09-28T20:44:25Z",
+      "updated": "2026-09-28T21:00:05.608227628Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The incomplete denylist matters only when polymorphic default typing is activated with DefaultBaseTypeLimitingValidator. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference; it constructs default ObjectMapper instances, which have default typing disabled. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-hgj6-7826-r7m5:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-hgj6-7826-r7m5",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-hgj6-7826-r7m5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54514",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54514"
+          }
+        }
+      ],
+      "cwes": [
+        918
+      ],
+      "description": "jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-hgj6-7826-r7m5"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54514"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5951"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/1f5a1037b1e9e05920e755cb35f198bcd46667e4"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-06-23T21:22:54Z",
+      "updated": "2026-11-10T19:45:35.335928286Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Eager DNS resolution happens only when JSON is deserialized into java.net.InetSocketAddress. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no InetSocketAddress or InetAddress reference and no typed deserialization: its targets are JsonNode, ObjectNode, Object, HashMap and LinkedHashMap<String,Object>, which Jackson fills with strings, numbers, booleans, lists and maps only. Default typing, which could select another type, is not enabled. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-j3rv-43j4-c7qm:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-j3rv-43j4-c7qm",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-j3rv-43j4-c7qm"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54512",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54512"
+          }
+        }
+      ],
+      "cwes": [
+        184,
+        502
+      ],
+      "description": "jackson-databind has a PolymorphicTypeValidator bypass via generic type parameters that allows arbitrary class instantiation",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-j3rv-43j4-c7qm"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54512"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5988"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/434d6c511de7fdd9872f29157aafb6162d12d8d5"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        }
+      ],
+      "published": "2026-06-23T21:21:38Z",
+      "updated": "2026-10-28T10:56:49.472327085Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass is in PolymorphicTypeValidator handling of generic type parameters and requires polymorphic typing. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference, and deserializes only into untyped trees and maps. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-p6pp-m3f8-5c89:pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "id": "GHSA-p6pp-m3f8-5c89",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-p6pp-m3f8-5c89"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-89407",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-89407"
+          }
+        }
+      ],
+      "cwes": [
+        1333,
+        400
+      ],
+      "description": " jackson-core: ReDoS: quadratic backtracking in NumberInput.PATTERN_FLOAT via looksLikeValidNumber()",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-p6pp-m3f8-5c89"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89407"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/issues/1649"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1650"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1701"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/731e794f62623aa0d86ced52490166be903fbb1d"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/e7acd64cc99bd346704423dc2bfea1ab0a08ddff"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ],
+      "published": "2026-10-01T15:19:21Z",
+      "updated": "2026-10-01T15:30:13.452657713Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The quadratic regex is in NumberInput.looksLikeValidNumber(). javap of the released jackson-core 2.17.2 and jackson-databind 2.17.2 JARs finds no invocation of that method, and reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 do not reference NumberInput. In this graph the method is reachable only by an application calling the public helper directly, which the released Reveal code does not do.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-q4xh-88c3-wmh7:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-q4xh-88c3-wmh7",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-q4xh-88c3-wmh7"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-68497",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-68497"
+          }
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "jackson-databind: Duration XMLGregorianCalendar Unbounded Number Parse DoS",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-q4xh-88c3-wmh7"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68497"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6127"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/a99b7e74c8928f43f6975773a8c862c8316178bd"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.10"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.2"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2"
+        }
+      ],
+      "published": "2026-09-28T20:19:46Z",
+      "updated": "2026-09-28T20:30:05.315085978Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The unbounded number parse occurs only when deserializing into javax.xml.datatype.Duration or XMLGregorianCalendar. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no javax/xml/datatype reference, deserializes only into untyped trees and maps, and does not enable default typing. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-r7wm-3cxj-wff9:pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+      "id": "GHSA-r7wm-3cxj-wff9",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-r7wm-3cxj-wff9"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-68494",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-68494"
+          }
+        }
+      ],
+      "cwes": [
+        770
+      ],
+      "description": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-r7wm-3cxj-wff9"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68494"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/pull/1611"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/050b429804dce2a7e08f0be1b0b4c3d040fdb9cd"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/4cdd529749da396cc7edf6d4a2aad41d47902641"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core/commit/c5941e5aae7fd5aeac55d66933cfb82b9aabeef8"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ],
+      "published": "2026-07-21T21:58:53Z",
+      "updated": "2026-10-02T23:15:06.853935725Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The chunked digit accumulation bypass is in Jackson's non-blocking (async) parser. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no non-blocking parser or byte feeder reference, and jackson-databind 2.17.2 never creates one; Reveal parses JSON synchronously through ObjectMapper.readTree(String). Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-rmj7-2vxq-3g9f:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-rmj7-2vxq-3g9f",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-rmj7-2vxq-3g9f"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54513",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-54513"
+          }
+        }
+      ],
+      "cwes": [
+        184
+      ],
+      "description": "jackson-databind has an array subtype allowlist bypass in BasicPolymorphicTypeValidator (allowIfSubTypeIsArray)",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-rmj7-2vxq-3g9f"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54513"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5983"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/5981"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5984"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/24529da29fdf46ff94ca38de9ebf31cd188f5e8e"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/01d1692c8d0ed03e51a0e3c4f8a9e6908e4931e5"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50849"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:54435"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:54622"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:62260"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:66488"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:66545"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-54513"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492010"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-54513.json"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:36839"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:40895"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:41951"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:43218"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:43400"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44061"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44062"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44063"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44064"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44065"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44066"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:44271"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:48095"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:48151"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50846"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50847"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:50848"
+        }
+      ],
+      "published": "2026-06-23T21:22:15Z",
+      "updated": "2026-09-11T15:45:08.499771763Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The array-subtype bypass is in BasicPolymorphicTypeValidator and requires polymorphic typing. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-vvgp-rfg2-7rr6:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-vvgp-rfg2-7rr6",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-vvgp-rfg2-7rr6"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-77310",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-77310"
+          }
+        }
+      ],
+      "cwes": [
+        918
+      ],
+      "description": "jackson-databind: Incomplete fix for CVE-2026-54514: eager DNS resolution (SSRF) still present in InetAddress deserialization",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-vvgp-rfg2-7rr6"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77310"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6058"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/2fc7bd9057dd051d7dea0e5fcad89822d0fa5ebd"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.9"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.5"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.1"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.5"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.1"
+        }
+      ],
+      "published": "2026-09-28T20:17:41Z",
+      "updated": "2026-09-28T20:30:05.324367371Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Eager DNS resolution happens only when JSON is deserialized into java.net.InetAddress. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no InetAddress reference and deserializes only into JsonNode, ObjectNode, Object, HashMap and LinkedHashMap<String,Object>; default typing is not enabled. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-w7x5-g22v-xqhr:pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar",
+      "id": "GHSA-w7x5-g22v-xqhr",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-w7x5-g22v-xqhr"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8384",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-8384"
+          }
+        }
+      ],
+      "cwes": [
+        647
+      ],
+      "description": "Eclipse Jetty: Path parameter traversal",
+      "advisories": [
+        {
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-w7x5-g22v-xqhr"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8384"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/14969"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/pull/14973"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/82969c77f6da46e27008b10b3c14840cd31db084"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/commit/ade27ce93a37c33278720250d85c48601230ae3f"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.0.35"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.1.9"
+        },
+        {
+          "url": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/108"
+        }
+      ],
+      "published": "2026-07-22T22:57:36Z",
+      "updated": "2026-09-10T03:51:12.485862890Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The bypass requires SecurityHandler.PathMapped to protect a path prefix. jetty-security is not in the resolved Maven graph, none of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references SecurityHandler, and the reveal-sdk-core 2.3.0 callback handler authenticates every path with the per-process token rather than path-based constraints.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.eclipse.jetty/jetty-util@12.0.12?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-wjgm-6hv5-3cvf:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-wjgm-6hv5-3cvf",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-wjgm-6hv5-3cvf"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-19032",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-19032"
+          }
+        }
+      ],
+      "cwes": [
+        470,
+        610
+      ],
+      "description": "jackson-databind: Path Deserialization Missing Scheme Allowlist for FileSystemProvider Resolution",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-wjgm-6hv5-3cvf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19032"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/6129"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/cc6756b61ed90b6b9227f670e0408d5d9bd48551"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/ce26eda3481cd796f76ba4c53ffe1da23b53f166"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/d94bb632becfe0ba96926b9909ab06d1f87aad6d"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.10"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.2"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.6"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2"
+        }
+      ],
+      "published": "2026-09-28T20:19:19Z",
+      "updated": "2026-09-28T20:30:05.331167692Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "FileSystemProvider resolution happens only when JSON is deserialized into java.nio.file.Path. The java.nio.file references in reveal-sdk-ai 1.3.2 and reveal-sdk-core 2.3.0 are file I/O calls, not Jackson targets: every Reveal deserialization targets JsonNode, ObjectNode, Object, HashMap or LinkedHashMap<String,Object>, and default typing is not enabled. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-wjpw-4j6x-6rwh:pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar",
+      "id": "GHSA-wjpw-4j6x-6rwh",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-wjpw-4j6x-6rwh"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-11143",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-11143"
+          }
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "org.eclipse.jetty:jetty-http has different parsing of invalid URIs",
+      "advisories": [
+        {
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-wjpw-4j6x-6rwh"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11143"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "url": "https://github.com/user-attachments/files/22222625/Java.Eclipse.Jetty.Report_.Incorrect.Parsing.Priority.of.the.IPv6.Hostname.Delimeter.pdf"
+        },
+        {
+          "url": "https://github.com/user-attachments/files/22222626/Java.Eclipse.Jetty.Report_.The.Parsing.Priority.of.the.Delimiter.pdf"
+        },
+        {
+          "url": "https://github.com/user-attachments/files/22222627/Java.Eclipse.Jetty.Report_.Parsing.Difference.Due.to.Deformed.Scheme.pdf"
+        },
+        {
+          "url": "https://github.com/user-attachments/files/22222630/Java.Eclipse.Jetty.Report_.Improper.IPv4-mapped.IPv6.Parsing.pdf"
+        }
+      ],
+      "published": "2026-03-05T21:41:25Z",
+      "updated": "2026-09-10T03:50:41.746719137Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The advisory affects applications that make security decisions from Jetty's parse of unusual URIs (scheme, IPv6 host, authority). The reveal-sdk-core 2.3.0 callback handler authenticates every request by comparing the RevealBI-Auth header with the per-process token before it routes on HttpURI.getPath(); no allow or deny decision uses the parsed scheme or authority. jetty-client is used only by EngineClient, for requests to http://127.0.0.1:<port> engine URLs that the SDK builds itself.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.eclipse.jetty/jetty-http@12.0.12?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-wv8q-qhhj-9h54:pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+      "id": "GHSA-wv8q-qhhj-9h54",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-wv8q-qhhj-9h54"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-91776",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-91776"
+          }
+        }
+      ],
+      "cwes": [
+        400
+      ],
+      "description": "jackson-databind retains every unknown raw type ID ",
+      "advisories": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-wv8q-qhhj-9h54"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91776"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/6203"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/2870d1d6dc1b7e1c07ee11dd5b04ab71cddbb577"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.18.11"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.21.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-2.22.3"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.1.7"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.3"
+        }
+      ],
+      "published": "2026-09-30T15:36:55Z",
+      "updated": "2026-09-30T15:46:18.451708212Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Unknown raw type IDs are retained only during polymorphic type-ID resolution (@JsonTypeInfo or default typing). Neither is present in the released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0, so no type IDs are resolved. Host application code that uses the same JAR must be assessed separately.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-xxh7-fcf3-rj7f:pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar",
+      "id": "GHSA-xxh7-fcf3-rj7f",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-xxh7-fcf3-rj7f"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-1605",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-1605"
+          }
+        }
+      ],
+      "cwes": [
+        400,
+        401
+      ],
+      "description": "The Eclipse Jetty Server Artifact has a Gzip request memory leak ",
+      "advisories": [
+        {
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-xxh7-fcf3-rj7f"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1605"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project/issues/14260"
+        },
+        {
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "url": "https://gitlab.eclipse.org/security/cve-assignment/-/issues/79"
+        }
+      ],
+      "published": "2026-03-05T21:27:59Z",
+      "updated": "2026-09-10T03:50:41.955076296Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The leak is in GzipHandler request inflation. reveal-sdk-core 2.3.0 CallbackServer installs its own Handler.Abstract directly with Server.setHandler, and none of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references GzipHandler, so Jetty does not inflate gzip request bodies on the callback port.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:maven/org.eclipse.jetty/jetty-server@12.0.12?type=jar"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    }
+  ]
+}
