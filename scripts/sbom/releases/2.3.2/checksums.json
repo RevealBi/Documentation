@@ -7,7 +7,7 @@
     },
     {
       "file": "provenance.json",
-      "sha256": "7f57ad61b918b6a183ee9a8107e5d78cec94f689c9d4a450a7da42e30165c143"
+      "sha256": "d02987f139a7cf623b9b237a9c57105dc7ed62638a0e98bcaf65368c23edf031"
     },
     {
       "file": "README.md",
@@ -15,7 +15,7 @@
     },
     {
       "file": "reveal-2.3.2-sbom-vex.zip",
-      "sha256": "46937d076ab404e0c9a276ac593a1ff03f6d3f6b478c806659786a5b2c4df354"
+      "sha256": "32d3364bef00a48383d8c8517e51da5ea3877713aea71190632f04953b61770f"
     },
     {
       "file": "scan-summary.json",

@@ -31,6 +31,9 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: Check SBOM files for non-public repository links
+        run: node scripts/sbom/check-public-links.mjs
+
       # @igniteui/reveal-ai-plugin is installed from git (IgniteUI/reveal-ai-plugin), which
       # lives in another org. A GitHub App installed there with Contents: read mints a
       # short-lived token for that one repo. Secrets are unavailable to fork/Dependabot

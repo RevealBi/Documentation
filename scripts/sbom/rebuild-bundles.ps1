@@ -87,6 +87,7 @@ foreach ($catalogEntry in $catalog.entries) {
     }
 
     $sourceFiles = [ordered]@{}
+    $contentChanged = $false
     foreach ($file in $manifest.files) {
         if (-not $file.archivePath.StartsWith('sboms/')) {
             throw "Manifest path '$($file.archivePath)' must start with 'sboms/'."
@@ -104,7 +105,11 @@ foreach ($catalogEntry in $catalog.entries) {
             throw "Manifest source '$sourcePath' does not exist."
         }
 
-        $file.sha256 = Get-Sha256 $sourcePath
+        $sourceHash = Get-Sha256 $sourcePath
+        if ($file.sha256 -ne $sourceHash) {
+            $contentChanged = $true
+        }
+        $file.sha256 = $sourceHash
         $sourceFiles[$file.archivePath] = $sourcePath
     }
 
@@ -112,6 +117,13 @@ foreach ($catalogEntry in $catalog.entries) {
         $readme = $readme.TrimEnd() + [Environment]::NewLine + [Environment]::NewLine +
             'Each SBOM includes an embedded CycloneDX VEX assessment. Review vulnerabilities[].analysis for the status, justification, response, and assessment detail.' +
             [Environment]::NewLine
+        $contentChanged = $true
+    }
+
+    # Re-zipping an unchanged bundle only changes entry timestamps, which changes the published hash.
+    if (-not $contentChanged) {
+        $catalogEntry.sha256 = Get-Sha256 $downloadPath
+        continue
     }
 
     $temporaryZip = Join-Path ([IO.Path]::GetDirectoryName($downloadPath)) ([IO.Path]::GetRandomFileName() + '.zip')

@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
   "serialNumber": "urn:uuid:5a529464-bb4a-40c7-afc9-7be7423984e0",
-  "version": 2,
+  "version": 3,
   "metadata": {
     "timestamp": "2026-09-30T00:00:00Z",
     "tools": {
@@ -2101,13 +2101,7 @@
         }
       ],
       "copyright": "Copyright © Infragistics 2026",
-      "purl": "pkg:nuget/Reveal.Sdk.AI@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ]
+      "purl": "pkg:nuget/Reveal.Sdk.AI@1.5.213"
     },
     {
       "type": "library",
@@ -2128,13 +2122,7 @@
         }
       ],
       "copyright": "Copyright © Infragistics 2026",
-      "purl": "pkg:nuget/Reveal.Sdk.AI.Abstractions@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ]
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Abstractions@1.5.213"
     },
     {
       "type": "library",
