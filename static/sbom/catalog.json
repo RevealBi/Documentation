@@ -112,6 +112,32 @@
       "sha256": "94ca1028ef751da0fcccea32f064898bbc406fba4cefff8c361aee003209728a"
     },
     {
+      "id": "reveal-ai-1.3.2-java",
+      "product": "Reveal AI",
+      "packageVersion": "1.3.2",
+      "scope": "server",
+      "platform": "java",
+      "platformLabel": "Java",
+      "contentsLabel": "Platform independent",
+      "artifactType": "file",
+      "downloadUrl": "./files/reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "e69612d574287841a448a84e3d745c24146edfe17fda8a2bf35000c82c96ca80"
+    },
+    {
+      "id": "reveal-ai-1.3.2-node",
+      "product": "Reveal AI",
+      "packageVersion": "1.3.2",
+      "scope": "server",
+      "platform": "node",
+      "platformLabel": "Node",
+      "contentsLabel": "Platform independent",
+      "artifactType": "file",
+      "downloadUrl": "./files/reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json",
+      "mediaType": "application/vnd.cyclonedx+json",
+      "sha256": "67de98204786be4982aa704c0a0a87ca186870cdccd3be7559af64d69f421dde"
+    },
+    {
       "id": "reveal-ai-1.2.0-java",
       "product": "Reveal AI",
       "packageVersion": "1.2.0",

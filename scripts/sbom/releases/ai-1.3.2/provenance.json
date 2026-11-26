@@ -1,0 +1,424 @@
+{
+  "release": {
+    "product": "Reveal AI",
+    "version": "1.3.2",
+    "packages": [
+      {
+        "purl": "pkg:maven/io.revealbi/reveal-sdk-ai@1.3.2?type=jar",
+        "repository": "https://maven.revealbi.io/repository/public",
+        "publishedAt": "2026-11-19T22:11:57Z"
+      },
+      {
+        "purl": "pkg:npm/reveal-sdk-node-ai@1.3.2",
+        "repository": "https://registry.npmjs.org",
+        "publishedAt": "2026-11-19T22:06:32.552Z"
+      }
+    ],
+    "nativeSourceTag": "v1.7.21-preview",
+    "nativeSourceCommit": "5ada28193ec979abc8a3c08c06a2e891af7f1983",
+    "sourceCommit": "7f5636e2c30bbfc616c2209b33c9b5d0ec36417b"
+  },
+  "assessmentDate": "2026-11-26T14:44:00Z",
+  "tools": {
+    "syft": "1.57.2",
+    "mavenCycloneDX": "2.9.3",
+    "maven": "3.9.16",
+    "osvScanner": "2.7.1",
+    "node": "v22.14.0",
+    "npm": "11.4.2",
+    "javap": "21.0.12.1",
+    "ilspycmd": "9.1.0.7988",
+    "ajv": "8.17.1"
+  },
+  "toolArchives": [
+    {
+      "file": "apache-maven-3.9.16-bin.zip",
+      "sha256": "5af3b743dd8b876b5c45da33b676251e5f1687712644abb4ee519ca56e1d89ce",
+      "verifiedAgainst": "Apache .sha512"
+    },
+    {
+      "file": "syft_1.57.2_windows_amd64.zip",
+      "sha256": "0a10e03ffd124c304fd7e7491262dba2e5f68eb12378b106d7525146675b2e3a",
+      "verifiedAgainst": "syft_1.57.2_checksums.txt"
+    },
+    {
+      "file": "osv-scanner_windows_amd64.exe",
+      "sha256": "7121dcf420aefbbf89a7f0050c4d3094e079ff93afd334dfc96f16b02ec85800",
+      "verifiedAgainst": "osv-scanner_SHA256SUMS (v2.7.1)"
+    }
+  ],
+  "schemas": [
+    {
+      "file": "bom-1.7.schema.json",
+      "sha256": "73308edec3ab2d38bfffd993e96a042b594314143b6971a6e9ed98bbb6bd76ce",
+      "source": "CycloneDX/specification tag 1.7.2"
+    },
+    {
+      "file": "spdx.schema.json",
+      "sha256": "4b345e2329f209f34e960ae2a8e7cb46a166907e6a45e94978565925dc47b359",
+      "source": "CycloneDX/specification tag 1.7.2"
+    },
+    {
+      "file": "jsf-0.82.schema.json",
+      "sha256": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+      "source": "CycloneDX/specification tag 1.7.2"
+    },
+    {
+      "file": "cryptography-defs.schema.json",
+      "sha256": "027b059a729a06d591bac79a584ef04f83fc32d91a826fdba6ad3c98a10e5b44",
+      "source": "CycloneDX/specification tag 1.7.2"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "artifacts/reveal-sdk-ai-1.3.2.jar",
+      "bytes": 7958644,
+      "sha256": "c20c730ab1fd6e5fa4cc56d8816e0c84af0a22a4140a1971330a8bef1b9304eb"
+    },
+    {
+      "file": "artifacts/reveal-sdk-ai-1.3.2.pom",
+      "bytes": 3984,
+      "sha256": "c106c4e7ab169f91c3a53b437f16a4583a9a30257378c3fca5e35192a6616ae4"
+    },
+    {
+      "file": "artifacts/reveal-sdk-node-ai-1.3.2.tgz",
+      "bytes": 8035984,
+      "sha256": "aa271918941784402158c2ec5a54765ba3cf56e439e2895fa38b6b81b9e97a9d"
+    },
+    {
+      "file": "maven/reveal-sdk-servlet-2.3.0.pom",
+      "bytes": 1222,
+      "sha256": "e740012f5b637bcb09f88cec5f7ce5525528651cbd9b7677ce2535489abac872"
+    },
+    {
+      "file": "maven/reveal-sdk-core-2.3.0.pom",
+      "bytes": 6047,
+      "sha256": "24d609f5b204ee4a399a24c3024897dec21856a3607424de742d9523bae7dfdc"
+    },
+    {
+      "file": "maven/reveal-sdk-root-2.3.0.pom",
+      "bytes": 4034,
+      "sha256": "03db2fee4121ba304c9f582afe07164333f58b58666539079f3f9a1c89376fdd"
+    },
+    {
+      "file": "maven/jackson-annotations-2.17.2.jar",
+      "bytes": 78492,
+      "sha256": "873a606e23507969f9bbbea939d5e19274a88775ea5a169ba7e2d795aa5156e1"
+    },
+    {
+      "file": "maven/jackson-core-2.17.2.jar",
+      "bytes": 581927,
+      "sha256": "721a189241dab0525d9e858e5cb604d3ecc0ede081e2de77d6f34fa5779a5b46"
+    },
+    {
+      "file": "maven/jackson-databind-2.17.2.jar",
+      "bytes": 1649454,
+      "sha256": "c04993f33c0f845342653784f14f38373d005280e6359db5f808701cfae73c0c"
+    },
+    {
+      "file": "maven/jetty-alpn-client-12.0.12.jar",
+      "bytes": 7172,
+      "sha256": "e267fdc6cc74db2e9e26ec27965d5a733004d7684ba6c2ed7c0b30a70434a47b"
+    },
+    {
+      "file": "maven/jetty-client-12.0.12.jar",
+      "bytes": 345810,
+      "sha256": "d737d69d3500ac637fe1d8387e6c36e40e442bcb6ce2ba1f82587d57b8802161"
+    },
+    {
+      "file": "maven/jetty-http-12.0.12.jar",
+      "bytes": 414930,
+      "sha256": "83a7d1b268f6a8dc87981caa96b4a87df6e7f6bd9d9315099aae7056e91b02ce"
+    },
+    {
+      "file": "maven/jetty-io-12.0.12.jar",
+      "bytes": 321709,
+      "sha256": "0187db0f7a994677ca44f8065f5a46aeee405d6a4b7e91b74a50ca262ddcbb39"
+    },
+    {
+      "file": "maven/jetty-server-12.0.12.jar",
+      "bytes": 612982,
+      "sha256": "299b992e50c7d9871b450fa33aa0e36d5641218ae10ffbf4449f59d845fe2e22"
+    },
+    {
+      "file": "maven/jetty-util-12.0.12.jar",
+      "bytes": 673365,
+      "sha256": "6186c46baa8e236fdebedb26c6d2bfa10203908db08050d72425f5aca707c18d"
+    },
+    {
+      "file": "maven/json-20231013.jar",
+      "bytes": 74702,
+      "sha256": "0f18192df289114e17aa1a0d0a7f8372cc9f5c7e4f7e39adcf8906fe714fa7d3"
+    },
+    {
+      "file": "maven/reveal-sdk-core-2.3.0.jar",
+      "bytes": 335771,
+      "sha256": "dc8818925a1611bea638b9ea9027db38fde5d80ffcc824d432e2b1c15ac49744"
+    },
+    {
+      "file": "maven/reveal-sdk-servlet-2.3.0.jar",
+      "bytes": 7586,
+      "sha256": "2700b8d5c58b73b8cdc76d257d18026c39d8811cdc0e95d376d1f662fccc0bbd"
+    },
+    {
+      "file": "maven/slf4j-api-2.0.13.jar",
+      "bytes": 68605,
+      "sha256": "e7c2a48e8515ba1f49fa637d57b4e2f590b3f5bd97407ac699c3aa5efb1204a9"
+    },
+    {
+      "file": "npm/reveal-sdk-node-2.3.2.tgz",
+      "bytes": 130322,
+      "sha256": "fbc0c5f80272cdc108811f7c38201fea41b43ea301f8ec89f7fedfdfb2b44cec"
+    },
+    {
+      "file": "reference/reveal-sdk-core-2.3.2.jar",
+      "bytes": 335257,
+      "sha256": "5fab20ef08264d4ee3ffb51db9ef889b6e1bd2d43fec12e1b0ec488337f8328a"
+    }
+  ],
+  "nugetPackages": [
+    {
+      "file": "nuget/anthropic.12.24.1.nupkg",
+      "bytes": 4881985,
+      "sha256": "ce0ea7ebe6b8254fd9dc1e6ae749aed2fd99aea0e8f2e4b8c9226d67a278f2c9",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/azure.ai.openai.2.8.0-beta.1.nupkg",
+      "bytes": 581631,
+      "sha256": "4c65152fbdbbb07fb21f6915d7b42f368d13e9032841875f83196d8751711257",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/dotliquid.2.3.197.nupkg",
+      "bytes": 357827,
+      "sha256": "8582b6fe1ba8d064ff3ac0e9c646f93189d893269facc76d18f103583c219d7b",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.api.commonprotos.2.17.0.nupkg",
+      "bytes": 709269,
+      "sha256": "3b099bbd1f2b868111d3394449490d85f791447354afba1966d161536a18d6af",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.api.gax.4.12.1.nupkg",
+      "bytes": 160267,
+      "sha256": "53c2be0774059968c8eb3a05ed9ec43e4db676c27c61c65b6c06f519acb08e88",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.api.gax.grpc.4.12.1.nupkg",
+      "bytes": 337103,
+      "sha256": "d07d77c1c952b43e8ba061d73234f8c1df9260ab8e66c59188c58495eef81009",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.apis.1.72.0.nupkg",
+      "bytes": 236920,
+      "sha256": "552f56e84962a5b379591fd2ab9437741320a113973b3040a149353e1b74610c",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.apis.auth.1.72.0.nupkg",
+      "bytes": 543969,
+      "sha256": "95177c924d885fff23e0666541ea139b0118a9aff1ddfa35a7668424ea878cc1",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.apis.core.1.72.0.nupkg",
+      "bytes": 250642,
+      "sha256": "f674d0d913ba9085aea9a3f48d1e4168f4a80fa9b139377b4ac7cdd30ddacde9",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.cloud.aiplatform.v1.3.60.0.nupkg",
+      "bytes": 5710666,
+      "sha256": "32fd03512f658c2f0e22d5ebd5260e0f8fbbae503e7ab0d8bd28e5b0bbd8c6d9",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.cloud.iam.v1.3.5.0.nupkg",
+      "bytes": 130318,
+      "sha256": "a4690fe4c3b95667b01ce51ba14ff1d141708a4f2f311cad70749b55eaa0f592",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.cloud.location.2.4.0.nupkg",
+      "bytes": 86388,
+      "sha256": "0699fa8d8a4df9f9d7251b7896d5bf356633a98ec472b6faf0030de663c94e82",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.longrunning.3.5.0.nupkg",
+      "bytes": 128690,
+      "sha256": "269804d6c3cd19e1c98e25c7f13eb29d505014600649901426befbdc8e1286bd",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/google.protobuf.3.31.1.nupkg",
+      "bytes": 1407282,
+      "sha256": "504727e07f05fb32b40234a6cf5693cb2324b0bc4938635fd8844eb45f83c9d0",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/grpc.auth.2.71.0.nupkg",
+      "bytes": 91068,
+      "sha256": "ac03cfa94791956ba830685dc02acb7755252057d29c63f5aa1835c831b777d7",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/grpc.core.api.2.71.0.nupkg",
+      "bytes": 253333,
+      "sha256": "3840341470f02257a0c9d0f5f8c9797ab631e2a4d09e42fa342a71ab7af62273",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/grpc.net.client.2.71.0.nupkg",
+      "bytes": 1050468,
+      "sha256": "aacc2e0ee4683129179553887b1f4a4df4da8118737e8201095e463bb45d7680",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/grpc.net.common.2.71.0.nupkg",
+      "bytes": 162893,
+      "sha256": "4c43c360a1d1e9bf6226d98450b8d6b4964b04f230d913baffa1d2355d5230d2",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/microsoft.extensions.ai.abstractions.10.8.3.nupkg",
+      "bytes": 1456929,
+      "sha256": "7be7e10d0663efb94ddbed605d5c03ccfe80bb6852ca44cdba1dd1e78ee7ca76",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/microsoft.extensions.ai.openai.10.8.3.nupkg",
+      "bytes": 729463,
+      "sha256": "2938a0182854ff46d59d7104d90c54e717e1219e838cbd1b144f4dd68353880b",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/microsoft.extensions.fileproviders.abstractions.10.0.3.nupkg",
+      "bytes": 128395,
+      "sha256": "b9601987f45d3048b04ccdb7d752a50ca2b62c1a3cd6d2185cf4d4cc95db71e0",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/microsoft.extensions.hosting.abstractions.10.0.3.nupkg",
+      "bytes": 233850,
+      "sha256": "77ccd7c937e055da24f82820e440b4e031f888f42d2f1954f42b06cb9f9dafab",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/microsoft.extensions.objectpool.8.0.1.nupkg",
+      "bytes": 90402,
+      "sha256": "bf60862f806e98ab6954ec9466e81bc60fe412784092e3b64b5762172c723303",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/microsoft.extensions.options.dataannotations.10.0.10.nupkg",
+      "bytes": 147216,
+      "sha256": "f72017316fedc122bcef82d5a9791bc6d6d521dece04a8226ae8af79f17489dd",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/openai.2.12.0.nupkg",
+      "bytes": 3925416,
+      "sha256": "a9b99e6f252a2be071962e82b85c90f3106bd229c528f2a5661a51062d171abd",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/reveal.sdk.ai.1.7.21-preview.nupkg",
+      "bytes": 731352,
+      "sha256": "beec17468bc75fe8dabb5f4e53a2c6fffb6815dd310a23a753e80623bb1828b7",
+      "source": "nuget.org"
+    },
+    {
+      "file": "nuget/reveal.sdk.ai.anthropic.1.7.21-preview.nupkg",
+      "bytes": 47993,
+      "sha256": "d40b68070662af4a87f039f6a59f43f248fa27f31acc0d0cce5228b2e22e2fdd",
+      "source": "nuget.org"
+    },
+    {
+      "file": "nuget/reveal.sdk.ai.aspnetcore.1.7.21-preview.nupkg",
+      "bytes": 233490,
+      "sha256": "864c18276d87649364d674932b4193e92097109c849d53db1a8afbbf177158de",
+      "source": "nuget.org"
+    },
+    {
+      "file": "nuget/reveal.sdk.ai.azureopenai.1.7.21-preview.nupkg",
+      "bytes": 45429,
+      "sha256": "6a87c025bc84b355bc5cfcf6e4aa5e43fa121181d681ef0cf05309fcd59c1cae",
+      "source": "nuget.org"
+    },
+    {
+      "file": "nuget/reveal.sdk.ai.google.1.7.21-preview.nupkg",
+      "bytes": 47826,
+      "sha256": "357d775ca0f547720aff6a751aa2cd17e57c32ca7e01386ee4e989d4bdda8ec2",
+      "source": "nuget.org"
+    },
+    {
+      "file": "nuget/reveal.sdk.ai.openai.1.7.21-preview.nupkg",
+      "bytes": 57175,
+      "sha256": "5f5b48ce5ddf038deaa2c9058dd857814cbed1f790430d2e0e7158de8a776018",
+      "source": "nuget.org"
+    },
+    {
+      "file": "nuget/reveal.sdk.dom.0.1.689-beta.nupkg",
+      "bytes": 554183,
+      "sha256": "48bdd95f7784e265e3919f1f4e90064debcf34d9c7a6e06c403c8e8e21fa525a",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/sqlparsercs.0.6.5.nupkg",
+      "bytes": 972821,
+      "sha256": "979d751234885e05b9b5cff8231d8ea7569ed43c71a81caa422f3d4ef25ece4b",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/system.clientmodel.1.14.0.nupkg",
+      "bytes": 694612,
+      "sha256": "af4bd515754893e75489c58186c5410d4b2f9eb2d929b4561ee1f86e9adc9d2f",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/system.io.pipelines.10.0.10.nupkg",
+      "bytes": 267197,
+      "sha256": "e73811c845c36b7b5da0b25f4fdb573300c691fd9f45d5698f8403de136cf88e",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/system.memory.data.10.0.3.nupkg",
+      "bytes": 154816,
+      "sha256": "1de7cac82b8d27b6ce34e56a1a2d9649c1ba5c8a05c9f192c1340cf4e974ebe5",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/system.net.serversentevents.10.0.2.nupkg",
+      "bytes": 187664,
+      "sha256": "14a21303d453f4c9519b2de47cefa1039e32265ad657f5cd6e1bdbc80094bd82",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/system.text.encodings.web.10.0.10.nupkg",
+      "bytes": 410761,
+      "sha256": "f695ce8cd0c57074dbc861cbe91ae8fec6989bb8f14a03a395427e68b0507a03",
+      "source": "local-nuget-cache"
+    },
+    {
+      "file": "nuget/system.text.json.10.0.10.nupkg",
+      "bytes": 2222728,
+      "sha256": "be50bbe83a74f8d6360c2e8ee6f166e9bf65a0625f83fb6084e25f292ea2efbf",
+      "source": "local-nuget-cache"
+    }
+  ],
+  "notes": [
+    "The JAR and POM SHA-1 values were verified against the repository .sha1 files; Maven re-resolved the same JAR bytes.",
+    "The npm tarball SHA-512 and SHA-1 were verified against registry dist.integrity and dist.shasum.",
+    "The 42 bundled .NET assembly files are byte-identical in the JAR and the npm tarball.",
+    "Every bundled third-party assembly and Reveal.Sdk.Dom matched the SHA-256 of the same file in the published NuGet package. The six Reveal.Sdk.AI assemblies carry the NuGet version and source commit but are a separate plugin build; see evidence/first-party-build-comparison.json.",
+    "reveal-sdk-node 2.3.2 matched the SHA-256 recorded in the Reveal 2.3.2 assessment provenance.",
+    "Maven, syft and OSV-Scanner downloads were checksum-verified against publisher checksum files; OSV database downloads were verified against the storage MD5 header.",
+    "No Reveal product build was performed. Maven dependency/makeBom goals and npm install with scripts disabled were used."
+  ]
+}

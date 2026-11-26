@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 1,
+  "assessment": {
+    "organization": "Infragistics, Inc.",
+    "product": "Reveal AI",
+    "date": "2026-11-26T14:44:00Z",
+    "scope": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI wrapper, the bundled .NET AI assemblies, the Maven runtime graph of reveal-sdk-servlet 2.3.0 and the npm production graph of reveal-sdk-node 2.3.2. The OS-selected Reveal engine, host-provided .NET assemblies, separately downloaded Chromium and host OS libraries are outside scan coverage.",
+    "method": "Resolved the published POM and npm package graphs and identified the bundled .NET assemblies by SHA-256 match against published NuGet packages. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites and released bytecode (javap) and JavaScript inspection; unresolved configuration or call-path exposure remains in_triage.",
+    "scanner": {
+      "name": "OSV-Scanner",
+      "version": "2.7.1",
+      "mode": "offline; --no-resolve --all-packages",
+      "databaseSnapshot": "2026-11-26"
+    },
+    "publicationStatus": "draft_pending_release_owner_approval"
+  },
+  "decisions": [
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-72hv-8253-57qq",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The number-length bypass is in Jackson's non-blocking (async) parser. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no non-blocking parser, byte feeder or JsonFactory reference; every parse goes through ObjectMapper.readTree(String), which uses the synchronous reader-based parser. jackson-databind 2.17.2 itself never creates a non-blocking parser. Jackson 2.17.2 is selected because the reveal-sdk-ai POM pins it, so both the AI wrapper and reveal-sdk-core run on it; host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-7hhh-6rmp-j9qf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The unbounded error message is built only by UTF8DataInputJsonParser, which Jackson creates for java.io.DataInput sources. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no java/io/DataInput reference; the only parse entry point is ObjectMapper.readTree(String), which uses ReaderBasedJsonParser, a parser the advisory confirms enforces maxErrorTokenLength. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-p6pp-m3f8-5c89",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The quadratic regex is in NumberInput.looksLikeValidNumber(). javap of the released jackson-core 2.17.2 and jackson-databind 2.17.2 JARs finds no invocation of that method, and reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 do not reference NumberInput. In this graph the method is reachable only by an application calling the public helper directly, which the released Reveal code does not do."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-r7wm-3cxj-wff9",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The chunked digit accumulation bypass is in Jackson's non-blocking (async) parser. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no non-blocking parser or byte feeder reference, and jackson-databind 2.17.2 never creates one; Reveal parses JSON synchronously through ObjectMapper.readTree(String). Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-3pjw-73gf-8qr5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass requires deserializing into a Java record that uses @JsonIgnore while a PropertyNamingStrategy is configured. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no com.fasterxml.jackson.annotation type and never sets a naming strategy. The three records in reveal-sdk-ai (RevealAIPluginOptions and its nested option records) are not deserialization targets: Reveal deserializes only into JsonNode, ObjectNode, Object, HashMap or LinkedHashMap<String,Object>. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-5gvw-p9qm-jgwh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass requires a bean property annotated with both @JsonView and @JsonUnwrapped, deserialized under an active view. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no Jackson annotation, view or ObjectReader, and deserializes only into untyped trees and maps (JsonNode, ObjectNode, Object, HashMap, LinkedHashMap<String,Object>). Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-5jmj-h7xm-6q6v",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass requires case-insensitive property matching (MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES or @JsonFormat) together with @JsonIgnoreProperties on a bean target. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references neither MapperFeature nor any Jackson annotation, calls no ObjectMapper configure/enable/disable method, and deserializes only into untyped trees and maps. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-cxp5-3px4-pw24",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Forward-reference completion is used only for object identities (@JsonIdentityInfo) on bean targets. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no Jackson annotation or object-identity type, and untyped tree and map deserialization does not track object identities. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-gx83-3vf8-gh7j",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The incomplete denylist matters only when polymorphic default typing is activated with DefaultBaseTypeLimitingValidator. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference; it constructs default ObjectMapper instances, which have default typing disabled. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-hgj6-7826-r7m5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Eager DNS resolution happens only when JSON is deserialized into java.net.InetSocketAddress. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no InetSocketAddress or InetAddress reference and no typed deserialization: its targets are JsonNode, ObjectNode, Object, HashMap and LinkedHashMap<String,Object>, which Jackson fills with strings, numbers, booleans, lists and maps only. Default typing, which could select another type, is not enabled. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-j3rv-43j4-c7qm",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The bypass is in PolymorphicTypeValidator handling of generic type parameters and requires polymorphic typing. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference, and deserializes only into untyped trees and maps. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-q4xh-88c3-wmh7",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The unbounded number parse occurs only when deserializing into javax.xml.datatype.Duration or XMLGregorianCalendar. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no javax/xml/datatype reference, deserializes only into untyped trees and maps, and does not enable default typing. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-rmj7-2vxq-3g9f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The array-subtype bypass is in BasicPolymorphicTypeValidator and requires polymorphic typing. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-vvgp-rfg2-7rr6",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Eager DNS resolution happens only when JSON is deserialized into java.net.InetAddress. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no InetAddress reference and deserializes only into JsonNode, ObjectNode, Object, HashMap and LinkedHashMap<String,Object>; default typing is not enabled. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-wjgm-6hv5-3cvf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "FileSystemProvider resolution happens only when JSON is deserialized into java.nio.file.Path. The java.nio.file references in reveal-sdk-ai 1.3.2 and reveal-sdk-core 2.3.0 are file I/O calls, not Jackson targets: every Reveal deserialization targets JsonNode, ObjectNode, Object, HashMap or LinkedHashMap<String,Object>, and default typing is not enabled. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-wv8q-qhhj-9h54",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Unknown raw type IDs are retained only during polymorphic type-ID resolution (@JsonTypeInfo or default typing). Neither is present in the released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0, so no type IDs are resolved. Host application code that uses the same JAR must be assessed separately."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment; release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-355h-qmc2-wpwf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Request smuggling needs a front-end proxy and Jetty to disagree on where a request ends. reveal-sdk-core 2.3.0 CallbackServer.start() creates a direct HTTP/1.1 ServerConnector on an ephemeral port for the local Reveal engine; nothing in the SDK places a proxy in front of it. Unlike core 2.3.2, core 2.3.0 does not call setHost, so the listener binds the wildcard address. A client that connects directly can only send requests on its own connection, and the handler rejects every request (404) whose RevealBI-Auth header does not match the per-process UUID.randomUUID() token before routing. Reassess if a reverse proxy is placed in front of the callback port."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment re-derived for reveal-sdk-core 2.3.0; the 2.3.2 rationale was not reused because CallbackServer differs. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-wjpw-4j6x-6rwh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The advisory affects applications that make security decisions from Jetty's parse of unusual URIs (scheme, IPv6 host, authority). The reveal-sdk-core 2.3.0 callback handler authenticates every request by comparing the RevealBI-Auth header with the per-process token before it routes on HttpURI.getPath(); no allow or deny decision uses the parsed scheme or authority. jetty-client is used only by EngineClient, for requests to http://127.0.0.1:<port> engine URLs that the SDK builds itself."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment re-derived for reveal-sdk-core 2.3.0. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-7p3p-8qv8-m2vh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The missing :authority/Host consistency check is on Jetty's HTTP/2 and HTTP/3 paths; the advisory states HTTP/1.1 already enforces it. reveal-sdk-core 2.3.0 CallbackServer.start() creates ServerConnector(Server) with the default HTTP/1.1 connection factory, and the resolved Maven graph contains no jetty-http2 or jetty-http3 artifact. The callback handler also makes no host-based decision."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment re-derived for reveal-sdk-core 2.3.0. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-f4v5-65jj-pcr2",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Stale trailer fields are visible only to code that reads Request.getTrailers(). No class in reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references getTrailers, so no Reveal callback decision reads trailers."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment re-derived for reveal-sdk-core 2.3.0. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-xxh7-fcf3-rj7f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The leak is in GzipHandler request inflation. reveal-sdk-core 2.3.0 CallbackServer installs its own Handler.Abstract directly with Server.setHandler, and none of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references GzipHandler, so Jetty does not inflate gzip request bodies on the callback port."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment re-derived for reveal-sdk-core 2.3.0. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-util",
+      "version": "12.0.12",
+      "advisory": "GHSA-w7x5-g22v-xqhr",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "The bypass requires SecurityHandler.PathMapped to protect a path prefix. jetty-security is not in the resolved Maven graph, none of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references SecurityHandler, and the reveal-sdk-core 2.3.0 callback handler authenticates every path with the per-process token rather than path-based constraints."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Static bytecode/configuration assessment re-derived for reveal-sdk-core 2.3.0. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.json:json",
+      "version": "20231013",
+      "advisory": "GHSA-ghc9-756g-vrcv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "reveal-sdk-core 2.3.0 declares org.json:json 20231013, but no class in reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0, reveal-sdk-core 2.3.0, Jackson 2.17.2, Jetty 12.0.12 or SLF4J API 2.0.13 in the resolved graph references org/json. JSONTokener is never called; Reveal parses JSON with Jackson."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same conclusion as the 2.3.2 assessment, re-checked against every JAR in the 1.3.2 graph. Release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-5pm8-86m8-9m6r",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers in reveal-sdk-node 2.3.2. Reveal downloads a fixed HTTPS browser build, but the downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp, and get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact. Re-checked for AI 1.3.2: the install resolved reveal-sdk-node 2.3.2 with a tarball SHA-256 identical to the 2.3.2 assessment, and identical versions and integrity for this chain. reveal-sdk-node-ai adds no caller (its index.js requires only fs and path). Fixed basic-ftp releases are 6.x only, and get-uri 6.0.5 requires basic-ftp ^5.0.2."
+      },
+      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs. Patched basic-ftp releases are 6.x; pick them up through an upstream get-uri update or, after testing, an application-level npm override.",
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same code path as the 2.3.2 assessment (byte-identical packages); release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-c475-qrg2-pj4r",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers in reveal-sdk-node 2.3.2. Reveal downloads a fixed HTTPS browser build, but the downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp, and get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact. Re-checked for AI 1.3.2: the install resolved reveal-sdk-node 2.3.2 with a tarball SHA-256 identical to the 2.3.2 assessment, and identical versions and integrity for this chain. reveal-sdk-node-ai adds no caller (its index.js requires only fs and path). Fixed basic-ftp releases are 6.x only, and get-uri 6.0.5 requires basic-ftp ^5.0.2."
+      },
+      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs. Patched basic-ftp releases are 6.x; pick them up through an upstream get-uri update or, after testing, an application-level npm override.",
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same code path as the 2.3.2 assessment (byte-identical packages); release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-r4jh-29pc-gfqr",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers in reveal-sdk-node 2.3.2. Reveal downloads a fixed HTTPS browser build, but the downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp, and get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact. Re-checked for AI 1.3.2: the install resolved reveal-sdk-node 2.3.2 with a tarball SHA-256 identical to the 2.3.2 assessment, and identical versions and integrity for this chain. reveal-sdk-node-ai adds no caller (its index.js requires only fs and path). Fixed basic-ftp releases are 6.x only, and get-uri 6.0.5 requires basic-ftp ^5.0.2."
+      },
+      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs. Patched basic-ftp releases are 6.x; pick them up through an upstream get-uri update or, after testing, an application-level npm override.",
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same code path as the 2.3.2 assessment (byte-identical packages); release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-7pqw-9j4j-h8q3",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "reveal-sdk-node 2.3.2 lib/exporter/PuppeteerUtils.js selects the fixed Chrome Headless Shell build 132.0.6834.110 from the upstream browser distribution and a fixed per-user cache directory. Reveal exposes no archive, archive URL or extraction path input to this call; the attack requires substituting a malicious archive for that trusted distribution. Re-checked for AI 1.3.2: reveal-sdk-node 2.3.2 is byte-identical to the assessed tarball, and @puppeteer/browsers 2.13.2 and extract-zip 2.0.1 have identical integrity. reveal-sdk-node-ai does no archive handling. Supply-chain compromise or a locally tampered cache is outside this assessment; reassess if custom archive sources are introduced."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same code path as the 2.3.2 assessment (byte-identical packages); release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-jmr9-qjv8-65gv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "reveal-sdk-node 2.3.2 lib/exporter/PuppeteerUtils.js selects the fixed Chrome Headless Shell build 132.0.6834.110 from the upstream browser distribution and a fixed per-user cache directory. Reveal exposes no archive, archive URL or extraction path input to this call; the attack requires substituting a malicious archive for that trusted distribution. Re-checked for AI 1.3.2: reveal-sdk-node 2.3.2 is byte-identical to the assessed tarball, and @puppeteer/browsers 2.13.2 and extract-zip 2.0.1 have identical integrity. reveal-sdk-node-ai does no archive handling. Supply-chain compromise or a locally tampered cache is outside this assessment; reassess if custom archive sources are introduced."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same code path as the 2.3.2 assessment (byte-identical packages); release-owner approval pending."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zod",
+      "version": "3.25.76",
+      "advisory": "GHSA-mrhx-c7xc-m3w5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Zod is introduced through chromium-bidi. reveal-sdk-node 2.3.2 lib/reveal.js calls puppeteer.launch({ executablePath, args }) without a protocol option, so puppeteer-core creates a CDP browser and the WebDriver BiDi schema-validation path is not used. Re-checked for AI 1.3.2: reveal-sdk-node 2.3.2 is byte-identical to the assessed tarball, and puppeteer-core 24.43.1, chromium-bidi 14.0.0 and zod 3.25.76 have identical integrity. reveal-sdk-node-ai does not use zod or Puppeteer. Reassess custom BiDi integration."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "record": "assessment-evidence.zip",
+        "review": "Same code path as the 2.3.2 assessment (byte-identical packages); release-owner approval pending."
+      }
+    }
+  ]
+}
