@@ -9,6 +9,19 @@ import TabItem from '@theme/TabItem';
 
 - Java SDK が、Reveal サーバーの動作停止 (たとえば、メモリ不足のためにオペレーティング システムがエンジン プロセスを終了した場合) を報告するようになりました。`IRevealServer.getStatus()` は `RUNNING`、`FAILED`、または `SHUT_DOWN` を返し、失敗の場合はその理由も返します。`IRevealServer.getTermination()` はサーバーの実行が停止すると完了します。SDK はエンジンを再起動しません。アプリケーションの[ヘルス チェック](https://help.revealbi.io/ja/web/java-health-check/)で障害を報告し、プラットフォームがアプリケーションを再起動するようにしてください。
 
+### 改善
+
+- ASP.NET SDK のパッケージ (`Reveal.Sdk.AspNetCore`、`Reveal.Sdk.Data`、`Reveal.Sdk.Data.*` データ ソース パッケージ、および `Reveal.Sdk.Cache.Redis`) に、.NET 8 ビルドに加えて .NET 10 ビルドが含まれるようになりました。.NET 10 をターゲットとするプロジェクトは自動的にこのビルドを使用し、.NET 8 プロジェクトは変更なしで引き続き動作します。
+- Java および Node.js SDK のエンジンが .NET 10 で実行されるようになりました。エンジンには独自のランタイムが含まれているため、引き続きインストールするものはありません。
+
+### 重大な変更
+
+#### Java および Node.js
+- Linux では、.NET 10 と同様に、エンジンに glibc 2.27 以降 (たとえば Ubuntu 18.04 以降) が必要になりました。Ubuntu 16.04 など、glibc がそれより古いディストリビューションでは、エンジンを起動できなくなりました。
+
+#### ASP.NET
+- .NET 10 プロジェクトでは、`Reveal.Sdk.AspNetCore` が `Microsoft.AspNetCore.Mvc.NewtonsoftJson`、`Microsoft.Extensions.Hosting`、`Microsoft.Extensions.ObjectPool` のバージョン 10.0.0 以降に依存するようになりました。これらのいずれかの古いバージョンを参照している .NET 10 アプリケーションはビルドできなくなり、`error NU1605: Detected package downgrade` で失敗します。参照を 10.0.0 以降に更新するか、削除してください。.NET 8 プロジェクトは影響を受けません。
+
 ### バグ修正
 
 #### Java

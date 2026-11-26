@@ -1,12 +1,14 @@
 # システム要件
 
 ## ASP.NET
-- ASP.NET 6.0 またはそれ以降
+- ASP.NET Core 8.0 またはそれ以降
+- NuGet パッケージには .NET 8 ビルドと .NET 10 ビルドが含まれています。.NET 10 以降をターゲットとするプロジェクトは .NET 10 ビルドを使用し、.NET 8 および .NET 9 のプロジェクトは .NET 8 ビルドを使用します。
 
 ## Java
 - Java SDK 17 およびそれ以降
 - Jakarta EE 9 準拠サーバー
 - Maven 3.6.3 およびそれ以降
+- Linux では glibc 2.27 以降 (たとえば Ubuntu 18.04 以降)
 
 :::note
 
@@ -22,6 +24,13 @@ Reveal SDK で使用されるネイティブ .NET コンポーネントを実行
 
 ## Node
 - NodeJS 16.3 およびそれ以降
+- Linux では glibc 2.27 以降 (たとえば Ubuntu 18.04 以降)
+
+:::note
+
+Java および Node.js SDK には独自の .NET 10 ランタイムが含まれているため、.NET をインストールする必要はありません。
+
+:::
 
 :::info
 
@@ -33,3 +42,7 @@ Rosetta を手動でインストールするには、ターミナルで次のコ
 ```
 
 :::
+
+## Linux
+
+Windows (ドメイン) アカウントを使用して HTTP 経由で Microsoft Analysis Services に接続するには、`gss-ntlmssp` パッケージが必要です。このパッケージがない場合、接続は "Unable to connect" で失敗します。これは ASP.NET、Java、Node.js の各 SDK に適用されます。
