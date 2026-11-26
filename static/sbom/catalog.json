@@ -109,7 +109,7 @@
       "artifactType": "bundle",
       "downloadUrl": "./bundles/reveal-ai/dotnet/1.5.213/reveal-ai-dotnet-1.5.213-sbom.zip",
       "mediaType": "application/zip",
-      "sha256": "94ca1028ef751da0fcccea32f064898bbc406fba4cefff8c361aee003209728a"
+      "sha256": "d08351d326b8f16e80caab158ece213d1c0ba10cf8ed5af68ff8af12ded6b5f5"
     },
     {
       "id": "reveal-ai-1.2.0-java",
@@ -122,7 +122,7 @@
       "artifactType": "file",
       "downloadUrl": "./files/reveal-ai/java/1.2.0/reveal-sdk-ai-java-1.2.0.cdx.json",
       "mediaType": "application/vnd.cyclonedx+json",
-      "sha256": "e14af195a1c8a6035ae759e289e4732c7de7a3131b5e983c1ae3183c2793700a"
+      "sha256": "3488164cfa7fb9fe9eb68f7ffdbea36958f2120547c2aa820a0d13729f837f51"
     },
     {
       "id": "reveal-ai-1.2.0-node",
@@ -135,7 +135,7 @@
       "artifactType": "file",
       "downloadUrl": "./files/reveal-ai/node/1.2.0/reveal-sdk-ai-node-1.2.0.cdx.json",
       "mediaType": "application/vnd.cyclonedx+json",
-      "sha256": "5f2c084ba306b84735421e32579421e6b64d9a7751a3566f03c422c9e5ff31f2"
+      "sha256": "eb49ee44bb55efee65b1cb890f41545dbaa5030c73ab2de4524c64c9b218ae05"
     },
     {
       "id": "reveal-client-2.2.1-javascript",

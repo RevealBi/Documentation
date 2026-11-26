@@ -3,7 +3,7 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
   "serialNumber": "urn:uuid:b151cef0-edd1-4dc0-b536-8d6c98e4b510",
-  "version": 2,
+  "version": 3,
   "metadata": {
     "timestamp": "2026-09-30T00:00:00Z",
     "tools": {
@@ -1748,12 +1748,6 @@
       "description": "Abstraction layer for AI providers in the Reveal SDK. Contains core interfaces and contracts for integrating AI capabilities into Reveal dashboards and analytics.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI.Abstractions@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {
@@ -1787,12 +1781,6 @@
       "description": "Anthropic AI provider integration for the Reveal SDK. Enables the use of Anthropic's AI capabilities within Reveal dashboards and analytics.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {
@@ -1826,12 +1814,6 @@
       "description": "ASP.NET Core integration for Reveal.Sdk.AI, enabling AI-powered analytics in ASP.NET Core applications.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {
@@ -1865,12 +1847,6 @@
       "description": "Azure OpenAI provider integration for the Reveal SDK. Enables the use of Azure OpenAI's AI capabilities within Reveal dashboards and analytics.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {
@@ -1904,12 +1880,6 @@
       "description": "Google AI provider integration for the Reveal SDK. Enables the use of Google's AI capabilities within Reveal dashboards and analytics.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI.Google@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {
@@ -1943,12 +1913,6 @@
       "description": "OpenAI provider integration for the Reveal SDK. Enables the use of OpenAI's AI capabilities within Reveal dashboards and analytics.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {
@@ -1982,12 +1946,6 @@
       "description": "AI capabilities for Reveal SDK, providing intelligent data analysis and insights.",
       "copyright": "Copyright © Infragistics 2026",
       "purl": "pkg:nuget/Reveal.Sdk.AI@1.5.213",
-      "externalReferences": [
-        {
-          "url": "https://github.com/Infragistics-BusinessTools/Reveal.Sdk.AI",
-          "type": "vcs"
-        }
-      ],
       "scope": "required",
       "properties": [
         {

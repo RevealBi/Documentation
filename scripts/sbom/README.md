@@ -25,6 +25,13 @@ For a release:
    ./scripts/sbom/rebuild-bundles.ps1
    ```
 
+   Only bundles whose SBOM content changed are rebuilt; unchanged bundles keep their bytes and catalog hash.
+
 6. Validate every JSON file against the official CycloneDX schema, validate the catalog and bundle manifests, and verify the hashes stored in each manifest and the catalog.
+7. Check that no published file or archive links to a non-public repository. Package metadata, such as a NuGet repository URL, can carry such links into generated SBOMs. CI runs the same check:
+
+   ```powershell
+   node scripts/sbom/check-public-links.mjs
+   ```
 
 The release owner must approve the assessment decisions before publication. A scanner match alone is not sufficient for a `not_affected` decision; the rationale must be supported by the released runtime, source, configuration, or another reproducible form of evidence.
