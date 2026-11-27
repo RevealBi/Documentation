@@ -2,20 +2,8 @@
   "algorithm": "SHA-256",
   "files": [
     {
-      "file": "assessment-evidence.zip",
-      "sha256": "26596b508f7f2b68c64862f0c26c89110ea1a8dee1dd8c5852ac58ec8ce6a5de"
-    },
-    {
-      "file": "provenance.json",
-      "sha256": "f925b979a852f9c65e1e06a4a01b6b0b8606d39ee1e5c51c68e5d0848dd3cea0"
-    },
-    {
       "file": "README.md",
-      "sha256": "882789fc9adb111aae6c4ba523840b26449eca440b922731a6c701afc51bf036"
-    },
-    {
-      "file": "reveal-ai-1.3.2-sbom-vex.zip",
-      "sha256": "9fcd60bae09499a31e58f4314d27983975c7217428648e2bf0d024e01009ba5d"
+      "sha256": "1f04133b35bdbbb7da9093b71db6ca4057c2f13762d872b131aea7c5a1434c84"
     },
     {
       "file": "scan-summary.json",
@@ -23,7 +11,7 @@
     },
     {
       "file": "vex-assessments.json",
-      "sha256": "b757dc09a3ac1f500a5b79ae0b7569c0bfe9817168a30323d1dccffc53a15e44"
+      "sha256": "9ac1a7405b2515706149457ee6917be2d6459ccc555b46fa602fd16ab90c44fe"
     }
   ]
 }

@@ -127,18 +127,6 @@
       ],
       "properties": [
         {
-          "name": "infragistics:release-tag",
-          "value": "v1.7.21-preview"
-        },
-        {
-          "name": "infragistics:native-source-commit",
-          "value": "5ada28193ec979abc8a3c08c06a2e891af7f1983"
-        },
-        {
-          "name": "infragistics:source-commit",
-          "value": "7f5636e2c30bbfc616c2209b33c9b5d0ec36417b"
-        },
-        {
           "name": "infragistics:scope",
           "value": "AI wrapper plus the reveal-sdk-servlet 2.3.0 Maven runtime graph declared by its POM. The OS-selected reveal-sdk-engine 2.3.0 dependency is not inventoried here."
         }
@@ -166,7 +154,7 @@
       },
       {
         "name": "io.revealbi.sbom.inventory-scope",
-        "value": "Published Maven compile/runtime dependencies of io.revealbi:reveal-sdk-ai:1.3.2 resolved from its released POM in isolation (Maven 3.9.16): reveal-sdk-servlet 2.3.0, reveal-sdk-core 2.3.0, Jetty 12.0.12, org.json, SLF4J API and Jackson 2.17.2 (the AI POM pins jackson-databind 2.17.2, which overrides the core [2.13,3.0) range). Plus the .NET assemblies bundled under native/ in the JAR, identified as NuGet packages. Excluded: the OS-selected reveal-sdk-engine 2.3.0 JAR, host-provided assemblies the plugin loads from the Reveal engine, provided servlet API, and host operating-system libraries. An application that declares a newer Reveal Java SDK overrides the 2.3.0 graph."
+        "value": "Published Maven compile/runtime dependencies of io.revealbi:reveal-sdk-ai:1.3.2 resolved from its released POM (Maven 3.9.16): reveal-sdk-servlet 2.3.0, reveal-sdk-core 2.3.0, Jetty 12.0.12, org.json, SLF4J API and Jackson 2.17.2, plus the .NET assemblies bundled under native/ in the JAR, identified as NuGet packages. When an application uses a newer Reveal Java SDK, the Reveal SDK, Jetty and related entries follow that SDK's dependencies, but jackson-databind still resolves to 2.17.2 because reveal-sdk-ai declares it directly, unless the application declares jackson-databind itself. Excluded: the OS-selected reveal-sdk-engine 2.3.0 JAR, host-provided assemblies the plugin loads from the Reveal engine, the provided servlet API, and host operating-system libraries."
       },
       {
         "name": "reveal:vex:assessment-date",
@@ -178,11 +166,11 @@
       },
       {
         "name": "reveal:vex:assessment-scope",
-        "value": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI wrapper, the bundled .NET AI assemblies, the Maven runtime graph of reveal-sdk-servlet 2.3.0 and the npm production graph of reveal-sdk-node 2.3.2. The OS-selected Reveal engine, host-provided .NET assemblies, separately downloaded Chromium and host OS libraries are outside scan coverage."
+        "value": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI package, the bundled .NET assemblies, the Maven runtime dependencies of reveal-sdk-servlet 2.3.0 and the npm production dependencies of reveal-sdk-node 2.3.2. Not included: the OS-specific Reveal engine, host-provided .NET assemblies, the headless browser downloaded at runtime, and host operating-system libraries."
       },
       {
         "name": "reveal:vex:assessment-method",
-        "value": "Resolved the published POM and npm package graphs and identified the bundled .NET assemblies by SHA-256 match against published NuGet packages. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites and released bytecode (javap) and JavaScript inspection; unresolved configuration or call-path exposure remains in_triage."
+        "value": "Resolved the published POM and npm dependency graphs and identified the bundled .NET assemblies by assembly name, version and SHA-256 comparison with published NuGet packages. OSV-Scanner matched the inventoried packages against complete offline NuGet, npm and Maven databases. Each decision is based on the advisory prerequisites and a static review of the released packages; findings that depend on deployment configuration remain in_triage."
       },
       {
         "name": "reveal:vex:scanner",
@@ -1221,10 +1209,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Anthropic.dll=534ec9f194ca86423b0fc0f9b6601e379295659c622c3762b8f94bca85e54785"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1275,10 +1259,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Azure.AI.OpenAI.dll=4690f5e82b37bb693f5aa58ffc099b3937f10ef69850d0929a18abc96292bd17"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1334,10 +1314,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/it/DotLiquid.resources.dll=993fd6d9c2ea7e50a75ca7f080fef1968b1f2dac455c6ab11a6e31e19d2930e2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1388,10 +1364,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Api.CommonProtos.dll=329cf0f2b66c5cbf675321f0d6b33c17d1092e5761f32d3d2c1307a110c0dbbd"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1442,10 +1414,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Api.Gax.Grpc.dll=2c447aafe6c5793b8a5c395ea2fbd57bbaff9576a47b29bf1f71ca3ed5459328"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1496,10 +1464,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Api.Gax.dll=b724c4317e3247d31108dfd9f0c266694e661e3890200869de41fdbb0812957a"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1550,10 +1514,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Apis.Auth.dll=a83ec6d1c80a0fcc818fae12ea93a7c425435cb55cf7e5328275432556471a80"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1604,10 +1564,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Apis.Core.dll=138a800b3dbf78e7d70a031516efb9f75e0a1af198301721ecfbefd0e9a0ea4b"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1658,10 +1614,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Apis.dll=f26773f2c697cf381393183c141a1a6529d7c1e269c28a18b05d450cccf7a393"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1712,10 +1664,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Cloud.AIPlatform.V1.dll=75f934ac7ceb5b4576a14e23988357a8dc3dbb20839188d254faf6aa56cf7e70"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1766,10 +1714,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Cloud.Iam.V1.dll=828687648dd36cd45d5a075f954f3b224bb721c2fad02c39b729176ab6718e90"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1820,10 +1764,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Cloud.Location.dll=35a2c85ff192d479dfc57e4870a58616b9e641c90d1625f0842146642fc7c6a6"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1874,10 +1814,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.LongRunning.dll=f28db50842aaebe022b837be016aca0a77bcf71b2f371a785428c1ab504b919c"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1928,10 +1864,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Protobuf.dll=dbd8f2ff0822d2fc0164ae255c0661ce84afc9ba328a30a4a50ba5f54ffee896"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -1982,10 +1914,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Auth.dll=d9f18b65825caaec7242324cb96f03d263aa9086d1ec747d1d28242bf8f58db2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2036,10 +1964,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Core.Api.dll=c14ac4d4c97e03cf1f05892caeb6346457ac25c8b1b7ee3e12a720fcaa1fb2e2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2090,10 +2014,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Net.Client.dll=75fe0ec43986ef6e78cf41268728909b9819263273fb1e84146c1c6ef58e0028"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2144,10 +2064,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Net.Common.dll=c31a578aed06bd7723ec24139882bbd10e18b79a6fe190482c771113ce32bd43"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2198,10 +2114,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.AI.Abstractions.dll=6a94202a8b3b01f558a71bad4cb94232a6e419d2230f22287bfa56b6eba4cce3"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2252,10 +2164,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.AI.OpenAI.dll=a9cb6276857d3dbdf9c3f5eaa61df54f481998dc77275ddf988fff5feb9a9c51"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2306,10 +2214,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll=d007f41f3f8902f56ce5b6d1dff420bb0df2d35bd3fdf202467cbb1d49fb8c08"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2360,10 +2264,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll=97fac88b2f6dd64dda07e844f91fbe02042fe379216e92e2604553efda591248"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2414,10 +2314,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.ObjectPool.dll=16ba19a951af5463d6141197a41386c16424be28855c3e82750039fc5cafc58e"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2468,10 +2364,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll=ddf6b2cd3148611375d25eb9ca92c98d250b84b4eb33f6f60efbfff5a7893124"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2522,10 +2414,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/OpenAI.dll=6f47facf543ac57942252e365c9ed2506c5d858efa43ef9d4c875f71f92606ea"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2559,14 +2447,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.Anthropic.dll=97931f981240367edad200e3140b105a36d0e12cb4f06e7ba4df61884c7bf47e"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -2600,14 +2480,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.AspNetCore.dll=06f2b997c166d4722abcdcf6d1028a8a37ccdc31f6032ad211858a8befea184e"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -2641,14 +2513,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll=06242d559afa45a1b856d5bce032d52ebffd902a80debfb61a718b751b769188"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -2682,14 +2546,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.Google.dll=cb6f4c16a4f2482d9d56249e4945bd4e0ef8a2dc56f9d0e545ff4daf6f14c2e9"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -2723,14 +2579,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.OpenAI.dll=31d79358630aa8ca2939a28e0bb59f6b99bcc0f32137ff1ab4ebc3d7b52cc753"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -2764,14 +2612,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.dll=e3e0395721180274182c528873f0c8b2dff880d864c00bde82e37dc698415135"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -2815,10 +2655,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.Dom.dll=41eaca1a5ca0554bda7c39bbe6fdfe7cf40ac1353797bf9ef92936c770438c65"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2862,10 +2698,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/SqlParser.dll=0c80f92bc658c0a55feb3f9a51fbcb5ec48368a0389d609ec1c3fea8ac886518"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2916,10 +2748,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.ClientModel.dll=8cc9da03e824b1f5ed412f3fde42539ae258d9e1b2db991feb8603b878bcac8a"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2970,10 +2798,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.IO.Pipelines.dll=9fa53a32f45686f97af49aba89fba89a5e0140d5839618fae318edac635437c8"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3024,10 +2848,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Memory.Data.dll=e7837fb6e7d6dae7d2a05a8934c3ed92ecff3192ee86521de9cf080b28bb96b2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3078,10 +2898,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Net.ServerSentEvents.dll=9f970a18ca00533628c71e471e05984b1c0d179b121aa0b7ab0b08c1f0fa5a60"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3140,10 +2956,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Text.Encodings.Web.dll=98951dac337286ddb49b53f316209830ca1ccc6c56b57c51033273d02ccd286b"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3194,10 +3006,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Text.Json.dll=cfbdfa2690d3770d531ec91c19d340dccc117df74427a7e4227d71d514eea063"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     }
@@ -3336,19 +3144,42 @@
     },
     {
       "ref": "pkg:generic/AIPlugin@2.3.0.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Anthropic@12.24.1",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/DotLiquid@2.3.197",
@@ -3356,11 +3187,21 @@
     },
     {
       "ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Protobuf@3.31.1"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Auth@2.71.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Client@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Api.Gax@4.12.1",
@@ -3368,7 +3209,10 @@
     },
     {
       "ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Core@1.72.0",
+        "pkg:nuget/Google.Apis@1.72.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Apis.Core@1.72.0",
@@ -3376,23 +3220,52 @@
     },
     {
       "ref": "pkg:nuget/Google.Apis@1.72.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Core@1.72.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+        "pkg:nuget/Google.Cloud.Location@2.4.0",
+        "pkg:nuget/Google.LongRunning@3.5.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.LongRunning@3.5.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Protobuf@3.31.1",
@@ -3400,7 +3273,10 @@
     },
     {
       "ref": "pkg:nuget/Grpc.Auth@2.71.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
@@ -3408,19 +3284,34 @@
     },
     {
       "ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Common@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
@@ -3428,7 +3319,9 @@
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
@@ -3440,31 +3333,75 @@
     },
     {
       "ref": "pkg:nuget/OpenAI@2.12.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Anthropic@12.24.1"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/System.ClientModel@1.14.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+        "pkg:nuget/Google.Protobuf@3.31.1"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/DotLiquid@2.3.197",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/SqlParserCS@0.6.5",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
@@ -3472,11 +3409,18 @@
     },
     {
       "ref": "pkg:nuget/SqlParserCS@0.6.5",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1"
+      ]
     },
     {
       "ref": "pkg:nuget/System.ClientModel@1.14.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
@@ -3484,7 +3428,9 @@
     },
     {
       "ref": "pkg:nuget/System.Memory.Data@10.0.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
@@ -3496,7 +3442,10 @@
     },
     {
       "ref": "pkg:nuget/System.Text.Json@10.0.10",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.IO.Pipelines@10.0.10",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10"
+      ]
     }
   ],
   "vulnerabilities": [
@@ -3584,7 +3533,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "requires_environment",
-        "detail": "Request smuggling needs a front-end proxy and Jetty to disagree on where a request ends. reveal-sdk-core 2.3.0 CallbackServer.start() creates a direct HTTP/1.1 ServerConnector on an ephemeral port for the local Reveal engine; nothing in the SDK places a proxy in front of it. Unlike core 2.3.2, core 2.3.0 does not call setHost, so the listener binds the wildcard address. A client that connects directly can only send requests on its own connection, and the handler rejects every request (404) whose RevealBI-Auth header does not match the per-process UUID.randomUUID() token before routing. Reassess if a reverse proxy is placed in front of the callback port.",
+        "detail": "Request smuggling requires a front-end proxy that parses requests differently from Jetty. Reveal uses Jetty only for an internal HTTP/1.1 listener that the local Reveal engine connects to directly, and Reveal does not place a proxy in front of it. Reassess if a reverse proxy is deployed in front of that listener.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -3653,7 +3602,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The bypass requires deserializing into a Java record that uses @JsonIgnore while a PropertyNamingStrategy is configured. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no com.fasterxml.jackson.annotation type and never sets a naming strategy. The three records in reveal-sdk-ai (RevealAIPluginOptions and its nested option records) are not deserialization targets: Reveal deserializes only into JsonNode, ObjectNode, Object, HashMap or LinkedHashMap<String,Object>. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires deserializing JSON into a Java record that uses @JsonIgnore while a property naming strategy is configured. Reveal deserializes JSON only into untyped JSON trees and maps, not into records or other bean types, and does not configure a naming strategy. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -3722,7 +3671,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The bypass requires a bean property annotated with both @JsonView and @JsonUnwrapped, deserialized under an active view. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no Jackson annotation, view or ObjectReader, and deserializes only into untyped trees and maps (JsonNode, ObjectNode, Object, HashMap, LinkedHashMap<String,Object>). Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires a bean property annotated with @JsonView and @JsonUnwrapped, deserialized with an active view. Reveal deserializes JSON only into untyped JSON trees and maps and does not use Jackson views. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -3791,7 +3740,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The bypass requires case-insensitive property matching (MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES or @JsonFormat) together with @JsonIgnoreProperties on a bean target. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references neither MapperFeature nor any Jackson annotation, calls no ObjectMapper configure/enable/disable method, and deserializes only into untyped trees and maps. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires case-insensitive property matching together with @JsonIgnoreProperties on a bean type. Reveal deserializes JSON only into untyped JSON trees and maps and uses default ObjectMapper settings. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -3857,7 +3806,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The number-length bypass is in Jackson's non-blocking (async) parser. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no non-blocking parser, byte feeder or JsonFactory reference; every parse goes through ObjectMapper.readTree(String), which uses the synchronous reader-based parser. jackson-databind 2.17.2 itself never creates a non-blocking parser. Jackson 2.17.2 is selected because the reveal-sdk-ai POM pins it, so both the AI wrapper and reveal-sdk-core run on it; host application code that uses the same JAR must be assessed separately.",
+        "detail": "Affects only Jackson's non-blocking (async) parser. Reveal parses JSON only with Jackson's standard blocking parser and does not use the non-blocking parser. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -3930,7 +3879,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The unbounded error message is built only by UTF8DataInputJsonParser, which Jackson creates for java.io.DataInput sources. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no java/io/DataInput reference; the only parse entry point is ObjectMapper.readTree(String), which uses ReaderBasedJsonParser, a parser the advisory confirms enforces maxErrorTokenLength. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Affects only the parser Jackson uses for java.io.DataInput sources. Reveal does not parse JSON from DataInput sources. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4020,7 +3969,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "requires_environment",
-        "detail": "The missing :authority/Host consistency check is on Jetty's HTTP/2 and HTTP/3 paths; the advisory states HTTP/1.1 already enforces it. reveal-sdk-core 2.3.0 CallbackServer.start() creates ServerConnector(Server) with the default HTTP/1.1 connection factory, and the resolved Maven graph contains no jetty-http2 or jetty-http3 artifact. The callback handler also makes no host-based decision.",
+        "detail": "The missing host check affects only Jetty's HTTP/2 and HTTP/3 support. Reveal configures Jetty for HTTP/1.1 only, and no Jetty HTTP/2 or HTTP/3 module is in the dependency graph.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4104,7 +4053,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "Forward-reference completion is used only for object identities (@JsonIdentityInfo) on bean targets. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 references no Jackson annotation or object-identity type, and untyped tree and map deserialization does not track object identities. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Applies only to object identity handling (@JsonIdentityInfo) on bean types. Reveal deserializes JSON only into untyped JSON trees and maps, which do not use object identities. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4185,7 +4134,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "Stale trailer fields are visible only to code that reads Request.getTrailers(). No class in reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references getTrailers, so no Reveal callback decision reads trailers.",
+        "detail": "Affects only code that reads HTTP request trailers. Reveal does not read request trailers.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4264,7 +4213,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "reveal-sdk-core 2.3.0 declares org.json:json 20231013, but no class in reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0, reveal-sdk-core 2.3.0, Jackson 2.17.2, Jetty 12.0.12 or SLF4J API 2.0.13 in the resolved graph references org/json. JSONTokener is never called; Reveal parses JSON with Jackson.",
+        "detail": "reveal-sdk-core 2.3.0 declares org.json 20231013, but no Reveal code or other library in the dependency graph uses it; Reveal parses JSON with Jackson.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4349,7 +4298,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The incomplete denylist matters only when polymorphic default typing is activated with DefaultBaseTypeLimitingValidator. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference; it constructs default ObjectMapper instances, which have default typing disabled. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires polymorphic default typing. Reveal uses default ObjectMapper settings, in which default typing is disabled, and does not use polymorphic type handling. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4415,7 +4364,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "Eager DNS resolution happens only when JSON is deserialized into java.net.InetSocketAddress. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no InetSocketAddress or InetAddress reference and no typed deserialization: its targets are JsonNode, ObjectNode, Object, HashMap and LinkedHashMap<String,Object>, which Jackson fills with strings, numbers, booleans, lists and maps only. Default typing, which could select another type, is not enabled. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires deserializing JSON into java.net.InetSocketAddress. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so this type is never a deserialization target. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4482,7 +4431,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The bypass is in PolymorphicTypeValidator handling of generic type parameters and requires polymorphic typing. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference, and deserializes only into untyped trees and maps. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires polymorphic typing (default typing or @JsonTypeInfo). Reveal uses default ObjectMapper settings, in which default typing is disabled, and does not use polymorphic type handling. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4558,7 +4507,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The quadratic regex is in NumberInput.looksLikeValidNumber(). javap of the released jackson-core 2.17.2 and jackson-databind 2.17.2 JARs finds no invocation of that method, and reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 do not reference NumberInput. In this graph the method is reachable only by an application calling the public helper directly, which the released Reveal code does not do.",
+        "detail": "In jackson-databind 2.17.2 the affected method is called only when a JSON string value is converted into a numeric Java type (BigDecimal, Double, Float or Number). Reveal deserializes JSON only into untyped JSON trees and maps, which keep string values as strings, and does not call the method directly. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4639,7 +4588,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The unbounded number parse occurs only when deserializing into javax.xml.datatype.Duration or XMLGregorianCalendar. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no javax/xml/datatype reference, deserializes only into untyped trees and maps, and does not enable default typing. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires deserializing JSON into javax.xml.datatype.Duration or XMLGregorianCalendar. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so these types are never deserialization targets. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4711,7 +4660,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The chunked digit accumulation bypass is in Jackson's non-blocking (async) parser. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no non-blocking parser or byte feeder reference, and jackson-databind 2.17.2 never creates one; Reveal parses JSON synchronously through ObjectMapper.readTree(String). Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Affects only Jackson's non-blocking (async) parser. Reveal parses JSON only with Jackson's standard blocking parser and does not use the non-blocking parser. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4864,7 +4813,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The array-subtype bypass is in BasicPolymorphicTypeValidator and requires polymorphic typing. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 contains no default-typing call, PolymorphicTypeValidator or @JsonTypeInfo reference. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires polymorphic typing (default typing or @JsonTypeInfo). Reveal uses default ObjectMapper settings, in which default typing is disabled, and does not use polymorphic type handling. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -4945,7 +4894,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "Eager DNS resolution happens only when JSON is deserialized into java.net.InetAddress. The released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 and reveal-sdk-core 2.3.0 has no InetAddress reference and deserializes only into JsonNode, ObjectNode, Object, HashMap and LinkedHashMap<String,Object>; default typing is not enabled. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires deserializing JSON into java.net.InetAddress. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so this type is never a deserialization target. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5026,7 +4975,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "requires_configuration",
-        "detail": "The bypass requires SecurityHandler.PathMapped to protect a path prefix. jetty-security is not in the resolved Maven graph, none of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references SecurityHandler, and the reveal-sdk-core 2.3.0 callback handler authenticates every path with the per-process token rather than path-based constraints.",
+        "detail": "Affects only applications that protect paths with Jetty's SecurityHandler path mappings. Reveal does not use Jetty's SecurityHandler, and jetty-security is not in the dependency graph.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5114,7 +5063,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "FileSystemProvider resolution happens only when JSON is deserialized into java.nio.file.Path. The java.nio.file references in reveal-sdk-ai 1.3.2 and reveal-sdk-core 2.3.0 are file I/O calls, not Jackson targets: every Reveal deserialization targets JsonNode, ObjectNode, Object, HashMap or LinkedHashMap<String,Object>, and default typing is not enabled. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Requires deserializing JSON into java.nio.file.Path. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so this type is never a deserialization target. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5186,7 +5135,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "The advisory affects applications that make security decisions from Jetty's parse of unusual URIs (scheme, IPv6 host, authority). The reveal-sdk-core 2.3.0 callback handler authenticates every request by comparing the RevealBI-Auth header with the per-process token before it routes on HttpURI.getPath(); no allow or deny decision uses the parsed scheme or authority. jetty-client is used only by EngineClient, for requests to http://127.0.0.1:<port> engine URLs that the SDK builds itself.",
+        "detail": "Affects applications that make security decisions based on Jetty's parsing of URI schemes, hosts or authorities. Reveal's Jetty listener and HTTP client make no such decisions; the client connects only to local engine URLs that Reveal builds itself.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5267,7 +5216,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "Unknown raw type IDs are retained only during polymorphic type-ID resolution (@JsonTypeInfo or default typing). Neither is present in the released bytecode of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0, so no type IDs are resolved. Host application code that uses the same JAR must be assessed separately.",
+        "detail": "Applies only during polymorphic type ID resolution (@JsonTypeInfo or default typing). Reveal uses neither, so no type IDs are resolved. Application code that uses Jackson directly is outside this assessment.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5334,7 +5283,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "requires_configuration",
-        "detail": "The leak is in GzipHandler request inflation. reveal-sdk-core 2.3.0 CallbackServer installs its own Handler.Abstract directly with Server.setHandler, and none of reveal-sdk-ai 1.3.2, reveal-sdk-servlet 2.3.0 or reveal-sdk-core 2.3.0 references GzipHandler, so Jetty does not inflate gzip request bodies on the callback port.",
+        "detail": "Affects only deployments that enable Jetty's GzipHandler for request decompression. Reveal does not configure GzipHandler.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },

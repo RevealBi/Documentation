@@ -64,18 +64,6 @@
       ],
       "properties": [
         {
-          "name": "infragistics:release-tag",
-          "value": "v1.7.21-preview"
-        },
-        {
-          "name": "infragistics:native-source-commit",
-          "value": "5ada28193ec979abc8a3c08c06a2e891af7f1983"
-        },
-        {
-          "name": "infragistics:source-commit",
-          "value": "7f5636e2c30bbfc616c2209b33c9b5d0ec36417b"
-        },
-        {
           "name": "infragistics:npm-integrity",
           "value": "sha512-ki+L5bKUdo7db68/aEDuSNXE+TNW89ysgVIen3BPC1nfVBXWStD5HY5JuVS8YeGsyoKVxGkLIxFRCaN0XOBJug=="
         },
@@ -111,11 +99,11 @@
       },
       {
         "name": "reveal:vex:assessment-scope",
-        "value": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI wrapper, the bundled .NET AI assemblies, the Maven runtime graph of reveal-sdk-servlet 2.3.0 and the npm production graph of reveal-sdk-node 2.3.2. The OS-selected Reveal engine, host-provided .NET assemblies, separately downloaded Chromium and host OS libraries are outside scan coverage."
+        "value": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI package, the bundled .NET assemblies, the Maven runtime dependencies of reveal-sdk-servlet 2.3.0 and the npm production dependencies of reveal-sdk-node 2.3.2. Not included: the OS-specific Reveal engine, host-provided .NET assemblies, the headless browser downloaded at runtime, and host operating-system libraries."
       },
       {
         "name": "reveal:vex:assessment-method",
-        "value": "Resolved the published POM and npm package graphs and identified the bundled .NET assemblies by SHA-256 match against published NuGet packages. OSV-Scanner matched inventoried packages against complete local NuGet/npm/Maven databases with network access and transitive resolution disabled. Decisions use advisory prerequisites and released bytecode (javap) and JavaScript inspection; unresolved configuration or call-path exposure remains in_triage."
+        "value": "Resolved the published POM and npm dependency graphs and identified the bundled .NET assemblies by assembly name, version and SHA-256 comparison with published NuGet packages. OSV-Scanner matched the inventoried packages against complete offline NuGet, npm and Maven databases. Each decision is based on the advisory prerequisites and a static review of the released packages; findings that depend on deployment configuration remain in_triage."
       },
       {
         "name": "reveal:vex:scanner",
@@ -2558,10 +2546,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Anthropic.dll=534ec9f194ca86423b0fc0f9b6601e379295659c622c3762b8f94bca85e54785"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2612,10 +2596,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Azure.AI.OpenAI.dll=4690f5e82b37bb693f5aa58ffc099b3937f10ef69850d0929a18abc96292bd17"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2671,10 +2651,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/it/DotLiquid.resources.dll=993fd6d9c2ea7e50a75ca7f080fef1968b1f2dac455c6ab11a6e31e19d2930e2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2725,10 +2701,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Api.CommonProtos.dll=329cf0f2b66c5cbf675321f0d6b33c17d1092e5761f32d3d2c1307a110c0dbbd"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2779,10 +2751,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Api.Gax.Grpc.dll=2c447aafe6c5793b8a5c395ea2fbd57bbaff9576a47b29bf1f71ca3ed5459328"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2833,10 +2801,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Api.Gax.dll=b724c4317e3247d31108dfd9f0c266694e661e3890200869de41fdbb0812957a"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2887,10 +2851,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Apis.Auth.dll=a83ec6d1c80a0fcc818fae12ea93a7c425435cb55cf7e5328275432556471a80"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2941,10 +2901,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Apis.Core.dll=138a800b3dbf78e7d70a031516efb9f75e0a1af198301721ecfbefd0e9a0ea4b"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -2995,10 +2951,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Apis.dll=f26773f2c697cf381393183c141a1a6529d7c1e269c28a18b05d450cccf7a393"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3049,10 +3001,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Cloud.AIPlatform.V1.dll=75f934ac7ceb5b4576a14e23988357a8dc3dbb20839188d254faf6aa56cf7e70"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3103,10 +3051,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Cloud.Iam.V1.dll=828687648dd36cd45d5a075f954f3b224bb721c2fad02c39b729176ab6718e90"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3157,10 +3101,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Cloud.Location.dll=35a2c85ff192d479dfc57e4870a58616b9e641c90d1625f0842146642fc7c6a6"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3211,10 +3151,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.LongRunning.dll=f28db50842aaebe022b837be016aca0a77bcf71b2f371a785428c1ab504b919c"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3265,10 +3201,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Google.Protobuf.dll=dbd8f2ff0822d2fc0164ae255c0661ce84afc9ba328a30a4a50ba5f54ffee896"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3319,10 +3251,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Auth.dll=d9f18b65825caaec7242324cb96f03d263aa9086d1ec747d1d28242bf8f58db2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3373,10 +3301,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Core.Api.dll=c14ac4d4c97e03cf1f05892caeb6346457ac25c8b1b7ee3e12a720fcaa1fb2e2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3427,10 +3351,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Net.Client.dll=75fe0ec43986ef6e78cf41268728909b9819263273fb1e84146c1c6ef58e0028"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3481,10 +3401,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Grpc.Net.Common.dll=c31a578aed06bd7723ec24139882bbd10e18b79a6fe190482c771113ce32bd43"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3535,10 +3451,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.AI.Abstractions.dll=6a94202a8b3b01f558a71bad4cb94232a6e419d2230f22287bfa56b6eba4cce3"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3589,10 +3501,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.AI.OpenAI.dll=a9cb6276857d3dbdf9c3f5eaa61df54f481998dc77275ddf988fff5feb9a9c51"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3643,10 +3551,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll=d007f41f3f8902f56ce5b6d1dff420bb0df2d35bd3fdf202467cbb1d49fb8c08"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3697,10 +3601,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll=97fac88b2f6dd64dda07e844f91fbe02042fe379216e92e2604553efda591248"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3751,10 +3651,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.ObjectPool.dll=16ba19a951af5463d6141197a41386c16424be28855c3e82750039fc5cafc58e"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3805,10 +3701,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll=ddf6b2cd3148611375d25eb9ca92c98d250b84b4eb33f6f60efbfff5a7893124"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3859,10 +3751,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/OpenAI.dll=6f47facf543ac57942252e365c9ed2506c5d858efa43ef9d4c875f71f92606ea"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -3896,14 +3784,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.Anthropic.dll=97931f981240367edad200e3140b105a36d0e12cb4f06e7ba4df61884c7bf47e"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -3937,14 +3817,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.AspNetCore.dll=06f2b997c166d4722abcdcf6d1028a8a37ccdc31f6032ad211858a8befea184e"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -3978,14 +3850,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll=06242d559afa45a1b856d5bce032d52ebffd902a80debfb61a718b751b769188"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -4019,14 +3883,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.Google.dll=cb6f4c16a4f2482d9d56249e4945bd4e0ef8a2dc56f9d0e545ff4daf6f14c2e9"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -4060,14 +3916,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.OpenAI.dll=31d79358630aa8ca2939a28e0bb59f6b99bcc0f32137ff1ab4ebc3d7b52cc753"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -4101,14 +3949,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.AI.dll=e3e0395721180274182c528873f0c8b2dff880d864c00bde82e37dc698415135"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "false"
-        },
-        {
-          "name": "infragistics:build-variant",
-          "value": "Plugin build variant compiled from the same source commit (5ada28193e) and version as the NuGet package, Release configuration. Separate build; not byte-identical to the NuGet package file."
         }
       ]
     },
@@ -4152,10 +3992,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/Reveal.Sdk.Dom.dll=41eaca1a5ca0554bda7c39bbe6fdfe7cf40ac1353797bf9ef92936c770438c65"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4199,10 +4035,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/SqlParser.dll=0c80f92bc658c0a55feb3f9a51fbcb5ec48368a0389d609ec1c3fea8ac886518"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4253,10 +4085,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.ClientModel.dll=8cc9da03e824b1f5ed412f3fde42539ae258d9e1b2db991feb8603b878bcac8a"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4307,10 +4135,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.IO.Pipelines.dll=9fa53a32f45686f97af49aba89fba89a5e0140d5839618fae318edac635437c8"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4361,10 +4185,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Memory.Data.dll=e7837fb6e7d6dae7d2a05a8934c3ed92ecff3192ee86521de9cf080b28bb96b2"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4415,10 +4235,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Net.ServerSentEvents.dll=9f970a18ca00533628c71e471e05984b1c0d179b121aa0b7ab0b08c1f0fa5a60"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4477,10 +4293,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Text.Encodings.Web.dll=98951dac337286ddb49b53f316209830ca1ccc6c56b57c51033273d02ccd286b"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     },
@@ -4531,10 +4343,6 @@
         {
           "name": "infragistics:bundled-file-sha256",
           "value": "native/System.Text.Json.dll=cfbdfa2690d3770d531ec91c19d340dccc117df74427a7e4227d71d514eea063"
-        },
-        {
-          "name": "infragistics:nuget-binary-match",
-          "value": "true"
         }
       ]
     }
@@ -5076,19 +4884,42 @@
     },
     {
       "ref": "pkg:generic/AIPlugin@2.3.0.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Anthropic@12.24.1",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/DotLiquid@2.3.197",
@@ -5096,11 +4927,21 @@
     },
     {
       "ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Protobuf@3.31.1"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Auth@2.71.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Client@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Api.Gax@4.12.1",
@@ -5108,7 +4949,10 @@
     },
     {
       "ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Core@1.72.0",
+        "pkg:nuget/Google.Apis@1.72.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Apis.Core@1.72.0",
@@ -5116,23 +4960,52 @@
     },
     {
       "ref": "pkg:nuget/Google.Apis@1.72.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Core@1.72.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+        "pkg:nuget/Google.Cloud.Location@2.4.0",
+        "pkg:nuget/Google.LongRunning@3.5.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.LongRunning@3.5.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Google.Protobuf@3.31.1",
@@ -5140,7 +5013,10 @@
     },
     {
       "ref": "pkg:nuget/Grpc.Auth@2.71.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
@@ -5148,19 +5024,34 @@
     },
     {
       "ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Common@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
@@ -5168,7 +5059,9 @@
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3"
+      ]
     },
     {
       "ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
@@ -5180,31 +5073,75 @@
     },
     {
       "ref": "pkg:nuget/OpenAI@2.12.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Anthropic@12.24.1"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/System.ClientModel@1.14.0"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+        "pkg:nuget/Google.Protobuf@3.31.1"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/DotLiquid@2.3.197",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/SqlParserCS@0.6.5",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
@@ -5212,11 +5149,18 @@
     },
     {
       "ref": "pkg:nuget/SqlParserCS@0.6.5",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1"
+      ]
     },
     {
       "ref": "pkg:nuget/System.ClientModel@1.14.0",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
@@ -5224,7 +5168,9 @@
     },
     {
       "ref": "pkg:nuget/System.Memory.Data@10.0.3",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
     },
     {
       "ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
@@ -5236,7 +5182,10 @@
     },
     {
       "ref": "pkg:nuget/System.Text.Json@10.0.10",
-      "dependsOn": []
+      "dependsOn": [
+        "pkg:nuget/System.IO.Pipelines@10.0.10",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10"
+      ]
     }
   ],
   "vulnerabilities": [
@@ -5261,7 +5210,7 @@
         248
       ],
       "description": "basic-ftp: Uncaught TypeError in MLSD directory-listing parser via __proto__ fact name causes DoS in Client.list()",
-      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs. Patched basic-ftp releases are 6.x; pick them up through an upstream get-uri update or, after testing, an application-level npm override.",
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
       "advisories": [
         {
           "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-5pm8-86m8-9m6r"
@@ -5280,7 +5229,7 @@
       "updated": "2026-11-12T21:45:03.430629333Z",
       "analysis": {
         "state": "in_triage",
-        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers in reveal-sdk-node 2.3.2. Reveal downloads a fixed HTTPS browser build, but the downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp, and get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact. Re-checked for AI 1.3.2: the install resolved reveal-sdk-node 2.3.2 with a tarball SHA-256 identical to the 2.3.2 assessment, and identical versions and integrity for this chain. reveal-sdk-node-ai adds no caller (its index.js requires only fs and path). Fixed basic-ftp releases are 6.x only, and get-uri 6.0.5 requires basic-ftp ^5.0.2.",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5343,7 +5292,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "requires_environment",
-        "detail": "reveal-sdk-node 2.3.2 lib/exporter/PuppeteerUtils.js selects the fixed Chrome Headless Shell build 132.0.6834.110 from the upstream browser distribution and a fixed per-user cache directory. Reveal exposes no archive, archive URL or extraction path input to this call; the attack requires substituting a malicious archive for that trusted distribution. Re-checked for AI 1.3.2: reveal-sdk-node 2.3.2 is byte-identical to the assessed tarball, and @puppeteer/browsers 2.13.2 and extract-zip 2.0.1 have identical integrity. reveal-sdk-node-ai does no archive handling. Supply-chain compromise or a locally tampered cache is outside this assessment; reassess if custom archive sources are introduced.",
+        "detail": "Requires extracting an attacker-supplied archive. reveal-sdk-node 2.3.2 extracts only the fixed headless browser build it downloads from the official distribution into its own cache directory, and Reveal exposes no archive, archive URL or extraction path input to that download. reveal-sdk-node-ai does not extract archives. Reassess if a custom browser download source is configured.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5387,7 +5336,7 @@
         1333
       ],
       "description": "basic-ftp: Quadratic-time CPU denial of service in Client.list() Unix directory-listing parser (RE_LINE backtracking)",
-      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs. Patched basic-ftp releases are 6.x; pick them up through an upstream get-uri update or, after testing, an application-level npm override.",
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
       "advisories": [
         {
           "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-c475-qrg2-pj4r"
@@ -5409,7 +5358,7 @@
       "updated": "2026-10-01T15:00:04.517943812Z",
       "analysis": {
         "state": "in_triage",
-        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers in reveal-sdk-node 2.3.2. Reveal downloads a fixed HTTPS browser build, but the downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp, and get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact. Re-checked for AI 1.3.2: the install resolved reveal-sdk-node 2.3.2 with a tarball SHA-256 identical to the 2.3.2 assessment, and identical versions and integrity for this chain. reveal-sdk-node-ai adds no caller (its index.js requires only fs and path). Fixed basic-ftp releases are 6.x only, and get-uri 6.0.5 requires basic-ftp ^5.0.2.",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5475,7 +5424,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "requires_environment",
-        "detail": "reveal-sdk-node 2.3.2 lib/exporter/PuppeteerUtils.js selects the fixed Chrome Headless Shell build 132.0.6834.110 from the upstream browser distribution and a fixed per-user cache directory. Reveal exposes no archive, archive URL or extraction path input to this call; the attack requires substituting a malicious archive for that trusted distribution. Re-checked for AI 1.3.2: reveal-sdk-node 2.3.2 is byte-identical to the assessed tarball, and @puppeteer/browsers 2.13.2 and extract-zip 2.0.1 have identical integrity. reveal-sdk-node-ai does no archive handling. Supply-chain compromise or a locally tampered cache is outside this assessment; reassess if custom archive sources are introduced.",
+        "detail": "Requires extracting an attacker-supplied archive. reveal-sdk-node 2.3.2 extracts only the fixed headless browser build it downloads from the official distribution into its own cache directory, and Reveal exposes no archive, archive URL or extraction path input to that download. reveal-sdk-node-ai does not extract archives. Reassess if a custom browser download source is configured.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5547,7 +5496,7 @@
       "analysis": {
         "state": "not_affected",
         "justification": "code_not_reachable",
-        "detail": "Zod is introduced through chromium-bidi. reveal-sdk-node 2.3.2 lib/reveal.js calls puppeteer.launch({ executablePath, args }) without a protocol option, so puppeteer-core creates a CDP browser and the WebDriver BiDi schema-validation path is not used. Re-checked for AI 1.3.2: reveal-sdk-node 2.3.2 is byte-identical to the assessed tarball, and puppeteer-core 24.43.1, chromium-bidi 14.0.0 and zod 3.25.76 have identical integrity. reveal-sdk-node-ai does not use zod or Puppeteer. Reassess custom BiDi integration.",
+        "detail": "Affects only the WebDriver BiDi protocol path of the browser automation library. reveal-sdk-node 2.3.2 launches the browser with the default Chrome DevTools Protocol, so the BiDi path is not used. reveal-sdk-node-ai does not use zod. Reassess if a WebDriver BiDi integration is added.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
@@ -5592,7 +5541,7 @@
         755
       ],
       "description": "basic-ftp: Uncaught exception crashes the Node.js process when a password (or resumed-download path) contains CR/LF",
-      "recommendation": "Review HTTP_PROXY/HTTPS_PROXY/ALL_PROXY settings and avoid FTP-backed PAC URLs. Patched basic-ftp releases are 6.x; pick them up through an upstream get-uri update or, after testing, an application-level npm override.",
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
       "advisories": [
         {
           "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-r4jh-29pc-gfqr"
@@ -5611,7 +5560,7 @@
       "updated": "2026-11-12T22:30:03.983522899Z",
       "analysis": {
         "state": "in_triage",
-        "detail": "basic-ftp is reachable through get-uri -> pac-proxy-agent -> proxy-agent -> @puppeteer/browsers in reveal-sdk-node 2.3.2. Reveal downloads a fixed HTTPS browser build, but the downloader constructs ProxyAgent and honors proxy environment variables, including pac+ftp, and get-uri can invoke Client.access, Client.list and Client.downloadTo. The default configuration does not require FTP, but deployment proxy configuration is not controlled by the release artifact. Re-checked for AI 1.3.2: the install resolved reveal-sdk-node 2.3.2 with a tarball SHA-256 identical to the 2.3.2 assessment, and identical versions and integrity for this chain. reveal-sdk-node-ai adds no caller (its index.js requires only fs and path). Fixed basic-ftp releases are 6.x only, and get-uri 6.0.5 requires basic-ftp ^5.0.2.",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp.",
         "firstIssued": "2026-11-26T14:44:00Z",
         "lastUpdated": "2026-11-26T14:44:00Z"
       },
