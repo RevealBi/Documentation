@@ -211,6 +211,7 @@ const decisions = new Map(configuration.decisions.map(decision => [
 const usedDecisions = new Set();
 const scanResults = new Map((scan.results ?? []).map(result => [normalizeFilePath(result.source.path), result]));
 const summaries = [];
+const pendingWrites = [];
 
 for (const sbomPath of listSboms(arguments_.sbomRoot).sort()) {
   const document = readJson(sbomPath);
@@ -265,7 +266,7 @@ for (const sbomPath of listSboms(arguments_.sbomRoot).sort()) {
     ...assessmentProperties(configuration.assessment, result, managedVulnerabilities.length),
   ];
 
-  writeJson(sbomPath, document);
+  pendingWrites.push({ sbomPath, document });
   summaries.push({
     file: path.relative(REPOSITORY_ROOT, sbomPath).replaceAll('\\', '/'),
     statements: managedVulnerabilities.length,
@@ -277,6 +278,9 @@ const unusedDecisions = [...decisions.keys()].filter(key => !usedDecisions.has(k
 if (unusedDecisions.length > 0) {
   throw new Error(`Assessment decisions were not used by the scan:\n${unusedDecisions.join('\n')}`);
 }
+
+// Write only after every document and decision has been validated, so a failed run leaves the SBOMs unchanged.
+for (const { sbomPath, document } of pendingWrites) writeJson(sbomPath, document);
 
 const totalStatements = summaries.reduce((total, summary) => total + summary.statements, 0);
 const exploitableStatements = summaries.reduce((total, summary) => total + summary.exploitable, 0);
