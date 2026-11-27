@@ -1,0 +1,17 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "1f04133b35bdbbb7da9093b71db6ca4057c2f13762d872b131aea7c5a1434c84"
+    },
+    {
+      "file": "scan-summary.json",
+      "sha256": "0578da77c653b41ed1a83398688c7befee732ef568c5fdaafbfe07b2aba4ed2c"
+    },
+    {
+      "file": "vex-assessments.json",
+      "sha256": "9ac1a7405b2515706149457ee6917be2d6459ccc555b46fa602fd16ab90c44fe"
+    }
+  ]
+}

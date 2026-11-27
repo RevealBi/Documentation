@@ -1,0 +1,5588 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:4bde6385-c99f-4618-9113-d3d98020b5d0",
+  "version": 2,
+  "metadata": {
+    "timestamp": "2026-11-26T14:44:00Z",
+    "lifecycles": [
+      {
+        "phase": "post-build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.57.2"
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "bom-ref": "pkg:npm/reveal-sdk-node-ai@1.3.2",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "reveal-sdk-node-ai",
+      "version": "1.3.2",
+      "description": "Reveal SDK AI plugin for Node.js — adds AI capabilities to Reveal BI dashboards",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "21b7a3c35746ca1362e6490ea2be831d9a724ad3"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "aa271918941784402158c2ec5a54765ba3cf56e439e2895fa38b6b81b9e97a9d"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "922f8be5b294768edd6faf3f6840ee48d5c4f93356f3dcac81521e9f704f0b59df5415d64ad0f91d8e49b954bc61e1acca8295c4690b23115109a3745ce049ba"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Reveal License"
+          }
+        }
+      ],
+      "purl": "pkg:npm/reveal-sdk-node-ai@1.3.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reveal-sdk-node-ai/-/reveal-sdk-node-ai-1.3.2.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://help.revealbi.io/ai/install-server-sdk/"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:npm-integrity",
+          "value": "sha512-ki+L5bKUdo7db68/aEDuSNXE+TNW89ysgVIen3BPC1nfVBXWStD5HY5JuVS8YeGsyoKVxGkLIxFRCaN0XOBJug=="
+        },
+        {
+          "name": "infragistics:scope",
+          "value": "AI wrapper plus the npm production graph of reveal-sdk-node resolved from the declared range >=2.3.0. The engine that reveal-sdk-node downloads in its install script is not inventoried here."
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "Infragistics, Inc."
+    },
+    "properties": [
+      {
+        "name": "io.revealbi.sbom.platform-resolution",
+        "value": "Platform independent. The package contains no OS- or architecture-specific binaries; the platform engine is downloaded by the reveal-sdk-node install script, which was not run."
+      },
+      {
+        "name": "io.revealbi.sbom.release",
+        "value": "ai-1.3.2"
+      },
+      {
+        "name": "io.revealbi.sbom.inventory-scope",
+        "value": "npm production dependencies of reveal-sdk-node-ai@1.3.2 from a clean install on 2026-11-26 (npm 11.4.2, --omit=dev, --ignore-scripts; dependency edges from package-lock.json). The declared range reveal-sdk-node >=2.3.0 resolved to 2.3.2; a later install can select different versions. Plus the .NET assemblies bundled under native/, identified as NuGet packages. Excluded: the engine downloaded by the reveal-sdk-node install script, host-provided assemblies the plugin loads from the Reveal engine, and host operating-system libraries."
+      },
+      {
+        "name": "reveal:vex:assessment-date",
+        "value": "2026-11-26T14:44:00Z"
+      },
+      {
+        "name": "reveal:vex:assessment-owner",
+        "value": "Infragistics, Inc."
+      },
+      {
+        "name": "reveal:vex:assessment-scope",
+        "value": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI package, the bundled .NET assemblies, the Maven runtime dependencies of reveal-sdk-servlet 2.3.0 and the npm production dependencies of reveal-sdk-node 2.3.2. Not included: the OS-specific Reveal engine, host-provided .NET assemblies, the headless browser downloaded at runtime, and host operating-system libraries."
+      },
+      {
+        "name": "reveal:vex:assessment-method",
+        "value": "Resolved the published POM and npm dependency graphs and identified the bundled .NET assemblies by assembly name, version and SHA-256 comparison with published NuGet packages. OSV-Scanner matched the inventoried packages against complete offline NuGet, npm and Maven databases. Each decision is based on the advisory prerequisites and a static review of the released packages; findings that depend on deployment configuration remain in_triage."
+      },
+      {
+        "name": "reveal:vex:scanner",
+        "value": "OSV-Scanner 2.7.1"
+      },
+      {
+        "name": "reveal:vex:scanner-mode",
+        "value": "offline; --no-resolve --all-packages"
+      },
+      {
+        "name": "reveal:vex:database-snapshot",
+        "value": "2026-11-26"
+      },
+      {
+        "name": "reveal:vex:result",
+        "value": "vex_statements_included"
+      },
+      {
+        "name": "reveal:vex:statement-count",
+        "value": "6"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/AIPlugin@2.3.0.0",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "AIPlugin",
+      "version": "2.3.0.0",
+      "scope": "required",
+      "purl": "pkg:generic/AIPlugin@2.3.0.0",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.3.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/AIPlugin.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/AIPlugin.dll=6ed0903790be53db2550030b3e0ab8f03e69f97d7da54b1aab2e7b15751a68b8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "Reveal.Sdk.AI.Abstractions.Debug",
+      "version": "1.7.21.23258",
+      "scope": "required",
+      "purl": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Abstractions.Debug.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Abstractions.Debug.dll=70bd47102b0fcd455ad92f3ceb698f58f3ce09e43b876f0e857baa8ea9a12634"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40puppeteer/browsers@2.13.2",
+      "name": "@puppeteer/browsers",
+      "version": "2.13.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e4451949421cdfb1fa6885f258ed19e32f0d945f0d9e3826a9e4203868acc0053ba58d073a8d7a868e3e6a52169927dd6678ea0516b032c3f723962a2d29fa93"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:\\@puppeteer\\/browsers:\\@puppeteer\\/browsers:2.13.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40puppeteer/browsers@2.13.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@puppeteer/browsers/-/browsers-2.13.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40tootallnate/quickjs-emscripten@0.23.0",
+      "name": "@tootallnate/quickjs-emscripten",
+      "version": "0.23.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0b931ceab767b1a2438cedd4a465bf0904c7b4229a62549c653972e0922ef7b271a3fa1d0a21f42139c35d224f4ceac42a4ff271267400e8139a40ed90eb2f20"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:\\@tootallnate\\/quickjs-emscripten:\\@tootallnate\\/quickjs-emscripten:0.23.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40tootallnate/quickjs-emscripten@0.23.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@tootallnate/quickjs-emscripten/-/quickjs-emscripten-0.23.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40types/node@26.6.11",
+      "name": "@types/node",
+      "version": "26.6.11",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b94c90d972c4cfe117877e25992dc684aae4aa7ffc154eca522291a64df8ec0b766e69cc556b2ce39cb3f1be051bfb54b66575b55ffe4d59084c8b4f44ec9e79"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:\\@types\\/node:\\@types\\/node:26.6.11:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40types/node@26.6.11",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/node/-/node-26.6.11.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/%40types/yauzl@2.10.3",
+      "name": "@types/yauzl",
+      "version": "2.10.3",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a09a1fb6fd0b4ae683644dcb7b80db297f8a4bd1b7e8dcce7926a9f745082b4c8c03f36128986a9521ad3433913516886d07f38d70eb41ad32b49ea63511b3fd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:\\@types\\/yauzl:\\@types\\/yauzl:2.10.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40types/yauzl@2.10.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/yauzl/-/yauzl-2.10.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/agent-base@7.1.4",
+      "name": "agent-base",
+      "version": "7.1.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "32703e613f1fc1f24f801c779bad0c36a6a49b7d173a4c88a07d72ea1b9342f0b43f0646ee48bc35a70b05cacf6cda28f2f119cbb269ba4efe8cc3be094a2f4d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:agent-base:agent-base:7.1.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/agent-base@7.1.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/ansi-regex@5.0.1",
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "aae2505e54d25062f62c7f52517a3c570b18e2ca1a9e1828e8b3529bce04d4b05c13cb373b4c29762473c91f73fd9649325316bf7eea38e6fda5d26531410a15"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:ansi-regex_project:ansi-regex:5.0.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/ansi-styles@4.3.0",
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cdb07dac22404f5adb8e25436f686a2851cd60bc60b64f0d511c59dc86700f717a36dc5b5d94029e74a2d4b931f880e885d3e5169db6db05402c885e64941212"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:ansi-styles:ansi-styles:4.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/ast-types@0.13.4",
+      "name": "ast-types",
+      "version": "0.13.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c751421671627ef6030f34da2c823bd6f1b9baf0f082d9834c4556031ae07a247c56330e35c097271ec4f944a30ed1e5c059adf4ccac6ea805f5bf558ebeb0fb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:ast-types:ast-types:0.13.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/ast-types@0.13.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ast-types/-/ast-types-0.13.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/b4a@1.9.0",
+      "name": "b4a",
+      "version": "1.9.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7697dc17d7c3351ebef9cb615d1ebb8b2860a96cbd081a2e02f2168489edcc11ba72f2bf72720f8994230708bf66a8e30440c67e8343b660749138eba0e277a5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:b4a:b4a:1.9.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/b4a@1.9.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/b4a/-/b4a-1.9.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bare-buffer@3.7.3",
+      "name": "bare-buffer",
+      "version": "3.7.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "efba305b5e915fa62074ecdd747b4cd281b3f30b1dd3f17d93fd1ca33e933e68d41e7afff45c1638354c34ac3261633f6bf112753ba6f39e677d0c67b0a53280"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bare-buffer:bare-buffer:3.7.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/bare-buffer@3.7.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/bare-buffer/-/bare-buffer-3.7.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bare-events@2.9.2",
+      "name": "bare-events",
+      "version": "2.9.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0083ca8a857bfd8ffc29f6770008633c9c4b2db638f52eb8626e436a4665520ef9a90893814abd8442681306b87947b33d4957472fe2e4da6c2afa3d8e02a6a0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bare-events:bare-events:2.9.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/bare-events@2.9.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/bare-events/-/bare-events-2.9.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bare-fs@4.8.7",
+      "name": "bare-fs",
+      "version": "4.8.7",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6cd063abec7d59ece9deb8ac26ced368f1f78e3567c859a6492c5fa444bcb69f718ef2f8b7a064f6fda70bec66e657f125e0f30a12bb341af22be25c88cfe97d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bare-fs:bare-fs:4.8.7:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/bare-fs@4.8.7",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/bare-fs/-/bare-fs-4.8.7.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bare-path@3.1.3",
+      "name": "bare-path",
+      "version": "3.1.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f2bf85554fe8e337059a9083a9ba806211c76ed5cf3fe73264aa3b0d119159cece2e536ce1331a4901295cbfec21dcf2106d0ced11f0e01ef160c1ab4dcfaaae"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bare-path:bare-path:3.1.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/bare-path@3.1.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/bare-path/-/bare-path-3.1.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bare-stream@2.13.4",
+      "name": "bare-stream",
+      "version": "2.13.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3dcad0f2554b6e226c70d9b529ecfe629e06cb800719c375973c23bdfe4dc9b59e9fb56f12051fc9f9d7609db336a5a7cce7c26f501baba947f2d8b4b3242ccc"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bare-stream:bare-stream:2.13.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/bare-stream@2.13.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/bare-stream/-/bare-stream-2.13.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bare-url@2.5.8",
+      "name": "bare-url",
+      "version": "2.5.8",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1b92937b9063eb3e69a88c5c9f7956948148bf4ae45db71cc744f45ee7fbb7845aa5f496bc595c55baf0617c45674d0f0b8969e7b382224eae5cffebdc66e90f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bare-url:bare-url:2.5.8:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/bare-url@2.5.8",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/bare-url/-/bare-url-2.5.8.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/basic-ftp@5.3.1",
+      "name": "basic-ftp",
+      "version": "5.3.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6e8a55369eae832035e740c3b997cf15db75299e5af786438b05f884c8190f317e1adb43f34944cbc923f7c91bca12d79cfbe1b48a3dde67672c88e908079e3b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:patrickjuchli:basic-ftp:5.3.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/basic-ftp@5.3.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/basic-ftp/-/basic-ftp-5.3.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/buffer-crc32@0.2.13",
+      "name": "buffer-crc32",
+      "version": "0.2.13",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "54ef47b7ffa9dd237b48a5aa72b804ce319b4522584f1f90d694d00b4c2b5aa1f1d2fa49ada43a1ad1f1f2dbdc835ae52b56f2854e6071cc603a08fb0744c391"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:buffer-crc32:buffer-crc32:0.2.13:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/buffer-crc32@0.2.13",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/chromium-bidi@14.0.0",
+      "name": "chromium-bidi",
+      "version": "14.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f606252ed4bab52b5d456cebb57693327a9c33876e74d7a0317271911d08fc25ce6c76a561e61c00c3eb2f5f5eae83591ed27c0d09aed44f9934e62efc85cc5f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:chromium-bidi:chromium-bidi:14.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/chromium-bidi@14.0.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/chromium-bidi/-/chromium-bidi-14.0.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/cliui@8.0.1",
+      "name": "cliui",
+      "version": "8.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "05278d9f2bacef90b8fff350f6042dd7f72c4d7ca8ffc49bf9a7cb024cc0a6d16e32ca1df4716890636e759a62fe8415ef786754afac47ee4f55131df83afb61"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:cliui:cliui:8.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/cliui@8.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/color-convert@2.0.1",
+      "name": "color-convert",
+      "version": "2.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4511023ec8fb8aeff16f9a0a61cb051d2a6914d9ec8ffe763954d129be333f9a275f0545df3566993a0d70e7c60be0910e97cafd4e7ce1f320dfc64709a12529"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:color-convert:color-convert:2.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/color-convert@2.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/color-name@1.1.4",
+      "name": "color-name",
+      "version": "1.1.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "74ecbedc0b96ddadb035b64722e319a537208c6b8b53fb812ffb9b71917d3976c3a3c7dfe0ef32569e417f479f4bcb84a18a39ab8171edd63d3a04065e002c40"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:color-name:color-name:1.1.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/color-name@1.1.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/data-uri-to-buffer@6.0.2",
+      "name": "data-uri-to-buffer",
+      "version": "6.0.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ee1bdfeff196f1ef3aad6d29b6ec12dce7011838c88ba499bdaee10b2582d3262bcb670e3e62c88d70141c8e832b61ec9f025df627e6b79ee2f1e5769f860da7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:data-uri-to-buffer:data-uri-to-buffer:6.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/data-uri-to-buffer@6.0.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-6.0.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/debug@4.4.3",
+      "name": "debug",
+      "version": "4.4.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "446c305a7c10be455f6af295b76d8518bc3ec5849dcc04709b4aeee83853540dee994e6165cdbc57790ee2cb6062bcab4e52e9baf808f468a28e5b408cd6dca8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:debug_project:debug:4.4.3:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/debug@4.4.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/degenerator@5.0.1",
+      "name": "degenerator",
+      "version": "5.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4e5969311fedd0ce6ca825df8fce62e17680cf1992e6d540d7a76abdd90cc069b323e7572d79f0dc9fb755dbfb54ac3e4e195331ba0aea2f6b9d9e8d9ed8f909"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:degenerator:degenerator:5.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/degenerator@5.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/degenerator/-/degenerator-5.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/devtools-protocol@0.0.1608973",
+      "name": "devtools-protocol",
+      "version": "0.0.1608973",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4e99b5edfc58cedf89ed5ac675cd64f18751a92dd857bb1efcce8a79e984aaf51babf9fb02dd6b595b97331420a5691dc1274810a61b53ffc1bdef92866e1835"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:devtools-protocol:devtools-protocol:0.0.1608973:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/devtools-protocol@0.0.1608973",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/devtools-protocol/-/devtools-protocol-0.0.1608973.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/emoji-regex@8.0.0",
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3128d8cdc58d380d1ec001e9cf4331a5816fc20eb28f2d4d1b7c6d7a8ab3eb8e150a8fd13e09ebd7f186b7e89cde2253cd0f04bb74dd335e126b09d5526184e8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:emoji-regex:emoji-regex:8.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/end-of-stream@1.4.5",
+      "name": "end-of-stream",
+      "version": "1.4.5",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a2810673a1cfdbac57abf37e18218e4f424a08b0c6aead9b41466b43b832ac989900d27ff180d3c53a5005718c9fe59b2105cd569c96ca69bb2985480909f23a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:end-of-stream:end-of-stream:1.4.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/end-of-stream@1.4.5",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/escalade@3.2.0",
+      "name": "escalade",
+      "version": "3.2.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5948f6aa5c5a42d3b883a3eae5cdbd193716183c9df22b4bf334e58a98040b3dc97ac02288e2a8b5df0953aa2d0773c00a01bac64254c9585ba0c4be6e37bf8c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:escalade:escalade:3.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/escalade@3.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/escodegen@2.1.0",
+      "name": "escodegen",
+      "version": "2.1.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d8d9480d3c145893749913d039db500736d41ef7466363f55574b253cdd0df12b133b5875f6425f1d2aaefcd90f5381050d38b133118bbd6f32cd8f5abcf08e7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:escodegen:escodegen:2.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/escodegen@2.1.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/escodegen/-/escodegen-2.1.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/esprima@4.0.1",
+      "name": "esprima",
+      "version": "4.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "786b85170ed4a5d6be838a7e407be75b44724d7fd255e2410ccfe00ad30044ed1c2ee4f61dc10a9d33ef86357a6867aaac207fb1b368a742acce6d23b1a594e0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:esprima:esprima:4.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/esprima@4.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/estraverse@5.3.0",
+      "name": "estraverse",
+      "version": "5.3.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "30c74046e54443388d4de243f0380caa6870475d41450fdc04ffa92ed61d4939dfdcc20ef1f15e8883446d7dfa65d3657d4ffb03d7f7814c38f41de842cbf004"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:estraverse:estraverse:5.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/estraverse@5.3.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/estraverse/-/estraverse-5.3.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/esutils@2.0.3",
+      "name": "esutils",
+      "version": "2.0.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "915b1ca97938382a7af126747648042958baffc8a3df4d0a0564c9ab7d8ffdd61e5934b02b8d56c93c5a94dd5e46603967d514fcb5fd0fb1564a657d480631ea"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:esutils:esutils:2.0.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/esutils@2.0.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/events-universal@1.0.1",
+      "name": "events-universal",
+      "version": "1.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2d47797aebdb30ba70385f26ea2bcf09b85079289854d6fc56cd1f43c4235e8d094e4107a73f29c5d41fd204ad96d68fa70d0271af1bdfd2b1bcaf5c7ca46203"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:events-universal:events-universal:1.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/events-universal@1.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/events-universal/-/events-universal-1.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/extract-zip@2.0.1",
+      "name": "extract-zip",
+      "version": "2.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "183854f67b70b8ac865dd6415204c87bebd79d68f47e9a5412d3032f4fa275de52b5af131a91ecb27fdebac03d9ab3ebf6a343ca6e92c406198cdbc29fff5106"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:max-mapper:extract-zip:2.0.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/extract-zip@2.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/extract-zip/-/extract-zip-2.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/fast-fifo@1.3.2",
+      "name": "fast-fifo",
+      "version": "1.3.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fddf6c7e8b38cb1ce9c240e4b8dee4d92a852ad60d9824f381f129cfcdb1df820cf7fcdcf0a1b14285e0d6588d0bf8b3a5133f30176de38366c78d595aa93e15"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:fast-fifo:fast-fifo:1.3.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/fast-fifo@1.3.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fast-fifo/-/fast-fifo-1.3.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/fd-slicer@1.1.0",
+      "name": "fd-slicer",
+      "version": "1.1.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "704d6ab01fd5c32428cd9faad5d1b147c2c160d65ea1f84475434648c6d00f71b0da50335fd65bdee214e846dcfc59b28e8f405967e79f4014087aad7afb3ff2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:fd-slicer:fd-slicer:1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/fd-slicer@1.1.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fd-slicer/-/fd-slicer-1.1.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/get-caller-file@2.0.5",
+      "name": "get-caller-file",
+      "version": "2.0.5",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0f214fdc133fdd81d340e0942ffc343991d1d25a4a786af1a2d70759ca8d11d9e5b6a1705d57e110143de1e228df801f429a34ac6922e1cc8889fb58d3a87616"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:get-caller-file:get-caller-file:2.0.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/get-caller-file@2.0.5",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/get-stream@5.2.0",
+      "name": "get-stream",
+      "version": "5.2.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9c117e175ac06550aefe9eeb8f3800f986f895f617ae997b6ba56626b53cc05f48d422af3ff4303cd6479ce9706d3918e9dbed148cc5312c905db2e84d03d1a4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:get-stream:get-stream:5.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/get-stream@5.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/get-uri@6.0.5",
+      "name": "get-uri",
+      "version": "6.0.5",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6f53b4ed762af1e46e57304d8092ecb54e8561cd6d4bac2732d1752350fd944f0bc5948e199ecb871379e323cfea61b0e5fd8291763605050bf45c78d6abdc22"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:get-uri:get-uri:6.0.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/get-uri@6.0.5",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/get-uri/-/get-uri-6.0.5.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/http-proxy-agent@7.0.2",
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4f58240226180d6631dd5e419b2bbb1dc7dcbcbee652b4d688ceb239f6b73c8a6156227f8053dbbe2750faf7aa48e1dc8bf3f105c0da6de50d0b3a4e3832598a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:http-proxy-agent:http-proxy-agent:7.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/https-proxy-agent@7.0.6",
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "bcaf4fe7f8947dd97de4023e255c94b88715b5de287efb6b3abdc736d336cb10bd6e731b11da77c74d4e8503678dbf082588b7f159531379815f071fbf2c2e4b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:https-proxy-agent_project:https-proxy-agent:7.0.6:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/https-proxy-agent@7.0.6",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/ip-address@10.7.6",
+      "name": "ip-address",
+      "version": "10.7.6",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d342d890ce9bc882daf5e408c7aaa869708ce34c532dde7a019e2fc9a3d6dd84f26f8f556583e8e71b2202ae2db90e78187e11ee055d612709d41ec1efb3ee4e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:beaugunderson:ip-address:10.7.6:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/ip-address@10.7.6",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ip-address/-/ip-address-10.7.6.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cf29a6e7ebbeb02b125b20fda8d69e8d5dc316f84229c94a762cd868952e1c0f3744b8dbee74ae1a775d0871afd2193e298ec130096c59e2b851e83a115e9742"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:is-fullwidth-code-point:is-fullwidth-code-point:3.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/lru-cache@7.18.3",
+      "name": "lru-cache",
+      "version": "7.18.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8ee9a573404852b4b7a891a0224599b327c033b3425a205c08386777edcd34ce4a6c198b4e01d57d605c83a5beacb52c229ce91113ecbf050fec272401048ea0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:isaacs:lru-cache:7.18.3:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/lru-cache@7.18.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/mitt@3.0.1",
+      "name": "mitt",
+      "version": "3.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "bca8af0137ebf7b976fd00426009176036eb2163ccd8820a125ed83e18c2bca946de4136826fae068ea71172b7339fc57e1fc52e9284c73390dc926824614a07"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:mitt:mitt:3.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/mitt@3.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/mitt/-/mitt-3.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/ms@2.1.3",
+      "name": "ms",
+      "version": "2.1.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e85973b9b4cb646dc9d9afcd542025784863ceae68c601f268253dc985ef70bb2fa1568726afece715c8ebf5d73fab73ed1f7100eb479d23bfb57b45dd645394"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:vercel:ms:2.1.3:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/ms@2.1.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/netmask@2.1.2",
+      "name": "netmask",
+      "version": "2.1.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "227fea8c480f58fdc410a441ac04ca48744271e9a928dfe0525f7baeb075993ade5507ef3c6b614c9570357c1b407b48cf32dfd5b63287c339d31a5e624d2be9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:netmask_project:netmask:2.1.2:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/netmask@2.1.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/netmask/-/netmask-2.1.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/once@1.4.0",
+      "name": "once",
+      "version": "1.4.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "94d689808fb643951140191c7042874d038f697754c67659125413658d0c15402e684a9ed44f8dcaf81dcff688c8d8ba67d3333b976fd47f27e7cfc610ba77fb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:once:once:1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/once@1.4.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/once/-/once-1.4.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/pac-proxy-agent@7.2.0",
+      "name": "pac-proxy-agent",
+      "version": "7.2.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4c407c112aae88b31cd2557cbdc779425fc900a028cb31c55da4adc23933a4ea42e58bfea48ccb7c7be34d275fdefa5ad9b322510ae0f62eb6efaca7f3aeba68"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:pac-proxy-agent:pac-proxy-agent:7.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/pac-proxy-agent@7.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pac-proxy-agent/-/pac-proxy-agent-7.2.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/pac-resolver@7.0.1",
+      "name": "pac-resolver",
+      "version": "7.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e4d3e07fcec04f64938306b69ed44caf8e634caad8046915537eb24f48a0fe7fc63006b7a0faa165f210da43048a645e834fadf64655883559f37a9f55495c92"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:pac-resolver_project:pac-resolver:7.0.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/pac-resolver@7.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pac-resolver/-/pac-resolver-7.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/pend@1.2.0",
+      "name": "pend",
+      "version": "1.2.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1776acbf8d94b97721773b7ec57a9f5b538695505efa6c5ada6a88d29839c801d93ef16663763a76b49ffc643503ce9681610df4ace1fd6ae029aea219c1d72e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:pend:pend:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/pend@1.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/progress@2.0.3",
+      "name": "progress",
+      "version": "2.0.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ecf887b4b965e4b767288330d74d08fbcc495d1e605b6430598913ea226f6b46d78ad64a6bf5ccad26dd9a0debd979da89dcfd42e99dd153da32b66517d57db0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:progress:progress:2.0.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/progress@2.0.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/proxy-agent@6.5.0",
+      "name": "proxy-agent",
+      "version": "6.5.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4e66ad31776bd8a951880d82c83bbc1aa47c1236a14c6dda6379d78ddcc5ca865b981f21ac1b13c8c7b38542c85ca9c2d23a5f8e59a2677f84682ce82274aefc"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:proxy-agent:proxy-agent:6.5.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/proxy-agent@6.5.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/proxy-from-env@1.1.0",
+      "name": "proxy-from-env",
+      "version": "1.1.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0fece439109b03d7f5b5d5912b445a091dc63efe7470cc5caf3e17f24e4b4d2503d43930e3b98a24465036e9c8b514e45b082d6944a8d515454481bd65788562"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:proxy-from-env:proxy-from-env:1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/proxy-from-env@1.1.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/pump@3.0.4",
+      "name": "pump",
+      "version": "3.0.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "552eec8dce8a47b7b5ba4445850498e4b336b8158050f88e3dafc0de690a9a23304a64455084edd31ba3fbf95eb209c2bfe74f204625933adcc9782ab881cc70"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:pump:pump:3.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/pump@3.0.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pump/-/pump-3.0.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/puppeteer-core@24.43.1",
+      "name": "puppeteer-core",
+      "version": "24.43.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4f949c50c02c9a174d6e00d1e3500611261e4ba57d31281eb644a7561856fa05efcc2e3655eb0a0a7e6577cee00190c9eaf2c72fd1a446f63d5ad4164a7c056f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:puppeteer-core:puppeteer-core:24.43.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/puppeteer-core@24.43.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-24.43.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/require-directory@2.1.1",
+      "name": "require-directory",
+      "version": "2.1.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7c6c4423bfb0b06f71aef763b2b9662f6d8e3134e21d1c0032ba2211e320abc833a0b0bf3d0afb46c4434932d483f6d9019b45f9354890773aff84482abba2f9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:require-directory:require-directory:2.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/require-directory@2.1.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/reveal-sdk-node@2.3.2",
+      "supplier": {
+        "name": "Infragistics"
+      },
+      "name": "reveal-sdk-node",
+      "version": "2.3.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ae34f5d08e390ec9d838e9ceb2d16ab4de01c306d8fe8ed63bb1412ef3a144fc7b58b02f0892ab9655b6fe5fa6ee342ca3c330dee7a482bbe2d486154f104ce3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "SEE LICENSE IN LICENSE"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:reveal-sdk-node:reveal-sdk-node:2.3.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/reveal-sdk-node@2.3.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reveal-sdk-node/-/reveal-sdk-node-2.3.2.tgz"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:declared-version-range",
+          "value": ">=2.3.0"
+        },
+        {
+          "name": "infragistics:install-script",
+          "value": "Downloads the platform engine at install time; not run during this assessment."
+        },
+        {
+          "name": "infragistics:required-platform-sbom",
+          "value": "Reveal Server SDK Node 2.3.2 SBOM (win-x64 or linux-x64) for the engine"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/semver@7.8.6",
+      "name": "semver",
+      "version": "7.8.6",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f65a52494e0c972de6aedaeec0bb3578b2bafa0cdbcea78117044d8c88c4fbd2ee0e959d61cb6b4254377a3d489608bb8249e9b134673e82cff03a421ea1c827"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:npmjs:semver:7.8.6:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/semver@7.8.6",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/semver/-/semver-7.8.6.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/smart-buffer@4.2.0",
+      "name": "smart-buffer",
+      "version": "4.2.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f7884ad0787cacfa90976c577371ec681a0e5ca576d0c4e83e4717bf06c84962c4b3eeb8b01ab9905827da42431dbd4faf2f72acfd1dc6b088f5145c8bb4572a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:smart-buffer:smart-buffer:4.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/smart-buffer@4.2.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/socks-proxy-agent@8.0.5",
+      "name": "socks-proxy-agent",
+      "version": "8.0.5",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1de84212ca2d16a6cf5bdb09f1655807a51b98832fee4514391205d8d9dcab8550bc17cd04b89b5bd619479765602494870703eb6f29465966ee7f84f984f327"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:socks-proxy-agent:socks-proxy-agent:8.0.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.5",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/socks@2.8.11",
+      "name": "socks",
+      "version": "2.8.11",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d87fee43bf9234fd212b5e91a2b4da934996ac5a2aa38027015192525d9d4f4ee86e059d5adf60ae697e5439752e496050e3d633801ba34bbce82be9f2f16363"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:socks:socks:2.8.11:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/socks@2.8.11",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/socks/-/socks-2.8.11.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/source-map@0.6.1",
+      "name": "source-map",
+      "version": "0.6.1",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "52381aa6e99695b3219018334fb624739617513e3a17488abbc4865ead1b7303f9773fe1d0f963e9e9c9aa3cf565bab697959aa989eb55bc16396332177178ee"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:source-map:source-map:0.6.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/source-map@0.6.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/streamx@2.28.1",
+      "name": "streamx",
+      "version": "2.28.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cc4cd76f4b3909db3bb6a307eab859d3995c2727425a240f13088d9e056acecc4273deb6bcb638530fa65bba1df240c7db9f24d94cff26b3a474800085287d54"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:streamx:streamx:2.28.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/streamx@2.28.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/streamx/-/streamx-2.28.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/string-width@4.2.3",
+      "name": "string-width",
+      "version": "4.2.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c0ac90450a63274b08a7ad84ad265d1ac8cc256b1aa79a1136284786ee86ec954effd8c807a5327af2feb57b8eaab9e0f23fdcc4a4d6c96530bd24eb8a2673fe"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:string-width:string-width:4.2.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/string-width@4.2.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/strip-ansi@6.0.1",
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "637f153d21dcaa416b0a916743dbee4979aabaebf9a1738aa46793e9a1abaf7a3719cf409556ba2417d448e0a76f1186645fbfd28a08ecaacfb944b3b54754e4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:strip-ansi:strip-ansi:6.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/tar-fs@3.1.4",
+      "name": "tar-fs",
+      "version": "3.1.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4b496b96b264ca78faa2dc011ac77ed581d6bdb81a738dbe2de1dabd2ce0a247a135d8918350f87861438b571c7a21b57d09524e79ecb3e6a0751425e416f50c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:tar-fs:tar-fs:3.1.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/tar-fs@3.1.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tar-fs/-/tar-fs-3.1.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/tar-stream@3.3.0",
+      "name": "tar-stream",
+      "version": "3.3.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ad06597d6d90e180c2149c8ff0a1431be81f33370e1da318ab481bf63cc7da0b0ad0fe6a5d5a6ef94a0a135a9a65cb37fd1e9056426bdb6dbc9e56683355793c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:tar-stream:tar-stream:3.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/tar-stream@3.3.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tar-stream/-/tar-stream-3.3.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/teex@1.0.1",
+      "name": "teex",
+      "version": "1.0.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "79813a88423ad8d8b51fca086bb2a50d4eae401b6aaf811a8e78b7c17eeba5f5c3f32b05c7ccf4f9dae2f8a5843d6a41b315dfc6ee7cc7fd23bd3553d5e90e4a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:teex:teex:1.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/teex@1.0.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/teex/-/teex-1.0.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/text-decoder@1.2.7",
+      "name": "text-decoder",
+      "version": "1.2.7",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "be52f2b5791e3f8c6f12ada8b477897d24084725b1a3fa191846d7aed10417d1e79ab765cb9f6c51bcd9fd08325ae2d81dcb421f1145e2d45064d43d93ad04c5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:text-decoder:text-decoder:1.2.7:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/text-decoder@1.2.7",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/text-decoder/-/text-decoder-1.2.7.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/tslib@2.9.1",
+      "name": "tslib",
+      "version": "2.9.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6b8531f552ae20c1ec392ec435b12aea12b66466084f6ed1b65d04e1e0fd2aac3184a89078c644ffdc5bdc8758c166923b220140b1318508170d3628882c6758"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:tslib:tslib:2.9.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/tslib@2.9.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/typed-query-selector@2.12.4",
+      "name": "typed-query-selector",
+      "version": "2.12.4",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "945ebf398eb9e4349665eb8da2f75ef136618eee90c82d17b5abf9edbd3ba19435110bdf4a8c00dfe59f2c486f14939cf6c55f02d5b98627b5946229a4ea9ba5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:typed-query-selector:typed-query-selector:2.12.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/typed-query-selector@2.12.4",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/typed-query-selector/-/typed-query-selector-2.12.4.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/undici-types@8.9.0",
+      "name": "undici-types",
+      "version": "8.9.0",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2930f2453617f2c5a629702290f1c74b273adc244f11331cb728ca16ea5c0ba3812d74f7c6c3747bd685ee6fa6217bad156a545ee79db68c06ee22cece9d2442"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:undici-types:undici-types:8.9.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/undici-types@8.9.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/undici-types/-/undici-types-8.9.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/webdriver-bidi-protocol@0.4.1",
+      "name": "webdriver-bidi-protocol",
+      "version": "0.4.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "011ae3363b56451b36c384e4ee7aab7f68012344175ae3a6302c76854fb58d4b7a774d0c8ccc5446b8718466ebb28899289ae14d24f36c8adce79e22288d74ab"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:webdriver-bidi-protocol:webdriver-bidi-protocol:0.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/webdriver-bidi-protocol@0.4.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/webdriver-bidi-protocol/-/webdriver-bidi-protocol-0.4.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/wrap-ansi@7.0.0",
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6151888f691a98b493c70e8db198e80717d2c2c9f4c9c75eb26738a7e436d5ce733ee675a65f8d7f155dc4fb5d1ef98d54e43a5d2606e0052dcadfc58bb0f5e9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:wrap-ansi:wrap-ansi:7.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/wrap-ansi@7.0.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/wrappy@1.0.2",
+      "name": "wrappy",
+      "version": "1.0.2",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9784a9fc346c7a8afdc0be84bd5dbe4ee427eb774c90f8d9feca7d5e48214c46d5f4a94f4b5c54b19deeeff2103b8c31b5c141e1b82940f45c477402bdeccf71"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:wrappy:wrappy:1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/wrappy@1.0.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/ws@8.23.0",
+      "name": "ws",
+      "version": "8.23.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c029265fc40c3ab2a380ef075b65b20db4d219eaa4a1cc600f34bd891efdac401ec6dcbaff6ab38a5c77020f13a9ff72928a778ab2ca95ed0cb559f9aa3567a1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:ws_project:ws:8.23.0:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/ws@8.23.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ws/-/ws-8.23.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/y18n@5.0.8",
+      "name": "y18n",
+      "version": "5.0.8",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d297c5cde81e0d62472480264cb44fd83c078dd179b3b8e8f6dbb3b5d43102120d09dbd2fb79c620da8f774d00a61a8947fd0b8403544baffeed209bf7c60e7c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:y18n_project:y18n:5.0.8:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/y18n@5.0.8",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/yargs-parser@21.1.1",
+      "name": "yargs-parser",
+      "version": "21.1.1",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b55a6c256ec376379c0221696c80757b7ab1210b04e8da0f739fde4ddadb6c80b88742d5b16867a1ade0fa6d87725048ba31f3b31678549540f8652e736fcb07"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:yargs:yargs-parser:21.1.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/yargs-parser@21.1.1",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/yargs@17.7.3",
+      "name": "yargs",
+      "version": "17.7.3",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "199b63c66fc9ff84d2c6e2f714d6230a62e4b414e7230feb56629223229e6006699890768a0f556ae082e71b1af3618d29528302aa4e9f7295ccdb74ce6ad4d2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:yargs:yargs:17.7.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/yargs@17.7.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/yargs/-/yargs-17.7.3.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/yauzl@2.10.0",
+      "name": "yauzl",
+      "version": "2.10.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a786bd23a5fa9eee888681a606a01c6c9cb59a50b88f6eef10f657f45e0be3fbd94f72f2ab5564147c3f57f3d4701f41ba8f831b7887913d31dd0c9ae7ccdcde"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:yauzl:yauzl:2.10.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/yauzl@2.10.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/yauzl/-/yauzl-2.10.0.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/zod@3.25.76",
+      "name": "zod",
+      "version": "3.25.76",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "83352dfeab7cd675ec14628815c0b76277c4031e4d92e9c27e70e5bee0524854b4d9b717bb82e679ad001485306cb5b158fc7777da7c4b94286ae8ca70d43171"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:zod:zod:3.25.76:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/zod@3.25.76",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/zod/-/zod-3.25.76.tgz"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Anthropic@12.24.1",
+      "name": "Anthropic",
+      "version": "12.24.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Anthropic@12.24.1",
+      "authors": [
+        {
+          "name": "Anthropic"
+        }
+      ],
+      "description": "The official .NET library for the Anthropic API.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright 2026 Anthropic",
+      "externalReferences": [
+        {
+          "url": "https://docs.anthropic.com/claude/reference/",
+          "type": "website"
+        },
+        {
+          "url": "https://www.github.com/anthropics/anthropic-sdk-csharp",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "12.24.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Anthropic.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Anthropic.dll=534ec9f194ca86423b0fc0f9b6601e379295659c622c3762b8f94bca85e54785"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "name": "Azure.AI.OpenAI",
+      "version": "2.8.0-beta.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Azure OpenAI's official extension package for using OpenAI's .NET library with the Azure OpenAI Service.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.8.0-beta.1/sdk/openai/Azure.AI.OpenAI/README.md",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.800.25.61201"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Azure.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Azure.AI.OpenAI.dll=4690f5e82b37bb693f5aa58ffc099b3937f10ef69850d0929a18abc96292bd17"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/DotLiquid@2.3.197",
+      "name": "DotLiquid",
+      "version": "2.3.197",
+      "scope": "required",
+      "purl": "pkg:nuget/DotLiquid@2.3.197",
+      "authors": [
+        {
+          "name": "Tim Jones, Alessandro Petrelli"
+        }
+      ],
+      "description": "DotLiquid is a templating system ported to the .NET framework from Ruby’s Liquid Markup.",
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR MS-PL"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://www.dotliquid.org/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotliquid/dotliquid.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.3.197"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/DotLiquid.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/DotLiquid.dll=1981abe7f827e61be22445730134ce7e39e44db00ed55c7faddcb83aea2f430e"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/it/DotLiquid.resources.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/it/DotLiquid.resources.dll=993fd6d9c2ea7e50a75ca7f080fef1968b1f2dac455c6ab11a6e31e19d2930e2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "name": "Google.Api.CommonProtos",
+      "version": "2.17.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Common Protocol Buffer messages for Google APIs",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.17.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.CommonProtos.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.CommonProtos.dll=329cf0f2b66c5cbf675321f0d6b33c17d1092e5761f32d3d2c1307a110c0dbbd"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "name": "Google.Api.Gax.Grpc",
+      "version": "4.12.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Additional support classes for Google gRPC API client libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "4.12.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.Gax.Grpc.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.Gax.Grpc.dll=2c447aafe6c5793b8a5c395ea2fbd57bbaff9576a47b29bf1f71ca3ed5459328"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "name": "Google.Api.Gax",
+      "version": "4.12.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Support classes for Google API client libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2020 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/gax-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "4.12.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Api.Gax.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Api.Gax.dll=b724c4317e3247d31108dfd9f0c266694e661e3890200869de41fdbb0812957a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "name": "Google.Apis.Auth",
+      "version": "1.72.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "The Google APIs Client Library is a runtime client for working with Google services.\r\n\r\nThis package includes auth components like user-credential, authorization code flow, etc. for making authenticated calls using the OAuth2 spec.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.Auth.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.Auth.dll=a83ec6d1c80a0fcc818fae12ea93a7c425435cb55cf7e5328275432556471a80"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "name": "Google.Apis.Core",
+      "version": "1.72.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "The Google APIs Core Library contains the Google APIs HTTP layer, JSON support, Data-store, logging and so on.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.Core.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.Core.dll=138a800b3dbf78e7d70a031516efb9f75e0a1af198301721ecfbefd0e9a0ea4b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Apis@1.72.0",
+      "name": "Google.Apis",
+      "version": "1.72.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Apis@1.72.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "The Google APIs Client Library is a runtime client for working with Google services.\r\nThe library supports service requests, media upload and download, etc.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2021 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-api-dotnet-client",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.72.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Apis.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Apis.dll=f26773f2c697cf381393183c141a1a6529d7c1e269c28a18b05d450cccf7a393"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "name": "Google.Cloud.AIPlatform.V1",
+      "version": "3.60.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "Recommended Google client library to access the Vertex AI API (v1), which allows you to train high-quality custom machine learning models with minimal machine learning expertise and effort.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2026 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.60.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.AIPlatform.V1.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.AIPlatform.V1.dll=75f934ac7ceb5b4576a14e23988357a8dc3dbb20839188d254faf6aa56cf7e70"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "name": "Google.Cloud.Iam.V1",
+      "version": "3.5.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.5.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.Iam.V1.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.Iam.V1.dll=828687648dd36cd45d5a075f954f3b224bb721c2fad02c39b729176ab6718e90"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "name": "Google.Cloud.Location",
+      "version": "2.4.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "gRPC services for the Google Cloud Locations API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.4.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Cloud.Location.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Cloud.Location.dll=35a2c85ff192d479dfc57e4870a58616b9e641c90d1625f0842146642fc7c6a6"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.LongRunning@3.5.0",
+      "name": "Google.LongRunning",
+      "version": "3.5.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.LongRunning@3.5.0",
+      "authors": [
+        {
+          "name": "Google LLC"
+        }
+      ],
+      "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2025 Google LLC",
+      "externalReferences": [
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/googleapis/google-cloud-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.5.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.LongRunning.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.LongRunning.dll=f28db50842aaebe022b837be016aca0a77bcf71b2f371a785428c1ab504b919c"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Google.Protobuf@3.31.1",
+      "name": "Google.Protobuf",
+      "version": "3.31.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Google.Protobuf@3.31.1",
+      "authors": [
+        {
+          "name": "Google Inc."
+        }
+      ],
+      "description": "C# runtime library for Protocol Buffers - Google's data interchange format.",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2015, Google Inc.",
+      "externalReferences": [
+        {
+          "url": "https://github.com/protocolbuffers/protobuf",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/protocolbuffers/protobuf.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "3.31.1.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Google.Protobuf.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Google.Protobuf.dll=dbd8f2ff0822d2fc0164ae255c0661ce84afc9ba328a30a4a50ba5f54ffee896"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Auth@2.71.0",
+      "name": "Grpc.Auth",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Auth@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": "gRPC C# Authentication Library",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Auth.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Auth.dll=d9f18b65825caaec7242324cb96f03d263aa9086d1ec747d1d28242bf8f58db2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "name": "Grpc.Core.Api",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": "gRPC C# Surface API",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Core.Api.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Core.Api.dll=c14ac4d4c97e03cf1f05892caeb6346457ac25c8b1b7ee3e12a720fcaa1fb2e2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "name": "Grpc.Net.Client",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": ".NET client for gRPC",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Net.Client.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Net.Client.dll=75fe0ec43986ef6e78cf41268728909b9819263273fb1e84146c1c6ef58e0028"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "name": "Grpc.Net.Common",
+      "version": "2.71.0",
+      "scope": "required",
+      "purl": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "authors": [
+        {
+          "name": "The gRPC Authors"
+        }
+      ],
+      "description": "Infrastructure for common functionality in gRPC",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright 2019 The gRPC Authors",
+      "externalReferences": [
+        {
+          "url": "https://github.com/grpc/grpc-dotnet",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/grpc/grpc-dotnet.git",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.71.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Grpc.Net.Common.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Grpc.Net.Common.dll=c31a578aed06bd7723ec24139882bbd10e18b79a6fe190482c771113ce32bd43"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "name": "Microsoft.Extensions.AI.Abstractions",
+      "version": "10.8.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Abstractions representing generative AI components.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/extensions",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.800.326.37702"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.AI.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.AI.Abstractions.dll=6a94202a8b3b01f558a71bad4cb94232a6e419d2230f22287bfa56b6eba4cce3"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "name": "Microsoft.Extensions.AI.OpenAI",
+      "version": "10.8.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Implementation of generative AI abstractions for OpenAI-compatible endpoints.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/extensions",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.800.326.37702"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.AI.OpenAI.dll=a9cb6276857d3dbdf9c3f5eaa61df54f481998dc77275ddf988fff5feb9a9c51"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "name": "Microsoft.Extensions.FileProviders.Abstractions",
+      "version": "10.0.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Abstractions of files and directories.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.FileProviders.IDirectoryContents\r\nMicrosoft.Extensions.FileProviders.IFileInfo\r\nMicrosoft.Extensions.FileProviders.IFileProvider",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.326.7603"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.FileProviders.Abstractions.dll=d007f41f3f8902f56ce5b6d1dff420bb0df2d35bd3fdf202467cbb1d49fb8c08"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "name": "Microsoft.Extensions.Hosting.Abstractions",
+      "version": "10.0.3",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Hosting and startup abstractions for applications.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.326.7603"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.Hosting.Abstractions.dll=97fac88b2f6dd64dda07e844f91fbe02042fe379216e92e2604553efda591248"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "name": "Microsoft.Extensions.ObjectPool",
+      "version": "8.0.1",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "A simple object pool implementation.\r\n\r\nThis package was built from the source code at https://github.com/dotnet/aspnetcore/tree/8e941eb42f819adb116b881195158b3887a70a1c",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://asp.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/aspnetcore",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "8.0.123.58008"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.ObjectPool.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.ObjectPool.dll=16ba19a951af5463d6141197a41386c16424be28855c3e82750039fc5cafc58e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "name": "Microsoft.Extensions.Options.DataAnnotations",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides additional DataAnnotations specific functionality related to Options.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Microsoft.Extensions.Options.DataAnnotations.dll=ddf6b2cd3148611375d25eb9ca92c98d250b84b4eb33f6f60efbfff5a7893124"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/OpenAI@2.12.0",
+      "name": "OpenAI",
+      "version": "2.12.0",
+      "scope": "required",
+      "purl": "pkg:nuget/OpenAI@2.12.0",
+      "authors": [
+        {
+          "name": "OpenAI"
+        }
+      ],
+      "description": "The official .NET library for the OpenAI service API.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright (c) 2026 OpenAI (https://openai.com)",
+      "externalReferences": [
+        {
+          "url": "https://github.com/openai/openai-dotnet/tree/OpenAI_2.12.0",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/openai/openai-dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "2.12.0.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/OpenAI.dll=6f47facf543ac57942252e365c9ed2506c5d858efa43ef9d4c875f71f92606ea"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.Anthropic",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "Anthropic AI provider integration for the Reveal SDK. Enables the use of Anthropic's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Anthropic.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Anthropic.dll=97931f981240367edad200e3140b105a36d0e12cb4f06e7ba4df61884c7bf47e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.AspNetCore",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "ASP.NET Core integration for Reveal.Sdk.AI, enabling AI-powered analytics in ASP.NET Core applications.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.AspNetCore.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.AspNetCore.dll=06f2b997c166d4722abcdcf6d1028a8a37ccdc31f6032ad211858a8befea184e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.AzureOpenAI",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "Azure OpenAI provider integration for the Reveal SDK. Enables the use of Azure OpenAI's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.AzureOpenAI.dll=06242d559afa45a1b856d5bce032d52ebffd902a80debfb61a718b751b769188"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.Google",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "Google AI provider integration for the Reveal SDK. Enables the use of Google's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.Google.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.Google.dll=cb6f4c16a4f2482d9d56249e4945bd4e0ef8a2dc56f9d0e545ff4daf6f14c2e9"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+      "name": "Reveal.Sdk.AI.OpenAI",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "OpenAI provider integration for the Reveal SDK. Enables the use of OpenAI's AI capabilities within Reveal dashboards and analytics.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.OpenAI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.OpenAI.dll=31d79358630aa8ca2939a28e0bb59f6b99bcc0f32137ff1ab4ebc3d7b52cc753"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+      "name": "Reveal.Sdk.AI",
+      "version": "1.7.21-preview",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+      "authors": [
+        {
+          "name": "Reveal"
+        }
+      ],
+      "description": "AI capabilities for Reveal SDK, providing intelligent data analysis and insights.",
+      "copyright": "Copyright © Infragistics 2026",
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.7.21.23258"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.AI.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.AI.dll=e3e0395721180274182c528873f0c8b2dff880d864c00bde82e37dc698415135"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+      "name": "Reveal.Sdk.Dom",
+      "version": "0.1.689-beta",
+      "scope": "required",
+      "purl": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+      "authors": [
+        {
+          "name": "Brian Lagunas"
+        }
+      ],
+      "description": "The Reveal.Sdk.Dom is a Document Object Model (DOM) for the Reveal .rdash file format. It allows developers using the Reveal SDK to load, edit, and create dashboards using .NET.",
+      "copyright": "Copyright ©2022 Infragistics Inc.",
+      "externalReferences": [
+        {
+          "url": "https://www.revealbi.io/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/RevealBi/Reveal.Sdk.Dom",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "0.1.689.5097"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/Reveal.Sdk.Dom.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/Reveal.Sdk.Dom.dll=41eaca1a5ca0554bda7c39bbe6fdfe7cf40ac1353797bf9ef92936c770438c65"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/SqlParserCS@0.6.5",
+      "name": "SqlParserCS",
+      "version": "0.6.5",
+      "scope": "required",
+      "purl": "pkg:nuget/SqlParserCS@0.6.5",
+      "authors": [
+        {
+          "name": "Tyler Brinks"
+        }
+      ],
+      "description": "Friendly SQL Parser for .NET",
+      "copyright": "2025 Tyler Brinks",
+      "externalReferences": [
+        {
+          "url": "https://github.com/TylerBrinks/SqlParser-cs",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/TylerBrinks/SqlParser-cs",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "0.6.5.0"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/SqlParser.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/SqlParser.dll=0c80f92bc658c0a55feb3f9a51fbcb5ec48368a0389d609ec1c3fea8ac886518"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.ClientModel@1.14.0",
+      "name": "System.ClientModel",
+      "version": "1.14.0",
+      "scope": "required",
+      "purl": "pkg:nuget/System.ClientModel@1.14.0",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Contains building blocks for clients that call cloud services.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net/blob/System.ClientModel_1.14.0/sdk/core/System.ClientModel/README.md",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/Azure/azure-sdk-for-net",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "1.1400.26.30307"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.ClientModel.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.ClientModel.dll=8cc9da03e824b1f5ed412f3fde42539ae258d9e1b2db991feb8603b878bcac8a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "name": "System.IO.Pipelines",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Single producer single consumer byte buffer management.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Pipelines.Pipe\r\nSystem.IO.Pipelines.PipeWriter\r\nSystem.IO.Pipelines.PipeReader",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.IO.Pipelines.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.IO.Pipelines.dll=9fa53a32f45686f97af49aba89fba89a5e0140d5839618fae318edac635437c8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Memory.Data@10.0.3",
+      "name": "System.Memory.Data",
+      "version": "10.0.3",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Memory.Data@10.0.3",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "A lightweight abstraction for a payload of bytes. Provides methods for converting between strings, streams, JSON, and bytes.\r\n\r\nCommonly Used Types:\r\nSystem.BinaryData",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.326.7603"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Memory.Data.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Memory.Data.dll=e7837fb6e7d6dae7d2a05a8934c3ed92ecff3192ee86521de9cf080b28bb96b2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "name": "System.Net.ServerSentEvents",
+      "version": "10.0.2",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides a simple parser for server-sent events (SSE).\r\n\r\nCommonly Used Types:\r\nSystem.Net.ServerSentEvents.SseParser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.225.61305"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Net.ServerSentEvents.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Net.ServerSentEvents.dll=9f970a18ca00533628c71e471e05984b1c0d179b121aa0b7ab0b08c1f0fa5a60"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "name": "System.Text.Encodings.Web",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll=da808440792e010b374d20dd4695574ea60f893382bd5afc8c444853033a38aa"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Text.Encodings.Web.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Text.Encodings.Web.dll=98951dac337286ddb49b53f316209830ca1ccc6c56b57c51033273d02ccd286b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:nuget/System.Text.Json@10.0.10",
+      "name": "System.Text.Json",
+      "version": "10.0.10",
+      "scope": "required",
+      "purl": "pkg:nuget/System.Text.Json@10.0.10",
+      "authors": [
+        {
+          "name": "Microsoft"
+        }
+      ],
+      "description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "externalReferences": [
+        {
+          "url": "https://dot.net/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/dotnet/dotnet",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "infragistics:bundled-binary",
+          "value": "true"
+        },
+        {
+          "name": "infragistics:binary-file-version",
+          "value": "10.0.1026.32716"
+        },
+        {
+          "name": "infragistics:bundled-path",
+          "value": "native/System.Text.Json.dll"
+        },
+        {
+          "name": "infragistics:bundled-file-sha256",
+          "value": "native/System.Text.Json.dll=cfbdfa2690d3770d531ec91c19d340dccc117df74427a7e4227d71d514eea063"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/%40puppeteer/browsers@2.13.2",
+      "dependsOn": [
+        "pkg:npm/debug@4.4.3",
+        "pkg:npm/extract-zip@2.0.1",
+        "pkg:npm/progress@2.0.3",
+        "pkg:npm/proxy-agent@6.5.0",
+        "pkg:npm/semver@7.8.6",
+        "pkg:npm/tar-fs@3.1.4",
+        "pkg:npm/yargs@17.7.3"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40tootallnate/quickjs-emscripten@0.23.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/%40types/node@26.6.11",
+      "dependsOn": [
+        "pkg:npm/undici-types@8.9.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40types/yauzl@2.10.3",
+      "dependsOn": [
+        "pkg:npm/%40types/node@26.6.11"
+      ]
+    },
+    {
+      "ref": "pkg:npm/agent-base@7.1.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ansi-regex@5.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ansi-styles@4.3.0",
+      "dependsOn": [
+        "pkg:npm/color-convert@2.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/ast-types@0.13.4",
+      "dependsOn": [
+        "pkg:npm/tslib@2.9.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/b4a@1.9.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/bare-buffer@3.7.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/bare-events@2.9.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/bare-fs@4.8.7",
+      "dependsOn": [
+        "pkg:npm/bare-buffer@3.7.3",
+        "pkg:npm/bare-events@2.9.2",
+        "pkg:npm/bare-path@3.1.3",
+        "pkg:npm/bare-stream@2.13.4",
+        "pkg:npm/bare-url@2.5.8",
+        "pkg:npm/fast-fifo@1.3.2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/bare-path@3.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/bare-stream@2.13.4",
+      "dependsOn": [
+        "pkg:npm/b4a@1.9.0",
+        "pkg:npm/bare-buffer@3.7.3",
+        "pkg:npm/bare-events@2.9.2",
+        "pkg:npm/streamx@2.28.1",
+        "pkg:npm/teex@1.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/bare-url@2.5.8",
+      "dependsOn": [
+        "pkg:npm/bare-buffer@3.7.3",
+        "pkg:npm/bare-path@3.1.3"
+      ]
+    },
+    {
+      "ref": "pkg:npm/basic-ftp@5.3.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/buffer-crc32@0.2.13",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/chromium-bidi@14.0.0",
+      "dependsOn": [
+        "pkg:npm/devtools-protocol@0.0.1608973",
+        "pkg:npm/mitt@3.0.1",
+        "pkg:npm/zod@3.25.76"
+      ]
+    },
+    {
+      "ref": "pkg:npm/cliui@8.0.1",
+      "dependsOn": [
+        "pkg:npm/string-width@4.2.3",
+        "pkg:npm/strip-ansi@6.0.1",
+        "pkg:npm/wrap-ansi@7.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/color-convert@2.0.1",
+      "dependsOn": [
+        "pkg:npm/color-name@1.1.4"
+      ]
+    },
+    {
+      "ref": "pkg:npm/color-name@1.1.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/data-uri-to-buffer@6.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/debug@4.4.3",
+      "dependsOn": [
+        "pkg:npm/ms@2.1.3"
+      ]
+    },
+    {
+      "ref": "pkg:npm/degenerator@5.0.1",
+      "dependsOn": [
+        "pkg:npm/ast-types@0.13.4",
+        "pkg:npm/escodegen@2.1.0",
+        "pkg:npm/esprima@4.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/devtools-protocol@0.0.1608973",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/emoji-regex@8.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/end-of-stream@1.4.5",
+      "dependsOn": [
+        "pkg:npm/once@1.4.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/escalade@3.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/escodegen@2.1.0",
+      "dependsOn": [
+        "pkg:npm/esprima@4.0.1",
+        "pkg:npm/estraverse@5.3.0",
+        "pkg:npm/esutils@2.0.3",
+        "pkg:npm/source-map@0.6.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/esprima@4.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/estraverse@5.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/esutils@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/events-universal@1.0.1",
+      "dependsOn": [
+        "pkg:npm/bare-events@2.9.2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/extract-zip@2.0.1",
+      "dependsOn": [
+        "pkg:npm/%40types/yauzl@2.10.3",
+        "pkg:npm/debug@4.4.3",
+        "pkg:npm/get-stream@5.2.0",
+        "pkg:npm/yauzl@2.10.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/fast-fifo@1.3.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/fd-slicer@1.1.0",
+      "dependsOn": [
+        "pkg:npm/pend@1.2.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/get-caller-file@2.0.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/get-stream@5.2.0",
+      "dependsOn": [
+        "pkg:npm/pump@3.0.4"
+      ]
+    },
+    {
+      "ref": "pkg:npm/get-uri@6.0.5",
+      "dependsOn": [
+        "pkg:npm/basic-ftp@5.3.1",
+        "pkg:npm/data-uri-to-buffer@6.0.2",
+        "pkg:npm/debug@4.4.3"
+      ]
+    },
+    {
+      "ref": "pkg:npm/http-proxy-agent@7.0.2",
+      "dependsOn": [
+        "pkg:npm/agent-base@7.1.4",
+        "pkg:npm/debug@4.4.3"
+      ]
+    },
+    {
+      "ref": "pkg:npm/https-proxy-agent@7.0.6",
+      "dependsOn": [
+        "pkg:npm/agent-base@7.1.4",
+        "pkg:npm/debug@4.4.3"
+      ]
+    },
+    {
+      "ref": "pkg:npm/ip-address@10.7.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/lru-cache@7.18.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/mitt@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ms@2.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/netmask@2.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/once@1.4.0",
+      "dependsOn": [
+        "pkg:npm/wrappy@1.0.2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/pac-proxy-agent@7.2.0",
+      "dependsOn": [
+        "pkg:npm/%40tootallnate/quickjs-emscripten@0.23.0",
+        "pkg:npm/agent-base@7.1.4",
+        "pkg:npm/debug@4.4.3",
+        "pkg:npm/get-uri@6.0.5",
+        "pkg:npm/http-proxy-agent@7.0.2",
+        "pkg:npm/https-proxy-agent@7.0.6",
+        "pkg:npm/pac-resolver@7.0.1",
+        "pkg:npm/socks-proxy-agent@8.0.5"
+      ]
+    },
+    {
+      "ref": "pkg:npm/pac-resolver@7.0.1",
+      "dependsOn": [
+        "pkg:npm/degenerator@5.0.1",
+        "pkg:npm/netmask@2.1.2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/pend@1.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/progress@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/proxy-agent@6.5.0",
+      "dependsOn": [
+        "pkg:npm/agent-base@7.1.4",
+        "pkg:npm/debug@4.4.3",
+        "pkg:npm/http-proxy-agent@7.0.2",
+        "pkg:npm/https-proxy-agent@7.0.6",
+        "pkg:npm/lru-cache@7.18.3",
+        "pkg:npm/pac-proxy-agent@7.2.0",
+        "pkg:npm/proxy-from-env@1.1.0",
+        "pkg:npm/socks-proxy-agent@8.0.5"
+      ]
+    },
+    {
+      "ref": "pkg:npm/proxy-from-env@1.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/pump@3.0.4",
+      "dependsOn": [
+        "pkg:npm/end-of-stream@1.4.5",
+        "pkg:npm/once@1.4.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/puppeteer-core@24.43.1",
+      "dependsOn": [
+        "pkg:npm/%40puppeteer/browsers@2.13.2",
+        "pkg:npm/chromium-bidi@14.0.0",
+        "pkg:npm/debug@4.4.3",
+        "pkg:npm/devtools-protocol@0.0.1608973",
+        "pkg:npm/typed-query-selector@2.12.4",
+        "pkg:npm/webdriver-bidi-protocol@0.4.1",
+        "pkg:npm/ws@8.23.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/require-directory@2.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/reveal-sdk-node@2.3.2",
+      "dependsOn": [
+        "pkg:npm/%40puppeteer/browsers@2.13.2",
+        "pkg:npm/puppeteer-core@24.43.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/reveal-sdk-node-ai@1.3.2",
+      "dependsOn": [
+        "pkg:generic/AIPlugin@2.3.0.0",
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:npm/reveal-sdk-node@2.3.2",
+        "pkg:nuget/Anthropic@12.24.1",
+        "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+        "pkg:nuget/DotLiquid@2.3.197",
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Apis.Core@1.72.0",
+        "pkg:nuget/Google.Apis@1.72.0",
+        "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+        "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+        "pkg:nuget/Google.Cloud.Location@2.4.0",
+        "pkg:nuget/Google.LongRunning@3.5.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Auth@2.71.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Client@2.71.0",
+        "pkg:nuget/Grpc.Net.Common@2.71.0",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/SqlParserCS@0.6.5",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.IO.Pipelines@10.0.10",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:npm/semver@7.8.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/smart-buffer@4.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/socks@2.8.11",
+      "dependsOn": [
+        "pkg:npm/ip-address@10.7.6",
+        "pkg:npm/smart-buffer@4.2.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/socks-proxy-agent@8.0.5",
+      "dependsOn": [
+        "pkg:npm/agent-base@7.1.4",
+        "pkg:npm/debug@4.4.3",
+        "pkg:npm/socks@2.8.11"
+      ]
+    },
+    {
+      "ref": "pkg:npm/source-map@0.6.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/streamx@2.28.1",
+      "dependsOn": [
+        "pkg:npm/events-universal@1.0.1",
+        "pkg:npm/fast-fifo@1.3.2",
+        "pkg:npm/text-decoder@1.2.7"
+      ]
+    },
+    {
+      "ref": "pkg:npm/string-width@4.2.3",
+      "dependsOn": [
+        "pkg:npm/emoji-regex@8.0.0",
+        "pkg:npm/is-fullwidth-code-point@3.0.0",
+        "pkg:npm/strip-ansi@6.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/strip-ansi@6.0.1",
+      "dependsOn": [
+        "pkg:npm/ansi-regex@5.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/tar-fs@3.1.4",
+      "dependsOn": [
+        "pkg:npm/bare-fs@4.8.7",
+        "pkg:npm/bare-path@3.1.3",
+        "pkg:npm/pump@3.0.4",
+        "pkg:npm/tar-stream@3.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/tar-stream@3.3.0",
+      "dependsOn": [
+        "pkg:npm/b4a@1.9.0",
+        "pkg:npm/bare-fs@4.8.7",
+        "pkg:npm/fast-fifo@1.3.2",
+        "pkg:npm/streamx@2.28.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/teex@1.0.1",
+      "dependsOn": [
+        "pkg:npm/streamx@2.28.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/text-decoder@1.2.7",
+      "dependsOn": [
+        "pkg:npm/b4a@1.9.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/tslib@2.9.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/typed-query-selector@2.12.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/undici-types@8.9.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/webdriver-bidi-protocol@0.4.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/wrap-ansi@7.0.0",
+      "dependsOn": [
+        "pkg:npm/ansi-styles@4.3.0",
+        "pkg:npm/string-width@4.2.3",
+        "pkg:npm/strip-ansi@6.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/wrappy@1.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ws@8.23.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/y18n@5.0.8",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/yargs@17.7.3",
+      "dependsOn": [
+        "pkg:npm/cliui@8.0.1",
+        "pkg:npm/escalade@3.2.0",
+        "pkg:npm/get-caller-file@2.0.5",
+        "pkg:npm/require-directory@2.1.1",
+        "pkg:npm/string-width@4.2.3",
+        "pkg:npm/y18n@5.0.8",
+        "pkg:npm/yargs-parser@21.1.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/yargs-parser@21.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/yauzl@2.10.0",
+      "dependsOn": [
+        "pkg:npm/buffer-crc32@0.2.13",
+        "pkg:npm/fd-slicer@1.1.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/zod@3.25.76",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/AIPlugin@2.3.0.0",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+      "dependsOn": [
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Anthropic@12.24.1",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+      "dependsOn": [
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/DotLiquid@2.3.197",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Protobuf@3.31.1"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Auth@2.71.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Client@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Api.Gax@4.12.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis.Auth@1.72.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Core@1.72.0",
+        "pkg:nuget/Google.Apis@1.72.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis.Core@1.72.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Google.Apis@1.72.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Core@1.72.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+        "pkg:nuget/Google.Cloud.Location@2.4.0",
+        "pkg:nuget/Google.LongRunning@3.5.0",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.Iam.V1@3.5.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Cloud.Location@2.4.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.LongRunning@3.5.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Api.CommonProtos@2.17.0",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Api.Gax@4.12.1",
+        "pkg:nuget/Google.Protobuf@3.31.1",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Google.Protobuf@3.31.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Auth@2.71.0",
+      "dependsOn": [
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Core.Api@2.71.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Net.Client@2.71.0",
+      "dependsOn": [
+        "pkg:nuget/Grpc.Core.Api@2.71.0",
+        "pkg:nuget/Grpc.Net.Common@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Grpc.Net.Common@2.71.0",
+      "dependsOn": [
+        "pkg:nuget/Grpc.Core.Api@2.71.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+      "dependsOn": [
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.FileProviders.Abstractions@10.0.3"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/OpenAI@2.12.0",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.Anthropic@1.7.21-preview",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Anthropic@12.24.1"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.AspNetCore@1.7.21-preview",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/Microsoft.Extensions.Options.DataAnnotations@10.0.10",
+        "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.AzureOpenAI@1.7.21-preview",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Azure.AI.OpenAI@2.8.0-beta.1",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+        "pkg:nuget/System.ClientModel@1.14.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.Google@1.7.21-preview",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Google.Api.Gax.Grpc@4.12.1",
+        "pkg:nuget/Google.Apis.Auth@1.72.0",
+        "pkg:nuget/Google.Cloud.AIPlatform.V1@3.60.0",
+        "pkg:nuget/Google.Protobuf@3.31.1"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI.OpenAI@1.7.21-preview",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/Microsoft.Extensions.AI.Abstractions@10.8.3",
+        "pkg:nuget/Microsoft.Extensions.AI.OpenAI@10.8.3",
+        "pkg:nuget/OpenAI@2.12.0",
+        "pkg:nuget/System.ClientModel@1.14.0",
+        "pkg:nuget/System.Memory.Data@10.0.3"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.AI@1.7.21-preview",
+      "dependsOn": [
+        "pkg:generic/Reveal.Sdk.AI.Abstractions.Debug@1.7.21.23258",
+        "pkg:nuget/DotLiquid@2.3.197",
+        "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+        "pkg:nuget/SqlParserCS@0.6.5",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/Reveal.Sdk.Dom@0.1.689-beta",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/SqlParserCS@0.6.5",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.ObjectPool@8.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/System.ClientModel@1.14.0",
+      "dependsOn": [
+        "pkg:nuget/Microsoft.Extensions.Hosting.Abstractions@10.0.3",
+        "pkg:nuget/System.Memory.Data@10.0.3",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/System.IO.Pipelines@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Memory.Data@10.0.3",
+      "dependsOn": [
+        "pkg:nuget/System.Text.Json@10.0.10"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/System.Net.ServerSentEvents@10.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Text.Encodings.Web@10.0.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:nuget/System.Text.Json@10.0.10",
+      "dependsOn": [
+        "pkg:nuget/System.IO.Pipelines@10.0.10",
+        "pkg:nuget/System.Text.Encodings.Web@10.0.10"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vex:GHSA-5pm8-86m8-9m6r:pkg:npm/basic-ftp@5.3.1",
+      "id": "GHSA-5pm8-86m8-9m6r",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-5pm8-86m8-9m6r"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-126345",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-126345"
+          }
+        }
+      ],
+      "cwes": [
+        1321,
+        248
+      ],
+      "description": "basic-ftp: Uncaught TypeError in MLSD directory-listing parser via __proto__ fact name causes DoS in Client.list()",
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
+      "advisories": [
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-5pm8-86m8-9m6r"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/commit/a22664a45d889f7d281e5bdd212c68c0a58d0ae6"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/releases/tag/v6.2.4"
+        }
+      ],
+      "published": "2026-11-12T21:42:12Z",
+      "updated": "2026-11-12T21:45:03.430629333Z",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:npm/basic-ftp@5.3.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-7pqw-9j4j-h8q3:pkg:npm/extract-zip@2.0.1",
+      "id": "GHSA-7pqw-9j4j-h8q3",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-7pqw-9j4j-h8q3"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-19693",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-19693"
+          }
+        }
+      ],
+      "cwes": [
+        22
+      ],
+      "description": "extract-zip allows arbitrary file writes through symlink archive entries",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19693"
+        },
+        {
+          "url": "https://github.com/max-mapper/extract-zip/pull/160"
+        },
+        {
+          "url": "https://github.com/max-mapper/extract-zip"
+        },
+        {
+          "url": "https://www.npmjs.com/package/extract-zip"
+        }
+      ],
+      "published": "2026-08-17T15:30:40Z",
+      "updated": "2026-09-08T21:10:57.608811Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Requires extracting an attacker-supplied archive. reveal-sdk-node 2.3.2 extracts only the fixed headless browser build it downloads from the official distribution into its own cache directory, and Reveal exposes no archive, archive URL or extraction path input to that download. reveal-sdk-node-ai does not extract archives. Reassess if a custom browser download source is configured.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:npm/extract-zip@2.0.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-c475-qrg2-pj4r:pkg:npm/basic-ftp@5.3.1",
+      "id": "GHSA-c475-qrg2-pj4r",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-c475-qrg2-pj4r"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-102990",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-102990"
+          }
+        }
+      ],
+      "cwes": [
+        1333
+      ],
+      "description": "basic-ftp: Quadratic-time CPU denial of service in Client.list() Unix directory-listing parser (RE_LINE backtracking)",
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
+      "advisories": [
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-c475-qrg2-pj4r"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102990"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/commit/d0d9e07c56e519587bb50532ac6eadbb0cb0cfe9"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/releases/tag/v6.2.1"
+        }
+      ],
+      "published": "2026-10-01T14:42:42Z",
+      "updated": "2026-10-01T15:00:04.517943812Z",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:npm/basic-ftp@5.3.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-jmr9-qjv8-65gv:pkg:npm/extract-zip@2.0.1",
+      "id": "GHSA-jmr9-qjv8-65gv",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-jmr9-qjv8-65gv"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-56876",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-56876"
+          }
+        }
+      ],
+      "cwes": [
+        22
+      ],
+      "description": "extract-zip unvalidated symlink path traversal",
+      "advisories": [
+        {
+          "url": "https://github.com/ziad626/extract-zip-security-research/security/advisories/GHSA-x7jf-2287-qcpf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56876"
+        },
+        {
+          "url": "https://github.com/max-mapper/extract-zip"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-177-01.json"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-56876"
+        }
+      ],
+      "published": "2026-06-26T18:34:00Z",
+      "updated": "2026-09-10T03:51:08.769710691Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Requires extracting an attacker-supplied archive. reveal-sdk-node 2.3.2 extracts only the fixed headless browser build it downloads from the official distribution into its own cache directory, and Reveal exposes no archive, archive URL or extraction path input to that download. reveal-sdk-node-ai does not extract archives. Reassess if a custom browser download source is configured.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:npm/extract-zip@2.0.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-mrhx-c7xc-m3w5:pkg:npm/zod@3.25.76",
+      "id": "GHSA-mrhx-c7xc-m3w5",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-mrhx-c7xc-m3w5"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-54404",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2023-54404"
+          }
+        }
+      ],
+      "cwes": [
+        770
+      ],
+      "description": "Zod can exhaust memory while validating oversized constrained collections",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-54404"
+        },
+        {
+          "url": "https://github.com/colinhacks/zod/issues/1872"
+        },
+        {
+          "url": "https://github.com/colinhacks/zod/pull/6475"
+        },
+        {
+          "url": "https://github.com/colinhacks/zod/pull/6652"
+        },
+        {
+          "url": "https://github.com/colinhacks/zod/commit/a0ebf970f2d752e5f58527cd2942ff48be4f46bd"
+        },
+        {
+          "url": "https://github.com/colinhacks/zod"
+        },
+        {
+          "url": "https://www.vulncheck.com/advisories/zod-uncontrolled-resource-consumption-via-array-validation"
+        }
+      ],
+      "published": "2026-10-01T18:32:46Z",
+      "updated": "2026-10-23T18:30:09.376405885Z",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects only the WebDriver BiDi protocol path of the browser automation library. reveal-sdk-node 2.3.2 launches the browser with the default Chrome DevTools Protocol, so the BiDi path is not used. reveal-sdk-node-ai does not use zod. Reassess if a WebDriver BiDi integration is added.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:npm/zod@3.25.76"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vex:GHSA-r4jh-29pc-gfqr:pkg:npm/basic-ftp@5.3.1",
+      "id": "GHSA-r4jh-29pc-gfqr",
+      "source": {
+        "name": "OSV",
+        "url": "https://osv.dev/vulnerability/GHSA-r4jh-29pc-gfqr"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-126346",
+          "source": {
+            "name": "CVE",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-126346"
+          }
+        }
+      ],
+      "cwes": [
+        248,
+        755
+      ],
+      "description": "basic-ftp: Uncaught exception crashes the Node.js process when a password (or resumed-download path) contains CR/LF",
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
+      "advisories": [
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-r4jh-29pc-gfqr"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/commit/0495b906bdf891e68806721b07b333dba65ec88e"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp"
+        },
+        {
+          "url": "https://github.com/patrickjuchli/basic-ftp/releases/tag/v6.2.3"
+        }
+      ],
+      "published": "2026-11-12T22:23:50Z",
+      "updated": "2026-11-12T22:30:03.983522899Z",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp.",
+        "firstIssued": "2026-11-26T14:44:00Z",
+        "lastUpdated": "2026-11-26T14:44:00Z"
+      },
+      "affects": [
+        {
+          "ref": "pkg:npm/basic-ftp@5.3.1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reveal:vex:managed",
+          "value": "true"
+        },
+        {
+          "name": "reveal:vex:scanner",
+          "value": "OSV-Scanner 2.7.1"
+        },
+        {
+          "name": "reveal:vex:database-snapshot",
+          "value": "2026-11-26"
+        }
+      ]
+    }
+  ]
+}

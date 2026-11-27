@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "assessment": {
+    "organization": "Infragistics, Inc.",
+    "product": "Reveal AI",
+    "date": "2026-11-26T14:44:00Z",
+    "scope": "Reveal AI 1.3.2 for Java (io.revealbi:reveal-sdk-ai) and Node (reveal-sdk-node-ai): the AI package, the bundled .NET assemblies, the Maven runtime dependencies of reveal-sdk-servlet 2.3.0 and the npm production dependencies of reveal-sdk-node 2.3.2. Not included: the OS-specific Reveal engine, host-provided .NET assemblies, the headless browser downloaded at runtime, and host operating-system libraries.",
+    "method": "Resolved the published POM and npm dependency graphs and identified the bundled .NET assemblies by assembly name, version and SHA-256 comparison with published NuGet packages. OSV-Scanner matched the inventoried packages against complete offline NuGet, npm and Maven databases. Each decision is based on the advisory prerequisites and a static review of the released packages; findings that depend on deployment configuration remain in_triage.",
+    "scanner": {
+      "name": "OSV-Scanner",
+      "version": "2.7.1",
+      "mode": "offline; --no-resolve --all-packages",
+      "databaseSnapshot": "2026-11-26"
+    }
+  },
+  "decisions": [
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-72hv-8253-57qq",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects only Jackson's non-blocking (async) parser. Reveal parses JSON only with Jackson's standard blocking parser and does not use the non-blocking parser. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-7hhh-6rmp-j9qf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects only the parser Jackson uses for java.io.DataInput sources. Reveal does not parse JSON from DataInput sources. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-p6pp-m3f8-5c89",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "In jackson-databind 2.17.2 the affected method is called only when a JSON string value is converted into a numeric Java type (BigDecimal, Double, Float or Number). Reveal deserializes JSON only into untyped JSON trees and maps, which keep string values as strings, and does not call the method directly. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.17.2",
+      "advisory": "GHSA-r7wm-3cxj-wff9",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects only Jackson's non-blocking (async) parser. Reveal parses JSON only with Jackson's standard blocking parser and does not use the non-blocking parser. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-3pjw-73gf-8qr5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires deserializing JSON into a Java record that uses @JsonIgnore while a property naming strategy is configured. Reveal deserializes JSON only into untyped JSON trees and maps, not into records or other bean types, and does not configure a naming strategy. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-5gvw-p9qm-jgwh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires a bean property annotated with @JsonView and @JsonUnwrapped, deserialized with an active view. Reveal deserializes JSON only into untyped JSON trees and maps and does not use Jackson views. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-5jmj-h7xm-6q6v",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires case-insensitive property matching together with @JsonIgnoreProperties on a bean type. Reveal deserializes JSON only into untyped JSON trees and maps and uses default ObjectMapper settings. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-cxp5-3px4-pw24",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Applies only to object identity handling (@JsonIdentityInfo) on bean types. Reveal deserializes JSON only into untyped JSON trees and maps, which do not use object identities. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-gx83-3vf8-gh7j",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires polymorphic default typing. Reveal uses default ObjectMapper settings, in which default typing is disabled, and does not use polymorphic type handling. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-hgj6-7826-r7m5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires deserializing JSON into java.net.InetSocketAddress. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so this type is never a deserialization target. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-j3rv-43j4-c7qm",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires polymorphic typing (default typing or @JsonTypeInfo). Reveal uses default ObjectMapper settings, in which default typing is disabled, and does not use polymorphic type handling. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-q4xh-88c3-wmh7",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires deserializing JSON into javax.xml.datatype.Duration or XMLGregorianCalendar. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so these types are never deserialization targets. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-rmj7-2vxq-3g9f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires polymorphic typing (default typing or @JsonTypeInfo). Reveal uses default ObjectMapper settings, in which default typing is disabled, and does not use polymorphic type handling. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-vvgp-rfg2-7rr6",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires deserializing JSON into java.net.InetAddress. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so this type is never a deserialization target. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-wjgm-6hv5-3cvf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Requires deserializing JSON into java.nio.file.Path. Reveal deserializes JSON only into untyped JSON trees and maps and does not enable default typing, so this type is never a deserialization target. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.17.2",
+      "advisory": "GHSA-wv8q-qhhj-9h54",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Applies only during polymorphic type ID resolution (@JsonTypeInfo or default typing). Reveal uses neither, so no type IDs are resolved. Application code that uses Jackson directly is outside this assessment."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-355h-qmc2-wpwf",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Request smuggling requires a front-end proxy that parses requests differently from Jetty. Reveal uses Jetty only for an internal HTTP/1.1 listener that the local Reveal engine connects to directly, and Reveal does not place a proxy in front of it. Reassess if a reverse proxy is deployed in front of that listener."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-http",
+      "version": "12.0.12",
+      "advisory": "GHSA-wjpw-4j6x-6rwh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects applications that make security decisions based on Jetty's parsing of URI schemes, hosts or authorities. Reveal's Jetty listener and HTTP client make no such decisions; the client connects only to local engine URLs that Reveal builds itself."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-7p3p-8qv8-m2vh",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "The missing host check affects only Jetty's HTTP/2 and HTTP/3 support. Reveal configures Jetty for HTTP/1.1 only, and no Jetty HTTP/2 or HTTP/3 module is in the dependency graph."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-f4v5-65jj-pcr2",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects only code that reads HTTP request trailers. Reveal does not read request trailers."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-server",
+      "version": "12.0.12",
+      "advisory": "GHSA-xxh7-fcf3-rj7f",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "Affects only deployments that enable Jetty's GzipHandler for request decompression. Reveal does not configure GzipHandler."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.eclipse.jetty:jetty-util",
+      "version": "12.0.12",
+      "advisory": "GHSA-w7x5-g22v-xqhr",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_configuration",
+        "detail": "Affects only applications that protect paths with Jetty's SecurityHandler path mappings. Reveal does not use Jetty's SecurityHandler, and jetty-security is not in the dependency graph."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.json:json",
+      "version": "20231013",
+      "advisory": "GHSA-ghc9-756g-vrcv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "reveal-sdk-core 2.3.0 declares org.json 20231013, but no Reveal code or other library in the dependency graph uses it; Reveal parses JSON with Jackson."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/java/1.3.2/reveal-sdk-ai-java-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-5pm8-86m8-9m6r",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp."
+      },
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-c475-qrg2-pj4r",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp."
+      },
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "advisory": "GHSA-r4jh-29pc-gfqr",
+      "analysis": {
+        "state": "in_triage",
+        "detail": "basic-ftp is a transitive dependency of the browser download component that reveal-sdk-node 2.3.2 uses for exports. It is used only when the proxy environment variables of the Reveal server process point to an FTP-based proxy auto-configuration (PAC) URL; the default configuration does not use FTP. Proxy configuration is set by each deployment, so this remains under review. reveal-sdk-node-ai does not use basic-ftp."
+      },
+      "recommendation": "Do not set FTP-based proxy auto-configuration (PAC) URLs in the proxy environment variables (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY) of the Reveal server process.",
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-7pqw-9j4j-h8q3",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Requires extracting an attacker-supplied archive. reveal-sdk-node 2.3.2 extracts only the fixed headless browser build it downloads from the official distribution into its own cache directory, and Reveal exposes no archive, archive URL or extraction path input to that download. reveal-sdk-node-ai does not extract archives. Reassess if a custom browser download source is configured."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "extract-zip",
+      "version": "2.0.1",
+      "advisory": "GHSA-jmr9-qjv8-65gv",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "requires_environment",
+        "detail": "Requires extracting an attacker-supplied archive. reveal-sdk-node 2.3.2 extracts only the fixed headless browser build it downloads from the official distribution into its own cache directory, and Reveal exposes no archive, archive URL or extraction path input to that download. reveal-sdk-node-ai does not extract archives. Reassess if a custom browser download source is configured."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zod",
+      "version": "3.25.76",
+      "advisory": "GHSA-mrhx-c7xc-m3w5",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "Affects only the WebDriver BiDi protocol path of the browser automation library. reveal-sdk-node 2.3.2 launches the browser with the default Chrome DevTools Protocol, so the BiDi path is not used. reveal-sdk-node-ai does not use zod. Reassess if a WebDriver BiDi integration is added."
+      },
+      "evidence": {
+        "documents": ["reveal-ai/node/1.3.2/reveal-sdk-ai-node-1.3.2.cdx.json"],
+        "review": "Static assessment of the released packages."
+      }
+    }
+  ]
+}
